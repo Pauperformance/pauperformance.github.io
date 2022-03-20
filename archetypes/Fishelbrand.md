@@ -54,7 +54,7 @@
 
 | Name | Set name | Set date | Legal |
 | -----| -------- | -------- | ----- |
-| [Fishelbrand 600.003.gannoncd](https://www.mtggoldfish.com/deck/4351094) | Throne of Eldraine | 2019-10-04 | ✅ |
+| <a target="_blank" href="https://www.mtggoldfish.com/deck/4351094">Fishelbrand 600.003.gannoncd</a>  | Throne of Eldraine | 2019-10-04 | ✅ |
 
 
 
@@ -63,8 +63,8 @@
 
 | Name | Set name | Set date | Legal |
 | -----| -------- | -------- | ----- |
-| [Fishelbrand 600.002.gannoncd](https://www.mtggoldfish.com/deck/4351096) | Throne of Eldraine | 2019-10-04 | ✅ |
-| [Fishelbrand 600.001.gannoncd](https://www.mtggoldfish.com/deck/4351095) | Throne of Eldraine | 2019-10-04 | ✅ |
+| <a target="_blank" href="https://www.mtggoldfish.com/deck/4351096">Fishelbrand 600.002.gannoncd</a>  | Throne of Eldraine | 2019-10-04 | ✅ |
+| <a target="_blank" href="https://www.mtggoldfish.com/deck/4351095">Fishelbrand 600.001.gannoncd</a>  | Throne of Eldraine | 2019-10-04 | ✅ |
 
 
 

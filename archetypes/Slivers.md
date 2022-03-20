@@ -52,7 +52,7 @@
 
 | Name | Set name | Set date | Legal |
 | -----| -------- | -------- | ----- |
-| [Slivers 651.001.Esandrad](https://www.mtggoldfish.com/deck/4624340) | Commander Legends | 2020-11-20 | ✅ |
+| <a target="_blank" href="https://www.mtggoldfish.com/deck/4624340">Slivers 651.001.Esandrad</a>  | Commander Legends | 2020-11-20 | ✅ |
 
 
 
@@ -61,10 +61,10 @@
 
 | Name | Set name | Set date | Legal |
 | -----| -------- | -------- | ----- |
-| [Slivers 600.001.gannoncd](https://www.mtggoldfish.com/deck/4626275) | Throne of Eldraine | 2019-10-04 | ✅ |
-| [Slivers 600.001.HANSDAMPF](https://www.mtggoldfish.com/deck/4351097) | Throne of Eldraine | 2019-10-04 | ✅ |
-| [Slivers 590.001.gannoncd](https://www.mtggoldfish.com/deck/4626276) | Core Set 2020 | 2019-07-12 | ✅ |
-| [Slivers 560.001.frucile](https://www.mtggoldfish.com/deck/4626277) | Guilds of Ravnica | 2018-10-05 | ✅ |
+| <a target="_blank" href="https://www.mtggoldfish.com/deck/4626275">Slivers 600.001.gannoncd</a>  | Throne of Eldraine | 2019-10-04 | ✅ |
+| <a target="_blank" href="https://www.mtggoldfish.com/deck/4351097">Slivers 600.001.HANSDAMPF</a>  | Throne of Eldraine | 2019-10-04 | ✅ |
+| <a target="_blank" href="https://www.mtggoldfish.com/deck/4626276">Slivers 590.001.gannoncd</a>  | Core Set 2020 | 2019-07-12 | ✅ |
+| <a target="_blank" href="https://www.mtggoldfish.com/deck/4626277">Slivers 560.001.frucile</a>  | Guilds of Ravnica | 2018-10-05 | ✅ |
 
 
 
@@ -75,5 +75,5 @@
 
 | 🗣️ | Name | Author | Date |
 | -- | ---- | ------ | ---- |
-| 🇮🇹 | [[Pauper Tier] Slivers](http://www.metagame.it/forum/viewtopic.php?f=158&t=5888) | Kuraiden | 2012-05-17   |
+| 🇮🇹 | <a target="_blank" href="http://www.metagame.it/forum/viewtopic.php?f=158&t=5888">[Pauper Tier] Slivers</a>  | Kuraiden | 2012-05-17   |
 

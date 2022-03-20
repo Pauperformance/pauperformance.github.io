@@ -46,7 +46,7 @@
 
 | Name | Set name | Set date | Legal |
 | -----| -------- | -------- | ----- |
-| [Soul Sisters 600.002.gannoncd](https://www.mtggoldfish.com/deck/4351090) | Throne of Eldraine | 2019-10-04 | ✅ |
+| <a target="_blank" href="https://www.mtggoldfish.com/deck/4351090">Soul Sisters 600.002.gannoncd</a>  | Throne of Eldraine | 2019-10-04 | ✅ |
 
 
 
@@ -55,7 +55,7 @@
 
 | Name | Set name | Set date | Legal |
 | -----| -------- | -------- | ----- |
-| [Soul Sisters 600.001.gannoncd](https://www.mtggoldfish.com/deck/4351092) | Throne of Eldraine | 2019-10-04 | ✅ |
+| <a target="_blank" href="https://www.mtggoldfish.com/deck/4351092">Soul Sisters 600.001.gannoncd</a>  | Throne of Eldraine | 2019-10-04 | ✅ |
 
 
 

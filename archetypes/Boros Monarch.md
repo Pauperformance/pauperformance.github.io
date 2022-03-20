@@ -57,8 +57,8 @@
 
 | Name | Set name | Set date | Legal |
 | -----| -------- | -------- | ----- |
-| [Boros Monarch 696.001.carvs](https://www.mtggoldfish.com/deck/4624426) | Innistrad: Midnight Hunt | 2021-09-24 | Ban 🔨 |
-| [Boros Monarch 560.001.Thraben27](https://www.mtggoldfish.com/deck/4351053) | Guilds of Ravnica | 2018-10-05 | Ban 🔨 |
+| <a target="_blank" href="https://www.mtggoldfish.com/deck/4624426">Boros Monarch 696.001.carvs</a>  | Innistrad: Midnight Hunt | 2021-09-24 | Ban 🔨 |
+| <a target="_blank" href="https://www.mtggoldfish.com/deck/4351053">Boros Monarch 560.001.Thraben27</a>  | Guilds of Ravnica | 2018-10-05 | Ban 🔨 |
 
 
 
@@ -67,8 +67,8 @@
 
 | Name | Set name | Set date | Legal |
 | -----| -------- | -------- | ----- |
-| [Boros Monarch 658.001.Rsousa](https://www.mtggoldfish.com/deck/4351119) | Kaldheim | 2021-02-05 | Ban 🔨 |
-| [Boros Monarch 658.001.Chronicle](https://www.mtggoldfish.com/deck/4351120) | Kaldheim | 2021-02-05 | Ban 🔨 |
+| <a target="_blank" href="https://www.mtggoldfish.com/deck/4351119">Boros Monarch 658.001.Rsousa</a>  | Kaldheim | 2021-02-05 | Ban 🔨 |
+| <a target="_blank" href="https://www.mtggoldfish.com/deck/4351120">Boros Monarch 658.001.Chronicle</a>  | Kaldheim | 2021-02-05 | Ban 🔨 |
 
 
 

@@ -22,7 +22,7 @@
 
 | Name | Set name | Set date | Legal |
 | -----| -------- | -------- | ----- |
-| [Rakdos Madness 722.001.Cesta](https://www.mtggoldfish.com/deck/4667102) | Kamigawa: Neon Dynasty | 2022-02-18 | ✅ |
+| <a target="_blank" href="https://www.mtggoldfish.com/deck/4667102">Rakdos Madness 722.001.Cesta</a>  | Kamigawa: Neon Dynasty | 2022-02-18 | ✅ |
 
 
 

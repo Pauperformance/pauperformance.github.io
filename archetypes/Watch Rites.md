@@ -51,9 +51,9 @@
 
 | Name | Set name | Set date | Legal |
 | -----| -------- | -------- | ----- |
-| [Watch Rites 560.001.Leonardo Borghi](https://www.mtggoldfish.com/deck/4351081) | Guilds of Ravnica | 2018-10-05 | ✅ |
-| [Watch Rites 488.001.eternalgathering](https://www.mtggoldfish.com/deck/4352004) | Modern Masters 2017 | 2017-03-17 | Ban 🔨 |
-| [Watch Rites 424.001.Matteo Burello](https://www.mtggoldfish.com/deck/4351141) | Fate Reforged | 2015-01-23 | ✅ |
+| <a target="_blank" href="https://www.mtggoldfish.com/deck/4351081">Watch Rites 560.001.Leonardo Borghi</a>  | Guilds of Ravnica | 2018-10-05 | ✅ |
+| <a target="_blank" href="https://www.mtggoldfish.com/deck/4352004">Watch Rites 488.001.eternalgathering</a>  | Modern Masters 2017 | 2017-03-17 | Ban 🔨 |
+| <a target="_blank" href="https://www.mtggoldfish.com/deck/4351141">Watch Rites 424.001.Matteo Burello</a>  | Fate Reforged | 2015-01-23 | ✅ |
 
 
 
@@ -64,7 +64,7 @@
 
 | 🗣️ | Name | Author | Date |
 | -- | ---- | ------ | ---- |
-| 🇮🇹 | [[Pauper] Temur Watch Rites by Leonardo Borghi](http://www.magictitans.it/pauper-temur-watch-rites-by-leonardo-borghi/) | Leonardo Borghi | 2018-12-06   |
-| 🇮🇹 | [Watch Rites combo – il lupo travestito da agnello](https://eternalgathering.altervista.org/watch-rites-combo/) | eternalgathering | 2017-04-18   |
-| 🇮🇹 | [Pauper Deck Analisi - RUG Watch Rites](http://www.metagame.it/articoli-pauper/1957-pauper-deck-analisi-rug-watch-rites.html) | Matteo Burello | 2015-02-05   |
+| 🇮🇹 | <a target="_blank" href="http://www.magictitans.it/pauper-temur-watch-rites-by-leonardo-borghi/">[Pauper] Temur Watch Rites by Leonardo Borghi</a>  | Leonardo Borghi | 2018-12-06   |
+| 🇮🇹 | <a target="_blank" href="https://eternalgathering.altervista.org/watch-rites-combo/">Watch Rites combo – il lupo travestito da agnello</a>  | eternalgathering | 2017-04-18   |
+| 🇮🇹 | <a target="_blank" href="http://www.metagame.it/articoli-pauper/1957-pauper-deck-analisi-rug-watch-rites.html">Pauper Deck Analisi - RUG Watch Rites</a>  | Matteo Burello | 2015-02-05   |
 

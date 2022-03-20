@@ -47,8 +47,8 @@
 
 | Name | Set name | Set date | Legal |
 | -----| -------- | -------- | ----- |
-| [Red Deck Wins 722.001.TiagoFuguete](https://www.mtggoldfish.com/deck/4673156) | Kamigawa: Neon Dynasty | 2022-02-18 | ✅ |
-| [Red Deck Wins 701.001.OlavoJusMTM](https://www.mtggoldfish.com/deck/4673157) | Innistrad: Crimson Vow | 2021-11-19 | ✅ |
+| <a target="_blank" href="https://www.mtggoldfish.com/deck/4673156">Red Deck Wins 722.001.TiagoFuguete</a>  | Kamigawa: Neon Dynasty | 2022-02-18 | ✅ |
+| <a target="_blank" href="https://www.mtggoldfish.com/deck/4673157">Red Deck Wins 701.001.OlavoJusMTM</a>  | Innistrad: Crimson Vow | 2021-11-19 | ✅ |
 
 
 
@@ -59,5 +59,5 @@
 
 | 🗣️ | Name | Author | Date |
 | -- | ---- | ------ | ---- |
-| 🇮🇹 | [Report Pauper - Winner @ Paupergeddon 2019 con RDW](http://www.metagame.it/articoli-pauper/3514-report-pauper-winner-paupergeddon-2019-con-rdw.html) | Matteo Mentasti | 2019-02-24   |
+| 🇮🇹 | <a target="_blank" href="http://www.metagame.it/articoli-pauper/3514-report-pauper-winner-paupergeddon-2019-con-rdw.html">Report Pauper - Winner @ Paupergeddon 2019 con RDW</a>  | Matteo Mentasti | 2019-02-24   |
 

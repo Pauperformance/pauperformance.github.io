@@ -45,7 +45,7 @@
 
 | Name | Set name | Set date | Legal |
 | -----| -------- | -------- | ----- |
-| [Zubera Storm 658.001.MTGDelphi](https://www.mtggoldfish.com/deck/4618707) | Kaldheim | 2021-02-05 | ✅ |
+| <a target="_blank" href="https://www.mtggoldfish.com/deck/4618707">Zubera Storm 658.001.MTGDelphi</a>  | Kaldheim | 2021-02-05 | ✅ |
 
 
 
@@ -54,7 +54,7 @@
 
 | Name | Set name | Set date | Legal |
 | -----| -------- | -------- | ----- |
-| [Zubera Storm 529.001.Størm](https://www.mtggoldfish.com/deck/4618698) | Rivals of Ixalan | 2018-01-19 | ✅ |
+| <a target="_blank" href="https://www.mtggoldfish.com/deck/4618698">Zubera Storm 529.001.Størm</a>  | Rivals of Ixalan | 2018-01-19 | ✅ |
 
 
 
@@ -65,5 +65,5 @@
 
 | 🗣️ | Name | Author | Date |
 | -- | ---- | ------ | ---- |
-| 🇮🇹 | [Building on a budget: Pauper Dimir Zubera](http://www.metagame.it/articoli-pauper/3378-building-on-a-budget-pauper-dimir-zubera.html) | Roberto Bernocco | 2018-06-07   |
+| 🇮🇹 | <a target="_blank" href="http://www.metagame.it/articoli-pauper/3378-building-on-a-budget-pauper-dimir-zubera.html">Building on a budget: Pauper Dimir Zubera</a>  | Roberto Bernocco | 2018-06-07   |
 

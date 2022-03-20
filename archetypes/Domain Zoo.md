@@ -51,8 +51,8 @@
 
 | Name | Set name | Set date | Legal |
 | -----| -------- | -------- | ----- |
-| [Domain Zoo 722.001.Nessin](https://www.mtggoldfish.com/deck/4673793) | Kamigawa: Neon Dynasty | 2022-02-18 | ✅ |
-| [Domain Zoo 701.001.Jacaretinga](https://www.mtggoldfish.com/deck/4673160) | Innistrad: Crimson Vow | 2021-11-19 | ✅ |
+| <a target="_blank" href="https://www.mtggoldfish.com/deck/4673793">Domain Zoo 722.001.Nessin</a>  | Kamigawa: Neon Dynasty | 2022-02-18 | ✅ |
+| <a target="_blank" href="https://www.mtggoldfish.com/deck/4673160">Domain Zoo 701.001.Jacaretinga</a>  | Innistrad: Crimson Vow | 2021-11-19 | ✅ |
 
 
 

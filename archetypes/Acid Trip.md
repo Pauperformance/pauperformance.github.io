@@ -54,8 +54,8 @@
 
 | Name | Set name | Set date | Legal |
 | -----| -------- | -------- | ----- |
-| [Acid Trip 576.001.anynewprovince](https://www.mtggoldfish.com/deck/4351102) | Ravnica Allegiance | 2019-01-25 | ✅ |
-| [Acid Trip 576.001.AzoriusFlavoredGamerGirlPee](https://www.mtggoldfish.com/deck/4351103) | Ravnica Allegiance | 2019-01-25 | ✅ |
+| <a target="_blank" href="https://www.mtggoldfish.com/deck/4351102">Acid Trip 576.001.anynewprovince</a>  | Ravnica Allegiance | 2019-01-25 | ✅ |
+| <a target="_blank" href="https://www.mtggoldfish.com/deck/4351103">Acid Trip 576.001.AzoriusFlavoredGamerGirlPee</a>  | Ravnica Allegiance | 2019-01-25 | ✅ |
 
 
 

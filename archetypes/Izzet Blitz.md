@@ -51,7 +51,7 @@
 
 | Name | Set name | Set date | Legal |
 | -----| -------- | -------- | ----- |
-| [Izzet Blitz 584.001.Amoras27](https://www.mtggoldfish.com/deck/4351062) | War of the Spark | 2019-05-03 | ✅ |
+| <a target="_blank" href="https://www.mtggoldfish.com/deck/4351062">Izzet Blitz 584.001.Amoras27</a>  | War of the Spark | 2019-05-03 | ✅ |
 
 
 
@@ -60,8 +60,8 @@
 
 | Name | Set name | Set date | Legal |
 | -----| -------- | -------- | ----- |
-| [Izzet Blitz 722.001.Amoras27](https://www.mtggoldfish.com/deck/4667106) | Kamigawa: Neon Dynasty | 2022-02-18 | ✅ |
-| [Izzet Blitz 479.001.gabripo93](https://www.mtggoldfish.com/deck/4351123) | Treasure Chest | 2016-11-16 | Ban 🔨 |
+| <a target="_blank" href="https://www.mtggoldfish.com/deck/4667106">Izzet Blitz 722.001.Amoras27</a>  | Kamigawa: Neon Dynasty | 2022-02-18 | ✅ |
+| <a target="_blank" href="https://www.mtggoldfish.com/deck/4351123">Izzet Blitz 479.001.gabripo93</a>  | Treasure Chest | 2016-11-16 | Ban 🔨 |
 
 
 

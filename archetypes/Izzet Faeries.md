@@ -52,7 +52,7 @@
 
 | Name | Set name | Set date | Legal |
 | -----| -------- | -------- | ----- |
-| [Izzet Faeries 696.001.Mogged](https://www.mtggoldfish.com/deck/4624370) | Innistrad: Midnight Hunt | 2021-09-24 | ✅ |
+| <a target="_blank" href="https://www.mtggoldfish.com/deck/4624370">Izzet Faeries 696.001.Mogged</a>  | Innistrad: Midnight Hunt | 2021-09-24 | ✅ |
 
 
 
@@ -61,11 +61,11 @@
 
 | Name | Set name | Set date | Legal |
 | -----| -------- | -------- | ----- |
-| [Izzet Faeries 722.001.Izzet Faeries](https://www.mtggoldfish.com/deck/4667117) | Kamigawa: Neon Dynasty | 2022-02-18 | ✅ |
-| [Izzet Faeries 676.002.MrEvilEye](https://www.mtggoldfish.com/deck/4351766) | Modern Horizons 2 | 2021-06-18 | ✅ |
-| [Izzet Faeries 676.001.MrEvilEye](https://www.mtggoldfish.com/deck/4351764) | Modern Horizons 2 | 2021-06-18 | ✅ |
-| [Izzet Faeries 584.001.PIETART](https://www.mtggoldfish.com/deck/4351057) | War of the Spark | 2019-05-03 | Ban 🔨 |
-| [Izzet Faeries 584.001.Mengucci](https://www.mtggoldfish.com/deck/4351059) | War of the Spark | 2019-05-03 | ✅ |
+| <a target="_blank" href="https://www.mtggoldfish.com/deck/4667117">Izzet Faeries 722.001.Izzet Faeries</a>  | Kamigawa: Neon Dynasty | 2022-02-18 | ✅ |
+| <a target="_blank" href="https://www.mtggoldfish.com/deck/4351766">Izzet Faeries 676.002.MrEvilEye</a>  | Modern Horizons 2 | 2021-06-18 | ✅ |
+| <a target="_blank" href="https://www.mtggoldfish.com/deck/4351764">Izzet Faeries 676.001.MrEvilEye</a>  | Modern Horizons 2 | 2021-06-18 | ✅ |
+| <a target="_blank" href="https://www.mtggoldfish.com/deck/4351057">Izzet Faeries 584.001.PIETART</a>  | War of the Spark | 2019-05-03 | Ban 🔨 |
+| <a target="_blank" href="https://www.mtggoldfish.com/deck/4351059">Izzet Faeries 584.001.Mengucci</a>  | War of the Spark | 2019-05-03 | ✅ |
 
 
 
@@ -76,5 +76,5 @@
 
 | 🗣️ | Name | Author | Date |
 | -- | ---- | ------ | ---- |
-| 🇮🇹 | [[Pauper Tier] Izzet Delver](http://www.metagame.it/forum/viewtopic.php?f=158&t=18321) | Allen | 2013-08-22   |
+| 🇮🇹 | <a target="_blank" href="http://www.metagame.it/forum/viewtopic.php?f=158&t=18321">[Pauper Tier] Izzet Delver</a>  | Allen | 2013-08-22   |
 

@@ -39,8 +39,8 @@
 
 | Name | Set name | Set date | Legal |
 | -----| -------- | -------- | ----- |
-| [Ping Storm 722.001.Raptor56](https://www.mtggoldfish.com/deck/4643658) | Kamigawa: Neon Dynasty | 2022-02-18 | Ban 🔨 |
-| [Ping Storm 722.001.Mikhathara1994](https://www.mtggoldfish.com/deck/4667100) | Kamigawa: Neon Dynasty | 2022-02-18 | Ban 🔨 |
+| <a target="_blank" href="https://www.mtggoldfish.com/deck/4643658">Ping Storm 722.001.Raptor56</a>  | Kamigawa: Neon Dynasty | 2022-02-18 | Ban 🔨 |
+| <a target="_blank" href="https://www.mtggoldfish.com/deck/4667100">Ping Storm 722.001.Mikhathara1994</a>  | Kamigawa: Neon Dynasty | 2022-02-18 | Ban 🔨 |
 
 
 
@@ -51,5 +51,5 @@
 
 | 🗣️ | Name | Author | Date |
 | -- | ---- | ------ | ---- |
-| 🇬🇧 | [Pauper Storm Discord](https://discord.gg/zrn2N6HT) | <i class="fa-brands fa-discord"></i> | ~            |
+| 🇬🇧 | <a target="_blank" href="https://discord.gg/zrn2N6HT">Pauper Storm Discord</a>  | <i class="fa-brands fa-discord"></i> | ~            |
 

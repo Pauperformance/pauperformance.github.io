@@ -44,8 +44,8 @@
 
 | Name | Set name | Set date | Legal |
 | -----| -------- | -------- | ----- |
-| [Midnight Gond 488.002.eternalgathering](https://www.mtggoldfish.com/deck/4351087) | Modern Masters 2017 | 2017-03-17 | ✅ |
-| [Midnight Gond 488.001.eternalgathering](https://www.mtggoldfish.com/deck/4351086) | Modern Masters 2017 | 2017-03-17 | ✅ |
+| <a target="_blank" href="https://www.mtggoldfish.com/deck/4351087">Midnight Gond 488.002.eternalgathering</a>  | Modern Masters 2017 | 2017-03-17 | ✅ |
+| <a target="_blank" href="https://www.mtggoldfish.com/deck/4351086">Midnight Gond 488.001.eternalgathering</a>  | Modern Masters 2017 | 2017-03-17 | ✅ |
 
 
 
@@ -56,5 +56,5 @@
 
 | 🗣️ | Name | Author | Date |
 | -- | ---- | ------ | ---- |
-| 🇮🇹 | [Midnight combo, gli manca solo la pescata(?)](https://eternalgathering.altervista.org/midnight-combo-gli-manca-solo-la-pescata/) | eternalgathering | 2017-03-19   |
+| 🇮🇹 | <a target="_blank" href="https://eternalgathering.altervista.org/midnight-combo-gli-manca-solo-la-pescata/">Midnight combo, gli manca solo la pescata(?)</a>  | eternalgathering | 2017-03-19   |
 

@@ -65,10 +65,10 @@
 
 | Name | Set name | Set date | Legal |
 | -----| -------- | -------- | ----- |
-| [Inside Out 701.001.carvs](https://www.mtggoldfish.com/deck/4618617) | Innistrad: Crimson Vow | 2021-11-19 | ✅ |
-| [Inside Out 612.001.Mathonical](https://www.mtggoldfish.com/deck/4351128) | Theros Beyond Death | 2020-01-24 | Ban 🔨 |
-| [Inside Out 600.001.A_AdeptoTerra](https://www.mtggoldfish.com/deck/4351072) | Throne of Eldraine | 2019-10-04 | ✅ |
-| [Inside Out 584.001.Entropy263](https://www.mtggoldfish.com/deck/4351063) | War of the Spark | 2019-05-03 | ✅ |
+| <a target="_blank" href="https://www.mtggoldfish.com/deck/4618617">Inside Out 701.001.carvs</a>  | Innistrad: Crimson Vow | 2021-11-19 | ✅ |
+| <a target="_blank" href="https://www.mtggoldfish.com/deck/4351128">Inside Out 612.001.Mathonical</a>  | Theros Beyond Death | 2020-01-24 | Ban 🔨 |
+| <a target="_blank" href="https://www.mtggoldfish.com/deck/4351072">Inside Out 600.001.A_AdeptoTerra</a>  | Throne of Eldraine | 2019-10-04 | ✅ |
+| <a target="_blank" href="https://www.mtggoldfish.com/deck/4351063">Inside Out 584.001.Entropy263</a>  | War of the Spark | 2019-05-03 | ✅ |
 
 
 
@@ -77,9 +77,9 @@
 
 | Name | Set name | Set date | Legal |
 | -----| -------- | -------- | ----- |
-| [Inside Out 722.001.neoweapon](https://www.mtggoldfish.com/deck/4673785) | Kamigawa: Neon Dynasty | 2022-02-18 | ✅ |
-| [Inside Out 722.001.Venancioo](https://www.mtggoldfish.com/deck/4673784) | Kamigawa: Neon Dynasty | 2022-02-18 | ✅ |
-| [Inside Out 540.001.Shika93](https://www.mtggoldfish.com/deck/4351737) | Battlebond | 2018-06-08 | Ban 🔨 |
+| <a target="_blank" href="https://www.mtggoldfish.com/deck/4673785">Inside Out 722.001.neoweapon</a>  | Kamigawa: Neon Dynasty | 2022-02-18 | ✅ |
+| <a target="_blank" href="https://www.mtggoldfish.com/deck/4673784">Inside Out 722.001.Venancioo</a>  | Kamigawa: Neon Dynasty | 2022-02-18 | ✅ |
+| <a target="_blank" href="https://www.mtggoldfish.com/deck/4351737">Inside Out 540.001.Shika93</a>  | Battlebond | 2018-06-08 | Ban 🔨 |
 
 
 
@@ -90,5 +90,5 @@
 
 | 🗣️ | Name | Author | Date |
 | -- | ---- | ------ | ---- |
-| 🇮🇹 | [Pauper Report - UW Tribe @ Paupergeddon](http://www.metagame.it/articoli-pauper/3407-pauper-report-uw-tribe-paupergeddon.html) | Pietro Bragioto | 2018-07-10   |
+| 🇮🇹 | <a target="_blank" href="http://www.metagame.it/articoli-pauper/3407-pauper-report-uw-tribe-paupergeddon.html">Pauper Report - UW Tribe @ Paupergeddon</a>  | Pietro Bragioto | 2018-07-10   |
 

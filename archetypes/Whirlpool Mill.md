@@ -47,8 +47,8 @@
 
 | Name | Set name | Set date | Legal |
 | -----| -------- | -------- | ----- |
-| [Whirlpool Mill 518.001.JherjamesB](https://www.mtggoldfish.com/deck/4618672) | Iconic Masters | 2017-11-17 | Ban 🔨 |
-| [Whirlpool Mill 442.001.Milkk](https://www.mtggoldfish.com/deck/4620518) | Battle for Zendikar | 2015-10-02 | Ban 🔨 |
+| <a target="_blank" href="https://www.mtggoldfish.com/deck/4618672">Whirlpool Mill 518.001.JherjamesB</a>  | Iconic Masters | 2017-11-17 | Ban 🔨 |
+| <a target="_blank" href="https://www.mtggoldfish.com/deck/4620518">Whirlpool Mill 442.001.Milkk</a>  | Battle for Zendikar | 2015-10-02 | Ban 🔨 |
 
 
 
@@ -59,5 +59,5 @@
 
 | 🗣️ | Name | Author | Date |
 | -- | ---- | ------ | ---- |
-| 🇬🇧 | [Pauper Ponderings: Whirlpool Mill](https://themanabase.com/pauper-ponderings-whirlpool-mill/) | Austen Hoey | 2016-11-03   |
+| 🇬🇧 | <a target="_blank" href="https://themanabase.com/pauper-ponderings-whirlpool-mill/">Pauper Ponderings: Whirlpool Mill</a>  | Austen Hoey | 2016-11-03   |
 

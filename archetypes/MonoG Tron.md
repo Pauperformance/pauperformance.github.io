@@ -52,8 +52,8 @@
 
 | Name | Set name | Set date | Legal |
 | -----| -------- | -------- | ----- |
-| [MonoG Tron 722.001.VINICIUS](https://www.mtggoldfish.com/deck/4673165) | Kamigawa: Neon Dynasty | 2022-02-18 | ✅ |
-| [MonoG Tron 442.001.Don](https://www.mtggoldfish.com/deck/4673163) | Battle for Zendikar | 2015-10-02 | Ban 🔨 |
+| <a target="_blank" href="https://www.mtggoldfish.com/deck/4673165">MonoG Tron 722.001.VINICIUS</a>  | Kamigawa: Neon Dynasty | 2022-02-18 | ✅ |
+| <a target="_blank" href="https://www.mtggoldfish.com/deck/4673163">MonoG Tron 442.001.Don</a>  | Battle for Zendikar | 2015-10-02 | Ban 🔨 |
 
 
 

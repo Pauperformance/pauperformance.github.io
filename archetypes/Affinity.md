@@ -69,16 +69,16 @@
 
 | Name | Set name | Set date | Legal |
 | -----| -------- | -------- | ----- |
-| [Affinity 722.001.Oceansoul92](https://www.mtggoldfish.com/deck/4667094) | Kamigawa: Neon Dynasty | 2022-02-18 | Ban 🔨 |
-| [Affinity 722.001.Condescend](https://www.mtggoldfish.com/deck/4667095) | Kamigawa: Neon Dynasty | 2022-02-18 | Ban 🔨 |
-| [Affinity 676.003.Shika93](https://www.mtggoldfish.com/deck/4626261) | Modern Horizons 2 | 2021-06-18 | Ban 🔨 |
-| [Affinity 676.002.Shika93](https://www.mtggoldfish.com/deck/4626260) | Modern Horizons 2 | 2021-06-18 | Ban 🔨 |
-| [Affinity 676.002.MrEvilEye](https://www.mtggoldfish.com/deck/4351761) | Modern Horizons 2 | 2021-06-18 | Ban 🔨 |
-| [Affinity 676.001.Shika93](https://www.mtggoldfish.com/deck/4626259) | Modern Horizons 2 | 2021-06-18 | Ban 🔨 |
-| [Affinity 676.001.MrEvilEye](https://www.mtggoldfish.com/deck/4351762) | Modern Horizons 2 | 2021-06-18 | Ban 🔨 |
-| [Affinity 600.001.Shika93](https://www.mtggoldfish.com/deck/4626262) | Throne of Eldraine | 2019-10-04 | Ban 🔨 |
-| [Affinity 590.001.Shika93](https://www.mtggoldfish.com/deck/4626263) | Core Set 2020 | 2019-07-12 | Ban 🔨 |
-| [Affinity 501.001.Shika93](https://www.mtggoldfish.com/deck/4351744) | Hour of Devastation | 2017-07-14 | Ban 🔨 |
+| <a target="_blank" href="https://www.mtggoldfish.com/deck/4667094">Affinity 722.001.Oceansoul92</a>  | Kamigawa: Neon Dynasty | 2022-02-18 | Ban 🔨 |
+| <a target="_blank" href="https://www.mtggoldfish.com/deck/4667095">Affinity 722.001.Condescend</a>  | Kamigawa: Neon Dynasty | 2022-02-18 | Ban 🔨 |
+| <a target="_blank" href="https://www.mtggoldfish.com/deck/4626261">Affinity 676.003.Shika93</a>  | Modern Horizons 2 | 2021-06-18 | Ban 🔨 |
+| <a target="_blank" href="https://www.mtggoldfish.com/deck/4626260">Affinity 676.002.Shika93</a>  | Modern Horizons 2 | 2021-06-18 | Ban 🔨 |
+| <a target="_blank" href="https://www.mtggoldfish.com/deck/4351761">Affinity 676.002.MrEvilEye</a>  | Modern Horizons 2 | 2021-06-18 | Ban 🔨 |
+| <a target="_blank" href="https://www.mtggoldfish.com/deck/4626259">Affinity 676.001.Shika93</a>  | Modern Horizons 2 | 2021-06-18 | Ban 🔨 |
+| <a target="_blank" href="https://www.mtggoldfish.com/deck/4351762">Affinity 676.001.MrEvilEye</a>  | Modern Horizons 2 | 2021-06-18 | Ban 🔨 |
+| <a target="_blank" href="https://www.mtggoldfish.com/deck/4626262">Affinity 600.001.Shika93</a>  | Throne of Eldraine | 2019-10-04 | Ban 🔨 |
+| <a target="_blank" href="https://www.mtggoldfish.com/deck/4626263">Affinity 590.001.Shika93</a>  | Core Set 2020 | 2019-07-12 | Ban 🔨 |
+| <a target="_blank" href="https://www.mtggoldfish.com/deck/4351744">Affinity 501.001.Shika93</a>  | Hour of Devastation | 2017-07-14 | Ban 🔨 |
 
 
 

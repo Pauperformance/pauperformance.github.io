@@ -56,8 +56,8 @@
 
 | Name | Set name | Set date | Legal |
 | -----| -------- | -------- | ----- |
-| [MonoB Suicide 722.001.Haste_BR](https://www.mtggoldfish.com/deck/4673179) | Kamigawa: Neon Dynasty | 2022-02-18 | ✅ |
-| [MonoB Suicide 584.001.Lazoreoc](https://www.mtggoldfish.com/deck/4351098) | War of the Spark | 2019-05-03 | ✅ |
+| <a target="_blank" href="https://www.mtggoldfish.com/deck/4673179">MonoB Suicide 722.001.Haste_BR</a>  | Kamigawa: Neon Dynasty | 2022-02-18 | ✅ |
+| <a target="_blank" href="https://www.mtggoldfish.com/deck/4351098">MonoB Suicide 584.001.Lazoreoc</a>  | War of the Spark | 2019-05-03 | ✅ |
 
 
 

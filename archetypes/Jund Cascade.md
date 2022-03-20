@@ -51,7 +51,7 @@
 
 | Name | Set name | Set date | Legal |
 | -----| -------- | -------- | ----- |
-| [Jund Cascade 701.001.Ixidor29](https://www.mtggoldfish.com/deck/4620537) | Innistrad: Crimson Vow | 2021-11-19 | ✅ |
+| <a target="_blank" href="https://www.mtggoldfish.com/deck/4620537">Jund Cascade 701.001.Ixidor29</a>  | Innistrad: Crimson Vow | 2021-11-19 | ✅ |
 
 
 
@@ -60,7 +60,7 @@
 
 | Name | Set name | Set date | Legal |
 | -----| -------- | -------- | ----- |
-| [Jund Cascade 658.001.Milkk](https://www.mtggoldfish.com/deck/4351121) | Kaldheim | 2021-02-05 | Ban 🔨 |
+| <a target="_blank" href="https://www.mtggoldfish.com/deck/4351121">Jund Cascade 658.001.Milkk</a>  | Kaldheim | 2021-02-05 | Ban 🔨 |
 
 
 
@@ -71,5 +71,5 @@
 
 | 🗣️ | Name | Author | Date |
 | -- | ---- | ------ | ---- |
-| 🇬🇧 | [Pauper Cascade Discord](https://discord.gg/2qf7KsVE) | <i class="fa-brands fa-discord"></i> | ~            |
+| 🇬🇧 | <a target="_blank" href="https://discord.gg/2qf7KsVE">Pauper Cascade Discord</a>  | <i class="fa-brands fa-discord"></i> | ~            |
 

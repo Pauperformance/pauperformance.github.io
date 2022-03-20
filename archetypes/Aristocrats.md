@@ -56,7 +56,7 @@
 
 | Name | Set name | Set date | Legal |
 | -----| -------- | -------- | ----- |
-| [Aristocrats 658.001.Gandalf_the_Magician](https://www.mtggoldfish.com/deck/4624331) | Kaldheim | 2021-02-05 | ✅ |
+| <a target="_blank" href="https://www.mtggoldfish.com/deck/4624331">Aristocrats 658.001.Gandalf_the_Magician</a>  | Kaldheim | 2021-02-05 | ✅ |
 
 
 
@@ -65,9 +65,9 @@
 
 | Name | Set name | Set date | Legal |
 | -----| -------- | -------- | ----- |
-| [Aristocrats 676.001.MrEvilEye](https://www.mtggoldfish.com/deck/4351760) | Modern Horizons 2 | 2021-06-18 | ✅ |
-| [Aristocrats 669.001.sekiars](https://www.mtggoldfish.com/deck/4679882) | Strixhaven: School of Mages | 2021-04-23 | ✅ |
-| [Aristocrats 501.001.Shika93](https://www.mtggoldfish.com/deck/4351745) | Hour of Devastation | 2017-07-14 | ✅ |
+| <a target="_blank" href="https://www.mtggoldfish.com/deck/4351760">Aristocrats 676.001.MrEvilEye</a>  | Modern Horizons 2 | 2021-06-18 | ✅ |
+| <a target="_blank" href="https://www.mtggoldfish.com/deck/4679882">Aristocrats 669.001.sekiars</a>  | Strixhaven: School of Mages | 2021-04-23 | ✅ |
+| <a target="_blank" href="https://www.mtggoldfish.com/deck/4351745">Aristocrats 501.001.Shika93</a>  | Hour of Devastation | 2017-07-14 | ✅ |
 
 
 

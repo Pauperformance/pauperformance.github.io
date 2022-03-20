@@ -56,7 +56,7 @@
 
 | Name | Set name | Set date | Legal |
 | -----| -------- | -------- | ----- |
-| [Goblins 669.001.mosskirin](https://www.mtggoldfish.com/deck/4624419) | Strixhaven: School of Mages | 2021-04-23 | ✅ |
+| <a target="_blank" href="https://www.mtggoldfish.com/deck/4624419">Goblins 669.001.mosskirin</a>  | Strixhaven: School of Mages | 2021-04-23 | ✅ |
 
 
 
@@ -65,9 +65,9 @@
 
 | Name | Set name | Set date | Legal |
 | -----| -------- | -------- | ----- |
-| [Goblins 669.001.ZeMotinha](https://www.mtggoldfish.com/deck/4351140) | Strixhaven: School of Mages | 2021-04-23 | ✅ |
-| [Goblins 669.001.Jeremiaa](https://www.mtggoldfish.com/deck/4351139) | Strixhaven: School of Mages | 2021-04-23 | ✅ |
-| [Goblins 600.001.walterr25](https://www.mtggoldfish.com/deck/4351073) | Throne of Eldraine | 2019-10-04 | ✅ |
+| <a target="_blank" href="https://www.mtggoldfish.com/deck/4351140">Goblins 669.001.ZeMotinha</a>  | Strixhaven: School of Mages | 2021-04-23 | ✅ |
+| <a target="_blank" href="https://www.mtggoldfish.com/deck/4351139">Goblins 669.001.Jeremiaa</a>  | Strixhaven: School of Mages | 2021-04-23 | ✅ |
+| <a target="_blank" href="https://www.mtggoldfish.com/deck/4351073">Goblins 600.001.walterr25</a>  | Throne of Eldraine | 2019-10-04 | ✅ |
 
 
 

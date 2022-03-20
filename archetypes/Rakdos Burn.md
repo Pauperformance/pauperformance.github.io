@@ -49,8 +49,8 @@
 
 | Name | Set name | Set date | Legal |
 | -----| -------- | -------- | ----- |
-| [Rakdos Burn 722.001.rfaustino](https://www.mtggoldfish.com/deck/4667114) | Kamigawa: Neon Dynasty | 2022-02-18 | ✅ |
-| [Rakdos Burn 722.001.DaveXXXVI](https://www.mtggoldfish.com/deck/4667103) | Kamigawa: Neon Dynasty | 2022-02-18 | ✅ |
+| <a target="_blank" href="https://www.mtggoldfish.com/deck/4667114">Rakdos Burn 722.001.rfaustino</a>  | Kamigawa: Neon Dynasty | 2022-02-18 | ✅ |
+| <a target="_blank" href="https://www.mtggoldfish.com/deck/4667103">Rakdos Burn 722.001.DaveXXXVI</a>  | Kamigawa: Neon Dynasty | 2022-02-18 | ✅ |
 
 
 

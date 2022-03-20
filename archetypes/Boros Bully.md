@@ -52,8 +52,8 @@
 
 | Name | Set name | Set date | Legal |
 | -----| -------- | -------- | ----- |
-| [Boros Bully 669.001.Heisen01](https://www.mtggoldfish.com/deck/4618626) | Strixhaven: School of Mages | 2021-04-23 | ✅ |
-| [Boros Bully 576.001.deluxeicoff](https://www.mtggoldfish.com/deck/4351052) | Ravnica Allegiance | 2019-01-25 | ✅ |
+| <a target="_blank" href="https://www.mtggoldfish.com/deck/4618626">Boros Bully 669.001.Heisen01</a>  | Strixhaven: School of Mages | 2021-04-23 | ✅ |
+| <a target="_blank" href="https://www.mtggoldfish.com/deck/4351052">Boros Bully 576.001.deluxeicoff</a>  | Ravnica Allegiance | 2019-01-25 | ✅ |
 
 
 
@@ -62,9 +62,9 @@
 
 | Name | Set name | Set date | Legal |
 | -----| -------- | -------- | ----- |
-| [Boros Bully 722.001.Lumbalgic](https://www.mtggoldfish.com/deck/4667096) | Kamigawa: Neon Dynasty | 2022-02-18 | ✅ |
-| [Boros Bully 722.001.Lollopollo2001](https://www.mtggoldfish.com/deck/4620538) | Kamigawa: Neon Dynasty | 2022-02-18 | ✅ |
-| [Boros Bully 669.001.Franco Cicchini](https://www.mtggoldfish.com/deck/4351118) | Strixhaven: School of Mages | 2021-04-23 | ✅ |
+| <a target="_blank" href="https://www.mtggoldfish.com/deck/4667096">Boros Bully 722.001.Lumbalgic</a>  | Kamigawa: Neon Dynasty | 2022-02-18 | ✅ |
+| <a target="_blank" href="https://www.mtggoldfish.com/deck/4620538">Boros Bully 722.001.Lollopollo2001</a>  | Kamigawa: Neon Dynasty | 2022-02-18 | ✅ |
+| <a target="_blank" href="https://www.mtggoldfish.com/deck/4351118">Boros Bully 669.001.Franco Cicchini</a>  | Strixhaven: School of Mages | 2021-04-23 | ✅ |
 
 
 

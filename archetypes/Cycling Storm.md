@@ -50,8 +50,8 @@
 
 | Name | Set name | Set date | Legal |
 | -----| -------- | -------- | ----- |
-| [Cycling Storm 701.001.Vivarus](https://www.mtggoldfish.com/deck/4618670) | Innistrad: Crimson Vow | 2021-11-19 | ✅ |
-| [Cycling Storm 696.001.Bryant_Cook](https://www.mtggoldfish.com/deck/4624384) | Innistrad: Midnight Hunt | 2021-09-24 | ✅ |
+| <a target="_blank" href="https://www.mtggoldfish.com/deck/4618670">Cycling Storm 701.001.Vivarus</a>  | Innistrad: Crimson Vow | 2021-11-19 | ✅ |
+| <a target="_blank" href="https://www.mtggoldfish.com/deck/4624384">Cycling Storm 696.001.Bryant_Cook</a>  | Innistrad: Midnight Hunt | 2021-09-24 | ✅ |
 
 
 
@@ -64,6 +64,6 @@
 
 | 🗣️ | Name | Author | Date |
 | -- | ---- | ------ | ---- |
-| 🇬🇧 | [Pauper Storm Discord](https://discord.gg/zrn2N6HT) | <i class="fa-brands fa-discord"></i> | ~            |
-| 🇬🇧 | [PAUPER CYCLE STORM PRIMER](https://www.theepicstorm.com/pauper-cycle-storm-primer/) | Alex McKinley | 2022-01-30   |
+| 🇬🇧 | <a target="_blank" href="https://discord.gg/zrn2N6HT">Pauper Storm Discord</a>  | <i class="fa-brands fa-discord"></i> | ~            |
+| 🇬🇧 | <a target="_blank" href="https://www.theepicstorm.com/pauper-cycle-storm-primer/">PAUPER CYCLE STORM PRIMER</a>  | Alex McKinley | 2022-01-30   |
 

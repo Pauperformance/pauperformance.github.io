@@ -54,7 +54,7 @@
 
 | Name | Set name | Set date | Legal |
 | -----| -------- | -------- | ----- |
-| [Dimir Delver 648.001.Hamuda](https://www.mtggoldfish.com/deck/4351124) | Zendikar Rising | 2020-09-25 | ✅ |
+| <a target="_blank" href="https://www.mtggoldfish.com/deck/4351124">Dimir Delver 648.001.Hamuda</a>  | Zendikar Rising | 2020-09-25 | ✅ |
 
 
 
@@ -63,7 +63,7 @@
 
 | Name | Set name | Set date | Legal |
 | -----| -------- | -------- | ----- |
-| [Dimir Delver 584.001.MTGPRO69](https://www.mtggoldfish.com/deck/4351058) | War of the Spark | 2019-05-03 | Ban 🔨 |
+| <a target="_blank" href="https://www.mtggoldfish.com/deck/4351058">Dimir Delver 584.001.MTGPRO69</a>  | War of the Spark | 2019-05-03 | Ban 🔨 |
 
 
 
@@ -74,5 +74,5 @@
 
 | 🗣️ | Name | Author | Date |
 | -- | ---- | ------ | ---- |
-| 🇮🇹 | [[Pauper Tier] Dimir Delver](http://www.metagame.it/forum/viewtopic.php?f=158&t=16467) | Siol | 2013-02-05   |
+| 🇮🇹 | <a target="_blank" href="http://www.metagame.it/forum/viewtopic.php?f=158&t=16467">[Pauper Tier] Dimir Delver</a>  | Siol | 2013-02-05   |
 

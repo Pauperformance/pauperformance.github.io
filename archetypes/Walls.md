@@ -70,9 +70,9 @@ A hybrid version of the two exists, with main deck cascade that can transform in
 
 | Name | Set name | Set date | Legal |
 | -----| -------- | -------- | ----- |
-| [Walls 722.001.apas72](https://www.mtggoldfish.com/deck/4667270) | Kamigawa: Neon Dynasty | 2022-02-18 | ✅ |
-| [Walls 696.001.HouseOfManaMTG](https://www.mtggoldfish.com/deck/4624355) | Innistrad: Midnight Hunt | 2021-09-24 | ✅ |
-| [Walls 658.001.Mathonical](https://www.mtggoldfish.com/deck/4351126) | Kaldheim | 2021-02-05 | ✅ |
+| <a target="_blank" href="https://www.mtggoldfish.com/deck/4667270">Walls 722.001.apas72</a>  | Kamigawa: Neon Dynasty | 2022-02-18 | ✅ |
+| <a target="_blank" href="https://www.mtggoldfish.com/deck/4624355">Walls 696.001.HouseOfManaMTG</a>  | Innistrad: Midnight Hunt | 2021-09-24 | ✅ |
+| <a target="_blank" href="https://www.mtggoldfish.com/deck/4351126">Walls 658.001.Mathonical</a>  | Kaldheim | 2021-02-05 | ✅ |
 
 
 
@@ -81,9 +81,9 @@ A hybrid version of the two exists, with main deck cascade that can transform in
 
 | Name | Set name | Set date | Legal |
 | -----| -------- | -------- | ----- |
-| [Walls 701.001.Terminus0](https://www.mtggoldfish.com/deck/4667272) | Innistrad: Crimson Vow | 2021-11-19 | ✅ |
-| [Walls 658.001.NotGood](https://www.mtggoldfish.com/deck/4667271) | Kaldheim | 2021-02-05 | ✅ |
-| [Walls 612.001.Diego_Brando](https://www.mtggoldfish.com/deck/4351100) | Theros Beyond Death | 2020-01-24 | ✅ |
+| <a target="_blank" href="https://www.mtggoldfish.com/deck/4667272">Walls 701.001.Terminus0</a>  | Innistrad: Crimson Vow | 2021-11-19 | ✅ |
+| <a target="_blank" href="https://www.mtggoldfish.com/deck/4667271">Walls 658.001.NotGood</a>  | Kaldheim | 2021-02-05 | ✅ |
+| <a target="_blank" href="https://www.mtggoldfish.com/deck/4351100">Walls 612.001.Diego_Brando</a>  | Theros Beyond Death | 2020-01-24 | ✅ |
 
 
 
@@ -94,7 +94,7 @@ A hybrid version of the two exists, with main deck cascade that can transform in
 
 | 🗣️ | Name | Author | Date |
 | -- | ---- | ------ | ---- |
-| 🇬🇧 | [Pauper Walls Discord](https://discord.gg/p4kESAk) | <i class="fa-brands fa-discord"></i> | ~            |
-| 🇬🇧 | [Pauper Walls Combo](https://www.legapauperonline.com/pauper-walls-combo/) | Andrea Passaro | 2022-03-11   |
-| 🇬🇧 | [Anyway, Here's Wonderwalls](https://www.coolstuffinc.com/a/kendrasmith-02122020-anyway-heres-wonderwalls) | Paige Smith | 2020-02-12   |
+| 🇬🇧 | <a target="_blank" href="https://discord.gg/p4kESAk">Pauper Walls Discord</a>  | <i class="fa-brands fa-discord"></i> | ~            |
+| 🇬🇧 | <a target="_blank" href="https://www.legapauperonline.com/pauper-walls-combo/">Pauper Walls Combo</a>  | Andrea Passaro | 2022-03-11   |
+| 🇬🇧 | <a target="_blank" href="https://www.coolstuffinc.com/a/kendrasmith-02122020-anyway-heres-wonderwalls">Anyway, Here's Wonderwalls</a>  | Paige Smith | 2020-02-12   |
 

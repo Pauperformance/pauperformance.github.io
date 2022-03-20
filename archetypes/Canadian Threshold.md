@@ -59,10 +59,10 @@
 
 | Name | Set name | Set date | Legal |
 | -----| -------- | -------- | ----- |
-| [Canadian Threshold 518.001.eternalgathering](https://www.mtggoldfish.com/deck/4351079) | Iconic Masters | 2017-11-17 | Ban 🔨 |
-| [Canadian Threshold 488.002.Federico Vaglio](https://www.mtggoldfish.com/deck/4351957) | Modern Masters 2017 | 2017-03-17 | Ban 🔨 |
-| [Canadian Threshold 488.001.alwayshalfchub](https://www.mtggoldfish.com/deck/4351076) | Modern Masters 2017 | 2017-03-17 | ✅ |
-| [Canadian Threshold 488.001.Federico Vaglio](https://www.mtggoldfish.com/deck/4351949) | Modern Masters 2017 | 2017-03-17 | Ban 🔨 |
+| <a target="_blank" href="https://www.mtggoldfish.com/deck/4351079">Canadian Threshold 518.001.eternalgathering</a>  | Iconic Masters | 2017-11-17 | Ban 🔨 |
+| <a target="_blank" href="https://www.mtggoldfish.com/deck/4351957">Canadian Threshold 488.002.Federico Vaglio</a>  | Modern Masters 2017 | 2017-03-17 | Ban 🔨 |
+| <a target="_blank" href="https://www.mtggoldfish.com/deck/4351076">Canadian Threshold 488.001.alwayshalfchub</a>  | Modern Masters 2017 | 2017-03-17 | ✅ |
+| <a target="_blank" href="https://www.mtggoldfish.com/deck/4351949">Canadian Threshold 488.001.Federico Vaglio</a>  | Modern Masters 2017 | 2017-03-17 | Ban 🔨 |
 
 
 
@@ -73,7 +73,7 @@
 
 | 🗣️ | Name | Author | Date |
 | -- | ---- | ------ | ---- |
-| 🇮🇹 | [The Canadian Job, ovvero la grande bellezza](https://eternalgathering.altervista.org/the-canadian-job-ovvero-la-grande-bellezza/) | eternalgathering | 2017-11-17   |
-| 🇬🇧 | [Pauper Ponderings: Canadian Threshold](http://themanabase.wpengine.com/pauper-ponderings-canadian-threshold/) | Austen Hoey | 2017-04-27   |
-| 🇮🇹 | [CANADIAN THRESHOLD](https://paupernexus.wixsite.com/paupernexus/primer-canadian-threshold) | Federico Vaglio | 2016-06-15   |
+| 🇮🇹 | <a target="_blank" href="https://eternalgathering.altervista.org/the-canadian-job-ovvero-la-grande-bellezza/">The Canadian Job, ovvero la grande bellezza</a>  | eternalgathering | 2017-11-17   |
+| 🇬🇧 | <a target="_blank" href="http://themanabase.wpengine.com/pauper-ponderings-canadian-threshold/">Pauper Ponderings: Canadian Threshold</a>  | Austen Hoey | 2017-04-27   |
+| 🇮🇹 | <a target="_blank" href="https://paupernexus.wixsite.com/paupernexus/primer-canadian-threshold">CANADIAN THRESHOLD</a>  | Federico Vaglio | 2016-06-15   |
 

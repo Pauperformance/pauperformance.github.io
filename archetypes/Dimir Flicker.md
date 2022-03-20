@@ -52,8 +52,8 @@
 
 | Name | Set name | Set date | Legal |
 | -----| -------- | -------- | ----- |
-| [Dimir Flicker 722.001.DragonDayDragon](https://www.mtggoldfish.com/deck/4673151) | Kamigawa: Neon Dynasty | 2022-02-18 | ✅ |
-| [Dimir Flicker 701.001.hjc](https://www.mtggoldfish.com/deck/4673152) | Innistrad: Crimson Vow | 2021-11-19 | ✅ |
+| <a target="_blank" href="https://www.mtggoldfish.com/deck/4673151">Dimir Flicker 722.001.DragonDayDragon</a>  | Kamigawa: Neon Dynasty | 2022-02-18 | ✅ |
+| <a target="_blank" href="https://www.mtggoldfish.com/deck/4673152">Dimir Flicker 701.001.hjc</a>  | Innistrad: Crimson Vow | 2021-11-19 | ✅ |
 
 
 

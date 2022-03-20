@@ -20,7 +20,7 @@
 
 | Name | Set name | Set date | Legal |
 | -----| -------- | -------- | ----- |
-| [MonoG Ponza 600.001.Mazurin_Pavel](https://www.mtggoldfish.com/deck/4673161) | Throne of Eldraine | 2019-10-04 | ✅ |
+| <a target="_blank" href="https://www.mtggoldfish.com/deck/4673161">MonoG Ponza 600.001.Mazurin_Pavel</a>  | Throne of Eldraine | 2019-10-04 | ✅ |
 
 
 

@@ -48,8 +48,8 @@
 
 | Name | Set name | Set date | Legal |
 | -----| -------- | -------- | ----- |
-| [MonoW Heroic 696.001.Raven094](https://www.mtggoldfish.com/deck/4624436) | Innistrad: Midnight Hunt | 2021-09-24 | ✅ |
-| [MonoW Heroic 651.001.Mathonical](https://www.mtggoldfish.com/deck/4351125) | Commander Legends | 2020-11-20 | ✅ |
+| <a target="_blank" href="https://www.mtggoldfish.com/deck/4624436">MonoW Heroic 696.001.Raven094</a>  | Innistrad: Midnight Hunt | 2021-09-24 | ✅ |
+| <a target="_blank" href="https://www.mtggoldfish.com/deck/4351125">MonoW Heroic 651.001.Mathonical</a>  | Commander Legends | 2020-11-20 | ✅ |
 
 
 
@@ -58,8 +58,8 @@
 
 | Name | Set name | Set date | Legal |
 | -----| -------- | -------- | ----- |
-| [MonoW Heroic 722.001.kalko](https://www.mtggoldfish.com/deck/4667109) | Kamigawa: Neon Dynasty | 2022-02-18 | ✅ |
-| [MonoW Heroic 584.001.dhalsinbh1](https://www.mtggoldfish.com/deck/4351061) | War of the Spark | 2019-05-03 | ✅ |
+| <a target="_blank" href="https://www.mtggoldfish.com/deck/4667109">MonoW Heroic 722.001.kalko</a>  | Kamigawa: Neon Dynasty | 2022-02-18 | ✅ |
+| <a target="_blank" href="https://www.mtggoldfish.com/deck/4351061">MonoW Heroic 584.001.dhalsinbh1</a>  | War of the Spark | 2019-05-03 | ✅ |
 
 
 
@@ -70,5 +70,5 @@
 
 | 🗣️ | Name | Author | Date |
 | -- | ---- | ------ | ---- |
-| 🇬🇧 | [A Pauper Primer to Mono W Heroic](https://ravennonest.wordpress.com/2021/10/17/a-pauper-primer-to-mono-w-heroic/) | Raven | 2021-10-17   |
+| 🇬🇧 | <a target="_blank" href="https://ravennonest.wordpress.com/2021/10/17/a-pauper-primer-to-mono-w-heroic/">A Pauper Primer to Mono W Heroic</a>  | Raven | 2021-10-17   |
 

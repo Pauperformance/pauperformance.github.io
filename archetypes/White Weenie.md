@@ -53,8 +53,8 @@
 
 | Name | Set name | Set date | Legal |
 | -----| -------- | -------- | ----- |
-| [White Weenie 722.001.TheChronicle](https://www.mtggoldfish.com/deck/4667105) | Kamigawa: Neon Dynasty | 2022-02-18 | ✅ |
-| [White Weenie 447.001.Matteo Burello](https://www.mtggoldfish.com/deck/4351101) | Commander 2015 | 2015-11-13 | ✅ |
+| <a target="_blank" href="https://www.mtggoldfish.com/deck/4667105">White Weenie 722.001.TheChronicle</a>  | Kamigawa: Neon Dynasty | 2022-02-18 | ✅ |
+| <a target="_blank" href="https://www.mtggoldfish.com/deck/4351101">White Weenie 447.001.Matteo Burello</a>  | Commander 2015 | 2015-11-13 | ✅ |
 
 
 
@@ -65,5 +65,5 @@
 
 | 🗣️ | Name | Author | Date |
 | -- | ---- | ------ | ---- |
-| 🇮🇹 | [PAUPER DECK ANALISI - WHITE WEENIE, OLD BUT GOLD](http://www.metagame.it/articoli-pauper/2543-pauper-deck-analisi-white-weenie.html) | Matteo Burello | 2015-11-27   |
+| 🇮🇹 | <a target="_blank" href="http://www.metagame.it/articoli-pauper/2543-pauper-deck-analisi-white-weenie.html">PAUPER DECK ANALISI - WHITE WEENIE, OLD BUT GOLD</a>  | Matteo Burello | 2015-11-27   |
 

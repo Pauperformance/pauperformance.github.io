@@ -56,7 +56,7 @@
 
 | Name | Set name | Set date | Legal |
 | -----| -------- | -------- | ----- |
-| [MonoB Control 701.001.medvedev](https://www.mtggoldfish.com/deck/4680107) | Innistrad: Crimson Vow | 2021-11-19 | ✅ |
+| <a target="_blank" href="https://www.mtggoldfish.com/deck/4680107">MonoB Control 701.001.medvedev</a>  | Innistrad: Crimson Vow | 2021-11-19 | ✅ |
 
 
 
@@ -65,13 +65,13 @@
 
 | Name | Set name | Set date | Legal |
 | -----| -------- | -------- | ----- |
-| [MonoB Control 722.001.Venancioo](https://www.mtggoldfish.com/deck/4680111) | Kamigawa: Neon Dynasty | 2022-02-18 | ✅ |
-| [MonoB Control 722.001.John1111](https://www.mtggoldfish.com/deck/4680122) | Kamigawa: Neon Dynasty | 2022-02-18 | ✅ |
-| [MonoB Control 612.001.Shika93](https://www.mtggoldfish.com/deck/4680118) | Theros Beyond Death | 2020-01-24 | ✅ |
-| [MonoB Control 597.002.Shika93](https://www.mtggoldfish.com/deck/4680117) | Commander 2019 | 2019-08-23 | ✅ |
-| [MonoB Control 597.001.Shika93](https://www.mtggoldfish.com/deck/4680115) | Commander 2019 | 2019-08-23 | ✅ |
-| [MonoB Control 584.001.Shika93](https://www.mtggoldfish.com/deck/4680114) | War of the Spark | 2019-05-03 | ✅ |
-| [MonoB Control 537.001.Shika93](https://www.mtggoldfish.com/deck/4680113) | Dominaria | 2018-04-27 | ✅ |
+| <a target="_blank" href="https://www.mtggoldfish.com/deck/4680111">MonoB Control 722.001.Venancioo</a>  | Kamigawa: Neon Dynasty | 2022-02-18 | ✅ |
+| <a target="_blank" href="https://www.mtggoldfish.com/deck/4680122">MonoB Control 722.001.John1111</a>  | Kamigawa: Neon Dynasty | 2022-02-18 | ✅ |
+| <a target="_blank" href="https://www.mtggoldfish.com/deck/4680118">MonoB Control 612.001.Shika93</a>  | Theros Beyond Death | 2020-01-24 | ✅ |
+| <a target="_blank" href="https://www.mtggoldfish.com/deck/4680117">MonoB Control 597.002.Shika93</a>  | Commander 2019 | 2019-08-23 | ✅ |
+| <a target="_blank" href="https://www.mtggoldfish.com/deck/4680115">MonoB Control 597.001.Shika93</a>  | Commander 2019 | 2019-08-23 | ✅ |
+| <a target="_blank" href="https://www.mtggoldfish.com/deck/4680114">MonoB Control 584.001.Shika93</a>  | War of the Spark | 2019-05-03 | ✅ |
+| <a target="_blank" href="https://www.mtggoldfish.com/deck/4680113">MonoB Control 537.001.Shika93</a>  | Dominaria | 2018-04-27 | ✅ |
 
 
 

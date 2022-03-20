@@ -54,10 +54,10 @@
 
 | Name | Set name | Set date | Legal |
 | -----| -------- | -------- | ----- |
-| [Bogles 683.001.SanPop](https://www.mtggoldfish.com/deck/4624393) | Adventures in the Forgotten Realms | 2021-07-23 | ✅ |
-| [Bogles 648.001.Mathonical](https://www.mtggoldfish.com/deck/4351127) | Zendikar Rising | 2020-09-25 | ✅ |
-| [Bogles 597.001.Mathonical](https://www.mtggoldfish.com/deck/4351071) | Commander 2019 | 2019-08-23 | Ban 🔨 |
-| [Bogles 584.001.TheMaverickGirl](https://www.mtggoldfish.com/deck/4351066) | War of the Spark | 2019-05-03 | ✅ |
+| <a target="_blank" href="https://www.mtggoldfish.com/deck/4624393">Bogles 683.001.SanPop</a>  | Adventures in the Forgotten Realms | 2021-07-23 | ✅ |
+| <a target="_blank" href="https://www.mtggoldfish.com/deck/4351127">Bogles 648.001.Mathonical</a>  | Zendikar Rising | 2020-09-25 | ✅ |
+| <a target="_blank" href="https://www.mtggoldfish.com/deck/4351071">Bogles 597.001.Mathonical</a>  | Commander 2019 | 2019-08-23 | Ban 🔨 |
+| <a target="_blank" href="https://www.mtggoldfish.com/deck/4351066">Bogles 584.001.TheMaverickGirl</a>  | War of the Spark | 2019-05-03 | ✅ |
 
 
 
@@ -66,10 +66,10 @@
 
 | Name | Set name | Set date | Legal |
 | -----| -------- | -------- | ----- |
-| [Bogles 722.001._DissonancE_](https://www.mtggoldfish.com/deck/4667099) | Kamigawa: Neon Dynasty | 2022-02-18 | ✅ |
-| [Bogles 722.001.Sarlanga](https://www.mtggoldfish.com/deck/4667113) | Kamigawa: Neon Dynasty | 2022-02-18 | ✅ |
-| [Bogles 722.001.Darthkid](https://www.mtggoldfish.com/deck/4667097) | Kamigawa: Neon Dynasty | 2022-02-18 | ✅ |
-| [Bogles 584.001.Jail0Breaker](https://www.mtggoldfish.com/deck/4351056) | War of the Spark | 2019-05-03 | ✅ |
+| <a target="_blank" href="https://www.mtggoldfish.com/deck/4667099">Bogles 722.001._DissonancE_</a>  | Kamigawa: Neon Dynasty | 2022-02-18 | ✅ |
+| <a target="_blank" href="https://www.mtggoldfish.com/deck/4667113">Bogles 722.001.Sarlanga</a>  | Kamigawa: Neon Dynasty | 2022-02-18 | ✅ |
+| <a target="_blank" href="https://www.mtggoldfish.com/deck/4667097">Bogles 722.001.Darthkid</a>  | Kamigawa: Neon Dynasty | 2022-02-18 | ✅ |
+| <a target="_blank" href="https://www.mtggoldfish.com/deck/4351056">Bogles 584.001.Jail0Breaker</a>  | War of the Spark | 2019-05-03 | ✅ |
 
 
 
@@ -80,5 +80,5 @@
 
 | 🗣️ | Name | Author | Date |
 | -- | ---- | ------ | ---- |
-| 🇮🇹 | [[Pauper Tier] Aura Hexproof](http://www.metagame.it/forum/viewtopic.php?f=158&t=24491) | DaveSpace | 2011-12-27   |
+| 🇮🇹 | <a target="_blank" href="http://www.metagame.it/forum/viewtopic.php?f=158&t=24491">[Pauper Tier] Aura Hexproof</a>  | DaveSpace | 2011-12-27   |
 

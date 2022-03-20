@@ -51,7 +51,7 @@
 
 | Name | Set name | Set date | Legal |
 | -----| -------- | -------- | ----- |
-| [MonoU Faeries 696.001.Drugo](https://www.mtggoldfish.com/deck/4624381) | Innistrad: Midnight Hunt | 2021-09-24 | ✅ |
+| <a target="_blank" href="https://www.mtggoldfish.com/deck/4624381">MonoU Faeries 696.001.Drugo</a>  | Innistrad: Midnight Hunt | 2021-09-24 | ✅ |
 
 
 
@@ -60,8 +60,8 @@
 
 | Name | Set name | Set date | Legal |
 | -----| -------- | -------- | ----- |
-| [MonoU Faeries 722.001.MonoU Faeries](https://www.mtggoldfish.com/deck/4667107) | Kamigawa: Neon Dynasty | 2022-02-18 | ✅ |
-| [MonoU Faeries 540.001.Shika93](https://www.mtggoldfish.com/deck/4351740) | Battlebond | 2018-06-08 | Ban 🔨 |
+| <a target="_blank" href="https://www.mtggoldfish.com/deck/4667107">MonoU Faeries 722.001.MonoU Faeries</a>  | Kamigawa: Neon Dynasty | 2022-02-18 | ✅ |
+| <a target="_blank" href="https://www.mtggoldfish.com/deck/4351740">MonoU Faeries 540.001.Shika93</a>  | Battlebond | 2018-06-08 | Ban 🔨 |
 
 
 
@@ -72,5 +72,5 @@
 
 | 🗣️ | Name | Author | Date |
 | -- | ---- | ------ | ---- |
-| 🇮🇹 | [[Pauper Tier] Mono Blue Delver](http://www.metagame.it/forum/viewtopic.php?f=158&t=265) | Scrocchi | 2011-09-27   |
+| 🇮🇹 | <a target="_blank" href="http://www.metagame.it/forum/viewtopic.php?f=158&t=265">[Pauper Tier] Mono Blue Delver</a>  | Scrocchi | 2011-09-27   |
 

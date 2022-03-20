@@ -53,8 +53,8 @@
 
 | Name | Set name | Set date | Legal |
 | -----| -------- | -------- | ----- |
-| [Dimir Reanimator 722.001.Bryant_Cook](https://www.mtggoldfish.com/deck/4673153) | Kamigawa: Neon Dynasty | 2022-02-18 | ✅ |
-| [Dimir Reanimator 701.001.monkey_noises](https://www.mtggoldfish.com/deck/4673154) | Innistrad: Crimson Vow | 2021-11-19 | ✅ |
+| <a target="_blank" href="https://www.mtggoldfish.com/deck/4673153">Dimir Reanimator 722.001.Bryant_Cook</a>  | Kamigawa: Neon Dynasty | 2022-02-18 | ✅ |
+| <a target="_blank" href="https://www.mtggoldfish.com/deck/4673154">Dimir Reanimator 701.001.monkey_noises</a>  | Innistrad: Crimson Vow | 2021-11-19 | ✅ |
 
 
 

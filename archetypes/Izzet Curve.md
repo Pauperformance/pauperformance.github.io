@@ -60,7 +60,7 @@
 
 | Name | Set name | Set date | Legal |
 | -----| -------- | -------- | ----- |
-| [Izzet Curve 676.001.killersuv](https://www.mtggoldfish.com/deck/4351129) | Modern Horizons 2 | 2021-06-18 | ✅ |
+| <a target="_blank" href="https://www.mtggoldfish.com/deck/4351129">Izzet Curve 676.001.killersuv</a>  | Modern Horizons 2 | 2021-06-18 | ✅ |
 
 
 
@@ -69,8 +69,8 @@
 
 | Name | Set name | Set date | Legal |
 | -----| -------- | -------- | ----- |
-| [Izzet Curve 701.001.GiorgioCombo](https://www.mtggoldfish.com/deck/4679883) | Innistrad: Crimson Vow | 2021-11-19 | Ban 🔨 |
-| [Izzet Curve 676.001._INVISIBLEKID_](https://www.mtggoldfish.com/deck/4351130) | Modern Horizons 2 | 2021-06-18 | ✅ |
+| <a target="_blank" href="https://www.mtggoldfish.com/deck/4679883">Izzet Curve 701.001.GiorgioCombo</a>  | Innistrad: Crimson Vow | 2021-11-19 | Ban 🔨 |
+| <a target="_blank" href="https://www.mtggoldfish.com/deck/4351130">Izzet Curve 676.001._INVISIBLEKID_</a>  | Modern Horizons 2 | 2021-06-18 | ✅ |
 
 
 
@@ -81,5 +81,5 @@
 
 | 🗣️ | Name | Author | Date |
 | -- | ---- | ------ | ---- |
-| 🇬🇧 | [Pauper Storm Discord](https://discord.gg/zrn2N6HT) | <i class="fa-brands fa-discord"></i> | ~            |
+| 🇬🇧 | <a target="_blank" href="https://discord.gg/zrn2N6HT">Pauper Storm Discord</a>  | <i class="fa-brands fa-discord"></i> | ~            |
 

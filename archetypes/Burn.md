@@ -48,8 +48,8 @@ Tough decisions for Burn players also involve choosing whether to use removals o
 
 | Name | Set name | Set date | Legal |
 | -----| -------- | -------- | ----- |
-| [Burn 696.001.PRGJJAR](https://www.mtggoldfish.com/deck/4624409) | Innistrad: Midnight Hunt | 2021-09-24 | ✅ |
-| [Burn 584.001.SuperCow12653](https://www.mtggoldfish.com/deck/4351060) | War of the Spark | 2019-05-03 | ✅ |
+| <a target="_blank" href="https://www.mtggoldfish.com/deck/4624409">Burn 696.001.PRGJJAR</a>  | Innistrad: Midnight Hunt | 2021-09-24 | ✅ |
+| <a target="_blank" href="https://www.mtggoldfish.com/deck/4351060">Burn 584.001.SuperCow12653</a>  | War of the Spark | 2019-05-03 | ✅ |
 
 
 
@@ -58,10 +58,10 @@ Tough decisions for Burn players also involve choosing whether to use removals o
 
 | Name | Set name | Set date | Legal |
 | -----| -------- | -------- | ----- |
-| [Burn 722.001.davy2892](https://www.mtggoldfish.com/deck/4682095) | Kamigawa: Neon Dynasty | 2022-02-18 | ✅ |
-| [Burn 722.001.John1111](https://www.mtggoldfish.com/deck/4667101) | Kamigawa: Neon Dynasty | 2022-02-18 | ✅ |
-| [Burn 676.001.MrEvilEye](https://www.mtggoldfish.com/deck/4351765) | Modern Horizons 2 | 2021-06-18 | ✅ |
-| [Burn 560.001.Shika93](https://www.mtggoldfish.com/deck/4351742) | Guilds of Ravnica | 2018-10-05 | ✅ |
+| <a target="_blank" href="https://www.mtggoldfish.com/deck/4682095">Burn 722.001.davy2892</a>  | Kamigawa: Neon Dynasty | 2022-02-18 | ✅ |
+| <a target="_blank" href="https://www.mtggoldfish.com/deck/4667101">Burn 722.001.John1111</a>  | Kamigawa: Neon Dynasty | 2022-02-18 | ✅ |
+| <a target="_blank" href="https://www.mtggoldfish.com/deck/4351765">Burn 676.001.MrEvilEye</a>  | Modern Horizons 2 | 2021-06-18 | ✅ |
+| <a target="_blank" href="https://www.mtggoldfish.com/deck/4351742">Burn 560.001.Shika93</a>  | Guilds of Ravnica | 2018-10-05 | ✅ |
 
 
 
@@ -72,5 +72,5 @@ Tough decisions for Burn players also involve choosing whether to use removals o
 
 | 🗣️ | Name | Author | Date |
 | -- | ---- | ------ | ---- |
-| 🇬🇧 | [A Guide to Mono-Red Burn in Pauper](https://strategy.channelfireball.com/all-strategy/mtg/channelmagic-articles/a-guide-to-mono-red-burn-in-pauper/) | Martin Juza | 2019-11-01   |
+| 🇬🇧 | <a target="_blank" href="https://strategy.channelfireball.com/all-strategy/mtg/channelmagic-articles/a-guide-to-mono-red-burn-in-pauper/">A Guide to Mono-Red Burn in Pauper</a>  | Martin Juza | 2019-11-01   |
 

@@ -53,8 +53,8 @@
 
 | Name | Set name | Set date | Legal |
 | -----| -------- | -------- | ----- |
-| [Azorius Caw Blade 529.001.eternalgathering](https://www.mtggoldfish.com/deck/4351088) | Rivals of Ixalan | 2018-01-19 | ✅ |
-| [Azorius Caw Blade 493.001.gabripo93](https://www.mtggoldfish.com/deck/4351089) | Amonkhet | 2017-04-28 | ✅ |
+| <a target="_blank" href="https://www.mtggoldfish.com/deck/4351088">Azorius Caw Blade 529.001.eternalgathering</a>  | Rivals of Ixalan | 2018-01-19 | ✅ |
+| <a target="_blank" href="https://www.mtggoldfish.com/deck/4351089">Azorius Caw Blade 493.001.gabripo93</a>  | Amonkhet | 2017-04-28 | ✅ |
 
 
 
@@ -65,5 +65,5 @@
 
 | 🗣️ | Name | Author | Date |
 | -- | ---- | ------ | ---- |
-| 🇮🇹 | [UW Caw Blade – un midrange atipico](https://eternalgathering.altervista.org/caw-blade/) | eternalgathering | 2018-02-23   |
+| 🇮🇹 | <a target="_blank" href="https://eternalgathering.altervista.org/caw-blade/">UW Caw Blade – un midrange atipico</a>  | eternalgathering | 2018-02-23   |
 

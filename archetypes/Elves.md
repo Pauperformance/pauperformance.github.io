@@ -51,9 +51,9 @@
 
 | Name | Set name | Set date | Legal |
 | -----| -------- | -------- | ----- |
-| [Elves 696.001.tarmogoyf_ita](https://www.mtggoldfish.com/deck/4624413) | Innistrad: Midnight Hunt | 2021-09-24 | ✅ |
-| [Elves 576.001.TheMaverickGal](https://www.mtggoldfish.com/deck/4351055) | Ravnica Allegiance | 2019-01-25 | ✅ |
-| [Elves 560.001.TheMaverickGal](https://www.mtggoldfish.com/deck/4351054) | Guilds of Ravnica | 2018-10-05 | ✅ |
+| <a target="_blank" href="https://www.mtggoldfish.com/deck/4624413">Elves 696.001.tarmogoyf_ita</a>  | Innistrad: Midnight Hunt | 2021-09-24 | ✅ |
+| <a target="_blank" href="https://www.mtggoldfish.com/deck/4351055">Elves 576.001.TheMaverickGal</a>  | Ravnica Allegiance | 2019-01-25 | ✅ |
+| <a target="_blank" href="https://www.mtggoldfish.com/deck/4351054">Elves 560.001.TheMaverickGal</a>  | Guilds of Ravnica | 2018-10-05 | ✅ |
 
 
 
@@ -62,7 +62,7 @@
 
 | Name | Set name | Set date | Legal |
 | -----| -------- | -------- | ----- |
-| [Elves 722.001.tarmogoyf_ita](https://www.mtggoldfish.com/deck/4667110) | Kamigawa: Neon Dynasty | 2022-02-18 | ✅ |
+| <a target="_blank" href="https://www.mtggoldfish.com/deck/4667110">Elves 722.001.tarmogoyf_ita</a>  | Kamigawa: Neon Dynasty | 2022-02-18 | ✅ |
 
 
 
@@ -73,6 +73,6 @@
 
 | 🗣️ | Name | Author | Date |
 | -- | ---- | ------ | ---- |
-| 🇬🇧 | [Pauper Elves Discord](https://discord.gg/JukzE4x4) | <i class="fa-brands fa-discord"></i> | ~            |
-| 🇮🇹 | [[Pauper Tier] Elves](http://www.metagame.it/forum/viewtopic.php?f=158&t=5180) | Kuraiden | 2012-05-17   |
+| 🇬🇧 | <a target="_blank" href="https://discord.gg/JukzE4x4">Pauper Elves Discord</a>  | <i class="fa-brands fa-discord"></i> | ~            |
+| 🇮🇹 | <a target="_blank" href="http://www.metagame.it/forum/viewtopic.php?f=158&t=5180">[Pauper Tier] Elves</a>  | Kuraiden | 2012-05-17   |
 

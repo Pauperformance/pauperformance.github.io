@@ -47,7 +47,7 @@
 
 | Name | Set name | Set date | Legal |
 | -----| -------- | -------- | ----- |
-| [Kuldotha Rebirth 722.001.Tarrasque1](https://www.mtggoldfish.com/deck/4618362) | Kamigawa: Neon Dynasty | 2022-02-18 | ✅ |
+| <a target="_blank" href="https://www.mtggoldfish.com/deck/4618362">Kuldotha Rebirth 722.001.Tarrasque1</a>  | Kamigawa: Neon Dynasty | 2022-02-18 | ✅ |
 
 
 
@@ -56,7 +56,7 @@
 
 | Name | Set name | Set date | Legal |
 | -----| -------- | -------- | ----- |
-| [Kuldotha Rebirth 459.001.JakeStiles](https://www.mtggoldfish.com/deck/4618615) | Shadows over Innistrad | 2016-04-08 | Ban 🔨 |
+| <a target="_blank" href="https://www.mtggoldfish.com/deck/4618615">Kuldotha Rebirth 459.001.JakeStiles</a>  | Shadows over Innistrad | 2016-04-08 | Ban 🔨 |
 
 
 
@@ -65,8 +65,8 @@
 
 | 🗣️ | 📺 | Deck | Author | Date |
 | -- | -- | ---- | ------ | ---- |
-| 🇬🇧 | <i class="fa-brands fa-youtube"></i> | [Kuldotha Rebirth 722.001.Tarrasque1](https://www.youtube.com/watch?v=5JBC2EhjGdM) | Pauperformance | 2022-03-20   |
-| 🇬🇧 | <i class="fa-brands fa-youtube"></i> | [Kuldotha Rebirth 722.001.Tarrasque1](https://www.youtube.com/watch?v=gqPuvf0OzKY) | Pauperformance | 2022-03-16   |
+| 🇬🇧 | <i class="fa-brands fa-youtube"></i> | <a target="_blank" href="https://www.youtube.com/watch?v=5JBC2EhjGdM">Kuldotha Rebirth 722.001.Tarrasque1</a> | Pauperformance | 2022-03-20   |
+| 🇬🇧 | <i class="fa-brands fa-youtube"></i> | <a target="_blank" href="https://www.youtube.com/watch?v=gqPuvf0OzKY">Kuldotha Rebirth 722.001.Tarrasque1</a>  | Pauperformance | 2022-03-16   |
 
 
 
@@ -75,5 +75,5 @@
 
 | 🗣️ | Name | Author | Date |
 | -- | ---- | ------ | ---- |
-| 🇬🇧 | [Playing Pauper: Kuldotha Boros](https://www.mtggoldfish.com/articles/playing-pauper-kuldotha-boros) | Jake Stiles | 2016-11-05   |
+| 🇬🇧 | <a target="_blank" href="https://www.mtggoldfish.com/articles/playing-pauper-kuldotha-boros">Playing Pauper: Kuldotha Boros</a>  | Jake Stiles | 2016-11-05   |
 

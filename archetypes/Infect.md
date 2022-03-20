@@ -49,8 +49,8 @@
 
 | Name | Set name | Set date | Legal |
 | -----| -------- | -------- | ----- |
-| [Infect 722.001.Sorceress-Queen](https://www.mtggoldfish.com/deck/4667112) | Kamigawa: Neon Dynasty | 2022-02-18 | ✅ |
-| [Infect 722.001.Luca_Borghesi](https://www.mtggoldfish.com/deck/4673155) | Kamigawa: Neon Dynasty | 2022-02-18 | ✅ |
+| <a target="_blank" href="https://www.mtggoldfish.com/deck/4667112">Infect 722.001.Sorceress-Queen</a>  | Kamigawa: Neon Dynasty | 2022-02-18 | ✅ |
+| <a target="_blank" href="https://www.mtggoldfish.com/deck/4673155">Infect 722.001.Luca_Borghesi</a>  | Kamigawa: Neon Dynasty | 2022-02-18 | ✅ |
 
 
 
@@ -61,5 +61,5 @@
 
 | 🗣️ | Name | Author | Date |
 | -- | ---- | ------ | ---- |
-| 🇮🇹 | [[Pauper Tier] Infect](http://www.metagame.it/forum/viewtopic.php?f=158&t=26111) | Dave Space | 2011-12-27   |
+| 🇮🇹 | <a target="_blank" href="http://www.metagame.it/forum/viewtopic.php?f=158&t=26111">[Pauper Tier] Infect</a>  | Dave Space | 2011-12-27   |
 

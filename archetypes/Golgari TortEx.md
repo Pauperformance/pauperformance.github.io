@@ -61,9 +61,9 @@
 
 | Name | Set name | Set date | Legal |
 | -----| -------- | -------- | ----- |
-| [Golgari TortEx 669.001.Shika93](https://www.mtggoldfish.com/deck/4351733) | Strixhaven: School of Mages | 2021-04-23 | ✅ |
-| [Golgari TortEx 600.001.Shika93](https://www.mtggoldfish.com/deck/4351750) | Throne of Eldraine | 2019-10-04 | ✅ |
-| [Golgari TortEx 537.001.Shika93](https://www.mtggoldfish.com/deck/4351741) | Dominaria | 2018-04-27 | ✅ |
+| <a target="_blank" href="https://www.mtggoldfish.com/deck/4351733">Golgari TortEx 669.001.Shika93</a>  | Strixhaven: School of Mages | 2021-04-23 | ✅ |
+| <a target="_blank" href="https://www.mtggoldfish.com/deck/4351750">Golgari TortEx 600.001.Shika93</a>  | Throne of Eldraine | 2019-10-04 | ✅ |
+| <a target="_blank" href="https://www.mtggoldfish.com/deck/4351741">Golgari TortEx 537.001.Shika93</a>  | Dominaria | 2018-04-27 | ✅ |
 
 
 
@@ -74,5 +74,5 @@
 
 | 🗣️ | Name | Author | Date |
 | -- | ---- | ------ | ---- |
-| 🇬🇧 | [Pauper TortEx Discord](https://discord.gg/fRzwk2TJ) | <i class="fa-brands fa-discord"></i> | ~            |
+| 🇬🇧 | <a target="_blank" href="https://discord.gg/fRzwk2TJ">Pauper TortEx Discord</a>  | <i class="fa-brands fa-discord"></i> | ~            |
 

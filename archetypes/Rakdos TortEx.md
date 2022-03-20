@@ -53,9 +53,9 @@
 
 | Name | Set name | Set date | Legal |
 | -----| -------- | -------- | ----- |
-| [Rakdos TortEx 683.002.Shika93](https://www.mtggoldfish.com/deck/4351759) | Adventures in the Forgotten Realms | 2021-07-23 | ✅ |
-| [Rakdos TortEx 683.001.Shika93](https://www.mtggoldfish.com/deck/4351758) | Adventures in the Forgotten Realms | 2021-07-23 | ✅ |
-| [Rakdos TortEx 518.001.Fran Blanco](https://www.mtggoldfish.com/deck/4351049) | Iconic Masters | 2017-11-17 | ✅ |
+| <a target="_blank" href="https://www.mtggoldfish.com/deck/4351759">Rakdos TortEx 683.002.Shika93</a>  | Adventures in the Forgotten Realms | 2021-07-23 | ✅ |
+| <a target="_blank" href="https://www.mtggoldfish.com/deck/4351758">Rakdos TortEx 683.001.Shika93</a>  | Adventures in the Forgotten Realms | 2021-07-23 | ✅ |
+| <a target="_blank" href="https://www.mtggoldfish.com/deck/4351049">Rakdos TortEx 518.001.Fran Blanco</a>  | Iconic Masters | 2017-11-17 | ✅ |
 
 
 
@@ -66,5 +66,5 @@
 
 | 🗣️ | Name | Author | Date |
 | -- | ---- | ------ | ---- |
-| 🇬🇧 | [Pauper TortEx Discord](https://discord.gg/fRzwk2TJ) | <i class="fa-brands fa-discord"></i> | ~            |
+| 🇬🇧 | <a target="_blank" href="https://discord.gg/fRzwk2TJ">Pauper TortEx Discord</a>  | <i class="fa-brands fa-discord"></i> | ~            |
 

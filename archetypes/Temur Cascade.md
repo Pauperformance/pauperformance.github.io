@@ -51,9 +51,9 @@
 
 | Name | Set name | Set date | Legal |
 | -----| -------- | -------- | ----- |
-| [Temur Cascade 696.002.Shika93](https://www.mtggoldfish.com/deck/4679974) | Innistrad: Midnight Hunt | 2021-09-24 | ✅ |
-| [Temur Cascade 696.001.Shika93](https://www.mtggoldfish.com/deck/4353988) | Innistrad: Midnight Hunt | 2021-09-24 | ✅ |
-| [Temur Cascade 696.001.CooperTheRed](https://www.mtggoldfish.com/deck/4353987) | Innistrad: Midnight Hunt | 2021-09-24 | Ban 🔨 |
+| <a target="_blank" href="https://www.mtggoldfish.com/deck/4679974">Temur Cascade 696.002.Shika93</a>  | Innistrad: Midnight Hunt | 2021-09-24 | ✅ |
+| <a target="_blank" href="https://www.mtggoldfish.com/deck/4353988">Temur Cascade 696.001.Shika93</a>  | Innistrad: Midnight Hunt | 2021-09-24 | ✅ |
+| <a target="_blank" href="https://www.mtggoldfish.com/deck/4353987">Temur Cascade 696.001.CooperTheRed</a>  | Innistrad: Midnight Hunt | 2021-09-24 | Ban 🔨 |
 
 
 
@@ -62,8 +62,8 @@
 
 | 🗣️ | 📺 | Deck | Author | Date |
 | -- | -- | ---- | ------ | ---- |
-| 🇮🇹 | <i class="fa-brands fa-youtube"></i> | [Temur Cascade 696.002.Shika93](https://www.youtube.com/watch?v=St6w7MTBabQ) | Pauperformance | 2022-03-20   |
-| 🇮🇹 | <i class="fa-brands fa-youtube"></i> | [Temur Cascade 696.002.Shika93](https://www.youtube.com/watch?v=yocuMcUPGBA) | Pauperformance | 2022-03-17   |
+| 🇮🇹 | <i class="fa-brands fa-youtube"></i> | <a target="_blank" href="https://www.youtube.com/watch?v=St6w7MTBabQ">Temur Cascade 696.002.Shika93</a> | Pauperformance | 2022-03-20   |
+| 🇮🇹 | <i class="fa-brands fa-youtube"></i> | <a target="_blank" href="https://www.youtube.com/watch?v=yocuMcUPGBA">Temur Cascade 696.002.Shika93</a>  | Pauperformance | 2022-03-17   |
 
 
 
@@ -72,5 +72,5 @@
 
 | 🗣️ | Name | Author | Date |
 | -- | ---- | ------ | ---- |
-| 🇬🇧 | [Pauper Cascade Discord](https://discord.gg/2qf7KsVE) | <i class="fa-brands fa-discord"></i> | ~            |
+| 🇬🇧 | <a target="_blank" href="https://discord.gg/2qf7KsVE">Pauper Cascade Discord</a>  | <i class="fa-brands fa-discord"></i> | ~            |
 

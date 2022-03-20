@@ -61,8 +61,8 @@
 
 | Name | Set name | Set date | Legal |
 | -----| -------- | -------- | ----- |
-| [Moggwarts 683.001.Hamuda](https://www.mtggoldfish.com/deck/4624432) | Adventures in the Forgotten Realms | 2021-07-23 | ✅ |
-| [Moggwarts 669.001.Hamuda](https://www.mtggoldfish.com/deck/4351108) | Strixhaven: School of Mages | 2021-04-23 | ✅ |
+| <a target="_blank" href="https://www.mtggoldfish.com/deck/4624432">Moggwarts 683.001.Hamuda</a>  | Adventures in the Forgotten Realms | 2021-07-23 | ✅ |
+| <a target="_blank" href="https://www.mtggoldfish.com/deck/4351108">Moggwarts 669.001.Hamuda</a>  | Strixhaven: School of Mages | 2021-04-23 | ✅ |
 
 
 
@@ -71,11 +71,11 @@
 
 | Name | Set name | Set date | Legal |
 | -----| -------- | -------- | ----- |
-| [Moggwarts 722.001.Shika93](https://www.mtggoldfish.com/deck/4680046) | Kamigawa: Neon Dynasty | 2022-02-18 | ✅ |
-| [Moggwarts 722.001.Kiiiittyman](https://www.mtggoldfish.com/deck/4667108) | Kamigawa: Neon Dynasty | 2022-02-18 | ✅ |
-| [Moggwarts 722.001.AMzobud](https://www.mtggoldfish.com/deck/4645828) | Kamigawa: Neon Dynasty | 2022-02-18 | ✅ |
-| [Moggwarts 669.001.pepeisra](https://www.mtggoldfish.com/deck/4351109) | Strixhaven: School of Mages | 2021-04-23 | ✅ |
-| [Moggwarts 669.001.Milkk](https://www.mtggoldfish.com/deck/4351099) | Strixhaven: School of Mages | 2021-04-23 | ✅ |
+| <a target="_blank" href="https://www.mtggoldfish.com/deck/4680046">Moggwarts 722.001.Shika93</a>  | Kamigawa: Neon Dynasty | 2022-02-18 | ✅ |
+| <a target="_blank" href="https://www.mtggoldfish.com/deck/4667108">Moggwarts 722.001.Kiiiittyman</a>  | Kamigawa: Neon Dynasty | 2022-02-18 | ✅ |
+| <a target="_blank" href="https://www.mtggoldfish.com/deck/4645828">Moggwarts 722.001.AMzobud</a>  | Kamigawa: Neon Dynasty | 2022-02-18 | ✅ |
+| <a target="_blank" href="https://www.mtggoldfish.com/deck/4351109">Moggwarts 669.001.pepeisra</a>  | Strixhaven: School of Mages | 2021-04-23 | ✅ |
+| <a target="_blank" href="https://www.mtggoldfish.com/deck/4351099">Moggwarts 669.001.Milkk</a>  | Strixhaven: School of Mages | 2021-04-23 | ✅ |
 
 
 
@@ -84,8 +84,8 @@
 
 | 🗣️ | 📺 | Deck | Author | Date |
 | -- | -- | ---- | ------ | ---- |
-| 🇮🇹 | <i class="fa-brands fa-youtube"></i> | [Moggwarts 722.001.Shika93](https://www.youtube.com/watch?v=iTHsl8oBHG8) | Pauperformance | 2022-03-17   |
-| 🇬🇧 | <i class="fa-brands fa-youtube"></i> | [Moggwarts 722.001.AMzobud](https://www.youtube.com/watch?v=7RbDZNvio3M) | Pauperformance | 2022-03-17   |
+| 🇮🇹 | <i class="fa-brands fa-youtube"></i> | <a target="_blank" href="https://www.youtube.com/watch?v=iTHsl8oBHG8">Moggwarts 722.001.Shika93</a>  | Pauperformance | 2022-03-17   |
+| 🇬🇧 | <i class="fa-brands fa-youtube"></i> | <a target="_blank" href="https://www.youtube.com/watch?v=7RbDZNvio3M">Moggwarts 722.001.AMzobud</a>  | Pauperformance | 2022-03-17   |
 
 
 
@@ -94,5 +94,5 @@
 
 | 🗣️ | Name | Author | Date |
 | -- | ---- | ------ | ---- |
-| 🇬🇧 | [Pauper Moggwarts Discord](https://discord.gg/hdFAKcTd) | <i class="fa-brands fa-discord"></i> | ~            |
+| 🇬🇧 | <a target="_blank" href="https://discord.gg/hdFAKcTd">Pauper Moggwarts Discord</a>  | <i class="fa-brands fa-discord"></i> | ~            |
 

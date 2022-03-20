@@ -40,8 +40,8 @@
 
 | Name | Set name | Set date | Legal |
 | -----| -------- | -------- | ----- |
-| [Jund Gardens 722.002.Milkk](https://www.mtggoldfish.com/deck/4675385) | Kamigawa: Neon Dynasty | 2022-02-18 | ✅ |
-| [Jund Gardens 722.001.Milkk](https://www.mtggoldfish.com/deck/4675387) | Kamigawa: Neon Dynasty | 2022-02-18 | ✅ |
+| <a target="_blank" href="https://www.mtggoldfish.com/deck/4675385">Jund Gardens 722.002.Milkk</a>  | Kamigawa: Neon Dynasty | 2022-02-18 | ✅ |
+| <a target="_blank" href="https://www.mtggoldfish.com/deck/4675387">Jund Gardens 722.001.Milkk</a>  | Kamigawa: Neon Dynasty | 2022-02-18 | ✅ |
 
 
 

@@ -52,8 +52,8 @@ Since 2019, the addition of [Savage Swipe](https://scryfall.com/card/mh1/178/sav
 
 | Name | Set name | Set date | Legal |
 | -----| -------- | -------- | ----- |
-| [Stompy 722.001.tarmogoyf_ita](https://www.mtggoldfish.com/deck/4680163) | Kamigawa: Neon Dynasty | 2022-02-18 | ✅ |
-| [Stompy 696.001.Ixidor29](https://www.mtggoldfish.com/deck/4624367) | Innistrad: Midnight Hunt | 2021-09-24 | ✅ |
+| <a target="_blank" href="https://www.mtggoldfish.com/deck/4680163">Stompy 722.001.tarmogoyf_ita</a>  | Kamigawa: Neon Dynasty | 2022-02-18 | ✅ |
+| <a target="_blank" href="https://www.mtggoldfish.com/deck/4624367">Stompy 696.001.Ixidor29</a>  | Innistrad: Midnight Hunt | 2021-09-24 | ✅ |
 
 
 
@@ -62,9 +62,9 @@ Since 2019, the addition of [Savage Swipe](https://scryfall.com/card/mh1/178/sav
 
 | Name | Set name | Set date | Legal |
 | -----| -------- | -------- | ----- |
-| [Stompy 722.001.thuriborghez](https://www.mtggoldfish.com/deck/4667104) | Kamigawa: Neon Dynasty | 2022-02-18 | ✅ |
-| [Stompy 669.001.Shika93](https://www.mtggoldfish.com/deck/4351732) | Strixhaven: School of Mages | 2021-04-23 | ✅ |
-| [Stompy 537.001.Shika93](https://www.mtggoldfish.com/deck/4351739) | Dominaria | 2018-04-27 | ✅ |
+| <a target="_blank" href="https://www.mtggoldfish.com/deck/4667104">Stompy 722.001.thuriborghez</a>  | Kamigawa: Neon Dynasty | 2022-02-18 | ✅ |
+| <a target="_blank" href="https://www.mtggoldfish.com/deck/4351732">Stompy 669.001.Shika93</a>  | Strixhaven: School of Mages | 2021-04-23 | ✅ |
+| <a target="_blank" href="https://www.mtggoldfish.com/deck/4351739">Stompy 537.001.Shika93</a>  | Dominaria | 2018-04-27 | ✅ |
 
 
 
@@ -75,10 +75,10 @@ Since 2019, the addition of [Savage Swipe](https://scryfall.com/card/mh1/178/sav
 
 | 🗣️ | Name | Author | Date |
 | -- | ---- | ------ | ---- |
-| 🇬🇧 | [Pauper Stompy Discord](https://discord.gg/RzTmb76qjJ) | <i class="fa-brands fa-discord"></i> | ~            |
-| 🇬🇧 | [Pauper Stompy Deck Guide](https://strategy.channelfireball.com/all-strategy/mtg/channelmagic-articles/pauper-stompy-deck-guide/) | Alex Ullman | 2020-08-27   |
-| 🇬🇧 | [Bringing Back Pauper Stompy](https://www.coolstuffinc.com/a/kendrasmith-11212018-bringing-back-pauper-stompy) | Paige Smith | 2018-11-21   |
-| 🇬🇧 | [Mono Green Stompy Pauper Guide](https://teamhp555130435.wordpress.com/2018/10/26/mono-green-stompy-pauper-guide/) | airborne17th | 2018-10-26   |
-| 🇮🇹 | [[PAUPER PRIMER] Mono Green](http://www.metagame.it/forum/viewtopic.php?f=187&t=10786) | Mr Pain | 2013-12-24   |
-| 🇬🇧 | [[Primer] Mono Green Aggro (stompy)](https://www.mtgsalvation.com/forums/the-game/pauper/mtgo-pauper/established/189724-primer-mono-green-aggro-stompy) | Psychobabble | 2013-10-17   |
+| 🇬🇧 | <a target="_blank" href="https://discord.gg/RzTmb76qjJ">Pauper Stompy Discord</a>  | <i class="fa-brands fa-discord"></i> | ~            |
+| 🇬🇧 | <a target="_blank" href="https://strategy.channelfireball.com/all-strategy/mtg/channelmagic-articles/pauper-stompy-deck-guide/">Pauper Stompy Deck Guide</a>  | Alex Ullman | 2020-08-27   |
+| 🇬🇧 | <a target="_blank" href="https://www.coolstuffinc.com/a/kendrasmith-11212018-bringing-back-pauper-stompy">Bringing Back Pauper Stompy</a>  | Paige Smith | 2018-11-21   |
+| 🇬🇧 | <a target="_blank" href="https://teamhp555130435.wordpress.com/2018/10/26/mono-green-stompy-pauper-guide/">Mono Green Stompy Pauper Guide</a>  | airborne17th | 2018-10-26   |
+| 🇮🇹 | <a target="_blank" href="http://www.metagame.it/forum/viewtopic.php?f=187&t=10786">[PAUPER PRIMER] Mono Green</a>  | Mr Pain | 2013-12-24   |
+| 🇬🇧 | <a target="_blank" href="https://www.mtgsalvation.com/forums/the-game/pauper/mtgo-pauper/established/189724-primer-mono-green-aggro-stompy">[Primer] Mono Green Aggro (stompy)</a>  | Psychobabble | 2013-10-17   |
 

@@ -59,8 +59,8 @@
 
 | Name | Set name | Set date | Legal |
 | -----| -------- | -------- | ----- |
-| [Familiars 696.001.Finespoo](https://www.mtggoldfish.com/deck/4624361) | Innistrad: Midnight Hunt | 2021-09-24 | ✅ |
-| [Familiars 533.001.A_AdeptoTerra](https://www.mtggoldfish.com/deck/4351105) | Masters 25 | 2018-03-16 | Ban 🔨 |
+| <a target="_blank" href="https://www.mtggoldfish.com/deck/4624361">Familiars 696.001.Finespoo</a>  | Innistrad: Midnight Hunt | 2021-09-24 | ✅ |
+| <a target="_blank" href="https://www.mtggoldfish.com/deck/4351105">Familiars 533.001.A_AdeptoTerra</a>  | Masters 25 | 2018-03-16 | Ban 🔨 |
 
 
 
@@ -69,10 +69,10 @@
 
 | Name | Set name | Set date | Legal |
 | -----| -------- | -------- | ----- |
-| [Familiars 722.001.Tinkmaster](https://www.mtggoldfish.com/deck/4667098) | Kamigawa: Neon Dynasty | 2022-02-18 | ✅ |
-| [Familiars 584.003.420Dragon](https://www.mtggoldfish.com/deck/4351067) | War of the Spark | 2019-05-03 | ✅ |
-| [Familiars 584.002.420Dragon](https://www.mtggoldfish.com/deck/4351065) | War of the Spark | 2019-05-03 | ✅ |
-| [Familiars 584.001.420Dragon](https://www.mtggoldfish.com/deck/4351064) | War of the Spark | 2019-05-03 | ✅ |
+| <a target="_blank" href="https://www.mtggoldfish.com/deck/4667098">Familiars 722.001.Tinkmaster</a>  | Kamigawa: Neon Dynasty | 2022-02-18 | ✅ |
+| <a target="_blank" href="https://www.mtggoldfish.com/deck/4351067">Familiars 584.003.420Dragon</a>  | War of the Spark | 2019-05-03 | ✅ |
+| <a target="_blank" href="https://www.mtggoldfish.com/deck/4351065">Familiars 584.002.420Dragon</a>  | War of the Spark | 2019-05-03 | ✅ |
+| <a target="_blank" href="https://www.mtggoldfish.com/deck/4351064">Familiars 584.001.420Dragon</a>  | War of the Spark | 2019-05-03 | ✅ |
 
 
 
@@ -83,8 +83,8 @@
 
 | 🗣️ | Name | Author | Date |
 | -- | ---- | ------ | ---- |
-| 🇬🇧 | [Pauper Familiars Discord](https://discord.gg/ANYVTjTf) | <i class="fa-brands fa-discord"></i> | ~            |
-| 🇬🇧 | [UW Familiars HOW TO and sideboarding guide](https://www.youtube.com/watch?v=aBjW1lKdrYo&t=1s) | kalikaiz | 2021-12-07   |
-| 🇮🇹 | [UW Familiar Pauper League](http://pauperwave.altervista.org/uw-familiar-pauper-league/) | Alessandro Moretti | 2020-04-01   |
-| 🇬🇧 | [Familiar speed tutorial with 420dragon](https://www.youtube.com/watch?v=59P3zGL_54A) | 420dragon | 2017-12-22   |
+| 🇬🇧 | <a target="_blank" href="https://discord.gg/ANYVTjTf">Pauper Familiars Discord</a>  | <i class="fa-brands fa-discord"></i> | ~            |
+| 🇬🇧 | <a target="_blank" href="https://www.youtube.com/watch?v=aBjW1lKdrYo&t=1s">UW Familiars HOW TO and sideboarding guide</a>  | kalikaiz | 2021-12-07   |
+| 🇮🇹 | <a target="_blank" href="http://pauperwave.altervista.org/uw-familiar-pauper-league/">UW Familiar Pauper League</a>  | Alessandro Moretti | 2020-04-01   |
+| 🇬🇧 | <a target="_blank" href="https://www.youtube.com/watch?v=59P3zGL_54A">Familiar speed tutorial with 420dragon</a>  | 420dragon | 2017-12-22   |
 

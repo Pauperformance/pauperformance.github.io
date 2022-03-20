@@ -47,8 +47,8 @@
 
 | Name | Set name | Set date | Legal |
 | -----| -------- | -------- | ----- |
-| [Jeskai Snow 600.001.Thebiologist](https://www.mtggoldfish.com/deck/4673181) | Throne of Eldraine | 2019-10-04 | Ban 🔨 |
-| [Jeskai Snow 600.001.Backoff](https://www.mtggoldfish.com/deck/4673180) | Throne of Eldraine | 2019-10-04 | Ban 🔨 |
+| <a target="_blank" href="https://www.mtggoldfish.com/deck/4673181">Jeskai Snow 600.001.Thebiologist</a>  | Throne of Eldraine | 2019-10-04 | Ban 🔨 |
+| <a target="_blank" href="https://www.mtggoldfish.com/deck/4673180">Jeskai Snow 600.001.Backoff</a>  | Throne of Eldraine | 2019-10-04 | Ban 🔨 |
 
 
 

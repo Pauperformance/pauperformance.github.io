@@ -48,7 +48,7 @@
 
 | Name | Set name | Set date | Legal |
 | -----| -------- | -------- | ----- |
-| [Rakdos Control 540.001.Bruno dos Santos Silva](https://www.mtggoldfish.com/deck/4351050) | Battlebond | 2018-06-08 | ✅ |
+| <a target="_blank" href="https://www.mtggoldfish.com/deck/4351050">Rakdos Control 540.001.Bruno dos Santos Silva</a>  | Battlebond | 2018-06-08 | ✅ |
 
 
 
@@ -57,7 +57,7 @@
 
 | Name | Set name | Set date | Legal |
 | -----| -------- | -------- | ----- |
-| [Rakdos Control 658.001.Topsy](https://www.mtggoldfish.com/deck/4673158) | Kaldheim | 2021-02-05 | ✅ |
+| <a target="_blank" href="https://www.mtggoldfish.com/deck/4673158">Rakdos Control 658.001.Topsy</a>  | Kaldheim | 2021-02-05 | ✅ |
 
 
 

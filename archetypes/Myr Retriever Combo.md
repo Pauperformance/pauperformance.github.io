@@ -20,7 +20,7 @@
 
 | Name | Set name | Set date | Legal |
 | -----| -------- | -------- | ----- |
-| [Myr Retriever Combo 722.001.Shika93](https://www.mtggoldfish.com/deck/4675388) | Kamigawa: Neon Dynasty | 2022-02-18 | ✅ |
+| <a target="_blank" href="https://www.mtggoldfish.com/deck/4675388">Myr Retriever Combo 722.001.Shika93</a>  | Kamigawa: Neon Dynasty | 2022-02-18 | ✅ |
 
 
 

@@ -52,9 +52,9 @@
 
 | Name | Set name | Set date | Legal |
 | -----| -------- | -------- | ----- |
-| [Chatterstorm 676.003.gannoncd](https://www.mtggoldfish.com/deck/4351145) | Modern Horizons 2 | 2021-06-18 | Ban 🔨 |
-| [Chatterstorm 676.002.gannoncd](https://www.mtggoldfish.com/deck/4351144) | Modern Horizons 2 | 2021-06-18 | Ban 🔨 |
-| [Chatterstorm 676.001.gannoncd](https://www.mtggoldfish.com/deck/4351143) | Modern Horizons 2 | 2021-06-18 | Ban 🔨 |
+| <a target="_blank" href="https://www.mtggoldfish.com/deck/4351145">Chatterstorm 676.003.gannoncd</a>  | Modern Horizons 2 | 2021-06-18 | Ban 🔨 |
+| <a target="_blank" href="https://www.mtggoldfish.com/deck/4351144">Chatterstorm 676.002.gannoncd</a>  | Modern Horizons 2 | 2021-06-18 | Ban 🔨 |
+| <a target="_blank" href="https://www.mtggoldfish.com/deck/4351143">Chatterstorm 676.001.gannoncd</a>  | Modern Horizons 2 | 2021-06-18 | Ban 🔨 |
 
 
 

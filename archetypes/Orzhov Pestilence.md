@@ -71,8 +71,8 @@ The deck is sometimes considered unstable due to the high number of lands it req
 
 | Name | Set name | Set date | Legal |
 | -----| -------- | -------- | ----- |
-| [Orzhov Pestilence 696.001.Kampo](https://www.mtggoldfish.com/deck/4624375) | Innistrad: Midnight Hunt | 2021-09-24 | Ban 🔨 |
-| [Orzhov Pestilence 572.001.Amoras27](https://www.mtggoldfish.com/deck/4618609) | Ultimate Masters | 2018-12-07 | ✅ |
+| <a target="_blank" href="https://www.mtggoldfish.com/deck/4624375">Orzhov Pestilence 696.001.Kampo</a>  | Innistrad: Midnight Hunt | 2021-09-24 | Ban 🔨 |
+| <a target="_blank" href="https://www.mtggoldfish.com/deck/4618609">Orzhov Pestilence 572.001.Amoras27</a>  | Ultimate Masters | 2018-12-07 | ✅ |
 
 
 
@@ -81,8 +81,8 @@ The deck is sometimes considered unstable due to the high number of lands it req
 
 | Name | Set name | Set date | Legal |
 | -----| -------- | -------- | ----- |
-| [Orzhov Pestilence 584.001.Shika93](https://www.mtggoldfish.com/deck/4351746) | War of the Spark | 2019-05-03 | ✅ |
-| [Orzhov Pestilence 572.001.donzauker84](https://www.mtggoldfish.com/deck/4618593) | Ultimate Masters | 2018-12-07 | Ban 🔨 |
+| <a target="_blank" href="https://www.mtggoldfish.com/deck/4351746">Orzhov Pestilence 584.001.Shika93</a>  | War of the Spark | 2019-05-03 | ✅ |
+| <a target="_blank" href="https://www.mtggoldfish.com/deck/4618593">Orzhov Pestilence 572.001.donzauker84</a>  | Ultimate Masters | 2018-12-07 | Ban 🔨 |
 
 
 
@@ -93,6 +93,6 @@ The deck is sometimes considered unstable due to the high number of lands it req
 
 | 🗣️ | Name | Author | Date |
 | -- | ---- | ------ | ---- |
-| 🇬🇧 | [Pestilence: What You Have to Endure, What You Have to Put Others Through](https://www.coolstuffinc.com/a/kendrasmith-12262018-pestilence-what-you-have-to-endure-what-you-have-to-put-others-through) | Paige Smith | 2018-12-26   |
-| 🇮🇹 | [[Pauper Tier] Orzhov Pestilence](http://www.metagame.it/forum/viewtopic.php?f=158&t=26084) | Pentola | 2018-05-21   |
+| 🇬🇧 | <a target="_blank" href="https://www.coolstuffinc.com/a/kendrasmith-12262018-pestilence-what-you-have-to-endure-what-you-have-to-put-others-through">Pestilence: What You Have to Endure, What You Have to Put Others Through</a>  | Paige Smith | 2018-12-26   |
+| 🇮🇹 | <a target="_blank" href="http://www.metagame.it/forum/viewtopic.php?f=158&t=26084">[Pauper Tier] Orzhov Pestilence</a>  | Pentola | 2018-05-21   |
 
