@@ -71,6 +71,13 @@ Since 2019, the addition of [Savage Swipe](https://scryfall.com/card/mh1/178/sav
 
 
 
+## **Videos**
+
+| 🗣️ | 📺 | Deck | Author | Date |
+| -- | -- | ---- | ------ | ---- |
+| 🇬🇧 | <i class="fa-brands fa-youtube"></i> | [Stompy 722.002.tarmogoyf_ita](https://www.youtube.com/watch?v=wtRXWDfLZK8) | Pauperformance | 2022-04-07   |
+
+
 
 
 ## **Resources**
