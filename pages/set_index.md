@@ -757,4 +757,5 @@ Lines in **bold** correspond to sets that have introduced new cards in the [Paup
 | 739       | ymid          | Alchemy: Innistrad                              | 2021-12-09   |
 | 740       | clb           | Commander Legends: Battle for Baldur's Gate     | 2022-06-10   |
 | 741       | ncc           | New Capenna Commander                           | 2022-04-29   |
+| 742       | gdy           | Game Day Promos                                 | 2022-04-08   |
 
