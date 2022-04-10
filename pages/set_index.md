@@ -758,4 +758,5 @@ Lines in **bold** correspond to sets that have introduced new cards in the [Paup
 | 740       | clb           | Commander Legends: Battle for Baldur's Gate     | 2022-06-10   |
 | 741       | ncc           | New Capenna Commander                           | 2022-04-29   |
 | 742       | gdy           | Game Day Promos                                 | 2022-04-08   |
+| 743       | tsnc          | Streets of New Capenna Tokens                   | 2022-04-10   |
 
