@@ -56,3 +56,10 @@
 
 
 
+
+## **Resources**
+
+| 🗣️ | Name | Author | Date |
+| -- | ---- | ------ | ---- |
+| 🇬🇧 | <a target="_blank" href="https://mtg.cardsrealm.com/en-us/articles/pauper--rakdos-burn-deck-tech--sideboard-guide">Rakdos Burn Deck Tech & Sideboard Guide</a> | Tiago Fuguete | 2022-04-26   |
+
