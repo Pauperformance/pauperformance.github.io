@@ -8,6 +8,10 @@ If you think a relevant archetype is missing or a mistake is present, please let
 
 Every archetype in the list is linked to its dedicated page, where you will find useful resources.
 
+{% include mana-filter.html %}
+<!-- leave empty line after -->
+
+
 | Name                   | Dominant mana | Type            | Family          |
 | -----------------------| ------------- | --------------- | --------------- |
 [Acid Trip](../archetypes/Acid%20Trip.html) | <img src="../resources/images/mana/U.png" class="dominant-mana-icon"/> <img src="../resources/images/mana/W.png" class="dominant-mana-icon"/> | Midrange        | [            ](../families/.html) |
