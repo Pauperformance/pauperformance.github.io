@@ -22,8 +22,8 @@ Two PhDs have already joined the Academy: [PAUPERGANDA](./phds/PAUPERGANDA.html)
 
 ---
 
-## The current Pauperformance code for decks is **722**.
-It refers to Kamigawa: Neon Dynasty (neo), released on 2022-02-18.
+## The current Pauperformance code for decks is **735**.
+It refers to Streets of New Capenna (snc), released on 2022-04-29.
 
 ---
 

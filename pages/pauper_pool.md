@@ -10,7 +10,7 @@ This page should be useful for Pauper players that haven't followed the latest r
 
 Further information about reference numbers used by Pauperformance (p12e) to uniquely identify Magic sets can be found in the [Set Index page](set_index.html).
 
-The total number of cards in the Pauper pool is: 8316.
+The total number of cards in the Pauper pool is: 8413.
 
 ---
 Table of Contents
@@ -169,6 +169,7 @@ Table of Contents
 * [Innistrad: Midnight Hunt](#innistrad-midnight-hunt-mid) (*release: 2021-09-24 ~ p12e_code: 696*)
 * [Innistrad: Crimson Vow](#innistrad-crimson-vow-vow) (*release: 2021-11-19 ~ p12e_code: 701*)
 * [Kamigawa: Neon Dynasty](#kamigawa-neon-dynasty-neo) (*release: 2022-02-18 ~ p12e_code: 722*)
+* [Streets of New Capenna](#streets-of-new-capenna-snc) (*release: 2022-04-29 ~ p12e_code: 735*)
 
 ---
 
@@ -9871,6 +9872,112 @@ Table of Contents
 <a href="https://scryfall.com/card/neo/171/voltage-surge?utm_source=api">Voltage Surge</a><br/>
 <a href="https://scryfall.com/card/neo/41/wanderers-intervention?utm_source=api">Wanderer's Intervention</a><br/>
 <a href="https://scryfall.com/card/neo/129/you-are-already-dead?utm_source=api">You Are Already Dead</a><br/>
+</details>
+[]()
+
+## Streets of New Capenna (snc)
+*release: 2022-04-29 | p12e_code: 735*
+
+<details>
+  <summary>Click to see 97 new cards</summary>
+
+<a href="https://scryfall.com/card/snc/100/antagonize?utm_source=api">Antagonize</a><br/>
+<a href="https://scryfall.com/card/snc/133/attended-socialite?utm_source=api">Attended Socialite</a><br/>
+<a href="https://scryfall.com/card/snc/35/backstreet-bruiser?utm_source=api">Backstreet Bruiser</a><br/>
+<a href="https://scryfall.com/card/snc/2/backup-agent?utm_source=api">Backup Agent</a><br/>
+<a href="https://scryfall.com/card/snc/102/big-score?utm_source=api">Big Score</a><br/>
+<a href="https://scryfall.com/card/snc/168/body-dropper?utm_source=api">Body Dropper</a><br/>
+<a href="https://scryfall.com/card/snc/4/boon-of-safety?utm_source=api">Boon of Safety</a><br/>
+<a href="https://scryfall.com/card/snc/247/botanical-plaza?utm_source=api">Botanical Plaza</a><br/>
+<a href="https://scryfall.com/card/snc/248/brokers-hideout?utm_source=api">Brokers Hideout</a><br/>
+<a href="https://scryfall.com/card/snc/5/brokers-initiate?utm_source=api">Brokers Initiate</a><br/>
+<a href="https://scryfall.com/card/snc/36/brokers-veteran?utm_source=api">Brokers Veteran</a><br/>
+<a href="https://scryfall.com/card/snc/6/buy-your-silence?utm_source=api">Buy Your Silence</a><br/>
+<a href="https://scryfall.com/card/snc/249/cabaretti-courtyard?utm_source=api">Cabaretti Courtyard</a><br/>
+<a href="https://scryfall.com/card/snc/137/cabaretti-initiate?utm_source=api">Cabaretti Initiate</a><br/>
+<a href="https://scryfall.com/card/snc/138/caldaia-strongarm?utm_source=api">Caldaia Strongarm</a><br/>
+<a href="https://scryfall.com/card/snc/139/capenna-express?utm_source=api">Capenna Express</a><br/>
+<a href="https://scryfall.com/card/snc/37/case-the-joint?utm_source=api">Case the Joint</a><br/>
+<a href="https://scryfall.com/card/snc/7/celebrity-fencer?utm_source=api">Celebrity Fencer</a><br/>
+<a href="https://scryfall.com/card/snc/174/celestial-regulator?utm_source=api">Celestial Regulator</a><br/>
+<a href="https://scryfall.com/card/snc/236/chrome-cat?utm_source=api">Chrome Cat</a><br/>
+<a href="https://scryfall.com/card/snc/140/civic-gardener?utm_source=api">Civic Gardener</a><br/>
+<a href="https://scryfall.com/card/snc/176/civil-servant?utm_source=api">Civil Servant</a><br/>
+<a href="https://scryfall.com/card/snc/70/corrupt-court-official?utm_source=api">Corrupt Court Official</a><br/>
+<a href="https://scryfall.com/card/snc/71/crooked-custodian?utm_source=api">Crooked Custodian</a><br/>
+<a href="https://scryfall.com/card/snc/73/cutthroat-contender?utm_source=api">Cutthroat Contender</a><br/>
+<a href="https://scryfall.com/card/snc/9/dapper-shieldmate?utm_source=api">Dapper Shieldmate</a><br/>
+<a href="https://scryfall.com/card/snc/104/daring-escape?utm_source=api">Daring Escape</a><br/>
+<a href="https://scryfall.com/card/snc/74/deal-gone-bad?utm_source=api">Deal Gone Bad</a><br/>
+<a href="https://scryfall.com/card/snc/75/demons-due?utm_source=api">Demon's Due</a><br/>
+<a href="https://scryfall.com/card/snc/76/dig-up-the-body?utm_source=api">Dig Up the Body</a><br/>
+<a href="https://scryfall.com/card/snc/40/echo-inspector?utm_source=api">Echo Inspector</a><br/>
+<a href="https://scryfall.com/card/snc/106/exhibition-magician?utm_source=api">Exhibition Magician</a><br/>
+<a href="https://scryfall.com/card/snc/43/expendable-lackey?utm_source=api">Expendable Lackey</a><br/>
+<a href="https://scryfall.com/card/snc/78/extract-the-truth?utm_source=api">Extract the Truth</a><br/>
+<a href="https://scryfall.com/card/snc/79/fake-your-own-death?utm_source=api">Fake Your Own Death</a><br/>
+<a href="https://scryfall.com/card/snc/146/for-the-family?utm_source=api">For the Family</a><br/>
+<a href="https://scryfall.com/card/snc/13/gathering-throng?utm_source=api">Gathering Throng</a><br/>
+<a href="https://scryfall.com/card/snc/238/gilded-pinions?utm_source=api">Gilded Pinions</a><br/>
+<a href="https://scryfall.com/card/snc/80/girder-goons?utm_source=api">Girder Goons</a><br/>
+<a href="https://scryfall.com/card/snc/190/glamorous-outlaw?utm_source=api">Glamorous Outlaw</a><br/>
+<a href="https://scryfall.com/card/snc/149/glittermonger?utm_source=api">Glittermonger</a><br/>
+<a href="https://scryfall.com/card/snc/108/goldhound?utm_source=api">Goldhound</a><br/>
+<a href="https://scryfall.com/card/snc/239/halo-scarab?utm_source=api">Halo Scarab</a><br/>
+<a href="https://scryfall.com/card/snc/150/high-rise-sawjack?utm_source=api">High-Rise Sawjack</a><br/>
+<a href="https://scryfall.com/card/snc/16/hold-for-ransom?utm_source=api">Hold for Ransom</a><br/>
+<a href="https://scryfall.com/card/snc/84/incriminate?utm_source=api">Incriminate</a><br/>
+<a href="https://scryfall.com/card/snc/18/inspiring-overseer?utm_source=api">Inspiring Overseer</a><br/>
+<a href="https://scryfall.com/card/snc/111/jackhammer?utm_source=api">Jackhammer</a><br/>
+<a href="https://scryfall.com/card/snc/194/jetmirs-fixer?utm_source=api">Jetmir's Fixer</a><br/>
+<a href="https://scryfall.com/card/snc/151/jewel-thief?utm_source=api">Jewel Thief</a><br/>
+<a href="https://scryfall.com/card/snc/85/join-the-maestros?utm_source=api">Join the Maestros</a><br/>
+<a href="https://scryfall.com/card/snc/113/light-em-up?utm_source=api">Light 'Em Up</a><br/>
+<a href="https://scryfall.com/card/snc/86/maestros-initiate?utm_source=api">Maestros Initiate</a><br/>
+<a href="https://scryfall.com/card/snc/251/maestros-theater?utm_source=api">Maestros Theater</a><br/>
+<a href="https://scryfall.com/card/snc/48/majestic-metamorphosis?utm_source=api">Majestic Metamorphosis</a><br/>
+<a href="https://scryfall.com/card/snc/49/make-disappear?utm_source=api">Make Disappear</a><br/>
+<a href="https://scryfall.com/card/snc/201/masked-bandits?utm_source=api">Masked Bandits</a><br/>
+<a href="https://scryfall.com/card/snc/114/mayhem-patrol?utm_source=api">Mayhem Patrol</a><br/>
+<a href="https://scryfall.com/card/snc/87/midnight-assassin?utm_source=api">Midnight Assassin</a><br/>
+<a href="https://scryfall.com/card/snc/153/most-wanted?utm_source=api">Most Wanted</a><br/>
+<a href="https://scryfall.com/card/snc/50/obscura-initiate?utm_source=api">Obscura Initiate</a><br/>
+<a href="https://scryfall.com/card/snc/252/obscura-storefront?utm_source=api">Obscura Storefront</a><br/>
+<a href="https://scryfall.com/card/snc/241/ominous-parcel?utm_source=api">Ominous Parcel</a><br/>
+<a href="https://scryfall.com/card/snc/242/paragon-of-modernity?utm_source=api">Paragon of Modernity</a><br/>
+<a href="https://scryfall.com/card/snc/115/plasma-jockey?utm_source=api">Plasma Jockey</a><br/>
+<a href="https://scryfall.com/card/snc/154/prizefight?utm_source=api">Prizefight</a><br/>
+<a href="https://scryfall.com/card/snc/53/psionic-snoop?utm_source=api">Psionic Snoop</a><br/>
+<a href="https://scryfall.com/card/snc/243/quick-draw-dagger?utm_source=api">Quick-Draw Dagger</a><br/>
+<a href="https://scryfall.com/card/snc/253/racers-ring?utm_source=api">Racers' Ring</a><br/>
+<a href="https://scryfall.com/card/snc/25/raffines-guidance?utm_source=api">Raffine's Guidance</a><br/>
+<a href="https://scryfall.com/card/snc/26/raffines-informant?utm_source=api">Raffine's Informant</a><br/>
+<a href="https://scryfall.com/card/snc/214/rakish-revelers?utm_source=api">Rakish Revelers</a><br/>
+<a href="https://scryfall.com/card/snc/119/ready-to-rumble?utm_source=api">Ready to Rumble</a><br/>
+<a href="https://scryfall.com/card/snc/28/revelation-of-power?utm_source=api">Revelation of Power</a><br/>
+<a href="https://scryfall.com/card/snc/91/revel-ruiner?utm_source=api">Revel Ruiner</a><br/>
+<a href="https://scryfall.com/card/snc/155/rhox-pummeler?utm_source=api">Rhox Pummeler</a><br/>
+<a href="https://scryfall.com/card/snc/120/riveteers-initiate?utm_source=api">Riveteers Initiate</a><br/>
+<a href="https://scryfall.com/card/snc/255/riveteers-overlook?utm_source=api">Riveteers Overlook</a><br/>
+<a href="https://scryfall.com/card/snc/57/rooftop-nuisance?utm_source=api">Rooftop Nuisance</a><br/>
+<a href="https://scryfall.com/card/snc/58/run-out-of-town?utm_source=api">Run Out of Town</a><br/>
+<a href="https://scryfall.com/card/snc/59/security-bypass?utm_source=api">Security Bypass</a><br/>
+<a href="https://scryfall.com/card/snc/60/sewer-crocodile?utm_source=api">Sewer Crocodile</a><br/>
+<a href="https://scryfall.com/card/snc/221/shattered-seraph?utm_source=api">Shattered Seraph</a><br/>
+<a href="https://scryfall.com/card/snc/256/skybridge-towers?utm_source=api">Skybridge Towers</a><br/>
+<a href="https://scryfall.com/card/snc/31/sky-crier?utm_source=api">Sky Crier</a><br/>
+<a href="https://scryfall.com/card/snc/222/snooping-newsie?utm_source=api">Snooping Newsie</a><br/>
+<a href="https://scryfall.com/card/snc/157/social-climber?utm_source=api">Social Climber</a><br/>
+<a href="https://scryfall.com/card/snc/224/sparas-adjudicators?utm_source=api">Spara's Adjudicators</a><br/>
+<a href="https://scryfall.com/card/snc/32/speakeasy-server?utm_source=api">Speakeasy Server</a><br/>
+<a href="https://scryfall.com/card/snc/124/sticky-fingers?utm_source=api">Sticky Fingers</a><br/>
+<a href="https://scryfall.com/card/snc/125/strangle?utm_source=api">Strangle</a><br/>
+<a href="https://scryfall.com/card/snc/258/tramway-station?utm_source=api">Tramway Station</a><br/>
+<a href="https://scryfall.com/card/snc/164/warm-welcome?utm_source=api">Warm Welcome</a><br/>
+<a href="https://scryfall.com/card/snc/259/waterfront-district?utm_source=api">Waterfront District</a><br/>
+<a href="https://scryfall.com/card/snc/66/witness-protection?utm_source=api">Witness Protection</a><br/>
+<a href="https://scryfall.com/card/snc/131/witty-roastmaster?utm_source=api">Witty Roastmaster</a><br/>
+<a href="https://scryfall.com/card/snc/132/wrecking-crew?utm_source=api">Wrecking Crew</a><br/>
 </details>
 []()
 
