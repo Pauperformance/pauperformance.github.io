@@ -750,7 +750,7 @@ Lines in **bold** correspond to sets that have introduced new cards in the [Paup
 | 732       | sstx          | Strixhaven: School of Mages Substitute Cards    | 2021-04-23   |
 | 733       | mvow          | Innistrad: Crimson Vow Minigames                | 2021-11-19   |
 | 734       | phed          | Heads I Win, Tails You Lose                     | 2022-04-22   |
-| 735       | snc           | Streets of New Capenna                          | 2022-04-29   |
+| **735**   | **snc**       | **Streets of New Capenna**                      | **2022-04-29** |
 | 736       | slx           | Universes Within                                | 2022-03-03   |
 | 737       | aneo          | Neon Dynasty Art Series                         | 2022-02-18   |
 | 738       | yneo          | Alchemy: Kamigawa                               | 2022-03-17   |
