@@ -16,14 +16,14 @@
 
 <details>
   <summary>Click here to expand</summary>
-<a href="https://scryfall.com/card/soi/98/alms-of-the-vein"><img src="https://c1.scryfall.com/file/scryfall-cards/normal/front/7/9/79b80948-a3cd-4962-8fce-d58f2db7e68e.jpg?1576384334" class="archetype-card rounded-image"/></a>
-<a href="https://scryfall.com/card/ddk/57/bump-in-the-night"><img src="https://c1.scryfall.com/file/scryfall-cards/normal/front/3/2/320e394c-c8b1-42ad-91a5-6d57296f85ab.jpg?1592714563" class="archetype-card rounded-image"/></a>
-<a href="https://scryfall.com/card/c21/168/faithless-looting"><img src="https://c1.scryfall.com/file/scryfall-cards/normal/front/1/d/1d6e5cc9-bd48-41b6-ac20-5a3e38aecdc5.jpg?1617647725" class="archetype-card rounded-image"/></a>
-<a href="https://scryfall.com/card/c19/142/fiery-temper"><img src="https://c1.scryfall.com/file/scryfall-cards/normal/front/f/c/fc8282aa-5347-44c7-8397-609aed82bc8c.jpg?1568004398" class="archetype-card rounded-image"/></a>
-<a href="https://scryfall.com/card/jvc/55/fireblast"><img src="https://c1.scryfall.com/file/scryfall-cards/normal/front/5/1/51e839d8-2c62-46df-a6ca-3964f43b7e54.jpg?1611933944" class="archetype-card rounded-image"/></a>
-<a href="https://scryfall.com/card/mh2/226/fodder-tosser"><img src="https://c1.scryfall.com/file/scryfall-cards/normal/front/f/d/fd401525-b874-4af2-99a3-c2c83e22547e.jpg?1626099071" class="archetype-card rounded-image"/></a>
-<a href="https://scryfall.com/card/mh2/89/kitchen-imp"><img src="https://c1.scryfall.com/file/scryfall-cards/normal/front/8/3/836ae711-e62f-49ec-850e-d25f6fd2a4d4.jpg?1626095627" class="archetype-card rounded-image"/></a>
-<a href="https://scryfall.com/card/vow/136/vampires-kiss"><img src="https://c1.scryfall.com/file/scryfall-cards/normal/front/9/7/974bf8cc-4259-48cc-8e7f-1580bb010d3f.jpg?1643590522" class="archetype-card rounded-image"/></a>
+<a href="https://scryfall.com/card/soi/98/alms-of-the-vein"><img src="https://c1.scryfall.com/file/scryfall-cards/normal/front/7/9/79b80948-a3cd-4962-8fce-d58f2db7e68e.jpg" class="archetype-card rounded-image"/></a>
+<a href="https://scryfall.com/card/ddk/57/bump-in-the-night"><img src="https://c1.scryfall.com/file/scryfall-cards/normal/front/3/2/320e394c-c8b1-42ad-91a5-6d57296f85ab.jpg" class="archetype-card rounded-image"/></a>
+<a href="https://scryfall.com/card/c21/168/faithless-looting"><img src="https://c1.scryfall.com/file/scryfall-cards/normal/front/1/d/1d6e5cc9-bd48-41b6-ac20-5a3e38aecdc5.jpg" class="archetype-card rounded-image"/></a>
+<a href="https://scryfall.com/card/c19/142/fiery-temper"><img src="https://c1.scryfall.com/file/scryfall-cards/normal/front/f/c/fc8282aa-5347-44c7-8397-609aed82bc8c.jpg" class="archetype-card rounded-image"/></a>
+<a href="https://scryfall.com/card/jvc/55/fireblast"><img src="https://c1.scryfall.com/file/scryfall-cards/normal/front/5/1/51e839d8-2c62-46df-a6ca-3964f43b7e54.jpg" class="archetype-card rounded-image"/></a>
+<a href="https://scryfall.com/card/mh2/226/fodder-tosser"><img src="https://c1.scryfall.com/file/scryfall-cards/normal/front/f/d/fd401525-b874-4af2-99a3-c2c83e22547e.jpg" class="archetype-card rounded-image"/></a>
+<a href="https://scryfall.com/card/mh2/89/kitchen-imp"><img src="https://c1.scryfall.com/file/scryfall-cards/normal/front/8/3/836ae711-e62f-49ec-850e-d25f6fd2a4d4.jpg" class="archetype-card rounded-image"/></a>
+<a href="https://scryfall.com/card/vow/136/vampires-kiss"><img src="https://c1.scryfall.com/file/scryfall-cards/normal/front/9/7/974bf8cc-4259-48cc-8e7f-1580bb010d3f.jpg" class="archetype-card rounded-image"/></a>
 </details><br/>
 
 
@@ -32,13 +32,13 @@
 
 <details>
   <summary>Click here to expand</summary>
-<a href="https://scryfall.com/card/rtr/93/electrickery"><img src="https://c1.scryfall.com/file/scryfall-cards/normal/front/5/e/5ed81ee8-d5e4-4127-876e-9bff81f9c726.jpg?1562787062" class="archetype-card rounded-image"/></a>
-<a href="https://scryfall.com/card/ddp/60/forked-bolt"><img src="https://c1.scryfall.com/file/scryfall-cards/normal/front/3/6/364ed745-0dff-477a-a2c5-987639936337.jpg?1593095847" class="archetype-card rounded-image"/></a>
-<a href="https://scryfall.com/card/jmp/342/lightning-bolt"><img src="https://c1.scryfall.com/file/scryfall-cards/normal/front/c/e/ce711943-c1a1-43a0-8b89-8d169cfb8e06.jpg?1618695786" class="archetype-card rounded-image"/></a>
-<a href="https://scryfall.com/card/mh2/139/revolutionist"><img src="https://c1.scryfall.com/file/scryfall-cards/normal/front/b/b/bb8f3008-a3ba-4f73-afa6-ad81074b3196.jpg?1626096944" class="archetype-card rounded-image"/></a>
-<a href="https://scryfall.com/card/m21/165/thrill-of-possibility"><img src="https://c1.scryfall.com/file/scryfall-cards/normal/front/f/4/f4af156d-0fbf-4a4e-b0c1-db7e95be4903.jpg?1594736817" class="archetype-card rounded-image"/></a>
-<a href="https://scryfall.com/card/vma/143/tyrants-choice"><img src="https://c1.scryfall.com/file/scryfall-cards/normal/front/5/e/5ed37b1c-7377-40bd-ae98-7f5ce56156b1.jpg?1562914207" class="archetype-card rounded-image"/></a>
-<a href="https://scryfall.com/card/vow/182/voldaren-epicure"><img src="https://c1.scryfall.com/file/scryfall-cards/normal/front/a/e/ae154e64-f626-45fb-bd52-840c1c27b2d3.jpg?1643592109" class="archetype-card rounded-image"/></a>
+<a href="https://scryfall.com/card/rtr/93/electrickery"><img src="https://c1.scryfall.com/file/scryfall-cards/normal/front/5/e/5ed81ee8-d5e4-4127-876e-9bff81f9c726.jpg" class="archetype-card rounded-image"/></a>
+<a href="https://scryfall.com/card/ddp/60/forked-bolt"><img src="https://c1.scryfall.com/file/scryfall-cards/normal/front/3/6/364ed745-0dff-477a-a2c5-987639936337.jpg" class="archetype-card rounded-image"/></a>
+<a href="https://scryfall.com/card/jmp/342/lightning-bolt"><img src="https://c1.scryfall.com/file/scryfall-cards/normal/front/c/e/ce711943-c1a1-43a0-8b89-8d169cfb8e06.jpg" class="archetype-card rounded-image"/></a>
+<a href="https://scryfall.com/card/mh2/139/revolutionist"><img src="https://c1.scryfall.com/file/scryfall-cards/normal/front/b/b/bb8f3008-a3ba-4f73-afa6-ad81074b3196.jpg" class="archetype-card rounded-image"/></a>
+<a href="https://scryfall.com/card/m21/165/thrill-of-possibility"><img src="https://c1.scryfall.com/file/scryfall-cards/normal/front/f/4/f4af156d-0fbf-4a4e-b0c1-db7e95be4903.jpg" class="archetype-card rounded-image"/></a>
+<a href="https://scryfall.com/card/vma/143/tyrants-choice"><img src="https://c1.scryfall.com/file/scryfall-cards/normal/front/5/e/5ed37b1c-7377-40bd-ae98-7f5ce56156b1.jpg" class="archetype-card rounded-image"/></a>
+<a href="https://scryfall.com/card/vow/182/voldaren-epicure"><img src="https://c1.scryfall.com/file/scryfall-cards/normal/front/a/e/ae154e64-f626-45fb-bd52-840c1c27b2d3.jpg" class="archetype-card rounded-image"/></a>
 </details><br/>
 
 

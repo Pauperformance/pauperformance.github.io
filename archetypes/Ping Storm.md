@@ -14,19 +14,19 @@
 
 <details>
   <summary>Click here to expand</summary>
-<a href="https://scryfall.com/card/vma/106/cabal-ritual"><img src="https://c1.scryfall.com/file/scryfall-cards/normal/front/a/5/a5d85875-22da-4054-ae42-e85b472a6d5d.jpg?1562928510" class="archetype-card rounded-image"/></a>
-<a href="https://scryfall.com/card/tsr/263/chromatic-star"><img src="https://c1.scryfall.com/file/scryfall-cards/normal/front/c/2/c2e8d492-2c67-410b-b556-c157a14c4cec.jpg?1619404181" class="archetype-card rounded-image"/></a>
-<a href="https://scryfall.com/card/a25/82/dark-ritual"><img src="https://c1.scryfall.com/file/scryfall-cards/normal/front/9/5/95f27eeb-6f14-4db3-adb9-9be5ed76b34b.jpg?1618695764" class="archetype-card rounded-image"/></a>
-<a href="https://scryfall.com/card/afr/94/deadly-dispute"><img src="https://c1.scryfall.com/file/scryfall-cards/normal/front/7/3/7373fe95-ad1c-44b9-8c7f-464ce8cbffc6.jpg?1627704524" class="archetype-card rounded-image"/></a>
-<a href="https://scryfall.com/card/neo/138/experimental-synthesizer"><img src="https://c1.scryfall.com/file/scryfall-cards/normal/front/c/4/c47931c9-685d-4b83-8299-bc347224b4e8.jpg?1643998697" class="archetype-card rounded-image"/></a>
-<a href="https://scryfall.com/card/tsb/109/feldons-cane"><img src="https://c1.scryfall.com/file/scryfall-cards/normal/front/7/2/726ce95b-bc4d-4c34-a8e1-b4c6c28accc9.jpg?1562778128" class="archetype-card rounded-image"/></a>
-<a href="https://scryfall.com/card/mh2/127/galvanic-relay"><img src="https://c1.scryfall.com/file/scryfall-cards/normal/front/0/6/06373318-e548-4664-b227-17e3b6fd0a88.jpg?1626096649" class="archetype-card rounded-image"/></a>
-<a href="https://scryfall.com/card/vow/164/kessig-flamebreather"><img src="https://c1.scryfall.com/file/scryfall-cards/normal/front/3/0/303ad78a-b02a-44dc-afe6-7f95781a5062.jpg?1643591531" class="archetype-card rounded-image"/></a>
-<a href="https://scryfall.com/card/tpr/225/lotus-petal"><img src="https://c1.scryfall.com/file/scryfall-cards/normal/front/f/8/f85ab5f9-508e-45de-8fa1-ce1f16552ffc.jpg?1562432227" class="archetype-card rounded-image"/></a>
-<a href="https://scryfall.com/card/2xm/208/manamorphose"><img src="https://c1.scryfall.com/file/scryfall-cards/normal/front/f/a/faf9070e-14be-4ce5-a19a-6addc79359c1.jpg?1599708170" class="archetype-card rounded-image"/></a>
-<a href="https://scryfall.com/card/ema/100/nights-whisper"><img src="https://c1.scryfall.com/file/scryfall-cards/normal/front/e/4/e4638720-a55d-4c3b-b57d-2d028db5894d.jpg?1580014319" class="archetype-card rounded-image"/></a>
-<a href="https://scryfall.com/card/vow/174/reckless-impulse"><img src="https://c1.scryfall.com/file/scryfall-cards/normal/front/6/9/6943c07f-ab0d-4f5a-bbe9-c0a83dc98546.jpg?1643591880" class="archetype-card rounded-image"/></a>
-<a href="https://scryfall.com/card/csp/96/rite-of-flame"><img src="https://c1.scryfall.com/file/scryfall-cards/normal/front/c/0/c062caf7-f0eb-44db-9f74-e6711a13fada.jpg?1593275318" class="archetype-card rounded-image"/></a>
+<a href="https://scryfall.com/card/vma/106/cabal-ritual"><img src="https://c1.scryfall.com/file/scryfall-cards/normal/front/a/5/a5d85875-22da-4054-ae42-e85b472a6d5d.jpg" class="archetype-card rounded-image"/></a>
+<a href="https://scryfall.com/card/tsr/263/chromatic-star"><img src="https://c1.scryfall.com/file/scryfall-cards/normal/front/c/2/c2e8d492-2c67-410b-b556-c157a14c4cec.jpg" class="archetype-card rounded-image"/></a>
+<a href="https://scryfall.com/card/a25/82/dark-ritual"><img src="https://c1.scryfall.com/file/scryfall-cards/normal/front/9/5/95f27eeb-6f14-4db3-adb9-9be5ed76b34b.jpg" class="archetype-card rounded-image"/></a>
+<a href="https://scryfall.com/card/afr/94/deadly-dispute"><img src="https://c1.scryfall.com/file/scryfall-cards/normal/front/7/3/7373fe95-ad1c-44b9-8c7f-464ce8cbffc6.jpg" class="archetype-card rounded-image"/></a>
+<a href="https://scryfall.com/card/neo/138/experimental-synthesizer"><img src="https://c1.scryfall.com/file/scryfall-cards/normal/front/c/4/c47931c9-685d-4b83-8299-bc347224b4e8.jpg" class="archetype-card rounded-image"/></a>
+<a href="https://scryfall.com/card/tsb/109/feldons-cane"><img src="https://c1.scryfall.com/file/scryfall-cards/normal/front/7/2/726ce95b-bc4d-4c34-a8e1-b4c6c28accc9.jpg" class="archetype-card rounded-image"/></a>
+<a href="https://scryfall.com/card/mh2/127/galvanic-relay"><img src="https://c1.scryfall.com/file/scryfall-cards/normal/front/0/6/06373318-e548-4664-b227-17e3b6fd0a88.jpg" class="archetype-card rounded-image"/></a>
+<a href="https://scryfall.com/card/vow/164/kessig-flamebreather"><img src="https://c1.scryfall.com/file/scryfall-cards/normal/front/3/0/303ad78a-b02a-44dc-afe6-7f95781a5062.jpg" class="archetype-card rounded-image"/></a>
+<a href="https://scryfall.com/card/tpr/225/lotus-petal"><img src="https://c1.scryfall.com/file/scryfall-cards/normal/front/f/8/f85ab5f9-508e-45de-8fa1-ce1f16552ffc.jpg" class="archetype-card rounded-image"/></a>
+<a href="https://scryfall.com/card/2xm/208/manamorphose"><img src="https://c1.scryfall.com/file/scryfall-cards/normal/front/f/a/faf9070e-14be-4ce5-a19a-6addc79359c1.jpg" class="archetype-card rounded-image"/></a>
+<a href="https://scryfall.com/card/ema/100/nights-whisper"><img src="https://c1.scryfall.com/file/scryfall-cards/normal/front/e/4/e4638720-a55d-4c3b-b57d-2d028db5894d.jpg" class="archetype-card rounded-image"/></a>
+<a href="https://scryfall.com/card/vow/174/reckless-impulse"><img src="https://c1.scryfall.com/file/scryfall-cards/normal/front/6/9/6943c07f-ab0d-4f5a-bbe9-c0a83dc98546.jpg" class="archetype-card rounded-image"/></a>
+<a href="https://scryfall.com/card/csp/96/rite-of-flame"><img src="https://c1.scryfall.com/file/scryfall-cards/normal/front/c/0/c062caf7-f0eb-44db-9f74-e6711a13fada.jpg" class="archetype-card rounded-image"/></a>
 </details><br/>
 
 

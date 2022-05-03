@@ -14,19 +14,19 @@
 
 <details>
   <summary>Click here to expand</summary>
-<a href="https://scryfall.com/card/chk/102/befoul"><img src="https://c1.scryfall.com/file/scryfall-cards/normal/front/2/d/2dfff5d3-1433-4a24-83e6-6361a446b974.jpg?1562758881" class="archetype-card rounded-image"/></a>
-<a href="https://scryfall.com/card/dst/39/chittering-rats"><img src="https://c1.scryfall.com/file/scryfall-cards/normal/front/9/8/980135d5-dfaa-4beb-b4b3-1e256bb46e61.jpg?1562638311" class="archetype-card rounded-image"/></a>
-<a href="https://scryfall.com/card/vma/109/choking-sands"><img src="https://c1.scryfall.com/file/scryfall-cards/normal/front/d/6/d63b5e4c-e6be-4df5-bb22-d0610067adf6.jpg?1562937995" class="archetype-card rounded-image"/></a>
-<a href="https://scryfall.com/card/a25/82/dark-ritual"><img src="https://c1.scryfall.com/file/scryfall-cards/normal/front/9/5/95f27eeb-6f14-4db3-adb9-9be5ed76b34b.jpg?1618695764" class="archetype-card rounded-image"/></a>
-<a href="https://scryfall.com/card/mh1/87/diabolic-edict"><img src="https://c1.scryfall.com/file/scryfall-cards/normal/front/4/e/4eabbed2-1399-4cf1-9eba-b53c56caced4.jpg?1591104828" class="archetype-card rounded-image"/></a>
-<a href="https://scryfall.com/card/a25/89/dusk-legion-zealot"><img src="https://c1.scryfall.com/file/scryfall-cards/normal/front/9/8/98a9ef61-1c6d-49d1-b185-2b022482b442.jpg?1562438935" class="archetype-card rounded-image"/></a>
-<a href="https://scryfall.com/card/uma/102/gurmag-angler"><img src="https://c1.scryfall.com/file/scryfall-cards/normal/front/c/e/cedd44eb-f381-46e1-bcb0-88416b4ce33d.jpg?1547516928" class="archetype-card rounded-image"/></a>
-<a href="https://scryfall.com/card/me2/94/icequake"><img src="https://c1.scryfall.com/file/scryfall-cards/normal/front/5/5/550880ba-26a0-463d-9da2-0160d224cda1.jpg?1562868563" class="archetype-card rounded-image"/></a>
-<a href="https://scryfall.com/card/ema/100/nights-whisper"><img src="https://c1.scryfall.com/file/scryfall-cards/normal/front/e/4/e4638720-a55d-4c3b-b57d-2d028db5894d.jpg?1580014319" class="archetype-card rounded-image"/></a>
-<a href="https://scryfall.com/card/tor/78/rancid-earth"><img src="https://c1.scryfall.com/file/scryfall-cards/normal/front/2/3/23d07a96-85ba-4714-94a5-4a8125954f58.jpg?1562628959" class="archetype-card rounded-image"/></a>
-<a href="https://scryfall.com/card/cm2/77/sign-in-blood"><img src="https://c1.scryfall.com/file/scryfall-cards/normal/front/6/1/61388c28-9428-473c-973a-0a82b6b83d62.jpg?1562274085" class="archetype-card rounded-image"/></a>
-<a href="https://scryfall.com/card/gvl/53/snuff-out"><img src="https://c1.scryfall.com/file/scryfall-cards/normal/front/7/5/75bbe89f-09af-494e-b58e-271f64bde4b5.jpg?1562922833" class="archetype-card rounded-image"/></a>
-<a href="https://scryfall.com/card/cmr/154/thorn-of-the-black-rose"><img src="https://c1.scryfall.com/file/scryfall-cards/normal/front/2/b/2b7538ad-cc41-4229-8a39-c1db21f2899a.jpg?1608909988" class="archetype-card rounded-image"/></a>
+<a href="https://scryfall.com/card/chk/102/befoul"><img src="https://c1.scryfall.com/file/scryfall-cards/normal/front/2/d/2dfff5d3-1433-4a24-83e6-6361a446b974.jpg" class="archetype-card rounded-image"/></a>
+<a href="https://scryfall.com/card/dst/39/chittering-rats"><img src="https://c1.scryfall.com/file/scryfall-cards/normal/front/9/8/980135d5-dfaa-4beb-b4b3-1e256bb46e61.jpg" class="archetype-card rounded-image"/></a>
+<a href="https://scryfall.com/card/vma/109/choking-sands"><img src="https://c1.scryfall.com/file/scryfall-cards/normal/front/d/6/d63b5e4c-e6be-4df5-bb22-d0610067adf6.jpg" class="archetype-card rounded-image"/></a>
+<a href="https://scryfall.com/card/a25/82/dark-ritual"><img src="https://c1.scryfall.com/file/scryfall-cards/normal/front/9/5/95f27eeb-6f14-4db3-adb9-9be5ed76b34b.jpg" class="archetype-card rounded-image"/></a>
+<a href="https://scryfall.com/card/mh1/87/diabolic-edict"><img src="https://c1.scryfall.com/file/scryfall-cards/normal/front/4/e/4eabbed2-1399-4cf1-9eba-b53c56caced4.jpg" class="archetype-card rounded-image"/></a>
+<a href="https://scryfall.com/card/a25/89/dusk-legion-zealot"><img src="https://c1.scryfall.com/file/scryfall-cards/normal/front/9/8/98a9ef61-1c6d-49d1-b185-2b022482b442.jpg" class="archetype-card rounded-image"/></a>
+<a href="https://scryfall.com/card/uma/102/gurmag-angler"><img src="https://c1.scryfall.com/file/scryfall-cards/normal/front/c/e/cedd44eb-f381-46e1-bcb0-88416b4ce33d.jpg" class="archetype-card rounded-image"/></a>
+<a href="https://scryfall.com/card/me2/94/icequake"><img src="https://c1.scryfall.com/file/scryfall-cards/normal/front/5/5/550880ba-26a0-463d-9da2-0160d224cda1.jpg" class="archetype-card rounded-image"/></a>
+<a href="https://scryfall.com/card/ema/100/nights-whisper"><img src="https://c1.scryfall.com/file/scryfall-cards/normal/front/e/4/e4638720-a55d-4c3b-b57d-2d028db5894d.jpg" class="archetype-card rounded-image"/></a>
+<a href="https://scryfall.com/card/tor/78/rancid-earth"><img src="https://c1.scryfall.com/file/scryfall-cards/normal/front/2/3/23d07a96-85ba-4714-94a5-4a8125954f58.jpg" class="archetype-card rounded-image"/></a>
+<a href="https://scryfall.com/card/cm2/77/sign-in-blood"><img src="https://c1.scryfall.com/file/scryfall-cards/normal/front/6/1/61388c28-9428-473c-973a-0a82b6b83d62.jpg" class="archetype-card rounded-image"/></a>
+<a href="https://scryfall.com/card/gvl/53/snuff-out"><img src="https://c1.scryfall.com/file/scryfall-cards/normal/front/7/5/75bbe89f-09af-494e-b58e-271f64bde4b5.jpg" class="archetype-card rounded-image"/></a>
+<a href="https://scryfall.com/card/cmr/154/thorn-of-the-black-rose"><img src="https://c1.scryfall.com/file/scryfall-cards/normal/front/2/b/2b7538ad-cc41-4229-8a39-c1db21f2899a.jpg" class="archetype-card rounded-image"/></a>
 </details><br/>
 
 
