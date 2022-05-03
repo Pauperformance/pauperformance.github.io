@@ -16,18 +16,18 @@
 
 <details>
   <summary>Click here to expand</summary>
-<a href="https://scryfall.com/card/lgn/61/blood-celebrant"><img src="https://c1.scryfall.com/file/scryfall-cards/normal/front/8/0/805de325-6f14-4a52-bb85-f9a9545d82a4.jpg?1562920849" class="archetype-card rounded-image"/></a>
-<a href="https://scryfall.com/card/vma/106/cabal-ritual"><img src="https://c1.scryfall.com/file/scryfall-cards/normal/front/a/5/a5d85875-22da-4054-ae42-e85b472a6d5d.jpg?1562928510" class="archetype-card rounded-image"/></a>
-<a href="https://scryfall.com/card/a25/82/dark-ritual"><img src="https://c1.scryfall.com/file/scryfall-cards/normal/front/9/5/95f27eeb-6f14-4db3-adb9-9be5ed76b34b.jpg?1618695764" class="archetype-card rounded-image"/></a>
-<a href="https://scryfall.com/card/mh2/193/dihadas-ploy"><img src="https://c1.scryfall.com/file/scryfall-cards/normal/front/9/0/9091e8dc-b546-4b74-9dc9-aef55f60d13a.jpg?1626098256" class="archetype-card rounded-image"/></a>
-<a href="https://scryfall.com/card/iko/10/drannith-healer"><img src="https://c1.scryfall.com/file/scryfall-cards/normal/front/f/f/ff5a821c-eaec-4f69-97c7-8299cdebc2f4.jpg?1591230232" class="archetype-card rounded-image"/></a>
-<a href="https://scryfall.com/card/iko/113/drannith-stinger"><img src="https://c1.scryfall.com/file/scryfall-cards/normal/front/6/1/612ee4be-e7a2-423c-a37c-7c6ca97f630e.jpg?1591227149" class="archetype-card rounded-image"/></a>
-<a href="https://scryfall.com/card/a25/93/horror-of-the-broken-lands"><img src="https://c1.scryfall.com/file/scryfall-cards/normal/front/f/b/fb1f0958-5bf6-4a4f-a4bc-2943c93ba15e.jpg?1562443142" class="archetype-card rounded-image"/></a>
-<a href="https://scryfall.com/card/iko/17/imposing-vantasaur"><img src="https://c1.scryfall.com/file/scryfall-cards/normal/front/b/6/b6fa5feb-f5e9-4079-acc9-84e458044769.jpg?1591230282" class="archetype-card rounded-image"/></a>
-<a href="https://scryfall.com/card/tpr/225/lotus-petal"><img src="https://c1.scryfall.com/file/scryfall-cards/normal/front/f/8/f85ab5f9-508e-45de-8fa1-ce1f16552ffc.jpg?1562432227" class="archetype-card rounded-image"/></a>
-<a href="https://scryfall.com/card/scg/72/reaping-the-graves"><img src="https://c1.scryfall.com/file/scryfall-cards/normal/front/7/6/760a66bd-2821-4710-8f02-3c30772dd884.jpg?1562530700" class="archetype-card rounded-image"/></a>
-<a href="https://scryfall.com/card/uma/115/songs-of-the-damned"><img src="https://c1.scryfall.com/file/scryfall-cards/normal/front/9/1/9133b267-295d-4987-b1d6-f32a85b66081.jpg?1547517061" class="archetype-card rounded-image"/></a>
-<a href="https://scryfall.com/card/tsr/141/street-wraith"><img src="https://c1.scryfall.com/file/scryfall-cards/normal/front/7/d/7d078cad-7f2b-4bef-b637-46aec9c8ed36.jpg?1619396291" class="archetype-card rounded-image"/></a>
+<a href="https://scryfall.com/card/lgn/61/blood-celebrant"><img src="https://c1.scryfall.com/file/scryfall-cards/normal/front/8/0/805de325-6f14-4a52-bb85-f9a9545d82a4.jpg" class="archetype-card rounded-image"/></a>
+<a href="https://scryfall.com/card/vma/106/cabal-ritual"><img src="https://c1.scryfall.com/file/scryfall-cards/normal/front/a/5/a5d85875-22da-4054-ae42-e85b472a6d5d.jpg" class="archetype-card rounded-image"/></a>
+<a href="https://scryfall.com/card/a25/82/dark-ritual"><img src="https://c1.scryfall.com/file/scryfall-cards/normal/front/9/5/95f27eeb-6f14-4db3-adb9-9be5ed76b34b.jpg" class="archetype-card rounded-image"/></a>
+<a href="https://scryfall.com/card/mh2/193/dihadas-ploy"><img src="https://c1.scryfall.com/file/scryfall-cards/normal/front/9/0/9091e8dc-b546-4b74-9dc9-aef55f60d13a.jpg" class="archetype-card rounded-image"/></a>
+<a href="https://scryfall.com/card/iko/10/drannith-healer"><img src="https://c1.scryfall.com/file/scryfall-cards/normal/front/f/f/ff5a821c-eaec-4f69-97c7-8299cdebc2f4.jpg" class="archetype-card rounded-image"/></a>
+<a href="https://scryfall.com/card/iko/113/drannith-stinger"><img src="https://c1.scryfall.com/file/scryfall-cards/normal/front/6/1/612ee4be-e7a2-423c-a37c-7c6ca97f630e.jpg" class="archetype-card rounded-image"/></a>
+<a href="https://scryfall.com/card/a25/93/horror-of-the-broken-lands"><img src="https://c1.scryfall.com/file/scryfall-cards/normal/front/f/b/fb1f0958-5bf6-4a4f-a4bc-2943c93ba15e.jpg" class="archetype-card rounded-image"/></a>
+<a href="https://scryfall.com/card/iko/17/imposing-vantasaur"><img src="https://c1.scryfall.com/file/scryfall-cards/normal/front/b/6/b6fa5feb-f5e9-4079-acc9-84e458044769.jpg" class="archetype-card rounded-image"/></a>
+<a href="https://scryfall.com/card/tpr/225/lotus-petal"><img src="https://c1.scryfall.com/file/scryfall-cards/normal/front/f/8/f85ab5f9-508e-45de-8fa1-ce1f16552ffc.jpg" class="archetype-card rounded-image"/></a>
+<a href="https://scryfall.com/card/scg/72/reaping-the-graves"><img src="https://c1.scryfall.com/file/scryfall-cards/normal/front/7/6/760a66bd-2821-4710-8f02-3c30772dd884.jpg" class="archetype-card rounded-image"/></a>
+<a href="https://scryfall.com/card/uma/115/songs-of-the-damned"><img src="https://c1.scryfall.com/file/scryfall-cards/normal/front/9/1/9133b267-295d-4987-b1d6-f32a85b66081.jpg" class="archetype-card rounded-image"/></a>
+<a href="https://scryfall.com/card/tsr/141/street-wraith"><img src="https://c1.scryfall.com/file/scryfall-cards/normal/front/7/d/7d078cad-7f2b-4bef-b637-46aec9c8ed36.jpg" class="archetype-card rounded-image"/></a>
 </details><br/>
 
 
@@ -36,12 +36,12 @@
 
 <details>
   <summary>Click here to expand</summary>
-<a href="https://scryfall.com/card/arc/77/architects-of-will"><img src="https://c1.scryfall.com/file/scryfall-cards/normal/front/6/f/6f614bb4-92e3-4ae0-9f2f-294434706c48.jpg?1562918419" class="archetype-card rounded-image"/></a>
-<a href="https://scryfall.com/card/jmp/230/exhume"><img src="https://c1.scryfall.com/file/scryfall-cards/normal/front/5/f/5f1cdcba-a04a-4a2f-8bc1-0dd7fa03754d.jpg?1600714444" class="archetype-card rounded-image"/></a>
-<a href="https://scryfall.com/card/tsr/76/mystical-teachings"><img src="https://c1.scryfall.com/file/scryfall-cards/normal/front/f/7/f7cb51cd-8418-43ee-bf4f-6b959cc5b131.jpg?1619394406" class="archetype-card rounded-image"/></a>
-<a href="https://scryfall.com/card/vow/73/repository-skaab"><img src="https://c1.scryfall.com/file/scryfall-cards/normal/front/7/c/7cc22c2a-535a-46b5-817c-da5850abd669.jpg?1643588423" class="archetype-card rounded-image"/></a>
-<a href="https://scryfall.com/card/hou/48/striped-riverwinder"><img src="https://c1.scryfall.com/file/scryfall-cards/normal/front/b/b/bbeef9ef-487c-400b-bcee-1c0e8ec94b6a.jpg?1562812506" class="archetype-card rounded-image"/></a>
-<a href="https://scryfall.com/card/7ed/105/tolarian-winds"><img src="https://c1.scryfall.com/file/scryfall-cards/normal/front/3/f/3fdd9981-bb5e-450d-90c3-4405a7097939.jpg?1562236403" class="archetype-card rounded-image"/></a>
+<a href="https://scryfall.com/card/arc/77/architects-of-will"><img src="https://c1.scryfall.com/file/scryfall-cards/normal/front/6/f/6f614bb4-92e3-4ae0-9f2f-294434706c48.jpg" class="archetype-card rounded-image"/></a>
+<a href="https://scryfall.com/card/jmp/230/exhume"><img src="https://c1.scryfall.com/file/scryfall-cards/normal/front/5/f/5f1cdcba-a04a-4a2f-8bc1-0dd7fa03754d.jpg" class="archetype-card rounded-image"/></a>
+<a href="https://scryfall.com/card/tsr/76/mystical-teachings"><img src="https://c1.scryfall.com/file/scryfall-cards/normal/front/f/7/f7cb51cd-8418-43ee-bf4f-6b959cc5b131.jpg" class="archetype-card rounded-image"/></a>
+<a href="https://scryfall.com/card/vow/73/repository-skaab"><img src="https://c1.scryfall.com/file/scryfall-cards/normal/front/7/c/7cc22c2a-535a-46b5-817c-da5850abd669.jpg" class="archetype-card rounded-image"/></a>
+<a href="https://scryfall.com/card/hou/48/striped-riverwinder"><img src="https://c1.scryfall.com/file/scryfall-cards/normal/front/b/b/bbeef9ef-487c-400b-bcee-1c0e8ec94b6a.jpg" class="archetype-card rounded-image"/></a>
+<a href="https://scryfall.com/card/7ed/105/tolarian-winds"><img src="https://c1.scryfall.com/file/scryfall-cards/normal/front/3/f/3fdd9981-bb5e-450d-90c3-4405a7097939.jpg" class="archetype-card rounded-image"/></a>
 </details><br/>
 
 

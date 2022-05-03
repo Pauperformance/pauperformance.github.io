@@ -14,15 +14,15 @@
 
 <details>
   <summary>Click here to expand</summary>
-<a href="https://scryfall.com/card/c21/115/brainstorm"><img src="https://c1.scryfall.com/file/scryfall-cards/normal/front/0/3/0359f212-9564-41a9-870b-d2c57455a695.jpg?1617910233" class="archetype-card rounded-image"/></a>
-<a href="https://scryfall.com/card/mh2/267/counterspell"><img src="https://c1.scryfall.com/file/scryfall-cards/normal/front/1/9/1920dae4-fb92-4f19-ae4b-eb3276b8dac7.jpg?1622389067" class="archetype-card rounded-image"/></a>
-<a href="https://scryfall.com/card/jvc/27/gush"><img src="https://c1.scryfall.com/file/scryfall-cards/normal/front/d/4/d4a3a921-3b7f-474c-b8c3-67a1a6ba5cc1.jpg?1562378488" class="archetype-card rounded-image"/></a>
-<a href="https://scryfall.com/card/m12/60/jaces-erasure"><img src="https://c1.scryfall.com/file/scryfall-cards/normal/front/9/7/970f4f34-f834-41a7-aff1-7cef82cefc74.jpg?1562652060" class="archetype-card rounded-image"/></a>
-<a href="https://scryfall.com/card/c21/125/ponder"><img src="https://c1.scryfall.com/file/scryfall-cards/normal/front/9/c/9cee2eb1-f60e-4626-ba4a-b543142ca950.jpg?1617910474" class="archetype-card rounded-image"/></a>
-<a href="https://scryfall.com/card/cmr/84/preordain"><img src="https://c1.scryfall.com/file/scryfall-cards/normal/front/1/4/1453f92e-df2d-4789-aa1b-a5b5c51567d4.jpg?1608909344" class="archetype-card rounded-image"/></a>
-<a href="https://scryfall.com/card/dds/10/snap"><img src="https://c1.scryfall.com/file/scryfall-cards/normal/front/1/9/1959f078-4b7b-4df2-a256-d43b2d97e853.jpg?1592761565" class="archetype-card rounded-image"/></a>
-<a href="https://scryfall.com/card/jmp/185/thought-scour"><img src="https://c1.scryfall.com/file/scryfall-cards/normal/front/1/4/142944d5-1b11-4ec4-b6b4-b5c03e682cd3.jpg?1600732539" class="archetype-card rounded-image"/></a>
-<a href="https://scryfall.com/card/apc/35/whirlpool-rider"><img src="https://c1.scryfall.com/file/scryfall-cards/normal/front/0/d/0de47f44-8c5e-4114-9064-145d2d8813c6.jpg?1562898184" class="archetype-card rounded-image"/></a>
+<a href="https://scryfall.com/card/c21/115/brainstorm"><img src="https://c1.scryfall.com/file/scryfall-cards/normal/front/0/3/0359f212-9564-41a9-870b-d2c57455a695.jpg" class="archetype-card rounded-image"/></a>
+<a href="https://scryfall.com/card/mh2/267/counterspell"><img src="https://c1.scryfall.com/file/scryfall-cards/normal/front/1/9/1920dae4-fb92-4f19-ae4b-eb3276b8dac7.jpg" class="archetype-card rounded-image"/></a>
+<a href="https://scryfall.com/card/jvc/27/gush"><img src="https://c1.scryfall.com/file/scryfall-cards/normal/front/d/4/d4a3a921-3b7f-474c-b8c3-67a1a6ba5cc1.jpg" class="archetype-card rounded-image"/></a>
+<a href="https://scryfall.com/card/m12/60/jaces-erasure"><img src="https://c1.scryfall.com/file/scryfall-cards/normal/front/9/7/970f4f34-f834-41a7-aff1-7cef82cefc74.jpg" class="archetype-card rounded-image"/></a>
+<a href="https://scryfall.com/card/c21/125/ponder"><img src="https://c1.scryfall.com/file/scryfall-cards/normal/front/9/c/9cee2eb1-f60e-4626-ba4a-b543142ca950.jpg" class="archetype-card rounded-image"/></a>
+<a href="https://scryfall.com/card/cmr/84/preordain"><img src="https://c1.scryfall.com/file/scryfall-cards/normal/front/1/4/1453f92e-df2d-4789-aa1b-a5b5c51567d4.jpg" class="archetype-card rounded-image"/></a>
+<a href="https://scryfall.com/card/dds/10/snap"><img src="https://c1.scryfall.com/file/scryfall-cards/normal/front/1/9/1959f078-4b7b-4df2-a256-d43b2d97e853.jpg" class="archetype-card rounded-image"/></a>
+<a href="https://scryfall.com/card/jmp/185/thought-scour"><img src="https://c1.scryfall.com/file/scryfall-cards/normal/front/1/4/142944d5-1b11-4ec4-b6b4-b5c03e682cd3.jpg" class="archetype-card rounded-image"/></a>
+<a href="https://scryfall.com/card/apc/35/whirlpool-rider"><img src="https://c1.scryfall.com/file/scryfall-cards/normal/front/0/d/0de47f44-8c5e-4114-9064-145d2d8813c6.jpg" class="archetype-card rounded-image"/></a>
 </details><br/>
 
 
@@ -31,12 +31,12 @@
 
 <details>
   <summary>Click here to expand</summary>
-<a href="https://scryfall.com/card/isd/51/delver-of-secrets-insectile-aberration"><img src="https://c1.scryfall.com/file/scryfall-cards/normal/front/1/1/11bf83bb-c95b-4b4f-9a56-ce7a1816307a.jpg?1562826346" class="archetype-card rounded-image"/></a>
-<a href="https://scryfall.com/card/roe/59/deprive"><img src="https://c1.scryfall.com/file/scryfall-cards/normal/front/2/e/2efecdd9-bd3a-4b79-92da-6485589d5bde.jpg?1562702470" class="archetype-card rounded-image"/></a>
-<a href="https://scryfall.com/card/c19/84/echoing-truth"><img src="https://c1.scryfall.com/file/scryfall-cards/normal/front/5/5/55cd75bc-5ec7-45b2-9231-85a321ecd786.jpg?1568003983" class="archetype-card rounded-image"/></a>
-<a href="https://scryfall.com/card/nph/35/gitaxian-probe"><img src="https://c1.scryfall.com/file/scryfall-cards/normal/front/9/9/995486ce-58bb-4753-a812-0ca73ef1a235.jpg?1562880052" class="archetype-card rounded-image"/></a>
-<a href="https://scryfall.com/card/c21/129/serum-visions"><img src="https://c1.scryfall.com/file/scryfall-cards/normal/front/f/b/fbff5161-ed36-429a-b06a-a1c5a6afd9bc.jpg?1617910503" class="archetype-card rounded-image"/></a>
-<a href="https://scryfall.com/card/jvc/16/spire-golem"><img src="https://c1.scryfall.com/file/scryfall-cards/normal/front/b/2/b299c599-1a10-4122-ac0b-8f52a9cec7b6.jpg?1562378478" class="archetype-card rounded-image"/></a>
+<a href="https://scryfall.com/card/isd/51/delver-of-secrets-insectile-aberration"><img src="https://c1.scryfall.com/file/scryfall-cards/normal/front/1/1/11bf83bb-c95b-4b4f-9a56-ce7a1816307a.jpg" class="archetype-card rounded-image"/></a>
+<a href="https://scryfall.com/card/roe/59/deprive"><img src="https://c1.scryfall.com/file/scryfall-cards/normal/front/2/e/2efecdd9-bd3a-4b79-92da-6485589d5bde.jpg" class="archetype-card rounded-image"/></a>
+<a href="https://scryfall.com/card/c19/84/echoing-truth"><img src="https://c1.scryfall.com/file/scryfall-cards/normal/front/5/5/55cd75bc-5ec7-45b2-9231-85a321ecd786.jpg" class="archetype-card rounded-image"/></a>
+<a href="https://scryfall.com/card/nph/35/gitaxian-probe"><img src="https://c1.scryfall.com/file/scryfall-cards/normal/front/9/9/995486ce-58bb-4753-a812-0ca73ef1a235.jpg" class="archetype-card rounded-image"/></a>
+<a href="https://scryfall.com/card/c21/129/serum-visions"><img src="https://c1.scryfall.com/file/scryfall-cards/normal/front/f/b/fbff5161-ed36-429a-b06a-a1c5a6afd9bc.jpg" class="archetype-card rounded-image"/></a>
+<a href="https://scryfall.com/card/jvc/16/spire-golem"><img src="https://c1.scryfall.com/file/scryfall-cards/normal/front/b/2/b299c599-1a10-4122-ac0b-8f52a9cec7b6.jpg" class="archetype-card rounded-image"/></a>
 </details><br/>
 
 
