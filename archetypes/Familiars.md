@@ -2,6 +2,8 @@
 # Familiars
 <br/>
 
+**Aliases**: `Azorius Familiars`, `UW Familiars`
+
 
 **Dominant mana**: <img src="../resources/images/mana/U.png" class="dominant-mana-icon"/> <img src="../resources/images/mana/W.png" class="dominant-mana-icon"/>
 

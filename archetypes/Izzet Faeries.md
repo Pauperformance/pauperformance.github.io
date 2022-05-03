@@ -2,7 +2,7 @@
 # Izzet Faeries
 <br/>
 
-**Aliases**: `UR Faeries`, `Izzet Skred`
+**Aliases**: `UR Faeries`, `Izzet Skred`, `UR Skred`
 
 
 **Dominant mana**: <img src="../resources/images/mana/U.png" class="dominant-mana-icon"/> <img src="../resources/images/mana/R.png" class="dominant-mana-icon"/>
