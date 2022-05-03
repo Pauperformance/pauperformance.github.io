@@ -2,7 +2,7 @@
 # Aristocrats
 <br/>
 
-**Aliases**: `Golgari Sacrifice`
+**Aliases**: `Golgari Aristocrats`, `BG Aristocrats`, `Golgari Sacrifice`, `BG Sacrifice`
 
 
 **Dominant mana**: <img src="../resources/images/mana/B.png" class="dominant-mana-icon"/> <img src="../resources/images/mana/G.png" class="dominant-mana-icon"/>

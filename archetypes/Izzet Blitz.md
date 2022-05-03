@@ -7,7 +7,7 @@
 
 **Dominant mana**: <img src="../resources/images/mana/U.png" class="dominant-mana-icon"/> <img src="../resources/images/mana/R.png" class="dominant-mana-icon"/>
 
-**Type**: `Aggro`/`Combo`
+**Type**: `Aggro`
 
 **Description**: _Still missing. Please join us on [Discord](https://discord.gg/fYQbpjjkQ3) to contribute to the Academy._
 

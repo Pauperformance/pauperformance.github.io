@@ -2,6 +2,8 @@
 # Azorius Caw Blade
 <br/>
 
+**Aliases**: `UW Caw Blade`
+
 
 **Dominant mana**: <img src="../resources/images/mana/U.png" class="dominant-mana-icon"/> <img src="../resources/images/mana/W.png" class="dominant-mana-icon"/>
 

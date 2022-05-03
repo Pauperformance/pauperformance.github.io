@@ -2,6 +2,8 @@
 # Domain Zoo
 <br/>
 
+**Aliases**: `Naya Zoo`
+
 
 **Dominant mana**: <img src="../resources/images/mana/R.png" class="dominant-mana-icon"/> <img src="../resources/images/mana/G.png" class="dominant-mana-icon"/> <img src="../resources/images/mana/W.png" class="dominant-mana-icon"/>
 
