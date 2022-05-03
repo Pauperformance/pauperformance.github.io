@@ -10,7 +10,7 @@ This page should be useful for Pauper players that haven't followed the latest r
 
 Further information about reference numbers used by Pauperformance (p12e) to uniquely identify Magic sets can be found in the [Set Index page](set_index.html).
 
-The total number of cards in the Pauper pool is: 8317.
+The total number of cards in the Pauper pool is: 8316.
 
 ---
 Table of Contents
@@ -2707,7 +2707,7 @@ Table of Contents
 *release: 2003-10-02 | p12e_code: 130*
 
 <details>
-  <summary>Click to see 105 new cards</summary>
+  <summary>Click to see 104 new cards</summary>
 
 <a href="https://scryfall.com/card/mrd/141/aether-spellbomb?utm_source=api">Aether Spellbomb</a><br/>
 <a href="https://scryfall.com/card/mrd/142/alpha-myr?utm_source=api">Alpha Myr</a><br/>
@@ -2728,7 +2728,6 @@ Table of Contents
 <a href="https://scryfall.com/card/mrd/158/copper-myr?utm_source=api">Copper Myr</a><br/>
 <a href="https://scryfall.com/card/mrd/118/deconstruct?utm_source=api">Deconstruct</a><br/>
 <a href="https://scryfall.com/card/mrd/32/disarm?utm_source=api">Disarm</a><br/>
-<a href="https://scryfall.com/card/mrd/62/disciple-of-the-vault?utm_source=api">Disciple of the Vault</a><br/>
 <a href="https://scryfall.com/card/mrd/34/dreams-grip?utm_source=api">Dream's Grip</a><br/>
 <a href="https://scryfall.com/card/mrd/64/dross-prowler?utm_source=api">Dross Prowler</a><br/>
 <a href="https://scryfall.com/card/mrd/164/dross-scorpion?utm_source=api">Dross Scorpion</a><br/>
@@ -4607,7 +4606,7 @@ Table of Contents
 *release: 2009-10-02 | p12e_code: 252*
 
 <details>
-  <summary>Click to see 93 new cards</summary>
+  <summary>Click to see 94 new cards</summary>
 
 <a href="https://scryfall.com/card/zen/195/adventuring-gear?utm_source=api">Adventuring Gear</a><br/>
 <a href="https://scryfall.com/card/zen/118/bladetusk-boar?utm_source=api">Bladetusk Boar</a><br/>
@@ -4621,6 +4620,7 @@ Table of Contents
 <a href="https://scryfall.com/card/zen/85/crypt-ripper?utm_source=api">Crypt Ripper</a><br/>
 <a href="https://scryfall.com/card/zen/86/desecrated-earth?utm_source=api">Desecrated Earth</a><br/>
 <a href="https://scryfall.com/card/zen/87/disfigure?utm_source=api">Disfigure</a><br/>
+<a href="https://scryfall.com/card/zen/201/expedition-map?utm_source=api">Expedition Map</a><br/>
 <a href="https://scryfall.com/card/zen/202/explorers-scope?utm_source=api">Explorer's Scope</a><br/>
 <a href="https://scryfall.com/card/zen/90/giant-scorpion?utm_source=api">Giant Scorpion</a><br/>
 <a href="https://scryfall.com/card/zen/125/goblin-bushwhacker?utm_source=api">Goblin Bushwhacker</a><br/>
@@ -9354,7 +9354,7 @@ Table of Contents
 *release: 2021-06-18 | p12e_code: 676*
 
 <details>
-  <summary>Click to see 99 new cards</summary>
+  <summary>Click to see 98 new cards</summary>
 
 <a href="https://scryfall.com/card/mh2/147/abundant-harvest?utm_source=api">Abundant Harvest</a><br/>
 <a href="https://scryfall.com/card/mh2/37/aeromoeba?utm_source=api">Aeromoeba</a><br/>
@@ -9392,7 +9392,6 @@ Table of Contents
 <a href="https://scryfall.com/card/mh2/43/foul-watcher?utm_source=api">Foul Watcher</a><br/>
 <a href="https://scryfall.com/card/mh2/196/foundry-helix?utm_source=api">Foundry Helix</a><br/>
 <a href="https://scryfall.com/card/mh2/161/funnel-web-recluse?utm_source=api">Funnel-Web Recluse</a><br/>
-<a href="https://scryfall.com/card/mh2/127/galvanic-relay?utm_source=api">Galvanic Relay</a><br/>
 <a href="https://scryfall.com/card/mh2/128/gargadon?utm_source=api">Gargadon</a><br/>
 <a href="https://scryfall.com/card/mh2/86/gilt-blade-prowler?utm_source=api">Gilt-Blade Prowler</a><br/>
 <a href="https://scryfall.com/card/mh2/163/glimmer-bairn?utm_source=api">Glimmer Bairn</a><br/>
