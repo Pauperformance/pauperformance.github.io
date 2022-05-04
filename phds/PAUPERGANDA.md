@@ -29,4 +29,4 @@ I'm deluxeicoff on MTGO - I've created many Pauper Staples including, Boros Bull
 —Journal of the Prime Izmagnus
 ```
 
-**Favorite artwork**: Anything by [Terese Nielsen](https://scryfall.com/search?as=grid&order=name&q=%28artist%3ATerese+artist%3ANielsen%29)
+**Favorite artwork**: Anything by [Terese Nielsen](https://scryfall.com/search?q=a%3A%E2%80%9CTerese+Nielsen%E2%80%9D&unique=art)
