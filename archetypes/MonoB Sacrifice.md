@@ -16,6 +16,13 @@
 
 
 
+## **Other decks**
+
+| Name | Set name | Set date | Legal |
+| -----| -------- | -------- | ----- |
+| [MonoB Sacrifice 722.001.Haste_BR](https://www.mtggoldfish.com/deck/4793453) | Kamigawa: Neon Dynasty | 2022-02-18 | ✅ |
+
+
 
 
 
