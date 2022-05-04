@@ -16,6 +16,13 @@
 
 
 
+## **Other decks**
+
+| Name | Set name | Set date | Legal |
+| -----| -------- | -------- | ----- |
+| [Gruul Ponza 669.001.Owanosora](https://www.mtggoldfish.com/deck/4793485) | Strixhaven: School of Mages | 2021-04-23 | ✅ |
+
+
 
 
 
