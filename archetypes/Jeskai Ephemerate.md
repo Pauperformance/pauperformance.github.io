@@ -55,3 +55,10 @@
 
 
 
+
+## **Resources**
+
+| 🗣️ | Name | Author | Date |
+| -- | ---- | ------ | ---- |
+| 🇬🇧 | <a target="_blank" href="https://mtg.cardsrealm.com/en-us/articles/pauper--jeskai-ephemerate-deck-tech--sideboard-guide">Jeskai Ephemerate Deck Tech & Sideboard Guide</a> | Tiago Fuguete | 2022-05-04   |
+
