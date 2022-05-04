@@ -7,7 +7,7 @@ I make some Pauper content on YouTube and I'm a member of the Pauper Format Pane
 
 **MTGO username**: `Heisen01`
 
-**Twitch**: [twitch.tv/heisen01_](https://www.twitch.tv/heisen01_)
+**Twitch**: [twitch.tv/heisen01\_](https://www.twitch.tv/heisen01_)
 
 **YouTube**: [youtube.com/channel/UC1jO4Ge4jmlvaImhze5ldaw](https://www.youtube.com/channel/UC1jO4Ge4jmlvaImhze5ldaw)
 
