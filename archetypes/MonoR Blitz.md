@@ -16,6 +16,13 @@
 
 
 
+## **Other decks**
+
+| Name | Set name | Set date | Legal |
+| -----| -------- | -------- | ----- |
+| [MonoR Blitz 722.001.pokerswizard](https://www.mtggoldfish.com/deck/4795053) | Kamigawa: Neon Dynasty | 2022-02-18 | ✅ |
+
+
 
 
 

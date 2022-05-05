@@ -12,7 +12,42 @@
 **Description**: _Still missing. Please join us on [Discord](https://discord.gg/fYQbpjjkQ3) to contribute to the Academy._
 
 
+## **Staples**
 
+<details>
+  <summary>Click here to expand</summary>
+<a href="https://scryfall.com/card/voc/102/arcane-denial"><img src="https://c1.scryfall.com/file/scryfall-cards/normal/front/2/4/247e08a1-b9ce-4312-aec4-626992933038.jpg" class="archetype-card rounded-image"/></a>
+<a href="https://scryfall.com/card/c21/115/brainstorm"><img src="https://c1.scryfall.com/file/scryfall-cards/normal/front/0/3/0359f212-9564-41a9-870b-d2c57455a695.jpg" class="archetype-card rounded-image"/></a>
+<a href="https://scryfall.com/card/m21/50/frantic-inventory"><img src="https://c1.scryfall.com/file/scryfall-cards/normal/front/8/f/8f14abb0-0e9f-448e-85d7-6cb71f756c56.jpg" class="archetype-card rounded-image"/></a>
+<a href="https://scryfall.com/card/ody/251/moments-peace"><img src="https://c1.scryfall.com/file/scryfall-cards/normal/front/4/0/40ebe935-ccf9-435e-8fe8-53bcbf3526e7.jpg" class="archetype-card rounded-image"/></a>
+<a href="https://scryfall.com/card/soi/78/pieces-of-the-puzzle"><img src="https://c1.scryfall.com/file/scryfall-cards/normal/front/6/9/69204c83-2e43-4ca1-a4cd-d75399a7d6dd.jpg" class="archetype-card rounded-image"/></a>
+<a href="https://scryfall.com/card/ori/195/reclaim"><img src="https://c1.scryfall.com/file/scryfall-cards/normal/front/8/8/88f3c600-66f1-4a5e-ba4f-61e9f7f7a1d9.jpg" class="archetype-card rounded-image"/></a>
+<a href="https://scryfall.com/card/mh1/71/stream-of-thought"><img src="https://c1.scryfall.com/file/scryfall-cards/normal/front/8/b/8b75bef5-a039-4edf-8e43-56b8d089605e.jpg" class="archetype-card rounded-image"/></a>
+<a href="https://scryfall.com/card/vma/237/tangle"><img src="https://c1.scryfall.com/file/scryfall-cards/normal/front/6/3/635ca3c1-d544-44fc-a178-3bfe4fe69551.jpg" class="archetype-card rounded-image"/></a>
+<a href="https://scryfall.com/card/mh1/191/weather-the-storm"><img src="https://c1.scryfall.com/file/scryfall-cards/normal/front/f/6/f6a9fa51-78c3-42e6-8c2e-39658f59ed87.jpg" class="archetype-card rounded-image"/></a>
+</details><br/>
+
+
+
+## **Frequent cards**
+
+<details>
+  <summary>Click here to expand</summary>
+<a href="https://scryfall.com/card/mh2/147/abundant-harvest"><img src="https://c1.scryfall.com/file/scryfall-cards/normal/front/5/a/5ad86b17-3fed-418a-938c-c49adb409531.jpg" class="archetype-card rounded-image"/></a>
+<a href="https://scryfall.com/card/a25/40/accumulated-knowledge"><img src="https://c1.scryfall.com/file/scryfall-cards/normal/front/a/d/ad88e5ee-0eee-47af-a7b4-9bac044e1c8c.jpg" class="archetype-card rounded-image"/></a>
+<a href="https://scryfall.com/card/khm/46/behold-the-multiverse"><img src="https://c1.scryfall.com/file/scryfall-cards/normal/front/2/7/27855a38-a682-4f97-ad22-ac625e86faec.jpg" class="archetype-card rounded-image"/></a>
+<a href="https://scryfall.com/card/c20/67/bonders-ornament"><img src="https://c1.scryfall.com/file/scryfall-cards/normal/front/5/a/5afe425c-50a7-4d29-ac14-0edb094fc770.jpg" class="archetype-card rounded-image"/></a>
+<a href="https://scryfall.com/card/mh2/267/counterspell"><img src="https://c1.scryfall.com/file/scryfall-cards/normal/front/1/9/1920dae4-fb92-4f19-ae4b-eb3276b8dac7.jpg" class="archetype-card rounded-image"/></a>
+<a href="https://scryfall.com/card/cmr/178/fiery-cannonade"><img src="https://c1.scryfall.com/file/scryfall-cards/normal/front/3/9/396f1cdf-712b-4518-a0e8-0039303dccdc.jpg" class="archetype-card rounded-image"/></a>
+<a href="https://scryfall.com/card/ema/167/fog"><img src="https://c1.scryfall.com/file/scryfall-cards/normal/front/b/b/bbc3152e-7b3b-4ac6-8b33-abfebde216aa.jpg" class="archetype-card rounded-image"/></a>
+<a href="https://scryfall.com/card/m12/60/jaces-erasure"><img src="https://c1.scryfall.com/file/scryfall-cards/normal/front/9/7/970f4f34-f834-41a7-aff1-7cef82cefc74.jpg" class="archetype-card rounded-image"/></a>
+<a href="https://scryfall.com/card/rav/60/muddle-the-mixture"><img src="https://c1.scryfall.com/file/scryfall-cards/normal/front/4/c/4cc785b0-0a77-4b02-b0b4-2bda2fc621cc.jpg" class="archetype-card rounded-image"/></a>
+<a href="https://scryfall.com/card/c21/125/ponder"><img src="https://c1.scryfall.com/file/scryfall-cards/normal/front/9/c/9cee2eb1-f60e-4626-ba4a-b543142ca950.jpg" class="archetype-card rounded-image"/></a>
+<a href="https://scryfall.com/card/cmr/84/preordain"><img src="https://c1.scryfall.com/file/scryfall-cards/normal/front/1/4/1453f92e-df2d-4789-aa1b-a5b5c51567d4.jpg" class="archetype-card rounded-image"/></a>
+<a href="https://scryfall.com/card/cns/176/respite"><img src="https://c1.scryfall.com/file/scryfall-cards/normal/front/d/9/d9b5c747-43d6-4c5f-9ca3-feaf004a88cb.jpg" class="archetype-card rounded-image"/></a>
+<a href="https://scryfall.com/card/jud/102/swirling-sandstorm"><img src="https://c1.scryfall.com/file/scryfall-cards/normal/front/4/d/4d757ec3-c15f-4d6e-8e18-36ebae985448.jpg" class="archetype-card rounded-image"/></a>
+<a href="https://scryfall.com/card/eld/74/witching-well"><img src="https://c1.scryfall.com/file/scryfall-cards/normal/front/6/2/62d3132f-f897-4a7a-9de4-c6388e83f5ad.jpg" class="archetype-card rounded-image"/></a>
+</details><br/>
 
 
 
@@ -23,6 +58,7 @@
 | Name | Set name | Set date | Legal |
 | -----| -------- | -------- | ----- |
 | [Turbofog 722.001.wisanto](https://www.mtggoldfish.com/deck/4673166) | Kamigawa: Neon Dynasty | 2022-02-18 | ✅ |
+| [Turbofog 696.001.Adrowo](https://www.mtggoldfish.com/deck/4795055) | Innistrad: Midnight Hunt | 2021-09-24 | Ban 🔨 |
 
 
 

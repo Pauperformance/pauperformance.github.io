@@ -10,7 +10,33 @@
 **Description**: _Still missing. Please join us on [Discord](https://discord.gg/fYQbpjjkQ3) to contribute to the Academy._
 
 
+## **Staples**
 
+<details>
+  <summary>Click here to expand</summary>
+<a href="https://scryfall.com/card/td2/4/ardent-recruit"><img src="https://c1.scryfall.com/file/scryfall-cards/normal/front/3/a/3a7f9bd7-7232-4956-873d-52ff82eabfb3.jpg" class="archetype-card rounded-image"/></a>
+<a href="https://scryfall.com/card/som/4/auriok-sunchaser"><img src="https://c1.scryfall.com/file/scryfall-cards/normal/front/e/2/e274a8b3-2d92-43d9-a436-d3f6f619ca95.jpg" class="archetype-card rounded-image"/></a>
+<a href="https://scryfall.com/card/2xm/256/flayer-husk"><img src="https://c1.scryfall.com/file/scryfall-cards/normal/front/2/0/20b394f9-644d-426e-801b-110774092018.jpg" class="archetype-card rounded-image"/></a>
+<a href="https://scryfall.com/card/jmp/466/gingerbrute"><img src="https://c1.scryfall.com/file/scryfall-cards/normal/front/c/1/c1195ec5-979b-4c4a-9c04-62bb53c2b011.jpg" class="archetype-card rounded-image"/></a>
+<a href="https://scryfall.com/card/som/10/glint-hawk"><img src="https://c1.scryfall.com/file/scryfall-cards/normal/front/2/8/284c4710-4183-4743-9c8b-515cc98cbbb8.jpg" class="archetype-card rounded-image"/></a>
+<a href="https://scryfall.com/card/cmd/17/journey-to-nowhere"><img src="https://c1.scryfall.com/file/scryfall-cards/normal/front/4/6/4686b51c-e02b-48c1-bafe-e8d08a5407b9.jpg" class="archetype-card rounded-image"/></a>
+<a href="https://scryfall.com/card/iko/60/of-one-mind"><img src="https://c1.scryfall.com/file/scryfall-cards/normal/front/c/9/c95fb136-f21d-4f3a-82b7-bcf490b7e90c.jpg" class="archetype-card rounded-image"/></a>
+<a href="https://scryfall.com/card/aer/167/ornithopter"><img src="https://c1.scryfall.com/file/scryfall-cards/normal/front/d/d/ddb96645-44d2-426c-90cb-3186297a8728.jpg" class="archetype-card rounded-image"/></a>
+<a href="https://scryfall.com/card/mm2/64/thoughtcast"><img src="https://c1.scryfall.com/file/scryfall-cards/normal/front/8/9/895485a4-06b6-449d-8cf1-db08e52790e4.jpg" class="archetype-card rounded-image"/></a>
+<a href="https://scryfall.com/card/2xm/35/thraben-inspector"><img src="https://c1.scryfall.com/file/scryfall-cards/normal/front/2/b/2be39749-ad6f-4160-99eb-c677eee7f1b2.jpg" class="archetype-card rounded-image"/></a>
+<a href="https://scryfall.com/card/mrd/264/tooth-of-chiss-goria"><img src="https://c1.scryfall.com/file/scryfall-cards/normal/front/d/b/db5a91db-1b86-4471-badc-884142c355ca.jpg" class="archetype-card rounded-image"/></a>
+</details><br/>
+
+
+
+## **Frequent cards**
+
+<details>
+  <summary>Click here to expand</summary>
+<a href="https://scryfall.com/card/bfz/76/dispel"><img src="https://c1.scryfall.com/file/scryfall-cards/normal/front/b/c/bceab6b3-6b64-4964-a501-ce806a6c13ad.jpg" class="archetype-card rounded-image"/></a>
+<a href="https://scryfall.com/card/frf/154/harsh-sustenance"><img src="https://c1.scryfall.com/file/scryfall-cards/normal/front/7/7/770d60a0-23fc-4224-873c-2e5549b3a816.jpg" class="archetype-card rounded-image"/></a>
+<a href="https://scryfall.com/card/2xm/291/springleaf-drum"><img src="https://c1.scryfall.com/file/scryfall-cards/normal/front/f/3/f3b3869b-6da1-4b01-a2e7-2018d478b6e5.jpg" class="archetype-card rounded-image"/></a>
+</details><br/>
 
 
 
@@ -21,6 +47,7 @@
 | Name | Set name | Set date | Legal |
 | -----| -------- | -------- | ----- |
 | [Brute Squad 658.001.Luiz0211](https://www.mtggoldfish.com/deck/4351093) | Kaldheim | 2021-02-05 | ✅ |
+| [Brute Squad 651.001.deluxeicoff](https://www.mtggoldfish.com/deck/4795051) | Commander Legends | 2020-11-20 | ✅ |
 
 
 
