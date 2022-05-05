@@ -8,81 +8,437 @@ If you think a relevant archetype is missing or a mistake is present, please let
 
 Every archetype in the list is linked to its dedicated page, where you will find useful resources.
 
-{% include mana-filter.html %}
-<!-- leave empty line after -->
+<div id="archetypes-filter-anchor"></div>
 
-
-| Name                   | Dominant mana | Type            | Family          |
-| -----------------------| ------------- | --------------- | --------------- |
-[Acid Trip](../archetypes/Acid%20Trip.html) | <img src="../resources/images/mana/U.png" class="dominant-mana-icon"/> <img src="../resources/images/mana/W.png" class="dominant-mana-icon"/> | Midrange        | [            ](../families/.html) |
-[Affinity](../archetypes/Affinity.html) | <img src="../resources/images/mana/B.png" class="dominant-mana-icon"/> <img src="../resources/images/mana/U.png" class="dominant-mana-icon"/> <img src="../resources/images/mana/R.png" class="dominant-mana-icon"/> | Aggro, Combo    | [Affinity    ](../families/Affinity.html) |
-[Aristocrats](../archetypes/Aristocrats.html) | <img src="../resources/images/mana/B.png" class="dominant-mana-icon"/> <img src="../resources/images/mana/G.png" class="dominant-mana-icon"/> | Aggro           | [            ](../families/.html) |
-[Atog Shift](../archetypes/Atog%20Shift.html) | <img src="../resources/images/mana/U.png" class="dominant-mana-icon"/> <img src="../resources/images/mana/R.png" class="dominant-mana-icon"/> | Midrange, Combo | [Affinity    ](../families/Affinity.html) |
-[Azorius Caw Blade](../archetypes/Azorius%20Caw%20Blade.html) | <img src="../resources/images/mana/U.png" class="dominant-mana-icon"/> <img src="../resources/images/mana/W.png" class="dominant-mana-icon"/> | Midrange        | [            ](../families/.html) |
-[Azorius Evoke](../archetypes/Azorius%20Evoke.html) | <img src="../resources/images/mana/U.png" class="dominant-mana-icon"/> <img src="../resources/images/mana/W.png" class="dominant-mana-icon"/> | Control         | [            ](../families/.html) |
-[Black Burn](../archetypes/Black%20Burn.html) | <img src="../resources/images/mana/B.png" class="dominant-mana-icon"/> | Aggro           | [            ](../families/.html) |
-[Bogles](../archetypes/Bogles.html) | <img src="../resources/images/mana/G.png" class="dominant-mana-icon"/> <img src="../resources/images/mana/W.png" class="dominant-mana-icon"/> | Aggro           | [            ](../families/.html) |
-[Boros Bully](../archetypes/Boros%20Bully.html) | <img src="../resources/images/mana/R.png" class="dominant-mana-icon"/> <img src="../resources/images/mana/W.png" class="dominant-mana-icon"/> | Midrange        | [            ](../families/.html) |
-[Boros Monarch](../archetypes/Boros%20Monarch.html) | <img src="../resources/images/mana/R.png" class="dominant-mana-icon"/> <img src="../resources/images/mana/W.png" class="dominant-mana-icon"/> | Midrange        | [            ](../families/.html) |
-[Boros Synth](../archetypes/Boros%20Synth.html) | <img src="../resources/images/mana/R.png" class="dominant-mana-icon"/> <img src="../resources/images/mana/W.png" class="dominant-mana-icon"/> | Aggro           | [            ](../families/.html) |
-[Brute Squad](../archetypes/Brute%20Squad.html) | <img src="../resources/images/mana/U.png" class="dominant-mana-icon"/> <img src="../resources/images/mana/W.png" class="dominant-mana-icon"/> | Aggro           | [            ](../families/.html) |
-[Burn](../archetypes/Burn.html) | <img src="../resources/images/mana/R.png" class="dominant-mana-icon"/> | Aggro           | [            ](../families/.html) |
-[Canadian Threshold](../archetypes/Canadian%20Threshold.html) | <img src="../resources/images/mana/G.png" class="dominant-mana-icon"/> <img src="../resources/images/mana/R.png" class="dominant-mana-icon"/> <img src="../resources/images/mana/U.png" class="dominant-mana-icon"/> | Midrange        | [            ](../families/.html) |
-[Chatterstorm](../archetypes/Chatterstorm.html) | <img src="../resources/images/mana/G.png" class="dominant-mana-icon"/> <img src="../resources/images/mana/R.png" class="dominant-mana-icon"/> <img src="../resources/images/mana/B.png" class="dominant-mana-icon"/> | Combo           | [            ](../families/.html) |
-[Cycling Storm](../archetypes/Cycling%20Storm.html) | <img src="../resources/images/mana/B.png" class="dominant-mana-icon"/> | Combo           | [            ](../families/.html) |
-[Dimir Alchemy](../archetypes/Dimir%20Alchemy.html) | <img src="../resources/images/mana/U.png" class="dominant-mana-icon"/> <img src="../resources/images/mana/B.png" class="dominant-mana-icon"/> | Control         | [            ](../families/.html) |
-[Dimir Delver](../archetypes/Dimir%20Delver.html) | <img src="../resources/images/mana/U.png" class="dominant-mana-icon"/> <img src="../resources/images/mana/B.png" class="dominant-mana-icon"/> | Tempo           | [            ](../families/.html) |
-[Dimir Faeries](../archetypes/Dimir%20Faeries.html) | <img src="../resources/images/mana/U.png" class="dominant-mana-icon"/> <img src="../resources/images/mana/B.png" class="dominant-mana-icon"/> | Tempo           | [Faeries     ](../families/Faeries.html) |
-[Dimir Flicker](../archetypes/Dimir%20Flicker.html) | <img src="../resources/images/mana/U.png" class="dominant-mana-icon"/> <img src="../resources/images/mana/B.png" class="dominant-mana-icon"/> | Control         | [            ](../families/.html) |
-[Dimir Reanimator](../archetypes/Dimir%20Reanimator.html) | <img src="../resources/images/mana/U.png" class="dominant-mana-icon"/> <img src="../resources/images/mana/B.png" class="dominant-mana-icon"/> | Midrange, Combo | [Reanimator  ](../families/Reanimator.html) |
-[Dimir Teachings](../archetypes/Dimir%20Teachings.html) | <img src="../resources/images/mana/U.png" class="dominant-mana-icon"/> <img src="../resources/images/mana/B.png" class="dominant-mana-icon"/> | Control         | [            ](../families/.html) |
-[Domain Zoo](../archetypes/Domain%20Zoo.html) | <img src="../resources/images/mana/R.png" class="dominant-mana-icon"/> <img src="../resources/images/mana/G.png" class="dominant-mana-icon"/> <img src="../resources/images/mana/W.png" class="dominant-mana-icon"/> | Aggro           | [            ](../families/.html) |
-[Eggs](../archetypes/Eggs.html) | <img src="../resources/images/mana/C.png" class="dominant-mana-icon"/> | Combo           | [            ](../families/.html) |
-[Elves](../archetypes/Elves.html) | <img src="../resources/images/mana/G.png" class="dominant-mana-icon"/> | Aggro, Combo    | [            ](../families/.html) |
-[Familiars](../archetypes/Familiars.html) | <img src="../resources/images/mana/U.png" class="dominant-mana-icon"/> <img src="../resources/images/mana/W.png" class="dominant-mana-icon"/> | Control, Combo  | [            ](../families/.html) |
-[Fishelbrand](../archetypes/Fishelbrand.html) | <img src="../resources/images/mana/U.png" class="dominant-mana-icon"/> <img src="../resources/images/mana/B.png" class="dominant-mana-icon"/> | Combo           | [            ](../families/.html) |
-[Flicker Tron](../archetypes/Flicker%20Tron.html) | <img src="../resources/images/mana/G.png" class="dominant-mana-icon"/> <img src="../resources/images/mana/R.png" class="dominant-mana-icon"/> <img src="../resources/images/mana/U.png" class="dominant-mana-icon"/> | Control         | [Tron        ](../families/Tron.html) |
-[Goblins](../archetypes/Goblins.html) | <img src="../resources/images/mana/R.png" class="dominant-mana-icon"/> | Aggro           | [            ](../families/.html) |
-[Golgari TortEx](../archetypes/Golgari%20TortEx.html) | <img src="../resources/images/mana/B.png" class="dominant-mana-icon"/> <img src="../resources/images/mana/G.png" class="dominant-mana-icon"/> | Midrange        | [TortEx      ](../families/TortEx.html) |
-[Infect](../archetypes/Infect.html) | <img src="../resources/images/mana/G.png" class="dominant-mana-icon"/> | Aggro           | [            ](../families/.html) |
-[Inside Out](../archetypes/Inside%20Out.html) | <img src="../resources/images/mana/U.png" class="dominant-mana-icon"/> <img src="../resources/images/mana/W.png" class="dominant-mana-icon"/> | Combo           | [            ](../families/.html) |
-[Izzet Blitz](../archetypes/Izzet%20Blitz.html) | <img src="../resources/images/mana/U.png" class="dominant-mana-icon"/> <img src="../resources/images/mana/R.png" class="dominant-mana-icon"/> | Aggro, Combo    | [            ](../families/.html) |
-[Izzet Curve](../archetypes/Izzet%20Curve.html) | <img src="../resources/images/mana/U.png" class="dominant-mana-icon"/> <img src="../resources/images/mana/R.png" class="dominant-mana-icon"/> | Midrange, Combo | [            ](../families/.html) |
-[Izzet Faeries](../archetypes/Izzet%20Faeries.html) | <img src="../resources/images/mana/U.png" class="dominant-mana-icon"/> <img src="../resources/images/mana/R.png" class="dominant-mana-icon"/> | Tempo           | [Faeries     ](../families/Faeries.html) |
-[Jeskai Ephemerate](../archetypes/Jeskai%20Ephemerate.html) | <img src="../resources/images/mana/R.png" class="dominant-mana-icon"/> <img src="../resources/images/mana/U.png" class="dominant-mana-icon"/> <img src="../resources/images/mana/W.png" class="dominant-mana-icon"/> | Control         | [            ](../families/.html) |
-[Jeskai Snow](../archetypes/Jeskai%20Snow.html) | <img src="../resources/images/mana/R.png" class="dominant-mana-icon"/> <img src="../resources/images/mana/U.png" class="dominant-mana-icon"/> <img src="../resources/images/mana/W.png" class="dominant-mana-icon"/> | Midrange        | [            ](../families/.html) |
-[Jund Cascade](../archetypes/Jund%20Cascade.html) | <img src="../resources/images/mana/B.png" class="dominant-mana-icon"/> <img src="../resources/images/mana/G.png" class="dominant-mana-icon"/> <img src="../resources/images/mana/R.png" class="dominant-mana-icon"/> | Midrange        | [Cascade     ](../families/Cascade.html) |
-[Jund Gardens](../archetypes/Jund%20Gardens.html) | <img src="../resources/images/mana/B.png" class="dominant-mana-icon"/> <img src="../resources/images/mana/G.png" class="dominant-mana-icon"/> <img src="../resources/images/mana/R.png" class="dominant-mana-icon"/> | Midrange, Combo | [            ](../families/.html) |
-[Jund PhD](../archetypes/Jund%20PhD.html) | <img src="../resources/images/mana/B.png" class="dominant-mana-icon"/> <img src="../resources/images/mana/G.png" class="dominant-mana-icon"/> <img src="../resources/images/mana/R.png" class="dominant-mana-icon"/> | Midrange        | [            ](../families/.html) |
-[Kuldotha Rebirth](../archetypes/Kuldotha%20Rebirth.html) | <img src="../resources/images/mana/R.png" class="dominant-mana-icon"/> <img src="../resources/images/mana/W.png" class="dominant-mana-icon"/> | Midrange        | [            ](../families/.html) |
-[Midnight Gond](../archetypes/Midnight%20Gond.html) | <img src="../resources/images/mana/G.png" class="dominant-mana-icon"/> <img src="../resources/images/mana/W.png" class="dominant-mana-icon"/> | Combo           | [            ](../families/.html) |
-[Moggwarts](../archetypes/Moggwarts.html) | <img src="../resources/images/mana/B.png" class="dominant-mana-icon"/> <img src="../resources/images/mana/R.png" class="dominant-mana-icon"/> | Combo           | [            ](../families/.html) |
-[MonoB Control](../archetypes/MonoB%20Control.html) | <img src="../resources/images/mana/B.png" class="dominant-mana-icon"/> | Control         | [            ](../families/.html) |
-[MonoB Ponza](../archetypes/MonoB%20Ponza.html) | <img src="../resources/images/mana/B.png" class="dominant-mana-icon"/> | Control         | [Ponza       ](../families/Ponza.html) |
-[MonoB Suicide](../archetypes/MonoB%20Suicide.html) | <img src="../resources/images/mana/B.png" class="dominant-mana-icon"/> | Aggro           | [            ](../families/.html) |
-[MonoG Ponza](../archetypes/MonoG%20Ponza.html) | <img src="../resources/images/mana/G.png" class="dominant-mana-icon"/> | Control         | [Ponza       ](../families/Ponza.html) |
-[MonoG Tron](../archetypes/MonoG%20Tron.html) | <img src="../resources/images/mana/G.png" class="dominant-mana-icon"/> | Midrange        | [Tron        ](../families/Tron.html) |
-[MonoU Faeries](../archetypes/MonoU%20Faeries.html) | <img src="../resources/images/mana/U.png" class="dominant-mana-icon"/> | Tempo           | [Faeries     ](../families/Faeries.html) |
-[MonoW Heroic](../archetypes/MonoW%20Heroic.html) | <img src="../resources/images/mana/W.png" class="dominant-mana-icon"/> | Aggro           | [            ](../families/.html) |
-[Myr Retriever Combo](../archetypes/Myr%20Retriever%20Combo.html) | <img src="../resources/images/mana/C.png" class="dominant-mana-icon"/> | Combo           | [            ](../families/.html) |
-[One Land Spy](../archetypes/One%20Land%20Spy.html) | <img src="../resources/images/mana/B.png" class="dominant-mana-icon"/> | Combo           | [            ](../families/.html) |
-[Orzhov Pestilence](../archetypes/Orzhov%20Pestilence.html) | <img src="../resources/images/mana/B.png" class="dominant-mana-icon"/> <img src="../resources/images/mana/W.png" class="dominant-mana-icon"/> | Control         | [            ](../families/.html) |
-[Petal Festival](../archetypes/Petal%20Festival.html) | <img src="../resources/images/mana/U.png" class="dominant-mana-icon"/> <img src="../resources/images/mana/G.png" class="dominant-mana-icon"/> | Combo           | [            ](../families/.html) |
-[Ping Storm](../archetypes/Ping%20Storm.html) | <img src="../resources/images/mana/B.png" class="dominant-mana-icon"/> <img src="../resources/images/mana/R.png" class="dominant-mana-icon"/> | Combo           | [            ](../families/.html) |
-[Rakdos Burn](../archetypes/Rakdos%20Burn.html) | <img src="../resources/images/mana/B.png" class="dominant-mana-icon"/> <img src="../resources/images/mana/R.png" class="dominant-mana-icon"/> | Aggro           | [            ](../families/.html) |
-[Rakdos Control](../archetypes/Rakdos%20Control.html) | <img src="../resources/images/mana/B.png" class="dominant-mana-icon"/> <img src="../resources/images/mana/R.png" class="dominant-mana-icon"/> | Control         | [            ](../families/.html) |
-[Rakdos Madness](../archetypes/Rakdos%20Madness.html) | <img src="../resources/images/mana/B.png" class="dominant-mana-icon"/> <img src="../resources/images/mana/R.png" class="dominant-mana-icon"/> | Midrange        | [            ](../families/.html) |
-[Rakdos Reanimator](../archetypes/Rakdos%20Reanimator.html) | <img src="../resources/images/mana/B.png" class="dominant-mana-icon"/> <img src="../resources/images/mana/R.png" class="dominant-mana-icon"/> | Aggro, Combo    | [Reanimator  ](../families/Reanimator.html) |
-[Rakdos TortEx](../archetypes/Rakdos%20TortEx.html) | <img src="../resources/images/mana/B.png" class="dominant-mana-icon"/> <img src="../resources/images/mana/R.png" class="dominant-mana-icon"/> | Midrange        | [TortEx      ](../families/TortEx.html) |
-[Red Deck Wins](../archetypes/Red%20Deck%20Wins.html) | <img src="../resources/images/mana/R.png" class="dominant-mana-icon"/> | Aggro           | [            ](../families/.html) |
-[Slivers](../archetypes/Slivers.html) | <img src="../resources/images/mana/G.png" class="dominant-mana-icon"/> <img src="../resources/images/mana/W.png" class="dominant-mana-icon"/> | Aggro           | [            ](../families/.html) |
-[Soul Sisters](../archetypes/Soul%20Sisters.html) | <img src="../resources/images/mana/G.png" class="dominant-mana-icon"/> | Aggro, Combo    | [            ](../families/.html) |
-[Stompy](../archetypes/Stompy.html) | <img src="../resources/images/mana/G.png" class="dominant-mana-icon"/> | Aggro           | [            ](../families/.html) |
-[Temur Cascade](../archetypes/Temur%20Cascade.html) | <img src="../resources/images/mana/U.png" class="dominant-mana-icon"/> <img src="../resources/images/mana/G.png" class="dominant-mana-icon"/> <img src="../resources/images/mana/R.png" class="dominant-mana-icon"/> | Midrange        | [Cascade     ](../families/Cascade.html) |
-[Turbofog](../archetypes/Turbofog.html) | <img src="../resources/images/mana/U.png" class="dominant-mana-icon"/> <img src="../resources/images/mana/G.png" class="dominant-mana-icon"/> | Control         | [            ](../families/.html) |
-[Walls](../archetypes/Walls.html) | <img src="../resources/images/mana/G.png" class="dominant-mana-icon"/> | Combo           | [            ](../families/.html) |
-[Watch Rites](../archetypes/Watch%20Rites.html) | <img src="../resources/images/mana/U.png" class="dominant-mana-icon"/> <img src="../resources/images/mana/R.png" class="dominant-mana-icon"/> <img src="../resources/images/mana/G.png" class="dominant-mana-icon"/> | Combo           | [            ](../families/.html) |
-[Whirlpool Mill](../archetypes/Whirlpool%20Mill.html) | <img src="../resources/images/mana/U.png" class="dominant-mana-icon"/> | Combo           | [            ](../families/.html) |
-[White Weenie](../archetypes/White%20Weenie.html) | <img src="../resources/images/mana/W.png" class="dominant-mana-icon"/> | Aggro           | [            ](../families/.html) |
-[Zubera Storm](../archetypes/Zubera%20Storm.html) | <img src="../resources/images/mana/U.png" class="dominant-mana-icon"/> <img src="../resources/images/mana/B.png" class="dominant-mana-icon"/> | Combo           | [            ](../families/.html) |
-
+<table id="archetypes-table">
+<thead>
+<tr>
+<th>Name</th>
+<th>Dominant mana</th>
+<th>Type</th>
+<th>Family</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><a href="../archetypes/Acid%20Trip.html">Acid Trip</a></td>
+<td><img src="../resources/images/mana/U.png" class="dominant-mana-icon"/> <img src="../resources/images/mana/W.png" class="dominant-mana-icon"/></td>
+<td>Midrange       </td>
+<td><a href="../families/.html">            </a></td>
+</tr>
+<tr>
+<td><a href="../archetypes/Affinity.html">Affinity</a></td>
+<td><img src="../resources/images/mana/B.png" class="dominant-mana-icon"/> <img src="../resources/images/mana/U.png" class="dominant-mana-icon"/> <img src="../resources/images/mana/R.png" class="dominant-mana-icon"/></td>
+<td>Aggro, Combo   </td>
+<td><a href="../families/Affinity.html">Affinity    </a></td>
+</tr>
+<tr>
+<td><a href="../archetypes/Aristocrats.html">Aristocrats</a></td>
+<td><img src="../resources/images/mana/B.png" class="dominant-mana-icon"/> <img src="../resources/images/mana/G.png" class="dominant-mana-icon"/></td>
+<td>Aggro          </td>
+<td><a href="../families/.html">            </a></td>
+</tr>
+<tr>
+<td><a href="../archetypes/Atog%20Shift.html">Atog Shift</a></td>
+<td><img src="../resources/images/mana/U.png" class="dominant-mana-icon"/> <img src="../resources/images/mana/R.png" class="dominant-mana-icon"/></td>
+<td>Midrange, Combo</td>
+<td><a href="../families/Affinity.html">Affinity    </a></td>
+</tr>
+<tr>
+<td><a href="../archetypes/Azorius%20Caw%20Blade.html">Azorius Caw Blade</a></td>
+<td><img src="../resources/images/mana/U.png" class="dominant-mana-icon"/> <img src="../resources/images/mana/W.png" class="dominant-mana-icon"/></td>
+<td>Midrange       </td>
+<td><a href="../families/.html">            </a></td>
+</tr>
+<tr>
+<td><a href="../archetypes/Azorius%20Evoke.html">Azorius Evoke</a></td>
+<td><img src="../resources/images/mana/U.png" class="dominant-mana-icon"/> <img src="../resources/images/mana/W.png" class="dominant-mana-icon"/></td>
+<td>Control        </td>
+<td><a href="../families/.html">            </a></td>
+</tr>
+<tr>
+<td><a href="../archetypes/Bogles.html">Bogles</a></td>
+<td><img src="../resources/images/mana/G.png" class="dominant-mana-icon"/> <img src="../resources/images/mana/W.png" class="dominant-mana-icon"/></td>
+<td>Aggro          </td>
+<td><a href="../families/.html">            </a></td>
+</tr>
+<tr>
+<td><a href="../archetypes/Boros%20Bully.html">Boros Bully</a></td>
+<td><img src="../resources/images/mana/R.png" class="dominant-mana-icon"/> <img src="../resources/images/mana/W.png" class="dominant-mana-icon"/></td>
+<td>Midrange       </td>
+<td><a href="../families/.html">            </a></td>
+</tr>
+<tr>
+<td><a href="../archetypes/Boros%20Monarch.html">Boros Monarch</a></td>
+<td><img src="../resources/images/mana/R.png" class="dominant-mana-icon"/> <img src="../resources/images/mana/W.png" class="dominant-mana-icon"/></td>
+<td>Midrange       </td>
+<td><a href="../families/.html">            </a></td>
+</tr>
+<tr>
+<td><a href="../archetypes/Boros%20Synth.html">Boros Synth</a></td>
+<td><img src="../resources/images/mana/R.png" class="dominant-mana-icon"/> <img src="../resources/images/mana/W.png" class="dominant-mana-icon"/></td>
+<td>Aggro          </td>
+<td><a href="../families/.html">            </a></td>
+</tr>
+<tr>
+<td><a href="../archetypes/Brute%20Squad.html">Brute Squad</a></td>
+<td><img src="../resources/images/mana/U.png" class="dominant-mana-icon"/> <img src="../resources/images/mana/W.png" class="dominant-mana-icon"/></td>
+<td>Aggro          </td>
+<td><a href="../families/.html">            </a></td>
+</tr>
+<tr>
+<td><a href="../archetypes/Burn.html">Burn</a></td>
+<td><img src="../resources/images/mana/R.png" class="dominant-mana-icon"/></td>
+<td>Aggro          </td>
+<td><a href="../families/.html">            </a></td>
+</tr>
+<tr>
+<td><a href="../archetypes/Canadian%20Threshold.html">Canadian Threshold</a></td>
+<td><img src="../resources/images/mana/G.png" class="dominant-mana-icon"/> <img src="../resources/images/mana/R.png" class="dominant-mana-icon"/> <img src="../resources/images/mana/U.png" class="dominant-mana-icon"/></td>
+<td>Midrange       </td>
+<td><a href="../families/.html">            </a></td>
+</tr>
+<tr>
+<td><a href="../archetypes/Chatterstorm.html">Chatterstorm</a></td>
+<td><img src="../resources/images/mana/G.png" class="dominant-mana-icon"/> <img src="../resources/images/mana/R.png" class="dominant-mana-icon"/> <img src="../resources/images/mana/B.png" class="dominant-mana-icon"/></td>
+<td>Combo          </td>
+<td><a href="../families/.html">            </a></td>
+</tr>
+<tr>
+<td><a href="../archetypes/Cycling%20Storm.html">Cycling Storm</a></td>
+<td><img src="../resources/images/mana/B.png" class="dominant-mana-icon"/></td>
+<td>Combo          </td>
+<td><a href="../families/.html">            </a></td>
+</tr>
+<tr>
+<td><a href="../archetypes/Dimir%20Alchemy.html">Dimir Alchemy</a></td>
+<td><img src="../resources/images/mana/U.png" class="dominant-mana-icon"/> <img src="../resources/images/mana/B.png" class="dominant-mana-icon"/></td>
+<td>Control        </td>
+<td><a href="../families/.html">            </a></td>
+</tr>
+<tr>
+<td><a href="../archetypes/Dimir%20Delver.html">Dimir Delver</a></td>
+<td><img src="../resources/images/mana/U.png" class="dominant-mana-icon"/> <img src="../resources/images/mana/B.png" class="dominant-mana-icon"/></td>
+<td>Tempo          </td>
+<td><a href="../families/.html">            </a></td>
+</tr>
+<tr>
+<td><a href="../archetypes/Dimir%20Faeries.html">Dimir Faeries</a></td>
+<td><img src="../resources/images/mana/U.png" class="dominant-mana-icon"/> <img src="../resources/images/mana/B.png" class="dominant-mana-icon"/></td>
+<td>Tempo          </td>
+<td><a href="../families/Faeries.html">Faeries     </a></td>
+</tr>
+<tr>
+<td><a href="../archetypes/Dimir%20Flicker.html">Dimir Flicker</a></td>
+<td><img src="../resources/images/mana/U.png" class="dominant-mana-icon"/> <img src="../resources/images/mana/B.png" class="dominant-mana-icon"/></td>
+<td>Control        </td>
+<td><a href="../families/.html">            </a></td>
+</tr>
+<tr>
+<td><a href="../archetypes/Dimir%20Reanimator.html">Dimir Reanimator</a></td>
+<td><img src="../resources/images/mana/U.png" class="dominant-mana-icon"/> <img src="../resources/images/mana/B.png" class="dominant-mana-icon"/></td>
+<td>Midrange, Combo</td>
+<td><a href="../families/Reanimator.html">Reanimator  </a></td>
+</tr>
+<tr>
+<td><a href="../archetypes/Dimir%20Teachings.html">Dimir Teachings</a></td>
+<td><img src="../resources/images/mana/U.png" class="dominant-mana-icon"/> <img src="../resources/images/mana/B.png" class="dominant-mana-icon"/></td>
+<td>Control        </td>
+<td><a href="../families/.html">            </a></td>
+</tr>
+<tr>
+<td><a href="../archetypes/Domain%20Zoo.html">Domain Zoo</a></td>
+<td><img src="../resources/images/mana/R.png" class="dominant-mana-icon"/> <img src="../resources/images/mana/G.png" class="dominant-mana-icon"/> <img src="../resources/images/mana/W.png" class="dominant-mana-icon"/></td>
+<td>Aggro          </td>
+<td><a href="../families/.html">            </a></td>
+</tr>
+<tr>
+<td><a href="../archetypes/Eggs.html">Eggs</a></td>
+<td><img src="../resources/images/mana/C.png" class="dominant-mana-icon"/></td>
+<td>Combo          </td>
+<td><a href="../families/.html">            </a></td>
+</tr>
+<tr>
+<td><a href="../archetypes/Elves.html">Elves</a></td>
+<td><img src="../resources/images/mana/G.png" class="dominant-mana-icon"/></td>
+<td>Aggro, Combo   </td>
+<td><a href="../families/.html">            </a></td>
+</tr>
+<tr>
+<td><a href="../archetypes/Familiars.html">Familiars</a></td>
+<td><img src="../resources/images/mana/U.png" class="dominant-mana-icon"/> <img src="../resources/images/mana/W.png" class="dominant-mana-icon"/></td>
+<td>Control, Combo </td>
+<td><a href="../families/.html">            </a></td>
+</tr>
+<tr>
+<td><a href="../archetypes/Fishelbrand.html">Fishelbrand</a></td>
+<td><img src="../resources/images/mana/U.png" class="dominant-mana-icon"/> <img src="../resources/images/mana/B.png" class="dominant-mana-icon"/></td>
+<td>Combo          </td>
+<td><a href="../families/.html">            </a></td>
+</tr>
+<tr>
+<td><a href="../archetypes/Flicker%20Tron.html">Flicker Tron</a></td>
+<td><img src="../resources/images/mana/G.png" class="dominant-mana-icon"/> <img src="../resources/images/mana/R.png" class="dominant-mana-icon"/> <img src="../resources/images/mana/U.png" class="dominant-mana-icon"/></td>
+<td>Control        </td>
+<td><a href="../families/Tron.html">Tron        </a></td>
+</tr>
+<tr>
+<td><a href="../archetypes/Goblins.html">Goblins</a></td>
+<td><img src="../resources/images/mana/R.png" class="dominant-mana-icon"/></td>
+<td>Aggro          </td>
+<td><a href="../families/.html">            </a></td>
+</tr>
+<tr>
+<td><a href="../archetypes/Golgari%20TortEx.html">Golgari TortEx</a></td>
+<td><img src="../resources/images/mana/B.png" class="dominant-mana-icon"/> <img src="../resources/images/mana/G.png" class="dominant-mana-icon"/></td>
+<td>Midrange       </td>
+<td><a href="../families/TortEx.html">TortEx      </a></td>
+</tr>
+<tr>
+<td><a href="../archetypes/Infect.html">Infect</a></td>
+<td><img src="../resources/images/mana/G.png" class="dominant-mana-icon"/></td>
+<td>Aggro          </td>
+<td><a href="../families/.html">            </a></td>
+</tr>
+<tr>
+<td><a href="../archetypes/Inside%20Out.html">Inside Out</a></td>
+<td><img src="../resources/images/mana/U.png" class="dominant-mana-icon"/> <img src="../resources/images/mana/W.png" class="dominant-mana-icon"/></td>
+<td>Combo          </td>
+<td><a href="../families/.html">            </a></td>
+</tr>
+<tr>
+<td><a href="../archetypes/Izzet%20Blitz.html">Izzet Blitz</a></td>
+<td><img src="../resources/images/mana/U.png" class="dominant-mana-icon"/> <img src="../resources/images/mana/R.png" class="dominant-mana-icon"/></td>
+<td>Aggro, Combo   </td>
+<td><a href="../families/.html">            </a></td>
+</tr>
+<tr>
+<td><a href="../archetypes/Izzet%20Curve.html">Izzet Curve</a></td>
+<td><img src="../resources/images/mana/U.png" class="dominant-mana-icon"/> <img src="../resources/images/mana/R.png" class="dominant-mana-icon"/></td>
+<td>Midrange, Combo</td>
+<td><a href="../families/.html">            </a></td>
+</tr>
+<tr>
+<td><a href="../archetypes/Izzet%20Faeries.html">Izzet Faeries</a></td>
+<td><img src="../resources/images/mana/U.png" class="dominant-mana-icon"/> <img src="../resources/images/mana/R.png" class="dominant-mana-icon"/></td>
+<td>Tempo          </td>
+<td><a href="../families/Faeries.html">Faeries     </a></td>
+</tr>
+<tr>
+<td><a href="../archetypes/Jeskai%20Ephemerate.html">Jeskai Ephemerate</a></td>
+<td><img src="../resources/images/mana/R.png" class="dominant-mana-icon"/> <img src="../resources/images/mana/U.png" class="dominant-mana-icon"/> <img src="../resources/images/mana/W.png" class="dominant-mana-icon"/></td>
+<td>Control        </td>
+<td><a href="../families/.html">            </a></td>
+</tr>
+<tr>
+<td><a href="../archetypes/Jeskai%20Snow.html">Jeskai Snow</a></td>
+<td><img src="../resources/images/mana/R.png" class="dominant-mana-icon"/> <img src="../resources/images/mana/U.png" class="dominant-mana-icon"/> <img src="../resources/images/mana/W.png" class="dominant-mana-icon"/></td>
+<td>Midrange       </td>
+<td><a href="../families/.html">            </a></td>
+</tr>
+<tr>
+<td><a href="../archetypes/Jund%20Cascade.html">Jund Cascade</a></td>
+<td><img src="../resources/images/mana/B.png" class="dominant-mana-icon"/> <img src="../resources/images/mana/G.png" class="dominant-mana-icon"/> <img src="../resources/images/mana/R.png" class="dominant-mana-icon"/></td>
+<td>Midrange       </td>
+<td><a href="../families/Cascade.html">Cascade     </a></td>
+</tr>
+<tr>
+<td><a href="../archetypes/Jund%20Gardens.html">Jund Gardens</a></td>
+<td><img src="../resources/images/mana/B.png" class="dominant-mana-icon"/> <img src="../resources/images/mana/G.png" class="dominant-mana-icon"/> <img src="../resources/images/mana/R.png" class="dominant-mana-icon"/></td>
+<td>Midrange, Combo</td>
+<td><a href="../families/.html">            </a></td>
+</tr>
+<tr>
+<td><a href="../archetypes/Jund%20PhD.html">Jund PhD</a></td>
+<td><img src="../resources/images/mana/B.png" class="dominant-mana-icon"/> <img src="../resources/images/mana/G.png" class="dominant-mana-icon"/> <img src="../resources/images/mana/R.png" class="dominant-mana-icon"/></td>
+<td>Midrange       </td>
+<td><a href="../families/.html">            </a></td>
+</tr>
+<tr>
+<td><a href="../archetypes/Kuldotha%20Rebirth.html">Kuldotha Rebirth</a></td>
+<td><img src="../resources/images/mana/R.png" class="dominant-mana-icon"/> <img src="../resources/images/mana/W.png" class="dominant-mana-icon"/></td>
+<td>Midrange       </td>
+<td><a href="../families/.html">            </a></td>
+</tr>
+<tr>
+<td><a href="../archetypes/Midnight%20Gond.html">Midnight Gond</a></td>
+<td><img src="../resources/images/mana/G.png" class="dominant-mana-icon"/> <img src="../resources/images/mana/W.png" class="dominant-mana-icon"/></td>
+<td>Combo          </td>
+<td><a href="../families/.html">            </a></td>
+</tr>
+<tr>
+<td><a href="../archetypes/Moggwarts.html">Moggwarts</a></td>
+<td><img src="../resources/images/mana/B.png" class="dominant-mana-icon"/> <img src="../resources/images/mana/R.png" class="dominant-mana-icon"/></td>
+<td>Combo          </td>
+<td><a href="../families/.html">            </a></td>
+</tr>
+<tr>
+<td><a href="../archetypes/MonoB%20Control.html">MonoB Control</a></td>
+<td><img src="../resources/images/mana/B.png" class="dominant-mana-icon"/></td>
+<td>Control        </td>
+<td><a href="../families/.html">            </a></td>
+</tr>
+<tr>
+<td><a href="../archetypes/MonoB%20Ponza.html">MonoB Ponza</a></td>
+<td><img src="../resources/images/mana/B.png" class="dominant-mana-icon"/></td>
+<td>Control        </td>
+<td><a href="../families/Ponza.html">Ponza       </a></td>
+</tr>
+<tr>
+<td><a href="../archetypes/MonoB%20Suicide.html">MonoB Suicide</a></td>
+<td><img src="../resources/images/mana/B.png" class="dominant-mana-icon"/></td>
+<td>Aggro          </td>
+<td><a href="../families/.html">            </a></td>
+</tr>
+<tr>
+<td><a href="../archetypes/MonoG%20Ponza.html">MonoG Ponza</a></td>
+<td><img src="../resources/images/mana/G.png" class="dominant-mana-icon"/></td>
+<td>Control        </td>
+<td><a href="../families/Ponza.html">Ponza       </a></td>
+</tr>
+<tr>
+<td><a href="../archetypes/MonoG%20Tron.html">MonoG Tron</a></td>
+<td><img src="../resources/images/mana/G.png" class="dominant-mana-icon"/></td>
+<td>Midrange       </td>
+<td><a href="../families/Tron.html">Tron        </a></td>
+</tr>
+<tr>
+<td><a href="../archetypes/MonoU%20Faeries.html">MonoU Faeries</a></td>
+<td><img src="../resources/images/mana/U.png" class="dominant-mana-icon"/></td>
+<td>Tempo          </td>
+<td><a href="../families/Faeries.html">Faeries     </a></td>
+</tr>
+<tr>
+<td><a href="../archetypes/MonoW%20Heroic.html">MonoW Heroic</a></td>
+<td><img src="../resources/images/mana/W.png" class="dominant-mana-icon"/></td>
+<td>Aggro          </td>
+<td><a href="../families/.html">            </a></td>
+</tr>
+<tr>
+<td><a href="../archetypes/Myr%20Retriever%20Combo.html">Myr Retriever Combo</a></td>
+<td><img src="../resources/images/mana/C.png" class="dominant-mana-icon"/></td>
+<td>Combo          </td>
+<td><a href="../families/.html">            </a></td>
+</tr>
+<tr>
+<td><a href="../archetypes/One%20Land%20Spy.html">One Land Spy</a></td>
+<td><img src="../resources/images/mana/B.png" class="dominant-mana-icon"/></td>
+<td>Combo          </td>
+<td><a href="../families/.html">            </a></td>
+</tr>
+<tr>
+<td><a href="../archetypes/Orzhov%20Pestilence.html">Orzhov Pestilence</a></td>
+<td><img src="../resources/images/mana/B.png" class="dominant-mana-icon"/> <img src="../resources/images/mana/W.png" class="dominant-mana-icon"/></td>
+<td>Control        </td>
+<td><a href="../families/.html">            </a></td>
+</tr>
+<tr>
+<td><a href="../archetypes/Petal%20Festival.html">Petal Festival</a></td>
+<td><img src="../resources/images/mana/U.png" class="dominant-mana-icon"/> <img src="../resources/images/mana/G.png" class="dominant-mana-icon"/></td>
+<td>Combo          </td>
+<td><a href="../families/.html">            </a></td>
+</tr>
+<tr>
+<td><a href="../archetypes/Ping%20Storm.html">Ping Storm</a></td>
+<td><img src="../resources/images/mana/B.png" class="dominant-mana-icon"/> <img src="../resources/images/mana/R.png" class="dominant-mana-icon"/></td>
+<td>Combo          </td>
+<td><a href="../families/.html">            </a></td>
+</tr>
+<tr>
+<td><a href="../archetypes/Rakdos%20Burn.html">Rakdos Burn</a></td>
+<td><img src="../resources/images/mana/B.png" class="dominant-mana-icon"/> <img src="../resources/images/mana/R.png" class="dominant-mana-icon"/></td>
+<td>Aggro          </td>
+<td><a href="../families/.html">            </a></td>
+</tr>
+<tr>
+<td><a href="../archetypes/Rakdos%20Control.html">Rakdos Control</a></td>
+<td><img src="../resources/images/mana/B.png" class="dominant-mana-icon"/> <img src="../resources/images/mana/R.png" class="dominant-mana-icon"/></td>
+<td>Control        </td>
+<td><a href="../families/.html">            </a></td>
+</tr>
+<tr>
+<td><a href="../archetypes/Rakdos%20Madness.html">Rakdos Madness</a></td>
+<td><img src="../resources/images/mana/B.png" class="dominant-mana-icon"/> <img src="../resources/images/mana/R.png" class="dominant-mana-icon"/></td>
+<td>Midrange       </td>
+<td><a href="../families/.html">            </a></td>
+</tr>
+<tr>
+<td><a href="../archetypes/Rakdos%20Reanimator.html">Rakdos Reanimator</a></td>
+<td><img src="../resources/images/mana/B.png" class="dominant-mana-icon"/> <img src="../resources/images/mana/R.png" class="dominant-mana-icon"/></td>
+<td>Aggro, Combo   </td>
+<td><a href="../families/Reanimator.html">Reanimator  </a></td>
+</tr>
+<tr>
+<td><a href="../archetypes/Rakdos%20TortEx.html">Rakdos TortEx</a></td>
+<td><img src="../resources/images/mana/B.png" class="dominant-mana-icon"/> <img src="../resources/images/mana/R.png" class="dominant-mana-icon"/></td>
+<td>Midrange       </td>
+<td><a href="../families/TortEx.html">TortEx      </a></td>
+</tr>
+<tr>
+<td><a href="../archetypes/Red%20Deck%20Wins.html">Red Deck Wins</a></td>
+<td><img src="../resources/images/mana/R.png" class="dominant-mana-icon"/></td>
+<td>Aggro          </td>
+<td><a href="../families/.html">            </a></td>
+</tr>
+<tr>
+<td><a href="../archetypes/Slivers.html">Slivers</a></td>
+<td><img src="../resources/images/mana/G.png" class="dominant-mana-icon"/> <img src="../resources/images/mana/W.png" class="dominant-mana-icon"/></td>
+<td>Aggro          </td>
+<td><a href="../families/.html">            </a></td>
+</tr>
+<tr>
+<td><a href="../archetypes/Soul%20Sisters.html">Soul Sisters</a></td>
+<td><img src="../resources/images/mana/G.png" class="dominant-mana-icon"/></td>
+<td>Aggro, Combo   </td>
+<td><a href="../families/.html">            </a></td>
+</tr>
+<tr>
+<td><a href="../archetypes/Stompy.html">Stompy</a></td>
+<td><img src="../resources/images/mana/G.png" class="dominant-mana-icon"/></td>
+<td>Aggro          </td>
+<td><a href="../families/.html">            </a></td>
+</tr>
+<tr>
+<td><a href="../archetypes/Temur%20Cascade.html">Temur Cascade</a></td>
+<td><img src="../resources/images/mana/U.png" class="dominant-mana-icon"/> <img src="../resources/images/mana/G.png" class="dominant-mana-icon"/> <img src="../resources/images/mana/R.png" class="dominant-mana-icon"/></td>
+<td>Midrange       </td>
+<td><a href="../families/Cascade.html">Cascade     </a></td>
+</tr>
+<tr>
+<td><a href="../archetypes/Turbofog.html">Turbofog</a></td>
+<td><img src="../resources/images/mana/U.png" class="dominant-mana-icon"/> <img src="../resources/images/mana/G.png" class="dominant-mana-icon"/></td>
+<td>Control        </td>
+<td><a href="../families/.html">            </a></td>
+</tr>
+<tr>
+<td><a href="../archetypes/Walls.html">Walls</a></td>
+<td><img src="../resources/images/mana/G.png" class="dominant-mana-icon"/></td>
+<td>Combo          </td>
+<td><a href="../families/.html">            </a></td>
+</tr>
+<tr>
+<td><a href="../archetypes/Watch%20Rites.html">Watch Rites</a></td>
+<td><img src="../resources/images/mana/U.png" class="dominant-mana-icon"/> <img src="../resources/images/mana/R.png" class="dominant-mana-icon"/> <img src="../resources/images/mana/G.png" class="dominant-mana-icon"/></td>
+<td>Combo          </td>
+<td><a href="../families/.html">            </a></td>
+</tr>
+<tr>
+<td><a href="../archetypes/Whirlpool%20Mill.html">Whirlpool Mill</a></td>
+<td><img src="../resources/images/mana/U.png" class="dominant-mana-icon"/></td>
+<td>Combo          </td>
+<td><a href="../families/.html">            </a></td>
+</tr>
+<tr>
+<td><a href="../archetypes/White%20Weenie.html">White Weenie</a></td>
+<td><img src="../resources/images/mana/W.png" class="dominant-mana-icon"/></td>
+<td>Aggro          </td>
+<td><a href="../families/.html">            </a></td>
+</tr>
+<tr>
+<td><a href="../archetypes/Zubera%20Storm.html">Zubera Storm</a></td>
+<td><img src="../resources/images/mana/U.png" class="dominant-mana-icon"/> <img src="../resources/images/mana/B.png" class="dominant-mana-icon"/></td>
+<td>Combo          </td>
+<td><a href="../families/.html">            </a></td>
+</tr>
+</tbody>
+</table>

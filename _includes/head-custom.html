@@ -5,5 +5,10 @@
 
 <!-- You can set your favicon here. -->
 <!-- link rel="shortcut icon" type="image/x-icon" href="{{ '/favicon.ico' | relative_url }}" -->
-<script src="{{ '/assets/js/archetypes.js' | relative_url }}"></script>
+
+<!-- TODO: when deploying, replace "development.js" with "production.min.js". -->
+<script src="https://unpkg.com/react@18.1.0/umd/react.development.js" crossorigin></script>
+<script src="https://unpkg.com/react-dom@18.1.0/umd/react-dom.development.js" crossorigin></script>
+<script src="https://unpkg.com/babel-standalone@6/babel.min.js" ></script>
+<script type="text/babel" src="/assets/js/archetypes.jsx"></script>
 <!-- end custom head snippets -->

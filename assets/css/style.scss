@@ -56,3 +56,15 @@ section {
     font-family: 'OpenSansSemibold', "Helvetica Neue", Helvetica, Arial, sans-serif !important; 
     font-weight: normal; 
 }
+
+.hide {
+  display: none;
+}
+
+.darkened {
+  filter: brightness(65%);
+}
+
+.grayed {
+  filter: grayscale(100%);
+}
