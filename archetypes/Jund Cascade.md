@@ -16,6 +16,8 @@
 
 <details>
   <summary>Click here to expand</summary>
+<a href="https://scryfall.com/card/cmr/410/abrade"><img src="https://c1.scryfall.com/file/scryfall-cards/normal/front/d/2/d27d5b87-6dfc-4b99-822b-f6f8489ad275.jpg" class="archetype-card rounded-image"/></a>
+<a href="https://scryfall.com/card/cmr/216/annoyed-altisaur"><img src="https://c1.scryfall.com/file/scryfall-cards/normal/front/7/5/7536d618-0c98-45bb-913b-b8117b4acf87.jpg" class="archetype-card rounded-image"/></a>
 <a href="https://scryfall.com/card/cmr/163/boarding-party"><img src="https://c1.scryfall.com/file/scryfall-cards/normal/front/1/8/186adacf-434b-475b-9b85-749615ae002b.jpg" class="archetype-card rounded-image"/></a>
 <a href="https://scryfall.com/card/cmr/112/cast-down"><img src="https://c1.scryfall.com/file/scryfall-cards/normal/front/2/1/21c8426e-476a-45e4-b3a9-841da54d966c.jpg" class="archetype-card rounded-image"/></a>
 <a href="https://scryfall.com/card/uma/89/chainers-edict"><img src="https://c1.scryfall.com/file/scryfall-cards/normal/front/a/3/a36a583a-d4be-4589-a43c-a2854de062c6.jpg" class="archetype-card rounded-image"/></a>
@@ -31,17 +33,11 @@
 
 <details>
   <summary>Click here to expand</summary>
-<a href="https://scryfall.com/card/cmr/410/abrade"><img src="https://c1.scryfall.com/file/scryfall-cards/normal/front/d/2/d27d5b87-6dfc-4b99-822b-f6f8489ad275.jpg" class="archetype-card rounded-image"/></a>
-<a href="https://scryfall.com/card/cmr/216/annoyed-altisaur"><img src="https://c1.scryfall.com/file/scryfall-cards/normal/front/7/5/7536d618-0c98-45bb-913b-b8117b4acf87.jpg" class="archetype-card rounded-image"/></a>
-<a href="https://scryfall.com/card/mid/128/ardent-elementalist"><img src="https://c1.scryfall.com/file/scryfall-cards/normal/front/f/5/f58592f7-1df5-428d-9dde-e6acd9a5d1d5.jpg" class="archetype-card rounded-image"/></a>
 <a href="https://scryfall.com/card/a25/198/blightning"><img src="https://c1.scryfall.com/file/scryfall-cards/normal/front/c/c/ccf0f075-4401-41da-a17f-a209d6a03782.jpg" class="archetype-card rounded-image"/></a>
 <a href="https://scryfall.com/card/c20/67/bonders-ornament"><img src="https://c1.scryfall.com/file/scryfall-cards/normal/front/5/a/5afe425c-50a7-4d29-ac14-0edb094fc770.jpg" class="archetype-card rounded-image"/></a>
 <a href="https://scryfall.com/card/znr/137/cleansing-wildfire"><img src="https://c1.scryfall.com/file/scryfall-cards/normal/front/4/9/492d77e5-acc6-41b8-8930-f39d69234919.jpg" class="archetype-card rounded-image"/></a>
 <a href="https://scryfall.com/card/cmr/171/crimson-fleet-commodore"><img src="https://c1.scryfall.com/file/scryfall-cards/normal/front/c/9/c90fdccf-30a6-40ee-9b35-83a6ee5c0681.jpg" class="archetype-card rounded-image"/></a>
-<a href="https://scryfall.com/card/cmr/178/fiery-cannonade"><img src="https://c1.scryfall.com/file/scryfall-cards/normal/front/3/9/396f1cdf-712b-4518-a0e8-0039303dccdc.jpg" class="archetype-card rounded-image"/></a>
 <a href="https://scryfall.com/card/2xm/125/galvanic-blast"><img src="https://c1.scryfall.com/file/scryfall-cards/normal/front/0/c/0cf8cb1e-314a-4894-82df-f9812825f52e.jpg" class="archetype-card rounded-image"/></a>
-<a href="https://scryfall.com/card/mh1/125/geomancers-gambit"><img src="https://c1.scryfall.com/file/scryfall-cards/normal/front/2/3/23b67031-76b8-4511-a6dc-433d9450496e.jpg" class="archetype-card rounded-image"/></a>
-<a href="https://scryfall.com/card/neo/190/harmonious-emergence"><img src="https://c1.scryfall.com/file/scryfall-cards/normal/front/c/9/c92ff968-b436-4313-8375-8a3bb41f9892.jpg" class="archetype-card rounded-image"/></a>
 <a href="https://scryfall.com/card/afr/198/owlbear"><img src="https://c1.scryfall.com/file/scryfall-cards/normal/front/3/0/30e8a00f-8131-470d-8072-4c23b812281a.jpg" class="archetype-card rounded-image"/></a>
 <a href="https://scryfall.com/card/tsr/223/penumbra-spider"><img src="https://c1.scryfall.com/file/scryfall-cards/normal/front/c/8/c862a2f7-673e-44bd-b8ee-e4295da1e0d5.jpg" class="archetype-card rounded-image"/></a>
 <a href="https://scryfall.com/card/iko/100/suffocating-fumes"><img src="https://c1.scryfall.com/file/scryfall-cards/normal/front/6/6/66b562e4-35df-4aee-848d-ceb4204bbe58.jpg" class="archetype-card rounded-image"/></a>
@@ -64,7 +60,6 @@
 
 | Name | Set name | Set date | Legal |
 | -----| -------- | -------- | ----- |
-| [Jund Cascade 722.001.Shika93 722.001.Shika93](https://www.mtggoldfish.com/deck/4790033) | Kamigawa: Neon Dynasty | 2022-02-18 | ✅ |
 | [Jund Cascade 658.001.Milkk](https://www.mtggoldfish.com/deck/4351121) | Kaldheim | 2021-02-05 | Ban 🔨 |
 
 

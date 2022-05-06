@@ -12,10 +12,48 @@
 **Description**: _Still missing. Please join us on [Discord](https://discord.gg/fYQbpjjkQ3) to contribute to the Academy._
 
 
+## **Staples**
+
+<details>
+  <summary>Click here to expand</summary>
+<a href="https://scryfall.com/card/mid/128/ardent-elementalist"><img src="https://c1.scryfall.com/file/scryfall-cards/normal/front/f/5/f58592f7-1df5-428d-9dde-e6acd9a5d1d5.jpg" class="archetype-card rounded-image"/></a>
+<a href="https://scryfall.com/card/som/55/bleak-coven-vampires"><img src="https://c1.scryfall.com/file/scryfall-cards/normal/front/9/d/9d3386e4-bbd6-4756-b29d-f55619e98d0d.jpg" class="archetype-card rounded-image"/></a>
+<a href="https://scryfall.com/card/cmr/163/boarding-party"><img src="https://c1.scryfall.com/file/scryfall-cards/normal/front/1/8/186adacf-434b-475b-9b85-749615ae002b.jpg" class="archetype-card rounded-image"/></a>
+<a href="https://scryfall.com/card/cmr/112/cast-down"><img src="https://c1.scryfall.com/file/scryfall-cards/normal/front/2/1/21c8426e-476a-45e4-b3a9-841da54d966c.jpg" class="archetype-card rounded-image"/></a>
+<a href="https://scryfall.com/card/znr/137/cleansing-wildfire"><img src="https://c1.scryfall.com/file/scryfall-cards/normal/front/4/9/492d77e5-acc6-41b8-8930-f39d69234919.jpg" class="archetype-card rounded-image"/></a>
+<a href="https://scryfall.com/card/afr/94/deadly-dispute"><img src="https://c1.scryfall.com/file/scryfall-cards/normal/front/7/3/7373fe95-ad1c-44b9-8c7f-464ce8cbffc6.jpg" class="archetype-card rounded-image"/></a>
+<a href="https://scryfall.com/card/2xm/125/galvanic-blast"><img src="https://c1.scryfall.com/file/scryfall-cards/normal/front/0/c/0cf8cb1e-314a-4894-82df-f9812825f52e.jpg" class="archetype-card rounded-image"/></a>
+<a href="https://scryfall.com/card/mh1/125/geomancers-gambit"><img src="https://c1.scryfall.com/file/scryfall-cards/normal/front/2/3/23b67031-76b8-4511-a6dc-433d9450496e.jpg" class="archetype-card rounded-image"/></a>
+<a href="https://scryfall.com/card/c21/245/ichor-wellspring"><img src="https://c1.scryfall.com/file/scryfall-cards/normal/front/1/c/1ccdb407-ac8f-4736-89d3-ab0d086096ea.jpg" class="archetype-card rounded-image"/></a>
+<a href="https://scryfall.com/card/mrd/98/krark-clan-shaman"><img src="https://c1.scryfall.com/file/scryfall-cards/normal/front/9/7/975f9ea8-af2c-456f-acd0-ffa9ea0d98c1.jpg" class="archetype-card rounded-image"/></a>
+<a href="https://scryfall.com/card/cmr/154/thorn-of-the-black-rose"><img src="https://c1.scryfall.com/file/scryfall-cards/normal/front/2/b/2b7538ad-cc41-4229-8a39-c1db21f2899a.jpg" class="archetype-card rounded-image"/></a>
+</details><br/>
+
+
+
+## **Frequent cards**
+
+<details>
+  <summary>Click here to expand</summary>
+<a href="https://scryfall.com/card/vow/95/blood-fountain"><img src="https://c1.scryfall.com/file/scryfall-cards/normal/front/d/d/dd03651e-ada0-41dc-8722-0eba476943e3.jpg" class="archetype-card rounded-image"/></a>
+<a href="https://scryfall.com/card/tsr/263/chromatic-star"><img src="https://c1.scryfall.com/file/scryfall-cards/normal/front/c/2/c2e8d492-2c67-410b-b556-c157a14c4cec.jpg" class="archetype-card rounded-image"/></a>
+<a href="https://scryfall.com/card/mbs/79/fangren-marauder"><img src="https://c1.scryfall.com/file/scryfall-cards/normal/front/f/5/f5cf62a2-d03a-495d-924a-bf79524175fa.jpg" class="archetype-card rounded-image"/></a>
+<a href="https://scryfall.com/card/eld/220/golden-egg"><img src="https://c1.scryfall.com/file/scryfall-cards/normal/front/5/2/525142c3-f17c-4e02-a02d-fa385215aa12.jpg" class="archetype-card rounded-image"/></a>
+<a href="https://scryfall.com/card/cmr/322/maelstrom-colossus"><img src="https://c1.scryfall.com/file/scryfall-cards/normal/front/3/2/322491d2-d082-4d38-8d81-8588c011e725.jpg" class="archetype-card rounded-image"/></a>
+<a href="https://scryfall.com/card/scg/72/reaping-the-graves"><img src="https://c1.scryfall.com/file/scryfall-cards/normal/front/7/6/760a66bd-2821-4710-8f02-3c30772dd884.jpg" class="archetype-card rounded-image"/></a>
+<a href="https://scryfall.com/card/c20/231/terminate"><img src="https://c1.scryfall.com/file/scryfall-cards/normal/front/1/a/1a2ba191-f11c-47d3-8459-34b0e0e56fd9.jpg" class="archetype-card rounded-image"/></a>
+</details><br/>
 
 
 
 
+
+## **Other decks**
+
+| Name | Set name | Set date | Legal |
+| -----| -------- | -------- | ----- |
+| [Rakdos Metalcraft 701.001.ANIKI](https://www.mtggoldfish.com/deck/4800226) | Innistrad: Crimson Vow | 2021-11-19 | ✅ |
+| [Rakdos Metalcraft 683.001.A_AdeptoTerra](https://www.mtggoldfish.com/deck/4800228) | Adventures in the Forgotten Realms | 2021-07-23 | ✅ |
 
 
 
