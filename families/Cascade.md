@@ -6,5 +6,6 @@
 ## **Archetypes**
 
 [Jund Cascade](../archetypes/Jund%20Cascade.html)  
+[Rakdos Metalcraft](../archetypes/Rakdos%20Metalcraft.html)  
 [Temur Cascade](../archetypes/Temur%20Cascade.html)  
 
