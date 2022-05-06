@@ -761,4 +761,5 @@ Lines in **bold** correspond to sets that have introduced new cards in the [Paup
 | 743       | tsnc          | Streets of New Capenna Tokens                   | 2022-04-10   |
 | 744       | tncc          | New Capenna Commander Tokens                    | 2022-04-20   |
 | 745       | asnc          | New Capenna Art Series                          | 2022-04-29   |
+| 746       | psnc          | Streets of New Capenna Promos                   | 2022-04-30   |
 
