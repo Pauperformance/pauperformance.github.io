@@ -10,7 +10,33 @@
 **Description**: _Still missing. Please join us on [Discord](https://discord.gg/fYQbpjjkQ3) to contribute to the Academy._
 
 
+## **Staples**
 
+<details>
+  <summary>Click here to expand</summary>
+<a href="https://scryfall.com/card/cmr/216/annoyed-altisaur"><img src="https://c1.scryfall.com/file/scryfall-cards/normal/front/7/5/7536d618-0c98-45bb-913b-b8117b4acf87.jpg" class="archetype-card rounded-image"/></a>
+<a href="https://scryfall.com/card/a25/160/arbor-elf"><img src="https://c1.scryfall.com/file/scryfall-cards/normal/front/4/b/4b81165e-f091-4211-8b47-5ea6868b0d4c.jpg" class="archetype-card rounded-image"/></a>
+<a href="https://scryfall.com/card/cmr/163/boarding-party"><img src="https://c1.scryfall.com/file/scryfall-cards/normal/front/1/8/186adacf-434b-475b-9b85-749615ae002b.jpg" class="archetype-card rounded-image"/></a>
+<a href="https://scryfall.com/card/m21/193/llanowar-visionary"><img src="https://c1.scryfall.com/file/scryfall-cards/normal/front/d/6/d6e23afa-7e08-4049-baf0-d4d0134ba2c8.jpg" class="archetype-card rounded-image"/></a>
+<a href="https://scryfall.com/card/tsp/207/mwonvuli-acid-moss"><img src="https://c1.scryfall.com/file/scryfall-cards/normal/front/6/8/6841dbf6-5023-4612-bbd7-182fd35b05c8.jpg" class="archetype-card rounded-image"/></a>
+<a href="https://scryfall.com/card/khm/192/sarulfs-packmate"><img src="https://c1.scryfall.com/file/scryfall-cards/normal/front/6/0/6061113e-7dd8-4739-b4dd-55bb7f9e39a2.jpg" class="archetype-card rounded-image"/></a>
+<a href="https://scryfall.com/card/me2/183/thermokarst"><img src="https://c1.scryfall.com/file/scryfall-cards/normal/front/7/4/74e907ed-76f7-476c-b128-bb6bfd892e06.jpg" class="archetype-card rounded-image"/></a>
+<a href="https://scryfall.com/card/a25/192/utopia-sprawl"><img src="https://c1.scryfall.com/file/scryfall-cards/normal/front/1/5/15625580-3cbd-459c-a667-87efdcdaf2b2.jpg" class="archetype-card rounded-image"/></a>
+</details><br/>
+
+
+
+## **Frequent cards**
+
+<details>
+  <summary>Click here to expand</summary>
+<a href="https://scryfall.com/card/znr/137/cleansing-wildfire"><img src="https://c1.scryfall.com/file/scryfall-cards/normal/front/4/9/492d77e5-acc6-41b8-8930-f39d69234919.jpg" class="archetype-card rounded-image"/></a>
+<a href="https://scryfall.com/card/cmr/224/entourage-of-trest"><img src="https://c1.scryfall.com/file/scryfall-cards/normal/front/8/7/87e65427-1191-4f5a-b4ca-c383eecd274e.jpg" class="archetype-card rounded-image"/></a>
+<a href="https://scryfall.com/card/cmr/178/fiery-cannonade"><img src="https://c1.scryfall.com/file/scryfall-cards/normal/front/3/9/396f1cdf-712b-4518-a0e8-0039303dccdc.jpg" class="archetype-card rounded-image"/></a>
+<a href="https://scryfall.com/card/mh1/122/firebolt"><img src="https://c1.scryfall.com/file/scryfall-cards/normal/front/8/8/882b8f98-ee51-4c94-a3eb-c79eb2b50d78.jpg" class="archetype-card rounded-image"/></a>
+<a href="https://scryfall.com/card/jmp/342/lightning-bolt"><img src="https://c1.scryfall.com/file/scryfall-cards/normal/front/c/e/ce711943-c1a1-43a0-8b89-8d169cfb8e06.jpg" class="archetype-card rounded-image"/></a>
+<a href="https://scryfall.com/card/uma/8/ulamogs-crusher"><img src="https://c1.scryfall.com/file/scryfall-cards/normal/front/e/d/eda0fd38-38e6-4e9b-9c17-4d855e01b1e1.jpg" class="archetype-card rounded-image"/></a>
+</details><br/>
 
 
 
@@ -21,6 +47,7 @@
 | Name | Set name | Set date | Legal |
 | -----| -------- | -------- | ----- |
 | [Gruul Ponza 669.001.Owanosora](https://www.mtggoldfish.com/deck/4793485) | Strixhaven: School of Mages | 2021-04-23 | ✅ |
+| [Gruul Ponza 669.001.Jositoshekel](https://www.mtggoldfish.com/deck/4801318) | Strixhaven: School of Mages | 2021-04-23 | ✅ |
 
 
 
