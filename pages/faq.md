@@ -7,7 +7,9 @@ Table of Contents
 
 * [What is Pauperformance?](#what-is-pauperformance)
 * [What is the Academy?](#what-is-the-academy)
-* [What is the Battlefield?](#what-is-the-battlefield)
+* [What is the Arena?](#what-is-the-arena)
+* [What is the Spellbook?](#what-is-the-spellbook)
+* [What is the Nexus?](#what-is-the-nexus)
 * [Who is Myr?](#who-is-myr)
 * [How can I support Pauperformance?](#how-can-i-support-pauperformance)
 * [Why are you naming decks this way?](#why-are-you-naming-decks-this-way)
@@ -18,7 +20,7 @@ Table of Contents
 
 Pauperformance is a shared journey to optimal [Pauper](https://magic.wizards.com/formats/pauper), a [Magic: The Gathering format](https://magic.wizards.com/).
 
-The project consists of two distinct yet linked parts: the **Academy** and the **Battlefield**.
+The project consists of distinct yet linked parts: the **Academy** 🎓, the **Arena** ⚔️, the **Spellbook** 🎨, the **Nexus** 🏛, and **Myr** 🤖.
 
 ---
 ### What is the Academy?
@@ -32,10 +34,12 @@ They provide information about current and old archetypes, sideboard guides, gam
 To avoid obsolete content, large sections of the website are automatically generated and kept up-to-date by **Myr**, the Pauperformance bot.
 This makes it possible for the Academy to easily follow new Magic releases and events, such as weekly online tournaments.
 
----
-### What is the Battlefield?
+The name is inspired by the card [Tolarian Academy](https://scryfall.com/card/usg/330/tolarian-academy). 🎓
 
-The Battlefield is where we host our shows.
+---
+### What is the Arena?
+
+The Arena is where we host our shows.
 
 Live videos are streamed [here on Twitch](https://www.twitch.tv/pauperformance); replays are archived [here on YouTube](https://www.youtube.com/channel/UCDUiIskNnmuJ3XJ1SdQqs0A).
 
@@ -48,6 +52,30 @@ Our goal is to systematically explore the format and test different decks to off
 
 We have a lot of fun while playing together, and we hope it's going to be the same for you!
 
+The name is inspired by the card [Phyrexian Arena](https://scryfall.com/card/hop/36/phyrexian-arena). ⚔
+
+---
+### What is the Spellbook?
+
+The Spellbook is the artistic spin-off of the project, dedicated to in-depth cards analyses, trivia and Magic lore. 
+
+Pauper artworks and pills are shared [here on Instagram](https://www.instagram.com/pauperformance/).
+
+The primary goal of the Spellbook is to share information about Pauper cards in a lighthearted and engaging way.
+We regularly post on the Spellbook also teasers from the Arena.
+
+The name is inspired by the card [Spellbook](https://scryfall.com/card/m10/220/spellbook). 🎨
+
+---
+### What is the Nexus?
+
+The Nexus is our Discord server.
+It aims to be an inclusive place to chat about decks and strategy of our favorite format, as well as a well-organized content aggregator.
+
+You can join our community [here on Discord](https://discord.gg/2fHG8DTA3R).
+
+The name is inspired by the card [Maelstrom Nexus](https://scryfall.com/card/arb/130/maelstrom-nexus). 🏛
+
 ---
 ### Who is Myr?
 
@@ -56,6 +84,8 @@ Myr is the Pauperformance bot.
 It works under the hood to update the Academy and does other magic stuff.
 It is hosted on [GitHub](https://github.com/Pauperformance/pauperformance-bot).
 
+The name is inspired by the card [Myr Retriever](https://scryfall.com/card/mrd/215/myr-retriever). 🤖
+
 ---
 ### How can I support Pauperformance?
 
@@ -63,7 +93,7 @@ There are many ways to support the project.
 
 The first and simplest way to support Pauperformance is to follow us/subscribe on [Twitch](https://www.twitch.tv/pauperformance) and [YouTube](https://www.youtube.com/channel/UCDUiIskNnmuJ3XJ1SdQqs0A) and to share this project with other players. This already means a lot to us.
 
-If you are a **Pauper player** and want to help us with the development of the Academy, please join us on [Discord at #feedback](https://discord.gg/2fHG8DTA3R).
+If you are a **Pauper player** and want to help us with the development of the Academy, please join us on [Discord](https://discord.gg/2fHG8DTA3R).
 We have a [long roadmap ahead](https://trello.com/b/EtDX4rhf/roadmap) and your support is invaluable.
 We cannot and shouldn't try to address every pending task at the same time.
 On Discord we will be able to coordinate our efforts.
@@ -79,9 +109,6 @@ Good luck with them!
 
 If you are a **Reddit admin of [r/pauper](https://www.reddit.com/r/Pauper/)**, please [contact us](contact.html).
 We would like to further involve the Reddit community in the project.
-
-If you wish to financially support us, please put the coins in the piggy bank.
-You will probably soon be able to subscribe to Patreon for exclusive content.
 
 Huge thanks for your help!
 
