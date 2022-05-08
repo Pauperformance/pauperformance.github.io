@@ -8,7 +8,8 @@ This page defines the guidelines to become a PhD and add content to the Academy.
 Table of Contents
 
 * [How to become a PhD](#how-to-become-a-phd)
-* [How to publish a deck](#how-to-publish-a-deck)
+* [How to publish a deck (new method)](#how-to-publish-a-deck-new-method)
+* [How to publish a deck (old method)](#how-to-publish-a-deck-old-method)
 * [How to publish a Twitch video](#how-to-publish-a-twitch-video)
 * [How to publish a YouTube video](#how-to-publish-a-youtube-video)
 * [How to publish a sideboard guide](#how-to-publish-a-sideboard-guide)
@@ -26,24 +27,88 @@ We will verify your identity, create a dedicated page for you in the website, an
 Optionally, join [our Discord](https://discord.gg/fYQbpjjkQ3), so it will be easy for us to share PhD-related updates with you.
 
 ---
-### How to publish a deck
+### How to publish a deck (new method)
 
 If you are a PhD, you can publish your decks to the Academy.
 
-The current procedure to publish decks is not as straightforward as we would like it to be.
-We plan to improve this aspect in the future.
-Please, be patient: it is in our roadmap.
-In any case, it's not cumbersome, as you will see.
+This section describes the new method to publish decks, using [Discord](https://discord.com/channels/861355984304078879/955537839951585291) and [MTGGoldfish](https://www.mtggoldfish.com/).
+It is straightforward and should take you less than a minute.
 
-For a number of technical reasons, [deckstats.net](https://deckstats.net/) is currently the easiest platform for [Myr](https://pauperformance.com/pages/faq.html#who-is-myr) to automatically retrieve decks from PhDs.
+If you are a PhD, you will be able to access the private Discord channel **#import-deck**.
+To import a deck in the Academy, it is sufficient to post in the channel a message containing the link to an existing deck on MTGGoldfish.
 
-Once a deck is retrieved, it will be processed, re-uploaded to MTGGoldfish, and published to the Academy.
+A visual example for the PhD Shika93 is provided with the screenshot below:
+![How to publish a deck](../resources/images/how_to_publish_a_deck_new1.png)
+
+That's it.
+Myr will retrieve your deck, process it, and re-upload it to MTGGoldfish (with extra metadata).
+The deck will automatically appear in the Academy within 10 minutes!
+
+The PhD will be privately notified by Myr when the import procedure is completed:
+![How to publish a deck](../resources/images/how_to_publish_a_deck_new2.png)
+
+For this project, naming is essential.
+Please, pay attention to the following notes: it is easy to specify an invalid deck name the first times you try.
+
+The name of deck you have created on MTGGoldfish and want to import has to be in one of the 2 following formats: **short** or **complete**.
+
+**Short** has the format `Archetype_name`:
+![How to publish a deck](../resources/images/how_to_publish_a_deck_new4.png)
+
+**Complete** has the format `Archetype_name magic_set_id.revision_id`:
+![How to publish a deck](../resources/images/how_to_publish_a_deck_new3.png)
+
+Let's quickly recap the parts you need for a valid deck name.
+
+The initial part is the `Archetype_name`.
+In the example, it's `Jund Cascade`.
+It has to be one of those listed in the [Archetypes Index](./archetypes_index.md).
+If the archetype is missing, please contact us: we will be happy to create a new archetype for you in the Academy, if that makes sense.
+We are thrilled by the idea you are creating a new archetype and evolving the format!
+
+Then, there is the `magic_set_id`.
+In the example, it's `722` (immediately after `Jund Cascade`).
+You can get the **current** Pauperformance code from the home page.
+At the time of writing, May 2022, it is `735` (associated to Streets of New Capenna).
+However, if you are interested in creating a deck for a past meta, you can get the **old** Pauperformance code from the [Set Index](./set_index.md) (the set number should be in **bold**).
+This is generally useful if you are uploading decks for your old Twitch/YouTube videos (and you are our hero!).
+So, for example, if you want to submit a Burn deck created after the release of Modern Horizons, you will use the code `587`.
+
+**If the short format is used, Myr will assume the deck is for the **current** Pauperformance code.**
+
+The next part of the name is the `revision_id`.
+It is common for players to try different iterations/versions of the same deck.
+You can name them with an increasing number: `001`, `002`, `003`, etc.
+
+**If the short format is used, Myr will automatically compute the revision for you.**
+
+Please note once a deck is imported in the Academy, it cannot be modified or deleted by a PhD (only Pauperformance admins can).
+Any change applied to the deck in MTGGoldfish will not be reflected in the Academy.
+If you want to make a change, please create a new revision (`002`, `003`, ...).
+Please, accept this "read-only feature" for the time being.
+
+We plan to support more websites in the future.
+At the time of writing, May 2022, MTGGoldfish is the only supported platform.
+
+We trust our PhDs to publish content meaningfully and responsibly.
+Thanks a lot!
+
+---
+### How to publish a deck (old method)
+
+If you are a PhD, you can publish your decks to the Academy.
+
+This section describes the old method to publish decks, using [deckstats.net](https://deckstats.net/).
+It is not straightforward and you may want to probably use the new one instead.
+In any case, it's not too cumbersome, as you will see.
+
+Once a deck is retrieved from deckstats, it will be processed, re-uploaded to MTGGoldfish, and published to the Academy.
 PhDs will be notified when the procedure is completed.
 
 First, if you haven't done it yet, create a **folder** in your deckstats account named `Pauperformance` (case-sensitive).
 
 A visual example for the PhD [Shik@93](https://deckstats.net/decks/78813/f88838/) is provided with the screenshot below:
-![How to publish a deck](../resources/images/how_to_publish_a_deck.png)
+![How to publish a deck](../resources/images/how_to_publish_a_deck_old.png)
 
 The `Pauperformance` folder is highlighted in red.
 [Myr](https://pauperformance.com/pages/faq.html#who-is-myr) will only search in this **folder** for new Academy decks to retrieve.
