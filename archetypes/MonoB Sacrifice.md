@@ -2,6 +2,8 @@
 # MonoB Sacrifice
 <br/>
 
+**Aliases**: `MonoB Aristocrats`
+
 
 **Dominant mana**: <img src="../resources/images/mana/B.png" class="dominant-mana-icon"/>
 
@@ -57,4 +59,11 @@
 
 
 
+
+
+## **Resources**
+
+| 🗣️ | Name | Author | Date |
+| -- | ---- | ------ | ---- |
+| 🇬🇧 | <a target="_blank" href="https://mtg.cardsrealm.com/en-us/articles/pauper-deck-tech---mono-black-aristocrats">Pauper Deck Tech - Mono Black Aristocrats</a> | Muhammad "Hamuda" | 2021-01-11   |
 

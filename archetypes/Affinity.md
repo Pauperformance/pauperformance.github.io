@@ -84,3 +84,10 @@
 
 
 
+
+## **Resources**
+
+| 🗣️ | Name | Author | Date |
+| -- | ---- | ------ | ---- |
+| 🇬🇧 | <a target="_blank" href="https://mtg.cardsrealm.com/en-us/articles/pauper--rakdos-affinity-deck-tech--sideboard-guide">Pauper: Rakdos Affinity Deck Tech & Sideboard Guide</a> | Muhammad "Hamuda" | 2021-12-21   |
+

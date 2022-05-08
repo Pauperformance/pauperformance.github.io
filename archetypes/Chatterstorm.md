@@ -60,3 +60,10 @@
 
 
 
+
+## **Resources**
+
+| 🗣️ | Name | Author | Date |
+| -- | ---- | ------ | ---- |
+| 🇬🇧 | <a target="_blank" href="https://mtg.cardsrealm.com/en-us/articles/pauper-deck-tech:-squirrel-storm">Pauper Deck Tech: Squirrel Storm</a> | Humberto "Romeu" | 2021-06-19   |
+

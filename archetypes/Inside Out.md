@@ -90,5 +90,6 @@
 
 | 🗣️ | Name | Author | Date |
 | -- | ---- | ------ | ---- |
+| 🇬🇧 | <a target="_blank" href="https://mtg.cardsrealm.com/en-us/articles/the-tireless-tireless-tribe-combo-at-pauper">Deck Tech of Tireless Tribe Combo in Pauper</a> | Arinaldo | 2019-09-19   |
 | 🇮🇹 | <a target="_blank" href="http://www.metagame.it/articoli-pauper/3407-pauper-report-uw-tribe-paupergeddon.html">Pauper Report - UW Tribe @ Paupergeddon</a> | Pietro Bragioto | 2018-07-10   |
 

@@ -61,5 +61,6 @@
 
 | 🗣️ | Name | Author | Date |
 | -- | ---- | ------ | ---- |
+| 🇬🇧 | <a target="_blank" href="https://mtg.cardsrealm.com/en-us/articles/pauper-deck-tech:-infect">Pauper Deck Tech: Infect</a> | Humberto "Romeu" | 2021-07-04   |
 | 🇮🇹 | <a target="_blank" href="http://www.metagame.it/forum/viewtopic.php?f=158&t=26111">[Pauper Tier] Infect</a> | Dave Space | 2011-12-27   |
 
