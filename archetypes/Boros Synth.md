@@ -54,3 +54,10 @@
 
 
 
+
+## **Resources**
+
+| 🗣️ | Name | Author | Date |
+| -- | ---- | ------ | ---- |
+| 🇬🇧 | <a target="_blank" href="https://mtg.cardsrealm.com/it-it/articles/pauper--boros-synthesizer-deck-tech--sideboard-guide">Pauper: Boros Synthesizer Deck Tech & Sideboard Guide</a> | Tiago Fuguete | 2022-04-22   |
+

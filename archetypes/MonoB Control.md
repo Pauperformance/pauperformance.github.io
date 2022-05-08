@@ -77,3 +77,11 @@
 
 
 
+
+## **Resources**
+
+| 🗣️ | Name | Author | Date |
+| -- | ---- | ------ | ---- |
+| 🇬🇧 | <a target="_blank" href="https://mtg.cardsrealm.com/en-us/articles/pauper-deck-tech--mono-black-devotion">Pauper Deck Tech: Mono Black Devotion</a> | Humberto "Romeu" | 2022-02-01   |
+| 🇬🇧 | <a target="_blank" href="https://mtg.cardsrealm.com/en-us/articles/pauper-deck-tech:-mono-black-control">Pauper Deck Tech: Mono-Black Control</a> | Humberto "Romeu" | 2021-08-19   |
+

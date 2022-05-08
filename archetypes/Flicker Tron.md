@@ -83,3 +83,10 @@
 
 
 
+
+## **Resources**
+
+| 🗣️ | Name | Author | Date |
+| -- | ---- | ------ | ---- |
+| 🇬🇧 | <a target="_blank" href="https://mtg.cardsrealm.com/en-us/articles/deck-tech-flicker-tron-pauper">Deck Tech Flicker Tron Pauper</a> | Betão | 2021-03-21   |
+
