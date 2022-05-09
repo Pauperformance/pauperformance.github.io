@@ -74,7 +74,7 @@ However, if you are interested in creating a deck for a past meta, you can get t
 This is generally useful if you are uploading decks for your old Twitch/YouTube videos (and you are our hero!).
 So, for example, if you want to submit a Burn deck created after the release of Modern Horizons, you will use the code `587`.
 
-**If the short format is used, Myr will assume the deck is for the **current** Pauperformance code.**
+**If the short format is used, Myr will assume the deck is for the current Pauperformance code.**
 
 The next part of the name is the `revision_id`.
 It is common for players to try different iterations/versions of the same deck.
