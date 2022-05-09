@@ -24,7 +24,7 @@ If you have a Twitch/YouTube channel with at least 100 followers you can join th
 Please, carefully compile [this form](https://docs.google.com/forms/d/e/1FAIpQLSckssNTDcknlPyi06OojWfzcbK2Ja7WNRSxegwIz1OiTIxPuA/viewform), and you will be contacted by a Pauperformance admin.
 We will verify your identity, create a dedicated page for you in the website, and authorize you to publish to the Academy.
 
-Optionally, join [our Discord](https://discord.gg/fYQbpjjkQ3), so it will be easy for us to share PhD-related updates with you.
+Please, join [our Discord](https://discord.gg/fYQbpjjkQ3), so it will be easy for us to share PhD-related updates, and for you to upload decks.
 
 ---
 ### How to publish a deck (new method)
