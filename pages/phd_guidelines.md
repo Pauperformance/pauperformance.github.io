@@ -175,7 +175,7 @@ Please note you **don't need** to be the owner of the deck you are trying to lin
 This is because it's common for a player to try other players' decks.
 
 First, make sure the deck is published in the Academy.
-If the deck is not in the Academy yet, please read above [how to publish a deck](#how-to-publish-a-deck).
+If the deck is not in the Academy yet, please read above [how to publish a deck](#how-to-publish-a-deck-new-method).
 
 Finally, write a line in the **description** of your video formatted as:
 
@@ -212,7 +212,7 @@ Please note you **don't need** to be the owner of the deck you are trying to lin
 This is because it's common for a player to try other players' decks.
 
 First, make sure the deck is published in the Academy.
-If the deck is not in the Academy yet, please read above [how to publish a deck](#how-to-publish-a-deck).
+If the deck is not in the Academy yet, please read above [how to publish a deck](#how-to-publish-a-deck-new-method).
 
 Finally, write a line in the **description** of your video formatted as:
 
