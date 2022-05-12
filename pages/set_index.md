@@ -770,7 +770,8 @@ Lines in **bold** correspond to sets that have introduced new cards in the [Paup
 | 749       | 2x2           | Double Masters 2022                             | 2022-07-08   |
 | 750       | sch           | Store Championships 2022                        | 2022-07-09   |
 | 751       | 40k           | Warhammer 40,000                                | 2022-08-12   |
-| 752       | dmc           | Dominaria United Commander                      | 2022-09-09   |
-| 753       | dmu           | Dominaria United                                | 2022-09-09   |
-| 754       | bro           | The Borthers' War                               | 2022-11-18   |
+| 752       | t40k          | Warhammer 40,000 Tokens                         | 2022-08-12   |
+| 753       | dmc           | Dominaria United Commander                      | 2022-09-09   |
+| 754       | dmu           | Dominaria United                                | 2022-09-09   |
+| 755       | bro           | The Borthers' War                               | 2022-11-18   |
 
