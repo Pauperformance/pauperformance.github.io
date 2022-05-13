@@ -773,5 +773,5 @@ Lines in **bold** correspond to sets that have introduced new cards in the [Paup
 | 752       | t40k          | Warhammer 40,000 Tokens                         | 2022-08-12   |
 | 753       | dmc           | Dominaria United Commander                      | 2022-09-09   |
 | 754       | dmu           | Dominaria United                                | 2022-09-09   |
-| 755       | bro           | The Borthers' War                               | 2022-11-18   |
+| 755       | bro           | The Brothers' War                               | 2022-11-18   |
 
