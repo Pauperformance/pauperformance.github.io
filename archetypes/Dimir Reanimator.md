@@ -37,6 +37,7 @@
 <a href="https://scryfall.com/card/c21/115/brainstorm"><img src="https://c1.scryfall.com/file/scryfall-cards/normal/front/0/3/0359f212-9564-41a9-870b-d2c57455a695.jpg" class="archetype-card rounded-image"/></a>
 <a href="https://scryfall.com/card/mid/44/consider"><img src="https://c1.scryfall.com/file/scryfall-cards/normal/front/a/2/a211d505-4d40-4914-a9da-220770d6ddbc.jpg" class="archetype-card rounded-image"/></a>
 <a href="https://scryfall.com/card/a25/82/dark-ritual"><img src="https://c1.scryfall.com/file/scryfall-cards/normal/front/9/5/95f27eeb-6f14-4db3-adb9-9be5ed76b34b.jpg" class="archetype-card rounded-image"/></a>
+<a href="https://scryfall.com/card/mh2/82/discerning-taste"><img src="https://c1.scryfall.com/file/scryfall-cards/normal/front/9/f/9f395828-9d6d-4ffa-be92-b681350031b0.jpg" class="archetype-card rounded-image"/></a>
 <a href="https://scryfall.com/card/bbd/172/dragon-breath"><img src="https://c1.scryfall.com/file/scryfall-cards/normal/front/0/9/0900c3b6-cf56-4089-a1e3-c1f53edcf23a.jpg" class="archetype-card rounded-image"/></a>
 <a href="https://scryfall.com/card/scg/34/dragon-wings"><img src="https://c1.scryfall.com/file/scryfall-cards/normal/front/7/6/7674ab4d-9bc0-45c3-88e1-3fd2c947cfaa.jpg" class="archetype-card rounded-image"/></a>
 <a href="https://scryfall.com/card/iko/157/greater-sandwurm"><img src="https://c1.scryfall.com/file/scryfall-cards/normal/front/d/9/d90c5650-7eb2-480a-856e-a04406096830.jpg" class="archetype-card rounded-image"/></a>
@@ -46,6 +47,8 @@
 <a href="https://scryfall.com/card/rav/105/shred-memory"><img src="https://c1.scryfall.com/file/scryfall-cards/normal/front/e/3/e38192e5-814f-4269-bae8-13867a73e7fa.jpg" class="archetype-card rounded-image"/></a>
 <a href="https://scryfall.com/card/xln/81/spell-pierce"><img src="https://c1.scryfall.com/file/scryfall-cards/normal/front/6/b/6bf4dfc0-c58b-4535-b660-54ceaa6e0217.jpg" class="archetype-card rounded-image"/></a>
 <a href="https://scryfall.com/card/hou/48/striped-riverwinder"><img src="https://c1.scryfall.com/file/scryfall-cards/normal/front/b/b/bbeef9ef-487c-400b-bcee-1c0e8ec94b6a.jpg" class="archetype-card rounded-image"/></a>
+<a href="https://scryfall.com/card/neo/66/the-modern-age-vector-glider"><img src="https://c1.scryfall.com/file/scryfall-cards/normal/front/e/e/ee60a8e9-3201-4a7e-8aa4-2c5e1042c8a5.jpg" class="archetype-card rounded-image"/></a>
+<a href="https://scryfall.com/card/jmp/185/thought-scour"><img src="https://c1.scryfall.com/file/scryfall-cards/normal/front/1/4/142944d5-1b11-4ec4-b6b4-b5c03e682cd3.jpg" class="archetype-card rounded-image"/></a>
 </details><br/>
 
 
@@ -56,6 +59,7 @@
 
 | Name | Set name | Set date | Legal |
 | -----| -------- | -------- | ----- |
+| [Dimir Reanimator 735.001.Shika93](https://www.mtggoldfish.com/deck/4822197) | Streets of New Capenna | 2022-04-29 | ✅ |
 | [Dimir Reanimator 722.001.Bryant_Cook](https://www.mtggoldfish.com/deck/4673153) | Kamigawa: Neon Dynasty | 2022-02-18 | ✅ |
 | [Dimir Reanimator 701.001.monkey_noises](https://www.mtggoldfish.com/deck/4673154) | Innistrad: Crimson Vow | 2021-11-19 | ✅ |
 
