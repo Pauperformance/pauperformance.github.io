@@ -766,12 +766,13 @@ Lines in **bold** correspond to sets that have introduced new cards in the [Paup
 | 745       | asnc          | New Capenna Art Series                          | 2022-04-29   |
 | 746       | psnc          | Streets of New Capenna Promos                   | 2022-04-30   |
 | 747       | pncc          | New Capenna Commander Promos                    | 2022-04-09   |
-| 748       | plg22         | Love Your LGS 2022                              | 2022-07-01   |
-| 749       | 2x2           | Double Masters 2022                             | 2022-07-08   |
-| 750       | sch           | Store Championships 2022                        | 2022-07-09   |
-| 751       | 40k           | Warhammer 40,000                                | 2022-08-12   |
-| 752       | t40k          | Warhammer 40,000 Tokens                         | 2022-08-12   |
-| 753       | dmc           | Dominaria United Commander                      | 2022-09-09   |
-| 754       | dmu           | Dominaria United                                | 2022-09-09   |
-| 755       | bro           | The Brothers' War                               | 2022-11-18   |
+| 748       | tclb          | Battle for Baldur's Gate Tokens                 | 2022-06-10   |
+| 749       | plg22         | Love Your LGS 2022                              | 2022-07-01   |
+| 750       | 2x2           | Double Masters 2022                             | 2022-07-08   |
+| 751       | sch           | Store Championships 2022                        | 2022-07-09   |
+| 752       | 40k           | Warhammer 40,000                                | 2022-08-12   |
+| 753       | t40k          | Warhammer 40,000 Tokens                         | 2022-08-12   |
+| 754       | dmc           | Dominaria United Commander                      | 2022-09-09   |
+| 755       | dmu           | Dominaria United                                | 2022-09-09   |
+| 756       | bro           | The Brothers' War                               | 2022-11-18   |
 
