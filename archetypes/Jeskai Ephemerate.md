@@ -57,6 +57,14 @@
 
 
 
+## **Videos**
+
+| 🗣️ | 📺 | Deck | Author | Date |
+| -- | -- | ---- | ------ | ---- |
+| 🇮🇹 | <i class="fa-brands fa-youtube"></i> | [Jeskai Ephemerate 722.001.Heisen01](https://www.youtube.com/watch?v=4JklgPrtNdM) | Heisen 01 | 2022-04-06   |
+| 🇮🇹 | <i class="fa-brands fa-youtube"></i> | [Jeskai Ephemerate 722.001.Heisen01](https://www.youtube.com/watch?v=mk18LScEIdI) | Heisen 01 | 2022-04-04   |
+
+
 
 
 ## **Resources**
