@@ -76,8 +76,8 @@
 
 | 🗣️ | 📺 | Deck | Author | Date |
 | -- | -- | ---- | ------ | ---- |
-| 🇮🇹 | <i class="fa-brands fa-youtube"></i> | [Golgari TortEx 722.001.Shika93](https://www.youtube.com/watch?v=PYPG8kdQXf0) | Pauperformance | 2022-05-18   |
 | 🇮🇹 | <i class="fa-brands fa-youtube"></i> | [Golgari TortEx 722.001.Shika93](https://www.youtube.com/watch?v=PiidMcZHJDo) | Pauperformance | 2022-05-18   |
+| 🇮🇹 | <i class="fa-brands fa-youtube"></i> | [Golgari TortEx 722.001.Shika93](https://www.youtube.com/watch?v=PYPG8kdQXf0) | Pauperformance | 2022-05-18   |
 
 
 
