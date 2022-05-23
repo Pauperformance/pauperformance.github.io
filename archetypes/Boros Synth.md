@@ -22,7 +22,6 @@
 <a href="https://scryfall.com/card/neo/138/experimental-synthesizer"><img src="https://c1.scryfall.com/file/scryfall-cards/normal/front/c/4/c47931c9-685d-4b83-8299-bc347224b4e8.jpg" class="archetype-card rounded-image"/></a>
 <a href="https://scryfall.com/card/2xm/125/galvanic-blast"><img src="https://c1.scryfall.com/file/scryfall-cards/normal/front/0/c/0cf8cb1e-314a-4894-82df-f9812825f52e.jpg" class="archetype-card rounded-image"/></a>
 <a href="https://scryfall.com/card/som/10/glint-hawk"><img src="https://c1.scryfall.com/file/scryfall-cards/normal/front/2/8/284c4710-4183-4743-9c8b-515cc98cbbb8.jpg" class="archetype-card rounded-image"/></a>
-<a href="https://scryfall.com/card/c21/245/ichor-wellspring"><img src="https://c1.scryfall.com/file/scryfall-cards/normal/front/1/c/1ccdb407-ac8f-4736-89d3-ab0d086096ea.jpg" class="archetype-card rounded-image"/></a>
 <a href="https://scryfall.com/card/mm3/11/kor-skyfisher"><img src="https://c1.scryfall.com/file/scryfall-cards/normal/front/d/7/d7501662-1216-4e08-bd2b-e0a459057942.jpg" class="archetype-card rounded-image"/></a>
 <a href="https://scryfall.com/card/jmp/342/lightning-bolt"><img src="https://c1.scryfall.com/file/scryfall-cards/normal/front/c/e/ce711943-c1a1-43a0-8b89-8d169cfb8e06.jpg" class="archetype-card rounded-image"/></a>
 <a href="https://scryfall.com/card/cmr/191/makeshift-munitions"><img src="https://c1.scryfall.com/file/scryfall-cards/normal/front/1/9/19d1ad9f-e217-49fb-8b27-025ca133b6c9.jpg" class="archetype-card rounded-image"/></a>
@@ -37,6 +36,10 @@
 <details>
   <summary>Click here to expand</summary>
 <a href="https://scryfall.com/card/td2/4/ardent-recruit"><img src="https://c1.scryfall.com/file/scryfall-cards/normal/front/3/a/3a7f9bd7-7232-4956-873d-52ff82eabfb3.jpg" class="archetype-card rounded-image"/></a>
+<a href="https://scryfall.com/card/afr/9/dawnbringer-cleric"><img src="https://c1.scryfall.com/file/scryfall-cards/normal/front/c/0/c00856f7-fef5-4ba5-9079-59a81d452c82.jpg" class="archetype-card rounded-image"/></a>
+<a href="https://scryfall.com/card/mh1/122/firebolt"><img src="https://c1.scryfall.com/file/scryfall-cards/normal/front/8/8/882b8f98-ee51-4c94-a3eb-c79eb2b50d78.jpg" class="archetype-card rounded-image"/></a>
+<a href="https://scryfall.com/card/c21/245/ichor-wellspring"><img src="https://c1.scryfall.com/file/scryfall-cards/normal/front/1/c/1ccdb407-ac8f-4736-89d3-ab0d086096ea.jpg" class="archetype-card rounded-image"/></a>
+<a href="https://scryfall.com/card/cmd/17/journey-to-nowhere"><img src="https://c1.scryfall.com/file/scryfall-cards/normal/front/4/6/4686b51c-e02b-48c1-bafe-e8d08a5407b9.jpg" class="archetype-card rounded-image"/></a>
 <a href="https://scryfall.com/card/som/96/kuldotha-rebirth"><img src="https://c1.scryfall.com/file/scryfall-cards/normal/front/7/e/7ee07266-a95d-4cd8-9863-1664922e9490.jpg" class="archetype-card rounded-image"/></a>
 <a href="https://scryfall.com/card/uma/28/rally-the-peasants"><img src="https://c1.scryfall.com/file/scryfall-cards/normal/front/3/b/3b300df0-c867-41e6-a1fd-fe547ed3dc51.jpg" class="archetype-card rounded-image"/></a>
 <a href="https://scryfall.com/card/znr/254/spare-supplies"><img src="https://c1.scryfall.com/file/scryfall-cards/normal/front/a/5/a53baf25-1782-427b-a9dd-fc9b8dc6444f.jpg" class="archetype-card rounded-image"/></a>
@@ -50,6 +53,7 @@
 
 | Name | Set name | Set date | Legal |
 | -----| -------- | -------- | ----- |
+| [Boros Synth 735.001.MrEvilEye](https://www.mtggoldfish.com/deck/4837191) | Streets of New Capenna | 2022-04-29 | ✅ |
 | [Boros Synth 722.001.Milkk](https://www.mtggoldfish.com/deck/4775954) | Kamigawa: Neon Dynasty | 2022-02-18 | ✅ |
 | [Boros Synth 722.001.CooperTheRed](https://www.mtggoldfish.com/deck/4775953) | Kamigawa: Neon Dynasty | 2022-02-18 | ✅ |
 
