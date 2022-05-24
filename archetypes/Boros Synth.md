@@ -26,6 +26,7 @@
 <a href="https://scryfall.com/card/jmp/342/lightning-bolt"><img src="https://c1.scryfall.com/file/scryfall-cards/normal/front/c/e/ce711943-c1a1-43a0-8b89-8d169cfb8e06.jpg" class="archetype-card rounded-image"/></a>
 <a href="https://scryfall.com/card/cmr/191/makeshift-munitions"><img src="https://c1.scryfall.com/file/scryfall-cards/normal/front/1/9/19d1ad9f-e217-49fb-8b27-025ca133b6c9.jpg" class="archetype-card rounded-image"/></a>
 <a href="https://scryfall.com/card/ima/29/seeker-of-the-way"><img src="https://c1.scryfall.com/file/scryfall-cards/normal/front/5/2/52d7aafb-969f-4a39-9af3-125f7f5c99f3.jpg" class="archetype-card rounded-image"/></a>
+<a href="https://scryfall.com/card/znr/254/spare-supplies"><img src="https://c1.scryfall.com/file/scryfall-cards/normal/front/a/5/a53baf25-1782-427b-a9dd-fc9b8dc6444f.jpg" class="archetype-card rounded-image"/></a>
 <a href="https://scryfall.com/card/2xm/35/thraben-inspector"><img src="https://c1.scryfall.com/file/scryfall-cards/normal/front/2/b/2be39749-ad6f-4160-99eb-c677eee7f1b2.jpg" class="archetype-card rounded-image"/></a>
 </details><br/>
 
@@ -40,9 +41,6 @@
 <a href="https://scryfall.com/card/mh1/122/firebolt"><img src="https://c1.scryfall.com/file/scryfall-cards/normal/front/8/8/882b8f98-ee51-4c94-a3eb-c79eb2b50d78.jpg" class="archetype-card rounded-image"/></a>
 <a href="https://scryfall.com/card/c21/245/ichor-wellspring"><img src="https://c1.scryfall.com/file/scryfall-cards/normal/front/1/c/1ccdb407-ac8f-4736-89d3-ab0d086096ea.jpg" class="archetype-card rounded-image"/></a>
 <a href="https://scryfall.com/card/cmd/17/journey-to-nowhere"><img src="https://c1.scryfall.com/file/scryfall-cards/normal/front/4/6/4686b51c-e02b-48c1-bafe-e8d08a5407b9.jpg" class="archetype-card rounded-image"/></a>
-<a href="https://scryfall.com/card/som/96/kuldotha-rebirth"><img src="https://c1.scryfall.com/file/scryfall-cards/normal/front/7/e/7ee07266-a95d-4cd8-9863-1664922e9490.jpg" class="archetype-card rounded-image"/></a>
-<a href="https://scryfall.com/card/uma/28/rally-the-peasants"><img src="https://c1.scryfall.com/file/scryfall-cards/normal/front/3/b/3b300df0-c867-41e6-a1fd-fe547ed3dc51.jpg" class="archetype-card rounded-image"/></a>
-<a href="https://scryfall.com/card/znr/254/spare-supplies"><img src="https://c1.scryfall.com/file/scryfall-cards/normal/front/a/5/a53baf25-1782-427b-a9dd-fc9b8dc6444f.jpg" class="archetype-card rounded-image"/></a>
 </details><br/>
 
 
@@ -54,7 +52,6 @@
 | Name | Set name | Set date | Legal |
 | -----| -------- | -------- | ----- |
 | [Boros Synth 735.001.MrEvilEye](https://www.mtggoldfish.com/deck/4837191) | Streets of New Capenna | 2022-04-29 | ✅ |
-| [Boros Synth 722.001.Milkk](https://www.mtggoldfish.com/deck/4775954) | Kamigawa: Neon Dynasty | 2022-02-18 | ✅ |
 | [Boros Synth 722.001.CooperTheRed](https://www.mtggoldfish.com/deck/4775953) | Kamigawa: Neon Dynasty | 2022-02-18 | ✅ |
 
 

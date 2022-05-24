@@ -42,6 +42,7 @@
 <a href="https://scryfall.com/card/mm2/29/oblivion-ring"><img src="https://c1.scryfall.com/file/scryfall-cards/normal/front/b/f/bff31eba-8ab3-403e-8d82-37a18b279bec.jpg" class="archetype-card rounded-image"/></a>
 <a href="https://scryfall.com/card/cmr/334/prophetic-prism"><img src="https://c1.scryfall.com/file/scryfall-cards/normal/front/1/4/14602fed-8666-4884-8fca-13529578f9e2.jpg" class="archetype-card rounded-image"/></a>
 <a href="https://scryfall.com/card/uma/28/rally-the-peasants"><img src="https://c1.scryfall.com/file/scryfall-cards/normal/front/3/b/3b300df0-c867-41e6-a1fd-fe547ed3dc51.jpg" class="archetype-card rounded-image"/></a>
+<a href="https://scryfall.com/card/ima/29/seeker-of-the-way"><img src="https://c1.scryfall.com/file/scryfall-cards/normal/front/5/2/52d7aafb-969f-4a39-9af3-125f7f5c99f3.jpg" class="archetype-card rounded-image"/></a>
 </details><br/>
 
 
@@ -59,6 +60,7 @@
 
 | Name | Set name | Set date | Legal |
 | -----| -------- | -------- | ----- |
+| [Kuldotha Rebirth 722.001.Milkk](https://www.mtggoldfish.com/deck/4838090) | Kamigawa: Neon Dynasty | 2022-02-18 | ✅ |
 | [Kuldotha Rebirth 459.001.JakeStiles](https://www.mtggoldfish.com/deck/4618615) | Shadows over Innistrad | 2016-04-08 | Ban 🔨 |
 
 
