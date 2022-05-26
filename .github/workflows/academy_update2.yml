@@ -70,8 +70,6 @@ jobs:
         ls myr/venv/
         echo "ls myr/venv/resources"
         ls myr/venv/resources
-        echo "cat myr/venv/resources/last_set_index.json"
-        cat myr/venv/resources/last_set_index.json
         echo "checking venv"
         python -c "import os; print('VIRTUAL_ENV' in os.environ)"
         myr academy update2
