@@ -60,10 +60,10 @@ jobs:
         TWITCH_APP_CLIENT_ID: ${{ secrets.TWITCH_APP_CLIENT_ID }}
         TWITCH_APP_CLIENT_SECRET: ${{ secrets.TWITCH_APP_CLIENT_SECRET }}
         YOUTUBE_API_KEY: ${{ secrets.YOUTUBE_API_KEY }}
-
-        ACADEMY_PATH: './academy'
       run: |
         source myr/venv/bin/activate
+        ACADEMY_PATH="$(pwd)/academy"
+        export ACADEMY_PATH
         myr academy update
 
     - name: Push changes
