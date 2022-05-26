@@ -62,16 +62,4 @@ jobs:
         YOUTUBE_API_KEY: ${{ secrets.YOUTUBE_API_KEY }}
       run: |
         pwd
-        ACADEMY_PATH="$(pwd)/academy"
-        export ACADEMY_PATH
-        ls $ACADEMY_PATH
-
-    - name: Push changes
-      run: |
-        pushd academy
-        git config --local user.email "ShadowTemplate@users.noreply.github.com"
-        git config --local user.name "Myr"
-        git status
-        git --no-pager diff
-        git diff --quiet HEAD || (git commit -am "Myr update: ${{ steps.date.outputs.today }}" && git push)
-        popd
+        myr --help
