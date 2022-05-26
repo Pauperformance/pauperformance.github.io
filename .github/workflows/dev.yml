@@ -33,6 +33,8 @@ jobs:
     - name: Install Myr
       run: |
         pushd myr
+        python -m venv venv
+        source venv/bin/activate
         python -m pip install --upgrade pip
         python -m pip install .
         popd
@@ -64,9 +66,4 @@ jobs:
       run: |
         echo "ENV"
         env
-        echo "ls /opt/hostedtoolcache/Python/3.9.12/x64/lib/python3.9/"
-        ls /opt/hostedtoolcache/Python/3.9.12/x64/lib/python3.9/
-        echo "ls /opt/hostedtoolcache/Python/3.9.12/x64/lib/python3.9/site-packages/"
-        ls /opt/hostedtoolcache/Python/3.9.12/x64/lib/python3.9/site-packages/
-        echo "ls /opt/hostedtoolcache/Python/3.9.12/x64/lib/python3.9/site-packages/resources"
-        ls /opt/hostedtoolcache/Python/3.9.12/x64/lib/python3.9/site-packages/resources
+        echo "ls myr/venv/"
