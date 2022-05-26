@@ -60,12 +60,11 @@ jobs:
         TWITCH_APP_CLIENT_ID: ${{ secrets.TWITCH_APP_CLIENT_ID }}
         TWITCH_APP_CLIENT_SECRET: ${{ secrets.TWITCH_APP_CLIENT_SECRET }}
         YOUTUBE_API_KEY: ${{ secrets.YOUTUBE_API_KEY }}
-
-        ACADEMY_PATH: "$(pwd)/academy"
       run: |
-        echo "ls academy"
         pwd
-        ls $(pwd)/academy
+        ACADEMY_PATH="$(pwd)/academy"
+        export ACADEMY_PATH
+        ls $ACADEMY_PATH
 
     - name: Push changes
       run: |
