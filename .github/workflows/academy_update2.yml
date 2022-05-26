@@ -74,4 +74,5 @@ jobs:
         git status
         git --no-pager diff
         git diff --quiet HEAD || (git commit -am "Myr update: ${{ steps.date.outputs.today }}" && git push)
+        [[ `git ls-files . --exclude-standard --others` ]] && git add . && git commit -am "Myr update: ${{ steps.date.outputs.today }}" && git push
         popd
