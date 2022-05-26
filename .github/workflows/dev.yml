@@ -62,4 +62,5 @@ jobs:
         YOUTUBE_API_KEY: ${{ secrets.YOUTUBE_API_KEY }}
       run: |
         pwd
+        source myr/venv/bin/activate
         myr --help
