@@ -33,6 +33,8 @@ jobs:
     - name: Install Myr
       run: |
         pushd myr
+        python -m venv venv
+        source venv/bin/activate
         python -m pip install --upgrade pip
         python -m pip install .
         popd
@@ -62,6 +64,7 @@ jobs:
 
         ACADEMY_PATH: './academy'
       run: |
+        source myr/venv/bin/activate
         myr academy update2
 
     - name: Push changes
