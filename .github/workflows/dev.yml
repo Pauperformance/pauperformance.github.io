@@ -64,8 +64,8 @@ jobs:
         ACADEMY_PATH: "$(pwd)/academy"
       run: |
         echo "ls academy"
-        echo $ACADEMY_PATH
-        ls $ACADEMY_PATH
+        pwd
+        ls $(pwd)/academy
 
     - name: Push changes
       run: |
