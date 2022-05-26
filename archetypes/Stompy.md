@@ -46,6 +46,7 @@ Since 2019, the addition of [Savage Swipe](https://scryfall.com/card/mh1/178/sav
 <a href="https://scryfall.com/card/pca/77/silhana-ledgewalker"><img src="https://c1.scryfall.com/file/scryfall-cards/normal/front/8/a/8ad3bdce-c0fa-4b5f-af14-7452b683960f.jpg" class="archetype-card rounded-image"/></a>
 <a href="https://scryfall.com/card/dds/50/skarrgan-pit-skulk"><img src="https://c1.scryfall.com/file/scryfall-cards/normal/front/3/0/30991c55-f39d-41f3-b584-f535f5f70f5a.jpg" class="archetype-card rounded-image"/></a>
 <a href="https://scryfall.com/card/mm3/136/slaughterhorn"><img src="https://c1.scryfall.com/file/scryfall-cards/normal/front/4/0/4010a419-8291-4c8b-8cda-38c35fbd7b88.jpg" class="archetype-card rounded-image"/></a>
+<a href="https://scryfall.com/card/khm/194/snakeskin-veil"><img src="https://c1.scryfall.com/file/scryfall-cards/normal/front/e/6/e692c208-c171-4964-9207-43c2cbc62845.jpg" class="archetype-card rounded-image"/></a>
 <a href="https://scryfall.com/card/nph/76/vault-skirge"><img src="https://c1.scryfall.com/file/scryfall-cards/normal/front/f/2/f254239c-c07a-4c41-98f7-8f4de539c73e.jpg" class="archetype-card rounded-image"/></a>
 <a href="https://scryfall.com/card/dka/134/young-wolf"><img src="https://c1.scryfall.com/file/scryfall-cards/normal/front/0/c/0c39aa40-ef5f-40f1-a6dd-fbce91172c50.jpg" class="archetype-card rounded-image"/></a>
 </details><br/>
@@ -66,6 +67,7 @@ Since 2019, the addition of [Savage Swipe](https://scryfall.com/card/mh1/178/sav
 
 | Name | Set name | Set date | Legal |
 | -----| -------- | -------- | ----- |
+| [Stompy 735.001.Tarmogoyf_ita](https://www.mtggoldfish.com/deck/4842528) | Streets of New Capenna | 2022-04-29 | ✅ |
 | [Stompy 722.002.tarmogoyf_ita](https://www.mtggoldfish.com/deck/4706455) | Kamigawa: Neon Dynasty | 2022-02-18 | ✅ |
 | [Stompy 722.001.thuriborghez](https://www.mtggoldfish.com/deck/4667104) | Kamigawa: Neon Dynasty | 2022-02-18 | ✅ |
 | [Stompy 669.001.Shika93](https://www.mtggoldfish.com/deck/4351732) | Strixhaven: School of Mages | 2021-04-23 | ✅ |
