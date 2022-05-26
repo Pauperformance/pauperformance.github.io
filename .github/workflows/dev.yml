@@ -49,7 +49,7 @@ jobs:
       id: date
       run: echo "::set-output name=today::$(date +'%Y-%m-%d, %H:%M:%S')"
 
-    - name: Update Academy
+    - name: Dev
       env:
         DISCORD_BOT_TOKEN: ${{ secrets.DISCORD_BOT_TOKEN }}
         DROPBOX_APP_KEY: ${{ secrets.DROPBOX_APP_KEY }}
@@ -70,9 +70,13 @@ jobs:
         source myr/venv/bin/activate
         echo "ENV"
         env
-        echo "ls myr/venv/"
-        ls myr/venv/
         echo "which python"
         which python
         echo "VIRTUAL_ENV"
         echo $VIRTUAL_ENV
+        echo "ls myr/venv/"
+        ls myr/venv/
+        echo "ls myr/venv/resources"
+        ls myr/venv/resources
+        echo "cat myr/venv/resources/last_set_index.json"
+        cat myr/venv/resources/last_set_index.json
