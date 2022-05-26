@@ -3,8 +3,8 @@
 name: Academy update 2
 
 on:
-  schedule:
-    - cron: "*/10 * * * *"
+  push:
+    branches: [ master ]
 
 jobs:
   build:
@@ -35,7 +35,7 @@ jobs:
         pushd myr
         python -m venv venv
         source venv/bin/activate
-        python -m pip install --upgrade pip
+        python -m pip install --upgrade pip setuptools wheel
         python -m pip install .
         popd
 
@@ -65,6 +65,12 @@ jobs:
         ACADEMY_PATH: './academy'
       run: |
         source myr/venv/bin/activate
+        echo "ls myr/venv/"
+        ls myr/venv/
+        echo "ls myr/venv/resources"
+        ls myr/venv/resources
+        echo "cat myr/venv/resources/last_set_index.json"
+        cat myr/venv/resources/last_set_index.json
         myr academy update2
 
     - name: Push changes
