@@ -66,6 +66,10 @@ jobs:
       run: |
         echo "ENV"
         env
+        echo "sourcing"
+        source myr/venv/bin/activate
+        echo "ENV"
+        env
         echo "ls myr/venv/"
         ls myr/venv/
         echo "which python"
