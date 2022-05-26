@@ -74,6 +74,8 @@ jobs:
         which python
         echo "VIRTUAL_ENV"
         echo $VIRTUAL_ENV
+        echo "checking venv"
+        python -c "import os; print('VIRTUAL_ENV' in os.environ)"
         echo "ls myr/venv/"
         ls myr/venv/
         echo "ls myr/venv/resources"
