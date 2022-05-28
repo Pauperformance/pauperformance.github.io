@@ -63,10 +63,3 @@
 
 
 
-
-## **Resources**
-
-| 🗣️ | Name | Author | Date |
-| -- | ---- | ------ | ---- |
-| 🇮🇹 | <a target="_blank" href="http://www.metagame.it/articoli-pauper/3341-building-on-a-budget-pauper-eggs.html">BUILDING ON A BUDGET: PAUPER EGGS</a> | Federico Cazzaniga - fedetoro | 2018-03-30   |
-
