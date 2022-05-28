@@ -11,7 +11,7 @@
 **Type**: `Aggro`/`Midrange`/`Control`/`Combo`
 
 **Description**: 
-Generic deck, that does not fit any archetype in the [Archetypes Index](../../pages/archetypes_index.html).
+Generic archetype, for decks that do not fit those in the [Archetypes Index](../../pages/archetypes_index.html).
 
 
 
