@@ -74,4 +74,5 @@
 | 🗣️ | Name | Author | Date |
 | -- | ---- | ------ | ---- |
 | 🇮🇹 | <a target="_blank" href="https://www.pauperwave.com/report-top-8-geddon-milano-eggs-tron-di-mazzola-matteo/">Report-Guide Winner Geddon Milano: Eggs Tron di Mazzola Matteo</a> | Matteo Mazzola | 2022-04-08   |
+| 🇮🇹 | <a target="_blank" href="http://www.metagame.it/articoli-pauper/3341-building-on-a-budget-pauper-eggs.html">BUILDING ON A BUDGET: PAUPER EGGS</a> | Federico Cazzaniga - fedetoro | 2018-03-30   |
 
