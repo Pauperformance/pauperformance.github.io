@@ -51,13 +51,19 @@
 
 
 
+## **Reference decks**
+
+| Name | Set name | Set date | Legal |
+| -----| -------- | -------- | ----- |
+| [Chatterstorm 683.001.saidin.raken](https://www.mtggoldfish.com/deck/4848405) | Adventures in the Forgotten Realms | 2021-07-23 | Ban 🔨 |
+
+
 
 
 ## **Other decks**
 
 | Name | Set name | Set date | Legal |
 | -----| -------- | -------- | ----- |
-| [Chatterstorm 683.001.saidin.raken](https://www.mtggoldfish.com/deck/4848405) | Adventures in the Forgotten Realms | 2021-07-23 | Ban 🔨 |
 | [Chatterstorm 676.003.gannoncd](https://www.mtggoldfish.com/deck/4351145) | Modern Horizons 2 | 2021-06-18 | Ban 🔨 |
 | [Chatterstorm 676.002.gannoncd](https://www.mtggoldfish.com/deck/4351144) | Modern Horizons 2 | 2021-06-18 | Ban 🔨 |
 | [Chatterstorm 676.001.gannoncd](https://www.mtggoldfish.com/deck/4351143) | Modern Horizons 2 | 2021-06-18 | Ban 🔨 |

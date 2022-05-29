@@ -60,13 +60,19 @@
 
 
 
+## **Reference decks**
+
+| Name | Set name | Set date | Legal |
+| -----| -------- | -------- | ----- |
+| [Canadian Threshold 722.001.SniperHere](https://www.mtggoldfish.com/deck/4848404) | Kamigawa: Neon Dynasty | 2022-02-18 | ✅ |
+
+
 
 
 ## **Other decks**
 
 | Name | Set name | Set date | Legal |
 | -----| -------- | -------- | ----- |
-| [Canadian Threshold 722.001.SniperHere](https://www.mtggoldfish.com/deck/4848404) | Kamigawa: Neon Dynasty | 2022-02-18 | ✅ |
 | [Canadian Threshold 518.001.eternalgathering](https://www.mtggoldfish.com/deck/4351079) | Iconic Masters | 2017-11-17 | Ban 🔨 |
 | [Canadian Threshold 488.002.Federico Vaglio](https://www.mtggoldfish.com/deck/4351957) | Modern Masters 2017 | 2017-03-17 | Ban 🔨 |
 | [Canadian Threshold 488.001.alwayshalfchub](https://www.mtggoldfish.com/deck/4351076) | Modern Masters 2017 | 2017-03-17 | ✅ |

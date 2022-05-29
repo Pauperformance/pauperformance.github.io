@@ -46,13 +46,20 @@
 
 
 
+## **Reference decks**
+
+| Name | Set name | Set date | Legal |
+| -----| -------- | -------- | ----- |
+| [Infect 722.001.Sorceress-Queen](https://www.mtggoldfish.com/deck/4848412) | Kamigawa: Neon Dynasty | 2022-02-18 | ✅ |
+| [Infect 722.001.Sorceress-Queen](https://www.mtggoldfish.com/deck/4667112) | Kamigawa: Neon Dynasty | 2022-02-18 | ✅ |
+
+
 
 
 ## **Other decks**
 
 | Name | Set name | Set date | Legal |
 | -----| -------- | -------- | ----- |
-| [Infect 722.001.Sorceress-Queen](https://www.mtggoldfish.com/deck/4667112) | Kamigawa: Neon Dynasty | 2022-02-18 | ✅ |
 | [Infect 722.001.Luca_Borghesi](https://www.mtggoldfish.com/deck/4673155) | Kamigawa: Neon Dynasty | 2022-02-18 | ✅ |
 
 
