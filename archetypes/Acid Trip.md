@@ -28,7 +28,6 @@ Once the board is in control, the player typically wins by beating with creature
 <a href="https://scryfall.com/card/mm3/11/kor-skyfisher"><img src="https://c1.scryfall.com/file/scryfall-cards/normal/front/d/7/d7501662-1216-4e08-bd2b-e0a459057942.jpg" class="archetype-card rounded-image"/></a>
 <a href="https://scryfall.com/card/cmr/84/preordain"><img src="https://c1.scryfall.com/file/scryfall-cards/normal/front/1/4/1453f92e-df2d-4789-aa1b-a5b5c51567d4.jpg" class="archetype-card rounded-image"/></a>
 <a href="https://scryfall.com/card/tsr/81/reality-acid"><img src="https://c1.scryfall.com/file/scryfall-cards/normal/front/a/8/a8510381-e05c-4cc4-98aa-c9327e18ec02.jpg" class="archetype-card rounded-image"/></a>
-<a href="https://scryfall.com/card/war/72/teferis-time-twist"><img src="https://c1.scryfall.com/file/scryfall-cards/normal/front/c/8/c878bdc0-d697-4a2f-bba5-758b27f4247a.jpg" class="archetype-card rounded-image"/></a>
 </details><br/>
 
 
@@ -43,11 +42,14 @@ Once the board is in control, the player typically wins by beating with creature
 <a href="https://scryfall.com/card/rav/44/drake-familiar"><img src="https://c1.scryfall.com/file/scryfall-cards/normal/front/b/4/b4583623-e367-48cc-8e86-e6c5e35f1a9c.jpg" class="archetype-card rounded-image"/></a>
 <a href="https://scryfall.com/card/tsr/63/dream-stalker"><img src="https://c1.scryfall.com/file/scryfall-cards/normal/front/e/5/e59b4729-74c1-4aa9-937d-27cda960f157.jpg" class="archetype-card rounded-image"/></a>
 <a href="https://scryfall.com/card/c19/84/echoing-truth"><img src="https://c1.scryfall.com/file/scryfall-cards/normal/front/5/5/55cd75bc-5ec7-45b2-9231-85a321ecd786.jpg" class="archetype-card rounded-image"/></a>
+<a href="https://scryfall.com/card/cmr/20/faiths-fetters"><img src="https://c1.scryfall.com/file/scryfall-cards/normal/front/0/4/04a7da8c-a444-4deb-89b9-2fc9e5475bff.jpg" class="archetype-card rounded-image"/></a>
 <a href="https://scryfall.com/card/khc/39/ghostly-flicker"><img src="https://c1.scryfall.com/file/scryfall-cards/normal/front/4/8/485ab561-9c2a-4f99-9317-8726bcdae364.jpg" class="archetype-card rounded-image"/></a>
 <a href="https://scryfall.com/card/thb/20/heliods-pilgrim"><img src="https://c1.scryfall.com/file/scryfall-cards/normal/front/c/a/cafce2f5-f4f4-465b-96dc-bcdd29d4e4bb.jpg" class="archetype-card rounded-image"/></a>
 <a href="https://scryfall.com/card/pls/7/hobble"><img src="https://c1.scryfall.com/file/scryfall-cards/normal/front/5/4/54c76a22-f9e3-408b-a5bd-403add57e31a.jpg" class="archetype-card rounded-image"/></a>
 <a href="https://scryfall.com/card/cmd/17/journey-to-nowhere"><img src="https://c1.scryfall.com/file/scryfall-cards/normal/front/4/6/4686b51c-e02b-48c1-bafe-e8d08a5407b9.jpg" class="archetype-card rounded-image"/></a>
+<a href="https://scryfall.com/card/mm3/14/lone-missionary"><img src="https://c1.scryfall.com/file/scryfall-cards/normal/front/6/d/6d31d5b6-0973-43d2-aae0-a3f3e7a61800.jpg" class="archetype-card rounded-image"/></a>
 <a href="https://scryfall.com/card/ima/67/mnemonic-wall"><img src="https://c1.scryfall.com/file/scryfall-cards/normal/front/a/3/a3e6784b-78e8-4f0b-8d27-d49c7cea9252.jpg" class="archetype-card rounded-image"/></a>
+<a href="https://scryfall.com/card/tsr/28/momentary-blink"><img src="https://c1.scryfall.com/file/scryfall-cards/normal/front/1/b/1be7ab3b-beca-411e-bc27-024f42c013e1.jpg" class="archetype-card rounded-image"/></a>
 <a href="https://scryfall.com/card/khc/42/mulldrifter"><img src="https://c1.scryfall.com/file/scryfall-cards/normal/front/3/4/345fd005-5052-4500-a260-3649500e21f4.jpg" class="archetype-card rounded-image"/></a>
 <a href="https://scryfall.com/card/mm2/29/oblivion-ring"><img src="https://c1.scryfall.com/file/scryfall-cards/normal/front/b/f/bff31eba-8ab3-403e-8d82-37a18b279bec.jpg" class="archetype-card rounded-image"/></a>
 <a href="https://scryfall.com/card/khc/43/sea-gate-oracle"><img src="https://c1.scryfall.com/file/scryfall-cards/normal/front/4/9/498743ce-0ca5-488a-ae5e-d348b274bf3b.jpg" class="archetype-card rounded-image"/></a>
@@ -55,6 +57,8 @@ Once the board is in control, the player typically wins by beating with creature
 <a href="https://scryfall.com/card/dds/10/snap"><img src="https://c1.scryfall.com/file/scryfall-cards/normal/front/1/9/1959f078-4b7b-4df2-a256-d43b2d97e853.jpg" class="archetype-card rounded-image"/></a>
 <a href="https://scryfall.com/card/zen/70/spreading-seas"><img src="https://c1.scryfall.com/file/scryfall-cards/normal/front/3/7/37454c1c-4098-4ac2-884e-3f65f1384bdb.jpg" class="archetype-card rounded-image"/></a>
 <a href="https://scryfall.com/card/pls/17/sunscape-familiar"><img src="https://c1.scryfall.com/file/scryfall-cards/normal/front/9/6/9621f341-bf85-4b77-bf19-2fb013b4c955.jpg" class="archetype-card rounded-image"/></a>
+<a href="https://scryfall.com/card/war/72/teferis-time-twist"><img src="https://c1.scryfall.com/file/scryfall-cards/normal/front/c/8/c878bdc0-d697-4a2f-bba5-758b27f4247a.jpg" class="archetype-card rounded-image"/></a>
+<a href="https://scryfall.com/card/2xm/35/thraben-inspector"><img src="https://c1.scryfall.com/file/scryfall-cards/normal/front/2/b/2be39749-ad6f-4160-99eb-c677eee7f1b2.jpg" class="archetype-card rounded-image"/></a>
 </details><br/>
 
 
@@ -65,6 +69,7 @@ Once the board is in control, the player typically wins by beating with creature
 
 | Name | Set name | Set date | Legal |
 | -----| -------- | -------- | ----- |
+| [Acid Trip 612.001.NalozycShade](https://www.mtggoldfish.com/deck/4848368) | Theros Beyond Death | 2020-01-24 | ✅ |
 | [Acid Trip 576.001.anynewprovince](https://www.mtggoldfish.com/deck/4351102) | Ravnica Allegiance | 2019-01-25 | ✅ |
 | [Acid Trip 576.001.AzoriusFlavoredGamerGirlPee](https://www.mtggoldfish.com/deck/4351103) | Ravnica Allegiance | 2019-01-25 | ✅ |
 
