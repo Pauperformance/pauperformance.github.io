@@ -50,8 +50,8 @@
 
 | Name | Set name | Set date | Legal |
 | -----| -------- | -------- | ----- |
+| [Infect 722.001.Sorceress-Queen](https://www.mtggoldfish.com/deck/4848542) | Kamigawa: Neon Dynasty | 2022-02-18 | ✅ |
 | [Infect 722.001.Sorceress-Queen](https://www.mtggoldfish.com/deck/4667112) | Kamigawa: Neon Dynasty | 2022-02-18 | ✅ |
-| [Infect 722.001.Sorceress-Queen](https://www.mtggoldfish.com/deck/4848412) | Kamigawa: Neon Dynasty | 2022-02-18 | ✅ |
 
 
 
