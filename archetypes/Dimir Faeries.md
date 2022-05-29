@@ -71,9 +71,9 @@
 
 ## **Videos**
 
-| 🗣️ | 📺 | Deck | Author | Date |
-| -- | -- | ---- | ------ | ---- |
-| 🇮🇹 | <i class="fa-brands fa-youtube"></i> | [Dimir Faeries 669.001.MrEvilEye](https://www.youtube.com/watch?v=ITlLhzZAjVY) | Pauperformance | 2022-03-20   |
+| 🗣️ | 📺 | ⬇️ | Title | Author | Date |
+| -- | -- | -- | ---- | ------ | ---- |
+| 🇮🇹 | <i class="fa-brands fa-youtube"></i> | <a href="{{https://www.mtggoldfish.com/deck/4351763}}" target="_blank">🗎</a> | <a href="https://www.youtube.com/watch?v=ITlLhzZAjVY" target="_blank">🇮🇹 MTGO League - Dimir Faeries 669.001.MrEvilEye - Strixhaven: School of Mages (stx)</a> | Pauperformance | 2022-03-20   |
 
 
 
