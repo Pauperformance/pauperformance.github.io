@@ -174,10 +174,21 @@ If you are a PhD, linking a Twitch video to an Academy deck is straightforward.
 Please note you **don't need** to be the owner of the deck you are trying to link your video to.
 This is because it's common for a player to try other players' decks.
 
-First, make sure the deck is published in the Academy.
+While publishing a video, you have 2 options:
+1. associate your video to an archetype;
+2. associate your video to an archetype and a deck;
+
+In the 2nd case, make sure the deck is published in the Academy before tagging the video.
 If the deck is not in the Academy yet, please read above [how to publish a deck](#how-to-publish-a-deck-new-method).
 
-Finally, write a line in the **description** of your video formatted as:
+To publish a video and associate it to an archetype (option #1), write a line in the **description** of your video formatted as:
+
+```Pauperformance: PAUPERFORMANCE_ARCHETYPE_NAME```
+
+The `PAUPERFORMANCE_ARCHETYPE_NAME` must be chosen among those in the [Archetypes Index](./archetypes_index.md).
+If no archetype is suitable for your video, please choose `Brew`.
+
+**Alternatively**, to publish a video and associate it to an archetype and a deck (option #2), write a line in the **description** of your video formatted as:
 
 ```Pauperformance: PAUPERFORMANCE_DECK_NAME```
 
@@ -187,7 +198,7 @@ It is canonically formatted as `Archetype_name magic_set_id.revision_id.player_i
 That's it.
 The video will automatically appear in the Academy!
 
-For example, if you want to link a video to the deck `Moggwarts 722.001.AMzobud`, your description will contain:
+For example, if you want to link a video to the deck `Moggwarts 722.001.AMzobud` (option #2), your description will contain:
 
 ```Pauperformance: Moggwarts 722.001.AMzobud```
 
@@ -211,10 +222,21 @@ If you are a PhD, linking a YouTube video to an Academy deck is straightforward.
 Please note you **don't need** to be the owner of the deck you are trying to link your video to.
 This is because it's common for a player to try other players' decks.
 
-First, make sure the deck is published in the Academy.
+While publishing a video, you have 2 options:
+1. associate your video to an archetype;
+2. associate your video to an archetype and a deck;
+
+In the 2nd case, make sure the deck is published in the Academy before tagging the video.
 If the deck is not in the Academy yet, please read above [how to publish a deck](#how-to-publish-a-deck-new-method).
 
-Finally, write a line in the **description** of your video formatted as:
+To publish a video and associate it to an archetype (option #1), write a line in the **description** of your video formatted as:
+
+```Pauperformance: PAUPERFORMANCE_ARCHETYPE_NAME```
+
+The `PAUPERFORMANCE_ARCHETYPE_NAME` must be chosen among those in the [Archetypes Index](./archetypes_index.md).
+If no archetype is suitable for your video, please choose `Brew`.
+
+**Alternatively**, to publish a video and associate it to an archetype and a deck (option #2), write a line in the **description** of your video formatted as:
 
 ```Pauperformance: PAUPERFORMANCE_DECK_NAME```
 
@@ -224,7 +246,7 @@ It is canonically formatted as `Archetype_name magic_set_id.revision_id.player_i
 That's it.
 The video will automatically appear in the Academy!
 
-For example, if you want to link a video to the deck `Moggwarts 722.001.AMzobud`, your description will contain:
+For example, if you want to link a video to the deck `Moggwarts 722.001.AMzobud` (option #2), your description will contain:
 
 ```Pauperformance: Moggwarts 722.001.AMzobud```
 
