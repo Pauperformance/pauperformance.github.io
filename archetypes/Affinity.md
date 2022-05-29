@@ -51,6 +51,7 @@
 <a href="https://scryfall.com/card/mrd/98/krark-clan-shaman"><img src="https://c1.scryfall.com/file/scryfall-cards/normal/front/9/7/975f9ea8-af2c-456f-acd0-ffa9ea0d98c1.jpg" class="archetype-card rounded-image"/></a>
 <a href="https://scryfall.com/card/cmr/191/makeshift-munitions"><img src="https://c1.scryfall.com/file/scryfall-cards/normal/front/1/9/19d1ad9f-e217-49fb-8b27-025ca133b6c9.jpg" class="archetype-card rounded-image"/></a>
 <a href="https://scryfall.com/card/rav/60/muddle-the-mixture"><img src="https://c1.scryfall.com/file/scryfall-cards/normal/front/4/c/4cc785b0-0a77-4b02-b0b4-2bda2fc621cc.jpg" class="archetype-card rounded-image"/></a>
+<a href="https://scryfall.com/card/2xm/277/myr-retriever"><img src="https://c1.scryfall.com/file/scryfall-cards/normal/front/7/f/7f0149d4-0731-474a-a1c3-28c25e486c14.jpg" class="archetype-card rounded-image"/></a>
 <a href="https://scryfall.com/card/dom/225/navigators-compass"><img src="https://c1.scryfall.com/file/scryfall-cards/normal/front/6/a/6a283135-7a51-4cf7-82a6-7e50894e64a5.jpg" class="archetype-card rounded-image"/></a>
 <a href="https://scryfall.com/card/mma/58/perilous-research"><img src="https://c1.scryfall.com/file/scryfall-cards/normal/front/f/4/f425b017-8c4d-457f-919a-f2686d71bcac.jpg" class="archetype-card rounded-image"/></a>
 <a href="https://scryfall.com/card/cmr/84/preordain"><img src="https://c1.scryfall.com/file/scryfall-cards/normal/front/1/4/1453f92e-df2d-4789-aa1b-a5b5c51567d4.jpg" class="archetype-card rounded-image"/></a>
@@ -72,6 +73,7 @@
 
 | Name | Set name | Set date | Legal |
 | -----| -------- | -------- | ----- |
+| [Affinity 735.001.JoaoMarcos](https://www.mtggoldfish.com/deck/4848400) | Streets of New Capenna | 2022-04-29 | ✅ |
 | [Affinity 722.001.Oceansoul92](https://www.mtggoldfish.com/deck/4667094) | Kamigawa: Neon Dynasty | 2022-02-18 | Ban 🔨 |
 | [Affinity 722.001.Condescend](https://www.mtggoldfish.com/deck/4667095) | Kamigawa: Neon Dynasty | 2022-02-18 | Ban 🔨 |
 | [Affinity 676.003.Shika93](https://www.mtggoldfish.com/deck/4626261) | Modern Horizons 2 | 2021-06-18 | Ban 🔨 |

@@ -49,6 +49,7 @@
 
 | Name | Set name | Set date | Legal |
 | -----| -------- | -------- | ----- |
+| [Brute Squad 658.001.SpikeBoyM](https://www.mtggoldfish.com/deck/4848403) | Kaldheim | 2021-02-05 | ✅ |
 | [Brute Squad 658.001.Luiz0211](https://www.mtggoldfish.com/deck/4351093) | Kaldheim | 2021-02-05 | ✅ |
 | [Brute Squad 651.001.deluxeicoff](https://www.mtggoldfish.com/deck/4795051) | Commander Legends | 2020-11-20 | ✅ |
 
