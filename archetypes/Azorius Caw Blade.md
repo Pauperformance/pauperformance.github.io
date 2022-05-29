@@ -62,13 +62,19 @@
 
 
 
+## **Reference decks**
+
+| Name | Set name | Set date | Legal |
+| -----| -------- | -------- | ----- |
+| [Azorius Caw Blade 683.001.Meyer_Gues](https://www.mtggoldfish.com/deck/4848401) | Adventures in the Forgotten Realms | 2021-07-23 | ✅ |
+
+
 
 
 ## **Other decks**
 
 | Name | Set name | Set date | Legal |
 | -----| -------- | -------- | ----- |
-| [Azorius Caw Blade 683.001.Meyer_Gues](https://www.mtggoldfish.com/deck/4848401) | Adventures in the Forgotten Realms | 2021-07-23 | ✅ |
 | [Azorius Caw Blade 529.001.eternalgathering](https://www.mtggoldfish.com/deck/4351088) | Rivals of Ixalan | 2018-01-19 | ✅ |
 | [Azorius Caw Blade 493.001.gabripo93](https://www.mtggoldfish.com/deck/4351089) | Amonkhet | 2017-04-28 | ✅ |
 

@@ -63,13 +63,19 @@ Once the board is in control, the player typically wins by beating with creature
 
 
 
+## **Reference decks**
+
+| Name | Set name | Set date | Legal |
+| -----| -------- | -------- | ----- |
+| [Acid Trip 612.001.NalozycShade](https://www.mtggoldfish.com/deck/4848368) | Theros Beyond Death | 2020-01-24 | ✅ |
+
+
 
 
 ## **Other decks**
 
 | Name | Set name | Set date | Legal |
 | -----| -------- | -------- | ----- |
-| [Acid Trip 612.001.NalozycShade](https://www.mtggoldfish.com/deck/4848368) | Theros Beyond Death | 2020-01-24 | ✅ |
 | [Acid Trip 576.001.anynewprovince](https://www.mtggoldfish.com/deck/4351102) | Ravnica Allegiance | 2019-01-25 | ✅ |
 | [Acid Trip 576.001.AzoriusFlavoredGamerGirlPee](https://www.mtggoldfish.com/deck/4351103) | Ravnica Allegiance | 2019-01-25 | ✅ |
 
