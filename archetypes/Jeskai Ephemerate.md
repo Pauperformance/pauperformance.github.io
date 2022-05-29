@@ -59,10 +59,10 @@
 
 ## **Videos**
 
-| 🗣️ | 📺 | Deck | Author | Date |
-| -- | -- | ---- | ------ | ---- |
-| 🇮🇹 | <i class="fa-brands fa-youtube"></i> | [Jeskai Ephemerate 722.001.Heisen01](https://www.youtube.com/watch?v=4JklgPrtNdM) | Heisen 01 | 2022-04-06   |
-| 🇮🇹 | <i class="fa-brands fa-youtube"></i> | [Jeskai Ephemerate 722.001.Heisen01](https://www.youtube.com/watch?v=mk18LScEIdI) | Heisen 01 | 2022-04-04   |
+| 🗣️ | 📺 | ⬇️ | Title | Author | Date |
+| -- | -- | -- | ---- | ------ | ---- |
+| 🇮🇹 | <i class="fa-brands fa-youtube"></i> |  | <a href="https://www.youtube.com/watch?v=4JklgPrtNdM" target="_blank">Jeskai è Arrivato in TOP al Geddon Senza di Me 😅</a> | Heisen 01 | 2022-04-06   |
+| 🇮🇹 | <i class="fa-brands fa-youtube"></i> |  | <a href="https://www.youtube.com/watch?v=mk18LScEIdI" target="_blank">Testare Jeskai in Preparazione al Geddon Appena Passato!</a> | Heisen 01 | 2022-04-04   |
 
 
 

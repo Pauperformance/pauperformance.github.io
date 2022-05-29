@@ -78,9 +78,9 @@ Since 2019, the addition of [Savage Swipe](https://scryfall.com/card/mh1/178/sav
 
 ## **Videos**
 
-| 🗣️ | 📺 | Deck | Author | Date |
-| -- | -- | ---- | ------ | ---- |
-| 🇬🇧 | <i class="fa-brands fa-youtube"></i> | [Stompy 722.002.tarmogoyf_ita](https://www.youtube.com/watch?v=wtRXWDfLZK8) | Pauperformance | 2022-04-07   |
+| 🗣️ | 📺 | ⬇️ | Title | Author | Date |
+| -- | -- | -- | ---- | ------ | ---- |
+| 🇬🇧 | <i class="fa-brands fa-youtube"></i> | <a href="{{https://www.mtggoldfish.com/deck/4706455}}" target="_blank">🗎</a> | <a href="https://www.youtube.com/watch?v=wtRXWDfLZK8" target="_blank">🇬🇧 MTGO League - Stompy 722.002.tarmogoyf_ita - Kamigawa: Neon Dynasty (neo)</a> | Pauperformance | 2022-04-07   |
 
 
 

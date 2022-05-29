@@ -68,10 +68,10 @@
 
 ## **Videos**
 
-| 🗣️ | 📺 | Deck | Author | Date |
-| -- | -- | ---- | ------ | ---- |
-| 🇬🇧 | <i class="fa-brands fa-youtube"></i> | [Kuldotha Rebirth 722.001.Tarrasque1](https://www.youtube.com/watch?v=5JBC2EhjGdM) | Pauperformance | 2022-03-20   |
-| 🇬🇧 | <i class="fa-brands fa-youtube"></i> | [Kuldotha Rebirth 722.001.Tarrasque1](https://www.youtube.com/watch?v=gqPuvf0OzKY) | Pauperformance | 2022-03-16   |
+| 🗣️ | 📺 | ⬇️ | Title | Author | Date |
+| -- | -- | -- | ---- | ------ | ---- |
+| 🇬🇧 | <i class="fa-brands fa-youtube"></i> | <a href="{{https://www.mtggoldfish.com/deck/4618362}}" target="_blank">🗎</a> | <a href="https://www.youtube.com/watch?v=5JBC2EhjGdM" target="_blank">🇬🇧 MTGO League - Kuldotha Rebirth 722.001.Tarrasque1 - Kamigawa: Neon Dynasty (neo)</a> | Pauperformance | 2022-03-20   |
+| 🇬🇧 | <i class="fa-brands fa-youtube"></i> | <a href="{{https://www.mtggoldfish.com/deck/4618362}}" target="_blank">🗎</a> | <a href="https://www.youtube.com/watch?v=gqPuvf0OzKY" target="_blank">🇬🇧 MTGO League - Kuldotha Rebirth 722.001.Tarrasque1 - Kamigawa: Neon Dynasty (neo)</a> | Pauperformance | 2022-03-16   |
 
 
 

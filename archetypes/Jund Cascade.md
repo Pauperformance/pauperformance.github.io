@@ -75,9 +75,9 @@
 
 ## **Videos**
 
-| 🗣️ | 📺 | Deck | Author | Date |
-| -- | -- | ---- | ------ | ---- |
-| 🇬🇧 | <i class="fa-brands fa-youtube"></i> | [Jund Cascade 722.001.Shika93](https://www.youtube.com/watch?v=5JhZuQ9tuU0) | Pauperformance | 2022-05-18   |
+| 🗣️ | 📺 | ⬇️ | Title | Author | Date |
+| -- | -- | -- | ---- | ------ | ---- |
+| 🇬🇧 | <i class="fa-brands fa-youtube"></i> | <a href="{{https://www.mtggoldfish.com/deck/4800250}}" target="_blank">🗎</a> | <a href="https://www.youtube.com/watch?v=5JhZuQ9tuU0" target="_blank">🇬🇧 MTGO League - Jund Cascade 722.001.Shika93 - Kamigawa: Neon Dynasty (neo)</a> | Pauperformance | 2022-05-18   |
 
 
 
