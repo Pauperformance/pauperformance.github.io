@@ -31,6 +31,7 @@
   <summary>Click here to expand</summary>
 <a href="https://scryfall.com/card/dds/55/burning-tree-emissary"><img src="https://c1.scryfall.com/file/scryfall-cards/normal/front/2/2/22e3e874-a0ec-4459-b78d-abef6b9232b9.jpg" class="archetype-card rounded-image"/></a>
 <a href="https://scryfall.com/card/jmp/302/chain-lightning"><img src="https://c1.scryfall.com/file/scryfall-cards/normal/front/b/7/b7cef88c-0ad6-47c4-b6c8-f989586aa635.jpg" class="archetype-card rounded-image"/></a>
+<a href="https://scryfall.com/card/me2/123/death-spark"><img src="https://c1.scryfall.com/file/scryfall-cards/normal/front/7/7/778d3497-2067-4d61-a322-5efb776dbaf1.jpg" class="archetype-card rounded-image"/></a>
 <a href="https://scryfall.com/card/jmp/309/dragon-fodder"><img src="https://c1.scryfall.com/file/scryfall-cards/normal/front/c/d/cdb5eab0-5397-4c00-8cef-7d3baf38a171.jpg" class="archetype-card rounded-image"/></a>
 <a href="https://scryfall.com/card/jvc/55/fireblast"><img src="https://c1.scryfall.com/file/scryfall-cards/normal/front/5/1/51e839d8-2c62-46df-a6ca-3964f43b7e54.jpg" class="archetype-card rounded-image"/></a>
 <a href="https://scryfall.com/card/m21/147/goblin-arsonist"><img src="https://c1.scryfall.com/file/scryfall-cards/normal/front/f/a/fa4bf664-3b92-4598-b905-2bc090958c8b.jpg" class="archetype-card rounded-image"/></a>
@@ -42,6 +43,7 @@
 <a href="https://scryfall.com/card/scg/96/goblin-war-strike"><img src="https://c1.scryfall.com/file/scryfall-cards/normal/front/d/c/dce59945-37a2-4f09-8831-9d44b4a59ea7.jpg" class="archetype-card rounded-image"/></a>
 <a href="https://scryfall.com/card/vis/82/hearth-charm"><img src="https://c1.scryfall.com/file/scryfall-cards/normal/front/c/a/caa9ac66-51b7-4aec-92dc-0f0656b0f7fe.jpg" class="archetype-card rounded-image"/></a>
 <a href="https://scryfall.com/card/a25/134/hordeling-outburst"><img src="https://c1.scryfall.com/file/scryfall-cards/normal/front/e/4/e4138531-ef42-4c56-864e-d3525a4f2082.jpg" class="archetype-card rounded-image"/></a>
+<a href="https://scryfall.com/card/shm/96/intimidator-initiate"><img src="https://c1.scryfall.com/file/scryfall-cards/normal/front/c/1/c19dd557-dd49-450d-8446-71ce351d4f52.jpg" class="archetype-card rounded-image"/></a>
 <a href="https://scryfall.com/card/m10/143/jackal-familiar"><img src="https://c1.scryfall.com/file/scryfall-cards/normal/front/0/a/0a47a2dc-f7f2-4103-9ebe-8cd8b83915ae.jpg" class="archetype-card rounded-image"/></a>
 <a href="https://scryfall.com/card/ddt/53/krenkos-command"><img src="https://c1.scryfall.com/file/scryfall-cards/normal/front/a/1/a1a6efce-e970-4ec3-80b4-c639d0e98186.jpg" class="archetype-card rounded-image"/></a>
 <a href="https://scryfall.com/card/tpr/143/mogg-conscripts"><img src="https://c1.scryfall.com/file/scryfall-cards/normal/front/c/6/c67c26d7-f752-40a5-b79e-1f4c531cbef5.jpg" class="archetype-card rounded-image"/></a>
@@ -68,6 +70,7 @@
 
 | Name | Set name | Set date | Legal |
 | -----| -------- | -------- | ----- |
+| [Goblins 735.001.Shika93](https://www.mtggoldfish.com/deck/4851294) | Streets of New Capenna | 2022-04-29 | ✅ |
 | [Goblins 669.001.ZeMotinha](https://www.mtggoldfish.com/deck/4351140) | Strixhaven: School of Mages | 2021-04-23 | ✅ |
 | [Goblins 669.001.Jeremiaa](https://www.mtggoldfish.com/deck/4351139) | Strixhaven: School of Mages | 2021-04-23 | ✅ |
 | [Goblins 600.001.walterr25](https://www.mtggoldfish.com/deck/4351073) | Throne of Eldraine | 2019-10-04 | ✅ |
