@@ -22,4 +22,11 @@ Generic archetype, for decks that do not fit those in the [Archetypes Index](../
 
 
 
+## **Videos**
+
+| 🗣️ | 📺 | ⬇️ | Title | Author | Date |
+| -- | -- | -- | ---- | ------ | ---- |
+| 🇬🇧 | <i class="fa-brands fa-youtube"></i> |  | <a href="https://www.youtube.com/watch?v=7-4CYBFrS3c" target="_blank">PAUPER - Death-Touch - PING em ALL!!!!</a> | Pauperganda | 2022-06-04   |
+
+
 
