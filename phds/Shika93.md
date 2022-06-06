@@ -39,11 +39,5 @@ energy he'd never thought to see again.
 **Favorite Magic-related quotes**:
 
 ```
-Magic is fun, even when it is not fun. - Pablo
-```
-
-And in a broader way:
-
-```
 The outcome is random, the performance is not. - Zdenek Zeman
 ```
