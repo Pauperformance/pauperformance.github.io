@@ -5,7 +5,7 @@
 # Red Deck Wins
 <br/>
 
-**Aliases**: `RDW`
+**Aliases**: `RDW`, `Mono Red Sligh`
 
 
 **Dominant mana**: <img src="../resources/images/mana/R.png" class="dominant-mana-icon"/>
@@ -54,6 +54,13 @@
 | [Red Deck Wins 701.001.OlavoJusMTM](https://www.mtggoldfish.com/deck/4673157) | Innistrad: Crimson Vow | 2021-11-19 | ✅ |
 
 
+
+
+## **Videos**
+
+| 🗣️ | 📺 | ⬇️ | Title | Author | Date |
+| -- | -- | -- | ---- | ------ | ---- |
+| 🇮🇹 | <i class="fa-brands fa-youtube"></i> |  | <a href="https://www.youtube.com/watch?v=ZV5SGS6Y98A" target="_blank">[ITA] Pauper Mono Red Sligh 24/05/2022</a> | Alessandro Moretti | 2022-05-30   |
 
 
 
