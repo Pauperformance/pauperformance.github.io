@@ -76,8 +76,8 @@
 
 | 🗣️ | 📺 | ⬇️ | Title | Author | Date |
 | -- | -- | -- | ---- | ------ | ---- |
-| 🇮🇹 | <i class="fa-brands fa-youtube"></i> | <a href="{{https://www.mtggoldfish.com/deck/4727490}}" target="_blank">🗎</a> | <a href="https://www.youtube.com/watch?v=PYPG8kdQXf0" target="_blank">🇮🇹 MTGO League - Golgari TortEx 722.001.Shika93 - Kamigawa: Neon Dynasty (neo)</a> | Pauperformance | 2022-05-18   |
-| 🇮🇹 | <i class="fa-brands fa-youtube"></i> | <a href="{{https://www.mtggoldfish.com/deck/4727490}}" target="_blank">🗎</a> | <a href="https://www.youtube.com/watch?v=PiidMcZHJDo" target="_blank">🇮🇹 MTGO League - Golgari TortEx 722.001.Shika93 - Kamigawa: Neon Dynasty (neo) - Part 2</a> | Pauperformance | 2022-05-18   |
+| 🇮🇹 | <i class="fa-brands fa-youtube"></i> | <a href="https://www.mtggoldfish.com/deck/4727490" target="_blank">🗎</a> | <a href="https://www.youtube.com/watch?v=PYPG8kdQXf0" target="_blank">🇮🇹 MTGO League - Golgari TortEx 722.001.Shika93 - Kamigawa: Neon Dynasty (neo)</a> | Pauperformance | 2022-05-18   |
+| 🇮🇹 | <i class="fa-brands fa-youtube"></i> | <a href="https://www.mtggoldfish.com/deck/4727490" target="_blank">🗎</a> | <a href="https://www.youtube.com/watch?v=PiidMcZHJDo" target="_blank">🇮🇹 MTGO League - Golgari TortEx 722.001.Shika93 - Kamigawa: Neon Dynasty (neo) - Part 2</a> | Pauperformance | 2022-05-18   |
 
 
 

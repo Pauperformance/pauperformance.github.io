@@ -61,7 +61,7 @@
 
 | 🗣️ | 📺 | ⬇️ | Title | Author | Date |
 | -- | -- | -- | ---- | ------ | ---- |
-| 🇬🇧 | <i class="fa-brands fa-youtube"></i> | <a href="{{https://www.mtggoldfish.com/deck/4837191}}" target="_blank">🗎</a> | <a href="https://www.youtube.com/watch?v=wF9rKkmXK00" target="_blank">🇬🇧 MTGO League - Boros Synth 735.001.MrEvilEye - Streets of New Capenna (snc)</a> | Pauperformance | 2022-06-05   |
+| 🇬🇧 | <i class="fa-brands fa-youtube"></i> | <a href="https://www.mtggoldfish.com/deck/4837191" target="_blank">🗎</a> | <a href="https://www.youtube.com/watch?v=wF9rKkmXK00" target="_blank">🇬🇧 MTGO League - Boros Synth 735.001.MrEvilEye - Streets of New Capenna (snc)</a> | Pauperformance | 2022-06-05   |
 
 
 
