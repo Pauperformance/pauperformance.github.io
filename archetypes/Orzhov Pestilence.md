@@ -102,8 +102,8 @@ The deck is sometimes considered unstable due to the high number of lands it req
 
 | 🗣️ | 📺 | ⬇️ | Title | Author | Date |
 | -- | -- | -- | ---- | ------ | ---- |
-| 🇬🇧 | <i class="fa-brands fa-youtube"></i> | <a href="{{https://www.mtggoldfish.com/deck/4690585}}" target="_blank">🗎</a> | <a href="https://www.youtube.com/watch?v=pI253MsHRZ4" target="_blank">🇬🇧  MTGO League - Orzhov Pestilence 722.001.Antonio1993 - Kamigawa: Neon Dynasty (neo) - Part 2</a> | Pauperformance | 2022-04-04   |
-| 🇮🇹 | <i class="fa-brands fa-youtube"></i> | <a href="{{https://www.mtggoldfish.com/deck/4690585}}" target="_blank">🗎</a> | <a href="https://www.youtube.com/watch?v=q7g8xrRB-RA" target="_blank">🇮🇹 MTGO League - Orzhov Pestilence 722.001.Antonio1993 - Kamigawa: Neon Dynasty (neo)</a> | Pauperformance | 2022-03-26   |
+| 🇬🇧 | <i class="fa-brands fa-youtube"></i> | <a href="https://www.mtggoldfish.com/deck/4690585" target="_blank">🗎</a> | <a href="https://www.youtube.com/watch?v=pI253MsHRZ4" target="_blank">🇬🇧  MTGO League - Orzhov Pestilence 722.001.Antonio1993 - Kamigawa: Neon Dynasty (neo) - Part 2</a> | Pauperformance | 2022-04-04   |
+| 🇮🇹 | <i class="fa-brands fa-youtube"></i> | <a href="https://www.mtggoldfish.com/deck/4690585" target="_blank">🗎</a> | <a href="https://www.youtube.com/watch?v=q7g8xrRB-RA" target="_blank">🇮🇹 MTGO League - Orzhov Pestilence 722.001.Antonio1993 - Kamigawa: Neon Dynasty (neo)</a> | Pauperformance | 2022-03-26   |
 
 
 

@@ -82,7 +82,7 @@
 
 | 🗣️ | 📺 | ⬇️ | Title | Author | Date |
 | -- | -- | -- | ---- | ------ | ---- |
-| 🇬🇧 | <i class="fa-brands fa-youtube"></i> | <a href="{{https://www.mtggoldfish.com/deck/4851294}}" target="_blank">🗎</a> | <a href="https://www.youtube.com/watch?v=uyUIaPjSXLw" target="_blank">PAUPER League - Goblins - Oldschool beat down galore!</a> | Pauperganda | 2022-05-29   |
+| 🇬🇧 | <i class="fa-brands fa-youtube"></i> | <a href="https://www.mtggoldfish.com/deck/4851294" target="_blank">🗎</a> | <a href="https://www.youtube.com/watch?v=uyUIaPjSXLw" target="_blank">PAUPER League - Goblins - Oldschool beat down galore!</a> | Pauperganda | 2022-05-29   |
 | 🇬🇧 | <i class="fa-brands fa-youtube"></i> |  | <a href="https://www.youtube.com/watch?v=EBe-zxsQICc" target="_blank">#MTG PAUPER Goblin Tokens Tech!</a> | Pauperganda | 2020-03-21   |
 | 🇬🇧 | <i class="fa-brands fa-youtube"></i> |  | <a href="https://www.youtube.com/watch?v=a1sh-B9K6Hg" target="_blank">PAUPER Goblins!</a> | Pauperganda | 2019-06-29   |
 | 🇬🇧 | <i class="fa-brands fa-youtube"></i> |  | <a href="https://www.youtube.com/watch?v=WCVgdfJw_lI" target="_blank">PAUPER Goblins 2.0</a> | Pauperganda | 2019-02-15   |

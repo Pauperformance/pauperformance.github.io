@@ -70,7 +70,7 @@
 
 | 🗣️ | 📺 | ⬇️ | Title | Author | Date |
 | -- | -- | -- | ---- | ------ | ---- |
-| 🇬🇧 | <i class="fa-brands fa-youtube"></i> | <a href="{{https://www.mtggoldfish.com/deck/4822197}}" target="_blank">🗎</a> | <a href="https://www.youtube.com/watch?v=7MVeUsorKeI" target="_blank">🇬🇧 MTGO League - Dimir Reanimator 735.001.Shika93 - Streets of New Capenna (snc)</a> | Pauperformance | 2022-05-18   |
+| 🇬🇧 | <i class="fa-brands fa-youtube"></i> | <a href="https://www.mtggoldfish.com/deck/4822197" target="_blank">🗎</a> | <a href="https://www.youtube.com/watch?v=7MVeUsorKeI" target="_blank">🇬🇧 MTGO League - Dimir Reanimator 735.001.Shika93 - Streets of New Capenna (snc)</a> | Pauperformance | 2022-05-18   |
 
 
 

@@ -87,8 +87,8 @@
 
 | 🗣️ | 📺 | ⬇️ | Title | Author | Date |
 | -- | -- | -- | ---- | ------ | ---- |
-| 🇮🇹 | <i class="fa-brands fa-youtube"></i> | <a href="{{https://www.mtggoldfish.com/deck/4680046}}" target="_blank">🗎</a> | <a href="https://www.youtube.com/watch?v=iTHsl8oBHG8" target="_blank">🇮🇹 Sprint Wheel Event - Moggwarts 722.001.Shika93 - Kamigawa: Neon Dynasty (neo)</a> | Pauperformance | 2022-03-17   |
-| 🇬🇧 | <i class="fa-brands fa-youtube"></i> | <a href="{{https://www.mtggoldfish.com/deck/4645828}}" target="_blank">🗎</a> | <a href="https://www.youtube.com/watch?v=7RbDZNvio3M" target="_blank">🇬🇧 MTGO League - Moggwarts 722.001.AMzobud - Kamigawa: Neon Dynasty (neo)</a> | Pauperformance | 2022-03-17   |
+| 🇮🇹 | <i class="fa-brands fa-youtube"></i> | <a href="https://www.mtggoldfish.com/deck/4680046" target="_blank">🗎</a> | <a href="https://www.youtube.com/watch?v=iTHsl8oBHG8" target="_blank">🇮🇹 Sprint Wheel Event - Moggwarts 722.001.Shika93 - Kamigawa: Neon Dynasty (neo)</a> | Pauperformance | 2022-03-17   |
+| 🇬🇧 | <i class="fa-brands fa-youtube"></i> | <a href="https://www.mtggoldfish.com/deck/4645828" target="_blank">🗎</a> | <a href="https://www.youtube.com/watch?v=7RbDZNvio3M" target="_blank">🇬🇧 MTGO League - Moggwarts 722.001.AMzobud - Kamigawa: Neon Dynasty (neo)</a> | Pauperformance | 2022-03-17   |
 
 
 

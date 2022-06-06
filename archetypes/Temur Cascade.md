@@ -69,8 +69,8 @@
 
 | 🗣️ | 📺 | ⬇️ | Title | Author | Date |
 | -- | -- | -- | ---- | ------ | ---- |
-| 🇮🇹 | <i class="fa-brands fa-youtube"></i> | <a href="{{https://www.mtggoldfish.com/deck/4679974}}" target="_blank">🗎</a> | <a href="https://www.youtube.com/watch?v=St6w7MTBabQ" target="_blank">🇮🇹 MTGO League - Temur Cascade 696.001.Shika93 - Innistrad: Midnight Hunt (mid) - Parte 2</a> | Pauperformance | 2022-03-20   |
-| 🇮🇹 | <i class="fa-brands fa-youtube"></i> | <a href="{{https://www.mtggoldfish.com/deck/4679974}}" target="_blank">🗎</a> | <a href="https://www.youtube.com/watch?v=yocuMcUPGBA" target="_blank">🇮🇹 MTGO League - Temur Cascade 696.002.Shika93 - Innistrad: Midnight Hunt (mid) - Parte 1</a> | Pauperformance | 2022-03-17   |
+| 🇮🇹 | <i class="fa-brands fa-youtube"></i> | <a href="https://www.mtggoldfish.com/deck/4679974" target="_blank">🗎</a> | <a href="https://www.youtube.com/watch?v=St6w7MTBabQ" target="_blank">🇮🇹 MTGO League - Temur Cascade 696.001.Shika93 - Innistrad: Midnight Hunt (mid) - Parte 2</a> | Pauperformance | 2022-03-20   |
+| 🇮🇹 | <i class="fa-brands fa-youtube"></i> | <a href="https://www.mtggoldfish.com/deck/4679974" target="_blank">🗎</a> | <a href="https://www.youtube.com/watch?v=yocuMcUPGBA" target="_blank">🇮🇹 MTGO League - Temur Cascade 696.002.Shika93 - Innistrad: Midnight Hunt (mid) - Parte 1</a> | Pauperformance | 2022-03-17   |
 
 
 
