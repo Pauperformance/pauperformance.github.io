@@ -84,6 +84,6 @@
 
 | 🗣️ | Name | Author | Date |
 | -- | ---- | ------ | ---- |
-| 🇬🇧 | <a target="_blank" href="https://discord.gg/zrn2N6HT">Pauper Storm Discord</a> | <i class="fa-brands fa-discord"></i> | ~            |
 | 🇬🇧 | <a target="_blank" href="https://mtg.cardsrealm.com/en-us/articles/pauper-izzet-serpentine-deck-tech--sideboard-guide---part-1">Pauper Izzet Serpentine Deck Tech & Sideboard Guide - part 1</a> | Lucas "Kampo" | 2021-05-23   |
+| 🇬🇧 | <a target="_blank" href="https://discord.gg/zrn2N6HT">Pauper Storm Discord</a> | <i class="fa-brands fa-discord"></i> | ~            |
 

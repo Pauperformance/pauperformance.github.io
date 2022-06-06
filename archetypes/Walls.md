@@ -101,8 +101,8 @@ A hybrid version of the two exists, with main deck cascade that can transform in
 
 | 🗣️ | Name | Author | Date |
 | -- | ---- | ------ | ---- |
-| 🇬🇧 | <a target="_blank" href="https://docs.google.com/spreadsheets/d/15SW61fnBwcNJeBYf9ROgkhmYnqnQNOcyAXTr61SAWjk/edit?usp=sharing">**Sideboard Guide**</a> | <i class="fa-solid fa-book"></i> | ~            |
-| 🇬🇧 | <a target="_blank" href="https://discord.gg/p4kESAk">Pauper Walls Discord</a> | <i class="fa-brands fa-discord"></i> | ~            |
 | 🇬🇧 | <a target="_blank" href="https://www.legapauperonline.com/pauper-walls-combo/">Pauper Walls Combo</a> | Andrea Passaro (apas72) | 2022-03-11   |
 | 🇬🇧 | <a target="_blank" href="https://www.coolstuffinc.com/a/kendrasmith-02122020-anyway-heres-wonderwalls">Anyway, Here's Wonderwalls</a> | Paige Smith | 2020-02-12   |
+| 🇬🇧 | <a target="_blank" href="https://docs.google.com/spreadsheets/d/15SW61fnBwcNJeBYf9ROgkhmYnqnQNOcyAXTr61SAWjk/edit?usp=sharing">**Sideboard Guide**</a> | <i class="fa-solid fa-book"></i> | ~            |
+| 🇬🇧 | <a target="_blank" href="https://discord.gg/p4kESAk">Pauper Walls Discord</a> | <i class="fa-brands fa-discord"></i> | ~            |
 

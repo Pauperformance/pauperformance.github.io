@@ -68,6 +68,6 @@
 
 | 🗣️ | Name | Author | Date |
 | -- | ---- | ------ | ---- |
-| 🇬🇧 | <a target="_blank" href="https://discord.com/invite/stormcommunity">MTG Storm Community Discord</a> | <i class="fa-brands fa-discord"></i> | ~            |
 | 🇮🇹 | <a target="_blank" href="http://www.metagame.it/articoli-pauper/3378-building-on-a-budget-pauper-dimir-zubera.html">Building on a budget: Pauper Dimir Zubera</a> | Roberto Bernocco | 2018-06-07   |
+| 🇬🇧 | <a target="_blank" href="https://discord.com/invite/stormcommunity">MTG Storm Community Discord</a> | <i class="fa-brands fa-discord"></i> | ~            |
 

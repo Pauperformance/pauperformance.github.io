@@ -89,11 +89,11 @@ Since 2019, the addition of [Savage Swipe](https://scryfall.com/card/mh1/178/sav
 
 | 🗣️ | Name | Author | Date |
 | -- | ---- | ------ | ---- |
-| 🇬🇧 | <a target="_blank" href="https://docs.google.com/spreadsheets/d/1iBnopoHW5EspnWOvCDVm28eTI581RljyJoJgAZJOhXQ/edit?usp=sharing">**Sideboard Guide**</a> | <i class="fa-solid fa-book"></i> | ~            |
-| 🇬🇧 | <a target="_blank" href="https://discord.gg/RzTmb76qjJ">Pauper Stompy Discord</a> | <i class="fa-brands fa-discord"></i> | ~            |
 | 🇬🇧 | <a target="_blank" href="https://strategy.channelfireball.com/all-strategy/mtg/channelmagic-articles/pauper-stompy-deck-guide/">Pauper Stompy Deck Guide</a> | Alex Ullman | 2020-08-27   |
 | 🇬🇧 | <a target="_blank" href="https://www.coolstuffinc.com/a/kendrasmith-11212018-bringing-back-pauper-stompy">Bringing Back Pauper Stompy</a> | Paige Smith | 2018-11-21   |
 | 🇬🇧 | <a target="_blank" href="https://teamhp555130435.wordpress.com/2018/10/26/mono-green-stompy-pauper-guide/">Mono Green Stompy Pauper Guide</a> | airborne17th | 2018-10-26   |
 | 🇮🇹 | <a target="_blank" href="http://www.metagame.it/forum/viewtopic.php?f=187&t=10786">[PAUPER PRIMER] Mono Green</a> | Mr Pain | 2013-12-24   |
 | 🇬🇧 | <a target="_blank" href="https://www.mtgsalvation.com/forums/the-game/pauper/mtgo-pauper/established/189724-primer-mono-green-aggro-stompy">[Primer] Mono Green Aggro (stompy)</a> | Psychobabble | 2013-10-17   |
+| 🇬🇧 | <a target="_blank" href="https://docs.google.com/spreadsheets/d/1iBnopoHW5EspnWOvCDVm28eTI581RljyJoJgAZJOhXQ/edit?usp=sharing">**Sideboard Guide**</a> | <i class="fa-solid fa-book"></i> | ~            |
+| 🇬🇧 | <a target="_blank" href="https://discord.gg/RzTmb76qjJ">Pauper Stompy Discord</a> | <i class="fa-brands fa-discord"></i> | ~            |
 
