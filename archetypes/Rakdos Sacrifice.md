@@ -65,7 +65,7 @@
 
 | 🗣️ | 📺 | ⬇️ | Title | Author | Date |
 | -- | -- | -- | ---- | ------ | ---- |
-| 🇮🇹 | <i class="fa-brands fa-youtube"></i> |  | <a href="https://www.youtube.com/watch?v=YO5AJS5thRQ" target="_blank">[ITA] Pauper BR Sacrifice 26/05/2022</a> | Alessandro Moretti | 2022-06-01   |
+| 🇮🇹 | <i class="fa-brands fa-youtube"></i> |  | <a href="https://www.youtube.com/watch?v=YO5AJS5thRQ" target="_blank">[ITA] Pauper BR Sacrifice 26/05/2022</a> | Adepto Terra | 2022-06-01   |
 
 
 

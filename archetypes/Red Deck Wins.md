@@ -56,6 +56,13 @@
 
 
 
+## **Videos**
+
+| 🗣️ | 📺 | ⬇️ | Title | Author | Date |
+| -- | -- | -- | ---- | ------ | ---- |
+| 🇮🇹 | <i class="fa-brands fa-youtube"></i> |  | <a href="https://www.youtube.com/watch?v=ZV5SGS6Y98A" target="_blank">[ITA] Pauper Mono Red Sligh 24/05/2022</a> | Adepto Terra | 2022-05-30   |
+
+
 
 
 ## **Resources**

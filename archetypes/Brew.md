@@ -26,9 +26,8 @@ Generic archetype, for decks that do not fit those in the [Archetypes Index](../
 
 | 🗣️ | 📺 | ⬇️ | Title | Author | Date |
 | -- | -- | -- | ---- | ------ | ---- |
-| 🇬🇧 | <i class="fa-brands fa-youtube"></i> |  | <a href="https://www.youtube.com/watch?v=7-4CYBFrS3c" target="_blank">PAUPER - Death-Touch - PING em ALL!!!!</a> | Pauperganda | 2022-06-04   |
-| 🇮🇹 | <i class="fa-brands fa-youtube"></i> |  | <a href="https://www.youtube.com/watch?v=ZV5SGS6Y98A" target="_blank">[ITA] Pauper Mono Red Sligh 24/05/2022</a> | Alessandro Moretti | 2022-05-30   |
-| 🇮🇹 | <i class="fa-brands fa-youtube"></i> |  | <a href="https://www.youtube.com/watch?v=nLoNjyeMqAo" target="_blank">The Modern Familiar! La Nuova Veste di Questo Mazzo Storico</a> | Heisen 01 | 2022-05-18   |
+| 🇬🇧 | <i class="fa-brands fa-youtube"></i> |  | <a href="https://www.youtube.com/watch?v=7-4CYBFrS3c" target="_blank">PAUPER - Death-Touch - PING em ALL!!!!</a> | PAUPERGANDA | 2022-06-04   |
+| 🇮🇹 | <i class="fa-brands fa-youtube"></i> |  | <a href="https://www.youtube.com/watch?v=nLoNjyeMqAo" target="_blank">The Modern Familiar! La Nuova Veste di Questo Mazzo Storico</a> | Heisen01 | 2022-05-18   |
 
 
 
