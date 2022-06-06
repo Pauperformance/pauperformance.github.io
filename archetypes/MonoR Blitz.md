@@ -5,6 +5,8 @@
 # MonoR Blitz
 <br/>
 
+**Aliases**: `Hot Dogs`
+
 
 **Dominant mana**: <img src="../resources/images/mana/R.png" class="dominant-mana-icon"/>
 

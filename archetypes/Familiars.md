@@ -88,8 +88,8 @@
 
 | 🗣️ | Name | Author | Date |
 | -- | ---- | ------ | ---- |
-| 🇬🇧 | <a target="_blank" href="https://discord.gg/gTdT6VZ">Pauper Familiars Discord</a> | <i class="fa-brands fa-discord"></i> | ~            |
 | 🇬🇧 | <a target="_blank" href="https://www.youtube.com/watch?v=aBjW1lKdrYo&t=1s">UW Familiars HOW TO and sideboarding guide</a> | kalikaiz | 2021-12-07   |
 | 🇮🇹 | <a target="_blank" href="http://pauperwave.altervista.org/uw-familiar-pauper-league/">UW Familiar Pauper League</a> | Alessandro Moretti | 2020-04-01   |
 | 🇬🇧 | <a target="_blank" href="https://www.youtube.com/watch?v=59P3zGL_54A">Familiar speed tutorial with 420dragon</a> | 420dragon | 2017-12-22   |
+| 🇬🇧 | <a target="_blank" href="https://discord.gg/gTdT6VZ">Pauper Familiars Discord</a> | <i class="fa-brands fa-discord"></i> | ~            |
 

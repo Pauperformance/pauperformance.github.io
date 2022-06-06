@@ -67,7 +67,7 @@
 
 | 🗣️ | Name | Author | Date |
 | -- | ---- | ------ | ---- |
+| 🇬🇧 | <a target="_blank" href="https://www.theepicstorm.com/pauper-cycle-storm-primer/">PAUPER CYCLE STORM PRIMER</a> | Alex McKinley | 2022-01-30   |
 | 🇬🇧 | <a target="_blank" href="https://discord.gg/zrn2N6HT">Pauper Storm Discord</a> | <i class="fa-brands fa-discord"></i> | ~            |
 | 🇬🇧 | <a target="_blank" href="https://discord.com/invite/stormcommunity">MTG Storm Community Discord</a> | <i class="fa-brands fa-discord"></i> | ~            |
-| 🇬🇧 | <a target="_blank" href="https://www.theepicstorm.com/pauper-cycle-storm-primer/">PAUPER CYCLE STORM PRIMER</a> | Alex McKinley | 2022-01-30   |
 

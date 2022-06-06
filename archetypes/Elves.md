@@ -76,7 +76,7 @@
 
 | 🗣️ | Name | Author | Date |
 | -- | ---- | ------ | ---- |
-| 🇬🇧 | <a target="_blank" href="https://discord.gg/aheU4Fe">Pauper Elves Discord</a> | <i class="fa-brands fa-discord"></i> | ~            |
 | 🇬🇧 | <a target="_blank" href="https://mtg.cardsrealm.com/en-us/articles/pauper-elves:-deck-tech--sideboard-guide">Pauper Elves: Deck Tech & Sideboard Guide</a> | Gabriel | 2021-11-19   |
 | 🇮🇹 | <a target="_blank" href="http://www.metagame.it/forum/viewtopic.php?f=158&t=5180">[Pauper Tier] Elves</a> | Kuraiden | 2012-05-17   |
+| 🇬🇧 | <a target="_blank" href="https://discord.gg/aheU4Fe">Pauper Elves Discord</a> | <i class="fa-brands fa-discord"></i> | ~            |
 
