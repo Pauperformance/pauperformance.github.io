@@ -67,7 +67,7 @@ Since 2019, the addition of [Savage Swipe](https://scryfall.com/card/mh1/178/sav
 
 | Name | Set name | Set date | Legal |
 | -----| -------- | -------- | ----- |
-| [Stompy 735.001.Tarmogoyf_ita](https://www.mtggoldfish.com/deck/4842528) | Streets of New Capenna | 2022-04-29 | ✅ |
+| [Stompy 735.001.tarmogoyf_ita](https://www.mtggoldfish.com/deck/4867387) | Streets of New Capenna | 2022-04-29 | ✅ |
 | [Stompy 722.002.tarmogoyf_ita](https://www.mtggoldfish.com/deck/4706455) | Kamigawa: Neon Dynasty | 2022-02-18 | ✅ |
 | [Stompy 722.001.thuriborghez](https://www.mtggoldfish.com/deck/4667104) | Kamigawa: Neon Dynasty | 2022-02-18 | ✅ |
 | [Stompy 669.001.Shika93](https://www.mtggoldfish.com/deck/4351732) | Strixhaven: School of Mages | 2021-04-23 | ✅ |
