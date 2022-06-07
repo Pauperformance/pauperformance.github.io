@@ -74,13 +74,19 @@
 
 
 
+## **Reference decks**
+
+| Name | Set name | Set date | Legal |
+| -----| -------- | -------- | ----- |
+| [Dimir Teachings 696.001.GuerrieroFantasma](https://www.mtggoldfish.com/deck/4869050) | Innistrad: Midnight Hunt | 2021-09-24 | Ban 🔨 |
+
+
 
 
 ## **Other decks**
 
 | Name | Set name | Set date | Legal |
 | -----| -------- | -------- | ----- |
-| [Dimir Teachings 696.001.GuerrieroFantasma](https://www.mtggoldfish.com/deck/4869050) | Innistrad: Midnight Hunt | 2021-09-24 | Ban 🔨 |
 | [Dimir Teachings 454.001.Jake Stiles](https://www.mtggoldfish.com/deck/4351084) | Oath of the Gatewatch | 2016-01-22 | ✅ |
 | [Dimir Teachings 454.001.Caiusthethief](https://www.mtggoldfish.com/deck/4351085) | Oath of the Gatewatch | 2016-01-22 | ✅ |
 

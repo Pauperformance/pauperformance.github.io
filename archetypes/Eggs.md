@@ -49,6 +49,13 @@
 
 
 
+## **Reference decks**
+
+| Name | Set name | Set date | Legal |
+| -----| -------- | -------- | ----- |
+| [Eggs 518.002.Shika93](https://www.mtggoldfish.com/deck/4351757) | Iconic Masters | 2017-11-17 | Ban 🔨 |
+
+
 
 
 ## **Other decks**
@@ -56,7 +63,6 @@
 | Name | Set name | Set date | Legal |
 | -----| -------- | -------- | ----- |
 | [Eggs 533.001.fedetoro](https://www.mtggoldfish.com/deck/4351104) | Masters 25 | 2018-03-16 | Ban 🔨 |
-| [Eggs 518.002.Shika93](https://www.mtggoldfish.com/deck/4351757) | Iconic Masters | 2017-11-17 | Ban 🔨 |
 | [Eggs 518.001.Shika93](https://www.mtggoldfish.com/deck/4351755) | Iconic Masters | 2017-11-17 | Ban 🔨 |
 
 
