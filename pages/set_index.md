@@ -776,4 +776,5 @@ Lines in **bold** correspond to sets that have introduced new cards in the [Paup
 | 755       | dmu           | Dominaria United                                | 2022-09-09   |
 | 756       | bro           | The Brothers' War                               | 2022-11-18   |
 | 757       | ysnc          | Alchemy: New Capenna                            | 2022-06-02   |
+| 758       | pclb          | Commander Legends: Battle for Baldur's Gate Promos | 2022-06-10   |
 
