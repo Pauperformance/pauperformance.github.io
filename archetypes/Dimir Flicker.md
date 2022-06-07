@@ -29,8 +29,6 @@
 <a href="https://scryfall.com/card/khc/42/mulldrifter"><img src="https://c1.scryfall.com/file/scryfall-cards/normal/front/3/4/345fd005-5052-4500-a260-3649500e21f4.jpg" class="archetype-card rounded-image"/></a>
 <a href="https://scryfall.com/card/cmr/84/preordain"><img src="https://c1.scryfall.com/file/scryfall-cards/normal/front/1/4/1453f92e-df2d-4789-aa1b-a5b5c51567d4.jpg" class="archetype-card rounded-image"/></a>
 <a href="https://scryfall.com/card/scg/72/reaping-the-graves"><img src="https://c1.scryfall.com/file/scryfall-cards/normal/front/7/6/760a66bd-2821-4710-8f02-3c30772dd884.jpg" class="archetype-card rounded-image"/></a>
-<a href="https://scryfall.com/card/gvl/53/snuff-out"><img src="https://c1.scryfall.com/file/scryfall-cards/normal/front/7/5/75bbe89f-09af-494e-b58e-271f64bde4b5.jpg" class="archetype-card rounded-image"/></a>
-<a href="https://scryfall.com/card/cmr/154/thorn-of-the-black-rose"><img src="https://c1.scryfall.com/file/scryfall-cards/normal/front/2/b/2b7538ad-cc41-4229-8a39-c1db21f2899a.jpg" class="archetype-card rounded-image"/></a>
 </details><br/>
 
 
@@ -41,9 +39,14 @@
   <summary>Click here to expand</summary>
 <a href="https://scryfall.com/card/war/41/augur-of-bolas"><img src="https://c1.scryfall.com/file/scryfall-cards/normal/front/d/1/d19fbfe6-69bb-452a-be3c-b9c625e23193.jpg" class="archetype-card rounded-image"/></a>
 <a href="https://scryfall.com/card/khm/46/behold-the-multiverse"><img src="https://c1.scryfall.com/file/scryfall-cards/normal/front/2/7/27855a38-a682-4f97-ad22-ac625e86faec.jpg" class="archetype-card rounded-image"/></a>
+<a href="https://scryfall.com/card/iko/83/dead-weight"><img src="https://c1.scryfall.com/file/scryfall-cards/normal/front/e/c/ecf18476-f67b-46e6-905c-e6808981c58a.jpg" class="archetype-card rounded-image"/></a>
+<a href="https://scryfall.com/card/m20/95/disfigure"><img src="https://c1.scryfall.com/file/scryfall-cards/normal/front/1/8/18069340-a698-4f75-82cc-cc94fcf82184.jpg" class="archetype-card rounded-image"/></a>
+<a href="https://scryfall.com/card/cma/58/evincars-justice"><img src="https://c1.scryfall.com/file/scryfall-cards/normal/front/2/e/2e0fffc6-4395-441e-95a9-c9cf33af7907.jpg" class="archetype-card rounded-image"/></a>
 <a href="https://scryfall.com/card/tsr/76/mystical-teachings"><img src="https://c1.scryfall.com/file/scryfall-cards/normal/front/f/7/f7cb51cd-8418-43ee-bf4f-6b959cc5b131.jpg" class="archetype-card rounded-image"/></a>
 <a href="https://scryfall.com/card/khc/43/sea-gate-oracle"><img src="https://c1.scryfall.com/file/scryfall-cards/normal/front/4/9/498743ce-0ca5-488a-ae5e-d348b274bf3b.jpg" class="archetype-card rounded-image"/></a>
+<a href="https://scryfall.com/card/gvl/53/snuff-out"><img src="https://c1.scryfall.com/file/scryfall-cards/normal/front/7/5/75bbe89f-09af-494e-b58e-271f64bde4b5.jpg" class="archetype-card rounded-image"/></a>
 <a href="https://scryfall.com/card/iko/100/suffocating-fumes"><img src="https://c1.scryfall.com/file/scryfall-cards/normal/front/6/6/66b562e4-35df-4aee-848d-ceb4204bbe58.jpg" class="archetype-card rounded-image"/></a>
+<a href="https://scryfall.com/card/cmr/154/thorn-of-the-black-rose"><img src="https://c1.scryfall.com/file/scryfall-cards/normal/front/2/b/2b7538ad-cc41-4229-8a39-c1db21f2899a.jpg" class="archetype-card rounded-image"/></a>
 <a href="https://scryfall.com/card/mh1/113/unearth"><img src="https://c1.scryfall.com/file/scryfall-cards/normal/front/b/6/b62abd0c-ec3e-45d7-989d-da269812aeef.jpg" class="archetype-card rounded-image"/></a>
 </details><br/>
 
@@ -57,6 +60,7 @@
 | -----| -------- | -------- | ----- |
 | [Dimir Flicker 722.001.DragonDayDragon](https://www.mtggoldfish.com/deck/4673151) | Kamigawa: Neon Dynasty | 2022-02-18 | ✅ |
 | [Dimir Flicker 701.001.hjc](https://www.mtggoldfish.com/deck/4673152) | Innistrad: Crimson Vow | 2021-11-19 | ✅ |
+| [Dimir Flicker 648.001.hjc](https://www.mtggoldfish.com/deck/4869047) | Zendikar Rising | 2020-09-25 | ✅ |
 
 
 

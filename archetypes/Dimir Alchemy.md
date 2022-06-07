@@ -25,7 +25,6 @@
 <a href="https://scryfall.com/card/m20/95/disfigure"><img src="https://c1.scryfall.com/file/scryfall-cards/normal/front/1/8/18069340-a698-4f75-82cc-cc94fcf82184.jpg" class="archetype-card rounded-image"/></a>
 <a href="https://scryfall.com/card/ima/87/doom-blade"><img src="https://c1.scryfall.com/file/scryfall-cards/normal/front/9/0/90699423-2556-40f7-b8f5-c9d82f22d52e.jpg" class="archetype-card rounded-image"/></a>
 <a href="https://scryfall.com/card/dst/41/echoing-decay"><img src="https://c1.scryfall.com/file/scryfall-cards/normal/front/f/8/f8e688e7-8350-4b78-bd49-a6ffdedad556.jpg" class="archetype-card rounded-image"/></a>
-<a href="https://scryfall.com/card/cma/58/evincars-justice"><img src="https://c1.scryfall.com/file/scryfall-cards/normal/front/2/e/2e0fffc6-4395-441e-95a9-c9cf33af7907.jpg" class="archetype-card rounded-image"/></a>
 <a href="https://scryfall.com/card/uma/56/forbidden-alchemy"><img src="https://c1.scryfall.com/file/scryfall-cards/normal/front/e/7/e70dcc0d-aaa2-4815-be83-daafe441ceb4.jpg" class="archetype-card rounded-image"/></a>
 <a href="https://scryfall.com/card/uma/102/gurmag-angler"><img src="https://c1.scryfall.com/file/scryfall-cards/normal/front/c/e/cedd44eb-f381-46e1-bcb0-88416b4ce33d.jpg" class="archetype-card rounded-image"/></a>
 </details><br/>
@@ -38,9 +37,15 @@
   <summary>Click here to expand</summary>
 <a href="https://scryfall.com/card/mm3/150/agony-warp"><img src="https://c1.scryfall.com/file/scryfall-cards/normal/front/c/6/c6bc51eb-4ed8-433f-aee5-4aee31f6ad50.jpg" class="archetype-card rounded-image"/></a>
 <a href="https://scryfall.com/card/cmr/394/compulsive-research"><img src="https://c1.scryfall.com/file/scryfall-cards/normal/front/c/8/c8fcefbc-211f-4ad2-8866-9514f09cd3b3.jpg" class="archetype-card rounded-image"/></a>
+<a href="https://scryfall.com/card/iko/83/dead-weight"><img src="https://c1.scryfall.com/file/scryfall-cards/normal/front/e/c/ecf18476-f67b-46e6-905c-e6808981c58a.jpg" class="archetype-card rounded-image"/></a>
 <a href="https://scryfall.com/card/mh1/87/diabolic-edict"><img src="https://c1.scryfall.com/file/scryfall-cards/normal/front/4/e/4eabbed2-1399-4cf1-9eba-b53c56caced4.jpg" class="archetype-card rounded-image"/></a>
+<a href="https://scryfall.com/card/bfz/76/dispel"><img src="https://c1.scryfall.com/file/scryfall-cards/normal/front/b/c/bceab6b3-6b64-4964-a501-ce806a6c13ad.jpg" class="archetype-card rounded-image"/></a>
+<a href="https://scryfall.com/card/cma/58/evincars-justice"><img src="https://c1.scryfall.com/file/scryfall-cards/normal/front/2/e/2e0fffc6-4395-441e-95a9-c9cf33af7907.jpg" class="archetype-card rounded-image"/></a>
+<a href="https://scryfall.com/card/jmp/152/exclude"><img src="https://c1.scryfall.com/file/scryfall-cards/normal/front/1/4/1455f59e-f487-4195-ab25-8fc7695903e4.jpg" class="archetype-card rounded-image"/></a>
 <a href="https://scryfall.com/card/cmr/129/ghastly-demise"><img src="https://c1.scryfall.com/file/scryfall-cards/normal/front/7/f/7fcfe11a-fcc9-41e1-91ef-755bb4e22389.jpg" class="archetype-card rounded-image"/></a>
+<a href="https://scryfall.com/card/ima/66/mana-leak"><img src="https://c1.scryfall.com/file/scryfall-cards/normal/front/2/4/247939d9-87e9-4f01-b223-fb4cfa7dbbe1.jpg" class="archetype-card rounded-image"/></a>
 <a href="https://scryfall.com/card/khc/42/mulldrifter"><img src="https://c1.scryfall.com/file/scryfall-cards/normal/front/3/4/345fd005-5052-4500-a260-3649500e21f4.jpg" class="archetype-card rounded-image"/></a>
+<a href="https://scryfall.com/card/znr/71/negate"><img src="https://c1.scryfall.com/file/scryfall-cards/normal/front/e/9/e92c7477-d453-4fa4-acf4-3835ab9eb55a.jpg" class="archetype-card rounded-image"/></a>
 <a href="https://scryfall.com/card/a25/226/nihil-spellbomb"><img src="https://c1.scryfall.com/file/scryfall-cards/normal/front/e/5/e5892a23-efae-4731-9b8f-41c87960fe93.jpg" class="archetype-card rounded-image"/></a>
 <a href="https://scryfall.com/card/cmr/84/preordain"><img src="https://c1.scryfall.com/file/scryfall-cards/normal/front/1/4/1453f92e-df2d-4789-aa1b-a5b5c51567d4.jpg" class="archetype-card rounded-image"/></a>
 <a href="https://scryfall.com/card/inv/66/probe"><img src="https://c1.scryfall.com/file/scryfall-cards/normal/front/a/2/a2a58d18-3d52-4178-86b2-7590d4164e76.jpg" class="archetype-card rounded-image"/></a>
@@ -60,6 +65,7 @@
 
 | Name | Set name | Set date | Legal |
 | -----| -------- | -------- | ----- |
+| [Dimir Alchemy 612.001.unsur3](https://www.mtggoldfish.com/deck/4869046) | Theros Beyond Death | 2020-01-24 | ✅ |
 | [Dimir Alchemy 612.001.MrEvilEye](https://www.mtggoldfish.com/deck/4351767) | Theros Beyond Death | 2020-01-24 | ✅ |
 | [Dimir Alchemy 560.001.Simone Capuzzi](https://www.mtggoldfish.com/deck/4351083) | Guilds of Ravnica | 2018-10-05 | ✅ |
 | [Dimir Alchemy 529.001.The Professor (Brian Lewis)](https://www.mtggoldfish.com/deck/4351133) | Rivals of Ixalan | 2018-01-19 | ✅ |
