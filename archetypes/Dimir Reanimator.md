@@ -63,13 +63,19 @@
 
 
 
+## **Reference decks**
+
+| Name | Set name | Set date | Legal |
+| -----| -------- | -------- | ----- |
+| [Dimir Reanimator 735.001.UniqueUsername3](https://www.mtggoldfish.com/deck/4869048) | Streets of New Capenna | 2022-04-29 | ✅ |
+
+
 
 
 ## **Other decks**
 
 | Name | Set name | Set date | Legal |
 | -----| -------- | -------- | ----- |
-| [Dimir Reanimator 735.001.UniqueUsername3](https://www.mtggoldfish.com/deck/4869048) | Streets of New Capenna | 2022-04-29 | ✅ |
 | [Dimir Reanimator 735.001.Shika93](https://www.mtggoldfish.com/deck/4822197) | Streets of New Capenna | 2022-04-29 | ✅ |
 | [Dimir Reanimator 722.001.Bryant_Cook](https://www.mtggoldfish.com/deck/4673153) | Kamigawa: Neon Dynasty | 2022-02-18 | ✅ |
 | [Dimir Reanimator 701.001.monkey_noises](https://www.mtggoldfish.com/deck/4673154) | Innistrad: Crimson Vow | 2021-11-19 | ✅ |

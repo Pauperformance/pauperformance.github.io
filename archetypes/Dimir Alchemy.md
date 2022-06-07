@@ -59,13 +59,19 @@
 
 
 
+## **Reference decks**
+
+| Name | Set name | Set date | Legal |
+| -----| -------- | -------- | ----- |
+| [Dimir Alchemy 612.001.unsur3](https://www.mtggoldfish.com/deck/4869046) | Theros Beyond Death | 2020-01-24 | ✅ |
+
+
 
 
 ## **Other decks**
 
 | Name | Set name | Set date | Legal |
 | -----| -------- | -------- | ----- |
-| [Dimir Alchemy 612.001.unsur3](https://www.mtggoldfish.com/deck/4869046) | Theros Beyond Death | 2020-01-24 | ✅ |
 | [Dimir Alchemy 612.001.MrEvilEye](https://www.mtggoldfish.com/deck/4351767) | Theros Beyond Death | 2020-01-24 | ✅ |
 | [Dimir Alchemy 560.001.Simone Capuzzi](https://www.mtggoldfish.com/deck/4351083) | Guilds of Ravnica | 2018-10-05 | ✅ |
 | [Dimir Alchemy 529.001.The Professor (Brian Lewis)](https://www.mtggoldfish.com/deck/4351133) | Rivals of Ixalan | 2018-01-19 | ✅ |

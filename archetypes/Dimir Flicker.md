@@ -52,6 +52,13 @@
 
 
 
+## **Reference decks**
+
+| Name | Set name | Set date | Legal |
+| -----| -------- | -------- | ----- |
+| [Dimir Flicker 648.001.hjc](https://www.mtggoldfish.com/deck/4869047) | Zendikar Rising | 2020-09-25 | ✅ |
+
+
 
 
 ## **Other decks**
@@ -60,7 +67,6 @@
 | -----| -------- | -------- | ----- |
 | [Dimir Flicker 722.001.DragonDayDragon](https://www.mtggoldfish.com/deck/4673151) | Kamigawa: Neon Dynasty | 2022-02-18 | ✅ |
 | [Dimir Flicker 701.001.hjc](https://www.mtggoldfish.com/deck/4673152) | Innistrad: Crimson Vow | 2021-11-19 | ✅ |
-| [Dimir Flicker 648.001.hjc](https://www.mtggoldfish.com/deck/4869047) | Zendikar Rising | 2020-09-25 | ✅ |
 
 
 
