@@ -95,6 +95,13 @@ A hybrid version of the two exists, with main deck cascade that can transform in
 
 
 
+## **Videos**
+
+| 🗣️ | 📺 | ⬇️ | Title | Author | Date |
+| -- | -- | -- | ---- | ------ | ---- |
+| 🇮🇹 | <i class="fa-brands fa-youtube"></i> |  | <a href="https://www.youtube.com/watch?v=tJDEHG-7TLk" target="_blank">[ITA] Pauper WB Pestilene + Cascade Walls 01/05/2022</a> | Adepto Terra | 2022-06-08   |
+
+
 
 
 ## **Resources**
