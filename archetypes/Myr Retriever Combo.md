@@ -63,13 +63,19 @@
 
 
 
+## **Reference decks**
+
+| Name | Set name | Set date | Legal |
+| -----| -------- | -------- | ----- |
+| [Myr Retriever Combo 735.001.darklordseth](https://www.mtggoldfish.com/deck/4870882) | Streets of New Capenna | 2022-04-29 | ✅ |
+
+
 
 
 ## **Other decks**
 
 | Name | Set name | Set date | Legal |
 | -----| -------- | -------- | ----- |
-| [Myr Retriever Combo 735.001.darklordseth](https://www.mtggoldfish.com/deck/4870882) | Streets of New Capenna | 2022-04-29 | ✅ |
 | [Myr Retriever Combo 722.001.Shika93](https://www.mtggoldfish.com/deck/4675388) | Kamigawa: Neon Dynasty | 2022-02-18 | ✅ |
 | [Myr Retriever Combo 722.001.MT_mentat](https://www.mtggoldfish.com/deck/4796697) | Kamigawa: Neon Dynasty | 2022-02-18 | Ban 🔨 |
 | [Myr Retriever Combo 701.001.Herculesmath](https://www.mtggoldfish.com/deck/4796698) | Innistrad: Crimson Vow | 2021-11-19 | Ban 🔨 |

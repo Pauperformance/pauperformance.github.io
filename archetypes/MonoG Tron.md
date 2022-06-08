@@ -52,13 +52,19 @@
 
 
 
+## **Reference decks**
+
+| Name | Set name | Set date | Legal |
+| -----| -------- | -------- | ----- |
+| [MonoG Tron 735.001.Symsonic](https://www.mtggoldfish.com/deck/4870879) | Streets of New Capenna | 2022-04-29 | ✅ |
+
+
 
 
 ## **Other decks**
 
 | Name | Set name | Set date | Legal |
 | -----| -------- | -------- | ----- |
-| [MonoG Tron 735.001.Symsonic](https://www.mtggoldfish.com/deck/4870879) | Streets of New Capenna | 2022-04-29 | ✅ |
 | [MonoG Tron 722.001.VINICIUS](https://www.mtggoldfish.com/deck/4673165) | Kamigawa: Neon Dynasty | 2022-02-18 | ✅ |
 | [MonoG Tron 442.001.Don](https://www.mtggoldfish.com/deck/4673163) | Battle for Zendikar | 2015-10-02 | Ban 🔨 |
 

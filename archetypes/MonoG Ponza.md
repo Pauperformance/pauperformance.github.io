@@ -50,6 +50,13 @@
 
 
 
+## **Reference decks**
+
+| Name | Set name | Set date | Legal |
+| -----| -------- | -------- | ----- |
+| [MonoG Ponza 612.001.Backoff](https://www.mtggoldfish.com/deck/4870883) | Theros Beyond Death | 2020-01-24 | ✅ |
+
+
 
 
 ## **Other decks**
@@ -57,7 +64,6 @@
 | Name | Set name | Set date | Legal |
 | -----| -------- | -------- | ----- |
 | [MonoG Ponza 612.001.Jorge Amat](https://www.mtggoldfish.com/deck/4775979) | Theros Beyond Death | 2020-01-24 | ✅ |
-| [MonoG Ponza 612.001.Backoff](https://www.mtggoldfish.com/deck/4870883) | Theros Beyond Death | 2020-01-24 | ✅ |
 | [MonoG Ponza 600.001.Mazurin_Pavel](https://www.mtggoldfish.com/deck/4673161) | Throne of Eldraine | 2019-10-04 | ✅ |
 | [MonoG Ponza 600.001.Gweil0](https://www.mtggoldfish.com/deck/4775959) | Throne of Eldraine | 2019-10-04 | ✅ |
 

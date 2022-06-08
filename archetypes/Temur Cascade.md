@@ -37,6 +37,7 @@
 <details>
   <summary>Click here to expand</summary>
 <a href="https://scryfall.com/card/cmr/410/abrade"><img src="https://c1.scryfall.com/file/scryfall-cards/normal/front/d/2/d27d5b87-6dfc-4b99-822b-f6f8489ad275.jpg" class="archetype-card rounded-image"/></a>
+<a href="https://scryfall.com/card/mh2/147/abundant-harvest"><img src="https://c1.scryfall.com/file/scryfall-cards/normal/front/5/a/5ad86b17-3fed-418a-938c-c49adb409531.jpg" class="archetype-card rounded-image"/></a>
 <a href="https://scryfall.com/card/mid/128/ardent-elementalist"><img src="https://c1.scryfall.com/file/scryfall-cards/normal/front/f/5/f58592f7-1df5-428d-9dde-e6acd9a5d1d5.jpg" class="archetype-card rounded-image"/></a>
 <a href="https://scryfall.com/card/c20/67/bonders-ornament"><img src="https://c1.scryfall.com/file/scryfall-cards/normal/front/5/a/5afe425c-50a7-4d29-ac14-0edb094fc770.jpg" class="archetype-card rounded-image"/></a>
 <a href="https://scryfall.com/card/c21/115/brainstorm"><img src="https://c1.scryfall.com/file/scryfall-cards/normal/front/0/3/0359f212-9564-41a9-870b-d2c57455a695.jpg" class="archetype-card rounded-image"/></a>
@@ -49,6 +50,13 @@
 <a href="https://scryfall.com/card/ncc/320/wickerbough-elder"><img src="https://c1.scryfall.com/file/scryfall-cards/normal/front/3/a/3a5832cc-f9f6-4881-99dd-c0728a52cabe.jpg" class="archetype-card rounded-image"/></a>
 </details><br/>
 
+
+
+## **Reference decks**
+
+| Name | Set name | Set date | Legal |
+| -----| -------- | -------- | ----- |
+| [Temur Cascade 701.001.King-Strawberry](https://www.mtggoldfish.com/deck/4870925) | Innistrad: Crimson Vow | 2021-11-19 | ✅ |
 
 
 

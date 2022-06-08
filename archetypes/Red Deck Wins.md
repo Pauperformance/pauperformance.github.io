@@ -29,7 +29,6 @@
 <a href="https://scryfall.com/card/jmp/342/lightning-bolt"><img src="https://c1.scryfall.com/file/scryfall-cards/normal/front/c/e/ce711943-c1a1-43a0-8b89-8d169cfb8e06.jpg" class="archetype-card rounded-image"/></a>
 <a href="https://scryfall.com/card/tpr/143/mogg-conscripts"><img src="https://c1.scryfall.com/file/scryfall-cards/normal/front/c/6/c67c26d7-f752-40a5-b79e-1f4c531cbef5.jpg" class="archetype-card rounded-image"/></a>
 <a href="https://scryfall.com/card/shm/100/mudbrawler-cohort"><img src="https://c1.scryfall.com/file/scryfall-cards/normal/front/8/f/8fcb1f26-9a2a-40bd-b291-4ef8ce375cdf.jpg" class="archetype-card rounded-image"/></a>
-<a href="https://scryfall.com/card/ons/235/sparksmith"><img src="https://c1.scryfall.com/file/scryfall-cards/normal/front/1/5/15a4460d-3fe8-4b1f-9990-0a19c3345367.jpg" class="archetype-card rounded-image"/></a>
 </details><br/>
 
 
@@ -38,10 +37,20 @@
 
 <details>
   <summary>Click here to expand</summary>
+<a href="https://scryfall.com/card/me2/123/death-spark"><img src="https://c1.scryfall.com/file/scryfall-cards/normal/front/7/7/778d3497-2067-4d61-a322-5efb776dbaf1.jpg" class="archetype-card rounded-image"/></a>
+<a href="https://scryfall.com/card/m10/143/jackal-familiar"><img src="https://c1.scryfall.com/file/scryfall-cards/normal/front/0/a/0a47a2dc-f7f2-4103-9ebe-8cd8b83915ae.jpg" class="archetype-card rounded-image"/></a>
 <a href="https://scryfall.com/card/vow/174/reckless-impulse"><img src="https://c1.scryfall.com/file/scryfall-cards/normal/front/6/9/6943c07f-ab0d-4f5a-bbe9-c0a83dc98546.jpg" class="archetype-card rounded-image"/></a>
+<a href="https://scryfall.com/card/ons/235/sparksmith"><img src="https://c1.scryfall.com/file/scryfall-cards/normal/front/1/5/15a4460d-3fe8-4b1f-9990-0a19c3345367.jpg" class="archetype-card rounded-image"/></a>
 <a href="https://scryfall.com/card/ktk/125/valley-dasher"><img src="https://c1.scryfall.com/file/scryfall-cards/normal/front/8/5/8543adbd-0dd1-47d3-ac41-2ec72d6a5d35.jpg" class="archetype-card rounded-image"/></a>
 </details><br/>
 
+
+
+## **Reference decks**
+
+| Name | Set name | Set date | Legal |
+| -----| -------- | -------- | ----- |
+| [Red Deck Wins 722.001.Kiiiittyman](https://www.mtggoldfish.com/deck/4870924) | Kamigawa: Neon Dynasty | 2022-02-18 | ✅ |
 
 
 

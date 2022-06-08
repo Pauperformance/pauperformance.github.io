@@ -60,13 +60,19 @@
 
 
 
+## **Reference decks**
+
+| Name | Set name | Set date | Legal |
+| -----| -------- | -------- | ----- |
+| [MonoB Suicide 722.001.censurado](https://www.mtggoldfish.com/deck/4870884) | Kamigawa: Neon Dynasty | 2022-02-18 | ✅ |
+
+
 
 
 ## **Other decks**
 
 | Name | Set name | Set date | Legal |
 | -----| -------- | -------- | ----- |
-| [MonoB Suicide 722.001.censurado](https://www.mtggoldfish.com/deck/4870884) | Kamigawa: Neon Dynasty | 2022-02-18 | ✅ |
 | [MonoB Suicide 701.001.kenedymt](https://www.mtggoldfish.com/deck/4796699) | Innistrad: Crimson Vow | 2021-11-19 | ✅ |
 | [MonoB Suicide 584.001.Lazoreoc](https://www.mtggoldfish.com/deck/4351098) | War of the Spark | 2019-05-03 | ✅ |
 | [MonoB Suicide 485.001.danilopaiva](https://www.mtggoldfish.com/deck/4796533) | Aether Revolt | 2017-01-20 | ✅ |

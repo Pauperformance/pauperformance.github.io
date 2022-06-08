@@ -23,10 +23,8 @@
 <a href="https://scryfall.com/card/c21/168/faithless-looting"><img src="https://c1.scryfall.com/file/scryfall-cards/normal/front/1/d/1d6e5cc9-bd48-41b6-ac20-5a3e38aecdc5.jpg" class="archetype-card rounded-image"/></a>
 <a href="https://scryfall.com/card/uma/166/golgari-brownscale"><img src="https://c1.scryfall.com/file/scryfall-cards/normal/front/e/4/e41f3323-f702-46a6-92db-33ec0afd75d2.jpg" class="archetype-card rounded-image"/></a>
 <a href="https://scryfall.com/card/tsr/118/grave-scrabbler"><img src="https://c1.scryfall.com/file/scryfall-cards/normal/front/d/6/d6c53e52-8d63-4628-bfb9-8abe4c7c7f4a.jpg" class="archetype-card rounded-image"/></a>
-<a href="https://scryfall.com/card/soi/168/insolent-neonate"><img src="https://c1.scryfall.com/file/scryfall-cards/normal/front/8/1/813104f6-e6e4-4709-8626-12fe4262a11f.jpg" class="archetype-card rounded-image"/></a>
 <a href="https://scryfall.com/card/jmp/342/lightning-bolt"><img src="https://c1.scryfall.com/file/scryfall-cards/normal/front/c/e/ce711943-c1a1-43a0-8b89-8d169cfb8e06.jpg" class="archetype-card rounded-image"/></a>
 <a href="https://scryfall.com/card/dvd/36/stinkweed-imp"><img src="https://c1.scryfall.com/file/scryfall-cards/normal/front/2/a/2ab08d69-210b-4b06-88a2-45281a1a4e1e.jpg" class="archetype-card rounded-image"/></a>
-<a href="https://scryfall.com/card/c20/231/terminate"><img src="https://c1.scryfall.com/file/scryfall-cards/normal/front/1/a/1a2ba191-f11c-47d3-8459-34b0e0e56fd9.jpg" class="archetype-card rounded-image"/></a>
 <a href="https://scryfall.com/card/sth/74/tortured-existence"><img src="https://c1.scryfall.com/file/scryfall-cards/normal/front/1/7/1754b92b-d6f9-4503-af01-dee03f72a048.jpg" class="archetype-card rounded-image"/></a>
 </details><br/>
 
@@ -37,17 +35,33 @@
 <details>
   <summary>Click here to expand</summary>
 <a href="https://scryfall.com/card/soi/146/bloodmad-vampire"><img src="https://c1.scryfall.com/file/scryfall-cards/normal/front/b/6/b64e974a-3cf7-49f1-9d5a-c74f920f0169.jpg" class="archetype-card rounded-image"/></a>
+<a href="https://scryfall.com/card/uma/89/chainers-edict"><img src="https://c1.scryfall.com/file/scryfall-cards/normal/front/a/3/a36a583a-d4be-4589-a43c-a2854de062c6.jpg" class="archetype-card rounded-image"/></a>
+<a href="https://scryfall.com/card/iko/113/drannith-stinger"><img src="https://c1.scryfall.com/file/scryfall-cards/normal/front/6/1/612ee4be-e7a2-423c-a37c-7c6ca97f630e.jpg" class="archetype-card rounded-image"/></a>
+<a href="https://scryfall.com/card/gvl/42/faerie-macabre"><img src="https://c1.scryfall.com/file/scryfall-cards/normal/front/6/2/62103ceb-b16d-48ea-af42-d3df88d1ee4c.jpg" class="archetype-card rounded-image"/></a>
+<a href="https://scryfall.com/card/cmr/128/fleshbag-marauder"><img src="https://c1.scryfall.com/file/scryfall-cards/normal/front/4/0/4002b3a4-e00e-44ed-8989-d553e5d7d6c8.jpg" class="archetype-card rounded-image"/></a>
 <a href="https://scryfall.com/card/uma/95/fume-spitter"><img src="https://c1.scryfall.com/file/scryfall-cards/normal/front/b/b/bb1ef824-306c-4975-abca-19f0bd77449f.jpg" class="archetype-card rounded-image"/></a>
+<a href="https://scryfall.com/card/uma/102/gurmag-angler"><img src="https://c1.scryfall.com/file/scryfall-cards/normal/front/c/e/cedd44eb-f381-46e1-bcb0-88416b4ce33d.jpg" class="archetype-card rounded-image"/></a>
 <a href="https://scryfall.com/card/mh2/88/hell-mongrel"><img src="https://c1.scryfall.com/file/scryfall-cards/normal/front/f/7/f7da32a3-8e33-4603-abd2-8db144062f6a.jpg" class="archetype-card rounded-image"/></a>
 <a href="https://scryfall.com/card/a25/93/horror-of-the-broken-lands"><img src="https://c1.scryfall.com/file/scryfall-cards/normal/front/f/b/fb1f0958-5bf6-4a4f-a4bc-2943c93ba15e.jpg" class="archetype-card rounded-image"/></a>
+<a href="https://scryfall.com/card/soi/168/insolent-neonate"><img src="https://c1.scryfall.com/file/scryfall-cards/normal/front/8/1/813104f6-e6e4-4709-8626-12fe4262a11f.jpg" class="archetype-card rounded-image"/></a>
 <a href="https://scryfall.com/card/mh2/89/kitchen-imp"><img src="https://c1.scryfall.com/file/scryfall-cards/normal/front/8/3/836ae711-e62f-49ec-850e-d25f6fd2a4d4.jpg" class="archetype-card rounded-image"/></a>
+<a href="https://scryfall.com/card/csp/92/martyr-of-ashes"><img src="https://c1.scryfall.com/file/scryfall-cards/normal/front/6/0/600a2cd2-166a-4fd8-838d-e513534b7cb0.jpg" class="archetype-card rounded-image"/></a>
+<a href="https://scryfall.com/card/eld/131/merchant-of-the-vale-haggle"><img src="https://c1.scryfall.com/file/scryfall-cards/normal/front/0/b/0b4399b6-e67f-40d8-8676-f5db7e04a6c9.jpg" class="archetype-card rounded-image"/></a>
 <a href="https://scryfall.com/card/arb/43/monstrous-carabid"><img src="https://c1.scryfall.com/file/scryfall-cards/normal/front/b/0/b09e668d-02ca-4164-88ee-c7ea6c665975.jpg" class="archetype-card rounded-image"/></a>
 <a href="https://scryfall.com/card/mh2/140/skophos-reaver"><img src="https://c1.scryfall.com/file/scryfall-cards/normal/front/3/2/32691e3f-dea9-45ac-96fe-96b34d5116a9.jpg" class="archetype-card rounded-image"/></a>
+<a href="https://scryfall.com/card/c20/231/terminate"><img src="https://c1.scryfall.com/file/scryfall-cards/normal/front/1/a/1a2ba191-f11c-47d3-8459-34b0e0e56fd9.jpg" class="archetype-card rounded-image"/></a>
 <a href="https://scryfall.com/card/m21/165/thrill-of-possibility"><img src="https://c1.scryfall.com/file/scryfall-cards/normal/front/f/4/f4af156d-0fbf-4a4e-b0c1-db7e95be4903.jpg" class="archetype-card rounded-image"/></a>
 <a href="https://scryfall.com/card/znr/172/tormenting-voice"><img src="https://c1.scryfall.com/file/scryfall-cards/normal/front/6/d/6da46103-a14c-4aa2-92fc-fd758335caf4.jpg" class="archetype-card rounded-image"/></a>
 <a href="https://scryfall.com/card/me2/185/whiteout"><img src="https://c1.scryfall.com/file/scryfall-cards/normal/front/e/e/ee7bb29a-daf4-42d3-9404-c9f25d72a648.jpg" class="archetype-card rounded-image"/></a>
 </details><br/>
 
+
+
+## **Reference decks**
+
+| Name | Set name | Set date | Legal |
+| -----| -------- | -------- | ----- |
+| [Rakdos TortEx 735.001.Takahashi Masato](https://www.mtggoldfish.com/deck/4870923) | Streets of New Capenna | 2022-04-29 | ✅ |
 
 
 
