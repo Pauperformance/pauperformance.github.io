@@ -33,7 +33,9 @@
 <a href="https://scryfall.com/card/vow/95/blood-fountain"><img src="https://c1.scryfall.com/file/scryfall-cards/normal/front/d/d/dd03651e-ada0-41dc-8722-0eba476943e3.jpg" class="archetype-card rounded-image"/></a>
 <a href="https://scryfall.com/card/c20/67/bonders-ornament"><img src="https://c1.scryfall.com/file/scryfall-cards/normal/front/5/a/5afe425c-50a7-4d29-ac14-0edb094fc770.jpg" class="archetype-card rounded-image"/></a>
 <a href="https://scryfall.com/card/som/114/carapace-forger"><img src="https://c1.scryfall.com/file/scryfall-cards/normal/front/e/9/e9948e4c-d583-4fde-a305-df926cf00199.jpg" class="archetype-card rounded-image"/></a>
+<a href="https://scryfall.com/card/cmr/112/cast-down"><img src="https://c1.scryfall.com/file/scryfall-cards/normal/front/2/1/21c8426e-476a-45e4-b3a9-841da54d966c.jpg" class="archetype-card rounded-image"/></a>
 <a href="https://scryfall.com/card/tsr/263/chromatic-star"><img src="https://c1.scryfall.com/file/scryfall-cards/normal/front/c/2/c2e8d492-2c67-410b-b556-c157a14c4cec.jpg" class="archetype-card rounded-image"/></a>
+<a href="https://scryfall.com/card/mh2/267/counterspell"><img src="https://c1.scryfall.com/file/scryfall-cards/normal/front/1/9/1920dae4-fb92-4f19-ae4b-eb3276b8dac7.jpg" class="archetype-card rounded-image"/></a>
 <a href="https://scryfall.com/card/eld/119/crystal-slipper"><img src="https://c1.scryfall.com/file/scryfall-cards/normal/front/9/f/9f738ca6-5254-4dbc-9f59-854e81c8dac2.jpg" class="archetype-card rounded-image"/></a>
 <a href="https://scryfall.com/card/afr/94/deadly-dispute"><img src="https://c1.scryfall.com/file/scryfall-cards/normal/front/7/3/7373fe95-ad1c-44b9-8c7f-464ce8cbffc6.jpg" class="archetype-card rounded-image"/></a>
 <a href="https://scryfall.com/card/2xm/86/disciple-of-the-vault"><img src="https://c1.scryfall.com/file/scryfall-cards/normal/front/4/c/4c539843-4e3f-47a7-92e1-412eaaa2d9c5.jpg" class="archetype-card rounded-image"/></a>
@@ -80,6 +82,7 @@
 
 | Name | Set name | Set date | Legal |
 | -----| -------- | -------- | ----- |
+| [Affinity 722.001.ziofrancone](https://www.mtggoldfish.com/deck/4871405) | Kamigawa: Neon Dynasty | 2022-02-18 | ✅ |
 | [Affinity 722.001.Oceansoul92](https://www.mtggoldfish.com/deck/4667094) | Kamigawa: Neon Dynasty | 2022-02-18 | Ban 🔨 |
 | [Affinity 722.001.Condescend](https://www.mtggoldfish.com/deck/4667095) | Kamigawa: Neon Dynasty | 2022-02-18 | Ban 🔨 |
 | [Affinity 676.003.Shika93](https://www.mtggoldfish.com/deck/4626261) | Modern Horizons 2 | 2021-06-18 | Ban 🔨 |

@@ -32,6 +32,7 @@
 
 <details>
   <summary>Click here to expand</summary>
+<a href="https://scryfall.com/card/cmr/112/cast-down"><img src="https://c1.scryfall.com/file/scryfall-cards/normal/front/2/1/21c8426e-476a-45e4-b3a9-841da54d966c.jpg" class="archetype-card rounded-image"/></a>
 <a href="https://scryfall.com/card/mh1/84/crypt-rats"><img src="https://c1.scryfall.com/file/scryfall-cards/normal/front/9/6/96916db2-5121-4ff1-880c-369744f11ecf.jpg" class="archetype-card rounded-image"/></a>
 <a href="https://scryfall.com/card/mh1/86/defile"><img src="https://c1.scryfall.com/file/scryfall-cards/normal/front/5/b/5bcb4398-edd1-41a7-a496-b12bce22ceb6.jpg" class="archetype-card rounded-image"/></a>
 <a href="https://scryfall.com/card/m20/95/disfigure"><img src="https://c1.scryfall.com/file/scryfall-cards/normal/front/1/8/18069340-a698-4f75-82cc-cc94fcf82184.jpg" class="archetype-card rounded-image"/></a>
@@ -68,6 +69,7 @@
 
 | Name | Set name | Set date | Legal |
 | -----| -------- | -------- | ----- |
+| [MonoB Control 735.001.panza_quiroga](https://www.mtggoldfish.com/deck/4871411) | Streets of New Capenna | 2022-04-29 | ✅ |
 | [MonoB Control 722.001.Venancioo](https://www.mtggoldfish.com/deck/4680111) | Kamigawa: Neon Dynasty | 2022-02-18 | ✅ |
 | [MonoB Control 722.001.John1111](https://www.mtggoldfish.com/deck/4680122) | Kamigawa: Neon Dynasty | 2022-02-18 | ✅ |
 | [MonoB Control 612.001.Shika93](https://www.mtggoldfish.com/deck/4680118) | Theros Beyond Death | 2020-01-24 | ✅ |
