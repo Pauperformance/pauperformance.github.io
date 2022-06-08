@@ -10,9 +10,27 @@
     "family": null,
     "frequent": [
         {
+            "link": "https://scryfall.com/card/me2/123/death-spark",
+            "name": "Death Spark",
+            "preview": "https://c1.scryfall.com/file/scryfall-cards/normal/front/7/7/778d3497-2067-4d61-a322-5efb776dbaf1.jpg",
+            "py/object": "pauperformance_bot.entity.api.archetype.ArchetypeCard"
+        },
+        {
+            "link": "https://scryfall.com/card/m10/143/jackal-familiar",
+            "name": "Jackal Familiar",
+            "preview": "https://c1.scryfall.com/file/scryfall-cards/normal/front/0/a/0a47a2dc-f7f2-4103-9ebe-8cd8b83915ae.jpg",
+            "py/object": "pauperformance_bot.entity.api.archetype.ArchetypeCard"
+        },
+        {
             "link": "https://scryfall.com/card/vow/174/reckless-impulse",
             "name": "Reckless Impulse",
             "preview": "https://c1.scryfall.com/file/scryfall-cards/normal/front/6/9/6943c07f-ab0d-4f5a-bbe9-c0a83dc98546.jpg",
+            "py/object": "pauperformance_bot.entity.api.archetype.ArchetypeCard"
+        },
+        {
+            "link": "https://scryfall.com/card/ons/235/sparksmith",
+            "name": "Sparksmith",
+            "preview": "https://c1.scryfall.com/file/scryfall-cards/normal/front/1/5/15a4460d-3fe8-4b1f-9990-0a19c3345367.jpg",
             "py/object": "pauperformance_bot.entity.api.archetype.ArchetypeCard"
         },
         {
@@ -27,7 +45,9 @@
     ],
     "name": "Red Deck Wins",
     "py/object": "pauperformance_bot.entity.api.archetype.Archetype",
-    "reference_decks": [],
+    "reference_decks": [
+        "Red Deck Wins 722.001.Kiiiittyman"
+    ],
     "resource_sideboard": null,
     "resources": [
         {
@@ -99,12 +119,6 @@
             "link": "https://scryfall.com/card/shm/100/mudbrawler-cohort",
             "name": "Mudbrawler Cohort",
             "preview": "https://c1.scryfall.com/file/scryfall-cards/normal/front/8/f/8fcb1f26-9a2a-40bd-b291-4ef8ce375cdf.jpg",
-            "py/object": "pauperformance_bot.entity.api.archetype.ArchetypeCard"
-        },
-        {
-            "link": "https://scryfall.com/card/ons/235/sparksmith",
-            "name": "Sparksmith",
-            "preview": "https://c1.scryfall.com/file/scryfall-cards/normal/front/1/5/15a4460d-3fe8-4b1f-9990-0a19c3345367.jpg",
             "py/object": "pauperformance_bot.entity.api.archetype.ArchetypeCard"
         }
     ]

@@ -13,6 +13,12 @@
             "py/object": "pauperformance_bot.entity.api.archetype.ArchetypeCard"
         },
         {
+            "link": "https://scryfall.com/card/mh1/4/battle-screech",
+            "name": "Battle Screech",
+            "preview": "https://c1.scryfall.com/file/scryfall-cards/normal/front/e/a/eacf7dd0-5855-4e7b-b75c-8119cc3d1460.jpg",
+            "py/object": "pauperformance_bot.entity.api.archetype.ArchetypeCard"
+        },
+        {
             "link": "https://scryfall.com/card/cmr/458/bonesplitter",
             "name": "Bonesplitter",
             "preview": "https://c1.scryfall.com/file/scryfall-cards/normal/front/6/9/690972a8-72df-4050-a353-16e45589167c.jpg",
@@ -55,9 +61,39 @@
             "py/object": "pauperformance_bot.entity.api.archetype.ArchetypeCard"
         },
         {
+            "link": "https://scryfall.com/card/ddo/14/icatian-javelineers",
+            "name": "Icatian Javelineers",
+            "preview": "https://c1.scryfall.com/file/scryfall-cards/normal/front/1/a/1ae589f5-a513-4d3c-b3fa-66eead66faf3.jpg",
+            "py/object": "pauperformance_bot.entity.api.archetype.ArchetypeCard"
+        },
+        {
+            "link": "https://scryfall.com/card/snc/18/inspiring-overseer",
+            "name": "Inspiring Overseer",
+            "preview": "https://c1.scryfall.com/file/scryfall-cards/normal/front/3/5/35d9da1d-8678-4252-b0f8-9960795642f0.jpg",
+            "py/object": "pauperformance_bot.entity.api.archetype.ArchetypeCard"
+        },
+        {
+            "link": "https://scryfall.com/card/ths/22/last-breath",
+            "name": "Last Breath",
+            "preview": "https://c1.scryfall.com/file/scryfall-cards/normal/front/1/8/1857fc37-1e7e-4b93-9fa9-ec139f16b7fa.jpg",
+            "py/object": "pauperformance_bot.entity.api.archetype.ArchetypeCard"
+        },
+        {
             "link": "https://scryfall.com/card/ddg/7/leonin-skyhunter",
             "name": "Leonin Skyhunter",
             "preview": "https://c1.scryfall.com/file/scryfall-cards/normal/front/1/5/15d6476c-1944-48e8-9af6-6db78edd58e5.jpg",
+            "py/object": "pauperformance_bot.entity.api.archetype.ArchetypeCard"
+        },
+        {
+            "link": "https://scryfall.com/card/dka/13/loyal-cathar-unhallowed-cathar",
+            "name": "Loyal Cathar",
+            "preview": "https://c1.scryfall.com/file/scryfall-cards/normal/front/c/b/cb09041b-4d09-4cae-9e85-b859edae885b.jpg",
+            "py/object": "pauperformance_bot.entity.api.archetype.ArchetypeCard"
+        },
+        {
+            "link": "https://scryfall.com/card/mid/27/lunarch-veteran-luminous-phantom",
+            "name": "Lunarch Veteran",
+            "preview": "https://c1.scryfall.com/file/scryfall-cards/normal/front/d/2/d2704743-2e23-40b9-a367-c73d2db45afc.jpg",
             "py/object": "pauperformance_bot.entity.api.archetype.ArchetypeCard"
         },
         {
@@ -85,6 +121,12 @@
             "py/object": "pauperformance_bot.entity.api.archetype.ArchetypeCard"
         },
         {
+            "link": "https://scryfall.com/card/neo/38/spirited-companion",
+            "name": "Spirited Companion",
+            "preview": "https://c1.scryfall.com/file/scryfall-cards/normal/front/5/a/5aa91a9e-2fe2-43bc-aa9c-cfb8a71829ff.jpg",
+            "py/object": "pauperformance_bot.entity.api.archetype.ArchetypeCard"
+        },
+        {
             "link": "https://scryfall.com/card/a25/34/squadron-hawk",
             "name": "Squadron Hawk",
             "preview": "https://c1.scryfall.com/file/scryfall-cards/normal/front/9/e/9e81806d-5d87-4032-ad94-c2cdeabecdbf.jpg",
@@ -101,6 +143,12 @@
             "name": "Unmake",
             "preview": "https://c1.scryfall.com/file/scryfall-cards/normal/front/6/d/6d0dea1b-43dc-4e76-aabd-f12e121a78af.jpg",
             "py/object": "pauperformance_bot.entity.api.archetype.ArchetypeCard"
+        },
+        {
+            "link": "https://scryfall.com/card/m13/38/war-falcon",
+            "name": "War Falcon",
+            "preview": "https://c1.scryfall.com/file/scryfall-cards/normal/front/7/e/7e092a0d-c031-4a76-86c1-7f83878a06e8.jpg",
+            "py/object": "pauperformance_bot.entity.api.archetype.ArchetypeCard"
         }
     ],
     "game_type": [
@@ -108,7 +156,9 @@
     ],
     "name": "White Weenie",
     "py/object": "pauperformance_bot.entity.api.archetype.Archetype",
-    "reference_decks": [],
+    "reference_decks": [
+        "White Weenie 735.001.JGitaxis"
+    ],
     "resource_sideboard": null,
     "resources": [
         {
@@ -123,12 +173,6 @@
     "resources_discord": [],
     "staples": [
         {
-            "link": "https://scryfall.com/card/ddo/14/icatian-javelineers",
-            "name": "Icatian Javelineers",
-            "preview": "https://c1.scryfall.com/file/scryfall-cards/normal/front/1/a/1ae589f5-a513-4d3c-b3fa-66eead66faf3.jpg",
-            "py/object": "pauperformance_bot.entity.api.archetype.ArchetypeCard"
-        },
-        {
             "link": "https://scryfall.com/card/cmd/17/journey-to-nowhere",
             "name": "Journey to Nowhere",
             "preview": "https://c1.scryfall.com/file/scryfall-cards/normal/front/4/6/4686b51c-e02b-48c1-bafe-e8d08a5407b9.jpg",
@@ -138,18 +182,6 @@
             "link": "https://scryfall.com/card/mm3/11/kor-skyfisher",
             "name": "Kor Skyfisher",
             "preview": "https://c1.scryfall.com/file/scryfall-cards/normal/front/d/7/d7501662-1216-4e08-bd2b-e0a459057942.jpg",
-            "py/object": "pauperformance_bot.entity.api.archetype.ArchetypeCard"
-        },
-        {
-            "link": "https://scryfall.com/card/dka/13/loyal-cathar-unhallowed-cathar",
-            "name": "Loyal Cathar",
-            "preview": "https://c1.scryfall.com/file/scryfall-cards/normal/front/c/b/cb09041b-4d09-4cae-9e85-b859edae885b.jpg",
-            "py/object": "pauperformance_bot.entity.api.archetype.ArchetypeCard"
-        },
-        {
-            "link": "https://scryfall.com/card/m13/38/war-falcon",
-            "name": "War Falcon",
-            "preview": "https://c1.scryfall.com/file/scryfall-cards/normal/front/7/e/7e092a0d-c031-4a76-86c1-7f83878a06e8.jpg",
             "py/object": "pauperformance_bot.entity.api.archetype.ArchetypeCard"
         }
     ]
