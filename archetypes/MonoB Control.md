@@ -60,6 +60,7 @@
 
 | Name | Set name | Set date | Legal |
 | -----| -------- | -------- | ----- |
+| [MonoB Control 735.001.panza_quiroga](https://www.mtggoldfish.com/deck/4871411) | Streets of New Capenna | 2022-04-29 | ✅ |
 | [MonoB Control 701.001.medvedev](https://www.mtggoldfish.com/deck/4680107) | Innistrad: Crimson Vow | 2021-11-19 | ✅ |
 
 
@@ -69,7 +70,6 @@
 
 | Name | Set name | Set date | Legal |
 | -----| -------- | -------- | ----- |
-| [MonoB Control 735.001.panza_quiroga](https://www.mtggoldfish.com/deck/4871411) | Streets of New Capenna | 2022-04-29 | ✅ |
 | [MonoB Control 722.001.Venancioo](https://www.mtggoldfish.com/deck/4680111) | Kamigawa: Neon Dynasty | 2022-02-18 | ✅ |
 | [MonoB Control 722.001.John1111](https://www.mtggoldfish.com/deck/4680122) | Kamigawa: Neon Dynasty | 2022-02-18 | ✅ |
 | [MonoB Control 612.001.Shika93](https://www.mtggoldfish.com/deck/4680118) | Theros Beyond Death | 2020-01-24 | ✅ |
