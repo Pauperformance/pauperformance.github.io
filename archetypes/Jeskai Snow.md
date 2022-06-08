@@ -23,7 +23,6 @@
 <a href="https://scryfall.com/card/mh2/267/counterspell"><img src="https://c1.scryfall.com/file/scryfall-cards/normal/front/1/9/1920dae4-fb92-4f19-ae4b-eb3276b8dac7.jpg" class="archetype-card rounded-image"/></a>
 <a href="https://scryfall.com/card/bfz/76/dispel"><img src="https://c1.scryfall.com/file/scryfall-cards/normal/front/b/c/bceab6b3-6b64-4964-a501-ce806a6c13ad.jpg" class="archetype-card rounded-image"/></a>
 <a href="https://scryfall.com/card/mh1/7/ephemerate"><img src="https://c1.scryfall.com/file/scryfall-cards/normal/front/2/d/2da5f3f8-5eef-498f-ba2c-2f3fbc3745aa.jpg" class="archetype-card rounded-image"/></a>
-<a href="https://scryfall.com/card/cmd/17/journey-to-nowhere"><img src="https://c1.scryfall.com/file/scryfall-cards/normal/front/4/6/4686b51c-e02b-48c1-bafe-e8d08a5407b9.jpg" class="archetype-card rounded-image"/></a>
 <a href="https://scryfall.com/card/mm3/11/kor-skyfisher"><img src="https://c1.scryfall.com/file/scryfall-cards/normal/front/d/7/d7501662-1216-4e08-bd2b-e0a459057942.jpg" class="archetype-card rounded-image"/></a>
 <a href="https://scryfall.com/card/khc/42/mulldrifter"><img src="https://c1.scryfall.com/file/scryfall-cards/normal/front/3/4/345fd005-5052-4500-a260-3649500e21f4.jpg" class="archetype-card rounded-image"/></a>
 <a href="https://scryfall.com/card/cmr/84/preordain"><img src="https://c1.scryfall.com/file/scryfall-cards/normal/front/1/4/1453f92e-df2d-4789-aa1b-a5b5c51567d4.jpg" class="archetype-card rounded-image"/></a>
@@ -38,8 +37,10 @@
 <details>
   <summary>Click here to expand</summary>
 <a href="https://scryfall.com/card/jvc/51/incinerate"><img src="https://c1.scryfall.com/file/scryfall-cards/normal/front/f/2/f23dff46-e040-4cba-890a-97c2899701f2.jpg" class="archetype-card rounded-image"/></a>
+<a href="https://scryfall.com/card/cmd/17/journey-to-nowhere"><img src="https://c1.scryfall.com/file/scryfall-cards/normal/front/4/6/4686b51c-e02b-48c1-bafe-e8d08a5407b9.jpg" class="archetype-card rounded-image"/></a>
 <a href="https://scryfall.com/card/jmp/342/lightning-bolt"><img src="https://c1.scryfall.com/file/scryfall-cards/normal/front/c/e/ce711943-c1a1-43a0-8b89-8d169cfb8e06.jpg" class="archetype-card rounded-image"/></a>
 <a href="https://scryfall.com/card/c21/202/pulse-of-murasa"><img src="https://c1.scryfall.com/file/scryfall-cards/normal/front/a/4/a4b9f8f4-d704-4f16-8495-cf8185285859.jpg" class="archetype-card rounded-image"/></a>
+<a href="https://scryfall.com/card/eld/74/witching-well"><img src="https://c1.scryfall.com/file/scryfall-cards/normal/front/6/2/62d3132f-f897-4a7a-9de4-c6388e83f5ad.jpg" class="archetype-card rounded-image"/></a>
 </details><br/>
 
 
@@ -51,6 +52,7 @@
 | Name | Set name | Set date | Legal |
 | -----| -------- | -------- | ----- |
 | [Jeskai Snow 600.001.Thebiologist](https://www.mtggoldfish.com/deck/4673181) | Throne of Eldraine | 2019-10-04 | Ban 🔨 |
+| [Jeskai Snow 600.001.BrianDeMars](https://www.mtggoldfish.com/deck/4870876) | Throne of Eldraine | 2019-10-04 | Ban 🔨 |
 | [Jeskai Snow 600.001.Backoff](https://www.mtggoldfish.com/deck/4673180) | Throne of Eldraine | 2019-10-04 | Ban 🔨 |
 
 

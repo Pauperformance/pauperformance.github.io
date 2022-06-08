@@ -37,6 +37,8 @@
 <a href="https://scryfall.com/card/jmp/462/chromatic-sphere"><img src="https://c1.scryfall.com/file/scryfall-cards/normal/front/e/d/edabc8b2-4413-48e4-8d6f-521b19d839a6.jpg" class="archetype-card rounded-image"/></a>
 <a href="https://scryfall.com/card/afc/157/explore"><img src="https://c1.scryfall.com/file/scryfall-cards/normal/front/5/9/59c33065-1bdd-4257-9e74-1f2aacf063c5.jpg" class="archetype-card rounded-image"/></a>
 <a href="https://scryfall.com/card/2xm/168/fierce-empath"><img src="https://c1.scryfall.com/file/scryfall-cards/normal/front/f/1/f13ddd38-397c-4119-8d55-50c7407883f9.jpg" class="archetype-card rounded-image"/></a>
+<a href="https://scryfall.com/card/cmr/178/fiery-cannonade"><img src="https://c1.scryfall.com/file/scryfall-cards/normal/front/3/9/396f1cdf-712b-4518-a0e8-0039303dccdc.jpg" class="archetype-card rounded-image"/></a>
+<a href="https://scryfall.com/card/eld/220/golden-egg"><img src="https://c1.scryfall.com/file/scryfall-cards/normal/front/5/2/525142c3-f17c-4e02-a02d-fa385215aa12.jpg" class="archetype-card rounded-image"/></a>
 <a href="https://scryfall.com/card/vma/175/kaerveks-torch"><img src="https://c1.scryfall.com/file/scryfall-cards/normal/front/8/3/83ff4446-4afd-42db-9879-0295e95764f7.jpg" class="archetype-card rounded-image"/></a>
 <a href="https://scryfall.com/card/cmr/322/maelstrom-colossus"><img src="https://c1.scryfall.com/file/scryfall-cards/normal/front/3/2/322491d2-d082-4d38-8d81-8588c011e725.jpg" class="archetype-card rounded-image"/></a>
 <a href="https://scryfall.com/card/jmp/472/mana-geode"><img src="https://c1.scryfall.com/file/scryfall-cards/normal/front/f/8/f8c54d41-683e-42fd-8aa4-371dddf3bcb3.jpg" class="archetype-card rounded-image"/></a>
@@ -44,6 +46,7 @@
 <a href="https://scryfall.com/card/ody/251/moments-peace"><img src="https://c1.scryfall.com/file/scryfall-cards/normal/front/4/0/40ebe935-ccf9-435e-8fe8-53bcbf3526e7.jpg" class="archetype-card rounded-image"/></a>
 <a href="https://scryfall.com/card/cmr/334/prophetic-prism"><img src="https://c1.scryfall.com/file/scryfall-cards/normal/front/1/4/14602fed-8666-4884-8fca-13529578f9e2.jpg" class="archetype-card rounded-image"/></a>
 <a href="https://scryfall.com/card/c21/202/pulse-of-murasa"><img src="https://c1.scryfall.com/file/scryfall-cards/normal/front/a/4/a4b9f8f4-d704-4f16-8495-cf8185285859.jpg" class="archetype-card rounded-image"/></a>
+<a href="https://scryfall.com/card/a25/231/self-assembler"><img src="https://c1.scryfall.com/file/scryfall-cards/normal/front/d/8/d86ba613-29bd-45d8-b5ed-f8fe8323fe75.jpg" class="archetype-card rounded-image"/></a>
 <a href="https://scryfall.com/card/znr/254/spare-supplies"><img src="https://c1.scryfall.com/file/scryfall-cards/normal/front/a/5/a53baf25-1782-427b-a9dd-fc9b8dc6444f.jpg" class="archetype-card rounded-image"/></a>
 </details><br/>
 
@@ -55,6 +58,7 @@
 
 | Name | Set name | Set date | Legal |
 | -----| -------- | -------- | ----- |
+| [MonoG Tron 735.001.Symsonic](https://www.mtggoldfish.com/deck/4870879) | Streets of New Capenna | 2022-04-29 | ✅ |
 | [MonoG Tron 722.001.VINICIUS](https://www.mtggoldfish.com/deck/4673165) | Kamigawa: Neon Dynasty | 2022-02-18 | ✅ |
 | [MonoG Tron 442.001.Don](https://www.mtggoldfish.com/deck/4673163) | Battle for Zendikar | 2015-10-02 | Ban 🔨 |
 
