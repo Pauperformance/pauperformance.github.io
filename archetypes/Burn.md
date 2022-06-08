@@ -54,6 +54,7 @@ Tough decisions for Burn players also involve choosing whether to use removals o
 
 | Name | Set name | Set date | Legal |
 | -----| -------- | -------- | ----- |
+| [Burn 735.001.hydra89](https://www.mtggoldfish.com/deck/4871420) | Streets of New Capenna | 2022-04-29 | ✅ |
 | [Burn 696.001.PRGJJAR](https://www.mtggoldfish.com/deck/4624409) | Innistrad: Midnight Hunt | 2021-09-24 | ✅ |
 | [Burn 584.001.SuperCow12653](https://www.mtggoldfish.com/deck/4351060) | War of the Spark | 2019-05-03 | ✅ |
 
