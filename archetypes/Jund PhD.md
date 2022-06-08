@@ -41,6 +41,7 @@
 | Name | Set name | Set date | Legal |
 | -----| -------- | -------- | ----- |
 | [Jund PhD 669.002.Milkk](https://www.mtggoldfish.com/deck/4351136) | Strixhaven: School of Mages | 2021-04-23 | Ban 🔨 |
+| [Jund PhD 669.001.Milkk](https://www.mtggoldfish.com/deck/4870878) | Strixhaven: School of Mages | 2021-04-23 | Ban 🔨 |
 | [Jund PhD 669.001.Milkk](https://www.mtggoldfish.com/deck/4351135) | Strixhaven: School of Mages | 2021-04-23 | Ban 🔨 |
 | [Jund PhD 669.001.CooperTheRed](https://www.mtggoldfish.com/deck/4351134) | Strixhaven: School of Mages | 2021-04-23 | Ban 🔨 |
 

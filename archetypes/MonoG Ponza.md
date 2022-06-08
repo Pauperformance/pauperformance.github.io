@@ -42,6 +42,7 @@
 <a href="https://scryfall.com/card/mm3/133/revive"><img src="https://c1.scryfall.com/file/scryfall-cards/normal/front/1/b/1b365778-1678-4c1f-ae32-7671a1429a3e.jpg" class="archetype-card rounded-image"/></a>
 <a href="https://scryfall.com/card/c20/187/sakura-tribe-elder"><img src="https://c1.scryfall.com/file/scryfall-cards/normal/front/c/8/c83be2b7-0373-4389-9aa0-523db58f4d2a.jpg" class="archetype-card rounded-image"/></a>
 <a href="https://scryfall.com/card/tsr/229/search-for-tomorrow"><img src="https://c1.scryfall.com/file/scryfall-cards/normal/front/0/c/0c65336f-f735-4c35-9278-ad97255eb5bb.jpg" class="archetype-card rounded-image"/></a>
+<a href="https://scryfall.com/card/mh1/187/trumpeting-herd"><img src="https://c1.scryfall.com/file/scryfall-cards/normal/front/b/0/b0f3b68e-f616-4687-bc2d-075165162cd1.jpg" class="archetype-card rounded-image"/></a>
 <a href="https://scryfall.com/card/a25/192/utopia-sprawl"><img src="https://c1.scryfall.com/file/scryfall-cards/normal/front/1/5/15625580-3cbd-459c-a667-87efdcdaf2b2.jpg" class="archetype-card rounded-image"/></a>
 <a href="https://scryfall.com/card/afc/174/wild-growth"><img src="https://c1.scryfall.com/file/scryfall-cards/normal/front/6/1/61efbd57-7e56-4087-beba-18d8445db7dd.jpg" class="archetype-card rounded-image"/></a>
 <a href="https://scryfall.com/card/emn/12/wretched-gryff"><img src="https://c1.scryfall.com/file/scryfall-cards/normal/front/9/d/9d65efec-018f-485c-906c-460379b4af87.jpg" class="archetype-card rounded-image"/></a>
@@ -56,6 +57,7 @@
 | Name | Set name | Set date | Legal |
 | -----| -------- | -------- | ----- |
 | [MonoG Ponza 612.001.Jorge Amat](https://www.mtggoldfish.com/deck/4775979) | Theros Beyond Death | 2020-01-24 | ✅ |
+| [MonoG Ponza 612.001.Backoff](https://www.mtggoldfish.com/deck/4870883) | Theros Beyond Death | 2020-01-24 | ✅ |
 | [MonoG Ponza 600.001.Mazurin_Pavel](https://www.mtggoldfish.com/deck/4673161) | Throne of Eldraine | 2019-10-04 | ✅ |
 | [MonoG Ponza 600.001.Gweil0](https://www.mtggoldfish.com/deck/4775959) | Throne of Eldraine | 2019-10-04 | ✅ |
 
