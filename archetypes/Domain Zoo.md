@@ -24,7 +24,6 @@
 <a href="https://scryfall.com/card/jmp/342/lightning-bolt"><img src="https://c1.scryfall.com/file/scryfall-cards/normal/front/c/e/ce711943-c1a1-43a0-8b89-8d169cfb8e06.jpg" class="archetype-card rounded-image"/></a>
 <a href="https://scryfall.com/card/mm2/148/matca-rioters"><img src="https://c1.scryfall.com/file/scryfall-cards/normal/front/0/e/0eac937f-9d61-4da2-8946-187839e13590.jpg" class="archetype-card rounded-image"/></a>
 <a href="https://scryfall.com/card/ths/169/nyleas-presence"><img src="https://c1.scryfall.com/file/scryfall-cards/normal/front/e/6/e68f1fd4-1a2f-405b-a592-6c4af6214eae.jpg" class="archetype-card rounded-image"/></a>
-<a href="https://scryfall.com/card/a25/186/rancor"><img src="https://c1.scryfall.com/file/scryfall-cards/normal/front/8/a/8a4d8527-af29-408d-a3a3-6781db0cf439.jpg" class="archetype-card rounded-image"/></a>
 <a href="https://scryfall.com/card/mm2/132/tribal-flames"><img src="https://c1.scryfall.com/file/scryfall-cards/normal/front/d/2/d22418cd-4c49-4754-aa75-17f6eaf1639a.jpg" class="archetype-card rounded-image"/></a>
 <a href="https://scryfall.com/card/ddh/4/wild-nacatl"><img src="https://c1.scryfall.com/file/scryfall-cards/normal/front/5/a/5a3bb291-11d1-45e0-a60a-e75c7dc94b94.jpg" class="archetype-card rounded-image"/></a>
 </details><br/>
@@ -37,11 +36,14 @@
   <summary>Click here to expand</summary>
 <a href="https://scryfall.com/card/ema/195/armadillo-cloak"><img src="https://c1.scryfall.com/file/scryfall-cards/normal/front/f/a/fa232c65-dbb4-4414-bd95-b3bbd321c653.jpg" class="archetype-card rounded-image"/></a>
 <a href="https://scryfall.com/card/c18/128/aura-gnarlid"><img src="https://c1.scryfall.com/file/scryfall-cards/normal/front/8/0/808d06bb-1467-4c91-965e-bf8874ffa5e6.jpg" class="archetype-card rounded-image"/></a>
+<a href="https://scryfall.com/card/dds/55/burning-tree-emissary"><img src="https://c1.scryfall.com/file/scryfall-cards/normal/front/2/2/22e3e874-a0ec-4459-b78d-abef6b9232b9.jpg" class="archetype-card rounded-image"/></a>
 <a href="https://scryfall.com/card/cmr/171/crimson-fleet-commodore"><img src="https://c1.scryfall.com/file/scryfall-cards/normal/front/c/9/c90fdccf-30a6-40ee-9b35-83a6ee5c0681.jpg" class="archetype-card rounded-image"/></a>
 <a href="https://scryfall.com/card/thb/20/heliods-pilgrim"><img src="https://c1.scryfall.com/file/scryfall-cards/normal/front/c/a/cafce2f5-f4f4-465b-96dc-bcdd29d4e4bb.jpg" class="archetype-card rounded-image"/></a>
+<a href="https://scryfall.com/card/cmd/17/journey-to-nowhere"><img src="https://c1.scryfall.com/file/scryfall-cards/normal/front/4/6/4686b51c-e02b-48c1-bafe-e8d08a5407b9.jpg" class="archetype-card rounded-image"/></a>
 <a href="https://scryfall.com/card/mm3/11/kor-skyfisher"><img src="https://c1.scryfall.com/file/scryfall-cards/normal/front/d/7/d7501662-1216-4e08-bd2b-e0a459057942.jpg" class="archetype-card rounded-image"/></a>
 <a href="https://scryfall.com/card/con/85/might-of-alara"><img src="https://c1.scryfall.com/file/scryfall-cards/normal/front/9/5/9514c013-bc11-4cc5-af8c-f82fd4098bcf.jpg" class="archetype-card rounded-image"/></a>
 <a href="https://scryfall.com/card/c17/189/qasali-pridemage"><img src="https://c1.scryfall.com/file/scryfall-cards/normal/front/a/2/a214bb26-f44a-4029-a99c-ea6bd086b0cc.jpg" class="archetype-card rounded-image"/></a>
+<a href="https://scryfall.com/card/a25/186/rancor"><img src="https://c1.scryfall.com/file/scryfall-cards/normal/front/8/a/8a4d8527-af29-408d-a3a3-6781db0cf439.jpg" class="archetype-card rounded-image"/></a>
 <a href="https://scryfall.com/card/kld/230/renegade-freighter"><img src="https://c1.scryfall.com/file/scryfall-cards/normal/front/7/a/7a10e2c3-0132-4eb2-94f0-5915caca2a17.jpg" class="archetype-card rounded-image"/></a>
 <a href="https://scryfall.com/card/csp/97/skred"><img src="https://c1.scryfall.com/file/scryfall-cards/normal/front/b/3/b3d6d42a-7607-4361-acc4-7f3cb956bfc9.jpg" class="archetype-card rounded-image"/></a>
 <a href="https://scryfall.com/card/a25/34/squadron-hawk"><img src="https://c1.scryfall.com/file/scryfall-cards/normal/front/9/e/9e81806d-5d87-4032-ad94-c2cdeabecdbf.jpg" class="archetype-card rounded-image"/></a>
@@ -55,6 +57,7 @@
 | Name | Set name | Set date | Legal |
 | -----| -------- | -------- | ----- |
 | [Domain Zoo 722.001.Nessin](https://www.mtggoldfish.com/deck/4673793) | Kamigawa: Neon Dynasty | 2022-02-18 | ✅ |
+| [Domain Zoo 722.001.Nessin](https://www.mtggoldfish.com/deck/4869074) | Kamigawa: Neon Dynasty | 2022-02-18 | ✅ |
 
 
 
