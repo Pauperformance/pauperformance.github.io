@@ -45,13 +45,19 @@
 
 
 
+## **Reference decks**
+
+| Name | Set name | Set date | Legal |
+| -----| -------- | -------- | ----- |
+| [MonoB Ponza 658.001.Angus91](https://www.mtggoldfish.com/deck/4870886) | Kaldheim | 2021-02-05 | ✅ |
+
+
 
 
 ## **Other decks**
 
 | Name | Set name | Set date | Legal |
 | -----| -------- | -------- | ----- |
-| [MonoB Ponza 658.001.Angus91](https://www.mtggoldfish.com/deck/4870886) | Kaldheim | 2021-02-05 | ✅ |
 | [MonoB Ponza 651.001.Bardo](https://www.mtggoldfish.com/deck/4673178) | Commander Legends | 2020-11-20 | ✅ |
 | [MonoB Ponza 540.001.Shika93](https://www.mtggoldfish.com/deck/4351754) | Battlebond | 2018-06-08 | ✅ |
 

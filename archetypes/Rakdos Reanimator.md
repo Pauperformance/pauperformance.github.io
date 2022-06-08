@@ -50,13 +50,19 @@
 
 
 
+## **Reference decks**
+
+| Name | Set name | Set date | Legal |
+| -----| -------- | -------- | ----- |
+| [Rakdos Reanimator 669.001.OlavoJusMTM](https://www.mtggoldfish.com/deck/4351132) | Strixhaven: School of Mages | 2021-04-23 | ✅ |
+
+
 
 
 ## **Other decks**
 
 | Name | Set name | Set date | Legal |
 | -----| -------- | -------- | ----- |
-| [Rakdos Reanimator 669.001.OlavoJusMTM](https://www.mtggoldfish.com/deck/4351132) | Strixhaven: School of Mages | 2021-04-23 | ✅ |
 | [Rakdos Reanimator 669.001.Gorlewski](https://www.mtggoldfish.com/deck/4351131) | Strixhaven: School of Mages | 2021-04-23 | ✅ |
 
 

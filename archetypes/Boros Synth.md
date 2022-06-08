@@ -45,13 +45,19 @@
 
 
 
+## **Reference decks**
+
+| Name | Set name | Set date | Legal |
+| -----| -------- | -------- | ----- |
+| [Boros Synth 735.001.MrEvilEye](https://www.mtggoldfish.com/deck/4837191) | Streets of New Capenna | 2022-04-29 | ✅ |
+
+
 
 
 ## **Other decks**
 
 | Name | Set name | Set date | Legal |
 | -----| -------- | -------- | ----- |
-| [Boros Synth 735.001.MrEvilEye](https://www.mtggoldfish.com/deck/4837191) | Streets of New Capenna | 2022-04-29 | ✅ |
 | [Boros Synth 722.001.CooperTheRed](https://www.mtggoldfish.com/deck/4775953) | Kamigawa: Neon Dynasty | 2022-02-18 | ✅ |
 
 

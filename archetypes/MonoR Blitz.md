@@ -45,6 +45,13 @@
 
 
 
+## **Reference decks**
+
+| Name | Set name | Set date | Legal |
+| -----| -------- | -------- | ----- |
+| [MonoR Blitz 722.001.Mogged](https://www.mtggoldfish.com/deck/4870881) | Kamigawa: Neon Dynasty | 2022-02-18 | ✅ |
+
+
 
 
 ## **Other decks**
@@ -53,7 +60,6 @@
 | -----| -------- | -------- | ----- |
 | [MonoR Blitz 735.001.Draztok](https://www.mtggoldfish.com/deck/4796534) | Streets of New Capenna | 2022-04-29 | ✅ |
 | [MonoR Blitz 722.001.pokerswizard](https://www.mtggoldfish.com/deck/4795053) | Kamigawa: Neon Dynasty | 2022-02-18 | ✅ |
-| [MonoR Blitz 722.001.Mogged](https://www.mtggoldfish.com/deck/4870881) | Kamigawa: Neon Dynasty | 2022-02-18 | ✅ |
 
 
 

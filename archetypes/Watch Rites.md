@@ -39,13 +39,22 @@
 <a href="https://scryfall.com/card/mm3/208/giantbaiting"><img src="https://c1.scryfall.com/file/scryfall-cards/normal/front/5/0/509d27ed-f9cf-4130-8807-38a4ae857323.jpg" class="archetype-card rounded-image"/></a>
 <a href="https://scryfall.com/card/dtk/140/impact-tremors"><img src="https://c1.scryfall.com/file/scryfall-cards/normal/front/5/6/56fb4035-197b-4d28-9bf7-bb62c304067e.jpg" class="archetype-card rounded-image"/></a>
 <a href="https://scryfall.com/card/jmp/342/lightning-bolt"><img src="https://c1.scryfall.com/file/scryfall-cards/normal/front/c/e/ce711943-c1a1-43a0-8b89-8d169cfb8e06.jpg" class="archetype-card rounded-image"/></a>
+<a href="https://scryfall.com/card/2xm/208/manamorphose"><img src="https://c1.scryfall.com/file/scryfall-cards/normal/front/f/a/faf9070e-14be-4ce5-a19a-6addc79359c1.jpg" class="archetype-card rounded-image"/></a>
 <a href="https://scryfall.com/card/cmr/334/prophetic-prism"><img src="https://c1.scryfall.com/file/scryfall-cards/normal/front/1/4/14602fed-8666-4884-8fca-13529578f9e2.jpg" class="archetype-card rounded-image"/></a>
 <a href="https://scryfall.com/card/uma/142/raid-bombardment"><img src="https://c1.scryfall.com/file/scryfall-cards/normal/front/c/a/ca75d458-4947-4075-89b6-e93936c67370.jpg" class="archetype-card rounded-image"/></a>
 <a href="https://scryfall.com/card/a25/186/rancor"><img src="https://c1.scryfall.com/file/scryfall-cards/normal/front/8/a/8a4d8527-af29-408d-a3a3-6781db0cf439.jpg" class="archetype-card rounded-image"/></a>
+<a href="https://scryfall.com/card/tsr/190/simian-spirit-guide"><img src="https://c1.scryfall.com/file/scryfall-cards/normal/front/0/e/0e57335d-4066-4d73-83cd-67a215e01a4e.jpg" class="archetype-card rounded-image"/></a>
 <a href="https://scryfall.com/card/tpr/231/skyshaper"><img src="https://c1.scryfall.com/file/scryfall-cards/normal/front/b/f/bfebe9f6-9915-47d2-8565-ca9132ee29ff.jpg" class="archetype-card rounded-image"/></a>
 <a href="https://scryfall.com/card/xln/81/spell-pierce"><img src="https://c1.scryfall.com/file/scryfall-cards/normal/front/6/b/6bf4dfc0-c58b-4535-b660-54ceaa6e0217.jpg" class="archetype-card rounded-image"/></a>
 </details><br/>
 
+
+
+## **Reference decks**
+
+| Name | Set name | Set date | Legal |
+| -----| -------- | -------- | ----- |
+| [Watch Rites 459.001.kinler](https://www.mtggoldfish.com/deck/4870931) | Shadows over Innistrad | 2016-04-08 | ✅ |
 
 
 

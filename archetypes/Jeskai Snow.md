@@ -45,6 +45,13 @@
 
 
 
+## **Reference decks**
+
+| Name | Set name | Set date | Legal |
+| -----| -------- | -------- | ----- |
+| [Jeskai Snow 600.001.BrianDeMars](https://www.mtggoldfish.com/deck/4870876) | Throne of Eldraine | 2019-10-04 | Ban 🔨 |
+
+
 
 
 ## **Other decks**
@@ -52,10 +59,16 @@
 | Name | Set name | Set date | Legal |
 | -----| -------- | -------- | ----- |
 | [Jeskai Snow 600.001.Thebiologist](https://www.mtggoldfish.com/deck/4673181) | Throne of Eldraine | 2019-10-04 | Ban 🔨 |
-| [Jeskai Snow 600.001.BrianDeMars](https://www.mtggoldfish.com/deck/4870876) | Throne of Eldraine | 2019-10-04 | Ban 🔨 |
 | [Jeskai Snow 600.001.Backoff](https://www.mtggoldfish.com/deck/4673180) | Throne of Eldraine | 2019-10-04 | Ban 🔨 |
 
 
 
 
+
+
+## **Resources**
+
+| 🗣️ | Name | Author | Date |
+| -- | ---- | ------ | ---- |
+| 🇬🇧 | <a target="_blank" href="https://strategy.channelfireball.com/all-strategy/mtg/channelmagic-articles/a-guide-to-jeskai-snow-in-pauper/">A Guide to Jeskai Snow in Pauper</a> | Brian DeMars | 2019-10-15   |
 

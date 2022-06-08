@@ -34,6 +34,20 @@
 
 
 
+## **Frequent cards**
+
+<details>
+  <summary>Click here to expand</summary>
+<a href="https://scryfall.com/card/mh1/191/weather-the-storm"><img src="https://c1.scryfall.com/file/scryfall-cards/normal/front/f/6/f6a9fa51-78c3-42e6-8c2e-39658f59ed87.jpg" class="archetype-card rounded-image"/></a>
+</details><br/>
+
+
+
+## **Reference decks**
+
+| Name | Set name | Set date | Legal |
+| -----| -------- | -------- | ----- |
+| [Ping Storm 722.001.Tyerube1618](https://www.mtggoldfish.com/deck/4870918) | Kamigawa: Neon Dynasty | 2022-02-18 | Ban 🔨 |
 
 
 

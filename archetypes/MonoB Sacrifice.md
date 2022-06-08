@@ -54,6 +54,13 @@
 
 
 
+## **Reference decks**
+
+| Name | Set name | Set date | Legal |
+| -----| -------- | -------- | ----- |
+| [MonoB Sacrifice 669.001.albana](https://www.mtggoldfish.com/deck/4870885) | Strixhaven: School of Mages | 2021-04-23 | ✅ |
+
+
 
 
 ## **Other decks**
@@ -62,7 +69,6 @@
 | -----| -------- | -------- | ----- |
 | [MonoB Sacrifice 722.001.Haste_BR](https://www.mtggoldfish.com/deck/4793453) | Kamigawa: Neon Dynasty | 2022-02-18 | ✅ |
 | [MonoB Sacrifice 722.001.CooperTheRed](https://www.mtggoldfish.com/deck/4793460) | Kamigawa: Neon Dynasty | 2022-02-18 | ✅ |
-| [MonoB Sacrifice 669.001.albana](https://www.mtggoldfish.com/deck/4870885) | Strixhaven: School of Mages | 2021-04-23 | ✅ |
 
 
 
