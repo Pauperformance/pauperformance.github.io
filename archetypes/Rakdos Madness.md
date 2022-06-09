@@ -30,24 +30,22 @@
 
 <details>
   <summary>Click here to expand</summary>
-<a href="https://scryfall.com/card/vow/95/blood-fountain"><img src="https://c1.scryfall.com/file/scryfall-cards/normal/front/d/d/dd03651e-ada0-41dc-8722-0eba476943e3.jpg" class="archetype-card rounded-image"/></a>
-<a href="https://scryfall.com/card/ddk/57/bump-in-the-night"><img src="https://c1.scryfall.com/file/scryfall-cards/normal/front/3/2/320e394c-c8b1-42ad-91a5-6d57296f85ab.jpg" class="archetype-card rounded-image"/></a>
-<a href="https://scryfall.com/card/afr/94/deadly-dispute"><img src="https://c1.scryfall.com/file/scryfall-cards/normal/front/7/3/7373fe95-ad1c-44b9-8c7f-464ce8cbffc6.jpg" class="archetype-card rounded-image"/></a>
-<a href="https://scryfall.com/card/2xm/125/galvanic-blast"><img src="https://c1.scryfall.com/file/scryfall-cards/normal/front/0/c/0cf8cb1e-314a-4894-82df-f9812825f52e.jpg" class="archetype-card rounded-image"/></a>
+<a href="https://scryfall.com/card/soi/146/bloodmad-vampire"><img src="https://c1.scryfall.com/file/scryfall-cards/normal/front/b/6/b64e974a-3cf7-49f1-9d5a-c74f920f0169.jpg" class="archetype-card rounded-image"/></a>
 <a href="https://scryfall.com/card/tsr/117/gorgon-recluse"><img src="https://c1.scryfall.com/file/scryfall-cards/normal/front/b/0/b0bf2a33-0eb6-4898-a0fb-f5afb47ea1aa.jpg" class="archetype-card rounded-image"/></a>
 <a href="https://scryfall.com/card/tsr/118/grave-scrabbler"><img src="https://c1.scryfall.com/file/scryfall-cards/normal/front/d/6/d6c53e52-8d63-4628-bfb9-8abe4c7c7f4a.jpg" class="archetype-card rounded-image"/></a>
 <a href="https://scryfall.com/card/uma/102/gurmag-angler"><img src="https://c1.scryfall.com/file/scryfall-cards/normal/front/c/e/cedd44eb-f381-46e1-bcb0-88416b4ce33d.jpg" class="archetype-card rounded-image"/></a>
+<a href="https://scryfall.com/card/mh2/88/hell-mongrel"><img src="https://c1.scryfall.com/file/scryfall-cards/normal/front/f/7/f7da32a3-8e33-4603-abd2-8db144062f6a.jpg" class="archetype-card rounded-image"/></a>
+<a href="https://scryfall.com/card/khm/141/immersturm-raider"><img src="https://c1.scryfall.com/file/scryfall-cards/normal/front/7/7/77da4de2-4d34-40e5-8fc0-850aef05356b.jpg" class="archetype-card rounded-image"/></a>
 <a href="https://scryfall.com/card/soi/168/insolent-neonate"><img src="https://c1.scryfall.com/file/scryfall-cards/normal/front/8/1/813104f6-e6e4-4709-8626-12fe4262a11f.jpg" class="archetype-card rounded-image"/></a>
 <a href="https://scryfall.com/card/mh2/89/kitchen-imp"><img src="https://c1.scryfall.com/file/scryfall-cards/normal/front/8/3/836ae711-e62f-49ec-850e-d25f6fd2a4d4.jpg" class="archetype-card rounded-image"/></a>
 <a href="https://scryfall.com/card/tsr/174/lightning-axe"><img src="https://c1.scryfall.com/file/scryfall-cards/normal/front/c/a/ca33c171-ab9e-4908-8f97-82cd83b173c0.jpg" class="archetype-card rounded-image"/></a>
 <a href="https://scryfall.com/card/jmp/342/lightning-bolt"><img src="https://c1.scryfall.com/file/scryfall-cards/normal/front/c/e/ce711943-c1a1-43a0-8b89-8d169cfb8e06.jpg" class="archetype-card rounded-image"/></a>
+<a href="https://scryfall.com/card/uma/109/olivias-dragoon"><img src="https://c1.scryfall.com/file/scryfall-cards/normal/front/1/4/145d0f7a-8418-455a-aa0c-02e8c9ad7820.jpg" class="archetype-card rounded-image"/></a>
 <a href="https://scryfall.com/card/vma/135/putrid-imp"><img src="https://c1.scryfall.com/file/scryfall-cards/normal/front/4/7/47a929a4-b861-432c-a2f3-3125f8a2665b.jpg" class="archetype-card rounded-image"/></a>
 <a href="https://scryfall.com/card/tsr/181/reckless-wurm"><img src="https://c1.scryfall.com/file/scryfall-cards/normal/front/5/9/59243436-b55d-44c3-962b-751eff429f71.jpg" class="archetype-card rounded-image"/></a>
-<a href="https://scryfall.com/card/ddi/67/searing-blaze"><img src="https://c1.scryfall.com/file/scryfall-cards/normal/front/f/6/f659d464-13dd-49e2-a842-098dcba49659.jpg" class="archetype-card rounded-image"/></a>
-<a href="https://scryfall.com/card/eve/44/soul-reap"><img src="https://c1.scryfall.com/file/scryfall-cards/normal/front/e/2/e2a129e2-bed5-4ee7-b223-851452f72682.jpg" class="archetype-card rounded-image"/></a>
+<a href="https://scryfall.com/card/mh2/139/revolutionist"><img src="https://c1.scryfall.com/file/scryfall-cards/normal/front/b/b/bb8f3008-a3ba-4f73-afa6-ad81074b3196.jpg" class="archetype-card rounded-image"/></a>
+<a href="https://scryfall.com/card/mh2/215/terminal-agony"><img src="https://c1.scryfall.com/file/scryfall-cards/normal/front/3/1/314e94ad-0e12-48bb-aae1-2c842943114a.jpg" class="archetype-card rounded-image"/></a>
 <a href="https://scryfall.com/card/znr/172/tormenting-voice"><img src="https://c1.scryfall.com/file/scryfall-cards/normal/front/6/d/6da46103-a14c-4aa2-92fc-fd758335caf4.jpg" class="archetype-card rounded-image"/></a>
-<a href="https://scryfall.com/card/vow/136/vampires-kiss"><img src="https://c1.scryfall.com/file/scryfall-cards/normal/front/9/7/974bf8cc-4259-48cc-8e7f-1580bb010d3f.jpg" class="archetype-card rounded-image"/></a>
-<a href="https://scryfall.com/card/vow/182/voldaren-epicure"><img src="https://c1.scryfall.com/file/scryfall-cards/normal/front/a/e/ae154e64-f626-45fb-bd52-840c1c27b2d3.jpg" class="archetype-card rounded-image"/></a>
 </details><br/>
 
 
@@ -65,8 +63,7 @@
 
 | Name | Set name | Set date | Legal |
 | -----| -------- | -------- | ----- |
-| [Rakdos Madness 722.001.Choochoochar](https://www.mtggoldfish.com/deck/4795049) | Kamigawa: Neon Dynasty | 2022-02-18 | ✅ |
-| [Rakdos Madness 722.001.Cesta](https://www.mtggoldfish.com/deck/4667102) | Kamigawa: Neon Dynasty | 2022-02-18 | ✅ |
+| [Rakdos Madness 701.001.Nícolas](https://www.mtggoldfish.com/deck/4872580) | Innistrad: Crimson Vow | 2021-11-19 | ✅ |
 
 
 
