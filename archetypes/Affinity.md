@@ -97,6 +97,13 @@
 
 
 
+## **Videos**
+
+| 🗣️ | 📺 | ⬇️ | Title | Author | Date |
+| -- | -- | -- | ---- | ------ | ---- |
+| 🇮🇹 | <i class="fa-brands fa-youtube"></i> |  | <a href="https://www.youtube.com/watch?v=lqzGFATWHiE" target="_blank">[ITA] Pauper Jund Affinity 07/06/2022</a> | Adepto Terra | 2022-06-10   |
+
+
 
 
 ## **Resources**
