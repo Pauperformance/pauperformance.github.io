@@ -56,8 +56,8 @@
 
 | Name | Set name | Set date | Legal |
 | -----| -------- | -------- | ----- |
-| [Domain Zoo 722.001.Nessin](https://www.mtggoldfish.com/deck/4673793) | Kamigawa: Neon Dynasty | 2022-02-18 | ✅ |
 | [Domain Zoo 722.001.Nessin](https://www.mtggoldfish.com/deck/4869074) | Kamigawa: Neon Dynasty | 2022-02-18 | ✅ |
+| [Domain Zoo 722.001.Nessin](https://www.mtggoldfish.com/deck/4673793) | Kamigawa: Neon Dynasty | 2022-02-18 | ✅ |
 
 
 
