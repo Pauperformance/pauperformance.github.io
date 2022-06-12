@@ -777,4 +777,5 @@ Lines in **bold** correspond to sets that have introduced new cards in the [Paup
 | 756       | bro           | The Brothers' War                               | 2022-11-18   |
 | 757       | ysnc          | Alchemy: New Capenna                            | 2022-06-02   |
 | 758       | pclb          | Commander Legends: Battle for Baldur's Gate Promos | 2022-06-10   |
+| 759       | aclb          | Battle for Baldur's Gate Art Series             | 2022-06-10   |
 
