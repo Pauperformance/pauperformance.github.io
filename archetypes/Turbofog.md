@@ -75,6 +75,13 @@
 
 
 
+## **Videos**
+
+| 🗣️ | 📺 | ⬇️ | Title | Author | Date |
+| -- | -- | -- | ---- | ------ | ---- |
+| 🇮🇹 | <i class="fa-brands fa-youtube"></i> |  | <a href="https://www.youtube.com/watch?v=z7bAz-K0fJg" target="_blank">Il Tardigrado del Pauper... Simic Fog?!</a> | Heisen01 | 2022-06-13   |
+
+
 
 
 ## **Resources**
