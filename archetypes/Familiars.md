@@ -88,6 +88,14 @@
 
 
 
+## **Videos**
+
+| 🗣️ | 📺 | ⬇️ | Title | Author | Date |
+| -- | -- | -- | ---- | ------ | ---- |
+| 🇮🇹 | <i class="fa-brands fa-youtube"></i> |  | <a href="https://www.youtube.com/watch?v=VtcBZBu_MEA" target="_blank">UW Familiar! Un Combo? Un control?</a> | Heisen01 | 2022-05-16   |
+| 🇮🇹 | <i class="fa-brands fa-youtube"></i> |  | <a href="https://www.youtube.com/watch?v=5wBQYu7Stc8" target="_blank">Blinkini, ETB tra i più Forti e Loop! Azorius Familiar!</a> | Heisen01 | 2022-05-13   |
+
+
 
 
 ## **Resources**

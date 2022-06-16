@@ -68,6 +68,7 @@
 | 🗣️ | 📺 | ⬇️ | Title | Author | Date |
 | -- | -- | -- | ---- | ------ | ---- |
 | 🇬🇧 | <i class="fa-brands fa-youtube"></i> | <a href="https://www.mtggoldfish.com/deck/4837191" target="_blank">🗎</a> | <a href="https://www.youtube.com/watch?v=YF_j3NbIRbI" target="_blank">🇬🇧 MTGO League - Boros Synth 735.001.MrEvilEye - Streets of New Capenna (snc) - Part 2</a> | Pauperformance | 2022-06-15   |
+| 🇮🇹 | <i class="fa-brands fa-youtube"></i> |  | <a href="https://www.youtube.com/watch?v=C_FzlkxUpuU" target="_blank">Un Mazzo per Grindare? Boros Ovetto Può Essere Perfetto</a> | Heisen01 | 2022-06-07   |
 | 🇬🇧 | <i class="fa-brands fa-youtube"></i> | <a href="https://www.mtggoldfish.com/deck/4837191" target="_blank">🗎</a> | <a href="https://www.youtube.com/watch?v=wF9rKkmXK00" target="_blank">🇬🇧 MTGO League - Boros Synth 735.001.MrEvilEye - Streets of New Capenna (snc)</a> | Pauperformance | 2022-06-05   |
 
 
