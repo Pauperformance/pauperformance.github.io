@@ -5,8 +5,6 @@
 # MonoU Faeries
 <br/>
 
-**Aliases**: `MonoU Delver`
-
 
 **Dominant mana**: <img src="../resources/images/mana/U.png" class="dominant-mana-icon"/>
 

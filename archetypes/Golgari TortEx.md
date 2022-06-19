@@ -5,6 +5,8 @@
 # Golgari TortEx
 <br/>
 
+**Aliases**: `BG TortEx`
+
 
 **Dominant mana**: <img src="../resources/images/mana/B.png" class="dominant-mana-icon"/> <img src="../resources/images/mana/G.png" class="dominant-mana-icon"/>
 

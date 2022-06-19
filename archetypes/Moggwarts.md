@@ -5,7 +5,7 @@
 # Moggwarts
 <br/>
 
-**Aliases**: `Rakdos Persist`
+**Aliases**: `Rakdos Persist`, `Goblins Combo`
 
 
 **Dominant mana**: <img src="../resources/images/mana/B.png" class="dominant-mana-icon"/> <img src="../resources/images/mana/R.png" class="dominant-mana-icon"/>
