@@ -13,7 +13,7 @@ This page should be useful for Pauper players that haven't followed the latest r
 
 Further information about reference numbers used by Pauperformance (p12e) to uniquely identify Magic sets can be found in the [Set Index page](set_index.html).
 
-The total number of cards in the Pauper pool is: 8413.
+The total number of cards in the Pauper pool is: 8531.
 
 ---
 Table of Contents
@@ -173,6 +173,7 @@ Table of Contents
 * [Innistrad: Crimson Vow](#innistrad-crimson-vow-vow) (*release: 2021-11-19 ~ p12e_code: 701*)
 * [Kamigawa: Neon Dynasty](#kamigawa-neon-dynasty-neo) (*release: 2022-02-18 ~ p12e_code: 722*)
 * [Streets of New Capenna](#streets-of-new-capenna-snc) (*release: 2022-04-29 ~ p12e_code: 735*)
+* [Commander Legends: Battle for Baldur's Gate](#commander-legends-battle-for-baldur's-gate-clb) (*release: 2022-06-10 ~ p12e_code: 740*)
 
 ---
 
@@ -9981,6 +9982,133 @@ Table of Contents
 <a href="https://scryfall.com/card/snc/66/witness-protection?utm_source=api">Witness Protection</a><br/>
 <a href="https://scryfall.com/card/snc/131/witty-roastmaster?utm_source=api">Witty Roastmaster</a><br/>
 <a href="https://scryfall.com/card/snc/132/wrecking-crew?utm_source=api">Wrecking Crew</a><br/>
+</details>
+[]()
+
+## Commander Legends: Battle for Baldur's Gate (clb)
+*release: 2022-06-10 | p12e_code: 740*
+
+<details>
+  <summary>Click to see 118 new cards</summary>
+
+<a href="https://scryfall.com/card/clb/54/aarakocra-sneak?utm_source=api">Aarakocra Sneak</a><br/>
+<a href="https://scryfall.com/card/clb/213/ambitious-dragonborn?utm_source=api">Ambitious Dragonborn</a><br/>
+<a href="https://scryfall.com/card/clb/112/armor-of-shadows?utm_source=api">Armor of Shadows</a><br/>
+<a href="https://scryfall.com/card/clb/113/arms-of-hadar?utm_source=api">Arms of Hadar</a><br/>
+<a href="https://scryfall.com/card/clb/6/astral-confrontation?utm_source=api">Astral Confrontation</a><br/>
+<a href="https://scryfall.com/card/clb/115/atrocious-experiment?utm_source=api">Atrocious Experiment</a><br/>
+<a href="https://scryfall.com/card/clb/215/avenging-hunter?utm_source=api">Avenging Hunter</a><br/>
+<a href="https://scryfall.com/card/clb/7/banes-invoker?utm_source=api">Bane's Invoker</a><br/>
+<a href="https://scryfall.com/card/clb/346/basilisk-gate?utm_source=api">Basilisk Gate</a><br/>
+<a href="https://scryfall.com/card/clb/163/bhaals-invoker?utm_source=api">Bhaal's Invoker</a><br/>
+<a href="https://scryfall.com/card/clb/347/black-dragon-gate?utm_source=api">Black Dragon Gate</a><br/>
+<a href="https://scryfall.com/card/clb/11/blessed-hippogriff-tyrs-blessing?utm_source=api">Blessed Hippogriff // Tyr's Blessing</a><br/>
+<a href="https://scryfall.com/card/clb/58/blur?utm_source=api">Blur</a><br/>
+<a href="https://scryfall.com/card/clb/165/breath-weapon?utm_source=api">Breath Weapon</a><br/>
+<a href="https://scryfall.com/card/clb/302/bronze-walrus?utm_source=api">Bronze Walrus</a><br/>
+<a href="https://scryfall.com/card/clb/60/candlekeep-sage?utm_source=api">Candlekeep Sage</a><br/>
+<a href="https://scryfall.com/card/clb/219/carefree-swinemaster?utm_source=api">Carefree Swinemaster</a><br/>
+<a href="https://scryfall.com/card/clb/166/carnelian-orb-of-dragonkind?utm_source=api">Carnelian Orb of Dragonkind</a><br/>
+<a href="https://scryfall.com/card/clb/120/chain-devil?utm_source=api">Chain Devil</a><br/>
+<a href="https://scryfall.com/card/clb/306/chardalyn-dragon?utm_source=api">Chardalyn Dragon</a><br/>
+<a href="https://scryfall.com/card/clb/220/circle-of-the-land-druid?utm_source=api">Circle of the Land Druid</a><br/>
+<a href="https://scryfall.com/card/clb/349/citadel-gate?utm_source=api">Citadel Gate</a><br/>
+<a href="https://scryfall.com/card/clb/350/cliffgate?utm_source=api">Cliffgate</a><br/>
+<a href="https://scryfall.com/card/clb/307/cloak-of-the-bat?utm_source=api">Cloak of the Bat</a><br/>
+<a href="https://scryfall.com/card/clb/222/cloakwood-swarmkeeper?utm_source=api">Cloakwood Swarmkeeper</a><br/>
+<a href="https://scryfall.com/card/clb/308/clockwork-fox?utm_source=api">Clockwork Fox</a><br/>
+<a href="https://scryfall.com/card/clb/223/colossal-badger-dig-deep?utm_source=api">Colossal Badger // Dig Deep</a><br/>
+<a href="https://scryfall.com/card/clb/168/coronation-of-chaos?utm_source=api">Coronation of Chaos</a><br/>
+<a href="https://scryfall.com/card/clb/309/decanter-of-endless-water?utm_source=api">Decanter of Endless Water</a><br/>
+<a href="https://scryfall.com/card/clb/310/dire-mimic?utm_source=api">Dire Mimic</a><br/>
+<a href="https://scryfall.com/card/clb/64/draconic-lore?utm_source=api">Draconic Lore</a><br/>
+<a href="https://scryfall.com/card/clb/65/dragonborn-looter?utm_source=api">Dragonborn Looter</a><br/>
+<a href="https://scryfall.com/card/clb/225/dread-linnorm-scale-deflection?utm_source=api">Dread Linnorm // Scale Deflection</a><br/>
+<a href="https://scryfall.com/card/clb/227/druidic-ritual?utm_source=api">Druidic Ritual</a><br/>
+<a href="https://scryfall.com/card/clb/226/druid-of-the-emerald-grove?utm_source=api">Druid of the Emerald Grove</a><br/>
+<a href="https://scryfall.com/card/clb/171/earth-tremor?utm_source=api">Earth Tremor</a><br/>
+<a href="https://scryfall.com/card/clb/231/ettercap-web-shot?utm_source=api">Ettercap // Web Shot</a><br/>
+<a href="https://scryfall.com/card/clb/173/fang-dragon-forktail-sweep?utm_source=api">Fang Dragon // Forktail Sweep</a><br/>
+<a href="https://scryfall.com/card/clb/18/flaming-fist?utm_source=api">Flaming Fist</a><br/>
+<a href="https://scryfall.com/card/clb/19/flaming-fist-officer?utm_source=api">Flaming Fist Officer</a><br/>
+<a href="https://scryfall.com/card/clb/177/genasi-enforcers?utm_source=api">Genasi Enforcers</a><br/>
+<a href="https://scryfall.com/card/clb/127/ghastly-death-tyrant?utm_source=api">Ghastly Death Tyrant</a><br/>
+<a href="https://scryfall.com/card/clb/74/goggles-of-night?utm_source=api">Goggles of Night</a><br/>
+<a href="https://scryfall.com/card/clb/21/goliath-paladin?utm_source=api">Goliath Paladin</a><br/>
+<a href="https://scryfall.com/card/clb/75/gray-harbor-merfolk?utm_source=api">Gray Harbor Merfolk</a><br/>
+<a href="https://scryfall.com/card/clb/129/gray-slaad-entropic-decay?utm_source=api">Gray Slaad // Entropic Decay</a><br/>
+<a href="https://scryfall.com/card/clb/22/greatsword-of-tyr?utm_source=api">Greatsword of Tyr</a><br/>
+<a href="https://scryfall.com/card/clb/23/guardian-naga-banishing-coils?utm_source=api">Guardian Naga // Banishing Coils</a><br/>
+<a href="https://scryfall.com/card/clb/24/guiding-bolt?utm_source=api">Guiding Bolt</a><br/>
+<a href="https://scryfall.com/card/clb/130/guildsworn-prowler?utm_source=api">Guildsworn Prowler</a><br/>
+<a href="https://scryfall.com/card/clb/354/heap-gate?utm_source=api">Heap Gate</a><br/>
+<a href="https://scryfall.com/card/clb/131/hezrou-demonic-stench?utm_source=api">Hezrou // Demonic Stench</a><br/>
+<a href="https://scryfall.com/card/clb/27/icewind-stalwart?utm_source=api">Icewind Stalwart</a><br/>
+<a href="https://scryfall.com/card/clb/182/ingenious-artillerist?utm_source=api">Ingenious Artillerist</a><br/>
+<a href="https://scryfall.com/card/clb/184/insufferable-balladeer?utm_source=api">Insufferable Balladeer</a><br/>
+<a href="https://scryfall.com/card/clb/236/jade-orb-of-dragonkind?utm_source=api">Jade Orb of Dragonkind</a><br/>
+<a href="https://scryfall.com/card/clb/185/javelin-of-lightning?utm_source=api">Javelin of Lightning</a><br/>
+<a href="https://scryfall.com/card/clb/80/kenku-artificer?utm_source=api">Kenku Artificer</a><br/>
+<a href="https://scryfall.com/card/clb/318/lantern-of-revealing?utm_source=api">Lantern of Revealing</a><br/>
+<a href="https://scryfall.com/card/clb/82/lapis-orb-of-dragonkind?utm_source=api">Lapis Orb of Dragonkind</a><br/>
+<a href="https://scryfall.com/card/clb/239/lurking-green-dragon?utm_source=api">Lurking Green Dragon</a><br/>
+<a href="https://scryfall.com/card/clb/356/manor-gate?utm_source=api">Manor Gate</a><br/>
+<a href="https://scryfall.com/card/clb/321/marching-duodrone?utm_source=api">Marching Duodrone</a><br/>
+<a href="https://scryfall.com/card/clb/33/martial-impetus?utm_source=api">Martial Impetus</a><br/>
+<a href="https://scryfall.com/card/clb/322/marut?utm_source=api">Marut</a><br/>
+<a href="https://scryfall.com/card/clb/241/master-chef?utm_source=api">Master Chef</a><br/>
+<a href="https://scryfall.com/card/clb/133/mold-folk?utm_source=api">Mold Folk</a><br/>
+<a href="https://scryfall.com/card/clb/243/myconid-spore-tender?utm_source=api">Myconid Spore Tender</a><br/>
+<a href="https://scryfall.com/card/clb/135/myrkuls-edict?utm_source=api">Myrkul's Edict</a><br/>
+<a href="https://scryfall.com/card/clb/136/myrkuls-invoker?utm_source=api">Myrkul's Invoker</a><br/>
+<a href="https://scryfall.com/card/clb/329/navigation-orb?utm_source=api">Navigation Orb</a><br/>
+<a href="https://scryfall.com/card/clb/137/nefarious-imp?utm_source=api">Nefarious Imp</a><br/>
+<a href="https://scryfall.com/card/clb/86/nimbleclaw-adept?utm_source=api">Nimbleclaw Adept</a><br/>
+<a href="https://scryfall.com/card/clb/330/nimblewright-schematic?utm_source=api">Nimblewright Schematic</a><br/>
+<a href="https://scryfall.com/card/clb/87/oceanus-dragon?utm_source=api">Oceanus Dragon</a><br/>
+<a href="https://scryfall.com/card/clb/190/pack-attack?utm_source=api">Pack Attack</a><br/>
+<a href="https://scryfall.com/card/clb/140/parasitic-impetus?utm_source=api">Parasitic Impetus</a><br/>
+<a href="https://scryfall.com/card/clb/191/patron-of-the-arts?utm_source=api">Patron of the Arts</a><br/>
+<a href="https://scryfall.com/card/clb/36/pegasus-guardian-rescue-the-foal?utm_source=api">Pegasus Guardian // Rescue the Foal</a><br/>
+<a href="https://scryfall.com/card/clb/248/poison-the-blade?utm_source=api">Poison the Blade</a><br/>
+<a href="https://scryfall.com/card/clb/249/predatory-impetus?utm_source=api">Predatory Impetus</a><br/>
+<a href="https://scryfall.com/card/clb/334/prized-statue?utm_source=api">Prized Statue</a><br/>
+<a href="https://scryfall.com/card/clb/88/pseudodragon-familiar?utm_source=api">Pseudodragon Familiar</a><br/>
+<a href="https://scryfall.com/card/clb/89/psychic-impetus?utm_source=api">Psychic Impetus</a><br/>
+<a href="https://scryfall.com/card/clb/193/reckless-barbarian?utm_source=api">Reckless Barbarian</a><br/>
+<a href="https://scryfall.com/card/clb/38/recruitment-drive?utm_source=api">Recruitment Drive</a><br/>
+<a href="https://scryfall.com/card/clb/40/roving-harper?utm_source=api">Roving Harper</a><br/>
+<a href="https://scryfall.com/card/clb/252/scaled-nurturer?utm_source=api">Scaled Nurturer</a><br/>
+<a href="https://scryfall.com/card/clb/145/scion-of-halaster?utm_source=api">Scion of Halaster</a><br/>
+<a href="https://scryfall.com/card/clb/41/scouting-hawk?utm_source=api">Scouting Hawk</a><br/>
+<a href="https://scryfall.com/card/clb/359/sea-gate?utm_source=api">Sea Gate</a><br/>
+<a href="https://scryfall.com/card/clb/95/sea-hag-aquatic-ingress?utm_source=api">Sea Hag // Aquatic Ingress</a><br/>
+<a href="https://scryfall.com/card/clb/194/shiny-impetus?utm_source=api">Shiny Impetus</a><br/>
+<a href="https://scryfall.com/card/clb/254/silvanuss-invoker?utm_source=api">Silvanus's Invoker</a><br/>
+<a href="https://scryfall.com/card/clb/44/steadfast-unicorn?utm_source=api">Steadfast Unicorn</a><br/>
+<a href="https://scryfall.com/card/clb/150/stirge?utm_source=api">Stirge</a><br/>
+<a href="https://scryfall.com/card/clb/195/stirring-bard?utm_source=api">Stirring Bard</a><br/>
+<a href="https://scryfall.com/card/clb/97/stunning-strike?utm_source=api">Stunning Strike</a><br/>
+<a href="https://scryfall.com/card/clb/151/summon-undead?utm_source=api">Summon Undead</a><br/>
+<a href="https://scryfall.com/card/clb/99/sword-coast-serpent-capsizing-wave?utm_source=api">Sword Coast Serpent // Capsizing Wave</a><br/>
+<a href="https://scryfall.com/card/clb/46/tabaxi-toucaneers?utm_source=api">Tabaxi Toucaneers</a><br/>
+<a href="https://scryfall.com/card/clb/200/tavern-brawler?utm_source=api">Tavern Brawler</a><br/>
+<a href="https://scryfall.com/card/clb/202/tiamats-fanatics?utm_source=api">Tiamat's Fanatics</a><br/>
+<a href="https://scryfall.com/card/clb/340/trailblazers-torch?utm_source=api">Trailblazer's Torch</a><br/>
+<a href="https://scryfall.com/card/clb/101/tymoras-invoker?utm_source=api">Tymora's Invoker</a><br/>
+<a href="https://scryfall.com/card/clb/259/undercellar-myconid?utm_source=api">Undercellar Myconid</a><br/>
+<a href="https://scryfall.com/card/clb/154/underdark-explorer?utm_source=api">Underdark Explorer</a><br/>
+<a href="https://scryfall.com/card/clb/155/vicious-battlerager?utm_source=api">Vicious Battlerager</a><br/>
+<a href="https://scryfall.com/card/clb/205/warehouse-thief?utm_source=api">Warehouse Thief</a><br/>
+<a href="https://scryfall.com/card/clb/104/winter-eladrin?utm_source=api">Winter Eladrin</a><br/>
+<a href="https://scryfall.com/card/clb/51/wyrms-crossing-patrol?utm_source=api">Wyrm's Crossing Patrol</a><br/>
+<a href="https://scryfall.com/card/clb/263/you-meet-in-a-tavern?utm_source=api">You Meet in a Tavern</a><br/>
+<a href="https://scryfall.com/card/clb/106/young-blue-dragon-sand-augury?utm_source=api">Young Blue Dragon // Sand Augury</a><br/>
+<a href="https://scryfall.com/card/clb/210/young-red-dragon-bathe-in-gold?utm_source=api">Young Red Dragon // Bathe in Gold</a><br/>
+<a href="https://scryfall.com/card/clb/53/youre-confronted-by-robbers?utm_source=api">You're Confronted by Robbers</a><br/>
+<a href="https://scryfall.com/card/clb/52/your-temple-is-under-attack?utm_source=api">Your Temple Is Under Attack</a><br/>
+<a href="https://scryfall.com/card/clb/211/youve-been-caught-stealing?utm_source=api">You've Been Caught Stealing</a><br/>
+<a href="https://scryfall.com/card/clb/158/zhentarim-bandit?utm_source=api">Zhentarim Bandit</a><br/>
 </details>
 []()
 
