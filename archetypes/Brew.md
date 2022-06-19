@@ -26,6 +26,7 @@ Generic archetype, for decks that do not fit those in the [Archetypes Index](../
 
 | 🗣️ | 📺 | ⬇️ | Title | Author | Date |
 | -- | -- | -- | ---- | ------ | ---- |
+| 🇬🇧 | <i class="fa-brands fa-youtube"></i> |  | <a href="https://www.youtube.com/watch?v=V5oAu4HmPR0" target="_blank">PAUPER League - Orzhov Tokens! - Now we Draw 16 cards!</a> | PAUPERGANDA | 2022-06-19   |
 | 🇬🇧 | <i class="fa-brands fa-youtube"></i> |  | <a href="https://www.youtube.com/watch?v=IUdql-h-A78" target="_blank">PAUPER League - Ninja Zero - Faster than Fae!?</a> | PAUPERGANDA | 2022-06-12   |
 | 🇬🇧 | <i class="fa-brands fa-youtube"></i> |  | <a href="https://www.youtube.com/watch?v=7-4CYBFrS3c" target="_blank">PAUPER - Death-Touch - PING em ALL!!!!</a> | PAUPERGANDA | 2022-06-04   |
 | 🇮🇹 | <i class="fa-brands fa-youtube"></i> |  | <a href="https://www.youtube.com/watch?v=nLoNjyeMqAo" target="_blank">The Modern Familiar! La Nuova Veste di Questo Mazzo Storico</a> | Heisen01 | 2022-05-18   |
