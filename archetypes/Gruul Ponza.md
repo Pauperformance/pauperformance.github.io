@@ -65,4 +65,11 @@
 
 
 
+## **Videos**
+
+| 🗣️ | 📺 | ⬇️ | Title | Author | Date |
+| -- | -- | -- | ---- | ------ | ---- |
+| 🇬🇧 | <i class="fa-brands fa-youtube"></i> | <a href="https://www.mtggoldfish.com/deck/4869076" target="_blank">🗎</a> | <a href="https://www.youtube.com/watch?v=WLzSmgxwgmM" target="_blank">🇬🇧 MTGO League - Gruul Ponza 735.001.apas72 - Streets of New Capenna (snc)</a> | Pauperformance | 2022-06-19   |
+
+
 
