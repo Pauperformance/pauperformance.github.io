@@ -75,6 +75,13 @@
 
 
 
+## **Videos**
+
+| 🗣️ | 📺 | ⬇️ | Title | Author | Date |
+| -- | -- | -- | ---- | ------ | ---- |
+| 🇮🇹 | <i class="fa-brands fa-youtube"></i> |  | <a href="https://www.youtube.com/watch?v=l_dDrtPlBTU" target="_blank">[ITA] Pauper Eggs Tron 14/06/2022</a> | Adepto Terra | 2022-06-21   |
+
+
 
 
 ## **Resources**
