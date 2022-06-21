@@ -61,6 +61,7 @@
 
 | Name | Set name | Set date | Legal |
 | -----| -------- | -------- | ----- |
+| [MonoR Blitz 740.001.CooperTheRed](https://www.mtggoldfish.com/deck/4898421) | Commander Legends: Battle for Baldur's Gate | 2022-06-10 | ✅ |
 | [MonoR Blitz 735.001.Draztok](https://www.mtggoldfish.com/deck/4796534) | Streets of New Capenna | 2022-04-29 | ✅ |
 | [MonoR Blitz 722.001.pokerswizard](https://www.mtggoldfish.com/deck/4795053) | Kamigawa: Neon Dynasty | 2022-02-18 | ✅ |
 
