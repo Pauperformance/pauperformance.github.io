@@ -73,6 +73,7 @@
 
 | 🗣️ | 📺 | ⬇️ | Title | Author | Date |
 | -- | -- | -- | ---- | ------ | ---- |
+| 🇮🇹 | <i class="fa-brands fa-youtube"></i> |  | <a href="https://www.youtube.com/watch?v=KPFO6stIFfU" target="_blank">[ITA] Pauper UB Faeries 16/06/2022</a> | Adepto Terra | 2022-06-22   |
 | 🇮🇹 | <i class="fa-brands fa-youtube"></i> | <a href="https://www.mtggoldfish.com/deck/4351763" target="_blank">🗎</a> | <a href="https://www.youtube.com/watch?v=ITlLhzZAjVY" target="_blank">🇮🇹 MTGO League - Dimir Faeries 669.001.MrEvilEye - Strixhaven: School of Mages (stx)</a> | Pauperformance | 2022-03-20   |
 
 
