@@ -26,6 +26,7 @@ Generic archetype, for decks that do not fit those in the [Archetypes Index](../
 
 | 🗣️ | 📺 | ⬇️ | Title | Author | Date |
 | -- | -- | -- | ---- | ------ | ---- |
+| 🇮🇹 | <i class="fa-brands fa-youtube"></i> |  | <a href="https://www.youtube.com/watch?v=hbtr6Cgc9aw" target="_blank">[ITA] Pauper Jund Midrange 21/06/2022</a> | Adepto Terra | 2022-06-23   |
 | 🇬🇧 | <i class="fa-brands fa-youtube"></i> |  | <a href="https://www.youtube.com/watch?v=V5oAu4HmPR0" target="_blank">PAUPER League - Orzhov Tokens! - Now we Draw 16 cards!</a> | PAUPERGANDA | 2022-06-19   |
 | 🇬🇧 | <i class="fa-brands fa-youtube"></i> |  | <a href="https://www.youtube.com/watch?v=IUdql-h-A78" target="_blank">PAUPER League - Ninja Zero - Faster than Fae!?</a> | PAUPERGANDA | 2022-06-12   |
 | 🇬🇧 | <i class="fa-brands fa-youtube"></i> |  | <a href="https://www.youtube.com/watch?v=7-4CYBFrS3c" target="_blank">PAUPER - Death-Touch - PING em ALL!!!!</a> | PAUPERGANDA | 2022-06-04   |
