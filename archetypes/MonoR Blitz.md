@@ -68,4 +68,11 @@
 
 
 
+## **Videos**
+
+| 🗣️ | 📺 | ⬇️ | Title | Author | Date |
+| -- | -- | -- | ---- | ------ | ---- |
+| 🇬🇧 | <i class="fa-brands fa-youtube"></i> | <a href="https://www.mtggoldfish.com/deck/4898421" target="_blank">🗎</a> | <a href="https://www.youtube.com/watch?v=56h3PRcTn9M" target="_blank">🇬🇧 MTGO League - MonoR Blitz 740.001.CooperTheRed - Commander Legends: Battle for Baldur's Gat</a> | Pauperformance | 2022-06-26   |
+
+
 
