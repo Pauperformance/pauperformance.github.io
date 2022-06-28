@@ -79,6 +79,7 @@
 
 | 🗣️ | 📺 | ⬇️ | Title | Author | Date |
 | -- | -- | -- | ---- | ------ | ---- |
+| 🇮🇹 | <i class="fa-brands fa-youtube"></i> |  | <a href="https://www.youtube.com/watch?v=ICnWHobd9uI" target="_blank">[ITA] Pauper Turbofog 23/06/2022</a> | Adepto Terra | 2022-06-28   |
 | 🇮🇹 | <i class="fa-brands fa-youtube"></i> |  | <a href="https://www.youtube.com/watch?v=z7bAz-K0fJg" target="_blank">Il Tardigrado del Pauper... Simic Fog?!</a> | Heisen01 | 2022-06-13   |
 
 
