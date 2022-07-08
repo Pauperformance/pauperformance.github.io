@@ -69,6 +69,13 @@
 
 
 
+## **Videos**
+
+| 🗣️ | 📺 | ⬇️ | Title | Author | Date |
+| -- | -- | -- | ---- | ------ | ---- |
+| 🇮🇹 | <i class="fa-brands fa-youtube"></i> | <a href="https://www.mtggoldfish.com/deck/4930697" target="_blank">🗎</a> | <a href="https://www.youtube.com/watch?v=kl0wRDjwhbw" target="_blank">🇮🇹 MTGO League - MonoU Faeries 740.001.MarcoBruschi - Commander Legends: Battle for Baldur's G</a> | Pauperformance | 2022-07-08   |
+
+
 
 
 ## **Resources**
