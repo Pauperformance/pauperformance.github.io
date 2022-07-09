@@ -26,6 +26,7 @@ Generic archetype, for decks that do not fit those in the [Archetypes Index](../
 
 | 🗣️ | 📺 | ⬇️ | Title | Author | Date |
 | -- | -- | -- | ---- | ------ | ---- |
+| 🇮🇹 | <i class="fa-brands fa-youtube"></i> |  | <a href="https://www.youtube.com/watch?v=aTi_JYogNuk" target="_blank">[ITA] UW Faeries + UG Turbofog 04/07/2022</a> | Adepto Terra | 2022-07-09   |
 | 🇬🇧 | <i class="fa-brands fa-youtube"></i> | <a href="https://www.mtggoldfish.com/deck/4911470" target="_blank">🗎</a> | <a href="https://www.youtube.com/watch?v=b87JcpST6SY" target="_blank">🇬🇧 MTGO League - Orzhov Crowns 740.001.Shika93 - Commander Legends: Battle for Baldur's Gate (</a> | Pauperformance | 2022-07-01   |
 | 🇮🇹 | <i class="fa-brands fa-youtube"></i> |  | <a href="https://www.youtube.com/watch?v=8q-QTPiQd4A" target="_blank">[ITA] Pauper Mono Black Metalcraft 28/06/2022</a> | Adepto Terra | 2022-06-30   |
 | 🇬🇧 | <i class="fa-brands fa-youtube"></i> |  | <a href="https://www.youtube.com/watch?v=iVDSbxQ5Zyk" target="_blank">PAUPER - TRON Cascade!!</a> | PAUPERGANDA | 2022-06-25   |
