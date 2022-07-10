@@ -1,4 +1,4 @@
-const currDeckId = '4930697'
+const currDeckId = '4848401'
 
 function redirectToCurrentDeck() {
     const url = 'https://www.mtggoldfish.com/deck/' + currDeckId;
