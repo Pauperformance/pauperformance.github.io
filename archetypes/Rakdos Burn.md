@@ -66,6 +66,7 @@
 
 | Name | Set name | Set date | Legal |
 | -----| -------- | -------- | ----- |
+| [Rakdos Burn 740.001.JuanPabloCellanes](https://www.mtggoldfish.com/deck/4947355) | Commander Legends: Battle for Baldur's Gate | 2022-06-10 | ✅ |
 | [Rakdos Burn 722.001.rfaustino](https://www.mtggoldfish.com/deck/4667114) | Kamigawa: Neon Dynasty | 2022-02-18 | ✅ |
 | [Rakdos Burn 722.001.DaveXXXVI](https://www.mtggoldfish.com/deck/4667103) | Kamigawa: Neon Dynasty | 2022-02-18 | ✅ |
 | [Rakdos Burn 722.001.Choochoochar](https://www.mtggoldfish.com/deck/4872575) | Kamigawa: Neon Dynasty | 2022-02-18 | ✅ |
