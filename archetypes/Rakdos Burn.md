@@ -75,6 +75,13 @@
 
 
 
+## **Videos**
+
+| 🗣️ | 📺 | ⬇️ | Title | Author | Date |
+| -- | -- | -- | ---- | ------ | ---- |
+| 🇬🇧 | <i class="fa-brands fa-youtube"></i> | <a href="https://www.mtggoldfish.com/deck/4947355" target="_blank">🗎</a> | <a href="https://www.youtube.com/watch?v=dZnQXDHZZRc" target="_blank">🇬🇧 Pauper - MTGO League - Rakdos Burn 740.001.JuanPabloCellanes - Commander Legends: Battle fo</a> | Pauperformance | 2022-07-24   |
+
+
 
 
 ## **Resources**
