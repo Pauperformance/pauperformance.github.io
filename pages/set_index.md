@@ -785,7 +785,7 @@ Lines in **bold** correspond to sets that have introduced new cards in the [Paup
 | 764       | ha6           | Historic Anthology 6                            | 2022-07-28   |
 | 765       | p30a          | 30th Anniversary Promos                         | 2022-09-02   |
 | 766       | tdmu          | Dominaria United Tokens                         | 2022-09-09   |
-| 767       | prcp          | Regional Championship 2022 Promos               | 2022-10-01   |
+| 767       | prcq          | Regional Championship Qualifiers 2022           | 2022-10-01   |
 | 768       | sunf          | Unfinity Sticker Sheets                         | 2022-10-07   |
 | 769       | gn3           | Game Night 2022                                 | 2022-10-14   |
 
