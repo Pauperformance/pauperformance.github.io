@@ -26,6 +26,7 @@ Generic archetype, for decks that do not fit those in the [Archetypes Index](../
 
 | 🗣️ | 📺 | ⬇️ | Title | Author | Date |
 | -- | -- | -- | ---- | ------ | ---- |
+| 🇬🇧 | <i class="fa-brands fa-youtube"></i> |  | <a href="https://www.youtube.com/watch?v=dfjXBLYELcs" target="_blank">PAUPER - Black Burn and a Pauper Quizshow?!</a> | PAUPERGANDA | 2022-07-30   |
 | 🇬🇧 | <i class="fa-brands fa-youtube"></i> |  | <a href="https://www.youtube.com/watch?v=A-AhrEAXqMs" target="_blank">PAUPER - Blue BLITZ!!!</a> | PAUPERGANDA | 2022-07-23   |
 | 🇮🇹 | <i class="fa-brands fa-youtube"></i> |  | <a href="https://www.youtube.com/watch?v=8KAufu410jM" target="_blank">[ITA] seconda lega con UW Familiar 07/07/2022</a> | Adepto Terra | 2022-07-12   |
 | 🇮🇹 | <i class="fa-brands fa-youtube"></i> |  | <a href="https://www.youtube.com/watch?v=aTi_JYogNuk" target="_blank">[ITA] UW Faeries + UG Turbofog 04/07/2022</a> | Adepto Terra | 2022-07-09   |
