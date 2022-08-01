@@ -783,9 +783,10 @@ Lines in **bold** correspond to sets that have introduced new cards in the [Paup
 | 762       | t2x2          | Double Masters 2022 Tokens                      | 2022-07-08   |
 | 763       | ea1           | Explorer Anthology 1                            | 2022-07-28   |
 | 764       | ha6           | Historic Anthology 6                            | 2022-07-28   |
-| 765       | p30a          | 30th Anniversary Promos                         | 2022-09-02   |
-| 766       | tdmu          | Dominaria United Tokens                         | 2022-09-09   |
-| 767       | prcq          | Regional Championship Qualifiers 2022           | 2022-10-01   |
-| 768       | sunf          | Unfinity Sticker Sheets                         | 2022-10-07   |
-| 769       | gn3           | Game Night 2022                                 | 2022-10-14   |
+| 765       | psvc          | Summer Vacation Promos 2022                     | 2022-08-01   |
+| 766       | p30a          | 30th Anniversary Promos                         | 2022-09-02   |
+| 767       | tdmu          | Dominaria United Tokens                         | 2022-09-09   |
+| 768       | prcq          | Regional Championship Qualifiers 2022           | 2022-10-01   |
+| 769       | sunf          | Unfinity Sticker Sheets                         | 2022-10-07   |
+| 770       | gn3           | Game Night 2022                                 | 2022-10-14   |
 
