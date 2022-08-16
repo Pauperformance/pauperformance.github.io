@@ -779,14 +779,15 @@ Lines in **bold** correspond to sets that have introduced new cards in the [Paup
 | 758       | pclb          | Commander Legends: Battle for Baldur's Gate Promos | 2022-06-10   |
 | 759       | aclb          | Battle for Baldur's Gate Art Series             | 2022-06-10   |
 | 760       | wmc           | World Magic Cup Qualifiers                      | 2013-04-06   |
-| 761       | hbg           | Alchemy Horizons: Baldur's Gate                 | 2022-07-07   |
-| 762       | t2x2          | Double Masters 2022 Tokens                      | 2022-07-08   |
-| 763       | ea1           | Explorer Anthology 1                            | 2022-07-28   |
-| 764       | ha6           | Historic Anthology 6                            | 2022-07-28   |
-| 765       | psvc          | Summer Vacation Promos 2022                     | 2022-08-01   |
-| 766       | p30a          | 30th Anniversary Promos                         | 2022-09-02   |
-| 767       | tdmu          | Dominaria United Tokens                         | 2022-09-09   |
-| 768       | prcq          | Regional Championship Qualifiers 2022           | 2022-10-01   |
-| 769       | sunf          | Unfinity Sticker Sheets                         | 2022-10-07   |
-| 770       | gn3           | Game Night 2022                                 | 2022-10-14   |
+| 761       | ptsnc         | Streets of New Capenna Southeast Asia Tokens    | 2022-04-30   |
+| 762       | hbg           | Alchemy Horizons: Baldur's Gate                 | 2022-07-07   |
+| 763       | t2x2          | Double Masters 2022 Tokens                      | 2022-07-08   |
+| 764       | ea1           | Explorer Anthology 1                            | 2022-07-28   |
+| 765       | ha6           | Historic Anthology 6                            | 2022-07-28   |
+| 766       | psvc          | Summer Vacation Promos 2022                     | 2022-08-01   |
+| 767       | p30a          | 30th Anniversary Promos                         | 2022-09-02   |
+| 768       | tdmu          | Dominaria United Tokens                         | 2022-09-09   |
+| 769       | prcq          | Regional Championship Qualifiers 2022           | 2022-10-01   |
+| 770       | sunf          | Unfinity Sticker Sheets                         | 2022-10-07   |
+| 771       | gn3           | Game Night 2022                                 | 2022-10-14   |
 
