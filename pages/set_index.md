@@ -778,16 +778,18 @@ Lines in **bold** correspond to sets that have introduced new cards in the [Paup
 | 757       | ysnc          | Alchemy: New Capenna                            | 2022-06-02   |
 | 758       | pclb          | Commander Legends: Battle for Baldur's Gate Promos | 2022-06-10   |
 | 759       | aclb          | Battle for Baldur's Gate Art Series             | 2022-06-10   |
-| 760       | wmc           | World Magic Cup Qualifiers                      | 2013-04-06   |
-| 761       | ptsnc         | Streets of New Capenna Southeast Asia Tokens    | 2022-04-30   |
-| 762       | hbg           | Alchemy Horizons: Baldur's Gate                 | 2022-07-07   |
-| 763       | t2x2          | Double Masters 2022 Tokens                      | 2022-07-08   |
-| 764       | ea1           | Explorer Anthology 1                            | 2022-07-28   |
-| 765       | ha6           | Historic Anthology 6                            | 2022-07-28   |
-| 766       | psvc          | Summer Vacation Promos 2022                     | 2022-08-01   |
-| 767       | p30a          | 30th Anniversary Promos                         | 2022-09-02   |
-| 768       | tdmu          | Dominaria United Tokens                         | 2022-09-09   |
-| 769       | prcq          | Regional Championship Qualifiers 2022           | 2022-10-01   |
-| 770       | sunf          | Unfinity Sticker Sheets                         | 2022-10-07   |
-| 771       | gn3           | Game Night 2022                                 | 2022-10-14   |
+| 760       | o90p          | Oversized 90's Promos                           | 1996-04-01   |
+| 761       | olep          | Oversized League Prizes                         | 1997-05-30   |
+| 762       | wmc           | World Magic Cup Qualifiers                      | 2013-04-06   |
+| 763       | ptsnc         | Streets of New Capenna Southeast Asia Tokens    | 2022-04-30   |
+| 764       | hbg           | Alchemy Horizons: Baldur's Gate                 | 2022-07-07   |
+| 765       | t2x2          | Double Masters 2022 Tokens                      | 2022-07-08   |
+| 766       | ea1           | Explorer Anthology 1                            | 2022-07-28   |
+| 767       | ha6           | Historic Anthology 6                            | 2022-07-28   |
+| 768       | psvc          | Summer Vacation Promos 2022                     | 2022-08-01   |
+| 769       | p30a          | 30th Anniversary Promos                         | 2022-09-02   |
+| 770       | tdmu          | Dominaria United Tokens                         | 2022-09-09   |
+| 771       | prcq          | Regional Championship Qualifiers 2022           | 2022-10-01   |
+| 772       | sunf          | Unfinity Sticker Sheets                         | 2022-10-07   |
+| 773       | gn3           | Game Night 2022                                 | 2022-10-14   |
 
