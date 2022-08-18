@@ -792,4 +792,5 @@ Lines in **bold** correspond to sets that have introduced new cards in the [Paup
 | 771       | prcq          | Regional Championship Qualifiers 2022           | 2022-10-01   |
 | 772       | sunf          | Unfinity Sticker Sheets                         | 2022-10-07   |
 | 773       | gn3           | Game Night 2022                                 | 2022-10-14   |
+| 774       | dmr           | Dominaria Remastered                            | 2023-03-31   |
 
