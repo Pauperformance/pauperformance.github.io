@@ -787,9 +787,9 @@ Lines in **bold** correspond to sets that have introduced new cards in the [Paup
 | 766       | ea1           | Explorer Anthology 1                            | 2022-07-28   |
 | 767       | ha6           | Historic Anthology 6                            | 2022-07-28   |
 | 768       | psvc          | Summer Vacation Promos 2022                     | 2022-08-01   |
-| 769       | ph30a         | 30th Anniversary History Promos                 | 2022-08-21   |
-| 770       | p30a          | 30th Anniversary Promos                         | 2022-09-02   |
-| 771       | pdmu          | Dominaria United Promos                         | 2022-09-09   |
+| 769       | p30a          | 30th Anniversary Promos                         | 2022-09-02   |
+| 770       | pdmu          | Dominaria United Promos                         | 2022-09-09   |
+| 771       | ph30a         | 30th Anniversary History Promos                 | 2022-09-09   |
 | 772       | tdmu          | Dominaria United Tokens                         | 2022-09-09   |
 | 773       | prcq          | Regional Championship Qualifiers 2022           | 2022-10-01   |
 | 774       | sunf          | Unfinity Sticker Sheets                         | 2022-10-07   |
