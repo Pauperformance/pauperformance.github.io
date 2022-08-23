@@ -27,6 +27,8 @@ Generic archetype, for decks that do not fit those in the [Archetypes Index](../
 | 🗣️ | 📺 | ⬇️ | Title | Author | Date |
 | -- | -- | -- | ---- | ------ | ---- |
 | 🇮🇹 | <i class="fa-brands fa-youtube"></i> |  | <a href="https://www.youtube.com/watch?v=IoyX5hWvAjE" target="_blank">[ITA] Pauper BG Pedine è fantastico.</a> | Adepto Terra | 2022-08-17   |
+| 🇬🇧 | <i class="fa-brands fa-youtube"></i> |  | <a href="https://www.youtube.com/watch?v=WMB7e-k6HTs" target="_blank">PAUPER - BLUE Re-ANIMATOR!?!?!</a> | PAUPERGANDA | 2022-08-13   |
+| 🇬🇧 | <i class="fa-brands fa-youtube"></i> |  | <a href="https://www.youtube.com/watch?v=Yh2ND5tYv78" target="_blank">PAUPER - White Weenie League - So much Draw!</a> | PAUPERGANDA | 2022-08-06   |
 | 🇬🇧 | <i class="fa-brands fa-youtube"></i> |  | <a href="https://www.youtube.com/watch?v=dfjXBLYELcs" target="_blank">PAUPER - Black Burn and a Pauper Quizshow?!</a> | PAUPERGANDA | 2022-07-30   |
 | 🇬🇧 | <i class="fa-brands fa-youtube"></i> |  | <a href="https://www.youtube.com/watch?v=A-AhrEAXqMs" target="_blank">PAUPER - Blue BLITZ!!!</a> | PAUPERGANDA | 2022-07-23   |
 | 🇮🇹 | <i class="fa-brands fa-youtube"></i> |  | <a href="https://www.youtube.com/watch?v=8KAufu410jM" target="_blank">[ITA] seconda lega con UW Familiar 07/07/2022</a> | Adepto Terra | 2022-07-12   |

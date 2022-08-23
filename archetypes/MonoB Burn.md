@@ -69,4 +69,11 @@
 
 
 
+## **Videos**
+
+| 🗣️ | 📺 | ⬇️ | Title | Author | Date |
+| -- | -- | -- | ---- | ------ | ---- |
+| 🇬🇧 | <i class="fa-brands fa-youtube"></i> |  | <a href="https://www.youtube.com/watch?v=FTGv_Y42c1g" target="_blank">PAUPER - RAKDOS Burn - It's MADNESS!!</a> | PAUPERGANDA | 2022-08-20   |
+
+
 
