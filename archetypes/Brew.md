@@ -26,6 +26,7 @@ Generic archetype, for decks that do not fit those in the [Archetypes Index](../
 
 | 🗣️ | 📺 | ⬇️ | Title | Author | Date |
 | -- | -- | -- | ---- | ------ | ---- |
+| 🇮🇹 | <i class="fa-brands fa-youtube"></i> |  | <a href="https://www.youtube.com/watch?v=eeF_78XVo5Q" target="_blank">[ITA] UW CawGate 29/08/2022</a> | Adepto Terra | 2022-09-05   |
 | 🇮🇹 | <i class="fa-brands fa-youtube"></i> |  | <a href="https://www.youtube.com/watch?v=Slx03NTI0WA" target="_blank">[ITA] Ho sognato CounterMadness ed è proprio un mazzo brutto</a> | Adepto Terra | 2022-08-30   |
 | 🇮🇹 | <i class="fa-brands fa-youtube"></i> |  | <a href="https://www.youtube.com/watch?v=IoyX5hWvAjE" target="_blank">[ITA] Pauper BG Pedine è fantastico.</a> | Adepto Terra | 2022-08-17   |
 | 🇬🇧 | <i class="fa-brands fa-youtube"></i> |  | <a href="https://www.youtube.com/watch?v=WMB7e-k6HTs" target="_blank">PAUPER - BLUE Re-ANIMATOR!?!?!</a> | PAUPERGANDA | 2022-08-13   |
