@@ -26,6 +26,7 @@ Generic archetype, for decks that do not fit those in the [Archetypes Index](../
 
 | 🗣️ | 📺 | ⬇️ | Title | Author | Date |
 | -- | -- | -- | ---- | ------ | ---- |
+| 🇮🇹 | <i class="fa-brands fa-youtube"></i> |  | <a href="https://www.youtube.com/watch?v=P59Mr2T8a9s" target="_blank">[ITA] il nuovo GB Rock post Baldur's Gate 08/09/2022</a> | Adepto Terra | 2022-09-10   |
 | 🇮🇹 | <i class="fa-brands fa-youtube"></i> |  | <a href="https://www.youtube.com/watch?v=qLaXtFPN2Sw" target="_blank">[ITA] Mono Black Dispute & Izzet Faeries 05/09/2022</a> | Adepto Terra | 2022-09-07   |
 | 🇮🇹 | <i class="fa-brands fa-youtube"></i> |  | <a href="https://www.youtube.com/watch?v=eeF_78XVo5Q" target="_blank">[ITA] UW CawGate 29/08/2022</a> | Adepto Terra | 2022-09-05   |
 | 🇮🇹 | <i class="fa-brands fa-youtube"></i> |  | <a href="https://www.youtube.com/watch?v=Slx03NTI0WA" target="_blank">[ITA] Ho sognato CounterMadness ed è proprio un mazzo brutto</a> | Adepto Terra | 2022-08-30   |
