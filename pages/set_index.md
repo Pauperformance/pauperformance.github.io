@@ -791,10 +791,11 @@ Lines in **bold** correspond to sets that have introduced new cards in the [Paup
 | 770       | admu          | Dominaria United Art Series                     | 2022-09-09   |
 | 771       | p30h          | 30th Anniversary History Promos                 | 2022-09-09   |
 | 772       | pdmu          | Dominaria United Promos                         | 2022-09-09   |
-| 773       | tdmc          | Dominaria United Commander Tokens               | 2022-09-09   |
-| 774       | tdmu          | Dominaria United Tokens                         | 2022-09-09   |
-| 775       | prcq          | Regional Championship Qualifiers 2022           | 2022-10-01   |
-| 776       | sunf          | Unfinity Sticker Sheets                         | 2022-10-07   |
-| 777       | gn3           | Game Night 2022                                 | 2022-10-14   |
-| 778       | dmr           | Dominaria Remastered                            | 2023-03-31   |
+| 773       | pdwa          | Dominaria United 'Wa' Tokens                    | 2022-09-09   |
+| 774       | tdmc          | Dominaria United Commander Tokens               | 2022-09-09   |
+| 775       | tdmu          | Dominaria United Tokens                         | 2022-09-09   |
+| 776       | prcq          | Regional Championship Qualifiers 2022           | 2022-10-01   |
+| 777       | sunf          | Unfinity Sticker Sheets                         | 2022-10-07   |
+| 778       | gn3           | Game Night 2022                                 | 2022-10-14   |
+| 779       | dmr           | Dominaria Remastered                            | 2023-03-31   |
 
