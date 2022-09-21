@@ -791,7 +791,7 @@ Lines in **bold** correspond to sets that have introduced new cards in the [Paup
 | 770       | admu          | Dominaria United Art Series                     | 2022-09-09   |
 | 771       | p30h          | 30th Anniversary History Promos                 | 2022-09-09   |
 | 772       | pdmu          | Dominaria United Promos                         | 2022-09-09   |
-| 773       | pdwa          | Dominaria United 'Wa' Tokens                    | 2022-09-09   |
+| 773       | pdwa          | Dominaria United Japanese Promo Tokens          | 2022-09-09   |
 | 774       | tdmc          | Dominaria United Commander Tokens               | 2022-09-09   |
 | 775       | tdmu          | Dominaria United Tokens                         | 2022-09-09   |
 | 776       | prcq          | Regional Championship Qualifiers 2022           | 2022-10-01   |
