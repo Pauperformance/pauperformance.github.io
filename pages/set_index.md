@@ -798,8 +798,9 @@ Lines in **bold** correspond to sets that have introduced new cards in the [Paup
 | 777       | sunf          | Unfinity Sticker Sheets                         | 2022-10-07   |
 | 778       | uplist        | The List (Unfinity Foil Edition)                | 2022-10-07   |
 | 779       | gn3           | Game Night 2022                                 | 2022-10-14   |
-| 780       | brc           | The Brothers' War Commander                     | 2022-11-18   |
-| 781       | brr           | The Brothers' War Retro Artifacts               | 2022-11-18   |
-| 782       | scd           | Starter Commander Decks                         | 2022-12-02   |
-| 783       | dmr           | Dominaria Remastered                            | 2023-03-31   |
+| 780       | q07           | Pioneer Challenger Decks 2022                   | 2022-10-15   |
+| 781       | brc           | The Brothers' War Commander                     | 2022-11-18   |
+| 782       | brr           | The Brothers' War Retro Artifacts               | 2022-11-18   |
+| 783       | scd           | Starter Commander Decks                         | 2022-12-02   |
+| 784       | dmr           | Dominaria Remastered                            | 2023-03-31   |
 
