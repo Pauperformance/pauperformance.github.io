@@ -802,6 +802,7 @@ Lines in **bold** correspond to sets that have introduced new cards in the [Paup
 | 781       | bot           | Transformers                                    | 2022-11-18   |
 | 782       | brc           | The Brothers' War Commander                     | 2022-11-18   |
 | 783       | brr           | The Brothers' War Retro Artifacts               | 2022-11-18   |
-| 784       | scd           | Starter Commander Decks                         | 2022-12-02   |
-| 785       | dmr           | Dominaria Remastered                            | 2023-03-31   |
+| 784       | tbot          | Transformers Tokens                             | 2022-11-18   |
+| 785       | scd           | Starter Commander Decks                         | 2022-12-02   |
+| 786       | dmr           | Dominaria Remastered                            | 2023-03-31   |
 
