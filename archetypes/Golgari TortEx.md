@@ -56,13 +56,13 @@
 <a href="https://scryfall.com/card/cmr/148/sanitarium-skeleton"><img src="https://c1.scryfall.com/file/scryfall-cards/normal/front/7/c/7c33d20d-8d1c-4cf7-a7ad-3dab9758fafe.jpg" class="archetype-card rounded-image"/></a>
 <a href="https://scryfall.com/card/znc/81/satyr-wayfinder"><img src="https://c1.scryfall.com/file/scryfall-cards/normal/front/8/4/84cb8203-88e4-4a3b-9334-91b70c747091.jpg" class="archetype-card rounded-image"/></a>
 <a href="https://scryfall.com/card/cmr/154/thorn-of-the-black-rose"><img src="https://c1.scryfall.com/file/scryfall-cards/normal/front/2/b/2b7538ad-cc41-4229-8a39-c1db21f2899a.jpg" class="archetype-card rounded-image"/></a>
-<a href="https://scryfall.com/card/rav/109/thoughtpicker-witch"><img src="https://c1.scryfall.com/file/scryfall-cards/normal/front/b/6/b6f8df33-a955-403c-aafc-85e5589c5041.jpg" class="archetype-card rounded-image"/></a>
+<a href="https://scryfall.com/card/rav/109/thoughtpicker-witch"><img src="https://cards.scryfall.io/normal/front/b/6/b6f8df33-a955-403c-aafc-85e5589c5041.jpg" class="archetype-card rounded-image"/></a>
 <a href="https://scryfall.com/card/eve/78/tilling-treefolk"><img src="https://c1.scryfall.com/file/scryfall-cards/normal/front/8/e/8e4a10d0-214d-4e7b-9683-c84034f8f6b7.jpg" class="archetype-card rounded-image"/></a>
 <a href="https://scryfall.com/card/tsp/137/traitors-clutch"><img src="https://c1.scryfall.com/file/scryfall-cards/normal/front/6/3/6313a601-5d26-487b-a70c-2c7184b7cc91.jpg" class="archetype-card rounded-image"/></a>
 <a href="https://scryfall.com/card/m15/204/undergrowth-scavenger"><img src="https://c1.scryfall.com/file/scryfall-cards/normal/front/4/f/4f8dc77e-f003-4c25-8394-cda22e3ea039.jpg" class="archetype-card rounded-image"/></a>
 <a href="https://scryfall.com/card/ema/191/werebear"><img src="https://c1.scryfall.com/file/scryfall-cards/normal/front/2/2/224ea635-b95b-4803-8716-edd4cb655923.jpg" class="archetype-card rounded-image"/></a>
 <a href="https://scryfall.com/card/ncc/320/wickerbough-elder"><img src="https://c1.scryfall.com/file/scryfall-cards/normal/front/3/a/3a5832cc-f9f6-4881-99dd-c0728a52cabe.jpg" class="archetype-card rounded-image"/></a>
-<a href="https://scryfall.com/card/uma/194/wild-mongrel"><img src="https://c1.scryfall.com/file/scryfall-cards/normal/front/4/d/4d5be4ab-f85a-4272-ac08-99cb0105eb11.jpg" class="archetype-card rounded-image"/></a>
+<a href="https://scryfall.com/card/uma/194/wild-mongrel"><img src="https://cards.scryfall.io/normal/front/4/d/4d5be4ab-f85a-4272-ac08-99cb0105eb11.jpg" class="archetype-card rounded-image"/></a>
 </details><br/>
 
 
