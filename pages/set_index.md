@@ -781,29 +781,30 @@ Lines in **bold** correspond to sets that have introduced new cards in the [Paup
 | 760       | o90p          | Oversized 90's Promos                           | 1996-04-01   |
 | 761       | olep          | Oversized League Prizes                         | 1997-05-30   |
 | 762       | wmc           | World Magic Cup Qualifiers                      | 2013-04-06   |
-| 763       | sneo          | Kamigawa: Neon Dynasty Substitute Cards         | 2022-02-18   |
-| 764       | ptsnc         | Streets of New Capenna Southeast Asia Tokens    | 2022-04-30   |
-| 765       | hbg           | Alchemy Horizons: Baldur's Gate                 | 2022-07-07   |
-| 766       | t2x2          | Double Masters 2022 Tokens                      | 2022-07-08   |
-| 767       | ea1           | Explorer Anthology 1                            | 2022-07-28   |
-| 768       | ha6           | Historic Anthology 6                            | 2022-07-28   |
-| 769       | psvc          | Summer Vacation Promos 2022                     | 2022-08-01   |
-| 770       | p30a          | 30th Anniversary Promos                         | 2022-09-02   |
-| 771       | admu          | Dominaria United Art Series                     | 2022-09-09   |
-| 772       | p30h          | 30th Anniversary History Promos                 | 2022-09-09   |
-| 773       | pdmu          | Dominaria United Promos                         | 2022-09-09   |
-| 774       | pdwa          | Dominaria United Japanese Promo Tokens          | 2022-09-09   |
-| 775       | tdmc          | Dominaria United Commander Tokens               | 2022-09-09   |
-| 776       | tdmu          | Dominaria United Tokens                         | 2022-09-09   |
-| 777       | prcq          | Regional Championship Qualifiers 2022           | 2022-10-01   |
-| 778       | sunf          | Unfinity Sticker Sheets                         | 2022-10-07   |
-| 779       | uplist        | The List (Unfinity Foil Edition)                | 2022-10-07   |
-| 780       | gn3           | Game Night 2022                                 | 2022-10-14   |
-| 781       | q07           | Pioneer Challenger Decks 2022                   | 2022-10-15   |
-| 782       | bot           | Transformers                                    | 2022-11-18   |
-| 783       | brc           | The Brothers' War Commander                     | 2022-11-18   |
-| 784       | brr           | The Brothers' War Retro Artifacts               | 2022-11-18   |
-| 785       | tbot          | Transformers Tokens                             | 2022-11-18   |
-| 786       | scd           | Starter Commander Decks                         | 2022-12-02   |
-| 787       | dmr           | Dominaria Remastered                            | 2023-03-31   |
+| 763       | mneo          | Kamigawa: Neon Destiny Minigames                | 2022-02-18   |
+| 764       | sneo          | Kamigawa: Neon Dynasty Substitute Cards         | 2022-02-18   |
+| 765       | ptsnc         | Streets of New Capenna Southeast Asia Tokens    | 2022-04-30   |
+| 766       | hbg           | Alchemy Horizons: Baldur's Gate                 | 2022-07-07   |
+| 767       | t2x2          | Double Masters 2022 Tokens                      | 2022-07-08   |
+| 768       | ea1           | Explorer Anthology 1                            | 2022-07-28   |
+| 769       | ha6           | Historic Anthology 6                            | 2022-07-28   |
+| 770       | psvc          | Summer Vacation Promos 2022                     | 2022-08-01   |
+| 771       | p30a          | 30th Anniversary Promos                         | 2022-09-02   |
+| 772       | admu          | Dominaria United Art Series                     | 2022-09-09   |
+| 773       | p30h          | 30th Anniversary History Promos                 | 2022-09-09   |
+| 774       | pdmu          | Dominaria United Promos                         | 2022-09-09   |
+| 775       | pdwa          | Dominaria United Japanese Promo Tokens          | 2022-09-09   |
+| 776       | tdmc          | Dominaria United Commander Tokens               | 2022-09-09   |
+| 777       | tdmu          | Dominaria United Tokens                         | 2022-09-09   |
+| 778       | prcq          | Regional Championship Qualifiers 2022           | 2022-10-01   |
+| 779       | sunf          | Unfinity Sticker Sheets                         | 2022-10-07   |
+| 780       | uplist        | The List (Unfinity Foil Edition)                | 2022-10-07   |
+| 781       | gn3           | Game Night 2022                                 | 2022-10-14   |
+| 782       | q07           | Pioneer Challenger Decks 2022                   | 2022-10-15   |
+| 783       | bot           | Transformers                                    | 2022-11-18   |
+| 784       | brc           | The Brothers' War Commander                     | 2022-11-18   |
+| 785       | brr           | The Brothers' War Retro Artifacts               | 2022-11-18   |
+| 786       | tbot          | Transformers Tokens                             | 2022-11-18   |
+| 787       | scd           | Starter Commander Decks                         | 2022-12-02   |
+| 788       | dmr           | Dominaria Remastered                            | 2023-03-31   |
 
