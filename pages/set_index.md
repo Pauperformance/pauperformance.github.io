@@ -811,5 +811,6 @@ Lines in **bold** correspond to sets that have introduced new cards in the [Paup
 | 790       | 30a           | 30th Anniversary Edition                        | 2022-11-28   |
 | 791       | t30a          | 30th Anniversary Tokens                         | 2022-11-28   |
 | 792       | scd           | Starter Commander Decks                         | 2022-12-02   |
-| 793       | dmr           | Dominaria Remastered                            | 2023-03-31   |
+| 793       | pr23          | Regional Championship Qualifiers 2023           | 2023-01-01   |
+| 794       | dmr           | Dominaria Remastered                            | 2023-03-31   |
 
