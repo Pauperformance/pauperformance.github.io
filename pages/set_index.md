@@ -791,7 +791,7 @@ Lines in **bold** correspond to sets that have introduced new cards in the [Paup
 | 770       | ea1           | Explorer Anthology 1                            | 2022-07-28   |
 | 771       | ha6           | Historic Anthology 6                            | 2022-07-28   |
 | 772       | psvc          | Summer Vacation Promos 2022                     | 2022-08-01   |
-| 773       | p30a          | 30th Anniversary Promos                         | 2022-09-02   |
+| 773       | p30a          | 30th Anniversary Play Promos                    | 2022-09-02   |
 | 774       | admu          | Dominaria United Art Series                     | 2022-09-09   |
 | 775       | p30h          | 30th Anniversary History Promos                 | 2022-09-09   |
 | 776       | pdmu          | Dominaria United Promos                         | 2022-09-09   |
@@ -802,11 +802,14 @@ Lines in **bold** correspond to sets that have introduced new cards in the [Paup
 | 781       | sunf          | Unfinity Sticker Sheets                         | 2022-10-07   |
 | 782       | uplist        | The List (Unfinity Foil Edition)                | 2022-10-07   |
 | 783       | gn3           | Game Night 2022                                 | 2022-10-14   |
-| 784       | q07           | Pioneer Challenger Decks 2022                   | 2022-10-15   |
-| 785       | bot           | Transformers                                    | 2022-11-18   |
-| 786       | brc           | The Brothers' War Commander                     | 2022-11-18   |
-| 787       | brr           | The Brothers' War Retro Artifacts               | 2022-11-18   |
-| 788       | tbot          | Transformers Tokens                             | 2022-11-18   |
-| 789       | scd           | Starter Commander Decks                         | 2022-12-02   |
-| 790       | dmr           | Dominaria Remastered                            | 2023-03-31   |
+| 784       | q07           | Challenger Decks 2022                           | 2022-10-15   |
+| 785       | q08           | Pioneer Challenger Decks 2022                   | 2022-11-04   |
+| 786       | bot           | Transformers                                    | 2022-11-18   |
+| 787       | brc           | The Brothers' War Commander                     | 2022-11-18   |
+| 788       | brr           | The Brothers' War Retro Artifacts               | 2022-11-18   |
+| 789       | tbot          | Transformers Tokens                             | 2022-11-18   |
+| 790       | 30a           | 30th Anniversary Edition                        | 2022-11-28   |
+| 791       | t30a          | 30th Anniversary Tokens                         | 2022-11-28   |
+| 792       | scd           | Starter Commander Decks                         | 2022-12-02   |
+| 793       | dmr           | Dominaria Remastered                            | 2023-03-31   |
 
