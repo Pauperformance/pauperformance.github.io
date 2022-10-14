@@ -803,16 +803,17 @@ Lines in **bold** correspond to sets that have introduced new cards in the [Paup
 | 782       | sunf          | Unfinity Sticker Sheets                         | 2022-10-07   |
 | 783       | uplist        | The List (Unfinity Foil Edition)                | 2022-10-07   |
 | 784       | gn3           | Game Night 2022                                 | 2022-10-14   |
-| 785       | q07           | Challenger Decks 2022                           | 2022-10-15   |
-| 786       | slc           | Secret Lair 30th Anniversary Countdown Kit      | 2022-11-01   |
-| 787       | q08           | Pioneer Challenger Decks 2022                   | 2022-11-04   |
-| 788       | bot           | Transformers                                    | 2022-11-18   |
-| 789       | brc           | The Brothers' War Commander                     | 2022-11-18   |
-| 790       | brr           | The Brothers' War Retro Artifacts               | 2022-11-18   |
-| 791       | tbot          | Transformers Tokens                             | 2022-11-18   |
-| 792       | 30a           | 30th Anniversary Edition                        | 2022-11-28   |
-| 793       | t30a          | 30th Anniversary Tokens                         | 2022-11-28   |
-| 794       | scd           | Starter Commander Decks                         | 2022-12-02   |
-| 795       | pr23          | Regional Championship Qualifiers 2023           | 2023-01-01   |
-| 796       | dmr           | Dominaria Remastered                            | 2023-03-31   |
+| 785       | tgn3          | Game Night 2022 Tokens                          | 2022-10-14   |
+| 786       | q07           | Challenger Decks 2022                           | 2022-10-15   |
+| 787       | slc           | Secret Lair 30th Anniversary Countdown Kit      | 2022-11-01   |
+| 788       | q08           | Pioneer Challenger Decks 2022                   | 2022-11-04   |
+| 789       | bot           | Transformers                                    | 2022-11-18   |
+| 790       | brc           | The Brothers' War Commander                     | 2022-11-18   |
+| 791       | brr           | The Brothers' War Retro Artifacts               | 2022-11-18   |
+| 792       | tbot          | Transformers Tokens                             | 2022-11-18   |
+| 793       | 30a           | 30th Anniversary Edition                        | 2022-11-28   |
+| 794       | t30a          | 30th Anniversary Tokens                         | 2022-11-28   |
+| 795       | scd           | Starter Commander Decks                         | 2022-12-02   |
+| 796       | pr23          | Regional Championship Qualifiers 2023           | 2023-01-01   |
+| 797       | dmr           | Dominaria Remastered                            | 2023-03-31   |
 
