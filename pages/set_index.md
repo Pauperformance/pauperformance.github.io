@@ -802,8 +802,8 @@ Lines in **bold** correspond to sets that have introduced new cards in the [Paup
 | 781       | ydmu          | Alchemy: Dominaria                              | 2022-10-05   |
 | 782       | sunf          | Unfinity Sticker Sheets                         | 2022-10-07   |
 | 783       | uplist        | The List (Unfinity Foil Edition)                | 2022-10-07   |
-| 784       | gn3           | Game Night 2022                                 | 2022-10-14   |
-| 785       | tgn3          | Game Night 2022 Tokens                          | 2022-10-14   |
+| 784       | gn3           | Game Night: Free-for-All                        | 2022-10-14   |
+| 785       | tgn3          | Game Night: Free-for-All Tokens                 | 2022-10-14   |
 | 786       | q07           | Challenger Decks 2022                           | 2022-10-15   |
 | 787       | slc           | Secret Lair 30th Anniversary Countdown Kit      | 2022-11-01   |
 | 788       | q08           | Pioneer Challenger Decks 2022                   | 2022-11-04   |
