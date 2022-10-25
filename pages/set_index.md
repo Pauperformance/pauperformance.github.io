@@ -811,13 +811,14 @@ Lines in **bold** correspond to sets that have introduced new cards in the [Paup
 | 790       | brc           | The Brothers' War Commander                     | 2022-11-18   |
 | 791       | brr           | The Brothers' War Retro Artifacts               | 2022-11-18   |
 | 792       | tbot          | Transformers Tokens                             | 2022-11-18   |
-| 793       | 30a           | 30th Anniversary Edition                        | 2022-11-28   |
-| 794       | t30a          | 30th Anniversary Tokens                         | 2022-11-28   |
-| 795       | j22           | Jumpstart 2022                                  | 2022-12-02   |
-| 796       | scd           | Starter Commander Decks                         | 2022-12-02   |
-| 797       | tscd          | Starter Commander Deck Tokens                   | 2022-12-02   |
-| 798       | pr23          | Regional Championship Qualifiers 2023           | 2023-01-01   |
-| 799       | onc           | Phyrexia: All Will Be One Commander             | 2023-02-03   |
-| 800       | one           | Phyrexia: All Will Be One                       | 2023-02-03   |
-| 801       | dmr           | Dominaria Remastered                            | 2023-03-31   |
+| 793       | pewk          | Eternal Weekend 2022                            | 2022-11-26   |
+| 794       | 30a           | 30th Anniversary Edition                        | 2022-11-28   |
+| 795       | t30a          | 30th Anniversary Tokens                         | 2022-11-28   |
+| 796       | j22           | Jumpstart 2022                                  | 2022-12-02   |
+| 797       | scd           | Starter Commander Decks                         | 2022-12-02   |
+| 798       | tscd          | Starter Commander Deck Tokens                   | 2022-12-02   |
+| 799       | pr23          | Regional Championship Qualifiers 2023           | 2023-01-01   |
+| 800       | onc           | Phyrexia: All Will Be One Commander             | 2023-02-03   |
+| 801       | one           | Phyrexia: All Will Be One                       | 2023-02-03   |
+| 802       | dmr           | Dominaria Remastered                            | 2023-03-31   |
 
