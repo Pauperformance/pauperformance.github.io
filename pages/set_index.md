@@ -801,7 +801,7 @@ Lines in **bold** correspond to sets that have introduced new cards in the [Paup
 | 780       | tdmu          | Dominaria United Tokens                         | 2022-09-09   |
 | 781       | prcq          | Regional Championship Qualifiers 2022           | 2022-10-01   |
 | 782       | ydmu          | Alchemy: Dominaria                              | 2022-10-05   |
-| **783**   | **sunf**      | **Unfinity Sticker Sheets**                     | **2022-10-07** |
+| 783       | sunf          | Unfinity Sticker Sheets                         | 2022-10-07   |
 | 784       | uplist        | The List (Unfinity Foil Edition)                | 2022-10-07   |
 | 785       | gn3           | Game Night: Free-for-All                        | 2022-10-14   |
 | 786       | tgn3          | Game Night: Free-for-All Tokens                 | 2022-10-14   |
