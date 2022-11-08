@@ -812,14 +812,16 @@ Lines in **bold** correspond to sets that have introduced new cards in the [Paup
 | 791       | brr           | The Brothers' War Retro Artifacts               | 2022-11-18   |
 | 792       | pbro          | The Brothers' War Promos                        | 2022-11-18   |
 | 793       | tbot          | Transformers Tokens                             | 2022-11-18   |
-| 794       | pewk          | Eternal Weekend 2022                            | 2022-11-26   |
-| 795       | 30a           | 30th Anniversary Edition                        | 2022-11-28   |
-| 796       | t30a          | 30th Anniversary Tokens                         | 2022-11-28   |
-| 797       | j22           | Jumpstart 2022                                  | 2022-12-02   |
-| 798       | scd           | Starter Commander Decks                         | 2022-12-02   |
-| 799       | tscd          | Starter Commander Deck Tokens                   | 2022-12-02   |
-| 800       | pr23          | Regional Championship Qualifiers 2023           | 2023-01-01   |
-| 801       | onc           | Phyrexia: All Will Be One Commander             | 2023-02-03   |
-| 802       | one           | Phyrexia: All Will Be One                       | 2023-02-03   |
-| 803       | dmr           | Dominaria Remastered                            | 2023-03-31   |
+| 794       | tbrc          | The Brothers' War Commander Tokens              | 2022-11-18   |
+| 795       | tbro          | The Brothers' War Tokens                        | 2022-11-18   |
+| 796       | pewk          | Eternal Weekend 2022                            | 2022-11-26   |
+| 797       | 30a           | 30th Anniversary Edition                        | 2022-11-28   |
+| 798       | t30a          | 30th Anniversary Tokens                         | 2022-11-28   |
+| 799       | j22           | Jumpstart 2022                                  | 2022-12-02   |
+| 800       | scd           | Starter Commander Decks                         | 2022-12-02   |
+| 801       | tscd          | Starter Commander Deck Tokens                   | 2022-12-02   |
+| 802       | pr23          | Regional Championship Qualifiers 2023           | 2023-01-01   |
+| 803       | onc           | Phyrexia: All Will Be One Commander             | 2023-02-03   |
+| 804       | one           | Phyrexia: All Will Be One                       | 2023-02-03   |
+| 805       | dmr           | Dominaria Remastered                            | 2023-03-31   |
 
