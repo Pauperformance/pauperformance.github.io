@@ -818,11 +818,12 @@ Lines in **bold** correspond to sets that have introduced new cards in the [Paup
 | 797       | pewk          | Eternal Weekend 2022                            | 2022-11-26   |
 | 798       | 30a           | 30th Anniversary Edition                        | 2022-11-28   |
 | 799       | t30a          | 30th Anniversary Tokens                         | 2022-11-28   |
-| 800       | j22           | Jumpstart 2022                                  | 2022-12-02   |
-| 801       | scd           | Starter Commander Decks                         | 2022-12-02   |
-| 802       | tscd          | Starter Commander Deck Tokens                   | 2022-12-02   |
-| 803       | pr23          | Regional Championship Qualifiers 2023           | 2023-01-01   |
-| 804       | onc           | Phyrexia: All Will Be One Commander             | 2023-02-03   |
-| 805       | one           | Phyrexia: All Will Be One                       | 2023-02-03   |
-| 806       | dmr           | Dominaria Remastered                            | 2023-03-31   |
+| 800       | fj22          | Jumpstart 2022 Front Cards                      | 2022-12-02   |
+| 801       | j22           | Jumpstart 2022                                  | 2022-12-02   |
+| 802       | scd           | Starter Commander Decks                         | 2022-12-02   |
+| 803       | tscd          | Starter Commander Deck Tokens                   | 2022-12-02   |
+| 804       | pr23          | Regional Championship Qualifiers 2023           | 2023-01-01   |
+| 805       | onc           | Phyrexia: All Will Be One Commander             | 2023-02-03   |
+| 806       | one           | Phyrexia: All Will Be One                       | 2023-02-03   |
+| 807       | dmr           | Dominaria Remastered                            | 2023-03-31   |
 
