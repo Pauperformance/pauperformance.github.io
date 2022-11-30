@@ -13,7 +13,7 @@ This page should be useful for Pauper players that haven't followed the latest r
 
 Further information about reference numbers used by Pauperformance (p12e) to uniquely identify Magic sets can be found in the [Set Index page](set_index.html).
 
-The total number of cards in the Pauper pool is: 8579.
+The total number of cards in the Pauper pool is: 8586.
 
 ---
 Table of Contents
@@ -175,6 +175,7 @@ Table of Contents
 * [Streets of New Capenna](#streets-of-new-capenna-snc) (*release: 2022-04-29 ~ p12e_code: 735*)
 * [Commander Legends: Battle for Baldur's Gate](#commander-legends-battle-for-baldur's-gate-clb) (*release: 2022-06-10 ~ p12e_code: 740*)
 * [Unfinity Sticker Sheets](#unfinity-sticker-sheets-sunf) (*release: 2022-10-07 ~ p12e_code: 783*)
+* [Jumpstart 2022](#jumpstart-2022-j22) (*release: 2022-12-02 ~ p12e_code: 801*)
 
 ---
 
@@ -10167,6 +10168,22 @@ Table of Contents
 <a href="https://scryfall.com/card/sunf/31/wrinkly-monkey-shenanigans?utm_source=api">Wrinkly Monkey Shenanigans</a><br/>
 <a href="https://scryfall.com/card/sunf/35/yawgmoth-merfolk-soul?utm_source=api">Yawgmoth Merfolk Soul</a><br/>
 <a href="https://scryfall.com/card/sunf/6/zombie-cheese-magician?utm_source=api">Zombie Cheese Magician</a><br/>
+</details>
+[]()
+
+## Jumpstart 2022 (j22)
+*release: 2022-12-02 | p12e_code: 801*
+
+<details>
+  <summary>Click to see 7 new cards</summary>
+
+<a href="https://scryfall.com/card/j22/49/infernal-idol?utm_source=api">Infernal Idol</a><br/>
+<a href="https://scryfall.com/card/j22/15/merfolk-pupil?utm_source=api">Merfolk Pupil</a><br/>
+<a href="https://scryfall.com/card/j22/24/ossuary-rats?utm_source=api">Ossuary Rats</a><br/>
+<a href="https://scryfall.com/card/j22/37/plundering-predator?utm_source=api">Plundering Predator</a><br/>
+<a href="https://scryfall.com/card/j22/17/soul-read?utm_source=api">Soul Read</a><br/>
+<a href="https://scryfall.com/card/j22/45/spectral-hunt-caller?utm_source=api">Spectral Hunt-Caller</a><br/>
+<a href="https://scryfall.com/card/j22/27/suspicious-shambler?utm_source=api">Suspicious Shambler</a><br/>
 </details>
 []()
 
