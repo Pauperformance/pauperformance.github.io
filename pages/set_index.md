@@ -819,7 +819,7 @@ Lines in **bold** correspond to sets that have introduced new cards in the [Paup
 | 798       | 30a           | 30th Anniversary Edition                        | 2022-11-28   |
 | 799       | t30a          | 30th Anniversary Tokens                         | 2022-11-28   |
 | 800       | fj22          | Jumpstart 2022 Front Cards                      | 2022-12-02   |
-| 801       | j22           | Jumpstart 2022                                  | 2022-12-02   |
+| **801**   | **j22**       | **Jumpstart 2022**                              | **2022-12-02** |
 | 802       | scd           | Starter Commander Decks                         | 2022-12-02   |
 | 803       | tscd          | Starter Commander Deck Tokens                   | 2022-12-02   |
 | 804       | pr23          | Regional Championship Qualifiers 2023           | 2023-01-01   |
