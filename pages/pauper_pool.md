@@ -13,7 +13,7 @@ This page should be useful for Pauper players that haven't followed the latest r
 
 Further information about reference numbers used by Pauperformance (p12e) to uniquely identify Magic sets can be found in the [Set Index page](set_index.html).
 
-The total number of cards in the Pauper pool is: 8585.
+The total number of cards in the Pauper pool is: 8586.
 
 ---
 Table of Contents
@@ -10175,14 +10175,15 @@ Table of Contents
 *release: 2022-12-02 | p12e_code: 801*
 
 <details>
-  <summary>Click to see 6 new cards</summary>
+  <summary>Click to see 7 new cards</summary>
 
-<a href="https://scryfall.com/card/j22/3/chains-of-custody?utm_source=api">Chains of Custody</a><br/>
-<a href="https://scryfall.com/card/j22/21/creeping-bloodsucker?utm_source=api">Creeping Bloodsucker</a><br/>
-<a href="https://scryfall.com/card/j22/48/dutiful-replicator?utm_source=api">Dutiful Replicator</a><br/>
-<a href="https://scryfall.com/card/j22/120/ghouls-feast?utm_source=api">Ghoul's Feast</a><br/>
-<a href="https://scryfall.com/card/j22/39/giant-ladybug?utm_source=api">Giant Ladybug</a><br/>
-<a href="https://scryfall.com/card/j22/34/goblin-researcher?utm_source=api">Goblin Researcher</a><br/>
+<a href="https://scryfall.com/card/j22/49/infernal-idol?utm_source=api">Infernal Idol</a><br/>
+<a href="https://scryfall.com/card/j22/15/merfolk-pupil?utm_source=api">Merfolk Pupil</a><br/>
+<a href="https://scryfall.com/card/j22/24/ossuary-rats?utm_source=api">Ossuary Rats</a><br/>
+<a href="https://scryfall.com/card/j22/37/plundering-predator?utm_source=api">Plundering Predator</a><br/>
+<a href="https://scryfall.com/card/j22/17/soul-read?utm_source=api">Soul Read</a><br/>
+<a href="https://scryfall.com/card/j22/45/spectral-hunt-caller?utm_source=api">Spectral Hunt-Caller</a><br/>
+<a href="https://scryfall.com/card/j22/27/suspicious-shambler?utm_source=api">Suspicious Shambler</a><br/>
 </details>
 []()
 
