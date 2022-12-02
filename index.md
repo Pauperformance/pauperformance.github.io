@@ -25,8 +25,8 @@ Please, read the [PhD Guidelines](./pages/phd_guidelines.html).**
 
 ---
 
-## The current Pauperformance code for decks is **783**.
-It refers to Unfinity Sticker Sheets (sunf), released on 2022-10-07.
+## The current Pauperformance code for decks is **801**.
+It refers to Jumpstart 2022 (j22), released on 2022-12-02.
 
 ---
 
