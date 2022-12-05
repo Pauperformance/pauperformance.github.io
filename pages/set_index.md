@@ -822,8 +822,9 @@ Lines in **bold** correspond to sets that have introduced new cards in the [Paup
 | **801**   | **j22**       | **Jumpstart 2022**                              | **2022-12-02** |
 | 802       | scd           | Starter Commander Decks                         | 2022-12-02   |
 | 803       | tscd          | Starter Commander Deck Tokens                   | 2022-12-02   |
-| 804       | pr23          | Regional Championship Qualifiers 2023           | 2023-01-01   |
-| 805       | onc           | Phyrexia: All Will Be One Commander             | 2023-02-03   |
-| 806       | one           | Phyrexia: All Will Be One                       | 2023-02-03   |
-| 807       | dmr           | Dominaria Remastered                            | 2023-03-31   |
+| 804       | ybro          | Alchemy: The Brothers' War                      | 2022-12-13   |
+| 805       | pr23          | Regional Championship Qualifiers 2023           | 2023-01-01   |
+| 806       | onc           | Phyrexia: All Will Be One Commander             | 2023-02-03   |
+| 807       | one           | Phyrexia: All Will Be One                       | 2023-02-03   |
+| 808       | dmr           | Dominaria Remastered                            | 2023-03-31   |
 
