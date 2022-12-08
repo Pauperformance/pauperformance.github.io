@@ -49,7 +49,7 @@ Once the board is in control, the player typically wins by beating with creature
 <a href="https://scryfall.com/card/cmd/17/journey-to-nowhere"><img src="https://c1.scryfall.com/file/scryfall-cards/normal/front/4/6/4686b51c-e02b-48c1-bafe-e8d08a5407b9.jpg" class="archetype-card rounded-image"/></a>
 <a href="https://scryfall.com/card/mm3/14/lone-missionary"><img src="https://cards.scryfall.io/normal/front/6/d/6d31d5b6-0973-43d2-aae0-a3f3e7a61800.jpg" class="archetype-card rounded-image"/></a>
 <a href="https://scryfall.com/card/ima/67/mnemonic-wall"><img src="https://c1.scryfall.com/file/scryfall-cards/normal/front/a/3/a3e6784b-78e8-4f0b-8d27-d49c7cea9252.jpg" class="archetype-card rounded-image"/></a>
-<a href="https://scryfall.com/card/2x2/20/momentary-blink"><img src="https://cards.scryfall.io/normal/front/1/f/1fa0d1c6-9110-4956-97eb-e18c457bb130.jpg" class="archetype-card rounded-image"/></a>
+<a href="https://scryfall.com/card/dmr/15/momentary-blink"><img src="https://errors.scryfall.com/soon.jpg" class="archetype-card rounded-image"/></a>
 <a href="https://scryfall.com/card/khc/42/mulldrifter"><img src="https://c1.scryfall.com/file/scryfall-cards/normal/front/3/4/345fd005-5052-4500-a260-3649500e21f4.jpg" class="archetype-card rounded-image"/></a>
 <a href="https://scryfall.com/card/mm2/29/oblivion-ring"><img src="https://c1.scryfall.com/file/scryfall-cards/normal/front/b/f/bff31eba-8ab3-403e-8d82-37a18b279bec.jpg" class="archetype-card rounded-image"/></a>
 <a href="https://scryfall.com/card/khc/43/sea-gate-oracle"><img src="https://c1.scryfall.com/file/scryfall-cards/normal/front/4/9/498743ce-0ca5-488a-ae5e-d348b274bf3b.jpg" class="archetype-card rounded-image"/></a>
