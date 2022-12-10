@@ -830,8 +830,9 @@ Lines in **bold** correspond to sets that have introduced new cards in the [Paup
 | 809       | tscd          | Starter Commander Deck Tokens                   | 2022-12-02   |
 | 810       | ea2           | Explorer Anthology 2                            | 2022-12-13   |
 | 811       | ybro          | Alchemy: The Brothers' War                      | 2022-12-13   |
-| 812       | pr23          | Regional Championship Qualifiers 2023           | 2023-01-01   |
-| 813       | onc           | Phyrexia: All Will Be One Commander             | 2023-02-03   |
-| 814       | one           | Phyrexia: All Will Be One                       | 2023-02-03   |
-| 815       | dmr           | Dominaria Remastered                            | 2023-03-31   |
+| 812       | p23           | Judge Gift Cards 2023                           | 2023-01-01   |
+| 813       | pr23          | Regional Championship Qualifiers 2023           | 2023-01-01   |
+| 814       | onc           | Phyrexia: All Will Be One Commander             | 2023-02-03   |
+| 815       | one           | Phyrexia: All Will Be One                       | 2023-02-03   |
+| 816       | dmr           | Dominaria Remastered                            | 2023-03-31   |
 
