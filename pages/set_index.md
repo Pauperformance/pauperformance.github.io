@@ -835,4 +835,5 @@ Lines in **bold** correspond to sets that have introduced new cards in the [Paup
 | 814       | dmr           | Dominaria Remastered                            | 2023-01-13   |
 | 815       | onc           | Phyrexia: All Will Be One Commander             | 2023-02-03   |
 | 816       | one           | Phyrexia: All Will Be One                       | 2023-02-03   |
+| 817       | slp           | Secret Lair Showdown                            | 2023-02-17   |
 
