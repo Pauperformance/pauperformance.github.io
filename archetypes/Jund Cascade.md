@@ -50,6 +50,7 @@
 <a href="https://scryfall.com/card/iko/100/suffocating-fumes"><img src="https://c1.scryfall.com/file/scryfall-cards/normal/front/6/6/66b562e4-35df-4aee-848d-ceb4204bbe58.jpg" class="archetype-card rounded-image"/></a>
 <a href="https://scryfall.com/card/c20/231/terminate"><img src="https://c1.scryfall.com/file/scryfall-cards/normal/front/1/a/1a2ba191-f11c-47d3-8459-34b0e0e56fd9.jpg" class="archetype-card rounded-image"/></a>
 <a href="https://scryfall.com/card/cmr/154/thorn-of-the-black-rose"><img src="https://c1.scryfall.com/file/scryfall-cards/normal/front/2/b/2b7538ad-cc41-4229-8a39-c1db21f2899a.jpg" class="archetype-card rounded-image"/></a>
+<a href="https://scryfall.com/card/ncc/439/thriving-grove"><img src="https://cards.scryfall.io/normal/front/1/d/1d6a0661-9be3-431f-8c73-110ab93c9b34.jpg" class="archetype-card rounded-image"/></a>
 </details><br/>
 
 
