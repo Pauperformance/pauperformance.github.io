@@ -48,7 +48,6 @@
 <a href="https://scryfall.com/card/c21/202/pulse-of-murasa"><img src="https://c1.scryfall.com/file/scryfall-cards/normal/front/a/4/a4b9f8f4-d704-4f16-8495-cf8185285859.jpg" class="archetype-card rounded-image"/></a>
 <a href="https://scryfall.com/card/a25/231/self-assembler"><img src="https://cards.scryfall.io/normal/front/d/8/d86ba613-29bd-45d8-b5ed-f8fe8323fe75.jpg" class="archetype-card rounded-image"/></a>
 <a href="https://scryfall.com/card/znr/254/spare-supplies"><img src="https://c1.scryfall.com/file/scryfall-cards/normal/front/a/5/a53baf25-1782-427b-a9dd-fc9b8dc6444f.jpg" class="archetype-card rounded-image"/></a>
-<a href="https://scryfall.com/card/ncc/439/thriving-grove"><img src="https://cards.scryfall.io/normal/front/1/d/1d6a0661-9be3-431f-8c73-110ab93c9b34.jpg" class="archetype-card rounded-image"/></a>
 </details><br/>
 
 
