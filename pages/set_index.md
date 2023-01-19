@@ -833,7 +833,7 @@ Lines in **bold** correspond to sets that have introduced new cards in the [Paup
 | 812       | p23           | Judge Gift Cards 2023                           | 2023-01-01   |
 | 813       | pr23          | Regional Championship Qualifiers 2023           | 2023-01-01   |
 | 814       | pw23          | Wizards Play Network 2023                       | 2023-01-01   |
-| 815       | dmr           | Dominaria Remastered                            | 2023-01-13   |
+| **815**   | **dmr**       | **Dominaria Remastered**                        | **2023-01-13** |
 | 816       | tdmr          | Dominaria Remastered Tokens                     | 2023-01-13   |
 | 817       | onc           | Phyrexia: All Will Be One Commander             | 2023-02-03   |
 | 818       | one           | Phyrexia: All Will Be One                       | 2023-02-03   |
