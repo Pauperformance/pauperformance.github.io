@@ -60,7 +60,6 @@ However, given its popularity, opponents typically reserve sideboard slots for (
 <a href="https://scryfall.com/card/pca/77/silhana-ledgewalker"><img src="https://c1.scryfall.com/file/scryfall-cards/normal/front/8/a/8ad3bdce-c0fa-4b5f-af14-7452b683960f.jpg" class="archetype-card rounded-image"/></a>
 <a href="https://scryfall.com/card/uma/184/spider-umbra"><img src="https://c1.scryfall.com/file/scryfall-cards/normal/front/7/6/762b8d61-53c9-41e1-aaa7-098b91d9b938.jpg" class="archetype-card rounded-image"/></a>
 <a href="https://scryfall.com/card/neo/38/spirited-companion"><img src="https://c1.scryfall.com/file/scryfall-cards/normal/front/5/a/5aa91a9e-2fe2-43bc-aa9c-cfb8a71829ff.jpg" class="archetype-card rounded-image"/></a>
-<a href="https://scryfall.com/card/ncc/439/thriving-grove"><img src="https://cards.scryfall.io/normal/front/1/d/1d6a0661-9be3-431f-8c73-110ab93c9b34.jpg" class="archetype-card rounded-image"/></a>
 <a href="https://scryfall.com/card/aer/126/unbridled-growth"><img src="https://c1.scryfall.com/file/scryfall-cards/normal/front/3/9/393fc419-a6ce-447d-9994-744cf41f9a27.jpg" class="archetype-card rounded-image"/></a>
 </details><br/>
 
