@@ -13,7 +13,7 @@ This page should be useful for Pauper players that haven't followed the latest r
 
 Further information about reference numbers used by Pauperformance (p12e) to uniquely identify Magic sets can be found in the [Set Index page](set_index.html).
 
-The total number of cards in the Pauper pool is: 8603.
+The total number of cards in the Pauper pool is: 8592.
 
 ---
 Table of Contents
@@ -176,7 +176,6 @@ Table of Contents
 * [Commander Legends: Battle for Baldur's Gate](#commander-legends-battle-for-baldur's-gate-clb) (*release: 2022-06-10 ~ p12e_code: 740*)
 * [Unfinity Sticker Sheets](#unfinity-sticker-sheets-sunf) (*release: 2022-10-07 ~ p12e_code: 789*)
 * [Jumpstart 2022](#jumpstart-2022-j22) (*release: 2022-12-02 ~ p12e_code: 807*)
-* [Dominaria Remastered](#dominaria-remastered-dmr) (*release: 2023-01-13 ~ p12e_code: 815*)
 
 ---
 
@@ -10191,26 +10190,6 @@ Table of Contents
 <a href="https://scryfall.com/card/j22/17/soul-read?utm_source=api">Soul Read</a><br/>
 <a href="https://scryfall.com/card/j22/45/spectral-hunt-caller?utm_source=api">Spectral Hunt-Caller</a><br/>
 <a href="https://scryfall.com/card/j22/27/suspicious-shambler?utm_source=api">Suspicious Shambler</a><br/>
-</details>
-[]()
-
-## Dominaria Remastered (dmr)
-*release: 2023-01-13 | p12e_code: 815*
-
-<details>
-  <summary>Click to see 11 new cards</summary>
-
-<a href="https://scryfall.com/card/dmr/83/evil-eye-of-orms-by-gore?utm_source=api">Evil Eye of Orms-by-Gore</a><br/>
-<a href="https://scryfall.com/card/dmr/228/juggernaut?utm_source=api">Juggernaut</a><br/>
-<a href="https://scryfall.com/card/dmr/11/kjeldoran-gargoyle?utm_source=api">Kjeldoran Gargoyle</a><br/>
-<a href="https://scryfall.com/card/dmr/17/nomad-decoy?utm_source=api">Nomad Decoy</a><br/>
-<a href="https://scryfall.com/card/dmr/63/ovinize?utm_source=api">Ovinize</a><br/>
-<a href="https://scryfall.com/card/dmr/20/phantom-flock?utm_source=api">Phantom Flock</a><br/>
-<a href="https://scryfall.com/card/dmr/173/primal-boost?utm_source=api">Primal Boost</a><br/>
-<a href="https://scryfall.com/card/dmr/134/ridgetop-raptor?utm_source=api">Ridgetop Raptor</a><br/>
-<a href="https://scryfall.com/card/dmr/29/spirit-link?utm_source=api">Spirit Link</a><br/>
-<a href="https://scryfall.com/card/dmr/180/symbiotic-beast?utm_source=api">Symbiotic Beast</a><br/>
-<a href="https://scryfall.com/card/dmr/259/terminal-moraine?utm_source=api">Terminal Moraine</a><br/>
 </details>
 []()
 
