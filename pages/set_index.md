@@ -786,7 +786,7 @@ Lines in **bold** correspond to sets that have introduced new cards in the [Paup
 | 765       | ph18          | 2018 Heroes of the Realm                        | 2019-08-01   |
 | 766       | ph19          | 2019 Heroes of the Realm                        | 2020-08-01   |
 | 767       | ph20          | 2020 Heroes of the Realm                        | 2021-08-01   |
-| 768       | mneo          | Kamigawa: Neon Destiny Minigames                | 2022-02-18   |
+| 768       | mneo          | Kamigawa: Neon Dynasty Minigames                | 2022-02-18   |
 | 769       | sneo          | Kamigawa: Neon Dynasty Substitute Cards         | 2022-02-18   |
 | 770       | q07           | Challenger Decks 2022                           | 2022-04-01   |
 | 771       | msnc          | Streets of New Capenna Minigames                | 2022-04-29   |
