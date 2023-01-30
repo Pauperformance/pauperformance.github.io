@@ -837,5 +837,7 @@ Lines in **bold** correspond to sets that have introduced new cards in the [Paup
 | 816       | tdmr          | Dominaria Remastered Tokens                     | 2023-01-13   |
 | 817       | onc           | Phyrexia: All Will Be One Commander             | 2023-02-03   |
 | 818       | one           | Phyrexia: All Will Be One                       | 2023-02-03   |
-| 819       | slp           | Secret Lair Showdown                            | 2023-02-17   |
+| 819       | tonc          | Phyrexia: All Will Be One Commander Tokens      | 2023-02-03   |
+| 820       | tone          | Phyrexia: All Will Be One Tokens                | 2023-02-03   |
+| 821       | slp           | Secret Lair Showdown                            | 2023-02-17   |
 
