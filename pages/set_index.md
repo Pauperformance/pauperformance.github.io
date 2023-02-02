@@ -802,9 +802,9 @@ Lines in **bold** correspond to sets that have introduced new cards in the [Paup
 | 781       | admu          | Dominaria United Art Series                     | 2022-09-09   |
 | 782       | p30h          | 30th Anniversary History Promos                 | 2022-09-09   |
 | 783       | pdmu          | Dominaria United Promos                         | 2022-09-09   |
-| 784       | pdwa          | Dominaria United Japanese Promo Tokens          | 2022-09-09   |
-| 785       | tdmc          | Dominaria United Commander Tokens               | 2022-09-09   |
-| 786       | tdmu          | Dominaria United Tokens                         | 2022-09-09   |
+| 784       | tdmc          | Dominaria United Commander Tokens               | 2022-09-09   |
+| 785       | tdmu          | Dominaria United Tokens                         | 2022-09-09   |
+| 786       | wdmu          | Dominaria United Japanese Promo Tokens          | 2022-09-09   |
 | 787       | prcq          | Regional Championship Qualifiers 2022           | 2022-10-01   |
 | 788       | ydmu          | Alchemy: Dominaria                              | 2022-10-05   |
 | **789**   | **sunf**      | **Unfinity Sticker Sheets**                     | **2022-10-07** |
@@ -835,11 +835,12 @@ Lines in **bold** correspond to sets that have introduced new cards in the [Paup
 | 814       | pw23          | Wizards Play Network 2023                       | 2023-01-01   |
 | **815**   | **dmr**       | **Dominaria Remastered**                        | **2023-01-13** |
 | 816       | tdmr          | Dominaria Remastered Tokens                     | 2023-01-13   |
-| 817       | aone          | Phyrexia: All Will Be One Art Series            | 2023-02-03   |
-| 818       | fone          | Phyrexia: All Will Be One Jumpstart Front Cards | 2023-02-03   |
-| 819       | onc           | Phyrexia: All Will Be One Commander             | 2023-02-03   |
-| **820**   | **one**       | **Phyrexia: All Will Be One**                   | **2023-02-03** |
-| 821       | tonc          | Phyrexia: All Will Be One Commander Tokens      | 2023-02-03   |
-| 822       | tone          | Phyrexia: All Will Be One Tokens                | 2023-02-03   |
-| 823       | slp           | Secret Lair Showdown                            | 2023-02-17   |
+| 817       | wone          | Phyrexia: All Will Be One Japanese Promo Tokens | 2023-01-27   |
+| 818       | aone          | Phyrexia: All Will Be One Art Series            | 2023-02-03   |
+| 819       | fone          | Phyrexia: All Will Be One Jumpstart Front Cards | 2023-02-03   |
+| 820       | onc           | Phyrexia: All Will Be One Commander             | 2023-02-03   |
+| 821       | one           | Phyrexia: All Will Be One                       | 2023-02-03   |
+| 822       | tonc          | Phyrexia: All Will Be One Commander Tokens      | 2023-02-03   |
+| 823       | tone          | Phyrexia: All Will Be One Tokens                | 2023-02-03   |
+| 824       | slp           | Secret Lair Showdown                            | 2023-02-17   |
 
