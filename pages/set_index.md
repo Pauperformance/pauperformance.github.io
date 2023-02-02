@@ -839,7 +839,7 @@ Lines in **bold** correspond to sets that have introduced new cards in the [Paup
 | 818       | aone          | Phyrexia: All Will Be One Art Series            | 2023-02-03   |
 | 819       | fone          | Phyrexia: All Will Be One Jumpstart Front Cards | 2023-02-03   |
 | 820       | onc           | Phyrexia: All Will Be One Commander             | 2023-02-03   |
-| 821       | one           | Phyrexia: All Will Be One                       | 2023-02-03   |
+| **821**   | **one**       | **Phyrexia: All Will Be One**                   | **2023-02-03** |
 | 822       | tonc          | Phyrexia: All Will Be One Commander Tokens      | 2023-02-03   |
 | 823       | tone          | Phyrexia: All Will Be One Tokens                | 2023-02-03   |
 | 824       | slp           | Secret Lair Showdown                            | 2023-02-17   |
