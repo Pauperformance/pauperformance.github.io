@@ -25,8 +25,8 @@ Please, read the [PhD Guidelines](./pages/phd_guidelines.html).**
 
 ---
 
-## The current Pauperformance code for decks is **815**.
-It refers to Dominaria Remastered (dmr), released on 2023-01-13.
+## The current Pauperformance code for decks is **740**.
+It refers to Commander Legends: Battle for Baldur's Gate (clb), released on 2022-06-10.
 
 ---
 
