@@ -25,8 +25,8 @@ Please, read the [PhD Guidelines](./pages/phd_guidelines.html).**
 
 ---
 
-## The current Pauperformance code for decks is **815**.
-It refers to Dominaria Remastered (dmr), released on 2023-01-13.
+## The current Pauperformance code for decks is **821**.
+It refers to Phyrexia: All Will Be One (one), released on 2023-02-03.
 
 ---
 
