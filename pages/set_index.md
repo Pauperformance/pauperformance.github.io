@@ -800,48 +800,49 @@ Lines in **bold** correspond to sets that have introduced new cards in the [Paup
 | 779       | psvc          | Summer Vacation Promos 2022                     | 2022-08-01   |
 | 780       | p30a          | 30th Anniversary Play Promos                    | 2022-09-02   |
 | 781       | admu          | Dominaria United Art Series                     | 2022-09-09   |
-| 782       | p30h          | 30th Anniversary History Promos                 | 2022-09-09   |
-| 783       | pdmu          | Dominaria United Promos                         | 2022-09-09   |
-| 784       | tdmc          | Dominaria United Commander Tokens               | 2022-09-09   |
-| 785       | tdmu          | Dominaria United Tokens                         | 2022-09-09   |
-| 786       | wdmu          | Dominaria United Japanese Promo Tokens          | 2022-09-09   |
-| 787       | prcq          | Regional Championship Qualifiers 2022           | 2022-10-01   |
-| 788       | ydmu          | Alchemy: Dominaria                              | 2022-10-05   |
-| **789**   | **sunf**      | **Unfinity Sticker Sheets**                     | **2022-10-07** |
-| 790       | uplist        | The List (Unfinity Foil Edition)                | 2022-10-07   |
-| 791       | gn3           | Game Night: Free-for-All                        | 2022-10-14   |
-| 792       | tgn3          | Game Night: Free-for-All Tokens                 | 2022-10-14   |
-| 793       | slc           | Secret Lair 30th Anniversary Countdown Kit      | 2022-11-01   |
-| 794       | q08           | Pioneer Challenger Decks 2022                   | 2022-11-04   |
-| 795       | abro          | The Brothers' War Art Series                    | 2022-11-18   |
-| 796       | bot           | Transformers                                    | 2022-11-18   |
-| 797       | brc           | The Brothers' War Commander                     | 2022-11-18   |
-| 798       | brr           | The Brothers' War Retro Artifacts               | 2022-11-18   |
-| 799       | mbro          | The Brothers' War Minigames                     | 2022-11-18   |
-| 800       | pbro          | The Brothers' War Promos                        | 2022-11-18   |
-| 801       | tbot          | Transformers Tokens                             | 2022-11-18   |
-| 802       | tbrc          | The Brothers' War Commander Tokens              | 2022-11-18   |
-| 803       | tbro          | The Brothers' War Tokens                        | 2022-11-18   |
-| 804       | pewk          | Eternal Weekend 2022                            | 2022-11-26   |
-| 805       | 30a           | 30th Anniversary Edition                        | 2022-11-28   |
-| 806       | t30a          | 30th Anniversary Tokens                         | 2022-11-28   |
-| 807       | fj22          | Jumpstart 2022 Front Cards                      | 2022-12-02   |
-| **808**   | **j22**       | **Jumpstart 2022**                              | **2022-12-02** |
-| 809       | scd           | Starter Commander Decks                         | 2022-12-02   |
-| 810       | tscd          | Starter Commander Deck Tokens                   | 2022-12-02   |
-| 811       | ea2           | Explorer Anthology 2                            | 2022-12-13   |
-| 812       | ybro          | Alchemy: The Brothers' War                      | 2022-12-13   |
-| 813       | p23           | Judge Gift Cards 2023                           | 2023-01-01   |
-| 814       | pr23          | Regional Championship Qualifiers 2023           | 2023-01-01   |
-| 815       | pw23          | Wizards Play Network 2023                       | 2023-01-01   |
-| **816**   | **dmr**       | **Dominaria Remastered**                        | **2023-01-13** |
-| 817       | tdmr          | Dominaria Remastered Tokens                     | 2023-01-13   |
-| 818       | wone          | Phyrexia: All Will Be One Japanese Promo Tokens | 2023-01-27   |
-| 819       | aone          | Phyrexia: All Will Be One Art Series            | 2023-02-03   |
-| 820       | fone          | Phyrexia: All Will Be One Jumpstart Front Cards | 2023-02-03   |
-| 821       | onc           | Phyrexia: All Will Be One Commander             | 2023-02-03   |
-| **822**   | **one**       | **Phyrexia: All Will Be One**                   | **2023-02-03** |
-| 823       | tonc          | Phyrexia: All Will Be One Commander Tokens      | 2023-02-03   |
-| 824       | tone          | Phyrexia: All Will Be One Tokens                | 2023-02-03   |
-| 825       | slp           | Secret Lair Showdown                            | 2023-02-17   |
+| 782       | mdmu          | Dominaria United Minigames                      | 2022-09-09   |
+| 783       | p30h          | 30th Anniversary History Promos                 | 2022-09-09   |
+| 784       | pdmu          | Dominaria United Promos                         | 2022-09-09   |
+| 785       | tdmc          | Dominaria United Commander Tokens               | 2022-09-09   |
+| 786       | tdmu          | Dominaria United Tokens                         | 2022-09-09   |
+| 787       | wdmu          | Dominaria United Japanese Promo Tokens          | 2022-09-09   |
+| 788       | prcq          | Regional Championship Qualifiers 2022           | 2022-10-01   |
+| 789       | ydmu          | Alchemy: Dominaria                              | 2022-10-05   |
+| **790**   | **sunf**      | **Unfinity Sticker Sheets**                     | **2022-10-07** |
+| 791       | uplist        | The List (Unfinity Foil Edition)                | 2022-10-07   |
+| 792       | gn3           | Game Night: Free-for-All                        | 2022-10-14   |
+| 793       | tgn3          | Game Night: Free-for-All Tokens                 | 2022-10-14   |
+| 794       | slc           | Secret Lair 30th Anniversary Countdown Kit      | 2022-11-01   |
+| 795       | q08           | Pioneer Challenger Decks 2022                   | 2022-11-04   |
+| 796       | abro          | The Brothers' War Art Series                    | 2022-11-18   |
+| 797       | bot           | Transformers                                    | 2022-11-18   |
+| 798       | brc           | The Brothers' War Commander                     | 2022-11-18   |
+| 799       | brr           | The Brothers' War Retro Artifacts               | 2022-11-18   |
+| 800       | mbro          | The Brothers' War Minigames                     | 2022-11-18   |
+| 801       | pbro          | The Brothers' War Promos                        | 2022-11-18   |
+| 802       | tbot          | Transformers Tokens                             | 2022-11-18   |
+| 803       | tbrc          | The Brothers' War Commander Tokens              | 2022-11-18   |
+| 804       | tbro          | The Brothers' War Tokens                        | 2022-11-18   |
+| 805       | pewk          | Eternal Weekend 2022                            | 2022-11-26   |
+| 806       | 30a           | 30th Anniversary Edition                        | 2022-11-28   |
+| 807       | t30a          | 30th Anniversary Tokens                         | 2022-11-28   |
+| 808       | fj22          | Jumpstart 2022 Front Cards                      | 2022-12-02   |
+| **809**   | **j22**       | **Jumpstart 2022**                              | **2022-12-02** |
+| 810       | scd           | Starter Commander Decks                         | 2022-12-02   |
+| 811       | tscd          | Starter Commander Deck Tokens                   | 2022-12-02   |
+| 812       | ea2           | Explorer Anthology 2                            | 2022-12-13   |
+| 813       | ybro          | Alchemy: The Brothers' War                      | 2022-12-13   |
+| 814       | p23           | Judge Gift Cards 2023                           | 2023-01-01   |
+| 815       | pr23          | Regional Championship Qualifiers 2023           | 2023-01-01   |
+| 816       | pw23          | Wizards Play Network 2023                       | 2023-01-01   |
+| **817**   | **dmr**       | **Dominaria Remastered**                        | **2023-01-13** |
+| 818       | tdmr          | Dominaria Remastered Tokens                     | 2023-01-13   |
+| 819       | wone          | Phyrexia: All Will Be One Japanese Promo Tokens | 2023-01-27   |
+| 820       | aone          | Phyrexia: All Will Be One Art Series            | 2023-02-03   |
+| 821       | fone          | Phyrexia: All Will Be One Jumpstart Front Cards | 2023-02-03   |
+| 822       | onc           | Phyrexia: All Will Be One Commander             | 2023-02-03   |
+| **823**   | **one**       | **Phyrexia: All Will Be One**                   | **2023-02-03** |
+| 824       | tonc          | Phyrexia: All Will Be One Commander Tokens      | 2023-02-03   |
+| 825       | tone          | Phyrexia: All Will Be One Tokens                | 2023-02-03   |
+| 826       | slp           | Secret Lair Showdown                            | 2023-02-17   |
 
