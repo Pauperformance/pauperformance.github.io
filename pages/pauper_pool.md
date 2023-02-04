@@ -174,10 +174,10 @@ Table of Contents
 * [Kamigawa: Neon Dynasty](#kamigawa-neon-dynasty-neo) (*release: 2022-02-18 ~ p12e_code: 722*)
 * [Streets of New Capenna](#streets-of-new-capenna-snc) (*release: 2022-04-29 ~ p12e_code: 735*)
 * [Commander Legends: Battle for Baldur's Gate](#commander-legends-battle-for-baldur's-gate-clb) (*release: 2022-06-10 ~ p12e_code: 740*)
-* [Unfinity Sticker Sheets](#unfinity-sticker-sheets-sunf) (*release: 2022-10-07 ~ p12e_code: 790*)
-* [Jumpstart 2022](#jumpstart-2022-j22) (*release: 2022-12-02 ~ p12e_code: 809*)
-* [Dominaria Remastered](#dominaria-remastered-dmr) (*release: 2023-01-13 ~ p12e_code: 817*)
-* [Phyrexia: All Will Be One](#phyrexia-all-will-be-one-one) (*release: 2023-02-03 ~ p12e_code: 823*)
+* [Unfinity Sticker Sheets](#unfinity-sticker-sheets-sunf) (*release: 2022-10-07 ~ p12e_code: 791*)
+* [Jumpstart 2022](#jumpstart-2022-j22) (*release: 2022-12-02 ~ p12e_code: 810*)
+* [Dominaria Remastered](#dominaria-remastered-dmr) (*release: 2023-01-13 ~ p12e_code: 818*)
+* [Phyrexia: All Will Be One](#phyrexia-all-will-be-one-one) (*release: 2023-02-03 ~ p12e_code: 824*)
 
 ---
 
@@ -10117,7 +10117,7 @@ Table of Contents
 []()
 
 ## Unfinity Sticker Sheets (sunf)
-*release: 2022-10-07 | p12e_code: 790*
+*release: 2022-10-07 | p12e_code: 791*
 
 <details>
   <summary>Click to see 48 new cards</summary>
@@ -10174,7 +10174,7 @@ Table of Contents
 []()
 
 ## Jumpstart 2022 (j22)
-*release: 2022-12-02 | p12e_code: 809*
+*release: 2022-12-02 | p12e_code: 810*
 
 <details>
   <summary>Click to see 13 new cards</summary>
@@ -10196,7 +10196,7 @@ Table of Contents
 []()
 
 ## Dominaria Remastered (dmr)
-*release: 2023-01-13 | p12e_code: 817*
+*release: 2023-01-13 | p12e_code: 818*
 
 <details>
   <summary>Click to see 11 new cards</summary>
@@ -10216,7 +10216,7 @@ Table of Contents
 []()
 
 ## Phyrexia: All Will Be One (one)
-*release: 2023-02-03 | p12e_code: 823*
+*release: 2023-02-03 | p12e_code: 824*
 
 <details>
   <summary>Click to see 95 new cards</summary>
