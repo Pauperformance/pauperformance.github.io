@@ -843,9 +843,9 @@ Lines in **bold** correspond to sets that have introduced new cards in the [Paup
 | 822       | fone          | Phyrexia: All Will Be One Jumpstart Front Cards | 2023-02-03   |
 | 823       | onc           | Phyrexia: All Will Be One Commander             | 2023-02-03   |
 | **824**   | **one**       | **Phyrexia: All Will Be One**                   | **2023-02-03** |
-| 825       | tonc          | Phyrexia: All Will Be One Commander Tokens      | 2023-02-03   |
-| 826       | tone          | Phyrexia: All Will Be One Tokens                | 2023-02-03   |
-| 827       | pone          | Phyrexia: All Will Be One Promos                | 2023-02-04   |
+| 825       | pone          | Phyrexia: All Will Be One Promos                | 2023-02-03   |
+| 826       | tonc          | Phyrexia: All Will Be One Commander Tokens      | 2023-02-03   |
+| 827       | tone          | Phyrexia: All Will Be One Tokens                | 2023-02-03   |
 | 828       | pl23          | Year of the Rabbit 2023                         | 2023-02-10   |
 | 829       | slp           | Secret Lair Showdown                            | 2023-02-17   |
 
