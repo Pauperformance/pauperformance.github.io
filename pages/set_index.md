@@ -778,74 +778,75 @@ Lines in **bold** correspond to sets that have introduced new cards in the [Paup
 | 757       | ysnc          | Alchemy: New Capenna                            | 2022-06-02   |
 | 758       | pclb          | Commander Legends: Battle for Baldur's Gate Promos | 2022-06-10   |
 | 759       | aclb          | Battle for Baldur's Gate Art Series             | 2022-06-10   |
-| 760       | o90p          | Oversized 90's Promos                           | 1996-04-01   |
-| 761       | olep          | Oversized League Prizes                         | 1997-05-30   |
-| 762       | wmc           | World Magic Cup Qualifiers                      | 2013-04-06   |
-| 763       | phtr          | 2016 Heroes of the Realm                        | 2017-09-20   |
-| 764       | ph17          | 2017 Heroes of the Realm                        | 2018-08-01   |
-| 765       | ph18          | 2018 Heroes of the Realm                        | 2019-08-01   |
-| 766       | ph19          | 2019 Heroes of the Realm                        | 2020-08-01   |
-| 767       | ph20          | 2020 Heroes of the Realm                        | 2021-08-01   |
-| 768       | mmid          | Innistrad: Midnight Hunt Minigames              | 2021-09-24   |
-| 769       | mneo          | Kamigawa: Neon Dynasty Minigames                | 2022-02-18   |
-| 770       | sneo          | Kamigawa: Neon Dynasty Substitute Cards         | 2022-02-18   |
-| 771       | q07           | Challenger Decks 2022                           | 2022-04-01   |
-| 772       | msnc          | Streets of New Capenna Minigames                | 2022-04-29   |
-| 773       | ptsnc         | Streets of New Capenna Southeast Asia Tokens    | 2022-04-30   |
-| 774       | mclb          | Commander Legends: Battle for Baldur's Gate Minigames | 2022-06-10   |
-| 775       | hbg           | Alchemy Horizons: Baldur's Gate                 | 2022-07-07   |
-| 776       | t2x2          | Double Masters 2022 Tokens                      | 2022-07-08   |
-| 777       | ea1           | Explorer Anthology 1                            | 2022-07-28   |
-| 778       | ha6           | Historic Anthology 6                            | 2022-07-28   |
-| 779       | ph21          | 2021 Heroes of the Realm                        | 2022-08-01   |
-| 780       | psvc          | Summer Vacation Promos 2022                     | 2022-08-01   |
-| 781       | p30a          | 30th Anniversary Play Promos                    | 2022-09-02   |
-| 782       | admu          | Dominaria United Art Series                     | 2022-09-09   |
-| 783       | mdmu          | Dominaria United Minigames                      | 2022-09-09   |
-| 784       | p30h          | 30th Anniversary History Promos                 | 2022-09-09   |
-| 785       | pdmu          | Dominaria United Promos                         | 2022-09-09   |
-| 786       | tdmc          | Dominaria United Commander Tokens               | 2022-09-09   |
-| 787       | tdmu          | Dominaria United Tokens                         | 2022-09-09   |
-| 788       | wdmu          | Dominaria United Japanese Promo Tokens          | 2022-09-09   |
-| 789       | prcq          | Regional Championship Qualifiers 2022           | 2022-10-01   |
-| 790       | ydmu          | Alchemy: Dominaria                              | 2022-10-05   |
-| **791**   | **sunf**      | **Unfinity Sticker Sheets**                     | **2022-10-07** |
-| 792       | uplist        | The List (Unfinity Foil Edition)                | 2022-10-07   |
-| 793       | gn3           | Game Night: Free-for-All                        | 2022-10-14   |
-| 794       | tgn3          | Game Night: Free-for-All Tokens                 | 2022-10-14   |
-| 795       | slc           | Secret Lair 30th Anniversary Countdown Kit      | 2022-11-01   |
-| 796       | q08           | Pioneer Challenger Decks 2022                   | 2022-11-04   |
-| 797       | abro          | The Brothers' War Art Series                    | 2022-11-18   |
-| 798       | bot           | Transformers                                    | 2022-11-18   |
-| 799       | brc           | The Brothers' War Commander                     | 2022-11-18   |
-| 800       | brr           | The Brothers' War Retro Artifacts               | 2022-11-18   |
-| 801       | mbro          | The Brothers' War Minigames                     | 2022-11-18   |
-| 802       | pbro          | The Brothers' War Promos                        | 2022-11-18   |
-| 803       | tbot          | Transformers Tokens                             | 2022-11-18   |
-| 804       | tbrc          | The Brothers' War Commander Tokens              | 2022-11-18   |
-| 805       | tbro          | The Brothers' War Tokens                        | 2022-11-18   |
-| 806       | pewk          | Eternal Weekend 2022                            | 2022-11-26   |
-| 807       | 30a           | 30th Anniversary Edition                        | 2022-11-28   |
-| 808       | t30a          | 30th Anniversary Tokens                         | 2022-11-28   |
-| 809       | fj22          | Jumpstart 2022 Front Cards                      | 2022-12-02   |
-| **810**   | **j22**       | **Jumpstart 2022**                              | **2022-12-02** |
-| 811       | scd           | Starter Commander Decks                         | 2022-12-02   |
-| 812       | tscd          | Starter Commander Deck Tokens                   | 2022-12-02   |
-| 813       | ea2           | Explorer Anthology 2                            | 2022-12-13   |
-| 814       | ybro          | Alchemy: The Brothers' War                      | 2022-12-13   |
-| 815       | p23           | Judge Gift Cards 2023                           | 2023-01-01   |
-| 816       | pr23          | Regional Championship Qualifiers 2023           | 2023-01-01   |
-| 817       | pw23          | Wizards Play Network 2023                       | 2023-01-01   |
-| **818**   | **dmr**       | **Dominaria Remastered**                        | **2023-01-13** |
-| 819       | tdmr          | Dominaria Remastered Tokens                     | 2023-01-13   |
-| 820       | wone          | Phyrexia: All Will Be One Japanese Promo Tokens | 2023-01-27   |
-| 821       | aone          | Phyrexia: All Will Be One Art Series            | 2023-02-03   |
-| 822       | fone          | Phyrexia: All Will Be One Jumpstart Front Cards | 2023-02-03   |
-| 823       | onc           | Phyrexia: All Will Be One Commander             | 2023-02-03   |
-| **824**   | **one**       | **Phyrexia: All Will Be One**                   | **2023-02-03** |
-| 825       | pone          | Phyrexia: All Will Be One Promos                | 2023-02-03   |
-| 826       | tonc          | Phyrexia: All Will Be One Commander Tokens      | 2023-02-03   |
-| 827       | tone          | Phyrexia: All Will Be One Tokens                | 2023-02-03   |
-| 828       | pl23          | Year of the Rabbit 2023                         | 2023-02-10   |
-| 829       | slp           | Secret Lair Showdown                            | 2023-02-17   |
+| 760       | bchr          | FBB Chronicles                                  | 1995-07-01   |
+| 761       | o90p          | Oversized 90's Promos                           | 1996-04-01   |
+| 762       | olep          | Oversized League Prizes                         | 1997-05-30   |
+| 763       | wmc           | World Magic Cup Qualifiers                      | 2013-04-06   |
+| 764       | phtr          | 2016 Heroes of the Realm                        | 2017-09-20   |
+| 765       | ph17          | 2017 Heroes of the Realm                        | 2018-08-01   |
+| 766       | ph18          | 2018 Heroes of the Realm                        | 2019-08-01   |
+| 767       | ph19          | 2019 Heroes of the Realm                        | 2020-08-01   |
+| 768       | ph20          | 2020 Heroes of the Realm                        | 2021-08-01   |
+| 769       | mmid          | Innistrad: Midnight Hunt Minigames              | 2021-09-24   |
+| 770       | mneo          | Kamigawa: Neon Dynasty Minigames                | 2022-02-18   |
+| 771       | sneo          | Kamigawa: Neon Dynasty Substitute Cards         | 2022-02-18   |
+| 772       | q07           | Challenger Decks 2022                           | 2022-04-01   |
+| 773       | msnc          | Streets of New Capenna Minigames                | 2022-04-29   |
+| 774       | ptsnc         | Streets of New Capenna Southeast Asia Tokens    | 2022-04-30   |
+| 775       | mclb          | Commander Legends: Battle for Baldur's Gate Minigames | 2022-06-10   |
+| 776       | hbg           | Alchemy Horizons: Baldur's Gate                 | 2022-07-07   |
+| 777       | t2x2          | Double Masters 2022 Tokens                      | 2022-07-08   |
+| 778       | ea1           | Explorer Anthology 1                            | 2022-07-28   |
+| 779       | ha6           | Historic Anthology 6                            | 2022-07-28   |
+| 780       | ph21          | 2021 Heroes of the Realm                        | 2022-08-01   |
+| 781       | psvc          | Summer Vacation Promos 2022                     | 2022-08-01   |
+| 782       | p30a          | 30th Anniversary Play Promos                    | 2022-09-02   |
+| 783       | admu          | Dominaria United Art Series                     | 2022-09-09   |
+| 784       | mdmu          | Dominaria United Minigames                      | 2022-09-09   |
+| 785       | p30h          | 30th Anniversary History Promos                 | 2022-09-09   |
+| 786       | pdmu          | Dominaria United Promos                         | 2022-09-09   |
+| 787       | tdmc          | Dominaria United Commander Tokens               | 2022-09-09   |
+| 788       | tdmu          | Dominaria United Tokens                         | 2022-09-09   |
+| 789       | wdmu          | Dominaria United Japanese Promo Tokens          | 2022-09-09   |
+| 790       | prcq          | Regional Championship Qualifiers 2022           | 2022-10-01   |
+| 791       | ydmu          | Alchemy: Dominaria                              | 2022-10-05   |
+| **792**   | **sunf**      | **Unfinity Sticker Sheets**                     | **2022-10-07** |
+| 793       | uplist        | The List (Unfinity Foil Edition)                | 2022-10-07   |
+| 794       | gn3           | Game Night: Free-for-All                        | 2022-10-14   |
+| 795       | tgn3          | Game Night: Free-for-All Tokens                 | 2022-10-14   |
+| 796       | slc           | Secret Lair 30th Anniversary Countdown Kit      | 2022-11-01   |
+| 797       | q08           | Pioneer Challenger Decks 2022                   | 2022-11-04   |
+| 798       | abro          | The Brothers' War Art Series                    | 2022-11-18   |
+| 799       | bot           | Transformers                                    | 2022-11-18   |
+| 800       | brc           | The Brothers' War Commander                     | 2022-11-18   |
+| 801       | brr           | The Brothers' War Retro Artifacts               | 2022-11-18   |
+| 802       | mbro          | The Brothers' War Minigames                     | 2022-11-18   |
+| 803       | pbro          | The Brothers' War Promos                        | 2022-11-18   |
+| 804       | tbot          | Transformers Tokens                             | 2022-11-18   |
+| 805       | tbrc          | The Brothers' War Commander Tokens              | 2022-11-18   |
+| 806       | tbro          | The Brothers' War Tokens                        | 2022-11-18   |
+| 807       | pewk          | Eternal Weekend 2022                            | 2022-11-26   |
+| 808       | 30a           | 30th Anniversary Edition                        | 2022-11-28   |
+| 809       | t30a          | 30th Anniversary Tokens                         | 2022-11-28   |
+| 810       | fj22          | Jumpstart 2022 Front Cards                      | 2022-12-02   |
+| **811**   | **j22**       | **Jumpstart 2022**                              | **2022-12-02** |
+| 812       | scd           | Starter Commander Decks                         | 2022-12-02   |
+| 813       | tscd          | Starter Commander Deck Tokens                   | 2022-12-02   |
+| 814       | ea2           | Explorer Anthology 2                            | 2022-12-13   |
+| 815       | ybro          | Alchemy: The Brothers' War                      | 2022-12-13   |
+| 816       | p23           | Judge Gift Cards 2023                           | 2023-01-01   |
+| 817       | pr23          | Regional Championship Qualifiers 2023           | 2023-01-01   |
+| 818       | pw23          | Wizards Play Network 2023                       | 2023-01-01   |
+| **819**   | **dmr**       | **Dominaria Remastered**                        | **2023-01-13** |
+| 820       | tdmr          | Dominaria Remastered Tokens                     | 2023-01-13   |
+| 821       | wone          | Phyrexia: All Will Be One Japanese Promo Tokens | 2023-01-27   |
+| 822       | aone          | Phyrexia: All Will Be One Art Series            | 2023-02-03   |
+| 823       | fone          | Phyrexia: All Will Be One Jumpstart Front Cards | 2023-02-03   |
+| 824       | onc           | Phyrexia: All Will Be One Commander             | 2023-02-03   |
+| **825**   | **one**       | **Phyrexia: All Will Be One**                   | **2023-02-03** |
+| 826       | pone          | Phyrexia: All Will Be One Promos                | 2023-02-03   |
+| 827       | tonc          | Phyrexia: All Will Be One Commander Tokens      | 2023-02-03   |
+| 828       | tone          | Phyrexia: All Will Be One Tokens                | 2023-02-03   |
+| 829       | pl23          | Year of the Rabbit 2023                         | 2023-02-10   |
+| 830       | slp           | Secret Lair Showdown                            | 2023-02-17   |
 
