@@ -849,5 +849,8 @@ Lines in **bold** correspond to sets that have introduced new cards in the [Paup
 | 828       | tone          | Phyrexia: All Will Be One Tokens                | 2023-02-03   |
 | 829       | pl23          | Year of the Rabbit 2023                         | 2023-02-10   |
 | 830       | slp           | Secret Lair Showdown                            | 2023-02-17   |
-| 831       | mom           | March of the Machine                            | 2023-04-21   |
+| 831       | moc           | March of the Machine Commander                  | 2023-04-21   |
+| 832       | mom           | March of the Machine                            | 2023-04-21   |
+| 833       | mul           | Multiverse Legends                              | 2023-04-21   |
+| 834       | mat           | March of the Machine: The Aftermath             | 2023-05-12   |
 
