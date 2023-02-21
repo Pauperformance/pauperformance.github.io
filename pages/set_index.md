@@ -835,8 +835,8 @@ Lines in **bold** correspond to sets that have introduced new cards in the [Paup
 | 814       | ea2           | Explorer Anthology 2                            | 2022-12-13   |
 | 815       | ybro          | Alchemy: The Brothers' War                      | 2022-12-13   |
 | 816       | p23           | Judge Gift Cards 2023                           | 2023-01-01   |
-| 817       | pr23          | Regional Championship Qualifiers 2023           | 2023-01-01   |
-| 818       | pw23          | Wizards Play Network 2023                       | 2023-01-01   |
+| 817       | pw23          | Wizards Play Network 2023                       | 2023-01-01   |
+| 818       | pr23          | Regional Championship Qualifiers 2023           | 2023-01-07   |
 | **819**   | **dmr**       | **Dominaria Remastered**                        | **2023-01-13** |
 | 820       | tdmr          | Dominaria Remastered Tokens                     | 2023-01-13   |
 | 821       | wone          | Phyrexia: All Will Be One Japanese Promo Tokens | 2023-01-27   |
