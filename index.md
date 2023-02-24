@@ -25,8 +25,8 @@ Please, read the [PhD Guidelines](./pages/phd_guidelines.html).**
 
 ---
 
-## The current Pauperformance code for decks is **825**.
-It refers to Phyrexia: All Will Be One (one), released on 2023-02-03.
+## The current Pauperformance code for decks is **740**.
+It refers to Commander Legends: Battle for Baldur's Gate (clb), released on 2022-06-10.
 
 ---
 
