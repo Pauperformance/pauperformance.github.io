@@ -177,7 +177,7 @@ Table of Contents
 * [Unfinity Sticker Sheets](#unfinity-sticker-sheets-sunf) (*release: 2022-10-07 ~ p12e_code: 792*)
 * [Jumpstart 2022](#jumpstart-2022-j22) (*release: 2022-12-02 ~ p12e_code: 811*)
 * [Dominaria Remastered](#dominaria-remastered-dmr) (*release: 2023-01-13 ~ p12e_code: 819*)
-* [Phyrexia: All Will Be One](#phyrexia-all-will-be-one-one) (*release: 2023-02-03 ~ p12e_code: 825*)
+* [Phyrexia: All Will Be One](#phyrexia-all-will-be-one-one) (*release: 2023-02-03 ~ p12e_code: 826*)
 
 ---
 
@@ -10216,7 +10216,7 @@ Table of Contents
 []()
 
 ## Phyrexia: All Will Be One (one)
-*release: 2023-02-03 | p12e_code: 825*
+*release: 2023-02-03 | p12e_code: 826*
 
 <details>
   <summary>Click to see 95 new cards</summary>
