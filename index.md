@@ -25,7 +25,7 @@ Please, read the [PhD Guidelines](./pages/phd_guidelines.html).**
 
 ---
 
-## The current Pauperformance code for decks is **827**.
+## The current Pauperformance code for decks is **828**.
 It refers to Phyrexia: All Will Be One (one), released on 2023-02-03.
 
 ---
