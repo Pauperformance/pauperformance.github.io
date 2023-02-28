@@ -842,19 +842,20 @@ Lines in **bold** correspond to sets that have introduced new cards in the [Paup
 | 821       | wone          | Phyrexia: All Will Be One Japanese Promo Tokens | 2023-01-27   |
 | 822       | aone          | Phyrexia: All Will Be One Art Series            | 2023-02-03   |
 | 823       | fone          | Phyrexia: All Will Be One Jumpstart Front Cards | 2023-02-03   |
-| 824       | onc           | Phyrexia: All Will Be One Commander             | 2023-02-03   |
-| **825**   | **one**       | **Phyrexia: All Will Be One**                   | **2023-02-03** |
-| 826       | pone          | Phyrexia: All Will Be One Promos                | 2023-02-03   |
-| 827       | tonc          | Phyrexia: All Will Be One Commander Tokens      | 2023-02-03   |
-| 828       | tone          | Phyrexia: All Will Be One Tokens                | 2023-02-03   |
-| 829       | pl23          | Year of the Rabbit 2023                         | 2023-02-10   |
-| 830       | slp           | Secret Lair Showdown                            | 2023-02-17   |
-| 831       | yone          | Alchemy: Phyrexia                               | 2023-02-28   |
-| 832       | sir           | Shadows Over Innistrad Remastered               | 2023-03-21   |
-| 833       | moc           | March of the Machine Commander                  | 2023-04-21   |
-| 834       | mom           | March of the Machine                            | 2023-04-21   |
-| 835       | mul           | Multiverse Legends                              | 2023-04-21   |
-| 836       | mat           | March of the Machine: The Aftermath             | 2023-05-12   |
-| 837       | ltr           | Lord of the Rings: Tales of Middle-Earth        | 2023-06-23   |
-| 838       | cmm           | Commander Masters                               | 2023-08-04   |
+| 824       | mone          | Phyrexia: All Will Be One Minigames             | 2023-02-03   |
+| 825       | onc           | Phyrexia: All Will Be One Commander             | 2023-02-03   |
+| **826**   | **one**       | **Phyrexia: All Will Be One**                   | **2023-02-03** |
+| 827       | pone          | Phyrexia: All Will Be One Promos                | 2023-02-03   |
+| 828       | tonc          | Phyrexia: All Will Be One Commander Tokens      | 2023-02-03   |
+| 829       | tone          | Phyrexia: All Will Be One Tokens                | 2023-02-03   |
+| 830       | pl23          | Year of the Rabbit 2023                         | 2023-02-10   |
+| 831       | slp           | Secret Lair Showdown                            | 2023-02-17   |
+| 832       | yone          | Alchemy: Phyrexia                               | 2023-02-28   |
+| 833       | sir           | Shadows Over Innistrad Remastered               | 2023-03-21   |
+| 834       | moc           | March of the Machine Commander                  | 2023-04-21   |
+| 835       | mom           | March of the Machine                            | 2023-04-21   |
+| 836       | mul           | Multiverse Legends                              | 2023-04-21   |
+| 837       | mat           | March of the Machine: The Aftermath             | 2023-05-12   |
+| 838       | ltr           | Lord of the Rings: Tales of Middle-Earth        | 2023-06-23   |
+| 839       | cmm           | Commander Masters                               | 2023-08-04   |
 
