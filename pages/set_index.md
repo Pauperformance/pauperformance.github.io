@@ -778,7 +778,7 @@ Lines in **bold** correspond to sets that have introduced new cards in the [Paup
 | 757       | ysnc          | Alchemy: New Capenna                            | 2022-06-02   |
 | 758       | pclb          | Commander Legends: Battle for Baldur's Gate Promos | 2022-06-10   |
 | 759       | aclb          | Battle for Baldur's Gate Art Series             | 2022-06-10   |
-| 760       | bchr          | FBB Chronicles                                  | 1995-07-01   |
+| 760       | bchr          | Chronicles Foreign Black Border                 | 1995-07-01   |
 | 761       | o90p          | Oversized 90's Promos                           | 1996-04-01   |
 | 762       | olep          | Oversized League Prizes                         | 1997-05-30   |
 | 763       | pdci          | DCI Promos                                      | 2006-01-01   |
