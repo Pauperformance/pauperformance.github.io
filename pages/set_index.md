@@ -854,11 +854,12 @@ Lines in **bold** correspond to sets that have introduced new cards in the [Paup
 | 833       | slp           | Secret Lair Showdown                            | 2023-02-17   |
 | 834       | yone          | Alchemy: Phyrexia                               | 2023-02-28   |
 | 835       | sir           | Shadows Over Innistrad Remastered               | 2023-03-21   |
-| 836       | moc           | March of the Machine Commander                  | 2023-04-21   |
-| 837       | mom           | March of the Machine                            | 2023-04-21   |
-| 838       | mul           | Multiverse Legends                              | 2023-04-21   |
-| 839       | mat           | March of the Machine: The Aftermath             | 2023-05-12   |
-| 840       | ltc           | Tales of Middle Earth Commander                 | 2023-06-23   |
-| 841       | ltr           | Lord of the Rings: Tales of Middle-Earth        | 2023-06-23   |
-| 842       | cmm           | Commander Masters                               | 2023-08-04   |
+| 836       | sis           | Shadows of the Past                             | 2023-03-21   |
+| 837       | moc           | March of the Machine Commander                  | 2023-04-21   |
+| 838       | mom           | March of the Machine                            | 2023-04-21   |
+| 839       | mul           | Multiverse Legends                              | 2023-04-21   |
+| 840       | mat           | March of the Machine: The Aftermath             | 2023-05-12   |
+| 841       | ltc           | Tales of Middle Earth Commander                 | 2023-06-23   |
+| 842       | ltr           | Lord of the Rings: Tales of Middle-Earth        | 2023-06-23   |
+| 843       | cmm           | Commander Masters                               | 2023-08-04   |
 
