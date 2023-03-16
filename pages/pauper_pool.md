@@ -13,7 +13,7 @@ This page should be useful for Pauper players that haven't followed the latest r
 
 Further information about reference numbers used by Pauperformance (p12e) to uniquely identify Magic sets can be found in the [Set Index page](set_index.html).
 
-The total number of cards in the Pauper pool is: 8698.
+The total number of cards in the Pauper pool is: 8699.
 
 ---
 Table of Contents
@@ -178,6 +178,7 @@ Table of Contents
 * [Jumpstart 2022](#jumpstart-2022-j22) (*release: 2022-12-02 ~ p12e_code: 813*)
 * [Dominaria Remastered](#dominaria-remastered-dmr) (*release: 2023-01-13 ~ p12e_code: 821*)
 * [Phyrexia: All Will Be One](#phyrexia-all-will-be-one-one) (*release: 2023-02-03 ~ p12e_code: 828*)
+* [Shadows Over Innistrad Remastered](#shadows-over-innistrad-remastered-sir) (*release: 2023-03-21 ~ p12e_code: 835*)
 
 ---
 
@@ -10316,6 +10317,16 @@ Table of Contents
 <a href="https://scryfall.com/card/one/156/vulshok-splitter?utm_source=api">Vulshok Splitter</a><br/>
 <a href="https://scryfall.com/card/one/117/whisper-of-the-dross?utm_source=api">Whisper of the Dross</a><br/>
 <a href="https://scryfall.com/card/one/39/zealots-conviction?utm_source=api">Zealot's Conviction</a><br/>
+</details>
+[]()
+
+## Shadows Over Innistrad Remastered (sir)
+*release: 2023-03-21 | p12e_code: 835*
+
+<details>
+  <summary>Click to see 1 new cards</summary>
+
+<a href="https://scryfall.com/card/sir/120/lilianas-elite?utm_source=api">Liliana's Elite</a><br/>
 </details>
 []()
 
