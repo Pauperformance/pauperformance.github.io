@@ -178,7 +178,7 @@ Table of Contents
 * [Jumpstart 2022](#jumpstart-2022-j22) (*release: 2022-12-02 ~ p12e_code: 813*)
 * [Dominaria Remastered](#dominaria-remastered-dmr) (*release: 2023-01-13 ~ p12e_code: 821*)
 * [Phyrexia: All Will Be One](#phyrexia-all-will-be-one-one) (*release: 2023-02-03 ~ p12e_code: 828*)
-* [Shadows Over Innistrad Remastered](#shadows-over-innistrad-remastered-sir) (*release: 2023-03-21 ~ p12e_code: 835*)
+* [Shadows over Innistrad Remastered](#shadows-over-innistrad-remastered-sir) (*release: 2023-03-21 ~ p12e_code: 835*)
 
 ---
 
@@ -10320,7 +10320,7 @@ Table of Contents
 </details>
 []()
 
-## Shadows Over Innistrad Remastered (sir)
+## Shadows over Innistrad Remastered (sir)
 *release: 2023-03-21 | p12e_code: 835*
 
 <details>
