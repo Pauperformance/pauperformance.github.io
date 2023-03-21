@@ -853,7 +853,7 @@ Lines in **bold** correspond to sets that have introduced new cards in the [Paup
 | 832       | pl23          | Year of the Rabbit 2023                         | 2023-02-10   |
 | 833       | slp           | Secret Lair Showdown                            | 2023-02-17   |
 | 834       | yone          | Alchemy: Phyrexia                               | 2023-02-28   |
-| **835**   | **sir**       | **Shadows Over Innistrad Remastered**           | **2023-03-21** |
+| **835**   | **sir**       | **Shadows over Innistrad Remastered**           | **2023-03-21** |
 | 836       | sis           | Shadows of the Past                             | 2023-03-21   |
 | 837       | moc           | March of the Machine Commander                  | 2023-04-21   |
 | 838       | mom           | March of the Machine                            | 2023-04-21   |

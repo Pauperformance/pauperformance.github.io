@@ -26,7 +26,7 @@ Please, read the [PhD Guidelines](./pages/phd_guidelines.html).**
 ---
 
 ## The current Pauperformance code for decks is **835**.
-It refers to Shadows Over Innistrad Remastered (sir), released on 2023-03-21.
+It refers to Shadows over Innistrad Remastered (sir), released on 2023-03-21.
 
 ---
 
