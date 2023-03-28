@@ -859,7 +859,7 @@ Lines in **bold** correspond to sets that have introduced new cards in the [Paup
 | 838       | mom           | March of the Machine                            | 2023-04-21   |
 | 839       | mul           | Multiverse Legends                              | 2023-04-21   |
 | 840       | mat           | March of the Machine: The Aftermath             | 2023-05-12   |
-| 841       | ltc           | Tales of Middle Earth Commander                 | 2023-06-23   |
-| 842       | ltr           | Lord of the Rings: Tales of Middle-Earth        | 2023-06-23   |
+| 841       | ltc           | Tales of Middle-earth Commander                 | 2023-06-23   |
+| 842       | ltr           | The Lord of the Rings: Tales of Middle-earth    | 2023-06-23   |
 | 843       | cmm           | Commander Masters                               | 2023-08-04   |
 
