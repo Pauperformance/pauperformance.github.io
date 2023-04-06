@@ -25,8 +25,8 @@ Please, read the [PhD Guidelines](./pages/phd_guidelines.html).**
 
 ---
 
-## The current Pauperformance code for decks is **740**.
-It refers to Commander Legends: Battle for Baldur's Gate (clb), released on 2022-06-10.
+## The current Pauperformance code for decks is **835**.
+It refers to Shadows over Innistrad Remastered (sir), released on 2023-03-21.
 
 ---
 
