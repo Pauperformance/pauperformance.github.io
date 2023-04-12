@@ -32,7 +32,7 @@
 
 <details>
   <summary>Click here to expand</summary>
-<a href="https://scryfall.com/card/mh1/120/bogardan-dragonheart"><img src="https://c1.scryfall.com/file/scryfall-cards/normal/front/f/e/feb81f44-8f22-4d28-a452-a50bef69a3e3.jpg" class="archetype-card rounded-image"/></a>
+<a href="https://scryfall.com/card/mh1/120/bogardan-dragonheart"><img src="https://cards.scryfall.io/normal/front/f/e/feb81f44-8f22-4d28-a452-a50bef69a3e3.jpg" class="archetype-card rounded-image"/></a>
 <a href="https://scryfall.com/card/2xm/78/bone-picker"><img src="https://c1.scryfall.com/file/scryfall-cards/normal/front/f/7/f7de3d27-f3e0-4aea-a737-6577de1bd1c5.jpg" class="archetype-card rounded-image"/></a>
 <a href="https://scryfall.com/card/cmr/112/cast-down"><img src="https://c1.scryfall.com/file/scryfall-cards/normal/front/2/1/21c8426e-476a-45e4-b3a9-841da54d966c.jpg" class="archetype-card rounded-image"/></a>
 <a href="https://scryfall.com/card/afr/94/deadly-dispute"><img src="https://c1.scryfall.com/file/scryfall-cards/normal/front/7/3/7373fe95-ad1c-44b9-8c7f-464ce8cbffc6.jpg" class="archetype-card rounded-image"/></a>

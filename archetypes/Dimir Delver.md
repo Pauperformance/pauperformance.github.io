@@ -71,6 +71,13 @@
 
 
 
+## **Videos**
+
+| 🗣️ | 📺 | ⬇️ | Title | Author | Date |
+| -- | -- | -- | ---- | ------ | ---- |
+| 🇬🇧 | <i class="fa-brands fa-youtube"></i> |  | <a href="https://www.youtube.com/watch?v=bhlpiK_OdUM" target="_blank">PAUPER League - Dimir Control - With a New Host?!?</a> | PAUPERGANDA | 2022-07-02   |
+
+
 
 
 ## **Resources**
