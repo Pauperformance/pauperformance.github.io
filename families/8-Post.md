@@ -10,5 +10,6 @@
 
 [Dimir 8-Post](../archetypes/Dimir%208-Post.html)  
 [Izzet 8-Post](../archetypes/Izzet%208-Post.html)  
+[MonoG 8-Post](../archetypes/MonoG%208-Post.html)  
 [MonoU 8-Post](../archetypes/MonoU%208-Post.html)  
 

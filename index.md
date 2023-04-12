@@ -25,8 +25,8 @@ Please, read the [PhD Guidelines](./pages/phd_guidelines.html).**
 
 ---
 
-## The current Pauperformance code for decks is **835**.
-It refers to Shadows over Innistrad Remastered (sir), released on 2023-03-21.
+## The current Pauperformance code for decks is **772**.
+It refers to Unfinity Sticker Sheets (sunf), released on 2022-10-07.
 
 ---
 
