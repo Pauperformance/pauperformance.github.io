@@ -1,7 +1,5 @@
 {
-    "aliases": [
-        "MonoU Delver"
-    ],
+    "aliases": [],
     "description": "_Still missing. Please join us on [Discord](https://discord.gg/fYQbpjjkQ3) to contribute to the Academy._",
     "dominant_mana": [
         "U"
@@ -12,6 +10,12 @@
             "link": "https://scryfall.com/card/war/41/augur-of-bolas",
             "name": "Augur of Bolas",
             "preview": "https://c1.scryfall.com/file/scryfall-cards/normal/front/d/1/d19fbfe6-69bb-452a-be3c-b9c625e23193.jpg",
+            "py/object": "pauperformance_bot.entity.api.archetype.ArchetypeCard"
+        },
+        {
+            "link": "https://scryfall.com/card/c21/115/brainstorm",
+            "name": "Brainstorm",
+            "preview": "https://c1.scryfall.com/file/scryfall-cards/normal/front/0/3/0359f212-9564-41a9-870b-d2c57455a695.jpg",
             "py/object": "pauperformance_bot.entity.api.archetype.ArchetypeCard"
         },
         {
@@ -51,6 +55,12 @@
             "py/object": "pauperformance_bot.entity.api.archetype.ArchetypeCard"
         },
         {
+            "link": "https://scryfall.com/card/c21/125/ponder",
+            "name": "Ponder",
+            "preview": "https://c1.scryfall.com/file/scryfall-cards/normal/front/9/c/9cee2eb1-f60e-4626-ba4a-b543142ca950.jpg",
+            "py/object": "pauperformance_bot.entity.api.archetype.ArchetypeCard"
+        },
+        {
             "link": "https://scryfall.com/card/cmr/84/preordain",
             "name": "Preordain",
             "preview": "https://c1.scryfall.com/file/scryfall-cards/normal/front/1/4/1453f92e-df2d-4789-aa1b-a5b5c51567d4.jpg",
@@ -83,6 +93,13 @@
     ],
     "game_type": [
         "Tempo"
+    ],
+    "must_have_cards": [
+        "Spellstutter Sprite"
+    ],
+    "must_not_have_cards": [
+        "Cloudpost",
+        "Glimmerpost"
     ],
     "name": "MonoU Faeries",
     "py/object": "pauperformance_bot.entity.api.archetype.Archetype",
@@ -130,12 +147,6 @@
             "link": "https://scryfall.com/card/c18/95/ninja-of-the-deep-hours",
             "name": "Ninja of the Deep Hours",
             "preview": "https://c1.scryfall.com/file/scryfall-cards/normal/front/5/f/5fea7980-55e1-47c1-ab18-a89c976b55fc.jpg",
-            "py/object": "pauperformance_bot.entity.api.archetype.ArchetypeCard"
-        },
-        {
-            "link": "https://scryfall.com/card/c21/125/ponder",
-            "name": "Ponder",
-            "preview": "https://c1.scryfall.com/file/scryfall-cards/normal/front/9/c/9cee2eb1-f60e-4626-ba4a-b543142ca950.jpg",
             "py/object": "pauperformance_bot.entity.api.archetype.ArchetypeCard"
         },
         {
