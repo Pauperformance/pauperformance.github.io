@@ -13,7 +13,7 @@ This page should be useful for Pauper players that haven't followed the latest r
 
 Further information about reference numbers used by Pauperformance (p12e) to uniquely identify Magic sets can be found in the [Set Index page](set_index.html).
 
-The total number of cards in the Pauper pool is: 8531.
+The total number of cards in the Pauper pool is: 8669.
 
 ---
 Table of Contents
@@ -174,6 +174,9 @@ Table of Contents
 * [Kamigawa: Neon Dynasty](#kamigawa-neon-dynasty-neo) (*release: 2022-02-18 ~ p12e_code: 722*)
 * [Streets of New Capenna](#streets-of-new-capenna-snc) (*release: 2022-04-29 ~ p12e_code: 735*)
 * [Commander Legends: Battle for Baldur's Gate](#commander-legends-battle-for-baldur's-gate-clb) (*release: 2022-06-10 ~ p12e_code: 740*)
+* [Unfinity Sticker Sheets](#unfinity-sticker-sheets-sunf) (*release: 2022-10-07 ~ p12e_code: 772*)
+* [Double Masters 2022](#double-masters-2022-2x2) (*release: 2022-07-08 ~ p12e_code: 750*)
+* [Unfinity](#unfinity-unf) (*release: 2022-12-31 ~ p12e_code: 727*)
 
 ---
 
@@ -10109,6 +10112,171 @@ Table of Contents
 <a href="https://scryfall.com/card/clb/52/your-temple-is-under-attack?utm_source=api">Your Temple Is Under Attack</a><br/>
 <a href="https://scryfall.com/card/clb/211/youve-been-caught-stealing?utm_source=api">You've Been Caught Stealing</a><br/>
 <a href="https://scryfall.com/card/clb/158/zhentarim-bandit?utm_source=api">Zhentarim Bandit</a><br/>
+</details>
+[]()
+
+## Unfinity Sticker Sheets (sunf)
+*release: 2022-10-07 | p12e_code: 772*
+
+<details>
+  <summary>Click to see 48 new cards</summary>
+
+<a href="https://scryfall.com/card/sunf/23/ancestral-hot-dog-minotaur?utm_source=api">Ancestral Hot Dog Minotaur</a><br/>
+<a href="https://scryfall.com/card/sunf/7/carnival-elephant-meteor?utm_source=api">Carnival Elephant Meteor</a><br/>
+<a href="https://scryfall.com/card/sunf/15/contortionist-otter-storm?utm_source=api">Contortionist Otter Storm</a><br/>
+<a href="https://scryfall.com/card/sunf/28/cool-fluffy-loxodon?utm_source=api">Cool Fluffy Loxodon</a><br/>
+<a href="https://scryfall.com/card/sunf/22/cursed-firebreathing-yogurt?utm_source=api">Cursed Firebreathing Yogurt</a><br/>
+<a href="https://scryfall.com/card/sunf/14/deep-fried-plague-myr?utm_source=api">Deep-Fried Plague Myr</a><br/>
+<a href="https://scryfall.com/card/sunf/21/demonic-tourist-laser?utm_source=api">Demonic Tourist Laser</a><br/>
+<a href="https://scryfall.com/card/sunf/1/eldrazi-guacamole-tightrope?utm_source=api">Eldrazi Guacamole Tightrope</a><br/>
+<a href="https://scryfall.com/card/sunf/46/elemental-time-flamingo?utm_source=api">Elemental Time Flamingo</a><br/>
+<a href="https://scryfall.com/card/sunf/19/eternal-acrobat-toast?utm_source=api">Eternal Acrobat Toast</a><br/>
+<a href="https://scryfall.com/card/sunf/24/familiar-beeble-mascot?utm_source=api">Familiar Beeble Mascot</a><br/>
+<a href="https://scryfall.com/card/sunf/32/geek-lotus-warrior?utm_source=api">Geek Lotus Warrior</a><br/>
+<a href="https://scryfall.com/card/sunf/25/giant-mana-cake?utm_source=api">Giant Mana Cake</a><br/>
+<a href="https://scryfall.com/card/sunf/17/goblin-coward-parade?utm_source=api">Goblin Coward Parade</a><br/>
+<a href="https://scryfall.com/card/sunf/8/happy-dead-squirrel?utm_source=api">Happy Dead Squirrel</a><br/>
+<a href="https://scryfall.com/card/sunf/20/jetpack-death-seltzer?utm_source=api">Jetpack Death Seltzer</a><br/>
+<a href="https://scryfall.com/card/sunf/5/misunderstood-trapeze-elf?utm_source=api">Misunderstood Trapeze Elf</a><br/>
+<a href="https://scryfall.com/card/sunf/11/mystic-doom-sandwich?utm_source=api">Mystic Doom Sandwich</a><br/>
+<a href="https://scryfall.com/card/sunf/12/narrow-minded-baloney-fireworks?utm_source=api">Narrow-Minded Baloney Fireworks</a><br/>
+<a href="https://scryfall.com/card/sunf/3/night-brushwagg-ringmaster?utm_source=api">Night Brushwagg Ringmaster</a><br/>
+<a href="https://scryfall.com/card/sunf/41/notorious-sliver-war?utm_source=api">Notorious Sliver War</a><br/>
+<a href="https://scryfall.com/card/sunf/18/phyrexian-midway-bamboozle?utm_source=api">Phyrexian Midway Bamboozle</a><br/>
+<a href="https://scryfall.com/card/sunf/30/playable-delusionary-hydra?utm_source=api">Playable Delusionary Hydra</a><br/>
+<a href="https://scryfall.com/card/sunf/33/primal-elder-kitty?utm_source=api">Primal Elder Kitty</a><br/>
+<a href="https://scryfall.com/card/sunf/34/sassy-gremlin-blood?utm_source=api">Sassy Gremlin Blood</a><br/>
+<a href="https://scryfall.com/card/sunf/9/slimy-burrito-illusion?utm_source=api">Slimy Burrito Illusion</a><br/>
+<a href="https://scryfall.com/card/sunf/26/snazzy-aether-homunculus?utm_source=api">Snazzy Aether Homunculus</a><br/>
+<a href="https://scryfall.com/card/sunf/29/space-fungus-snickerdoodle?utm_source=api">Space Fungus Snickerdoodle</a><br/>
+<a href="https://scryfall.com/card/sunf/10/spooky-clown-mox?utm_source=api">Spooky Clown Mox</a><br/>
+<a href="https://scryfall.com/card/sunf/27/squid-fire-knight?utm_source=api">Squid Fire Knight</a><br/>
+<a href="https://scryfall.com/card/sunf/37/squishy-sphinx-ninja?utm_source=api">Squishy Sphinx Ninja</a><br/>
+<a href="https://scryfall.com/card/sunf/16/sticky-kavu-daredevil?utm_source=api">Sticky Kavu Daredevil</a><br/>
+<a href="https://scryfall.com/card/sunf/44/trained-blessed-mind?utm_source=api">Trained Blessed Mind</a><br/>
+<a href="https://scryfall.com/card/sunf/2/trendy-circus-pirate?utm_source=api">Trendy Circus Pirate</a><br/>
+<a href="https://scryfall.com/card/sunf/36/unassuming-gelatinous-serpent?utm_source=api">Unassuming Gelatinous Serpent</a><br/>
+<a href="https://scryfall.com/card/sunf/45/unglued-pea-brained-dinosaur?utm_source=api">Unglued Pea-Brained Dinosaur</a><br/>
+<a href="https://scryfall.com/card/sunf/39/unhinged-beast-hunt?utm_source=api">Unhinged Beast Hunt</a><br/>
+<a href="https://scryfall.com/card/sunf/38/unique-charmed-pants?utm_source=api">Unique Charmed Pants</a><br/>
+<a href="https://scryfall.com/card/sunf/13/unsanctioned-ancient-juggler?utm_source=api">Unsanctioned Ancient Juggler</a><br/>
+<a href="https://scryfall.com/card/sunf/47/unstable-robot-dragon?utm_source=api">Unstable Robot Dragon</a><br/>
+<a href="https://scryfall.com/card/sunf/4/urzas-dark-cannonball?utm_source=api">Urza's Dark Cannonball</a><br/>
+<a href="https://scryfall.com/card/sunf/43/vampire-champion-fury?utm_source=api">Vampire Champion Fury</a><br/>
+<a href="https://scryfall.com/card/sunf/42/weird-angel-flame?utm_source=api">Weird Angel Flame</a><br/>
+<a href="https://scryfall.com/card/sunf/48/werewolf-lightning-mage?utm_source=api">Werewolf Lightning Mage</a><br/>
+<a href="https://scryfall.com/card/sunf/40/wild-ogre-bupkis?utm_source=api">Wild Ogre Bupkis</a><br/>
+<a href="https://scryfall.com/card/sunf/31/wrinkly-monkey-shenanigans?utm_source=api">Wrinkly Monkey Shenanigans</a><br/>
+<a href="https://scryfall.com/card/sunf/35/yawgmoth-merfolk-soul?utm_source=api">Yawgmoth Merfolk Soul</a><br/>
+<a href="https://scryfall.com/card/sunf/6/zombie-cheese-magician?utm_source=api">Zombie Cheese Magician</a><br/>
+</details>
+[]()
+
+## Double Masters 2022 (2x2)
+*release: 2022-07-08 | p12e_code: 750*
+
+<details>
+  <summary>Click to see 30 new cards</summary>
+
+<a href="https://scryfall.com/card/2x2/36/advanced-stitchwing?utm_source=api">Advanced Stitchwing</a><br/>
+<a href="https://scryfall.com/card/2x2/185/bloodwater-entity?utm_source=api">Bloodwater Entity</a><br/>
+<a href="https://scryfall.com/card/2x2/190/call-to-the-feast?utm_source=api">Call to the Feast</a><br/>
+<a href="https://scryfall.com/card/2x2/72/carrier-thrall?utm_source=api">Carrier Thrall</a><br/>
+<a href="https://scryfall.com/card/2x2/191/cartel-aristocrat?utm_source=api">Cartel Aristocrat</a><br/>
+<a href="https://scryfall.com/card/2x2/193/chronicler-of-heroes?utm_source=api">Chronicler of Heroes</a><br/>
+<a href="https://scryfall.com/card/2x2/332/cryptic-spires?utm_source=api">Cryptic Spires</a><br/>
+<a href="https://scryfall.com/card/2x2/106/dark-dweller-oracle?utm_source=api">Dark-Dweller Oracle</a><br/>
+<a href="https://scryfall.com/card/2x2/204/dreg-mangler?utm_source=api">Dreg Mangler</a><br/>
+<a href="https://scryfall.com/card/2x2/146/experiment-one?utm_source=api">Experiment One</a><br/>
+<a href="https://scryfall.com/card/2x2/214/fireblade-artist?utm_source=api">Fireblade Artist</a><br/>
+<a href="https://scryfall.com/card/2x2/220/glowspore-shaman?utm_source=api">Glowspore Shaman</a><br/>
+<a href="https://scryfall.com/card/2x2/148/gnarlback-rhino?utm_source=api">Gnarlback Rhino</a><br/>
+<a href="https://scryfall.com/card/2x2/230/izzet-charm?utm_source=api">Izzet Charm</a><br/>
+<a href="https://scryfall.com/card/2x2/53/jeskai-elder?utm_source=api">Jeskai Elder</a><br/>
+<a href="https://scryfall.com/card/2x2/116/lava-coil?utm_source=api">Lava Coil</a><br/>
+<a href="https://scryfall.com/card/2x2/82/lilianas-elite?utm_source=api">Liliana's Elite</a><br/>
+<a href="https://scryfall.com/card/2x2/118/living-lightning?utm_source=api">Living Lightning</a><br/>
+<a href="https://scryfall.com/card/2x2/246/lyev-skyknight?utm_source=api">Lyev Skyknight</a><br/>
+<a href="https://scryfall.com/card/2x2/153/might-of-old-krosa?utm_source=api">Might of Old Krosa</a><br/>
+<a href="https://scryfall.com/card/2x2/19/militia-bugler?utm_source=api">Militia Bugler</a><br/>
+<a href="https://scryfall.com/card/2x2/119/monastery-swiftspear?utm_source=api">Monastery Swiftspear</a><br/>
+<a href="https://scryfall.com/card/2x2/120/pirates-pillage?utm_source=api">Pirate's Pillage</a><br/>
+<a href="https://scryfall.com/card/2x2/121/purphoross-emissary?utm_source=api">Purphoros's Emissary</a><br/>
+<a href="https://scryfall.com/card/2x2/24/relief-captain?utm_source=api">Relief Captain</a><br/>
+<a href="https://scryfall.com/card/2x2/87/seekers-squire?utm_source=api">Seekers' Squire</a><br/>
+<a href="https://scryfall.com/card/2x2/283/tenth-district-legionnaire?utm_source=api">Tenth District Legionnaire</a><br/>
+<a href="https://scryfall.com/card/2x2/163/tuskguard-captain?utm_source=api">Tuskguard Captain</a><br/>
+<a href="https://scryfall.com/card/2x2/97/vampire-sovereign?utm_source=api">Vampire Sovereign</a><br/>
+<a href="https://scryfall.com/card/2x2/164/webweaver-changeling?utm_source=api">Webweaver Changeling</a><br/>
+</details>
+[]()
+
+## Unfinity (unf)
+*release: 2022-12-31 | p12e_code: 727*
+
+<details>
+  <summary>Click to see 60 new cards</summary>
+
+<a href="https://scryfall.com/card/unf/2/aerialephant?utm_source=api">Aerialephant</a><br/>
+<a href="https://scryfall.com/card/unf/12/a-good-day-to-pie?utm_source=api">A Good Day to Pie</a><br/>
+<a href="https://scryfall.com/card/unf/130/atomwheel-acrobats?utm_source=api">Atomwheel Acrobats</a><br/>
+<a href="https://scryfall.com/card/unf/37/bamboozling-beeble?utm_source=api">Bamboozling Beeble</a><br/>
+<a href="https://scryfall.com/card/unf/101/big-winner?utm_source=api">Big Winner</a><br/>
+<a href="https://scryfall.com/card/unf/5/_____-bird-gets-the-worm?utm_source=api">_____ Bird Gets the Worm</a><br/>
+<a href="https://scryfall.com/card/unf/131/blorbian-buddy?utm_source=api">Blorbian Buddy</a><br/>
+<a href="https://scryfall.com/card/unf/40/boing!?utm_source=api">Boing!</a><br/>
+<a href="https://scryfall.com/card/unf/68/carnival-carnivore?utm_source=api">Carnival Carnivore</a><br/>
+<a href="https://scryfall.com/card/unf/133/chicken-troupe?utm_source=api">Chicken Troupe</a><br/>
+<a href="https://scryfall.com/card/unf/103/circuits-act?utm_source=api">Circuits Act</a><br/>
+<a href="https://scryfall.com/card/unf/204a/clown-extruder?utm_source=api">Clown Extruder</a><br/>
+<a href="https://scryfall.com/card/unf/6/clowning-around?utm_source=api">Clowning Around</a><br/>
+<a href="https://scryfall.com/card/unf/135/coming-attraction?utm_source=api">Coming Attraction</a><br/>
+<a href="https://scryfall.com/card/unf/42/command-performance?utm_source=api">Command Performance</a><br/>
+<a href="https://scryfall.com/card/unf/206a/costume-shop?utm_source=api">Costume Shop</a><br/>
+<a href="https://scryfall.com/card/unf/43/croakid-amphibonaut?utm_source=api">Croakid Amphibonaut</a><br/>
+<a href="https://scryfall.com/card/unf/69/deadbeat-attendant?utm_source=api">Deadbeat Attendant</a><br/>
+<a href="https://scryfall.com/card/unf/72/dissatisfied-customer?utm_source=api">Dissatisfied Customer</a><br/>
+<a href="https://scryfall.com/card/unf/73/down-for-repairs?utm_source=api">Down for Repairs</a><br/>
+<a href="https://scryfall.com/card/unf/188/draconian-gate-bot?utm_source=api">Draconian Gate-Bot</a><br/>
+<a href="https://scryfall.com/card/unf/209a/drop-tower?utm_source=api">Drop Tower</a><br/>
+<a href="https://scryfall.com/card/unf/106/eelectrocute?utm_source=api">Eelectrocute</a><br/>
+<a href="https://scryfall.com/card/unf/137/embiggen?utm_source=api">Embiggen</a><br/>
+<a href="https://scryfall.com/card/unf/139/finishing-move?utm_source=api">Finishing Move</a><br/>
+<a href="https://scryfall.com/card/unf/211a/foam-weapons-kiosk?utm_source=api">Foam Weapons Kiosk</a><br/>
+<a href="https://scryfall.com/card/unf/212a/fortune-teller?utm_source=api">Fortune Teller</a><br/>
+<a href="https://scryfall.com/card/unf/48/glitterflitter?utm_source=api">Glitterflitter</a><br/>
+<a href="https://scryfall.com/card/unf/107/_____-goblin?utm_source=api">_____ Goblin</a><br/>
+<a href="https://scryfall.com/card/unf/140/grabby-tabby?utm_source=api">Grabby Tabby</a><br/>
+<a href="https://scryfall.com/card/unf/219a/kiddie-coaster?utm_source=api">Kiddie Coaster</a><br/>
+<a href="https://scryfall.com/card/unf/80/line-cutter?utm_source=api">Line Cutter</a><br/>
+<a href="https://scryfall.com/card/unf/114/minotaur-de-force?utm_source=api">Minotaur de Force</a><br/>
+<a href="https://scryfall.com/card/unf/53/motion-sickness?utm_source=api">Motion Sickness</a><br/>
+<a href="https://scryfall.com/card/unf/115/non-human-cannonball?utm_source=api">Non-Human Cannonball</a><br/>
+<a href="https://scryfall.com/card/unf/117/one-clown-band?utm_source=api">One-Clown Band</a><br/>
+<a href="https://scryfall.com/card/unf/148/_____-o-saurus?utm_source=api">_____-o-saurus</a><br/>
+<a href="https://scryfall.com/card/unf/150/petting-zookeeper?utm_source=api">Petting Zookeeper</a><br/>
+<a href="https://scryfall.com/card/unf/223a/pick-a-beeble?utm_source=api">Pick-a-Beeble</a><br/>
+<a href="https://scryfall.com/card/unf/57/prize-wall?utm_source=api">Prize Wall</a><br/>
+<a href="https://scryfall.com/card/unf/121/rad-rascal?utm_source=api">Rad Rascal</a><br/>
+<a href="https://scryfall.com/card/unf/24/ride-guide?utm_source=api">Ride Guide</a><br/>
+<a href="https://scryfall.com/card/unf/25/robo-pi%C3%B1ata?utm_source=api">Robo-Piñata</a><br/>
+<a href="https://scryfall.com/card/unf/26/sanguine-sipper?utm_source=api">Sanguine Sipper</a><br/>
+<a href="https://scryfall.com/card/unf/90/scared-stiff?utm_source=api">Scared Stiff</a><br/>
+<a href="https://scryfall.com/card/unf/58/seasoned-buttoneer?utm_source=api">Seasoned Buttoneer</a><br/>
+<a href="https://scryfall.com/card/unf/92/six-sided-die?utm_source=api">Six-Sided Die</a><br/>
+<a href="https://scryfall.com/card/unf/123/slight-malfunction?utm_source=api">Slight Malfunction</a><br/>
+<a href="https://scryfall.com/card/unf/93/soul-swindler?utm_source=api">Soul Swindler</a><br/>
+<a href="https://scryfall.com/card/unf/227a/spinny-ride?utm_source=api">Spinny Ride</a><br/>
+<a href="https://scryfall.com/card/unf/94/step-right-up?utm_source=api">Step Right Up</a><br/>
+<a href="https://scryfall.com/card/unf/157/stiltstrider?utm_source=api">Stiltstrider</a><br/>
+<a href="https://scryfall.com/card/unf/195/ticketomaton?utm_source=api">Ticketomaton</a><br/>
+<a href="https://scryfall.com/card/unf/194/ticket-turbotubes?utm_source=api">Ticket Turbotubes</a><br/>
+<a href="https://scryfall.com/card/unf/62/unlawful-entry?utm_source=api">Unlawful Entry</a><br/>
+<a href="https://scryfall.com/card/unf/160/vegetation-abomination?utm_source=api">Vegetation Abomination</a><br/>
+<a href="https://scryfall.com/card/unf/127/wee-champion?utm_source=api">Wee Champion</a><br/>
+<a href="https://scryfall.com/card/unf/64/wizards-of-the-_____?utm_source=api">Wizards of the _____</a><br/>
+<a href="https://scryfall.com/card/unf/95/wolf-in-_____-clothing?utm_source=api">Wolf in _____ Clothing</a><br/>
+<a href="https://scryfall.com/card/unf/96/xenosquirrels?utm_source=api">Xenosquirrels</a><br/>
 </details>
 []()
 

@@ -37,7 +37,7 @@
 
 <details>
   <summary>Click here to expand</summary>
-<a href="https://scryfall.com/card/me2/123/death-spark"><img src="https://c1.scryfall.com/file/scryfall-cards/normal/front/7/7/778d3497-2067-4d61-a322-5efb776dbaf1.jpg" class="archetype-card rounded-image"/></a>
+<a href="https://scryfall.com/card/me2/123/death-spark"><img src="https://cards.scryfall.io/normal/front/7/7/778d3497-2067-4d61-a322-5efb776dbaf1.jpg" class="archetype-card rounded-image"/></a>
 <a href="https://scryfall.com/card/m10/143/jackal-familiar"><img src="https://c1.scryfall.com/file/scryfall-cards/normal/front/0/a/0a47a2dc-f7f2-4103-9ebe-8cd8b83915ae.jpg" class="archetype-card rounded-image"/></a>
 <a href="https://scryfall.com/card/vow/174/reckless-impulse"><img src="https://c1.scryfall.com/file/scryfall-cards/normal/front/6/9/6943c07f-ab0d-4f5a-bbe9-c0a83dc98546.jpg" class="archetype-card rounded-image"/></a>
 <a href="https://scryfall.com/card/ons/235/sparksmith"><img src="https://c1.scryfall.com/file/scryfall-cards/normal/front/1/5/15a4460d-3fe8-4b1f-9990-0a19c3345367.jpg" class="archetype-card rounded-image"/></a>

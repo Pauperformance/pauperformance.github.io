@@ -10,7 +10,7 @@
 
 **Dominant mana**: <img src="../resources/images/mana/B.png" class="dominant-mana-icon"/> <img src="../resources/images/mana/R.png" class="dominant-mana-icon"/>
 
-**Type**: `Aggro`
+**Type**: `Midrange`
 
 **Description**: _Still missing. Please join us on [Discord](https://discord.gg/fYQbpjjkQ3) to contribute to the Academy._
 
@@ -66,12 +66,20 @@
 
 | Name | Set name | Set date | Legal |
 | -----| -------- | -------- | ----- |
+| [Rakdos Burn 740.001.JuanPabloCellanes](https://www.mtggoldfish.com/deck/4947355) | Commander Legends: Battle for Baldur's Gate | 2022-06-10 | ✅ |
 | [Rakdos Burn 722.001.rfaustino](https://www.mtggoldfish.com/deck/4667114) | Kamigawa: Neon Dynasty | 2022-02-18 | ✅ |
 | [Rakdos Burn 722.001.DaveXXXVI](https://www.mtggoldfish.com/deck/4667103) | Kamigawa: Neon Dynasty | 2022-02-18 | ✅ |
 | [Rakdos Burn 722.001.Choochoochar](https://www.mtggoldfish.com/deck/4872575) | Kamigawa: Neon Dynasty | 2022-02-18 | ✅ |
 | [Rakdos Burn 722.001.Cesta](https://www.mtggoldfish.com/deck/4872573) | Kamigawa: Neon Dynasty | 2022-02-18 | ✅ |
 
 
+
+
+## **Videos**
+
+| 🗣️ | 📺 | ⬇️ | Title | Author | Date |
+| -- | -- | -- | ---- | ------ | ---- |
+| 🇬🇧 | <i class="fa-brands fa-youtube"></i> | <a href="https://www.mtggoldfish.com/deck/4947355" target="_blank">🗎</a> | <a href="https://www.youtube.com/watch?v=dZnQXDHZZRc" target="_blank">🇬🇧 Pauper - MTGO League - Rakdos Burn 740.001.JuanPabloCellanes - Commander Legends: Battle fo</a> | Pauperformance | 2022-07-24   |
 
 
 

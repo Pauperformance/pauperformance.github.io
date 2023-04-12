@@ -65,4 +65,11 @@
 
 
 
+## **Videos**
+
+| 🗣️ | 📺 | ⬇️ | Title | Author | Date |
+| -- | -- | -- | ---- | ------ | ---- |
+| 🇮🇹 | <i class="fa-brands fa-youtube"></i> |  | <a href="https://www.youtube.com/watch?v=hrjMAm-I3QE" target="_blank">Dark Ritual ft. Monarch & Monastery! Rakdos Mona(qualcosa)</a> | Heisen01 | 2022-07-15   |
+
+
 

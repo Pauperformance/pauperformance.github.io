@@ -25,8 +25,8 @@ Please, read the [PhD Guidelines](./pages/phd_guidelines.html).**
 
 ---
 
-## The current Pauperformance code for decks is **740**.
-It refers to Commander Legends: Battle for Baldur's Gate (clb), released on 2022-06-10.
+## The current Pauperformance code for decks is **772**.
+It refers to Unfinity Sticker Sheets (sunf), released on 2022-10-07.
 
 ---
 

@@ -51,7 +51,7 @@
 <a href="https://scryfall.com/card/usg/158/skittering-skirge"><img src="https://c1.scryfall.com/file/scryfall-cards/normal/front/9/3/93aba9d5-5f96-4aba-8248-74398b8bfe9d.jpg" class="archetype-card rounded-image"/></a>
 <a href="https://scryfall.com/card/eve/44/soul-reap"><img src="https://c1.scryfall.com/file/scryfall-cards/normal/front/e/2/e2a129e2-bed5-4ee7-b223-851452f72682.jpg" class="archetype-card rounded-image"/></a>
 <a href="https://scryfall.com/card/ori/121/thornbow-archer"><img src="https://c1.scryfall.com/file/scryfall-cards/normal/front/3/2/3290c60a-f9a0-464d-a15e-8473a6d50d96.jpg" class="archetype-card rounded-image"/></a>
-<a href="https://scryfall.com/card/ima/111/thrill-kill-assassin"><img src="https://c1.scryfall.com/file/scryfall-cards/normal/front/2/3/23915972-2009-4363-a791-24be90a4fbe0.jpg" class="archetype-card rounded-image"/></a>
+<a href="https://scryfall.com/card/ima/111/thrill-kill-assassin"><img src="https://cards.scryfall.io/normal/front/2/3/23915972-2009-4363-a791-24be90a4fbe0.jpg" class="archetype-card rounded-image"/></a>
 <a href="https://scryfall.com/card/vma/143/tyrants-choice"><img src="https://c1.scryfall.com/file/scryfall-cards/normal/front/5/e/5ed37b1c-7377-40bd-ae98-7f5ce56156b1.jpg" class="archetype-card rounded-image"/></a>
 <a href="https://scryfall.com/card/dka/77/undying-evil"><img src="https://c1.scryfall.com/file/scryfall-cards/normal/front/3/2/325f2243-54fd-484b-a742-166cea7ec179.jpg" class="archetype-card rounded-image"/></a>
 <a href="https://scryfall.com/card/cmr/158/viscera-seer"><img src="https://c1.scryfall.com/file/scryfall-cards/normal/front/d/4/d49203dd-89b6-4e91-b3ff-5f9f5ce981f8.jpg" class="archetype-card rounded-image"/></a>

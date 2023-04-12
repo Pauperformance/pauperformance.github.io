@@ -37,7 +37,7 @@
 <a href="https://scryfall.com/card/cmr/224/entourage-of-trest"><img src="https://c1.scryfall.com/file/scryfall-cards/normal/front/8/7/87e65427-1191-4f5a-b4ca-c383eecd274e.jpg" class="archetype-card rounded-image"/></a>
 <a href="https://scryfall.com/card/cmr/178/fiery-cannonade"><img src="https://c1.scryfall.com/file/scryfall-cards/normal/front/3/9/396f1cdf-712b-4518-a0e8-0039303dccdc.jpg" class="archetype-card rounded-image"/></a>
 <a href="https://scryfall.com/card/mh1/122/firebolt"><img src="https://c1.scryfall.com/file/scryfall-cards/normal/front/8/8/882b8f98-ee51-4c94-a3eb-c79eb2b50d78.jpg" class="archetype-card rounded-image"/></a>
-<a href="https://scryfall.com/card/rna/234/gruul-locket"><img src="https://c1.scryfall.com/file/scryfall-cards/normal/front/1/e/1ec78880-a8ec-4c87-bc3f-e2a79d154884.jpg" class="archetype-card rounded-image"/></a>
+<a href="https://scryfall.com/card/rna/234/gruul-locket"><img src="https://cards.scryfall.io/normal/front/1/e/1ec78880-a8ec-4c87-bc3f-e2a79d154884.jpg" class="archetype-card rounded-image"/></a>
 <a href="https://scryfall.com/card/jmp/342/lightning-bolt"><img src="https://c1.scryfall.com/file/scryfall-cards/normal/front/c/e/ce711943-c1a1-43a0-8b89-8d169cfb8e06.jpg" class="archetype-card rounded-image"/></a>
 <a href="https://scryfall.com/card/afr/198/owlbear"><img src="https://c1.scryfall.com/file/scryfall-cards/normal/front/3/0/30e8a00f-8131-470d-8072-4c23b812281a.jpg" class="archetype-card rounded-image"/></a>
 <a href="https://scryfall.com/card/uma/8/ulamogs-crusher"><img src="https://c1.scryfall.com/file/scryfall-cards/normal/front/e/d/eda0fd38-38e6-4e9b-9c17-4d855e01b1e1.jpg" class="archetype-card rounded-image"/></a>
