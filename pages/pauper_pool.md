@@ -13,7 +13,7 @@ This page should be useful for Pauper players that haven't followed the latest r
 
 Further information about reference numbers used by Pauperformance (p12e) to uniquely identify Magic sets can be found in the [Set Index page](set_index.html).
 
-The total number of cards in the Pauper pool is: 8669.
+The total number of cards in the Pauper pool is: 8719.
 
 ---
 Table of Contents
@@ -177,6 +177,7 @@ Table of Contents
 * [Unfinity Sticker Sheets](#unfinity-sticker-sheets-sunf) (*release: 2022-10-07 ~ p12e_code: 772*)
 * [Double Masters 2022](#double-masters-2022-2x2) (*release: 2022-07-08 ~ p12e_code: 750*)
 * [Unfinity](#unfinity-unf) (*release: 2022-12-31 ~ p12e_code: 727*)
+* [March of the Machine Commander](#march-of-the-machine-commander-moc) (*release: 2023-04-21 ~ p12e_code: 838*)
 
 ---
 
@@ -10277,6 +10278,65 @@ Table of Contents
 <a href="https://scryfall.com/card/unf/64/wizards-of-the-_____?utm_source=api">Wizards of the _____</a><br/>
 <a href="https://scryfall.com/card/unf/95/wolf-in-_____-clothing?utm_source=api">Wolf in _____ Clothing</a><br/>
 <a href="https://scryfall.com/card/unf/96/xenosquirrels?utm_source=api">Xenosquirrels</a><br/>
+</details>
+[]()
+
+## March of the Machine Commander (moc)
+*release: 2023-04-21 | p12e_code: 838*
+
+<details>
+  <summary>Click to see 50 new cards</summary>
+
+<a href="https://scryfall.com/card/moc/140/bloodhill-bastion?utm_source=api">Bloodhill Bastion</a><br/>
+<a href="https://scryfall.com/card/moc/141/chaotic-aether?utm_source=api">Chaotic Aether</a><br/>
+<a href="https://scryfall.com/card/moc/48/enigma-ridges?utm_source=api">Enigma Ridges</a><br/>
+<a href="https://scryfall.com/card/moc/49/esper?utm_source=api">Esper</a><br/>
+<a href="https://scryfall.com/card/moc/142/gavony?utm_source=api">Gavony</a><br/>
+<a href="https://scryfall.com/card/moc/51/ghirapur?utm_source=api">Ghirapur</a><br/>
+<a href="https://scryfall.com/card/moc/143/glimmervoid-basin?utm_source=api">Glimmervoid Basin</a><br/>
+<a href="https://scryfall.com/card/moc/145/grove-of-the-dreampods?utm_source=api">Grove of the Dreampods</a><br/>
+<a href="https://scryfall.com/card/moc/146/hedron-fields-of-agadeem?utm_source=api">Hedron Fields of Agadeem</a><br/>
+<a href="https://scryfall.com/card/moc/54/inys-haen?utm_source=api">Inys Haen</a><br/>
+<a href="https://scryfall.com/card/moc/147/isle-of-vesuva?utm_source=api">Isle of Vesuva</a><br/>
+<a href="https://scryfall.com/card/moc/148/jund?utm_source=api">Jund</a><br/>
+<a href="https://scryfall.com/card/moc/55/ketria?utm_source=api">Ketria</a><br/>
+<a href="https://scryfall.com/card/moc/149/kharasha-foothills?utm_source=api">Kharasha Foothills</a><br/>
+<a href="https://scryfall.com/card/moc/150/krosa?utm_source=api">Krosa</a><br/>
+<a href="https://scryfall.com/card/moc/56/littjara?utm_source=api">Littjara</a><br/>
+<a href="https://scryfall.com/card/moc/57/megaflora-jungle?utm_source=api">Megaflora Jungle</a><br/>
+<a href="https://scryfall.com/card/moc/151/mutual-epiphany?utm_source=api">Mutual Epiphany</a><br/>
+<a href="https://scryfall.com/card/moc/58/naktamun?utm_source=api">Naktamun</a><br/>
+<a href="https://scryfall.com/card/moc/59/new-argive?utm_source=api">New Argive</a><br/>
+<a href="https://scryfall.com/card/moc/60/norns-seedcore?utm_source=api">Norn's Seedcore</a><br/>
+<a href="https://scryfall.com/card/moc/61/nyx?utm_source=api">Nyx</a><br/>
+<a href="https://scryfall.com/card/moc/152/orochi-colony?utm_source=api">Orochi Colony</a><br/>
+<a href="https://scryfall.com/card/moc/62/paliano?utm_source=api">Paliano</a><br/>
+<a href="https://scryfall.com/card/moc/153/panopticon?utm_source=api">Panopticon</a><br/>
+<a href="https://scryfall.com/card/moc/154/planewide-disaster?utm_source=api">Planewide Disaster</a><br/>
+<a href="https://scryfall.com/card/moc/155/reality-shaping?utm_source=api">Reality Shaping</a><br/>
+<a href="https://scryfall.com/card/moc/64/riptide-island?utm_source=api">Riptide Island</a><br/>
+<a href="https://scryfall.com/card/moc/156/selesnya-loft-gardens?utm_source=api">Selesnya Loft Gardens</a><br/>
+<a href="https://scryfall.com/card/moc/157/sokenzan?utm_source=api">Sokenzan</a><br/>
+<a href="https://scryfall.com/card/moc/158/spatial-merging?utm_source=api">Spatial Merging</a><br/>
+<a href="https://scryfall.com/card/moc/159/stensia?utm_source=api">Stensia</a><br/>
+<a href="https://scryfall.com/card/moc/65/strixhaven?utm_source=api">Strixhaven</a><br/>
+<a href="https://scryfall.com/card/moc/160/stronghold-furnace?utm_source=api">Stronghold Furnace</a><br/>
+<a href="https://scryfall.com/card/moc/66/ten-wizards-mountain?utm_source=api">Ten Wizards Mountain</a><br/>
+<a href="https://scryfall.com/card/moc/139/the-aether-flues?utm_source=api">The Aether Flues</a><br/>
+<a href="https://scryfall.com/card/moc/47/the-caldaia?utm_source=api">The Caldaia</a><br/>
+<a href="https://scryfall.com/card/moc/50/the-fertile-lands-of-saulvinia?utm_source=api">The Fertile Lands of Saulvinia</a><br/>
+<a href="https://scryfall.com/card/moc/52/the-golden-city-of-orazca?utm_source=api">The Golden City of Orazca</a><br/>
+<a href="https://scryfall.com/card/moc/53/the-great-aerie?utm_source=api">The Great Aerie</a><br/>
+<a href="https://scryfall.com/card/moc/144/the-great-forest?utm_source=api">The Great Forest</a><br/>
+<a href="https://scryfall.com/card/moc/63/the-pit?utm_source=api">The Pit</a><br/>
+<a href="https://scryfall.com/card/moc/70/the-western-cloud?utm_source=api">The Western Cloud</a><br/>
+<a href="https://scryfall.com/card/moc/71/the-wilds?utm_source=api">The Wilds</a><br/>
+<a href="https://scryfall.com/card/moc/67/towashi?utm_source=api">Towashi</a><br/>
+<a href="https://scryfall.com/card/moc/161/truga-jungle?utm_source=api">Truga Jungle</a><br/>
+<a href="https://scryfall.com/card/moc/162/turri-island?utm_source=api">Turri Island</a><br/>
+<a href="https://scryfall.com/card/moc/163/undercity-reaches?utm_source=api">Undercity Reaches</a><br/>
+<a href="https://scryfall.com/card/moc/68/unyaro?utm_source=api">Unyaro</a><br/>
+<a href="https://scryfall.com/card/moc/69/valors-reach?utm_source=api">Valor's Reach</a><br/>
 </details>
 []()
 

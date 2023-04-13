@@ -856,7 +856,7 @@ Lines in **bold** correspond to sets that have introduced new cards in the [Paup
 | 835       | yone          | Alchemy: Phyrexia                               | 2023-02-28   |
 | 836       | sir           | Shadows over Innistrad Remastered               | 2023-03-21   |
 | 837       | sis           | Shadows of the Past                             | 2023-03-21   |
-| 838       | moc           | March of the Machine Commander                  | 2023-04-21   |
+| **838**   | **moc**       | **March of the Machine Commander**              | **2023-04-21** |
 | 839       | mom           | March of the Machine                            | 2023-04-21   |
 | 840       | mul           | Multiverse Legends                              | 2023-04-21   |
 | 841       | tmom          | March of the Machine Tokens                     | 2023-04-21   |
