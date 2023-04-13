@@ -13,7 +13,7 @@ This page should be useful for Pauper players that haven't followed the latest r
 
 Further information about reference numbers used by Pauperformance (p12e) to uniquely identify Magic sets can be found in the [Set Index page](set_index.html).
 
-The total number of cards in the Pauper pool is: 8669.
+The total number of cards in the Pauper pool is: 8825.
 
 ---
 Table of Contents
@@ -177,6 +177,8 @@ Table of Contents
 * [Unfinity Sticker Sheets](#unfinity-sticker-sheets-sunf) (*release: 2022-10-07 ~ p12e_code: 772*)
 * [Double Masters 2022](#double-masters-2022-2x2) (*release: 2022-07-08 ~ p12e_code: 750*)
 * [Unfinity](#unfinity-unf) (*release: 2022-12-31 ~ p12e_code: 727*)
+* [March of the Machine Commander](#march-of-the-machine-commander-moc) (*release: 2023-04-21 ~ p12e_code: 838*)
+* [March of the Machine](#march-of-the-machine-mom) (*release: 2023-04-21 ~ p12e_code: 839*)
 
 ---
 
@@ -10277,6 +10279,180 @@ Table of Contents
 <a href="https://scryfall.com/card/unf/64/wizards-of-the-_____?utm_source=api">Wizards of the _____</a><br/>
 <a href="https://scryfall.com/card/unf/95/wolf-in-_____-clothing?utm_source=api">Wolf in _____ Clothing</a><br/>
 <a href="https://scryfall.com/card/unf/96/xenosquirrels?utm_source=api">Xenosquirrels</a><br/>
+</details>
+[]()
+
+## March of the Machine Commander (moc)
+*release: 2023-04-21 | p12e_code: 838*
+
+<details>
+  <summary>Click to see 50 new cards</summary>
+
+<a href="https://scryfall.com/card/moc/140/bloodhill-bastion?utm_source=api">Bloodhill Bastion</a><br/>
+<a href="https://scryfall.com/card/moc/141/chaotic-aether?utm_source=api">Chaotic Aether</a><br/>
+<a href="https://scryfall.com/card/moc/48/enigma-ridges?utm_source=api">Enigma Ridges</a><br/>
+<a href="https://scryfall.com/card/moc/49/esper?utm_source=api">Esper</a><br/>
+<a href="https://scryfall.com/card/moc/142/gavony?utm_source=api">Gavony</a><br/>
+<a href="https://scryfall.com/card/moc/51/ghirapur?utm_source=api">Ghirapur</a><br/>
+<a href="https://scryfall.com/card/moc/143/glimmervoid-basin?utm_source=api">Glimmervoid Basin</a><br/>
+<a href="https://scryfall.com/card/moc/145/grove-of-the-dreampods?utm_source=api">Grove of the Dreampods</a><br/>
+<a href="https://scryfall.com/card/moc/146/hedron-fields-of-agadeem?utm_source=api">Hedron Fields of Agadeem</a><br/>
+<a href="https://scryfall.com/card/moc/54/inys-haen?utm_source=api">Inys Haen</a><br/>
+<a href="https://scryfall.com/card/moc/147/isle-of-vesuva?utm_source=api">Isle of Vesuva</a><br/>
+<a href="https://scryfall.com/card/moc/148/jund?utm_source=api">Jund</a><br/>
+<a href="https://scryfall.com/card/moc/55/ketria?utm_source=api">Ketria</a><br/>
+<a href="https://scryfall.com/card/moc/149/kharasha-foothills?utm_source=api">Kharasha Foothills</a><br/>
+<a href="https://scryfall.com/card/moc/150/krosa?utm_source=api">Krosa</a><br/>
+<a href="https://scryfall.com/card/moc/56/littjara?utm_source=api">Littjara</a><br/>
+<a href="https://scryfall.com/card/moc/57/megaflora-jungle?utm_source=api">Megaflora Jungle</a><br/>
+<a href="https://scryfall.com/card/moc/151/mutual-epiphany?utm_source=api">Mutual Epiphany</a><br/>
+<a href="https://scryfall.com/card/moc/58/naktamun?utm_source=api">Naktamun</a><br/>
+<a href="https://scryfall.com/card/moc/59/new-argive?utm_source=api">New Argive</a><br/>
+<a href="https://scryfall.com/card/moc/60/norns-seedcore?utm_source=api">Norn's Seedcore</a><br/>
+<a href="https://scryfall.com/card/moc/61/nyx?utm_source=api">Nyx</a><br/>
+<a href="https://scryfall.com/card/moc/152/orochi-colony?utm_source=api">Orochi Colony</a><br/>
+<a href="https://scryfall.com/card/moc/62/paliano?utm_source=api">Paliano</a><br/>
+<a href="https://scryfall.com/card/moc/153/panopticon?utm_source=api">Panopticon</a><br/>
+<a href="https://scryfall.com/card/moc/154/planewide-disaster?utm_source=api">Planewide Disaster</a><br/>
+<a href="https://scryfall.com/card/moc/155/reality-shaping?utm_source=api">Reality Shaping</a><br/>
+<a href="https://scryfall.com/card/moc/64/riptide-island?utm_source=api">Riptide Island</a><br/>
+<a href="https://scryfall.com/card/moc/156/selesnya-loft-gardens?utm_source=api">Selesnya Loft Gardens</a><br/>
+<a href="https://scryfall.com/card/moc/157/sokenzan?utm_source=api">Sokenzan</a><br/>
+<a href="https://scryfall.com/card/moc/158/spatial-merging?utm_source=api">Spatial Merging</a><br/>
+<a href="https://scryfall.com/card/moc/159/stensia?utm_source=api">Stensia</a><br/>
+<a href="https://scryfall.com/card/moc/65/strixhaven?utm_source=api">Strixhaven</a><br/>
+<a href="https://scryfall.com/card/moc/160/stronghold-furnace?utm_source=api">Stronghold Furnace</a><br/>
+<a href="https://scryfall.com/card/moc/66/ten-wizards-mountain?utm_source=api">Ten Wizards Mountain</a><br/>
+<a href="https://scryfall.com/card/moc/139/the-aether-flues?utm_source=api">The Aether Flues</a><br/>
+<a href="https://scryfall.com/card/moc/47/the-caldaia?utm_source=api">The Caldaia</a><br/>
+<a href="https://scryfall.com/card/moc/50/the-fertile-lands-of-saulvinia?utm_source=api">The Fertile Lands of Saulvinia</a><br/>
+<a href="https://scryfall.com/card/moc/52/the-golden-city-of-orazca?utm_source=api">The Golden City of Orazca</a><br/>
+<a href="https://scryfall.com/card/moc/53/the-great-aerie?utm_source=api">The Great Aerie</a><br/>
+<a href="https://scryfall.com/card/moc/144/the-great-forest?utm_source=api">The Great Forest</a><br/>
+<a href="https://scryfall.com/card/moc/63/the-pit?utm_source=api">The Pit</a><br/>
+<a href="https://scryfall.com/card/moc/70/the-western-cloud?utm_source=api">The Western Cloud</a><br/>
+<a href="https://scryfall.com/card/moc/71/the-wilds?utm_source=api">The Wilds</a><br/>
+<a href="https://scryfall.com/card/moc/67/towashi?utm_source=api">Towashi</a><br/>
+<a href="https://scryfall.com/card/moc/161/truga-jungle?utm_source=api">Truga Jungle</a><br/>
+<a href="https://scryfall.com/card/moc/162/turri-island?utm_source=api">Turri Island</a><br/>
+<a href="https://scryfall.com/card/moc/163/undercity-reaches?utm_source=api">Undercity Reaches</a><br/>
+<a href="https://scryfall.com/card/moc/68/unyaro?utm_source=api">Unyaro</a><br/>
+<a href="https://scryfall.com/card/moc/69/valors-reach?utm_source=api">Valor's Reach</a><br/>
+</details>
+[]()
+
+## March of the Machine (mom)
+*release: 2023-04-21 | p12e_code: 839*
+
+<details>
+  <summary>Click to see 106 new cards</summary>
+
+<a href="https://scryfall.com/card/mom/2/aerial-boost?utm_source=api">Aerial Boost</a><br/>
+<a href="https://scryfall.com/card/mom/88/aetherblade-agent-gitaxian-mindstinger?utm_source=api">Aetherblade Agent // Gitaxian Mindstinger</a><br/>
+<a href="https://scryfall.com/card/mom/130/akki-scrapchomper?utm_source=api">Akki Scrapchomper</a><br/>
+<a href="https://scryfall.com/card/mom/3/alabaster-host-intercessor?utm_source=api">Alabaster Host Intercessor</a><br/>
+<a href="https://scryfall.com/card/mom/4/alabaster-host-sanctifier?utm_source=api">Alabaster Host Sanctifier</a><br/>
+<a href="https://scryfall.com/card/mom/5/angelic-intervention?utm_source=api">Angelic Intervention</a><br/>
+<a href="https://scryfall.com/card/mom/175/arachnoid-adaptation?utm_source=api">Arachnoid Adaptation</a><br/>
+<a href="https://scryfall.com/card/mom/47/assimilate-essence?utm_source=api">Assimilate Essence</a><br/>
+<a href="https://scryfall.com/card/mom/176/atraxas-fall?utm_source=api">Atraxa's Fall</a><br/>
+<a href="https://scryfall.com/card/mom/7/attentive-skywarden?utm_source=api">Attentive Skywarden</a><br/>
+<a href="https://scryfall.com/card/mom/131/beamtown-beatstick?utm_source=api">Beamtown Beatstick</a><br/>
+<a href="https://scryfall.com/card/mom/91/bladed-battle-fan?utm_source=api">Bladed Battle-Fan</a><br/>
+<a href="https://scryfall.com/card/mom/177/blighted-burgeoning?utm_source=api">Blighted Burgeoning</a><br/>
+<a href="https://scryfall.com/card/mom/8/bola-slinger?utm_source=api">Bola Slinger</a><br/>
+<a href="https://scryfall.com/card/mom/178/bonded-herdbeast-plated-kilnbeast?utm_source=api">Bonded Herdbeast // Plated Kilnbeast</a><br/>
+<a href="https://scryfall.com/card/mom/133/burning-suns-fury?utm_source=api">Burning Sun's Fury</a><br/>
+<a href="https://scryfall.com/card/mom/179/chomping-kavu?utm_source=api">Chomping Kavu</a><br/>
+<a href="https://scryfall.com/card/mom/136/coming-in-hot?utm_source=api">Coming In Hot</a><br/>
+<a href="https://scryfall.com/card/mom/97/consuming-aetherborn?utm_source=api">Consuming Aetherborn</a><br/>
+<a href="https://scryfall.com/card/mom/180/converter-beast?utm_source=api">Converter Beast</a><br/>
+<a href="https://scryfall.com/card/mom/98/corrupted-conviction?utm_source=api">Corrupted Conviction</a><br/>
+<a href="https://scryfall.com/card/mom/182/cosmic-hunger?utm_source=api">Cosmic Hunger</a><br/>
+<a href="https://scryfall.com/card/mom/333/cragsmasher-yeti?utm_source=api">Cragsmasher Yeti</a><br/>
+<a href="https://scryfall.com/card/mom/183/crystal-carapace?utm_source=api">Crystal Carapace</a><br/>
+<a href="https://scryfall.com/card/mom/10/cut-short?utm_source=api">Cut Short</a><br/>
+<a href="https://scryfall.com/card/mom/99/deadly-derision?utm_source=api">Deadly Derision</a><br/>
+<a href="https://scryfall.com/card/mom/54/disturbing-conversion?utm_source=api">Disturbing Conversion</a><br/>
+<a href="https://scryfall.com/card/mom/100/dreg-recycler?utm_source=api">Dreg Recycler</a><br/>
+<a href="https://scryfall.com/card/mom/14/enduring-bondwarden?utm_source=api">Enduring Bondwarden</a><br/>
+<a href="https://scryfall.com/card/mom/55/epharas-dispersal?utm_source=api">Ephara's Dispersal</a><br/>
+<a href="https://scryfall.com/card/mom/101/etched-familiar?utm_source=api">Etched Familiar</a><br/>
+<a href="https://scryfall.com/card/mom/102/etched-host-doombringer?utm_source=api">Etched Host Doombringer</a><br/>
+<a href="https://scryfall.com/card/mom/56/expedition-lookout?utm_source=api">Expedition Lookout</a><br/>
+<a href="https://scryfall.com/card/mom/57/eyes-of-gitaxias?utm_source=api">Eyes of Gitaxias</a><br/>
+<a href="https://scryfall.com/card/mom/103/failed-conversion?utm_source=api">Failed Conversion</a><br/>
+<a href="https://scryfall.com/card/mom/335/fairgrounds-trumpeter?utm_source=api">Fairgrounds Trumpeter</a><br/>
+<a href="https://scryfall.com/card/mom/186/fertilids-favor?utm_source=api">Fertilid's Favor</a><br/>
+<a href="https://scryfall.com/card/mom/104/final-flourish?utm_source=api">Final Flourish</a><br/>
+<a href="https://scryfall.com/card/mom/105/flitting-guerrilla?utm_source=api">Flitting Guerrilla</a><br/>
+<a href="https://scryfall.com/card/mom/259/flywheel-racer?utm_source=api">Flywheel Racer</a><br/>
+<a href="https://scryfall.com/card/mom/140/furnace-host-charger?utm_source=api">Furnace Host Charger</a><br/>
+<a href="https://scryfall.com/card/mom/59/furtive-analyst?utm_source=api">Furtive Analyst</a><br/>
+<a href="https://scryfall.com/card/mom/108/gloomfang-mauler?utm_source=api">Gloomfang Mauler</a><br/>
+<a href="https://scryfall.com/card/mom/15/golden-scale-aeronaut?utm_source=api">Golden-Scale Aeronaut</a><br/>
+<a href="https://scryfall.com/card/mom/60/halo-charged-skaab?utm_source=api">Halo-Charged Skaab</a><br/>
+<a href="https://scryfall.com/card/mom/260/halo-hopper?utm_source=api">Halo Hopper</a><br/>
+<a href="https://scryfall.com/card/mom/142/hangar-scrounger?utm_source=api">Hangar Scrounger</a><br/>
+<a href="https://scryfall.com/card/mom/111/ichor-drinker?utm_source=api">Ichor Drinker</a><br/>
+<a href="https://scryfall.com/card/mom/112/ichor-shade?utm_source=api">Ichor Shade</a><br/>
+<a href="https://scryfall.com/card/mom/18/infected-defector?utm_source=api">Infected Defector</a><br/>
+<a href="https://scryfall.com/card/mom/329/injector-crocodile?utm_source=api">Injector Crocodile</a><br/>
+<a href="https://scryfall.com/card/mom/195/iridescent-blademaster?utm_source=api">Iridescent Blademaster</a><br/>
+<a href="https://scryfall.com/card/mom/150/karsus-depthguard?utm_source=api">Karsus Depthguard</a><br/>
+<a href="https://scryfall.com/card/mom/24/kithkin-billyrider?utm_source=api">Kithkin Billyrider</a><br/>
+<a href="https://scryfall.com/card/mom/25/knight-of-the-new-coalition?utm_source=api">Knight of the New Coalition</a><br/>
+<a href="https://scryfall.com/card/mom/27/kor-halberd?utm_source=api">Kor Halberd</a><br/>
+<a href="https://scryfall.com/card/mom/153/marauding-dreadship?utm_source=api">Marauding Dreadship</a><br/>
+<a href="https://scryfall.com/card/mom/66/meeting-of-minds?utm_source=api">Meeting of Minds</a><br/>
+<a href="https://scryfall.com/card/mom/154/mirran-banesplitter?utm_source=api">Mirran Banesplitter</a><br/>
+<a href="https://scryfall.com/card/mom/118/mirrodin-avenged?utm_source=api">Mirrodin Avenged</a><br/>
+<a href="https://scryfall.com/card/mom/67/moment-of-truth?utm_source=api">Moment of Truth</a><br/>
+<a href="https://scryfall.com/card/mom/120/nezumi-informant?utm_source=api">Nezumi Informant</a><br/>
+<a href="https://scryfall.com/card/mom/69/oculus-whelp?utm_source=api">Oculus Whelp</a><br/>
+<a href="https://scryfall.com/card/mom/156/onakke-javelineer?utm_source=api">Onakke Javelineer</a><br/>
+<a href="https://scryfall.com/card/mom/72/order-of-the-mirror-order-of-the-alabaster-host?utm_source=api">Order of the Mirror // Order of the Alabaster Host</a><br/>
+<a href="https://scryfall.com/card/mom/197/overgrown-pest?utm_source=api">Overgrown Pest</a><br/>
+<a href="https://scryfall.com/card/mom/262/phyrexian-archivist?utm_source=api">Phyrexian Archivist</a><br/>
+<a href="https://scryfall.com/card/mom/324/phyrexian-pegasus?utm_source=api">Phyrexian Pegasus</a><br/>
+<a href="https://scryfall.com/card/mom/199/placid-rottentail?utm_source=api">Placid Rottentail</a><br/>
+<a href="https://scryfall.com/card/mom/201/portent-tracker?utm_source=api">Portent Tracker</a><br/>
+<a href="https://scryfall.com/card/mom/73/preening-champion?utm_source=api">Preening Champion</a><br/>
+<a href="https://scryfall.com/card/mom/74/protocol-knight?utm_source=api">Protocol Knight</a><br/>
+<a href="https://scryfall.com/card/mom/157/pyretic-prankster-glistening-goremonger?utm_source=api">Pyretic Prankster // Glistening Goremonger</a><br/>
+<a href="https://scryfall.com/card/mom/158/rals-reinforcements?utm_source=api">Ral's Reinforcements</a><br/>
+<a href="https://scryfall.com/card/mom/33/realmbreakers-grasp?utm_source=api">Realmbreaker's Grasp</a><br/>
+<a href="https://scryfall.com/card/mom/161/redcap-heelslasher?utm_source=api">Redcap Heelslasher</a><br/>
+<a href="https://scryfall.com/card/mom/76/saiba-cryptomancer?utm_source=api">Saiba Cryptomancer</a><br/>
+<a href="https://scryfall.com/card/mom/34/scrollshift?utm_source=api">Scrollshift</a><br/>
+<a href="https://scryfall.com/card/mom/163/searing-barb?utm_source=api">Searing Barb</a><br/>
+<a href="https://scryfall.com/card/mom/204/seed-of-hope?utm_source=api">Seed of Hope</a><br/>
+<a href="https://scryfall.com/card/mom/205/serpent-blade-assailant?utm_source=api">Serpent-Blade Assailant</a><br/>
+<a href="https://scryfall.com/card/mom/164/shatter-the-source?utm_source=api">Shatter the Source</a><br/>
+<a href="https://scryfall.com/card/mom/37/sigiled-sentinel?utm_source=api">Sigiled Sentinel</a><br/>
+<a href="https://scryfall.com/card/mom/79/stasis-field?utm_source=api">Stasis Field</a><br/>
+<a href="https://scryfall.com/card/mom/39/sunder-the-gateway?utm_source=api">Sunder the Gateway</a><br/>
+<a href="https://scryfall.com/card/mom/42/swordsworn-cavalier?utm_source=api">Swordsworn Cavalier</a><br/>
+<a href="https://scryfall.com/card/mom/43/tarkir-duneshaper-burnished-dunestomper?utm_source=api">Tarkir Duneshaper // Burnished Dunestomper</a><br/>
+<a href="https://scryfall.com/card/mom/80/temporal-cleansing?utm_source=api">Temporal Cleansing</a><br/>
+<a href="https://scryfall.com/card/mom/126/tenured-oilcaster?utm_source=api">Tenured Oilcaster</a><br/>
+<a href="https://scryfall.com/card/mom/167/thrashing-frontliner?utm_source=api">Thrashing Frontliner</a><br/>
+<a href="https://scryfall.com/card/mom/81/thunderhead-squadron?utm_source=api">Thunderhead Squadron</a><br/>
+<a href="https://scryfall.com/card/mom/82/tidal-terror?utm_source=api">Tidal Terror</a><br/>
+<a href="https://scryfall.com/card/mom/210/timberland-ancient?utm_source=api">Timberland Ancient</a><br/>
+<a href="https://scryfall.com/card/mom/168/trailblazing-historian?utm_source=api">Trailblazing Historian</a><br/>
+<a href="https://scryfall.com/card/mom/127/traumatic-revelation?utm_source=api">Traumatic Revelation</a><br/>
+<a href="https://scryfall.com/card/mom/128/unseal-the-necropolis?utm_source=api">Unseal the Necropolis</a><br/>
+<a href="https://scryfall.com/card/mom/266/urn-of-godfire?utm_source=api">Urn of Godfire</a><br/>
+<a href="https://scryfall.com/card/mom/212/vengeant-earth?utm_source=api">Vengeant Earth</a><br/>
+<a href="https://scryfall.com/card/mom/170/volcanic-spite?utm_source=api">Volcanic Spite</a><br/>
+<a href="https://scryfall.com/card/mom/214/war-historian?utm_source=api">War Historian</a><br/>
+<a href="https://scryfall.com/card/mom/172/war-trained-slasher?utm_source=api">War-Trained Slasher</a><br/>
+<a href="https://scryfall.com/card/mom/215/wary-thespian?utm_source=api">Wary Thespian</a><br/>
+<a href="https://scryfall.com/card/mom/216/wildwood-escort?utm_source=api">Wildwood Escort</a><br/>
+<a href="https://scryfall.com/card/mom/173/wrenns-resolve?utm_source=api">Wrenn's Resolve</a><br/>
+<a href="https://scryfall.com/card/mom/328/zephyr-winder?utm_source=api">Zephyr Winder</a><br/>
+<a href="https://scryfall.com/card/mom/87/zhalfirin-shapecraft?utm_source=api">Zhalfirin Shapecraft</a><br/>
 </details>
 []()
 
