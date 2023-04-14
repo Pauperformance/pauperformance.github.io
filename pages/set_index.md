@@ -770,11 +770,11 @@ Lines in **bold** correspond to sets that have introduced new cards in the [Paup
 | 749       | plg22         | Love Your LGS 2022                              | 2022-07-01   |
 | **750**   | **2x2**       | **Double Masters 2022**                         | **2022-07-08** |
 | 751       | sch           | Store Championships 2022                        | 2022-07-09   |
-| 752       | 40k           | Warhammer 40,000                                | 2022-08-12   |
+| **752**   | **40k**       | **Warhammer 40,000**                            | **2022-08-12** |
 | 753       | t40k          | Warhammer 40,000 Tokens                         | 2022-08-12   |
 | 754       | dmc           | Dominaria United Commander                      | 2022-09-09   |
-| 755       | dmu           | Dominaria United                                | 2022-09-09   |
-| 756       | bro           | The Brothers' War                               | 2022-11-18   |
+| **755**   | **dmu**       | **Dominaria United**                            | **2022-09-09** |
+| **756**   | **bro**       | **The Brothers' War**                           | **2022-11-18** |
 | 757       | ysnc          | Alchemy: New Capenna                            | 2022-06-02   |
 | 758       | pclb          | Commander Legends: Battle for Baldur's Gate Promos | 2022-06-10   |
 | 759       | aclb          | Battle for Baldur's Gate Art Series             | 2022-06-10   |
@@ -818,13 +818,13 @@ Lines in **bold** correspond to sets that have introduced new cards in the [Paup
 | 797       | pewk          | Eternal Weekend 2022                            | 2022-11-26   |
 | 798       | 30a           | 30th Anniversary Edition                        | 2022-11-28   |
 | 799       | t30a          | 30th Anniversary Tokens                         | 2022-11-28   |
-| 800       | j22           | Jumpstart 2022                                  | 2022-12-02   |
+| **800**   | **j22**       | **Jumpstart 2022**                              | **2022-12-02** |
 | 801       | scd           | Starter Commander Decks                         | 2022-12-02   |
 | 802       | tscd          | Starter Commander Deck Tokens                   | 2022-12-02   |
 | 803       | pr23          | Regional Championship Qualifiers 2023           | 2023-01-01   |
 | 804       | onc           | Phyrexia: All Will Be One Commander             | 2023-02-03   |
-| 805       | one           | Phyrexia: All Will Be One                       | 2023-02-03   |
-| 806       | dmr           | Dominaria Remastered                            | 2023-03-31   |
+| **805**   | **one**       | **Phyrexia: All Will Be One**                   | **2023-02-03** |
+| **806**   | **dmr**       | **Dominaria Remastered**                        | **2023-03-31** |
 | 807       | bchr          | Chronicles Foreign Black Border                 | 1995-07-01   |
 | 808       | pdci          | DCI Promos                                      | 2006-01-01   |
 | 809       | phtr          | 2016 Heroes of the Realm                        | 2017-09-20   |
