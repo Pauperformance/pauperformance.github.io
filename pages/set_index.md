@@ -864,7 +864,8 @@ Lines in **bold** correspond to sets that have introduced new cards in the [Paup
 | 843       | ltc           | Tales of Middle-earth Commander                 | 2023-06-23   |
 | 844       | ltr           | The Lord of the Rings: Tales of Middle-earth    | 2023-06-23   |
 | 845       | cmm           | Commander Masters                               | 2023-08-04   |
-| 846       | tmoc          | March of the Machine Commander Tokens           | 2023-04-21   |
-| 847       | tmul          | Multiverse Legends Tokens                       | 2023-04-21   |
-| 848       | sbro          | The Brothers' War Substitute Cards              | 2023-05-16   |
+| 846       | fbro          | The Brothers' War Jumpstart Front Cards         | 2022-11-18   |
+| 847       | tmoc          | March of the Machine Commander Tokens           | 2023-04-21   |
+| 848       | tmul          | Multiverse Legends Tokens                       | 2023-04-21   |
+| 849       | sbro          | The Brothers' War Substitute Cards              | 2023-05-16   |
 
