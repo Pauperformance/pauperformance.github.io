@@ -866,4 +866,5 @@ Lines in **bold** correspond to sets that have introduced new cards in the [Paup
 | 845       | cmm           | Commander Masters                               | 2023-08-04   |
 | 846       | tmoc          | March of the Machine Commander Tokens           | 2023-04-21   |
 | 847       | tmul          | Multiverse Legends Tokens                       | 2023-04-21   |
+| 848       | sbro          | The Brothers' War Substitute Cards              | 2023-05-16   |
 
