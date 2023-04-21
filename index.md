@@ -25,8 +25,8 @@ Please, read the [PhD Guidelines](./pages/phd_guidelines.html).**
 
 ---
 
-## The current Pauperformance code for decks is **806**.
-It refers to Dominaria Remastered (dmr), released on 2023-03-31.
+## The current Pauperformance code for decks is **839**.
+It refers to March of the Machine (mom), released on 2023-04-21.
 
 ---
 
