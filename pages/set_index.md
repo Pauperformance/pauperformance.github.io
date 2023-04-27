@@ -868,6 +868,7 @@ Lines in **bold** correspond to sets that have introduced new cards in the [Paup
 | 847       | fbro          | The Brothers' War Jumpstart Front Cards         | 2022-11-18   |
 | 848       | sbro          | The Brothers' War Substitute Cards              | 2022-11-18   |
 | 849       | fmom          | March of the Machine Jumpstart Front Cards      | 2023-04-21   |
-| 850       | tmoc          | March of the Machine Commander Tokens           | 2023-04-21   |
-| 851       | tmul          | Multiverse Legends Tokens                       | 2023-04-21   |
+| 850       | pmom          | March of the Machine Promos                     | 2023-04-21   |
+| 851       | tmoc          | March of the Machine Commander Tokens           | 2023-04-21   |
+| 852       | tmul          | Multiverse Legends Tokens                       | 2023-04-21   |
 
