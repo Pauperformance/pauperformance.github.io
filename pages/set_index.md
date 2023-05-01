@@ -872,4 +872,5 @@ Lines in **bold** correspond to sets that have introduced new cards in the [Paup
 | 851       | pmom          | March of the Machine Promos                     | 2023-04-21   |
 | 852       | tmoc          | March of the Machine Commander Tokens           | 2023-04-21   |
 | 853       | tmul          | Multiverse Legends Tokens                       | 2023-04-21   |
+| 854       | wmom          | March of the Machine Japanese Promo Tokens      | 2023-04-21   |
 
