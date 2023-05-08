@@ -870,9 +870,10 @@ Lines in **bold** correspond to sets that have introduced new cards in the [Paup
 | 849       | amom          | March of the Machine Art Series                 | 2023-04-21   |
 | 850       | fmom          | March of the Machine Jumpstart Front Cards      | 2023-04-21   |
 | 851       | pmom          | March of the Machine Promos                     | 2023-04-21   |
-| 852       | tmoc          | March of the Machine Commander Tokens           | 2023-04-21   |
-| 853       | tmul          | Multiverse Legends Tokens                       | 2023-04-21   |
-| 854       | wmom          | March of the Machine Japanese Promo Tokens      | 2023-04-21   |
-| 855       | tltr          | Tales of Middle-earth Tokens                    | 2023-06-23   |
-| 856       | who           | Universes Beyond: Doctor Who                    | 2023-10-13   |
+| 852       | smom          | March of the Machine Substitute Cards           | 2023-04-21   |
+| 853       | tmoc          | March of the Machine Commander Tokens           | 2023-04-21   |
+| 854       | tmul          | Multiverse Legends Tokens                       | 2023-04-21   |
+| 855       | wmom          | March of the Machine Japanese Promo Tokens      | 2023-04-21   |
+| 856       | tltr          | Tales of Middle-earth Tokens                    | 2023-06-23   |
+| 857       | who           | Universes Beyond: Doctor Who                    | 2023-10-13   |
 
