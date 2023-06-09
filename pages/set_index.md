@@ -875,7 +875,8 @@ Lines in **bold** correspond to sets that have introduced new cards in the [Paup
 | 854       | tmul          | Multiverse Legends Tokens                       | 2023-04-21   |
 | 855       | wmom          | March of the Machine Japanese Promo Tokens      | 2023-04-21   |
 | 856       | pctb          | From Cute to Brute                              | 2023-05-08   |
-| 857       | tltr          | Tales of Middle-earth Tokens                    | 2023-06-23   |
-| 858       | pf23          | MagicFest 2023                                  | 2023-07-01   |
-| 859       | who           | Universes Beyond: Doctor Who                    | 2023-10-13   |
+| 857       | tltc          | Tales of Middle-earth Commander Tokens          | 2023-06-23   |
+| 858       | tltr          | Tales of Middle-earth Tokens                    | 2023-06-23   |
+| 859       | pf23          | MagicFest 2023                                  | 2023-07-01   |
+| 860       | who           | Universes Beyond: Doctor Who                    | 2023-10-13   |
 
