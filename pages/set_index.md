@@ -886,7 +886,8 @@ Lines in **bold** correspond to sets that have introduced new cards in the [Paup
 | 865       | ha7           | Historic Anthology 7                            | 2023-07-18   |
 | 866       | tcmm          | Commander Masters Tokens                        | 2023-08-04   |
 | 867       | p30t          | 30th Anniversary Celebration Tokyo              | 2023-09-01   |
-| 868       | woe           | Wilds of Eldraine                               | 2023-09-23   |
-| 869       | twho          | Doctor Who Tokens                               | 2023-10-13   |
-| 870       | who           | Doctor Who                                      | 2023-10-13   |
+| 868       | woe           | Wilds of Eldraine                               | 2023-09-08   |
+| 869       | wot           | Wilds of Eldraine: Enchanting Tales             | 2023-09-08   |
+| 870       | twho          | Doctor Who Tokens                               | 2023-10-13   |
+| 871       | who           | Doctor Who                                      | 2023-10-13   |
 
