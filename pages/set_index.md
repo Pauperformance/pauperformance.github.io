@@ -891,4 +891,5 @@ Lines in **bold** correspond to sets that have introduced new cards in the [Paup
 | 870       | wot           | Wilds of Eldraine: Enchanting Tales             | 2023-09-08   |
 | 871       | twho          | Doctor Who Tokens                               | 2023-10-13   |
 | 872       | who           | Doctor Who                                      | 2023-10-13   |
+| 873       | rvr           | Ravnica Remastered                              | 2024-03-01   |
 
