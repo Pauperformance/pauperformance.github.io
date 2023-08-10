@@ -866,30 +866,32 @@ Lines in **bold** correspond to sets that have introduced new cards in the [Paup
 | 845       | cmm           | Commander Masters                               | 2023-08-04   |
 | 846       | p30m          | 30th Anniversary Misc Promos                    | 2022-09-02   |
 | 847       | fdmu          | Dominaria United Jumpstart Front Cards          | 2022-09-09   |
-| 848       | fbro          | The Brothers' War Jumpstart Front Cards         | 2022-11-18   |
-| 849       | sbro          | The Brothers' War Substitute Cards              | 2022-11-18   |
-| 850       | amom          | March of the Machine Art Series                 | 2023-04-21   |
-| 851       | fmom          | March of the Machine Jumpstart Front Cards      | 2023-04-21   |
-| 852       | pmom          | March of the Machine Promos                     | 2023-04-21   |
-| 853       | smom          | March of the Machine Substitute Cards           | 2023-04-21   |
-| 854       | tmoc          | March of the Machine Commander Tokens           | 2023-04-21   |
-| 855       | tmul          | Multiverse Legends Tokens                       | 2023-04-21   |
-| 856       | wmom          | March of the Machine Japanese Promo Tokens      | 2023-04-21   |
-| 857       | pctb          | From Cute to Brute                              | 2023-05-08   |
-| 858       | altr          | Tales of Middle-earth Art Series                | 2023-06-23   |
-| 859       | fltr          | Tales of Middle-earth Front Cards               | 2023-06-23   |
-| 860       | pltr          | Tales of Middle-earth Promos                    | 2023-06-23   |
-| 861       | tltc          | Tales of Middle-earth Commander Tokens          | 2023-06-23   |
-| 862       | tltr          | Tales of Middle-earth Tokens                    | 2023-06-23   |
-| 863       | pf23          | MagicFest 2023                                  | 2023-07-01   |
-| 864       | ea3           | Explorer Anthology 3                            | 2023-07-18   |
-| 865       | ha7           | Historic Anthology 7                            | 2023-07-18   |
-| 866       | acmm          | Commander Masters Art Series                    | 2023-08-04   |
-| 867       | tcmm          | Commander Masters Tokens                        | 2023-08-04   |
-| 868       | p30t          | 30th Anniversary Celebration Tokyo              | 2023-09-01   |
-| 869       | woe           | Wilds of Eldraine                               | 2023-09-08   |
-| 870       | wot           | Wilds of Eldraine: Enchanting Tales             | 2023-09-08   |
-| 871       | twho          | Doctor Who Tokens                               | 2023-10-13   |
-| 872       | who           | Doctor Who                                      | 2023-10-13   |
-| 873       | rvr           | Ravnica Remastered                              | 2024-03-01   |
+| 848       | ptdmu         | Dominaria United Southeast Asia Tokens          | 2022-09-09   |
+| 849       | fbro          | The Brothers' War Jumpstart Front Cards         | 2022-11-18   |
+| 850       | ptbro         | The Brothers' War Southeast Asia Tokens         | 2022-11-18   |
+| 851       | sbro          | The Brothers' War Substitute Cards              | 2022-11-18   |
+| 852       | amom          | March of the Machine Art Series                 | 2023-04-21   |
+| 853       | fmom          | March of the Machine Jumpstart Front Cards      | 2023-04-21   |
+| 854       | pmom          | March of the Machine Promos                     | 2023-04-21   |
+| 855       | smom          | March of the Machine Substitute Cards           | 2023-04-21   |
+| 856       | tmoc          | March of the Machine Commander Tokens           | 2023-04-21   |
+| 857       | tmul          | Multiverse Legends Tokens                       | 2023-04-21   |
+| 858       | wmom          | March of the Machine Japanese Promo Tokens      | 2023-04-21   |
+| 859       | pctb          | From Cute to Brute                              | 2023-05-08   |
+| 860       | altr          | Tales of Middle-earth Art Series                | 2023-06-23   |
+| 861       | fltr          | Tales of Middle-earth Front Cards               | 2023-06-23   |
+| 862       | pltr          | Tales of Middle-earth Promos                    | 2023-06-23   |
+| 863       | tltc          | Tales of Middle-earth Commander Tokens          | 2023-06-23   |
+| 864       | tltr          | Tales of Middle-earth Tokens                    | 2023-06-23   |
+| 865       | pf23          | MagicFest 2023                                  | 2023-07-01   |
+| 866       | ea3           | Explorer Anthology 3                            | 2023-07-18   |
+| 867       | ha7           | Historic Anthology 7                            | 2023-07-18   |
+| 868       | acmm          | Commander Masters Art Series                    | 2023-08-04   |
+| 869       | tcmm          | Commander Masters Tokens                        | 2023-08-04   |
+| 870       | p30t          | 30th Anniversary Celebration Tokyo              | 2023-09-01   |
+| 871       | woe           | Wilds of Eldraine                               | 2023-09-08   |
+| 872       | wot           | Wilds of Eldraine: Enchanting Tales             | 2023-09-08   |
+| 873       | twho          | Doctor Who Tokens                               | 2023-10-13   |
+| 874       | who           | Doctor Who                                      | 2023-10-13   |
+| 875       | rvr           | Ravnica Remastered                              | 2024-03-01   |
 
