@@ -890,9 +890,10 @@ Lines in **bold** correspond to sets that have introduced new cards in the [Paup
 | 869       | tcmm          | Commander Masters Tokens                        | 2023-08-04   |
 | 870       | p30t          | 30th Anniversary Celebration Tokyo              | 2023-09-01   |
 | 871       | pmda          | Magic × Duel Masters Promos                     | 2023-09-08   |
-| 872       | woe           | Wilds of Eldraine                               | 2023-09-08   |
-| 873       | wot           | Wilds of Eldraine: Enchanting Tales             | 2023-09-08   |
-| 874       | twho          | Doctor Who Tokens                               | 2023-10-13   |
-| 875       | who           | Doctor Who                                      | 2023-10-13   |
-| 876       | rvr           | Ravnica Remastered                              | 2024-03-01   |
+| 872       | woc           | Wilds of Eldraine Commander                     | 2023-09-08   |
+| 873       | woe           | Wilds of Eldraine                               | 2023-09-08   |
+| 874       | wot           | Wilds of Eldraine: Enchanting Tales             | 2023-09-08   |
+| 875       | twho          | Doctor Who Tokens                               | 2023-10-13   |
+| 876       | who           | Doctor Who                                      | 2023-10-13   |
+| 877       | rvr           | Ravnica Remastered                              | 2024-03-01   |
 
