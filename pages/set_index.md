@@ -891,7 +891,7 @@ Lines in **bold** correspond to sets that have introduced new cards in the [Paup
 | 870       | p30t          | 30th Anniversary Celebration Tokyo              | 2023-09-01   |
 | 871       | pmda          | Magic × Duel Masters Promos                     | 2023-09-08   |
 | 872       | woc           | Wilds of Eldraine Commander                     | 2023-09-08   |
-| **873**   | **woe**       | **Wilds of Eldraine**                           | **2023-09-08** |
+| 873       | woe           | Wilds of Eldraine                               | 2023-09-08   |
 | 874       | wot           | Wilds of Eldraine: Enchanting Tales             | 2023-09-08   |
 | 875       | twoe          | Wilds of Eldraine Tokens                        | 2023-09-15   |
 | 876       | twoc          | Wilds of Eldraine Commander Tokens              | 2023-09-23   |
