@@ -13,7 +13,7 @@ This page should be useful for Pauper players that haven't followed the latest r
 
 Further information about reference numbers used by Pauperformance (p12e) to uniquely identify Magic sets can be found in the [Set Index page](set_index.html).
 
-The total number of cards in the Pauper pool is: 9219.
+The total number of cards in the Pauper pool is: 9125.
 
 ---
 Table of Contents
@@ -185,7 +185,6 @@ Table of Contents
 * [Dominaria Remastered](#dominaria-remastered-dmr) (*release: 2023-03-31 ~ p12e_code: 806*)
 * [March of the Machine Commander](#march-of-the-machine-commander-moc) (*release: 2023-04-21 ~ p12e_code: 838*)
 * [March of the Machine](#march-of-the-machine-mom) (*release: 2023-04-21 ~ p12e_code: 839*)
-* [Wilds of Eldraine](#wilds-of-eldraine-woe) (*release: 2023-09-08 ~ p12e_code: 873*)
 
 ---
 
@@ -10814,109 +10813,6 @@ Table of Contents
 <a href="https://scryfall.com/card/mom/173/wrenns-resolve?utm_source=api">Wrenn's Resolve</a><br/>
 <a href="https://scryfall.com/card/mom/328/zephyr-winder?utm_source=api">Zephyr Winder</a><br/>
 <a href="https://scryfall.com/card/mom/87/zhalfirin-shapecraft?utm_source=api">Zhalfirin Shapecraft</a><br/>
-</details>
-[]()
-
-## Wilds of Eldraine (woe)
-*release: 2023-09-08 | p12e_code: 873*
-
-<details>
-  <summary>Click to see 94 new cards</summary>
-
-<a href="https://scryfall.com/card/woe/40/aquatic-alchemist-bubble-up?utm_source=api">Aquatic Alchemist // Bubble Up</a><br/>
-<a href="https://scryfall.com/card/woe/2/archons-glory?utm_source=api">Archon's Glory</a><br/>
-<a href="https://scryfall.com/card/woe/3/armory-mice?utm_source=api">Armory Mice</a><br/>
-<a href="https://scryfall.com/card/woe/81/barrow-naughty?utm_source=api">Barrow Naughty</a><br/>
-<a href="https://scryfall.com/card/woe/161/beanstalk-wurm-plant-beans?utm_source=api">Beanstalk Wurm // Plant Beans</a><br/>
-<a href="https://scryfall.com/card/woe/121/bellowing-bruiser-beat-a-path?utm_source=api">Bellowing Bruiser // Beat a Path</a><br/>
-<a href="https://scryfall.com/card/woe/43/belunas-gatekeeper-entry-denied?utm_source=api">Beluna's Gatekeeper // Entry Denied</a><br/>
-<a href="https://scryfall.com/card/woe/4/besotted-knight-betroth-the-beast?utm_source=api">Besotted Knight // Betroth the Beast</a><br/>
-<a href="https://scryfall.com/card/woe/122/bespoke-battlegarb?utm_source=api">Bespoke Battlegarb</a><br/>
-<a href="https://scryfall.com/card/woe/162/bestial-bloodline?utm_source=api">Bestial Bloodline</a><br/>
-<a href="https://scryfall.com/card/woe/165/brave-the-wilds?utm_source=api">Brave the Wilds</a><br/>
-<a href="https://scryfall.com/card/woe/5/break-the-spell?utm_source=api">Break the Spell</a><br/>
-<a href="https://scryfall.com/card/woe/83/candy-grapple?utm_source=api">Candy Grapple</a><br/>
-<a href="https://scryfall.com/card/woe/243/candy-trail?utm_source=api">Candy Trail</a><br/>
-<a href="https://scryfall.com/card/woe/6/charmed-clothier?utm_source=api">Charmed Clothier</a><br/>
-<a href="https://scryfall.com/card/woe/84/conceited-witch-price-of-beauty?utm_source=api">Conceited Witch // Price of Beauty</a><br/>
-<a href="https://scryfall.com/card/woe/8/cooped-up?utm_source=api">Cooped Up</a><br/>
-<a href="https://scryfall.com/card/woe/167/curse-of-the-werefox?utm_source=api">Curse of the Werefox</a><br/>
-<a href="https://scryfall.com/card/woe/125/cut-in?utm_source=api">Cut In</a><br/>
-<a href="https://scryfall.com/card/woe/46/diminisher-witch?utm_source=api">Diminisher Witch</a><br/>
-<a href="https://scryfall.com/card/woe/126/edgewall-pack?utm_source=api">Edgewall Pack</a><br/>
-<a href="https://scryfall.com/card/woe/88/eriettes-whisper?utm_source=api">Eriette's Whisper</a><br/>
-<a href="https://scryfall.com/card/woe/91/feed-the-cauldron?utm_source=api">Feed the Cauldron</a><br/>
-<a href="https://scryfall.com/card/woe/92/fell-horseman-deathly-ride?utm_source=api">Fell Horseman // Deathly Ride</a><br/>
-<a href="https://scryfall.com/card/woe/170/ferocious-werefox-guard-change?utm_source=api">Ferocious Werefox // Guard Change</a><br/>
-<a href="https://scryfall.com/card/woe/128/flick-a-coin?utm_source=api">Flick a Coin</a><br/>
-<a href="https://scryfall.com/card/woe/130/frantic-firebolt?utm_source=api">Frantic Firebolt</a><br/>
-<a href="https://scryfall.com/card/woe/50/freeze-in-place?utm_source=api">Freeze in Place</a><br/>
-<a href="https://scryfall.com/card/woe/14/frostbridge-guard?utm_source=api">Frostbridge Guard</a><br/>
-<a href="https://scryfall.com/card/woe/131/gnawing-crescendo?utm_source=api">Gnawing Crescendo</a><br/>
-<a href="https://scryfall.com/card/woe/133/grabby-giant-thats-mine?utm_source=api">Grabby Giant // That's Mine</a><br/>
-<a href="https://scryfall.com/card/woe/134/grand-ball-guest?utm_source=api">Grand Ball Guest</a><br/>
-<a href="https://scryfall.com/card/woe/173/hamlet-glutton?utm_source=api">Hamlet Glutton</a><br/>
-<a href="https://scryfall.com/card/woe/135/harried-spearguard?utm_source=api">Harried Spearguard</a><br/>
-<a href="https://scryfall.com/card/woe/174/hollow-scavenger-bakery-raid?utm_source=api">Hollow Scavenger // Bakery Raid</a><br/>
-<a href="https://scryfall.com/card/woe/17/hopeful-vigil?utm_source=api">Hopeful Vigil</a><br/>
-<a href="https://scryfall.com/card/woe/95/hopeless-nightmare?utm_source=api">Hopeless Nightmare</a><br/>
-<a href="https://scryfall.com/card/woe/54/ice-out?utm_source=api">Ice Out</a><br/>
-<a href="https://scryfall.com/card/woe/57/into-the-fae-court?utm_source=api">Into the Fae Court</a><br/>
-<a href="https://scryfall.com/card/woe/58/johanns-stopgap?utm_source=api">Johann's Stopgap</a><br/>
-<a href="https://scryfall.com/card/woe/18/kellans-lightblades?utm_source=api">Kellan's Lightblades</a><br/>
-<a href="https://scryfall.com/card/woe/138/kindled-heroism?utm_source=api">Kindled Heroism</a><br/>
-<a href="https://scryfall.com/card/woe/177/leaping-ambush?utm_source=api">Leaping Ambush</a><br/>
-<a href="https://scryfall.com/card/woe/59/living-lectern?utm_source=api">Living Lectern</a><br/>
-<a href="https://scryfall.com/card/woe/60/merfolk-coralsmith?utm_source=api">Merfolk Coralsmith</a><br/>
-<a href="https://scryfall.com/card/woe/140/merry-bards?utm_source=api">Merry Bards</a><br/>
-<a href="https://scryfall.com/card/woe/141/minecart-daredevil-ride-the-rails?utm_source=api">Minecart Daredevil // Ride the Rails</a><br/>
-<a href="https://scryfall.com/card/woe/100/mintstrosity?utm_source=api">Mintstrosity</a><br/>
-<a href="https://scryfall.com/card/woe/61/misleading-motes?utm_source=api">Misleading Motes</a><br/>
-<a href="https://scryfall.com/card/woe/62/mocking-sprite?utm_source=api">Mocking Sprite</a><br/>
-<a href="https://scryfall.com/card/woe/20/moment-of-valor?utm_source=api">Moment of Valor</a><br/>
-<a href="https://scryfall.com/card/woe/101/not-dead-after-all?utm_source=api">Not Dead After All</a><br/>
-<a href="https://scryfall.com/card/woe/63/obyras-attendants-desperate-parry?utm_source=api">Obyra's Attendants // Desperate Parry</a><br/>
-<a href="https://scryfall.com/card/woe/22/plunge-into-winter?utm_source=api">Plunge into Winter</a><br/>
-<a href="https://scryfall.com/card/woe/24/protective-parents?utm_source=api">Protective Parents</a><br/>
-<a href="https://scryfall.com/card/woe/65/quick-study?utm_source=api">Quick Study</a><br/>
-<a href="https://scryfall.com/card/woe/144/ratcatcher-trainee-pest-problem?utm_source=api">Ratcatcher Trainee // Pest Problem</a><br/>
-<a href="https://scryfall.com/card/woe/103/rat-out?utm_source=api">Rat Out</a><br/>
-<a href="https://scryfall.com/card/woe/147/redcap-thief?utm_source=api">Redcap Thief</a><br/>
-<a href="https://scryfall.com/card/woe/179/redtooth-genealogist?utm_source=api">Redtooth Genealogist</a><br/>
-<a href="https://scryfall.com/card/woe/181/return-from-the-wilds?utm_source=api">Return from the Wilds</a><br/>
-<a href="https://scryfall.com/card/woe/26/return-triumphant?utm_source=api">Return Triumphant</a><br/>
-<a href="https://scryfall.com/card/woe/27/rimefur-reindeer?utm_source=api">Rimefur Reindeer</a><br/>
-<a href="https://scryfall.com/card/woe/182/rootrider-faun?utm_source=api">Rootrider Faun</a><br/>
-<a href="https://scryfall.com/card/woe/104/rowans-grim-search?utm_source=api">Rowan's Grim Search</a><br/>
-<a href="https://scryfall.com/card/woe/28/savior-of-the-sleeping?utm_source=api">Savior of the Sleeping</a><br/>
-<a href="https://scryfall.com/card/woe/250/scarecrow-guide?utm_source=api">Scarecrow Guide</a><br/>
-<a href="https://scryfall.com/card/woe/105/scream-puff?utm_source=api">Scream Puff</a><br/>
-<a href="https://scryfall.com/card/woe/106/shatter-the-oath?utm_source=api">Shatter the Oath</a><br/>
-<a href="https://scryfall.com/card/woe/149/skewer-slinger?utm_source=api">Skewer Slinger</a><br/>
-<a href="https://scryfall.com/card/woe/185/skybeast-tracker?utm_source=api">Skybeast Tracker</a><br/>
-<a href="https://scryfall.com/card/woe/29/slumbering-keepguard?utm_source=api">Slumbering Keepguard</a><br/>
-<a href="https://scryfall.com/card/woe/68/snaremaster-sprite?utm_source=api">Snaremaster Sprite</a><br/>
-<a href="https://scryfall.com/card/woe/69/spell-stutter?utm_source=api">Spell Stutter</a><br/>
-<a href="https://scryfall.com/card/woe/186/spider-food?utm_source=api">Spider Food</a><br/>
-<a href="https://scryfall.com/card/woe/109/stingblade-assassin?utm_source=api">Stingblade Assassin</a><br/>
-<a href="https://scryfall.com/card/woe/32/stockpiling-celebrant?utm_source=api">Stockpiling Celebrant</a><br/>
-<a href="https://scryfall.com/card/woe/71/stormkeld-prowler?utm_source=api">Stormkeld Prowler</a><br/>
-<a href="https://scryfall.com/card/woe/110/sugar-rush?utm_source=api">Sugar Rush</a><br/>
-<a href="https://scryfall.com/card/woe/111/sweettooth-witch?utm_source=api">Sweettooth Witch</a><br/>
-<a href="https://scryfall.com/card/woe/189/territorial-witchstalker?utm_source=api">Territorial Witchstalker</a><br/>
-<a href="https://scryfall.com/card/woe/192/toadstool-admirer?utm_source=api">Toadstool Admirer</a><br/>
-<a href="https://scryfall.com/card/woe/153/torch-the-tower?utm_source=api">Torch the Tower</a><br/>
-<a href="https://scryfall.com/card/woe/194/troublemaker-ouphe?utm_source=api">Troublemaker Ouphe</a><br/>
-<a href="https://scryfall.com/card/woe/36/tuinvale-guide?utm_source=api">Tuinvale Guide</a><br/>
-<a href="https://scryfall.com/card/woe/37/unassuming-sage?utm_source=api">Unassuming Sage</a><br/>
-<a href="https://scryfall.com/card/woe/156/unruly-catapult?utm_source=api">Unruly Catapult</a><br/>
-<a href="https://scryfall.com/card/woe/75/vantress-transmuter-croaking-curse?utm_source=api">Vantress Transmuter // Croaking Curse</a><br/>
-<a href="https://scryfall.com/card/woe/196/verdant-outrider?utm_source=api">Verdant Outrider</a><br/>
-<a href="https://scryfall.com/card/woe/116/voracious-vermin?utm_source=api">Voracious Vermin</a><br/>
-<a href="https://scryfall.com/card/woe/117/warehouse-tabby?utm_source=api">Warehouse Tabby</a><br/>
-<a href="https://scryfall.com/card/woe/77/water-wings?utm_source=api">Water Wings</a><br/>
-<a href="https://scryfall.com/card/woe/118/wicked-visitor?utm_source=api">Wicked Visitor</a><br/>
-<a href="https://scryfall.com/card/woe/158/witchs-mark?utm_source=api">Witch's Mark</a><br/>
 </details>
 []()
 
