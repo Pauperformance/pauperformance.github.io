@@ -891,11 +891,11 @@ Lines in **bold** correspond to sets that have introduced new cards in the [Paup
 | 870       | pagl          | Angels: They're Just Like Us but Cooler and with Wings | 2023-08-14   |
 | 871       | p30t          | 30th Anniversary Celebration Tokyo              | 2023-09-01   |
 | 872       | pmda          | Magic × Duel Masters Promos                     | 2023-09-08   |
-| 873       | woc           | Wilds of Eldraine Commander                     | 2023-09-08   |
-| **874**   | **woe**       | **Wilds of Eldraine**                           | **2023-09-08** |
-| 875       | wot           | Wilds of Eldraine: Enchanting Tales             | 2023-09-08   |
-| 876       | twoe          | Wilds of Eldraine Tokens                        | 2023-09-15   |
-| 877       | twoc          | Wilds of Eldraine Commander Tokens              | 2023-09-23   |
+| 873       | twoc          | Wilds of Eldraine Commander Tokens              | 2023-09-08   |
+| 874       | twoe          | Wilds of Eldraine Tokens                        | 2023-09-08   |
+| 875       | woc           | Wilds of Eldraine Commander                     | 2023-09-08   |
+| **876**   | **woe**       | **Wilds of Eldraine**                           | **2023-09-08** |
+| 877       | wot           | Wilds of Eldraine: Enchanting Tales             | 2023-09-08   |
 | 878       | twho          | Doctor Who Tokens                               | 2023-10-13   |
 | 879       | who           | Doctor Who                                      | 2023-10-13   |
 | 880       | rvr           | Ravnica Remastered                              | 2024-03-01   |
