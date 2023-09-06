@@ -897,7 +897,8 @@ Lines in **bold** correspond to sets that have introduced new cards in the [Paup
 | 876       | woc           | Wilds of Eldraine Commander                     | 2023-09-08   |
 | **877**   | **woe**       | **Wilds of Eldraine**                           | **2023-09-08** |
 | 878       | wot           | Wilds of Eldraine: Enchanting Tales             | 2023-09-08   |
-| 879       | twho          | Doctor Who Tokens                               | 2023-10-13   |
-| 880       | who           | Doctor Who                                      | 2023-10-13   |
-| 881       | rvr           | Ravnica Remastered                              | 2024-03-01   |
+| 879       | wwoe          | Wilds of Eldraine Japanese Promo Tokens         | 2023-09-08   |
+| 880       | twho          | Doctor Who Tokens                               | 2023-10-13   |
+| 881       | who           | Doctor Who                                      | 2023-10-13   |
+| 882       | rvr           | Ravnica Remastered                              | 2024-03-01   |
 
