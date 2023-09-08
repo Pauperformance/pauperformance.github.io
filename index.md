@@ -25,8 +25,8 @@ Please, read the [PhD Guidelines](./pages/phd_guidelines.html).**
 
 ---
 
-## The current Pauperformance code for decks is **839**.
-It refers to March of the Machine (mom), released on 2023-04-21.
+## The current Pauperformance code for decks is **877**.
+It refers to Wilds of Eldraine (woe), released on 2023-09-08.
 
 ---
 
