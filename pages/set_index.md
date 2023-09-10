@@ -892,13 +892,14 @@ Lines in **bold** correspond to sets that have introduced new cards in the [Paup
 | 871       | p30t          | 30th Anniversary Celebration Tokyo              | 2023-09-01   |
 | 872       | awoe          | Wilds of Eldraine Art Series                    | 2023-09-08   |
 | 873       | pmda          | Magic × Duel Masters Promos                     | 2023-09-08   |
-| 874       | twoc          | Wilds of Eldraine Commander Tokens              | 2023-09-08   |
-| 875       | twoe          | Wilds of Eldraine Tokens                        | 2023-09-08   |
-| 876       | woc           | Wilds of Eldraine Commander                     | 2023-09-08   |
-| **877**   | **woe**       | **Wilds of Eldraine**                           | **2023-09-08** |
-| 878       | wot           | Wilds of Eldraine: Enchanting Tales             | 2023-09-08   |
-| 879       | wwoe          | Wilds of Eldraine Japanese Promo Tokens         | 2023-09-08   |
-| 880       | twho          | Doctor Who Tokens                               | 2023-10-13   |
-| 881       | who           | Doctor Who                                      | 2023-10-13   |
-| 882       | rvr           | Ravnica Remastered                              | 2024-03-01   |
+| 874       | pwoe          | Wilds of Eldraine Promos                        | 2023-09-08   |
+| 875       | twoc          | Wilds of Eldraine Commander Tokens              | 2023-09-08   |
+| 876       | twoe          | Wilds of Eldraine Tokens                        | 2023-09-08   |
+| 877       | woc           | Wilds of Eldraine Commander                     | 2023-09-08   |
+| **878**   | **woe**       | **Wilds of Eldraine**                           | **2023-09-08** |
+| 879       | wot           | Wilds of Eldraine: Enchanting Tales             | 2023-09-08   |
+| 880       | wwoe          | Wilds of Eldraine Japanese Promo Tokens         | 2023-09-08   |
+| 881       | twho          | Doctor Who Tokens                               | 2023-10-13   |
+| 882       | who           | Doctor Who                                      | 2023-10-13   |
+| 883       | rvr           | Ravnica Remastered                              | 2024-03-01   |
 

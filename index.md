@@ -25,7 +25,7 @@ Please, read the [PhD Guidelines](./pages/phd_guidelines.html).**
 
 ---
 
-## The current Pauperformance code for decks is **877**.
+## The current Pauperformance code for decks is **878**.
 It refers to Wilds of Eldraine (woe), released on 2023-09-08.
 
 ---

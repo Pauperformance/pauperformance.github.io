@@ -185,7 +185,7 @@ Table of Contents
 * [Dominaria Remastered](#dominaria-remastered-dmr) (*release: 2023-03-31 ~ p12e_code: 806*)
 * [March of the Machine Commander](#march-of-the-machine-commander-moc) (*release: 2023-04-21 ~ p12e_code: 838*)
 * [March of the Machine](#march-of-the-machine-mom) (*release: 2023-04-21 ~ p12e_code: 839*)
-* [Wilds of Eldraine](#wilds-of-eldraine-woe) (*release: 2023-09-08 ~ p12e_code: 877*)
+* [Wilds of Eldraine](#wilds-of-eldraine-woe) (*release: 2023-09-08 ~ p12e_code: 878*)
 
 ---
 
@@ -10818,7 +10818,7 @@ Table of Contents
 []()
 
 ## Wilds of Eldraine (woe)
-*release: 2023-09-08 | p12e_code: 877*
+*release: 2023-09-08 | p12e_code: 878*
 
 <details>
   <summary>Click to see 94 new cards</summary>
