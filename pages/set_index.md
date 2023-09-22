@@ -901,5 +901,10 @@ Lines in **bold** correspond to sets that have introduced new cards in the [Paup
 | 880       | wwoe          | Wilds of Eldraine Japanese Promo Tokens         | 2023-09-08   |
 | 881       | twho          | Doctor Who Tokens                               | 2023-10-13   |
 | 882       | who           | Doctor Who                                      | 2023-10-13   |
-| 883       | rvr           | Ravnica Remastered                              | 2024-03-01   |
+| 883       | lcc           | Lost Caverns of Ixalan Commander                | 2023-11-17   |
+| 884       | lci           | Lost Caverns of Ixalan                          | 2023-11-17   |
+| 885       | rex           | Jurassic World Collection                       | 2023-11-17   |
+| 886       | spg           | Special Guests                                  | 2023-11-17   |
+| 887       | tlci          | Lost Caverns of Ixalan Tokens                   | 2023-11-17   |
+| 888       | rvr           | Ravnica Remastered                              | 2024-03-01   |
 
