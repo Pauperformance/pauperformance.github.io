@@ -42,7 +42,7 @@
 <a href="https://scryfall.com/card/mh2/267/counterspell"><img src="https://c1.scryfall.com/file/scryfall-cards/normal/front/1/9/1920dae4-fb92-4f19-ae4b-eb3276b8dac7.jpg" class="archetype-card rounded-image"/></a>
 <a href="https://scryfall.com/card/cmr/178/fiery-cannonade"><img src="https://c1.scryfall.com/file/scryfall-cards/normal/front/3/9/396f1cdf-712b-4518-a0e8-0039303dccdc.jpg" class="archetype-card rounded-image"/></a>
 <a href="https://scryfall.com/card/ema/167/fog"><img src="https://c1.scryfall.com/file/scryfall-cards/normal/front/b/b/bbc3152e-7b3b-4ac6-8b33-abfebde216aa.jpg" class="archetype-card rounded-image"/></a>
-<a href="https://scryfall.com/card/ltc/267/growth-spiral"><img src="https://cards.scryfall.io/normal/front/f/7/f7b59b66-677d-4fd8-b7d7-5135d6622eb9.jpg" class="archetype-card rounded-image"/></a>
+<a href="https://scryfall.com/card/dmc/153/growth-spiral"><img src="https://cards.scryfall.io/normal/front/7/d/7d0ae655-c64e-470d-a7ae-e06b89c77e57.jpg" class="archetype-card rounded-image"/></a>
 <a href="https://scryfall.com/card/bbd/119/impulse"><img src="https://c1.scryfall.com/file/scryfall-cards/normal/front/8/9/895c961f-61cf-49e8-9b80-97140a5de19a.jpg" class="archetype-card rounded-image"/></a>
 <a href="https://scryfall.com/card/m12/60/jaces-erasure"><img src="https://c1.scryfall.com/file/scryfall-cards/normal/front/9/7/970f4f34-f834-41a7-aff1-7cef82cefc74.jpg" class="archetype-card rounded-image"/></a>
 <a href="https://scryfall.com/card/rav/60/muddle-the-mixture"><img src="https://c1.scryfall.com/file/scryfall-cards/normal/front/4/c/4cc785b0-0a77-4b02-b0b4-2bda2fc621cc.jpg" class="archetype-card rounded-image"/></a>
