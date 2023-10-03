@@ -906,5 +906,6 @@ Lines in **bold** correspond to sets that have introduced new cards in the [Paup
 | 885       | rex           | Jurassic World Collection                       | 2023-11-17   |
 | 886       | spg           | Special Guests                                  | 2023-11-17   |
 | 887       | tlci          | Lost Caverns of Ixalan Tokens                   | 2023-11-17   |
-| 888       | rvr           | Ravnica Remastered                              | 2024-03-01   |
+| 888       | pw24          | Wizards Play Network 2024                       | 2024-01-01   |
+| 889       | rvr           | Ravnica Remastered                              | 2024-03-01   |
 
