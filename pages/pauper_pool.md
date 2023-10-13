@@ -13,7 +13,7 @@ This page should be useful for Pauper players that haven't followed the latest r
 
 Further information about reference numbers used by Pauperformance (p12e) to uniquely identify Magic sets can be found in the [Set Index page](set_index.html).
 
-The total number of cards in the Pauper pool is: 9224.
+The total number of cards in the Pauper pool is: 9220.
 
 ---
 Table of Contents
@@ -10925,12 +10925,8 @@ Table of Contents
 *release: 2023-10-13 | p12e_code: 883*
 
 <details>
-  <summary>Click to see 5 new cards</summary>
+  <summary>Click to see 1 new cards</summary>
 
-<a href="https://scryfall.com/card/who/572/caught-in-a-parallel-universe?utm_source=api">Caught in a Parallel Universe</a><br/>
-<a href="https://scryfall.com/card/who/582/fixed-point-in-time?utm_source=api">Fixed Point in Time</a><br/>
-<a href="https://scryfall.com/card/who/585/human-time-lord-meta-crisis?utm_source=api">Human-Time Lord Meta-Crisis</a><br/>
-<a href="https://scryfall.com/card/who/605/unleash-the-flux?utm_source=api">Unleash the Flux</a><br/>
 <a href="https://scryfall.com/card/who/62/wibbly-wobbly-timey-wimey?utm_source=api">Wibbly-wobbly, Timey-wimey</a><br/>
 </details>
 []()
