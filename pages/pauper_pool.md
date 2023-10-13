@@ -13,7 +13,7 @@ This page should be useful for Pauper players that haven't followed the latest r
 
 Further information about reference numbers used by Pauperformance (p12e) to uniquely identify Magic sets can be found in the [Set Index page](set_index.html).
 
-The total number of cards in the Pauper pool is: 9260.
+The total number of cards in the Pauper pool is: 9220.
 
 ---
 Table of Contents
@@ -10925,48 +10925,8 @@ Table of Contents
 *release: 2023-10-13 | p12e_code: 883*
 
 <details>
-  <summary>Click to see 41 new cards</summary>
+  <summary>Click to see 1 new cards</summary>
 
-<a href="https://scryfall.com/card/who/566/amys-home?utm_source=api">Amy's Home</a><br/>
-<a href="https://scryfall.com/card/who/567/antarctic-research-base?utm_source=api">Antarctic Research Base</a><br/>
-<a href="https://scryfall.com/card/who/568/aplan-mortarium?utm_source=api">Aplan Mortarium</a><br/>
-<a href="https://scryfall.com/card/who/569/bad-wolf-bay?utm_source=api">Bad Wolf Bay</a><br/>
-<a href="https://scryfall.com/card/who/570/besieged-viking-village?utm_source=api">Besieged Viking Village</a><br/>
-<a href="https://scryfall.com/card/who/571/bowie-base-one?utm_source=api">Bowie Base One</a><br/>
-<a href="https://scryfall.com/card/who/572/caught-in-a-parallel-universe?utm_source=api">Caught in a Parallel Universe</a><br/>
-<a href="https://scryfall.com/card/who/575/city-of-the-daleks?utm_source=api">City of the Daleks</a><br/>
-<a href="https://scryfall.com/card/who/576/coal-hill-school?utm_source=api">Coal Hill School</a><br/>
-<a href="https://scryfall.com/card/who/577/dalek-intensive-care?utm_source=api">Dalek Intensive Care</a><br/>
-<a href="https://scryfall.com/card/who/582/fixed-point-in-time?utm_source=api">Fixed Point in Time</a><br/>
-<a href="https://scryfall.com/card/who/583/gardens-of-tranquil-repose?utm_source=api">Gardens of Tranquil Repose</a><br/>
-<a href="https://scryfall.com/card/who/584/hotel-of-fears?utm_source=api">Hotel of Fears</a><br/>
-<a href="https://scryfall.com/card/who/585/human-time-lord-meta-crisis?utm_source=api">Human-Time Lord Meta-Crisis</a><br/>
-<a href="https://scryfall.com/card/who/586/kerblam!-warehouse?utm_source=api">Kerblam! Warehouse</a><br/>
-<a href="https://scryfall.com/card/who/587/lake-silencio?utm_source=api">Lake Silencio</a><br/>
-<a href="https://scryfall.com/card/who/590/mondassian-colony-ship?utm_source=api">Mondassian Colony Ship</a><br/>
-<a href="https://scryfall.com/card/who/592/new-new-york?utm_source=api">New New York</a><br/>
-<a href="https://scryfall.com/card/who/593/north-pole-research-base?utm_source=api">North Pole Research Base</a><br/>
-<a href="https://scryfall.com/card/who/594/ood-sphere?utm_source=api">Ood Sphere</a><br/>
-<a href="https://scryfall.com/card/who/595/pompeii?utm_source=api">Pompeii</a><br/>
-<a href="https://scryfall.com/card/who/596/prime-ministers-cabinet-room?utm_source=api">Prime Minister's Cabinet Room</a><br/>
-<a href="https://scryfall.com/card/who/598/singing-towers-of-darillium?utm_source=api">Singing Towers of Darillium</a><br/>
-<a href="https://scryfall.com/card/who/599/spectrox-mines?utm_source=api">Spectrox Mines</a><br/>
-<a href="https://scryfall.com/card/who/600/stormcage-containment-facility?utm_source=api">Stormcage Containment Facility</a><br/>
-<a href="https://scryfall.com/card/who/601/tardis-bay?utm_source=api">TARDIS Bay</a><br/>
-<a href="https://scryfall.com/card/who/602/temple-of-atropos?utm_source=api">Temple of Atropos</a><br/>
-<a href="https://scryfall.com/card/who/573/the-cave-of-skulls?utm_source=api">The Cave of Skulls</a><br/>
-<a href="https://scryfall.com/card/who/574/the-cheetah-planet?utm_source=api">The Cheetah Planet</a><br/>
-<a href="https://scryfall.com/card/who/578/the-dining-car?utm_source=api">The Dining Car</a><br/>
-<a href="https://scryfall.com/card/who/579/the-doctors-childhood-barn?utm_source=api">The Doctor's Childhood Barn</a><br/>
-<a href="https://scryfall.com/card/who/580/the-doctors-tomb?utm_source=api">The Doctor's Tomb</a><br/>
-<a href="https://scryfall.com/card/who/581/the-drum-mining-facility?utm_source=api">The Drum, Mining Facility</a><br/>
-<a href="https://scryfall.com/card/who/588/the-lux-foundation-library?utm_source=api">The Lux Foundation Library</a><br/>
-<a href="https://scryfall.com/card/who/589/the-matrix-of-time?utm_source=api">The Matrix of Time</a><br/>
-<a href="https://scryfall.com/card/who/591/the-moonbase?utm_source=api">The Moonbase</a><br/>
-<a href="https://scryfall.com/card/who/597/the-pyramid-of-mars?utm_source=api">The Pyramid of Mars</a><br/>
-<a href="https://scryfall.com/card/who/603/two-streams-facility?utm_source=api">Two Streams Facility</a><br/>
-<a href="https://scryfall.com/card/who/604/unit-headquarters?utm_source=api">UNIT Headquarters</a><br/>
-<a href="https://scryfall.com/card/who/605/unleash-the-flux?utm_source=api">Unleash the Flux</a><br/>
 <a href="https://scryfall.com/card/who/62/wibbly-wobbly-timey-wimey?utm_source=api">Wibbly-wobbly, Timey-wimey</a><br/>
 </details>
 []()
