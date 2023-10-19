@@ -909,4 +909,6 @@ Lines in **bold** correspond to sets that have introduced new cards in the [Paup
 | 888       | tlci          | Lost Caverns of Ixalan Tokens                   | 2023-11-17   |
 | 889       | pw24          | Wizards Play Network 2024                       | 2024-01-01   |
 | 890       | rvr           | Ravnica Remastered                              | 2024-03-01   |
+| 891       | pip           | Fallout                                         | 2024-03-08   |
+| 892       | tpip          | Fallout Tokens                                  | 2024-03-08   |
 
