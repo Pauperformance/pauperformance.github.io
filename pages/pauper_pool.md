@@ -10880,12 +10880,12 @@ Table of Contents
 <a href="https://scryfall.com/card/woe/22/plunge-into-winter?utm_source=api">Plunge into Winter</a><br/>
 <a href="https://scryfall.com/card/woe/24/protective-parents?utm_source=api">Protective Parents</a><br/>
 <a href="https://scryfall.com/card/woe/65/quick-study?utm_source=api">Quick Study</a><br/>
-<a href="https://scryfall.com/card/woe/144/ratcatcher-trainee-pest-problem?utm_source=api">Ratcatcher Trainee // Pest Problem</a><br/>
 <a href="https://scryfall.com/card/woe/103/rat-out?utm_source=api">Rat Out</a><br/>
+<a href="https://scryfall.com/card/woe/144/ratcatcher-trainee-pest-problem?utm_source=api">Ratcatcher Trainee // Pest Problem</a><br/>
 <a href="https://scryfall.com/card/woe/147/redcap-thief?utm_source=api">Redcap Thief</a><br/>
 <a href="https://scryfall.com/card/woe/179/redtooth-genealogist?utm_source=api">Redtooth Genealogist</a><br/>
-<a href="https://scryfall.com/card/woe/181/return-from-the-wilds?utm_source=api">Return from the Wilds</a><br/>
 <a href="https://scryfall.com/card/woe/26/return-triumphant?utm_source=api">Return Triumphant</a><br/>
+<a href="https://scryfall.com/card/woe/181/return-from-the-wilds?utm_source=api">Return from the Wilds</a><br/>
 <a href="https://scryfall.com/card/woe/27/rimefur-reindeer?utm_source=api">Rimefur Reindeer</a><br/>
 <a href="https://scryfall.com/card/woe/182/rootrider-faun?utm_source=api">Rootrider Faun</a><br/>
 <a href="https://scryfall.com/card/woe/104/rowans-grim-search?utm_source=api">Rowan's Grim Search</a><br/>
