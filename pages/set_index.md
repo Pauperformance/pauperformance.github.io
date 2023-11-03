@@ -905,11 +905,12 @@ Lines in **bold** correspond to sets that have introduced new cards in the [Paup
 | **884**   | **lcc**       | **Lost Caverns of Ixalan Commander**            | **2023-11-17** |
 | 885       | lci           | The Lost Caverns of Ixalan                      | 2023-11-17   |
 | **886**   | **rex**       | **Jurassic World Collection**                   | **2023-11-17** |
-| 887       | spg           | Special Guests                                  | 2023-11-17   |
-| 888       | tlcc          | Lost Caverns of Ixalan Commander Tokens         | 2023-11-17   |
-| 889       | tlci          | Lost Caverns of Ixalan Tokens                   | 2023-11-17   |
-| 890       | pw24          | Wizards Play Network 2024                       | 2024-01-01   |
-| 891       | rvr           | Ravnica Remastered                              | 2024-03-01   |
-| 892       | pip           | Fallout                                         | 2024-03-08   |
-| 893       | tpip          | Fallout Tokens                                  | 2024-03-08   |
+| 887       | slci          | The Lost Caverns of Ixalan Substitute Cards     | 2023-11-17   |
+| 888       | spg           | Special Guests                                  | 2023-11-17   |
+| 889       | tlcc          | Lost Caverns of Ixalan Commander Tokens         | 2023-11-17   |
+| 890       | tlci          | Lost Caverns of Ixalan Tokens                   | 2023-11-17   |
+| 891       | pw24          | Wizards Play Network 2024                       | 2024-01-01   |
+| 892       | rvr           | Ravnica Remastered                              | 2024-03-01   |
+| 893       | pip           | Fallout                                         | 2024-03-08   |
+| 894       | tpip          | Fallout Tokens                                  | 2024-03-08   |
 
