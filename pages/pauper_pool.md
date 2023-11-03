@@ -13,7 +13,7 @@ This page should be useful for Pauper players that haven't followed the latest r
 
 Further information about reference numbers used by Pauperformance (p12e) to uniquely identify Magic sets can be found in the [Set Index page](set_index.html).
 
-The total number of cards in the Pauper pool is: 9220.
+The total number of cards in the Pauper pool is: 9221.
 
 ---
 Table of Contents
@@ -187,6 +187,7 @@ Table of Contents
 * [March of the Machine](#march-of-the-machine-mom) (*release: 2023-04-21 ~ p12e_code: 839*)
 * [Wilds of Eldraine](#wilds-of-eldraine-woe) (*release: 2023-09-08 ~ p12e_code: 878*)
 * [Doctor Who](#doctor-who-who) (*release: 2023-10-13 ~ p12e_code: 883*)
+* [Lost Caverns of Ixalan Commander](#lost-caverns-of-ixalan-commander-lcc) (*release: 2023-11-17 ~ p12e_code: 884*)
 
 ---
 
@@ -10928,6 +10929,16 @@ Table of Contents
   <summary>Click to see 1 new cards</summary>
 
 <a href="https://scryfall.com/card/who/62/wibbly-wobbly-timey-wimey?utm_source=api">Wibbly-wobbly, Timey-wimey</a><br/>
+</details>
+[]()
+
+## Lost Caverns of Ixalan Commander (lcc)
+*release: 2023-11-17 | p12e_code: 884*
+
+<details>
+  <summary>Click to see 1 new cards</summary>
+
+<a href="https://scryfall.com/card/lcc/128/generous-gift?utm_source=api">Generous Gift</a><br/>
 </details>
 []()
 
