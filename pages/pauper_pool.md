@@ -13,7 +13,7 @@ This page should be useful for Pauper players that haven't followed the latest r
 
 Further information about reference numbers used by Pauperformance (p12e) to uniquely identify Magic sets can be found in the [Set Index page](set_index.html).
 
-The total number of cards in the Pauper pool is: 9227.
+The total number of cards in the Pauper pool is: 9221.
 
 ---
 Table of Contents
@@ -188,7 +188,6 @@ Table of Contents
 * [Wilds of Eldraine](#wilds-of-eldraine-woe) (*release: 2023-09-08 ~ p12e_code: 878*)
 * [Doctor Who](#doctor-who-who) (*release: 2023-10-13 ~ p12e_code: 883*)
 * [Lost Caverns of Ixalan Commander](#lost-caverns-of-ixalan-commander-lcc) (*release: 2023-11-17 ~ p12e_code: 884*)
-* [Jurassic World Collection](#jurassic-world-collection-rex) (*release: 2023-11-17 ~ p12e_code: 886*)
 
 ---
 
@@ -10940,21 +10939,6 @@ Table of Contents
   <summary>Click to see 1 new cards</summary>
 
 <a href="https://scryfall.com/card/lcc/128/generous-gift?utm_source=api">Generous Gift</a><br/>
-</details>
-[]()
-
-## Jurassic World Collection (rex)
-*release: 2023-11-17 | p12e_code: 886*
-
-<details>
-  <summary>Click to see 6 new cards</summary>
-
-<a href="https://scryfall.com/card/rex/26/command-tower-command-tower?utm_source=api">Command Tower // Command Tower</a><br/>
-<a href="https://scryfall.com/card/rex/25/forest-forest?utm_source=api">Forest // Forest</a><br/>
-<a href="https://scryfall.com/card/rex/22/island-island?utm_source=api">Island // Island</a><br/>
-<a href="https://scryfall.com/card/rex/24/mountain-mountain?utm_source=api">Mountain // Mountain</a><br/>
-<a href="https://scryfall.com/card/rex/21/plains-plains?utm_source=api">Plains // Plains</a><br/>
-<a href="https://scryfall.com/card/rex/23/swamp-swamp?utm_source=api">Swamp // Swamp</a><br/>
 </details>
 []()
 
