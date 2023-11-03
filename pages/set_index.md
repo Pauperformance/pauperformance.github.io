@@ -902,7 +902,7 @@ Lines in **bold** correspond to sets that have introduced new cards in the [Paup
 | 881       | ywoe          | Alchemy: Wilds of Eldraine                      | 2023-10-10   |
 | 882       | twho          | Doctor Who Tokens                               | 2023-10-13   |
 | **883**   | **who**       | **Doctor Who**                                  | **2023-10-13** |
-| 884       | lcc           | Lost Caverns of Ixalan Commander                | 2023-11-17   |
+| **884**   | **lcc**       | **Lost Caverns of Ixalan Commander**            | **2023-11-17** |
 | 885       | lci           | The Lost Caverns of Ixalan                      | 2023-11-17   |
 | 886       | rex           | Jurassic World Collection                       | 2023-11-17   |
 | 887       | spg           | Special Guests                                  | 2023-11-17   |
