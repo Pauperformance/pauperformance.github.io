@@ -904,7 +904,7 @@ Lines in **bold** correspond to sets that have introduced new cards in the [Paup
 | **883**   | **who**       | **Doctor Who**                                  | **2023-10-13** |
 | **884**   | **lcc**       | **Lost Caverns of Ixalan Commander**            | **2023-11-17** |
 | 885       | lci           | The Lost Caverns of Ixalan                      | 2023-11-17   |
-| 886       | rex           | Jurassic World Collection                       | 2023-11-17   |
+| **886**   | **rex**       | **Jurassic World Collection**                   | **2023-11-17** |
 | 887       | spg           | Special Guests                                  | 2023-11-17   |
 | 888       | tlcc          | Lost Caverns of Ixalan Commander Tokens         | 2023-11-17   |
 | 889       | tlci          | Lost Caverns of Ixalan Tokens                   | 2023-11-17   |
