@@ -47,7 +47,6 @@
 <a href="https://scryfall.com/card/pca/69/nest-invader"><img src="https://c1.scryfall.com/file/scryfall-cards/normal/front/3/0/3085f5b1-d2e3-4dd4-8263-024b2b5da4b4.jpg" class="archetype-card rounded-image"/></a>
 <a href="https://scryfall.com/card/mh2/95/nested-shambler"><img src="https://c1.scryfall.com/file/scryfall-cards/normal/front/9/8/9851f290-f502-49f8-9b48-67f7966d4e34.jpg" class="archetype-card rounded-image"/></a>
 <a href="https://scryfall.com/card/frf/85/sultai-emissary"><img src="https://c1.scryfall.com/file/scryfall-cards/normal/front/1/2/12421e1c-5144-4391-abf2-a2fb864920e9.jpg" class="archetype-card rounded-image"/></a>
-<a href="https://scryfall.com/card/lcc/360/terramorphic-expanse"><img src="https://cards.scryfall.io/normal/front/1/9/19b72af8-9bb9-4542-9115-09c27ad6e7ad.jpg" class="archetype-card rounded-image"/></a>
 <a href="https://scryfall.com/card/ema/109/tragic-slip"><img src="https://c1.scryfall.com/file/scryfall-cards/normal/front/c/3/c3140bf5-9846-47ae-8142-b013aac14609.jpg" class="archetype-card rounded-image"/></a>
 <a href="https://scryfall.com/card/mh1/113/unearth"><img src="https://c1.scryfall.com/file/scryfall-cards/normal/front/b/6/b62abd0c-ec3e-45d7-989d-da269812aeef.jpg" class="archetype-card rounded-image"/></a>
 <a href="https://scryfall.com/card/khm/117/village-rites"><img src="https://c1.scryfall.com/file/scryfall-cards/normal/front/0/f/0fab9ee8-776a-48e5-b309-bcd381e67bf7.jpg" class="archetype-card rounded-image"/></a>
