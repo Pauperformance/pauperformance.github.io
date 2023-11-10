@@ -22,7 +22,6 @@
 <a href="https://scryfall.com/card/c18/139/dawns-reflection"><img src="https://c1.scryfall.com/file/scryfall-cards/normal/front/1/3/1366d406-4539-408f-93c1-f940327c1ba2.jpg" class="archetype-card rounded-image"/></a>
 <a href="https://scryfall.com/card/jou/130/market-festival"><img src="https://c1.scryfall.com/file/scryfall-cards/normal/front/c/3/c3a70329-ecae-4647-b912-75d936a6c8c5.jpg" class="archetype-card rounded-image"/></a>
 <a href="https://scryfall.com/card/chk/80/psychic-puppetry"><img src="https://c1.scryfall.com/file/scryfall-cards/normal/front/9/e/9e341d6b-f4b0-4347-8055-f5fab756334c.jpg" class="archetype-card rounded-image"/></a>
-<a href="https://scryfall.com/card/lcc/360/terramorphic-expanse"><img src="https://cards.scryfall.io/normal/front/1/9/19b72af8-9bb9-4542-9115-09c27ad6e7ad.jpg" class="archetype-card rounded-image"/></a>
 </details><br/>
 
 
