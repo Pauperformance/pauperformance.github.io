@@ -58,6 +58,7 @@ Once the board is in control, the player typically wins by beating with creature
 <a href="https://scryfall.com/card/zen/70/spreading-seas"><img src="https://c1.scryfall.com/file/scryfall-cards/normal/front/3/7/37454c1c-4098-4ac2-884e-3f65f1384bdb.jpg" class="archetype-card rounded-image"/></a>
 <a href="https://scryfall.com/card/pls/17/sunscape-familiar"><img src="https://c1.scryfall.com/file/scryfall-cards/normal/front/9/6/9621f341-bf85-4b77-bf19-2fb013b4c955.jpg" class="archetype-card rounded-image"/></a>
 <a href="https://scryfall.com/card/war/72/teferis-time-twist"><img src="https://c1.scryfall.com/file/scryfall-cards/normal/front/c/8/c878bdc0-d697-4a2f-bba5-758b27f4247a.jpg" class="archetype-card rounded-image"/></a>
+<a href="https://scryfall.com/card/lcc/360/terramorphic-expanse"><img src="https://cards.scryfall.io/normal/front/1/9/19b72af8-9bb9-4542-9115-09c27ad6e7ad.jpg" class="archetype-card rounded-image"/></a>
 <a href="https://scryfall.com/card/2xm/35/thraben-inspector"><img src="https://c1.scryfall.com/file/scryfall-cards/normal/front/2/b/2be39749-ad6f-4160-99eb-c677eee7f1b2.jpg" class="archetype-card rounded-image"/></a>
 </details><br/>
 
