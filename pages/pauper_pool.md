@@ -13,7 +13,7 @@ This page should be useful for Pauper players that haven't followed the latest r
 
 Further information about reference numbers used by Pauperformance (p12e) to uniquely identify Magic sets can be found in the [Set Index page](set_index.html).
 
-The total number of cards in the Pauper pool is: 9227.
+The total number of cards in the Pauper pool is: 9332.
 
 ---
 Table of Contents
@@ -188,6 +188,7 @@ Table of Contents
 * [Wilds of Eldraine](#wilds-of-eldraine-woe) (*release: 2023-09-08 ~ p12e_code: 878*)
 * [Doctor Who](#doctor-who-who) (*release: 2023-10-13 ~ p12e_code: 883*)
 * [Lost Caverns of Ixalan Commander](#lost-caverns-of-ixalan-commander-lcc) (*release: 2023-11-17 ~ p12e_code: 884*)
+* [The Lost Caverns of Ixalan](#the-lost-caverns-of-ixalan-lci) (*release: 2023-11-17 ~ p12e_code: 885*)
 * [Jurassic World Collection](#jurassic-world-collection-rex) (*release: 2023-11-17 ~ p12e_code: 886*)
 
 ---
@@ -10940,6 +10941,120 @@ Table of Contents
   <summary>Click to see 1 new cards</summary>
 
 <a href="https://scryfall.com/card/lcc/128/generous-gift?utm_source=api">Generous Gift</a><br/>
+</details>
+[]()
+
+## The Lost Caverns of Ixalan (lci)
+*release: 2023-11-17 | p12e_code: 885*
+
+<details>
+  <summary>Click to see 105 new cards</summary>
+
+<a href="https://scryfall.com/card/lci/89/acolyte-of-aclazotz?utm_source=api">Acolyte of Aclazotz</a><br/>
+<a href="https://scryfall.com/card/lci/2/acrobatic-leap?utm_source=api">Acrobatic Leap</a><br/>
+<a href="https://scryfall.com/card/lci/3/adaptive-gemguard?utm_source=api">Adaptive Gemguard</a><br/>
+<a href="https://scryfall.com/card/lci/132/ancestors-aid?utm_source=api">Ancestors' Aid</a><br/>
+<a href="https://scryfall.com/card/lci/45/ancestral-reminiscence?utm_source=api">Ancestral Reminiscence</a><br/>
+<a href="https://scryfall.com/card/lci/90/another-chance?utm_source=api">Another Chance</a><br/>
+<a href="https://scryfall.com/card/lci/174/armored-kincaller?utm_source=api">Armored Kincaller</a><br/>
+<a href="https://scryfall.com/card/lci/4/attentive-sunscribe?utm_source=api">Attentive Sunscribe</a><br/>
+<a href="https://scryfall.com/card/lci/175/basking-capybara?utm_source=api">Basking Capybara</a><br/>
+<a href="https://scryfall.com/card/lci/46/brackish-blunder?utm_source=api">Brackish Blunder</a><br/>
+<a href="https://scryfall.com/card/lci/136/brazen-blademaster?utm_source=api">Brazen Blademaster</a><br/>
+<a href="https://scryfall.com/card/lci/95/broodrage-mycoid?utm_source=api">Broodrage Mycoid</a><br/>
+<a href="https://scryfall.com/card/lci/246/buried-treasure?utm_source=api">Buried Treasure</a><br/>
+<a href="https://scryfall.com/card/lci/138/burning-sun-cavalry?utm_source=api">Burning Sun Cavalry</a><br/>
+<a href="https://scryfall.com/card/lci/268/captivating-cave?utm_source=api">Captivating Cave</a><br/>
+<a href="https://scryfall.com/card/lci/248/cartographers-companion?utm_source=api">Cartographer's Companion</a><br/>
+<a href="https://scryfall.com/card/lci/177/cavern-stomper?utm_source=api">Cavern Stomper</a><br/>
+<a href="https://scryfall.com/card/lci/140/child-of-the-volcano?utm_source=api">Child of the Volcano</a><br/>
+<a href="https://scryfall.com/card/lci/49/cogwork-wrestler?utm_source=api">Cogwork Wrestler</a><br/>
+<a href="https://scryfall.com/card/lci/250/compass-gnome?utm_source=api">Compass Gnome</a><br/>
+<a href="https://scryfall.com/card/lci/7/cosmium-blast?utm_source=api">Cosmium Blast</a><br/>
+<a href="https://scryfall.com/card/lci/142/daring-discovery?utm_source=api">Daring Discovery</a><br/>
+<a href="https://scryfall.com/card/lci/100/deathcap-marionette?utm_source=api">Deathcap Marionette</a><br/>
+<a href="https://scryfall.com/card/lci/9/deconstruction-hammer?utm_source=api">Deconstruction Hammer</a><br/>
+<a href="https://scryfall.com/card/lci/101/deep-goblin-skulltaker?utm_source=api">Deep Goblin Skulltaker</a><br/>
+<a href="https://scryfall.com/card/lci/53/didact-echo?utm_source=api">Didact Echo</a><br/>
+<a href="https://scryfall.com/card/lci/144/dinotomaton?utm_source=api">Dinotomaton</a><br/>
+<a href="https://scryfall.com/card/lci/253/disruptor-wanderglyph?utm_source=api">Disruptor Wanderglyph</a><br/>
+<a href="https://scryfall.com/card/lci/182/disturbed-slumber?utm_source=api">Disturbed Slumber</a><br/>
+<a href="https://scryfall.com/card/lci/104/echo-of-dusk?utm_source=api">Echo of Dusk</a><br/>
+<a href="https://scryfall.com/card/lci/11/envoy-of-okinec-ahau?utm_source=api">Envoy of Okinec Ahau</a><br/>
+<a href="https://scryfall.com/card/lci/149/etalis-favor?utm_source=api">Etali's Favor</a><br/>
+<a href="https://scryfall.com/card/lci/13/family-reunion?utm_source=api">Family Reunion</a><br/>
+<a href="https://scryfall.com/card/lci/105/fanatical-offering?utm_source=api">Fanatical Offering</a><br/>
+<a href="https://scryfall.com/card/lci/57/frilled-cave-wurm?utm_source=api">Frilled Cave-Wurm</a><br/>
+<a href="https://scryfall.com/card/lci/106/fungal-fortitude?utm_source=api">Fungal Fortitude</a><br/>
+<a href="https://scryfall.com/card/lci/15/glorifier-of-suffering?utm_source=api">Glorifier of Suffering</a><br/>
+<a href="https://scryfall.com/card/lci/151/goblin-tomb-raider?utm_source=api">Goblin Tomb Raider</a><br/>
+<a href="https://scryfall.com/card/lci/109/greedy-freebooter?utm_source=api">Greedy Freebooter</a><br/>
+<a href="https://scryfall.com/card/lci/273/hidden-cataract?utm_source=api">Hidden Cataract</a><br/>
+<a href="https://scryfall.com/card/lci/274/hidden-courtyard?utm_source=api">Hidden Courtyard</a><br/>
+<a href="https://scryfall.com/card/lci/275/hidden-necropolis?utm_source=api">Hidden Necropolis</a><br/>
+<a href="https://scryfall.com/card/lci/276/hidden-nursery?utm_source=api">Hidden Nursery</a><br/>
+<a href="https://scryfall.com/card/lci/277/hidden-volcano?utm_source=api">Hidden Volcano</a><br/>
+<a href="https://scryfall.com/card/lci/154/hotfoot-gnome?utm_source=api">Hotfoot Gnome</a><br/>
+<a href="https://scryfall.com/card/lci/190/huatlis-final-strike?utm_source=api">Huatli's Final Strike</a><br/>
+<a href="https://scryfall.com/card/lci/255/hunters-blowgun?utm_source=api">Hunter's Blowgun</a><br/>
+<a href="https://scryfall.com/card/lci/155/idol-of-the-deep-king-sovereigns-macuahuitl?utm_source=api">Idol of the Deep King // Sovereign's Macuahuitl</a><br/>
+<a href="https://scryfall.com/card/lci/192/in-the-presence-of-ages?utm_source=api">In the Presence of Ages</a><br/>
+<a href="https://scryfall.com/card/lci/60/inverted-iceberg-iceberg-titan?utm_source=api">Inverted Iceberg // Iceberg Titan</a><br/>
+<a href="https://scryfall.com/card/lci/18/ironpaw-aspirant?utm_source=api">Ironpaw Aspirant</a><br/>
+<a href="https://scryfall.com/card/lci/110/join-the-dead?utm_source=api">Join the Dead</a><br/>
+<a href="https://scryfall.com/card/lci/197/kaslems-stonetree-kaslems-strider?utm_source=api">Kaslem's Stonetree // Kaslem's Strider</a><br/>
+<a href="https://scryfall.com/card/lci/199/malamet-brawler?utm_source=api">Malamet Brawler</a><br/>
+<a href="https://scryfall.com/card/lci/200/malamet-scythe?utm_source=api">Malamet Scythe</a><br/>
+<a href="https://scryfall.com/card/lci/201/malamet-veteran?utm_source=api">Malamet Veteran</a><br/>
+<a href="https://scryfall.com/card/lci/64/marauding-brinefang?utm_source=api">Marauding Brinefang</a><br/>
+<a href="https://scryfall.com/card/lci/112/mephitic-draught?utm_source=api">Mephitic Draught</a><br/>
+<a href="https://scryfall.com/card/lci/24/miners-guidewing?utm_source=api">Miner's Guidewing</a><br/>
+<a href="https://scryfall.com/card/lci/202/mineshaft-spider?utm_source=api">Mineshaft Spider</a><br/>
+<a href="https://scryfall.com/card/lci/203/nurturing-bristleback?utm_source=api">Nurturing Bristleback</a><br/>
+<a href="https://scryfall.com/card/lci/66/oaken-siren?utm_source=api">Oaken Siren</a><br/>
+<a href="https://scryfall.com/card/lci/27/oltec-archaeologists?utm_source=api">Oltec Archaeologists</a><br/>
+<a href="https://scryfall.com/card/lci/28/oltec-cloud-guard?utm_source=api">Oltec Cloud Guard</a><br/>
+<a href="https://scryfall.com/card/lci/68/orazca-puzzle-door?utm_source=api">Orazca Puzzle-Door</a><br/>
+<a href="https://scryfall.com/card/lci/29/oteclan-landmark-oteclan-levitator?utm_source=api">Oteclan Landmark // Oteclan Levitator</a><br/>
+<a href="https://scryfall.com/card/lci/69/out-of-air?utm_source=api">Out of Air</a><br/>
+<a href="https://scryfall.com/card/lci/205/over-the-edge?utm_source=api">Over the Edge</a><br/>
+<a href="https://scryfall.com/card/lci/159/panicked-altisaur?utm_source=api">Panicked Altisaur</a><br/>
+<a href="https://scryfall.com/card/lci/206/pathfinding-axejaw?utm_source=api">Pathfinding Axejaw</a><br/>
+<a href="https://scryfall.com/card/lci/30/petrify?utm_source=api">Petrify</a><br/>
+<a href="https://scryfall.com/card/lci/70/pirate-hat?utm_source=api">Pirate Hat</a><br/>
+<a href="https://scryfall.com/card/lci/160/plundering-pirate?utm_source=api">Plundering Pirate</a><br/>
+<a href="https://scryfall.com/card/lci/207/poison-dart-frog?utm_source=api">Poison Dart Frog</a><br/>
+<a href="https://scryfall.com/card/lci/114/primordial-gnawer?utm_source=api">Primordial Gnawer</a><br/>
+<a href="https://scryfall.com/card/lci/279/promising-vein?utm_source=api">Promising Vein</a><br/>
+<a href="https://scryfall.com/card/lci/31/quicksand-whirlpool?utm_source=api">Quicksand Whirlpool</a><br/>
+<a href="https://scryfall.com/card/lci/116/rampaging-spiketail?utm_source=api">Rampaging Spiketail</a><br/>
+<a href="https://scryfall.com/card/lci/117/ray-of-ruin?utm_source=api">Ray of Ruin</a><br/>
+<a href="https://scryfall.com/card/lci/71/relics-roar?utm_source=api">Relic's Roar</a><br/>
+<a href="https://scryfall.com/card/lci/209/river-herald-guide?utm_source=api">River Herald Guide</a><br/>
+<a href="https://scryfall.com/card/lci/72/river-herald-scout?utm_source=api">River Herald Scout</a><br/>
+<a href="https://scryfall.com/card/lci/259/runaway-boulder?utm_source=api">Runaway Boulder</a><br/>
+<a href="https://scryfall.com/card/lci/73/sage-of-days?utm_source=api">Sage of Days</a><br/>
+<a href="https://scryfall.com/card/lci/118/screaming-phantom?utm_source=api">Screaming Phantom</a><br/>
+<a href="https://scryfall.com/card/lci/210/seeker-of-sunlight?utm_source=api">Seeker of Sunlight</a><br/>
+<a href="https://scryfall.com/card/lci/166/seismic-monstrosaur?utm_source=api">Seismic Monstrosaur</a><br/>
+<a href="https://scryfall.com/card/lci/75/shipwreck-sentry?utm_source=api">Shipwreck Sentry</a><br/>
+<a href="https://scryfall.com/card/lci/119/skullcap-snail?utm_source=api">Skullcap Snail</a><br/>
+<a href="https://scryfall.com/card/lci/35/soaring-sandwing?utm_source=api">Soaring Sandwing</a><br/>
+<a href="https://scryfall.com/card/lci/77/song-of-stupefaction?utm_source=api">Song of Stupefaction</a><br/>
+<a href="https://scryfall.com/card/lci/214/staggering-size?utm_source=api">Staggering Size</a><br/>
+<a href="https://scryfall.com/card/lci/167/sunfire-torch?utm_source=api">Sunfire Torch</a><br/>
+<a href="https://scryfall.com/card/lci/168/sunshot-militia?utm_source=api">Sunshot Militia</a><br/>
+<a href="https://scryfall.com/card/lci/169/tectonic-hazard?utm_source=api">Tectonic Hazard</a><br/>
+<a href="https://scryfall.com/card/lci/37/thousand-moons-crackshot?utm_source=api">Thousand Moons Crackshot</a><br/>
+<a href="https://scryfall.com/card/lci/38/thousand-moons-infantry?utm_source=api">Thousand Moons Infantry</a><br/>
+<a href="https://scryfall.com/card/lci/40/tinkers-tote?utm_source=api">Tinker's Tote</a><br/>
+<a href="https://scryfall.com/card/lci/128/tithing-blade-consuming-sepulcher?utm_source=api">Tithing Blade // Consuming Sepulcher</a><br/>
+<a href="https://scryfall.com/card/lci/82/unlucky-drop?utm_source=api">Unlucky Drop</a><br/>
+<a href="https://scryfall.com/card/lci/130/vitos-inquisitor?utm_source=api">Vito's Inquisitor</a><br/>
+<a href="https://scryfall.com/card/lci/172/volatile-wanderglyph?utm_source=api">Volatile Wanderglyph</a><br/>
+<a href="https://scryfall.com/card/lci/218/walk-with-the-ancestors?utm_source=api">Walk with the Ancestors</a><br/>
+<a href="https://scryfall.com/card/lci/84/waterwind-scout?utm_source=api">Waterwind Scout</a><br/>
+<a href="https://scryfall.com/card/lci/85/waylaying-pirates?utm_source=api">Waylaying Pirates</a><br/>
 </details>
 []()
 
