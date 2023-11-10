@@ -50,10 +50,7 @@
 <a href="https://scryfall.com/card/uma/68/rune-snag"><img src="https://c1.scryfall.com/file/scryfall-cards/normal/front/4/0/40d72a34-0f31-4fec-b5a5-4574199bc312.jpg" class="archetype-card rounded-image"/></a>
 <a href="https://scryfall.com/card/csp/97/skred"><img src="https://c1.scryfall.com/file/scryfall-cards/normal/front/b/3/b3d6d42a-7607-4361-acc4-7f3cb956bfc9.jpg" class="archetype-card rounded-image"/></a>
 <a href="https://scryfall.com/card/mma/65/spellstutter-sprite"><img src="https://c1.scryfall.com/file/scryfall-cards/normal/front/3/8/3899605d-2203-4ab6-9ff5-69490382eea4.jpg" class="archetype-card rounded-image"/></a>
-<a href="https://scryfall.com/card/mom/273/swiftwater-cliffs"><img src="https://cards.scryfall.io/normal/front/9/5/957efc4e-c2a9-46a2-b9e3-20dc419ffd05.jpg" class="archetype-card rounded-image"/></a>
 <a href="https://scryfall.com/card/mm3/53/tandem-lookout"><img src="https://c1.scryfall.com/file/scryfall-cards/normal/front/3/e/3e44b411-ccb8-44c8-a021-2372c945f0d3.jpg" class="archetype-card rounded-image"/></a>
-<a href="https://scryfall.com/card/mh2/257/tanglepool-bridge"><img src="https://cards.scryfall.io/normal/front/5/7/57d2b895-8921-4615-a674-fb85eed5ea3f.jpg" class="archetype-card rounded-image"/></a>
-<a href="https://scryfall.com/card/lcc/360/terramorphic-expanse"><img src="https://cards.scryfall.io/normal/front/1/9/19b72af8-9bb9-4542-9115-09c27ad6e7ad.jpg" class="archetype-card rounded-image"/></a>
 <a href="https://scryfall.com/card/jmp/365/thermo-alchemist"><img src="https://c1.scryfall.com/file/scryfall-cards/normal/front/b/3/b37c1b56-621a-4908-89b2-21622d195223.jpg" class="archetype-card rounded-image"/></a>
 <a href="https://scryfall.com/card/jmp/185/thought-scour"><img src="https://c1.scryfall.com/file/scryfall-cards/normal/front/1/4/142944d5-1b11-4ec4-b6b4-b5c03e682cd3.jpg" class="archetype-card rounded-image"/></a>
 <a href="https://scryfall.com/card/mh2/145/unholy-heat"><img src="https://cards.scryfall.io/normal/front/2/b/2b73d294-6ab1-4051-9b0f-d8e335d37674.jpg" class="archetype-card rounded-image"/></a>

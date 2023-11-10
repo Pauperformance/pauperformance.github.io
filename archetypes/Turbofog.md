@@ -51,7 +51,6 @@
 <a href="https://scryfall.com/card/ori/195/reclaim"><img src="https://c1.scryfall.com/file/scryfall-cards/normal/front/8/8/88f3c600-66f1-4a5e-ba4f-61e9f7f7a1d9.jpg" class="archetype-card rounded-image"/></a>
 <a href="https://scryfall.com/card/cns/176/respite"><img src="https://c1.scryfall.com/file/scryfall-cards/normal/front/d/9/d9b5c747-43d6-4c5f-9ca3-feaf004a88cb.jpg" class="archetype-card rounded-image"/></a>
 <a href="https://scryfall.com/card/jud/102/swirling-sandstorm"><img src="https://c1.scryfall.com/file/scryfall-cards/normal/front/4/d/4d757ec3-c15f-4d6e-8e18-36ebae985448.jpg" class="archetype-card rounded-image"/></a>
-<a href="https://scryfall.com/card/lcc/360/terramorphic-expanse"><img src="https://cards.scryfall.io/normal/front/1/9/19b72af8-9bb9-4542-9115-09c27ad6e7ad.jpg" class="archetype-card rounded-image"/></a>
 <a href="https://scryfall.com/card/eld/74/witching-well"><img src="https://c1.scryfall.com/file/scryfall-cards/normal/front/6/2/62d3132f-f897-4a7a-9de4-c6388e83f5ad.jpg" class="archetype-card rounded-image"/></a>
 </details><br/>
 
