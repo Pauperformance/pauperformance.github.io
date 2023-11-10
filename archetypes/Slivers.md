@@ -45,7 +45,6 @@
 <a href="https://scryfall.com/card/tsr/44/sinew-sliver"><img src="https://c1.scryfall.com/file/scryfall-cards/normal/front/0/0/000edc61-b3ae-49e3-87f4-0250fa6a4501.jpg" class="archetype-card rounded-image"/></a>
 <a href="https://scryfall.com/card/tsr/230/spinneret-sliver"><img src="https://c1.scryfall.com/file/scryfall-cards/normal/front/7/f/7f86e30d-d9e8-48f7-8bd1-f2645f0ab3f4.jpg" class="archetype-card rounded-image"/></a>
 <a href="https://scryfall.com/card/m14/157/striking-sliver"><img src="https://c1.scryfall.com/file/scryfall-cards/normal/front/4/e/4ee9254b-3d98-4477-a82e-1450cf3ee96e.jpg" class="archetype-card rounded-image"/></a>
-<a href="https://scryfall.com/card/zen/226/teetering-peaks"><img src="https://cards.scryfall.io/normal/front/e/5/e56aca36-bb51-45e3-9ef9-9f9f2aa1e088.jpg" class="archetype-card rounded-image"/></a>
 <a href="https://scryfall.com/card/mh1/235/universal-automaton"><img src="https://c1.scryfall.com/file/scryfall-cards/normal/front/5/3/53c682e2-c90f-4f4b-9010-00b099e85518.jpg" class="archetype-card rounded-image"/></a>
 <a href="https://scryfall.com/card/mh1/193/winding-way"><img src="https://c1.scryfall.com/file/scryfall-cards/normal/front/4/e/4e5d9776-b6ce-4ad6-8acc-69115ba5de76.jpg" class="archetype-card rounded-image"/></a>
 </details><br/>

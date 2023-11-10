@@ -54,7 +54,6 @@
 <a href="https://scryfall.com/card/khc/43/sea-gate-oracle"><img src="https://c1.scryfall.com/file/scryfall-cards/normal/front/4/9/498743ce-0ca5-488a-ae5e-d348b274bf3b.jpg" class="archetype-card rounded-image"/></a>
 <a href="https://scryfall.com/card/ima/29/seeker-of-the-way"><img src="https://c1.scryfall.com/file/scryfall-cards/normal/front/5/2/52d7aafb-969f-4a39-9af3-125f7f5c99f3.jpg" class="archetype-card rounded-image"/></a>
 <a href="https://scryfall.com/card/som/209/sylvok-lifestaff"><img src="https://c1.scryfall.com/file/scryfall-cards/normal/front/a/b/abbc5ae5-8e8b-4106-844f-2d49d2a51ed9.jpg" class="archetype-card rounded-image"/></a>
-<a href="https://scryfall.com/card/lcc/360/terramorphic-expanse"><img src="https://cards.scryfall.io/normal/front/1/9/19b72af8-9bb9-4542-9115-09c27ad6e7ad.jpg" class="archetype-card rounded-image"/></a>
 <a href="https://scryfall.com/card/2xm/35/thraben-inspector"><img src="https://c1.scryfall.com/file/scryfall-cards/normal/front/2/b/2be39749-ad6f-4160-99eb-c677eee7f1b2.jpg" class="archetype-card rounded-image"/></a>
 <a href="https://scryfall.com/card/ddu/41/trinket-mage"><img src="https://c1.scryfall.com/file/scryfall-cards/normal/front/9/a/9a7800f7-95cd-4f5c-b054-4afad8924367.jpg" class="archetype-card rounded-image"/></a>
 <a href="https://scryfall.com/card/cmr/106/warden-of-evos-isle"><img src="https://c1.scryfall.com/file/scryfall-cards/normal/front/6/b/6bfc5cef-aa9b-45d4-a9c3-4b157e4ed193.jpg" class="archetype-card rounded-image"/></a>
