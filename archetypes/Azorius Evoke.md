@@ -32,7 +32,6 @@
 <a href="https://scryfall.com/card/cmr/36/palace-sentinels"><img src="https://c1.scryfall.com/file/scryfall-cards/normal/front/4/f/4fd0e9a0-f974-412a-aba1-c4fb68351149.jpg" class="archetype-card rounded-image"/></a>
 <a href="https://scryfall.com/card/cmr/84/preordain"><img src="https://c1.scryfall.com/file/scryfall-cards/normal/front/1/4/1453f92e-df2d-4789-aa1b-a5b5c51567d4.jpg" class="archetype-card rounded-image"/></a>
 <a href="https://scryfall.com/card/mh2/33/soul-of-migration"><img src="https://c1.scryfall.com/file/scryfall-cards/normal/front/4/5/4541217f-5e86-491b-918b-ed7a2eb3e4eb.jpg" class="archetype-card rounded-image"/></a>
-<a href="https://scryfall.com/card/lcc/360/terramorphic-expanse"><img src="https://cards.scryfall.io/normal/front/1/9/19b72af8-9bb9-4542-9115-09c27ad6e7ad.jpg" class="archetype-card rounded-image"/></a>
 </details><br/>
 
 

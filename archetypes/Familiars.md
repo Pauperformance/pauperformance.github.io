@@ -60,7 +60,6 @@
 <a href="https://scryfall.com/card/khc/43/sea-gate-oracle"><img src="https://c1.scryfall.com/file/scryfall-cards/normal/front/4/9/498743ce-0ca5-488a-ae5e-d348b274bf3b.jpg" class="archetype-card rounded-image"/></a>
 <a href="https://scryfall.com/card/gvl/20/serrated-arrows"><img src="https://c1.scryfall.com/file/scryfall-cards/normal/front/1/5/1519b17c-9003-43e0-958f-1fcd20ab2d70.jpg" class="archetype-card rounded-image"/></a>
 <a href="https://scryfall.com/card/mh2/66/step-through"><img src="https://c1.scryfall.com/file/scryfall-cards/normal/front/7/1/716534cb-aa89-4de7-9aa5-8d8aa4422a6a.jpg" class="archetype-card rounded-image"/></a>
-<a href="https://scryfall.com/card/lcc/360/terramorphic-expanse"><img src="https://cards.scryfall.io/normal/front/1/9/19b72af8-9bb9-4542-9115-09c27ad6e7ad.jpg" class="archetype-card rounded-image"/></a>
 <a href="https://scryfall.com/card/neo/66/the-modern-age-vector-glider"><img src="https://c1.scryfall.com/file/scryfall-cards/normal/front/e/e/ee60a8e9-3201-4a7e-8aa4-2c5e1042c8a5.jpg" class="archetype-card rounded-image"/></a>
 </details><br/>
 
