@@ -48,6 +48,8 @@
 <a href="https://scryfall.com/card/m21/59/opt"><img src="https://c1.scryfall.com/file/scryfall-cards/normal/front/3/2/323db259-d35e-467d-9a46-4adcb2fc107c.jpg" class="archetype-card rounded-image"/></a>
 <a href="https://scryfall.com/card/ogw/47/slip-through-space"><img src="https://c1.scryfall.com/file/scryfall-cards/normal/front/2/d/2dee6dca-9c7e-4347-bea7-7fecc69e5827.jpg" class="archetype-card rounded-image"/></a>
 <a href="https://scryfall.com/card/xln/81/spell-pierce"><img src="https://c1.scryfall.com/file/scryfall-cards/normal/front/6/b/6bf4dfc0-c58b-4535-b660-54ceaa6e0217.jpg" class="archetype-card rounded-image"/></a>
+<a href="https://scryfall.com/card/mom/273/swiftwater-cliffs"><img src="https://cards.scryfall.io/normal/front/9/5/957efc4e-c2a9-46a2-b9e3-20dc419ffd05.jpg" class="archetype-card rounded-image"/></a>
+<a href="https://scryfall.com/card/lcc/360/terramorphic-expanse"><img src="https://cards.scryfall.io/normal/front/1/9/19b72af8-9bb9-4542-9115-09c27ad6e7ad.jpg" class="archetype-card rounded-image"/></a>
 <a href="https://scryfall.com/card/mm2/66/vapor-snag"><img src="https://c1.scryfall.com/file/scryfall-cards/normal/front/5/9/59f26d0a-e9f3-442f-b5c6-8016cf736432.jpg" class="archetype-card rounded-image"/></a>
 </details><br/>
 

@@ -55,6 +55,7 @@
 <a href="https://scryfall.com/card/c20/187/sakura-tribe-elder"><img src="https://c1.scryfall.com/file/scryfall-cards/normal/front/c/8/c83be2b7-0373-4389-9aa0-523db58f4d2a.jpg" class="archetype-card rounded-image"/></a>
 <a href="https://scryfall.com/card/cmr/148/sanitarium-skeleton"><img src="https://c1.scryfall.com/file/scryfall-cards/normal/front/7/c/7c33d20d-8d1c-4cf7-a7ad-3dab9758fafe.jpg" class="archetype-card rounded-image"/></a>
 <a href="https://scryfall.com/card/znc/81/satyr-wayfinder"><img src="https://c1.scryfall.com/file/scryfall-cards/normal/front/8/4/84cb8203-88e4-4a3b-9334-91b70c747091.jpg" class="archetype-card rounded-image"/></a>
+<a href="https://scryfall.com/card/lcc/360/terramorphic-expanse"><img src="https://cards.scryfall.io/normal/front/1/9/19b72af8-9bb9-4542-9115-09c27ad6e7ad.jpg" class="archetype-card rounded-image"/></a>
 <a href="https://scryfall.com/card/cmr/154/thorn-of-the-black-rose"><img src="https://c1.scryfall.com/file/scryfall-cards/normal/front/2/b/2b7538ad-cc41-4229-8a39-c1db21f2899a.jpg" class="archetype-card rounded-image"/></a>
 <a href="https://scryfall.com/card/rav/109/thoughtpicker-witch"><img src="https://cards.scryfall.io/normal/front/b/6/b6f8df33-a955-403c-aafc-85e5589c5041.jpg" class="archetype-card rounded-image"/></a>
 <a href="https://scryfall.com/card/eve/78/tilling-treefolk"><img src="https://c1.scryfall.com/file/scryfall-cards/normal/front/8/e/8e4a10d0-214d-4e7b-9683-c84034f8f6b7.jpg" class="archetype-card rounded-image"/></a>
