@@ -28,6 +28,7 @@
 <a href="https://scryfall.com/card/uma/102/gurmag-angler"><img src="https://c1.scryfall.com/file/scryfall-cards/normal/front/c/e/cedd44eb-f381-46e1-bcb0-88416b4ce33d.jpg" class="archetype-card rounded-image"/></a>
 <a href="https://scryfall.com/card/cmr/84/preordain"><img src="https://c1.scryfall.com/file/scryfall-cards/normal/front/1/4/1453f92e-df2d-4789-aa1b-a5b5c51567d4.jpg" class="archetype-card rounded-image"/></a>
 <a href="https://scryfall.com/card/gvl/53/snuff-out"><img src="https://c1.scryfall.com/file/scryfall-cards/normal/front/7/5/75bbe89f-09af-494e-b58e-271f64bde4b5.jpg" class="archetype-card rounded-image"/></a>
+<a href="https://scryfall.com/card/lcc/360/terramorphic-expanse"><img src="https://cards.scryfall.io/normal/front/1/9/19b72af8-9bb9-4542-9115-09c27ad6e7ad.jpg" class="archetype-card rounded-image"/></a>
 </details><br/>
 
 

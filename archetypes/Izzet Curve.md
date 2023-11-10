@@ -54,6 +54,7 @@
 <a href="https://scryfall.com/card/csp/97/skred"><img src="https://c1.scryfall.com/file/scryfall-cards/normal/front/b/3/b3d6d42a-7607-4361-acc4-7f3cb956bfc9.jpg" class="archetype-card rounded-image"/></a>
 <a href="https://scryfall.com/card/jud/102/swirling-sandstorm"><img src="https://c1.scryfall.com/file/scryfall-cards/normal/front/4/d/4d757ec3-c15f-4d6e-8e18-36ebae985448.jpg" class="archetype-card rounded-image"/></a>
 <a href="https://scryfall.com/card/stx/241/teach-by-example"><img src="https://c1.scryfall.com/file/scryfall-cards/normal/front/a/a/aa7fbb9b-50a8-4d18-a667-fe965468ca16.jpg" class="archetype-card rounded-image"/></a>
+<a href="https://scryfall.com/card/lcc/360/terramorphic-expanse"><img src="https://cards.scryfall.io/normal/front/1/9/19b72af8-9bb9-4542-9115-09c27ad6e7ad.jpg" class="archetype-card rounded-image"/></a>
 <a href="https://scryfall.com/card/jmp/185/thought-scour"><img src="https://c1.scryfall.com/file/scryfall-cards/normal/front/1/4/142944d5-1b11-4ec4-b6b4-b5c03e682cd3.jpg" class="archetype-card rounded-image"/></a>
 </details><br/>
 
