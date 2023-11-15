@@ -187,9 +187,9 @@ Table of Contents
 * [March of the Machine](#march-of-the-machine-mom) (*release: 2023-04-21 ~ p12e_code: 839*)
 * [Wilds of Eldraine](#wilds-of-eldraine-woe) (*release: 2023-09-08 ~ p12e_code: 878*)
 * [Doctor Who](#doctor-who-who) (*release: 2023-10-13 ~ p12e_code: 883*)
-* [The Lost Caverns of Ixalan Commander](#the-lost-caverns-of-ixalan-commander-lcc) (*release: 2023-11-17 ~ p12e_code: 884*)
-* [The Lost Caverns of Ixalan](#the-lost-caverns-of-ixalan-lci) (*release: 2023-11-17 ~ p12e_code: 885*)
-* [Jurassic World Collection](#jurassic-world-collection-rex) (*release: 2023-11-17 ~ p12e_code: 886*)
+* [The Lost Caverns of Ixalan Commander](#the-lost-caverns-of-ixalan-commander-lcc) (*release: 2023-11-17 ~ p12e_code: 885*)
+* [The Lost Caverns of Ixalan](#the-lost-caverns-of-ixalan-lci) (*release: 2023-11-17 ~ p12e_code: 886*)
+* [Jurassic World Collection](#jurassic-world-collection-rex) (*release: 2023-11-17 ~ p12e_code: 887*)
 
 ---
 
@@ -10935,7 +10935,7 @@ Table of Contents
 []()
 
 ## The Lost Caverns of Ixalan Commander (lcc)
-*release: 2023-11-17 | p12e_code: 884*
+*release: 2023-11-17 | p12e_code: 885*
 
 <details>
   <summary>Click to see 1 new cards</summary>
@@ -10945,7 +10945,7 @@ Table of Contents
 []()
 
 ## The Lost Caverns of Ixalan (lci)
-*release: 2023-11-17 | p12e_code: 885*
+*release: 2023-11-17 | p12e_code: 886*
 
 <details>
   <summary>Click to see 105 new cards</summary>
@@ -11059,7 +11059,7 @@ Table of Contents
 []()
 
 ## Jurassic World Collection (rex)
-*release: 2023-11-17 | p12e_code: 886*
+*release: 2023-11-17 | p12e_code: 887*
 
 <details>
   <summary>Click to see 6 new cards</summary>
