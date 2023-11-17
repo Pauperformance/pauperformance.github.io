@@ -25,8 +25,8 @@ Please, read the [PhD Guidelines](./pages/phd_guidelines.html).**
 
 ---
 
-## The current Pauperformance code for decks is **883**.
-It refers to Doctor Who (who), released on 2023-10-13.
+## The current Pauperformance code for decks is **887**.
+It refers to Jurassic World Collection (rex), released on 2023-11-17.
 
 ---
 
