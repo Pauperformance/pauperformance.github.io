@@ -913,7 +913,7 @@ Lines in **bold** correspond to sets that have introduced new cards in the [Paup
 | 892       | trex          | Jurassic World Collection Tokens                | 2023-11-17   |
 | 893       | pf24          | MagicFest 2024                                  | 2024-01-01   |
 | 894       | pw24          | Wizards Play Network 2024                       | 2024-01-01   |
-| 895       | rvr           | Ravnica Remastered                              | 2024-03-01   |
+| 895       | rvr           | Ravnica Remastered                              | 2024-01-12   |
 | 896       | pip           | Fallout                                         | 2024-03-08   |
 | 897       | tpip          | Fallout Tokens                                  | 2024-03-08   |
 
