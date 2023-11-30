@@ -905,16 +905,17 @@ Lines in **bold** correspond to sets that have introduced new cards in the [Paup
 | 884       | alci          | The Lost Caverns of Ixalan Art Series           | 2023-11-17   |
 | 885       | lcc           | The Lost Caverns of Ixalan Commander            | 2023-11-17   |
 | **886**   | **lci**       | **The Lost Caverns of Ixalan**                  | **2023-11-17** |
-| **887**   | **rex**       | **Jurassic World Collection**                   | **2023-11-17** |
-| 888       | slci          | The Lost Caverns of Ixalan Substitute Cards     | 2023-11-17   |
-| 889       | spg           | Special Guests                                  | 2023-11-17   |
-| 890       | tlcc          | The Lost Caverns of Ixalan Commander Tokens     | 2023-11-17   |
-| 891       | tlci          | The Lost Caverns of Ixalan Tokens               | 2023-11-17   |
-| 892       | trex          | Jurassic World Collection Tokens                | 2023-11-17   |
-| 893       | ylci          | Alchemy: Ixalan                                 | 2023-12-05   |
-| 894       | pf24          | MagicFest 2024                                  | 2024-01-01   |
-| 895       | pw24          | Wizards Play Network 2024                       | 2024-01-01   |
-| 896       | rvr           | Ravnica Remastered                              | 2024-01-12   |
-| 897       | pip           | Fallout                                         | 2024-03-08   |
-| 898       | tpip          | Fallout Tokens                                  | 2024-03-08   |
+| 887       | plci          | The Lost Caverns of Ixalan Promos               | 2023-11-17   |
+| **888**   | **rex**       | **Jurassic World Collection**                   | **2023-11-17** |
+| 889       | slci          | The Lost Caverns of Ixalan Substitute Cards     | 2023-11-17   |
+| 890       | spg           | Special Guests                                  | 2023-11-17   |
+| 891       | tlcc          | The Lost Caverns of Ixalan Commander Tokens     | 2023-11-17   |
+| 892       | tlci          | The Lost Caverns of Ixalan Tokens               | 2023-11-17   |
+| 893       | trex          | Jurassic World Collection Tokens                | 2023-11-17   |
+| 894       | ylci          | Alchemy: Ixalan                                 | 2023-12-05   |
+| 895       | pf24          | MagicFest 2024                                  | 2024-01-01   |
+| 896       | pw24          | Wizards Play Network 2024                       | 2024-01-01   |
+| 897       | rvr           | Ravnica Remastered                              | 2024-01-12   |
+| 898       | pip           | Fallout                                         | 2024-03-08   |
+| 899       | tpip          | Fallout Tokens                                  | 2024-03-08   |
 

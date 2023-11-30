@@ -188,7 +188,7 @@ Table of Contents
 * [Wilds of Eldraine](#wilds-of-eldraine-woe) (*release: 2023-09-08 ~ p12e_code: 878*)
 * [Doctor Who](#doctor-who-who) (*release: 2023-10-13 ~ p12e_code: 883*)
 * [The Lost Caverns of Ixalan](#the-lost-caverns-of-ixalan-lci) (*release: 2023-11-17 ~ p12e_code: 886*)
-* [Jurassic World Collection](#jurassic-world-collection-rex) (*release: 2023-11-17 ~ p12e_code: 887*)
+* [Jurassic World Collection](#jurassic-world-collection-rex) (*release: 2023-11-17 ~ p12e_code: 888*)
 
 ---
 
@@ -11048,7 +11048,7 @@ Table of Contents
 []()
 
 ## Jurassic World Collection (rex)
-*release: 2023-11-17 | p12e_code: 887*
+*release: 2023-11-17 | p12e_code: 888*
 
 <details>
   <summary>Click to see 6 new cards</summary>
