@@ -13,7 +13,7 @@ This page should be useful for Pauper players that haven't followed the latest r
 
 Further information about reference numbers used by Pauperformance (p12e) to uniquely identify Magic sets can be found in the [Set Index page](set_index.html).
 
-The total number of cards in the Pauper pool is: 9333.
+The total number of cards in the Pauper pool is: 9331.
 
 ---
 Table of Contents
@@ -189,7 +189,6 @@ Table of Contents
 * [Doctor Who](#doctor-who-who) (*release: 2023-10-13 ~ p12e_code: 883*)
 * [The Lost Caverns of Ixalan](#the-lost-caverns-of-ixalan-lci) (*release: 2023-11-17 ~ p12e_code: 886*)
 * [Jurassic World Collection](#jurassic-world-collection-rex) (*release: 2023-11-17 ~ p12e_code: 888*)
-* [Ravnica Remastered](#ravnica-remastered-rvr) (*release: 2024-01-12 ~ p12e_code: 897*)
 
 ---
 
@@ -11060,17 +11059,6 @@ Table of Contents
 <a href="https://scryfall.com/card/rex/24/mountain-mountain?utm_source=api">Mountain // Mountain</a><br/>
 <a href="https://scryfall.com/card/rex/21/plains-plains?utm_source=api">Plains // Plains</a><br/>
 <a href="https://scryfall.com/card/rex/23/swamp-swamp?utm_source=api">Swamp // Swamp</a><br/>
-</details>
-[]()
-
-## Ravnica Remastered (rvr)
-*release: 2024-01-12 | p12e_code: 897*
-
-<details>
-  <summary>Click to see 2 new cards</summary>
-
-<a href="https://scryfall.com/card/rvr/23/ministrant-of-obligation?utm_source=api">Ministrant of Obligation</a><br/>
-<a href="https://scryfall.com/card/rvr/51/murmuring-mystic?utm_source=api">Murmuring Mystic</a><br/>
 </details>
 []()
 
