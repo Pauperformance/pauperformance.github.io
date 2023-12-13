@@ -915,7 +915,7 @@ Lines in **bold** correspond to sets that have introduced new cards in the [Paup
 | 894       | ylci          | Alchemy: Ixalan                                 | 2023-12-05   |
 | 895       | pf24          | MagicFest 2024                                  | 2024-01-01   |
 | 896       | pw24          | Wizards Play Network 2024                       | 2024-01-01   |
-| 897       | rvr           | Ravnica Remastered                              | 2024-01-12   |
+| **897**   | **rvr**       | **Ravnica Remastered**                          | **2024-01-12** |
 | 898       | clu           | Ravnica: Clue Edition                           | 2024-02-09   |
 | 899       | mkm           | Murders at Karlov Manor                         | 2024-02-09   |
 | 900       | pip           | Fallout                                         | 2024-03-08   |
