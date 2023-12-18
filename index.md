@@ -25,7 +25,7 @@ Please, read the [PhD Guidelines](./pages/phd_guidelines.html).**
 
 ---
 
-## The current Pauperformance code for decks is **888**.
+## The current Pauperformance code for decks is **889**.
 It refers to Jurassic World Collection (rex), released on 2023-11-17.
 
 ---

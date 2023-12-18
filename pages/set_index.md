@@ -886,40 +886,41 @@ Lines in **bold** correspond to sets that have introduced new cards in the [Paup
 | 865       | pf23          | MagicFest 2023                                  | 2023-07-01   |
 | 866       | ea3           | Explorer Anthology 3                            | 2023-07-18   |
 | 867       | ha7           | Historic Anthology 7                            | 2023-07-18   |
-| 868       | acmm          | Commander Masters Art Series                    | 2023-08-04   |
-| 869       | tcmm          | Commander Masters Tokens                        | 2023-08-04   |
-| 870       | pagl          | Angels: They're Just Like Us but Cooler and with Wings | 2023-08-14   |
-| 871       | p30t          | 30th Anniversary Celebration Tokyo              | 2023-09-01   |
-| 872       | awoe          | Wilds of Eldraine Art Series                    | 2023-09-08   |
-| 873       | pmda          | Magic × Duel Masters Promos                     | 2023-09-08   |
-| 874       | pwoe          | Wilds of Eldraine Promos                        | 2023-09-08   |
-| 875       | twoc          | Wilds of Eldraine Commander Tokens              | 2023-09-08   |
-| 876       | twoe          | Wilds of Eldraine Tokens                        | 2023-09-08   |
-| 877       | woc           | Wilds of Eldraine Commander                     | 2023-09-08   |
-| **878**   | **woe**       | **Wilds of Eldraine**                           | **2023-09-08** |
-| 879       | wot           | Wilds of Eldraine: Enchanting Tales             | 2023-09-08   |
-| 880       | wwoe          | Wilds of Eldraine Japanese Promo Tokens         | 2023-09-08   |
-| 881       | ywoe          | Alchemy: Wilds of Eldraine                      | 2023-10-10   |
-| 882       | twho          | Doctor Who Tokens                               | 2023-10-13   |
-| **883**   | **who**       | **Doctor Who**                                  | **2023-10-13** |
-| 884       | alci          | The Lost Caverns of Ixalan Art Series           | 2023-11-17   |
-| 885       | lcc           | The Lost Caverns of Ixalan Commander            | 2023-11-17   |
-| **886**   | **lci**       | **The Lost Caverns of Ixalan**                  | **2023-11-17** |
-| 887       | plci          | The Lost Caverns of Ixalan Promos               | 2023-11-17   |
-| **888**   | **rex**       | **Jurassic World Collection**                   | **2023-11-17** |
-| 889       | slci          | The Lost Caverns of Ixalan Substitute Cards     | 2023-11-17   |
-| 890       | spg           | Special Guests                                  | 2023-11-17   |
-| 891       | tlcc          | The Lost Caverns of Ixalan Commander Tokens     | 2023-11-17   |
-| 892       | tlci          | The Lost Caverns of Ixalan Tokens               | 2023-11-17   |
-| 893       | trex          | Jurassic World Collection Tokens                | 2023-11-17   |
-| 894       | ylci          | Alchemy: Ixalan                                 | 2023-12-05   |
-| 895       | pf24          | MagicFest 2024                                  | 2024-01-01   |
-| 896       | pw24          | Wizards Play Network 2024                       | 2024-01-01   |
-| 897       | rvr           | Ravnica Remastered                              | 2024-01-12   |
-| 898       | trvr          | Ravnica Remastered Tokens                       | 2024-01-12   |
-| 899       | pl24          | Year of the Dragon 2024                         | 2024-02-08   |
-| 900       | clu           | Ravnica: Clue Edition                           | 2024-02-09   |
-| 901       | mkm           | Murders at Karlov Manor                         | 2024-02-09   |
-| 902       | pip           | Fallout                                         | 2024-03-08   |
-| 903       | tpip          | Fallout Tokens                                  | 2024-03-08   |
+| 868       | ph22          | 2022 Heroes of the Realm                        | 2023-08-01   |
+| 869       | acmm          | Commander Masters Art Series                    | 2023-08-04   |
+| 870       | tcmm          | Commander Masters Tokens                        | 2023-08-04   |
+| 871       | pagl          | Angels: They're Just Like Us but Cooler and with Wings | 2023-08-14   |
+| 872       | p30t          | 30th Anniversary Celebration Tokyo              | 2023-09-01   |
+| 873       | awoe          | Wilds of Eldraine Art Series                    | 2023-09-08   |
+| 874       | pmda          | Magic × Duel Masters Promos                     | 2023-09-08   |
+| 875       | pwoe          | Wilds of Eldraine Promos                        | 2023-09-08   |
+| 876       | twoc          | Wilds of Eldraine Commander Tokens              | 2023-09-08   |
+| 877       | twoe          | Wilds of Eldraine Tokens                        | 2023-09-08   |
+| 878       | woc           | Wilds of Eldraine Commander                     | 2023-09-08   |
+| **879**   | **woe**       | **Wilds of Eldraine**                           | **2023-09-08** |
+| 880       | wot           | Wilds of Eldraine: Enchanting Tales             | 2023-09-08   |
+| 881       | wwoe          | Wilds of Eldraine Japanese Promo Tokens         | 2023-09-08   |
+| 882       | ywoe          | Alchemy: Wilds of Eldraine                      | 2023-10-10   |
+| 883       | twho          | Doctor Who Tokens                               | 2023-10-13   |
+| **884**   | **who**       | **Doctor Who**                                  | **2023-10-13** |
+| 885       | alci          | The Lost Caverns of Ixalan Art Series           | 2023-11-17   |
+| 886       | lcc           | The Lost Caverns of Ixalan Commander            | 2023-11-17   |
+| **887**   | **lci**       | **The Lost Caverns of Ixalan**                  | **2023-11-17** |
+| 888       | plci          | The Lost Caverns of Ixalan Promos               | 2023-11-17   |
+| **889**   | **rex**       | **Jurassic World Collection**                   | **2023-11-17** |
+| 890       | slci          | The Lost Caverns of Ixalan Substitute Cards     | 2023-11-17   |
+| 891       | spg           | Special Guests                                  | 2023-11-17   |
+| 892       | tlcc          | The Lost Caverns of Ixalan Commander Tokens     | 2023-11-17   |
+| 893       | tlci          | The Lost Caverns of Ixalan Tokens               | 2023-11-17   |
+| 894       | trex          | Jurassic World Collection Tokens                | 2023-11-17   |
+| 895       | ylci          | Alchemy: Ixalan                                 | 2023-12-05   |
+| 896       | pf24          | MagicFest 2024                                  | 2024-01-01   |
+| 897       | pw24          | Wizards Play Network 2024                       | 2024-01-01   |
+| 898       | rvr           | Ravnica Remastered                              | 2024-01-12   |
+| 899       | trvr          | Ravnica Remastered Tokens                       | 2024-01-12   |
+| 900       | pl24          | Year of the Dragon 2024                         | 2024-02-08   |
+| 901       | clu           | Ravnica: Clue Edition                           | 2024-02-09   |
+| 902       | mkm           | Murders at Karlov Manor                         | 2024-02-09   |
+| 903       | pip           | Fallout                                         | 2024-03-08   |
+| 904       | tpip          | Fallout Tokens                                  | 2024-03-08   |
 
