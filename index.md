@@ -25,8 +25,8 @@ Please, read the [PhD Guidelines](./pages/phd_guidelines.html).**
 
 ---
 
-## The current Pauperformance code for decks is **898**.
-It refers to Ravnica Remastered (rvr), released on 2024-01-12.
+## The current Pauperformance code for decks is **889**.
+It refers to Jurassic World Collection (rex), released on 2023-11-17.
 
 ---
 
