@@ -916,7 +916,7 @@ Lines in **bold** correspond to sets that have introduced new cards in the [Paup
 | 895       | ylci          | Alchemy: Ixalan                                 | 2023-12-05   |
 | 896       | pf24          | MagicFest 2024                                  | 2024-01-01   |
 | 897       | pw24          | Wizards Play Network 2024                       | 2024-01-01   |
-| **898**   | **rvr**       | **Ravnica Remastered**                          | **2024-01-12** |
+| 898       | rvr           | Ravnica Remastered                              | 2024-01-12   |
 | 899       | trvr          | Ravnica Remastered Tokens                       | 2024-01-12   |
 | 900       | pl24          | Year of the Dragon 2024                         | 2024-02-08   |
 | 901       | clu           | Ravnica: Clue Edition                           | 2024-02-09   |
