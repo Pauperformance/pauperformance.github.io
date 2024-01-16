@@ -921,6 +921,7 @@ Lines in **bold** correspond to sets that have introduced new cards in the [Paup
 | 900       | pl24          | Year of the Dragon 2024                         | 2024-02-08   |
 | 901       | clu           | Ravnica: Clue Edition                           | 2024-02-09   |
 | 902       | mkm           | Murders at Karlov Manor                         | 2024-02-09   |
-| 903       | pip           | Fallout                                         | 2024-03-08   |
-| 904       | tpip          | Fallout Tokens                                  | 2024-03-08   |
+| 903       | mkc           | Murders at Karlov Manor Commander               | 2024-02-16   |
+| 904       | pip           | Fallout                                         | 2024-03-08   |
+| 905       | tpip          | Fallout Tokens                                  | 2024-03-08   |
 
