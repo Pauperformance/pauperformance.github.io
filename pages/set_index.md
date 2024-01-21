@@ -864,72 +864,67 @@ Lines in **bold** correspond to sets that have introduced new cards in the [Paup
 | 843       | ltc           | Tales of Middle-earth Commander                 | 2023-06-23   |
 | 844       | ltr           | The Lord of the Rings: Tales of Middle-earth    | 2023-06-23   |
 | 845       | cmm           | Commander Masters                               | 2023-08-04   |
-| 846       | disabled-mb1  | Mystery Booster                                 | 2019-11-07   |
-| 847       | disabled-fmb1 | Mystery Booster Retail Edition Foils            | 2020-03-08   |
-| 848       | plst          | The List                                        | 2020-09-26   |
-| 849       | disabled-phed | Heads I Win, Tails You Lose                     | 2022-04-22   |
-| 850       | p30m          | 30th Anniversary Misc Promos                    | 2022-09-02   |
-| 851       | fdmu          | Dominaria United Jumpstart Front Cards          | 2022-09-09   |
-| 852       | ptdmu         | Dominaria United Southeast Asia Tokens          | 2022-09-09   |
-| 853       | ulst          | The List (Unfinity Foil Edition)                | 2022-10-07   |
-| 854       | fbro          | The Brothers' War Jumpstart Front Cards         | 2022-11-18   |
-| 855       | ptbro         | The Brothers' War Southeast Asia Tokens         | 2022-11-18   |
-| 856       | sbro          | The Brothers' War Substitute Cards              | 2022-11-18   |
-| 857       | amom          | March of the Machine Art Series                 | 2023-04-21   |
-| 858       | fmom          | March of the Machine Jumpstart Front Cards      | 2023-04-21   |
-| 859       | pmom          | March of the Machine Promos                     | 2023-04-21   |
-| 860       | smom          | March of the Machine Substitute Cards           | 2023-04-21   |
-| 861       | tmoc          | March of the Machine Commander Tokens           | 2023-04-21   |
-| 862       | tmul          | Multiverse Legends Tokens                       | 2023-04-21   |
-| 863       | wmom          | March of the Machine Japanese Promo Tokens      | 2023-04-21   |
-| 864       | disabled-pctb | From Cute to Brute                              | 2023-05-08   |
-| 865       | altr          | Tales of Middle-earth Art Series                | 2023-06-23   |
-| 866       | fltr          | Tales of Middle-earth Front Cards               | 2023-06-23   |
-| 867       | pltr          | Tales of Middle-earth Promos                    | 2023-06-23   |
-| 868       | tltc          | Tales of Middle-earth Commander Tokens          | 2023-06-23   |
-| 869       | tltr          | Tales of Middle-earth Tokens                    | 2023-06-23   |
-| 870       | pf23          | MagicFest 2023                                  | 2023-07-01   |
-| 871       | ea3           | Explorer Anthology 3                            | 2023-07-18   |
-| 872       | ha7           | Historic Anthology 7                            | 2023-07-18   |
-| 873       | ph22          | 2022 Heroes of the Realm                        | 2023-08-01   |
-| 874       | acmm          | Commander Masters Art Series                    | 2023-08-04   |
-| 875       | tcmm          | Commander Masters Tokens                        | 2023-08-04   |
-| 876       | disabled-pagl | Angels: They're Just Like Us but Cooler and with Wings | 2023-08-14   |
-| 877       | p30t          | 30th Anniversary Celebration Tokyo              | 2023-09-01   |
-| 878       | awoe          | Wilds of Eldraine Art Series                    | 2023-09-08   |
-| 879       | pmda          | Magic × Duel Masters Promos                     | 2023-09-08   |
-| 880       | pwoe          | Wilds of Eldraine Promos                        | 2023-09-08   |
-| 881       | twoc          | Wilds of Eldraine Commander Tokens              | 2023-09-08   |
-| 882       | twoe          | Wilds of Eldraine Tokens                        | 2023-09-08   |
-| 883       | woc           | Wilds of Eldraine Commander                     | 2023-09-08   |
-| **884**   | **woe**       | **Wilds of Eldraine**                           | **2023-09-08** |
-| 885       | wot           | Wilds of Eldraine: Enchanting Tales             | 2023-09-08   |
-| 886       | wwoe          | Wilds of Eldraine Japanese Promo Tokens         | 2023-09-08   |
-| 887       | ywoe          | Alchemy: Wilds of Eldraine                      | 2023-10-10   |
-| 888       | twho          | Doctor Who Tokens                               | 2023-10-13   |
-| **889**   | **who**       | **Doctor Who**                                  | **2023-10-13** |
-| 890       | alci          | The Lost Caverns of Ixalan Art Series           | 2023-11-17   |
-| 891       | lcc           | The Lost Caverns of Ixalan Commander            | 2023-11-17   |
-| **892**   | **lci**       | **The Lost Caverns of Ixalan**                  | **2023-11-17** |
-| 893       | plci          | The Lost Caverns of Ixalan Promos               | 2023-11-17   |
-| 894       | pmat          | March of the Machine: The Aftermath Promos      | 2023-11-17   |
-| **895**   | **rex**       | **Jurassic World Collection**                   | **2023-11-17** |
-| 896       | slci          | The Lost Caverns of Ixalan Substitute Cards     | 2023-11-17   |
-| 897       | spg           | Special Guests                                  | 2023-11-17   |
-| 898       | tlcc          | The Lost Caverns of Ixalan Commander Tokens     | 2023-11-17   |
-| 899       | tlci          | The Lost Caverns of Ixalan Tokens               | 2023-11-17   |
-| 900       | trex          | Jurassic World Collection Tokens                | 2023-11-17   |
-| 901       | ylci          | Alchemy: Ixalan                                 | 2023-12-05   |
-| 902       | pf24          | MagicFest 2024                                  | 2024-01-01   |
-| 903       | pw24          | Wizards Play Network 2024                       | 2024-01-01   |
-| **904**   | **rvr**       | **Ravnica Remastered**                          | **2024-01-12** |
-| 905       | trvr          | Ravnica Remastered Tokens                       | 2024-01-12   |
-| 906       | pl24          | Year of the Dragon 2024                         | 2024-02-08   |
-| 907       | clu           | Ravnica: Clue Edition                           | 2024-02-09   |
-| 908       | mkm           | Murders at Karlov Manor                         | 2024-02-09   |
-| 909       | tmkm          | Murders at Karlov Manor Tokens                  | 2024-02-09   |
-| 910       | pss4          | Murders at Karlov Manor Standard Showdown       | 2024-02-10   |
-| 911       | mkc           | Murders at Karlov Manor Commander               | 2024-02-16   |
-| 912       | pip           | Fallout                                         | 2024-03-08   |
-| 913       | tpip          | Fallout Tokens                                  | 2024-03-08   |
+| 846       | plst          | The List                                        | 2020-09-26   |
+| 847       | p30m          | 30th Anniversary Misc Promos                    | 2022-09-02   |
+| 848       | fdmu          | Dominaria United Jumpstart Front Cards          | 2022-09-09   |
+| 849       | ptdmu         | Dominaria United Southeast Asia Tokens          | 2022-09-09   |
+| 850       | ulst          | The List (Unfinity Foil Edition)                | 2022-10-07   |
+| 851       | fbro          | The Brothers' War Jumpstart Front Cards         | 2022-11-18   |
+| 852       | ptbro         | The Brothers' War Southeast Asia Tokens         | 2022-11-18   |
+| 853       | sbro          | The Brothers' War Substitute Cards              | 2022-11-18   |
+| 854       | amom          | March of the Machine Art Series                 | 2023-04-21   |
+| 855       | fmom          | March of the Machine Jumpstart Front Cards      | 2023-04-21   |
+| 856       | pmom          | March of the Machine Promos                     | 2023-04-21   |
+| 857       | smom          | March of the Machine Substitute Cards           | 2023-04-21   |
+| 858       | tmoc          | March of the Machine Commander Tokens           | 2023-04-21   |
+| 859       | tmul          | Multiverse Legends Tokens                       | 2023-04-21   |
+| 860       | wmom          | March of the Machine Japanese Promo Tokens      | 2023-04-21   |
+| 861       | altr          | Tales of Middle-earth Art Series                | 2023-06-23   |
+| 862       | fltr          | Tales of Middle-earth Front Cards               | 2023-06-23   |
+| 863       | pltr          | Tales of Middle-earth Promos                    | 2023-06-23   |
+| 864       | tltc          | Tales of Middle-earth Commander Tokens          | 2023-06-23   |
+| 865       | tltr          | Tales of Middle-earth Tokens                    | 2023-06-23   |
+| 866       | pf23          | MagicFest 2023                                  | 2023-07-01   |
+| 867       | ea3           | Explorer Anthology 3                            | 2023-07-18   |
+| 868       | ha7           | Historic Anthology 7                            | 2023-07-18   |
+| 869       | ph22          | 2022 Heroes of the Realm                        | 2023-08-01   |
+| 870       | acmm          | Commander Masters Art Series                    | 2023-08-04   |
+| 871       | tcmm          | Commander Masters Tokens                        | 2023-08-04   |
+| 872       | p30t          | 30th Anniversary Celebration Tokyo              | 2023-09-01   |
+| 873       | awoe          | Wilds of Eldraine Art Series                    | 2023-09-08   |
+| 874       | pmda          | Magic × Duel Masters Promos                     | 2023-09-08   |
+| 875       | pwoe          | Wilds of Eldraine Promos                        | 2023-09-08   |
+| 876       | twoc          | Wilds of Eldraine Commander Tokens              | 2023-09-08   |
+| 877       | twoe          | Wilds of Eldraine Tokens                        | 2023-09-08   |
+| 878       | woc           | Wilds of Eldraine Commander                     | 2023-09-08   |
+| **879**   | **woe**       | **Wilds of Eldraine**                           | **2023-09-08** |
+| 880       | wot           | Wilds of Eldraine: Enchanting Tales             | 2023-09-08   |
+| 881       | wwoe          | Wilds of Eldraine Japanese Promo Tokens         | 2023-09-08   |
+| 882       | ywoe          | Alchemy: Wilds of Eldraine                      | 2023-10-10   |
+| 883       | twho          | Doctor Who Tokens                               | 2023-10-13   |
+| **884**   | **who**       | **Doctor Who**                                  | **2023-10-13** |
+| 885       | alci          | The Lost Caverns of Ixalan Art Series           | 2023-11-17   |
+| 886       | lcc           | The Lost Caverns of Ixalan Commander            | 2023-11-17   |
+| **887**   | **lci**       | **The Lost Caverns of Ixalan**                  | **2023-11-17** |
+| 888       | plci          | The Lost Caverns of Ixalan Promos               | 2023-11-17   |
+| 889       | pmat          | March of the Machine: The Aftermath Promos      | 2023-11-17   |
+| **890**   | **rex**       | **Jurassic World Collection**                   | **2023-11-17** |
+| 891       | slci          | The Lost Caverns of Ixalan Substitute Cards     | 2023-11-17   |
+| 892       | spg           | Special Guests                                  | 2023-11-17   |
+| 893       | tlcc          | The Lost Caverns of Ixalan Commander Tokens     | 2023-11-17   |
+| 894       | tlci          | The Lost Caverns of Ixalan Tokens               | 2023-11-17   |
+| 895       | trex          | Jurassic World Collection Tokens                | 2023-11-17   |
+| 896       | ylci          | Alchemy: Ixalan                                 | 2023-12-05   |
+| 897       | pf24          | MagicFest 2024                                  | 2024-01-01   |
+| 898       | pw24          | Wizards Play Network 2024                       | 2024-01-01   |
+| **899**   | **rvr**       | **Ravnica Remastered**                          | **2024-01-12** |
+| 900       | trvr          | Ravnica Remastered Tokens                       | 2024-01-12   |
+| 901       | pl24          | Year of the Dragon 2024                         | 2024-02-08   |
+| 902       | clu           | Ravnica: Clue Edition                           | 2024-02-09   |
+| 903       | mkm           | Murders at Karlov Manor                         | 2024-02-09   |
+| 904       | tmkm          | Murders at Karlov Manor Tokens                  | 2024-02-09   |
+| 905       | pss4          | Murders at Karlov Manor Standard Showdown       | 2024-02-10   |
+| 906       | mkc           | Murders at Karlov Manor Commander               | 2024-02-16   |
+| 907       | pip           | Fallout                                         | 2024-03-08   |
+| 908       | tpip          | Fallout Tokens                                  | 2024-03-08   |
 
