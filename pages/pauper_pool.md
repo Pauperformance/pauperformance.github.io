@@ -185,11 +185,11 @@ Table of Contents
 * [Dominaria Remastered](#dominaria-remastered-dmr) (*release: 2023-03-31 ~ p12e_code: 806*)
 * [March of the Machine Commander](#march-of-the-machine-commander-moc) (*release: 2023-04-21 ~ p12e_code: 838*)
 * [March of the Machine](#march-of-the-machine-mom) (*release: 2023-04-21 ~ p12e_code: 839*)
-* [Wilds of Eldraine](#wilds-of-eldraine-woe) (*release: 2023-09-08 ~ p12e_code: 881*)
-* [Doctor Who](#doctor-who-who) (*release: 2023-10-13 ~ p12e_code: 886*)
-* [The Lost Caverns of Ixalan](#the-lost-caverns-of-ixalan-lci) (*release: 2023-11-17 ~ p12e_code: 889*)
-* [Jurassic World Collection](#jurassic-world-collection-rex) (*release: 2023-11-17 ~ p12e_code: 892*)
-* [Ravnica Remastered](#ravnica-remastered-rvr) (*release: 2024-01-12 ~ p12e_code: 901*)
+* [Wilds of Eldraine](#wilds-of-eldraine-woe) (*release: 2023-09-08 ~ p12e_code: 884*)
+* [Doctor Who](#doctor-who-who) (*release: 2023-10-13 ~ p12e_code: 889*)
+* [The Lost Caverns of Ixalan](#the-lost-caverns-of-ixalan-lci) (*release: 2023-11-17 ~ p12e_code: 892*)
+* [Jurassic World Collection](#jurassic-world-collection-rex) (*release: 2023-11-17 ~ p12e_code: 895*)
+* [Ravnica Remastered](#ravnica-remastered-rvr) (*release: 2024-01-12 ~ p12e_code: 904*)
 
 ---
 
@@ -10822,7 +10822,7 @@ Table of Contents
 []()
 
 ## Wilds of Eldraine (woe)
-*release: 2023-09-08 | p12e_code: 881*
+*release: 2023-09-08 | p12e_code: 884*
 
 <details>
   <summary>Click to see 94 new cards</summary>
@@ -10925,7 +10925,7 @@ Table of Contents
 []()
 
 ## Doctor Who (who)
-*release: 2023-10-13 | p12e_code: 886*
+*release: 2023-10-13 | p12e_code: 889*
 
 <details>
   <summary>Click to see 1 new cards</summary>
@@ -10935,7 +10935,7 @@ Table of Contents
 []()
 
 ## The Lost Caverns of Ixalan (lci)
-*release: 2023-11-17 | p12e_code: 889*
+*release: 2023-11-17 | p12e_code: 892*
 
 <details>
   <summary>Click to see 105 new cards</summary>
@@ -11049,7 +11049,7 @@ Table of Contents
 []()
 
 ## Jurassic World Collection (rex)
-*release: 2023-11-17 | p12e_code: 892*
+*release: 2023-11-17 | p12e_code: 895*
 
 <details>
   <summary>Click to see 6 new cards</summary>
@@ -11064,7 +11064,7 @@ Table of Contents
 []()
 
 ## Ravnica Remastered (rvr)
-*release: 2024-01-12 | p12e_code: 901*
+*release: 2024-01-12 | p12e_code: 904*
 
 <details>
   <summary>Click to see 8 new cards</summary>
