@@ -25,7 +25,7 @@ Please, read the [PhD Guidelines](./pages/phd_guidelines.html).**
 
 ---
 
-## The current Pauperformance code for decks is **901**.
+## The current Pauperformance code for decks is **904**.
 It refers to Ravnica Remastered (rvr), released on 2024-01-12.
 
 ---
