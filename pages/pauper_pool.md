@@ -188,8 +188,8 @@ Table of Contents
 * [Wilds of Eldraine](#wilds-of-eldraine-woe) (*release: 2023-09-08 ~ p12e_code: 879*)
 * [Doctor Who](#doctor-who-who) (*release: 2023-10-13 ~ p12e_code: 884*)
 * [The Lost Caverns of Ixalan](#the-lost-caverns-of-ixalan-lci) (*release: 2023-11-17 ~ p12e_code: 887*)
-* [Jurassic World Collection](#jurassic-world-collection-rex) (*release: 2023-11-17 ~ p12e_code: 889*)
-* [Ravnica Remastered](#ravnica-remastered-rvr) (*release: 2024-01-12 ~ p12e_code: 898*)
+* [Jurassic World Collection](#jurassic-world-collection-rex) (*release: 2023-11-17 ~ p12e_code: 890*)
+* [Ravnica Remastered](#ravnica-remastered-rvr) (*release: 2024-01-12 ~ p12e_code: 899*)
 
 ---
 
@@ -11049,7 +11049,7 @@ Table of Contents
 []()
 
 ## Jurassic World Collection (rex)
-*release: 2023-11-17 | p12e_code: 889*
+*release: 2023-11-17 | p12e_code: 890*
 
 <details>
   <summary>Click to see 6 new cards</summary>
@@ -11064,7 +11064,7 @@ Table of Contents
 []()
 
 ## Ravnica Remastered (rvr)
-*release: 2024-01-12 | p12e_code: 898*
+*release: 2024-01-12 | p12e_code: 899*
 
 <details>
   <summary>Click to see 8 new cards</summary>

@@ -907,23 +907,24 @@ Lines in **bold** correspond to sets that have introduced new cards in the [Paup
 | 886       | lcc           | The Lost Caverns of Ixalan Commander            | 2023-11-17   |
 | **887**   | **lci**       | **The Lost Caverns of Ixalan**                  | **2023-11-17** |
 | 888       | plci          | The Lost Caverns of Ixalan Promos               | 2023-11-17   |
-| **889**   | **rex**       | **Jurassic World Collection**                   | **2023-11-17** |
-| 890       | slci          | The Lost Caverns of Ixalan Substitute Cards     | 2023-11-17   |
-| 891       | spg           | Special Guests                                  | 2023-11-17   |
-| 892       | tlcc          | The Lost Caverns of Ixalan Commander Tokens     | 2023-11-17   |
-| 893       | tlci          | The Lost Caverns of Ixalan Tokens               | 2023-11-17   |
-| 894       | trex          | Jurassic World Collection Tokens                | 2023-11-17   |
-| 895       | ylci          | Alchemy: Ixalan                                 | 2023-12-05   |
-| 896       | pf24          | MagicFest 2024                                  | 2024-01-01   |
-| 897       | pw24          | Wizards Play Network 2024                       | 2024-01-01   |
-| **898**   | **rvr**       | **Ravnica Remastered**                          | **2024-01-12** |
-| 899       | trvr          | Ravnica Remastered Tokens                       | 2024-01-12   |
-| 900       | pl24          | Year of the Dragon 2024                         | 2024-02-08   |
-| 901       | clu           | Ravnica: Clue Edition                           | 2024-02-09   |
-| 902       | mkm           | Murders at Karlov Manor                         | 2024-02-09   |
-| 903       | tmkm          | Murders at Karlov Manor Tokens                  | 2024-02-09   |
-| 904       | pss4          | Murders at Karlov Manor Standard Showdown       | 2024-02-10   |
-| 905       | mkc           | Murders at Karlov Manor Commander               | 2024-02-16   |
-| 906       | pip           | Fallout                                         | 2024-03-08   |
-| 907       | tpip          | Fallout Tokens                                  | 2024-03-08   |
+| 889       | pmat          | March of the Machine: The Aftermath Promos      | 2023-11-17   |
+| **890**   | **rex**       | **Jurassic World Collection**                   | **2023-11-17** |
+| 891       | slci          | The Lost Caverns of Ixalan Substitute Cards     | 2023-11-17   |
+| 892       | spg           | Special Guests                                  | 2023-11-17   |
+| 893       | tlcc          | The Lost Caverns of Ixalan Commander Tokens     | 2023-11-17   |
+| 894       | tlci          | The Lost Caverns of Ixalan Tokens               | 2023-11-17   |
+| 895       | trex          | Jurassic World Collection Tokens                | 2023-11-17   |
+| 896       | ylci          | Alchemy: Ixalan                                 | 2023-12-05   |
+| 897       | pf24          | MagicFest 2024                                  | 2024-01-01   |
+| 898       | pw24          | Wizards Play Network 2024                       | 2024-01-01   |
+| **899**   | **rvr**       | **Ravnica Remastered**                          | **2024-01-12** |
+| 900       | trvr          | Ravnica Remastered Tokens                       | 2024-01-12   |
+| 901       | pl24          | Year of the Dragon 2024                         | 2024-02-08   |
+| 902       | clu           | Ravnica: Clue Edition                           | 2024-02-09   |
+| 903       | mkm           | Murders at Karlov Manor                         | 2024-02-09   |
+| 904       | tmkm          | Murders at Karlov Manor Tokens                  | 2024-02-09   |
+| 905       | pss4          | Murders at Karlov Manor Standard Showdown       | 2024-02-10   |
+| 906       | mkc           | Murders at Karlov Manor Commander               | 2024-02-16   |
+| 907       | pip           | Fallout                                         | 2024-03-08   |
+| 908       | tpip          | Fallout Tokens                                  | 2024-03-08   |
 
