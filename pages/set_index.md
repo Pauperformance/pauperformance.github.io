@@ -927,4 +927,5 @@ Lines in **bold** correspond to sets that have introduced new cards in the [Paup
 | 906       | mkc           | Murders at Karlov Manor Commander               | 2024-02-16   |
 | 907       | pip           | Fallout                                         | 2024-03-08   |
 | 908       | tpip          | Fallout Tokens                                  | 2024-03-08   |
+| 909       | otj           | Outlaws of Thunder Junction                     | 2024-04-19   |
 
