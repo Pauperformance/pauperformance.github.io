@@ -42,7 +42,7 @@ Once the board is in control, the player typically wins by beating with creature
 <a href="https://scryfall.com/card/rav/44/drake-familiar"><img src="https://c1.scryfall.com/file/scryfall-cards/normal/front/b/4/b4583623-e367-48cc-8e86-e6c5e35f1a9c.jpg" class="archetype-card rounded-image"/></a>
 <a href="https://scryfall.com/card/tsr/63/dream-stalker"><img src="https://c1.scryfall.com/file/scryfall-cards/normal/front/e/5/e59b4729-74c1-4aa9-937d-27cda960f157.jpg" class="archetype-card rounded-image"/></a>
 <a href="https://scryfall.com/card/c19/84/echoing-truth"><img src="https://c1.scryfall.com/file/scryfall-cards/normal/front/5/5/55cd75bc-5ec7-45b2-9231-85a321ecd786.jpg" class="archetype-card rounded-image"/></a>
-<a href="https://scryfall.com/card/rvr/18/faiths-fetters"><img src="https://cards.scryfall.io/normal/front/0/8/08b62f4c-cc20-40b6-a504-407d53bdf2aa.jpg" class="archetype-card rounded-image"/></a>
+<a href="https://scryfall.com/card/cmr/20/faiths-fetters"><img src="https://cards.scryfall.io/normal/front/0/4/04a7da8c-a444-4deb-89b9-2fc9e5475bff.jpg" class="archetype-card rounded-image"/></a>
 <a href="https://scryfall.com/card/khc/39/ghostly-flicker"><img src="https://c1.scryfall.com/file/scryfall-cards/normal/front/4/8/485ab561-9c2a-4f99-9317-8726bcdae364.jpg" class="archetype-card rounded-image"/></a>
 <a href="https://scryfall.com/card/thb/20/heliods-pilgrim"><img src="https://c1.scryfall.com/file/scryfall-cards/normal/front/c/a/cafce2f5-f4f4-465b-96dc-bcdd29d4e4bb.jpg" class="archetype-card rounded-image"/></a>
 <a href="https://scryfall.com/card/pls/7/hobble"><img src="https://c1.scryfall.com/file/scryfall-cards/normal/front/5/4/54c76a22-f9e3-408b-a5bd-403add57e31a.jpg" class="archetype-card rounded-image"/></a>
