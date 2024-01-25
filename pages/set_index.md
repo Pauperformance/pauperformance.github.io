@@ -922,10 +922,11 @@ Lines in **bold** correspond to sets that have introduced new cards in the [Paup
 | 901       | pl24          | Year of the Dragon 2024                         | 2024-02-08   |
 | 902       | clu           | Ravnica: Clue Edition                           | 2024-02-09   |
 | 903       | mkm           | Murders at Karlov Manor                         | 2024-02-09   |
-| 904       | tmkm          | Murders at Karlov Manor Tokens                  | 2024-02-09   |
-| 905       | pss4          | Murders at Karlov Manor Standard Showdown       | 2024-02-10   |
-| 906       | mkc           | Murders at Karlov Manor Commander               | 2024-02-16   |
-| 907       | pip           | Fallout                                         | 2024-03-08   |
-| 908       | tpip          | Fallout Tokens                                  | 2024-03-08   |
-| 909       | otj           | Outlaws of Thunder Junction                     | 2024-04-19   |
+| 904       | tmkc          | Murders at Karlov Manor Commander Tokens        | 2024-02-09   |
+| 905       | tmkm          | Murders at Karlov Manor Tokens                  | 2024-02-09   |
+| 906       | pss4          | Murders at Karlov Manor Standard Showdown       | 2024-02-10   |
+| 907       | mkc           | Murders at Karlov Manor Commander               | 2024-02-16   |
+| 908       | pip           | Fallout                                         | 2024-03-08   |
+| 909       | tpip          | Fallout Tokens                                  | 2024-03-08   |
+| 910       | otj           | Outlaws of Thunder Junction                     | 2024-04-19   |
 
