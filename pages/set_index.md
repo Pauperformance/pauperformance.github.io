@@ -925,7 +925,7 @@ Lines in **bold** correspond to sets that have introduced new cards in the [Paup
 | 904       | mkm           | Murders at Karlov Manor                         | 2024-02-09   |
 | 905       | tmkc          | Murders at Karlov Manor Commander Tokens        | 2024-02-09   |
 | 906       | tmkm          | Murders at Karlov Manor Tokens                  | 2024-02-09   |
-| 907       | pss4          | Murders at Karlov Manor Standard Showdown       | 2024-02-10   |
+| 907       | pss4          | MKM Standard Showdown                           | 2024-02-10   |
 | 908       | mkc           | Murders at Karlov Manor Commander               | 2024-02-16   |
 | 909       | pip           | Fallout                                         | 2024-03-08   |
 | 910       | tpip          | Fallout Tokens                                  | 2024-03-08   |
