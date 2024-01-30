@@ -23,7 +23,6 @@
 <a href="https://scryfall.com/card/mh1/129/goblin-matron"><img src="https://c1.scryfall.com/file/scryfall-cards/normal/front/2/0/2092e6db-1196-43bf-b7c9-07498fa7ca90.jpg" class="archetype-card rounded-image"/></a>
 <a href="https://scryfall.com/card/mh1/101/putrid-goblin"><img src="https://c1.scryfall.com/file/scryfall-cards/normal/front/3/3/333406d5-abcc-4629-a33b-395d0662ba1b.jpg" class="archetype-card rounded-image"/></a>
 <a href="https://scryfall.com/card/dom/144/skirk-prospector"><img src="https://c1.scryfall.com/file/scryfall-cards/normal/front/1/6/1636d138-aa63-476f-a930-41b1be988032.jpg" class="archetype-card rounded-image"/></a>
-<a href="https://scryfall.com/card/clu/262/swamp"><img src="https://cards.scryfall.io/normal/front/5/b/5b7096fd-48b1-4eb5-8c18-945ebbd63168.jpg" class="archetype-card rounded-image"/></a>
 <a href="https://scryfall.com/card/mh1/113/unearth"><img src="https://c1.scryfall.com/file/scryfall-cards/normal/front/b/6/b62abd0c-ec3e-45d7-989d-da269812aeef.jpg" class="archetype-card rounded-image"/></a>
 </details><br/>
 
