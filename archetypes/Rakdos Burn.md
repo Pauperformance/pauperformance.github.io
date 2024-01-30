@@ -46,6 +46,7 @@
 <a href="https://scryfall.com/card/mh2/139/revolutionist"><img src="https://c1.scryfall.com/file/scryfall-cards/normal/front/b/b/bb8f3008-a3ba-4f73-afa6-ad81074b3196.jpg" class="archetype-card rounded-image"/></a>
 <a href="https://scryfall.com/card/ddi/67/searing-blaze"><img src="https://c1.scryfall.com/file/scryfall-cards/normal/front/f/6/f659d464-13dd-49e2-a842-098dcba49659.jpg" class="archetype-card rounded-image"/></a>
 <a href="https://scryfall.com/card/eve/44/soul-reap"><img src="https://c1.scryfall.com/file/scryfall-cards/normal/front/e/2/e2a129e2-bed5-4ee7-b223-851452f72682.jpg" class="archetype-card rounded-image"/></a>
+<a href="https://scryfall.com/card/clu/262/swamp"><img src="https://cards.scryfall.io/normal/front/5/b/5b7096fd-48b1-4eb5-8c18-945ebbd63168.jpg" class="archetype-card rounded-image"/></a>
 <a href="https://scryfall.com/card/m21/165/thrill-of-possibility"><img src="https://c1.scryfall.com/file/scryfall-cards/normal/front/f/4/f4af156d-0fbf-4a4e-b0c1-db7e95be4903.jpg" class="archetype-card rounded-image"/></a>
 <a href="https://scryfall.com/card/vma/143/tyrants-choice"><img src="https://c1.scryfall.com/file/scryfall-cards/normal/front/5/e/5ed37b1c-7377-40bd-ae98-7f5ce56156b1.jpg" class="archetype-card rounded-image"/></a>
 <a href="https://scryfall.com/card/vow/182/voldaren-epicure"><img src="https://c1.scryfall.com/file/scryfall-cards/normal/front/a/e/ae154e64-f626-45fb-bd52-840c1c27b2d3.jpg" class="archetype-card rounded-image"/></a>
