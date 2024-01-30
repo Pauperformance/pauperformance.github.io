@@ -49,6 +49,7 @@
 <a href="https://scryfall.com/card/eld/131/merchant-of-the-vale-haggle"><img src="https://c1.scryfall.com/file/scryfall-cards/normal/front/0/b/0b4399b6-e67f-40d8-8676-f5db7e04a6c9.jpg" class="archetype-card rounded-image"/></a>
 <a href="https://scryfall.com/card/arb/43/monstrous-carabid"><img src="https://c1.scryfall.com/file/scryfall-cards/normal/front/b/0/b09e668d-02ca-4164-88ee-c7ea6c665975.jpg" class="archetype-card rounded-image"/></a>
 <a href="https://scryfall.com/card/mh2/140/skophos-reaver"><img src="https://c1.scryfall.com/file/scryfall-cards/normal/front/3/2/32691e3f-dea9-45ac-96fe-96b34d5116a9.jpg" class="archetype-card rounded-image"/></a>
+<a href="https://scryfall.com/card/clu/262/swamp"><img src="https://cards.scryfall.io/normal/front/5/b/5b7096fd-48b1-4eb5-8c18-945ebbd63168.jpg" class="archetype-card rounded-image"/></a>
 <a href="https://scryfall.com/card/c20/231/terminate"><img src="https://c1.scryfall.com/file/scryfall-cards/normal/front/1/a/1a2ba191-f11c-47d3-8459-34b0e0e56fd9.jpg" class="archetype-card rounded-image"/></a>
 <a href="https://scryfall.com/card/m21/165/thrill-of-possibility"><img src="https://c1.scryfall.com/file/scryfall-cards/normal/front/f/4/f4af156d-0fbf-4a4e-b0c1-db7e95be4903.jpg" class="archetype-card rounded-image"/></a>
 <a href="https://scryfall.com/card/znr/172/tormenting-voice"><img src="https://c1.scryfall.com/file/scryfall-cards/normal/front/6/d/6da46103-a14c-4aa2-92fc-fd758335caf4.jpg" class="archetype-card rounded-image"/></a>
