@@ -26,6 +26,7 @@
 <a href="https://scryfall.com/card/ema/100/nights-whisper"><img src="https://c1.scryfall.com/file/scryfall-cards/normal/front/e/4/e4638720-a55d-4c3b-b57d-2d028db5894d.jpg" class="archetype-card rounded-image"/></a>
 <a href="https://scryfall.com/card/cmr/142/phyrexian-rager"><img src="https://c1.scryfall.com/file/scryfall-cards/normal/front/b/b/bb0d354e-3a63-4dfe-ae6d-5e82cbf419ac.jpg" class="archetype-card rounded-image"/></a>
 <a href="https://scryfall.com/card/mma/95/ravens-crime"><img src="https://c1.scryfall.com/file/scryfall-cards/normal/front/7/2/7271436b-897a-4b24-a5d2-d29dbea8c1bf.jpg" class="archetype-card rounded-image"/></a>
+<a href="https://scryfall.com/card/clu/262/swamp"><img src="https://cards.scryfall.io/normal/front/5/b/5b7096fd-48b1-4eb5-8c18-945ebbd63168.jpg" class="archetype-card rounded-image"/></a>
 <a href="https://scryfall.com/card/c20/231/terminate"><img src="https://c1.scryfall.com/file/scryfall-cards/normal/front/1/a/1a2ba191-f11c-47d3-8459-34b0e0e56fd9.jpg" class="archetype-card rounded-image"/></a>
 </details><br/>
 

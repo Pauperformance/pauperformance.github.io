@@ -46,6 +46,7 @@
 <a href="https://scryfall.com/card/fut/138/sprout-swarm"><img src="https://c1.scryfall.com/file/scryfall-cards/normal/front/0/b/0b915355-4e98-44df-81bd-961a3d3c86b8.jpg" class="archetype-card rounded-image"/></a>
 <a href="https://scryfall.com/card/apc/18/standard-bearer"><img src="https://cards.scryfall.io/normal/front/e/0/e0f8e16a-55f0-4147-a01a-dba7938f31c4.jpg" class="archetype-card rounded-image"/></a>
 <a href="https://scryfall.com/card/mor/25/stonybrook-schoolmaster"><img src="https://c1.scryfall.com/file/scryfall-cards/normal/front/6/9/69fa2293-f398-4ad8-895e-c739ddea56d0.jpg" class="archetype-card rounded-image"/></a>
+<a href="https://scryfall.com/card/hou/184/survivors-encampment"><img src="https://cards.scryfall.io/normal/front/c/7/c7b0404e-0f42-456b-91ce-f960195c4951.jpg" class="archetype-card rounded-image"/></a>
 <a href="https://scryfall.com/card/mma/34/veteran-armorer"><img src="https://c1.scryfall.com/file/scryfall-cards/normal/front/0/2/026aaea6-ed4f-4505-9779-7c28ff6c2284.jpg" class="archetype-card rounded-image"/></a>
 </details><br/>
 
