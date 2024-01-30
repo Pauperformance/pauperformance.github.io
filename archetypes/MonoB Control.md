@@ -24,7 +24,6 @@
 <a href="https://scryfall.com/card/cmr/116/cuombajj-witches"><img src="https://c1.scryfall.com/file/scryfall-cards/normal/front/6/a/6a26e910-275a-4981-831b-bfed936a7e3f.jpg" class="archetype-card rounded-image"/></a>
 <a href="https://scryfall.com/card/thb/99/gray-merchant-of-asphodel"><img src="https://c1.scryfall.com/file/scryfall-cards/normal/front/7/c/7c1a7dd8-8034-4f59-a351-33666b26ff5a.jpg" class="archetype-card rounded-image"/></a>
 <a href="https://scryfall.com/card/cmr/142/phyrexian-rager"><img src="https://c1.scryfall.com/file/scryfall-cards/normal/front/b/b/bb0d354e-3a63-4dfe-ae6d-5e82cbf419ac.jpg" class="archetype-card rounded-image"/></a>
-<a href="https://scryfall.com/card/clu/262/swamp"><img src="https://cards.scryfall.io/normal/front/5/b/5b7096fd-48b1-4eb5-8c18-945ebbd63168.jpg" class="archetype-card rounded-image"/></a>
 </details><br/>
 
 

@@ -45,7 +45,6 @@
 <a href="https://scryfall.com/card/ths/174/satyr-hedonist"><img src="https://c1.scryfall.com/file/scryfall-cards/normal/front/8/8/88c67e15-833c-406a-b75f-8de97fbacf5a.jpg" class="archetype-card rounded-image"/></a>
 <a href="https://scryfall.com/card/c21/179/seething-song"><img src="https://c1.scryfall.com/file/scryfall-cards/normal/front/f/4/f493ce26-005c-4ddc-80f0-47bea4fd013a.jpg" class="archetype-card rounded-image"/></a>
 <a href="https://scryfall.com/card/cm2/77/sign-in-blood"><img src="https://c1.scryfall.com/file/scryfall-cards/normal/front/6/1/61388c28-9428-473c-973a-0a82b6b83d62.jpg" class="archetype-card rounded-image"/></a>
-<a href="https://scryfall.com/card/clu/262/swamp"><img src="https://cards.scryfall.io/normal/front/5/b/5b7096fd-48b1-4eb5-8c18-945ebbd63168.jpg" class="archetype-card rounded-image"/></a>
 <a href="https://scryfall.com/card/me2/184/tinder-wall"><img src="https://c1.scryfall.com/file/scryfall-cards/normal/front/1/e/1e62598f-0a91-4cfd-9a28-c3bda61c9ead.jpg" class="archetype-card rounded-image"/></a>
 <a href="https://scryfall.com/card/gpt/149/wild-cantor"><img src="https://c1.scryfall.com/file/scryfall-cards/normal/front/2/4/242dc29e-d8f5-4207-abbf-cf5425f08551.jpg" class="archetype-card rounded-image"/></a>
 </details><br/>

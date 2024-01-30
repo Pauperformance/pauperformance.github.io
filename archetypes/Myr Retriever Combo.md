@@ -54,7 +54,6 @@
 <a href="https://scryfall.com/card/kld/126/reckless-fireweaver"><img src="https://c1.scryfall.com/file/scryfall-cards/normal/front/6/3/63ffac51-62c4-4170-85b3-a43d7cfae7d7.jpg" class="archetype-card rounded-image"/></a>
 <a href="https://scryfall.com/card/rav/105/shred-memory"><img src="https://c1.scryfall.com/file/scryfall-cards/normal/front/e/3/e38192e5-814f-4269-bae8-13867a73e7fa.jpg" class="archetype-card rounded-image"/></a>
 <a href="https://scryfall.com/card/2xm/291/springleaf-drum"><img src="https://c1.scryfall.com/file/scryfall-cards/normal/front/f/3/f3b3869b-6da1-4b01-a2e7-2018d478b6e5.jpg" class="archetype-card rounded-image"/></a>
-<a href="https://scryfall.com/card/clu/262/swamp"><img src="https://cards.scryfall.io/normal/front/5/b/5b7096fd-48b1-4eb5-8c18-945ebbd63168.jpg" class="archetype-card rounded-image"/></a>
 <a href="https://scryfall.com/card/som/209/sylvok-lifestaff"><img src="https://c1.scryfall.com/file/scryfall-cards/normal/front/a/b/abbc5ae5-8e8b-4106-844f-2d49d2a51ed9.jpg" class="archetype-card rounded-image"/></a>
 <a href="https://scryfall.com/card/cmr/417/temur-battle-rage"><img src="https://c1.scryfall.com/file/scryfall-cards/normal/front/d/3/d344f38d-0ef2-434b-914c-934c639e7e18.jpg" class="archetype-card rounded-image"/></a>
 <a href="https://scryfall.com/card/jmp/488/terrarion"><img src="https://c1.scryfall.com/file/scryfall-cards/normal/front/4/8/48eda056-e00f-4e28-ad26-9150a4704d21.jpg" class="archetype-card rounded-image"/></a>
