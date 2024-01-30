@@ -26,7 +26,6 @@
 <a href="https://scryfall.com/card/m21/193/llanowar-visionary"><img src="https://c1.scryfall.com/file/scryfall-cards/normal/front/d/6/d6e23afa-7e08-4049-baf0-d4d0134ba2c8.jpg" class="archetype-card rounded-image"/></a>
 <a href="https://scryfall.com/card/c21/202/pulse-of-murasa"><img src="https://c1.scryfall.com/file/scryfall-cards/normal/front/a/4/a4b9f8f4-d704-4f16-8495-cf8185285859.jpg" class="archetype-card rounded-image"/></a>
 <a href="https://scryfall.com/card/khm/192/sarulfs-packmate"><img src="https://c1.scryfall.com/file/scryfall-cards/normal/front/6/0/6061113e-7dd8-4739-b4dd-55bb7f9e39a2.jpg" class="archetype-card rounded-image"/></a>
-<a href="https://scryfall.com/card/clu/262/swamp"><img src="https://cards.scryfall.io/normal/front/5/b/5b7096fd-48b1-4eb5-8c18-945ebbd63168.jpg" class="archetype-card rounded-image"/></a>
 </details><br/>
 
 

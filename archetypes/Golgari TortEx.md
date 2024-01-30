@@ -27,7 +27,6 @@
 <a href="https://scryfall.com/card/uma/102/gurmag-angler"><img src="https://c1.scryfall.com/file/scryfall-cards/normal/front/c/e/cedd44eb-f381-46e1-bcb0-88416b4ce33d.jpg" class="archetype-card rounded-image"/></a>
 <a href="https://scryfall.com/card/mh1/180/spore-frog"><img src="https://c1.scryfall.com/file/scryfall-cards/normal/front/6/d/6d42fd52-34ea-4d1b-80dc-58fb0593bb5b.jpg" class="archetype-card rounded-image"/></a>
 <a href="https://scryfall.com/card/dvd/36/stinkweed-imp"><img src="https://c1.scryfall.com/file/scryfall-cards/normal/front/2/a/2ab08d69-210b-4b06-88a2-45281a1a4e1e.jpg" class="archetype-card rounded-image"/></a>
-<a href="https://scryfall.com/card/clu/262/swamp"><img src="https://cards.scryfall.io/normal/front/5/b/5b7096fd-48b1-4eb5-8c18-945ebbd63168.jpg" class="archetype-card rounded-image"/></a>
 <a href="https://scryfall.com/card/sth/74/tortured-existence"><img src="https://c1.scryfall.com/file/scryfall-cards/normal/front/1/7/1754b92b-d6f9-4503-af01-dee03f72a048.jpg" class="archetype-card rounded-image"/></a>
 <a href="https://scryfall.com/card/a25/193/vessel-of-nascency"><img src="https://c1.scryfall.com/file/scryfall-cards/normal/front/9/d/9d502ecf-b3a5-4657-8718-104e8f0ab9af.jpg" class="archetype-card rounded-image"/></a>
 </details><br/>

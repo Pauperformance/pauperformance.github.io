@@ -49,7 +49,6 @@
 <a href="https://scryfall.com/card/cmr/334/prophetic-prism"><img src="https://c1.scryfall.com/file/scryfall-cards/normal/front/1/4/14602fed-8666-4884-8fca-13529578f9e2.jpg" class="archetype-card rounded-image"/></a>
 <a href="https://scryfall.com/card/scg/102/scattershot"><img src="https://c1.scryfall.com/file/scryfall-cards/normal/front/c/f/cf22f3e7-1626-4bab-9f62-7d4774704395.jpg" class="archetype-card rounded-image"/></a>
 <a href="https://scryfall.com/card/znr/254/spare-supplies"><img src="https://c1.scryfall.com/file/scryfall-cards/normal/front/a/5/a53baf25-1782-427b-a9dd-fc9b8dc6444f.jpg" class="archetype-card rounded-image"/></a>
-<a href="https://scryfall.com/card/clu/262/swamp"><img src="https://cards.scryfall.io/normal/front/5/b/5b7096fd-48b1-4eb5-8c18-945ebbd63168.jpg" class="archetype-card rounded-image"/></a>
 <a href="https://scryfall.com/card/jmp/488/terrarion"><img src="https://c1.scryfall.com/file/scryfall-cards/normal/front/4/8/48eda056-e00f-4e28-ad26-9150a4704d21.jpg" class="archetype-card rounded-image"/></a>
 <a href="https://scryfall.com/card/mm2/64/thoughtcast"><img src="https://c1.scryfall.com/file/scryfall-cards/normal/front/8/9/895485a4-06b6-449d-8cf1-db08e52790e4.jpg" class="archetype-card rounded-image"/></a>
 <a href="https://scryfall.com/card/mh1/191/weather-the-storm"><img src="https://c1.scryfall.com/file/scryfall-cards/normal/front/f/6/f6a9fa51-78c3-42e6-8c2e-39658f59ed87.jpg" class="archetype-card rounded-image"/></a>
