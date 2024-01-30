@@ -25,6 +25,7 @@
 <a href="https://scryfall.com/card/me2/94/icequake"><img src="https://c1.scryfall.com/file/scryfall-cards/normal/front/5/5/550880ba-26a0-463d-9da2-0160d224cda1.jpg" class="archetype-card rounded-image"/></a>
 <a href="https://scryfall.com/card/tor/78/rancid-earth"><img src="https://c1.scryfall.com/file/scryfall-cards/normal/front/2/3/23d07a96-85ba-4714-94a5-4a8125954f58.jpg" class="archetype-card rounded-image"/></a>
 <a href="https://scryfall.com/card/cm2/77/sign-in-blood"><img src="https://c1.scryfall.com/file/scryfall-cards/normal/front/6/1/61388c28-9428-473c-973a-0a82b6b83d62.jpg" class="archetype-card rounded-image"/></a>
+<a href="https://scryfall.com/card/clu/262/swamp"><img src="https://cards.scryfall.io/normal/front/5/b/5b7096fd-48b1-4eb5-8c18-945ebbd63168.jpg" class="archetype-card rounded-image"/></a>
 <a href="https://scryfall.com/card/cmr/154/thorn-of-the-black-rose"><img src="https://c1.scryfall.com/file/scryfall-cards/normal/front/2/b/2b7538ad-cc41-4229-8a39-c1db21f2899a.jpg" class="archetype-card rounded-image"/></a>
 </details><br/>
 

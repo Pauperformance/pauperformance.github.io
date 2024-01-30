@@ -22,6 +22,7 @@
 <a href="https://scryfall.com/card/mh1/81/carrion-feeder"><img src="https://c1.scryfall.com/file/scryfall-cards/normal/front/0/a/0a19da90-880e-4eca-8cf7-6d7baf090d53.jpg" class="archetype-card rounded-image"/></a>
 <a href="https://scryfall.com/card/mm3/78/mortician-beetle"><img src="https://c1.scryfall.com/file/scryfall-cards/normal/front/9/7/978f2a31-1c89-43cb-92f2-195026c9311a.jpg" class="archetype-card rounded-image"/></a>
 <a href="https://scryfall.com/card/a25/186/rancor"><img src="https://c1.scryfall.com/file/scryfall-cards/normal/front/8/a/8a4d8527-af29-408d-a3a3-6781db0cf439.jpg" class="archetype-card rounded-image"/></a>
+<a href="https://scryfall.com/card/clu/262/swamp"><img src="https://cards.scryfall.io/normal/front/5/b/5b7096fd-48b1-4eb5-8c18-945ebbd63168.jpg" class="archetype-card rounded-image"/></a>
 <a href="https://scryfall.com/card/dka/134/young-wolf"><img src="https://c1.scryfall.com/file/scryfall-cards/normal/front/0/c/0c39aa40-ef5f-40f1-a6dd-fbce91172c50.jpg" class="archetype-card rounded-image"/></a>
 </details><br/>
 

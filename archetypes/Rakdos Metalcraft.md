@@ -28,6 +28,7 @@
 <a href="https://scryfall.com/card/2xm/125/galvanic-blast"><img src="https://c1.scryfall.com/file/scryfall-cards/normal/front/0/c/0cf8cb1e-314a-4894-82df-f9812825f52e.jpg" class="archetype-card rounded-image"/></a>
 <a href="https://scryfall.com/card/mh1/125/geomancers-gambit"><img src="https://c1.scryfall.com/file/scryfall-cards/normal/front/2/3/23b67031-76b8-4511-a6dc-433d9450496e.jpg" class="archetype-card rounded-image"/></a>
 <a href="https://scryfall.com/card/c21/245/ichor-wellspring"><img src="https://c1.scryfall.com/file/scryfall-cards/normal/front/1/c/1ccdb407-ac8f-4736-89d3-ab0d086096ea.jpg" class="archetype-card rounded-image"/></a>
+<a href="https://scryfall.com/card/clu/262/swamp"><img src="https://cards.scryfall.io/normal/front/5/b/5b7096fd-48b1-4eb5-8c18-945ebbd63168.jpg" class="archetype-card rounded-image"/></a>
 <a href="https://scryfall.com/card/cmr/154/thorn-of-the-black-rose"><img src="https://c1.scryfall.com/file/scryfall-cards/normal/front/2/b/2b7538ad-cc41-4229-8a39-c1db21f2899a.jpg" class="archetype-card rounded-image"/></a>
 </details><br/>
 
