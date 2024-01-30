@@ -68,7 +68,6 @@
 <a href="https://scryfall.com/card/dds/10/snap"><img src="https://c1.scryfall.com/file/scryfall-cards/normal/front/1/9/1959f078-4b7b-4df2-a256-d43b2d97e853.jpg" class="archetype-card rounded-image"/></a>
 <a href="https://scryfall.com/card/mm3/52/spire-monitor"><img src="https://c1.scryfall.com/file/scryfall-cards/normal/front/f/3/f30ed6e1-d713-40ae-81f6-d2d66914bbb9.jpg" class="archetype-card rounded-image"/></a>
 <a href="https://scryfall.com/card/iko/100/suffocating-fumes"><img src="https://c1.scryfall.com/file/scryfall-cards/normal/front/6/6/66b562e4-35df-4aee-848d-ceb4204bbe58.jpg" class="archetype-card rounded-image"/></a>
-<a href="https://scryfall.com/card/clu/262/swamp"><img src="https://cards.scryfall.io/normal/front/5/b/5b7096fd-48b1-4eb5-8c18-945ebbd63168.jpg" class="archetype-card rounded-image"/></a>
 <a href="https://scryfall.com/card/ema/109/tragic-slip"><img src="https://c1.scryfall.com/file/scryfall-cards/normal/front/c/3/c3140bf5-9846-47ae-8142-b013aac14609.jpg" class="archetype-card rounded-image"/></a>
 <a href="https://scryfall.com/card/2xm/111/twisted-abomination"><img src="https://c1.scryfall.com/file/scryfall-cards/normal/front/f/f/ffae38ec-7712-4701-b072-9f962ec9c259.jpg" class="archetype-card rounded-image"/></a>
 </details><br/>

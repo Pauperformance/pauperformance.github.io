@@ -48,7 +48,6 @@
 <a href="https://scryfall.com/card/dds/10/snap"><img src="https://c1.scryfall.com/file/scryfall-cards/normal/front/1/9/1959f078-4b7b-4df2-a256-d43b2d97e853.jpg" class="archetype-card rounded-image"/></a>
 <a href="https://scryfall.com/card/chk/144/soulless-revival"><img src="https://c1.scryfall.com/file/scryfall-cards/normal/front/6/b/6b36712c-1ccb-4efe-8db8-823b9b80a99f.jpg" class="archetype-card rounded-image"/></a>
 <a href="https://scryfall.com/card/mh1/71/stream-of-thought"><img src="https://c1.scryfall.com/file/scryfall-cards/normal/front/8/b/8b75bef5-a039-4edf-8e43-56b8d089605e.jpg" class="archetype-card rounded-image"/></a>
-<a href="https://scryfall.com/card/clu/262/swamp"><img src="https://cards.scryfall.io/normal/front/5/b/5b7096fd-48b1-4eb5-8c18-945ebbd63168.jpg" class="archetype-card rounded-image"/></a>
 <a href="https://scryfall.com/card/apc/125/temporal-spring"><img src="https://c1.scryfall.com/file/scryfall-cards/normal/front/b/5/b584dfd1-a56c-406e-8504-47ea136dc102.jpg" class="archetype-card rounded-image"/></a>
 <a href="https://scryfall.com/card/con/56/wretched-banquet"><img src="https://c1.scryfall.com/file/scryfall-cards/normal/front/3/b/3bdaf55b-2de3-4c8a-90ae-9c88c9d00fd7.jpg" class="archetype-card rounded-image"/></a>
 </details><br/>
