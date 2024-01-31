@@ -30,6 +30,7 @@
 <a href="https://scryfall.com/card/gvl/53/snuff-out"><img src="https://c1.scryfall.com/file/scryfall-cards/normal/front/7/5/75bbe89f-09af-494e-b58e-271f64bde4b5.jpg" class="archetype-card rounded-image"/></a>
 <a href="https://scryfall.com/card/mma/65/spellstutter-sprite"><img src="https://c1.scryfall.com/file/scryfall-cards/normal/front/3/8/3899605d-2203-4ab6-9ff5-69490382eea4.jpg" class="archetype-card rounded-image"/></a>
 <a href="https://scryfall.com/card/iko/100/suffocating-fumes"><img src="https://c1.scryfall.com/file/scryfall-cards/normal/front/6/6/66b562e4-35df-4aee-848d-ceb4204bbe58.jpg" class="archetype-card rounded-image"/></a>
+<a href="https://scryfall.com/card/clu/262/swamp"><img src="https://cards.scryfall.io/normal/front/5/b/5b7096fd-48b1-4eb5-8c18-945ebbd63168.jpg" class="archetype-card rounded-image"/></a>
 <a href="https://scryfall.com/card/cmr/154/thorn-of-the-black-rose"><img src="https://c1.scryfall.com/file/scryfall-cards/normal/front/2/b/2b7538ad-cc41-4229-8a39-c1db21f2899a.jpg" class="archetype-card rounded-image"/></a>
 </details><br/>
 

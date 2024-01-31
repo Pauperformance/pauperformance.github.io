@@ -30,6 +30,7 @@
 <a href="https://scryfall.com/card/cmr/191/makeshift-munitions"><img src="https://c1.scryfall.com/file/scryfall-cards/normal/front/1/9/19d1ad9f-e217-49fb-8b27-025ca133b6c9.jpg" class="archetype-card rounded-image"/></a>
 <a href="https://scryfall.com/card/vma/182/rites-of-initiation"><img src="https://c1.scryfall.com/file/scryfall-cards/normal/front/f/1/f17d9c60-5f81-4b65-8af1-9c5bb757bd7d.jpg" class="archetype-card rounded-image"/></a>
 <a href="https://scryfall.com/card/fut/138/sprout-swarm"><img src="https://c1.scryfall.com/file/scryfall-cards/normal/front/0/b/0b915355-4e98-44df-81bd-961a3d3c86b8.jpg" class="archetype-card rounded-image"/></a>
+<a href="https://scryfall.com/card/clu/262/swamp"><img src="https://cards.scryfall.io/normal/front/5/b/5b7096fd-48b1-4eb5-8c18-945ebbd63168.jpg" class="archetype-card rounded-image"/></a>
 <a href="https://scryfall.com/card/cmr/154/thorn-of-the-black-rose"><img src="https://c1.scryfall.com/file/scryfall-cards/normal/front/2/b/2b7538ad-cc41-4229-8a39-c1db21f2899a.jpg" class="archetype-card rounded-image"/></a>
 </details><br/>
 

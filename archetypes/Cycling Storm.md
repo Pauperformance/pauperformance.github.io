@@ -31,6 +31,7 @@
 <a href="https://scryfall.com/card/scg/72/reaping-the-graves"><img src="https://c1.scryfall.com/file/scryfall-cards/normal/front/7/6/760a66bd-2821-4710-8f02-3c30772dd884.jpg" class="archetype-card rounded-image"/></a>
 <a href="https://scryfall.com/card/uma/115/songs-of-the-damned"><img src="https://c1.scryfall.com/file/scryfall-cards/normal/front/9/1/9133b267-295d-4987-b1d6-f32a85b66081.jpg" class="archetype-card rounded-image"/></a>
 <a href="https://scryfall.com/card/tsr/141/street-wraith"><img src="https://c1.scryfall.com/file/scryfall-cards/normal/front/7/d/7d078cad-7f2b-4bef-b637-46aec9c8ed36.jpg" class="archetype-card rounded-image"/></a>
+<a href="https://scryfall.com/card/clu/262/swamp"><img src="https://cards.scryfall.io/normal/front/5/b/5b7096fd-48b1-4eb5-8c18-945ebbd63168.jpg" class="archetype-card rounded-image"/></a>
 </details><br/>
 
 
