@@ -62,7 +62,6 @@
 <a href="https://scryfall.com/card/neo/120/reckoners-bargain"><img src="https://c1.scryfall.com/file/scryfall-cards/normal/front/6/3/6338942d-d650-4571-8ec6-4d658792c53e.jpg" class="archetype-card rounded-image"/></a>
 <a href="https://scryfall.com/card/mh2/235/sojourners-companion"><img src="https://c1.scryfall.com/file/scryfall-cards/normal/front/8/c/8c6af084-eee7-4259-a58b-a866e0cf171b.jpg" class="archetype-card rounded-image"/></a>
 <a href="https://scryfall.com/card/2xm/291/springleaf-drum"><img src="https://c1.scryfall.com/file/scryfall-cards/normal/front/f/3/f3b3869b-6da1-4b01-a2e7-2018d478b6e5.jpg" class="archetype-card rounded-image"/></a>
-<a href="https://scryfall.com/card/clu/262/swamp"><img src="https://cards.scryfall.io/normal/front/5/b/5b7096fd-48b1-4eb5-8c18-945ebbd63168.jpg" class="archetype-card rounded-image"/></a>
 <a href="https://scryfall.com/card/cmr/417/temur-battle-rage"><img src="https://c1.scryfall.com/file/scryfall-cards/normal/front/d/3/d344f38d-0ef2-434b-914c-934c639e7e18.jpg" class="archetype-card rounded-image"/></a>
 <a href="https://scryfall.com/card/mm2/64/thoughtcast"><img src="https://c1.scryfall.com/file/scryfall-cards/normal/front/8/9/895485a4-06b6-449d-8cf1-db08e52790e4.jpg" class="archetype-card rounded-image"/></a>
 <a href="https://scryfall.com/card/eld/74/witching-well"><img src="https://c1.scryfall.com/file/scryfall-cards/normal/front/6/2/62d3132f-f897-4a7a-9de4-c6388e83f5ad.jpg" class="archetype-card rounded-image"/></a>

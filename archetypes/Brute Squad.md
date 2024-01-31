@@ -39,7 +39,6 @@
 <a href="https://scryfall.com/card/bfz/76/dispel"><img src="https://c1.scryfall.com/file/scryfall-cards/normal/front/b/c/bceab6b3-6b64-4964-a501-ce806a6c13ad.jpg" class="archetype-card rounded-image"/></a>
 <a href="https://scryfall.com/card/frf/154/harsh-sustenance"><img src="https://c1.scryfall.com/file/scryfall-cards/normal/front/7/7/770d60a0-23fc-4224-873c-2e5549b3a816.jpg" class="archetype-card rounded-image"/></a>
 <a href="https://scryfall.com/card/2xm/291/springleaf-drum"><img src="https://c1.scryfall.com/file/scryfall-cards/normal/front/f/3/f3b3869b-6da1-4b01-a2e7-2018d478b6e5.jpg" class="archetype-card rounded-image"/></a>
-<a href="https://scryfall.com/card/hou/184/survivors-encampment"><img src="https://cards.scryfall.io/normal/front/c/7/c7b0404e-0f42-456b-91ce-f960195c4951.jpg" class="archetype-card rounded-image"/></a>
 </details><br/>
 
 

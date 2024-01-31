@@ -27,7 +27,6 @@
 <a href="https://scryfall.com/card/dst/41/echoing-decay"><img src="https://c1.scryfall.com/file/scryfall-cards/normal/front/f/8/f8e688e7-8350-4b78-bd49-a6ffdedad556.jpg" class="archetype-card rounded-image"/></a>
 <a href="https://scryfall.com/card/uma/56/forbidden-alchemy"><img src="https://c1.scryfall.com/file/scryfall-cards/normal/front/e/7/e70dcc0d-aaa2-4815-be83-daafe441ceb4.jpg" class="archetype-card rounded-image"/></a>
 <a href="https://scryfall.com/card/uma/102/gurmag-angler"><img src="https://c1.scryfall.com/file/scryfall-cards/normal/front/c/e/cedd44eb-f381-46e1-bcb0-88416b4ce33d.jpg" class="archetype-card rounded-image"/></a>
-<a href="https://scryfall.com/card/clu/262/swamp"><img src="https://cards.scryfall.io/normal/front/5/b/5b7096fd-48b1-4eb5-8c18-945ebbd63168.jpg" class="archetype-card rounded-image"/></a>
 </details><br/>
 
 

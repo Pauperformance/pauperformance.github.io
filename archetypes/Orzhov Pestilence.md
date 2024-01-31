@@ -32,7 +32,6 @@ The deck is sometimes considered unstable due to the high number of lands it req
 <a href="https://scryfall.com/card/uma/89/chainers-edict"><img src="https://c1.scryfall.com/file/scryfall-cards/normal/front/a/3/a36a583a-d4be-4589-a43c-a2854de062c6.jpg" class="archetype-card rounded-image"/></a>
 <a href="https://scryfall.com/card/dis/10/guardian-of-the-guildpact"><img src="https://c1.scryfall.com/file/scryfall-cards/normal/front/c/8/c8dd004b-01e4-4fe1-a164-9f2ea8d7d88e.jpg" class="archetype-card rounded-image"/></a>
 <a href="https://scryfall.com/card/6ed/149/pestilence"><img src="https://c1.scryfall.com/file/scryfall-cards/normal/front/2/9/29d852c4-bd53-4a3b-b1e2-896917cbc27f.jpg" class="archetype-card rounded-image"/></a>
-<a href="https://scryfall.com/card/clu/262/swamp"><img src="https://cards.scryfall.io/normal/front/5/b/5b7096fd-48b1-4eb5-8c18-945ebbd63168.jpg" class="archetype-card rounded-image"/></a>
 </details><br/>
 
 
