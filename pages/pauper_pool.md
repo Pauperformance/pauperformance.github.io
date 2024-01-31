@@ -13,7 +13,7 @@ This page should be useful for Pauper players that haven't followed the latest r
 
 Further information about reference numbers used by Pauperformance (p12e) to uniquely identify Magic sets can be found in the [Set Index page](set_index.html).
 
-The total number of cards in the Pauper pool is: 9339.
+The total number of cards in the Pauper pool is: 9417.
 
 ---
 Table of Contents
@@ -190,6 +190,7 @@ Table of Contents
 * [The Lost Caverns of Ixalan](#the-lost-caverns-of-ixalan-lci) (*release: 2023-11-17 ~ p12e_code: 887*)
 * [Jurassic World Collection](#jurassic-world-collection-rex) (*release: 2023-11-17 ~ p12e_code: 890*)
 * [Ravnica Remastered](#ravnica-remastered-rvr) (*release: 2024-01-12 ~ p12e_code: 899*)
+* [Murders at Karlov Manor](#murders-at-karlov-manor-mkm) (*release: 2024-02-09 ~ p12e_code: 905*)
 
 ---
 
@@ -11077,6 +11078,93 @@ Table of Contents
 <a href="https://scryfall.com/card/rvr/226/slitherhead?utm_source=api">Slitherhead</a><br/>
 <a href="https://scryfall.com/card/rvr/157/sprouting-renewal?utm_source=api">Sprouting Renewal</a><br/>
 <a href="https://scryfall.com/card/rvr/128/tin-street-dodger?utm_source=api">Tin Street Dodger</a><br/>
+</details>
+[]()
+
+## Murders at Karlov Manor (mkm)
+*release: 2024-02-09 | p12e_code: 905*
+
+<details>
+  <summary>Click to see 78 new cards</summary>
+
+<a href="https://scryfall.com/card/mkm/75/agency-coroner?utm_source=api">Agency Coroner</a><br/>
+<a href="https://scryfall.com/card/mkm/149/airtight-alibi?utm_source=api">Airtight Alibi</a><br/>
+<a href="https://scryfall.com/card/mkm/76/alley-assailant?utm_source=api">Alley Assailant</a><br/>
+<a href="https://scryfall.com/card/mkm/5/auspicious-arrival?utm_source=api">Auspicious Arrival</a><br/>
+<a href="https://scryfall.com/card/mkm/78/basilica-stalker?utm_source=api">Basilica Stalker</a><br/>
+<a href="https://scryfall.com/card/mkm/39/behind-the-mask?utm_source=api">Behind the Mask</a><br/>
+<a href="https://scryfall.com/card/mkm/40/benthic-criminologists?utm_source=api">Benthic Criminologists</a><br/>
+<a href="https://scryfall.com/card/mkm/154/bite-down-on-crime?utm_source=api">Bite Down on Crime</a><br/>
+<a href="https://scryfall.com/card/mkm/41/bubble-smuggler?utm_source=api">Bubble Smuggler</a><br/>
+<a href="https://scryfall.com/card/mkm/81/cerebral-confiscation?utm_source=api">Cerebral Confiscation</a><br/>
+<a href="https://scryfall.com/card/mkm/46/cold-case-cracker?utm_source=api">Cold Case Cracker</a><br/>
+<a href="https://scryfall.com/card/mkm/49/crimestopper-sprite?utm_source=api">Crimestopper Sprite</a><br/>
+<a href="https://scryfall.com/card/mkm/193/crowd-control-warden?utm_source=api">Crowd-Control Warden</a><br/>
+<a href="https://scryfall.com/card/mkm/52/deduce?utm_source=api">Deduce</a><br/>
+<a href="https://scryfall.com/card/mkm/11/defenestrated-phantom?utm_source=api">Defenestrated Phantom</a><br/>
+<a href="https://scryfall.com/card/mkm/122/demand-answers?utm_source=api">Demand Answers</a><br/>
+<a href="https://scryfall.com/card/mkm/197/dog-walker?utm_source=api">Dog Walker</a><br/>
+<a href="https://scryfall.com/card/mkm/53/dramatic-accusation?utm_source=api">Dramatic Accusation</a><br/>
+<a href="https://scryfall.com/card/mkm/14/due-diligence?utm_source=api">Due Diligence</a><br/>
+<a href="https://scryfall.com/card/mkm/261/escape-tunnel?utm_source=api">Escape Tunnel</a><br/>
+<a href="https://scryfall.com/card/mkm/84/extract-a-confession?utm_source=api">Extract a Confession</a><br/>
+<a href="https://scryfall.com/card/mkm/203/faerie-snoop?utm_source=api">Faerie Snoop</a><br/>
+<a href="https://scryfall.com/card/mkm/159/fanatical-strength?utm_source=api">Fanatical Strength</a><br/>
+<a href="https://scryfall.com/card/mkm/125/felonious-rage?utm_source=api">Felonious Rage</a><br/>
+<a href="https://scryfall.com/card/mkm/204/gadget-technician?utm_source=api">Gadget Technician</a><br/>
+<a href="https://scryfall.com/card/mkm/128/galvanize?utm_source=api">Galvanize</a><br/>
+<a href="https://scryfall.com/card/mkm/129/gearbane-orangutan?utm_source=api">Gearbane Orangutan</a><br/>
+<a href="https://scryfall.com/card/mkm/130/goblin-maskmaker?utm_source=api">Goblin Maskmaker</a><br/>
+<a href="https://scryfall.com/card/mkm/206/granite-witness?utm_source=api">Granite Witness</a><br/>
+<a href="https://scryfall.com/card/mkm/252/gravestone-strider?utm_source=api">Gravestone Strider</a><br/>
+<a href="https://scryfall.com/card/mkm/17/griffnaut-tracker?utm_source=api">Griffnaut Tracker</a><br/>
+<a href="https://scryfall.com/card/mkm/18/haazda-vigilante?utm_source=api">Haazda Vigilante</a><br/>
+<a href="https://scryfall.com/card/mkm/60/hotshot-investigators?utm_source=api">Hotshot Investigators</a><br/>
+<a href="https://scryfall.com/card/mkm/133/innocent-bystander?utm_source=api">Innocent Bystander</a><br/>
+<a href="https://scryfall.com/card/mkm/19/inside-source?utm_source=api">Inside Source</a><br/>
+<a href="https://scryfall.com/card/mkm/62/jaded-analyst?utm_source=api">Jaded Analyst</a><br/>
+<a href="https://scryfall.com/card/mkm/168/loxodon-eavesdropper?utm_source=api">Loxodon Eavesdropper</a><br/>
+<a href="https://scryfall.com/card/mkm/93/macabre-reconstruction?utm_source=api">Macabre Reconstruction</a><br/>
+<a href="https://scryfall.com/card/mkm/23/makeshift-binding?utm_source=api">Makeshift Binding</a><br/>
+<a href="https://scryfall.com/card/mkm/22/make-your-move?utm_source=api">Make Your Move</a><br/>
+<a href="https://scryfall.com/card/mkm/24/marketwatch-phantom?utm_source=api">Marketwatch Phantom</a><br/>
+<a href="https://scryfall.com/card/mkm/25/museum-nightwatch?utm_source=api">Museum Nightwatch</a><br/>
+<a href="https://scryfall.com/card/mkm/169/nervous-gardener?utm_source=api">Nervous Gardener</a><br/>
+<a href="https://scryfall.com/card/mkm/29/novice-inspector?utm_source=api">Novice Inspector</a><br/>
+<a href="https://scryfall.com/card/mkm/138/offender-at-large?utm_source=api">Offender at Large</a><br/>
+<a href="https://scryfall.com/card/mkm/30/on-the-job?utm_source=api">On the Job</a><br/>
+<a href="https://scryfall.com/card/mkm/66/out-cold?utm_source=api">Out Cold</a><br/>
+<a href="https://scryfall.com/card/mkm/139/person-of-interest?utm_source=api">Person of Interest</a><br/>
+<a href="https://scryfall.com/card/mkm/170/pick-your-poison?utm_source=api">Pick Your Poison</a><br/>
+<a href="https://scryfall.com/card/mkm/68/projektor-inspector?utm_source=api">Projektor Inspector</a><br/>
+<a href="https://scryfall.com/card/mkm/265/public-thoroughfare?utm_source=api">Public Thoroughfare</a><br/>
+<a href="https://scryfall.com/card/mkm/225/rakish-scoundrel?utm_source=api">Rakish Scoundrel</a><br/>
+<a href="https://scryfall.com/card/mkm/69/reasonable-doubt?utm_source=api">Reasonable Doubt</a><br/>
+<a href="https://scryfall.com/card/mkm/142/red-herring?utm_source=api">Red Herring</a><br/>
+<a href="https://scryfall.com/card/mkm/101/repeat-offender?utm_source=api">Repeat Offender</a><br/>
+<a href="https://scryfall.com/card/mkm/228/riftburst-hellion?utm_source=api">Riftburst Hellion</a><br/>
+<a href="https://scryfall.com/card/mkm/102/rot-farm-mortipede?utm_source=api">Rot Farm Mortipede</a><br/>
+<a href="https://scryfall.com/card/mkm/143/rubblebelt-braggart?utm_source=api">Rubblebelt Braggart</a><br/>
+<a href="https://scryfall.com/card/mkm/174/rubblebelt-maverick?utm_source=api">Rubblebelt Maverick</a><br/>
+<a href="https://scryfall.com/card/mkm/230/sanguine-savior?utm_source=api">Sanguine Savior</a><br/>
+<a href="https://scryfall.com/card/mkm/256/sanitation-automaton?utm_source=api">Sanitation Automaton</a><br/>
+<a href="https://scryfall.com/card/mkm/33/seasoned-consultant?utm_source=api">Seasoned Consultant</a><br/>
+<a href="https://scryfall.com/card/mkm/231/shady-informant?utm_source=api">Shady Informant</a><br/>
+<a href="https://scryfall.com/card/mkm/103/slice-from-the-shadows?utm_source=api">Slice from the Shadows</a><br/>
+<a href="https://scryfall.com/card/mkm/177/slime-against-humanity?utm_source=api">Slime Against Humanity</a><br/>
+<a href="https://scryfall.com/card/mkm/105/snarling-gorehound?utm_source=api">Snarling Gorehound</a><br/>
+<a href="https://scryfall.com/card/mkm/145/suspicious-detonation?utm_source=api">Suspicious Detonation</a><br/>
+<a href="https://scryfall.com/card/mkm/116/the-chase-is-on?utm_source=api">The Chase Is On</a><br/>
+<a href="https://scryfall.com/card/mkm/178/they-went-this-way?utm_source=api">They Went This Way</a><br/>
+<a href="https://scryfall.com/card/mkm/257/thinking-cap?utm_source=api">Thinking Cap</a><br/>
+<a href="https://scryfall.com/card/mkm/179/topiary-panther?utm_source=api">Topiary Panther</a><br/>
+<a href="https://scryfall.com/card/mkm/107/toxin-analysis?utm_source=api">Toxin Analysis</a><br/>
+<a href="https://scryfall.com/card/mkm/180/tunnel-tipster?utm_source=api">Tunnel Tipster</a><br/>
+<a href="https://scryfall.com/card/mkm/74/unauthorized-exit?utm_source=api">Unauthorized Exit</a><br/>
+<a href="https://scryfall.com/card/mkm/239/undercover-crocodelf?utm_source=api">Undercover Crocodelf</a><br/>
+<a href="https://scryfall.com/card/mkm/109/unscrupulous-agent?utm_source=api">Unscrupulous Agent</a><br/>
+<a href="https://scryfall.com/card/mkm/182/vengeful-creeper?utm_source=api">Vengeful Creeper</a><br/>
+<a href="https://scryfall.com/card/mkm/183/vitu-ghazi-inspector?utm_source=api">Vitu-Ghazi Inspector</a><br/>
 </details>
 []()
 

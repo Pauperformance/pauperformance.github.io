@@ -48,6 +48,7 @@
 <a href="https://scryfall.com/card/afr/119/shambling-ghast"><img src="https://c1.scryfall.com/file/scryfall-cards/normal/front/d/9/d96198a7-dd19-4940-bf8f-23135011fc84.jpg" class="archetype-card rounded-image"/></a>
 <a href="https://scryfall.com/card/gvl/53/snuff-out"><img src="https://c1.scryfall.com/file/scryfall-cards/normal/front/7/5/75bbe89f-09af-494e-b58e-271f64bde4b5.jpg" class="archetype-card rounded-image"/></a>
 <a href="https://scryfall.com/card/frf/85/sultai-emissary"><img src="https://c1.scryfall.com/file/scryfall-cards/normal/front/1/2/12421e1c-5144-4391-abf2-a2fb864920e9.jpg" class="archetype-card rounded-image"/></a>
+<a href="https://scryfall.com/card/clu/262/swamp"><img src="https://cards.scryfall.io/normal/front/5/b/5b7096fd-48b1-4eb5-8c18-945ebbd63168.jpg" class="archetype-card rounded-image"/></a>
 <a href="https://scryfall.com/card/ema/109/tragic-slip"><img src="https://c1.scryfall.com/file/scryfall-cards/normal/front/c/3/c3140bf5-9846-47ae-8142-b013aac14609.jpg" class="archetype-card rounded-image"/></a>
 <a href="https://scryfall.com/card/iko/105/whisper-squad"><img src="https://c1.scryfall.com/file/scryfall-cards/normal/front/0/9/097eeb32-cfd5-4adb-ac30-d7762e6ea48f.jpg" class="archetype-card rounded-image"/></a>
 </details><br/>

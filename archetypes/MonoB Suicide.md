@@ -19,6 +19,7 @@
   <summary>Click here to expand</summary>
 <a href="https://scryfall.com/card/tpr/84/carnophage"><img src="https://c1.scryfall.com/file/scryfall-cards/normal/front/8/8/889a92ca-e198-494d-9ccb-6ae2c19ec62e.jpg" class="archetype-card rounded-image"/></a>
 <a href="https://scryfall.com/card/a25/82/dark-ritual"><img src="https://c1.scryfall.com/file/scryfall-cards/normal/front/9/5/95f27eeb-6f14-4db3-adb9-9be5ed76b34b.jpg" class="archetype-card rounded-image"/></a>
+<a href="https://scryfall.com/card/clu/262/swamp"><img src="https://cards.scryfall.io/normal/front/5/b/5b7096fd-48b1-4eb5-8c18-945ebbd63168.jpg" class="archetype-card rounded-image"/></a>
 <a href="https://scryfall.com/card/a25/114/vampire-lacerator"><img src="https://c1.scryfall.com/file/scryfall-cards/normal/front/0/c/0c947c96-b4a5-4c3b-aacb-85ee0bf3afda.jpg" class="archetype-card rounded-image"/></a>
 </details><br/>
 
