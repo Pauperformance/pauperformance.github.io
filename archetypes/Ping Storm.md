@@ -38,7 +38,6 @@
 
 <details>
   <summary>Click here to expand</summary>
-<a href="https://scryfall.com/card/clu/262/swamp"><img src="https://cards.scryfall.io/normal/front/5/b/5b7096fd-48b1-4eb5-8c18-945ebbd63168.jpg" class="archetype-card rounded-image"/></a>
 <a href="https://scryfall.com/card/mh1/191/weather-the-storm"><img src="https://c1.scryfall.com/file/scryfall-cards/normal/front/f/6/f6a9fa51-78c3-42e6-8c2e-39658f59ed87.jpg" class="archetype-card rounded-image"/></a>
 </details><br/>
 
