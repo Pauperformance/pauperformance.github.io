@@ -878,7 +878,7 @@ Lines in **bold** correspond to sets that have introduced new cards in the [Paup
 | 857       | smom          | March of the Machine Substitute Cards           | 2023-04-21   |
 | 858       | tmoc          | March of the Machine Commander Tokens           | 2023-04-21   |
 | 859       | tmul          | Multiverse Legends Tokens                       | 2023-04-21   |
-| 860       | wmom          | March of the Machine Japanese Promo Tokens      | 2023-04-21   |
+| 860       | wmom          | MOM Japanese Promo Tokens                       | 2023-04-21   |
 | 861       | altr          | Tales of Middle-earth Art Series                | 2023-06-23   |
 | 862       | fltr          | Tales of Middle-earth Front Cards               | 2023-06-23   |
 | 863       | pltr          | Tales of Middle-earth Promos                    | 2023-06-23   |
@@ -899,7 +899,7 @@ Lines in **bold** correspond to sets that have introduced new cards in the [Paup
 | 878       | woc           | Wilds of Eldraine Commander                     | 2023-09-08   |
 | **879**   | **woe**       | **Wilds of Eldraine**                           | **2023-09-08** |
 | 880       | wot           | Wilds of Eldraine: Enchanting Tales             | 2023-09-08   |
-| 881       | wwoe          | Wilds of Eldraine Japanese Promo Tokens         | 2023-09-08   |
+| 881       | wwoe          | WOE Japanese Promo Tokens                       | 2023-09-08   |
 | 882       | ywoe          | Alchemy: Wilds of Eldraine                      | 2023-10-10   |
 | 883       | twho          | Doctor Who Tokens                               | 2023-10-13   |
 | **884**   | **who**       | **Doctor Who**                                  | **2023-10-13** |
@@ -926,8 +926,9 @@ Lines in **bold** correspond to sets that have introduced new cards in the [Paup
 | **905**   | **mkm**       | **Murders at Karlov Manor**                     | **2024-02-09** |
 | 906       | tmkc          | Murders at Karlov Manor Commander Tokens        | 2024-02-09   |
 | 907       | tmkm          | Murders at Karlov Manor Tokens                  | 2024-02-09   |
-| 908       | pss4          | MKM Standard Showdown                           | 2024-02-10   |
-| 909       | pip           | Fallout                                         | 2024-03-08   |
-| 910       | tpip          | Fallout Tokens                                  | 2024-03-08   |
-| 911       | otj           | Outlaws of Thunder Junction                     | 2024-04-19   |
+| 908       | wmkm          | MKM Japanese Promo Tokens                       | 2024-02-09   |
+| 909       | pss4          | MKM Standard Showdown                           | 2024-02-10   |
+| 910       | pip           | Fallout                                         | 2024-03-08   |
+| 911       | tpip          | Fallout Tokens                                  | 2024-03-08   |
+| 912       | otj           | Outlaws of Thunder Junction                     | 2024-04-19   |
 
