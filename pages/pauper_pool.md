@@ -190,7 +190,7 @@ Table of Contents
 * [The Lost Caverns of Ixalan](#the-lost-caverns-of-ixalan-lci) (*release: 2023-11-17 ~ p12e_code: 887*)
 * [Jurassic World Collection](#jurassic-world-collection-rex) (*release: 2023-11-17 ~ p12e_code: 890*)
 * [Ravnica Remastered](#ravnica-remastered-rvr) (*release: 2024-01-12 ~ p12e_code: 899*)
-* [Murders at Karlov Manor](#murders-at-karlov-manor-mkm) (*release: 2024-02-09 ~ p12e_code: 905*)
+* [Murders at Karlov Manor](#murders-at-karlov-manor-mkm) (*release: 2024-02-09 ~ p12e_code: 903*)
 
 ---
 
@@ -11082,7 +11082,7 @@ Table of Contents
 []()
 
 ## Murders at Karlov Manor (mkm)
-*release: 2024-02-09 | p12e_code: 905*
+*release: 2024-02-09 | p12e_code: 903*
 
 <details>
   <summary>Click to see 78 new cards</summary>

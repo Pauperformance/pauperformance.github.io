@@ -920,14 +920,14 @@ Lines in **bold** correspond to sets that have introduced new cards in the [Paup
 | **899**   | **rvr**       | **Ravnica Remastered**                          | **2024-01-12** |
 | 900       | trvr          | Ravnica Remastered Tokens                       | 2024-01-12   |
 | 901       | pl24          | Year of the Dragon 2024                         | 2024-02-08   |
-| 902       | clu           | Ravnica: Clue Edition                           | 2024-02-09   |
-| 903       | fclu          | Ravnica: Clue Edition Front Cards               | 2024-02-09   |
-| 904       | mkc           | Murders at Karlov Manor Commander               | 2024-02-09   |
-| **905**   | **mkm**       | **Murders at Karlov Manor**                     | **2024-02-09** |
-| 906       | tmkc          | Murders at Karlov Manor Commander Tokens        | 2024-02-09   |
-| 907       | tmkm          | Murders at Karlov Manor Tokens                  | 2024-02-09   |
-| 908       | wmkm          | MKM Japanese Promo Tokens                       | 2024-02-09   |
-| 909       | pss4          | MKM Standard Showdown                           | 2024-02-10   |
+| 902       | mkc           | Murders at Karlov Manor Commander               | 2024-02-09   |
+| **903**   | **mkm**       | **Murders at Karlov Manor**                     | **2024-02-09** |
+| 904       | tmkc          | Murders at Karlov Manor Commander Tokens        | 2024-02-09   |
+| 905       | tmkm          | Murders at Karlov Manor Tokens                  | 2024-02-09   |
+| 906       | wmkm          | MKM Japanese Promo Tokens                       | 2024-02-09   |
+| 907       | pss4          | MKM Standard Showdown                           | 2024-02-10   |
+| 908       | clu           | Ravnica: Clue Edition                           | 2024-02-23   |
+| 909       | fclu          | Ravnica: Clue Edition Front Cards               | 2024-02-23   |
 | 910       | pip           | Fallout                                         | 2024-03-08   |
 | 911       | tpip          | Fallout Tokens                                  | 2024-03-08   |
 | 912       | otj           | Outlaws of Thunder Junction                     | 2024-04-19   |
