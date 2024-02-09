@@ -25,8 +25,8 @@ Please, read the [PhD Guidelines](./pages/phd_guidelines.html).**
 
 ---
 
-## The current Pauperformance code for decks is **899**.
-It refers to Ravnica Remastered (rvr), released on 2024-01-12.
+## The current Pauperformance code for decks is **903**.
+It refers to Murders at Karlov Manor (mkm), released on 2024-02-09.
 
 ---
 
