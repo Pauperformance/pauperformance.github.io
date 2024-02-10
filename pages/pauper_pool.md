@@ -185,12 +185,12 @@ Table of Contents
 * [Dominaria Remastered](#dominaria-remastered-dmr) (*release: 2023-03-31 ~ p12e_code: 806*)
 * [March of the Machine Commander](#march-of-the-machine-commander-moc) (*release: 2023-04-21 ~ p12e_code: 838*)
 * [March of the Machine](#march-of-the-machine-mom) (*release: 2023-04-21 ~ p12e_code: 839*)
-* [Wilds of Eldraine](#wilds-of-eldraine-woe) (*release: 2023-09-08 ~ p12e_code: 879*)
-* [Doctor Who](#doctor-who-who) (*release: 2023-10-13 ~ p12e_code: 884*)
-* [The Lost Caverns of Ixalan](#the-lost-caverns-of-ixalan-lci) (*release: 2023-11-17 ~ p12e_code: 887*)
-* [Jurassic World Collection](#jurassic-world-collection-rex) (*release: 2023-11-17 ~ p12e_code: 890*)
-* [Ravnica Remastered](#ravnica-remastered-rvr) (*release: 2024-01-12 ~ p12e_code: 899*)
-* [Murders at Karlov Manor](#murders-at-karlov-manor-mkm) (*release: 2024-02-09 ~ p12e_code: 903*)
+* [Wilds of Eldraine](#wilds-of-eldraine-woe) (*release: 2023-09-08 ~ p12e_code: 880*)
+* [Doctor Who](#doctor-who-who) (*release: 2023-10-13 ~ p12e_code: 885*)
+* [The Lost Caverns of Ixalan](#the-lost-caverns-of-ixalan-lci) (*release: 2023-11-17 ~ p12e_code: 888*)
+* [Jurassic World Collection](#jurassic-world-collection-rex) (*release: 2023-11-17 ~ p12e_code: 891*)
+* [Ravnica Remastered](#ravnica-remastered-rvr) (*release: 2024-01-12 ~ p12e_code: 900*)
+* [Murders at Karlov Manor](#murders-at-karlov-manor-mkm) (*release: 2024-02-09 ~ p12e_code: 904*)
 
 ---
 
@@ -10823,7 +10823,7 @@ Table of Contents
 []()
 
 ## Wilds of Eldraine (woe)
-*release: 2023-09-08 | p12e_code: 879*
+*release: 2023-09-08 | p12e_code: 880*
 
 <details>
   <summary>Click to see 94 new cards</summary>
@@ -10926,7 +10926,7 @@ Table of Contents
 []()
 
 ## Doctor Who (who)
-*release: 2023-10-13 | p12e_code: 884*
+*release: 2023-10-13 | p12e_code: 885*
 
 <details>
   <summary>Click to see 1 new cards</summary>
@@ -10936,7 +10936,7 @@ Table of Contents
 []()
 
 ## The Lost Caverns of Ixalan (lci)
-*release: 2023-11-17 | p12e_code: 887*
+*release: 2023-11-17 | p12e_code: 888*
 
 <details>
   <summary>Click to see 105 new cards</summary>
@@ -11050,7 +11050,7 @@ Table of Contents
 []()
 
 ## Jurassic World Collection (rex)
-*release: 2023-11-17 | p12e_code: 890*
+*release: 2023-11-17 | p12e_code: 891*
 
 <details>
   <summary>Click to see 6 new cards</summary>
@@ -11065,7 +11065,7 @@ Table of Contents
 []()
 
 ## Ravnica Remastered (rvr)
-*release: 2024-01-12 | p12e_code: 899*
+*release: 2024-01-12 | p12e_code: 900*
 
 <details>
   <summary>Click to see 8 new cards</summary>
@@ -11082,7 +11082,7 @@ Table of Contents
 []()
 
 ## Murders at Karlov Manor (mkm)
-*release: 2024-02-09 | p12e_code: 903*
+*release: 2024-02-09 | p12e_code: 904*
 
 <details>
   <summary>Click to see 78 new cards</summary>
