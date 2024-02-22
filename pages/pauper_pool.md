@@ -13,7 +13,7 @@ This page should be useful for Pauper players that haven't followed the latest r
 
 Further information about reference numbers used by Pauperformance (p12e) to uniquely identify Magic sets can be found in the [Set Index page](set_index.html).
 
-The total number of cards in the Pauper pool is: 9417.
+The total number of cards in the Pauper pool is: 9418.
 
 ---
 Table of Contents
@@ -191,6 +191,7 @@ Table of Contents
 * [Jurassic World Collection](#jurassic-world-collection-rex) (*release: 2023-11-17 ~ p12e_code: 891*)
 * [Ravnica Remastered](#ravnica-remastered-rvr) (*release: 2024-01-12 ~ p12e_code: 900*)
 * [Murders at Karlov Manor](#murders-at-karlov-manor-mkm) (*release: 2024-02-09 ~ p12e_code: 904*)
+* [Fallout](#fallout-pip) (*release: 2024-03-08 ~ p12e_code: 912*)
 
 ---
 
@@ -11165,6 +11166,16 @@ Table of Contents
 <a href="https://scryfall.com/card/mkm/109/unscrupulous-agent?utm_source=api">Unscrupulous Agent</a><br/>
 <a href="https://scryfall.com/card/mkm/182/vengeful-creeper?utm_source=api">Vengeful Creeper</a><br/>
 <a href="https://scryfall.com/card/mkm/183/vitu-ghazi-inspector?utm_source=api">Vitu-Ghazi Inspector</a><br/>
+</details>
+[]()
+
+## Fallout (pip)
+*release: 2024-03-08 | p12e_code: 912*
+
+<details>
+  <summary>Click to see 1 new cards</summary>
+
+<a href="https://scryfall.com/card/pip/155/all-that-glitters?utm_source=api">All That Glitters</a><br/>
 </details>
 []()
 
