@@ -930,7 +930,7 @@ Lines in **bold** correspond to sets that have introduced new cards in the [Paup
 | 909       | pss4          | MKM Standard Showdown                           | 2024-02-10   |
 | 910       | clu           | Ravnica: Clue Edition                           | 2024-02-23   |
 | 911       | fclu          | Ravnica: Clue Edition Front Cards               | 2024-02-23   |
-| **912**   | **pip**       | **Fallout**                                     | **2024-03-08** |
+| 912       | pip           | Fallout                                         | 2024-03-08   |
 | 913       | tpip          | Fallout Tokens                                  | 2024-03-08   |
 | 914       | otj           | Outlaws of Thunder Junction                     | 2024-04-19   |
 
