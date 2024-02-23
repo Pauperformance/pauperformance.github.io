@@ -932,5 +932,6 @@ Lines in **bold** correspond to sets that have introduced new cards in the [Paup
 | 911       | fclu          | Ravnica: Clue Edition Front Cards               | 2024-02-23   |
 | **912**   | **pip**       | **Fallout**                                     | **2024-03-08** |
 | 913       | tpip          | Fallout Tokens                                  | 2024-03-08   |
-| 914       | otj           | Outlaws of Thunder Junction                     | 2024-04-19   |
+| 914       | big           | The Vault                                       | 2024-04-19   |
+| 915       | otj           | Outlaws of Thunder Junction                     | 2024-04-19   |
 
