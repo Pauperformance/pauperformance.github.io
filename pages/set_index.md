@@ -932,9 +932,11 @@ Lines in **bold** correspond to sets that have introduced new cards in the [Paup
 | 911       | fclu          | Ravnica: Clue Edition Front Cards               | 2024-02-23   |
 | **912**   | **pip**       | **Fallout**                                     | **2024-03-08** |
 | 913       | tpip          | Fallout Tokens                                  | 2024-03-08   |
-| 914       | big           | The Vault                                       | 2024-04-19   |
+| 914       | big           | The Big Score                                   | 2024-04-19   |
 | 915       | otj           | Outlaws of Thunder Junction                     | 2024-04-19   |
-| 916       | otp           | Outlaws of Thunder Junction Bonus Sheet         | 2024-04-19   |
-| 917       | blb           | Bloomburrow                                     | 2024-07-26   |
-| 918       | tblb          | Bloomburrow Tokens                              | 2024-07-26   |
+| 916       | otp           | Breaking News                                   | 2024-04-19   |
+| 917       | mh3           | Modern Horizons 3                               | 2024-06-07   |
+| 918       | acr           | Assassin's Creed                                | 2024-07-05   |
+| 919       | blb           | Bloomburrow                                     | 2024-07-26   |
+| 920       | tblb          | Bloomburrow Tokens                              | 2024-07-26   |
 
