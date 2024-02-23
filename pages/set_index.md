@@ -935,4 +935,6 @@ Lines in **bold** correspond to sets that have introduced new cards in the [Paup
 | 914       | big           | The Vault                                       | 2024-04-19   |
 | 915       | otj           | Outlaws of Thunder Junction                     | 2024-04-19   |
 | 916       | otp           | Outlaws of Thunder Junction Bonus Sheet         | 2024-04-19   |
+| 917       | blb           | Bloomburrow                                     | 2024-07-26   |
+| 918       | tblb          | Bloomburrow Tokens                              | 2024-07-26   |
 
