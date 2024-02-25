@@ -921,23 +921,24 @@ Lines in **bold** correspond to sets that have introduced new cards in the [Paup
 | **900**   | **rvr**       | **Ravnica Remastered**                          | **2024-01-12** |
 | 901       | trvr          | Ravnica Remastered Tokens                       | 2024-01-12   |
 | 902       | pl24          | Year of the Dragon 2024                         | 2024-02-08   |
-| 903       | mkc           | Murders at Karlov Manor Commander               | 2024-02-09   |
-| **904**   | **mkm**       | **Murders at Karlov Manor**                     | **2024-02-09** |
-| 905       | pmkm          | Murders at Karlov Manor Promos                  | 2024-02-09   |
-| 906       | tmkc          | Murders at Karlov Manor Commander Tokens        | 2024-02-09   |
-| 907       | tmkm          | Murders at Karlov Manor Tokens                  | 2024-02-09   |
-| 908       | wmkm          | MKM Japanese Promo Tokens                       | 2024-02-09   |
-| 909       | pss4          | MKM Standard Showdown                           | 2024-02-10   |
-| 910       | clu           | Ravnica: Clue Edition                           | 2024-02-23   |
-| 911       | fclu          | Ravnica: Clue Edition Front Cards               | 2024-02-23   |
-| **912**   | **pip**       | **Fallout**                                     | **2024-03-08** |
-| 913       | tpip          | Fallout Tokens                                  | 2024-03-08   |
-| 914       | big           | The Big Score                                   | 2024-04-19   |
-| 915       | otj           | Outlaws of Thunder Junction                     | 2024-04-19   |
-| 916       | otp           | Breaking News                                   | 2024-04-19   |
-| 917       | m3c           | Modern Horizons 3 Commander                     | 2024-06-06   |
-| 918       | mh3           | Modern Horizons 3                               | 2024-06-07   |
-| 919       | acr           | Assassin's Creed                                | 2024-07-05   |
-| 920       | blb           | Bloomburrow                                     | 2024-08-02   |
-| 921       | tblb          | Bloomburrow Tokens                              | 2024-08-02   |
+| 903       | amkm          | Murders at Karlov Manor Art Series              | 2024-02-09   |
+| 904       | mkc           | Murders at Karlov Manor Commander               | 2024-02-09   |
+| **905**   | **mkm**       | **Murders at Karlov Manor**                     | **2024-02-09** |
+| 906       | pmkm          | Murders at Karlov Manor Promos                  | 2024-02-09   |
+| 907       | tmkc          | Murders at Karlov Manor Commander Tokens        | 2024-02-09   |
+| 908       | tmkm          | Murders at Karlov Manor Tokens                  | 2024-02-09   |
+| 909       | wmkm          | MKM Japanese Promo Tokens                       | 2024-02-09   |
+| 910       | pss4          | MKM Standard Showdown                           | 2024-02-10   |
+| 911       | clu           | Ravnica: Clue Edition                           | 2024-02-23   |
+| 912       | fclu          | Ravnica: Clue Edition Front Cards               | 2024-02-23   |
+| **913**   | **pip**       | **Fallout**                                     | **2024-03-08** |
+| 914       | tpip          | Fallout Tokens                                  | 2024-03-08   |
+| 915       | big           | The Big Score                                   | 2024-04-19   |
+| 916       | otj           | Outlaws of Thunder Junction                     | 2024-04-19   |
+| 917       | otp           | Breaking News                                   | 2024-04-19   |
+| 918       | m3c           | Modern Horizons 3 Commander                     | 2024-06-06   |
+| 919       | mh3           | Modern Horizons 3                               | 2024-06-07   |
+| 920       | acr           | Assassin's Creed                                | 2024-07-05   |
+| 921       | blb           | Bloomburrow                                     | 2024-08-02   |
+| 922       | tblb          | Bloomburrow Tokens                              | 2024-08-02   |
 
