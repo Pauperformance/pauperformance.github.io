@@ -25,7 +25,7 @@ Please, read the [PhD Guidelines](./pages/phd_guidelines.html).**
 
 ---
 
-## The current Pauperformance code for decks is **905**.
+## The current Pauperformance code for decks is **906**.
 It refers to Murders at Karlov Manor (mkm), released on 2024-02-09.
 
 ---
