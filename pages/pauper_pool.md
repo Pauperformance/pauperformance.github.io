@@ -191,7 +191,7 @@ Table of Contents
 * [Jurassic World Collection](#jurassic-world-collection-rex) (*release: 2023-11-17 ~ p12e_code: 892*)
 * [Ravnica Remastered](#ravnica-remastered-rvr) (*release: 2024-01-12 ~ p12e_code: 901*)
 * [Murders at Karlov Manor](#murders-at-karlov-manor-mkm) (*release: 2024-02-09 ~ p12e_code: 906*)
-* [Fallout](#fallout-pip) (*release: 2024-03-08 ~ p12e_code: 914*)
+* [Fallout](#fallout-pip) (*release: 2024-03-08 ~ p12e_code: 915*)
 
 ---
 
@@ -11170,7 +11170,7 @@ Table of Contents
 []()
 
 ## Fallout (pip)
-*release: 2024-03-08 | p12e_code: 914*
+*release: 2024-03-08 | p12e_code: 915*
 
 <details>
   <summary>Click to see 1 new cards</summary>

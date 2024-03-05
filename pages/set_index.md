@@ -932,9 +932,9 @@ Lines in **bold** correspond to sets that have introduced new cards in the [Paup
 | 911       | pss4          | MKM Standard Showdown                           | 2024-02-10   |
 | 912       | clu           | Ravnica: Clue Edition                           | 2024-02-23   |
 | 913       | fclu          | Ravnica: Clue Edition Front Cards               | 2024-02-23   |
-| **914**   | **pip**       | **Fallout**                                     | **2024-03-08** |
-| 915       | tpip          | Fallout Tokens                                  | 2024-03-08   |
-| 916       | ymkm          | Alchemy: Murders at Karlov Manor                | 2024-04-04   |
+| 914       | ymkm          | Alchemy: Murders at Karlov Manor                | 2024-03-05   |
+| **915**   | **pip**       | **Fallout**                                     | **2024-03-08** |
+| 916       | tpip          | Fallout Tokens                                  | 2024-03-08   |
 | 917       | big           | The Big Score                                   | 2024-04-19   |
 | 918       | otj           | Outlaws of Thunder Junction                     | 2024-04-19   |
 | 919       | otp           | Breaking News                                   | 2024-04-19   |
