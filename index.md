@@ -25,8 +25,8 @@ Please, read the [PhD Guidelines](./pages/phd_guidelines.html).**
 
 ---
 
-## The current Pauperformance code for decks is **915**.
-It refers to Fallout (pip), released on 2024-03-08.
+## The current Pauperformance code for decks is **839**.
+It refers to March of the Machine (mom), released on 2023-04-21.
 
 ---
 
