@@ -13,7 +13,7 @@ This page should be useful for Pauper players that haven't followed the latest r
 
 Further information about reference numbers used by Pauperformance (p12e) to uniquely identify Magic sets can be found in the [Set Index page](set_index.html).
 
-The total number of cards in the Pauper pool is: 9504.
+The total number of cards in the Pauper pool is: 9418.
 
 ---
 Table of Contents
@@ -192,7 +192,6 @@ Table of Contents
 * [Ravnica Remastered](#ravnica-remastered-rvr) (*release: 2024-01-12 ~ p12e_code: 901*)
 * [Murders at Karlov Manor](#murders-at-karlov-manor-mkm) (*release: 2024-02-09 ~ p12e_code: 906*)
 * [Fallout](#fallout-pip) (*release: 2024-03-08 ~ p12e_code: 915*)
-* [Outlaws of Thunder Junction](#outlaws-of-thunder-junction-otj) (*release: 2024-04-19 ~ p12e_code: 919*)
 
 ---
 
@@ -11177,101 +11176,6 @@ Table of Contents
   <summary>Click to see 1 new cards</summary>
 
 <a href="https://scryfall.com/card/pip/155/all-that-glitters?utm_source=api">All That Glitters</a><br/>
-</details>
-[]()
-
-## Outlaws of Thunder Junction (otj)
-*release: 2024-04-19 | p12e_code: 919*
-
-<details>
-  <summary>Click to see 86 new cards</summary>
-
-<a href="https://scryfall.com/card/otj/251/abraded-bluffs?utm_source=api">Abraded Bluffs</a><br/>
-<a href="https://scryfall.com/card/otj/77/ambush-gigapede?utm_source=api">Ambush Gigapede</a><br/>
-<a href="https://scryfall.com/card/otj/153/ankle-biter?utm_source=api">Ankle Biter</a><br/>
-<a href="https://scryfall.com/card/otj/3/armored-armadillo?utm_source=api">Armored Armadillo</a><br/>
-<a href="https://scryfall.com/card/otj/79/blacksnag-buzzard?utm_source=api">Blacksnag Buzzard</a><br/>
-<a href="https://scryfall.com/card/otj/81/boneyard-desecrator?utm_source=api">Boneyard Desecrator</a><br/>
-<a href="https://scryfall.com/card/otj/7/bridled-bighorn?utm_source=api">Bridled Bighorn</a><br/>
-<a href="https://scryfall.com/card/otj/156/bristlepack-sentry?utm_source=api">Bristlepack Sentry</a><br/>
-<a href="https://scryfall.com/card/otj/253/bristling-backwoods?utm_source=api">Bristling Backwoods</a><br/>
-<a href="https://scryfall.com/card/otj/158/cactarantula?utm_source=api">Cactarantula</a><br/>
-<a href="https://scryfall.com/card/otj/254/conduit-pylons?utm_source=api">Conduit Pylons</a><br/>
-<a href="https://scryfall.com/card/otj/83/consuming-ashes?utm_source=api">Consuming Ashes</a><br/>
-<a href="https://scryfall.com/card/otj/255/creosote-heath?utm_source=api">Creosote Heath</a><br/>
-<a href="https://scryfall.com/card/otj/160/dance-of-the-tumbleweeds?utm_source=api">Dance of the Tumbleweeds</a><br/>
-<a href="https://scryfall.com/card/otj/41/daring-thunder-thief?utm_source=api">Daring Thunder-Thief</a><br/>
-<a href="https://scryfall.com/card/otj/119/deadeye-duelist?utm_source=api">Deadeye Duelist</a><br/>
-<a href="https://scryfall.com/card/otj/85/deserts-due?utm_source=api">Desert's Due</a><br/>
-<a href="https://scryfall.com/card/otj/86/desperate-bloodseeker?utm_source=api">Desperate Bloodseeker</a><br/>
-<a href="https://scryfall.com/card/otj/121/discerning-peddler?utm_source=api">Discerning Peddler</a><br/>
-<a href="https://scryfall.com/card/otj/43/djinn-of-fools-fall?utm_source=api">Djinn of Fool's Fall</a><br/>
-<a href="https://scryfall.com/card/otj/161/drover-grizzly?utm_source=api">Drover Grizzly</a><br/>
-<a href="https://scryfall.com/card/otj/10/eriettes-lullaby?utm_source=api">Eriette's Lullaby</a><br/>
-<a href="https://scryfall.com/card/otj/256/eroded-canyon?utm_source=api">Eroded Canyon</a><br/>
-<a href="https://scryfall.com/card/otj/122/explosive-derailment?utm_source=api">Explosive Derailment</a><br/>
-<a href="https://scryfall.com/card/otj/47/failed-fording?utm_source=api">Failed Fording</a><br/>
-<a href="https://scryfall.com/card/otj/257/festering-gulch?utm_source=api">Festering Gulch</a><br/>
-<a href="https://scryfall.com/card/otj/258/forlorn-flats?utm_source=api">Forlorn Flats</a><br/>
-<a href="https://scryfall.com/card/otj/162/freestrider-commando?utm_source=api">Freestrider Commando</a><br/>
-<a href="https://scryfall.com/card/otj/51/geyser-drake?utm_source=api">Geyser Drake</a><br/>
-<a href="https://scryfall.com/card/otj/165/giant-beaver?utm_source=api">Giant Beaver</a><br/>
-<a href="https://scryfall.com/card/otj/242/gold-pan?utm_source=api">Gold Pan</a><br/>
-<a href="https://scryfall.com/card/otj/168/hardbristle-bandit?utm_source=api">Hardbristle Bandit</a><br/>
-<a href="https://scryfall.com/card/otj/52/harrier-strix?utm_source=api">Harrier Strix</a><br/>
-<a href="https://scryfall.com/card/otj/129/highway-robbery?utm_source=api">Highway Robbery</a><br/>
-<a href="https://scryfall.com/card/otj/16/holy-cow?utm_source=api">Holy Cow</a><br/>
-<a href="https://scryfall.com/card/otj/17/inventive-wingsmith?utm_source=api">Inventive Wingsmith</a><br/>
-<a href="https://scryfall.com/card/otj/130/irascible-wolverine?utm_source=api">Irascible Wolverine</a><br/>
-<a href="https://scryfall.com/card/otj/131/iron-fist-pulverizer?utm_source=api">Iron-Fist Pulverizer</a><br/>
-<a href="https://scryfall.com/card/otj/259/jagged-barrens?utm_source=api">Jagged Barrens</a><br/>
-<a href="https://scryfall.com/card/otj/53/jailbreak-scheme?utm_source=api">Jailbreak Scheme</a><br/>
-<a href="https://scryfall.com/card/otj/55/loan-shark?utm_source=api">Loan Shark</a><br/>
-<a href="https://scryfall.com/card/otj/260/lonely-arroyo?utm_source=api">Lonely Arroyo</a><br/>
-<a href="https://scryfall.com/card/otj/261/lush-oasis?utm_source=api">Lush Oasis</a><br/>
-<a href="https://scryfall.com/card/otj/135/mine-raider?utm_source=api">Mine Raider</a><br/>
-<a href="https://scryfall.com/card/otj/262/mirage-mesa?utm_source=api">Mirage Mesa</a><br/>
-<a href="https://scryfall.com/card/otj/94/mourners-surprise?utm_source=api">Mourner's Surprise</a><br/>
-<a href="https://scryfall.com/card/otj/19/mystical-tether?utm_source=api">Mystical Tether</a><br/>
-<a href="https://scryfall.com/card/otj/96/nezumi-linkbreaker?utm_source=api">Nezumi Linkbreaker</a><br/>
-<a href="https://scryfall.com/card/otj/246/oasis-gardener?utm_source=api">Oasis Gardener</a><br/>
-<a href="https://scryfall.com/card/otj/23/outlaw-medic?utm_source=api">Outlaw Medic</a><br/>
-<a href="https://scryfall.com/card/otj/136/outlaws-fury?utm_source=api">Outlaws' Fury</a><br/>
-<a href="https://scryfall.com/card/otj/97/overzealous-muscle?utm_source=api">Overzealous Muscle</a><br/>
-<a href="https://scryfall.com/card/otj/174/patient-naturalist?utm_source=api">Patient Naturalist</a><br/>
-<a href="https://scryfall.com/card/otj/60/peerless-ropemaster?utm_source=api">Peerless Ropemaster</a><br/>
-<a href="https://scryfall.com/card/otj/61/phantom-interference?utm_source=api">Phantom Interference</a><br/>
-<a href="https://scryfall.com/card/otj/137/prickly-pair?utm_source=api">Prickly Pair</a><br/>
-<a href="https://scryfall.com/card/otj/138/quick-draw?utm_source=api">Quick Draw</a><br/>
-<a href="https://scryfall.com/card/otj/139/quilled-charger?utm_source=api">Quilled Charger</a><br/>
-<a href="https://scryfall.com/card/otj/101/raven-of-fell-omens?utm_source=api">Raven of Fell Omens</a><br/>
-<a href="https://scryfall.com/card/otj/63/razzle-dazzler?utm_source=api">Razzle-Dazzler</a><br/>
-<a href="https://scryfall.com/card/otj/178/reach-for-the-sky?utm_source=api">Reach for the Sky</a><br/>
-<a href="https://scryfall.com/card/otj/140/reckless-lackey?utm_source=api">Reckless Lackey</a><br/>
-<a href="https://scryfall.com/card/otj/143/rodeo-pyromancers?utm_source=api">Rodeo Pyromancers</a><br/>
-<a href="https://scryfall.com/card/otj/103/rooftop-assassin?utm_source=api">Rooftop Assassin</a><br/>
-<a href="https://scryfall.com/card/otj/64/seize-the-secrets?utm_source=api">Seize the Secrets</a><br/>
-<a href="https://scryfall.com/card/otj/248/silver-deputy?utm_source=api">Silver Deputy</a><br/>
-<a href="https://scryfall.com/card/otj/68/slickshot-vault-buster?utm_source=api">Slickshot Vault-Buster</a><br/>
-<a href="https://scryfall.com/card/otj/264/soured-springs?utm_source=api">Soured Springs</a><br/>
-<a href="https://scryfall.com/card/otj/183/spinewoods-paladin?utm_source=api">Spinewoods Paladin</a><br/>
-<a href="https://scryfall.com/card/otj/69/spring-splasher?utm_source=api">Spring Splasher</a><br/>
-<a href="https://scryfall.com/card/otj/30/stagecoach-security?utm_source=api">Stagecoach Security</a><br/>
-<a href="https://scryfall.com/card/otj/31/steer-clear?utm_source=api">Steer Clear</a><br/>
-<a href="https://scryfall.com/card/otj/249/sterling-hound?utm_source=api">Sterling Hound</a><br/>
-<a href="https://scryfall.com/card/otj/32/sterling-keykeeper?utm_source=api">Sterling Keykeeper</a><br/>
-<a href="https://scryfall.com/card/otj/33/sterling-supplier?utm_source=api">Sterling Supplier</a><br/>
-<a href="https://scryfall.com/card/otj/72/stop-cold?utm_source=api">Stop Cold</a><br/>
-<a href="https://scryfall.com/card/otj/73/take-the-fall?utm_source=api">Take the Fall</a><br/>
-<a href="https://scryfall.com/card/otj/185/throw-from-the-saddle?utm_source=api">Throw from the Saddle</a><br/>
-<a href="https://scryfall.com/card/otj/150/thunder-salvo?utm_source=api">Thunder Salvo</a><br/>
-<a href="https://scryfall.com/card/otj/36/trained-arynx?utm_source=api">Trained Arynx</a><br/>
-<a href="https://scryfall.com/card/otj/151/trick-shot?utm_source=api">Trick Shot</a><br/>
-<a href="https://scryfall.com/card/otj/187/tumbleweed-rising?utm_source=api">Tumbleweed Rising</a><br/>
-<a href="https://scryfall.com/card/otj/114/vault-plunderer?utm_source=api">Vault Plunderer</a><br/>
-<a href="https://scryfall.com/card/otj/37/vengeful-townsfolk?utm_source=api">Vengeful Townsfolk</a><br/>
-<a href="https://scryfall.com/card/otj/188/voracious-varmint?utm_source=api">Voracious Varmint</a><br/>
-<a href="https://scryfall.com/card/otj/38/wanted-griffin?utm_source=api">Wanted Griffin</a><br/>
 </details>
 []()
 
