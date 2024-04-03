@@ -937,7 +937,7 @@ Lines in **bold** correspond to sets that have introduced new cards in the [Paup
 | 916       | tpip          | Fallout Tokens                                  | 2024-03-08   |
 | 917       | big           | The Big Score                                   | 2024-04-19   |
 | 918       | otc           | Outlaws of Thunder Junction Commander           | 2024-04-19   |
-| 919       | otj           | Outlaws of Thunder Junction                     | 2024-04-19   |
+| **919**   | **otj**       | **Outlaws of Thunder Junction**                 | **2024-04-19** |
 | 920       | otp           | Breaking News                                   | 2024-04-19   |
 | 921       | m3c           | Modern Horizons 3 Commander                     | 2024-06-06   |
 | 922       | mh3           | Modern Horizons 3                               | 2024-06-07   |
