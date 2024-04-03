@@ -46,6 +46,7 @@
 <a href="https://scryfall.com/card/vow/125/persistent-specimen"><img src="https://c1.scryfall.com/file/scryfall-cards/normal/front/f/7/f7baf973-3202-4fea-8861-a4a5ec228640.jpg" class="archetype-card rounded-image"/></a>
 <a href="https://scryfall.com/card/iko/99/serrated-scorpion"><img src="https://c1.scryfall.com/file/scryfall-cards/normal/front/b/c/bc8f0242-35e1-4409-9321-56e742e8fef4.jpg" class="archetype-card rounded-image"/></a>
 <a href="https://scryfall.com/card/afr/119/shambling-ghast"><img src="https://c1.scryfall.com/file/scryfall-cards/normal/front/d/9/d96198a7-dd19-4940-bf8f-23135011fc84.jpg" class="archetype-card rounded-image"/></a>
+<a href="https://scryfall.com/card/khm/280/snow-covered-swamp"><img src="https://cards.scryfall.io/normal/front/6/a/6aa85af8-15f5-4620-8aea-0b45c28372ed.jpg" class="archetype-card rounded-image"/></a>
 <a href="https://scryfall.com/card/gvl/53/snuff-out"><img src="https://c1.scryfall.com/file/scryfall-cards/normal/front/7/5/75bbe89f-09af-494e-b58e-271f64bde4b5.jpg" class="archetype-card rounded-image"/></a>
 <a href="https://scryfall.com/card/frf/85/sultai-emissary"><img src="https://c1.scryfall.com/file/scryfall-cards/normal/front/1/2/12421e1c-5144-4391-abf2-a2fb864920e9.jpg" class="archetype-card rounded-image"/></a>
 <a href="https://scryfall.com/card/ema/109/tragic-slip"><img src="https://c1.scryfall.com/file/scryfall-cards/normal/front/c/3/c3140bf5-9846-47ae-8142-b013aac14609.jpg" class="archetype-card rounded-image"/></a>

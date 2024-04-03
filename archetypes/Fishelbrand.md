@@ -24,6 +24,7 @@
 <a href="https://scryfall.com/card/2xm/208/manamorphose"><img src="https://c1.scryfall.com/file/scryfall-cards/normal/front/f/a/faf9070e-14be-4ce5-a19a-6addc79359c1.jpg" class="archetype-card rounded-image"/></a>
 <a href="https://scryfall.com/card/2xm/66/rush-of-knowledge"><img src="https://c1.scryfall.com/file/scryfall-cards/normal/front/c/c/ccca07a9-5c24-490f-8871-b125cb337e2c.jpg" class="archetype-card rounded-image"/></a>
 <a href="https://scryfall.com/card/ktk/89/shambling-attendants"><img src="https://c1.scryfall.com/file/scryfall-cards/normal/front/4/5/459ca25c-775f-4110-8d70-59720692ab27.jpg" class="archetype-card rounded-image"/></a>
+<a href="https://scryfall.com/card/inv/328/sulfur-vent"><img src="https://cards.scryfall.io/normal/front/2/2/22c66ed6-55fb-4c65-aac4-26d9cc3053b8.jpg" class="archetype-card rounded-image"/></a>
 </details><br/>
 
 
