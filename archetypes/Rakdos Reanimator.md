@@ -43,6 +43,7 @@
 <a href="https://scryfall.com/card/eld/131/merchant-of-the-vale-haggle"><img src="https://c1.scryfall.com/file/scryfall-cards/normal/front/0/b/0b4399b6-e67f-40d8-8676-f5db7e04a6c9.jpg" class="archetype-card rounded-image"/></a>
 <a href="https://scryfall.com/card/thb/107/mogiss-favor"><img src="https://c1.scryfall.com/file/scryfall-cards/normal/front/d/e/de6bf7fb-11ca-4878-8072-cebaa763a549.jpg" class="archetype-card rounded-image"/></a>
 <a href="https://scryfall.com/card/mh1/103/ransack-the-lab"><img src="https://c1.scryfall.com/file/scryfall-cards/normal/front/b/5/b547513d-8b69-41cd-84c9-4b08b6426f1d.jpg" class="archetype-card rounded-image"/></a>
+<a href="https://scryfall.com/card/khm/280/snow-covered-swamp"><img src="https://cards.scryfall.io/normal/front/6/a/6aa85af8-15f5-4620-8aea-0b45c28372ed.jpg" class="archetype-card rounded-image"/></a>
 <a href="https://scryfall.com/card/dvd/36/stinkweed-imp"><img src="https://c1.scryfall.com/file/scryfall-cards/normal/front/2/a/2ab08d69-210b-4b06-88a2-45281a1a4e1e.jpg" class="archetype-card rounded-image"/></a>
 <a href="https://scryfall.com/card/iko/100/suffocating-fumes"><img src="https://c1.scryfall.com/file/scryfall-cards/normal/front/6/6/66b562e4-35df-4aee-848d-ceb4204bbe58.jpg" class="archetype-card rounded-image"/></a>
 <a href="https://scryfall.com/card/m21/165/thrill-of-possibility"><img src="https://c1.scryfall.com/file/scryfall-cards/normal/front/f/4/f4af156d-0fbf-4a4e-b0c1-db7e95be4903.jpg" class="archetype-card rounded-image"/></a>
