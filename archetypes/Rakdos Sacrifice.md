@@ -45,7 +45,9 @@
 <a href="https://scryfall.com/card/cmr/330/perilous-myr"><img src="https://c1.scryfall.com/file/scryfall-cards/normal/front/5/a/5a15c8ef-04ad-4aab-a7f1-c7a90c10eb50.jpg" class="archetype-card rounded-image"/></a>
 <a href="https://scryfall.com/card/scg/72/reaping-the-graves"><img src="https://c1.scryfall.com/file/scryfall-cards/normal/front/7/6/760a66bd-2821-4710-8f02-3c30772dd884.jpg" class="archetype-card rounded-image"/></a>
 <a href="https://scryfall.com/card/afr/119/shambling-ghast"><img src="https://c1.scryfall.com/file/scryfall-cards/normal/front/d/9/d96198a7-dd19-4940-bf8f-23135011fc84.jpg" class="archetype-card rounded-image"/></a>
+<a href="https://scryfall.com/card/khm/280/snow-covered-swamp"><img src="https://cards.scryfall.io/normal/front/6/a/6aa85af8-15f5-4620-8aea-0b45c28372ed.jpg" class="archetype-card rounded-image"/></a>
 <a href="https://scryfall.com/card/gvl/53/snuff-out"><img src="https://c1.scryfall.com/file/scryfall-cards/normal/front/7/5/75bbe89f-09af-494e-b58e-271f64bde4b5.jpg" class="archetype-card rounded-image"/></a>
+<a href="https://scryfall.com/card/khm/270/sulfurous-mire"><img src="https://cards.scryfall.io/normal/front/3/5/35ebe245-ebb5-493c-b9c1-56fbfda9bd66.jpg" class="archetype-card rounded-image"/></a>
 <a href="https://scryfall.com/card/mh1/113/unearth"><img src="https://c1.scryfall.com/file/scryfall-cards/normal/front/b/6/b62abd0c-ec3e-45d7-989d-da269812aeef.jpg" class="archetype-card rounded-image"/></a>
 </details><br/>
 

@@ -52,6 +52,7 @@
 <a href="https://scryfall.com/card/mid/67/otherworldly-gaze"><img src="https://c1.scryfall.com/file/scryfall-cards/normal/front/9/c/9cebee20-869e-45ed-9ddc-843faf4032ad.jpg" class="archetype-card rounded-image"/></a>
 <a href="https://scryfall.com/card/cmr/84/preordain"><img src="https://c1.scryfall.com/file/scryfall-cards/normal/front/1/4/1453f92e-df2d-4789-aa1b-a5b5c51567d4.jpg" class="archetype-card rounded-image"/></a>
 <a href="https://scryfall.com/card/rav/105/shred-memory"><img src="https://c1.scryfall.com/file/scryfall-cards/normal/front/e/3/e38192e5-814f-4269-bae8-13867a73e7fa.jpg" class="archetype-card rounded-image"/></a>
+<a href="https://scryfall.com/card/khm/280/snow-covered-swamp"><img src="https://cards.scryfall.io/normal/front/6/a/6aa85af8-15f5-4620-8aea-0b45c28372ed.jpg" class="archetype-card rounded-image"/></a>
 <a href="https://scryfall.com/card/gvl/53/snuff-out"><img src="https://c1.scryfall.com/file/scryfall-cards/normal/front/7/5/75bbe89f-09af-494e-b58e-271f64bde4b5.jpg" class="archetype-card rounded-image"/></a>
 <a href="https://scryfall.com/card/xln/81/spell-pierce"><img src="https://c1.scryfall.com/file/scryfall-cards/normal/front/6/b/6bf4dfc0-c58b-4535-b660-54ceaa6e0217.jpg" class="archetype-card rounded-image"/></a>
 <a href="https://scryfall.com/card/hou/48/striped-riverwinder"><img src="https://c1.scryfall.com/file/scryfall-cards/normal/front/b/b/bbeef9ef-487c-400b-bcee-1c0e8ec94b6a.jpg" class="archetype-card rounded-image"/></a>
