@@ -939,9 +939,10 @@ Lines in **bold** correspond to sets that have introduced new cards in the [Paup
 | 918       | otc           | Outlaws of Thunder Junction Commander           | 2024-04-19   |
 | **919**   | **otj**       | **Outlaws of Thunder Junction**                 | **2024-04-19** |
 | 920       | otp           | Breaking News                                   | 2024-04-19   |
-| 921       | m3c           | Modern Horizons 3 Commander                     | 2024-06-06   |
-| 922       | mh3           | Modern Horizons 3                               | 2024-06-07   |
-| 923       | acr           | Assassin's Creed                                | 2024-07-05   |
-| 924       | blb           | Bloomburrow                                     | 2024-08-02   |
-| 925       | tblb          | Bloomburrow Tokens                              | 2024-08-02   |
+| 921       | totc          | Outlaws of Thunder Junction Commander Tokens    | 2024-04-19   |
+| 922       | m3c           | Modern Horizons 3 Commander                     | 2024-06-06   |
+| 923       | mh3           | Modern Horizons 3                               | 2024-06-07   |
+| 924       | acr           | Assassin's Creed                                | 2024-07-05   |
+| 925       | blb           | Bloomburrow                                     | 2024-08-02   |
+| 926       | tblb          | Bloomburrow Tokens                              | 2024-08-02   |
 
