@@ -13,7 +13,7 @@ This page should be useful for Pauper players that haven't followed the latest r
 
 Further information about reference numbers used by Pauperformance (p12e) to uniquely identify Magic sets can be found in the [Set Index page](set_index.html).
 
-The total number of cards in the Pauper pool is: 9504.
+The total number of cards in the Pauper pool is: 9505.
 
 ---
 Table of Contents
@@ -192,6 +192,7 @@ Table of Contents
 * [Ravnica Remastered](#ravnica-remastered-rvr) (*release: 2024-01-12 ~ p12e_code: 901*)
 * [Murders at Karlov Manor](#murders-at-karlov-manor-mkm) (*release: 2024-02-09 ~ p12e_code: 906*)
 * [Fallout](#fallout-pip) (*release: 2024-03-08 ~ p12e_code: 915*)
+* [Outlaws of Thunder Junction Commander](#outlaws-of-thunder-junction-commander-otc) (*release: 2024-04-19 ~ p12e_code: 918*)
 * [Outlaws of Thunder Junction](#outlaws-of-thunder-junction-otj) (*release: 2024-04-19 ~ p12e_code: 919*)
 
 ---
@@ -11177,6 +11178,16 @@ Table of Contents
   <summary>Click to see 1 new cards</summary>
 
 <a href="https://scryfall.com/card/pip/155/all-that-glitters?utm_source=api">All That Glitters</a><br/>
+</details>
+[]()
+
+## Outlaws of Thunder Junction Commander (otc)
+*release: 2024-04-19 | p12e_code: 918*
+
+<details>
+  <summary>Click to see 1 new cards</summary>
+
+<a href="https://scryfall.com/card/otc/169/guttersnipe?utm_source=api">Guttersnipe</a><br/>
 </details>
 []()
 

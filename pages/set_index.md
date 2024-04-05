@@ -936,7 +936,7 @@ Lines in **bold** correspond to sets that have introduced new cards in the [Paup
 | **915**   | **pip**       | **Fallout**                                     | **2024-03-08** |
 | 916       | tpip          | Fallout Tokens                                  | 2024-03-08   |
 | 917       | big           | The Big Score                                   | 2024-04-19   |
-| 918       | otc           | Outlaws of Thunder Junction Commander           | 2024-04-19   |
+| **918**   | **otc**       | **Outlaws of Thunder Junction Commander**       | **2024-04-19** |
 | **919**   | **otj**       | **Outlaws of Thunder Junction**                 | **2024-04-19** |
 | 920       | otp           | Breaking News                                   | 2024-04-19   |
 | 921       | tbig          | The Big Score Tokens                            | 2024-04-19   |
