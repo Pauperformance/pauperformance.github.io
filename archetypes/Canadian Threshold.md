@@ -53,7 +53,7 @@
 <a href="https://scryfall.com/card/mm3/53/tandem-lookout"><img src="https://c1.scryfall.com/file/scryfall-cards/normal/front/3/e/3e44b411-ccb8-44c8-a021-2372c945f0d3.jpg" class="archetype-card rounded-image"/></a>
 <a href="https://scryfall.com/card/jmp/365/thermo-alchemist"><img src="https://c1.scryfall.com/file/scryfall-cards/normal/front/b/3/b37c1b56-621a-4908-89b2-21622d195223.jpg" class="archetype-card rounded-image"/></a>
 <a href="https://scryfall.com/card/jmp/185/thought-scour"><img src="https://c1.scryfall.com/file/scryfall-cards/normal/front/1/4/142944d5-1b11-4ec4-b6b4-b5c03e682cd3.jpg" class="archetype-card rounded-image"/></a>
-<a href="https://scryfall.com/card/otc/182/unholy-heat"><img src="https://cards.scryfall.io/normal/front/4/e/4e879386-b1f8-4f2a-9820-6e1291746f88.jpg" class="archetype-card rounded-image"/></a>
+<a href="https://scryfall.com/card/mh2/145/unholy-heat"><img src="https://cards.scryfall.io/normal/front/2/b/2b73d294-6ab1-4051-9b0f-d8e335d37674.jpg" class="archetype-card rounded-image"/></a>
 <a href="https://scryfall.com/card/mm2/66/vapor-snag"><img src="https://c1.scryfall.com/file/scryfall-cards/normal/front/5/9/59f26d0a-e9f3-442f-b5c6-8016cf736432.jpg" class="archetype-card rounded-image"/></a>
 <a href="https://scryfall.com/card/ema/191/werebear"><img src="https://c1.scryfall.com/file/scryfall-cards/normal/front/2/2/224ea635-b95b-4803-8716-edd4cb655923.jpg" class="archetype-card rounded-image"/></a>
 </details><br/>
