@@ -13,7 +13,7 @@ This page should be useful for Pauper players that haven't followed the latest r
 
 Further information about reference numbers used by Pauperformance (p12e) to uniquely identify Magic sets can be found in the [Set Index page](set_index.html).
 
-The total number of cards in the Pauper pool is: 9506.
+The total number of cards in the Pauper pool is: 9505.
 
 ---
 Table of Contents
@@ -11185,9 +11185,8 @@ Table of Contents
 *release: 2024-04-19 | p12e_code: 918*
 
 <details>
-  <summary>Click to see 2 new cards</summary>
+  <summary>Click to see 1 new cards</summary>
 
-<a href="https://scryfall.com/card/otc/169/guttersnipe?utm_source=api">Guttersnipe</a><br/>
 <a href="https://scryfall.com/card/otc/102/murmuring-mystic?utm_source=api">Murmuring Mystic</a><br/>
 </details>
 []()
