@@ -947,5 +947,6 @@ Lines in **bold** correspond to sets that have introduced new cards in the [Paup
 | 926       | mh3           | Modern Horizons 3                               | 2024-06-07   |
 | 927       | acr           | Assassin's Creed                                | 2024-07-05   |
 | 928       | blb           | Bloomburrow                                     | 2024-08-02   |
-| 929       | tblb          | Bloomburrow Tokens                              | 2024-08-02   |
+| 929       | pcbb          | Cowboy Bebop                                    | 2024-08-02   |
+| 930       | tblb          | Bloomburrow Tokens                              | 2024-08-02   |
 
