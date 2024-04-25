@@ -939,11 +939,11 @@ Lines in **bold** correspond to sets that have introduced new cards in the [Paup
 | **918**   | **otc**       | **Outlaws of Thunder Junction Commander**       | **2024-04-19** |
 | **919**   | **otj**       | **Outlaws of Thunder Junction**                 | **2024-04-19** |
 | 920       | otp           | Breaking News                                   | 2024-04-19   |
-| 921       | tbig          | The Big Score Tokens                            | 2024-04-19   |
-| 922       | totc          | Outlaws of Thunder Junction Commander Tokens    | 2024-04-19   |
-| 923       | totj          | Outlaws of Thunder Junction Tokens              | 2024-04-19   |
-| 924       | totp          | Breaking News Tokens                            | 2024-04-19   |
-| 925       | potj          | Outlaws of Thunder Junction Promos              | 2024-05-24   |
+| 921       | potj          | Outlaws of Thunder Junction Promos              | 2024-04-19   |
+| 922       | tbig          | The Big Score Tokens                            | 2024-04-19   |
+| 923       | totc          | Outlaws of Thunder Junction Commander Tokens    | 2024-04-19   |
+| 924       | totj          | Outlaws of Thunder Junction Tokens              | 2024-04-19   |
+| 925       | totp          | Breaking News Tokens                            | 2024-04-19   |
 | 926       | m3c           | Modern Horizons 3 Commander                     | 2024-06-06   |
 | 927       | mh3           | Modern Horizons 3                               | 2024-06-07   |
 | 928       | acr           | Assassin's Creed                                | 2024-07-05   |
