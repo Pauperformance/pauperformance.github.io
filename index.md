@@ -25,8 +25,8 @@ Please, read the [PhD Guidelines](./pages/phd_guidelines.html).**
 
 ---
 
-## The current Pauperformance code for decks is **839**.
-It refers to March of the Machine (mom), released on 2023-04-21.
+## The current Pauperformance code for decks is **919**.
+It refers to Outlaws of Thunder Junction (otj), released on 2024-04-19.
 
 ---
 
