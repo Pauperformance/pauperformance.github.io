@@ -11,6 +11,7 @@
 [Chatterstorm](../archetypes/Chatterstorm.html)  
 [Cycling Storm](../archetypes/Cycling%20Storm.html)  
 [Empty The Warrens Storm](../archetypes/Empty%20The%20Warrens%20Storm.html)  
+[Grapeshot Storm](../archetypes/Grapeshot%20Storm.html)  
 [Ping Storm](../archetypes/Ping%20Storm.html)  
 [Zubera Storm](../archetypes/Zubera%20Storm.html)  
 
