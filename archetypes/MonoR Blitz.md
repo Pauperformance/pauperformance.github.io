@@ -36,10 +36,10 @@
 <a href="https://scryfall.com/card/mm2/8/apostles-blessing"><img src="https://c1.scryfall.com/file/scryfall-cards/normal/front/f/d/fdfbc07e-d726-4d42-9394-6aa0f5fc3a3a.jpg" class="archetype-card rounded-image"/></a>
 <a href="https://scryfall.com/card/tsr/157/brute-force"><img src="https://c1.scryfall.com/file/scryfall-cards/normal/front/8/9/89db7256-3bd0-4c1d-9c6f-de81f7d3c1a2.jpg" class="archetype-card rounded-image"/></a>
 <a href="https://scryfall.com/card/war/117/burning-prophet"><img src="https://c1.scryfall.com/file/scryfall-cards/normal/front/0/1/01c5b095-13c9-4673-bf0c-553de455e521.jpg" class="archetype-card rounded-image"/></a>
-<a href="https://scryfall.com/card/m21/140/crash-through"><img src="https://cards.scryfall.io/normal/front/8/2/8257c205-00cd-4d41-bd58-098575ea2343.jpg" class="archetype-card rounded-image"/></a>
+<a href="https://scryfall.com/card/m21/140/crash-through"><img src="https://c1.scryfall.com/file/scryfall-cards/normal/front/8/2/8257c205-00cd-4d41-bd58-098575ea2343.jpg" class="archetype-card rounded-image"/></a>
 <a href="https://scryfall.com/card/mid/140/festival-crasher"><img src="https://c1.scryfall.com/file/scryfall-cards/normal/front/6/2/626b0477-6165-443a-8a75-dfeac26ac9f9.jpg" class="archetype-card rounded-image"/></a>
 <a href="https://scryfall.com/card/cmr/414/fists-of-flame"><img src="https://c1.scryfall.com/file/scryfall-cards/normal/front/1/8/1897b60d-7e15-488c-84d5-505187739b00.jpg" class="archetype-card rounded-image"/></a>
-<a href="https://scryfall.com/card/ori/154/mage-ring-bully"><img src="https://cards.scryfall.io/normal/front/1/a/1a129f22-dd7e-4b2c-a514-a2ac55bb5661.jpg" class="archetype-card rounded-image"/></a>
+<a href="https://scryfall.com/card/ori/154/mage-ring-bully"><img src="https://c1.scryfall.com/file/scryfall-cards/normal/front/1/a/1a129f22-dd7e-4b2c-a514-a2ac55bb5661.jpg" class="archetype-card rounded-image"/></a>
 <a href="https://scryfall.com/card/2xm/208/manamorphose"><img src="https://c1.scryfall.com/file/scryfall-cards/normal/front/f/a/faf9070e-14be-4ce5-a19a-6addc79359c1.jpg" class="archetype-card rounded-image"/></a>
 <a href="https://scryfall.com/card/jou/110/satyr-hoplite"><img src="https://c1.scryfall.com/file/scryfall-cards/normal/front/b/8/b8754d66-facb-432e-a6c2-91430a6dec94.jpg" class="archetype-card rounded-image"/></a>
 <a href="https://scryfall.com/card/cmr/417/temur-battle-rage"><img src="https://c1.scryfall.com/file/scryfall-cards/normal/front/d/3/d344f38d-0ef2-434b-914c-934c639e7e18.jpg" class="archetype-card rounded-image"/></a>
