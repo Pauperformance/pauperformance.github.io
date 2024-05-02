@@ -45,7 +45,7 @@
 <a href="https://scryfall.com/card/a25/93/horror-of-the-broken-lands"><img src="https://c1.scryfall.com/file/scryfall-cards/normal/front/f/b/fb1f0958-5bf6-4a4f-a4bc-2943c93ba15e.jpg" class="archetype-card rounded-image"/></a>
 <a href="https://scryfall.com/card/soi/168/insolent-neonate"><img src="https://c1.scryfall.com/file/scryfall-cards/normal/front/8/1/813104f6-e6e4-4709-8626-12fe4262a11f.jpg" class="archetype-card rounded-image"/></a>
 <a href="https://scryfall.com/card/mh2/89/kitchen-imp"><img src="https://c1.scryfall.com/file/scryfall-cards/normal/front/8/3/836ae711-e62f-49ec-850e-d25f6fd2a4d4.jpg" class="archetype-card rounded-image"/></a>
-<a href="https://scryfall.com/card/csp/92/martyr-of-ashes"><img src="https://cards.scryfall.io/normal/front/6/0/600a2cd2-166a-4fd8-838d-e513534b7cb0.jpg" class="archetype-card rounded-image"/></a>
+<a href="https://scryfall.com/card/csp/92/martyr-of-ashes"><img src="https://c1.scryfall.com/file/scryfall-cards/normal/front/6/0/600a2cd2-166a-4fd8-838d-e513534b7cb0.jpg" class="archetype-card rounded-image"/></a>
 <a href="https://scryfall.com/card/eld/131/merchant-of-the-vale-haggle"><img src="https://c1.scryfall.com/file/scryfall-cards/normal/front/0/b/0b4399b6-e67f-40d8-8676-f5db7e04a6c9.jpg" class="archetype-card rounded-image"/></a>
 <a href="https://scryfall.com/card/arb/43/monstrous-carabid"><img src="https://c1.scryfall.com/file/scryfall-cards/normal/front/b/0/b09e668d-02ca-4164-88ee-c7ea6c665975.jpg" class="archetype-card rounded-image"/></a>
 <a href="https://scryfall.com/card/mh2/140/skophos-reaver"><img src="https://c1.scryfall.com/file/scryfall-cards/normal/front/3/2/32691e3f-dea9-45ac-96fe-96b34d5116a9.jpg" class="archetype-card rounded-image"/></a>
