@@ -46,7 +46,7 @@
 <a href="https://scryfall.com/card/ody/251/moments-peace"><img src="https://c1.scryfall.com/file/scryfall-cards/normal/front/4/0/40ebe935-ccf9-435e-8fe8-53bcbf3526e7.jpg" class="archetype-card rounded-image"/></a>
 <a href="https://scryfall.com/card/cmr/334/prophetic-prism"><img src="https://c1.scryfall.com/file/scryfall-cards/normal/front/1/4/14602fed-8666-4884-8fca-13529578f9e2.jpg" class="archetype-card rounded-image"/></a>
 <a href="https://scryfall.com/card/c21/202/pulse-of-murasa"><img src="https://c1.scryfall.com/file/scryfall-cards/normal/front/a/4/a4b9f8f4-d704-4f16-8495-cf8185285859.jpg" class="archetype-card rounded-image"/></a>
-<a href="https://scryfall.com/card/a25/231/self-assembler"><img src="https://c1.scryfall.com/file/scryfall-cards/normal/front/d/8/d86ba613-29bd-45d8-b5ed-f8fe8323fe75.jpg" class="archetype-card rounded-image"/></a>
+<a href="https://scryfall.com/card/a25/231/self-assembler"><img src="https://cards.scryfall.io/normal/front/d/8/d86ba613-29bd-45d8-b5ed-f8fe8323fe75.jpg" class="archetype-card rounded-image"/></a>
 <a href="https://scryfall.com/card/znr/254/spare-supplies"><img src="https://c1.scryfall.com/file/scryfall-cards/normal/front/a/5/a53baf25-1782-427b-a9dd-fc9b8dc6444f.jpg" class="archetype-card rounded-image"/></a>
 </details><br/>
 

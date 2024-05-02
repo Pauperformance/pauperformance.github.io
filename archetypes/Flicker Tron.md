@@ -50,10 +50,10 @@
 <a href="https://scryfall.com/card/uma/56/forbidden-alchemy"><img src="https://c1.scryfall.com/file/scryfall-cards/normal/front/e/7/e70dcc0d-aaa2-4815-be83-daafe441ceb4.jpg" class="archetype-card rounded-image"/></a>
 <a href="https://scryfall.com/card/akh/13/forsake-the-worldly"><img src="https://c1.scryfall.com/file/scryfall-cards/normal/front/c/c/cca4e95e-f14e-4cfa-918a-cfb15f912293.jpg" class="archetype-card rounded-image"/></a>
 <a href="https://scryfall.com/card/eld/220/golden-egg"><img src="https://c1.scryfall.com/file/scryfall-cards/normal/front/5/2/525142c3-f17c-4e02-a02d-fa385215aa12.jpg" class="archetype-card rounded-image"/></a>
-<a href="https://scryfall.com/card/vow/257/honored-heirloom"><img src="https://c1.scryfall.com/file/scryfall-cards/normal/front/d/3/d3390e4d-9137-40ff-b998-bdb19c90b7d5.jpg" class="archetype-card rounded-image"/></a>
+<a href="https://scryfall.com/card/vow/257/honored-heirloom"><img src="https://cards.scryfall.io/normal/front/d/3/d3390e4d-9137-40ff-b998-bdb19c90b7d5.jpg" class="archetype-card rounded-image"/></a>
 <a href="https://scryfall.com/card/c21/245/ichor-wellspring"><img src="https://c1.scryfall.com/file/scryfall-cards/normal/front/1/c/1ccdb407-ac8f-4736-89d3-ab0d086096ea.jpg" class="archetype-card rounded-image"/></a>
 <a href="https://scryfall.com/card/bbd/119/impulse"><img src="https://c1.scryfall.com/file/scryfall-cards/normal/front/8/9/895c961f-61cf-49e8-9b80-97140a5de19a.jpg" class="archetype-card rounded-image"/></a>
-<a href="https://scryfall.com/card/neo/251/network-terminal"><img src="https://c1.scryfall.com/file/scryfall-cards/normal/front/d/6/d61e596f-97ef-4eb3-af42-ddfe50d07667.jpg" class="archetype-card rounded-image"/></a>
+<a href="https://scryfall.com/card/neo/251/network-terminal"><img src="https://cards.scryfall.io/normal/front/d/6/d61e596f-97ef-4eb3-af42-ddfe50d07667.jpg" class="archetype-card rounded-image"/></a>
 <a href="https://scryfall.com/card/mh1/64/prohibit"><img src="https://c1.scryfall.com/file/scryfall-cards/normal/front/0/a/0ae544bf-7229-4b82-99ad-32c3af36e30f.jpg" class="archetype-card rounded-image"/></a>
 <a href="https://scryfall.com/card/cmr/334/prophetic-prism"><img src="https://c1.scryfall.com/file/scryfall-cards/normal/front/1/4/14602fed-8666-4884-8fca-13529578f9e2.jpg" class="archetype-card rounded-image"/></a>
 <a href="https://scryfall.com/card/ema/142/pyroblast"><img src="https://c1.scryfall.com/file/scryfall-cards/normal/front/b/0/b029eb9a-dd7a-40c2-96c4-0063d9cc002c.jpg" class="archetype-card rounded-image"/></a>
