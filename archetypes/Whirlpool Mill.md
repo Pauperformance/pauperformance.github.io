@@ -36,10 +36,10 @@
 <a href="https://scryfall.com/card/isd/51/delver-of-secrets-insectile-aberration"><img src="https://c1.scryfall.com/file/scryfall-cards/normal/front/1/1/11bf83bb-c95b-4b4f-9a56-ce7a1816307a.jpg" class="archetype-card rounded-image"/></a>
 <a href="https://scryfall.com/card/roe/59/deprive"><img src="https://c1.scryfall.com/file/scryfall-cards/normal/front/2/e/2efecdd9-bd3a-4b79-92da-6485589d5bde.jpg" class="archetype-card rounded-image"/></a>
 <a href="https://scryfall.com/card/c19/84/echoing-truth"><img src="https://c1.scryfall.com/file/scryfall-cards/normal/front/5/5/55cd75bc-5ec7-45b2-9231-85a321ecd786.jpg" class="archetype-card rounded-image"/></a>
-<a href="https://scryfall.com/card/tsr/68/fathom-seer"><img src="https://cards.scryfall.io/normal/front/6/c/6c0f831e-2eb0-499f-9502-418c04ac34a0.jpg" class="archetype-card rounded-image"/></a>
+<a href="https://scryfall.com/card/tsr/68/fathom-seer"><img src="https://c1.scryfall.com/file/scryfall-cards/normal/front/6/c/6c0f831e-2eb0-499f-9502-418c04ac34a0.jpg" class="archetype-card rounded-image"/></a>
 <a href="https://scryfall.com/card/nph/35/gitaxian-probe"><img src="https://c1.scryfall.com/file/scryfall-cards/normal/front/9/9/995486ce-58bb-4753-a812-0ca73ef1a235.jpg" class="archetype-card rounded-image"/></a>
 <a href="https://scryfall.com/card/jvc/27/gush"><img src="https://c1.scryfall.com/file/scryfall-cards/normal/front/d/4/d4a3a921-3b7f-474c-b8c3-67a1a6ba5cc1.jpg" class="archetype-card rounded-image"/></a>
-<a href="https://scryfall.com/card/tsr/73/logic-knot"><img src="https://cards.scryfall.io/normal/front/6/2/624feb0e-f683-4eb6-a63b-7872d0e28f1f.jpg" class="archetype-card rounded-image"/></a>
+<a href="https://scryfall.com/card/tsr/73/logic-knot"><img src="https://c1.scryfall.com/file/scryfall-cards/normal/front/6/2/624feb0e-f683-4eb6-a63b-7872d0e28f1f.jpg" class="archetype-card rounded-image"/></a>
 <a href="https://scryfall.com/card/c21/129/serum-visions"><img src="https://c1.scryfall.com/file/scryfall-cards/normal/front/f/b/fbff5161-ed36-429a-b06a-a1c5a6afd9bc.jpg" class="archetype-card rounded-image"/></a>
 <a href="https://scryfall.com/card/jvc/16/spire-golem"><img src="https://c1.scryfall.com/file/scryfall-cards/normal/front/b/2/b299c599-1a10-4122-ac0b-8f52a9cec7b6.jpg" class="archetype-card rounded-image"/></a>
 </details><br/>

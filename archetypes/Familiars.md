@@ -46,7 +46,7 @@
 <a href="https://scryfall.com/card/tsr/69/foresee"><img src="https://c1.scryfall.com/file/scryfall-cards/normal/front/2/e/2ecf2ee8-6b93-4757-89c4-f1e76509a217.jpg" class="archetype-card rounded-image"/></a>
 <a href="https://scryfall.com/card/akh/13/forsake-the-worldly"><img src="https://c1.scryfall.com/file/scryfall-cards/normal/front/c/c/cca4e95e-f14e-4cfa-918a-cfb15f912293.jpg" class="archetype-card rounded-image"/></a>
 <a href="https://scryfall.com/card/ths/22/last-breath"><img src="https://c1.scryfall.com/file/scryfall-cards/normal/front/1/8/1857fc37-1e7e-4b93-9fa9-ec139f16b7fa.jpg" class="archetype-card rounded-image"/></a>
-<a href="https://scryfall.com/card/mh2/49/lose-focus"><img src="https://cards.scryfall.io/normal/front/9/8/985bdb0c-ce6c-4506-8163-76f3b2fdf5fb.jpg" class="archetype-card rounded-image"/></a>
+<a href="https://scryfall.com/card/mh2/49/lose-focus"><img src="https://c1.scryfall.com/file/scryfall-cards/normal/front/9/8/985bdb0c-ce6c-4506-8163-76f3b2fdf5fb.jpg" class="archetype-card rounded-image"/></a>
 <a href="https://scryfall.com/card/ema/60/memory-lapse"><img src="https://c1.scryfall.com/file/scryfall-cards/normal/front/3/0/30202613-d05f-4f47-af97-d0b75ccac293.jpg" class="archetype-card rounded-image"/></a>
 <a href="https://scryfall.com/card/ima/67/mnemonic-wall"><img src="https://c1.scryfall.com/file/scryfall-cards/normal/front/a/3/a3e6784b-78e8-4f0b-8d27-d49c7cea9252.jpg" class="archetype-card rounded-image"/></a>
 <a href="https://scryfall.com/card/eld/247/mystic-sanctuary"><img src="https://c1.scryfall.com/file/scryfall-cards/normal/front/1/7/170e792c-80d5-4775-ad95-37614574ab84.jpg" class="archetype-card rounded-image"/></a>
