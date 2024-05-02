@@ -17,9 +17,9 @@
 
 <details>
   <summary>Click here to expand</summary>
-<a href="https://scryfall.com/card/bbd/99/midnight-guard"><img src="https://c1.scryfall.com/file/scryfall-cards/normal/front/8/7/87c1d85d-b2b8-4c9d-84fa-2566b14cb5ea.jpg" class="archetype-card rounded-image"/></a>
-<a href="https://scryfall.com/card/jmp/420/presence-of-gond"><img src="https://c1.scryfall.com/file/scryfall-cards/normal/front/b/b/bba661af-c4a8-4230-830e-a9ee22b25d6b.jpg" class="archetype-card rounded-image"/></a>
-<a href="https://scryfall.com/card/mm3/24/soul-warden"><img src="https://c1.scryfall.com/file/scryfall-cards/normal/front/d/9/d96266b3-a7cb-40ce-a328-ac13719fe5f0.jpg" class="archetype-card rounded-image"/></a>
+<a href="https://scryfall.com/card/bbd/99/midnight-guard"><img src="https://cards.scryfall.io/normal/front/8/7/87c1d85d-b2b8-4c9d-84fa-2566b14cb5ea.jpg" class="archetype-card rounded-image"/></a>
+<a href="https://scryfall.com/card/jmp/420/presence-of-gond"><img src="https://cards.scryfall.io/normal/front/b/b/bba661af-c4a8-4230-830e-a9ee22b25d6b.jpg" class="archetype-card rounded-image"/></a>
+<a href="https://scryfall.com/card/mm3/24/soul-warden"><img src="https://cards.scryfall.io/normal/front/d/9/d96266b3-a7cb-40ce-a328-ac13719fe5f0.jpg" class="archetype-card rounded-image"/></a>
 </details><br/>
 
 
@@ -28,25 +28,25 @@
 
 <details>
   <summary>Click here to expand</summary>
-<a href="https://scryfall.com/card/mh1/4/battle-screech"><img src="https://c1.scryfall.com/file/scryfall-cards/normal/front/e/a/eacf7dd0-5855-4e7b-b75c-8119cc3d1460.jpg" class="archetype-card rounded-image"/></a>
-<a href="https://scryfall.com/card/ema/4/benevolent-bodyguard"><img src="https://c1.scryfall.com/file/scryfall-cards/normal/front/2/4/241e5c4e-0f0b-4a3f-91e0-87387a11e81e.jpg" class="archetype-card rounded-image"/></a>
-<a href="https://scryfall.com/card/mma/9/cenns-enlistment"><img src="https://cards.scryfall.io/normal/front/3/7/37bcc0fd-1eea-4eb0-8099-e0e94ffe00b6.jpg" class="archetype-card rounded-image"/></a>
-<a href="https://scryfall.com/card/ema/162/commune-with-the-gods"><img src="https://c1.scryfall.com/file/scryfall-cards/normal/front/6/7/67d95f6f-3ff0-483d-b98f-ccb4fb5715f4.jpg" class="archetype-card rounded-image"/></a>
-<a href="https://scryfall.com/card/cma/106/essence-warden"><img src="https://c1.scryfall.com/file/scryfall-cards/normal/front/3/1/31ca84d1-30a6-432b-966c-089fb6652a89.jpg" class="archetype-card rounded-image"/></a>
-<a href="https://scryfall.com/card/c21/168/faithless-looting"><img src="https://c1.scryfall.com/file/scryfall-cards/normal/front/1/d/1d6e5cc9-bd48-41b6-ac20-5a3e38aecdc5.jpg" class="archetype-card rounded-image"/></a>
-<a href="https://scryfall.com/card/cmr/191/makeshift-munitions"><img src="https://c1.scryfall.com/file/scryfall-cards/normal/front/1/9/19d1ad9f-e217-49fb-8b27-025ca133b6c9.jpg" class="archetype-card rounded-image"/></a>
-<a href="https://scryfall.com/card/a25/182/nettle-sentinel"><img src="https://c1.scryfall.com/file/scryfall-cards/normal/front/3/f/3f290ed2-d1a8-4a90-a3a7-8240652dc109.jpg" class="archetype-card rounded-image"/></a>
-<a href="https://scryfall.com/card/tsr/31/pallid-mycoderm"><img src="https://c1.scryfall.com/file/scryfall-cards/normal/front/2/9/29a2a28e-c241-4228-9ece-2e49d4d3733a.jpg" class="archetype-card rounded-image"/></a>
-<a href="https://scryfall.com/card/c19/69/prismatic-strands"><img src="https://c1.scryfall.com/file/scryfall-cards/normal/front/e/f/efd85985-abc1-430a-9210-63109c90a82d.jpg" class="archetype-card rounded-image"/></a>
-<a href="https://scryfall.com/card/uma/28/rally-the-peasants"><img src="https://c1.scryfall.com/file/scryfall-cards/normal/front/3/b/3b300df0-c867-41e6-a1fd-fe547ed3dc51.jpg" class="archetype-card rounded-image"/></a>
-<a href="https://scryfall.com/card/akh/27/sacred-cat"><img src="https://c1.scryfall.com/file/scryfall-cards/normal/front/0/8/08891c78-13c1-4d84-aa9c-78346b3b7d18.jpg" class="archetype-card rounded-image"/></a>
-<a href="https://scryfall.com/card/mm2/159/scatter-the-seeds"><img src="https://c1.scryfall.com/file/scryfall-cards/normal/front/6/b/6b28c2a8-ee7d-4eea-8046-a47e81ddd28d.jpg" class="archetype-card rounded-image"/></a>
-<a href="https://scryfall.com/card/cmd/223/selesnya-evangel"><img src="https://c1.scryfall.com/file/scryfall-cards/normal/front/3/2/32a20292-8b19-4386-95b4-85efc903146b.jpg" class="archetype-card rounded-image"/></a>
-<a href="https://scryfall.com/card/ddg/32/spidersilk-armor"><img src="https://c1.scryfall.com/file/scryfall-cards/normal/front/e/5/e55202a1-c246-4b5b-94d6-43c86a69d61a.jpg" class="archetype-card rounded-image"/></a>
-<a href="https://scryfall.com/card/fut/138/sprout-swarm"><img src="https://c1.scryfall.com/file/scryfall-cards/normal/front/0/b/0b915355-4e98-44df-81bd-961a3d3c86b8.jpg" class="archetype-card rounded-image"/></a>
-<a href="https://scryfall.com/card/apc/18/standard-bearer"><img src="https://cards.scryfall.io/normal/front/e/0/e0f8e16a-55f0-4147-a01a-dba7938f31c4.jpg" class="archetype-card rounded-image"/></a>
-<a href="https://scryfall.com/card/mor/25/stonybrook-schoolmaster"><img src="https://c1.scryfall.com/file/scryfall-cards/normal/front/6/9/69fa2293-f398-4ad8-895e-c739ddea56d0.jpg" class="archetype-card rounded-image"/></a>
-<a href="https://scryfall.com/card/mma/34/veteran-armorer"><img src="https://c1.scryfall.com/file/scryfall-cards/normal/front/0/2/026aaea6-ed4f-4505-9779-7c28ff6c2284.jpg" class="archetype-card rounded-image"/></a>
+<a href="https://scryfall.com/card/cmm/17/battle-screech"><img src="https://cards.scryfall.io/normal/front/9/0/90301f8c-f7af-4179-8faf-9901931bba8d.jpg" class="archetype-card rounded-image"/></a>
+<a href="https://scryfall.com/card/ema/4/benevolent-bodyguard"><img src="https://cards.scryfall.io/normal/front/2/4/241e5c4e-0f0b-4a3f-91e0-87387a11e81e.jpg" class="archetype-card rounded-image"/></a>
+<a href="https://scryfall.com/card/mma/9/cenns-enlistment"><img src="https://c1.scryfall.com/file/scryfall-cards/normal/front/3/7/37bcc0fd-1eea-4eb0-8099-e0e94ffe00b6.jpg" class="archetype-card rounded-image"/></a>
+<a href="https://scryfall.com/card/ema/162/commune-with-the-gods"><img src="https://cards.scryfall.io/normal/front/6/7/67d95f6f-3ff0-483d-b98f-ccb4fb5715f4.jpg" class="archetype-card rounded-image"/></a>
+<a href="https://scryfall.com/card/cma/106/essence-warden"><img src="https://cards.scryfall.io/normal/front/3/1/31ca84d1-30a6-432b-966c-089fb6652a89.jpg" class="archetype-card rounded-image"/></a>
+<a href="https://scryfall.com/card/otc/165/faithless-looting"><img src="https://cards.scryfall.io/normal/front/1/e/1ea23c17-6960-44fd-bae3-e24595b00c22.jpg" class="archetype-card rounded-image"/></a>
+<a href="https://scryfall.com/card/cmm/242/makeshift-munitions"><img src="https://cards.scryfall.io/normal/front/6/0/60715b6d-b223-431a-85d8-27d7c05469b2.jpg" class="archetype-card rounded-image"/></a>
+<a href="https://scryfall.com/card/a25/182/nettle-sentinel"><img src="https://cards.scryfall.io/normal/front/3/f/3f290ed2-d1a8-4a90-a3a7-8240652dc109.jpg" class="archetype-card rounded-image"/></a>
+<a href="https://scryfall.com/card/tsr/31/pallid-mycoderm"><img src="https://cards.scryfall.io/normal/front/2/9/29a2a28e-c241-4228-9ece-2e49d4d3733a.jpg" class="archetype-card rounded-image"/></a>
+<a href="https://scryfall.com/card/c19/69/prismatic-strands"><img src="https://cards.scryfall.io/normal/front/e/f/efd85985-abc1-430a-9210-63109c90a82d.jpg" class="archetype-card rounded-image"/></a>
+<a href="https://scryfall.com/card/uma/28/rally-the-peasants"><img src="https://cards.scryfall.io/normal/front/3/b/3b300df0-c867-41e6-a1fd-fe547ed3dc51.jpg" class="archetype-card rounded-image"/></a>
+<a href="https://scryfall.com/card/akh/27/sacred-cat"><img src="https://cards.scryfall.io/normal/front/0/8/08891c78-13c1-4d84-aa9c-78346b3b7d18.jpg" class="archetype-card rounded-image"/></a>
+<a href="https://scryfall.com/card/mm2/159/scatter-the-seeds"><img src="https://cards.scryfall.io/normal/front/6/b/6b28c2a8-ee7d-4eea-8046-a47e81ddd28d.jpg" class="archetype-card rounded-image"/></a>
+<a href="https://scryfall.com/card/rvr/220/selesnya-evangel"><img src="https://cards.scryfall.io/normal/front/2/d/2d929bda-150c-484a-910e-eee19297c77e.jpg" class="archetype-card rounded-image"/></a>
+<a href="https://scryfall.com/card/ddg/32/spidersilk-armor"><img src="https://cards.scryfall.io/normal/front/e/5/e55202a1-c246-4b5b-94d6-43c86a69d61a.jpg" class="archetype-card rounded-image"/></a>
+<a href="https://scryfall.com/card/fut/138/sprout-swarm"><img src="https://cards.scryfall.io/normal/front/0/b/0b915355-4e98-44df-81bd-961a3d3c86b8.jpg" class="archetype-card rounded-image"/></a>
+<a href="https://scryfall.com/card/apc/18/standard-bearer"><img src="https://c1.scryfall.com/file/scryfall-cards/normal/front/e/0/e0f8e16a-55f0-4147-a01a-dba7938f31c4.jpg" class="archetype-card rounded-image"/></a>
+<a href="https://scryfall.com/card/mor/25/stonybrook-schoolmaster"><img src="https://cards.scryfall.io/normal/front/6/9/69fa2293-f398-4ad8-895e-c739ddea56d0.jpg" class="archetype-card rounded-image"/></a>
+<a href="https://scryfall.com/card/mma/34/veteran-armorer"><img src="https://cards.scryfall.io/normal/front/0/2/026aaea6-ed4f-4505-9779-7c28ff6c2284.jpg" class="archetype-card rounded-image"/></a>
 </details><br/>
 
 

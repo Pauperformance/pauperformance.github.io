@@ -19,9 +19,9 @@
 
 <details>
   <summary>Click here to expand</summary>
-<a href="https://scryfall.com/card/cmr/458/bonesplitter"><img src="https://c1.scryfall.com/file/scryfall-cards/normal/front/6/9/690972a8-72df-4050-a353-16e45589167c.jpg" class="archetype-card rounded-image"/></a>
-<a href="https://scryfall.com/card/c21/115/brainstorm"><img src="https://c1.scryfall.com/file/scryfall-cards/normal/front/0/3/0359f212-9564-41a9-870b-d2c57455a695.jpg" class="archetype-card rounded-image"/></a>
-<a href="https://scryfall.com/card/a25/34/squadron-hawk"><img src="https://c1.scryfall.com/file/scryfall-cards/normal/front/9/e/9e81806d-5d87-4032-ad94-c2cdeabecdbf.jpg" class="archetype-card rounded-image"/></a>
+<a href="https://scryfall.com/card/cmr/458/bonesplitter"><img src="https://cards.scryfall.io/normal/front/6/9/690972a8-72df-4050-a353-16e45589167c.jpg" class="archetype-card rounded-image"/></a>
+<a href="https://scryfall.com/card/mkc/96/brainstorm"><img src="https://cards.scryfall.io/normal/front/8/4/84479779-d570-4eee-9982-f6e918b4d75b.jpg" class="archetype-card rounded-image"/></a>
+<a href="https://scryfall.com/card/a25/34/squadron-hawk"><img src="https://cards.scryfall.io/normal/front/9/e/9e81806d-5d87-4032-ad94-c2cdeabecdbf.jpg" class="archetype-card rounded-image"/></a>
 </details><br/>
 
 
@@ -30,34 +30,34 @@
 
 <details>
   <summary>Click here to expand</summary>
-<a href="https://scryfall.com/card/tsr/6/aven-riftwatcher"><img src="https://c1.scryfall.com/file/scryfall-cards/normal/front/2/6/261691c8-371d-49b6-9c9b-50ece5984aa2.jpg" class="archetype-card rounded-image"/></a>
-<a href="https://scryfall.com/card/mh2/267/counterspell"><img src="https://c1.scryfall.com/file/scryfall-cards/normal/front/1/9/1920dae4-fb92-4f19-ae4b-eb3276b8dac7.jpg" class="archetype-card rounded-image"/></a>
-<a href="https://scryfall.com/card/m21/15/defiant-strike"><img src="https://c1.scryfall.com/file/scryfall-cards/normal/front/5/c/5c23869b-c99a-49dd-9e29-fcc0eb63fad1.jpg" class="archetype-card rounded-image"/></a>
-<a href="https://scryfall.com/card/isd/51/delver-of-secrets-insectile-aberration"><img src="https://c1.scryfall.com/file/scryfall-cards/normal/front/1/1/11bf83bb-c95b-4b4f-9a56-ce7a1816307a.jpg" class="archetype-card rounded-image"/></a>
-<a href="https://scryfall.com/card/bfz/76/dispel"><img src="https://c1.scryfall.com/file/scryfall-cards/normal/front/b/c/bceab6b3-6b64-4964-a501-ce806a6c13ad.jpg" class="archetype-card rounded-image"/></a>
-<a href="https://scryfall.com/card/bfz/58/eldrazi-skyspawner"><img src="https://c1.scryfall.com/file/scryfall-cards/normal/front/9/c/9c9c1a10-446e-492a-95cc-a459dc6c08a0.jpg" class="archetype-card rounded-image"/></a>
-<a href="https://scryfall.com/card/ima/54/elusive-spellfist"><img src="https://cards.scryfall.io/normal/front/a/a/aac94901-f4ec-4888-82ef-87fd2b20cf11.jpg" class="archetype-card rounded-image"/></a>
-<a href="https://scryfall.com/card/eld/11/faerie-guidemother-gift-of-the-fae"><img src="https://cards.scryfall.io/normal/front/e/8/e8bbece8-9620-44d9-b991-350fe952538a.jpg" class="archetype-card rounded-image"/></a>
-<a href="https://scryfall.com/card/2xm/256/flayer-husk"><img src="https://c1.scryfall.com/file/scryfall-cards/normal/front/2/0/20b394f9-644d-426e-801b-110774092018.jpg" class="archetype-card rounded-image"/></a>
-<a href="https://scryfall.com/card/dis/10/guardian-of-the-guildpact"><img src="https://c1.scryfall.com/file/scryfall-cards/normal/front/c/8/c8dd004b-01e4-4fe1-a164-9f2ea8d7d88e.jpg" class="archetype-card rounded-image"/></a>
-<a href="https://scryfall.com/card/cmd/17/journey-to-nowhere"><img src="https://c1.scryfall.com/file/scryfall-cards/normal/front/4/6/4686b51c-e02b-48c1-bafe-e8d08a5407b9.jpg" class="archetype-card rounded-image"/></a>
-<a href="https://scryfall.com/card/mm3/11/kor-skyfisher"><img src="https://c1.scryfall.com/file/scryfall-cards/normal/front/d/7/d7501662-1216-4e08-bd2b-e0a459057942.jpg" class="archetype-card rounded-image"/></a>
-<a href="https://scryfall.com/card/rix/11/legion-conquistador"><img src="https://c1.scryfall.com/file/scryfall-cards/normal/front/b/a/ba197b31-97b8-447e-b8fd-3eefd5ccdc72.jpg" class="archetype-card rounded-image"/></a>
-<a href="https://scryfall.com/card/iko/20/light-of-hope"><img src="https://cards.scryfall.io/normal/front/b/c/bcb00599-e082-49b0-88f3-ef91b75595e4.jpg" class="archetype-card rounded-image"/></a>
-<a href="https://scryfall.com/card/ima/66/mana-leak"><img src="https://c1.scryfall.com/file/scryfall-cards/normal/front/2/4/247939d9-87e9-4f01-b223-fb4cfa7dbbe1.jpg" class="archetype-card rounded-image"/></a>
-<a href="https://scryfall.com/card/eld/52/mantle-of-tides"><img src="https://cards.scryfall.io/normal/front/c/0/c058d01e-f705-4407-bd9e-a2d127afdf04.jpg" class="archetype-card rounded-image"/></a>
-<a href="https://scryfall.com/card/ema/60/memory-lapse"><img src="https://c1.scryfall.com/file/scryfall-cards/normal/front/3/0/30202613-d05f-4f47-af97-d0b75ccac293.jpg" class="archetype-card rounded-image"/></a>
-<a href="https://scryfall.com/card/khc/42/mulldrifter"><img src="https://c1.scryfall.com/file/scryfall-cards/normal/front/3/4/345fd005-5052-4500-a260-3649500e21f4.jpg" class="archetype-card rounded-image"/></a>
-<a href="https://scryfall.com/card/iko/60/of-one-mind"><img src="https://c1.scryfall.com/file/scryfall-cards/normal/front/c/9/c95fb136-f21d-4f3a-82b7-bcf490b7e90c.jpg" class="archetype-card rounded-image"/></a>
-<a href="https://scryfall.com/card/c21/125/ponder"><img src="https://c1.scryfall.com/file/scryfall-cards/normal/front/9/c/9cee2eb1-f60e-4626-ba4a-b543142ca950.jpg" class="archetype-card rounded-image"/></a>
-<a href="https://scryfall.com/card/cmr/84/preordain"><img src="https://c1.scryfall.com/file/scryfall-cards/normal/front/1/4/1453f92e-df2d-4789-aa1b-a5b5c51567d4.jpg" class="archetype-card rounded-image"/></a>
-<a href="https://scryfall.com/card/khc/43/sea-gate-oracle"><img src="https://c1.scryfall.com/file/scryfall-cards/normal/front/4/9/498743ce-0ca5-488a-ae5e-d348b274bf3b.jpg" class="archetype-card rounded-image"/></a>
-<a href="https://scryfall.com/card/ima/29/seeker-of-the-way"><img src="https://c1.scryfall.com/file/scryfall-cards/normal/front/5/2/52d7aafb-969f-4a39-9af3-125f7f5c99f3.jpg" class="archetype-card rounded-image"/></a>
-<a href="https://scryfall.com/card/som/209/sylvok-lifestaff"><img src="https://c1.scryfall.com/file/scryfall-cards/normal/front/a/b/abbc5ae5-8e8b-4106-844f-2d49d2a51ed9.jpg" class="archetype-card rounded-image"/></a>
-<a href="https://scryfall.com/card/2xm/35/thraben-inspector"><img src="https://c1.scryfall.com/file/scryfall-cards/normal/front/2/b/2be39749-ad6f-4160-99eb-c677eee7f1b2.jpg" class="archetype-card rounded-image"/></a>
-<a href="https://scryfall.com/card/ddu/41/trinket-mage"><img src="https://c1.scryfall.com/file/scryfall-cards/normal/front/9/a/9a7800f7-95cd-4f5c-b054-4afad8924367.jpg" class="archetype-card rounded-image"/></a>
-<a href="https://scryfall.com/card/cmr/106/warden-of-evos-isle"><img src="https://c1.scryfall.com/file/scryfall-cards/normal/front/6/b/6bfc5cef-aa9b-45d4-a9c3-4b157e4ed193.jpg" class="archetype-card rounded-image"/></a>
-<a href="https://scryfall.com/card/jud/57/wormfang-drake"><img src="https://c1.scryfall.com/file/scryfall-cards/normal/front/b/6/b6afd312-6448-4bd1-8539-0910cefead0d.jpg" class="archetype-card rounded-image"/></a>
+<a href="https://scryfall.com/card/tsr/6/aven-riftwatcher"><img src="https://cards.scryfall.io/normal/front/2/6/261691c8-371d-49b6-9c9b-50ece5984aa2.jpg" class="archetype-card rounded-image"/></a>
+<a href="https://scryfall.com/card/cmm/81/counterspell"><img src="https://cards.scryfall.io/normal/front/8/4/8493131c-0a7b-4be6-a8a2-0b425f4f67fb.jpg" class="archetype-card rounded-image"/></a>
+<a href="https://scryfall.com/card/m21/15/defiant-strike"><img src="https://cards.scryfall.io/normal/front/5/c/5c23869b-c99a-49dd-9e29-fcc0eb63fad1.jpg" class="archetype-card rounded-image"/></a>
+<a href="https://scryfall.com/card/mid/47/delver-of-secrets-insectile-aberration"><img src="https://cards.scryfall.io/normal/front/a/b/abff6c81-65a4-48fa-ba8f-580f87b0344a.jpg" class="archetype-card rounded-image"/></a>
+<a href="https://scryfall.com/card/bfz/76/dispel"><img src="https://cards.scryfall.io/normal/front/b/c/bceab6b3-6b64-4964-a501-ce806a6c13ad.jpg" class="archetype-card rounded-image"/></a>
+<a href="https://scryfall.com/card/bfz/58/eldrazi-skyspawner"><img src="https://cards.scryfall.io/normal/front/9/c/9c9c1a10-446e-492a-95cc-a459dc6c08a0.jpg" class="archetype-card rounded-image"/></a>
+<a href="https://scryfall.com/card/ima/54/elusive-spellfist"><img src="https://c1.scryfall.com/file/scryfall-cards/normal/front/a/a/aac94901-f4ec-4888-82ef-87fd2b20cf11.jpg" class="archetype-card rounded-image"/></a>
+<a href="https://scryfall.com/card/eld/11/faerie-guidemother-gift-of-the-fae"><img src="https://c1.scryfall.com/file/scryfall-cards/normal/front/e/8/e8bbece8-9620-44d9-b991-350fe952538a.jpg" class="archetype-card rounded-image"/></a>
+<a href="https://scryfall.com/card/2xm/256/flayer-husk"><img src="https://cards.scryfall.io/normal/front/2/0/20b394f9-644d-426e-801b-110774092018.jpg" class="archetype-card rounded-image"/></a>
+<a href="https://scryfall.com/card/dis/10/guardian-of-the-guildpact"><img src="https://cards.scryfall.io/normal/front/c/8/c8dd004b-01e4-4fe1-a164-9f2ea8d7d88e.jpg" class="archetype-card rounded-image"/></a>
+<a href="https://scryfall.com/card/cmd/17/journey-to-nowhere"><img src="https://cards.scryfall.io/normal/front/4/6/4686b51c-e02b-48c1-bafe-e8d08a5407b9.jpg" class="archetype-card rounded-image"/></a>
+<a href="https://scryfall.com/card/mm3/11/kor-skyfisher"><img src="https://cards.scryfall.io/normal/front/d/7/d7501662-1216-4e08-bd2b-e0a459057942.jpg" class="archetype-card rounded-image"/></a>
+<a href="https://scryfall.com/card/rix/11/legion-conquistador"><img src="https://cards.scryfall.io/normal/front/b/a/ba197b31-97b8-447e-b8fd-3eefd5ccdc72.jpg" class="archetype-card rounded-image"/></a>
+<a href="https://scryfall.com/card/iko/20/light-of-hope"><img src="https://c1.scryfall.com/file/scryfall-cards/normal/front/b/c/bcb00599-e082-49b0-88f3-ef91b75595e4.jpg" class="archetype-card rounded-image"/></a>
+<a href="https://scryfall.com/card/2x2/58/mana-leak"><img src="https://cards.scryfall.io/normal/front/1/7/179236d9-6fe2-4db6-bdfb-f851e8d531a2.jpg" class="archetype-card rounded-image"/></a>
+<a href="https://scryfall.com/card/eld/52/mantle-of-tides"><img src="https://c1.scryfall.com/file/scryfall-cards/normal/front/c/0/c058d01e-f705-4407-bd9e-a2d127afdf04.jpg" class="archetype-card rounded-image"/></a>
+<a href="https://scryfall.com/card/ema/60/memory-lapse"><img src="https://cards.scryfall.io/normal/front/3/0/30202613-d05f-4f47-af97-d0b75ccac293.jpg" class="archetype-card rounded-image"/></a>
+<a href="https://scryfall.com/card/mkc/111/mulldrifter"><img src="https://cards.scryfall.io/normal/front/e/b/eb6d8d1c-8d23-4273-9c9b-f3b71eb0e105.jpg" class="archetype-card rounded-image"/></a>
+<a href="https://scryfall.com/card/iko/60/of-one-mind"><img src="https://cards.scryfall.io/normal/front/c/9/c95fb136-f21d-4f3a-82b7-bcf490b7e90c.jpg" class="archetype-card rounded-image"/></a>
+<a href="https://scryfall.com/card/otc/105/ponder"><img src="https://cards.scryfall.io/normal/front/5/a/5af43ceb-56d2-47d4-ab43-853338ab293c.jpg" class="archetype-card rounded-image"/></a>
+<a href="https://scryfall.com/card/otc/107/preordain"><img src="https://cards.scryfall.io/normal/front/1/2/122f2cc2-5f4d-497c-96b5-ed5698f28b51.jpg" class="archetype-card rounded-image"/></a>
+<a href="https://scryfall.com/card/khc/43/sea-gate-oracle"><img src="https://cards.scryfall.io/normal/front/4/9/498743ce-0ca5-488a-ae5e-d348b274bf3b.jpg" class="archetype-card rounded-image"/></a>
+<a href="https://scryfall.com/card/2x2/28/seeker-of-the-way"><img src="https://cards.scryfall.io/normal/front/e/9/e9e3cb28-d318-4d5d-b5bf-1ea7c6249a89.jpg" class="archetype-card rounded-image"/></a>
+<a href="https://scryfall.com/card/som/209/sylvok-lifestaff"><img src="https://cards.scryfall.io/normal/front/a/b/abbc5ae5-8e8b-4106-844f-2d49d2a51ed9.jpg" class="archetype-card rounded-image"/></a>
+<a href="https://scryfall.com/card/cmm/66/thraben-inspector"><img src="https://cards.scryfall.io/normal/front/2/9/299cc386-2ed5-4504-9ba6-17a52e0c9a0c.jpg" class="archetype-card rounded-image"/></a>
+<a href="https://scryfall.com/card/ddu/41/trinket-mage"><img src="https://cards.scryfall.io/normal/front/9/a/9a7800f7-95cd-4f5c-b054-4afad8924367.jpg" class="archetype-card rounded-image"/></a>
+<a href="https://scryfall.com/card/cmr/106/warden-of-evos-isle"><img src="https://cards.scryfall.io/normal/front/6/b/6bfc5cef-aa9b-45d4-a9c3-4b157e4ed193.jpg" class="archetype-card rounded-image"/></a>
+<a href="https://scryfall.com/card/dmr/74/wormfang-drake"><img src="https://cards.scryfall.io/normal/front/5/0/501128c7-c541-4de8-a041-9367c032dbb3.jpg" class="archetype-card rounded-image"/></a>
 </details><br/>
 
 

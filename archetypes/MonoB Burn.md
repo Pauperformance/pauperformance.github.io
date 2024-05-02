@@ -19,12 +19,12 @@
 
 <details>
   <summary>Click here to expand</summary>
-<a href="https://scryfall.com/card/ddk/57/bump-in-the-night"><img src="https://c1.scryfall.com/file/scryfall-cards/normal/front/3/2/320e394c-c8b1-42ad-91a5-6d57296f85ab.jpg" class="archetype-card rounded-image"/></a>
-<a href="https://scryfall.com/card/thb/96/fruit-of-tizerus"><img src="https://c1.scryfall.com/file/scryfall-cards/normal/front/6/6/66e577a0-e5d7-4e6a-919c-d85c2ae819ce.jpg" class="archetype-card rounded-image"/></a>
-<a href="https://scryfall.com/card/cm2/77/sign-in-blood"><img src="https://c1.scryfall.com/file/scryfall-cards/normal/front/6/1/61388c28-9428-473c-973a-0a82b6b83d62.jpg" class="archetype-card rounded-image"/></a>
-<a href="https://scryfall.com/card/eve/44/soul-reap"><img src="https://c1.scryfall.com/file/scryfall-cards/normal/front/e/2/e2a129e2-bed5-4ee7-b223-851452f72682.jpg" class="archetype-card rounded-image"/></a>
-<a href="https://scryfall.com/card/m19/120/sovereigns-bite"><img src="https://c1.scryfall.com/file/scryfall-cards/normal/front/5/3/5326d251-bb91-4653-b1fa-44f14c4e0b88.jpg" class="archetype-card rounded-image"/></a>
-<a href="https://scryfall.com/card/vma/143/tyrants-choice"><img src="https://c1.scryfall.com/file/scryfall-cards/normal/front/5/e/5ed37b1c-7377-40bd-ae98-7f5ce56156b1.jpg" class="archetype-card rounded-image"/></a>
+<a href="https://scryfall.com/card/ddk/57/bump-in-the-night"><img src="https://cards.scryfall.io/normal/front/3/2/320e394c-c8b1-42ad-91a5-6d57296f85ab.jpg" class="archetype-card rounded-image"/></a>
+<a href="https://scryfall.com/card/thb/96/fruit-of-tizerus"><img src="https://cards.scryfall.io/normal/front/6/6/66e577a0-e5d7-4e6a-919c-d85c2ae819ce.jpg" class="archetype-card rounded-image"/></a>
+<a href="https://scryfall.com/card/cm2/77/sign-in-blood"><img src="https://cards.scryfall.io/normal/front/6/1/61388c28-9428-473c-973a-0a82b6b83d62.jpg" class="archetype-card rounded-image"/></a>
+<a href="https://scryfall.com/card/eve/44/soul-reap"><img src="https://cards.scryfall.io/normal/front/e/2/e2a129e2-bed5-4ee7-b223-851452f72682.jpg" class="archetype-card rounded-image"/></a>
+<a href="https://scryfall.com/card/m19/120/sovereigns-bite"><img src="https://cards.scryfall.io/normal/front/5/3/5326d251-bb91-4653-b1fa-44f14c4e0b88.jpg" class="archetype-card rounded-image"/></a>
+<a href="https://scryfall.com/card/vma/143/tyrants-choice"><img src="https://cards.scryfall.io/normal/front/5/e/5ed37b1c-7377-40bd-ae98-7f5ce56156b1.jpg" class="archetype-card rounded-image"/></a>
 </details><br/>
 
 
@@ -33,19 +33,19 @@
 
 <details>
   <summary>Click here to expand</summary>
-<a href="https://scryfall.com/card/soi/98/alms-of-the-vein"><img src="https://c1.scryfall.com/file/scryfall-cards/normal/front/7/9/79b80948-a3cd-4962-8fce-d58f2db7e68e.jpg" class="archetype-card rounded-image"/></a>
-<a href="https://scryfall.com/card/znc/40/changeling-outcast"><img src="https://c1.scryfall.com/file/scryfall-cards/normal/front/0/d/0dc046ef-eeb9-4ef7-8cc5-172b7346355e.jpg" class="archetype-card rounded-image"/></a>
-<a href="https://scryfall.com/card/cma/58/evincars-justice"><img src="https://c1.scryfall.com/file/scryfall-cards/normal/front/2/e/2e0fffc6-4395-441e-95a9-c9cf33af7907.jpg" class="archetype-card rounded-image"/></a>
-<a href="https://scryfall.com/card/nph/61/geths-verdict"><img src="https://c1.scryfall.com/file/scryfall-cards/normal/front/7/a/7a20b5a2-8613-49ed-b5cc-7cae9d0e0850.jpg" class="archetype-card rounded-image"/></a>
-<a href="https://scryfall.com/card/zen/93/guul-draz-vampire"><img src="https://c1.scryfall.com/file/scryfall-cards/normal/front/f/3/f3c92575-1c97-48bf-801b-22f34040cf9a.jpg" class="archetype-card rounded-image"/></a>
-<a href="https://scryfall.com/card/mor/68/morsel-theft"><img src="https://c1.scryfall.com/file/scryfall-cards/normal/front/c/a/cac48152-81c0-4cdc-8e3c-bfbe7b068b28.jpg" class="archetype-card rounded-image"/></a>
-<a href="https://scryfall.com/card/kld/95/night-market-lookout"><img src="https://c1.scryfall.com/file/scryfall-cards/normal/front/4/e/4edb03b7-e5a2-4ba1-b0ec-bfbfeaa94efd.jpg" class="archetype-card rounded-image"/></a>
-<a href="https://scryfall.com/card/neo/117/okiba-reckoner-raid-nezumi-road-captain"><img src="https://c1.scryfall.com/file/scryfall-cards/normal/front/4/f/4f0582b4-d951-4450-b158-4a34109e48cd.jpg" class="archetype-card rounded-image"/></a>
-<a href="https://scryfall.com/card/cmr/330/perilous-myr"><img src="https://c1.scryfall.com/file/scryfall-cards/normal/front/5/a/5a15c8ef-04ad-4aab-a7f1-c7a90c10eb50.jpg" class="archetype-card rounded-image"/></a>
-<a href="https://scryfall.com/card/mor/74/prickly-boggart"><img src="https://c1.scryfall.com/file/scryfall-cards/normal/front/5/5/55121b63-22a6-4923-82e9-c55f66742980.jpg" class="archetype-card rounded-image"/></a>
-<a href="https://scryfall.com/card/iko/99/serrated-scorpion"><img src="https://c1.scryfall.com/file/scryfall-cards/normal/front/b/c/bc8f0242-35e1-4409-9321-56e742e8fef4.jpg" class="archetype-card rounded-image"/></a>
-<a href="https://scryfall.com/card/vow/136/vampires-kiss"><img src="https://c1.scryfall.com/file/scryfall-cards/normal/front/9/7/974bf8cc-4259-48cc-8e7f-1580bb010d3f.jpg" class="archetype-card rounded-image"/></a>
-<a href="https://scryfall.com/card/khm/117/village-rites"><img src="https://c1.scryfall.com/file/scryfall-cards/normal/front/0/f/0fab9ee8-776a-48e5-b309-bcd381e67bf7.jpg" class="archetype-card rounded-image"/></a>
+<a href="https://scryfall.com/card/soi/98/alms-of-the-vein"><img src="https://cards.scryfall.io/normal/front/7/9/79b80948-a3cd-4962-8fce-d58f2db7e68e.jpg" class="archetype-card rounded-image"/></a>
+<a href="https://scryfall.com/card/otc/128/changeling-outcast"><img src="https://cards.scryfall.io/normal/front/a/b/ab499df5-ed76-43ad-81b3-70afd0487ccd.jpg" class="archetype-card rounded-image"/></a>
+<a href="https://scryfall.com/card/cma/58/evincars-justice"><img src="https://cards.scryfall.io/normal/front/2/e/2e0fffc6-4395-441e-95a9-c9cf33af7907.jpg" class="archetype-card rounded-image"/></a>
+<a href="https://scryfall.com/card/nph/61/geths-verdict"><img src="https://cards.scryfall.io/normal/front/7/a/7a20b5a2-8613-49ed-b5cc-7cae9d0e0850.jpg" class="archetype-card rounded-image"/></a>
+<a href="https://scryfall.com/card/zen/93/guul-draz-vampire"><img src="https://cards.scryfall.io/normal/front/f/3/f3c92575-1c97-48bf-801b-22f34040cf9a.jpg" class="archetype-card rounded-image"/></a>
+<a href="https://scryfall.com/card/mor/68/morsel-theft"><img src="https://cards.scryfall.io/normal/front/c/a/cac48152-81c0-4cdc-8e3c-bfbe7b068b28.jpg" class="archetype-card rounded-image"/></a>
+<a href="https://scryfall.com/card/kld/95/night-market-lookout"><img src="https://cards.scryfall.io/normal/front/4/e/4edb03b7-e5a2-4ba1-b0ec-bfbfeaa94efd.jpg" class="archetype-card rounded-image"/></a>
+<a href="https://scryfall.com/card/neo/117/okiba-reckoner-raid-nezumi-road-captain"><img src="https://cards.scryfall.io/normal/front/4/f/4f0582b4-d951-4450-b158-4a34109e48cd.jpg" class="archetype-card rounded-image"/></a>
+<a href="https://scryfall.com/card/cmr/330/perilous-myr"><img src="https://cards.scryfall.io/normal/front/5/a/5a15c8ef-04ad-4aab-a7f1-c7a90c10eb50.jpg" class="archetype-card rounded-image"/></a>
+<a href="https://scryfall.com/card/mor/74/prickly-boggart"><img src="https://cards.scryfall.io/normal/front/5/5/55121b63-22a6-4923-82e9-c55f66742980.jpg" class="archetype-card rounded-image"/></a>
+<a href="https://scryfall.com/card/cmm/185/serrated-scorpion"><img src="https://cards.scryfall.io/normal/front/7/8/78509763-4bb8-4030-b205-76917de75c57.jpg" class="archetype-card rounded-image"/></a>
+<a href="https://scryfall.com/card/vow/136/vampires-kiss"><img src="https://cards.scryfall.io/normal/front/9/7/974bf8cc-4259-48cc-8e7f-1580bb010d3f.jpg" class="archetype-card rounded-image"/></a>
+<a href="https://scryfall.com/card/lcc/212/village-rites"><img src="https://cards.scryfall.io/normal/front/2/8/2841339b-faef-407d-9838-d03fe80e6294.jpg" class="archetype-card rounded-image"/></a>
 </details><br/>
 
 
