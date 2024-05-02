@@ -58,7 +58,7 @@
 <a href="https://scryfall.com/card/neo/66/the-modern-age-vector-glider"><img src="https://c1.scryfall.com/file/scryfall-cards/normal/front/e/e/ee60a8e9-3201-4a7e-8aa4-2c5e1042c8a5.jpg" class="archetype-card rounded-image"/></a>
 <a href="https://scryfall.com/card/jmp/185/thought-scour"><img src="https://c1.scryfall.com/file/scryfall-cards/normal/front/1/4/142944d5-1b11-4ec4-b6b4-b5c03e682cd3.jpg" class="archetype-card rounded-image"/></a>
 <a href="https://scryfall.com/card/uma/8/ulamogs-crusher"><img src="https://c1.scryfall.com/file/scryfall-cards/normal/front/e/d/eda0fd38-38e6-4e9b-9c17-4d855e01b1e1.jpg" class="archetype-card rounded-image"/></a>
-<a href="https://scryfall.com/card/iko/102/unexpected-fangs"><img src="https://cards.scryfall.io/normal/front/a/a/aa6494ad-a35e-4b09-8623-7740f3c20b0b.jpg" class="archetype-card rounded-image"/></a>
+<a href="https://scryfall.com/card/iko/102/unexpected-fangs"><img src="https://c1.scryfall.com/file/scryfall-cards/normal/front/a/a/aa6494ad-a35e-4b09-8623-7740f3c20b0b.jpg" class="archetype-card rounded-image"/></a>
 </details><br/>
 
 
