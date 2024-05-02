@@ -2,16 +2,23 @@
 <!-- Changes directly applied here will be lost. -->
 <!-- If you plan to update this page, please update the template at https://github.com/Pauperformance/pauperformance-bot -->
 <!-- Templates can be found under pauperformance-bot/resources/templates/ -->
-# Storm
+# Grapeshot Storm
+<br/>
+
+
+**Dominant mana**: <img src="../resources/images/mana/B.png" class="dominant-mana-icon"/> <img src="../resources/images/mana/R.png" class="dominant-mana-icon"/>
+
+**Type**: `Combo`
 
 **Description**: _Still missing. Please join us on [Discord](https://discord.gg/fYQbpjjkQ3) to contribute to the Academy._
 
-## **Archetypes**
 
-[Chatterstorm](../archetypes/Chatterstorm.html)  
-[Cycling Storm](../archetypes/Cycling%20Storm.html)  
-[Empty The Warrens Storm](../archetypes/Empty%20The%20Warrens%20Storm.html)  
-[Grapeshot Storm](../archetypes/Grapeshot%20Storm.html)  
-[Ping Storm](../archetypes/Ping%20Storm.html)  
-[Zubera Storm](../archetypes/Zubera%20Storm.html)  
+
+
+
+
+
+
+
+
 

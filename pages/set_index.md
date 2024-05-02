@@ -770,11 +770,11 @@ Lines in **bold** correspond to sets that have introduced new cards in the [Paup
 | 749       | plg22         | Love Your LGS 2022                              | 2022-07-01   |
 | **750**   | **2x2**       | **Double Masters 2022**                         | **2022-07-08** |
 | 751       | sch           | Store Championships 2022                        | 2022-07-09   |
-| 752       | 40k           | Warhammer 40,000                                | 2022-08-12   |
+| **752**   | **40k**       | **Warhammer 40,000**                            | **2022-08-12** |
 | 753       | t40k          | Warhammer 40,000 Tokens                         | 2022-08-12   |
 | 754       | dmc           | Dominaria United Commander                      | 2022-09-09   |
-| 755       | dmu           | Dominaria United                                | 2022-09-09   |
-| 756       | bro           | The Brothers' War                               | 2022-11-18   |
+| **755**   | **dmu**       | **Dominaria United**                            | **2022-09-09** |
+| **756**   | **bro**       | **The Brothers' War**                           | **2022-11-18** |
 | 757       | ysnc          | Alchemy: New Capenna                            | 2022-06-02   |
 | 758       | pclb          | Commander Legends: Battle for Baldur's Gate Promos | 2022-06-10   |
 | 759       | aclb          | Battle for Baldur's Gate Art Series             | 2022-06-10   |
@@ -818,13 +818,13 @@ Lines in **bold** correspond to sets that have introduced new cards in the [Paup
 | 797       | pewk          | Eternal Weekend 2022                            | 2022-11-26   |
 | 798       | 30a           | 30th Anniversary Edition                        | 2022-11-28   |
 | 799       | t30a          | 30th Anniversary Tokens                         | 2022-11-28   |
-| 800       | j22           | Jumpstart 2022                                  | 2022-12-02   |
+| **800**   | **j22**       | **Jumpstart 2022**                              | **2022-12-02** |
 | 801       | scd           | Starter Commander Decks                         | 2022-12-02   |
 | 802       | tscd          | Starter Commander Deck Tokens                   | 2022-12-02   |
 | 803       | pr23          | Regional Championship Qualifiers 2023           | 2023-01-01   |
 | 804       | onc           | Phyrexia: All Will Be One Commander             | 2023-02-03   |
-| 805       | one           | Phyrexia: All Will Be One                       | 2023-02-03   |
-| 806       | dmr           | Dominaria Remastered                            | 2023-03-31   |
+| **805**   | **one**       | **Phyrexia: All Will Be One**                   | **2023-02-03** |
+| **806**   | **dmr**       | **Dominaria Remastered**                        | **2023-03-31** |
 | 807       | bchr          | Chronicles Foreign Black Border                 | 1995-07-01   |
 | 808       | pdci          | DCI Promos                                      | 2006-01-01   |
 | 809       | phtr          | 2016 Heroes of the Realm                        | 2017-09-20   |
@@ -864,6 +864,90 @@ Lines in **bold** correspond to sets that have introduced new cards in the [Paup
 | 843       | ltc           | Tales of Middle-earth Commander                 | 2023-06-23   |
 | 844       | ltr           | The Lord of the Rings: Tales of Middle-earth    | 2023-06-23   |
 | 845       | cmm           | Commander Masters                               | 2023-08-04   |
-| 846       | tmoc          | March of the Machine Commander Tokens           | 2023-04-21   |
-| 847       | tmul          | Multiverse Legends Tokens                       | 2023-04-21   |
+| 846       | plst          | The List                                        | 2020-09-26   |
+| 847       | pcmr          | Commander Legends Promos                        | 2020-11-20   |
+| 848       | p30m          | 30th Anniversary Misc Promos                    | 2022-09-02   |
+| 849       | fdmu          | Dominaria United Jumpstart Front Cards          | 2022-09-09   |
+| 850       | ptdmu         | Dominaria United Southeast Asia Tokens          | 2022-09-09   |
+| 851       | ulst          | The List (Unfinity Foil Edition)                | 2022-10-07   |
+| 852       | fbro          | The Brothers' War Jumpstart Front Cards         | 2022-11-18   |
+| 853       | ptbro         | The Brothers' War Southeast Asia Tokens         | 2022-11-18   |
+| 854       | sbro          | The Brothers' War Substitute Cards              | 2022-11-18   |
+| 855       | amom          | March of the Machine Art Series                 | 2023-04-21   |
+| 856       | fmom          | March of the Machine Jumpstart Front Cards      | 2023-04-21   |
+| 857       | pmom          | March of the Machine Promos                     | 2023-04-21   |
+| 858       | smom          | March of the Machine Substitute Cards           | 2023-04-21   |
+| 859       | tmoc          | March of the Machine Commander Tokens           | 2023-04-21   |
+| 860       | tmul          | Multiverse Legends Tokens                       | 2023-04-21   |
+| 861       | wmom          | MOM Japanese Promo Tokens                       | 2023-04-21   |
+| 862       | altr          | Tales of Middle-earth Art Series                | 2023-06-23   |
+| 863       | fltr          | Tales of Middle-earth Front Cards               | 2023-06-23   |
+| 864       | pltr          | Tales of Middle-earth Promos                    | 2023-06-23   |
+| 865       | tltc          | Tales of Middle-earth Commander Tokens          | 2023-06-23   |
+| 866       | tltr          | Tales of Middle-earth Tokens                    | 2023-06-23   |
+| 867       | pf23          | MagicFest 2023                                  | 2023-07-01   |
+| 868       | ea3           | Explorer Anthology 3                            | 2023-07-18   |
+| 869       | ha7           | Historic Anthology 7                            | 2023-07-18   |
+| 870       | ph22          | 2022 Heroes of the Realm                        | 2023-08-01   |
+| 871       | acmm          | Commander Masters Art Series                    | 2023-08-04   |
+| 872       | tcmm          | Commander Masters Tokens                        | 2023-08-04   |
+| 873       | p30t          | 30th Anniversary Celebration Tokyo              | 2023-09-01   |
+| 874       | awoe          | Wilds of Eldraine Art Series                    | 2023-09-08   |
+| 875       | pmda          | Magic × Duel Masters Promos                     | 2023-09-08   |
+| 876       | ptsr          | Time Spiral Remastered Promos                   | 2023-09-08   |
+| 877       | pwoe          | Wilds of Eldraine Promos                        | 2023-09-08   |
+| 878       | twoc          | Wilds of Eldraine Commander Tokens              | 2023-09-08   |
+| 879       | twoe          | Wilds of Eldraine Tokens                        | 2023-09-08   |
+| 880       | woc           | Wilds of Eldraine Commander                     | 2023-09-08   |
+| **881**   | **woe**       | **Wilds of Eldraine**                           | **2023-09-08** |
+| 882       | wot           | Wilds of Eldraine: Enchanting Tales             | 2023-09-08   |
+| 883       | wwoe          | WOE Japanese Promo Tokens                       | 2023-09-08   |
+| 884       | ywoe          | Alchemy: Wilds of Eldraine                      | 2023-10-10   |
+| 885       | twho          | Doctor Who Tokens                               | 2023-10-13   |
+| **886**   | **who**       | **Doctor Who**                                  | **2023-10-13** |
+| 887       | alci          | The Lost Caverns of Ixalan Art Series           | 2023-11-17   |
+| 888       | lcc           | The Lost Caverns of Ixalan Commander            | 2023-11-17   |
+| **889**   | **lci**       | **The Lost Caverns of Ixalan**                  | **2023-11-17** |
+| 890       | plci          | The Lost Caverns of Ixalan Promos               | 2023-11-17   |
+| 891       | pmat          | March of the Machine: The Aftermath Promos      | 2023-11-17   |
+| **892**   | **rex**       | **Jurassic World Collection**                   | **2023-11-17** |
+| 893       | slci          | The Lost Caverns of Ixalan Substitute Cards     | 2023-11-17   |
+| 894       | spg           | Special Guests                                  | 2023-11-17   |
+| 895       | tlcc          | The Lost Caverns of Ixalan Commander Tokens     | 2023-11-17   |
+| 896       | tlci          | The Lost Caverns of Ixalan Tokens               | 2023-11-17   |
+| 897       | trex          | Jurassic World Collection Tokens                | 2023-11-17   |
+| 898       | ylci          | Alchemy: Ixalan                                 | 2023-12-05   |
+| 899       | pf24          | MagicFest 2024                                  | 2024-01-01   |
+| 900       | pw24          | Wizards Play Network 2024                       | 2024-01-01   |
+| **901**   | **rvr**       | **Ravnica Remastered**                          | **2024-01-12** |
+| 902       | trvr          | Ravnica Remastered Tokens                       | 2024-01-12   |
+| 903       | pl24          | Year of the Dragon 2024                         | 2024-02-08   |
+| 904       | amkm          | Murders at Karlov Manor Art Series              | 2024-02-09   |
+| 905       | mkc           | Murders at Karlov Manor Commander               | 2024-02-09   |
+| **906**   | **mkm**       | **Murders at Karlov Manor**                     | **2024-02-09** |
+| 907       | pmkm          | Murders at Karlov Manor Promos                  | 2024-02-09   |
+| 908       | tmkc          | Murders at Karlov Manor Commander Tokens        | 2024-02-09   |
+| 909       | tmkm          | Murders at Karlov Manor Tokens                  | 2024-02-09   |
+| 910       | wmkm          | MKM Japanese Promo Tokens                       | 2024-02-09   |
+| 911       | pss4          | MKM Standard Showdown                           | 2024-02-10   |
+| 912       | clu           | Ravnica: Clue Edition                           | 2024-02-23   |
+| 913       | fclu          | Ravnica: Clue Edition Front Cards               | 2024-02-23   |
+| 914       | ymkm          | Alchemy: Murders at Karlov Manor                | 2024-03-05   |
+| **915**   | **pip**       | **Fallout**                                     | **2024-03-08** |
+| 916       | tpip          | Fallout Tokens                                  | 2024-03-08   |
+| 917       | big           | The Big Score                                   | 2024-04-19   |
+| **918**   | **otc**       | **Outlaws of Thunder Junction Commander**       | **2024-04-19** |
+| **919**   | **otj**       | **Outlaws of Thunder Junction**                 | **2024-04-19** |
+| 920       | otp           | Breaking News                                   | 2024-04-19   |
+| 921       | potj          | Outlaws of Thunder Junction Promos              | 2024-04-19   |
+| 922       | tbig          | The Big Score Tokens                            | 2024-04-19   |
+| 923       | totc          | Outlaws of Thunder Junction Commander Tokens    | 2024-04-19   |
+| 924       | totj          | Outlaws of Thunder Junction Tokens              | 2024-04-19   |
+| 925       | totp          | Breaking News Tokens                            | 2024-04-19   |
+| 926       | m3c           | Modern Horizons 3 Commander                     | 2024-06-06   |
+| 927       | mh3           | Modern Horizons 3                               | 2024-06-07   |
+| 928       | acr           | Assassin's Creed                                | 2024-07-05   |
+| 929       | blb           | Bloomburrow                                     | 2024-08-02   |
+| 930       | pcbb          | Cowboy Bebop                                    | 2024-08-02   |
+| 931       | tblb          | Bloomburrow Tokens                              | 2024-08-02   |
 
