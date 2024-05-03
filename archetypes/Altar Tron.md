@@ -22,10 +22,3 @@
 
 
 
-
-## **Resources**
-
-| 🗣️ | Name | Author | Date |
-| -- | ---- | ------ | ---- |
-| 🇬🇧 | <a target="_blank" href="https://chumpblocckami.github.io/vedalken/paupergeddon/2023">Paupergeddon Lecco 2023: Report and spieghino</a> | Matteo Mazzola | 2023-04-08   |
-
