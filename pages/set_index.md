@@ -950,4 +950,5 @@ Lines in **bold** correspond to sets that have introduced new cards in the [Paup
 | 929       | blb           | Bloomburrow                                     | 2024-08-02   |
 | 930       | pcbb          | Cowboy Bebop                                    | 2024-08-02   |
 | 931       | tblb          | Bloomburrow Tokens                              | 2024-08-02   |
+| 932       | aotj          | Outlaws of Thunder Junction Art Series          | 2024-06-02   |
 
