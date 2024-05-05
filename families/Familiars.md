@@ -10,4 +10,5 @@
 
 [Esper Familiars](../archetypes/Esper%20Familiars.html)  
 [Familiars](../archetypes/Familiars.html)  
+[Jeskai Familiars](../archetypes/Jeskai%20Familiars.html)  
 
