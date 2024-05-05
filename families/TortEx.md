@@ -10,6 +10,7 @@
 
 [Abzan TortEx](../archetypes/Abzan%20TortEx.html)  
 [Golgari TortEx](../archetypes/Golgari%20TortEx.html)  
+[Jund TortEx](../archetypes/Jund%20TortEx.html)  
 [Orzhov TortEx](../archetypes/Orzhov%20TortEx.html)  
 [Rakdos TortEx](../archetypes/Rakdos%20TortEx.html)  
 
