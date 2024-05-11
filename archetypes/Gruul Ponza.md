@@ -5,6 +5,8 @@
 # Gruul Ponza
 <br/>
 
+**Aliases**: `RG Ponza`
+
 
 **Dominant mana**: <img src="../resources/images/mana/R.png" class="dominant-mana-icon"/> <img src="../resources/images/mana/G.png" class="dominant-mana-icon"/>
 
