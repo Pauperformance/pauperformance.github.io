@@ -5,6 +5,8 @@
 # Affinity
 <br/>
 
+**Aliases**: `Grixis Affinity`
+
 
 **Dominant mana**: <img src="../resources/images/mana/B.png" class="dominant-mana-icon"/> <img src="../resources/images/mana/U.png" class="dominant-mana-icon"/> <img src="../resources/images/mana/R.png" class="dominant-mana-icon"/>
 
