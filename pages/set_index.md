@@ -954,5 +954,6 @@ Lines in **bold** correspond to sets that have introduced new cards in the [Paup
 | 933       | yotj          | Alchemy: Outlaws of Thunder Junction            | 2024-06-07   |
 | 934       | da1           | Unknown Event                                   | 2023-02-15   |
 | 935       | h2r           | Modern Horizons 2 Timeshifts                    | 2024-06-07   |
-| 936       | tmh3          | Modern Horizons 3 Tokens                        | 2024-06-07   |
+| 936       | tm3c          |  Modern Horizons 3 Commander Tokens             | 2024-06-07   |
+| 937       | tmh3          | Modern Horizons 3 Tokens                        | 2024-06-07   |
 
