@@ -45,7 +45,6 @@
 <a href="https://scryfall.com/card/clu/141/lightning-bolt"><img src="https://cards.scryfall.io/normal/front/7/7/77c6fa74-5543-42ac-9ead-0e890b188e99.jpg" class="archetype-card rounded-image"/></a>
 <a href="https://scryfall.com/card/mh2/139/revolutionist"><img src="https://cards.scryfall.io/normal/front/b/b/bb8f3008-a3ba-4f73-afa6-ad81074b3196.jpg" class="archetype-card rounded-image"/></a>
 <a href="https://scryfall.com/card/ddi/67/searing-blaze"><img src="https://cards.scryfall.io/normal/front/f/6/f659d464-13dd-49e2-a842-098dcba49659.jpg" class="archetype-card rounded-image"/></a>
-<a href="https://scryfall.com/card/khm/282/snow-covered-mountain"><img src="https://c1.scryfall.com/file/scryfall-cards/normal/front/5/4/5474e67c-628f-41b0-aa31-3d85a267265a.jpg" class="archetype-card rounded-image"/></a>
 <a href="https://scryfall.com/card/eve/44/soul-reap"><img src="https://cards.scryfall.io/normal/front/e/2/e2a129e2-bed5-4ee7-b223-851452f72682.jpg" class="archetype-card rounded-image"/></a>
 <a href="https://scryfall.com/card/one/151/thrill-of-possibility"><img src="https://cards.scryfall.io/normal/front/1/e/1efd4ae5-0076-46a0-a113-58cfff53144f.jpg" class="archetype-card rounded-image"/></a>
 <a href="https://scryfall.com/card/vma/143/tyrants-choice"><img src="https://cards.scryfall.io/normal/front/5/e/5ed37b1c-7377-40bd-ae98-7f5ce56156b1.jpg" class="archetype-card rounded-image"/></a>

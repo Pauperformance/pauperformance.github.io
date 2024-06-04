@@ -46,8 +46,6 @@
 <a href="https://scryfall.com/card/2x2/156/rancor"><img src="https://cards.scryfall.io/normal/front/8/6/86d6b411-4a31-4bfc-8dd6-e19f553bb29b.jpg" class="archetype-card rounded-image"/></a>
 <a href="https://scryfall.com/card/kld/230/renegade-freighter"><img src="https://cards.scryfall.io/normal/front/7/a/7a10e2c3-0132-4eb2-94f0-5915caca2a17.jpg" class="archetype-card rounded-image"/></a>
 <a href="https://scryfall.com/card/csp/97/skred"><img src="https://cards.scryfall.io/normal/front/b/3/b3d6d42a-7607-4361-acc4-7f3cb956bfc9.jpg" class="archetype-card rounded-image"/></a>
-<a href="https://scryfall.com/card/khm/284/snow-covered-forest"><img src="https://c1.scryfall.com/file/scryfall-cards/normal/front/c/a/ca17acea-f079-4e53-8176-a2f5c5c408a1.jpg" class="archetype-card rounded-image"/></a>
-<a href="https://scryfall.com/card/khm/282/snow-covered-mountain"><img src="https://c1.scryfall.com/file/scryfall-cards/normal/front/5/4/5474e67c-628f-41b0-aa31-3d85a267265a.jpg" class="archetype-card rounded-image"/></a>
 <a href="https://scryfall.com/card/a25/34/squadron-hawk"><img src="https://cards.scryfall.io/normal/front/9/e/9e81806d-5d87-4032-ad94-c2cdeabecdbf.jpg" class="archetype-card rounded-image"/></a>
 <a href="https://scryfall.com/card/mm2/168/vines-of-vastwood"><img src="https://cards.scryfall.io/normal/front/6/2/6203e3d4-8998-41d6-9f7e-b68af0f1f8b5.jpg" class="archetype-card rounded-image"/></a>
 </details><br/>
