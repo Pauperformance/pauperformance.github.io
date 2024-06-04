@@ -42,6 +42,7 @@
 <a href="https://scryfall.com/card/ori/154/mage-ring-bully"><img src="https://c1.scryfall.com/file/scryfall-cards/normal/front/1/a/1a129f22-dd7e-4b2c-a514-a2ac55bb5661.jpg" class="archetype-card rounded-image"/></a>
 <a href="https://scryfall.com/card/2xm/208/manamorphose"><img src="https://cards.scryfall.io/normal/front/f/a/faf9070e-14be-4ce5-a19a-6addc79359c1.jpg" class="archetype-card rounded-image"/></a>
 <a href="https://scryfall.com/card/jou/110/satyr-hoplite"><img src="https://cards.scryfall.io/normal/front/b/8/b8754d66-facb-432e-a6c2-91430a6dec94.jpg" class="archetype-card rounded-image"/></a>
+<a href="https://scryfall.com/card/khm/282/snow-covered-mountain"><img src="https://c1.scryfall.com/file/scryfall-cards/normal/front/5/4/5474e67c-628f-41b0-aa31-3d85a267265a.jpg" class="archetype-card rounded-image"/></a>
 <a href="https://scryfall.com/card/cmm/264/temur-battle-rage"><img src="https://cards.scryfall.io/normal/front/3/7/375bc646-942e-4bf5-9c71-2c5471828e35.jpg" class="archetype-card rounded-image"/></a>
 </details><br/>
 
