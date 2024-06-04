@@ -42,6 +42,7 @@
 <a href="https://scryfall.com/card/clu/166/ivy-lane-denizen"><img src="https://cards.scryfall.io/normal/front/b/6/b6936a91-db5d-4977-a851-2dc6a4141ceb.jpg" class="archetype-card rounded-image"/></a>
 <a href="https://scryfall.com/card/khm/178/jaspera-sentinel"><img src="https://cards.scryfall.io/normal/front/1/a/1a68615d-9808-479d-aa80-50651246954e.jpg" class="archetype-card rounded-image"/></a>
 <a href="https://scryfall.com/card/a25/182/nettle-sentinel"><img src="https://cards.scryfall.io/normal/front/3/f/3f290ed2-d1a8-4a90-a3a7-8240652dc109.jpg" class="archetype-card rounded-image"/></a>
+<a href="https://scryfall.com/card/khm/284/snow-covered-forest"><img src="https://c1.scryfall.com/file/scryfall-cards/normal/front/c/a/ca17acea-f079-4e53-8176-a2f5c5c408a1.jpg" class="archetype-card rounded-image"/></a>
 <a href="https://scryfall.com/card/ddg/32/spidersilk-armor"><img src="https://cards.scryfall.io/normal/front/e/5/e55202a1-c246-4b5b-94d6-43c86a69d61a.jpg" class="archetype-card rounded-image"/></a>
 <a href="https://scryfall.com/card/jmp/435/sylvan-ranger"><img src="https://cards.scryfall.io/normal/front/e/3/e36a5be0-a730-4cb7-9d1e-6ae84b5bc872.jpg" class="archetype-card rounded-image"/></a>
 <a href="https://scryfall.com/card/mm2/168/vines-of-vastwood"><img src="https://cards.scryfall.io/normal/front/6/2/6203e3d4-8998-41d6-9f7e-b68af0f1f8b5.jpg" class="archetype-card rounded-image"/></a>

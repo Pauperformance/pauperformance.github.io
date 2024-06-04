@@ -26,6 +26,8 @@
 <a href="https://scryfall.com/card/c18/95/ninja-of-the-deep-hours"><img src="https://cards.scryfall.io/normal/front/5/f/5fea7980-55e1-47c1-ab18-a89c976b55fc.jpg" class="archetype-card rounded-image"/></a>
 <a href="https://scryfall.com/card/otc/107/preordain"><img src="https://cards.scryfall.io/normal/front/1/2/122f2cc2-5f4d-497c-96b5-ed5698f28b51.jpg" class="archetype-card rounded-image"/></a>
 <a href="https://scryfall.com/card/csp/97/skred"><img src="https://cards.scryfall.io/normal/front/b/3/b3d6d42a-7607-4361-acc4-7f3cb956bfc9.jpg" class="archetype-card rounded-image"/></a>
+<a href="https://scryfall.com/card/khm/278/snow-covered-island"><img src="https://c1.scryfall.com/file/scryfall-cards/normal/front/3/b/3bfa5ebc-5623-4eec-89ea-dc187489ee4a.jpg" class="archetype-card rounded-image"/></a>
+<a href="https://scryfall.com/card/khm/282/snow-covered-mountain"><img src="https://c1.scryfall.com/file/scryfall-cards/normal/front/5/4/5474e67c-628f-41b0-aa31-3d85a267265a.jpg" class="archetype-card rounded-image"/></a>
 <a href="https://scryfall.com/card/mma/65/spellstutter-sprite"><img src="https://cards.scryfall.io/normal/front/3/8/3899605d-2203-4ab6-9ff5-69490382eea4.jpg" class="archetype-card rounded-image"/></a>
 </details><br/>
 

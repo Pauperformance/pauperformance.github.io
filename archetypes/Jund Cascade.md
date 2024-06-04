@@ -47,6 +47,7 @@
 <a href="https://scryfall.com/card/neo/190/harmonious-emergence"><img src="https://cards.scryfall.io/normal/front/c/9/c92ff968-b436-4313-8375-8a3bb41f9892.jpg" class="archetype-card rounded-image"/></a>
 <a href="https://scryfall.com/card/afr/198/owlbear"><img src="https://cards.scryfall.io/normal/front/3/0/30e8a00f-8131-470d-8072-4c23b812281a.jpg" class="archetype-card rounded-image"/></a>
 <a href="https://scryfall.com/card/tsr/223/penumbra-spider"><img src="https://cards.scryfall.io/normal/front/c/8/c862a2f7-673e-44bd-b8ee-e4295da1e0d5.jpg" class="archetype-card rounded-image"/></a>
+<a href="https://scryfall.com/card/mh2/256/slagwoods-bridge"><img src="https://cards.scryfall.io/normal/front/e/5/e51b48e9-a75a-4acd-9462-5e1ac2b0d803.jpg" class="archetype-card rounded-image"/></a>
 <a href="https://scryfall.com/card/iko/100/suffocating-fumes"><img src="https://cards.scryfall.io/normal/front/6/6/66b562e4-35df-4aee-848d-ceb4204bbe58.jpg" class="archetype-card rounded-image"/></a>
 <a href="https://scryfall.com/card/dmc/172/terminate"><img src="https://cards.scryfall.io/normal/front/0/4/0476ea45-ee6d-41c6-93b8-50f92cb37b78.jpg" class="archetype-card rounded-image"/></a>
 <a href="https://scryfall.com/card/cmm/190/thorn-of-the-black-rose"><img src="https://cards.scryfall.io/normal/front/b/4/b4b266e2-1cad-40df-bc0e-3e1464b299b3.jpg" class="archetype-card rounded-image"/></a>
