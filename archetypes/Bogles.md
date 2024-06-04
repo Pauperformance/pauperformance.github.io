@@ -58,6 +58,7 @@ However, given its popularity, opponents typically reserve sideboard slots for (
 <a href="https://scryfall.com/card/cmm/314/ram-through"><img src="https://cards.scryfall.io/normal/front/4/4/44063a90-e4cf-4bcd-a128-792de15371a7.jpg" class="archetype-card rounded-image"/></a>
 <a href="https://scryfall.com/card/thb/36/sentinels-eyes"><img src="https://cards.scryfall.io/normal/front/3/2/32adc118-b81e-48c2-b7ef-b62e8c3308d6.jpg" class="archetype-card rounded-image"/></a>
 <a href="https://scryfall.com/card/otc/206/silhana-ledgewalker"><img src="https://cards.scryfall.io/normal/front/2/1/21a2d11e-48b7-4e9a-a574-838cc26c2b17.jpg" class="archetype-card rounded-image"/></a>
+<a href="https://scryfall.com/card/khm/284/snow-covered-forest"><img src="https://c1.scryfall.com/file/scryfall-cards/normal/front/c/a/ca17acea-f079-4e53-8176-a2f5c5c408a1.jpg" class="archetype-card rounded-image"/></a>
 <a href="https://scryfall.com/card/uma/184/spider-umbra"><img src="https://cards.scryfall.io/normal/front/7/6/762b8d61-53c9-41e1-aaa7-098b91d9b938.jpg" class="archetype-card rounded-image"/></a>
 <a href="https://scryfall.com/card/cmm/838/spirited-companion"><img src="https://cards.scryfall.io/normal/front/7/e/7e038684-c476-41db-a1b1-57c46e5b4c9a.jpg" class="archetype-card rounded-image"/></a>
 <a href="https://scryfall.com/card/aer/126/unbridled-growth"><img src="https://cards.scryfall.io/normal/front/3/9/393fc419-a6ce-447d-9994-744cf41f9a27.jpg" class="archetype-card rounded-image"/></a>

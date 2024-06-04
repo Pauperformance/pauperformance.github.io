@@ -55,6 +55,7 @@
 <a href="https://scryfall.com/card/otc/107/preordain"><img src="https://cards.scryfall.io/normal/front/1/2/122f2cc2-5f4d-497c-96b5-ed5698f28b51.jpg" class="archetype-card rounded-image"/></a>
 <a href="https://scryfall.com/card/c19/69/prismatic-strands"><img src="https://cards.scryfall.io/normal/front/e/f/efd85985-abc1-430a-9210-63109c90a82d.jpg" class="archetype-card rounded-image"/></a>
 <a href="https://scryfall.com/card/2x2/28/seeker-of-the-way"><img src="https://cards.scryfall.io/normal/front/e/9/e9e3cb28-d318-4d5d-b5bf-1ea7c6249a89.jpg" class="archetype-card rounded-image"/></a>
+<a href="https://scryfall.com/card/khm/278/snow-covered-island"><img src="https://c1.scryfall.com/file/scryfall-cards/normal/front/3/b/3bfa5ebc-5623-4eec-89ea-dc187489ee4a.jpg" class="archetype-card rounded-image"/></a>
 <a href="https://scryfall.com/card/m12/37/stonehorn-dignitary"><img src="https://cards.scryfall.io/normal/front/c/3/c3797f7f-489d-4735-af56-6359e0fa0a6b.jpg" class="archetype-card rounded-image"/></a>
 <a href="https://scryfall.com/card/uma/40/tethmos-high-priest"><img src="https://cards.scryfall.io/normal/front/5/1/51baeea2-a922-4e98-8253-f395546c30c8.jpg" class="archetype-card rounded-image"/></a>
 <a href="https://scryfall.com/card/cmm/66/thraben-inspector"><img src="https://cards.scryfall.io/normal/front/2/9/299cc386-2ed5-4504-9ba6-17a52e0c9a0c.jpg" class="archetype-card rounded-image"/></a>
