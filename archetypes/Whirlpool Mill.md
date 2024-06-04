@@ -41,7 +41,6 @@
 <a href="https://scryfall.com/card/jvc/27/gush"><img src="https://cards.scryfall.io/normal/front/d/4/d4a3a921-3b7f-474c-b8c3-67a1a6ba5cc1.jpg" class="archetype-card rounded-image"/></a>
 <a href="https://scryfall.com/card/tsr/73/logic-knot"><img src="https://c1.scryfall.com/file/scryfall-cards/normal/front/6/2/624feb0e-f683-4eb6-a63b-7872d0e28f1f.jpg" class="archetype-card rounded-image"/></a>
 <a href="https://scryfall.com/card/otc/112/serum-visions"><img src="https://cards.scryfall.io/normal/front/5/b/5b75eb6b-d76c-4b92-b042-13493f9ef164.jpg" class="archetype-card rounded-image"/></a>
-<a href="https://scryfall.com/card/khm/278/snow-covered-island"><img src="https://c1.scryfall.com/file/scryfall-cards/normal/front/3/b/3bfa5ebc-5623-4eec-89ea-dc187489ee4a.jpg" class="archetype-card rounded-image"/></a>
 <a href="https://scryfall.com/card/jvc/16/spire-golem"><img src="https://cards.scryfall.io/normal/front/b/2/b299c599-1a10-4122-ac0b-8f52a9cec7b6.jpg" class="archetype-card rounded-image"/></a>
 </details><br/>
 

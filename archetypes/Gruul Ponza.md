@@ -42,7 +42,6 @@
 <a href="https://scryfall.com/card/rna/234/gruul-locket"><img src="https://c1.scryfall.com/file/scryfall-cards/normal/front/1/e/1ec78880-a8ec-4c87-bc3f-e2a79d154884.jpg" class="archetype-card rounded-image"/></a>
 <a href="https://scryfall.com/card/clu/141/lightning-bolt"><img src="https://cards.scryfall.io/normal/front/7/7/77c6fa74-5543-42ac-9ead-0e890b188e99.jpg" class="archetype-card rounded-image"/></a>
 <a href="https://scryfall.com/card/afr/198/owlbear"><img src="https://cards.scryfall.io/normal/front/3/0/30e8a00f-8131-470d-8072-4c23b812281a.jpg" class="archetype-card rounded-image"/></a>
-<a href="https://scryfall.com/card/mh2/256/slagwoods-bridge"><img src="https://cards.scryfall.io/normal/front/e/5/e51b48e9-a75a-4acd-9462-5e1ac2b0d803.jpg" class="archetype-card rounded-image"/></a>
 <a href="https://scryfall.com/card/cmm/6/ulamogs-crusher"><img src="https://cards.scryfall.io/normal/front/6/9/699c0f6f-b26b-4741-8140-8a6030cad127.jpg" class="archetype-card rounded-image"/></a>
 <a href="https://scryfall.com/card/mkc/195/wild-growth"><img src="https://cards.scryfall.io/normal/front/4/7/47260e7c-29bf-46f1-a029-9da7bbb418b5.jpg" class="archetype-card rounded-image"/></a>
 </details><br/>
