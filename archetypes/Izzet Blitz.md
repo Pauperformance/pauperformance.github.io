@@ -47,8 +47,6 @@
 <a href="https://scryfall.com/card/2xm/208/manamorphose"><img src="https://cards.scryfall.io/normal/front/f/a/faf9070e-14be-4ce5-a19a-6addc79359c1.jpg" class="archetype-card rounded-image"/></a>
 <a href="https://scryfall.com/card/otc/104/opt"><img src="https://cards.scryfall.io/normal/front/6/7/67bcf3fd-fca0-4cdb-b625-bac5fadd00e3.jpg" class="archetype-card rounded-image"/></a>
 <a href="https://scryfall.com/card/ogw/47/slip-through-space"><img src="https://cards.scryfall.io/normal/front/2/d/2dee6dca-9c7e-4347-bea7-7fecc69e5827.jpg" class="archetype-card rounded-image"/></a>
-<a href="https://scryfall.com/card/khm/278/snow-covered-island"><img src="https://c1.scryfall.com/file/scryfall-cards/normal/front/3/b/3bfa5ebc-5623-4eec-89ea-dc187489ee4a.jpg" class="archetype-card rounded-image"/></a>
-<a href="https://scryfall.com/card/khm/282/snow-covered-mountain"><img src="https://c1.scryfall.com/file/scryfall-cards/normal/front/5/4/5474e67c-628f-41b0-aa31-3d85a267265a.jpg" class="archetype-card rounded-image"/></a>
 <a href="https://scryfall.com/card/2x2/63/spell-pierce"><img src="https://cards.scryfall.io/normal/front/3/5/35b8a9db-d126-4038-abb1-74dcc5b36136.jpg" class="archetype-card rounded-image"/></a>
 <a href="https://scryfall.com/card/mm2/66/vapor-snag"><img src="https://cards.scryfall.io/normal/front/5/9/59f26d0a-e9f3-442f-b5c6-8016cf736432.jpg" class="archetype-card rounded-image"/></a>
 </details><br/>

@@ -64,7 +64,6 @@
 <a href="https://scryfall.com/card/gnt/40/rolling-thunder"><img src="https://cards.scryfall.io/normal/front/0/d/0df50703-5655-4bc4-adc9-d719c2da3bfd.jpg" class="archetype-card rounded-image"/></a>
 <a href="https://scryfall.com/card/khc/43/sea-gate-oracle"><img src="https://cards.scryfall.io/normal/front/4/9/498743ce-0ca5-488a-ae5e-d348b274bf3b.jpg" class="archetype-card rounded-image"/></a>
 <a href="https://scryfall.com/card/clu/228/simic-signet"><img src="https://cards.scryfall.io/normal/front/7/8/78824387-d996-42df-91d3-61a699f34197.jpg" class="archetype-card rounded-image"/></a>
-<a href="https://scryfall.com/card/khm/278/snow-covered-island"><img src="https://c1.scryfall.com/file/scryfall-cards/normal/front/3/b/3bfa5ebc-5623-4eec-89ea-dc187489ee4a.jpg" class="archetype-card rounded-image"/></a>
 <a href="https://scryfall.com/card/m12/37/stonehorn-dignitary"><img src="https://cards.scryfall.io/normal/front/c/3/c3797f7f-489d-4735-af56-6359e0fa0a6b.jpg" class="archetype-card rounded-image"/></a>
 <a href="https://scryfall.com/card/cmm/6/ulamogs-crusher"><img src="https://cards.scryfall.io/normal/front/6/9/699c0f6f-b26b-4741-8140-8a6030cad127.jpg" class="archetype-card rounded-image"/></a>
 <a href="https://scryfall.com/card/dom/72/unwind"><img src="https://cards.scryfall.io/normal/front/9/7/97da6607-9131-4f8b-8af3-63439a59b78b.jpg" class="archetype-card rounded-image"/></a>

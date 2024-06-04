@@ -66,7 +66,6 @@
 <a href="https://scryfall.com/card/mh1/64/prohibit"><img src="https://cards.scryfall.io/normal/front/0/a/0ae544bf-7229-4b82-99ad-32c3af36e30f.jpg" class="archetype-card rounded-image"/></a>
 <a href="https://scryfall.com/card/stx/52/serpentine-curve"><img src="https://cards.scryfall.io/normal/front/d/6/d651b9e9-d723-4340-a010-d71b2a697e73.jpg" class="archetype-card rounded-image"/></a>
 <a href="https://scryfall.com/card/dmr/66/snap"><img src="https://cards.scryfall.io/normal/front/f/1/f13406c6-f208-402a-94d3-a94a24f03563.jpg" class="archetype-card rounded-image"/></a>
-<a href="https://scryfall.com/card/khm/278/snow-covered-island"><img src="https://c1.scryfall.com/file/scryfall-cards/normal/front/3/b/3bfa5ebc-5623-4eec-89ea-dc187489ee4a.jpg" class="archetype-card rounded-image"/></a>
 <a href="https://scryfall.com/card/mm3/52/spire-monitor"><img src="https://cards.scryfall.io/normal/front/f/3/f30ed6e1-d713-40ae-81f6-d2d66914bbb9.jpg" class="archetype-card rounded-image"/></a>
 <a href="https://scryfall.com/card/iko/100/suffocating-fumes"><img src="https://cards.scryfall.io/normal/front/6/6/66b562e4-35df-4aee-848d-ceb4204bbe58.jpg" class="archetype-card rounded-image"/></a>
 <a href="https://scryfall.com/card/cmm/192/tragic-slip"><img src="https://cards.scryfall.io/normal/front/5/8/588332da-8ec5-49d1-a365-455beb7913a2.jpg" class="archetype-card rounded-image"/></a>
