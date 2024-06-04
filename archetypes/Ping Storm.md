@@ -38,6 +38,7 @@
 
 <details>
   <summary>Click here to expand</summary>
+<a href="https://scryfall.com/card/khm/282/snow-covered-mountain"><img src="https://c1.scryfall.com/file/scryfall-cards/normal/front/5/4/5474e67c-628f-41b0-aa31-3d85a267265a.jpg" class="archetype-card rounded-image"/></a>
 <a href="https://scryfall.com/card/mh1/191/weather-the-storm"><img src="https://cards.scryfall.io/normal/front/f/6/f6a9fa51-78c3-42e6-8c2e-39658f59ed87.jpg" class="archetype-card rounded-image"/></a>
 </details><br/>
 
