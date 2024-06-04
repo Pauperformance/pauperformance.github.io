@@ -23,8 +23,6 @@
 <a href="https://scryfall.com/card/jmp/320/fling"><img src="https://cards.scryfall.io/normal/front/8/f/8f42d773-c742-4465-b6d5-31feaba49146.jpg" class="archetype-card rounded-image"/></a>
 <a href="https://scryfall.com/card/otc/105/ponder"><img src="https://cards.scryfall.io/normal/front/5/a/5af43ceb-56d2-47d4-ab43-853338ab293c.jpg" class="archetype-card rounded-image"/></a>
 <a href="https://scryfall.com/card/stx/52/serpentine-curve"><img src="https://cards.scryfall.io/normal/front/d/6/d651b9e9-d723-4340-a010-d71b2a697e73.jpg" class="archetype-card rounded-image"/></a>
-<a href="https://scryfall.com/card/khm/278/snow-covered-island"><img src="https://c1.scryfall.com/file/scryfall-cards/normal/front/3/b/3bfa5ebc-5623-4eec-89ea-dc187489ee4a.jpg" class="archetype-card rounded-image"/></a>
-<a href="https://scryfall.com/card/khm/282/snow-covered-mountain"><img src="https://c1.scryfall.com/file/scryfall-cards/normal/front/5/4/5474e67c-628f-41b0-aa31-3d85a267265a.jpg" class="archetype-card rounded-image"/></a>
 </details><br/>
 
 

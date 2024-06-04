@@ -61,7 +61,6 @@ A hybrid version of the two exists, with main deck cascade that can transform in
 <a href="https://scryfall.com/card/scg/72/reaping-the-graves"><img src="https://cards.scryfall.io/normal/front/7/6/760a66bd-2821-4710-8f02-3c30772dd884.jpg" class="archetype-card rounded-image"/></a>
 <a href="https://scryfall.com/card/afr/71/secret-door"><img src="https://cards.scryfall.io/normal/front/3/1/3191e400-aa4e-4955-aca0-ecbe63ea240f.jpg" class="archetype-card rounded-image"/></a>
 <a href="https://scryfall.com/card/me1/166/shield-sphere"><img src="https://cards.scryfall.io/normal/front/7/a/7a76a97e-a857-4593-ae7c-e393d8a868ac.jpg" class="archetype-card rounded-image"/></a>
-<a href="https://scryfall.com/card/khm/284/snow-covered-forest"><img src="https://c1.scryfall.com/file/scryfall-cards/normal/front/c/a/ca17acea-f079-4e53-8176-a2f5c5c408a1.jpg" class="archetype-card rounded-image"/></a>
 <a href="https://scryfall.com/card/me2/184/tinder-wall"><img src="https://cards.scryfall.io/normal/front/1/e/1e62598f-0a91-4cfd-9a28-c3bda61c9ead.jpg" class="archetype-card rounded-image"/></a>
 <a href="https://scryfall.com/card/znr/173/tuktuk-rubblefort"><img src="https://cards.scryfall.io/normal/front/0/2/02eedf9d-e26c-405c-aee5-1b3493dc5e9b.jpg" class="archetype-card rounded-image"/></a>
 <a href="https://scryfall.com/card/cmm/6/ulamogs-crusher"><img src="https://cards.scryfall.io/normal/front/6/9/699c0f6f-b26b-4741-8140-8a6030cad127.jpg" class="archetype-card rounded-image"/></a>
