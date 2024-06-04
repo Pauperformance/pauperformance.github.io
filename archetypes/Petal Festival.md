@@ -46,7 +46,6 @@
 <a href="https://scryfall.com/card/otc/105/ponder"><img src="https://cards.scryfall.io/normal/front/5/a/5af43ceb-56d2-47d4-ab43-853338ab293c.jpg" class="archetype-card rounded-image"/></a>
 <a href="https://scryfall.com/card/chk/140/rend-flesh"><img src="https://cards.scryfall.io/normal/front/9/2/92b300a3-e6a8-4ca9-bb26-03f57b5ff6ec.jpg" class="archetype-card rounded-image"/></a>
 <a href="https://scryfall.com/card/dmr/66/snap"><img src="https://cards.scryfall.io/normal/front/f/1/f13406c6-f208-402a-94d3-a94a24f03563.jpg" class="archetype-card rounded-image"/></a>
-<a href="https://scryfall.com/card/khm/278/snow-covered-island"><img src="https://c1.scryfall.com/file/scryfall-cards/normal/front/3/b/3bfa5ebc-5623-4eec-89ea-dc187489ee4a.jpg" class="archetype-card rounded-image"/></a>
 <a href="https://scryfall.com/card/chk/144/soulless-revival"><img src="https://cards.scryfall.io/normal/front/6/b/6b36712c-1ccb-4efe-8db8-823b9b80a99f.jpg" class="archetype-card rounded-image"/></a>
 <a href="https://scryfall.com/card/mh1/71/stream-of-thought"><img src="https://cards.scryfall.io/normal/front/8/b/8b75bef5-a039-4edf-8e43-56b8d089605e.jpg" class="archetype-card rounded-image"/></a>
 <a href="https://scryfall.com/card/apc/125/temporal-spring"><img src="https://cards.scryfall.io/normal/front/b/5/b584dfd1-a56c-406e-8504-47ea136dc102.jpg" class="archetype-card rounded-image"/></a>

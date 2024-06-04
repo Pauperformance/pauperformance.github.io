@@ -28,8 +28,6 @@
 <a href="https://scryfall.com/card/mkc/111/mulldrifter"><img src="https://cards.scryfall.io/normal/front/e/b/eb6d8d1c-8d23-4273-9c9b-f3b71eb0e105.jpg" class="archetype-card rounded-image"/></a>
 <a href="https://scryfall.com/card/otc/107/preordain"><img src="https://cards.scryfall.io/normal/front/1/2/122f2cc2-5f4d-497c-96b5-ed5698f28b51.jpg" class="archetype-card rounded-image"/></a>
 <a href="https://scryfall.com/card/khc/43/sea-gate-oracle"><img src="https://cards.scryfall.io/normal/front/4/9/498743ce-0ca5-488a-ae5e-d348b274bf3b.jpg" class="archetype-card rounded-image"/></a>
-<a href="https://scryfall.com/card/khm/278/snow-covered-island"><img src="https://c1.scryfall.com/file/scryfall-cards/normal/front/3/b/3bfa5ebc-5623-4eec-89ea-dc187489ee4a.jpg" class="archetype-card rounded-image"/></a>
-<a href="https://scryfall.com/card/khm/282/snow-covered-mountain"><img src="https://c1.scryfall.com/file/scryfall-cards/normal/front/5/4/5474e67c-628f-41b0-aa31-3d85a267265a.jpg" class="archetype-card rounded-image"/></a>
 </details><br/>
 
 
