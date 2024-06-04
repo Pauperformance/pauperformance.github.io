@@ -49,7 +49,6 @@
 <a href="https://scryfall.com/card/eld/131/merchant-of-the-vale-haggle"><img src="https://cards.scryfall.io/normal/front/0/b/0b4399b6-e67f-40d8-8676-f5db7e04a6c9.jpg" class="archetype-card rounded-image"/></a>
 <a href="https://scryfall.com/card/arb/43/monstrous-carabid"><img src="https://cards.scryfall.io/normal/front/b/0/b09e668d-02ca-4164-88ee-c7ea6c665975.jpg" class="archetype-card rounded-image"/></a>
 <a href="https://scryfall.com/card/mh2/140/skophos-reaver"><img src="https://cards.scryfall.io/normal/front/3/2/32691e3f-dea9-45ac-96fe-96b34d5116a9.jpg" class="archetype-card rounded-image"/></a>
-<a href="https://scryfall.com/card/khm/282/snow-covered-mountain"><img src="https://c1.scryfall.com/file/scryfall-cards/normal/front/5/4/5474e67c-628f-41b0-aa31-3d85a267265a.jpg" class="archetype-card rounded-image"/></a>
 <a href="https://scryfall.com/card/dmc/172/terminate"><img src="https://cards.scryfall.io/normal/front/0/4/0476ea45-ee6d-41c6-93b8-50f92cb37b78.jpg" class="archetype-card rounded-image"/></a>
 <a href="https://scryfall.com/card/one/151/thrill-of-possibility"><img src="https://cards.scryfall.io/normal/front/1/e/1efd4ae5-0076-46a0-a113-58cfff53144f.jpg" class="archetype-card rounded-image"/></a>
 <a href="https://scryfall.com/card/znr/172/tormenting-voice"><img src="https://cards.scryfall.io/normal/front/6/d/6da46103-a14c-4aa2-92fc-fd758335caf4.jpg" class="archetype-card rounded-image"/></a>
