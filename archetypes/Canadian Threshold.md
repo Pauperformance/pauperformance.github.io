@@ -49,9 +49,6 @@
 <a href="https://scryfall.com/card/me3/47/remove-soul"><img src="https://cards.scryfall.io/normal/front/7/5/75c4b4d6-2230-4fb0-b127-b9e820d56048.jpg" class="archetype-card rounded-image"/></a>
 <a href="https://scryfall.com/card/uma/68/rune-snag"><img src="https://cards.scryfall.io/normal/front/4/0/40d72a34-0f31-4fec-b5a5-4574199bc312.jpg" class="archetype-card rounded-image"/></a>
 <a href="https://scryfall.com/card/csp/97/skred"><img src="https://cards.scryfall.io/normal/front/b/3/b3d6d42a-7607-4361-acc4-7f3cb956bfc9.jpg" class="archetype-card rounded-image"/></a>
-<a href="https://scryfall.com/card/khm/284/snow-covered-forest"><img src="https://c1.scryfall.com/file/scryfall-cards/normal/front/c/a/ca17acea-f079-4e53-8176-a2f5c5c408a1.jpg" class="archetype-card rounded-image"/></a>
-<a href="https://scryfall.com/card/khm/278/snow-covered-island"><img src="https://c1.scryfall.com/file/scryfall-cards/normal/front/3/b/3bfa5ebc-5623-4eec-89ea-dc187489ee4a.jpg" class="archetype-card rounded-image"/></a>
-<a href="https://scryfall.com/card/khm/282/snow-covered-mountain"><img src="https://c1.scryfall.com/file/scryfall-cards/normal/front/5/4/5474e67c-628f-41b0-aa31-3d85a267265a.jpg" class="archetype-card rounded-image"/></a>
 <a href="https://scryfall.com/card/mma/65/spellstutter-sprite"><img src="https://cards.scryfall.io/normal/front/3/8/3899605d-2203-4ab6-9ff5-69490382eea4.jpg" class="archetype-card rounded-image"/></a>
 <a href="https://scryfall.com/card/mm3/53/tandem-lookout"><img src="https://cards.scryfall.io/normal/front/3/e/3e44b411-ccb8-44c8-a021-2372c945f0d3.jpg" class="archetype-card rounded-image"/></a>
 <a href="https://scryfall.com/card/mid/164/thermo-alchemist"><img src="https://cards.scryfall.io/normal/front/b/4/b4c68bad-c7ee-4dbc-ad06-8c4d9446884e.jpg" class="archetype-card rounded-image"/></a>
