@@ -28,6 +28,7 @@
 <a href="https://scryfall.com/card/mkc/111/mulldrifter"><img src="https://cards.scryfall.io/normal/front/e/b/eb6d8d1c-8d23-4273-9c9b-f3b71eb0e105.jpg" class="archetype-card rounded-image"/></a>
 <a href="https://scryfall.com/card/c21/202/pulse-of-murasa"><img src="https://cards.scryfall.io/normal/front/a/4/a4b9f8f4-d704-4f16-8495-cf8185285859.jpg" class="archetype-card rounded-image"/></a>
 <a href="https://scryfall.com/card/khm/192/sarulfs-packmate"><img src="https://cards.scryfall.io/normal/front/6/0/6061113e-7dd8-4739-b4dd-55bb7f9e39a2.jpg" class="archetype-card rounded-image"/></a>
+<a href="https://scryfall.com/card/mh2/256/slagwoods-bridge"><img src="https://cards.scryfall.io/normal/front/e/5/e51b48e9-a75a-4acd-9462-5e1ac2b0d803.jpg" class="archetype-card rounded-image"/></a>
 </details><br/>
 
 
@@ -47,6 +48,9 @@
 <a href="https://scryfall.com/card/neo/190/harmonious-emergence"><img src="https://cards.scryfall.io/normal/front/c/9/c92ff968-b436-4313-8375-8a3bb41f9892.jpg" class="archetype-card rounded-image"/></a>
 <a href="https://scryfall.com/card/m21/193/llanowar-visionary"><img src="https://cards.scryfall.io/normal/front/d/6/d6e23afa-7e08-4049-baf0-d4d0134ba2c8.jpg" class="archetype-card rounded-image"/></a>
 <a href="https://scryfall.com/card/tsr/223/penumbra-spider"><img src="https://cards.scryfall.io/normal/front/c/8/c862a2f7-673e-44bd-b8ee-e4295da1e0d5.jpg" class="archetype-card rounded-image"/></a>
+<a href="https://scryfall.com/card/khm/284/snow-covered-forest"><img src="https://c1.scryfall.com/file/scryfall-cards/normal/front/c/a/ca17acea-f079-4e53-8176-a2f5c5c408a1.jpg" class="archetype-card rounded-image"/></a>
+<a href="https://scryfall.com/card/khm/278/snow-covered-island"><img src="https://c1.scryfall.com/file/scryfall-cards/normal/front/3/b/3bfa5ebc-5623-4eec-89ea-dc187489ee4a.jpg" class="archetype-card rounded-image"/></a>
+<a href="https://scryfall.com/card/khm/282/snow-covered-mountain"><img src="https://c1.scryfall.com/file/scryfall-cards/normal/front/5/4/5474e67c-628f-41b0-aa31-3d85a267265a.jpg" class="archetype-card rounded-image"/></a>
 <a href="https://scryfall.com/card/ncc/320/wickerbough-elder"><img src="https://cards.scryfall.io/normal/front/3/a/3a5832cc-f9f6-4881-99dd-c0728a52cabe.jpg" class="archetype-card rounded-image"/></a>
 </details><br/>
 
