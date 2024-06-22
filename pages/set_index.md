@@ -957,4 +957,5 @@ Lines in **bold** correspond to sets that have introduced new cards in the [Paup
 | 936       | amh3          | Modern Horizons 3 Art Series                    | 2024-06-14   |
 | 937       | tm3c          | Modern Horizons 3 Commander Tokens              | 2024-06-14   |
 | 938       | tmh3          | Modern Horizons 3 Tokens                        | 2024-06-14   |
+| 939       | pmh3          | Modern Horizons 3 Promos                        | 2024-06-14   |
 
