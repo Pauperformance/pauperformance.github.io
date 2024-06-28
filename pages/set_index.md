@@ -960,4 +960,5 @@ Lines in **bold** correspond to sets that have introduced new cards in the [Paup
 | 939       | pmh3          | Modern Horizons 3 Promos                        | 2024-06-14   |
 | 940       | tacr          | Assassin's Creed Tokens                         | 2024-07-05   |
 | 941       | dsk           | Duskmourn: House of Horror                      | 2024-09-27   |
+| 942       | fdn           | Foundations                                     | 2024-11-15   |
 
