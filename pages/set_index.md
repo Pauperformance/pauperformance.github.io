@@ -959,9 +959,10 @@ Lines in **bold** correspond to sets that have introduced new cards in the [Paup
 | 938       | tmh3          | Modern Horizons 3 Tokens                        | 2024-06-14   |
 | 939       | pmh3          | Modern Horizons 3 Promos                        | 2024-06-14   |
 | 940       | tacr          | Assassin's Creed Tokens                         | 2024-07-05   |
-| 941       | blc           | Bloomburrow Commander                           | 2024-07-28   |
-| 942       | plg24         | Love Your LGS 2024                              | 2024-08-06   |
-| 943       | dsc           | Duskmourn: House of Horror Commander            | 2024-09-27   |
-| 944       | dsk           | Duskmourn: House of Horror                      | 2024-09-27   |
-| 945       | fdn           | Foundations                                     | 2024-11-15   |
+| 941       | blc           | Bloomburrow Commander                           | 2024-08-02   |
+| 942       | tblc          | Bloomburrow Commander Tokens                    | 2024-08-02   |
+| 943       | plg24         | Love Your LGS 2024                              | 2024-08-06   |
+| 944       | dsc           | Duskmourn: House of Horror Commander            | 2024-09-27   |
+| 945       | dsk           | Duskmourn: House of Horror                      | 2024-09-27   |
+| 946       | fdn           | Foundations                                     | 2024-11-15   |
 
