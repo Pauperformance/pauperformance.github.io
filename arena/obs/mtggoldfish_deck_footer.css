@@ -1,0 +1,41 @@
+/*
+
+Type: Browser
+URL: https://pauperformance.com/arena/current/popout
+Width: 2160
+Height: 42
+✓ Use custom frame rate
+FPS: 30
+
+Custom CSS:
+@import url("https://pauperformance.com/arena/obs/mtggoldfish_deck_footer.css");
+
+*/
+
+@import url("https://pauperformance.com/arena/obs/pauperformance_font.css");
+
+body {
+    overflow: hidden;
+    background: transparent;
+    visibility: hidden;
+}
+
+.popout-deck-title {
+    visibility: visible;
+    font-size: 20px !important;
+    font-family: 'bebas_neueregular';
+    text-align: center;
+    width: 100%;
+    position: fixed;
+}
+
+.popout-deck-container {
+    width: max-content;
+    height: max-content;
+}
+
+.popout-deck-title {
+    text-align: center;
+    width: 100%;
+    position: fixed;
+}

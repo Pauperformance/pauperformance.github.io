@@ -1,0 +1,38 @@
+/*
+
+Type: Browser
+URL: http://mtgbot.tv/overlay/compact.html?username=Pauperformance
+Width: 255
+Height: 55
+✓ Use custom frame rate
+FPS: 30
+
+Custom CSS:
+@import url("https://pauperformance.com/arena/obs/mtgbot.css");
+
+*/
+
+@import url("https://pauperformance.com/arena/obs/pauperformance_font.css");
+
+body {
+    overflow: hidden;
+    background: transparent;
+}
+
+#background {
+    border-color: #9b8337 !important;
+}
+
+#statustext {
+    font-size: 16px;
+    font-family: 'bebas_neueregular';
+}
+
+#tourntext {
+    font-family: 'bebas_neueregular';
+}
+
+#recordtext {
+    font-size: 22px;
+    font-family: 'bebas_neueregular';
+}
