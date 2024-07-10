@@ -15,43 +15,10 @@
 **Description**: _Still missing. Please join us on [Discord](https://discord.gg/fYQbpjjkQ3) to contribute to the Academy._
 
 
-## **Staples**
-
-<details>
-  <summary>Click here to expand</summary>
-<a href="https://scryfall.com/card/clb/119/cast-down"><img src="https://cards.scryfall.io/normal/front/a/b/aba79021-39af-4e74-beb5-f2f508c865b2.jpg" class="archetype-card rounded-image"/></a>
-<a href="https://scryfall.com/card/tsr/263/chromatic-star"><img src="https://cards.scryfall.io/normal/front/c/2/c2e8d492-2c67-410b-b556-c157a14c4cec.jpg" class="archetype-card rounded-image"/></a>
-<a href="https://scryfall.com/card/otc/131/deadly-dispute"><img src="https://cards.scryfall.io/normal/front/e/d/ed01650e-4eb5-4884-9cc6-947b0e20dd3c.jpg" class="archetype-card rounded-image"/></a>
-<a href="https://scryfall.com/card/neo/138/experimental-synthesizer"><img src="https://cards.scryfall.io/normal/front/c/4/c47931c9-685d-4b83-8299-bc347224b4e8.jpg" class="archetype-card rounded-image"/></a>
-<a href="https://scryfall.com/card/mh2/163/glimmer-bairn"><img src="https://cards.scryfall.io/normal/front/0/3/03250752-bd85-485a-b19a-fa344c4ffd50.jpg" class="archetype-card rounded-image"/></a>
-<a href="https://scryfall.com/card/c21/245/ichor-wellspring"><img src="https://cards.scryfall.io/normal/front/1/c/1ccdb407-ac8f-4736-89d3-ab0d086096ea.jpg" class="archetype-card rounded-image"/></a>
-<a href="https://scryfall.com/card/som/96/kuldotha-rebirth"><img src="https://cards.scryfall.io/normal/front/7/e/7ee07266-a95d-4cd8-9863-1664922e9490.jpg" class="archetype-card rounded-image"/></a>
-<a href="https://scryfall.com/card/clu/141/lightning-bolt"><img src="https://cards.scryfall.io/normal/front/7/7/77c6fa74-5543-42ac-9ead-0e890b188e99.jpg" class="archetype-card rounded-image"/></a>
-<a href="https://scryfall.com/card/cmm/242/makeshift-munitions"><img src="https://cards.scryfall.io/normal/front/6/0/60715b6d-b223-431a-85d8-27d7c05469b2.jpg" class="archetype-card rounded-image"/></a>
-<a href="https://scryfall.com/card/vma/182/rites-of-initiation"><img src="https://cards.scryfall.io/normal/front/f/1/f17d9c60-5f81-4b65-8af1-9c5bb757bd7d.jpg" class="archetype-card rounded-image"/></a>
-<a href="https://scryfall.com/card/fut/138/sprout-swarm"><img src="https://cards.scryfall.io/normal/front/0/b/0b915355-4e98-44df-81bd-961a3d3c86b8.jpg" class="archetype-card rounded-image"/></a>
-<a href="https://scryfall.com/card/cmm/190/thorn-of-the-black-rose"><img src="https://cards.scryfall.io/normal/front/b/4/b4b266e2-1cad-40df-bc0e-3e1464b299b3.jpg" class="archetype-card rounded-image"/></a>
-</details><br/>
 
 
 
 
-
-## **Reference decks**
-
-| Name | Set name | Set date | Legal |
-| -----| -------- | -------- | ----- |
-| [Jund Gardens 722.001.Milkk](https://www.mtggoldfish.com/deck/4893098) | Kamigawa: Neon Dynasty | 2022-02-18 | ✅ |
-
-
-
-
-## **Other decks**
-
-| Name | Set name | Set date | Legal |
-| -----| -------- | -------- | ----- |
-| [Jund Gardens 722.003.Milkk](https://www.mtggoldfish.com/deck/4893101) | Kamigawa: Neon Dynasty | 2022-02-18 | ✅ |
-| [Jund Gardens 722.002.Milkk](https://www.mtggoldfish.com/deck/4675385) | Kamigawa: Neon Dynasty | 2022-02-18 | ✅ |
 
 
 
