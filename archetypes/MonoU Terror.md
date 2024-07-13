@@ -13,7 +13,34 @@
 **Description**: _Still missing. Please join us on [Discord](https://discord.gg/fYQbpjjkQ3) to contribute to the Academy._
 
 
+## **Staples**
 
+<details>
+  <summary>Click here to expand</summary>
+<a href="https://scryfall.com/card/a25/43/blue-elemental-blast"><img src="https://cards.scryfall.io/normal/front/2/f/2f51f88f-f662-4572-a371-9a77718ed079.jpg" class="archetype-card rounded-image"/></a>
+<a href="https://scryfall.com/card/mkc/96/brainstorm"><img src="https://cards.scryfall.io/normal/front/8/4/84479779-d570-4eee-9982-f6e918b4d75b.jpg" class="archetype-card rounded-image"/></a>
+<a href="https://scryfall.com/card/cmm/81/counterspell"><img src="https://cards.scryfall.io/normal/front/8/4/8493131c-0a7b-4be6-a8a2-0b425f4f67fb.jpg" class="archetype-card rounded-image"/></a>
+<a href="https://scryfall.com/card/mid/47/delver-of-secrets-insectile-aberration"><img src="https://cards.scryfall.io/normal/front/a/b/abff6c81-65a4-48fa-ba8f-580f87b0344a.jpg" class="archetype-card rounded-image"/></a>
+<a href="https://scryfall.com/card/clb/455/island"><img src="https://c1.scryfall.com/file/scryfall-cards/normal/front/f/f/ff3ffe47-53a3-42ec-ae89-afc79793380d.jpg" class="archetype-card rounded-image"/></a>
+<a href="https://scryfall.com/card/2x2/63/spell-pierce"><img src="https://cards.scryfall.io/normal/front/3/5/35b8a9db-d126-4038-abb1-74dcc5b36136.jpg" class="archetype-card rounded-image"/></a>
+<a href="https://scryfall.com/card/2x2/65/thought-scour"><img src="https://cards.scryfall.io/normal/front/4/a/4afee6b3-55a4-44e5-b08c-85e0c813cd09.jpg" class="archetype-card rounded-image"/></a>
+<a href="https://scryfall.com/card/dmu/72/tolarian-terror"><img src="https://cards.scryfall.io/normal/front/4/2/42f01cba-43d4-46ad-b7a5-d7631b0e1347.jpg" class="archetype-card rounded-image"/></a>
+</details><br/>
+
+
+
+## **Frequent cards**
+
+<details>
+  <summary>Click here to expand</summary>
+<a href="https://scryfall.com/card/khm/42/annul"><img src="https://c1.scryfall.com/file/scryfall-cards/normal/front/4/b/4b1d4a59-11a0-4a55-8ac0-07377a9e6dc8.jpg" class="archetype-card rounded-image"/></a>
+<a href="https://scryfall.com/card/cmm/83/cryptic-serpent"><img src="https://cards.scryfall.io/normal/front/7/f/7f1af32a-dba2-4c2f-b0ee-9c83849fda53.jpg" class="archetype-card rounded-image"/></a>
+<a href="https://scryfall.com/card/otc/94/deep-analysis"><img src="https://cards.scryfall.io/normal/front/6/b/6bb58d70-8944-4507-aeca-6b3d5f792a91.jpg" class="archetype-card rounded-image"/></a>
+<a href="https://scryfall.com/card/ema/55/hydroblast"><img src="https://c1.scryfall.com/file/scryfall-cards/normal/front/4/c/4c9c9b16-5567-4473-95e6-622292f77336.jpg" class="archetype-card rounded-image"/></a>
+<a href="https://scryfall.com/card/ltr/60/l%C3%B3rien-revealed"><img src="https://cards.scryfall.io/normal/front/0/c/0ce44270-a684-4489-9077-521456e6dfaa.jpg" class="archetype-card rounded-image"/></a>
+<a href="https://scryfall.com/card/jud/46/mental-note"><img src="https://cards.scryfall.io/normal/front/1/f/1f343724-6ecd-494f-8bfc-93676af4e173.jpg" class="archetype-card rounded-image"/></a>
+<a href="https://scryfall.com/card/dmr/66/snap"><img src="https://cards.scryfall.io/normal/front/f/1/f13406c6-f208-402a-94d3-a94a24f03563.jpg" class="archetype-card rounded-image"/></a>
+</details><br/>
 
 
 

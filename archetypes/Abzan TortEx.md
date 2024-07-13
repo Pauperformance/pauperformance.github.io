@@ -13,7 +13,42 @@
 **Description**: _Still missing. Please join us on [Discord](https://discord.gg/fYQbpjjkQ3) to contribute to the Academy._
 
 
+## **Staples**
 
+<details>
+  <summary>Click here to expand</summary>
+<a href="https://scryfall.com/card/dmc/128/abundant-growth"><img src="https://cards.scryfall.io/normal/front/6/d/6dba2d06-13af-464d-b007-9027cade1cdf.jpg" class="archetype-card rounded-image"/></a>
+<a href="https://scryfall.com/card/dmr/1/auramancer"><img src="https://cards.scryfall.io/normal/front/f/f/ffe359e9-2ac8-48ae-9a43-e2f12fd4a785.jpg" class="archetype-card rounded-image"/></a>
+<a href="https://scryfall.com/card/ema/162/commune-with-the-gods"><img src="https://cards.scryfall.io/normal/front/6/7/67d95f6f-3ff0-483d-b98f-ccb4fb5715f4.jpg" class="archetype-card rounded-image"/></a>
+<a href="https://scryfall.com/card/mh1/84/crypt-rats"><img src="https://cards.scryfall.io/normal/front/9/6/96916db2-5121-4ff1-880c-369744f11ecf.jpg" class="archetype-card rounded-image"/></a>
+<a href="https://scryfall.com/card/gvl/42/faerie-macabre"><img src="https://cards.scryfall.io/normal/front/6/2/62103ceb-b16d-48ea-af42-d3df88d1ee4c.jpg" class="archetype-card rounded-image"/></a>
+<a href="https://scryfall.com/card/mh3/318/forest"><img src="https://cards.scryfall.io/normal/front/7/a/7ac34881-de32-42c7-af60-f992638e1da2.jpg" class="archetype-card rounded-image"/></a>
+<a href="https://scryfall.com/card/uma/166/golgari-brownscale"><img src="https://cards.scryfall.io/normal/front/e/4/e41f3323-f702-46a6-92db-33ec0afd75d2.jpg" class="archetype-card rounded-image"/></a>
+<a href="https://scryfall.com/card/cmd/17/journey-to-nowhere"><img src="https://cards.scryfall.io/normal/front/4/6/4686b51c-e02b-48c1-bafe-e8d08a5407b9.jpg" class="archetype-card rounded-image"/></a>
+<a href="https://scryfall.com/card/mm3/11/kor-skyfisher"><img src="https://cards.scryfall.io/normal/front/d/7/d7501662-1216-4e08-bd2b-e0a459057942.jpg" class="archetype-card rounded-image"/></a>
+<a href="https://scryfall.com/card/mh3/310/plains"><img src="https://cards.scryfall.io/normal/front/e/0/e0281fba-d771-4431-931f-920db2f14c47.jpg" class="archetype-card rounded-image"/></a>
+<a href="https://scryfall.com/card/otc/204/satyr-wayfinder"><img src="https://cards.scryfall.io/normal/front/a/7/a7313136-91a9-45fb-b5b4-07ba8f22326c.jpg" class="archetype-card rounded-image"/></a>
+<a href="https://scryfall.com/card/dvd/36/stinkweed-imp"><img src="https://cards.scryfall.io/normal/front/2/a/2ab08d69-210b-4b06-88a2-45281a1a4e1e.jpg" class="archetype-card rounded-image"/></a>
+<a href="https://scryfall.com/card/otj/281/swamp"><img src="https://cards.scryfall.io/normal/front/e/b/eb7dc259-9949-4673-a8f1-874396948392.jpg" class="archetype-card rounded-image"/></a>
+<a href="https://scryfall.com/card/sth/74/tortured-existence"><img src="https://cards.scryfall.io/normal/front/1/7/1754b92b-d6f9-4503-af01-dee03f72a048.jpg" class="archetype-card rounded-image"/></a>
+</details><br/>
+
+
+
+## **Frequent cards**
+
+<details>
+  <summary>Click here to expand</summary>
+<a href="https://scryfall.com/card/frf/5/arashin-cleric"><img src="https://cards.scryfall.io/normal/front/1/0/10aeac19-6892-448e-9e5f-302051a089fc.jpg" class="archetype-card rounded-image"/></a>
+<a href="https://scryfall.com/card/9ed/11/circle-of-protection:-red"><img src="https://cards.scryfall.io/normal/front/d/7/d7920b6d-ff71-4802-9589-e1df0c58b9ff.jpg" class="archetype-card rounded-image"/></a>
+<a href="https://scryfall.com/card/clb/352/evolving-wilds"><img src="https://c1.scryfall.com/file/scryfall-cards/normal/front/b/b/bbc8841a-0f6e-4078-a0b9-a4bda642182e.jpg" class="archetype-card rounded-image"/></a>
+<a href="https://scryfall.com/card/uma/95/fume-spitter"><img src="https://cards.scryfall.io/normal/front/b/b/bb1ef824-306c-4975-abca-19f0bd77449f.jpg" class="archetype-card rounded-image"/></a>
+<a href="https://scryfall.com/card/uma/102/gurmag-angler"><img src="https://cards.scryfall.io/normal/front/c/e/cedd44eb-f381-46e1-bcb0-88416b4ce33d.jpg" class="archetype-card rounded-image"/></a>
+<a href="https://scryfall.com/card/mom/270/jungle-hollow"><img src="https://cards.scryfall.io/normal/front/b/6/b6ed20a4-bc8a-44b1-b9b7-c82518c287b8.jpg" class="archetype-card rounded-image"/></a>
+<a href="https://scryfall.com/card/mm3/14/lone-missionary"><img src="https://c1.scryfall.com/file/scryfall-cards/normal/front/6/d/6d31d5b6-0973-43d2-aae0-a3f3e7a61800.jpg" class="archetype-card rounded-image"/></a>
+<a href="https://scryfall.com/card/mom/272/scoured-barrens"><img src="https://cards.scryfall.io/normal/front/6/6/66aefbfc-3f67-443d-8ec4-cc9beafb64ee.jpg" class="archetype-card rounded-image"/></a>
+<a href="https://scryfall.com/card/eve/78/tilling-treefolk"><img src="https://cards.scryfall.io/normal/front/8/e/8e4a10d0-214d-4e7b-9683-c84034f8f6b7.jpg" class="archetype-card rounded-image"/></a>
+</details><br/>
 
 
 

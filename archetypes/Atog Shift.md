@@ -19,20 +19,30 @@
   <summary>Click here to expand</summary>
 <a href="https://scryfall.com/card/me4/109/atog"><img src="https://cards.scryfall.io/normal/front/a/d/adf3bd18-d9c1-4f18-86c0-579db8ea37c7.jpg" class="archetype-card rounded-image"/></a>
 <a href="https://scryfall.com/card/tsr/263/chromatic-star"><img src="https://cards.scryfall.io/normal/front/c/2/c2e8d492-2c67-410b-b556-c157a14c4cec.jpg" class="archetype-card rounded-image"/></a>
+<a href="https://scryfall.com/card/c21/285/darksteel-citadel"><img src="https://cards.scryfall.io/normal/front/2/b/2ba7597d-6d76-45b8-b172-342999e401bd.jpg" class="archetype-card rounded-image"/></a>
 <a href="https://scryfall.com/card/jmp/320/fling"><img src="https://cards.scryfall.io/normal/front/8/f/8f42d773-c742-4465-b6d5-31feaba49146.jpg" class="archetype-card rounded-image"/></a>
 <a href="https://scryfall.com/card/2xm/125/galvanic-blast"><img src="https://cards.scryfall.io/normal/front/0/c/0cf8cb1e-314a-4894-82df-f9812825f52e.jpg" class="archetype-card rounded-image"/></a>
 <a href="https://scryfall.com/card/kld/48/gearseeker-serpent"><img src="https://cards.scryfall.io/normal/front/d/3/d32d8327-6ec2-4d43-b254-b04407612715.jpg" class="archetype-card rounded-image"/></a>
+<a href="https://scryfall.com/card/phed/24/great-furnace"><img src="https://c1.scryfall.com/file/scryfall-cards/normal/front/2/a/2a7d2d8f-4736-4c99-aba2-b14960395ad6.jpg" class="archetype-card rounded-image"/></a>
 <a href="https://scryfall.com/card/c21/245/ichor-wellspring"><img src="https://cards.scryfall.io/normal/front/1/c/1ccdb407-ac8f-4736-89d3-ab0d086096ea.jpg" class="archetype-card rounded-image"/></a>
+<a href="https://scryfall.com/card/mrd/98/krark-clan-shaman"><img src="https://cards.scryfall.io/normal/front/9/7/975f9ea8-af2c-456f-acd0-ffa9ea0d98c1.jpg" class="archetype-card rounded-image"/></a>
 <a href="https://scryfall.com/card/rvr/50/muddle-the-mixture"><img src="https://cards.scryfall.io/normal/front/e/6/e69d760c-48fb-4e7f-8611-547b0c22928c.jpg" class="archetype-card rounded-image"/></a>
-<a href="https://scryfall.com/card/dom/225/navigators-compass"><img src="https://cards.scryfall.io/normal/front/6/a/6a283135-7a51-4cf7-82a6-7e50894e64a5.jpg" class="archetype-card rounded-image"/></a>
-<a href="https://scryfall.com/card/otc/107/preordain"><img src="https://cards.scryfall.io/normal/front/1/2/122f2cc2-5f4d-497c-96b5-ed5698f28b51.jpg" class="archetype-card rounded-image"/></a>
 <a href="https://scryfall.com/card/woe/249/prophetic-prism"><img src="https://cards.scryfall.io/normal/front/1/f/1fae351c-b918-4648-a361-d5239ae63156.jpg" class="archetype-card rounded-image"/></a>
+<a href="https://scryfall.com/card/c18/278/seat-of-the-synod"><img src="https://c1.scryfall.com/file/scryfall-cards/normal/front/1/f/1fedc183-2d95-471c-ba78-2169e4df13f8.jpg" class="archetype-card rounded-image"/></a>
 <a href="https://scryfall.com/card/cmm/264/temur-battle-rage"><img src="https://cards.scryfall.io/normal/front/3/7/375bc646-942e-4bf5-9c71-2c5471828e35.jpg" class="archetype-card rounded-image"/></a>
 <a href="https://scryfall.com/card/moc/242/thoughtcast"><img src="https://cards.scryfall.io/normal/front/4/6/466a0be8-31b9-4ea0-9a96-b09a76f4ec69.jpg" class="archetype-card rounded-image"/></a>
-<a href="https://scryfall.com/card/cmm/135/witching-well"><img src="https://cards.scryfall.io/normal/front/d/2/d2f028cd-1cb4-4a5b-b989-4acd8777ac5c.jpg" class="archetype-card rounded-image"/></a>
 </details><br/>
 
 
+
+## **Frequent cards**
+
+<details>
+  <summary>Click here to expand</summary>
+<a href="https://scryfall.com/card/ema/55/hydroblast"><img src="https://c1.scryfall.com/file/scryfall-cards/normal/front/4/c/4c9c9b16-5567-4473-95e6-622292f77336.jpg" class="archetype-card rounded-image"/></a>
+<a href="https://scryfall.com/card/dom/225/navigators-compass"><img src="https://cards.scryfall.io/normal/front/6/a/6a283135-7a51-4cf7-82a6-7e50894e64a5.jpg" class="archetype-card rounded-image"/></a>
+<a href="https://scryfall.com/card/ema/142/pyroblast"><img src="https://cards.scryfall.io/normal/front/b/0/b029eb9a-dd7a-40c2-96c4-0063d9cc002c.jpg" class="archetype-card rounded-image"/></a>
+</details><br/>
 
 
 

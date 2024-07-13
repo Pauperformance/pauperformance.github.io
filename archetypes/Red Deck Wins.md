@@ -19,16 +19,9 @@
 
 <details>
   <summary>Click here to expand</summary>
-<a href="https://scryfall.com/card/2x2/189/burning-tree-emissary"><img src="https://cards.scryfall.io/normal/front/b/a/ba327a5e-bd57-4e24-b4b4-062202df30e1.jpg" class="archetype-card rounded-image"/></a>
-<a href="https://scryfall.com/card/dmr/119/fireblast"><img src="https://cards.scryfall.io/normal/front/a/0/a0ab67cc-b553-4451-9cda-0e5fe3303940.jpg" class="archetype-card rounded-image"/></a>
-<a href="https://scryfall.com/card/ddt/38/foundry-street-denizen"><img src="https://cards.scryfall.io/normal/front/a/3/a328c8d8-a404-43b5-8c79-2e79d639fb40.jpg" class="archetype-card rounded-image"/></a>
 <a href="https://scryfall.com/card/zen/125/goblin-bushwhacker"><img src="https://cards.scryfall.io/normal/front/4/0/4085a5bf-a71b-4c73-9b39-0dcc328fe11b.jpg" class="archetype-card rounded-image"/></a>
-<a href="https://scryfall.com/card/evg/38/goblin-cohort"><img src="https://cards.scryfall.io/normal/front/f/a/faa652d7-16d3-400f-9ba4-7ba8078d4a08.jpg" class="archetype-card rounded-image"/></a>
-<a href="https://scryfall.com/card/ddt/45/goblin-grenade"><img src="https://cards.scryfall.io/normal/front/b/0/b0e0ef27-3db2-4976-b9db-13e3d7cd795d.jpg" class="archetype-card rounded-image"/></a>
-<a href="https://scryfall.com/card/frf/102/goblin-heelcutter"><img src="https://cards.scryfall.io/normal/front/5/b/5b3bfeb6-95d6-4f00-8981-c6d3c9c93f67.jpg" class="archetype-card rounded-image"/></a>
 <a href="https://scryfall.com/card/clu/141/lightning-bolt"><img src="https://cards.scryfall.io/normal/front/7/7/77c6fa74-5543-42ac-9ead-0e890b188e99.jpg" class="archetype-card rounded-image"/></a>
-<a href="https://scryfall.com/card/tpr/143/mogg-conscripts"><img src="https://cards.scryfall.io/normal/front/c/6/c67c26d7-f752-40a5-b79e-1f4c531cbef5.jpg" class="archetype-card rounded-image"/></a>
-<a href="https://scryfall.com/card/shm/100/mudbrawler-cohort"><img src="https://cards.scryfall.io/normal/front/8/f/8fcb1f26-9a2a-40bd-b291-4ef8ce375cdf.jpg" class="archetype-card rounded-image"/></a>
+<a href="https://scryfall.com/card/clb/463/mountain"><img src="https://c1.scryfall.com/file/scryfall-cards/normal/front/0/a/0ab63e49-0869-4c7c-a033-d8e50032dd13.jpg" class="archetype-card rounded-image"/></a>
 </details><br/>
 
 
@@ -37,11 +30,11 @@
 
 <details>
   <summary>Click here to expand</summary>
-<a href="https://scryfall.com/card/me2/123/death-spark"><img src="https://c1.scryfall.com/file/scryfall-cards/normal/front/7/7/778d3497-2067-4d61-a322-5efb776dbaf1.jpg" class="archetype-card rounded-image"/></a>
-<a href="https://scryfall.com/card/m10/143/jackal-familiar"><img src="https://cards.scryfall.io/normal/front/0/a/0a47a2dc-f7f2-4103-9ebe-8cd8b83915ae.jpg" class="archetype-card rounded-image"/></a>
-<a href="https://scryfall.com/card/vow/174/reckless-impulse"><img src="https://cards.scryfall.io/normal/front/6/9/6943c07f-ab0d-4f5a-bbe9-c0a83dc98546.jpg" class="archetype-card rounded-image"/></a>
-<a href="https://scryfall.com/card/ons/235/sparksmith"><img src="https://cards.scryfall.io/normal/front/1/5/15a4460d-3fe8-4b1f-9990-0a19c3345367.jpg" class="archetype-card rounded-image"/></a>
-<a href="https://scryfall.com/card/ktk/125/valley-dasher"><img src="https://cards.scryfall.io/normal/front/8/5/8543adbd-0dd1-47d3-ac41-2ec72d6a5d35.jpg" class="archetype-card rounded-image"/></a>
+<a href="https://scryfall.com/card/rtr/93/electrickery"><img src="https://cards.scryfall.io/normal/front/5/e/5ed81ee8-d5e4-4127-876e-9bff81f9c726.jpg" class="archetype-card rounded-image"/></a>
+<a href="https://scryfall.com/card/dmr/119/fireblast"><img src="https://cards.scryfall.io/normal/front/a/0/a0ab67cc-b553-4451-9cda-0e5fe3303940.jpg" class="archetype-card rounded-image"/></a>
+<a href="https://scryfall.com/card/cn2/157/flame-slash"><img src="https://cards.scryfall.io/normal/front/1/5/15affc1b-2ebb-4934-87a2-10e89eafe894.jpg" class="archetype-card rounded-image"/></a>
+<a href="https://scryfall.com/card/evg/38/goblin-cohort"><img src="https://cards.scryfall.io/normal/front/f/a/faa652d7-16d3-400f-9ba4-7ba8078d4a08.jpg" class="archetype-card rounded-image"/></a>
+<a href="https://scryfall.com/card/tpr/143/mogg-conscripts"><img src="https://cards.scryfall.io/normal/front/c/6/c67c26d7-f752-40a5-b79e-1f4c531cbef5.jpg" class="archetype-card rounded-image"/></a>
 </details><br/>
 
 

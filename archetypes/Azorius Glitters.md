@@ -15,7 +15,36 @@
 **Description**: _Still missing. Please join us on [Discord](https://discord.gg/fYQbpjjkQ3) to contribute to the Academy._
 
 
+## **Staples**
 
+<details>
+  <summary>Click here to expand</summary>
+<a href="https://scryfall.com/card/cmm/9/all-that-glitters"><img src="https://cards.scryfall.io/normal/front/5/f/5fc0b82a-f943-4330-b9e7-bb4527354bfd.jpg" class="archetype-card rounded-image"/></a>
+<a href="https://scryfall.com/card/c21/276/ancient-den"><img src="https://cards.scryfall.io/normal/front/0/a/0a508907-a127-45cd-898a-e936bc08391f.jpg" class="archetype-card rounded-image"/></a>
+<a href="https://scryfall.com/card/c21/285/darksteel-citadel"><img src="https://cards.scryfall.io/normal/front/2/b/2ba7597d-6d76-45b8-b172-342999e401bd.jpg" class="archetype-card rounded-image"/></a>
+<a href="https://scryfall.com/card/woe/246/gingerbrute"><img src="https://cards.scryfall.io/normal/front/0/9/09a4578a-7dc6-4da3-93ee-913b10be5740.jpg" class="archetype-card rounded-image"/></a>
+<a href="https://scryfall.com/card/clb/455/island"><img src="https://c1.scryfall.com/file/scryfall-cards/normal/front/f/f/ff3ffe47-53a3-42ec-ae89-afc79793380d.jpg" class="archetype-card rounded-image"/></a>
+<a href="https://scryfall.com/card/2xm/59/metallic-rebuke"><img src="https://cards.scryfall.io/normal/front/3/4/34785944-7b51-48a9-855c-3e656cd78251.jpg" class="archetype-card rounded-image"/></a>
+<a href="https://scryfall.com/card/neo/67/moon-circuit-hacker"><img src="https://cards.scryfall.io/normal/front/c/6/c6e466d1-943d-41e6-a47d-c9d951ca4262.jpg" class="archetype-card rounded-image"/></a>
+<a href="https://scryfall.com/card/mm2/224/myr-enforcer"><img src="https://cards.scryfall.io/normal/front/d/f/dff51ae7-4b68-4770-915b-fb6bcf9ca1ed.jpg" class="archetype-card rounded-image"/></a>
+<a href="https://scryfall.com/card/iko/60/of-one-mind"><img src="https://cards.scryfall.io/normal/front/c/9/c95fb136-f21d-4f3a-82b7-bcf490b7e90c.jpg" class="archetype-card rounded-image"/></a>
+<a href="https://scryfall.com/card/dmr/233/ornithopter"><img src="https://cards.scryfall.io/normal/front/3/0/305078a5-ac18-4721-bba2-3434eba5b1cf.jpg" class="archetype-card rounded-image"/></a>
+<a href="https://scryfall.com/card/mh2/252/razortide-bridge"><img src="https://cards.scryfall.io/normal/front/e/7/e7ea7395-430e-4036-92c9-17a850ec2371.jpg" class="archetype-card rounded-image"/></a>
+<a href="https://scryfall.com/card/c18/278/seat-of-the-synod"><img src="https://c1.scryfall.com/file/scryfall-cards/normal/front/1/f/1fedc183-2d95-471c-ba78-2169e4df13f8.jpg" class="archetype-card rounded-image"/></a>
+<a href="https://scryfall.com/card/2xm/291/springleaf-drum"><img src="https://cards.scryfall.io/normal/front/f/3/f3b3869b-6da1-4b01-a2e7-2018d478b6e5.jpg" class="archetype-card rounded-image"/></a>
+<a href="https://scryfall.com/card/moc/242/thoughtcast"><img src="https://cards.scryfall.io/normal/front/4/6/466a0be8-31b9-4ea0-9a96-b09a76f4ec69.jpg" class="archetype-card rounded-image"/></a>
+<a href="https://scryfall.com/card/cmm/66/thraben-inspector"><img src="https://cards.scryfall.io/normal/front/2/9/299cc386-2ed5-4504-9ba6-17a52e0c9a0c.jpg" class="archetype-card rounded-image"/></a>
+</details><br/>
+
+
+
+## **Frequent cards**
+
+<details>
+  <summary>Click here to expand</summary>
+<a href="https://scryfall.com/card/a25/43/blue-elemental-blast"><img src="https://cards.scryfall.io/normal/front/2/f/2f51f88f-f662-4572-a371-9a77718ed079.jpg" class="archetype-card rounded-image"/></a>
+<a href="https://scryfall.com/card/me4/11/dust-to-dust"><img src="https://cards.scryfall.io/normal/front/d/f/dff1ee4e-cba1-4d2d-94fb-e3068d807cac.jpg" class="archetype-card rounded-image"/></a>
+</details><br/>
 
 
 

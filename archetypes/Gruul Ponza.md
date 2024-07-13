@@ -22,11 +22,10 @@
 <a href="https://scryfall.com/card/2x2/134/annoyed-altisaur"><img src="https://cards.scryfall.io/normal/front/6/1/6108741c-30de-4390-8482-3f293bdce4bd.jpg" class="archetype-card rounded-image"/></a>
 <a href="https://scryfall.com/card/a25/160/arbor-elf"><img src="https://cards.scryfall.io/normal/front/4/b/4b81165e-f091-4211-8b47-5ea6868b0d4c.jpg" class="archetype-card rounded-image"/></a>
 <a href="https://scryfall.com/card/cmr/163/boarding-party"><img src="https://cards.scryfall.io/normal/front/1/8/186adacf-434b-475b-9b85-749615ae002b.jpg" class="archetype-card rounded-image"/></a>
-<a href="https://scryfall.com/card/m21/193/llanowar-visionary"><img src="https://cards.scryfall.io/normal/front/d/6/d6e23afa-7e08-4049-baf0-d4d0134ba2c8.jpg" class="archetype-card rounded-image"/></a>
 <a href="https://scryfall.com/card/tsp/207/mwonvuli-acid-moss"><img src="https://cards.scryfall.io/normal/front/6/8/6841dbf6-5023-4612-bbd7-182fd35b05c8.jpg" class="archetype-card rounded-image"/></a>
-<a href="https://scryfall.com/card/khm/192/sarulfs-packmate"><img src="https://cards.scryfall.io/normal/front/6/0/6061113e-7dd8-4739-b4dd-55bb7f9e39a2.jpg" class="archetype-card rounded-image"/></a>
 <a href="https://scryfall.com/card/me2/183/thermokarst"><img src="https://cards.scryfall.io/normal/front/7/4/74e907ed-76f7-476c-b128-bb6bfd892e06.jpg" class="archetype-card rounded-image"/></a>
 <a href="https://scryfall.com/card/rvr/159/utopia-sprawl"><img src="https://cards.scryfall.io/normal/front/5/e/5ea568df-04a1-4012-98ec-ba75e189e0ca.jpg" class="archetype-card rounded-image"/></a>
+<a href="https://scryfall.com/card/mkc/195/wild-growth"><img src="https://cards.scryfall.io/normal/front/4/7/47260e7c-29bf-46f1-a029-9da7bbb418b5.jpg" class="archetype-card rounded-image"/></a>
 </details><br/>
 
 
@@ -35,15 +34,11 @@
 
 <details>
   <summary>Click here to expand</summary>
-<a href="https://scryfall.com/card/znr/137/cleansing-wildfire"><img src="https://cards.scryfall.io/normal/front/4/9/492d77e5-acc6-41b8-8930-f39d69234919.jpg" class="archetype-card rounded-image"/></a>
-<a href="https://scryfall.com/card/cmm/285/entourage-of-trest"><img src="https://cards.scryfall.io/normal/front/7/8/78075b31-8145-4053-90dd-6a34bd48fa7c.jpg" class="archetype-card rounded-image"/></a>
+<a href="https://scryfall.com/card/mor/118/deglamer"><img src="https://cards.scryfall.io/normal/front/9/8/985b43aa-58f0-42fc-9ef0-a7925727d58f.jpg" class="archetype-card rounded-image"/></a>
 <a href="https://scryfall.com/card/cmr/178/fiery-cannonade"><img src="https://cards.scryfall.io/normal/front/3/9/396f1cdf-712b-4518-a0e8-0039303dccdc.jpg" class="archetype-card rounded-image"/></a>
-<a href="https://scryfall.com/card/mh1/122/firebolt"><img src="https://cards.scryfall.io/normal/front/8/8/882b8f98-ee51-4c94-a3eb-c79eb2b50d78.jpg" class="archetype-card rounded-image"/></a>
-<a href="https://scryfall.com/card/rna/234/gruul-locket"><img src="https://c1.scryfall.com/file/scryfall-cards/normal/front/1/e/1ec78880-a8ec-4c87-bc3f-e2a79d154884.jpg" class="archetype-card rounded-image"/></a>
-<a href="https://scryfall.com/card/clu/141/lightning-bolt"><img src="https://cards.scryfall.io/normal/front/7/7/77c6fa74-5543-42ac-9ead-0e890b188e99.jpg" class="archetype-card rounded-image"/></a>
-<a href="https://scryfall.com/card/afr/198/owlbear"><img src="https://cards.scryfall.io/normal/front/3/0/30e8a00f-8131-470d-8072-4c23b812281a.jpg" class="archetype-card rounded-image"/></a>
-<a href="https://scryfall.com/card/cmm/6/ulamogs-crusher"><img src="https://cards.scryfall.io/normal/front/6/9/699c0f6f-b26b-4741-8140-8a6030cad127.jpg" class="archetype-card rounded-image"/></a>
-<a href="https://scryfall.com/card/mkc/195/wild-growth"><img src="https://cards.scryfall.io/normal/front/4/7/47260e7c-29bf-46f1-a029-9da7bbb418b5.jpg" class="archetype-card rounded-image"/></a>
+<a href="https://scryfall.com/card/clb/896/highland-forest"><img src="https://cards.scryfall.io/normal/front/5/9/59f64a32-c364-4750-94ed-d4d71c1a3511.jpg" class="archetype-card rounded-image"/></a>
+<a href="https://scryfall.com/card/m21/193/llanowar-visionary"><img src="https://cards.scryfall.io/normal/front/d/6/d6e23afa-7e08-4049-baf0-d4d0134ba2c8.jpg" class="archetype-card rounded-image"/></a>
+<a href="https://scryfall.com/card/khm/284/snow-covered-forest"><img src="https://c1.scryfall.com/file/scryfall-cards/normal/front/c/a/ca17acea-f079-4e53-8176-a2f5c5c408a1.jpg" class="archetype-card rounded-image"/></a>
 </details><br/>
 
 

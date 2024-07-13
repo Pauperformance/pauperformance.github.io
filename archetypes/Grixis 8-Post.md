@@ -15,7 +15,36 @@
 **Description**: _Still missing. Please join us on [Discord](https://discord.gg/fYQbpjjkQ3) to contribute to the Academy._
 
 
+## **Staples**
 
+<details>
+  <summary>Click here to expand</summary>
+<a href="https://scryfall.com/card/tpr/42/capsize"><img src="https://cards.scryfall.io/normal/front/f/3/f36f6545-e4e0-4dc8-acea-e527e43f3e14.jpg" class="archetype-card rounded-image"/></a>
+<a href="https://scryfall.com/card/mrd/280/cloudpost"><img src="https://cards.scryfall.io/normal/front/2/f/2f28ecdc-a4f0-4327-a78c-340be41555ee.jpg" class="archetype-card rounded-image"/></a>
+<a href="https://scryfall.com/card/mh1/87/diabolic-edict"><img src="https://cards.scryfall.io/normal/front/4/e/4eabbed2-1399-4cf1-9eba-b53c56caced4.jpg" class="archetype-card rounded-image"/></a>
+<a href="https://scryfall.com/card/ima/87/doom-blade"><img src="https://cards.scryfall.io/normal/front/9/0/90699423-2556-40f7-b8f5-c9d82f22d52e.jpg" class="archetype-card rounded-image"/></a>
+<a href="https://scryfall.com/card/one/92/duress"><img src="https://cards.scryfall.io/normal/front/3/5/3557e601-9b71-4ce9-9047-1a8baa72e574.jpg" class="archetype-card rounded-image"/></a>
+<a href="https://scryfall.com/card/dst/41/echoing-decay"><img src="https://cards.scryfall.io/normal/front/f/8/f8e688e7-8350-4b78-bd49-a6ffdedad556.jpg" class="archetype-card rounded-image"/></a>
+<a href="https://scryfall.com/card/som/227/glimmerpost"><img src="https://cards.scryfall.io/normal/front/8/b/8b63efb6-249c-4f57-9af1-baffe938520c.jpg" class="archetype-card rounded-image"/></a>
+<a href="https://scryfall.com/card/ema/55/hydroblast"><img src="https://c1.scryfall.com/file/scryfall-cards/normal/front/4/c/4c9c9b16-5567-4473-95e6-622292f77336.jpg" class="archetype-card rounded-image"/></a>
+<a href="https://scryfall.com/card/clb/455/island"><img src="https://c1.scryfall.com/file/scryfall-cards/normal/front/f/f/ff3ffe47-53a3-42ec-ae89-afc79793380d.jpg" class="archetype-card rounded-image"/></a>
+<a href="https://scryfall.com/card/mkc/111/mulldrifter"><img src="https://cards.scryfall.io/normal/front/e/b/eb6d8d1c-8d23-4273-9c9b-f3b71eb0e105.jpg" class="archetype-card rounded-image"/></a>
+<a href="https://scryfall.com/card/tsr/76/mystical-teachings"><img src="https://cards.scryfall.io/normal/front/f/7/f7cb51cd-8418-43ee-bf4f-6b959cc5b131.jpg" class="archetype-card rounded-image"/></a>
+<a href="https://scryfall.com/card/woe/249/prophetic-prism"><img src="https://cards.scryfall.io/normal/front/1/f/1fae351c-b918-4648-a361-d5239ae63156.jpg" class="archetype-card rounded-image"/></a>
+<a href="https://scryfall.com/card/otj/281/swamp"><img src="https://cards.scryfall.io/normal/front/e/b/eb7dc259-9949-4673-a8f1-874396948392.jpg" class="archetype-card rounded-image"/></a>
+</details><br/>
+
+
+
+## **Frequent cards**
+
+<details>
+  <summary>Click here to expand</summary>
+<a href="https://scryfall.com/card/clb/352/evolving-wilds"><img src="https://c1.scryfall.com/file/scryfall-cards/normal/front/b/b/bbc8841a-0f6e-4078-a0b9-a4bda642182e.jpg" class="archetype-card rounded-image"/></a>
+<a href="https://scryfall.com/card/csp/58/grim-harvest"><img src="https://cards.scryfall.io/normal/front/b/d/bdb1972f-2ef7-4fe2-8c8e-ab07f48a3176.jpg" class="archetype-card rounded-image"/></a>
+<a href="https://scryfall.com/card/khc/43/sea-gate-oracle"><img src="https://cards.scryfall.io/normal/front/4/9/498743ce-0ca5-488a-ae5e-d348b274bf3b.jpg" class="archetype-card rounded-image"/></a>
+<a href="https://scryfall.com/card/afc/267/terramorphic-expanse"><img src="https://c1.scryfall.com/file/scryfall-cards/normal/front/0/8/08ac4e43-4e16-46a2-96f5-58d5550984c4.jpg" class="archetype-card rounded-image"/></a>
+</details><br/>
 
 
 

@@ -21,13 +21,8 @@
   <summary>Click here to expand</summary>
 <a href="https://scryfall.com/card/2x2/134/annoyed-altisaur"><img src="https://cards.scryfall.io/normal/front/6/1/6108741c-30de-4390-8482-3f293bdce4bd.jpg" class="archetype-card rounded-image"/></a>
 <a href="https://scryfall.com/card/cmr/163/boarding-party"><img src="https://cards.scryfall.io/normal/front/1/8/186adacf-434b-475b-9b85-749615ae002b.jpg" class="archetype-card rounded-image"/></a>
-<a href="https://scryfall.com/card/znr/137/cleansing-wildfire"><img src="https://cards.scryfall.io/normal/front/4/9/492d77e5-acc6-41b8-8930-f39d69234919.jpg" class="archetype-card rounded-image"/></a>
-<a href="https://scryfall.com/card/2xm/125/galvanic-blast"><img src="https://cards.scryfall.io/normal/front/0/c/0cf8cb1e-314a-4894-82df-f9812825f52e.jpg" class="archetype-card rounded-image"/></a>
-<a href="https://scryfall.com/card/mh1/125/geomancers-gambit"><img src="https://cards.scryfall.io/normal/front/2/3/23b67031-76b8-4511-a6dc-433d9450496e.jpg" class="archetype-card rounded-image"/></a>
-<a href="https://scryfall.com/card/clu/141/lightning-bolt"><img src="https://cards.scryfall.io/normal/front/7/7/77c6fa74-5543-42ac-9ead-0e890b188e99.jpg" class="archetype-card rounded-image"/></a>
+<a href="https://scryfall.com/card/m21/193/llanowar-visionary"><img src="https://cards.scryfall.io/normal/front/d/6/d6e23afa-7e08-4049-baf0-d4d0134ba2c8.jpg" class="archetype-card rounded-image"/></a>
 <a href="https://scryfall.com/card/mkc/111/mulldrifter"><img src="https://cards.scryfall.io/normal/front/e/b/eb6d8d1c-8d23-4273-9c9b-f3b71eb0e105.jpg" class="archetype-card rounded-image"/></a>
-<a href="https://scryfall.com/card/c21/202/pulse-of-murasa"><img src="https://cards.scryfall.io/normal/front/a/4/a4b9f8f4-d704-4f16-8495-cf8185285859.jpg" class="archetype-card rounded-image"/></a>
-<a href="https://scryfall.com/card/khm/192/sarulfs-packmate"><img src="https://cards.scryfall.io/normal/front/6/0/6061113e-7dd8-4739-b4dd-55bb7f9e39a2.jpg" class="archetype-card rounded-image"/></a>
 </details><br/>
 
 
@@ -36,18 +31,8 @@
 
 <details>
   <summary>Click here to expand</summary>
-<a href="https://scryfall.com/card/lci/131/abrade"><img src="https://cards.scryfall.io/normal/front/4/7/47f39b5e-2e85-4f31-bbab-0b0bf58f701d.jpg" class="archetype-card rounded-image"/></a>
-<a href="https://scryfall.com/card/cmm/269/abundant-harvest"><img src="https://cards.scryfall.io/normal/front/5/1/516e137a-d9d9-4ba7-89fb-e680ddb2c2d1.jpg" class="archetype-card rounded-image"/></a>
-<a href="https://scryfall.com/card/mid/128/ardent-elementalist"><img src="https://cards.scryfall.io/normal/front/f/5/f58592f7-1df5-428d-9dde-e6acd9a5d1d5.jpg" class="archetype-card rounded-image"/></a>
-<a href="https://scryfall.com/card/cmm/370/bonders-ornament"><img src="https://cards.scryfall.io/normal/front/8/9/89486719-4aba-4465-986b-fecbe4d409a1.jpg" class="archetype-card rounded-image"/></a>
-<a href="https://scryfall.com/card/mkc/96/brainstorm"><img src="https://cards.scryfall.io/normal/front/8/4/84479779-d570-4eee-9982-f6e918b4d75b.jpg" class="archetype-card rounded-image"/></a>
-<a href="https://scryfall.com/card/cmm/211/crimson-fleet-commodore"><img src="https://cards.scryfall.io/normal/front/e/d/edf54657-5943-4a45-a296-dc91c41109d4.jpg" class="archetype-card rounded-image"/></a>
-<a href="https://scryfall.com/card/cmm/285/entourage-of-trest"><img src="https://cards.scryfall.io/normal/front/7/8/78075b31-8145-4053-90dd-6a34bd48fa7c.jpg" class="archetype-card rounded-image"/></a>
-<a href="https://scryfall.com/card/cmr/178/fiery-cannonade"><img src="https://cards.scryfall.io/normal/front/3/9/396f1cdf-712b-4518-a0e8-0039303dccdc.jpg" class="archetype-card rounded-image"/></a>
-<a href="https://scryfall.com/card/neo/190/harmonious-emergence"><img src="https://cards.scryfall.io/normal/front/c/9/c92ff968-b436-4313-8375-8a3bb41f9892.jpg" class="archetype-card rounded-image"/></a>
-<a href="https://scryfall.com/card/m21/193/llanowar-visionary"><img src="https://cards.scryfall.io/normal/front/d/6/d6e23afa-7e08-4049-baf0-d4d0134ba2c8.jpg" class="archetype-card rounded-image"/></a>
-<a href="https://scryfall.com/card/tsr/223/penumbra-spider"><img src="https://cards.scryfall.io/normal/front/c/8/c862a2f7-673e-44bd-b8ee-e4295da1e0d5.jpg" class="archetype-card rounded-image"/></a>
-<a href="https://scryfall.com/card/ncc/320/wickerbough-elder"><img src="https://cards.scryfall.io/normal/front/3/a/3a5832cc-f9f6-4881-99dd-c0728a52cabe.jpg" class="archetype-card rounded-image"/></a>
+<a href="https://scryfall.com/card/ema/55/hydroblast"><img src="https://c1.scryfall.com/file/scryfall-cards/normal/front/4/c/4c9c9b16-5567-4473-95e6-622292f77336.jpg" class="archetype-card rounded-image"/></a>
+<a href="https://scryfall.com/card/c21/202/pulse-of-murasa"><img src="https://cards.scryfall.io/normal/front/a/4/a4b9f8f4-d704-4f16-8495-cf8185285859.jpg" class="archetype-card rounded-image"/></a>
 </details><br/>
 
 

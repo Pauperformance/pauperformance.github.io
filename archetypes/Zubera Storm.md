@@ -17,30 +17,33 @@
 
 <details>
   <summary>Click here to expand</summary>
-<a href="https://scryfall.com/card/ddp/46/bloodthrone-vampire"><img src="https://cards.scryfall.io/normal/front/e/e/ee7354fe-fb76-4196-a69b-0916af73bf45.jpg" class="archetype-card rounded-image"/></a>
-<a href="https://scryfall.com/card/exo/55/culling-the-weak"><img src="https://cards.scryfall.io/normal/front/5/0/50c33f18-0a5c-4e46-ab0d-6e450915594f.jpg" class="archetype-card rounded-image"/></a>
-<a href="https://scryfall.com/card/a25/82/dark-ritual"><img src="https://cards.scryfall.io/normal/front/9/5/95f27eeb-6f14-4db3-adb9-9be5ed76b34b.jpg" class="archetype-card rounded-image"/></a>
-<a href="https://scryfall.com/card/chk/166/ember-fist-zubera"><img src="https://cards.scryfall.io/normal/front/0/1/0150e3f0-237e-4669-9401-d2cd08e86387.jpg" class="archetype-card rounded-image"/></a>
-<a href="https://scryfall.com/card/jmp/230/exhume"><img src="https://cards.scryfall.io/normal/front/5/f/5f1cdcba-a04a-4a2f-8bc1-0dd7fa03754d.jpg" class="archetype-card rounded-image"/></a>
+<a href="https://scryfall.com/card/clb/880/ash-barrens"><img src="https://c1.scryfall.com/file/scryfall-cards/normal/front/f/b/fb71aebf-f5d3-45ee-91a4-51088f7141ec.jpg" class="archetype-card rounded-image"/></a>
+<a href="https://scryfall.com/card/chk/101/ashen-skin-zubera"><img src="https://cards.scryfall.io/normal/front/4/0/40cee88d-849d-4715-ad88-7cdb855a3088.jpg" class="archetype-card rounded-image"/></a>
+<a href="https://scryfall.com/card/mh1/81/carrion-feeder"><img src="https://cards.scryfall.io/normal/front/0/a/0a19da90-880e-4eca-8cf7-6d7baf090d53.jpg" class="archetype-card rounded-image"/></a>
+<a href="https://scryfall.com/card/dmr/78/chainers-edict"><img src="https://cards.scryfall.io/normal/front/8/c/8c204471-d908-4a08-83e4-cf38999fa80f.jpg" class="archetype-card rounded-image"/></a>
+<a href="https://scryfall.com/card/mh1/84/crypt-rats"><img src="https://cards.scryfall.io/normal/front/9/6/96916db2-5121-4ff1-880c-369744f11ecf.jpg" class="archetype-card rounded-image"/></a>
+<a href="https://scryfall.com/card/2x2/322/dimir-aqueduct"><img src="https://c1.scryfall.com/file/scryfall-cards/normal/front/8/7/877b7b90-80d4-4cad-af7c-a0b36c590ca0.jpg" class="archetype-card rounded-image"/></a>
+<a href="https://scryfall.com/card/mom/269/dismal-backwater"><img src="https://cards.scryfall.io/normal/front/3/3/33cd4f63-3484-4cee-8603-1f89cabee6c3.jpg" class="archetype-card rounded-image"/></a>
+<a href="https://scryfall.com/card/bfz/76/dispel"><img src="https://cards.scryfall.io/normal/front/b/c/bceab6b3-6b64-4964-a501-ce806a6c13ad.jpg" class="archetype-card rounded-image"/></a>
+<a href="https://scryfall.com/card/one/92/duress"><img src="https://cards.scryfall.io/normal/front/3/5/3557e601-9b71-4ce9-9047-1a8baa72e574.jpg" class="archetype-card rounded-image"/></a>
 <a href="https://scryfall.com/card/chk/61/floating-dream-zubera"><img src="https://cards.scryfall.io/normal/front/6/3/63ea55a8-6c21-4cc1-a2c4-86cd60cddced.jpg" class="archetype-card rounded-image"/></a>
-<a href="https://scryfall.com/card/tpr/225/lotus-petal"><img src="https://cards.scryfall.io/normal/front/f/8/f85ab5f9-508e-45de-8fa1-ce1f16552ffc.jpg" class="archetype-card rounded-image"/></a>
-<a href="https://scryfall.com/card/rav/105/shred-memory"><img src="https://cards.scryfall.io/normal/front/e/3/e38192e5-814f-4269-bae8-13867a73e7fa.jpg" class="archetype-card rounded-image"/></a>
+<a href="https://scryfall.com/card/uma/102/gurmag-angler"><img src="https://cards.scryfall.io/normal/front/c/e/cedd44eb-f381-46e1-bcb0-88416b4ce33d.jpg" class="archetype-card rounded-image"/></a>
+<a href="https://scryfall.com/card/ema/55/hydroblast"><img src="https://c1.scryfall.com/file/scryfall-cards/normal/front/4/c/4c9c9b16-5567-4473-95e6-622292f77336.jpg" class="archetype-card rounded-image"/></a>
+<a href="https://scryfall.com/card/clb/455/island"><img src="https://c1.scryfall.com/file/scryfall-cards/normal/front/f/f/ff3ffe47-53a3-42ec-ae89-afc79793380d.jpg" class="archetype-card rounded-image"/></a>
+<a href="https://scryfall.com/card/clb/900/mortuary-mire"><img src="https://cards.scryfall.io/normal/front/0/5/058f30e5-64a9-4d6b-b7a6-0fd95d460cae.jpg" class="archetype-card rounded-image"/></a>
+<a href="https://scryfall.com/card/mkc/111/mulldrifter"><img src="https://cards.scryfall.io/normal/front/e/b/eb6d8d1c-8d23-4273-9c9b-f3b71eb0e105.jpg" class="archetype-card rounded-image"/></a>
+<a href="https://scryfall.com/card/a25/226/nihil-spellbomb"><img src="https://cards.scryfall.io/normal/front/e/5/e5892a23-efae-4731-9b8f-41c87960fe93.jpg" class="archetype-card rounded-image"/></a>
+<a href="https://scryfall.com/card/scg/72/reaping-the-graves"><img src="https://cards.scryfall.io/normal/front/7/6/760a66bd-2821-4710-8f02-3c30772dd884.jpg" class="archetype-card rounded-image"/></a>
+<a href="https://scryfall.com/card/dka/51/stormbound-geist"><img src="https://cards.scryfall.io/normal/front/0/4/040eddb0-fca2-41eb-ab07-c48d49385973.jpg" class="archetype-card rounded-image"/></a>
 <a href="https://scryfall.com/card/cmm/188/supernatural-stamina"><img src="https://cards.scryfall.io/normal/front/2/b/2b349b4b-f08d-45e8-81f6-3467a02e6d23.jpg" class="archetype-card rounded-image"/></a>
+<a href="https://scryfall.com/card/otj/281/swamp"><img src="https://cards.scryfall.io/normal/front/e/b/eb7dc259-9949-4673-a8f1-874396948392.jpg" class="archetype-card rounded-image"/></a>
+<a href="https://scryfall.com/card/som/209/sylvok-lifestaff"><img src="https://cards.scryfall.io/normal/front/a/b/abbc5ae5-8e8b-4106-844f-2d49d2a51ed9.jpg" class="archetype-card rounded-image"/></a>
+<a href="https://scryfall.com/card/cmm/192/tragic-slip"><img src="https://cards.scryfall.io/normal/front/5/8/588332da-8ec5-49d1-a365-455beb7913a2.jpg" class="archetype-card rounded-image"/></a>
 <a href="https://scryfall.com/card/dka/77/undying-evil"><img src="https://cards.scryfall.io/normal/front/3/2/325f2243-54fd-484b-a742-166cea7ec179.jpg" class="archetype-card rounded-image"/></a>
 <a href="https://scryfall.com/card/2x2/96/unearth"><img src="https://cards.scryfall.io/normal/front/b/1/b1f73271-b70f-40ae-be64-f8de7805923a.jpg" class="archetype-card rounded-image"/></a>
-<a href="https://scryfall.com/card/lcc/213/viscera-seer"><img src="https://cards.scryfall.io/normal/front/4/8/486fd8a2-dd97-4082-84ef-4795c7e559a0.jpg" class="archetype-card rounded-image"/></a>
 </details><br/>
 
 
-
-## **Frequent cards**
-
-<details>
-  <summary>Click here to expand</summary>
-<a href="https://scryfall.com/card/vma/106/cabal-ritual"><img src="https://cards.scryfall.io/normal/front/a/5/a5d85875-22da-4054-ae42-e85b472a6d5d.jpg" class="archetype-card rounded-image"/></a>
-<a href="https://scryfall.com/card/khm/84/demonic-gifts"><img src="https://cards.scryfall.io/normal/front/3/f/3f23c487-ac4a-475b-ad5e-ec6f8678e668.jpg" class="archetype-card rounded-image"/></a>
-<a href="https://scryfall.com/card/soi/78/pieces-of-the-puzzle"><img src="https://cards.scryfall.io/normal/front/6/9/69204c83-2e43-4ca1-a4cd-d75399a7d6dd.jpg" class="archetype-card rounded-image"/></a>
-</details><br/>
 
 
 

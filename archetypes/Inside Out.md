@@ -19,9 +19,13 @@
 
 <details>
   <summary>Click here to expand</summary>
+<a href="https://scryfall.com/card/clb/880/ash-barrens"><img src="https://c1.scryfall.com/file/scryfall-cards/normal/front/f/b/fb71aebf-f5d3-45ee-91a4-51088f7141ec.jpg" class="archetype-card rounded-image"/></a>
 <a href="https://scryfall.com/card/mkc/96/brainstorm"><img src="https://cards.scryfall.io/normal/front/8/4/84479779-d570-4eee-9982-f6e918b4d75b.jpg" class="archetype-card rounded-image"/></a>
+<a href="https://scryfall.com/card/dmr/42/circular-logic"><img src="https://cards.scryfall.io/normal/front/4/b/4b19fdac-da3e-4ebd-ae7b-6f31a97b2a0f.jpg" class="archetype-card rounded-image"/></a>
 <a href="https://scryfall.com/card/bfz/76/dispel"><img src="https://cards.scryfall.io/normal/front/b/c/bceab6b3-6b64-4964-a501-ce806a6c13ad.jpg" class="archetype-card rounded-image"/></a>
 <a href="https://scryfall.com/card/eve/103/inside-out"><img src="https://cards.scryfall.io/normal/front/a/5/a51180ee-8677-4d5a-9685-3861c67a1d1f.jpg" class="archetype-card rounded-image"/></a>
+<a href="https://scryfall.com/card/otc/105/ponder"><img src="https://cards.scryfall.io/normal/front/5/a/5af43ceb-56d2-47d4-ab43-853338ab293c.jpg" class="archetype-card rounded-image"/></a>
+<a href="https://scryfall.com/card/otc/107/preordain"><img src="https://cards.scryfall.io/normal/front/1/2/122f2cc2-5f4d-497c-96b5-ed5698f28b51.jpg" class="archetype-card rounded-image"/></a>
 <a href="https://scryfall.com/card/tpr/66/shadow-rift"><img src="https://cards.scryfall.io/normal/front/0/6/06f6d0bd-19b9-45d0-8768-691a6a593d81.jpg" class="archetype-card rounded-image"/></a>
 <a href="https://scryfall.com/card/ody/56/tireless-tribe"><img src="https://cards.scryfall.io/normal/front/1/d/1d23e47a-21d5-4d7e-8aa0-3b3064da5967.jpg" class="archetype-card rounded-image"/></a>
 </details><br/>
@@ -32,34 +36,10 @@
 
 <details>
   <summary>Click here to expand</summary>
-<a href="https://scryfall.com/card/a25/40/accumulated-knowledge"><img src="https://cards.scryfall.io/normal/front/a/d/ad88e5ee-0eee-47af-a7b4-9bac044e1c8c.jpg" class="archetype-card rounded-image"/></a>
-<a href="https://scryfall.com/card/mm2/8/apostles-blessing"><img src="https://cards.scryfall.io/normal/front/f/d/fdfbc07e-d726-4d42-9394-6aa0f5fc3a3a.jpg" class="archetype-card rounded-image"/></a>
-<a href="https://scryfall.com/card/uma/45/archaeomancer"><img src="https://cards.scryfall.io/normal/front/c/c/cc258713-6ce3-44e0-9b4b-8fa7d1d093a1.jpg" class="archetype-card rounded-image"/></a>
 <a href="https://scryfall.com/card/war/41/augur-of-bolas"><img src="https://cards.scryfall.io/normal/front/d/1/d19fbfe6-69bb-452a-be3c-b9c625e23193.jpg" class="archetype-card rounded-image"/></a>
-<a href="https://scryfall.com/card/dmr/42/circular-logic"><img src="https://cards.scryfall.io/normal/front/4/b/4b19fdac-da3e-4ebd-ae7b-6f31a97b2a0f.jpg" class="archetype-card rounded-image"/></a>
-<a href="https://scryfall.com/card/rvr/38/compulsive-research"><img src="https://cards.scryfall.io/normal/front/f/d/fd162ca2-3f27-4747-8f5c-8e66e9ceb7f2.jpg" class="archetype-card rounded-image"/></a>
-<a href="https://scryfall.com/card/cmm/81/counterspell"><img src="https://cards.scryfall.io/normal/front/8/4/8493131c-0a7b-4be6-a8a2-0b425f4f67fb.jpg" class="archetype-card rounded-image"/></a>
-<a href="https://scryfall.com/card/otc/94/deep-analysis"><img src="https://cards.scryfall.io/normal/front/6/b/6bb58d70-8944-4507-aeca-6b3d5f792a91.jpg" class="archetype-card rounded-image"/></a>
-<a href="https://scryfall.com/card/roe/59/deprive"><img src="https://cards.scryfall.io/normal/front/2/e/2efecdd9-bd3a-4b79-92da-6485589d5bde.jpg" class="archetype-card rounded-image"/></a>
-<a href="https://scryfall.com/card/rav/43/dizzy-spell"><img src="https://cards.scryfall.io/normal/front/6/e/6e0db10d-fb6d-44df-9ff2-6f1e0e8f8209.jpg" class="archetype-card rounded-image"/></a>
-<a href="https://scryfall.com/card/mh1/7/ephemerate"><img src="https://cards.scryfall.io/normal/front/2/d/2da5f3f8-5eef-498f-ba2c-2f3fbc3745aa.jpg" class="archetype-card rounded-image"/></a>
+<a href="https://scryfall.com/card/clb/352/evolving-wilds"><img src="https://c1.scryfall.com/file/scryfall-cards/normal/front/b/b/bbc8841a-0f6e-4078-a0b9-a4bda642182e.jpg" class="archetype-card rounded-image"/></a>
 <a href="https://scryfall.com/card/gpt/26/gigadrowse"><img src="https://cards.scryfall.io/normal/front/b/f/bf9f85b3-eb8c-43de-aaac-8a887e9c58da.jpg" class="archetype-card rounded-image"/></a>
-<a href="https://scryfall.com/card/jvc/27/gush"><img src="https://cards.scryfall.io/normal/front/d/4/d4a3a921-3b7f-474c-b8c3-67a1a6ba5cc1.jpg" class="archetype-card rounded-image"/></a>
-<a href="https://scryfall.com/card/dmr/56/impulse"><img src="https://cards.scryfall.io/normal/front/3/e/3ec50625-5e14-4fd0-9a96-86f195342695.jpg" class="archetype-card rounded-image"/></a>
-<a href="https://scryfall.com/card/8ed/91/merchant-scroll"><img src="https://cards.scryfall.io/normal/front/b/b/bb5385d2-ca5d-4fb9-934b-b7cc8b38ac89.jpg" class="archetype-card rounded-image"/></a>
-<a href="https://scryfall.com/card/rvr/50/muddle-the-mixture"><img src="https://cards.scryfall.io/normal/front/e/6/e69d760c-48fb-4e7f-8611-547b0c22928c.jpg" class="archetype-card rounded-image"/></a>
-<a href="https://scryfall.com/card/mkc/111/mulldrifter"><img src="https://cards.scryfall.io/normal/front/e/b/eb6d8d1c-8d23-4273-9c9b-f3b71eb0e105.jpg" class="archetype-card rounded-image"/></a>
-<a href="https://scryfall.com/card/mkc/277/mystic-sanctuary"><img src="https://cards.scryfall.io/normal/front/6/7/67652446-6d12-4e2a-bb51-ba685f2e79d1.jpg" class="archetype-card rounded-image"/></a>
-<a href="https://scryfall.com/card/10e/94/peek"><img src="https://cards.scryfall.io/normal/front/8/6/869a6c06-eae5-418e-9a5c-26598a929416.jpg" class="archetype-card rounded-image"/></a>
-<a href="https://scryfall.com/card/otc/105/ponder"><img src="https://cards.scryfall.io/normal/front/5/a/5af43ceb-56d2-47d4-ab43-853338ab293c.jpg" class="archetype-card rounded-image"/></a>
-<a href="https://scryfall.com/card/otc/107/preordain"><img src="https://cards.scryfall.io/normal/front/1/2/122f2cc2-5f4d-497c-96b5-ed5698f28b51.jpg" class="archetype-card rounded-image"/></a>
-<a href="https://scryfall.com/card/c19/69/prismatic-strands"><img src="https://cards.scryfall.io/normal/front/e/f/efd85985-abc1-430a-9210-63109c90a82d.jpg" class="archetype-card rounded-image"/></a>
-<a href="https://scryfall.com/card/2x2/28/seeker-of-the-way"><img src="https://cards.scryfall.io/normal/front/e/9/e9e3cb28-d318-4d5d-b5bf-1ea7c6249a89.jpg" class="archetype-card rounded-image"/></a>
-<a href="https://scryfall.com/card/m12/37/stonehorn-dignitary"><img src="https://cards.scryfall.io/normal/front/c/3/c3797f7f-489d-4735-af56-6359e0fa0a6b.jpg" class="archetype-card rounded-image"/></a>
-<a href="https://scryfall.com/card/uma/40/tethmos-high-priest"><img src="https://cards.scryfall.io/normal/front/5/1/51baeea2-a922-4e98-8253-f395546c30c8.jpg" class="archetype-card rounded-image"/></a>
-<a href="https://scryfall.com/card/cmm/66/thraben-inspector"><img src="https://cards.scryfall.io/normal/front/2/9/299cc386-2ed5-4504-9ba6-17a52e0c9a0c.jpg" class="archetype-card rounded-image"/></a>
-<a href="https://scryfall.com/card/hou/51/tragic-lesson"><img src="https://cards.scryfall.io/normal/front/a/0/a0f0353c-f1e0-49db-9edc-eea9090de872.jpg" class="archetype-card rounded-image"/></a>
-<a href="https://scryfall.com/card/me2/185/whiteout"><img src="https://cards.scryfall.io/normal/front/e/e/ee7bb29a-daf4-42d3-9404-c9f25d72a648.jpg" class="archetype-card rounded-image"/></a>
+<a href="https://scryfall.com/card/ema/55/hydroblast"><img src="https://c1.scryfall.com/file/scryfall-cards/normal/front/4/c/4c9c9b16-5567-4473-95e6-622292f77336.jpg" class="archetype-card rounded-image"/></a>
 </details><br/>
 
 

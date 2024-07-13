@@ -13,7 +13,34 @@
 **Description**: _Still missing. Please join us on [Discord](https://discord.gg/fYQbpjjkQ3) to contribute to the Academy._
 
 
+## **Staples**
 
+<details>
+  <summary>Click here to expand</summary>
+<a href="https://scryfall.com/card/mh1/84/crypt-rats"><img src="https://cards.scryfall.io/normal/front/9/6/96916db2-5121-4ff1-880c-369744f11ecf.jpg" class="archetype-card rounded-image"/></a>
+<a href="https://scryfall.com/card/one/92/duress"><img src="https://cards.scryfall.io/normal/front/3/5/3557e601-9b71-4ce9-9047-1a8baa72e574.jpg" class="archetype-card rounded-image"/></a>
+<a href="https://scryfall.com/card/mh3/318/forest"><img src="https://cards.scryfall.io/normal/front/7/a/7ac34881-de32-42c7-af60-f992638e1da2.jpg" class="archetype-card rounded-image"/></a>
+<a href="https://scryfall.com/card/uma/95/fume-spitter"><img src="https://cards.scryfall.io/normal/front/b/b/bb1ef824-306c-4975-abca-19f0bd77449f.jpg" class="archetype-card rounded-image"/></a>
+<a href="https://scryfall.com/card/uma/166/golgari-brownscale"><img src="https://cards.scryfall.io/normal/front/e/4/e41f3323-f702-46a6-92db-33ec0afd75d2.jpg" class="archetype-card rounded-image"/></a>
+<a href="https://scryfall.com/card/tsr/118/grave-scrabbler"><img src="https://cards.scryfall.io/normal/front/d/6/d6c53e52-8d63-4628-bfb9-8abe4c7c7f4a.jpg" class="archetype-card rounded-image"/></a>
+<a href="https://scryfall.com/card/ddm/51/putrid-leech"><img src="https://cards.scryfall.io/normal/front/c/9/c901a8d7-e230-4a08-afe5-00e9d1c85544.jpg" class="archetype-card rounded-image"/></a>
+<a href="https://scryfall.com/card/dvd/36/stinkweed-imp"><img src="https://cards.scryfall.io/normal/front/2/a/2ab08d69-210b-4b06-88a2-45281a1a4e1e.jpg" class="archetype-card rounded-image"/></a>
+<a href="https://scryfall.com/card/otj/281/swamp"><img src="https://cards.scryfall.io/normal/front/e/b/eb7dc259-9949-4673-a8f1-874396948392.jpg" class="archetype-card rounded-image"/></a>
+<a href="https://scryfall.com/card/afc/267/terramorphic-expanse"><img src="https://c1.scryfall.com/file/scryfall-cards/normal/front/0/8/08ac4e43-4e16-46a2-96f5-58d5550984c4.jpg" class="archetype-card rounded-image"/></a>
+<a href="https://scryfall.com/card/sth/74/tortured-existence"><img src="https://cards.scryfall.io/normal/front/1/7/1754b92b-d6f9-4503-af01-dee03f72a048.jpg" class="archetype-card rounded-image"/></a>
+<a href="https://scryfall.com/card/tpr/122/vampire-hounds"><img src="https://cards.scryfall.io/normal/front/5/9/59339026-3ec6-4bd9-a1c4-c80951f8c68d.jpg" class="archetype-card rounded-image"/></a>
+<a href="https://scryfall.com/card/uma/194/wild-mongrel"><img src="https://c1.scryfall.com/file/scryfall-cards/normal/front/4/d/4d5be4ab-f85a-4272-ac08-99cb0105eb11.jpg" class="archetype-card rounded-image"/></a>
+</details><br/>
+
+
+
+## **Frequent cards**
+
+<details>
+  <summary>Click here to expand</summary>
+<a href="https://scryfall.com/card/uma/156/basking-rootwalla"><img src="https://cards.scryfall.io/normal/front/2/6/26bfde99-7761-48e1-851a-522f888d0f6c.jpg" class="archetype-card rounded-image"/></a>
+<a href="https://scryfall.com/card/dst/41/echoing-decay"><img src="https://cards.scryfall.io/normal/front/f/8/f8e688e7-8350-4b78-bd49-a6ffdedad556.jpg" class="archetype-card rounded-image"/></a>
+</details><br/>
 
 
 

@@ -20,15 +20,19 @@
 <a href="https://scryfall.com/card/mic/132/avacyns-pilgrim"><img src="https://cards.scryfall.io/normal/front/a/3/a390a7df-b8da-41aa-93e5-2c0db938a27e.jpg" class="archetype-card rounded-image"/></a>
 <a href="https://scryfall.com/card/c21/143/epicure-of-blood"><img src="https://cards.scryfall.io/normal/front/a/c/ac79386b-91eb-4813-8f3c-3b74b45be188.jpg" class="archetype-card rounded-image"/></a>
 <a href="https://scryfall.com/card/cma/106/essence-warden"><img src="https://cards.scryfall.io/normal/front/3/1/31ca84d1-30a6-432b-966c-089fb6652a89.jpg" class="archetype-card rounded-image"/></a>
+<a href="https://scryfall.com/card/gvl/42/faerie-macabre"><img src="https://cards.scryfall.io/normal/front/6/2/62103ceb-b16d-48ea-af42-d3df88d1ee4c.jpg" class="archetype-card rounded-image"/></a>
 <a href="https://scryfall.com/card/uds/8/field-surgeon"><img src="https://cards.scryfall.io/normal/front/b/b/bb830403-0832-47f7-b4b4-4f241f1b9112.jpg" class="archetype-card rounded-image"/></a>
+<a href="https://scryfall.com/card/mh3/318/forest"><img src="https://cards.scryfall.io/normal/front/7/a/7ac34881-de32-42c7-af60-f992638e1da2.jpg" class="archetype-card rounded-image"/></a>
 <a href="https://scryfall.com/card/iko/163/lead-the-stampede"><img src="https://cards.scryfall.io/normal/front/9/e/9e76b676-c7a3-4de6-a78d-3059a0df83f2.jpg" class="archetype-card rounded-image"/></a>
 <a href="https://scryfall.com/card/soi/216/loam-dryad"><img src="https://cards.scryfall.io/normal/front/6/1/61c9441d-18d9-4ec6-859e-e9a7893b54e3.jpg" class="archetype-card rounded-image"/></a>
+<a href="https://scryfall.com/card/inv/22/obsidian-acolyte"><img src="https://cards.scryfall.io/normal/front/8/6/868efcee-bb13-4b6f-b81b-99408685e4c4.jpg" class="archetype-card rounded-image"/></a>
 <a href="https://scryfall.com/card/mh2/285/quirion-ranger"><img src="https://cards.scryfall.io/normal/front/3/2/320fdf89-e158-41c5-b0bf-fee9dec36a75.jpg" class="archetype-card rounded-image"/></a>
 <a href="https://scryfall.com/card/rna/139/saruli-caretaker"><img src="https://cards.scryfall.io/normal/front/e/f/ef3358cb-714c-49bf-b7e9-a69d02d7799e.jpg" class="archetype-card rounded-image"/></a>
 <a href="https://scryfall.com/card/m15/31/selfless-cathar"><img src="https://cards.scryfall.io/normal/front/3/3/3366f6c3-3899-4585-b6d2-24406703cf34.jpg" class="archetype-card rounded-image"/></a>
 <a href="https://scryfall.com/card/mm3/24/soul-warden"><img src="https://cards.scryfall.io/normal/front/d/9/d96266b3-a7cb-40ce-a328-ac13719fe5f0.jpg" class="archetype-card rounded-image"/></a>
+<a href="https://scryfall.com/card/roe/44/souls-attendant"><img src="https://cards.scryfall.io/normal/front/3/2/3223c0ac-cc22-4886-8919-11273b477cc7.jpg" class="archetype-card rounded-image"/></a>
+<a href="https://scryfall.com/card/apc/18/standard-bearer"><img src="https://c1.scryfall.com/file/scryfall-cards/normal/front/e/0/e0f8e16a-55f0-4147-a01a-dba7938f31c4.jpg" class="archetype-card rounded-image"/></a>
 <a href="https://scryfall.com/card/mor/25/stonybrook-schoolmaster"><img src="https://cards.scryfall.io/normal/front/6/9/69fa2293-f398-4ad8-895e-c739ddea56d0.jpg" class="archetype-card rounded-image"/></a>
-<a href="https://scryfall.com/card/mma/34/veteran-armorer"><img src="https://cards.scryfall.io/normal/front/0/2/026aaea6-ed4f-4505-9779-7c28ff6c2284.jpg" class="archetype-card rounded-image"/></a>
 <a href="https://scryfall.com/card/otc/213/winding-way"><img src="https://cards.scryfall.io/normal/front/d/3/d3340062-3071-4d8e-98f8-fd3343a011ad.jpg" class="archetype-card rounded-image"/></a>
 </details><br/>
 
@@ -38,9 +42,7 @@
 
 <details>
   <summary>Click here to expand</summary>
-<a href="https://scryfall.com/card/rvr/220/selesnya-evangel"><img src="https://cards.scryfall.io/normal/front/2/d/2d929bda-150c-484a-910e-eee19297c77e.jpg" class="archetype-card rounded-image"/></a>
-<a href="https://scryfall.com/card/roe/44/souls-attendant"><img src="https://cards.scryfall.io/normal/front/3/2/3223c0ac-cc22-4886-8919-11273b477cc7.jpg" class="archetype-card rounded-image"/></a>
-<a href="https://scryfall.com/card/dmr/102/street-wraith"><img src="https://cards.scryfall.io/normal/front/5/d/5d09cc57-2275-4b6b-aaf6-a6d781cd9365.jpg" class="archetype-card rounded-image"/></a>
+<a href="https://scryfall.com/card/mma/34/veteran-armorer"><img src="https://cards.scryfall.io/normal/front/0/2/026aaea6-ed4f-4505-9779-7c28ff6c2284.jpg" class="archetype-card rounded-image"/></a>
 </details><br/>
 
 

@@ -15,7 +15,31 @@
 **Description**: _Still missing. Please join us on [Discord](https://discord.gg/fYQbpjjkQ3) to contribute to the Academy._
 
 
+## **Staples**
 
+<details>
+  <summary>Click here to expand</summary>
+<a href="https://scryfall.com/card/2x2/134/annoyed-altisaur"><img src="https://cards.scryfall.io/normal/front/6/1/6108741c-30de-4390-8482-3f293bdce4bd.jpg" class="archetype-card rounded-image"/></a>
+<a href="https://scryfall.com/card/a25/160/arbor-elf"><img src="https://cards.scryfall.io/normal/front/4/b/4b81165e-f091-4211-8b47-5ea6868b0d4c.jpg" class="archetype-card rounded-image"/></a>
+<a href="https://scryfall.com/card/cmr/163/boarding-party"><img src="https://cards.scryfall.io/normal/front/1/8/186adacf-434b-475b-9b85-749615ae002b.jpg" class="archetype-card rounded-image"/></a>
+<a href="https://scryfall.com/card/mkc/111/mulldrifter"><img src="https://cards.scryfall.io/normal/front/e/b/eb6d8d1c-8d23-4273-9c9b-f3b71eb0e105.jpg" class="archetype-card rounded-image"/></a>
+<a href="https://scryfall.com/card/tsp/207/mwonvuli-acid-moss"><img src="https://cards.scryfall.io/normal/front/6/8/6841dbf6-5023-4612-bbd7-182fd35b05c8.jpg" class="archetype-card rounded-image"/></a>
+<a href="https://scryfall.com/card/rvr/159/utopia-sprawl"><img src="https://cards.scryfall.io/normal/front/5/e/5ea568df-04a1-4012-98ec-ba75e189e0ca.jpg" class="archetype-card rounded-image"/></a>
+</details><br/>
+
+
+
+## **Frequent cards**
+
+<details>
+  <summary>Click here to expand</summary>
+<a href="https://scryfall.com/card/mor/118/deglamer"><img src="https://cards.scryfall.io/normal/front/9/8/985b43aa-58f0-42fc-9ef0-a7925727d58f.jpg" class="archetype-card rounded-image"/></a>
+<a href="https://scryfall.com/card/cmr/178/fiery-cannonade"><img src="https://cards.scryfall.io/normal/front/3/9/396f1cdf-712b-4518-a0e8-0039303dccdc.jpg" class="archetype-card rounded-image"/></a>
+<a href="https://scryfall.com/card/clb/896/highland-forest"><img src="https://cards.scryfall.io/normal/front/5/9/59f64a32-c364-4750-94ed-d4d71c1a3511.jpg" class="archetype-card rounded-image"/></a>
+<a href="https://scryfall.com/card/khm/266/rimewood-falls"><img src="https://cards.scryfall.io/normal/front/d/a/da1db084-f235-4e26-8867-5f0835a0d283.jpg" class="archetype-card rounded-image"/></a>
+<a href="https://scryfall.com/card/me2/183/thermokarst"><img src="https://cards.scryfall.io/normal/front/7/4/74e907ed-76f7-476c-b128-bb6bfd892e06.jpg" class="archetype-card rounded-image"/></a>
+<a href="https://scryfall.com/card/mkc/195/wild-growth"><img src="https://cards.scryfall.io/normal/front/4/7/47260e7c-29bf-46f1-a029-9da7bbb418b5.jpg" class="archetype-card rounded-image"/></a>
+</details><br/>
 
 
 
