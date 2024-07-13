@@ -34,10 +34,10 @@ It's one of the cheapest and competitive deck in the format.
 <a href="https://scryfall.com/card/bng/3/akroan-skyguard"><img src="https://cards.scryfall.io/normal/front/d/5/d55e85c3-234e-49c4-a307-96fb4497eea8.jpg" class="archetype-card rounded-image"/></a>
 <a href="https://scryfall.com/card/akh/7/cartouche-of-solidarity"><img src="https://cards.scryfall.io/normal/front/9/0/90eaf94e-85a7-4958-aa58-8e2fe44db58d.jpg" class="archetype-card rounded-image"/></a>
 <a href="https://scryfall.com/card/vma/23/deftblade-elite"><img src="https://cards.scryfall.io/normal/front/d/5/d576b8f2-9b5b-47c0-8f9f-faa209d59595.jpg" class="archetype-card rounded-image"/></a>
-<a href="https://scryfall.com/card/ima/19/emerge-unscathed"><img src="https://cards.scryfall.io/normal/front/d/0/d016f166-183e-4d9e-9292-9bfb1ca0d72b.jpg" class="archetype-card rounded-image"/></a>
 <a href="https://scryfall.com/card/rtr/9/ethereal-armor"><img src="https://cards.scryfall.io/normal/front/7/6/76960e65-e5c7-4414-b9a5-37d7b2ded4a0.jpg" class="archetype-card rounded-image"/></a>
 <a href="https://scryfall.com/card/2x2/13/hyena-umbra"><img src="https://cards.scryfall.io/normal/front/f/6/f6cc0f1f-191a-4141-965f-8d159bf54732.jpg" class="archetype-card rounded-image"/></a>
 <a href="https://scryfall.com/card/jou/14/lagonna-band-trailblazer"><img src="https://cards.scryfall.io/normal/front/3/8/38a6f533-6acb-4c24-ae9d-fe4977230156.jpg" class="archetype-card rounded-image"/></a>
+<a href="https://scryfall.com/card/mh3/310/plains"><img src="https://cards.scryfall.io/normal/front/e/0/e0281fba-d771-4431-931f-920db2f14c47.jpg" class="archetype-card rounded-image"/></a>
 </details><br/>
 
 
@@ -46,17 +46,11 @@ It's one of the cheapest and competitive deck in the format.
 
 <details>
   <summary>Click here to expand</summary>
-<a href="https://scryfall.com/card/cmr/13/benevolent-blessing"><img src="https://cards.scryfall.io/normal/front/0/d/0d5c2401-da2c-46f9-b850-f37edcbb85cd.jpg" class="archetype-card rounded-image"/></a>
-<a href="https://scryfall.com/card/ema/4/benevolent-bodyguard"><img src="https://cards.scryfall.io/normal/front/2/4/241e5c4e-0f0b-4a3f-91e0-87387a11e81e.jpg" class="archetype-card rounded-image"/></a>
-<a href="https://scryfall.com/card/mmq/12/cho-mannos-blessing"><img src="https://cards.scryfall.io/normal/front/5/c/5c9f33c6-5294-4584-854d-c8c0f847aba8.jpg" class="archetype-card rounded-image"/></a>
-<a href="https://scryfall.com/card/m21/15/defiant-strike"><img src="https://cards.scryfall.io/normal/front/5/c/5c23869b-c99a-49dd-9e29-fcc0eb63fad1.jpg" class="archetype-card rounded-image"/></a>
-<a href="https://scryfall.com/card/clu/63/gods-willing"><img src="https://cards.scryfall.io/normal/front/1/3/138f0e49-71d5-4582-92be-797e753f0f42.jpg" class="archetype-card rounded-image"/></a>
-<a href="https://scryfall.com/card/thb/26/karametras-blessing"><img src="https://cards.scryfall.io/normal/front/8/8/88c8e4dc-5378-48d6-85b2-f5ea9ec7cf36.jpg" class="archetype-card rounded-image"/></a>
-<a href="https://scryfall.com/card/mm2/149/mutagenic-growth"><img src="https://cards.scryfall.io/normal/front/2/e/2e0861a2-1858-47af-8154-20a977c2b298.jpg" class="archetype-card rounded-image"/></a>
+<a href="https://scryfall.com/card/ima/19/emerge-unscathed"><img src="https://cards.scryfall.io/normal/front/d/0/d016f166-183e-4d9e-9292-9bfb1ca0d72b.jpg" class="archetype-card rounded-image"/></a>
+<a href="https://scryfall.com/card/m12/24/lifelink"><img src="https://cards.scryfall.io/normal/front/a/8/a8e207d4-9930-4aff-a7c8-b53bd1b5d566.jpg" class="archetype-card rounded-image"/></a>
 <a href="https://scryfall.com/card/akh/27/sacred-cat"><img src="https://cards.scryfall.io/normal/front/0/8/08891c78-13c1-4d84-aa9c-78346b3b7d18.jpg" class="archetype-card rounded-image"/></a>
-<a href="https://scryfall.com/card/2x2/28/seeker-of-the-way"><img src="https://cards.scryfall.io/normal/front/e/9/e9e3cb28-d318-4d5d-b5bf-1ea7c6249a89.jpg" class="archetype-card rounded-image"/></a>
+<a href="https://scryfall.com/card/mkc/289/secluded-steppe"><img src="https://cards.scryfall.io/normal/front/2/2/22dd757f-e43a-430f-ae79-66fc7dc12525.jpg" class="archetype-card rounded-image"/></a>
 <a href="https://scryfall.com/card/thb/36/sentinels-eyes"><img src="https://cards.scryfall.io/normal/front/3/2/32adc118-b81e-48c2-b7ef-b62e8c3308d6.jpg" class="archetype-card rounded-image"/></a>
-<a href="https://scryfall.com/card/nph/76/vault-skirge"><img src="https://cards.scryfall.io/normal/front/f/2/f254239c-c07a-4c41-98f7-8f4de539c73e.jpg" class="archetype-card rounded-image"/></a>
 </details><br/>
 
 

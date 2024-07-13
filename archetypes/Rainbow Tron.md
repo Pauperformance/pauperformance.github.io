@@ -13,7 +13,37 @@
 **Description**: _Still missing. Please join us on [Discord](https://discord.gg/fYQbpjjkQ3) to contribute to the Academy._
 
 
+## **Staples**
 
+<details>
+  <summary>Click here to expand</summary>
+<a href="https://scryfall.com/card/jmp/462/chromatic-sphere"><img src="https://cards.scryfall.io/normal/front/e/d/edabc8b2-4413-48e4-8d6f-521b19d839a6.jpg" class="archetype-card rounded-image"/></a>
+<a href="https://scryfall.com/card/tsr/263/chromatic-star"><img src="https://cards.scryfall.io/normal/front/c/2/c2e8d492-2c67-410b-b556-c157a14c4cec.jpg" class="archetype-card rounded-image"/></a>
+<a href="https://scryfall.com/card/2xm/255/expedition-map"><img src="https://cards.scryfall.io/normal/front/5/5/551c0a45-9515-4e51-84e5-79703832a661.jpg" class="archetype-card rounded-image"/></a>
+<a href="https://scryfall.com/card/mbs/79/fangren-marauder"><img src="https://cards.scryfall.io/normal/front/f/5/f5cf62a2-d03a-495d-924a-bf79524175fa.jpg" class="archetype-card rounded-image"/></a>
+<a href="https://scryfall.com/card/c18/254/haunted-fengraf"><img src="https://cards.scryfall.io/normal/front/9/7/97a1d55a-39a8-4bf4-91b7-5565146c9c40.jpg" class="archetype-card rounded-image"/></a>
+<a href="https://scryfall.com/card/mkc/111/mulldrifter"><img src="https://cards.scryfall.io/normal/front/e/b/eb6d8d1c-8d23-4273-9c9b-f3b71eb0e105.jpg" class="archetype-card rounded-image"/></a>
+<a href="https://scryfall.com/card/woe/249/prophetic-prism"><img src="https://cards.scryfall.io/normal/front/1/f/1fae351c-b918-4648-a361-d5239ae63156.jpg" class="archetype-card rounded-image"/></a>
+<a href="https://scryfall.com/card/gnt/40/rolling-thunder"><img src="https://cards.scryfall.io/normal/front/0/d/0df50703-5655-4bc4-adc9-d719c2da3bfd.jpg" class="archetype-card rounded-image"/></a>
+<a href="https://scryfall.com/card/cmm/1051/urzas-mine"><img src="https://cards.scryfall.io/normal/front/3/9/396bbb7d-ae61-4d8d-b931-9ed2f712832e.jpg" class="archetype-card rounded-image"/></a>
+<a href="https://scryfall.com/card/cmm/1052/urzas-power-plant"><img src="https://cards.scryfall.io/normal/front/b/0/b0449a19-37f7-4169-9e32-928db5ec76fe.jpg" class="archetype-card rounded-image"/></a>
+<a href="https://scryfall.com/card/cmm/1053/urzas-tower"><img src="https://cards.scryfall.io/normal/front/1/e/1e9f09b3-dd2d-4ba9-a57e-4f3c1793f752.jpg" class="archetype-card rounded-image"/></a>
+</details><br/>
+
+
+
+## **Frequent cards**
+
+<details>
+  <summary>Click here to expand</summary>
+<a href="https://scryfall.com/card/tsr/151/ancient-grudge"><img src="https://c1.scryfall.com/file/scryfall-cards/normal/front/5/f/5f28d4a2-6c75-44c2-93ac-e7159c1c623f.jpg" class="archetype-card rounded-image"/></a>
+<a href="https://scryfall.com/card/2xm/151/ancient-stirrings"><img src="https://cards.scryfall.io/normal/front/7/2/726039a0-6c0d-48ef-9b42-99de5d4e41d2.jpg" class="archetype-card rounded-image"/></a>
+<a href="https://scryfall.com/card/9ed/11/circle-of-protection:-red"><img src="https://cards.scryfall.io/normal/front/d/7/d7920b6d-ff71-4802-9589-e1df0c58b9ff.jpg" class="archetype-card rounded-image"/></a>
+<a href="https://scryfall.com/card/mh1/122/firebolt"><img src="https://cards.scryfall.io/normal/front/8/8/882b8f98-ee51-4c94-a3eb-c79eb2b50d78.jpg" class="archetype-card rounded-image"/></a>
+<a href="https://scryfall.com/card/khc/43/sea-gate-oracle"><img src="https://cards.scryfall.io/normal/front/4/9/498743ce-0ca5-488a-ae5e-d348b274bf3b.jpg" class="archetype-card rounded-image"/></a>
+<a href="https://scryfall.com/card/ima/248/shimmering-grotto"><img src="https://cards.scryfall.io/normal/front/e/0/e03f2594-c6e8-4758-86b4-885d1dba3a91.jpg" class="archetype-card rounded-image"/></a>
+<a href="https://scryfall.com/card/cmm/6/ulamogs-crusher"><img src="https://cards.scryfall.io/normal/front/6/9/699c0f6f-b26b-4741-8140-8a6030cad127.jpg" class="archetype-card rounded-image"/></a>
+</details><br/>
 
 
 

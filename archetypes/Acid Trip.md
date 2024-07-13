@@ -25,7 +25,15 @@ Once the board is in control, the player typically wins by beating with creature
 
 <details>
   <summary>Click here to expand</summary>
+<a href="https://scryfall.com/card/clu/229/azorius-chancery"><img src="https://cards.scryfall.io/normal/front/a/9/a9d629f3-24b0-400c-b054-b66250696708.jpg" class="archetype-card rounded-image"/></a>
+<a href="https://scryfall.com/card/tsr/63/dream-stalker"><img src="https://cards.scryfall.io/normal/front/e/5/e59b4729-74c1-4aa9-937d-27cda960f157.jpg" class="archetype-card rounded-image"/></a>
+<a href="https://scryfall.com/card/clb/455/island"><img src="https://c1.scryfall.com/file/scryfall-cards/normal/front/f/f/ff3ffe47-53a3-42ec-ae89-afc79793380d.jpg" class="archetype-card rounded-image"/></a>
+<a href="https://scryfall.com/card/cmd/17/journey-to-nowhere"><img src="https://cards.scryfall.io/normal/front/4/6/4686b51c-e02b-48c1-bafe-e8d08a5407b9.jpg" class="archetype-card rounded-image"/></a>
+<a href="https://scryfall.com/card/c17/259/kabira-crossroads"><img src="https://cards.scryfall.io/normal/front/7/f/7f6a18b8-d490-490d-83a5-227a416ccf92.jpg" class="archetype-card rounded-image"/></a>
 <a href="https://scryfall.com/card/mm3/11/kor-skyfisher"><img src="https://cards.scryfall.io/normal/front/d/7/d7501662-1216-4e08-bd2b-e0a459057942.jpg" class="archetype-card rounded-image"/></a>
+<a href="https://scryfall.com/card/mm3/14/lone-missionary"><img src="https://c1.scryfall.com/file/scryfall-cards/normal/front/6/d/6d31d5b6-0973-43d2-aae0-a3f3e7a61800.jpg" class="archetype-card rounded-image"/></a>
+<a href="https://scryfall.com/card/mkc/111/mulldrifter"><img src="https://cards.scryfall.io/normal/front/e/b/eb6d8d1c-8d23-4273-9c9b-f3b71eb0e105.jpg" class="archetype-card rounded-image"/></a>
+<a href="https://scryfall.com/card/mh3/310/plains"><img src="https://cards.scryfall.io/normal/front/e/0/e0281fba-d771-4431-931f-920db2f14c47.jpg" class="archetype-card rounded-image"/></a>
 <a href="https://scryfall.com/card/otc/107/preordain"><img src="https://cards.scryfall.io/normal/front/1/2/122f2cc2-5f4d-497c-96b5-ed5698f28b51.jpg" class="archetype-card rounded-image"/></a>
 <a href="https://scryfall.com/card/tsr/81/reality-acid"><img src="https://cards.scryfall.io/normal/front/a/8/a8510381-e05c-4cc4-98aa-c9327e18ec02.jpg" class="archetype-card rounded-image"/></a>
 </details><br/>
@@ -36,29 +44,9 @@ Once the board is in control, the player typically wins by beating with creature
 
 <details>
   <summary>Click here to expand</summary>
-<a href="https://scryfall.com/card/2x2/37/aethersnipe"><img src="https://cards.scryfall.io/normal/front/2/c/2cc9b5ee-4d6d-42ea-8b13-b8a7059781c9.jpg" class="archetype-card rounded-image"/></a>
-<a href="https://scryfall.com/card/a25/51/court-hussar"><img src="https://cards.scryfall.io/normal/front/f/3/f3843e98-192c-44a2-be54-9ba79e51657c.jpg" class="archetype-card rounded-image"/></a>
-<a href="https://scryfall.com/card/cmm/19/custodi-squire"><img src="https://cards.scryfall.io/normal/front/1/7/1771d71b-18b1-44dd-b413-4319519b0778.jpg" class="archetype-card rounded-image"/></a>
-<a href="https://scryfall.com/card/rav/44/drake-familiar"><img src="https://cards.scryfall.io/normal/front/b/4/b4583623-e367-48cc-8e86-e6c5e35f1a9c.jpg" class="archetype-card rounded-image"/></a>
-<a href="https://scryfall.com/card/tsr/63/dream-stalker"><img src="https://cards.scryfall.io/normal/front/e/5/e59b4729-74c1-4aa9-937d-27cda960f157.jpg" class="archetype-card rounded-image"/></a>
-<a href="https://scryfall.com/card/dmc/109/echoing-truth"><img src="https://cards.scryfall.io/normal/front/5/d/5d987d26-c8e8-4edf-8ac0-6a2980265710.jpg" class="archetype-card rounded-image"/></a>
 <a href="https://scryfall.com/card/cmr/20/faiths-fetters"><img src="https://c1.scryfall.com/file/scryfall-cards/normal/front/0/4/04a7da8c-a444-4deb-89b9-2fc9e5475bff.jpg" class="archetype-card rounded-image"/></a>
-<a href="https://scryfall.com/card/cmm/98/ghostly-flicker"><img src="https://cards.scryfall.io/normal/front/d/c/dc143ba3-2a58-4980-9fa0-a05a9e9ed082.jpg" class="archetype-card rounded-image"/></a>
-<a href="https://scryfall.com/card/thb/20/heliods-pilgrim"><img src="https://cards.scryfall.io/normal/front/c/a/cafce2f5-f4f4-465b-96dc-bcdd29d4e4bb.jpg" class="archetype-card rounded-image"/></a>
-<a href="https://scryfall.com/card/pls/7/hobble"><img src="https://cards.scryfall.io/normal/front/5/4/54c76a22-f9e3-408b-a5bd-403add57e31a.jpg" class="archetype-card rounded-image"/></a>
-<a href="https://scryfall.com/card/cmd/17/journey-to-nowhere"><img src="https://cards.scryfall.io/normal/front/4/6/4686b51c-e02b-48c1-bafe-e8d08a5407b9.jpg" class="archetype-card rounded-image"/></a>
-<a href="https://scryfall.com/card/mm3/14/lone-missionary"><img src="https://c1.scryfall.com/file/scryfall-cards/normal/front/6/d/6d31d5b6-0973-43d2-aae0-a3f3e7a61800.jpg" class="archetype-card rounded-image"/></a>
-<a href="https://scryfall.com/card/ima/67/mnemonic-wall"><img src="https://cards.scryfall.io/normal/front/a/3/a3e6784b-78e8-4f0b-8d27-d49c7cea9252.jpg" class="archetype-card rounded-image"/></a>
 <a href="https://scryfall.com/card/2x2/20/momentary-blink"><img src="https://c1.scryfall.com/file/scryfall-cards/normal/front/1/f/1fa0d1c6-9110-4956-97eb-e18c457bb130.jpg" class="archetype-card rounded-image"/></a>
-<a href="https://scryfall.com/card/mkc/111/mulldrifter"><img src="https://cards.scryfall.io/normal/front/e/b/eb6d8d1c-8d23-4273-9c9b-f3b71eb0e105.jpg" class="archetype-card rounded-image"/></a>
-<a href="https://scryfall.com/card/mm2/29/oblivion-ring"><img src="https://cards.scryfall.io/normal/front/b/f/bff31eba-8ab3-403e-8d82-37a18b279bec.jpg" class="archetype-card rounded-image"/></a>
 <a href="https://scryfall.com/card/khc/43/sea-gate-oracle"><img src="https://cards.scryfall.io/normal/front/4/9/498743ce-0ca5-488a-ae5e-d348b274bf3b.jpg" class="archetype-card rounded-image"/></a>
-<a href="https://scryfall.com/card/2x2/28/seeker-of-the-way"><img src="https://cards.scryfall.io/normal/front/e/9/e9e3cb28-d318-4d5d-b5bf-1ea7c6249a89.jpg" class="archetype-card rounded-image"/></a>
-<a href="https://scryfall.com/card/dmr/66/snap"><img src="https://cards.scryfall.io/normal/front/f/1/f13406c6-f208-402a-94d3-a94a24f03563.jpg" class="archetype-card rounded-image"/></a>
-<a href="https://scryfall.com/card/zen/70/spreading-seas"><img src="https://cards.scryfall.io/normal/front/3/7/37454c1c-4098-4ac2-884e-3f65f1384bdb.jpg" class="archetype-card rounded-image"/></a>
-<a href="https://scryfall.com/card/pls/17/sunscape-familiar"><img src="https://cards.scryfall.io/normal/front/9/6/9621f341-bf85-4b77-bf19-2fb013b4c955.jpg" class="archetype-card rounded-image"/></a>
-<a href="https://scryfall.com/card/war/72/teferis-time-twist"><img src="https://cards.scryfall.io/normal/front/c/8/c878bdc0-d697-4a2f-bba5-758b27f4247a.jpg" class="archetype-card rounded-image"/></a>
-<a href="https://scryfall.com/card/cmm/66/thraben-inspector"><img src="https://cards.scryfall.io/normal/front/2/9/299cc386-2ed5-4504-9ba6-17a52e0c9a0c.jpg" class="archetype-card rounded-image"/></a>
 </details><br/>
 
 

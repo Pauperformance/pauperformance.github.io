@@ -19,10 +19,10 @@
 
 <details>
   <summary>Click here to expand</summary>
-<a href="https://scryfall.com/card/vow/142/ancestral-anger"><img src="https://cards.scryfall.io/normal/front/5/d/5dee47ab-d603-4346-97f4-a25dc3f47765.jpg" class="archetype-card rounded-image"/></a>
-<a href="https://scryfall.com/card/otc/165/faithless-looting"><img src="https://cards.scryfall.io/normal/front/1/e/1ea23c17-6960-44fd-bae3-e24595b00c22.jpg" class="archetype-card rounded-image"/></a>
+<a href="https://scryfall.com/card/mm2/8/apostles-blessing"><img src="https://cards.scryfall.io/normal/front/f/d/fdfbc07e-d726-4d42-9394-6aa0f5fc3a3a.jpg" class="archetype-card rounded-image"/></a>
 <a href="https://scryfall.com/card/jmp/338/kiln-fiend"><img src="https://cards.scryfall.io/normal/front/6/c/6c957c94-3d2d-4b98-8990-cd8909462081.jpg" class="archetype-card rounded-image"/></a>
 <a href="https://scryfall.com/card/mh1/134/lava-dart"><img src="https://cards.scryfall.io/normal/front/b/1/b16dd041-451d-4914-8c46-aa315a90d802.jpg" class="archetype-card rounded-image"/></a>
+<a href="https://scryfall.com/card/clb/463/mountain"><img src="https://c1.scryfall.com/file/scryfall-cards/normal/front/0/a/0ab63e49-0869-4c7c-a033-d8e50032dd13.jpg" class="archetype-card rounded-image"/></a>
 <a href="https://scryfall.com/card/mm2/149/mutagenic-growth"><img src="https://cards.scryfall.io/normal/front/2/e/2e0861a2-1858-47af-8154-20a977c2b298.jpg" class="archetype-card rounded-image"/></a>
 </details><br/>
 
@@ -32,16 +32,11 @@
 
 <details>
   <summary>Click here to expand</summary>
-<a href="https://scryfall.com/card/uma/121/akroan-crusader"><img src="https://cards.scryfall.io/normal/front/7/3/73d295ac-3c83-47db-a324-aa4907bcefdd.jpg" class="archetype-card rounded-image"/></a>
-<a href="https://scryfall.com/card/mm2/8/apostles-blessing"><img src="https://cards.scryfall.io/normal/front/f/d/fdfbc07e-d726-4d42-9394-6aa0f5fc3a3a.jpg" class="archetype-card rounded-image"/></a>
-<a href="https://scryfall.com/card/tsr/157/brute-force"><img src="https://cards.scryfall.io/normal/front/8/9/89db7256-3bd0-4c1d-9c6f-de81f7d3c1a2.jpg" class="archetype-card rounded-image"/></a>
-<a href="https://scryfall.com/card/rvr/104/burning-prophet"><img src="https://cards.scryfall.io/normal/front/f/d/fdc5436b-9655-4fd4-bb1e-9d6a30dfeb81.jpg" class="archetype-card rounded-image"/></a>
-<a href="https://scryfall.com/card/m21/140/crash-through"><img src="https://c1.scryfall.com/file/scryfall-cards/normal/front/8/2/8257c205-00cd-4d41-bd58-098575ea2343.jpg" class="archetype-card rounded-image"/></a>
 <a href="https://scryfall.com/card/mid/140/festival-crasher"><img src="https://cards.scryfall.io/normal/front/6/2/626b0477-6165-443a-8a75-dfeac26ac9f9.jpg" class="archetype-card rounded-image"/></a>
-<a href="https://scryfall.com/card/cmm/223/fists-of-flame"><img src="https://cards.scryfall.io/normal/front/6/b/6b34af88-bc4e-4ca8-8662-7dc4050c62c5.jpg" class="archetype-card rounded-image"/></a>
-<a href="https://scryfall.com/card/ori/154/mage-ring-bully"><img src="https://c1.scryfall.com/file/scryfall-cards/normal/front/1/a/1a129f22-dd7e-4b2c-a514-a2ac55bb5661.jpg" class="archetype-card rounded-image"/></a>
+<a href="https://scryfall.com/card/jud/89/flaring-pain"><img src="https://c1.scryfall.com/file/scryfall-cards/normal/front/e/e/eeb5c96a-1d16-459d-9968-ced9a8f1c520.jpg" class="archetype-card rounded-image"/></a>
+<a href="https://scryfall.com/card/clu/141/lightning-bolt"><img src="https://cards.scryfall.io/normal/front/7/7/77c6fa74-5543-42ac-9ead-0e890b188e99.jpg" class="archetype-card rounded-image"/></a>
 <a href="https://scryfall.com/card/2xm/208/manamorphose"><img src="https://cards.scryfall.io/normal/front/f/a/faf9070e-14be-4ce5-a19a-6addc79359c1.jpg" class="archetype-card rounded-image"/></a>
-<a href="https://scryfall.com/card/jou/110/satyr-hoplite"><img src="https://cards.scryfall.io/normal/front/b/8/b8754d66-facb-432e-a6c2-91430a6dec94.jpg" class="archetype-card rounded-image"/></a>
+<a href="https://scryfall.com/card/ema/142/pyroblast"><img src="https://cards.scryfall.io/normal/front/b/0/b029eb9a-dd7a-40c2-96c4-0063d9cc002c.jpg" class="archetype-card rounded-image"/></a>
 <a href="https://scryfall.com/card/cmm/264/temur-battle-rage"><img src="https://cards.scryfall.io/normal/front/3/7/375bc646-942e-4bf5-9c71-2c5471828e35.jpg" class="archetype-card rounded-image"/></a>
 </details><br/>
 

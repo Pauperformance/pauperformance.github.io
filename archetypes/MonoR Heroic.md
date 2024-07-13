@@ -13,7 +13,36 @@
 **Description**: _Still missing. Please join us on [Discord](https://discord.gg/fYQbpjjkQ3) to contribute to the Academy._
 
 
+## **Staples**
 
+<details>
+  <summary>Click here to expand</summary>
+<a href="https://scryfall.com/card/vow/142/ancestral-anger"><img src="https://cards.scryfall.io/normal/front/5/d/5dee47ab-d603-4346-97f4-a25dc3f47765.jpg" class="archetype-card rounded-image"/></a>
+<a href="https://scryfall.com/card/mm2/8/apostles-blessing"><img src="https://cards.scryfall.io/normal/front/f/d/fdfbc07e-d726-4d42-9394-6aa0f5fc3a3a.jpg" class="archetype-card rounded-image"/></a>
+<a href="https://scryfall.com/card/clu/141/lightning-bolt"><img src="https://cards.scryfall.io/normal/front/7/7/77c6fa74-5543-42ac-9ead-0e890b188e99.jpg" class="archetype-card rounded-image"/></a>
+<a href="https://scryfall.com/card/clb/463/mountain"><img src="https://c1.scryfall.com/file/scryfall-cards/normal/front/0/a/0ab63e49-0869-4c7c-a033-d8e50032dd13.jpg" class="archetype-card rounded-image"/></a>
+<a href="https://scryfall.com/card/mm2/149/mutagenic-growth"><img src="https://cards.scryfall.io/normal/front/2/e/2e0861a2-1858-47af-8154-20a977c2b298.jpg" class="archetype-card rounded-image"/></a>
+<a href="https://scryfall.com/card/ori/163/smash-to-smithereens"><img src="https://c1.scryfall.com/file/scryfall-cards/normal/front/6/5/655c489f-bffb-45a4-8e7c-2d1a35220197.jpg" class="archetype-card rounded-image"/></a>
+</details><br/>
+
+
+
+## **Frequent cards**
+
+<details>
+  <summary>Click here to expand</summary>
+<a href="https://scryfall.com/card/uma/121/akroan-crusader"><img src="https://cards.scryfall.io/normal/front/7/3/73d295ac-3c83-47db-a324-aa4907bcefdd.jpg" class="archetype-card rounded-image"/></a>
+<a href="https://scryfall.com/card/tsr/157/brute-force"><img src="https://cards.scryfall.io/normal/front/8/9/89db7256-3bd0-4c1d-9c6f-de81f7d3c1a2.jpg" class="archetype-card rounded-image"/></a>
+<a href="https://scryfall.com/card/cmr/174/dragon-mantle"><img src="https://cards.scryfall.io/normal/front/c/a/ca32fd66-f7f1-4e50-817f-bb259f690f00.jpg" class="archetype-card rounded-image"/></a>
+<a href="https://scryfall.com/card/dmu/124/flowstone-infusion"><img src="https://cards.scryfall.io/normal/front/b/5/b57c3674-9a31-4418-b306-e6b0a2514d8f.jpg" class="archetype-card rounded-image"/></a>
+<a href="https://scryfall.com/card/dmu/139/molten-monstrosity"><img src="https://cards.scryfall.io/normal/front/2/4/240957e5-ab0a-443f-92de-ae999b08c44f.jpg" class="archetype-card rounded-image"/></a>
+<a href="https://scryfall.com/card/woe/144/ratcatcher-trainee-pest-problem"><img src="https://cards.scryfall.io/normal/front/7/f/7f4c0959-a107-4d61-9e51-256b2955f6ba.jpg" class="archetype-card rounded-image"/></a>
+<a href="https://scryfall.com/card/a25/147/red-elemental-blast"><img src="https://c1.scryfall.com/file/scryfall-cards/normal/front/7/0/70a45e9b-699e-425a-9f3d-267274830d3e.jpg" class="archetype-card rounded-image"/></a>
+<a href="https://scryfall.com/card/ema/231/relic-of-progenitus"><img src="https://c1.scryfall.com/file/scryfall-cards/normal/front/4/3/436cd66c-0622-43cd-8748-af4d21a2db3f.jpg" class="archetype-card rounded-image"/></a>
+<a href="https://scryfall.com/card/eld/137/rimrock-knight-boulder-rush"><img src="https://cards.scryfall.io/normal/front/a/3/a3d13d84-01e4-4429-93db-e5afff811527.jpg" class="archetype-card rounded-image"/></a>
+<a href="https://scryfall.com/card/soi/177/rush-of-adrenaline"><img src="https://cards.scryfall.io/normal/front/d/0/d0def54b-9f0a-4ab1-9df9-25506a06350c.jpg" class="archetype-card rounded-image"/></a>
+<a href="https://scryfall.com/card/jou/110/satyr-hoplite"><img src="https://cards.scryfall.io/normal/front/b/8/b8754d66-facb-432e-a6c2-91430a6dec94.jpg" class="archetype-card rounded-image"/></a>
+</details><br/>
 
 
 

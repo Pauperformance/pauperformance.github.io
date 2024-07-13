@@ -17,30 +17,32 @@
 
 <details>
   <summary>Click here to expand</summary>
+<a href="https://scryfall.com/card/c21/276/ancient-den"><img src="https://cards.scryfall.io/normal/front/0/a/0a508907-a127-45cd-898a-e936bc08391f.jpg" class="archetype-card rounded-image"/></a>
+<a href="https://scryfall.com/card/tsr/151/ancient-grudge"><img src="https://c1.scryfall.com/file/scryfall-cards/normal/front/5/f/5f28d4a2-6c75-44c2-93ac-e7159c1c623f.jpg" class="archetype-card rounded-image"/></a>
+<a href="https://scryfall.com/card/som/114/carapace-forger"><img src="https://cards.scryfall.io/normal/front/e/9/e9948e4c-d583-4fde-a305-df926cf00199.jpg" class="archetype-card rounded-image"/></a>
 <a href="https://scryfall.com/card/jmp/462/chromatic-sphere"><img src="https://cards.scryfall.io/normal/front/e/d/edabc8b2-4413-48e4-8d6f-521b19d839a6.jpg" class="archetype-card rounded-image"/></a>
 <a href="https://scryfall.com/card/tsr/263/chromatic-star"><img src="https://cards.scryfall.io/normal/front/c/2/c2e8d492-2c67-410b-b556-c157a14c4cec.jpg" class="archetype-card rounded-image"/></a>
 <a href="https://scryfall.com/card/5dn/112/conjurers-bauble"><img src="https://cards.scryfall.io/normal/front/2/d/2d32960e-d182-455f-8e74-eb11b10050da.jpg" class="archetype-card rounded-image"/></a>
 <a href="https://scryfall.com/card/2xm/86/disciple-of-the-vault"><img src="https://cards.scryfall.io/normal/front/4/c/4c539843-4e3f-47a7-92e1-412eaaa2d9c5.jpg" class="archetype-card rounded-image"/></a>
 <a href="https://scryfall.com/card/nec/92/etherium-sculptor"><img src="https://cards.scryfall.io/normal/front/e/d/ed796f1a-683d-4ac5-af48-ca58a557a74f.jpg" class="archetype-card rounded-image"/></a>
+<a href="https://scryfall.com/card/otc/165/faithless-looting"><img src="https://cards.scryfall.io/normal/front/1/e/1ea23c17-6960-44fd-bae3-e24595b00c22.jpg" class="archetype-card rounded-image"/></a>
 <a href="https://scryfall.com/card/mbs/6/frantic-salvage"><img src="https://cards.scryfall.io/normal/front/a/f/aff909bc-0bda-4e8a-b7a3-ebc963552246.jpg" class="archetype-card rounded-image"/></a>
 <a href="https://scryfall.com/card/2xm/125/galvanic-blast"><img src="https://cards.scryfall.io/normal/front/0/c/0cf8cb1e-314a-4894-82df-f9812825f52e.jpg" class="archetype-card rounded-image"/></a>
 <a href="https://scryfall.com/card/2xm/95/glaze-fiend"><img src="https://cards.scryfall.io/normal/front/0/7/07f9a946-f961-4e19-a30a-6e1a95683340.jpg" class="archetype-card rounded-image"/></a>
 <a href="https://scryfall.com/card/som/160/golem-foundry"><img src="https://cards.scryfall.io/normal/front/3/c/3cef2e6a-e46b-4425-b507-3213cfd1400c.jpg" class="archetype-card rounded-image"/></a>
+<a href="https://scryfall.com/card/phed/24/great-furnace"><img src="https://c1.scryfall.com/file/scryfall-cards/normal/front/2/a/2a7d2d8f-4736-4c99-aba2-b14960395ad6.jpg" class="archetype-card rounded-image"/></a>
+<a href="https://scryfall.com/card/mrd/98/krark-clan-shaman"><img src="https://cards.scryfall.io/normal/front/9/7/975f9ea8-af2c-456f-acd0-ffa9ea0d98c1.jpg" class="archetype-card rounded-image"/></a>
+<a href="https://scryfall.com/card/5dn/9/leonin-squire"><img src="https://cards.scryfall.io/normal/front/5/a/5a5320ff-1fe6-492a-b27f-86a84a1768ed.jpg" class="archetype-card rounded-image"/></a>
 <a href="https://scryfall.com/card/tpr/225/lotus-petal"><img src="https://cards.scryfall.io/normal/front/f/8/f85ab5f9-508e-45de-8fa1-ce1f16552ffc.jpg" class="archetype-card rounded-image"/></a>
-<a href="https://scryfall.com/card/woe/249/prophetic-prism"><img src="https://cards.scryfall.io/normal/front/1/f/1fae351c-b918-4648-a361-d5239ae63156.jpg" class="archetype-card rounded-image"/></a>
+<a href="https://scryfall.com/card/a25/226/nihil-spellbomb"><img src="https://cards.scryfall.io/normal/front/e/5/e5892a23-efae-4731-9b8f-41c87960fe93.jpg" class="archetype-card rounded-image"/></a>
 <a href="https://scryfall.com/card/2xm/283/pyrite-spellbomb"><img src="https://cards.scryfall.io/normal/front/0/8/088c801d-381f-403b-aeb7-fbbfafee99bf.jpg" class="archetype-card rounded-image"/></a>
-<a href="https://scryfall.com/card/moc/242/thoughtcast"><img src="https://cards.scryfall.io/normal/front/4/6/466a0be8-31b9-4ea0-9a96-b09a76f4ec69.jpg" class="archetype-card rounded-image"/></a>
-</details><br/>
-
-
-
-## **Frequent cards**
-
-<details>
-  <summary>Click here to expand</summary>
-<a href="https://scryfall.com/card/kld/126/reckless-fireweaver"><img src="https://cards.scryfall.io/normal/front/6/3/63ffac51-62c4-4170-85b3-a43d7cfae7d7.jpg" class="archetype-card rounded-image"/></a>
+<a href="https://scryfall.com/card/c18/278/seat-of-the-synod"><img src="https://c1.scryfall.com/file/scryfall-cards/normal/front/1/f/1fedc183-2d95-471c-ba78-2169e4df13f8.jpg" class="archetype-card rounded-image"/></a>
 <a href="https://scryfall.com/card/jmp/488/terrarion"><img src="https://cards.scryfall.io/normal/front/4/8/48eda056-e00f-4e28-ad26-9150a4704d21.jpg" class="archetype-card rounded-image"/></a>
+<a href="https://scryfall.com/card/moc/242/thoughtcast"><img src="https://cards.scryfall.io/normal/front/4/6/466a0be8-31b9-4ea0-9a96-b09a76f4ec69.jpg" class="archetype-card rounded-image"/></a>
+<a href="https://scryfall.com/card/hop/141/vault-of-whispers"><img src="https://cards.scryfall.io/normal/front/6/9/69e50871-bde7-4109-8811-a1c1bf70d3ae.jpg" class="archetype-card rounded-image"/></a>
 </details><br/>
+
+
 
 
 

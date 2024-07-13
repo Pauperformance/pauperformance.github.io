@@ -14,6 +14,16 @@
 Generic archetype, for decks that do not fit those in the [Archetypes Index](../../pages/archetypes_index.html).
 
 
+## **Staples**
+
+<details>
+  <summary>Click here to expand</summary>
+<a href="https://scryfall.com/card/m12/94/distress"><img src="https://cards.scryfall.io/normal/front/6/3/630d4080-8183-41fb-8091-740719083765.jpg" class="archetype-card rounded-image"/></a>
+<a href="https://scryfall.com/card/cm2/77/sign-in-blood"><img src="https://cards.scryfall.io/normal/front/6/1/61388c28-9428-473c-973a-0a82b6b83d62.jpg" class="archetype-card rounded-image"/></a>
+<a href="https://scryfall.com/card/otj/281/swamp"><img src="https://cards.scryfall.io/normal/front/e/b/eb7dc259-9949-4673-a8f1-874396948392.jpg" class="archetype-card rounded-image"/></a>
+<a href="https://scryfall.com/card/2x2/96/unearth"><img src="https://cards.scryfall.io/normal/front/b/1/b1f73271-b70f-40ae-be64-f8de7805923a.jpg" class="archetype-card rounded-image"/></a>
+</details><br/>
+
 
 
 
