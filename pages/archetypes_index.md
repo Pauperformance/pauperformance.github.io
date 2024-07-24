@@ -130,8 +130,8 @@ Every archetype in the list is linked to its dedicated page, where you will find
 [MonoR 8-Post](../archetypes/MonoR%208-Post.html) | <img src="../resources/images/mana/R.png" class="dominant-mana-icon"/> | Aggro           | [8-Post      ](../families/8-Post.html) |
 [MonoR Blitz](../archetypes/MonoR%20Blitz.html) | <img src="../resources/images/mana/R.png" class="dominant-mana-icon"/> | Aggro           | [Blitz       ](../families/Blitz.html) |
 [MonoR Heroic](../archetypes/MonoR%20Heroic.html) | <img src="../resources/images/mana/R.png" class="dominant-mana-icon"/> | Aggro           | [            ](../families/.html) |
-[MonoR Kuldotha](../archetypes/MonoR%20Kuldotha.html) | <img src="../resources/images/mana/R.png" class="dominant-mana-icon"/> | Aggro           | [Burn        ](../families/Burn.html) |
 [MonoR Kuldotha](../archetypes/MonoR%20Kuldotha.html) | <img src="../resources/images/mana/R.png" class="dominant-mana-icon"/> | Aggro           | [            ](../families/.html) |
+[MonoR Kuldotha](../archetypes/MonoR%20Kuldotha.html) | <img src="../resources/images/mana/R.png" class="dominant-mana-icon"/> | Aggro           | [Burn        ](../families/Burn.html) |
 [MonoR Tron](../archetypes/MonoR%20Tron.html) | <img src="../resources/images/mana/R.png" class="dominant-mana-icon"/> | Control         | [Tron        ](../families/Tron.html) |
 [MonoR Turbo Emblem](../archetypes/MonoR%20Turbo%20Emblem.html) | <img src="../resources/images/mana/R.png" class="dominant-mana-icon"/> | Aggro, Combo    | [Turbo Emblem](../families/Turbo%20Emblem.html) |
 [MonoU 8-Post](../archetypes/MonoU%208-Post.html) | <img src="../resources/images/mana/U.png" class="dominant-mana-icon"/> | Control         | [8-Post      ](../families/8-Post.html) |
