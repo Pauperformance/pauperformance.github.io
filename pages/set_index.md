@@ -967,4 +967,5 @@ Lines in **bold** correspond to sets that have introduced new cards in the [Paup
 | 946       | fdn           | Foundations                                     | 2024-11-15   |
 | 947       | aacr          | Assassin's Creed Art Series                     | 2024-07-05   |
 | 948       | ablb          | Bloomburrow Art Series                          | 2024-08-02   |
+| 949       | mb2           | Mystery Booster 2                               | 2024-08-02   |
 
