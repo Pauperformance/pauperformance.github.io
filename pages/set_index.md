@@ -965,8 +965,9 @@ Lines in **bold** correspond to sets that have introduced new cards in the [Paup
 | 944       | dsc           | Duskmourn: House of Horror Commander            | 2024-09-27   |
 | 945       | dsk           | Duskmourn: House of Horror                      | 2024-09-27   |
 | 946       | fdn           | Foundations                                     | 2024-11-15   |
-| 947       | aacr          | Assassin's Creed Art Series                     | 2024-07-05   |
-| 948       | ablb          | Bloomburrow Art Series                          | 2024-08-02   |
-| 949       | mb2           | Mystery Booster 2                               | 2024-08-02   |
-| 950       | pblb          | Bloomburrow Promos                              | 2024-08-02   |
+| 947       | smh3          | Modern Horizons 3 Substitute Cards              | 2024-06-14   |
+| 948       | aacr          | Assassin's Creed Art Series                     | 2024-07-05   |
+| 949       | ablb          | Bloomburrow Art Series                          | 2024-08-02   |
+| 950       | mb2           | Mystery Booster 2                               | 2024-08-02   |
+| 951       | pblb          | Bloomburrow Promos                              | 2024-08-02   |
 
