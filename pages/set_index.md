@@ -971,6 +971,7 @@ Lines in **bold** correspond to sets that have introduced new cards in the [Paup
 | 950       | mb2           | Mystery Booster 2                               | 2024-08-02   |
 | 951       | pblb          | Bloomburrow Promos                              | 2024-08-02   |
 | 952       | yblb          | Alchemy: Bloomburrow                            | 2024-08-20   |
-| 953       | tdsk          | Duskmourn: House of Horror Tokens               | 2024-09-27   |
-| 954       | ffdn          | Foundations Front Cards                         | 2024-11-15   |
+| 953       | tdsc          | Duskmourne Commander Tokens                     | 2024-09-27   |
+| 954       | tdsk          | Duskmourn: House of Horror Tokens               | 2024-09-27   |
+| 955       | ffdn          | Foundations Front Cards                         | 2024-11-15   |
 
