@@ -967,14 +967,15 @@ Lines in **bold** correspond to sets that have introduced new cards in the [Paup
 | 946       | fdn           | Foundations                                     | 2024-11-15   |
 | 947       | smh3          | Modern Horizons 3 Substitute Cards              | 2024-06-14   |
 | 948       | aacr          | Assassin's Creed Art Series                     | 2024-07-05   |
-| 949       | ablb          | Bloomburrow Art Series                          | 2024-08-02   |
-| 950       | mb2           | Mystery Booster 2                               | 2024-08-02   |
-| 951       | pblb          | Bloomburrow Promos                              | 2024-08-02   |
-| 952       | yblb          | Alchemy: Bloomburrow                            | 2024-08-20   |
-| 953       | adsk          | Duskmourn: House of Horror Art Series           | 2024-09-27   |
-| 954       | pdsk          | Duskmourn: House of Horror Promos               | 2024-09-27   |
-| 955       | tdsc          | Duskmourn Commander Tokens                      | 2024-09-27   |
-| 956       | tdsk          | Duskmourn: House of Horror Tokens               | 2024-09-27   |
-| 957       | ydsk          | Alchemy: Duskmourn                              | 2024-10-15   |
-| 958       | ffdn          | Foundations Front Cards                         | 2024-11-15   |
+| 949       | macr          | Assassin's Creen Minigames                      | 2024-07-05   |
+| 950       | ablb          | Bloomburrow Art Series                          | 2024-08-02   |
+| 951       | mb2           | Mystery Booster 2                               | 2024-08-02   |
+| 952       | pblb          | Bloomburrow Promos                              | 2024-08-02   |
+| 953       | yblb          | Alchemy: Bloomburrow                            | 2024-08-20   |
+| 954       | adsk          | Duskmourn: House of Horror Art Series           | 2024-09-27   |
+| 955       | pdsk          | Duskmourn: House of Horror Promos               | 2024-09-27   |
+| 956       | tdsc          | Duskmourn Commander Tokens                      | 2024-09-27   |
+| 957       | tdsk          | Duskmourn: House of Horror Tokens               | 2024-09-27   |
+| 958       | ydsk          | Alchemy: Duskmourn                              | 2024-10-15   |
+| 959       | ffdn          | Foundations Front Cards                         | 2024-11-15   |
 
