@@ -978,4 +978,5 @@ Lines in **bold** correspond to sets that have introduced new cards in the [Paup
 | 957       | tdsk          | Duskmourn: House of Horror Tokens               | 2024-09-27   |
 | 958       | ydsk          | Alchemy: Duskmourn                              | 2024-10-15   |
 | 959       | ffdn          | Foundations Front Cards                         | 2024-11-15   |
+| 960       | pspl          | Spotlight Series                                | 2025-01-03   |
 
