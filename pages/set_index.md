@@ -967,7 +967,7 @@ Lines in **bold** correspond to sets that have introduced new cards in the [Paup
 | 946       | fdn           | Foundations                                     | 2024-11-15   |
 | 947       | smh3          | Modern Horizons 3 Substitute Cards              | 2024-06-14   |
 | 948       | aacr          | Assassin's Creed Art Series                     | 2024-07-05   |
-| 949       | macr          | Assassin's Creen Minigames                      | 2024-07-05   |
+| 949       | macr          | Assassin's Creed Minigames                      | 2024-07-05   |
 | 950       | ablb          | Bloomburrow Art Series                          | 2024-08-02   |
 | 951       | mb2           | Mystery Booster 2                               | 2024-08-02   |
 | 952       | pblb          | Bloomburrow Promos                              | 2024-08-02   |
