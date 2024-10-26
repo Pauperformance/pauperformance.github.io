@@ -980,4 +980,5 @@ Lines in **bold** correspond to sets that have introduced new cards in the [Paup
 | 959       | ydsk          | Alchemy: Duskmourn                              | 2024-10-15   |
 | 960       | ffdn          | Foundations Front Cards                         | 2024-11-15   |
 | 961       | pspl          | Spotlight Series                                | 2025-01-03   |
+| 962       | dft           | Aetherdrift                                     | 2025-02-14   |
 
