@@ -976,13 +976,12 @@ Lines in **bold** correspond to sets that have introduced new cards in the [Paup
 | 955       | pdsk          | Duskmourn: House of Horror Promos               | 2024-09-27   |
 | 956       | tdsc          | Duskmourn Commander Tokens                      | 2024-09-27   |
 | 957       | tdsk          | Duskmourn: House of Horror Tokens               | 2024-09-27   |
-| 958       | pe24          | Eternal Weekend 2024                            | 2024-10-12   |
-| 959       | ydsk          | Alchemy: Duskmourn                              | 2024-10-15   |
-| 960       | fdc           | Foundations Commander                           | 2024-11-15   |
-| 961       | ffdn          | Foundations Front Cards                         | 2024-11-15   |
-| 962       | j25           | Foundations Jumpstart                           | 2024-11-15   |
-| 963       | pfdn          | Foundations Promos                              | 2024-11-15   |
-| 964       | pspl          | Spotlight Series                                | 2025-01-03   |
-| 965       | inr           | Innistrad Remastered                            | 2025-01-24   |
-| 966       | dft           | Aetherdrift                                     | 2025-02-14   |
+| 958       | ydsk          | Alchemy: Duskmourn                              | 2024-10-15   |
+| 959       | fdc           | Foundations Commander                           | 2024-11-15   |
+| 960       | ffdn          | Foundations Front Cards                         | 2024-11-15   |
+| 961       | j25           | Foundations Jumpstart                           | 2024-11-15   |
+| 962       | pfdn          | Foundations Promos                              | 2024-11-15   |
+| 963       | pspl          | Spotlight Series                                | 2025-01-03   |
+| 964       | inr           | Innistrad Remastered                            | 2025-01-24   |
+| 965       | dft           | Aetherdrift                                     | 2025-02-14   |
 
