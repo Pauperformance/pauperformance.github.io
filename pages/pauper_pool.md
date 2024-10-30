@@ -13,7 +13,7 @@ This page should be useful for Pauper players that haven't followed the latest r
 
 Further information about reference numbers used by Pauperformance (p12e) to uniquely identify Magic sets can be found in the [Set Index page](set_index.html).
 
-The total number of cards in the Pauper pool is: 9556.
+The total number of cards in the Pauper pool is: 9558.
 
 ---
 Table of Contents
@@ -195,6 +195,7 @@ Table of Contents
 * [Fallout](#fallout-pip) (*release: 2024-03-08 ~ p12e_code: 915*)
 * [Outlaws of Thunder Junction Commander](#outlaws-of-thunder-junction-commander-otc) (*release: 2024-04-19 ~ p12e_code: 918*)
 * [Outlaws of Thunder Junction](#outlaws-of-thunder-junction-otj) (*release: 2024-04-19 ~ p12e_code: 919*)
+* [Foundations Jumpstart](#foundations-jumpstart-j25) (*release: 2024-11-15 ~ p12e_code: 962*)
 
 ---
 
@@ -11344,6 +11345,17 @@ Table of Contents
 <a href="https://scryfall.com/card/otj/37/vengeful-townsfolk?utm_source=api">Vengeful Townsfolk</a><br/>
 <a href="https://scryfall.com/card/otj/188/voracious-varmint?utm_source=api">Voracious Varmint</a><br/>
 <a href="https://scryfall.com/card/otj/38/wanted-griffin?utm_source=api">Wanted Griffin</a><br/>
+</details>
+[]()
+
+## Foundations Jumpstart (j25)
+*release: 2024-11-15 | p12e_code: 962*
+
+<details>
+  <summary>Click to see 2 new cards</summary>
+
+<a href="https://scryfall.com/card/j25/534/cyclops-electromancer?utm_source=api">Cyclops Electromancer</a><br/>
+<a href="https://scryfall.com/card/j25/354/shipwreck-dowser?utm_source=api">Shipwreck Dowser</a><br/>
 </details>
 []()
 
