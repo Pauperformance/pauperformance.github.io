@@ -980,7 +980,7 @@ Lines in **bold** correspond to sets that have introduced new cards in the [Paup
 | 959       | fdc           | Foundations Commander                           | 2024-11-15   |
 | 960       | ffdn          | Foundations Front Cards                         | 2024-11-15   |
 | 961       | fj25          | Foundations Jumpstart Front Cards               | 2024-11-15   |
-| 962       | j25           | Foundations Jumpstart                           | 2024-11-15   |
+| **962**   | **j25**       | **Foundations Jumpstart**                       | **2024-11-15** |
 | 963       | pfdn          | Foundations Promos                              | 2024-11-15   |
 | 964       | pspl          | Spotlight Series                                | 2025-01-03   |
 | 965       | inr           | Innistrad Remastered                            | 2025-01-24   |
