@@ -983,7 +983,8 @@ Lines in **bold** correspond to sets that have introduced new cards in the [Paup
 | 962       | fj25          | Foundations Jumpstart Front Cards               | 2024-11-15   |
 | **963**   | **j25**       | **Foundations Jumpstart**                       | **2024-11-15** |
 | 964       | pfdn          | Foundations Promos                              | 2024-11-15   |
-| 965       | pspl          | Spotlight Series                                | 2025-01-03   |
-| 966       | inr           | Innistrad Remastered                            | 2025-01-24   |
-| 967       | dft           | Aetherdrift                                     | 2025-02-14   |
+| 965       | tfdn          | Foundations Tokens                              | 2024-11-15   |
+| 966       | pspl          | Spotlight Series                                | 2025-01-03   |
+| 967       | inr           | Innistrad Remastered                            | 2025-01-24   |
+| 968       | dft           | Aetherdrift                                     | 2025-02-14   |
 
