@@ -195,7 +195,7 @@ Table of Contents
 * [Fallout](#fallout-pip) (*release: 2024-03-08 ~ p12e_code: 915*)
 * [Outlaws of Thunder Junction Commander](#outlaws-of-thunder-junction-commander-otc) (*release: 2024-04-19 ~ p12e_code: 918*)
 * [Outlaws of Thunder Junction](#outlaws-of-thunder-junction-otj) (*release: 2024-04-19 ~ p12e_code: 919*)
-* [Foundations Jumpstart](#foundations-jumpstart-j25) (*release: 2024-11-15 ~ p12e_code: 962*)
+* [Foundations Jumpstart](#foundations-jumpstart-j25) (*release: 2024-11-15 ~ p12e_code: 963*)
 
 ---
 
@@ -11349,7 +11349,7 @@ Table of Contents
 []()
 
 ## Foundations Jumpstart (j25)
-*release: 2024-11-15 | p12e_code: 962*
+*release: 2024-11-15 | p12e_code: 963*
 
 <details>
   <summary>Click to see 2 new cards</summary>
