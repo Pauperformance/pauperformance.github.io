@@ -986,7 +986,8 @@ Lines in **bold** correspond to sets that have introduced new cards in the [Paup
 | 965       | pfdn          | Foundations Promos                              | 2024-11-15   |
 | 966       | tfdn          | Foundations Tokens                              | 2024-11-15   |
 | 967       | pio           | Pioneer Masters                                 | 2024-12-10   |
-| 968       | pspl          | Spotlight Series                                | 2025-01-03   |
-| 969       | inr           | Innistrad Remastered                            | 2025-01-24   |
-| 970       | dft           | Aetherdrift                                     | 2025-02-14   |
+| 968       | pf25          | MagicFest 2025                                  | 2025-01-01   |
+| 969       | pspl          | Spotlight Series                                | 2025-01-03   |
+| 970       | inr           | Innistrad Remastered                            | 2025-01-24   |
+| 971       | dft           | Aetherdrift                                     | 2025-02-14   |
 
