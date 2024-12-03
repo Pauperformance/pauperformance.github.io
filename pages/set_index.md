@@ -989,5 +989,6 @@ Lines in **bold** correspond to sets that have introduced new cards in the [Paup
 | 968       | pf25          | MagicFest 2025                                  | 2025-01-01   |
 | 969       | pspl          | Spotlight Series                                | 2025-01-03   |
 | 970       | inr           | Innistrad Remastered                            | 2025-01-24   |
-| 971       | dft           | Aetherdrift                                     | 2025-02-14   |
+| 971       | tinr          | Innistrad Remastered tokens                     | 2025-01-24   |
+| 972       | dft           | Aetherdrift                                     | 2025-02-14   |
 
