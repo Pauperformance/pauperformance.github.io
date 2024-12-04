@@ -25,7 +25,7 @@ Please, read the [PhD Guidelines](./pages/phd_guidelines.html).**
 
 ---
 
-## The current Pauperformance code for decks is **964**.
+## The current Pauperformance code for decks is **966**.
 It refers to Foundations Jumpstart (j25), released on 2024-11-15.
 
 ---
