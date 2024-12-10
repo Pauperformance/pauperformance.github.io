@@ -992,5 +992,6 @@ Lines in **bold** correspond to sets that have introduced new cards in the [Paup
 | 971       | pspl          | Spotlight Series                                | 2025-01-03   |
 | 972       | inr           | Innistrad Remastered                            | 2025-01-24   |
 | 973       | tinr          | Innistrad Remastered tokens                     | 2025-01-24   |
-| 974       | dft           | Aetherdrift                                     | 2025-02-14   |
+| 974       | pjsc          | Japan Standard Cup                              | 2025-02-08   |
+| 975       | dft           | Aetherdrift                                     | 2025-02-14   |
 
