@@ -994,4 +994,5 @@ Lines in **bold** correspond to sets that have introduced new cards in the [Paup
 | 973       | tinr          | Innistrad Remastered Tokens                     | 2025-01-24   |
 | 974       | pjsc          | Japan Standard Cup                              | 2025-02-09   |
 | 975       | dft           | Aetherdrift                                     | 2025-02-14   |
+| 976       | drc           | Aetherdrift Commander                           | 2025-02-14   |
 
