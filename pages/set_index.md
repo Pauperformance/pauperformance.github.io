@@ -990,9 +990,10 @@ Lines in **bold** correspond to sets that have introduced new cards in the [Paup
 | 969       | pio           | Pioneer Masters                                 | 2024-12-10   |
 | 970       | pf25          | MagicFest 2025                                  | 2025-01-01   |
 | 971       | pspl          | Spotlight Series                                | 2025-01-03   |
-| 972       | inr           | Innistrad Remastered                            | 2025-01-24   |
-| 973       | tinr          | Innistrad Remastered Tokens                     | 2025-01-24   |
-| 974       | pjsc          | Japan Standard Cup                              | 2025-02-09   |
-| 975       | dft           | Aetherdrift                                     | 2025-02-14   |
-| 976       | drc           | Aetherdrift Commander                           | 2025-02-14   |
+| 972       | ainr          | Innistrad Remastered Art Series                 | 2025-01-24   |
+| 973       | inr           | Innistrad Remastered                            | 2025-01-24   |
+| 974       | tinr          | Innistrad Remastered Tokens                     | 2025-01-24   |
+| 975       | pjsc          | Japan Standard Cup                              | 2025-02-09   |
+| 976       | dft           | Aetherdrift                                     | 2025-02-14   |
+| 977       | drc           | Aetherdrift Commander                           | 2025-02-14   |
 
