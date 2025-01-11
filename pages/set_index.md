@@ -965,4 +965,35 @@ Lines in **bold** correspond to sets that have introduced new cards in the [Paup
 | 944       | dsc           | Duskmourn: House of Horror Commander            | 2024-09-27   |
 | 945       | dsk           | Duskmourn: House of Horror                      | 2024-09-27   |
 | 946       | fdn           | Foundations                                     | 2024-11-15   |
+| 947       | jp1           | Hobby Japan Promos                              | 2002-07-01   |
+| 948       | dci           | DCI Promos                                      | 2006-01-01   |
+| 949       | smh3          | Modern Horizons 3 Substitute Cards              | 2024-06-14   |
+| 950       | aacr          | Assassin's Creed Art Series                     | 2024-07-05   |
+| 951       | macr          | Assassin's Creed Minigames                      | 2024-07-05   |
+| 952       | ablb          | Bloomburrow Art Series                          | 2024-08-02   |
+| 953       | mb2           | Mystery Booster 2                               | 2024-08-02   |
+| 954       | pblb          | Bloomburrow Promos                              | 2024-08-02   |
+| 955       | yblb          | Alchemy: Bloomburrow                            | 2024-08-20   |
+| 956       | adsk          | Duskmourn: House of Horror Art Series           | 2024-09-27   |
+| 957       | pdsk          | Duskmourn: House of Horror Promos               | 2024-09-27   |
+| 958       | tdsc          | Duskmourn Commander Tokens                      | 2024-09-27   |
+| 959       | tdsk          | Duskmourn: House of Horror Tokens               | 2024-09-27   |
+| 960       | ydsk          | Alchemy: Duskmourn                              | 2024-10-15   |
+| 961       | pltc          | Tales of Middle-earth Deluxe Commander Kit      | 2024-10-16   |
+| 962       | afdn          | Foundations Art Series                          | 2024-11-15   |
+| 963       | fdc           | Foundations Commander                           | 2024-11-15   |
+| 964       | ffdn          | Foundations Front Cards                         | 2024-11-15   |
+| 965       | fj25          | Foundations Jumpstart Front Cards               | 2024-11-15   |
+| **966**   | **j25**       | **Foundations Jumpstart**                       | **2024-11-15** |
+| 967       | pfdn          | Foundations Promos                              | 2024-11-15   |
+| 968       | tfdn          | Foundations Tokens                              | 2024-11-15   |
+| 969       | pio           | Pioneer Masters                                 | 2024-12-10   |
+| 970       | pf25          | MagicFest 2025                                  | 2025-01-01   |
+| 971       | pspl          | Spotlight Series                                | 2025-01-03   |
+| 972       | ainr          | Innistrad Remastered Art Series                 | 2025-01-24   |
+| 973       | inr           | Innistrad Remastered                            | 2025-01-24   |
+| 974       | tinr          | Innistrad Remastered Tokens                     | 2025-01-24   |
+| 975       | pjsc          | Japan Standard Cup                              | 2025-02-09   |
+| 976       | dft           | Aetherdrift                                     | 2025-02-14   |
+| 977       | drc           | Aetherdrift Commander                           | 2025-02-14   |
 

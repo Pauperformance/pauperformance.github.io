@@ -13,7 +13,7 @@ This page should be useful for Pauper players that haven't followed the latest r
 
 Further information about reference numbers used by Pauperformance (p12e) to uniquely identify Magic sets can be found in the [Set Index page](set_index.html).
 
-The total number of cards in the Pauper pool is: 9556.
+The total number of cards in the Pauper pool is: 9574.
 
 ---
 Table of Contents
@@ -195,6 +195,7 @@ Table of Contents
 * [Fallout](#fallout-pip) (*release: 2024-03-08 ~ p12e_code: 915*)
 * [Outlaws of Thunder Junction Commander](#outlaws-of-thunder-junction-commander-otc) (*release: 2024-04-19 ~ p12e_code: 918*)
 * [Outlaws of Thunder Junction](#outlaws-of-thunder-junction-otj) (*release: 2024-04-19 ~ p12e_code: 919*)
+* [Foundations Jumpstart](#foundations-jumpstart-j25) (*release: 2024-11-15 ~ p12e_code: 966*)
 
 ---
 
@@ -11344,6 +11345,33 @@ Table of Contents
 <a href="https://scryfall.com/card/otj/37/vengeful-townsfolk?utm_source=api">Vengeful Townsfolk</a><br/>
 <a href="https://scryfall.com/card/otj/188/voracious-varmint?utm_source=api">Voracious Varmint</a><br/>
 <a href="https://scryfall.com/card/otj/38/wanted-griffin?utm_source=api">Wanted Griffin</a><br/>
+</details>
+[]()
+
+## Foundations Jumpstart (j25)
+*release: 2024-11-15 | p12e_code: 966*
+
+<details>
+  <summary>Click to see 18 new cards</summary>
+
+<a href="https://scryfall.com/card/j25/534/cyclops-electromancer?utm_source=api">Cyclops Electromancer</a><br/>
+<a href="https://scryfall.com/card/j25/3/faithful-pikemaster?utm_source=api">Faithful Pikemaster</a><br/>
+<a href="https://scryfall.com/card/j25/7/gilded-scuttler?utm_source=api">Gilded Scuttler</a><br/>
+<a href="https://scryfall.com/card/j25/20/go-forth?utm_source=api">Go Forth</a><br/>
+<a href="https://scryfall.com/card/j25/17/hearts-on-fire?utm_source=api">Hearts on Fire</a><br/>
+<a href="https://scryfall.com/card/j25/5/hinterland-sanctifier?utm_source=api">Hinterland Sanctifier</a><br/>
+<a href="https://scryfall.com/card/j25/22/razorgrass-invoker?utm_source=api">Razorgrass Invoker</a><br/>
+<a href="https://scryfall.com/card/j25/10/revoke-demise?utm_source=api">Revoke Demise</a><br/>
+<a href="https://scryfall.com/card/j25/23/saurian-symbiote?utm_source=api">Saurian Symbiote</a><br/>
+<a href="https://scryfall.com/card/j25/19/scholar-of-combustion?utm_source=api">Scholar of Combustion</a><br/>
+<a href="https://scryfall.com/card/j25/11/scourge-of-the-undercity?utm_source=api">Scourge of the Undercity</a><br/>
+<a href="https://scryfall.com/card/j25/28/shardless-outlander?utm_source=api">Shardless Outlander</a><br/>
+<a href="https://scryfall.com/card/j25/354/shipwreck-dowser?utm_source=api">Shipwreck Dowser</a><br/>
+<a href="https://scryfall.com/card/j25/356/shorecomber-crab?utm_source=api">Shorecomber Crab</a><br/>
+<a href="https://scryfall.com/card/j25/25/slimy-piper?utm_source=api">Slimy Piper</a><br/>
+<a href="https://scryfall.com/card/j25/9/starlight-snare?utm_source=api">Starlight Snare</a><br/>
+<a href="https://scryfall.com/card/j25/386/waterkin-shaman?utm_source=api">Waterkin Shaman</a><br/>
+<a href="https://scryfall.com/card/j25/27/woodland-liege?utm_source=api">Woodland Liege</a><br/>
 </details>
 []()
 
