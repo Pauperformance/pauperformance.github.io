@@ -996,4 +996,7 @@ Lines in **bold** correspond to sets that have introduced new cards in the [Paup
 | 975       | pjsc          | Japan Standard Cup                              | 2025-02-09   |
 | 976       | dft           | Aetherdrift                                     | 2025-02-14   |
 | 977       | drc           | Aetherdrift Commander                           | 2025-02-14   |
+| 978       | pdft          | Aetherdrift Promos                              | 2025-02-14   |
+| 979       | tdft          | Aetherdrift Tokens                              | 2025-02-14   |
+| 980       | tdrc          | Aetherdrift Commander Tokens                    | 2025-02-14   |
 
