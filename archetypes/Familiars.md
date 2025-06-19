@@ -19,12 +19,14 @@
 
 <details>
   <summary>Click here to expand</summary>
-<a href="https://scryfall.com/card/khc/39/ghostly-flicker"><img src="https://c1.scryfall.com/file/scryfall-cards/normal/front/4/8/485ab561-9c2a-4f99-9317-8726bcdae364.jpg" class="archetype-card rounded-image"/></a>
-<a href="https://scryfall.com/card/hou/14/god-pharaohs-faithful"><img src="https://c1.scryfall.com/file/scryfall-cards/normal/front/9/c/9cb8a25b-2ad0-4ffe-b41a-6b3f8b48c1e9.jpg" class="archetype-card rounded-image"/></a>
-<a href="https://scryfall.com/card/khc/42/mulldrifter"><img src="https://c1.scryfall.com/file/scryfall-cards/normal/front/3/4/345fd005-5052-4500-a260-3649500e21f4.jpg" class="archetype-card rounded-image"/></a>
-<a href="https://scryfall.com/card/cmr/84/preordain"><img src="https://c1.scryfall.com/file/scryfall-cards/normal/front/1/4/1453f92e-df2d-4789-aa1b-a5b5c51567d4.jpg" class="archetype-card rounded-image"/></a>
-<a href="https://scryfall.com/card/dds/10/snap"><img src="https://c1.scryfall.com/file/scryfall-cards/normal/front/1/9/1959f078-4b7b-4df2-a256-d43b2d97e853.jpg" class="archetype-card rounded-image"/></a>
-<a href="https://scryfall.com/card/pls/17/sunscape-familiar"><img src="https://c1.scryfall.com/file/scryfall-cards/normal/front/9/6/9621f341-bf85-4b77-bf19-2fb013b4c955.jpg" class="archetype-card rounded-image"/></a>
+<a href="https://scryfall.com/card/clb/880/ash-barrens"><img src="https://c1.scryfall.com/file/scryfall-cards/normal/front/f/b/fb71aebf-f5d3-45ee-91a4-51088f7141ec.jpg" class="archetype-card rounded-image"/></a>
+<a href="https://scryfall.com/card/clu/229/azorius-chancery"><img src="https://cards.scryfall.io/normal/front/a/9/a9d629f3-24b0-400c-b054-b66250696708.jpg" class="archetype-card rounded-image"/></a>
+<a href="https://scryfall.com/card/cmm/98/ghostly-flicker"><img src="https://cards.scryfall.io/normal/front/d/c/dc143ba3-2a58-4980-9fa0-a05a9e9ed082.jpg" class="archetype-card rounded-image"/></a>
+<a href="https://scryfall.com/card/hou/14/god-pharaohs-faithful"><img src="https://cards.scryfall.io/normal/front/9/c/9cb8a25b-2ad0-4ffe-b41a-6b3f8b48c1e9.jpg" class="archetype-card rounded-image"/></a>
+<a href="https://scryfall.com/card/mkc/111/mulldrifter"><img src="https://cards.scryfall.io/normal/front/e/b/eb6d8d1c-8d23-4273-9c9b-f3b71eb0e105.jpg" class="archetype-card rounded-image"/></a>
+<a href="https://scryfall.com/card/otc/107/preordain"><img src="https://cards.scryfall.io/normal/front/1/2/122f2cc2-5f4d-497c-96b5-ed5698f28b51.jpg" class="archetype-card rounded-image"/></a>
+<a href="https://scryfall.com/card/dmr/66/snap"><img src="https://cards.scryfall.io/normal/front/f/1/f13406c6-f208-402a-94d3-a94a24f03563.jpg" class="archetype-card rounded-image"/></a>
+<a href="https://scryfall.com/card/pls/17/sunscape-familiar"><img src="https://cards.scryfall.io/normal/front/9/6/9621f341-bf85-4b77-bf19-2fb013b4c955.jpg" class="archetype-card rounded-image"/></a>
 </details><br/>
 
 
@@ -33,34 +35,12 @@
 
 <details>
   <summary>Click here to expand</summary>
-<a href="https://scryfall.com/card/uma/45/archaeomancer"><img src="https://c1.scryfall.com/file/scryfall-cards/normal/front/c/c/cc258713-6ce3-44e0-9b4b-8fa7d1d093a1.jpg" class="archetype-card rounded-image"/></a>
-<a href="https://scryfall.com/card/c21/115/brainstorm"><img src="https://c1.scryfall.com/file/scryfall-cards/normal/front/0/3/0359f212-9564-41a9-870b-d2c57455a695.jpg" class="archetype-card rounded-image"/></a>
-<a href="https://scryfall.com/card/cmr/394/compulsive-research"><img src="https://c1.scryfall.com/file/scryfall-cards/normal/front/c/8/c8fcefbc-211f-4ad2-8866-9514f09cd3b3.jpg" class="archetype-card rounded-image"/></a>
-<a href="https://scryfall.com/card/mh2/267/counterspell"><img src="https://c1.scryfall.com/file/scryfall-cards/normal/front/1/9/1920dae4-fb92-4f19-ae4b-eb3276b8dac7.jpg" class="archetype-card rounded-image"/></a>
-<a href="https://scryfall.com/card/a25/51/court-hussar"><img src="https://c1.scryfall.com/file/scryfall-cards/normal/front/f/3/f3843e98-192c-44a2-be54-9ba79e51657c.jpg" class="archetype-card rounded-image"/></a>
-<a href="https://scryfall.com/card/c19/83/deep-analysis"><img src="https://c1.scryfall.com/file/scryfall-cards/normal/front/7/a/7a7a6d2d-be31-474b-811d-3802e32f3768.jpg" class="archetype-card rounded-image"/></a>
-<a href="https://scryfall.com/card/c19/84/echoing-truth"><img src="https://c1.scryfall.com/file/scryfall-cards/normal/front/5/5/55cd75bc-5ec7-45b2-9231-85a321ecd786.jpg" class="archetype-card rounded-image"/></a>
-<a href="https://scryfall.com/card/mh1/7/ephemerate"><img src="https://c1.scryfall.com/file/scryfall-cards/normal/front/2/d/2da5f3f8-5eef-498f-ba2c-2f3fbc3745aa.jpg" class="archetype-card rounded-image"/></a>
-<a href="https://scryfall.com/card/mh2/290/fire-ice"><img src="https://c1.scryfall.com/file/scryfall-cards/normal/front/0/e/0e09b054-4d33-4a12-bf2a-9b0009f33044.jpg" class="archetype-card rounded-image"/></a>
-<a href="https://scryfall.com/card/cn2/157/flame-slash"><img src="https://c1.scryfall.com/file/scryfall-cards/normal/front/1/5/15affc1b-2ebb-4934-87a2-10e89eafe894.jpg" class="archetype-card rounded-image"/></a>
-<a href="https://scryfall.com/card/tsr/69/foresee"><img src="https://c1.scryfall.com/file/scryfall-cards/normal/front/2/e/2ecf2ee8-6b93-4757-89c4-f1e76509a217.jpg" class="archetype-card rounded-image"/></a>
-<a href="https://scryfall.com/card/akh/13/forsake-the-worldly"><img src="https://c1.scryfall.com/file/scryfall-cards/normal/front/c/c/cca4e95e-f14e-4cfa-918a-cfb15f912293.jpg" class="archetype-card rounded-image"/></a>
-<a href="https://scryfall.com/card/ths/22/last-breath"><img src="https://c1.scryfall.com/file/scryfall-cards/normal/front/1/8/1857fc37-1e7e-4b93-9fa9-ec139f16b7fa.jpg" class="archetype-card rounded-image"/></a>
-<a href="https://scryfall.com/card/mh2/49/lose-focus"><img src="https://c1.scryfall.com/file/scryfall-cards/normal/front/9/8/985bdb0c-ce6c-4506-8163-76f3b2fdf5fb.jpg" class="archetype-card rounded-image"/></a>
-<a href="https://scryfall.com/card/ema/60/memory-lapse"><img src="https://c1.scryfall.com/file/scryfall-cards/normal/front/3/0/30202613-d05f-4f47-af97-d0b75ccac293.jpg" class="archetype-card rounded-image"/></a>
-<a href="https://scryfall.com/card/ima/67/mnemonic-wall"><img src="https://c1.scryfall.com/file/scryfall-cards/normal/front/a/3/a3e6784b-78e8-4f0b-8d27-d49c7cea9252.jpg" class="archetype-card rounded-image"/></a>
-<a href="https://scryfall.com/card/eld/247/mystic-sanctuary"><img src="https://c1.scryfall.com/file/scryfall-cards/normal/front/1/7/170e792c-80d5-4775-ad95-37614574ab84.jpg" class="archetype-card rounded-image"/></a>
-<a href="https://scryfall.com/card/e01/35/nightscape-familiar"><img src="https://c1.scryfall.com/file/scryfall-cards/normal/front/6/a/6ada4055-279d-411d-9316-5ecf0b8668c5.jpg" class="archetype-card rounded-image"/></a>
-<a href="https://scryfall.com/card/c21/125/ponder"><img src="https://c1.scryfall.com/file/scryfall-cards/normal/front/9/c/9cee2eb1-f60e-4626-ba4a-b543142ca950.jpg" class="archetype-card rounded-image"/></a>
-<a href="https://scryfall.com/card/c19/69/prismatic-strands"><img src="https://c1.scryfall.com/file/scryfall-cards/normal/front/e/f/efd85985-abc1-430a-9210-63109c90a82d.jpg" class="archetype-card rounded-image"/></a>
-<a href="https://scryfall.com/card/mh1/64/prohibit"><img src="https://c1.scryfall.com/file/scryfall-cards/normal/front/0/a/0ae544bf-7229-4b82-99ad-32c3af36e30f.jpg" class="archetype-card rounded-image"/></a>
-<a href="https://scryfall.com/card/scg/72/reaping-the-graves"><img src="https://c1.scryfall.com/file/scryfall-cards/normal/front/7/6/760a66bd-2821-4710-8f02-3c30772dd884.jpg" class="archetype-card rounded-image"/></a>
-<a href="https://scryfall.com/card/m20/73/sages-row-denizen"><img src="https://c1.scryfall.com/file/scryfall-cards/normal/front/0/6/06ad3e3e-176b-48f0-af2f-fa4fc4759775.jpg" class="archetype-card rounded-image"/></a>
-<a href="https://scryfall.com/card/shm/175/scarscale-ritual"><img src="https://c1.scryfall.com/file/scryfall-cards/normal/front/7/1/71d3f64a-ffb9-4f66-91c0-463b5d2d381b.jpg" class="archetype-card rounded-image"/></a>
-<a href="https://scryfall.com/card/khc/43/sea-gate-oracle"><img src="https://c1.scryfall.com/file/scryfall-cards/normal/front/4/9/498743ce-0ca5-488a-ae5e-d348b274bf3b.jpg" class="archetype-card rounded-image"/></a>
-<a href="https://scryfall.com/card/gvl/20/serrated-arrows"><img src="https://c1.scryfall.com/file/scryfall-cards/normal/front/1/5/1519b17c-9003-43e0-958f-1fcd20ab2d70.jpg" class="archetype-card rounded-image"/></a>
-<a href="https://scryfall.com/card/mh2/66/step-through"><img src="https://c1.scryfall.com/file/scryfall-cards/normal/front/7/1/716534cb-aa89-4de7-9aa5-8d8aa4422a6a.jpg" class="archetype-card rounded-image"/></a>
-<a href="https://scryfall.com/card/neo/66/the-modern-age-vector-glider"><img src="https://c1.scryfall.com/file/scryfall-cards/normal/front/e/e/ee60a8e9-3201-4a7e-8aa4-2c5e1042c8a5.jpg" class="archetype-card rounded-image"/></a>
+<a href="https://scryfall.com/card/uma/45/archaeomancer"><img src="https://cards.scryfall.io/normal/front/c/c/cc258713-6ce3-44e0-9b4b-8fa7d1d093a1.jpg" class="archetype-card rounded-image"/></a>
+<a href="https://scryfall.com/card/mh1/7/ephemerate"><img src="https://cards.scryfall.io/normal/front/2/d/2da5f3f8-5eef-498f-ba2c-2f3fbc3745aa.jpg" class="archetype-card rounded-image"/></a>
+<a href="https://scryfall.com/card/ema/55/hydroblast"><img src="https://c1.scryfall.com/file/scryfall-cards/normal/front/4/c/4c9c9b16-5567-4473-95e6-622292f77336.jpg" class="archetype-card rounded-image"/></a>
+<a href="https://scryfall.com/card/clb/900/mortuary-mire"><img src="https://cards.scryfall.io/normal/front/0/5/058f30e5-64a9-4d6b-b7a6-0fd95d460cae.jpg" class="archetype-card rounded-image"/></a>
+<a href="https://scryfall.com/card/mh1/64/prohibit"><img src="https://cards.scryfall.io/normal/front/0/a/0ae544bf-7229-4b82-99ad-32c3af36e30f.jpg" class="archetype-card rounded-image"/></a>
+<a href="https://scryfall.com/card/khc/43/sea-gate-oracle"><img src="https://cards.scryfall.io/normal/front/4/9/498743ce-0ca5-488a-ae5e-d348b274bf3b.jpg" class="archetype-card rounded-image"/></a>
 </details><br/>
 
 

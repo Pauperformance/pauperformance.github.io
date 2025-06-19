@@ -1,0 +1,313 @@
+{
+    "archetypes": {
+        "py/set": [
+            {
+                "aliases": [
+                    "UB Trinket"
+                ],
+                "description": "_Still missing. Please join us on [Discord](https://discord.gg/fYQbpjjkQ3) to contribute to the Academy._",
+                "dominant_mana": [
+                    "U",
+                    "B"
+                ],
+                "family": null,
+                "game_type": [
+                    "Control"
+                ],
+                "must_have_cards": [],
+                "must_not_have_cards": [],
+                "name": "Trinket Control",
+                "py/object": "pauperformance_bot.entity.config.archetype.ArchetypeConfig",
+                "reference_decks": [],
+                "resource_sideboard": null,
+                "resources": [],
+                "resources_discord": []
+            },
+            {
+                "aliases": [
+                    "UBR 8-Post"
+                ],
+                "description": "_Still missing. Please join us on [Discord](https://discord.gg/fYQbpjjkQ3) to contribute to the Academy._",
+                "dominant_mana": [
+                    "U",
+                    "B",
+                    "R"
+                ],
+                "family": "8-Post",
+                "game_type": [
+                    "Control"
+                ],
+                "must_have_cards": [
+                    "Cloudpost",
+                    "Glimmerpost"
+                ],
+                "must_not_have_cards": [],
+                "name": "Grixis 8-Post",
+                "py/object": "pauperformance_bot.entity.config.archetype.ArchetypeConfig",
+                "reference_decks": [],
+                "resource_sideboard": null,
+                "resources": [],
+                "resources_discord": []
+            },
+            {
+                "aliases": [
+                    "Azorius Familiars",
+                    "UW Familiars"
+                ],
+                "description": "_Still missing. Please join us on [Discord](https://discord.gg/fYQbpjjkQ3) to contribute to the Academy._",
+                "dominant_mana": [
+                    "U",
+                    "W"
+                ],
+                "family": "Familiars",
+                "game_type": [
+                    "Control",
+                    "Combo"
+                ],
+                "must_have_cards": [],
+                "must_not_have_cards": [],
+                "name": "Familiars",
+                "py/object": "pauperformance_bot.entity.config.archetype.ArchetypeConfig",
+                "reference_decks": [
+                    "Familiars 735.001.Parallax",
+                    "Familiars 696.001.Finespoo",
+                    "Familiars 533.001.A_AdeptoTerra"
+                ],
+                "resource_sideboard": null,
+                "resources": [
+                    {
+                        "author": "kalikaiz",
+                        "date": "2021-12-07",
+                        "language": "\ud83c\uddec\ud83c\udde7",
+                        "link": "https://www.youtube.com/watch?v=aBjW1lKdrYo&t=1s",
+                        "name": "UW Familiars HOW TO and sideboarding guide",
+                        "py/object": "pauperformance_bot.entity.config.archetype.Resource"
+                    },
+                    {
+                        "author": "Alessandro Moretti",
+                        "date": "2020-04-01",
+                        "language": "\ud83c\uddee\ud83c\uddf9",
+                        "link": "http://pauperwave.altervista.org/uw-familiar-pauper-league/",
+                        "name": "UW Familiar Pauper League",
+                        "py/object": "pauperformance_bot.entity.config.archetype.Resource"
+                    },
+                    {
+                        "author": "420dragon",
+                        "date": "2017-12-22",
+                        "language": "\ud83c\uddec\ud83c\udde7",
+                        "link": "https://www.youtube.com/watch?v=59P3zGL_54A",
+                        "name": "Familiar speed tutorial with 420dragon",
+                        "py/object": "pauperformance_bot.entity.config.archetype.Resource"
+                    }
+                ],
+                "resources_discord": [
+                    {
+                        "language": "\ud83c\uddec\ud83c\udde7",
+                        "link": "https://discord.gg/gTdT6VZ",
+                        "name": "Pauper Familiars Discord",
+                        "py/object": "pauperformance_bot.entity.config.archetype.DiscordResource"
+                    }
+                ]
+            },
+            {
+                "aliases": [],
+                "description": "_Still missing. Please join us on [Discord](https://discord.gg/fYQbpjjkQ3) to contribute to the Academy._",
+                "dominant_mana": [
+                    "w"
+                ],
+                "family": "8-Post",
+                "game_type": [
+                    "Aggro"
+                ],
+                "must_have_cards": [
+                    "Cloudpost",
+                    "Glimmerpost"
+                ],
+                "must_not_have_cards": [],
+                "name": "MonoW 8-Post",
+                "py/object": "pauperformance_bot.entity.config.archetype.ArchetypeConfig",
+                "reference_decks": [],
+                "resource_sideboard": null,
+                "resources": [],
+                "resources_discord": []
+            },
+            {
+                "aliases": [],
+                "description": "_Still missing. Please join us on [Discord](https://discord.gg/fYQbpjjkQ3) to contribute to the Academy._",
+                "dominant_mana": [
+                    "G"
+                ],
+                "family": "8-Post",
+                "game_type": [
+                    "Control"
+                ],
+                "must_have_cards": [
+                    "Cloudpost",
+                    "Glimmerpost"
+                ],
+                "must_not_have_cards": [],
+                "name": "MonoG 8-Post",
+                "py/object": "pauperformance_bot.entity.config.archetype.ArchetypeConfig",
+                "reference_decks": [],
+                "resource_sideboard": null,
+                "resources": [],
+                "resources_discord": []
+            },
+            {
+                "aliases": [
+                    "UG 8-Post"
+                ],
+                "description": "_Still missing. Please join us on [Discord](https://discord.gg/fYQbpjjkQ3) to contribute to the Academy._",
+                "dominant_mana": [
+                    "U",
+                    "G"
+                ],
+                "family": "8-Post",
+                "game_type": [
+                    "Control"
+                ],
+                "must_have_cards": [
+                    "Cloudpost",
+                    "Glimmerpost"
+                ],
+                "must_not_have_cards": [],
+                "name": "Simic 8-Post",
+                "py/object": "pauperformance_bot.entity.config.archetype.ArchetypeConfig",
+                "reference_decks": [],
+                "resource_sideboard": null,
+                "resources": [],
+                "resources_discord": []
+            },
+            {
+                "aliases": [
+                    "UB Flicker",
+                    "UB Rat Lock"
+                ],
+                "description": "_Still missing. Please join us on [Discord](https://discord.gg/fYQbpjjkQ3) to contribute to the Academy._",
+                "dominant_mana": [
+                    "U",
+                    "B"
+                ],
+                "family": null,
+                "game_type": [
+                    "Control"
+                ],
+                "must_have_cards": [
+                    "Ghostly Flicker"
+                ],
+                "must_not_have_cards": [],
+                "name": "Dimir Flicker",
+                "py/object": "pauperformance_bot.entity.config.archetype.ArchetypeConfig",
+                "reference_decks": [
+                    "Dimir Flicker 648.001.hjc"
+                ],
+                "resource_sideboard": null,
+                "resources": [],
+                "resources_discord": []
+            },
+            {
+                "aliases": [
+                    "UB 8-Post"
+                ],
+                "description": "_Still missing. Please join us on [Discord](https://discord.gg/fYQbpjjkQ3) to contribute to the Academy._",
+                "dominant_mana": [
+                    "U",
+                    "B"
+                ],
+                "family": "8-Post",
+                "game_type": [
+                    "Control"
+                ],
+                "must_have_cards": [
+                    "Cloudpost",
+                    "Glimmerpost"
+                ],
+                "must_not_have_cards": [],
+                "name": "Dimir 8-Post",
+                "py/object": "pauperformance_bot.entity.config.archetype.ArchetypeConfig",
+                "reference_decks": [],
+                "resource_sideboard": null,
+                "resources": [],
+                "resources_discord": []
+            },
+            {
+                "aliases": [
+                    "UR 8-Post"
+                ],
+                "description": "_Still missing. Please join us on [Discord](https://discord.gg/fYQbpjjkQ3) to contribute to the Academy._",
+                "dominant_mana": [
+                    "U",
+                    "R"
+                ],
+                "family": "8-Post",
+                "game_type": [
+                    "Control"
+                ],
+                "must_have_cards": [
+                    "Cloudpost",
+                    "Glimmerpost"
+                ],
+                "must_not_have_cards": [],
+                "name": "Izzet 8-Post",
+                "py/object": "pauperformance_bot.entity.config.archetype.ArchetypeConfig",
+                "reference_decks": [],
+                "resource_sideboard": null,
+                "resources": [
+                    {
+                        "author": "BonSequitur",
+                        "date": "2011-12-21",
+                        "language": "\ud83c\uddec\ud83c\udde7",
+                        "link": "https://www.mtgsalvation.com/forums/the-game/pauper/mtgo-pauper/mtgo-pauper-archive/189721-primer-blue-red-8-post",
+                        "name": "Blue-Red 8-Post",
+                        "py/object": "pauperformance_bot.entity.config.archetype.Resource"
+                    }
+                ],
+                "resources_discord": []
+            },
+            {
+                "aliases": [],
+                "description": "_Still missing. Please join us on [Discord](https://discord.gg/fYQbpjjkQ3) to contribute to the Academy._",
+                "dominant_mana": [
+                    "U"
+                ],
+                "family": "8-Post",
+                "game_type": [
+                    "Control"
+                ],
+                "must_have_cards": [
+                    "Cloudpost",
+                    "Glimmerpost"
+                ],
+                "must_not_have_cards": [],
+                "name": "MonoU 8-Post",
+                "py/object": "pauperformance_bot.entity.config.archetype.ArchetypeConfig",
+                "reference_decks": [],
+                "resource_sideboard": null,
+                "resources": [],
+                "resources_discord": []
+            },
+            {
+                "aliases": [],
+                "description": "_Still missing. Please join us on [Discord](https://discord.gg/fYQbpjjkQ3) to contribute to the Academy._",
+                "dominant_mana": [
+                    "R"
+                ],
+                "family": "8-Post",
+                "game_type": [
+                    "Aggro"
+                ],
+                "must_have_cards": [
+                    "Cloudpost",
+                    "Glimmerpost"
+                ],
+                "must_not_have_cards": [],
+                "name": "MonoR 8-Post",
+                "py/object": "pauperformance_bot.entity.config.archetype.ArchetypeConfig",
+                "reference_decks": [],
+                "resource_sideboard": null,
+                "resources": [],
+                "resources_discord": []
+            }
+        ]
+    }
+}

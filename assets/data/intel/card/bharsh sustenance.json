@@ -1,0 +1,82 @@
+{
+    "archetypes": {
+        "py/set": [
+            {
+                "aliases": [],
+                "description": "_Still missing. Please join us on [Discord](https://discord.gg/fYQbpjjkQ3) to contribute to the Academy._",
+                "dominant_mana": [
+                    "G"
+                ],
+                "family": null,
+                "game_type": [
+                    "Aggro",
+                    "Combo"
+                ],
+                "must_have_cards": [],
+                "must_not_have_cards": [],
+                "name": "Elves",
+                "py/object": "pauperformance_bot.entity.config.archetype.ArchetypeConfig",
+                "reference_decks": [
+                    "Elves 696.001.tarmogoyf_ita",
+                    "Elves 576.001.TheMaverickGal",
+                    "Elves 560.001.TheMaverickGal"
+                ],
+                "resource_sideboard": null,
+                "resources": [
+                    {
+                        "author": "Gabriel",
+                        "date": "2021-11-19",
+                        "language": "\ud83c\uddec\ud83c\udde7",
+                        "link": "https://mtg.cardsrealm.com/en-us/articles/pauper-elves:-deck-tech--sideboard-guide",
+                        "name": "Pauper Elves: Deck Tech & Sideboard Guide",
+                        "py/object": "pauperformance_bot.entity.config.archetype.Resource"
+                    },
+                    {
+                        "author": "Kuraiden",
+                        "date": "2012-05-17",
+                        "language": "\ud83c\uddee\ud83c\uddf9",
+                        "link": "http://www.metagame.it/forum/viewtopic.php?f=158&t=5180",
+                        "name": "[Pauper Tier] Elves",
+                        "py/object": "pauperformance_bot.entity.config.archetype.Resource"
+                    }
+                ],
+                "resources_discord": [
+                    {
+                        "language": "\ud83c\uddec\ud83c\udde7",
+                        "link": "https://discord.gg/aheU4Fe",
+                        "name": "Pauper Elves Discord",
+                        "py/object": "pauperformance_bot.entity.config.archetype.DiscordResource"
+                    }
+                ]
+            },
+            {
+                "aliases": [
+                    "WB Blade"
+                ],
+                "description": "_Still missing. Please join us on [Discord](https://discord.gg/fYQbpjjkQ3) to contribute to the Academy._",
+                "dominant_mana": [
+                    "W",
+                    "B"
+                ],
+                "family": null,
+                "game_type": [
+                    "Midrange"
+                ],
+                "must_have_cards": [
+                    "Tithing Blade",
+                    "Kor Skyfisher"
+                ],
+                "must_not_have_cards": [
+                    "Pestilence",
+                    "All That Glitters"
+                ],
+                "name": "Orzhov Blade",
+                "py/object": "pauperformance_bot.entity.config.archetype.ArchetypeConfig",
+                "reference_decks": [],
+                "resource_sideboard": null,
+                "resources": [],
+                "resources_discord": []
+            }
+        ]
+    }
+}

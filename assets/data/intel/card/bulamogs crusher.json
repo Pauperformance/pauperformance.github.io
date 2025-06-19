@@ -1,0 +1,483 @@
+{
+    "archetypes": {
+        "py/set": [
+            {
+                "aliases": [
+                    "UB Trinket"
+                ],
+                "description": "_Still missing. Please join us on [Discord](https://discord.gg/fYQbpjjkQ3) to contribute to the Academy._",
+                "dominant_mana": [
+                    "U",
+                    "B"
+                ],
+                "family": null,
+                "game_type": [
+                    "Control"
+                ],
+                "must_have_cards": [],
+                "must_not_have_cards": [],
+                "name": "Trinket Control",
+                "py/object": "pauperformance_bot.entity.config.archetype.ArchetypeConfig",
+                "reference_decks": [],
+                "resource_sideboard": null,
+                "resources": [],
+                "resources_discord": []
+            },
+            {
+                "aliases": [],
+                "description": "_Still missing. Please join us on [Discord](https://discord.gg/fYQbpjjkQ3) to contribute to the Academy._",
+                "dominant_mana": [
+                    "w"
+                ],
+                "family": "8-Post",
+                "game_type": [
+                    "Aggro"
+                ],
+                "must_have_cards": [
+                    "Cloudpost",
+                    "Glimmerpost"
+                ],
+                "must_not_have_cards": [],
+                "name": "MonoW 8-Post",
+                "py/object": "pauperformance_bot.entity.config.archetype.ArchetypeConfig",
+                "reference_decks": [],
+                "resource_sideboard": null,
+                "resources": [],
+                "resources_discord": []
+            },
+            {
+                "aliases": [],
+                "description": "_Still missing. Please join us on [Discord](https://discord.gg/fYQbpjjkQ3) to contribute to the Academy._",
+                "dominant_mana": [
+                    "G"
+                ],
+                "family": "8-Post",
+                "game_type": [
+                    "Control"
+                ],
+                "must_have_cards": [
+                    "Cloudpost",
+                    "Glimmerpost"
+                ],
+                "must_not_have_cards": [],
+                "name": "MonoG 8-Post",
+                "py/object": "pauperformance_bot.entity.config.archetype.ArchetypeConfig",
+                "reference_decks": [],
+                "resource_sideboard": null,
+                "resources": [],
+                "resources_discord": []
+            },
+            {
+                "aliases": [],
+                "description": "_Still missing. Please join us on [Discord](https://discord.gg/fYQbpjjkQ3) to contribute to the Academy._",
+                "dominant_mana": [
+                    "G"
+                ],
+                "family": null,
+                "game_type": [
+                    "Aggro",
+                    "Combo"
+                ],
+                "must_have_cards": [],
+                "must_not_have_cards": [],
+                "name": "Elves",
+                "py/object": "pauperformance_bot.entity.config.archetype.ArchetypeConfig",
+                "reference_decks": [
+                    "Elves 696.001.tarmogoyf_ita",
+                    "Elves 576.001.TheMaverickGal",
+                    "Elves 560.001.TheMaverickGal"
+                ],
+                "resource_sideboard": null,
+                "resources": [
+                    {
+                        "author": "Gabriel",
+                        "date": "2021-11-19",
+                        "language": "\ud83c\uddec\ud83c\udde7",
+                        "link": "https://mtg.cardsrealm.com/en-us/articles/pauper-elves:-deck-tech--sideboard-guide",
+                        "name": "Pauper Elves: Deck Tech & Sideboard Guide",
+                        "py/object": "pauperformance_bot.entity.config.archetype.Resource"
+                    },
+                    {
+                        "author": "Kuraiden",
+                        "date": "2012-05-17",
+                        "language": "\ud83c\uddee\ud83c\uddf9",
+                        "link": "http://www.metagame.it/forum/viewtopic.php?f=158&t=5180",
+                        "name": "[Pauper Tier] Elves",
+                        "py/object": "pauperformance_bot.entity.config.archetype.Resource"
+                    }
+                ],
+                "resources_discord": [
+                    {
+                        "language": "\ud83c\uddec\ud83c\udde7",
+                        "link": "https://discord.gg/aheU4Fe",
+                        "name": "Pauper Elves Discord",
+                        "py/object": "pauperformance_bot.entity.config.archetype.DiscordResource"
+                    }
+                ]
+            },
+            {
+                "aliases": [
+                    "UG 8-Post"
+                ],
+                "description": "_Still missing. Please join us on [Discord](https://discord.gg/fYQbpjjkQ3) to contribute to the Academy._",
+                "dominant_mana": [
+                    "U",
+                    "G"
+                ],
+                "family": "8-Post",
+                "game_type": [
+                    "Control"
+                ],
+                "must_have_cards": [
+                    "Cloudpost",
+                    "Glimmerpost"
+                ],
+                "must_not_have_cards": [],
+                "name": "Simic 8-Post",
+                "py/object": "pauperformance_bot.entity.config.archetype.ArchetypeConfig",
+                "reference_decks": [],
+                "resource_sideboard": null,
+                "resources": [],
+                "resources_discord": []
+            },
+            {
+                "aliases": [],
+                "description": "\nAcid Trip is a midrange deck revolving around the card [Reality Acid](https://scryfall.com/card/tsr/81/reality-acid).\nThe enchantment is used to repeatedly force the opponent to sacrifice key permanents.\n\nTo speed-up the engine, the player tries to [bounce](https://mtg.fandom.com/wiki/Bounce) Reality Acid without waiting for the [Vanishing](https://mtg.fandom.com/wiki/Vanishing) ability to resolve after the 3rd upkeep.\nSeveral cards can cause Reality Acid to [leave the battlefield](https://mtg.fandom.com/wiki/Leaves_the_battlefield), such as [Kor Skyfisher](https://scryfall.com/card/mm3/11/kor-skyfisher), [Teferi's Time Twist](https://scryfall.com/card/war/72/teferis-time-twist), [Aethersnipe](https://scryfall.com/card/uma/44/aethersnipe), [Dream Stalker](https://scryfall.com/card/tsr/63/dream-stalker), and [Drake Familiar](https://scryfall.com/card/rav/44/drake-familiar).\nBounce effects are also used directly on the opponent's permanents whenever possible to control the board.\n\nOnce the board is in control, the player typically wins by beating with creatures like [Seeker of the Way](https://scryfall.com/card/ima/29/seeker-of-the-way) and [Mulldrifter](https://scryfall.com/card/khc/42/mulldrifter).",
+                "dominant_mana": [
+                    "U",
+                    "W"
+                ],
+                "family": null,
+                "game_type": [
+                    "Midrange"
+                ],
+                "must_have_cards": [],
+                "must_not_have_cards": [],
+                "name": "Acid Trip",
+                "py/object": "pauperformance_bot.entity.config.archetype.ArchetypeConfig",
+                "reference_decks": [
+                    "Acid Trip 612.001.NalozycShade"
+                ],
+                "resource_sideboard": null,
+                "resources": [],
+                "resources_discord": []
+            },
+            {
+                "aliases": [
+                    "RG Brew"
+                ],
+                "description": "\nGeneric archetype, for Gruul decks that do not fit those in the [Archetypes Index](../../pages/archetypes_index.html).",
+                "dominant_mana": [
+                    "R",
+                    "G"
+                ],
+                "family": "Brew",
+                "game_type": [
+                    "Aggro",
+                    "Midrange",
+                    "Control",
+                    "Combo"
+                ],
+                "must_have_cards": [],
+                "must_not_have_cards": [],
+                "name": "Brew Gruul",
+                "py/object": "pauperformance_bot.entity.config.archetype.ArchetypeConfig",
+                "reference_decks": [],
+                "resource_sideboard": null,
+                "resources": [],
+                "resources_discord": []
+            },
+            {
+                "aliases": [
+                    "UB 8-Post"
+                ],
+                "description": "_Still missing. Please join us on [Discord](https://discord.gg/fYQbpjjkQ3) to contribute to the Academy._",
+                "dominant_mana": [
+                    "U",
+                    "B"
+                ],
+                "family": "8-Post",
+                "game_type": [
+                    "Control"
+                ],
+                "must_have_cards": [
+                    "Cloudpost",
+                    "Glimmerpost"
+                ],
+                "must_not_have_cards": [],
+                "name": "Dimir 8-Post",
+                "py/object": "pauperformance_bot.entity.config.archetype.ArchetypeConfig",
+                "reference_decks": [],
+                "resource_sideboard": null,
+                "resources": [],
+                "resources_discord": []
+            },
+            {
+                "aliases": [],
+                "description": "_Still missing. Please join us on [Discord](https://discord.gg/fYQbpjjkQ3) to contribute to the Academy._",
+                "dominant_mana": [
+                    "G"
+                ],
+                "family": "Tron",
+                "game_type": [
+                    "Midrange"
+                ],
+                "must_have_cards": [],
+                "must_not_have_cards": [],
+                "name": "MonoG Tron",
+                "py/object": "pauperformance_bot.entity.config.archetype.ArchetypeConfig",
+                "reference_decks": [
+                    "MonoG Tron 735.001.Symsonic"
+                ],
+                "resource_sideboard": null,
+                "resources": [],
+                "resources_discord": []
+            },
+            {
+                "aliases": [
+                    "RG Ponza"
+                ],
+                "description": "_Still missing. Please join us on [Discord](https://discord.gg/fYQbpjjkQ3) to contribute to the Academy._",
+                "dominant_mana": [
+                    "R",
+                    "G"
+                ],
+                "family": "Ponza",
+                "game_type": [
+                    "Control"
+                ],
+                "must_have_cards": [],
+                "must_not_have_cards": [
+                    "Mulldrifter"
+                ],
+                "name": "Gruul Ponza",
+                "py/object": "pauperformance_bot.entity.config.archetype.ArchetypeConfig",
+                "reference_decks": [
+                    "Gruul Ponza 735.001.apas72"
+                ],
+                "resource_sideboard": null,
+                "resources": [],
+                "resources_discord": []
+            },
+            {
+                "aliases": [
+                    "Wonderwalls"
+                ],
+                "description": "\nWalls is a deck based around the mana generation capability of [Overgrown Battlement](https://scryfall.com/card/jmp/417/overgrown-battlement) and [Axebane Guardian](https://scryfall.com/card/rtr/115/axebane-guardian), that both produce mana equal to the total amount of [defenders](https://mtg.fandom.com/wiki/Defender) the player controls.\nTwo main versions of the deck exists, with many sub-versions: combo and [cascade](https://mtg.fandom.com/wiki/Cascade).\n\nThe first version is a pure combo deck that allows to kill through infinite damage usually by turn 4, or to mill the opponent.\nKey cards to enable the combo are [Galvanic Alchemist](https://scryfall.com/card/avr/54/galvanic-alchemist), [Freed from the Real](https://scryfall.com/card/a25/58/freed-from-the-real), and [Secret Door](https://scryfall.com/card/afr/71/secret-door).\n\nThe second version aims at quickly putting into play [Boarding Party](https://scryfall.com/card/cmr/163/boarding-party) and [Annoyed Altisaur](https://scryfall.com/card/cmr/216/annoyed-altisaur), overwhelming the opponent on the board by turn 4-5.\n\nA hybrid version of the two exists, with main deck cascade that can transform into combo with a transformational sideboard.",
+                "dominant_mana": [
+                    "G"
+                ],
+                "family": null,
+                "game_type": [
+                    "Combo"
+                ],
+                "must_have_cards": [],
+                "must_not_have_cards": [],
+                "name": "Walls",
+                "py/object": "pauperformance_bot.entity.config.archetype.ArchetypeConfig",
+                "reference_decks": [
+                    "Walls 722.002.apas72",
+                    "Walls 696.001.HouseOfManaMTG",
+                    "Walls 658.001.Mathonical"
+                ],
+                "resource_sideboard": {
+                    "link": "https://docs.google.com/spreadsheets/d/15SW61fnBwcNJeBYf9ROgkhmYnqnQNOcyAXTr61SAWjk/edit?usp=sharing",
+                    "py/object": "pauperformance_bot.entity.config.archetype.SideboardResource"
+                },
+                "resources": [
+                    {
+                        "author": "Andrea Passaro (apas72)",
+                        "date": "2022-03-11",
+                        "language": "\ud83c\uddec\ud83c\udde7",
+                        "link": "https://www.legapauperonline.com/pauper-walls-combo/",
+                        "name": "Pauper Walls Combo",
+                        "py/object": "pauperformance_bot.entity.config.archetype.Resource"
+                    },
+                    {
+                        "author": "Paige Smith",
+                        "date": "2020-02-12",
+                        "language": "\ud83c\uddec\ud83c\udde7",
+                        "link": "https://www.coolstuffinc.com/a/kendrasmith-02122020-anyway-heres-wonderwalls",
+                        "name": "Anyway, Here's Wonderwalls",
+                        "py/object": "pauperformance_bot.entity.config.archetype.Resource"
+                    }
+                ],
+                "resources_discord": [
+                    {
+                        "language": "\ud83c\uddec\ud83c\udde7",
+                        "link": "https://discord.gg/p4kESAk",
+                        "name": "Pauper Walls Discord",
+                        "py/object": "pauperformance_bot.entity.config.archetype.DiscordResource"
+                    }
+                ]
+            },
+            {
+                "aliases": [],
+                "description": "_Still missing. Please join us on [Discord](https://discord.gg/fYQbpjjkQ3) to contribute to the Academy._",
+                "dominant_mana": [
+                    "W",
+                    "U",
+                    "B",
+                    "R",
+                    "G"
+                ],
+                "family": "Tron",
+                "game_type": [
+                    "Control"
+                ],
+                "must_have_cards": [],
+                "must_not_have_cards": [
+                    "Ghostly Flicker"
+                ],
+                "name": "Rainbow Tron",
+                "py/object": "pauperformance_bot.entity.config.archetype.ArchetypeConfig",
+                "reference_decks": [],
+                "resource_sideboard": null,
+                "resources": [],
+                "resources_discord": []
+            },
+            {
+                "aliases": [
+                    "UR 8-Post"
+                ],
+                "description": "_Still missing. Please join us on [Discord](https://discord.gg/fYQbpjjkQ3) to contribute to the Academy._",
+                "dominant_mana": [
+                    "U",
+                    "R"
+                ],
+                "family": "8-Post",
+                "game_type": [
+                    "Control"
+                ],
+                "must_have_cards": [
+                    "Cloudpost",
+                    "Glimmerpost"
+                ],
+                "must_not_have_cards": [],
+                "name": "Izzet 8-Post",
+                "py/object": "pauperformance_bot.entity.config.archetype.ArchetypeConfig",
+                "reference_decks": [],
+                "resource_sideboard": null,
+                "resources": [
+                    {
+                        "author": "BonSequitur",
+                        "date": "2011-12-21",
+                        "language": "\ud83c\uddec\ud83c\udde7",
+                        "link": "https://www.mtgsalvation.com/forums/the-game/pauper/mtgo-pauper/mtgo-pauper-archive/189721-primer-blue-red-8-post",
+                        "name": "Blue-Red 8-Post",
+                        "py/object": "pauperformance_bot.entity.config.archetype.Resource"
+                    }
+                ],
+                "resources_discord": []
+            },
+            {
+                "aliases": [
+                    "UB Control"
+                ],
+                "description": "_Still missing. Please join us on [Discord](https://discord.gg/fYQbpjjkQ3) to contribute to the Academy._",
+                "dominant_mana": [
+                    "U",
+                    "B"
+                ],
+                "family": null,
+                "game_type": [
+                    "Control"
+                ],
+                "must_have_cards": [],
+                "must_not_have_cards": [
+                    "Delver of Secrets // Insectile Aberration",
+                    "Cloudpost",
+                    "Glimmerpost",
+                    "Mental Note",
+                    "Thought Scour"
+                ],
+                "name": "Dimir Control",
+                "py/object": "pauperformance_bot.entity.config.archetype.ArchetypeConfig",
+                "reference_decks": [],
+                "resource_sideboard": null,
+                "resources": [],
+                "resources_discord": []
+            },
+            {
+                "aliases": [],
+                "description": "_Still missing. Please join us on [Discord](https://discord.gg/fYQbpjjkQ3) to contribute to the Academy._",
+                "dominant_mana": [
+                    "U"
+                ],
+                "family": "8-Post",
+                "game_type": [
+                    "Control"
+                ],
+                "must_have_cards": [
+                    "Cloudpost",
+                    "Glimmerpost"
+                ],
+                "must_not_have_cards": [],
+                "name": "MonoU 8-Post",
+                "py/object": "pauperformance_bot.entity.config.archetype.ArchetypeConfig",
+                "reference_decks": [],
+                "resource_sideboard": null,
+                "resources": [],
+                "resources_discord": []
+            },
+            {
+                "aliases": [],
+                "description": "_Still missing. Please join us on [Discord](https://discord.gg/fYQbpjjkQ3) to contribute to the Academy._",
+                "dominant_mana": [
+                    "G",
+                    "R",
+                    "U"
+                ],
+                "family": "Tron",
+                "game_type": [
+                    "Control"
+                ],
+                "must_have_cards": [
+                    "Ghostly Flicker",
+                    "Mystical Teachings"
+                ],
+                "must_not_have_cards": [],
+                "name": "Flicker Tron",
+                "py/object": "pauperformance_bot.entity.config.archetype.ArchetypeConfig",
+                "reference_decks": [
+                    "Flicker Tron 735.001.Alleyezonme",
+                    "Flicker Tron 612.001.A_AdeptoTerra"
+                ],
+                "resource_sideboard": null,
+                "resources": [
+                    {
+                        "author": "Bet\u00e3o",
+                        "date": "2021-03-21",
+                        "language": "\ud83c\uddec\ud83c\udde7",
+                        "link": "https://mtg.cardsrealm.com/en-us/articles/deck-tech-flicker-tron-pauper",
+                        "name": "Deck Tech Flicker Tron Pauper",
+                        "py/object": "pauperformance_bot.entity.config.archetype.Resource"
+                    }
+                ],
+                "resources_discord": []
+            },
+            {
+                "aliases": [],
+                "description": "_Still missing. Please join us on [Discord](https://discord.gg/fYQbpjjkQ3) to contribute to the Academy._",
+                "dominant_mana": [
+                    "R"
+                ],
+                "family": "8-Post",
+                "game_type": [
+                    "Aggro"
+                ],
+                "must_have_cards": [
+                    "Cloudpost",
+                    "Glimmerpost"
+                ],
+                "must_not_have_cards": [],
+                "name": "MonoR 8-Post",
+                "py/object": "pauperformance_bot.entity.config.archetype.ArchetypeConfig",
+                "reference_decks": [],
+                "resource_sideboard": null,
+                "resources": [],
+                "resources_discord": []
+            }
+        ]
+    }
+}

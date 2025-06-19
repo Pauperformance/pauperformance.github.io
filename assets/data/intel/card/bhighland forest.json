@@ -1,0 +1,191 @@
+{
+    "archetypes": {
+        "py/set": [
+            {
+                "aliases": [
+                    "URG Ponza"
+                ],
+                "description": "_Still missing. Please join us on [Discord](https://discord.gg/fYQbpjjkQ3) to contribute to the Academy._",
+                "dominant_mana": [
+                    "U",
+                    "R",
+                    "G"
+                ],
+                "family": "Ponza",
+                "game_type": [
+                    "Control"
+                ],
+                "must_have_cards": [
+                    "Mulldrifter"
+                ],
+                "must_not_have_cards": [],
+                "name": "Temur Ponza",
+                "py/object": "pauperformance_bot.entity.config.archetype.ArchetypeConfig",
+                "reference_decks": [],
+                "resource_sideboard": null,
+                "resources": [],
+                "resources_discord": []
+            },
+            {
+                "aliases": [],
+                "description": "_Still missing. Please join us on [Discord](https://discord.gg/fYQbpjjkQ3) to contribute to the Academy._",
+                "dominant_mana": [
+                    "G"
+                ],
+                "family": "Tron",
+                "game_type": [
+                    "Midrange"
+                ],
+                "must_have_cards": [],
+                "must_not_have_cards": [],
+                "name": "MonoG Tron",
+                "py/object": "pauperformance_bot.entity.config.archetype.ArchetypeConfig",
+                "reference_decks": [
+                    "MonoG Tron 735.001.Symsonic"
+                ],
+                "resource_sideboard": null,
+                "resources": [],
+                "resources_discord": []
+            },
+            {
+                "aliases": [
+                    "RG Ponza"
+                ],
+                "description": "_Still missing. Please join us on [Discord](https://discord.gg/fYQbpjjkQ3) to contribute to the Academy._",
+                "dominant_mana": [
+                    "R",
+                    "G"
+                ],
+                "family": "Ponza",
+                "game_type": [
+                    "Control"
+                ],
+                "must_have_cards": [],
+                "must_not_have_cards": [
+                    "Mulldrifter"
+                ],
+                "name": "Gruul Ponza",
+                "py/object": "pauperformance_bot.entity.config.archetype.ArchetypeConfig",
+                "reference_decks": [
+                    "Gruul Ponza 735.001.apas72"
+                ],
+                "resource_sideboard": null,
+                "resources": [],
+                "resources_discord": []
+            },
+            {
+                "aliases": [
+                    "BG Dredge"
+                ],
+                "description": "_Still missing. Please join us on [Discord](https://discord.gg/fYQbpjjkQ3) to contribute to the Academy._",
+                "dominant_mana": [
+                    "B",
+                    "G"
+                ],
+                "family": null,
+                "game_type": [
+                    "Midrange",
+                    "Combo"
+                ],
+                "must_have_cards": [
+                    "Dread Return",
+                    "Lotleth Giant",
+                    "Stinkweed Imp"
+                ],
+                "must_not_have_cards": [],
+                "name": "Golgari Dredge",
+                "py/object": "pauperformance_bot.entity.config.archetype.ArchetypeConfig",
+                "reference_decks": [],
+                "resource_sideboard": null,
+                "resources": [],
+                "resources_discord": []
+            },
+            {
+                "aliases": [
+                    "BRG Brew"
+                ],
+                "description": "\nGeneric archetype, for Jund decks that do not fit those in the [Archetypes Index](../../pages/archetypes_index.html).",
+                "dominant_mana": [
+                    "B",
+                    "R",
+                    "G"
+                ],
+                "family": "Brew",
+                "game_type": [
+                    "Aggro",
+                    "Midrange",
+                    "Control",
+                    "Combo"
+                ],
+                "must_have_cards": [],
+                "must_not_have_cards": [],
+                "name": "Brew Jund",
+                "py/object": "pauperformance_bot.entity.config.archetype.ArchetypeConfig",
+                "reference_decks": [],
+                "resource_sideboard": null,
+                "resources": [],
+                "resources_discord": []
+            },
+            {
+                "aliases": [
+                    "RG Turbo Emblem"
+                ],
+                "description": "_Still missing. Please join us on [Discord](https://discord.gg/fYQbpjjkQ3) to contribute to the Academy._",
+                "dominant_mana": [
+                    "R",
+                    "G"
+                ],
+                "family": "Turbo Emblem",
+                "game_type": [
+                    "Aggro",
+                    "Combo"
+                ],
+                "must_have_cards": [
+                    "Simian Spirit Guide",
+                    "Avenging Hunter"
+                ],
+                "must_not_have_cards": [
+                    "Goliath Paladin"
+                ],
+                "name": "Gruul Turbo Emblem",
+                "py/object": "pauperformance_bot.entity.config.archetype.ArchetypeConfig",
+                "reference_decks": [],
+                "resource_sideboard": null,
+                "resources": [],
+                "resources_discord": []
+            },
+            {
+                "aliases": [
+                    "Temur Wildfire"
+                ],
+                "description": "_Still missing. Please join us on [Discord](https://discord.gg/fYQbpjjkQ3) to contribute to the Academy._",
+                "dominant_mana": [
+                    "U",
+                    "G",
+                    "R"
+                ],
+                "family": "Cascade",
+                "game_type": [
+                    "Midrange"
+                ],
+                "must_have_cards": [],
+                "must_not_have_cards": [],
+                "name": "Temur Cascade",
+                "py/object": "pauperformance_bot.entity.config.archetype.ArchetypeConfig",
+                "reference_decks": [
+                    "Temur Cascade 701.001.King-Strawberry"
+                ],
+                "resource_sideboard": null,
+                "resources": [],
+                "resources_discord": [
+                    {
+                        "language": "\ud83c\uddec\ud83c\udde7",
+                        "link": "https://discord.gg/wTxNJkpmJS",
+                        "name": "Pauper Cascade Discord",
+                        "py/object": "pauperformance_bot.entity.config.archetype.DiscordResource"
+                    }
+                ]
+            }
+        ]
+    }
+}

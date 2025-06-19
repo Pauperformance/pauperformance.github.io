@@ -1,0 +1,374 @@
+{
+    "archetypes": {
+        "py/set": [
+            {
+                "aliases": [
+                    "Azorius Familiars",
+                    "UW Familiars"
+                ],
+                "description": "_Still missing. Please join us on [Discord](https://discord.gg/fYQbpjjkQ3) to contribute to the Academy._",
+                "dominant_mana": [
+                    "U",
+                    "W"
+                ],
+                "family": "Familiars",
+                "game_type": [
+                    "Control",
+                    "Combo"
+                ],
+                "must_have_cards": [],
+                "must_not_have_cards": [],
+                "name": "Familiars",
+                "py/object": "pauperformance_bot.entity.config.archetype.ArchetypeConfig",
+                "reference_decks": [
+                    "Familiars 735.001.Parallax",
+                    "Familiars 696.001.Finespoo",
+                    "Familiars 533.001.A_AdeptoTerra"
+                ],
+                "resource_sideboard": null,
+                "resources": [
+                    {
+                        "author": "kalikaiz",
+                        "date": "2021-12-07",
+                        "language": "\ud83c\uddec\ud83c\udde7",
+                        "link": "https://www.youtube.com/watch?v=aBjW1lKdrYo&t=1s",
+                        "name": "UW Familiars HOW TO and sideboarding guide",
+                        "py/object": "pauperformance_bot.entity.config.archetype.Resource"
+                    },
+                    {
+                        "author": "Alessandro Moretti",
+                        "date": "2020-04-01",
+                        "language": "\ud83c\uddee\ud83c\uddf9",
+                        "link": "http://pauperwave.altervista.org/uw-familiar-pauper-league/",
+                        "name": "UW Familiar Pauper League",
+                        "py/object": "pauperformance_bot.entity.config.archetype.Resource"
+                    },
+                    {
+                        "author": "420dragon",
+                        "date": "2017-12-22",
+                        "language": "\ud83c\uddec\ud83c\udde7",
+                        "link": "https://www.youtube.com/watch?v=59P3zGL_54A",
+                        "name": "Familiar speed tutorial with 420dragon",
+                        "py/object": "pauperformance_bot.entity.config.archetype.Resource"
+                    }
+                ],
+                "resources_discord": [
+                    {
+                        "language": "\ud83c\uddec\ud83c\udde7",
+                        "link": "https://discord.gg/gTdT6VZ",
+                        "name": "Pauper Familiars Discord",
+                        "py/object": "pauperformance_bot.entity.config.archetype.DiscordResource"
+                    }
+                ]
+            },
+            {
+                "aliases": [],
+                "description": "_Still missing. Please join us on [Discord](https://discord.gg/fYQbpjjkQ3) to contribute to the Academy._",
+                "dominant_mana": [
+                    "U",
+                    "B"
+                ],
+                "family": "Storm",
+                "game_type": [
+                    "Combo"
+                ],
+                "must_have_cards": [],
+                "must_not_have_cards": [],
+                "name": "Zubera Storm",
+                "py/object": "pauperformance_bot.entity.config.archetype.ArchetypeConfig",
+                "reference_decks": [
+                    "Zubera Storm 658.001.MTGDelphi"
+                ],
+                "resource_sideboard": null,
+                "resources": [
+                    {
+                        "author": "Roberto Bernocco",
+                        "date": "2018-06-07",
+                        "language": "\ud83c\uddee\ud83c\uddf9",
+                        "link": "http://www.metagame.it/articoli-pauper/3378-building-on-a-budget-pauper-dimir-zubera.html",
+                        "name": "Building on a budget: Pauper Dimir Zubera",
+                        "py/object": "pauperformance_bot.entity.config.archetype.Resource"
+                    }
+                ],
+                "resources_discord": [
+                    {
+                        "language": "\ud83c\uddec\ud83c\udde7",
+                        "link": "https://discord.com/invite/stormcommunity",
+                        "name": "MTG Storm Community Discord",
+                        "py/object": "pauperformance_bot.entity.config.archetype.DiscordResource"
+                    }
+                ]
+            },
+            {
+                "aliases": [
+                    "BW Pestilence"
+                ],
+                "description": "\nOrzhov Pestilence exploits the unique synergy between [Guardian of the Guildpact](https://scryfall.com/card/dis/10/guardian-of-the-guildpact) and [Pestilence](https://scryfall.com/card/mb1/729/pestilence), both to completely stall the board and as a final win condition.\nIn several matchups, Guardian of the Guildpact is impossible to remove thanks to its peculiar [protection ability](https://mtg.fandom.com/wiki/Protection), that protects the creature from damage caused by Pestilence effect.\nAs result, the player is allowed to activate multiple times per turn Pestilence to wipe the board, while Guardian of the Guildpact will prevent the enchantment from leaving the battlefield.\n\nOrzhov Pestilence takes control of the board in early game by means of a variety of removal spells, while developing its mana to resolve Pestilence and Guardian of the Guildpact.\nIn versions of the deck with a strong focus on the control strategy, a key card is [Pristine Talisman](https://scryfall.com/card/c21/258/pristine-talisman), to [ramp](https://mtg.fandom.com/wiki/Ramp) while keeping up the life total.\nDiscard effects are common in this archetype and typically represent the only way to deal with counterspells and strong [enters the battlefield](https://mtg.fandom.com/wiki/Enters_the_battlefield) effects.\n\nThe deck is sometimes considered unstable due to the high number of lands it requires, and to the absence of an efficient card selection and draw engine after [Bonder's Ornament](https://scryfall.com/card/c20/67/bonders-ornament) ban.",
+                "dominant_mana": [
+                    "B",
+                    "W"
+                ],
+                "family": null,
+                "game_type": [
+                    "Midrange",
+                    "Control"
+                ],
+                "must_have_cards": [
+                    "Pestilence"
+                ],
+                "must_not_have_cards": [],
+                "name": "Orzhov Pestilence",
+                "py/object": "pauperformance_bot.entity.config.archetype.ArchetypeConfig",
+                "reference_decks": [
+                    "Orzhov Pestilence 696.001.Kampo",
+                    "Orzhov Pestilence 572.001.Amoras27"
+                ],
+                "resource_sideboard": null,
+                "resources": [
+                    {
+                        "author": "Paige Smith",
+                        "date": "2018-12-26",
+                        "language": "\ud83c\uddec\ud83c\udde7",
+                        "link": "https://www.coolstuffinc.com/a/kendrasmith-12262018-pestilence-what-you-have-to-endure-what-you-have-to-put-others-through",
+                        "name": "Pestilence: What You Have to Endure, What You Have to Put Others Through",
+                        "py/object": "pauperformance_bot.entity.config.archetype.Resource"
+                    },
+                    {
+                        "author": "Pentola",
+                        "date": "2018-05-21",
+                        "language": "\ud83c\uddee\ud83c\uddf9",
+                        "link": "http://www.metagame.it/forum/viewtopic.php?f=158&t=26084",
+                        "name": "[Pauper Tier] Orzhov Pestilence",
+                        "py/object": "pauperformance_bot.entity.config.archetype.Resource"
+                    }
+                ],
+                "resources_discord": []
+            },
+            {
+                "aliases": [
+                    "UB Flicker",
+                    "UB Rat Lock"
+                ],
+                "description": "_Still missing. Please join us on [Discord](https://discord.gg/fYQbpjjkQ3) to contribute to the Academy._",
+                "dominant_mana": [
+                    "U",
+                    "B"
+                ],
+                "family": null,
+                "game_type": [
+                    "Control"
+                ],
+                "must_have_cards": [
+                    "Ghostly Flicker"
+                ],
+                "must_not_have_cards": [],
+                "name": "Dimir Flicker",
+                "py/object": "pauperformance_bot.entity.config.archetype.ArchetypeConfig",
+                "reference_decks": [
+                    "Dimir Flicker 648.001.hjc"
+                ],
+                "resource_sideboard": null,
+                "resources": [],
+                "resources_discord": []
+            },
+            {
+                "aliases": [
+                    "BG Gardens"
+                ],
+                "description": "_Still missing. Please join us on [Discord](https://discord.gg/fYQbpjjkQ3) to contribute to the Academy._",
+                "dominant_mana": [
+                    "B",
+                    "G"
+                ],
+                "family": null,
+                "game_type": [
+                    "Control"
+                ],
+                "must_have_cards": [
+                    "Khalni Garden",
+                    "Avenging Hunter",
+                    "Thorn of the Black Rose"
+                ],
+                "must_not_have_cards": [
+                    "Geothermal Bog",
+                    "Sulfurous Mire",
+                    "Pyroblast",
+                    "Red Elemental Blast",
+                    "Ancient Grudge"
+                ],
+                "name": "Golgari Gardens",
+                "py/object": "pauperformance_bot.entity.config.archetype.ArchetypeConfig",
+                "reference_decks": [],
+                "resource_sideboard": null,
+                "resources": [],
+                "resources_discord": []
+            },
+            {
+                "aliases": [
+                    "MonoB Devotion"
+                ],
+                "description": "_Still missing. Please join us on [Discord](https://discord.gg/fYQbpjjkQ3) to contribute to the Academy._",
+                "dominant_mana": [
+                    "B"
+                ],
+                "family": null,
+                "game_type": [
+                    "Control"
+                ],
+                "must_have_cards": [],
+                "must_not_have_cards": [],
+                "name": "MonoB Control",
+                "py/object": "pauperformance_bot.entity.config.archetype.ArchetypeConfig",
+                "reference_decks": [
+                    "MonoB Control 735.001.panza_quiroga",
+                    "MonoB Control 701.001.medvedev"
+                ],
+                "resource_sideboard": null,
+                "resources": [
+                    {
+                        "author": "Humberto \"Romeu\"",
+                        "date": "2022-02-01",
+                        "language": "\ud83c\uddec\ud83c\udde7",
+                        "link": "https://mtg.cardsrealm.com/en-us/articles/pauper-deck-tech--mono-black-devotion",
+                        "name": "Pauper Deck Tech: Mono Black Devotion",
+                        "py/object": "pauperformance_bot.entity.config.archetype.Resource"
+                    },
+                    {
+                        "author": "Humberto \"Romeu\"",
+                        "date": "2021-08-19",
+                        "language": "\ud83c\uddec\ud83c\udde7",
+                        "link": "https://mtg.cardsrealm.com/en-us/articles/pauper-deck-tech:-mono-black-control",
+                        "name": "Pauper Deck Tech: Mono-Black Control",
+                        "py/object": "pauperformance_bot.entity.config.archetype.Resource"
+                    }
+                ],
+                "resources_discord": []
+            },
+            {
+                "aliases": [
+                    "UBR Brew"
+                ],
+                "description": "\nGeneric archetype, for Grixis decks that do not fit those in the [Archetypes Index](../../pages/archetypes_index.html).",
+                "dominant_mana": [
+                    "U",
+                    "B",
+                    "R"
+                ],
+                "family": "Brew",
+                "game_type": [
+                    "Aggro",
+                    "Midrange",
+                    "Control",
+                    "Combo"
+                ],
+                "must_have_cards": [],
+                "must_not_have_cards": [],
+                "name": "Brew Grixis",
+                "py/object": "pauperformance_bot.entity.config.archetype.ArchetypeConfig",
+                "reference_decks": [],
+                "resource_sideboard": null,
+                "resources": [],
+                "resources_discord": []
+            },
+            {
+                "aliases": [
+                    "UB Control"
+                ],
+                "description": "_Still missing. Please join us on [Discord](https://discord.gg/fYQbpjjkQ3) to contribute to the Academy._",
+                "dominant_mana": [
+                    "U",
+                    "B"
+                ],
+                "family": null,
+                "game_type": [
+                    "Control"
+                ],
+                "must_have_cards": [],
+                "must_not_have_cards": [
+                    "Delver of Secrets // Insectile Aberration",
+                    "Cloudpost",
+                    "Glimmerpost",
+                    "Mental Note",
+                    "Thought Scour"
+                ],
+                "name": "Dimir Control",
+                "py/object": "pauperformance_bot.entity.config.archetype.ArchetypeConfig",
+                "reference_decks": [],
+                "resource_sideboard": null,
+                "resources": [],
+                "resources_discord": []
+            },
+            {
+                "aliases": [],
+                "description": "_Still missing. Please join us on [Discord](https://discord.gg/fYQbpjjkQ3) to contribute to the Academy._",
+                "dominant_mana": [
+                    "G",
+                    "R",
+                    "U"
+                ],
+                "family": "Tron",
+                "game_type": [
+                    "Control"
+                ],
+                "must_have_cards": [
+                    "Ghostly Flicker",
+                    "Mystical Teachings"
+                ],
+                "must_not_have_cards": [],
+                "name": "Flicker Tron",
+                "py/object": "pauperformance_bot.entity.config.archetype.ArchetypeConfig",
+                "reference_decks": [
+                    "Flicker Tron 735.001.Alleyezonme",
+                    "Flicker Tron 612.001.A_AdeptoTerra"
+                ],
+                "resource_sideboard": null,
+                "resources": [
+                    {
+                        "author": "Bet\u00e3o",
+                        "date": "2021-03-21",
+                        "language": "\ud83c\uddec\ud83c\udde7",
+                        "link": "https://mtg.cardsrealm.com/en-us/articles/deck-tech-flicker-tron-pauper",
+                        "name": "Deck Tech Flicker Tron Pauper",
+                        "py/object": "pauperformance_bot.entity.config.archetype.Resource"
+                    }
+                ],
+                "resources_discord": []
+            },
+            {
+                "aliases": [
+                    "Boros Rebirth"
+                ],
+                "description": "_Still missing. Please join us on [Discord](https://discord.gg/fYQbpjjkQ3) to contribute to the Academy._",
+                "dominant_mana": [
+                    "W",
+                    "R"
+                ],
+                "family": null,
+                "game_type": [
+                    "Midrange"
+                ],
+                "must_have_cards": [
+                    "Kuldotha Rebirth"
+                ],
+                "must_not_have_cards": [],
+                "name": "Kuldotha Rebirth",
+                "py/object": "pauperformance_bot.entity.config.archetype.ArchetypeConfig",
+                "reference_decks": [
+                    "Kuldotha Rebirth 722.001.Tarrasque1"
+                ],
+                "resource_sideboard": null,
+                "resources": [
+                    {
+                        "author": "Jake Stiles",
+                        "date": "2016-11-05",
+                        "language": "\ud83c\uddec\ud83c\udde7",
+                        "link": "https://www.mtggoldfish.com/articles/playing-pauper-kuldotha-boros",
+                        "name": "Playing Pauper: Kuldotha Boros",
+                        "py/object": "pauperformance_bot.entity.config.archetype.Resource"
+                    }
+                ],
+                "resources_discord": []
+            }
+        ]
+    }
+}

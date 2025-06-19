@@ -1,0 +1,59 @@
+{
+    "archetypes": {
+        "py/set": [
+            {
+                "aliases": [
+                    "UW Gates",
+                    "Azorius Caw Gates",
+                    "UW Caw Gates",
+                    "Caw Gates"
+                ],
+                "description": "_Still missing. Please join us on [Discord](https://discord.gg/fYQbpjjkQ3) to contribute to the Academy._",
+                "dominant_mana": [
+                    "U",
+                    "W"
+                ],
+                "family": null,
+                "game_type": [
+                    "Midrange"
+                ],
+                "must_have_cards": [
+                    "Basilisk Gate",
+                    "Sacred Cat"
+                ],
+                "must_not_have_cards": [],
+                "name": "Azorius Gates",
+                "py/object": "pauperformance_bot.entity.config.archetype.ArchetypeConfig",
+                "reference_decks": [],
+                "resource_sideboard": null,
+                "resources": [],
+                "resources_discord": []
+            },
+            {
+                "aliases": [
+                    "WB Brew"
+                ],
+                "description": "\nGeneric archetype, for Orzhov decks that do not fit those in the [Archetypes Index](../../pages/archetypes_index.html).",
+                "dominant_mana": [
+                    "W",
+                    "B"
+                ],
+                "family": "Brew",
+                "game_type": [
+                    "Aggro",
+                    "Midrange",
+                    "Control",
+                    "Combo"
+                ],
+                "must_have_cards": [],
+                "must_not_have_cards": [],
+                "name": "Brew Orzhov",
+                "py/object": "pauperformance_bot.entity.config.archetype.ArchetypeConfig",
+                "reference_decks": [],
+                "resource_sideboard": null,
+                "resources": [],
+                "resources_discord": []
+            }
+        ]
+    }
+}

@@ -1,0 +1,299 @@
+{
+    "archetypes": {
+        "py/set": [
+            {
+                "aliases": [
+                    "MonoG Brew"
+                ],
+                "description": "\nGeneric archetype, for MonoG decks that do not fit those in the [Archetypes Index](../../pages/archetypes_index.html).",
+                "dominant_mana": [
+                    "G"
+                ],
+                "family": "Brew",
+                "game_type": [
+                    "Aggro",
+                    "Midrange",
+                    "Control",
+                    "Combo"
+                ],
+                "must_have_cards": [],
+                "must_not_have_cards": [],
+                "name": "Brew MonoG",
+                "py/object": "pauperformance_bot.entity.config.archetype.ArchetypeConfig",
+                "reference_decks": [],
+                "resource_sideboard": null,
+                "resources": [],
+                "resources_discord": []
+            },
+            {
+                "aliases": [
+                    "Golgari Aristocrats",
+                    "BG Aristocrats",
+                    "Golgari Sacrifice",
+                    "BG Sacrifice"
+                ],
+                "description": "_Still missing. Please join us on [Discord](https://discord.gg/fYQbpjjkQ3) to contribute to the Academy._",
+                "dominant_mana": [
+                    "B",
+                    "G"
+                ],
+                "family": "Sacrifice",
+                "game_type": [
+                    "Aggro"
+                ],
+                "must_have_cards": [],
+                "must_not_have_cards": [],
+                "name": "Aristocrats",
+                "py/object": "pauperformance_bot.entity.config.archetype.ArchetypeConfig",
+                "reference_decks": [
+                    "Aristocrats 658.001.Gandalf_the_Magician"
+                ],
+                "resource_sideboard": null,
+                "resources": [],
+                "resources_discord": []
+            },
+            {
+                "aliases": [
+                    "MonoW Brew"
+                ],
+                "description": "\nGeneric archetype, for MonoW decks that do not fit those in the [Archetypes Index](../../pages/archetypes_index.html).",
+                "dominant_mana": [
+                    "W"
+                ],
+                "family": "Brew",
+                "game_type": [
+                    "Aggro",
+                    "Midrange",
+                    "Control",
+                    "Combo"
+                ],
+                "must_have_cards": [],
+                "must_not_have_cards": [],
+                "name": "Brew MonoW",
+                "py/object": "pauperformance_bot.entity.config.archetype.ArchetypeConfig",
+                "reference_decks": [],
+                "resource_sideboard": null,
+                "resources": [],
+                "resources_discord": []
+            },
+            {
+                "aliases": [],
+                "description": "_Still missing. Please join us on [Discord](https://discord.gg/fYQbpjjkQ3) to contribute to the Academy._",
+                "dominant_mana": [
+                    "G"
+                ],
+                "family": null,
+                "game_type": [
+                    "Aggro",
+                    "Combo"
+                ],
+                "must_have_cards": [],
+                "must_not_have_cards": [],
+                "name": "Elves",
+                "py/object": "pauperformance_bot.entity.config.archetype.ArchetypeConfig",
+                "reference_decks": [
+                    "Elves 696.001.tarmogoyf_ita",
+                    "Elves 576.001.TheMaverickGal",
+                    "Elves 560.001.TheMaverickGal"
+                ],
+                "resource_sideboard": null,
+                "resources": [
+                    {
+                        "author": "Gabriel",
+                        "date": "2021-11-19",
+                        "language": "\ud83c\uddec\ud83c\udde7",
+                        "link": "https://mtg.cardsrealm.com/en-us/articles/pauper-elves:-deck-tech--sideboard-guide",
+                        "name": "Pauper Elves: Deck Tech & Sideboard Guide",
+                        "py/object": "pauperformance_bot.entity.config.archetype.Resource"
+                    },
+                    {
+                        "author": "Kuraiden",
+                        "date": "2012-05-17",
+                        "language": "\ud83c\uddee\ud83c\uddf9",
+                        "link": "http://www.metagame.it/forum/viewtopic.php?f=158&t=5180",
+                        "name": "[Pauper Tier] Elves",
+                        "py/object": "pauperformance_bot.entity.config.archetype.Resource"
+                    }
+                ],
+                "resources_discord": [
+                    {
+                        "language": "\ud83c\uddec\ud83c\udde7",
+                        "link": "https://discord.gg/aheU4Fe",
+                        "name": "Pauper Elves Discord",
+                        "py/object": "pauperformance_bot.entity.config.archetype.DiscordResource"
+                    }
+                ]
+            },
+            {
+                "aliases": [
+                    "BG Dredge"
+                ],
+                "description": "_Still missing. Please join us on [Discord](https://discord.gg/fYQbpjjkQ3) to contribute to the Academy._",
+                "dominant_mana": [
+                    "B",
+                    "G"
+                ],
+                "family": null,
+                "game_type": [
+                    "Midrange",
+                    "Combo"
+                ],
+                "must_have_cards": [
+                    "Dread Return",
+                    "Lotleth Giant",
+                    "Stinkweed Imp"
+                ],
+                "must_not_have_cards": [],
+                "name": "Golgari Dredge",
+                "py/object": "pauperformance_bot.entity.config.archetype.ArchetypeConfig",
+                "reference_decks": [],
+                "resource_sideboard": null,
+                "resources": [],
+                "resources_discord": []
+            },
+            {
+                "aliases": [
+                    "BG Turbo Emblem"
+                ],
+                "description": "_Still missing. Please join us on [Discord](https://discord.gg/fYQbpjjkQ3) to contribute to the Academy._",
+                "dominant_mana": [
+                    "B",
+                    "G"
+                ],
+                "family": "Turbo Emblem",
+                "game_type": [
+                    "Aggro",
+                    "Combo"
+                ],
+                "must_have_cards": [
+                    "Culling the Weak",
+                    "Village Rites",
+                    "Avenging Hunter"
+                ],
+                "must_not_have_cards": [],
+                "name": "Golgari Turbo Emblem",
+                "py/object": "pauperformance_bot.entity.config.archetype.ArchetypeConfig",
+                "reference_decks": [],
+                "resource_sideboard": null,
+                "resources": [],
+                "resources_discord": []
+            },
+            {
+                "aliases": [],
+                "description": "_Still missing. Please join us on [Discord](https://discord.gg/fYQbpjjkQ3) to contribute to the Academy._",
+                "dominant_mana": [
+                    "C"
+                ],
+                "family": "Tron",
+                "game_type": [
+                    "Combo"
+                ],
+                "must_have_cards": [
+                    "Ashnod's Altar",
+                    "Golem Foundry",
+                    "Myr Retriever",
+                    "Urza's Mine",
+                    "Urza's Power Plant",
+                    "Urza's Tower"
+                ],
+                "must_not_have_cards": [],
+                "name": "Altar Tron",
+                "py/object": "pauperformance_bot.entity.config.archetype.ArchetypeConfig",
+                "reference_decks": [],
+                "resource_sideboard": null,
+                "resources": [],
+                "resources_discord": []
+            },
+            {
+                "aliases": [
+                    "BRG Brew"
+                ],
+                "description": "\nGeneric archetype, for Jund decks that do not fit those in the [Archetypes Index](../../pages/archetypes_index.html).",
+                "dominant_mana": [
+                    "B",
+                    "R",
+                    "G"
+                ],
+                "family": "Brew",
+                "game_type": [
+                    "Aggro",
+                    "Midrange",
+                    "Control",
+                    "Combo"
+                ],
+                "must_have_cards": [],
+                "must_not_have_cards": [],
+                "name": "Brew Jund",
+                "py/object": "pauperformance_bot.entity.config.archetype.ArchetypeConfig",
+                "reference_decks": [],
+                "resource_sideboard": null,
+                "resources": [],
+                "resources_discord": []
+            },
+            {
+                "aliases": [
+                    "Rakdos Persist",
+                    "Goblins Combo"
+                ],
+                "description": "_Still missing. Please join us on [Discord](https://discord.gg/fYQbpjjkQ3) to contribute to the Academy._",
+                "dominant_mana": [
+                    "B",
+                    "R"
+                ],
+                "family": null,
+                "game_type": [
+                    "Combo"
+                ],
+                "must_have_cards": [],
+                "must_not_have_cards": [],
+                "name": "Moggwarts",
+                "py/object": "pauperformance_bot.entity.config.archetype.ArchetypeConfig",
+                "reference_decks": [
+                    "Moggwarts 683.001.Hamuda",
+                    "Moggwarts 669.001.Hamuda"
+                ],
+                "resource_sideboard": null,
+                "resources": [],
+                "resources_discord": [
+                    {
+                        "language": "\ud83c\uddec\ud83c\udde7",
+                        "link": "https://discord.gg/hdFAKcTd",
+                        "name": "Pauper Moggwarts Discord",
+                        "py/object": "pauperformance_bot.entity.config.archetype.DiscordResource"
+                    }
+                ]
+            },
+            {
+                "aliases": [],
+                "description": "_Still missing. Please join us on [Discord](https://discord.gg/fYQbpjjkQ3) to contribute to the Academy._",
+                "dominant_mana": [
+                    "G",
+                    "W"
+                ],
+                "family": null,
+                "game_type": [
+                    "Aggro"
+                ],
+                "must_have_cards": [],
+                "must_not_have_cards": [],
+                "name": "Slivers",
+                "py/object": "pauperformance_bot.entity.config.archetype.ArchetypeConfig",
+                "reference_decks": [
+                    "Slivers 651.001.Esandrad"
+                ],
+                "resource_sideboard": null,
+                "resources": [
+                    {
+                        "author": "Kuraiden",
+                        "date": "2012-05-17",
+                        "language": "\ud83c\uddee\ud83c\uddf9",
+                        "link": "http://www.metagame.it/forum/viewtopic.php?f=158&t=5888",
+                        "name": "[Pauper Tier] Slivers",
+                        "py/object": "pauperformance_bot.entity.config.archetype.Resource"
+                    }
+                ],
+                "resources_discord": []
+            }
+        ]
+    }
+}

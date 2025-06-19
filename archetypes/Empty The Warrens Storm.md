@@ -13,7 +13,26 @@
 **Description**: _Still missing. Please join us on [Discord](https://discord.gg/fYQbpjjkQ3) to contribute to the Academy._
 
 
+## **Staples**
 
+<details>
+  <summary>Click here to expand</summary>
+<a href="https://scryfall.com/card/dmr/118/empty-the-warrens"><img src="https://cards.scryfall.io/normal/front/9/3/939d765a-aefb-4393-8808-98b1bbd7e803.jpg" class="archetype-card rounded-image"/></a>
+<a href="https://scryfall.com/card/tpr/225/lotus-petal"><img src="https://cards.scryfall.io/normal/front/f/8/f85ab5f9-508e-45de-8fa1-ce1f16552ffc.jpg" class="archetype-card rounded-image"/></a>
+<a href="https://scryfall.com/card/2xm/208/manamorphose"><img src="https://cards.scryfall.io/normal/front/f/a/faf9070e-14be-4ce5-a19a-6addc79359c1.jpg" class="archetype-card rounded-image"/></a>
+<a href="https://scryfall.com/card/csp/96/rite-of-flame"><img src="https://cards.scryfall.io/normal/front/c/0/c062caf7-f0eb-44db-9f74-e6711a13fada.jpg" class="archetype-card rounded-image"/></a>
+</details><br/>
+
+
+
+## **Frequent cards**
+
+<details>
+  <summary>Click here to expand</summary>
+<a href="https://scryfall.com/card/jud/89/flaring-pain"><img src="https://c1.scryfall.com/file/scryfall-cards/normal/front/e/e/eeb5c96a-1d16-459d-9968-ced9a8f1c520.jpg" class="archetype-card rounded-image"/></a>
+<a href="https://scryfall.com/card/nph/35/gitaxian-probe"><img src="https://cards.scryfall.io/normal/front/9/9/995486ce-58bb-4753-a812-0ca73ef1a235.jpg" class="archetype-card rounded-image"/></a>
+<a href="https://scryfall.com/card/zen/125/goblin-bushwhacker"><img src="https://cards.scryfall.io/normal/front/4/0/4085a5bf-a71b-4c73-9b39-0dcc328fe11b.jpg" class="archetype-card rounded-image"/></a>
+</details><br/>
 
 
 

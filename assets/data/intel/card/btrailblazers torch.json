@@ -1,0 +1,157 @@
+{
+    "archetypes": {
+        "py/set": [
+            {
+                "aliases": [
+                    "WRG Turbo Emblem"
+                ],
+                "description": "_Still missing. Please join us on [Discord](https://discord.gg/fYQbpjjkQ3) to contribute to the Academy._",
+                "dominant_mana": [
+                    "W",
+                    "R",
+                    "G"
+                ],
+                "family": "Turbo Emblem",
+                "game_type": [
+                    "Aggro",
+                    "Combo"
+                ],
+                "must_have_cards": [
+                    "Crimson Fleet Commodore",
+                    "Simian Spirit Guide",
+                    "Avenging Hunter",
+                    "Goliath Paladin"
+                ],
+                "must_not_have_cards": [],
+                "name": "Naya Turbo Emblem",
+                "py/object": "pauperformance_bot.entity.config.archetype.ArchetypeConfig",
+                "reference_decks": [],
+                "resource_sideboard": null,
+                "resources": [],
+                "resources_discord": []
+            },
+            {
+                "aliases": [
+                    "WB Brew"
+                ],
+                "description": "\nGeneric archetype, for Orzhov decks that do not fit those in the [Archetypes Index](../../pages/archetypes_index.html).",
+                "dominant_mana": [
+                    "W",
+                    "B"
+                ],
+                "family": "Brew",
+                "game_type": [
+                    "Aggro",
+                    "Midrange",
+                    "Control",
+                    "Combo"
+                ],
+                "must_have_cards": [],
+                "must_not_have_cards": [],
+                "name": "Brew Orzhov",
+                "py/object": "pauperformance_bot.entity.config.archetype.ArchetypeConfig",
+                "reference_decks": [],
+                "resource_sideboard": null,
+                "resources": [],
+                "resources_discord": []
+            },
+            {
+                "aliases": [
+                    "R Turbo Emblem"
+                ],
+                "description": "_Still missing. Please join us on [Discord](https://discord.gg/fYQbpjjkQ3) to contribute to the Academy._",
+                "dominant_mana": [
+                    "R"
+                ],
+                "family": "Turbo Emblem",
+                "game_type": [
+                    "Aggro",
+                    "Combo"
+                ],
+                "must_have_cards": [
+                    "Rite of Flame",
+                    "Crimson Fleet Commodore",
+                    "Simian Spirit Guide"
+                ],
+                "must_not_have_cards": [
+                    "Avenging Hunter"
+                ],
+                "name": "MonoR Turbo Emblem",
+                "py/object": "pauperformance_bot.entity.config.archetype.ArchetypeConfig",
+                "reference_decks": [],
+                "resource_sideboard": null,
+                "resources": [],
+                "resources_discord": []
+            },
+            {
+                "aliases": [
+                    "MonoB Devotion"
+                ],
+                "description": "_Still missing. Please join us on [Discord](https://discord.gg/fYQbpjjkQ3) to contribute to the Academy._",
+                "dominant_mana": [
+                    "B"
+                ],
+                "family": null,
+                "game_type": [
+                    "Control"
+                ],
+                "must_have_cards": [],
+                "must_not_have_cards": [],
+                "name": "MonoB Control",
+                "py/object": "pauperformance_bot.entity.config.archetype.ArchetypeConfig",
+                "reference_decks": [
+                    "MonoB Control 735.001.panza_quiroga",
+                    "MonoB Control 701.001.medvedev"
+                ],
+                "resource_sideboard": null,
+                "resources": [
+                    {
+                        "author": "Humberto \"Romeu\"",
+                        "date": "2022-02-01",
+                        "language": "\ud83c\uddec\ud83c\udde7",
+                        "link": "https://mtg.cardsrealm.com/en-us/articles/pauper-deck-tech--mono-black-devotion",
+                        "name": "Pauper Deck Tech: Mono Black Devotion",
+                        "py/object": "pauperformance_bot.entity.config.archetype.Resource"
+                    },
+                    {
+                        "author": "Humberto \"Romeu\"",
+                        "date": "2021-08-19",
+                        "language": "\ud83c\uddec\ud83c\udde7",
+                        "link": "https://mtg.cardsrealm.com/en-us/articles/pauper-deck-tech:-mono-black-control",
+                        "name": "Pauper Deck Tech: Mono-Black Control",
+                        "py/object": "pauperformance_bot.entity.config.archetype.Resource"
+                    }
+                ],
+                "resources_discord": []
+            },
+            {
+                "aliases": [
+                    "RG Turbo Emblem"
+                ],
+                "description": "_Still missing. Please join us on [Discord](https://discord.gg/fYQbpjjkQ3) to contribute to the Academy._",
+                "dominant_mana": [
+                    "R",
+                    "G"
+                ],
+                "family": "Turbo Emblem",
+                "game_type": [
+                    "Aggro",
+                    "Combo"
+                ],
+                "must_have_cards": [
+                    "Simian Spirit Guide",
+                    "Avenging Hunter"
+                ],
+                "must_not_have_cards": [
+                    "Goliath Paladin"
+                ],
+                "name": "Gruul Turbo Emblem",
+                "py/object": "pauperformance_bot.entity.config.archetype.ArchetypeConfig",
+                "reference_decks": [],
+                "resource_sideboard": null,
+                "resources": [],
+                "resources_discord": []
+            }
+        ]
+    }
+}

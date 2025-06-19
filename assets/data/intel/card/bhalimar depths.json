@@ -1,0 +1,69 @@
+{
+    "archetypes": {
+        "py/set": [
+            {
+                "aliases": [
+                    "UB Control"
+                ],
+                "description": "_Still missing. Please join us on [Discord](https://discord.gg/fYQbpjjkQ3) to contribute to the Academy._",
+                "dominant_mana": [
+                    "U",
+                    "B"
+                ],
+                "family": null,
+                "game_type": [
+                    "Control"
+                ],
+                "must_have_cards": [],
+                "must_not_have_cards": [
+                    "Delver of Secrets // Insectile Aberration",
+                    "Cloudpost",
+                    "Glimmerpost",
+                    "Mental Note",
+                    "Thought Scour"
+                ],
+                "name": "Dimir Control",
+                "py/object": "pauperformance_bot.entity.config.archetype.ArchetypeConfig",
+                "reference_decks": [],
+                "resource_sideboard": null,
+                "resources": [],
+                "resources_discord": []
+            },
+            {
+                "aliases": [
+                    "UB Delver"
+                ],
+                "description": "_Still missing. Please join us on [Discord](https://discord.gg/fYQbpjjkQ3) to contribute to the Academy._",
+                "dominant_mana": [
+                    "U",
+                    "B"
+                ],
+                "family": null,
+                "game_type": [
+                    "Tempo"
+                ],
+                "must_have_cards": [],
+                "must_not_have_cards": [
+                    "Spellstutter Sprite"
+                ],
+                "name": "Dimir Delver",
+                "py/object": "pauperformance_bot.entity.config.archetype.ArchetypeConfig",
+                "reference_decks": [
+                    "Dimir Delver 648.001.Hamuda"
+                ],
+                "resource_sideboard": null,
+                "resources": [
+                    {
+                        "author": "Siol",
+                        "date": "2013-02-05",
+                        "language": "\ud83c\uddee\ud83c\uddf9",
+                        "link": "http://www.metagame.it/forum/viewtopic.php?f=158&t=16467",
+                        "name": "[Pauper Tier] Dimir Delver",
+                        "py/object": "pauperformance_bot.entity.config.archetype.Resource"
+                    }
+                ],
+                "resources_discord": []
+            }
+        ]
+    }
+}

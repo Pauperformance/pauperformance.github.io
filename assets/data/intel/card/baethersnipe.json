@@ -1,0 +1,88 @@
+{
+    "archetypes": {
+        "py/set": [
+            {
+                "aliases": [
+                    "Azorius Familiars",
+                    "UW Familiars"
+                ],
+                "description": "_Still missing. Please join us on [Discord](https://discord.gg/fYQbpjjkQ3) to contribute to the Academy._",
+                "dominant_mana": [
+                    "U",
+                    "W"
+                ],
+                "family": "Familiars",
+                "game_type": [
+                    "Control",
+                    "Combo"
+                ],
+                "must_have_cards": [],
+                "must_not_have_cards": [],
+                "name": "Familiars",
+                "py/object": "pauperformance_bot.entity.config.archetype.ArchetypeConfig",
+                "reference_decks": [
+                    "Familiars 735.001.Parallax",
+                    "Familiars 696.001.Finespoo",
+                    "Familiars 533.001.A_AdeptoTerra"
+                ],
+                "resource_sideboard": null,
+                "resources": [
+                    {
+                        "author": "kalikaiz",
+                        "date": "2021-12-07",
+                        "language": "\ud83c\uddec\ud83c\udde7",
+                        "link": "https://www.youtube.com/watch?v=aBjW1lKdrYo&t=1s",
+                        "name": "UW Familiars HOW TO and sideboarding guide",
+                        "py/object": "pauperformance_bot.entity.config.archetype.Resource"
+                    },
+                    {
+                        "author": "Alessandro Moretti",
+                        "date": "2020-04-01",
+                        "language": "\ud83c\uddee\ud83c\uddf9",
+                        "link": "http://pauperwave.altervista.org/uw-familiar-pauper-league/",
+                        "name": "UW Familiar Pauper League",
+                        "py/object": "pauperformance_bot.entity.config.archetype.Resource"
+                    },
+                    {
+                        "author": "420dragon",
+                        "date": "2017-12-22",
+                        "language": "\ud83c\uddec\ud83c\udde7",
+                        "link": "https://www.youtube.com/watch?v=59P3zGL_54A",
+                        "name": "Familiar speed tutorial with 420dragon",
+                        "py/object": "pauperformance_bot.entity.config.archetype.Resource"
+                    }
+                ],
+                "resources_discord": [
+                    {
+                        "language": "\ud83c\uddec\ud83c\udde7",
+                        "link": "https://discord.gg/gTdT6VZ",
+                        "name": "Pauper Familiars Discord",
+                        "py/object": "pauperformance_bot.entity.config.archetype.DiscordResource"
+                    }
+                ]
+            },
+            {
+                "aliases": [],
+                "description": "\nAcid Trip is a midrange deck revolving around the card [Reality Acid](https://scryfall.com/card/tsr/81/reality-acid).\nThe enchantment is used to repeatedly force the opponent to sacrifice key permanents.\n\nTo speed-up the engine, the player tries to [bounce](https://mtg.fandom.com/wiki/Bounce) Reality Acid without waiting for the [Vanishing](https://mtg.fandom.com/wiki/Vanishing) ability to resolve after the 3rd upkeep.\nSeveral cards can cause Reality Acid to [leave the battlefield](https://mtg.fandom.com/wiki/Leaves_the_battlefield), such as [Kor Skyfisher](https://scryfall.com/card/mm3/11/kor-skyfisher), [Teferi's Time Twist](https://scryfall.com/card/war/72/teferis-time-twist), [Aethersnipe](https://scryfall.com/card/uma/44/aethersnipe), [Dream Stalker](https://scryfall.com/card/tsr/63/dream-stalker), and [Drake Familiar](https://scryfall.com/card/rav/44/drake-familiar).\nBounce effects are also used directly on the opponent's permanents whenever possible to control the board.\n\nOnce the board is in control, the player typically wins by beating with creatures like [Seeker of the Way](https://scryfall.com/card/ima/29/seeker-of-the-way) and [Mulldrifter](https://scryfall.com/card/khc/42/mulldrifter).",
+                "dominant_mana": [
+                    "U",
+                    "W"
+                ],
+                "family": null,
+                "game_type": [
+                    "Midrange"
+                ],
+                "must_have_cards": [],
+                "must_not_have_cards": [],
+                "name": "Acid Trip",
+                "py/object": "pauperformance_bot.entity.config.archetype.ArchetypeConfig",
+                "reference_decks": [
+                    "Acid Trip 612.001.NalozycShade"
+                ],
+                "resource_sideboard": null,
+                "resources": [],
+                "resources_discord": []
+            }
+        ]
+    }
+}

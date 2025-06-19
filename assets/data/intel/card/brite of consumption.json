@@ -1,0 +1,64 @@
+{
+    "archetypes": {
+        "py/set": [
+            {
+                "aliases": [
+                    "UBR Brew"
+                ],
+                "description": "\nGeneric archetype, for Grixis decks that do not fit those in the [Archetypes Index](../../pages/archetypes_index.html).",
+                "dominant_mana": [
+                    "U",
+                    "B",
+                    "R"
+                ],
+                "family": "Brew",
+                "game_type": [
+                    "Aggro",
+                    "Midrange",
+                    "Control",
+                    "Combo"
+                ],
+                "must_have_cards": [],
+                "must_not_have_cards": [],
+                "name": "Brew Grixis",
+                "py/object": "pauperformance_bot.entity.config.archetype.ArchetypeConfig",
+                "reference_decks": [],
+                "resource_sideboard": null,
+                "resources": [],
+                "resources_discord": []
+            },
+            {
+                "aliases": [
+                    "MonoB Aristocrats"
+                ],
+                "description": "_Still missing. Please join us on [Discord](https://discord.gg/fYQbpjjkQ3) to contribute to the Academy._",
+                "dominant_mana": [
+                    "B"
+                ],
+                "family": "Sacrifice",
+                "game_type": [
+                    "Aggro"
+                ],
+                "must_have_cards": [],
+                "must_not_have_cards": [],
+                "name": "MonoB Sacrifice",
+                "py/object": "pauperformance_bot.entity.config.archetype.ArchetypeConfig",
+                "reference_decks": [
+                    "MonoB Sacrifice 669.001.albana"
+                ],
+                "resource_sideboard": null,
+                "resources": [
+                    {
+                        "author": "Muhammad \"Hamuda\"",
+                        "date": "2021-01-11",
+                        "language": "\ud83c\uddec\ud83c\udde7",
+                        "link": "https://mtg.cardsrealm.com/en-us/articles/pauper-deck-tech---mono-black-aristocrats",
+                        "name": "Pauper Deck Tech - Mono Black Aristocrats",
+                        "py/object": "pauperformance_bot.entity.config.archetype.Resource"
+                    }
+                ],
+                "resources_discord": []
+            }
+        ]
+    }
+}

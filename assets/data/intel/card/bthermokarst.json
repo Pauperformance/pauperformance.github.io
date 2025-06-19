@@ -1,0 +1,225 @@
+{
+    "archetypes": {
+        "py/set": [
+            {
+                "aliases": [
+                    "MonoG Brew"
+                ],
+                "description": "\nGeneric archetype, for MonoG decks that do not fit those in the [Archetypes Index](../../pages/archetypes_index.html).",
+                "dominant_mana": [
+                    "G"
+                ],
+                "family": "Brew",
+                "game_type": [
+                    "Aggro",
+                    "Midrange",
+                    "Control",
+                    "Combo"
+                ],
+                "must_have_cards": [],
+                "must_not_have_cards": [],
+                "name": "Brew MonoG",
+                "py/object": "pauperformance_bot.entity.config.archetype.ArchetypeConfig",
+                "reference_decks": [],
+                "resource_sideboard": null,
+                "resources": [],
+                "resources_discord": []
+            },
+            {
+                "aliases": [
+                    "URG Ponza"
+                ],
+                "description": "_Still missing. Please join us on [Discord](https://discord.gg/fYQbpjjkQ3) to contribute to the Academy._",
+                "dominant_mana": [
+                    "U",
+                    "R",
+                    "G"
+                ],
+                "family": "Ponza",
+                "game_type": [
+                    "Control"
+                ],
+                "must_have_cards": [
+                    "Mulldrifter"
+                ],
+                "must_not_have_cards": [],
+                "name": "Temur Ponza",
+                "py/object": "pauperformance_bot.entity.config.archetype.ArchetypeConfig",
+                "reference_decks": [],
+                "resource_sideboard": null,
+                "resources": [],
+                "resources_discord": []
+            },
+            {
+                "aliases": [
+                    "UG 8-Post"
+                ],
+                "description": "_Still missing. Please join us on [Discord](https://discord.gg/fYQbpjjkQ3) to contribute to the Academy._",
+                "dominant_mana": [
+                    "U",
+                    "G"
+                ],
+                "family": "8-Post",
+                "game_type": [
+                    "Control"
+                ],
+                "must_have_cards": [
+                    "Cloudpost",
+                    "Glimmerpost"
+                ],
+                "must_not_have_cards": [],
+                "name": "Simic 8-Post",
+                "py/object": "pauperformance_bot.entity.config.archetype.ArchetypeConfig",
+                "reference_decks": [],
+                "resource_sideboard": null,
+                "resources": [],
+                "resources_discord": []
+            },
+            {
+                "aliases": [
+                    "MonoG Aggro"
+                ],
+                "description": "\nStompy is a fast and solid aggro deck, and the most popular of this type in the format.\nIt takes advantage of cheap and strong creatures, sometimes with [evasion or pseudo-evasion abilities](https://mtg.fandom.com/wiki/Evasion_ability), to immediately put pressure on the board.\nSeveral efficient pump spells helps Stompy quickly reducing the opponent's life total, allowing players to consistently win games in the fist few turns.\nSince 2019, the addition of [Savage Swipe](https://scryfall.com/card/mh1/178/savage-swipe) from Modern Horizons (mh1) has provided the deck with a powerful option for clearing out blockers while also applying additional pressure.",
+                "dominant_mana": [
+                    "G"
+                ],
+                "family": null,
+                "game_type": [
+                    "Aggro"
+                ],
+                "must_have_cards": [],
+                "must_not_have_cards": [],
+                "name": "Stompy",
+                "py/object": "pauperformance_bot.entity.config.archetype.ArchetypeConfig",
+                "reference_decks": [
+                    "Stompy 722.001.tarmogoyf_ita",
+                    "Stompy 696.001.Ixidor29"
+                ],
+                "resource_sideboard": {
+                    "link": "https://docs.google.com/spreadsheets/d/1iBnopoHW5EspnWOvCDVm28eTI581RljyJoJgAZJOhXQ/edit?usp=sharing",
+                    "py/object": "pauperformance_bot.entity.config.archetype.SideboardResource"
+                },
+                "resources": [
+                    {
+                        "author": "Alex Ullman",
+                        "date": "2020-08-27",
+                        "language": "\ud83c\uddec\ud83c\udde7",
+                        "link": "https://strategy.channelfireball.com/all-strategy/mtg/channelmagic-articles/pauper-stompy-deck-guide/",
+                        "name": "Pauper Stompy Deck Guide",
+                        "py/object": "pauperformance_bot.entity.config.archetype.Resource"
+                    },
+                    {
+                        "author": "Paige Smith",
+                        "date": "2018-11-21",
+                        "language": "\ud83c\uddec\ud83c\udde7",
+                        "link": "https://www.coolstuffinc.com/a/kendrasmith-11212018-bringing-back-pauper-stompy",
+                        "name": "Bringing Back Pauper Stompy",
+                        "py/object": "pauperformance_bot.entity.config.archetype.Resource"
+                    },
+                    {
+                        "author": "airborne17th",
+                        "date": "2018-10-26",
+                        "language": "\ud83c\uddec\ud83c\udde7",
+                        "link": "https://teamhp555130435.wordpress.com/2018/10/26/mono-green-stompy-pauper-guide/",
+                        "name": "Mono Green Stompy Pauper Guide",
+                        "py/object": "pauperformance_bot.entity.config.archetype.Resource"
+                    },
+                    {
+                        "author": "Mr Pain",
+                        "date": "2013-12-24",
+                        "language": "\ud83c\uddee\ud83c\uddf9",
+                        "link": "http://www.metagame.it/forum/viewtopic.php?f=187&t=10786",
+                        "name": "[PAUPER PRIMER] Mono Green",
+                        "py/object": "pauperformance_bot.entity.config.archetype.Resource"
+                    },
+                    {
+                        "author": "Psychobabble",
+                        "date": "2013-10-17",
+                        "language": "\ud83c\uddec\ud83c\udde7",
+                        "link": "https://www.mtgsalvation.com/forums/the-game/pauper/mtgo-pauper/established/189724-primer-mono-green-aggro-stompy",
+                        "name": "[Primer] Mono Green Aggro (stompy)",
+                        "py/object": "pauperformance_bot.entity.config.archetype.Resource"
+                    }
+                ],
+                "resources_discord": [
+                    {
+                        "language": "\ud83c\uddec\ud83c\udde7",
+                        "link": "https://discord.gg/RzTmb76qjJ",
+                        "name": "Pauper Stompy Discord",
+                        "py/object": "pauperformance_bot.entity.config.archetype.DiscordResource"
+                    }
+                ]
+            },
+            {
+                "aliases": [
+                    "RG Ponza"
+                ],
+                "description": "_Still missing. Please join us on [Discord](https://discord.gg/fYQbpjjkQ3) to contribute to the Academy._",
+                "dominant_mana": [
+                    "R",
+                    "G"
+                ],
+                "family": "Ponza",
+                "game_type": [
+                    "Control"
+                ],
+                "must_have_cards": [],
+                "must_not_have_cards": [
+                    "Mulldrifter"
+                ],
+                "name": "Gruul Ponza",
+                "py/object": "pauperformance_bot.entity.config.archetype.ArchetypeConfig",
+                "reference_decks": [
+                    "Gruul Ponza 735.001.apas72"
+                ],
+                "resource_sideboard": null,
+                "resources": [],
+                "resources_discord": []
+            },
+            {
+                "aliases": [],
+                "description": "_Still missing. Please join us on [Discord](https://discord.gg/fYQbpjjkQ3) to contribute to the Academy._",
+                "dominant_mana": [
+                    "G"
+                ],
+                "family": "8-Post",
+                "game_type": [
+                    "Control"
+                ],
+                "must_have_cards": [
+                    "Cloudpost",
+                    "Glimmerpost"
+                ],
+                "must_not_have_cards": [],
+                "name": "MonoG 8-Post",
+                "py/object": "pauperformance_bot.entity.config.archetype.ArchetypeConfig",
+                "reference_decks": [],
+                "resource_sideboard": null,
+                "resources": [],
+                "resources_discord": []
+            },
+            {
+                "aliases": [
+                    "BG Ponza"
+                ],
+                "description": "_Still missing. Please join us on [Discord](https://discord.gg/fYQbpjjkQ3) to contribute to the Academy._",
+                "dominant_mana": [
+                    "B",
+                    "G"
+                ],
+                "family": "Ponza",
+                "game_type": [
+                    "Control"
+                ],
+                "must_have_cards": [],
+                "must_not_have_cards": [],
+                "name": "Golgari Ponza",
+                "py/object": "pauperformance_bot.entity.config.archetype.ArchetypeConfig",
+                "reference_decks": [],
+                "resource_sideboard": null,
+                "resources": [],
+                "resources_discord": []
+            }
+        ]
+    }
+}

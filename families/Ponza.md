@@ -8,7 +8,9 @@
 
 ## **Archetypes**
 
+[Golgari Ponza](../archetypes/Golgari%20Ponza.html)  
 [Gruul Ponza](../archetypes/Gruul%20Ponza.html)  
 [MonoB Ponza](../archetypes/MonoB%20Ponza.html)  
 [MonoG Ponza](../archetypes/MonoG%20Ponza.html)  
+[Temur Ponza](../archetypes/Temur%20Ponza.html)  
 

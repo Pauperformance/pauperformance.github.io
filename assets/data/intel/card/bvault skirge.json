@@ -1,0 +1,289 @@
+{
+    "archetypes": {
+        "py/set": [
+            {
+                "aliases": [],
+                "description": "_Still missing. Please join us on [Discord](https://discord.gg/fYQbpjjkQ3) to contribute to the Academy._",
+                "dominant_mana": [
+                    "W"
+                ],
+                "family": null,
+                "game_type": [
+                    "Aggro"
+                ],
+                "must_have_cards": [],
+                "must_not_have_cards": [],
+                "name": "White Weenie",
+                "py/object": "pauperformance_bot.entity.config.archetype.ArchetypeConfig",
+                "reference_decks": [
+                    "White Weenie 735.001.JGitaxis"
+                ],
+                "resource_sideboard": null,
+                "resources": [
+                    {
+                        "author": "Matteo Burello",
+                        "date": "2015-11-27",
+                        "language": "\ud83c\uddee\ud83c\uddf9",
+                        "link": "http://www.metagame.it/articoli-pauper/2543-pauper-deck-analisi-white-weenie.html",
+                        "name": "PAUPER DECK ANALISI - WHITE WEENIE, OLD BUT GOLD",
+                        "py/object": "pauperformance_bot.entity.config.archetype.Resource"
+                    }
+                ],
+                "resources_discord": []
+            },
+            {
+                "aliases": [
+                    "MonoW Brew"
+                ],
+                "description": "\nGeneric archetype, for MonoW decks that do not fit those in the [Archetypes Index](../../pages/archetypes_index.html).",
+                "dominant_mana": [
+                    "W"
+                ],
+                "family": "Brew",
+                "game_type": [
+                    "Aggro",
+                    "Midrange",
+                    "Control",
+                    "Combo"
+                ],
+                "must_have_cards": [],
+                "must_not_have_cards": [],
+                "name": "Brew MonoW",
+                "py/object": "pauperformance_bot.entity.config.archetype.ArchetypeConfig",
+                "reference_decks": [],
+                "resource_sideboard": null,
+                "resources": [],
+                "resources_discord": []
+            },
+            {
+                "aliases": [
+                    "WB Blade"
+                ],
+                "description": "_Still missing. Please join us on [Discord](https://discord.gg/fYQbpjjkQ3) to contribute to the Academy._",
+                "dominant_mana": [
+                    "W",
+                    "B"
+                ],
+                "family": null,
+                "game_type": [
+                    "Midrange"
+                ],
+                "must_have_cards": [
+                    "Tithing Blade",
+                    "Kor Skyfisher"
+                ],
+                "must_not_have_cards": [
+                    "Pestilence",
+                    "All That Glitters"
+                ],
+                "name": "Orzhov Blade",
+                "py/object": "pauperformance_bot.entity.config.archetype.ArchetypeConfig",
+                "reference_decks": [],
+                "resource_sideboard": null,
+                "resources": [],
+                "resources_discord": []
+            },
+            {
+                "aliases": [
+                    "UW Glitters"
+                ],
+                "description": "_Still missing. Please join us on [Discord](https://discord.gg/fYQbpjjkQ3) to contribute to the Academy._",
+                "dominant_mana": [
+                    "U",
+                    "W"
+                ],
+                "family": "Glitters",
+                "game_type": [
+                    "Aggro"
+                ],
+                "must_have_cards": [
+                    "All That Glitters"
+                ],
+                "must_not_have_cards": [],
+                "name": "Azorius Glitters",
+                "py/object": "pauperformance_bot.entity.config.archetype.ArchetypeConfig",
+                "reference_decks": [],
+                "resource_sideboard": null,
+                "resources": [],
+                "resources_discord": []
+            },
+            {
+                "aliases": [
+                    "MonoG Aggro"
+                ],
+                "description": "\nStompy is a fast and solid aggro deck, and the most popular of this type in the format.\nIt takes advantage of cheap and strong creatures, sometimes with [evasion or pseudo-evasion abilities](https://mtg.fandom.com/wiki/Evasion_ability), to immediately put pressure on the board.\nSeveral efficient pump spells helps Stompy quickly reducing the opponent's life total, allowing players to consistently win games in the fist few turns.\nSince 2019, the addition of [Savage Swipe](https://scryfall.com/card/mh1/178/savage-swipe) from Modern Horizons (mh1) has provided the deck with a powerful option for clearing out blockers while also applying additional pressure.",
+                "dominant_mana": [
+                    "G"
+                ],
+                "family": null,
+                "game_type": [
+                    "Aggro"
+                ],
+                "must_have_cards": [],
+                "must_not_have_cards": [],
+                "name": "Stompy",
+                "py/object": "pauperformance_bot.entity.config.archetype.ArchetypeConfig",
+                "reference_decks": [
+                    "Stompy 722.001.tarmogoyf_ita",
+                    "Stompy 696.001.Ixidor29"
+                ],
+                "resource_sideboard": {
+                    "link": "https://docs.google.com/spreadsheets/d/1iBnopoHW5EspnWOvCDVm28eTI581RljyJoJgAZJOhXQ/edit?usp=sharing",
+                    "py/object": "pauperformance_bot.entity.config.archetype.SideboardResource"
+                },
+                "resources": [
+                    {
+                        "author": "Alex Ullman",
+                        "date": "2020-08-27",
+                        "language": "\ud83c\uddec\ud83c\udde7",
+                        "link": "https://strategy.channelfireball.com/all-strategy/mtg/channelmagic-articles/pauper-stompy-deck-guide/",
+                        "name": "Pauper Stompy Deck Guide",
+                        "py/object": "pauperformance_bot.entity.config.archetype.Resource"
+                    },
+                    {
+                        "author": "Paige Smith",
+                        "date": "2018-11-21",
+                        "language": "\ud83c\uddec\ud83c\udde7",
+                        "link": "https://www.coolstuffinc.com/a/kendrasmith-11212018-bringing-back-pauper-stompy",
+                        "name": "Bringing Back Pauper Stompy",
+                        "py/object": "pauperformance_bot.entity.config.archetype.Resource"
+                    },
+                    {
+                        "author": "airborne17th",
+                        "date": "2018-10-26",
+                        "language": "\ud83c\uddec\ud83c\udde7",
+                        "link": "https://teamhp555130435.wordpress.com/2018/10/26/mono-green-stompy-pauper-guide/",
+                        "name": "Mono Green Stompy Pauper Guide",
+                        "py/object": "pauperformance_bot.entity.config.archetype.Resource"
+                    },
+                    {
+                        "author": "Mr Pain",
+                        "date": "2013-12-24",
+                        "language": "\ud83c\uddee\ud83c\uddf9",
+                        "link": "http://www.metagame.it/forum/viewtopic.php?f=187&t=10786",
+                        "name": "[PAUPER PRIMER] Mono Green",
+                        "py/object": "pauperformance_bot.entity.config.archetype.Resource"
+                    },
+                    {
+                        "author": "Psychobabble",
+                        "date": "2013-10-17",
+                        "language": "\ud83c\uddec\ud83c\udde7",
+                        "link": "https://www.mtgsalvation.com/forums/the-game/pauper/mtgo-pauper/established/189724-primer-mono-green-aggro-stompy",
+                        "name": "[Primer] Mono Green Aggro (stompy)",
+                        "py/object": "pauperformance_bot.entity.config.archetype.Resource"
+                    }
+                ],
+                "resources_discord": [
+                    {
+                        "language": "\ud83c\uddec\ud83c\udde7",
+                        "link": "https://discord.gg/RzTmb76qjJ",
+                        "name": "Pauper Stompy Discord",
+                        "py/object": "pauperformance_bot.entity.config.archetype.DiscordResource"
+                    }
+                ]
+            },
+            {
+                "aliases": [
+                    "WUB Brew"
+                ],
+                "description": "\nGeneric archetype, for Esper decks that do not fit those in the [Archetypes Index](../../pages/archetypes_index.html).",
+                "dominant_mana": [
+                    "W",
+                    "U",
+                    "B"
+                ],
+                "family": "Brew",
+                "game_type": [
+                    "Aggro",
+                    "Midrange",
+                    "Control",
+                    "Combo"
+                ],
+                "must_have_cards": [],
+                "must_not_have_cards": [],
+                "name": "Brew Esper",
+                "py/object": "pauperformance_bot.entity.config.archetype.ArchetypeConfig",
+                "reference_decks": [],
+                "resource_sideboard": null,
+                "resources": [],
+                "resources_discord": []
+            },
+            {
+                "aliases": [],
+                "description": "_Still missing. Please join us on [Discord](https://discord.gg/fYQbpjjkQ3) to contribute to the Academy._",
+                "dominant_mana": [
+                    "B"
+                ],
+                "family": null,
+                "game_type": [
+                    "Aggro"
+                ],
+                "must_have_cards": [],
+                "must_not_have_cards": [],
+                "name": "MonoB Suicide",
+                "py/object": "pauperformance_bot.entity.config.archetype.ArchetypeConfig",
+                "reference_decks": [
+                    "MonoB Suicide 722.001.censurado"
+                ],
+                "resource_sideboard": null,
+                "resources": [],
+                "resources_discord": []
+            },
+            {
+                "aliases": [],
+                "description": "_Still missing. Please join us on [Discord](https://discord.gg/fYQbpjjkQ3) to contribute to the Academy._",
+                "dominant_mana": [
+                    "W",
+                    "U",
+                    "R"
+                ],
+                "family": "Glitters",
+                "game_type": [
+                    "Aggro"
+                ],
+                "must_have_cards": [
+                    "All That Glitters",
+                    "Galvanic Blast"
+                ],
+                "must_not_have_cards": [],
+                "name": "Jeskai Glitters",
+                "py/object": "pauperformance_bot.entity.config.archetype.ArchetypeConfig",
+                "reference_decks": [],
+                "resource_sideboard": null,
+                "resources": [],
+                "resources_discord": []
+            },
+            {
+                "aliases": [],
+                "description": "\nMonoW Heroic is an explosive aggro deck based around cheap white creatures with the [Heroic](https://mtg.fandom.com/wiki/Heroic) ability, such as [Lagonna-Band Trailblazer](https://scryfall.com/card/jou/14/lagonna-band-trailblazer) and [Akroan Skyguard](https://scryfall.com/card/bng/3/akroan-skyguard).\nThe deck bets on a protective buff strategy where the player can protect their creatures while leveraging the Heroic ability to pump them and win in the first 4-5 turns.\n\nStaples of the archetype are [Cartouche of Solidarity](https://scryfall.com/card/akh/7/cartouche-of-solidarity), [Hyena Umbra](https://scryfall.com/card/uma/20/hyena-umbra), [Benevolent Blessing](https://scryfall.com/card/cmr/13/benevolent-blessing), and their catalyzer [Ethereal Armor](https://scryfall.com/card/rtr/9/ethereal-armor).\nAuras are at the core of the deck, but anything that can target and protect a creature is welcome to the strategy (with the trade-off of not contributing to Ethereal Armor).\nFor this reason, the deck also leverages some instants: [Defiant Strike](https://scryfall.com/card/m21/15/defiant-strike) brings a bit of buff and card advantage, [Emerge Unscathed](https://scryfall.com/card/ima/19/emerge-unscathed) brings more protection, and [Karametra's Blessing](https://scryfall.com/card/thb/26/karametras-blessing) brings a combination of both.\n\nSince MonoW Heroic does not need to fix mana in the early turns, creatures can be usually protected from the beginning of the game and opponents are left with a few options to deal with them.\nThe most common way of dealing with creatures is via sacrifice effects, such as [Chainer's Edict](https://scryfall.com/card/uma/89/chainers-edict), or by quickly resolving a removal spell before they get the needed protection.\nThe opponent may also rely on [Standard bearer](https://scryfall.com/card/apc/18/standard-bearer) to mostly disable the deck's strategy.\nSome extra creatures are usually added to get a sufficiently high body count: [Benevolent Bodyguard](https://scryfall.com/card/ema/4/benevolent-bodyguard) is often used to avoid [Chainer's Edict](https://scryfall.com/card/uma/89/chainers-edict), while still providing extra protection, and [Deftblade Elite](https://scryfall.com/card/vma/23/deftblade-elite) compensates for the lack of removals and takes care of blockers.\n\nMono White Heroic has few interactions, a fast clock, low mana curve and all-in strategy that doesn't offer many mid/late-game options.\nIt's one of the cheapest and competitive deck in the format.",
+                "dominant_mana": [
+                    "W"
+                ],
+                "family": null,
+                "game_type": [
+                    "Aggro"
+                ],
+                "must_have_cards": [],
+                "must_not_have_cards": [],
+                "name": "MonoW Heroic",
+                "py/object": "pauperformance_bot.entity.config.archetype.ArchetypeConfig",
+                "reference_decks": [
+                    "MonoW Heroic 696.001.Raven094",
+                    "MonoW Heroic 651.001.Mathonical"
+                ],
+                "resource_sideboard": null,
+                "resources": [
+                    {
+                        "author": "Raven",
+                        "date": "2021-10-17",
+                        "language": "\ud83c\uddec\ud83c\udde7",
+                        "link": "https://ravennonest.wordpress.com/2021/10/17/a-pauper-primer-to-mono-w-heroic/",
+                        "name": "A Pauper Primer to Mono W Heroic",
+                        "py/object": "pauperformance_bot.entity.config.archetype.Resource"
+                    }
+                ],
+                "resources_discord": []
+            }
+        ]
+    }
+}

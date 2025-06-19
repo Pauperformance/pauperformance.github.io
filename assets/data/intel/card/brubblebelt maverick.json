@@ -1,0 +1,105 @@
+{
+    "archetypes": {
+        "py/set": [
+            {
+                "aliases": [
+                    "BG Dredge"
+                ],
+                "description": "_Still missing. Please join us on [Discord](https://discord.gg/fYQbpjjkQ3) to contribute to the Academy._",
+                "dominant_mana": [
+                    "B",
+                    "G"
+                ],
+                "family": null,
+                "game_type": [
+                    "Midrange",
+                    "Combo"
+                ],
+                "must_have_cards": [
+                    "Dread Return",
+                    "Lotleth Giant",
+                    "Stinkweed Imp"
+                ],
+                "must_not_have_cards": [],
+                "name": "Golgari Dredge",
+                "py/object": "pauperformance_bot.entity.config.archetype.ArchetypeConfig",
+                "reference_decks": [],
+                "resource_sideboard": null,
+                "resources": [],
+                "resources_discord": []
+            },
+            {
+                "aliases": [
+                    "BRG Brew"
+                ],
+                "description": "\nGeneric archetype, for Jund decks that do not fit those in the [Archetypes Index](../../pages/archetypes_index.html).",
+                "dominant_mana": [
+                    "B",
+                    "R",
+                    "G"
+                ],
+                "family": "Brew",
+                "game_type": [
+                    "Aggro",
+                    "Midrange",
+                    "Control",
+                    "Combo"
+                ],
+                "must_have_cards": [],
+                "must_not_have_cards": [],
+                "name": "Brew Jund",
+                "py/object": "pauperformance_bot.entity.config.archetype.ArchetypeConfig",
+                "reference_decks": [],
+                "resource_sideboard": null,
+                "resources": [],
+                "resources_discord": []
+            },
+            {
+                "aliases": [
+                    "Cycle Storm"
+                ],
+                "description": "_Still missing. Please join us on [Discord](https://discord.gg/fYQbpjjkQ3) to contribute to the Academy._",
+                "dominant_mana": [
+                    "B"
+                ],
+                "family": "Storm",
+                "game_type": [
+                    "Combo"
+                ],
+                "must_have_cards": [],
+                "must_not_have_cards": [],
+                "name": "Cycling Storm",
+                "py/object": "pauperformance_bot.entity.config.archetype.ArchetypeConfig",
+                "reference_decks": [
+                    "Cycling Storm 701.001.Vivarus",
+                    "Cycling Storm 696.001.Bryant_Cook"
+                ],
+                "resource_sideboard": null,
+                "resources": [
+                    {
+                        "author": "Alex McKinley",
+                        "date": "2022-01-30",
+                        "language": "\ud83c\uddec\ud83c\udde7",
+                        "link": "https://www.theepicstorm.com/pauper-cycle-storm-primer/",
+                        "name": "PAUPER CYCLE STORM PRIMER",
+                        "py/object": "pauperformance_bot.entity.config.archetype.Resource"
+                    }
+                ],
+                "resources_discord": [
+                    {
+                        "language": "\ud83c\uddec\ud83c\udde7",
+                        "link": "https://discord.gg/zrn2N6HT",
+                        "name": "Pauper Storm Discord",
+                        "py/object": "pauperformance_bot.entity.config.archetype.DiscordResource"
+                    },
+                    {
+                        "language": "\ud83c\uddec\ud83c\udde7",
+                        "link": "https://discord.com/invite/stormcommunity",
+                        "name": "MTG Storm Community Discord",
+                        "py/object": "pauperformance_bot.entity.config.archetype.DiscordResource"
+                    }
+                ]
+            }
+        ]
+    }
+}

@@ -1,0 +1,421 @@
+{
+    "archetypes": {
+        "py/set": [
+            {
+                "aliases": [
+                    "WR Glitters"
+                ],
+                "description": "_Still missing. Please join us on [Discord](https://discord.gg/fYQbpjjkQ3) to contribute to the Academy._",
+                "dominant_mana": [
+                    "W",
+                    "R"
+                ],
+                "family": "Glitters",
+                "game_type": [
+                    "Aggro"
+                ],
+                "must_have_cards": [
+                    "All That Glitters",
+                    "Experimental Synthesizer"
+                ],
+                "must_not_have_cards": [
+                    "Palace Sentinels",
+                    "Basilisk Gate"
+                ],
+                "name": "Boros Glitters",
+                "py/object": "pauperformance_bot.entity.config.archetype.ArchetypeConfig",
+                "reference_decks": [],
+                "resource_sideboard": null,
+                "resources": [],
+                "resources_discord": []
+            },
+            {
+                "aliases": [],
+                "description": "_Still missing. Please join us on [Discord](https://discord.gg/fYQbpjjkQ3) to contribute to the Academy._",
+                "dominant_mana": [
+                    "C"
+                ],
+                "family": "Tron",
+                "game_type": [
+                    "Combo"
+                ],
+                "must_have_cards": [
+                    "Conjurer's Bauble",
+                    "Golem Foundry",
+                    "Urza's Mine",
+                    "Urza's Power Plant",
+                    "Urza's Tower"
+                ],
+                "must_not_have_cards": [],
+                "name": "Eggs Tron",
+                "py/object": "pauperformance_bot.entity.config.archetype.ArchetypeConfig",
+                "reference_decks": [
+                    "Eggs Tron 722.001.chumpblocckami"
+                ],
+                "resource_sideboard": null,
+                "resources": [
+                    {
+                        "author": "Matteo Mazzola",
+                        "date": "2022-04-08",
+                        "language": "\ud83c\uddee\ud83c\uddf9",
+                        "link": "https://www.pauperwave.com/report-top-8-geddon-milano-eggs-tron-di-mazzola-matteo/",
+                        "name": "Report-Guide Winner Geddon Milano: Eggs Tron di Mazzola Matteo",
+                        "py/object": "pauperformance_bot.entity.config.archetype.Resource"
+                    },
+                    {
+                        "author": "Federico Cazzaniga - fedetoro",
+                        "date": "2018-03-30",
+                        "language": "\ud83c\uddee\ud83c\uddf9",
+                        "link": "http://www.metagame.it/articoli-pauper/3341-building-on-a-budget-pauper-eggs.html",
+                        "name": "BUILDING ON A BUDGET: PAUPER EGGS",
+                        "py/object": "pauperformance_bot.entity.config.archetype.Resource"
+                    }
+                ],
+                "resources_discord": []
+            },
+            {
+                "aliases": [
+                    "Grixis Affinity"
+                ],
+                "description": "_Still missing. Please join us on [Discord](https://discord.gg/fYQbpjjkQ3) to contribute to the Academy._",
+                "dominant_mana": [
+                    "B",
+                    "U",
+                    "R"
+                ],
+                "family": "Affinity",
+                "game_type": [
+                    "Aggro",
+                    "Combo"
+                ],
+                "must_have_cards": [],
+                "must_not_have_cards": [
+                    "Glint Hawk",
+                    "Kor Skyfisher",
+                    "All That Glitters"
+                ],
+                "name": "Affinity",
+                "py/object": "pauperformance_bot.entity.config.archetype.ArchetypeConfig",
+                "reference_decks": [
+                    "Affinity 735.001.JoaoMarcos",
+                    "Affinity 722.001.ziofrancone"
+                ],
+                "resource_sideboard": null,
+                "resources": [
+                    {
+                        "author": "Muhammad \"Hamuda\"",
+                        "date": "2021-12-21",
+                        "language": "\ud83c\uddec\ud83c\udde7",
+                        "link": "https://mtg.cardsrealm.com/en-us/articles/pauper--rakdos-affinity-deck-tech--sideboard-guide",
+                        "name": "Pauper: Rakdos Affinity Deck Tech & Sideboard Guide",
+                        "py/object": "pauperformance_bot.entity.config.archetype.Resource"
+                    }
+                ],
+                "resources_discord": []
+            },
+            {
+                "aliases": [
+                    "Kuldotha Red"
+                ],
+                "description": "_Still missing. Please join us on [Discord](https://discord.gg/fYQbpjjkQ3) to contribute to the Academy._",
+                "dominant_mana": [
+                    "R"
+                ],
+                "family": "Burn",
+                "game_type": [
+                    "Aggro"
+                ],
+                "must_have_cards": [
+                    "Experimental Synthesizer",
+                    "Kuldotha Rebirth"
+                ],
+                "must_not_have_cards": [],
+                "name": "MonoR Kuldotha",
+                "py/object": "pauperformance_bot.entity.config.archetype.ArchetypeConfig",
+                "reference_decks": [],
+                "resource_sideboard": null,
+                "resources": [],
+                "resources_discord": []
+            },
+            {
+                "aliases": [
+                    "RG Brew"
+                ],
+                "description": "\nGeneric archetype, for Gruul decks that do not fit those in the [Archetypes Index](../../pages/archetypes_index.html).",
+                "dominant_mana": [
+                    "R",
+                    "G"
+                ],
+                "family": "Brew",
+                "game_type": [
+                    "Aggro",
+                    "Midrange",
+                    "Control",
+                    "Combo"
+                ],
+                "must_have_cards": [],
+                "must_not_have_cards": [],
+                "name": "Brew Gruul",
+                "py/object": "pauperformance_bot.entity.config.archetype.ArchetypeConfig",
+                "reference_decks": [],
+                "resource_sideboard": null,
+                "resources": [],
+                "resources_discord": []
+            },
+            {
+                "aliases": [],
+                "description": "_Still missing. Please join us on [Discord](https://discord.gg/fYQbpjjkQ3) to contribute to the Academy._",
+                "dominant_mana": [
+                    "R"
+                ],
+                "family": null,
+                "game_type": [
+                    "Aggro",
+                    "Combo"
+                ],
+                "must_have_cards": [],
+                "must_not_have_cards": [],
+                "name": "Turbo Goblins",
+                "py/object": "pauperformance_bot.entity.config.archetype.ArchetypeConfig",
+                "reference_decks": [],
+                "resource_sideboard": null,
+                "resources": [],
+                "resources_discord": []
+            },
+            {
+                "aliases": [],
+                "description": "_Still missing. Please join us on [Discord](https://discord.gg/fYQbpjjkQ3) to contribute to the Academy._",
+                "dominant_mana": [
+                    "G"
+                ],
+                "family": "Tron",
+                "game_type": [
+                    "Midrange"
+                ],
+                "must_have_cards": [],
+                "must_not_have_cards": [],
+                "name": "MonoG Tron",
+                "py/object": "pauperformance_bot.entity.config.archetype.ArchetypeConfig",
+                "reference_decks": [
+                    "MonoG Tron 735.001.Symsonic"
+                ],
+                "resource_sideboard": null,
+                "resources": [],
+                "resources_discord": []
+            },
+            {
+                "aliases": [],
+                "description": "_Still missing. Please join us on [Discord](https://discord.gg/fYQbpjjkQ3) to contribute to the Academy._",
+                "dominant_mana": [
+                    "W",
+                    "U",
+                    "B",
+                    "R",
+                    "G"
+                ],
+                "family": "Tron",
+                "game_type": [
+                    "Control"
+                ],
+                "must_have_cards": [],
+                "must_not_have_cards": [
+                    "Ghostly Flicker"
+                ],
+                "name": "Rainbow Tron",
+                "py/object": "pauperformance_bot.entity.config.archetype.ArchetypeConfig",
+                "reference_decks": [],
+                "resource_sideboard": null,
+                "resources": [],
+                "resources_discord": []
+            },
+            {
+                "aliases": [],
+                "description": "_Still missing. Please join us on [Discord](https://discord.gg/fYQbpjjkQ3) to contribute to the Academy._",
+                "dominant_mana": [
+                    "C"
+                ],
+                "family": "Tron",
+                "game_type": [
+                    "Combo"
+                ],
+                "must_have_cards": [
+                    "Ashnod's Altar",
+                    "Golem Foundry",
+                    "Myr Retriever",
+                    "Urza's Mine",
+                    "Urza's Power Plant",
+                    "Urza's Tower"
+                ],
+                "must_not_have_cards": [],
+                "name": "Altar Tron",
+                "py/object": "pauperformance_bot.entity.config.archetype.ArchetypeConfig",
+                "reference_decks": [],
+                "resource_sideboard": null,
+                "resources": [],
+                "resources_discord": []
+            },
+            {
+                "aliases": [
+                    "UBR Brew"
+                ],
+                "description": "\nGeneric archetype, for Grixis decks that do not fit those in the [Archetypes Index](../../pages/archetypes_index.html).",
+                "dominant_mana": [
+                    "U",
+                    "B",
+                    "R"
+                ],
+                "family": "Brew",
+                "game_type": [
+                    "Aggro",
+                    "Midrange",
+                    "Control",
+                    "Combo"
+                ],
+                "must_have_cards": [],
+                "must_not_have_cards": [],
+                "name": "Brew Grixis",
+                "py/object": "pauperformance_bot.entity.config.archetype.ArchetypeConfig",
+                "reference_decks": [],
+                "resource_sideboard": null,
+                "resources": [],
+                "resources_discord": []
+            },
+            {
+                "aliases": [
+                    "BRG Brew"
+                ],
+                "description": "\nGeneric archetype, for Jund decks that do not fit those in the [Archetypes Index](../../pages/archetypes_index.html).",
+                "dominant_mana": [
+                    "B",
+                    "R",
+                    "G"
+                ],
+                "family": "Brew",
+                "game_type": [
+                    "Aggro",
+                    "Midrange",
+                    "Control",
+                    "Combo"
+                ],
+                "must_have_cards": [],
+                "must_not_have_cards": [],
+                "name": "Brew Jund",
+                "py/object": "pauperformance_bot.entity.config.archetype.ArchetypeConfig",
+                "reference_decks": [],
+                "resource_sideboard": null,
+                "resources": [],
+                "resources_discord": []
+            },
+            {
+                "aliases": [
+                    "Rakdos Persist",
+                    "Goblins Combo"
+                ],
+                "description": "_Still missing. Please join us on [Discord](https://discord.gg/fYQbpjjkQ3) to contribute to the Academy._",
+                "dominant_mana": [
+                    "B",
+                    "R"
+                ],
+                "family": null,
+                "game_type": [
+                    "Combo"
+                ],
+                "must_have_cards": [],
+                "must_not_have_cards": [],
+                "name": "Moggwarts",
+                "py/object": "pauperformance_bot.entity.config.archetype.ArchetypeConfig",
+                "reference_decks": [
+                    "Moggwarts 683.001.Hamuda",
+                    "Moggwarts 669.001.Hamuda"
+                ],
+                "resource_sideboard": null,
+                "resources": [],
+                "resources_discord": [
+                    {
+                        "language": "\ud83c\uddec\ud83c\udde7",
+                        "link": "https://discord.gg/hdFAKcTd",
+                        "name": "Pauper Moggwarts Discord",
+                        "py/object": "pauperformance_bot.entity.config.archetype.DiscordResource"
+                    }
+                ]
+            },
+            {
+                "aliases": [],
+                "description": "_Still missing. Please join us on [Discord](https://discord.gg/fYQbpjjkQ3) to contribute to the Academy._",
+                "dominant_mana": [
+                    "U",
+                    "R"
+                ],
+                "family": "Storm",
+                "game_type": [
+                    "Combo"
+                ],
+                "must_have_cards": [
+                    "Empty the Warrens"
+                ],
+                "must_not_have_cards": [],
+                "name": "Empty The Warrens Storm",
+                "py/object": "pauperformance_bot.entity.config.archetype.ArchetypeConfig",
+                "reference_decks": [],
+                "resource_sideboard": null,
+                "resources": [
+                    {
+                        "author": "Pauper's Cage",
+                        "date": "2012-05-05",
+                        "language": "\ud83c\uddec\ud83c\udde7",
+                        "link": "http://pauperscage.blogspot.com/2012/05/empty-warrens-redblue-storm.html",
+                        "name": "PRIMER - Empty The Warrens Red/Blue Storm",
+                        "py/object": "pauperformance_bot.entity.config.archetype.Resource"
+                    }
+                ],
+                "resources_discord": []
+            },
+            {
+                "aliases": [],
+                "description": "_Still missing. Please join us on [Discord](https://discord.gg/fYQbpjjkQ3) to contribute to the Academy._",
+                "dominant_mana": [
+                    "B",
+                    "R"
+                ],
+                "family": "Storm",
+                "game_type": [
+                    "Combo"
+                ],
+                "must_have_cards": [
+                    "Grapeshot"
+                ],
+                "must_not_have_cards": [],
+                "name": "Grapeshot Storm",
+                "py/object": "pauperformance_bot.entity.config.archetype.ArchetypeConfig",
+                "reference_decks": [],
+                "resource_sideboard": null,
+                "resources": [],
+                "resources_discord": []
+            },
+            {
+                "aliases": [],
+                "description": "_Still missing. Please join us on [Discord](https://discord.gg/fYQbpjjkQ3) to contribute to the Academy._",
+                "dominant_mana": [
+                    "W",
+                    "U",
+                    "R"
+                ],
+                "family": "Glitters",
+                "game_type": [
+                    "Aggro"
+                ],
+                "must_have_cards": [
+                    "All That Glitters",
+                    "Galvanic Blast"
+                ],
+                "must_not_have_cards": [],
+                "name": "Jeskai Glitters",
+                "py/object": "pauperformance_bot.entity.config.archetype.ArchetypeConfig",
+                "reference_decks": [],
+                "resource_sideboard": null,
+                "resources": [],
+                "resources_discord": []
+            }
+        ]
+    }
+}

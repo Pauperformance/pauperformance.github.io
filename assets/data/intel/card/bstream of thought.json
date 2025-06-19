@@ -1,0 +1,144 @@
+{
+    "archetypes": {
+        "py/set": [
+            {
+                "aliases": [
+                    "UG Brew"
+                ],
+                "description": "\nGeneric archetype, for Simic decks that do not fit those in the [Archetypes Index](../../pages/archetypes_index.html).",
+                "dominant_mana": [
+                    "U",
+                    "G"
+                ],
+                "family": "Brew",
+                "game_type": [
+                    "Aggro",
+                    "Midrange",
+                    "Control",
+                    "Combo"
+                ],
+                "must_have_cards": [],
+                "must_not_have_cards": [],
+                "name": "Brew Simic",
+                "py/object": "pauperformance_bot.entity.config.archetype.ArchetypeConfig",
+                "reference_decks": [],
+                "resource_sideboard": null,
+                "resources": [],
+                "resources_discord": []
+            },
+            {
+                "aliases": [],
+                "description": "_Still missing. Please join us on [Discord](https://discord.gg/fYQbpjjkQ3) to contribute to the Academy._",
+                "dominant_mana": [
+                    "C"
+                ],
+                "family": "Tron",
+                "game_type": [
+                    "Combo"
+                ],
+                "must_have_cards": [
+                    "Ashnod's Altar",
+                    "Golem Foundry",
+                    "Myr Retriever",
+                    "Urza's Mine",
+                    "Urza's Power Plant",
+                    "Urza's Tower"
+                ],
+                "must_not_have_cards": [],
+                "name": "Altar Tron",
+                "py/object": "pauperformance_bot.entity.config.archetype.ArchetypeConfig",
+                "reference_decks": [],
+                "resource_sideboard": null,
+                "resources": [],
+                "resources_discord": []
+            },
+            {
+                "aliases": [
+                    "TurboErasure"
+                ],
+                "description": "_Still missing. Please join us on [Discord](https://discord.gg/fYQbpjjkQ3) to contribute to the Academy._",
+                "dominant_mana": [
+                    "U",
+                    "G"
+                ],
+                "family": null,
+                "game_type": [
+                    "Control"
+                ],
+                "must_have_cards": [],
+                "must_not_have_cards": [],
+                "name": "Turbofog",
+                "py/object": "pauperformance_bot.entity.config.archetype.ArchetypeConfig",
+                "reference_decks": [
+                    "Turbofog 735.001.thetilla"
+                ],
+                "resource_sideboard": null,
+                "resources": [
+                    {
+                        "author": "Spell_Slam",
+                        "date": "2019-07-12",
+                        "language": "\ud83c\uddec\ud83c\udde7",
+                        "link": "https://www.mtgnexus.com/viewtopic.php?f=80&t=564",
+                        "name": "[Primer] Turbo Fog",
+                        "py/object": "pauperformance_bot.entity.config.archetype.Resource"
+                    }
+                ],
+                "resources_discord": []
+            },
+            {
+                "aliases": [],
+                "description": "_Still missing. Please join us on [Discord](https://discord.gg/fYQbpjjkQ3) to contribute to the Academy._",
+                "dominant_mana": [
+                    "U"
+                ],
+                "family": null,
+                "game_type": [
+                    "Midrange",
+                    "Combo"
+                ],
+                "must_have_cards": [
+                    "Contentious Plan",
+                    "Experimental Augury"
+                ],
+                "must_not_have_cards": [],
+                "name": "Poison Storm",
+                "py/object": "pauperformance_bot.entity.config.archetype.ArchetypeConfig",
+                "reference_decks": [],
+                "resource_sideboard": null,
+                "resources": [],
+                "resources_discord": []
+            },
+            {
+                "aliases": [
+                    "Twiddle Storm"
+                ],
+                "description": "_Still missing. Please join us on [Discord](https://discord.gg/fYQbpjjkQ3) to contribute to the Academy._",
+                "dominant_mana": [
+                    "U",
+                    "G"
+                ],
+                "family": null,
+                "game_type": [
+                    "Combo"
+                ],
+                "must_have_cards": [],
+                "must_not_have_cards": [],
+                "name": "Petal Festival",
+                "py/object": "pauperformance_bot.entity.config.archetype.ArchetypeConfig",
+                "reference_decks": [
+                    "Petal Festival 669.001.saidin.rake"
+                ],
+                "resource_sideboard": null,
+                "resources": [],
+                "resources_discord": [
+                    {
+                        "language": "\ud83c\uddec\ud83c\udde7",
+                        "link": "https://discord.com/invite/stormcommunity",
+                        "name": "MTG Storm Community Discord",
+                        "py/object": "pauperformance_bot.entity.config.archetype.DiscordResource"
+                    }
+                ]
+            }
+        ]
+    }
+}

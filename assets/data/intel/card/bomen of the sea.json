@@ -1,0 +1,88 @@
+{
+    "archetypes": {
+        "py/set": [
+            {
+                "aliases": [
+                    "WUB Brew"
+                ],
+                "description": "\nGeneric archetype, for Esper decks that do not fit those in the [Archetypes Index](../../pages/archetypes_index.html).",
+                "dominant_mana": [
+                    "W",
+                    "U",
+                    "B"
+                ],
+                "family": "Brew",
+                "game_type": [
+                    "Aggro",
+                    "Midrange",
+                    "Control",
+                    "Combo"
+                ],
+                "must_have_cards": [],
+                "must_not_have_cards": [],
+                "name": "Brew Esper",
+                "py/object": "pauperformance_bot.entity.config.archetype.ArchetypeConfig",
+                "reference_decks": [],
+                "resource_sideboard": null,
+                "resources": [],
+                "resources_discord": []
+            },
+            {
+                "aliases": [],
+                "description": "_Still missing. Please join us on [Discord](https://discord.gg/fYQbpjjkQ3) to contribute to the Academy._",
+                "dominant_mana": [
+                    "W",
+                    "U",
+                    "R"
+                ],
+                "family": null,
+                "game_type": [
+                    "Control"
+                ],
+                "must_have_cards": [],
+                "must_not_have_cards": [
+                    "Arcum's Astrolabe"
+                ],
+                "name": "Jeskai Ephemerate",
+                "py/object": "pauperformance_bot.entity.config.archetype.ArchetypeConfig",
+                "reference_decks": [
+                    "Jeskai Ephemerate 735.001.Ezocratto1989"
+                ],
+                "resource_sideboard": null,
+                "resources": [
+                    {
+                        "author": "Tiago Fuguete",
+                        "date": "2022-05-04",
+                        "language": "\ud83c\uddec\ud83c\udde7",
+                        "link": "https://mtg.cardsrealm.com/en-us/articles/pauper--jeskai-ephemerate-deck-tech--sideboard-guide",
+                        "name": "Jeskai Ephemerate Deck Tech & Sideboard Guide",
+                        "py/object": "pauperformance_bot.entity.config.archetype.Resource"
+                    }
+                ],
+                "resources_discord": []
+            },
+            {
+                "aliases": [],
+                "description": "\nAcid Trip is a midrange deck revolving around the card [Reality Acid](https://scryfall.com/card/tsr/81/reality-acid).\nThe enchantment is used to repeatedly force the opponent to sacrifice key permanents.\n\nTo speed-up the engine, the player tries to [bounce](https://mtg.fandom.com/wiki/Bounce) Reality Acid without waiting for the [Vanishing](https://mtg.fandom.com/wiki/Vanishing) ability to resolve after the 3rd upkeep.\nSeveral cards can cause Reality Acid to [leave the battlefield](https://mtg.fandom.com/wiki/Leaves_the_battlefield), such as [Kor Skyfisher](https://scryfall.com/card/mm3/11/kor-skyfisher), [Teferi's Time Twist](https://scryfall.com/card/war/72/teferis-time-twist), [Aethersnipe](https://scryfall.com/card/uma/44/aethersnipe), [Dream Stalker](https://scryfall.com/card/tsr/63/dream-stalker), and [Drake Familiar](https://scryfall.com/card/rav/44/drake-familiar).\nBounce effects are also used directly on the opponent's permanents whenever possible to control the board.\n\nOnce the board is in control, the player typically wins by beating with creatures like [Seeker of the Way](https://scryfall.com/card/ima/29/seeker-of-the-way) and [Mulldrifter](https://scryfall.com/card/khc/42/mulldrifter).",
+                "dominant_mana": [
+                    "U",
+                    "W"
+                ],
+                "family": null,
+                "game_type": [
+                    "Midrange"
+                ],
+                "must_have_cards": [],
+                "must_not_have_cards": [],
+                "name": "Acid Trip",
+                "py/object": "pauperformance_bot.entity.config.archetype.ArchetypeConfig",
+                "reference_decks": [
+                    "Acid Trip 612.001.NalozycShade"
+                ],
+                "resource_sideboard": null,
+                "resources": [],
+                "resources_discord": []
+            }
+        ]
+    }
+}

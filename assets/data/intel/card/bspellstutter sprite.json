@@ -1,0 +1,421 @@
+{
+    "archetypes": {
+        "py/set": [
+            {
+                "aliases": [
+                    "UG Brew"
+                ],
+                "description": "\nGeneric archetype, for Simic decks that do not fit those in the [Archetypes Index](../../pages/archetypes_index.html).",
+                "dominant_mana": [
+                    "U",
+                    "G"
+                ],
+                "family": "Brew",
+                "game_type": [
+                    "Aggro",
+                    "Midrange",
+                    "Control",
+                    "Combo"
+                ],
+                "must_have_cards": [],
+                "must_not_have_cards": [],
+                "name": "Brew Simic",
+                "py/object": "pauperformance_bot.entity.config.archetype.ArchetypeConfig",
+                "reference_decks": [],
+                "resource_sideboard": null,
+                "resources": [],
+                "resources_discord": []
+            },
+            {
+                "aliases": [
+                    "Tireless Tribe"
+                ],
+                "description": "_Still missing. Please join us on [Discord](https://discord.gg/fYQbpjjkQ3) to contribute to the Academy._",
+                "dominant_mana": [
+                    "U",
+                    "W"
+                ],
+                "family": null,
+                "game_type": [
+                    "Combo"
+                ],
+                "must_have_cards": [],
+                "must_not_have_cards": [],
+                "name": "Inside Out",
+                "py/object": "pauperformance_bot.entity.config.archetype.ArchetypeConfig",
+                "reference_decks": [
+                    "Inside Out 701.001.carvs",
+                    "Inside Out 612.001.Mathonical",
+                    "Inside Out 600.001.A_AdeptoTerra",
+                    "Inside Out 584.001.Entropy263"
+                ],
+                "resource_sideboard": null,
+                "resources": [
+                    {
+                        "author": "Arinaldo",
+                        "date": "2019-09-19",
+                        "language": "\ud83c\uddec\ud83c\udde7",
+                        "link": "https://mtg.cardsrealm.com/en-us/articles/the-tireless-tireless-tribe-combo-at-pauper",
+                        "name": "Deck Tech of Tireless Tribe Combo in Pauper",
+                        "py/object": "pauperformance_bot.entity.config.archetype.Resource"
+                    },
+                    {
+                        "author": "Pietro Bragioto",
+                        "date": "2018-07-10",
+                        "language": "\ud83c\uddee\ud83c\uddf9",
+                        "link": "http://www.metagame.it/articoli-pauper/3407-pauper-report-uw-tribe-paupergeddon.html",
+                        "name": "Pauper Report - UW Tribe @ Paupergeddon",
+                        "py/object": "pauperformance_bot.entity.config.archetype.Resource"
+                    }
+                ],
+                "resources_discord": []
+            },
+            {
+                "aliases": [],
+                "description": "_Still missing. Please join us on [Discord](https://discord.gg/fYQbpjjkQ3) to contribute to the Academy._",
+                "dominant_mana": [
+                    "U",
+                    "B"
+                ],
+                "family": "Storm",
+                "game_type": [
+                    "Combo"
+                ],
+                "must_have_cards": [],
+                "must_not_have_cards": [],
+                "name": "Zubera Storm",
+                "py/object": "pauperformance_bot.entity.config.archetype.ArchetypeConfig",
+                "reference_decks": [
+                    "Zubera Storm 658.001.MTGDelphi"
+                ],
+                "resource_sideboard": null,
+                "resources": [
+                    {
+                        "author": "Roberto Bernocco",
+                        "date": "2018-06-07",
+                        "language": "\ud83c\uddee\ud83c\uddf9",
+                        "link": "http://www.metagame.it/articoli-pauper/3378-building-on-a-budget-pauper-dimir-zubera.html",
+                        "name": "Building on a budget: Pauper Dimir Zubera",
+                        "py/object": "pauperformance_bot.entity.config.archetype.Resource"
+                    }
+                ],
+                "resources_discord": [
+                    {
+                        "language": "\ud83c\uddec\ud83c\udde7",
+                        "link": "https://discord.com/invite/stormcommunity",
+                        "name": "MTG Storm Community Discord",
+                        "py/object": "pauperformance_bot.entity.config.archetype.DiscordResource"
+                    }
+                ]
+            },
+            {
+                "aliases": [
+                    "UR Faeries",
+                    "Izzet Skred",
+                    "UR Skred"
+                ],
+                "description": "_Still missing. Please join us on [Discord](https://discord.gg/fYQbpjjkQ3) to contribute to the Academy._",
+                "dominant_mana": [
+                    "U",
+                    "R"
+                ],
+                "family": "Faeries",
+                "game_type": [
+                    "Tempo"
+                ],
+                "must_have_cards": [],
+                "must_not_have_cards": [],
+                "name": "Izzet Faeries",
+                "py/object": "pauperformance_bot.entity.config.archetype.ArchetypeConfig",
+                "reference_decks": [
+                    "Izzet Faeries 696.001.Mogged"
+                ],
+                "resource_sideboard": null,
+                "resources": [
+                    {
+                        "author": "Allen",
+                        "date": "2013-08-22",
+                        "language": "\ud83c\uddee\ud83c\uddf9",
+                        "link": "http://www.metagame.it/forum/viewtopic.php?f=158&t=18321",
+                        "name": "[Pauper Tier] Izzet Delver",
+                        "py/object": "pauperformance_bot.entity.config.archetype.Resource"
+                    }
+                ],
+                "resources_discord": []
+            },
+            {
+                "aliases": [
+                    "UB Delver"
+                ],
+                "description": "_Still missing. Please join us on [Discord](https://discord.gg/fYQbpjjkQ3) to contribute to the Academy._",
+                "dominant_mana": [
+                    "U",
+                    "B"
+                ],
+                "family": null,
+                "game_type": [
+                    "Tempo"
+                ],
+                "must_have_cards": [],
+                "must_not_have_cards": [
+                    "Spellstutter Sprite"
+                ],
+                "name": "Dimir Delver",
+                "py/object": "pauperformance_bot.entity.config.archetype.ArchetypeConfig",
+                "reference_decks": [
+                    "Dimir Delver 648.001.Hamuda"
+                ],
+                "resource_sideboard": null,
+                "resources": [
+                    {
+                        "author": "Siol",
+                        "date": "2013-02-05",
+                        "language": "\ud83c\uddee\ud83c\uddf9",
+                        "link": "http://www.metagame.it/forum/viewtopic.php?f=158&t=16467",
+                        "name": "[Pauper Tier] Dimir Delver",
+                        "py/object": "pauperformance_bot.entity.config.archetype.Resource"
+                    }
+                ],
+                "resources_discord": []
+            },
+            {
+                "aliases": [],
+                "description": "_Still missing. Please join us on [Discord](https://discord.gg/fYQbpjjkQ3) to contribute to the Academy._",
+                "dominant_mana": [
+                    "G"
+                ],
+                "family": null,
+                "game_type": [
+                    "Aggro",
+                    "Combo"
+                ],
+                "must_have_cards": [],
+                "must_not_have_cards": [],
+                "name": "Elves",
+                "py/object": "pauperformance_bot.entity.config.archetype.ArchetypeConfig",
+                "reference_decks": [
+                    "Elves 696.001.tarmogoyf_ita",
+                    "Elves 576.001.TheMaverickGal",
+                    "Elves 560.001.TheMaverickGal"
+                ],
+                "resource_sideboard": null,
+                "resources": [
+                    {
+                        "author": "Gabriel",
+                        "date": "2021-11-19",
+                        "language": "\ud83c\uddec\ud83c\udde7",
+                        "link": "https://mtg.cardsrealm.com/en-us/articles/pauper-elves:-deck-tech--sideboard-guide",
+                        "name": "Pauper Elves: Deck Tech & Sideboard Guide",
+                        "py/object": "pauperformance_bot.entity.config.archetype.Resource"
+                    },
+                    {
+                        "author": "Kuraiden",
+                        "date": "2012-05-17",
+                        "language": "\ud83c\uddee\ud83c\uddf9",
+                        "link": "http://www.metagame.it/forum/viewtopic.php?f=158&t=5180",
+                        "name": "[Pauper Tier] Elves",
+                        "py/object": "pauperformance_bot.entity.config.archetype.Resource"
+                    }
+                ],
+                "resources_discord": [
+                    {
+                        "language": "\ud83c\uddec\ud83c\udde7",
+                        "link": "https://discord.gg/aheU4Fe",
+                        "name": "Pauper Elves Discord",
+                        "py/object": "pauperformance_bot.entity.config.archetype.DiscordResource"
+                    }
+                ]
+            },
+            {
+                "aliases": [
+                    "UW Glitters"
+                ],
+                "description": "_Still missing. Please join us on [Discord](https://discord.gg/fYQbpjjkQ3) to contribute to the Academy._",
+                "dominant_mana": [
+                    "U",
+                    "W"
+                ],
+                "family": "Glitters",
+                "game_type": [
+                    "Aggro"
+                ],
+                "must_have_cards": [
+                    "All That Glitters"
+                ],
+                "must_not_have_cards": [],
+                "name": "Azorius Glitters",
+                "py/object": "pauperformance_bot.entity.config.archetype.ArchetypeConfig",
+                "reference_decks": [],
+                "resource_sideboard": null,
+                "resources": [],
+                "resources_discord": []
+            },
+            {
+                "aliases": [],
+                "description": "_Still missing. Please join us on [Discord](https://discord.gg/fYQbpjjkQ3) to contribute to the Academy._",
+                "dominant_mana": [
+                    "U"
+                ],
+                "family": "Terror",
+                "game_type": [
+                    "Tempo"
+                ],
+                "must_have_cards": [
+                    "Tolarian Terror"
+                ],
+                "must_not_have_cards": [],
+                "name": "MonoU Terror",
+                "py/object": "pauperformance_bot.entity.config.archetype.ArchetypeConfig",
+                "reference_decks": [],
+                "resource_sideboard": null,
+                "resources": [],
+                "resources_discord": []
+            },
+            {
+                "aliases": [
+                    "UB Faeries"
+                ],
+                "description": "_Still missing. Please join us on [Discord](https://discord.gg/fYQbpjjkQ3) to contribute to the Academy._",
+                "dominant_mana": [
+                    "U",
+                    "B"
+                ],
+                "family": "Faeries",
+                "game_type": [
+                    "Tempo"
+                ],
+                "must_have_cards": [
+                    "Spellstutter Sprite"
+                ],
+                "must_not_have_cards": [],
+                "name": "Dimir Faeries",
+                "py/object": "pauperformance_bot.entity.config.archetype.ArchetypeConfig",
+                "reference_decks": [
+                    "Dimir Faeries 696.001.Beicodegeia"
+                ],
+                "resource_sideboard": null,
+                "resources": [],
+                "resources_discord": []
+            },
+            {
+                "aliases": [
+                    "UR 8-Post"
+                ],
+                "description": "_Still missing. Please join us on [Discord](https://discord.gg/fYQbpjjkQ3) to contribute to the Academy._",
+                "dominant_mana": [
+                    "U",
+                    "R"
+                ],
+                "family": "8-Post",
+                "game_type": [
+                    "Control"
+                ],
+                "must_have_cards": [
+                    "Cloudpost",
+                    "Glimmerpost"
+                ],
+                "must_not_have_cards": [],
+                "name": "Izzet 8-Post",
+                "py/object": "pauperformance_bot.entity.config.archetype.ArchetypeConfig",
+                "reference_decks": [],
+                "resource_sideboard": null,
+                "resources": [
+                    {
+                        "author": "BonSequitur",
+                        "date": "2011-12-21",
+                        "language": "\ud83c\uddec\ud83c\udde7",
+                        "link": "https://www.mtgsalvation.com/forums/the-game/pauper/mtgo-pauper/mtgo-pauper-archive/189721-primer-blue-red-8-post",
+                        "name": "Blue-Red 8-Post",
+                        "py/object": "pauperformance_bot.entity.config.archetype.Resource"
+                    }
+                ],
+                "resources_discord": []
+            },
+            {
+                "aliases": [
+                    "UB Control"
+                ],
+                "description": "_Still missing. Please join us on [Discord](https://discord.gg/fYQbpjjkQ3) to contribute to the Academy._",
+                "dominant_mana": [
+                    "U",
+                    "B"
+                ],
+                "family": null,
+                "game_type": [
+                    "Control"
+                ],
+                "must_have_cards": [],
+                "must_not_have_cards": [
+                    "Delver of Secrets // Insectile Aberration",
+                    "Cloudpost",
+                    "Glimmerpost",
+                    "Mental Note",
+                    "Thought Scour"
+                ],
+                "name": "Dimir Control",
+                "py/object": "pauperformance_bot.entity.config.archetype.ArchetypeConfig",
+                "reference_decks": [],
+                "resource_sideboard": null,
+                "resources": [],
+                "resources_discord": []
+            },
+            {
+                "aliases": [],
+                "description": "_Still missing. Please join us on [Discord](https://discord.gg/fYQbpjjkQ3) to contribute to the Academy._",
+                "dominant_mana": [
+                    "U"
+                ],
+                "family": "8-Post",
+                "game_type": [
+                    "Control"
+                ],
+                "must_have_cards": [
+                    "Cloudpost",
+                    "Glimmerpost"
+                ],
+                "must_not_have_cards": [],
+                "name": "MonoU 8-Post",
+                "py/object": "pauperformance_bot.entity.config.archetype.ArchetypeConfig",
+                "reference_decks": [],
+                "resource_sideboard": null,
+                "resources": [],
+                "resources_discord": []
+            },
+            {
+                "aliases": [],
+                "description": "_Still missing. Please join us on [Discord](https://discord.gg/fYQbpjjkQ3) to contribute to the Academy._",
+                "dominant_mana": [
+                    "U"
+                ],
+                "family": "Faeries",
+                "game_type": [
+                    "Tempo"
+                ],
+                "must_have_cards": [
+                    "Spellstutter Sprite"
+                ],
+                "must_not_have_cards": [
+                    "Cloudpost",
+                    "Glimmerpost"
+                ],
+                "name": "MonoU Faeries",
+                "py/object": "pauperformance_bot.entity.config.archetype.ArchetypeConfig",
+                "reference_decks": [
+                    "MonoU Faeries 696.001.Drugo"
+                ],
+                "resource_sideboard": null,
+                "resources": [
+                    {
+                        "author": "Scrocchi",
+                        "date": "2011-09-27",
+                        "language": "\ud83c\uddee\ud83c\uddf9",
+                        "link": "http://www.metagame.it/forum/viewtopic.php?f=158&t=265",
+                        "name": "[Pauper Tier] Mono Blue Delver",
+                        "py/object": "pauperformance_bot.entity.config.archetype.Resource"
+                    }
+                ],
+                "resources_discord": []
+            }
+        ]
+    }
+}

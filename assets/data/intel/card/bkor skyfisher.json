@@ -1,0 +1,902 @@
+{
+    "archetypes": {
+        "py/set": [
+            {
+                "aliases": [
+                    "WBG Brew"
+                ],
+                "description": "\nGeneric archetype, for Abzan decks that do not fit those in the [Archetypes Index](../../pages/archetypes_index.html).",
+                "dominant_mana": [
+                    "W",
+                    "B",
+                    "G"
+                ],
+                "family": "Brew",
+                "game_type": [
+                    "Aggro",
+                    "Midrange",
+                    "Control",
+                    "Combo"
+                ],
+                "must_have_cards": [],
+                "must_not_have_cards": [],
+                "name": "Brew Abzan",
+                "py/object": "pauperformance_bot.entity.config.archetype.ArchetypeConfig",
+                "reference_decks": [],
+                "resource_sideboard": null,
+                "resources": [],
+                "resources_discord": []
+            },
+            {
+                "aliases": [
+                    "WR Glitters"
+                ],
+                "description": "_Still missing. Please join us on [Discord](https://discord.gg/fYQbpjjkQ3) to contribute to the Academy._",
+                "dominant_mana": [
+                    "W",
+                    "R"
+                ],
+                "family": "Glitters",
+                "game_type": [
+                    "Aggro"
+                ],
+                "must_have_cards": [
+                    "All That Glitters",
+                    "Experimental Synthesizer"
+                ],
+                "must_not_have_cards": [
+                    "Palace Sentinels",
+                    "Basilisk Gate"
+                ],
+                "name": "Boros Glitters",
+                "py/object": "pauperformance_bot.entity.config.archetype.ArchetypeConfig",
+                "reference_decks": [],
+                "resource_sideboard": null,
+                "resources": [],
+                "resources_discord": []
+            },
+            {
+                "aliases": [
+                    "WB Brew"
+                ],
+                "description": "\nGeneric archetype, for Orzhov decks that do not fit those in the [Archetypes Index](../../pages/archetypes_index.html).",
+                "dominant_mana": [
+                    "W",
+                    "B"
+                ],
+                "family": "Brew",
+                "game_type": [
+                    "Aggro",
+                    "Midrange",
+                    "Control",
+                    "Combo"
+                ],
+                "must_have_cards": [],
+                "must_not_have_cards": [],
+                "name": "Brew Orzhov",
+                "py/object": "pauperformance_bot.entity.config.archetype.ArchetypeConfig",
+                "reference_decks": [],
+                "resource_sideboard": null,
+                "resources": [],
+                "resources_discord": []
+            },
+            {
+                "aliases": [],
+                "description": "_Still missing. Please join us on [Discord](https://discord.gg/fYQbpjjkQ3) to contribute to the Academy._",
+                "dominant_mana": [
+                    "W"
+                ],
+                "family": null,
+                "game_type": [
+                    "Aggro"
+                ],
+                "must_have_cards": [],
+                "must_not_have_cards": [],
+                "name": "White Weenie",
+                "py/object": "pauperformance_bot.entity.config.archetype.ArchetypeConfig",
+                "reference_decks": [
+                    "White Weenie 735.001.JGitaxis"
+                ],
+                "resource_sideboard": null,
+                "resources": [
+                    {
+                        "author": "Matteo Burello",
+                        "date": "2015-11-27",
+                        "language": "\ud83c\uddee\ud83c\uddf9",
+                        "link": "http://www.metagame.it/articoli-pauper/2543-pauper-deck-analisi-white-weenie.html",
+                        "name": "PAUPER DECK ANALISI - WHITE WEENIE, OLD BUT GOLD",
+                        "py/object": "pauperformance_bot.entity.config.archetype.Resource"
+                    }
+                ],
+                "resources_discord": []
+            },
+            {
+                "aliases": [
+                    "WUBRG Brew"
+                ],
+                "description": "\nGeneric archetype, for Rainbow decks that do not fit those in the [Archetypes Index](../../pages/archetypes_index.html).",
+                "dominant_mana": [
+                    "W",
+                    "U",
+                    "B",
+                    "R",
+                    "G"
+                ],
+                "family": "Brew",
+                "game_type": [
+                    "Aggro",
+                    "Midrange",
+                    "Control",
+                    "Combo"
+                ],
+                "must_have_cards": [],
+                "must_not_have_cards": [],
+                "name": "Brew Rainbow",
+                "py/object": "pauperformance_bot.entity.config.archetype.ArchetypeConfig",
+                "reference_decks": [],
+                "resource_sideboard": null,
+                "resources": [],
+                "resources_discord": []
+            },
+            {
+                "aliases": [
+                    "BW Pestilence"
+                ],
+                "description": "\nOrzhov Pestilence exploits the unique synergy between [Guardian of the Guildpact](https://scryfall.com/card/dis/10/guardian-of-the-guildpact) and [Pestilence](https://scryfall.com/card/mb1/729/pestilence), both to completely stall the board and as a final win condition.\nIn several matchups, Guardian of the Guildpact is impossible to remove thanks to its peculiar [protection ability](https://mtg.fandom.com/wiki/Protection), that protects the creature from damage caused by Pestilence effect.\nAs result, the player is allowed to activate multiple times per turn Pestilence to wipe the board, while Guardian of the Guildpact will prevent the enchantment from leaving the battlefield.\n\nOrzhov Pestilence takes control of the board in early game by means of a variety of removal spells, while developing its mana to resolve Pestilence and Guardian of the Guildpact.\nIn versions of the deck with a strong focus on the control strategy, a key card is [Pristine Talisman](https://scryfall.com/card/c21/258/pristine-talisman), to [ramp](https://mtg.fandom.com/wiki/Ramp) while keeping up the life total.\nDiscard effects are common in this archetype and typically represent the only way to deal with counterspells and strong [enters the battlefield](https://mtg.fandom.com/wiki/Enters_the_battlefield) effects.\n\nThe deck is sometimes considered unstable due to the high number of lands it requires, and to the absence of an efficient card selection and draw engine after [Bonder's Ornament](https://scryfall.com/card/c20/67/bonders-ornament) ban.",
+                "dominant_mana": [
+                    "B",
+                    "W"
+                ],
+                "family": null,
+                "game_type": [
+                    "Midrange",
+                    "Control"
+                ],
+                "must_have_cards": [
+                    "Pestilence"
+                ],
+                "must_not_have_cards": [],
+                "name": "Orzhov Pestilence",
+                "py/object": "pauperformance_bot.entity.config.archetype.ArchetypeConfig",
+                "reference_decks": [
+                    "Orzhov Pestilence 696.001.Kampo",
+                    "Orzhov Pestilence 572.001.Amoras27"
+                ],
+                "resource_sideboard": null,
+                "resources": [
+                    {
+                        "author": "Paige Smith",
+                        "date": "2018-12-26",
+                        "language": "\ud83c\uddec\ud83c\udde7",
+                        "link": "https://www.coolstuffinc.com/a/kendrasmith-12262018-pestilence-what-you-have-to-endure-what-you-have-to-put-others-through",
+                        "name": "Pestilence: What You Have to Endure, What You Have to Put Others Through",
+                        "py/object": "pauperformance_bot.entity.config.archetype.Resource"
+                    },
+                    {
+                        "author": "Pentola",
+                        "date": "2018-05-21",
+                        "language": "\ud83c\uddee\ud83c\uddf9",
+                        "link": "http://www.metagame.it/forum/viewtopic.php?f=158&t=26084",
+                        "name": "[Pauper Tier] Orzhov Pestilence",
+                        "py/object": "pauperformance_bot.entity.config.archetype.Resource"
+                    }
+                ],
+                "resources_discord": []
+            },
+            {
+                "aliases": [],
+                "description": "_Still missing. Please join us on [Discord](https://discord.gg/fYQbpjjkQ3) to contribute to the Academy._",
+                "dominant_mana": [
+                    "W",
+                    "B",
+                    "G"
+                ],
+                "family": "TortEx",
+                "game_type": [
+                    "Midrange"
+                ],
+                "must_have_cards": [],
+                "must_not_have_cards": [],
+                "name": "Abzan TortEx",
+                "py/object": "pauperformance_bot.entity.config.archetype.ArchetypeConfig",
+                "reference_decks": [],
+                "resource_sideboard": null,
+                "resources": [],
+                "resources_discord": [
+                    {
+                        "language": "\ud83c\uddec\ud83c\udde7",
+                        "link": "https://discord.gg/Q3sgSkwjWG",
+                        "name": "Pauper TortEx Discord",
+                        "py/object": "pauperformance_bot.entity.config.archetype.DiscordResource"
+                    }
+                ]
+            },
+            {
+                "aliases": [
+                    "UW Glitters"
+                ],
+                "description": "_Still missing. Please join us on [Discord](https://discord.gg/fYQbpjjkQ3) to contribute to the Academy._",
+                "dominant_mana": [
+                    "U",
+                    "W"
+                ],
+                "family": "Glitters",
+                "game_type": [
+                    "Aggro"
+                ],
+                "must_have_cards": [
+                    "All That Glitters"
+                ],
+                "must_not_have_cards": [],
+                "name": "Azorius Glitters",
+                "py/object": "pauperformance_bot.entity.config.archetype.ArchetypeConfig",
+                "reference_decks": [],
+                "resource_sideboard": null,
+                "resources": [],
+                "resources_discord": []
+            },
+            {
+                "aliases": [
+                    "WUB Familiars"
+                ],
+                "description": "_Still missing. Please join us on [Discord](https://discord.gg/fYQbpjjkQ3) to contribute to the Academy._",
+                "dominant_mana": [
+                    "W",
+                    "U",
+                    "B"
+                ],
+                "family": "Familiars",
+                "game_type": [
+                    "Control",
+                    "Combo"
+                ],
+                "must_have_cards": [],
+                "must_not_have_cards": [],
+                "name": "Esper Familiars",
+                "py/object": "pauperformance_bot.entity.config.archetype.ArchetypeConfig",
+                "reference_decks": [],
+                "resource_sideboard": null,
+                "resources": [],
+                "resources_discord": [
+                    {
+                        "language": "\ud83c\uddec\ud83c\udde7",
+                        "link": "https://discord.gg/gTdT6VZ",
+                        "name": "Pauper Familiars Discord",
+                        "py/object": "pauperformance_bot.entity.config.archetype.DiscordResource"
+                    }
+                ]
+            },
+            {
+                "aliases": [
+                    "BG TortEx"
+                ],
+                "description": "_Still missing. Please join us on [Discord](https://discord.gg/fYQbpjjkQ3) to contribute to the Academy._",
+                "dominant_mana": [
+                    "B",
+                    "G"
+                ],
+                "family": "TortEx",
+                "game_type": [
+                    "Midrange"
+                ],
+                "must_have_cards": [],
+                "must_not_have_cards": [],
+                "name": "Golgari TortEx",
+                "py/object": "pauperformance_bot.entity.config.archetype.ArchetypeConfig",
+                "reference_decks": [
+                    "Golgari TortEx 600.001.BERNASTORRES"
+                ],
+                "resource_sideboard": null,
+                "resources": [],
+                "resources_discord": [
+                    {
+                        "language": "\ud83c\uddec\ud83c\udde7",
+                        "link": "https://discord.gg/Q3sgSkwjWG",
+                        "name": "Pauper TortEx Discord",
+                        "py/object": "pauperformance_bot.entity.config.archetype.DiscordResource"
+                    }
+                ]
+            },
+            {
+                "aliases": [],
+                "description": "_Still missing. Please join us on [Discord](https://discord.gg/fYQbpjjkQ3) to contribute to the Academy._",
+                "dominant_mana": [
+                    "W",
+                    "U",
+                    "R"
+                ],
+                "family": "Glitters",
+                "game_type": [
+                    "Aggro"
+                ],
+                "must_have_cards": [
+                    "All That Glitters",
+                    "Galvanic Blast"
+                ],
+                "must_not_have_cards": [],
+                "name": "Jeskai Glitters",
+                "py/object": "pauperformance_bot.entity.config.archetype.ArchetypeConfig",
+                "reference_decks": [],
+                "resource_sideboard": null,
+                "resources": [],
+                "resources_discord": []
+            },
+            {
+                "aliases": [
+                    "WR Monarch"
+                ],
+                "description": "_Still missing. Please join us on [Discord](https://discord.gg/fYQbpjjkQ3) to contribute to the Academy._",
+                "dominant_mana": [
+                    "W",
+                    "R"
+                ],
+                "family": null,
+                "game_type": [
+                    "Midrange"
+                ],
+                "must_have_cards": [
+                    "Palace Sentinels"
+                ],
+                "must_not_have_cards": [
+                    "Kuldotha Rebirth"
+                ],
+                "name": "Boros Monarch",
+                "py/object": "pauperformance_bot.entity.config.archetype.ArchetypeConfig",
+                "reference_decks": [
+                    "Boros Monarch 696.001.carvs",
+                    "Boros Monarch 560.001.Thraben27"
+                ],
+                "resource_sideboard": null,
+                "resources": [],
+                "resources_discord": []
+            },
+            {
+                "aliases": [
+                    "WRG Naya"
+                ],
+                "description": "\nGeneric archetype, for Naya decks that do not fit those in the [Archetypes Index](../../pages/archetypes_index.html).",
+                "dominant_mana": [
+                    "W",
+                    "R",
+                    "G"
+                ],
+                "family": "Brew",
+                "game_type": [
+                    "Aggro",
+                    "Midrange",
+                    "Control",
+                    "Combo"
+                ],
+                "must_have_cards": [],
+                "must_not_have_cards": [],
+                "name": "Brew Naya",
+                "py/object": "pauperformance_bot.entity.config.archetype.ArchetypeConfig",
+                "reference_decks": [],
+                "resource_sideboard": null,
+                "resources": [],
+                "resources_discord": []
+            },
+            {
+                "aliases": [
+                    "WBR Glitters"
+                ],
+                "description": "_Still missing. Please join us on [Discord](https://discord.gg/fYQbpjjkQ3) to contribute to the Academy._",
+                "dominant_mana": [
+                    "W",
+                    "B",
+                    "R"
+                ],
+                "family": null,
+                "game_type": [
+                    "Midrange"
+                ],
+                "must_have_cards": [
+                    "Experimental Synthesizer",
+                    "Tithing Blade",
+                    "All That Glitters"
+                ],
+                "must_not_have_cards": [
+                    "Palace Sentinels",
+                    "Rally the Peasants"
+                ],
+                "name": "Mardu Glitters",
+                "py/object": "pauperformance_bot.entity.config.archetype.ArchetypeConfig",
+                "reference_decks": [],
+                "resource_sideboard": null,
+                "resources": [],
+                "resources_discord": []
+            },
+            {
+                "aliases": [
+                    "WB Blade"
+                ],
+                "description": "_Still missing. Please join us on [Discord](https://discord.gg/fYQbpjjkQ3) to contribute to the Academy._",
+                "dominant_mana": [
+                    "W",
+                    "B"
+                ],
+                "family": null,
+                "game_type": [
+                    "Midrange"
+                ],
+                "must_have_cards": [
+                    "Tithing Blade",
+                    "Kor Skyfisher"
+                ],
+                "must_not_have_cards": [
+                    "Pestilence",
+                    "All That Glitters"
+                ],
+                "name": "Orzhov Blade",
+                "py/object": "pauperformance_bot.entity.config.archetype.ArchetypeConfig",
+                "reference_decks": [],
+                "resource_sideboard": null,
+                "resources": [],
+                "resources_discord": []
+            },
+            {
+                "aliases": [
+                    "WR Gates"
+                ],
+                "description": "_Still missing. Please join us on [Discord](https://discord.gg/fYQbpjjkQ3) to contribute to the Academy._",
+                "dominant_mana": [
+                    "W",
+                    "R"
+                ],
+                "family": null,
+                "game_type": [
+                    "Midrange"
+                ],
+                "must_have_cards": [
+                    "Experimental Synthesizer",
+                    "Basilisk Gate"
+                ],
+                "must_not_have_cards": [
+                    "Palace Sentinels",
+                    "Rally the Peasants",
+                    "All That Glitters"
+                ],
+                "name": "Boros Gates",
+                "py/object": "pauperformance_bot.entity.config.archetype.ArchetypeConfig",
+                "reference_decks": [],
+                "resource_sideboard": null,
+                "resources": [],
+                "resources_discord": []
+            },
+            {
+                "aliases": [
+                    "UB Control"
+                ],
+                "description": "_Still missing. Please join us on [Discord](https://discord.gg/fYQbpjjkQ3) to contribute to the Academy._",
+                "dominant_mana": [
+                    "U",
+                    "B"
+                ],
+                "family": null,
+                "game_type": [
+                    "Control"
+                ],
+                "must_have_cards": [],
+                "must_not_have_cards": [
+                    "Delver of Secrets // Insectile Aberration",
+                    "Cloudpost",
+                    "Glimmerpost",
+                    "Mental Note",
+                    "Thought Scour"
+                ],
+                "name": "Dimir Control",
+                "py/object": "pauperformance_bot.entity.config.archetype.ArchetypeConfig",
+                "reference_decks": [],
+                "resource_sideboard": null,
+                "resources": [],
+                "resources_discord": []
+            },
+            {
+                "aliases": [
+                    "Boros Rebirth"
+                ],
+                "description": "_Still missing. Please join us on [Discord](https://discord.gg/fYQbpjjkQ3) to contribute to the Academy._",
+                "dominant_mana": [
+                    "W",
+                    "R"
+                ],
+                "family": null,
+                "game_type": [
+                    "Midrange"
+                ],
+                "must_have_cards": [
+                    "Kuldotha Rebirth"
+                ],
+                "must_not_have_cards": [],
+                "name": "Kuldotha Rebirth",
+                "py/object": "pauperformance_bot.entity.config.archetype.ArchetypeConfig",
+                "reference_decks": [
+                    "Kuldotha Rebirth 722.001.Tarrasque1"
+                ],
+                "resource_sideboard": null,
+                "resources": [
+                    {
+                        "author": "Jake Stiles",
+                        "date": "2016-11-05",
+                        "language": "\ud83c\uddec\ud83c\udde7",
+                        "link": "https://www.mtggoldfish.com/articles/playing-pauper-kuldotha-boros",
+                        "name": "Playing Pauper: Kuldotha Boros",
+                        "py/object": "pauperformance_bot.entity.config.archetype.Resource"
+                    }
+                ],
+                "resources_discord": []
+            },
+            {
+                "aliases": [
+                    "Boros Metalcraft",
+                    "Boros Kitty",
+                    "WR Synth",
+                    "WR Metalcraft",
+                    "WR Kitty"
+                ],
+                "description": "_Still missing. Please join us on [Discord](https://discord.gg/fYQbpjjkQ3) to contribute to the Academy._",
+                "dominant_mana": [
+                    "W",
+                    "R"
+                ],
+                "family": null,
+                "game_type": [
+                    "Aggro"
+                ],
+                "must_have_cards": [
+                    "Experimental Synthesizer"
+                ],
+                "must_not_have_cards": [
+                    "Palace Sentinels",
+                    "All That Glitters",
+                    "Basilisk Gate"
+                ],
+                "name": "Boros Synth",
+                "py/object": "pauperformance_bot.entity.config.archetype.ArchetypeConfig",
+                "reference_decks": [
+                    "Boros Synth 735.001.MrEvilEye"
+                ],
+                "resource_sideboard": null,
+                "resources": [
+                    {
+                        "author": "Tiago Fuguete",
+                        "date": "2022-04-22",
+                        "language": "\ud83c\uddec\ud83c\udde7",
+                        "link": "https://mtg.cardsrealm.com/it-it/articles/pauper--boros-synthesizer-deck-tech--sideboard-guide",
+                        "name": "Pauper: Boros Synthesizer Deck Tech & Sideboard Guide",
+                        "py/object": "pauperformance_bot.entity.config.archetype.Resource"
+                    }
+                ],
+                "resources_discord": []
+            },
+            {
+                "aliases": [
+                    "WB Glitters"
+                ],
+                "description": "_Still missing. Please join us on [Discord](https://discord.gg/fYQbpjjkQ3) to contribute to the Academy._",
+                "dominant_mana": [
+                    "W",
+                    "B"
+                ],
+                "family": null,
+                "game_type": [
+                    "Midrange"
+                ],
+                "must_have_cards": [
+                    "Tithing Blade",
+                    "Kor Skyfisher",
+                    "All That Glitters"
+                ],
+                "must_not_have_cards": [
+                    "Pestilence"
+                ],
+                "name": "Orzhov Glitters",
+                "py/object": "pauperformance_bot.entity.config.archetype.ArchetypeConfig",
+                "reference_decks": [],
+                "resource_sideboard": null,
+                "resources": [],
+                "resources_discord": []
+            },
+            {
+                "aliases": [
+                    "MonoW Brew"
+                ],
+                "description": "\nGeneric archetype, for MonoW decks that do not fit those in the [Archetypes Index](../../pages/archetypes_index.html).",
+                "dominant_mana": [
+                    "W"
+                ],
+                "family": "Brew",
+                "game_type": [
+                    "Aggro",
+                    "Midrange",
+                    "Control",
+                    "Combo"
+                ],
+                "must_have_cards": [],
+                "must_not_have_cards": [],
+                "name": "Brew MonoW",
+                "py/object": "pauperformance_bot.entity.config.archetype.ArchetypeConfig",
+                "reference_decks": [],
+                "resource_sideboard": null,
+                "resources": [],
+                "resources_discord": []
+            },
+            {
+                "aliases": [
+                    "BG Gardens"
+                ],
+                "description": "_Still missing. Please join us on [Discord](https://discord.gg/fYQbpjjkQ3) to contribute to the Academy._",
+                "dominant_mana": [
+                    "B",
+                    "G"
+                ],
+                "family": null,
+                "game_type": [
+                    "Control"
+                ],
+                "must_have_cards": [
+                    "Khalni Garden",
+                    "Avenging Hunter",
+                    "Thorn of the Black Rose"
+                ],
+                "must_not_have_cards": [
+                    "Geothermal Bog",
+                    "Sulfurous Mire",
+                    "Pyroblast",
+                    "Red Elemental Blast",
+                    "Ancient Grudge"
+                ],
+                "name": "Golgari Gardens",
+                "py/object": "pauperformance_bot.entity.config.archetype.ArchetypeConfig",
+                "reference_decks": [],
+                "resource_sideboard": null,
+                "resources": [],
+                "resources_discord": []
+            },
+            {
+                "aliases": [
+                    "Aura Hexproof"
+                ],
+                "description": "\nBogles is an explosive aggro deck based around cheap creatures with [Hexproof](https://mtg.fandom.com/wiki/Hexproof) or similar abilities, such as [Slippery Bogle](https://scryfall.com/card/uma/223/slippery-bogle), [Gladecover Scout](https://scryfall.com/card/m14/176/gladecover-scout), and [Silhana Ledgewalker](https://scryfall.com/card/pca/77/silhana-ledgewalker).\nIn a format dominated by cheap and efficient removals, Bogles players try to race their opponents from 20 to 0 with creatures having built-in protection.\nSince Bogles creatures cannot be targeted once on the board, opponents are left with a few options to deal with them.\nSome of those include sacrifice effects, such as [Chainer's Edict](https://scryfall.com/card/uma/89/chainers-edict), or (non-targeting) mass removals, such as [Fiery Cannonade](https://scryfall.com/card/cmr/178/fiery-cannonade), or creatures like [Standard bearer](https://scryfall.com/card/apc/18/standard-bearer).\n\nTo consistently win games in the first 4-5 turns, Bogles features a variety of enchantments to boost creatures' power and to grant useful combat abilities to its attackers, such as [Trample](https://mtg.fandom.com/wiki/Trample) and [First Strike](https://mtg.fandom.com/wiki/First_strike).\nStaples of the archetype are [Rancor](https://scryfall.com/card/a25/186/rancor), [Ethereal Armor](https://scryfall.com/card/rtr/9/ethereal-armor), and [Armadillo Cloak](https://scryfall.com/card/ema/195/armadillo-cloak), that typically lead to a snowball effect in conjunction with [Ancestral Mask](https://scryfall.com/card/ema/157/ancestral-mask).\n\nTo fix its mana base, Bogles uses additional enchantments like [Abundant Growth](https://scryfall.com/card/ema/156/abundant-growth) and [Utopia Sprawl](https://scryfall.com/card/a25/192/utopia-sprawl), that also contribute to the offensive strategy.\n\nBogles is a non-interactive deck, with a fast clock, a low mana curve and all-in strategy that doesn't offer many mid/late-game options.\nHowever, given its popularity, opponents typically reserve sideboard slots for (mass) enchantment removals that can disrupt the aggro plan.",
+                "dominant_mana": [
+                    "G",
+                    "W"
+                ],
+                "family": null,
+                "game_type": [
+                    "Aggro"
+                ],
+                "must_have_cards": [],
+                "must_not_have_cards": [],
+                "name": "Bogles",
+                "py/object": "pauperformance_bot.entity.config.archetype.ArchetypeConfig",
+                "reference_decks": [
+                    "Bogles 683.001.SanPop",
+                    "Bogles 648.001.Mathonical",
+                    "Bogles 597.001.Mathonical",
+                    "Bogles 584.001.TheMaverickGirl"
+                ],
+                "resource_sideboard": null,
+                "resources": [
+                    {
+                        "author": "DaveSpace",
+                        "date": "2011-12-27",
+                        "language": "\ud83c\uddee\ud83c\uddf9",
+                        "link": "http://www.metagame.it/forum/viewtopic.php?f=158&t=24491",
+                        "name": "[Pauper Tier] Aura Hexproof",
+                        "py/object": "pauperformance_bot.entity.config.archetype.Resource"
+                    }
+                ],
+                "resources_discord": [
+                    {
+                        "language": "\ud83c\uddec\ud83c\udde7",
+                        "link": "https://discord.gg/m7yqNPt",
+                        "name": "Bogles Discord",
+                        "py/object": "pauperformance_bot.entity.config.archetype.DiscordResource"
+                    }
+                ]
+            },
+            {
+                "aliases": [],
+                "description": "_Still missing. Please join us on [Discord](https://discord.gg/fYQbpjjkQ3) to contribute to the Academy._",
+                "dominant_mana": [
+                    "W",
+                    "B"
+                ],
+                "family": null,
+                "game_type": [
+                    "Midrange"
+                ],
+                "must_have_cards": [
+                    "Ephemerate",
+                    "Goliath Paladin"
+                ],
+                "must_not_have_cards": [],
+                "name": "Orzhov Ephemerate",
+                "py/object": "pauperformance_bot.entity.config.archetype.ArchetypeConfig",
+                "reference_decks": [],
+                "resource_sideboard": null,
+                "resources": [
+                    {
+                        "author": "Tiago Fuguete",
+                        "date": "2023-03-11",
+                        "language": "\ud83c\uddec\ud83c\udde7",
+                        "link": "https://mtg.cardsrealm.com/en-us/articles/pauper-orzhov-ephemerate-deck-tech-sideboard-guide",
+                        "name": "Pauper: Orzhov Ephemerate Deck Tech and Sideboard Guide",
+                        "py/object": "pauperformance_bot.entity.config.archetype.Resource"
+                    }
+                ],
+                "resources_discord": []
+            },
+            {
+                "aliases": [
+                    "WUR Brew"
+                ],
+                "description": "\nGeneric archetype, for Jeskai decks that do not fit those in the [Archetypes Index](../../pages/archetypes_index.html).",
+                "dominant_mana": [
+                    "W",
+                    "U",
+                    "R"
+                ],
+                "family": "Brew",
+                "game_type": [
+                    "Aggro",
+                    "Midrange",
+                    "Control",
+                    "Combo"
+                ],
+                "must_have_cards": [],
+                "must_not_have_cards": [],
+                "name": "Brew Jeskai",
+                "py/object": "pauperformance_bot.entity.config.archetype.ArchetypeConfig",
+                "reference_decks": [],
+                "resource_sideboard": null,
+                "resources": [],
+                "resources_discord": []
+            },
+            {
+                "aliases": [
+                    "WUB Brew"
+                ],
+                "description": "\nGeneric archetype, for Esper decks that do not fit those in the [Archetypes Index](../../pages/archetypes_index.html).",
+                "dominant_mana": [
+                    "W",
+                    "U",
+                    "B"
+                ],
+                "family": "Brew",
+                "game_type": [
+                    "Aggro",
+                    "Midrange",
+                    "Control",
+                    "Combo"
+                ],
+                "must_have_cards": [],
+                "must_not_have_cards": [],
+                "name": "Brew Esper",
+                "py/object": "pauperformance_bot.entity.config.archetype.ArchetypeConfig",
+                "reference_decks": [],
+                "resource_sideboard": null,
+                "resources": [],
+                "resources_discord": []
+            },
+            {
+                "aliases": [
+                    "WBR Synth"
+                ],
+                "description": "_Still missing. Please join us on [Discord](https://discord.gg/fYQbpjjkQ3) to contribute to the Academy._",
+                "dominant_mana": [
+                    "W",
+                    "B",
+                    "R"
+                ],
+                "family": null,
+                "game_type": [
+                    "Midrange"
+                ],
+                "must_have_cards": [
+                    "Experimental Synthesizer",
+                    "Kor Skyfisher"
+                ],
+                "must_not_have_cards": [
+                    "Palace Sentinels",
+                    "Rally the Peasants",
+                    "All That Glitters"
+                ],
+                "name": "Mardu Synth",
+                "py/object": "pauperformance_bot.entity.config.archetype.ArchetypeConfig",
+                "reference_decks": [],
+                "resource_sideboard": null,
+                "resources": [],
+                "resources_discord": []
+            },
+            {
+                "aliases": [
+                    "Grixis Affinity"
+                ],
+                "description": "_Still missing. Please join us on [Discord](https://discord.gg/fYQbpjjkQ3) to contribute to the Academy._",
+                "dominant_mana": [
+                    "B",
+                    "U",
+                    "R"
+                ],
+                "family": "Affinity",
+                "game_type": [
+                    "Aggro",
+                    "Combo"
+                ],
+                "must_have_cards": [],
+                "must_not_have_cards": [
+                    "Glint Hawk",
+                    "Kor Skyfisher",
+                    "All That Glitters"
+                ],
+                "name": "Affinity",
+                "py/object": "pauperformance_bot.entity.config.archetype.ArchetypeConfig",
+                "reference_decks": [
+                    "Affinity 735.001.JoaoMarcos",
+                    "Affinity 722.001.ziofrancone"
+                ],
+                "resource_sideboard": null,
+                "resources": [
+                    {
+                        "author": "Muhammad \"Hamuda\"",
+                        "date": "2021-12-21",
+                        "language": "\ud83c\uddec\ud83c\udde7",
+                        "link": "https://mtg.cardsrealm.com/en-us/articles/pauper--rakdos-affinity-deck-tech--sideboard-guide",
+                        "name": "Pauper: Rakdos Affinity Deck Tech & Sideboard Guide",
+                        "py/object": "pauperformance_bot.entity.config.archetype.Resource"
+                    }
+                ],
+                "resources_discord": []
+            },
+            {
+                "aliases": [],
+                "description": "\nAcid Trip is a midrange deck revolving around the card [Reality Acid](https://scryfall.com/card/tsr/81/reality-acid).\nThe enchantment is used to repeatedly force the opponent to sacrifice key permanents.\n\nTo speed-up the engine, the player tries to [bounce](https://mtg.fandom.com/wiki/Bounce) Reality Acid without waiting for the [Vanishing](https://mtg.fandom.com/wiki/Vanishing) ability to resolve after the 3rd upkeep.\nSeveral cards can cause Reality Acid to [leave the battlefield](https://mtg.fandom.com/wiki/Leaves_the_battlefield), such as [Kor Skyfisher](https://scryfall.com/card/mm3/11/kor-skyfisher), [Teferi's Time Twist](https://scryfall.com/card/war/72/teferis-time-twist), [Aethersnipe](https://scryfall.com/card/uma/44/aethersnipe), [Dream Stalker](https://scryfall.com/card/tsr/63/dream-stalker), and [Drake Familiar](https://scryfall.com/card/rav/44/drake-familiar).\nBounce effects are also used directly on the opponent's permanents whenever possible to control the board.\n\nOnce the board is in control, the player typically wins by beating with creatures like [Seeker of the Way](https://scryfall.com/card/ima/29/seeker-of-the-way) and [Mulldrifter](https://scryfall.com/card/khc/42/mulldrifter).",
+                "dominant_mana": [
+                    "U",
+                    "W"
+                ],
+                "family": null,
+                "game_type": [
+                    "Midrange"
+                ],
+                "must_have_cards": [],
+                "must_not_have_cards": [],
+                "name": "Acid Trip",
+                "py/object": "pauperformance_bot.entity.config.archetype.ArchetypeConfig",
+                "reference_decks": [
+                    "Acid Trip 612.001.NalozycShade"
+                ],
+                "resource_sideboard": null,
+                "resources": [],
+                "resources_discord": []
+            },
+            {
+                "aliases": [
+                    "WR Brew"
+                ],
+                "description": "\nGeneric archetype, for Boros decks that do not fit those in the [Archetypes Index](../../pages/archetypes_index.html).",
+                "dominant_mana": [
+                    "W",
+                    "R"
+                ],
+                "family": "Brew",
+                "game_type": [
+                    "Aggro",
+                    "Midrange",
+                    "Control",
+                    "Combo"
+                ],
+                "must_have_cards": [],
+                "must_not_have_cards": [],
+                "name": "Brew Boros",
+                "py/object": "pauperformance_bot.entity.config.archetype.ArchetypeConfig",
+                "reference_decks": [],
+                "resource_sideboard": null,
+                "resources": [],
+                "resources_discord": []
+            }
+        ]
+    }
+}

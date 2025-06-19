@@ -17,17 +17,19 @@
 
 <details>
   <summary>Click here to expand</summary>
-<a href="https://scryfall.com/card/td2/4/ardent-recruit"><img src="https://c1.scryfall.com/file/scryfall-cards/normal/front/3/a/3a7f9bd7-7232-4956-873d-52ff82eabfb3.jpg" class="archetype-card rounded-image"/></a>
-<a href="https://scryfall.com/card/som/4/auriok-sunchaser"><img src="https://c1.scryfall.com/file/scryfall-cards/normal/front/e/2/e274a8b3-2d92-43d9-a436-d3f6f619ca95.jpg" class="archetype-card rounded-image"/></a>
-<a href="https://scryfall.com/card/2xm/256/flayer-husk"><img src="https://c1.scryfall.com/file/scryfall-cards/normal/front/2/0/20b394f9-644d-426e-801b-110774092018.jpg" class="archetype-card rounded-image"/></a>
-<a href="https://scryfall.com/card/jmp/466/gingerbrute"><img src="https://c1.scryfall.com/file/scryfall-cards/normal/front/c/1/c1195ec5-979b-4c4a-9c04-62bb53c2b011.jpg" class="archetype-card rounded-image"/></a>
-<a href="https://scryfall.com/card/som/10/glint-hawk"><img src="https://c1.scryfall.com/file/scryfall-cards/normal/front/2/8/284c4710-4183-4743-9c8b-515cc98cbbb8.jpg" class="archetype-card rounded-image"/></a>
-<a href="https://scryfall.com/card/cmd/17/journey-to-nowhere"><img src="https://c1.scryfall.com/file/scryfall-cards/normal/front/4/6/4686b51c-e02b-48c1-bafe-e8d08a5407b9.jpg" class="archetype-card rounded-image"/></a>
-<a href="https://scryfall.com/card/iko/60/of-one-mind"><img src="https://c1.scryfall.com/file/scryfall-cards/normal/front/c/9/c95fb136-f21d-4f3a-82b7-bcf490b7e90c.jpg" class="archetype-card rounded-image"/></a>
-<a href="https://scryfall.com/card/aer/167/ornithopter"><img src="https://c1.scryfall.com/file/scryfall-cards/normal/front/d/d/ddb96645-44d2-426c-90cb-3186297a8728.jpg" class="archetype-card rounded-image"/></a>
-<a href="https://scryfall.com/card/mm2/64/thoughtcast"><img src="https://c1.scryfall.com/file/scryfall-cards/normal/front/8/9/895485a4-06b6-449d-8cf1-db08e52790e4.jpg" class="archetype-card rounded-image"/></a>
-<a href="https://scryfall.com/card/2xm/35/thraben-inspector"><img src="https://c1.scryfall.com/file/scryfall-cards/normal/front/2/b/2be39749-ad6f-4160-99eb-c677eee7f1b2.jpg" class="archetype-card rounded-image"/></a>
-<a href="https://scryfall.com/card/mrd/264/tooth-of-chiss-goria"><img src="https://c1.scryfall.com/file/scryfall-cards/normal/front/d/b/db5a91db-1b86-4471-badc-884142c355ca.jpg" class="archetype-card rounded-image"/></a>
+<a href="https://scryfall.com/card/c21/276/ancient-den"><img src="https://cards.scryfall.io/normal/front/0/a/0a508907-a127-45cd-898a-e936bc08391f.jpg" class="archetype-card rounded-image"/></a>
+<a href="https://scryfall.com/card/td2/4/ardent-recruit"><img src="https://cards.scryfall.io/normal/front/3/a/3a7f9bd7-7232-4956-873d-52ff82eabfb3.jpg" class="archetype-card rounded-image"/></a>
+<a href="https://scryfall.com/card/som/4/auriok-sunchaser"><img src="https://cards.scryfall.io/normal/front/e/2/e274a8b3-2d92-43d9-a436-d3f6f619ca95.jpg" class="archetype-card rounded-image"/></a>
+<a href="https://scryfall.com/card/2xm/256/flayer-husk"><img src="https://cards.scryfall.io/normal/front/2/0/20b394f9-644d-426e-801b-110774092018.jpg" class="archetype-card rounded-image"/></a>
+<a href="https://scryfall.com/card/woe/246/gingerbrute"><img src="https://cards.scryfall.io/normal/front/0/9/09a4578a-7dc6-4da3-93ee-913b10be5740.jpg" class="archetype-card rounded-image"/></a>
+<a href="https://scryfall.com/card/som/10/glint-hawk"><img src="https://cards.scryfall.io/normal/front/2/8/284c4710-4183-4743-9c8b-515cc98cbbb8.jpg" class="archetype-card rounded-image"/></a>
+<a href="https://scryfall.com/card/cmd/17/journey-to-nowhere"><img src="https://cards.scryfall.io/normal/front/4/6/4686b51c-e02b-48c1-bafe-e8d08a5407b9.jpg" class="archetype-card rounded-image"/></a>
+<a href="https://scryfall.com/card/dmr/233/ornithopter"><img src="https://cards.scryfall.io/normal/front/3/0/305078a5-ac18-4721-bba2-3434eba5b1cf.jpg" class="archetype-card rounded-image"/></a>
+<a href="https://scryfall.com/card/c18/278/seat-of-the-synod"><img src="https://c1.scryfall.com/file/scryfall-cards/normal/front/1/f/1fedc183-2d95-471c-ba78-2169e4df13f8.jpg" class="archetype-card rounded-image"/></a>
+<a href="https://scryfall.com/card/2xm/291/springleaf-drum"><img src="https://cards.scryfall.io/normal/front/f/3/f3b3869b-6da1-4b01-a2e7-2018d478b6e5.jpg" class="archetype-card rounded-image"/></a>
+<a href="https://scryfall.com/card/moc/242/thoughtcast"><img src="https://cards.scryfall.io/normal/front/4/6/466a0be8-31b9-4ea0-9a96-b09a76f4ec69.jpg" class="archetype-card rounded-image"/></a>
+<a href="https://scryfall.com/card/cmm/66/thraben-inspector"><img src="https://cards.scryfall.io/normal/front/2/9/299cc386-2ed5-4504-9ba6-17a52e0c9a0c.jpg" class="archetype-card rounded-image"/></a>
+<a href="https://scryfall.com/card/mrd/264/tooth-of-chiss-goria"><img src="https://cards.scryfall.io/normal/front/d/b/db5a91db-1b86-4471-badc-884142c355ca.jpg" class="archetype-card rounded-image"/></a>
 </details><br/>
 
 
@@ -36,9 +38,9 @@
 
 <details>
   <summary>Click here to expand</summary>
-<a href="https://scryfall.com/card/bfz/76/dispel"><img src="https://c1.scryfall.com/file/scryfall-cards/normal/front/b/c/bceab6b3-6b64-4964-a501-ce806a6c13ad.jpg" class="archetype-card rounded-image"/></a>
-<a href="https://scryfall.com/card/frf/154/harsh-sustenance"><img src="https://c1.scryfall.com/file/scryfall-cards/normal/front/7/7/770d60a0-23fc-4224-873c-2e5549b3a816.jpg" class="archetype-card rounded-image"/></a>
-<a href="https://scryfall.com/card/2xm/291/springleaf-drum"><img src="https://c1.scryfall.com/file/scryfall-cards/normal/front/f/3/f3b3869b-6da1-4b01-a2e7-2018d478b6e5.jpg" class="archetype-card rounded-image"/></a>
+<a href="https://scryfall.com/card/a25/43/blue-elemental-blast"><img src="https://cards.scryfall.io/normal/front/2/f/2f51f88f-f662-4572-a371-9a77718ed079.jpg" class="archetype-card rounded-image"/></a>
+<a href="https://scryfall.com/card/iko/60/of-one-mind"><img src="https://cards.scryfall.io/normal/front/c/9/c95fb136-f21d-4f3a-82b7-bcf490b7e90c.jpg" class="archetype-card rounded-image"/></a>
+<a href="https://scryfall.com/card/hou/184/survivors-encampment"><img src="https://cards.scryfall.io/normal/front/c/7/c7b0404e-0f42-456b-91ce-f960195c4951.jpg" class="archetype-card rounded-image"/></a>
 </details><br/>
 
 

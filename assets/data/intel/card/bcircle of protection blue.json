@@ -1,0 +1,525 @@
+{
+    "archetypes": {
+        "py/set": [
+            {
+                "aliases": [
+                    "Azorius Familiars",
+                    "UW Familiars"
+                ],
+                "description": "_Still missing. Please join us on [Discord](https://discord.gg/fYQbpjjkQ3) to contribute to the Academy._",
+                "dominant_mana": [
+                    "U",
+                    "W"
+                ],
+                "family": "Familiars",
+                "game_type": [
+                    "Control",
+                    "Combo"
+                ],
+                "must_have_cards": [],
+                "must_not_have_cards": [],
+                "name": "Familiars",
+                "py/object": "pauperformance_bot.entity.config.archetype.ArchetypeConfig",
+                "reference_decks": [
+                    "Familiars 735.001.Parallax",
+                    "Familiars 696.001.Finespoo",
+                    "Familiars 533.001.A_AdeptoTerra"
+                ],
+                "resource_sideboard": null,
+                "resources": [
+                    {
+                        "author": "kalikaiz",
+                        "date": "2021-12-07",
+                        "language": "\ud83c\uddec\ud83c\udde7",
+                        "link": "https://www.youtube.com/watch?v=aBjW1lKdrYo&t=1s",
+                        "name": "UW Familiars HOW TO and sideboarding guide",
+                        "py/object": "pauperformance_bot.entity.config.archetype.Resource"
+                    },
+                    {
+                        "author": "Alessandro Moretti",
+                        "date": "2020-04-01",
+                        "language": "\ud83c\uddee\ud83c\uddf9",
+                        "link": "http://pauperwave.altervista.org/uw-familiar-pauper-league/",
+                        "name": "UW Familiar Pauper League",
+                        "py/object": "pauperformance_bot.entity.config.archetype.Resource"
+                    },
+                    {
+                        "author": "420dragon",
+                        "date": "2017-12-22",
+                        "language": "\ud83c\uddec\ud83c\udde7",
+                        "link": "https://www.youtube.com/watch?v=59P3zGL_54A",
+                        "name": "Familiar speed tutorial with 420dragon",
+                        "py/object": "pauperformance_bot.entity.config.archetype.Resource"
+                    }
+                ],
+                "resources_discord": [
+                    {
+                        "language": "\ud83c\uddec\ud83c\udde7",
+                        "link": "https://discord.gg/gTdT6VZ",
+                        "name": "Pauper Familiars Discord",
+                        "py/object": "pauperformance_bot.entity.config.archetype.DiscordResource"
+                    }
+                ]
+            },
+            {
+                "aliases": [
+                    "WRG Turbo Emblem"
+                ],
+                "description": "_Still missing. Please join us on [Discord](https://discord.gg/fYQbpjjkQ3) to contribute to the Academy._",
+                "dominant_mana": [
+                    "W",
+                    "R",
+                    "G"
+                ],
+                "family": "Turbo Emblem",
+                "game_type": [
+                    "Aggro",
+                    "Combo"
+                ],
+                "must_have_cards": [
+                    "Crimson Fleet Commodore",
+                    "Simian Spirit Guide",
+                    "Avenging Hunter",
+                    "Goliath Paladin"
+                ],
+                "must_not_have_cards": [],
+                "name": "Naya Turbo Emblem",
+                "py/object": "pauperformance_bot.entity.config.archetype.ArchetypeConfig",
+                "reference_decks": [],
+                "resource_sideboard": null,
+                "resources": [],
+                "resources_discord": []
+            },
+            {
+                "aliases": [],
+                "description": "_Still missing. Please join us on [Discord](https://discord.gg/fYQbpjjkQ3) to contribute to the Academy._",
+                "dominant_mana": [
+                    "W",
+                    "G"
+                ],
+                "family": null,
+                "game_type": [
+                    "Combo"
+                ],
+                "must_have_cards": [],
+                "must_not_have_cards": [],
+                "name": "Midnight Gond",
+                "py/object": "pauperformance_bot.entity.config.archetype.ArchetypeConfig",
+                "reference_decks": [
+                    "Midnight Gond 735.001.CoopertheRed"
+                ],
+                "resource_sideboard": null,
+                "resources": [
+                    {
+                        "author": "eternalgathering",
+                        "date": "2017-03-19",
+                        "language": "\ud83c\uddee\ud83c\uddf9",
+                        "link": "https://eternalgathering.altervista.org/midnight-combo-gli-manca-solo-la-pescata/",
+                        "name": "Midnight combo, gli manca solo la pescata(?)",
+                        "py/object": "pauperformance_bot.entity.config.archetype.Resource"
+                    }
+                ],
+                "resources_discord": []
+            },
+            {
+                "aliases": [],
+                "description": "_Still missing. Please join us on [Discord](https://discord.gg/fYQbpjjkQ3) to contribute to the Academy._",
+                "dominant_mana": [
+                    "W",
+                    "U",
+                    "R"
+                ],
+                "family": null,
+                "game_type": [
+                    "Control"
+                ],
+                "must_have_cards": [],
+                "must_not_have_cards": [
+                    "Arcum's Astrolabe"
+                ],
+                "name": "Jeskai Ephemerate",
+                "py/object": "pauperformance_bot.entity.config.archetype.ArchetypeConfig",
+                "reference_decks": [
+                    "Jeskai Ephemerate 735.001.Ezocratto1989"
+                ],
+                "resource_sideboard": null,
+                "resources": [
+                    {
+                        "author": "Tiago Fuguete",
+                        "date": "2022-05-04",
+                        "language": "\ud83c\uddec\ud83c\udde7",
+                        "link": "https://mtg.cardsrealm.com/en-us/articles/pauper--jeskai-ephemerate-deck-tech--sideboard-guide",
+                        "name": "Jeskai Ephemerate Deck Tech & Sideboard Guide",
+                        "py/object": "pauperformance_bot.entity.config.archetype.Resource"
+                    }
+                ],
+                "resources_discord": []
+            },
+            {
+                "aliases": [
+                    "BW Pestilence"
+                ],
+                "description": "\nOrzhov Pestilence exploits the unique synergy between [Guardian of the Guildpact](https://scryfall.com/card/dis/10/guardian-of-the-guildpact) and [Pestilence](https://scryfall.com/card/mb1/729/pestilence), both to completely stall the board and as a final win condition.\nIn several matchups, Guardian of the Guildpact is impossible to remove thanks to its peculiar [protection ability](https://mtg.fandom.com/wiki/Protection), that protects the creature from damage caused by Pestilence effect.\nAs result, the player is allowed to activate multiple times per turn Pestilence to wipe the board, while Guardian of the Guildpact will prevent the enchantment from leaving the battlefield.\n\nOrzhov Pestilence takes control of the board in early game by means of a variety of removal spells, while developing its mana to resolve Pestilence and Guardian of the Guildpact.\nIn versions of the deck with a strong focus on the control strategy, a key card is [Pristine Talisman](https://scryfall.com/card/c21/258/pristine-talisman), to [ramp](https://mtg.fandom.com/wiki/Ramp) while keeping up the life total.\nDiscard effects are common in this archetype and typically represent the only way to deal with counterspells and strong [enters the battlefield](https://mtg.fandom.com/wiki/Enters_the_battlefield) effects.\n\nThe deck is sometimes considered unstable due to the high number of lands it requires, and to the absence of an efficient card selection and draw engine after [Bonder's Ornament](https://scryfall.com/card/c20/67/bonders-ornament) ban.",
+                "dominant_mana": [
+                    "B",
+                    "W"
+                ],
+                "family": null,
+                "game_type": [
+                    "Midrange",
+                    "Control"
+                ],
+                "must_have_cards": [
+                    "Pestilence"
+                ],
+                "must_not_have_cards": [],
+                "name": "Orzhov Pestilence",
+                "py/object": "pauperformance_bot.entity.config.archetype.ArchetypeConfig",
+                "reference_decks": [
+                    "Orzhov Pestilence 696.001.Kampo",
+                    "Orzhov Pestilence 572.001.Amoras27"
+                ],
+                "resource_sideboard": null,
+                "resources": [
+                    {
+                        "author": "Paige Smith",
+                        "date": "2018-12-26",
+                        "language": "\ud83c\uddec\ud83c\udde7",
+                        "link": "https://www.coolstuffinc.com/a/kendrasmith-12262018-pestilence-what-you-have-to-endure-what-you-have-to-put-others-through",
+                        "name": "Pestilence: What You Have to Endure, What You Have to Put Others Through",
+                        "py/object": "pauperformance_bot.entity.config.archetype.Resource"
+                    },
+                    {
+                        "author": "Pentola",
+                        "date": "2018-05-21",
+                        "language": "\ud83c\uddee\ud83c\uddf9",
+                        "link": "http://www.metagame.it/forum/viewtopic.php?f=158&t=26084",
+                        "name": "[Pauper Tier] Orzhov Pestilence",
+                        "py/object": "pauperformance_bot.entity.config.archetype.Resource"
+                    }
+                ],
+                "resources_discord": []
+            },
+            {
+                "aliases": [
+                    "UW Glitters"
+                ],
+                "description": "_Still missing. Please join us on [Discord](https://discord.gg/fYQbpjjkQ3) to contribute to the Academy._",
+                "dominant_mana": [
+                    "U",
+                    "W"
+                ],
+                "family": "Glitters",
+                "game_type": [
+                    "Aggro"
+                ],
+                "must_have_cards": [
+                    "All That Glitters"
+                ],
+                "must_not_have_cards": [],
+                "name": "Azorius Glitters",
+                "py/object": "pauperformance_bot.entity.config.archetype.ArchetypeConfig",
+                "reference_decks": [],
+                "resource_sideboard": null,
+                "resources": [],
+                "resources_discord": []
+            },
+            {
+                "aliases": [
+                    "UB 8-Post"
+                ],
+                "description": "_Still missing. Please join us on [Discord](https://discord.gg/fYQbpjjkQ3) to contribute to the Academy._",
+                "dominant_mana": [
+                    "U",
+                    "B"
+                ],
+                "family": "8-Post",
+                "game_type": [
+                    "Control"
+                ],
+                "must_have_cards": [
+                    "Cloudpost",
+                    "Glimmerpost"
+                ],
+                "must_not_have_cards": [],
+                "name": "Dimir 8-Post",
+                "py/object": "pauperformance_bot.entity.config.archetype.ArchetypeConfig",
+                "reference_decks": [],
+                "resource_sideboard": null,
+                "resources": [],
+                "resources_discord": []
+            },
+            {
+                "aliases": [
+                    "WUB Familiars"
+                ],
+                "description": "_Still missing. Please join us on [Discord](https://discord.gg/fYQbpjjkQ3) to contribute to the Academy._",
+                "dominant_mana": [
+                    "W",
+                    "U",
+                    "B"
+                ],
+                "family": "Familiars",
+                "game_type": [
+                    "Control",
+                    "Combo"
+                ],
+                "must_have_cards": [],
+                "must_not_have_cards": [],
+                "name": "Esper Familiars",
+                "py/object": "pauperformance_bot.entity.config.archetype.ArchetypeConfig",
+                "reference_decks": [],
+                "resource_sideboard": null,
+                "resources": [],
+                "resources_discord": [
+                    {
+                        "language": "\ud83c\uddec\ud83c\udde7",
+                        "link": "https://discord.gg/gTdT6VZ",
+                        "name": "Pauper Familiars Discord",
+                        "py/object": "pauperformance_bot.entity.config.archetype.DiscordResource"
+                    }
+                ]
+            },
+            {
+                "aliases": [
+                    "BG Gardens"
+                ],
+                "description": "_Still missing. Please join us on [Discord](https://discord.gg/fYQbpjjkQ3) to contribute to the Academy._",
+                "dominant_mana": [
+                    "B",
+                    "G"
+                ],
+                "family": null,
+                "game_type": [
+                    "Control"
+                ],
+                "must_have_cards": [
+                    "Khalni Garden",
+                    "Avenging Hunter",
+                    "Thorn of the Black Rose"
+                ],
+                "must_not_have_cards": [
+                    "Geothermal Bog",
+                    "Sulfurous Mire",
+                    "Pyroblast",
+                    "Red Elemental Blast",
+                    "Ancient Grudge"
+                ],
+                "name": "Golgari Gardens",
+                "py/object": "pauperformance_bot.entity.config.archetype.ArchetypeConfig",
+                "reference_decks": [],
+                "resource_sideboard": null,
+                "resources": [],
+                "resources_discord": []
+            },
+            {
+                "aliases": [
+                    "Aura Hexproof"
+                ],
+                "description": "\nBogles is an explosive aggro deck based around cheap creatures with [Hexproof](https://mtg.fandom.com/wiki/Hexproof) or similar abilities, such as [Slippery Bogle](https://scryfall.com/card/uma/223/slippery-bogle), [Gladecover Scout](https://scryfall.com/card/m14/176/gladecover-scout), and [Silhana Ledgewalker](https://scryfall.com/card/pca/77/silhana-ledgewalker).\nIn a format dominated by cheap and efficient removals, Bogles players try to race their opponents from 20 to 0 with creatures having built-in protection.\nSince Bogles creatures cannot be targeted once on the board, opponents are left with a few options to deal with them.\nSome of those include sacrifice effects, such as [Chainer's Edict](https://scryfall.com/card/uma/89/chainers-edict), or (non-targeting) mass removals, such as [Fiery Cannonade](https://scryfall.com/card/cmr/178/fiery-cannonade), or creatures like [Standard bearer](https://scryfall.com/card/apc/18/standard-bearer).\n\nTo consistently win games in the first 4-5 turns, Bogles features a variety of enchantments to boost creatures' power and to grant useful combat abilities to its attackers, such as [Trample](https://mtg.fandom.com/wiki/Trample) and [First Strike](https://mtg.fandom.com/wiki/First_strike).\nStaples of the archetype are [Rancor](https://scryfall.com/card/a25/186/rancor), [Ethereal Armor](https://scryfall.com/card/rtr/9/ethereal-armor), and [Armadillo Cloak](https://scryfall.com/card/ema/195/armadillo-cloak), that typically lead to a snowball effect in conjunction with [Ancestral Mask](https://scryfall.com/card/ema/157/ancestral-mask).\n\nTo fix its mana base, Bogles uses additional enchantments like [Abundant Growth](https://scryfall.com/card/ema/156/abundant-growth) and [Utopia Sprawl](https://scryfall.com/card/a25/192/utopia-sprawl), that also contribute to the offensive strategy.\n\nBogles is a non-interactive deck, with a fast clock, a low mana curve and all-in strategy that doesn't offer many mid/late-game options.\nHowever, given its popularity, opponents typically reserve sideboard slots for (mass) enchantment removals that can disrupt the aggro plan.",
+                "dominant_mana": [
+                    "G",
+                    "W"
+                ],
+                "family": null,
+                "game_type": [
+                    "Aggro"
+                ],
+                "must_have_cards": [],
+                "must_not_have_cards": [],
+                "name": "Bogles",
+                "py/object": "pauperformance_bot.entity.config.archetype.ArchetypeConfig",
+                "reference_decks": [
+                    "Bogles 683.001.SanPop",
+                    "Bogles 648.001.Mathonical",
+                    "Bogles 597.001.Mathonical",
+                    "Bogles 584.001.TheMaverickGirl"
+                ],
+                "resource_sideboard": null,
+                "resources": [
+                    {
+                        "author": "DaveSpace",
+                        "date": "2011-12-27",
+                        "language": "\ud83c\uddee\ud83c\uddf9",
+                        "link": "http://www.metagame.it/forum/viewtopic.php?f=158&t=24491",
+                        "name": "[Pauper Tier] Aura Hexproof",
+                        "py/object": "pauperformance_bot.entity.config.archetype.Resource"
+                    }
+                ],
+                "resources_discord": [
+                    {
+                        "language": "\ud83c\uddec\ud83c\udde7",
+                        "link": "https://discord.gg/m7yqNPt",
+                        "name": "Bogles Discord",
+                        "py/object": "pauperformance_bot.entity.config.archetype.DiscordResource"
+                    }
+                ]
+            },
+            {
+                "aliases": [
+                    "UR 8-Post"
+                ],
+                "description": "_Still missing. Please join us on [Discord](https://discord.gg/fYQbpjjkQ3) to contribute to the Academy._",
+                "dominant_mana": [
+                    "U",
+                    "R"
+                ],
+                "family": "8-Post",
+                "game_type": [
+                    "Control"
+                ],
+                "must_have_cards": [
+                    "Cloudpost",
+                    "Glimmerpost"
+                ],
+                "must_not_have_cards": [],
+                "name": "Izzet 8-Post",
+                "py/object": "pauperformance_bot.entity.config.archetype.ArchetypeConfig",
+                "reference_decks": [],
+                "resource_sideboard": null,
+                "resources": [
+                    {
+                        "author": "BonSequitur",
+                        "date": "2011-12-21",
+                        "language": "\ud83c\uddec\ud83c\udde7",
+                        "link": "https://www.mtgsalvation.com/forums/the-game/pauper/mtgo-pauper/mtgo-pauper-archive/189721-primer-blue-red-8-post",
+                        "name": "Blue-Red 8-Post",
+                        "py/object": "pauperformance_bot.entity.config.archetype.Resource"
+                    }
+                ],
+                "resources_discord": []
+            },
+            {
+                "aliases": [
+                    "WUBG Brew"
+                ],
+                "description": "\nGeneric archetype, for Witch decks that do not fit those in the [Archetypes Index](../../pages/archetypes_index.html).",
+                "dominant_mana": [
+                    "W",
+                    "U",
+                    "B",
+                    "G"
+                ],
+                "family": "Brew",
+                "game_type": [
+                    "Aggro",
+                    "Midrange",
+                    "Control",
+                    "Combo"
+                ],
+                "must_have_cards": [],
+                "must_not_have_cards": [],
+                "name": "Brew Witch",
+                "py/object": "pauperformance_bot.entity.config.archetype.ArchetypeConfig",
+                "reference_decks": [],
+                "resource_sideboard": null,
+                "resources": [],
+                "resources_discord": []
+            },
+            {
+                "aliases": [],
+                "description": "_Still missing. Please join us on [Discord](https://discord.gg/fYQbpjjkQ3) to contribute to the Academy._",
+                "dominant_mana": [
+                    "W",
+                    "U",
+                    "R"
+                ],
+                "family": "Glitters",
+                "game_type": [
+                    "Aggro"
+                ],
+                "must_have_cards": [
+                    "All That Glitters",
+                    "Galvanic Blast"
+                ],
+                "must_not_have_cards": [],
+                "name": "Jeskai Glitters",
+                "py/object": "pauperformance_bot.entity.config.archetype.ArchetypeConfig",
+                "reference_decks": [],
+                "resource_sideboard": null,
+                "resources": [],
+                "resources_discord": []
+            },
+            {
+                "aliases": [],
+                "description": "_Still missing. Please join us on [Discord](https://discord.gg/fYQbpjjkQ3) to contribute to the Academy._",
+                "dominant_mana": [
+                    "G",
+                    "R",
+                    "U"
+                ],
+                "family": "Tron",
+                "game_type": [
+                    "Control"
+                ],
+                "must_have_cards": [
+                    "Ghostly Flicker",
+                    "Mystical Teachings"
+                ],
+                "must_not_have_cards": [],
+                "name": "Flicker Tron",
+                "py/object": "pauperformance_bot.entity.config.archetype.ArchetypeConfig",
+                "reference_decks": [
+                    "Flicker Tron 735.001.Alleyezonme",
+                    "Flicker Tron 612.001.A_AdeptoTerra"
+                ],
+                "resource_sideboard": null,
+                "resources": [
+                    {
+                        "author": "Bet\u00e3o",
+                        "date": "2021-03-21",
+                        "language": "\ud83c\uddec\ud83c\udde7",
+                        "link": "https://mtg.cardsrealm.com/en-us/articles/deck-tech-flicker-tron-pauper",
+                        "name": "Deck Tech Flicker Tron Pauper",
+                        "py/object": "pauperformance_bot.entity.config.archetype.Resource"
+                    }
+                ],
+                "resources_discord": []
+            },
+            {
+                "aliases": [
+                    "UB Teachings",
+                    "Creatureless Teachings"
+                ],
+                "description": "_Still missing. Please join us on [Discord](https://discord.gg/fYQbpjjkQ3) to contribute to the Academy._",
+                "dominant_mana": [
+                    "U",
+                    "B"
+                ],
+                "family": null,
+                "game_type": [
+                    "Control"
+                ],
+                "must_have_cards": [
+                    "Mystical Teachings"
+                ],
+                "must_not_have_cards": [],
+                "name": "Dimir Teachings",
+                "py/object": "pauperformance_bot.entity.config.archetype.ArchetypeConfig",
+                "reference_decks": [
+                    "Dimir Teachings 696.001.GuerrieroFantasma"
+                ],
+                "resource_sideboard": null,
+                "resources": [
+                    {
+                        "author": "Jake Stiles",
+                        "date": "2016-03-30",
+                        "language": "\ud83c\uddec\ud83c\udde7",
+                        "link": "https://www.mtggoldfish.com/articles/playing-pauper-dimir-teachings",
+                        "name": "Playing Pauper: Dimir Teachings",
+                        "py/object": "pauperformance_bot.entity.config.archetype.Resource"
+                    },
+                    {
+                        "author": "Giorgio \"Caiusthethief\" Iaderosa",
+                        "date": "2016-01-31",
+                        "language": "\ud83c\uddee\ud83c\uddf9",
+                        "link": "http://www.metagame.it/articoli-pauper/1730-deck-analisi-ub-teachings.html",
+                        "name": "DECK ANALISI - UB TEACHINGS IN PAUPER",
+                        "py/object": "pauperformance_bot.entity.config.archetype.Resource"
+                    }
+                ],
+                "resources_discord": []
+            }
+        ]
+    }
+}

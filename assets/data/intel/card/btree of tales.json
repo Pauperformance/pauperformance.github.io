@@ -1,0 +1,181 @@
+{
+    "archetypes": {
+        "py/set": [
+            {
+                "aliases": [
+                    "Grixis Affinity"
+                ],
+                "description": "_Still missing. Please join us on [Discord](https://discord.gg/fYQbpjjkQ3) to contribute to the Academy._",
+                "dominant_mana": [
+                    "B",
+                    "U",
+                    "R"
+                ],
+                "family": "Affinity",
+                "game_type": [
+                    "Aggro",
+                    "Combo"
+                ],
+                "must_have_cards": [],
+                "must_not_have_cards": [
+                    "Glint Hawk",
+                    "Kor Skyfisher",
+                    "All That Glitters"
+                ],
+                "name": "Affinity",
+                "py/object": "pauperformance_bot.entity.config.archetype.ArchetypeConfig",
+                "reference_decks": [
+                    "Affinity 735.001.JoaoMarcos",
+                    "Affinity 722.001.ziofrancone"
+                ],
+                "resource_sideboard": null,
+                "resources": [
+                    {
+                        "author": "Muhammad \"Hamuda\"",
+                        "date": "2021-12-21",
+                        "language": "\ud83c\uddec\ud83c\udde7",
+                        "link": "https://mtg.cardsrealm.com/en-us/articles/pauper--rakdos-affinity-deck-tech--sideboard-guide",
+                        "name": "Pauper: Rakdos Affinity Deck Tech & Sideboard Guide",
+                        "py/object": "pauperformance_bot.entity.config.archetype.Resource"
+                    }
+                ],
+                "resources_discord": []
+            },
+            {
+                "aliases": [
+                    "RG Brew"
+                ],
+                "description": "\nGeneric archetype, for Gruul decks that do not fit those in the [Archetypes Index](../../pages/archetypes_index.html).",
+                "dominant_mana": [
+                    "R",
+                    "G"
+                ],
+                "family": "Brew",
+                "game_type": [
+                    "Aggro",
+                    "Midrange",
+                    "Control",
+                    "Combo"
+                ],
+                "must_have_cards": [],
+                "must_not_have_cards": [],
+                "name": "Brew Gruul",
+                "py/object": "pauperformance_bot.entity.config.archetype.ArchetypeConfig",
+                "reference_decks": [],
+                "resource_sideboard": null,
+                "resources": [],
+                "resources_discord": []
+            },
+            {
+                "aliases": [],
+                "description": "_Still missing. Please join us on [Discord](https://discord.gg/fYQbpjjkQ3) to contribute to the Academy._",
+                "dominant_mana": [
+                    "G"
+                ],
+                "family": "Tron",
+                "game_type": [
+                    "Midrange"
+                ],
+                "must_have_cards": [],
+                "must_not_have_cards": [],
+                "name": "MonoG Tron",
+                "py/object": "pauperformance_bot.entity.config.archetype.ArchetypeConfig",
+                "reference_decks": [
+                    "MonoG Tron 735.001.Symsonic"
+                ],
+                "resource_sideboard": null,
+                "resources": [],
+                "resources_discord": []
+            },
+            {
+                "aliases": [
+                    "Aura Hexproof"
+                ],
+                "description": "\nBogles is an explosive aggro deck based around cheap creatures with [Hexproof](https://mtg.fandom.com/wiki/Hexproof) or similar abilities, such as [Slippery Bogle](https://scryfall.com/card/uma/223/slippery-bogle), [Gladecover Scout](https://scryfall.com/card/m14/176/gladecover-scout), and [Silhana Ledgewalker](https://scryfall.com/card/pca/77/silhana-ledgewalker).\nIn a format dominated by cheap and efficient removals, Bogles players try to race their opponents from 20 to 0 with creatures having built-in protection.\nSince Bogles creatures cannot be targeted once on the board, opponents are left with a few options to deal with them.\nSome of those include sacrifice effects, such as [Chainer's Edict](https://scryfall.com/card/uma/89/chainers-edict), or (non-targeting) mass removals, such as [Fiery Cannonade](https://scryfall.com/card/cmr/178/fiery-cannonade), or creatures like [Standard bearer](https://scryfall.com/card/apc/18/standard-bearer).\n\nTo consistently win games in the first 4-5 turns, Bogles features a variety of enchantments to boost creatures' power and to grant useful combat abilities to its attackers, such as [Trample](https://mtg.fandom.com/wiki/Trample) and [First Strike](https://mtg.fandom.com/wiki/First_strike).\nStaples of the archetype are [Rancor](https://scryfall.com/card/a25/186/rancor), [Ethereal Armor](https://scryfall.com/card/rtr/9/ethereal-armor), and [Armadillo Cloak](https://scryfall.com/card/ema/195/armadillo-cloak), that typically lead to a snowball effect in conjunction with [Ancestral Mask](https://scryfall.com/card/ema/157/ancestral-mask).\n\nTo fix its mana base, Bogles uses additional enchantments like [Abundant Growth](https://scryfall.com/card/ema/156/abundant-growth) and [Utopia Sprawl](https://scryfall.com/card/a25/192/utopia-sprawl), that also contribute to the offensive strategy.\n\nBogles is a non-interactive deck, with a fast clock, a low mana curve and all-in strategy that doesn't offer many mid/late-game options.\nHowever, given its popularity, opponents typically reserve sideboard slots for (mass) enchantment removals that can disrupt the aggro plan.",
+                "dominant_mana": [
+                    "G",
+                    "W"
+                ],
+                "family": null,
+                "game_type": [
+                    "Aggro"
+                ],
+                "must_have_cards": [],
+                "must_not_have_cards": [],
+                "name": "Bogles",
+                "py/object": "pauperformance_bot.entity.config.archetype.ArchetypeConfig",
+                "reference_decks": [
+                    "Bogles 683.001.SanPop",
+                    "Bogles 648.001.Mathonical",
+                    "Bogles 597.001.Mathonical",
+                    "Bogles 584.001.TheMaverickGirl"
+                ],
+                "resource_sideboard": null,
+                "resources": [
+                    {
+                        "author": "DaveSpace",
+                        "date": "2011-12-27",
+                        "language": "\ud83c\uddee\ud83c\uddf9",
+                        "link": "http://www.metagame.it/forum/viewtopic.php?f=158&t=24491",
+                        "name": "[Pauper Tier] Aura Hexproof",
+                        "py/object": "pauperformance_bot.entity.config.archetype.Resource"
+                    }
+                ],
+                "resources_discord": [
+                    {
+                        "language": "\ud83c\uddec\ud83c\udde7",
+                        "link": "https://discord.gg/m7yqNPt",
+                        "name": "Bogles Discord",
+                        "py/object": "pauperformance_bot.entity.config.archetype.DiscordResource"
+                    }
+                ]
+            },
+            {
+                "aliases": [
+                    "Cycle Storm"
+                ],
+                "description": "_Still missing. Please join us on [Discord](https://discord.gg/fYQbpjjkQ3) to contribute to the Academy._",
+                "dominant_mana": [
+                    "B"
+                ],
+                "family": "Storm",
+                "game_type": [
+                    "Combo"
+                ],
+                "must_have_cards": [],
+                "must_not_have_cards": [],
+                "name": "Cycling Storm",
+                "py/object": "pauperformance_bot.entity.config.archetype.ArchetypeConfig",
+                "reference_decks": [
+                    "Cycling Storm 701.001.Vivarus",
+                    "Cycling Storm 696.001.Bryant_Cook"
+                ],
+                "resource_sideboard": null,
+                "resources": [
+                    {
+                        "author": "Alex McKinley",
+                        "date": "2022-01-30",
+                        "language": "\ud83c\uddec\ud83c\udde7",
+                        "link": "https://www.theepicstorm.com/pauper-cycle-storm-primer/",
+                        "name": "PAUPER CYCLE STORM PRIMER",
+                        "py/object": "pauperformance_bot.entity.config.archetype.Resource"
+                    }
+                ],
+                "resources_discord": [
+                    {
+                        "language": "\ud83c\uddec\ud83c\udde7",
+                        "link": "https://discord.gg/zrn2N6HT",
+                        "name": "Pauper Storm Discord",
+                        "py/object": "pauperformance_bot.entity.config.archetype.DiscordResource"
+                    },
+                    {
+                        "language": "\ud83c\uddec\ud83c\udde7",
+                        "link": "https://discord.com/invite/stormcommunity",
+                        "name": "MTG Storm Community Discord",
+                        "py/object": "pauperformance_bot.entity.config.archetype.DiscordResource"
+                    }
+                ]
+            }
+        ]
+    }
+}

@@ -10,7 +10,7 @@
 
 **Dominant mana**: <img src="../resources/images/mana/B.png" class="dominant-mana-icon"/> <img src="../resources/images/mana/R.png" class="dominant-mana-icon"/>
 
-**Type**: `Aggro`
+**Type**: `Midrange`
 
 **Description**: _Still missing. Please join us on [Discord](https://discord.gg/fYQbpjjkQ3) to contribute to the Academy._
 
@@ -19,12 +19,19 @@
 
 <details>
   <summary>Click here to expand</summary>
-<a href="https://scryfall.com/card/soi/98/alms-of-the-vein"><img src="https://c1.scryfall.com/file/scryfall-cards/normal/front/7/9/79b80948-a3cd-4962-8fce-d58f2db7e68e.jpg" class="archetype-card rounded-image"/></a>
-<a href="https://scryfall.com/card/ddk/57/bump-in-the-night"><img src="https://c1.scryfall.com/file/scryfall-cards/normal/front/3/2/320e394c-c8b1-42ad-91a5-6d57296f85ab.jpg" class="archetype-card rounded-image"/></a>
-<a href="https://scryfall.com/card/c21/168/faithless-looting"><img src="https://c1.scryfall.com/file/scryfall-cards/normal/front/1/d/1d6e5cc9-bd48-41b6-ac20-5a3e38aecdc5.jpg" class="archetype-card rounded-image"/></a>
-<a href="https://scryfall.com/card/c19/142/fiery-temper"><img src="https://c1.scryfall.com/file/scryfall-cards/normal/front/f/c/fc8282aa-5347-44c7-8397-609aed82bc8c.jpg" class="archetype-card rounded-image"/></a>
-<a href="https://scryfall.com/card/mh2/89/kitchen-imp"><img src="https://c1.scryfall.com/file/scryfall-cards/normal/front/8/3/836ae711-e62f-49ec-850e-d25f6fd2a4d4.jpg" class="archetype-card rounded-image"/></a>
-<a href="https://scryfall.com/card/vow/136/vampires-kiss"><img src="https://c1.scryfall.com/file/scryfall-cards/normal/front/9/7/974bf8cc-4259-48cc-8e7f-1580bb010d3f.jpg" class="archetype-card rounded-image"/></a>
+<a href="https://scryfall.com/card/soi/98/alms-of-the-vein"><img src="https://cards.scryfall.io/normal/front/7/9/79b80948-a3cd-4962-8fce-d58f2db7e68e.jpg" class="archetype-card rounded-image"/></a>
+<a href="https://scryfall.com/card/mh2/246/drossforge-bridge"><img src="https://cards.scryfall.io/normal/front/5/b/5b46b8d8-723a-4752-b97d-29ef83bd294c.jpg" class="archetype-card rounded-image"/></a>
+<a href="https://scryfall.com/card/otc/165/faithless-looting"><img src="https://cards.scryfall.io/normal/front/1/e/1ea23c17-6960-44fd-bae3-e24595b00c22.jpg" class="archetype-card rounded-image"/></a>
+<a href="https://scryfall.com/card/c19/142/fiery-temper"><img src="https://cards.scryfall.io/normal/front/f/c/fc8282aa-5347-44c7-8397-609aed82bc8c.jpg" class="archetype-card rounded-image"/></a>
+<a href="https://scryfall.com/card/2xm/125/galvanic-blast"><img src="https://cards.scryfall.io/normal/front/0/c/0cf8cb1e-314a-4894-82df-f9812825f52e.jpg" class="archetype-card rounded-image"/></a>
+<a href="https://scryfall.com/card/phed/24/great-furnace"><img src="https://c1.scryfall.com/file/scryfall-cards/normal/front/2/a/2a7d2d8f-4736-4c99-aba2-b14960395ad6.jpg" class="archetype-card rounded-image"/></a>
+<a href="https://scryfall.com/card/mh2/89/kitchen-imp"><img src="https://cards.scryfall.io/normal/front/8/3/836ae711-e62f-49ec-850e-d25f6fd2a4d4.jpg" class="archetype-card rounded-image"/></a>
+<a href="https://scryfall.com/card/clu/141/lightning-bolt"><img src="https://cards.scryfall.io/normal/front/7/7/77c6fa74-5543-42ac-9ead-0e890b188e99.jpg" class="archetype-card rounded-image"/></a>
+<a href="https://scryfall.com/card/clb/463/mountain"><img src="https://c1.scryfall.com/file/scryfall-cards/normal/front/0/a/0ab63e49-0869-4c7c-a033-d8e50032dd13.jpg" class="archetype-card rounded-image"/></a>
+<a href="https://scryfall.com/card/clu/243/rakdos-carnarium"><img src="https://cards.scryfall.io/normal/front/b/2/b2eaa0f2-9f8e-4b41-8916-9c9a985c39de.jpg" class="archetype-card rounded-image"/></a>
+<a href="https://scryfall.com/card/vow/136/vampires-kiss"><img src="https://cards.scryfall.io/normal/front/9/7/974bf8cc-4259-48cc-8e7f-1580bb010d3f.jpg" class="archetype-card rounded-image"/></a>
+<a href="https://scryfall.com/card/hop/141/vault-of-whispers"><img src="https://cards.scryfall.io/normal/front/6/9/69e50871-bde7-4109-8811-a1c1bf70d3ae.jpg" class="archetype-card rounded-image"/></a>
+<a href="https://scryfall.com/card/vow/182/voldaren-epicure"><img src="https://cards.scryfall.io/normal/front/a/e/ae154e64-f626-45fb-bd52-840c1c27b2d3.jpg" class="archetype-card rounded-image"/></a>
 </details><br/>
 
 
@@ -33,22 +40,9 @@
 
 <details>
   <summary>Click here to expand</summary>
-<a href="https://scryfall.com/card/vow/95/blood-fountain"><img src="https://c1.scryfall.com/file/scryfall-cards/normal/front/d/d/dd03651e-ada0-41dc-8722-0eba476943e3.jpg" class="archetype-card rounded-image"/></a>
-<a href="https://scryfall.com/card/jmp/302/chain-lightning"><img src="https://c1.scryfall.com/file/scryfall-cards/normal/front/b/7/b7cef88c-0ad6-47c4-b6c8-f989586aa635.jpg" class="archetype-card rounded-image"/></a>
-<a href="https://scryfall.com/card/afr/94/deadly-dispute"><img src="https://c1.scryfall.com/file/scryfall-cards/normal/front/7/3/7373fe95-ad1c-44b9-8c7f-464ce8cbffc6.jpg" class="archetype-card rounded-image"/></a>
-<a href="https://scryfall.com/card/rtr/93/electrickery"><img src="https://c1.scryfall.com/file/scryfall-cards/normal/front/5/e/5ed81ee8-d5e4-4127-876e-9bff81f9c726.jpg" class="archetype-card rounded-image"/></a>
-<a href="https://scryfall.com/card/jvc/55/fireblast"><img src="https://c1.scryfall.com/file/scryfall-cards/normal/front/5/1/51e839d8-2c62-46df-a6ca-3964f43b7e54.jpg" class="archetype-card rounded-image"/></a>
-<a href="https://scryfall.com/card/mh2/226/fodder-tosser"><img src="https://c1.scryfall.com/file/scryfall-cards/normal/front/f/d/fd401525-b874-4af2-99a3-c2c83e22547e.jpg" class="archetype-card rounded-image"/></a>
-<a href="https://scryfall.com/card/ddp/60/forked-bolt"><img src="https://c1.scryfall.com/file/scryfall-cards/normal/front/3/6/364ed745-0dff-477a-a2c5-987639936337.jpg" class="archetype-card rounded-image"/></a>
-<a href="https://scryfall.com/card/2xm/125/galvanic-blast"><img src="https://c1.scryfall.com/file/scryfall-cards/normal/front/0/c/0cf8cb1e-314a-4894-82df-f9812825f52e.jpg" class="archetype-card rounded-image"/></a>
-<a href="https://scryfall.com/card/uma/102/gurmag-angler"><img src="https://c1.scryfall.com/file/scryfall-cards/normal/front/c/e/cedd44eb-f381-46e1-bcb0-88416b4ce33d.jpg" class="archetype-card rounded-image"/></a>
-<a href="https://scryfall.com/card/jmp/342/lightning-bolt"><img src="https://c1.scryfall.com/file/scryfall-cards/normal/front/c/e/ce711943-c1a1-43a0-8b89-8d169cfb8e06.jpg" class="archetype-card rounded-image"/></a>
-<a href="https://scryfall.com/card/mh2/139/revolutionist"><img src="https://c1.scryfall.com/file/scryfall-cards/normal/front/b/b/bb8f3008-a3ba-4f73-afa6-ad81074b3196.jpg" class="archetype-card rounded-image"/></a>
-<a href="https://scryfall.com/card/ddi/67/searing-blaze"><img src="https://c1.scryfall.com/file/scryfall-cards/normal/front/f/6/f659d464-13dd-49e2-a842-098dcba49659.jpg" class="archetype-card rounded-image"/></a>
-<a href="https://scryfall.com/card/eve/44/soul-reap"><img src="https://c1.scryfall.com/file/scryfall-cards/normal/front/e/2/e2a129e2-bed5-4ee7-b223-851452f72682.jpg" class="archetype-card rounded-image"/></a>
-<a href="https://scryfall.com/card/m21/165/thrill-of-possibility"><img src="https://c1.scryfall.com/file/scryfall-cards/normal/front/f/4/f4af156d-0fbf-4a4e-b0c1-db7e95be4903.jpg" class="archetype-card rounded-image"/></a>
-<a href="https://scryfall.com/card/vma/143/tyrants-choice"><img src="https://c1.scryfall.com/file/scryfall-cards/normal/front/5/e/5ed37b1c-7377-40bd-ae98-7f5ce56156b1.jpg" class="archetype-card rounded-image"/></a>
-<a href="https://scryfall.com/card/vow/182/voldaren-epicure"><img src="https://c1.scryfall.com/file/scryfall-cards/normal/front/a/e/ae154e64-f626-45fb-bd52-840c1c27b2d3.jpg" class="archetype-card rounded-image"/></a>
+<a href="https://scryfall.com/card/otc/131/deadly-dispute"><img src="https://cards.scryfall.io/normal/front/e/d/ed01650e-4eb5-4884-9cc6-947b0e20dd3c.jpg" class="archetype-card rounded-image"/></a>
+<a href="https://scryfall.com/card/a25/226/nihil-spellbomb"><img src="https://cards.scryfall.io/normal/front/e/5/e5892a23-efae-4731-9b8f-41c87960fe93.jpg" class="archetype-card rounded-image"/></a>
+<a href="https://scryfall.com/card/otj/281/swamp"><img src="https://cards.scryfall.io/normal/front/e/b/eb7dc259-9949-4673-a8f1-874396948392.jpg" class="archetype-card rounded-image"/></a>
 </details><br/>
 
 
@@ -66,12 +60,20 @@
 
 | Name | Set name | Set date | Legal |
 | -----| -------- | -------- | ----- |
+| [Rakdos Burn 740.001.JuanPabloCellanes](https://www.mtggoldfish.com/deck/4947355) | Commander Legends: Battle for Baldur's Gate | 2022-06-10 | ✅ |
 | [Rakdos Burn 722.001.rfaustino](https://www.mtggoldfish.com/deck/4667114) | Kamigawa: Neon Dynasty | 2022-02-18 | ✅ |
 | [Rakdos Burn 722.001.DaveXXXVI](https://www.mtggoldfish.com/deck/4667103) | Kamigawa: Neon Dynasty | 2022-02-18 | ✅ |
 | [Rakdos Burn 722.001.Choochoochar](https://www.mtggoldfish.com/deck/4872575) | Kamigawa: Neon Dynasty | 2022-02-18 | ✅ |
 | [Rakdos Burn 722.001.Cesta](https://www.mtggoldfish.com/deck/4872573) | Kamigawa: Neon Dynasty | 2022-02-18 | ✅ |
 
 
+
+
+## **Videos**
+
+| 🗣️ | 📺 | ⬇️ | Title | Author | Date |
+| -- | -- | -- | ---- | ------ | ---- |
+| 🇬🇧 | <i class="fa-brands fa-youtube"></i> | <a href="https://www.mtggoldfish.com/deck/4947355" target="_blank">🗎</a> | <a href="https://www.youtube.com/watch?v=dZnQXDHZZRc" target="_blank">🇬🇧 Pauper - MTGO League - Rakdos Burn 740.001.JuanPabloCellanes - Commander Legends: Battle fo</a> | Pauperformance | 2022-07-24   |
 
 
 

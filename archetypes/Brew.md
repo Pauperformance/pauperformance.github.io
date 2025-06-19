@@ -8,11 +8,21 @@
 
 **Dominant mana**: <img src="../resources/images/mana/W.png" class="dominant-mana-icon"/> <img src="../resources/images/mana/U.png" class="dominant-mana-icon"/> <img src="../resources/images/mana/B.png" class="dominant-mana-icon"/> <img src="../resources/images/mana/R.png" class="dominant-mana-icon"/> <img src="../resources/images/mana/G.png" class="dominant-mana-icon"/>
 
-**Type**: `Aggro`/`Midrange`/`Control`/`Combo`
+**Type**: `Aggro`/`Midrange`/`Control`/`Tempo`/`Combo`
 
 **Description**: 
 Generic archetype, for decks that do not fit those in the [Archetypes Index](../../pages/archetypes_index.html).
 
+
+## **Staples**
+
+<details>
+  <summary>Click here to expand</summary>
+<a href="https://scryfall.com/card/m12/94/distress"><img src="https://cards.scryfall.io/normal/front/6/3/630d4080-8183-41fb-8091-740719083765.jpg" class="archetype-card rounded-image"/></a>
+<a href="https://scryfall.com/card/cm2/77/sign-in-blood"><img src="https://cards.scryfall.io/normal/front/6/1/61388c28-9428-473c-973a-0a82b6b83d62.jpg" class="archetype-card rounded-image"/></a>
+<a href="https://scryfall.com/card/otj/281/swamp"><img src="https://cards.scryfall.io/normal/front/e/b/eb7dc259-9949-4673-a8f1-874396948392.jpg" class="archetype-card rounded-image"/></a>
+<a href="https://scryfall.com/card/2x2/96/unearth"><img src="https://cards.scryfall.io/normal/front/b/1/b1f73271-b70f-40ae-be64-f8de7805923a.jpg" class="archetype-card rounded-image"/></a>
+</details><br/>
 
 
 
@@ -26,6 +36,19 @@ Generic archetype, for decks that do not fit those in the [Archetypes Index](../
 
 | 🗣️ | 📺 | ⬇️ | Title | Author | Date |
 | -- | -- | -- | ---- | ------ | ---- |
+| 🇮🇹 | <i class="fa-brands fa-youtube"></i> |  | <a href="https://www.youtube.com/watch?v=P59Mr2T8a9s" target="_blank">[ITA] il nuovo GB Rock post Baldur's Gate 08/09/2022</a> | Adepto Terra | 2022-09-10   |
+| 🇮🇹 | <i class="fa-brands fa-youtube"></i> |  | <a href="https://www.youtube.com/watch?v=qLaXtFPN2Sw" target="_blank">[ITA] Mono Black Dispute & Izzet Faeries 05/09/2022</a> | Adepto Terra | 2022-09-07   |
+| 🇮🇹 | <i class="fa-brands fa-youtube"></i> |  | <a href="https://www.youtube.com/watch?v=eeF_78XVo5Q" target="_blank">[ITA] UW CawGate 29/08/2022</a> | Adepto Terra | 2022-09-05   |
+| 🇮🇹 | <i class="fa-brands fa-youtube"></i> |  | <a href="https://www.youtube.com/watch?v=Slx03NTI0WA" target="_blank">[ITA] Ho sognato CounterMadness ed è proprio un mazzo brutto</a> | Adepto Terra | 2022-08-30   |
+| 🇮🇹 | <i class="fa-brands fa-youtube"></i> |  | <a href="https://www.youtube.com/watch?v=IoyX5hWvAjE" target="_blank">[ITA] Pauper BG Pedine è fantastico.</a> | Adepto Terra | 2022-08-17   |
+| 🇬🇧 | <i class="fa-brands fa-youtube"></i> |  | <a href="https://www.youtube.com/watch?v=WMB7e-k6HTs" target="_blank">PAUPER - BLUE Re-ANIMATOR!?!?!</a> | PAUPERGANDA | 2022-08-13   |
+| 🇬🇧 | <i class="fa-brands fa-youtube"></i> |  | <a href="https://www.youtube.com/watch?v=Yh2ND5tYv78" target="_blank">PAUPER - White Weenie League - So much Draw!</a> | PAUPERGANDA | 2022-08-06   |
+| 🇬🇧 | <i class="fa-brands fa-youtube"></i> |  | <a href="https://www.youtube.com/watch?v=dfjXBLYELcs" target="_blank">PAUPER - Black Burn and a Pauper Quizshow?!</a> | PAUPERGANDA | 2022-07-30   |
+| 🇬🇧 | <i class="fa-brands fa-youtube"></i> |  | <a href="https://www.youtube.com/watch?v=A-AhrEAXqMs" target="_blank">PAUPER - Blue BLITZ!!!</a> | PAUPERGANDA | 2022-07-23   |
+| 🇮🇹 | <i class="fa-brands fa-youtube"></i> |  | <a href="https://www.youtube.com/watch?v=8KAufu410jM" target="_blank">[ITA] seconda lega con UW Familiar 07/07/2022</a> | Adepto Terra | 2022-07-12   |
+| 🇮🇹 | <i class="fa-brands fa-youtube"></i> |  | <a href="https://www.youtube.com/watch?v=aTi_JYogNuk" target="_blank">[ITA] UW Faeries + UG Turbofog 04/07/2022</a> | Adepto Terra | 2022-07-09   |
+| 🇬🇧 | <i class="fa-brands fa-youtube"></i> | <a href="https://www.mtggoldfish.com/deck/4911470" target="_blank">🗎</a> | <a href="https://www.youtube.com/watch?v=b87JcpST6SY" target="_blank">🇬🇧 MTGO League - Orzhov Crowns 740.001.Shika93 - Commander Legends: Battle for Baldur's Gate (</a> | Pauperformance | 2022-07-01   |
+| 🇮🇹 | <i class="fa-brands fa-youtube"></i> |  | <a href="https://www.youtube.com/watch?v=8q-QTPiQd4A" target="_blank">[ITA] Pauper Mono Black Metalcraft 28/06/2022</a> | Adepto Terra | 2022-06-30   |
 | 🇬🇧 | <i class="fa-brands fa-youtube"></i> |  | <a href="https://www.youtube.com/watch?v=iVDSbxQ5Zyk" target="_blank">PAUPER - TRON Cascade!!</a> | PAUPERGANDA | 2022-06-25   |
 | 🇮🇹 | <i class="fa-brands fa-youtube"></i> |  | <a href="https://www.youtube.com/watch?v=hbtr6Cgc9aw" target="_blank">[ITA] Pauper Jund Midrange 21/06/2022</a> | Adepto Terra | 2022-06-23   |
 | 🇬🇧 | <i class="fa-brands fa-youtube"></i> |  | <a href="https://www.youtube.com/watch?v=V5oAu4HmPR0" target="_blank">PAUPER League - Orzhov Tokens! - Now we Draw 16 cards!</a> | PAUPERGANDA | 2022-06-19   |

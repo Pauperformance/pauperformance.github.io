@@ -19,11 +19,11 @@
 
 <details>
   <summary>Click here to expand</summary>
-<a href="https://scryfall.com/card/vow/142/ancestral-anger"><img src="https://c1.scryfall.com/file/scryfall-cards/normal/front/5/d/5dee47ab-d603-4346-97f4-a25dc3f47765.jpg" class="archetype-card rounded-image"/></a>
-<a href="https://scryfall.com/card/c21/168/faithless-looting"><img src="https://c1.scryfall.com/file/scryfall-cards/normal/front/1/d/1d6e5cc9-bd48-41b6-ac20-5a3e38aecdc5.jpg" class="archetype-card rounded-image"/></a>
-<a href="https://scryfall.com/card/jmp/338/kiln-fiend"><img src="https://c1.scryfall.com/file/scryfall-cards/normal/front/6/c/6c957c94-3d2d-4b98-8990-cd8909462081.jpg" class="archetype-card rounded-image"/></a>
-<a href="https://scryfall.com/card/mh1/134/lava-dart"><img src="https://c1.scryfall.com/file/scryfall-cards/normal/front/b/1/b16dd041-451d-4914-8c46-aa315a90d802.jpg" class="archetype-card rounded-image"/></a>
-<a href="https://scryfall.com/card/mm2/149/mutagenic-growth"><img src="https://c1.scryfall.com/file/scryfall-cards/normal/front/2/e/2e0861a2-1858-47af-8154-20a977c2b298.jpg" class="archetype-card rounded-image"/></a>
+<a href="https://scryfall.com/card/mm2/8/apostles-blessing"><img src="https://cards.scryfall.io/normal/front/f/d/fdfbc07e-d726-4d42-9394-6aa0f5fc3a3a.jpg" class="archetype-card rounded-image"/></a>
+<a href="https://scryfall.com/card/jmp/338/kiln-fiend"><img src="https://cards.scryfall.io/normal/front/6/c/6c957c94-3d2d-4b98-8990-cd8909462081.jpg" class="archetype-card rounded-image"/></a>
+<a href="https://scryfall.com/card/mh1/134/lava-dart"><img src="https://cards.scryfall.io/normal/front/b/1/b16dd041-451d-4914-8c46-aa315a90d802.jpg" class="archetype-card rounded-image"/></a>
+<a href="https://scryfall.com/card/clb/463/mountain"><img src="https://c1.scryfall.com/file/scryfall-cards/normal/front/0/a/0ab63e49-0869-4c7c-a033-d8e50032dd13.jpg" class="archetype-card rounded-image"/></a>
+<a href="https://scryfall.com/card/mm2/149/mutagenic-growth"><img src="https://cards.scryfall.io/normal/front/2/e/2e0861a2-1858-47af-8154-20a977c2b298.jpg" class="archetype-card rounded-image"/></a>
 </details><br/>
 
 
@@ -32,17 +32,12 @@
 
 <details>
   <summary>Click here to expand</summary>
-<a href="https://scryfall.com/card/uma/121/akroan-crusader"><img src="https://c1.scryfall.com/file/scryfall-cards/normal/front/7/3/73d295ac-3c83-47db-a324-aa4907bcefdd.jpg" class="archetype-card rounded-image"/></a>
-<a href="https://scryfall.com/card/mm2/8/apostles-blessing"><img src="https://c1.scryfall.com/file/scryfall-cards/normal/front/f/d/fdfbc07e-d726-4d42-9394-6aa0f5fc3a3a.jpg" class="archetype-card rounded-image"/></a>
-<a href="https://scryfall.com/card/tsr/157/brute-force"><img src="https://c1.scryfall.com/file/scryfall-cards/normal/front/8/9/89db7256-3bd0-4c1d-9c6f-de81f7d3c1a2.jpg" class="archetype-card rounded-image"/></a>
-<a href="https://scryfall.com/card/war/117/burning-prophet"><img src="https://c1.scryfall.com/file/scryfall-cards/normal/front/0/1/01c5b095-13c9-4673-bf0c-553de455e521.jpg" class="archetype-card rounded-image"/></a>
-<a href="https://scryfall.com/card/m21/140/crash-through"><img src="https://c1.scryfall.com/file/scryfall-cards/normal/front/8/2/8257c205-00cd-4d41-bd58-098575ea2343.jpg" class="archetype-card rounded-image"/></a>
-<a href="https://scryfall.com/card/mid/140/festival-crasher"><img src="https://c1.scryfall.com/file/scryfall-cards/normal/front/6/2/626b0477-6165-443a-8a75-dfeac26ac9f9.jpg" class="archetype-card rounded-image"/></a>
-<a href="https://scryfall.com/card/cmr/414/fists-of-flame"><img src="https://c1.scryfall.com/file/scryfall-cards/normal/front/1/8/1897b60d-7e15-488c-84d5-505187739b00.jpg" class="archetype-card rounded-image"/></a>
-<a href="https://scryfall.com/card/ori/154/mage-ring-bully"><img src="https://c1.scryfall.com/file/scryfall-cards/normal/front/1/a/1a129f22-dd7e-4b2c-a514-a2ac55bb5661.jpg" class="archetype-card rounded-image"/></a>
-<a href="https://scryfall.com/card/2xm/208/manamorphose"><img src="https://c1.scryfall.com/file/scryfall-cards/normal/front/f/a/faf9070e-14be-4ce5-a19a-6addc79359c1.jpg" class="archetype-card rounded-image"/></a>
-<a href="https://scryfall.com/card/jou/110/satyr-hoplite"><img src="https://c1.scryfall.com/file/scryfall-cards/normal/front/b/8/b8754d66-facb-432e-a6c2-91430a6dec94.jpg" class="archetype-card rounded-image"/></a>
-<a href="https://scryfall.com/card/cmr/417/temur-battle-rage"><img src="https://c1.scryfall.com/file/scryfall-cards/normal/front/d/3/d344f38d-0ef2-434b-914c-934c639e7e18.jpg" class="archetype-card rounded-image"/></a>
+<a href="https://scryfall.com/card/mid/140/festival-crasher"><img src="https://cards.scryfall.io/normal/front/6/2/626b0477-6165-443a-8a75-dfeac26ac9f9.jpg" class="archetype-card rounded-image"/></a>
+<a href="https://scryfall.com/card/jud/89/flaring-pain"><img src="https://c1.scryfall.com/file/scryfall-cards/normal/front/e/e/eeb5c96a-1d16-459d-9968-ced9a8f1c520.jpg" class="archetype-card rounded-image"/></a>
+<a href="https://scryfall.com/card/clu/141/lightning-bolt"><img src="https://cards.scryfall.io/normal/front/7/7/77c6fa74-5543-42ac-9ead-0e890b188e99.jpg" class="archetype-card rounded-image"/></a>
+<a href="https://scryfall.com/card/2xm/208/manamorphose"><img src="https://cards.scryfall.io/normal/front/f/a/faf9070e-14be-4ce5-a19a-6addc79359c1.jpg" class="archetype-card rounded-image"/></a>
+<a href="https://scryfall.com/card/ema/142/pyroblast"><img src="https://cards.scryfall.io/normal/front/b/0/b029eb9a-dd7a-40c2-96c4-0063d9cc002c.jpg" class="archetype-card rounded-image"/></a>
+<a href="https://scryfall.com/card/cmm/264/temur-battle-rage"><img src="https://cards.scryfall.io/normal/front/3/7/375bc646-942e-4bf5-9c71-2c5471828e35.jpg" class="archetype-card rounded-image"/></a>
 </details><br/>
 
 
@@ -66,6 +61,13 @@
 | [MonoR Blitz 722.001.pokerswizard](https://www.mtggoldfish.com/deck/4795053) | Kamigawa: Neon Dynasty | 2022-02-18 | ✅ |
 
 
+
+
+## **Videos**
+
+| 🗣️ | 📺 | ⬇️ | Title | Author | Date |
+| -- | -- | -- | ---- | ------ | ---- |
+| 🇬🇧 | <i class="fa-brands fa-youtube"></i> | <a href="https://www.mtggoldfish.com/deck/4898421" target="_blank">🗎</a> | <a href="https://www.youtube.com/watch?v=56h3PRcTn9M" target="_blank">🇬🇧 MTGO League - MonoR Blitz 740.001.CooperTheRed - Commander Legends: Battle for Baldur's Gat</a> | Pauperformance | 2022-06-26   |
 
 
 

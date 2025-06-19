@@ -1,0 +1,58 @@
+{
+    "archetypes": {
+        "py/set": [
+            {
+                "aliases": [
+                    "Wonderwalls"
+                ],
+                "description": "\nWalls is a deck based around the mana generation capability of [Overgrown Battlement](https://scryfall.com/card/jmp/417/overgrown-battlement) and [Axebane Guardian](https://scryfall.com/card/rtr/115/axebane-guardian), that both produce mana equal to the total amount of [defenders](https://mtg.fandom.com/wiki/Defender) the player controls.\nTwo main versions of the deck exists, with many sub-versions: combo and [cascade](https://mtg.fandom.com/wiki/Cascade).\n\nThe first version is a pure combo deck that allows to kill through infinite damage usually by turn 4, or to mill the opponent.\nKey cards to enable the combo are [Galvanic Alchemist](https://scryfall.com/card/avr/54/galvanic-alchemist), [Freed from the Real](https://scryfall.com/card/a25/58/freed-from-the-real), and [Secret Door](https://scryfall.com/card/afr/71/secret-door).\n\nThe second version aims at quickly putting into play [Boarding Party](https://scryfall.com/card/cmr/163/boarding-party) and [Annoyed Altisaur](https://scryfall.com/card/cmr/216/annoyed-altisaur), overwhelming the opponent on the board by turn 4-5.\n\nA hybrid version of the two exists, with main deck cascade that can transform into combo with a transformational sideboard.",
+                "dominant_mana": [
+                    "G"
+                ],
+                "family": null,
+                "game_type": [
+                    "Combo"
+                ],
+                "must_have_cards": [],
+                "must_not_have_cards": [],
+                "name": "Walls",
+                "py/object": "pauperformance_bot.entity.config.archetype.ArchetypeConfig",
+                "reference_decks": [
+                    "Walls 722.002.apas72",
+                    "Walls 696.001.HouseOfManaMTG",
+                    "Walls 658.001.Mathonical"
+                ],
+                "resource_sideboard": {
+                    "link": "https://docs.google.com/spreadsheets/d/15SW61fnBwcNJeBYf9ROgkhmYnqnQNOcyAXTr61SAWjk/edit?usp=sharing",
+                    "py/object": "pauperformance_bot.entity.config.archetype.SideboardResource"
+                },
+                "resources": [
+                    {
+                        "author": "Andrea Passaro (apas72)",
+                        "date": "2022-03-11",
+                        "language": "\ud83c\uddec\ud83c\udde7",
+                        "link": "https://www.legapauperonline.com/pauper-walls-combo/",
+                        "name": "Pauper Walls Combo",
+                        "py/object": "pauperformance_bot.entity.config.archetype.Resource"
+                    },
+                    {
+                        "author": "Paige Smith",
+                        "date": "2020-02-12",
+                        "language": "\ud83c\uddec\ud83c\udde7",
+                        "link": "https://www.coolstuffinc.com/a/kendrasmith-02122020-anyway-heres-wonderwalls",
+                        "name": "Anyway, Here's Wonderwalls",
+                        "py/object": "pauperformance_bot.entity.config.archetype.Resource"
+                    }
+                ],
+                "resources_discord": [
+                    {
+                        "language": "\ud83c\uddec\ud83c\udde7",
+                        "link": "https://discord.gg/p4kESAk",
+                        "name": "Pauper Walls Discord",
+                        "py/object": "pauperformance_bot.entity.config.archetype.DiscordResource"
+                    }
+                ]
+            }
+        ]
+    }
+}

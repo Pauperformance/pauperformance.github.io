@@ -15,7 +15,25 @@
 **Description**: _Still missing. Please join us on [Discord](https://discord.gg/fYQbpjjkQ3) to contribute to the Academy._
 
 
+## **Staples**
 
+<details>
+  <summary>Click here to expand</summary>
+<a href="https://scryfall.com/card/cmm/81/counterspell"><img src="https://cards.scryfall.io/normal/front/8/4/8493131c-0a7b-4be6-a8a2-0b425f4f67fb.jpg" class="archetype-card rounded-image"/></a>
+<a href="https://scryfall.com/card/clb/455/island"><img src="https://c1.scryfall.com/file/scryfall-cards/normal/front/f/f/ff3ffe47-53a3-42ec-ae89-afc79793380d.jpg" class="archetype-card rounded-image"/></a>
+<a href="https://scryfall.com/card/otj/281/swamp"><img src="https://cards.scryfall.io/normal/front/e/b/eb7dc259-9949-4673-a8f1-874396948392.jpg" class="archetype-card rounded-image"/></a>
+</details><br/>
+
+
+
+## **Frequent cards**
+
+<details>
+  <summary>Click here to expand</summary>
+<a href="https://scryfall.com/card/2x2/322/dimir-aqueduct"><img src="https://c1.scryfall.com/file/scryfall-cards/normal/front/8/7/877b7b90-80d4-4cad-af7c-a0b36c590ca0.jpg" class="archetype-card rounded-image"/></a>
+<a href="https://scryfall.com/card/bfz/76/dispel"><img src="https://cards.scryfall.io/normal/front/b/c/bceab6b3-6b64-4964-a501-ce806a6c13ad.jpg" class="archetype-card rounded-image"/></a>
+<a href="https://scryfall.com/card/dst/41/echoing-decay"><img src="https://cards.scryfall.io/normal/front/f/8/f8e688e7-8350-4b78-bd49-a6ffdedad556.jpg" class="archetype-card rounded-image"/></a>
+</details><br/>
 
 
 

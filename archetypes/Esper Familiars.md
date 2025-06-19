@@ -15,7 +15,38 @@
 **Description**: _Still missing. Please join us on [Discord](https://discord.gg/fYQbpjjkQ3) to contribute to the Academy._
 
 
+## **Staples**
 
+<details>
+  <summary>Click here to expand</summary>
+<a href="https://scryfall.com/card/clu/229/azorius-chancery"><img src="https://cards.scryfall.io/normal/front/a/9/a9d629f3-24b0-400c-b054-b66250696708.jpg" class="archetype-card rounded-image"/></a>
+<a href="https://scryfall.com/card/vma/62/cloud-of-faeries"><img src="https://c1.scryfall.com/file/scryfall-cards/normal/front/e/b/ebd0933a-9192-43ee-b73d-f852a20ea9b9.jpg" class="archetype-card rounded-image"/></a>
+<a href="https://scryfall.com/card/rvr/38/compulsive-research"><img src="https://cards.scryfall.io/normal/front/f/d/fd162ca2-3f27-4747-8f5c-8e66e9ceb7f2.jpg" class="archetype-card rounded-image"/></a>
+<a href="https://scryfall.com/card/2x2/322/dimir-aqueduct"><img src="https://c1.scryfall.com/file/scryfall-cards/normal/front/8/7/877b7b90-80d4-4cad-af7c-a0b36c590ca0.jpg" class="archetype-card rounded-image"/></a>
+<a href="https://scryfall.com/card/clb/352/evolving-wilds"><img src="https://c1.scryfall.com/file/scryfall-cards/normal/front/b/b/bbc8841a-0f6e-4078-a0b9-a4bda642182e.jpg" class="archetype-card rounded-image"/></a>
+<a href="https://scryfall.com/card/tsr/69/foresee"><img src="https://cards.scryfall.io/normal/front/2/e/2ecf2ee8-6b93-4757-89c4-f1e76509a217.jpg" class="archetype-card rounded-image"/></a>
+<a href="https://scryfall.com/card/clb/455/island"><img src="https://c1.scryfall.com/file/scryfall-cards/normal/front/f/f/ff3ffe47-53a3-42ec-ae89-afc79793380d.jpg" class="archetype-card rounded-image"/></a>
+<a href="https://scryfall.com/card/ima/67/mnemonic-wall"><img src="https://cards.scryfall.io/normal/front/a/3/a3e6784b-78e8-4f0b-8d27-d49c7cea9252.jpg" class="archetype-card rounded-image"/></a>
+<a href="https://scryfall.com/card/mkc/111/mulldrifter"><img src="https://cards.scryfall.io/normal/front/e/b/eb6d8d1c-8d23-4273-9c9b-f3b71eb0e105.jpg" class="archetype-card rounded-image"/></a>
+<a href="https://scryfall.com/card/dmr/94/nightscape-familiar"><img src="https://cards.scryfall.io/normal/front/4/c/4cf1918f-ad58-4f62-bd8c-649919de0e75.jpg" class="archetype-card rounded-image"/></a>
+<a href="https://scryfall.com/card/mh3/310/plains"><img src="https://cards.scryfall.io/normal/front/e/0/e0281fba-d771-4431-931f-920db2f14c47.jpg" class="archetype-card rounded-image"/></a>
+<a href="https://scryfall.com/card/dmr/66/snap"><img src="https://cards.scryfall.io/normal/front/f/1/f13406c6-f208-402a-94d3-a94a24f03563.jpg" class="archetype-card rounded-image"/></a>
+<a href="https://scryfall.com/card/pls/17/sunscape-familiar"><img src="https://cards.scryfall.io/normal/front/9/6/9621f341-bf85-4b77-bf19-2fb013b4c955.jpg" class="archetype-card rounded-image"/></a>
+<a href="https://scryfall.com/card/otj/281/swamp"><img src="https://cards.scryfall.io/normal/front/e/b/eb7dc259-9949-4673-a8f1-874396948392.jpg" class="archetype-card rounded-image"/></a>
+<a href="https://scryfall.com/card/afc/267/terramorphic-expanse"><img src="https://c1.scryfall.com/file/scryfall-cards/normal/front/0/8/08ac4e43-4e16-46a2-96f5-58d5550984c4.jpg" class="archetype-card rounded-image"/></a>
+</details><br/>
+
+
+
+## **Frequent cards**
+
+<details>
+  <summary>Click here to expand</summary>
+<a href="https://scryfall.com/card/otc/94/deep-analysis"><img src="https://cards.scryfall.io/normal/front/6/b/6bb58d70-8944-4507-aeca-6b3d5f792a91.jpg" class="archetype-card rounded-image"/></a>
+<a href="https://scryfall.com/card/mm3/14/lone-missionary"><img src="https://c1.scryfall.com/file/scryfall-cards/normal/front/6/d/6d31d5b6-0973-43d2-aae0-a3f3e7a61800.jpg" class="archetype-card rounded-image"/></a>
+<a href="https://scryfall.com/card/c19/69/prismatic-strands"><img src="https://cards.scryfall.io/normal/front/e/f/efd85985-abc1-430a-9210-63109c90a82d.jpg" class="archetype-card rounded-image"/></a>
+<a href="https://scryfall.com/card/khc/43/sea-gate-oracle"><img src="https://cards.scryfall.io/normal/front/4/9/498743ce-0ca5-488a-ae5e-d348b274bf3b.jpg" class="archetype-card rounded-image"/></a>
+</details><br/>
 
 
 

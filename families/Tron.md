@@ -8,7 +8,9 @@
 
 ## **Archetypes**
 
+[Altar Tron](../archetypes/Altar%20Tron.html)  
 [Eggs Tron](../archetypes/Eggs%20Tron.html)  
 [Flicker Tron](../archetypes/Flicker%20Tron.html)  
 [MonoG Tron](../archetypes/MonoG%20Tron.html)  
+[Rainbow Tron](../archetypes/Rainbow%20Tron.html)  
 

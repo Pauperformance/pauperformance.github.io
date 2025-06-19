@@ -17,13 +17,10 @@
 
 <details>
   <summary>Click here to expand</summary>
-<a href="https://scryfall.com/card/mh2/267/counterspell"><img src="https://c1.scryfall.com/file/scryfall-cards/normal/front/1/9/1920dae4-fb92-4f19-ae4b-eb3276b8dac7.jpg" class="archetype-card rounded-image"/></a>
-<a href="https://scryfall.com/card/isd/51/delver-of-secrets-insectile-aberration"><img src="https://c1.scryfall.com/file/scryfall-cards/normal/front/1/1/11bf83bb-c95b-4b4f-9a56-ce7a1816307a.jpg" class="archetype-card rounded-image"/></a>
-<a href="https://scryfall.com/card/m20/58/faerie-miscreant"><img src="https://c1.scryfall.com/file/scryfall-cards/normal/front/2/8/28aa0337-94bd-4274-b2ee-6f43747c77b3.jpg" class="archetype-card rounded-image"/></a>
-<a href="https://scryfall.com/card/mm2/149/mutagenic-growth"><img src="https://c1.scryfall.com/file/scryfall-cards/normal/front/2/e/2e0861a2-1858-47af-8154-20a977c2b298.jpg" class="archetype-card rounded-image"/></a>
-<a href="https://scryfall.com/card/c18/95/ninja-of-the-deep-hours"><img src="https://c1.scryfall.com/file/scryfall-cards/normal/front/5/f/5fea7980-55e1-47c1-ab18-a89c976b55fc.jpg" class="archetype-card rounded-image"/></a>
-<a href="https://scryfall.com/card/c21/125/ponder"><img src="https://c1.scryfall.com/file/scryfall-cards/normal/front/9/c/9cee2eb1-f60e-4626-ba4a-b543142ca950.jpg" class="archetype-card rounded-image"/></a>
-<a href="https://scryfall.com/card/mma/65/spellstutter-sprite"><img src="https://c1.scryfall.com/file/scryfall-cards/normal/front/3/8/3899605d-2203-4ab6-9ff5-69490382eea4.jpg" class="archetype-card rounded-image"/></a>
+<a href="https://scryfall.com/card/cmm/81/counterspell"><img src="https://cards.scryfall.io/normal/front/8/4/8493131c-0a7b-4be6-a8a2-0b425f4f67fb.jpg" class="archetype-card rounded-image"/></a>
+<a href="https://scryfall.com/card/clb/455/island"><img src="https://c1.scryfall.com/file/scryfall-cards/normal/front/f/f/ff3ffe47-53a3-42ec-ae89-afc79793380d.jpg" class="archetype-card rounded-image"/></a>
+<a href="https://scryfall.com/card/c18/95/ninja-of-the-deep-hours"><img src="https://cards.scryfall.io/normal/front/5/f/5fea7980-55e1-47c1-ab18-a89c976b55fc.jpg" class="archetype-card rounded-image"/></a>
+<a href="https://scryfall.com/card/mma/65/spellstutter-sprite"><img src="https://cards.scryfall.io/normal/front/3/8/3899605d-2203-4ab6-9ff5-69490382eea4.jpg" class="archetype-card rounded-image"/></a>
 </details><br/>
 
 
@@ -32,18 +29,11 @@
 
 <details>
   <summary>Click here to expand</summary>
-<a href="https://scryfall.com/card/war/41/augur-of-bolas"><img src="https://c1.scryfall.com/file/scryfall-cards/normal/front/d/1/d19fbfe6-69bb-452a-be3c-b9c625e23193.jpg" class="archetype-card rounded-image"/></a>
-<a href="https://scryfall.com/card/ema/44/daze"><img src="https://c1.scryfall.com/file/scryfall-cards/normal/front/f/0/f05e9a3e-8a35-4687-85cb-e31b3927a5e2.jpg" class="archetype-card rounded-image"/></a>
-<a href="https://scryfall.com/card/bfz/76/dispel"><img src="https://c1.scryfall.com/file/scryfall-cards/normal/front/b/c/bceab6b3-6b64-4964-a501-ce806a6c13ad.jpg" class="archetype-card rounded-image"/></a>
-<a href="https://scryfall.com/card/mh1/51/faerie-seer"><img src="https://c1.scryfall.com/file/scryfall-cards/normal/front/d/1/d1fcfeb4-1818-4e08-be4c-27b8a9dc12e6.jpg" class="archetype-card rounded-image"/></a>
-<a href="https://scryfall.com/card/jvc/27/gush"><img src="https://c1.scryfall.com/file/scryfall-cards/normal/front/d/4/d4a3a921-3b7f-474c-b8c3-67a1a6ba5cc1.jpg" class="archetype-card rounded-image"/></a>
-<a href="https://scryfall.com/card/neo/67/moon-circuit-hacker"><img src="https://c1.scryfall.com/file/scryfall-cards/normal/front/c/6/c6e466d1-943d-41e6-a47d-c9d951ca4262.jpg" class="archetype-card rounded-image"/></a>
-<a href="https://scryfall.com/card/iko/60/of-one-mind"><img src="https://c1.scryfall.com/file/scryfall-cards/normal/front/c/9/c95fb136-f21d-4f3a-82b7-bcf490b7e90c.jpg" class="archetype-card rounded-image"/></a>
-<a href="https://scryfall.com/card/cmr/84/preordain"><img src="https://c1.scryfall.com/file/scryfall-cards/normal/front/1/4/1453f92e-df2d-4789-aa1b-a5b5c51567d4.jpg" class="archetype-card rounded-image"/></a>
-<a href="https://scryfall.com/card/dds/10/snap"><img src="https://c1.scryfall.com/file/scryfall-cards/normal/front/1/9/1959f078-4b7b-4df2-a256-d43b2d97e853.jpg" class="archetype-card rounded-image"/></a>
-<a href="https://scryfall.com/card/xln/81/spell-pierce"><img src="https://c1.scryfall.com/file/scryfall-cards/normal/front/6/b/6bf4dfc0-c58b-4535-b660-54ceaa6e0217.jpg" class="archetype-card rounded-image"/></a>
-<a href="https://scryfall.com/card/jvc/16/spire-golem"><img src="https://c1.scryfall.com/file/scryfall-cards/normal/front/b/2/b299c599-1a10-4122-ac0b-8f52a9cec7b6.jpg" class="archetype-card rounded-image"/></a>
-<a href="https://scryfall.com/card/mm2/66/vapor-snag"><img src="https://c1.scryfall.com/file/scryfall-cards/normal/front/5/9/59f26d0a-e9f3-442f-b5c6-8016cf736432.jpg" class="archetype-card rounded-image"/></a>
+<a href="https://scryfall.com/card/mid/47/delver-of-secrets-insectile-aberration"><img src="https://cards.scryfall.io/normal/front/a/b/abff6c81-65a4-48fa-ba8f-580f87b0344a.jpg" class="archetype-card rounded-image"/></a>
+<a href="https://scryfall.com/card/ema/55/hydroblast"><img src="https://c1.scryfall.com/file/scryfall-cards/normal/front/4/c/4c9c9b16-5567-4473-95e6-622292f77336.jpg" class="archetype-card rounded-image"/></a>
+<a href="https://scryfall.com/card/otc/107/preordain"><img src="https://cards.scryfall.io/normal/front/1/2/122f2cc2-5f4d-497c-96b5-ed5698f28b51.jpg" class="archetype-card rounded-image"/></a>
+<a href="https://scryfall.com/card/dmr/66/snap"><img src="https://cards.scryfall.io/normal/front/f/1/f13406c6-f208-402a-94d3-a94a24f03563.jpg" class="archetype-card rounded-image"/></a>
+<a href="https://scryfall.com/card/jvc/16/spire-golem"><img src="https://cards.scryfall.io/normal/front/b/2/b299c599-1a10-4122-ac0b-8f52a9cec7b6.jpg" class="archetype-card rounded-image"/></a>
 </details><br/>
 
 
@@ -61,10 +51,18 @@
 
 | Name | Set name | Set date | Legal |
 | -----| -------- | -------- | ----- |
+| [MonoU Faeries 740.001.MarcoBruschi](https://www.mtggoldfish.com/deck/4930697) | Commander Legends: Battle for Baldur's Gate | 2022-06-10 | ✅ |
 | [MonoU Faeries 722.001.MonoU Faeries](https://www.mtggoldfish.com/deck/4667107) | Kamigawa: Neon Dynasty | 2022-02-18 | ✅ |
 | [MonoU Faeries 540.001.Shika93](https://www.mtggoldfish.com/deck/4351740) | Battlebond | 2018-06-08 | Ban 🔨 |
 
 
+
+
+## **Videos**
+
+| 🗣️ | 📺 | ⬇️ | Title | Author | Date |
+| -- | -- | -- | ---- | ------ | ---- |
+| 🇮🇹 | <i class="fa-brands fa-youtube"></i> | <a href="https://www.mtggoldfish.com/deck/4930697" target="_blank">🗎</a> | <a href="https://www.youtube.com/watch?v=kl0wRDjwhbw" target="_blank">🇮🇹 MTGO League - MonoU Faeries 740.001.MarcoBruschi - Commander Legends: Battle for Baldur's G</a> | Pauperformance | 2022-07-08   |
 
 
 

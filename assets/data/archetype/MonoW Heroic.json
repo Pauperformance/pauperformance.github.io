@@ -1,5 +1,5 @@
 {
-    "aliases": null,
+    "aliases": [],
     "description": "\nMonoW Heroic is an explosive aggro deck based around cheap white creatures with the [Heroic](https://mtg.fandom.com/wiki/Heroic) ability, such as [Lagonna-Band Trailblazer](https://scryfall.com/card/jou/14/lagonna-band-trailblazer) and [Akroan Skyguard](https://scryfall.com/card/bng/3/akroan-skyguard).\nThe deck bets on a protective buff strategy where the player can protect their creatures while leveraging the Heroic ability to pump them and win in the first 4-5 turns.\n\nStaples of the archetype are [Cartouche of Solidarity](https://scryfall.com/card/akh/7/cartouche-of-solidarity), [Hyena Umbra](https://scryfall.com/card/uma/20/hyena-umbra), [Benevolent Blessing](https://scryfall.com/card/cmr/13/benevolent-blessing), and their catalyzer [Ethereal Armor](https://scryfall.com/card/rtr/9/ethereal-armor).\nAuras are at the core of the deck, but anything that can target and protect a creature is welcome to the strategy (with the trade-off of not contributing to Ethereal Armor).\nFor this reason, the deck also leverages some instants: [Defiant Strike](https://scryfall.com/card/m21/15/defiant-strike) brings a bit of buff and card advantage, [Emerge Unscathed](https://scryfall.com/card/ima/19/emerge-unscathed) brings more protection, and [Karametra's Blessing](https://scryfall.com/card/thb/26/karametras-blessing) brings a combination of both.\n\nSince MonoW Heroic does not need to fix mana in the early turns, creatures can be usually protected from the beginning of the game and opponents are left with a few options to deal with them.\nThe most common way of dealing with creatures is via sacrifice effects, such as [Chainer's Edict](https://scryfall.com/card/uma/89/chainers-edict), or by quickly resolving a removal spell before they get the needed protection.\nThe opponent may also rely on [Standard bearer](https://scryfall.com/card/apc/18/standard-bearer) to mostly disable the deck's strategy.\nSome extra creatures are usually added to get a sufficiently high body count: [Benevolent Bodyguard](https://scryfall.com/card/ema/4/benevolent-bodyguard) is often used to avoid [Chainer's Edict](https://scryfall.com/card/uma/89/chainers-edict), while still providing extra protection, and [Deftblade Elite](https://scryfall.com/card/vma/23/deftblade-elite) compensates for the lack of removals and takes care of blockers.\n\nMono White Heroic has few interactions, a fast clock, low mana curve and all-in strategy that doesn't offer many mid/late-game options.\nIt's one of the cheapest and competitive deck in the format.",
     "dominant_mana": [
         "W"
@@ -7,75 +7,41 @@
     "family": null,
     "frequent": [
         {
-            "link": "https://scryfall.com/card/cmr/13/benevolent-blessing",
-            "name": "Benevolent Blessing",
-            "preview": "https://c1.scryfall.com/file/scryfall-cards/normal/front/0/d/0d5c2401-da2c-46f9-b850-f37edcbb85cd.jpg",
+            "link": "https://scryfall.com/card/ima/19/emerge-unscathed",
+            "name": "Emerge Unscathed",
+            "preview": "https://cards.scryfall.io/normal/front/d/0/d016f166-183e-4d9e-9292-9bfb1ca0d72b.jpg",
             "py/object": "pauperformance_bot.entity.api.archetype.ArchetypeCard"
         },
         {
-            "link": "https://scryfall.com/card/ema/4/benevolent-bodyguard",
-            "name": "Benevolent Bodyguard",
-            "preview": "https://c1.scryfall.com/file/scryfall-cards/normal/front/2/4/241e5c4e-0f0b-4a3f-91e0-87387a11e81e.jpg",
-            "py/object": "pauperformance_bot.entity.api.archetype.ArchetypeCard"
-        },
-        {
-            "link": "https://scryfall.com/card/mmq/12/cho-mannos-blessing",
-            "name": "Cho-Manno's Blessing",
-            "preview": "https://c1.scryfall.com/file/scryfall-cards/normal/front/5/c/5c9f33c6-5294-4584-854d-c8c0f847aba8.jpg",
-            "py/object": "pauperformance_bot.entity.api.archetype.ArchetypeCard"
-        },
-        {
-            "link": "https://scryfall.com/card/m21/15/defiant-strike",
-            "name": "Defiant Strike",
-            "preview": "https://c1.scryfall.com/file/scryfall-cards/normal/front/5/c/5c23869b-c99a-49dd-9e29-fcc0eb63fad1.jpg",
-            "py/object": "pauperformance_bot.entity.api.archetype.ArchetypeCard"
-        },
-        {
-            "link": "https://scryfall.com/card/m20/19/gods-willing",
-            "name": "Gods Willing",
-            "preview": "https://c1.scryfall.com/file/scryfall-cards/normal/front/9/0/90883bac-bcd8-4fa9-a17c-c2402fb0714e.jpg",
-            "py/object": "pauperformance_bot.entity.api.archetype.ArchetypeCard"
-        },
-        {
-            "link": "https://scryfall.com/card/thb/26/karametras-blessing",
-            "name": "Karametra's Blessing",
-            "preview": "https://c1.scryfall.com/file/scryfall-cards/normal/front/8/8/88c8e4dc-5378-48d6-85b2-f5ea9ec7cf36.jpg",
-            "py/object": "pauperformance_bot.entity.api.archetype.ArchetypeCard"
-        },
-        {
-            "link": "https://scryfall.com/card/mm2/149/mutagenic-growth",
-            "name": "Mutagenic Growth",
-            "preview": "https://c1.scryfall.com/file/scryfall-cards/normal/front/2/e/2e0861a2-1858-47af-8154-20a977c2b298.jpg",
+            "link": "https://scryfall.com/card/m12/24/lifelink",
+            "name": "Lifelink",
+            "preview": "https://cards.scryfall.io/normal/front/a/8/a8e207d4-9930-4aff-a7c8-b53bd1b5d566.jpg",
             "py/object": "pauperformance_bot.entity.api.archetype.ArchetypeCard"
         },
         {
             "link": "https://scryfall.com/card/akh/27/sacred-cat",
             "name": "Sacred Cat",
-            "preview": "https://c1.scryfall.com/file/scryfall-cards/normal/front/0/8/08891c78-13c1-4d84-aa9c-78346b3b7d18.jpg",
+            "preview": "https://cards.scryfall.io/normal/front/0/8/08891c78-13c1-4d84-aa9c-78346b3b7d18.jpg",
             "py/object": "pauperformance_bot.entity.api.archetype.ArchetypeCard"
         },
         {
-            "link": "https://scryfall.com/card/ima/29/seeker-of-the-way",
-            "name": "Seeker of the Way",
-            "preview": "https://c1.scryfall.com/file/scryfall-cards/normal/front/5/2/52d7aafb-969f-4a39-9af3-125f7f5c99f3.jpg",
+            "link": "https://scryfall.com/card/mkc/289/secluded-steppe",
+            "name": "Secluded Steppe",
+            "preview": "https://cards.scryfall.io/normal/front/2/2/22dd757f-e43a-430f-ae79-66fc7dc12525.jpg",
             "py/object": "pauperformance_bot.entity.api.archetype.ArchetypeCard"
         },
         {
             "link": "https://scryfall.com/card/thb/36/sentinels-eyes",
             "name": "Sentinel's Eyes",
-            "preview": "https://c1.scryfall.com/file/scryfall-cards/normal/front/3/2/32adc118-b81e-48c2-b7ef-b62e8c3308d6.jpg",
-            "py/object": "pauperformance_bot.entity.api.archetype.ArchetypeCard"
-        },
-        {
-            "link": "https://scryfall.com/card/nph/76/vault-skirge",
-            "name": "Vault Skirge",
-            "preview": "https://c1.scryfall.com/file/scryfall-cards/normal/front/f/2/f254239c-c07a-4c41-98f7-8f4de539c73e.jpg",
+            "preview": "https://cards.scryfall.io/normal/front/3/2/32adc118-b81e-48c2-b7ef-b62e8c3308d6.jpg",
             "py/object": "pauperformance_bot.entity.api.archetype.ArchetypeCard"
         }
     ],
     "game_type": [
         "Aggro"
     ],
+    "must_have_cards": [],
+    "must_not_have_cards": [],
     "name": "MonoW Heroic",
     "py/object": "pauperformance_bot.entity.api.archetype.Archetype",
     "reference_decks": [
@@ -98,43 +64,43 @@
         {
             "link": "https://scryfall.com/card/bng/3/akroan-skyguard",
             "name": "Akroan Skyguard",
-            "preview": "https://c1.scryfall.com/file/scryfall-cards/normal/front/d/5/d55e85c3-234e-49c4-a307-96fb4497eea8.jpg",
+            "preview": "https://cards.scryfall.io/normal/front/d/5/d55e85c3-234e-49c4-a307-96fb4497eea8.jpg",
             "py/object": "pauperformance_bot.entity.api.archetype.ArchetypeCard"
         },
         {
             "link": "https://scryfall.com/card/akh/7/cartouche-of-solidarity",
             "name": "Cartouche of Solidarity",
-            "preview": "https://c1.scryfall.com/file/scryfall-cards/normal/front/9/0/90eaf94e-85a7-4958-aa58-8e2fe44db58d.jpg",
+            "preview": "https://cards.scryfall.io/normal/front/9/0/90eaf94e-85a7-4958-aa58-8e2fe44db58d.jpg",
             "py/object": "pauperformance_bot.entity.api.archetype.ArchetypeCard"
         },
         {
             "link": "https://scryfall.com/card/vma/23/deftblade-elite",
             "name": "Deftblade Elite",
-            "preview": "https://c1.scryfall.com/file/scryfall-cards/normal/front/d/5/d576b8f2-9b5b-47c0-8f9f-faa209d59595.jpg",
-            "py/object": "pauperformance_bot.entity.api.archetype.ArchetypeCard"
-        },
-        {
-            "link": "https://scryfall.com/card/ima/19/emerge-unscathed",
-            "name": "Emerge Unscathed",
-            "preview": "https://c1.scryfall.com/file/scryfall-cards/normal/front/d/0/d016f166-183e-4d9e-9292-9bfb1ca0d72b.jpg",
+            "preview": "https://cards.scryfall.io/normal/front/d/5/d576b8f2-9b5b-47c0-8f9f-faa209d59595.jpg",
             "py/object": "pauperformance_bot.entity.api.archetype.ArchetypeCard"
         },
         {
             "link": "https://scryfall.com/card/rtr/9/ethereal-armor",
             "name": "Ethereal Armor",
-            "preview": "https://c1.scryfall.com/file/scryfall-cards/normal/front/7/6/76960e65-e5c7-4414-b9a5-37d7b2ded4a0.jpg",
+            "preview": "https://cards.scryfall.io/normal/front/7/6/76960e65-e5c7-4414-b9a5-37d7b2ded4a0.jpg",
             "py/object": "pauperformance_bot.entity.api.archetype.ArchetypeCard"
         },
         {
-            "link": "https://scryfall.com/card/uma/21/hyena-umbra",
+            "link": "https://scryfall.com/card/2x2/13/hyena-umbra",
             "name": "Hyena Umbra",
-            "preview": "https://c1.scryfall.com/file/scryfall-cards/normal/front/8/7/87128a82-bcde-4def-9447-0ab8165d6b5e.jpg",
+            "preview": "https://cards.scryfall.io/normal/front/f/6/f6cc0f1f-191a-4141-965f-8d159bf54732.jpg",
             "py/object": "pauperformance_bot.entity.api.archetype.ArchetypeCard"
         },
         {
             "link": "https://scryfall.com/card/jou/14/lagonna-band-trailblazer",
             "name": "Lagonna-Band Trailblazer",
-            "preview": "https://c1.scryfall.com/file/scryfall-cards/normal/front/3/8/38a6f533-6acb-4c24-ae9d-fe4977230156.jpg",
+            "preview": "https://cards.scryfall.io/normal/front/3/8/38a6f533-6acb-4c24-ae9d-fe4977230156.jpg",
+            "py/object": "pauperformance_bot.entity.api.archetype.ArchetypeCard"
+        },
+        {
+            "link": "https://scryfall.com/card/mh3/310/plains",
+            "name": "Plains",
+            "preview": "https://cards.scryfall.io/normal/front/e/0/e0281fba-d771-4431-931f-920db2f14c47.jpg",
             "py/object": "pauperformance_bot.entity.api.archetype.ArchetypeCard"
         }
     ]

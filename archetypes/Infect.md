@@ -17,16 +17,14 @@
 
 <details>
   <summary>Click here to expand</summary>
-<a href="https://scryfall.com/card/mm2/8/apostles-blessing"><img src="https://c1.scryfall.com/file/scryfall-cards/normal/front/f/d/fdfbc07e-d726-4d42-9394-6aa0f5fc3a3a.jpg" class="archetype-card rounded-image"/></a>
-<a href="https://scryfall.com/card/som/112/blight-mamba"><img src="https://c1.scryfall.com/file/scryfall-cards/normal/front/c/f/cf9b3335-565c-406d-bd94-f36974602552.jpg" class="archetype-card rounded-image"/></a>
-<a href="https://scryfall.com/card/war/162/giant-growth"><img src="https://c1.scryfall.com/file/scryfall-cards/normal/front/0/6/06ec9e8b-4bd8-4caf-a559-6514b7ab4ca4.jpg" class="archetype-card rounded-image"/></a>
-<a href="https://scryfall.com/card/nph/111/glistener-elf"><img src="https://c1.scryfall.com/file/scryfall-cards/normal/front/8/b/8b94f4c6-b518-43b3-be52-e889d1f3ea38.jpg" class="archetype-card rounded-image"/></a>
-<a href="https://scryfall.com/card/som/166/ichorclaw-myr"><img src="https://c1.scryfall.com/file/scryfall-cards/normal/front/f/a/faef8b8b-2c45-4fed-b6ba-a8ac49c66330.jpg" class="archetype-card rounded-image"/></a>
-<a href="https://scryfall.com/card/fut/129/llanowar-augur"><img src="https://c1.scryfall.com/file/scryfall-cards/normal/front/1/c/1c8c9473-97f4-4875-8f06-d3a70d4cbe6d.jpg" class="archetype-card rounded-image"/></a>
-<a href="https://scryfall.com/card/mm2/149/mutagenic-growth"><img src="https://c1.scryfall.com/file/scryfall-cards/normal/front/2/e/2e0861a2-1858-47af-8154-20a977c2b298.jpg" class="archetype-card rounded-image"/></a>
-<a href="https://scryfall.com/card/a25/186/rancor"><img src="https://c1.scryfall.com/file/scryfall-cards/normal/front/8/a/8a4d8527-af29-408d-a3a3-6781db0cf439.jpg" class="archetype-card rounded-image"/></a>
-<a href="https://scryfall.com/card/ema/184/seal-of-strength"><img src="https://c1.scryfall.com/file/scryfall-cards/normal/front/5/5/559c3909-51e3-4a3e-8570-107ffe69e30d.jpg" class="archetype-card rounded-image"/></a>
-<a href="https://scryfall.com/card/mm2/168/vines-of-vastwood"><img src="https://c1.scryfall.com/file/scryfall-cards/normal/front/6/2/6203e3d4-8998-41d6-9f7e-b68af0f1f8b5.jpg" class="archetype-card rounded-image"/></a>
+<a href="https://scryfall.com/card/som/112/blight-mamba"><img src="https://cards.scryfall.io/normal/front/c/f/cf9b3335-565c-406d-bd94-f36974602552.jpg" class="archetype-card rounded-image"/></a>
+<a href="https://scryfall.com/card/mh3/318/forest"><img src="https://cards.scryfall.io/normal/front/7/a/7ac34881-de32-42c7-af60-f992638e1da2.jpg" class="archetype-card rounded-image"/></a>
+<a href="https://scryfall.com/card/nph/111/glistener-elf"><img src="https://cards.scryfall.io/normal/front/8/b/8b94f4c6-b518-43b3-be52-e889d1f3ea38.jpg" class="archetype-card rounded-image"/></a>
+<a href="https://scryfall.com/card/som/166/ichorclaw-myr"><img src="https://cards.scryfall.io/normal/front/f/a/faef8b8b-2c45-4fed-b6ba-a8ac49c66330.jpg" class="archetype-card rounded-image"/></a>
+<a href="https://scryfall.com/card/2xm/172/invigorate"><img src="https://cards.scryfall.io/normal/front/e/0/e0899da3-7beb-4161-81a3-e2d694e5b8a5.jpg" class="archetype-card rounded-image"/></a>
+<a href="https://scryfall.com/card/mm2/149/mutagenic-growth"><img src="https://cards.scryfall.io/normal/front/2/e/2e0861a2-1858-47af-8154-20a977c2b298.jpg" class="archetype-card rounded-image"/></a>
+<a href="https://scryfall.com/card/2x2/156/rancor"><img src="https://cards.scryfall.io/normal/front/8/6/86d6b411-4a31-4bfc-8dd6-e19f553bb29b.jpg" class="archetype-card rounded-image"/></a>
+<a href="https://scryfall.com/card/mm2/168/vines-of-vastwood"><img src="https://cards.scryfall.io/normal/front/6/2/6203e3d4-8998-41d6-9f7e-b68af0f1f8b5.jpg" class="archetype-card rounded-image"/></a>
 </details><br/>
 
 
@@ -35,13 +33,10 @@
 
 <details>
   <summary>Click here to expand</summary>
-<a href="https://scryfall.com/card/wth/121/briar-shield"><img src="https://c1.scryfall.com/file/scryfall-cards/normal/front/6/8/68100ac2-9677-4eb5-93dc-54e49b15985d.jpg" class="archetype-card rounded-image"/></a>
-<a href="https://scryfall.com/card/ddp/15/groundswell"><img src="https://c1.scryfall.com/file/scryfall-cards/normal/front/8/2/821e9cb9-f78e-4d11-9c36-42e8b84b49cd.jpg" class="archetype-card rounded-image"/></a>
-<a href="https://scryfall.com/card/iko/170/ram-through"><img src="https://c1.scryfall.com/file/scryfall-cards/normal/front/a/c/ac0b24e7-14e7-45ee-b5d8-bdb8674b669c.jpg" class="archetype-card rounded-image"/></a>
-<a href="https://scryfall.com/card/td2/54/rot-wolf"><img src="https://c1.scryfall.com/file/scryfall-cards/normal/front/0/b/0b08563c-1a00-4d9d-8e4f-13e4b9b0629f.jpg" class="archetype-card rounded-image"/></a>
-<a href="https://scryfall.com/card/khm/194/snakeskin-veil"><img src="https://c1.scryfall.com/file/scryfall-cards/normal/front/e/6/e692c208-c171-4964-9207-43c2cbc62845.jpg" class="archetype-card rounded-image"/></a>
-<a href="https://scryfall.com/card/neo/211/tamiyos-safekeeping"><img src="https://c1.scryfall.com/file/scryfall-cards/normal/front/f/d/fd4b7ee2-de65-4288-872d-486065a4f226.jpg" class="archetype-card rounded-image"/></a>
-<a href="https://scryfall.com/card/ons/296/vitality-charm"><img src="https://c1.scryfall.com/file/scryfall-cards/normal/front/e/1/e1abae21-ed8f-4e21-b227-f721b840c11f.jpg" class="archetype-card rounded-image"/></a>
+<a href="https://scryfall.com/card/mm2/8/apostles-blessing"><img src="https://cards.scryfall.io/normal/front/f/d/fdfbc07e-d726-4d42-9394-6aa0f5fc3a3a.jpg" class="archetype-card rounded-image"/></a>
+<a href="https://scryfall.com/card/ddp/15/groundswell"><img src="https://cards.scryfall.io/normal/front/8/2/821e9cb9-f78e-4d11-9c36-42e8b84b49cd.jpg" class="archetype-card rounded-image"/></a>
+<a href="https://scryfall.com/card/m11/181/hornet-sting"><img src="https://cards.scryfall.io/normal/front/a/f/af6b3bf7-bd09-4f0d-a670-2efc1c6d416f.jpg" class="archetype-card rounded-image"/></a>
+<a href="https://scryfall.com/card/ima/177/natures-claim"><img src="https://cards.scryfall.io/normal/front/d/2/d24b6640-ef2f-4c92-beb3-afdf78f9c2d5.jpg" class="archetype-card rounded-image"/></a>
 </details><br/>
 
 

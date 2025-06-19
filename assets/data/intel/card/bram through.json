@@ -1,0 +1,186 @@
+{
+    "archetypes": {
+        "py/set": [
+            {
+                "aliases": [
+                    "MonoG Brew"
+                ],
+                "description": "\nGeneric archetype, for MonoG decks that do not fit those in the [Archetypes Index](../../pages/archetypes_index.html).",
+                "dominant_mana": [
+                    "G"
+                ],
+                "family": "Brew",
+                "game_type": [
+                    "Aggro",
+                    "Midrange",
+                    "Control",
+                    "Combo"
+                ],
+                "must_have_cards": [],
+                "must_not_have_cards": [],
+                "name": "Brew MonoG",
+                "py/object": "pauperformance_bot.entity.config.archetype.ArchetypeConfig",
+                "reference_decks": [],
+                "resource_sideboard": null,
+                "resources": [],
+                "resources_discord": []
+            },
+            {
+                "aliases": [
+                    "Aura Hexproof"
+                ],
+                "description": "\nBogles is an explosive aggro deck based around cheap creatures with [Hexproof](https://mtg.fandom.com/wiki/Hexproof) or similar abilities, such as [Slippery Bogle](https://scryfall.com/card/uma/223/slippery-bogle), [Gladecover Scout](https://scryfall.com/card/m14/176/gladecover-scout), and [Silhana Ledgewalker](https://scryfall.com/card/pca/77/silhana-ledgewalker).\nIn a format dominated by cheap and efficient removals, Bogles players try to race their opponents from 20 to 0 with creatures having built-in protection.\nSince Bogles creatures cannot be targeted once on the board, opponents are left with a few options to deal with them.\nSome of those include sacrifice effects, such as [Chainer's Edict](https://scryfall.com/card/uma/89/chainers-edict), or (non-targeting) mass removals, such as [Fiery Cannonade](https://scryfall.com/card/cmr/178/fiery-cannonade), or creatures like [Standard bearer](https://scryfall.com/card/apc/18/standard-bearer).\n\nTo consistently win games in the first 4-5 turns, Bogles features a variety of enchantments to boost creatures' power and to grant useful combat abilities to its attackers, such as [Trample](https://mtg.fandom.com/wiki/Trample) and [First Strike](https://mtg.fandom.com/wiki/First_strike).\nStaples of the archetype are [Rancor](https://scryfall.com/card/a25/186/rancor), [Ethereal Armor](https://scryfall.com/card/rtr/9/ethereal-armor), and [Armadillo Cloak](https://scryfall.com/card/ema/195/armadillo-cloak), that typically lead to a snowball effect in conjunction with [Ancestral Mask](https://scryfall.com/card/ema/157/ancestral-mask).\n\nTo fix its mana base, Bogles uses additional enchantments like [Abundant Growth](https://scryfall.com/card/ema/156/abundant-growth) and [Utopia Sprawl](https://scryfall.com/card/a25/192/utopia-sprawl), that also contribute to the offensive strategy.\n\nBogles is a non-interactive deck, with a fast clock, a low mana curve and all-in strategy that doesn't offer many mid/late-game options.\nHowever, given its popularity, opponents typically reserve sideboard slots for (mass) enchantment removals that can disrupt the aggro plan.",
+                "dominant_mana": [
+                    "G",
+                    "W"
+                ],
+                "family": null,
+                "game_type": [
+                    "Aggro"
+                ],
+                "must_have_cards": [],
+                "must_not_have_cards": [],
+                "name": "Bogles",
+                "py/object": "pauperformance_bot.entity.config.archetype.ArchetypeConfig",
+                "reference_decks": [
+                    "Bogles 683.001.SanPop",
+                    "Bogles 648.001.Mathonical",
+                    "Bogles 597.001.Mathonical",
+                    "Bogles 584.001.TheMaverickGirl"
+                ],
+                "resource_sideboard": null,
+                "resources": [
+                    {
+                        "author": "DaveSpace",
+                        "date": "2011-12-27",
+                        "language": "\ud83c\uddee\ud83c\uddf9",
+                        "link": "http://www.metagame.it/forum/viewtopic.php?f=158&t=24491",
+                        "name": "[Pauper Tier] Aura Hexproof",
+                        "py/object": "pauperformance_bot.entity.config.archetype.Resource"
+                    }
+                ],
+                "resources_discord": [
+                    {
+                        "language": "\ud83c\uddec\ud83c\udde7",
+                        "link": "https://discord.gg/m7yqNPt",
+                        "name": "Bogles Discord",
+                        "py/object": "pauperformance_bot.entity.config.archetype.DiscordResource"
+                    }
+                ]
+            },
+            {
+                "aliases": [],
+                "description": "_Still missing. Please join us on [Discord](https://discord.gg/fYQbpjjkQ3) to contribute to the Academy._",
+                "dominant_mana": [
+                    "G"
+                ],
+                "family": "Infect",
+                "game_type": [
+                    "Aggro"
+                ],
+                "must_have_cards": [],
+                "must_not_have_cards": [],
+                "name": "Infect",
+                "py/object": "pauperformance_bot.entity.config.archetype.ArchetypeConfig",
+                "reference_decks": [
+                    "Infect 722.001.Sorceress-Queen"
+                ],
+                "resource_sideboard": null,
+                "resources": [
+                    {
+                        "author": "Humberto \"Romeu\"",
+                        "date": "2021-07-04",
+                        "language": "\ud83c\uddec\ud83c\udde7",
+                        "link": "https://mtg.cardsrealm.com/en-us/articles/pauper-deck-tech:-infect",
+                        "name": "Pauper Deck Tech: Infect",
+                        "py/object": "pauperformance_bot.entity.config.archetype.Resource"
+                    },
+                    {
+                        "author": "Dave Space",
+                        "date": "2011-12-27",
+                        "language": "\ud83c\uddee\ud83c\uddf9",
+                        "link": "http://www.metagame.it/forum/viewtopic.php?f=158&t=26111",
+                        "name": "[Pauper Tier] Infect",
+                        "py/object": "pauperformance_bot.entity.config.archetype.Resource"
+                    }
+                ],
+                "resources_discord": []
+            },
+            {
+                "aliases": [
+                    "MonoG Aggro"
+                ],
+                "description": "\nStompy is a fast and solid aggro deck, and the most popular of this type in the format.\nIt takes advantage of cheap and strong creatures, sometimes with [evasion or pseudo-evasion abilities](https://mtg.fandom.com/wiki/Evasion_ability), to immediately put pressure on the board.\nSeveral efficient pump spells helps Stompy quickly reducing the opponent's life total, allowing players to consistently win games in the fist few turns.\nSince 2019, the addition of [Savage Swipe](https://scryfall.com/card/mh1/178/savage-swipe) from Modern Horizons (mh1) has provided the deck with a powerful option for clearing out blockers while also applying additional pressure.",
+                "dominant_mana": [
+                    "G"
+                ],
+                "family": null,
+                "game_type": [
+                    "Aggro"
+                ],
+                "must_have_cards": [],
+                "must_not_have_cards": [],
+                "name": "Stompy",
+                "py/object": "pauperformance_bot.entity.config.archetype.ArchetypeConfig",
+                "reference_decks": [
+                    "Stompy 722.001.tarmogoyf_ita",
+                    "Stompy 696.001.Ixidor29"
+                ],
+                "resource_sideboard": {
+                    "link": "https://docs.google.com/spreadsheets/d/1iBnopoHW5EspnWOvCDVm28eTI581RljyJoJgAZJOhXQ/edit?usp=sharing",
+                    "py/object": "pauperformance_bot.entity.config.archetype.SideboardResource"
+                },
+                "resources": [
+                    {
+                        "author": "Alex Ullman",
+                        "date": "2020-08-27",
+                        "language": "\ud83c\uddec\ud83c\udde7",
+                        "link": "https://strategy.channelfireball.com/all-strategy/mtg/channelmagic-articles/pauper-stompy-deck-guide/",
+                        "name": "Pauper Stompy Deck Guide",
+                        "py/object": "pauperformance_bot.entity.config.archetype.Resource"
+                    },
+                    {
+                        "author": "Paige Smith",
+                        "date": "2018-11-21",
+                        "language": "\ud83c\uddec\ud83c\udde7",
+                        "link": "https://www.coolstuffinc.com/a/kendrasmith-11212018-bringing-back-pauper-stompy",
+                        "name": "Bringing Back Pauper Stompy",
+                        "py/object": "pauperformance_bot.entity.config.archetype.Resource"
+                    },
+                    {
+                        "author": "airborne17th",
+                        "date": "2018-10-26",
+                        "language": "\ud83c\uddec\ud83c\udde7",
+                        "link": "https://teamhp555130435.wordpress.com/2018/10/26/mono-green-stompy-pauper-guide/",
+                        "name": "Mono Green Stompy Pauper Guide",
+                        "py/object": "pauperformance_bot.entity.config.archetype.Resource"
+                    },
+                    {
+                        "author": "Mr Pain",
+                        "date": "2013-12-24",
+                        "language": "\ud83c\uddee\ud83c\uddf9",
+                        "link": "http://www.metagame.it/forum/viewtopic.php?f=187&t=10786",
+                        "name": "[PAUPER PRIMER] Mono Green",
+                        "py/object": "pauperformance_bot.entity.config.archetype.Resource"
+                    },
+                    {
+                        "author": "Psychobabble",
+                        "date": "2013-10-17",
+                        "language": "\ud83c\uddec\ud83c\udde7",
+                        "link": "https://www.mtgsalvation.com/forums/the-game/pauper/mtgo-pauper/established/189724-primer-mono-green-aggro-stompy",
+                        "name": "[Primer] Mono Green Aggro (stompy)",
+                        "py/object": "pauperformance_bot.entity.config.archetype.Resource"
+                    }
+                ],
+                "resources_discord": [
+                    {
+                        "language": "\ud83c\uddec\ud83c\udde7",
+                        "link": "https://discord.gg/RzTmb76qjJ",
+                        "name": "Pauper Stompy Discord",
+                        "py/object": "pauperformance_bot.entity.config.archetype.DiscordResource"
+                    }
+                ]
+            }
+        ]
+    }
+}

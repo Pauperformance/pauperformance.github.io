@@ -9,6 +9,11 @@
 ## **Archetypes**
 
 [Dimir 8-Post](../archetypes/Dimir%208-Post.html)  
+[Grixis 8-Post](../archetypes/Grixis%208-Post.html)  
 [Izzet 8-Post](../archetypes/Izzet%208-Post.html)  
+[MonoG 8-Post](../archetypes/MonoG%208-Post.html)  
+[MonoR 8-Post](../archetypes/MonoR%208-Post.html)  
 [MonoU 8-Post](../archetypes/MonoU%208-Post.html)  
+[MonoW 8-Post](../archetypes/MonoW%208-Post.html)  
+[Simic 8-Post](../archetypes/Simic%208-Post.html)  
 

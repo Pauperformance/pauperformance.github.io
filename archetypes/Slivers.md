@@ -17,10 +17,11 @@
 
 <details>
   <summary>Click here to expand</summary>
-<a href="https://scryfall.com/card/iko/163/lead-the-stampede"><img src="https://c1.scryfall.com/file/scryfall-cards/normal/front/9/e/9e76b676-c7a3-4de6-a78d-3059a0df83f2.jpg" class="archetype-card rounded-image"/></a>
-<a href="https://scryfall.com/card/tpr/182/muscle-sliver"><img src="https://c1.scryfall.com/file/scryfall-cards/normal/front/f/3/f36faada-4f9c-43f9-b3e4-55714737a5c9.jpg" class="archetype-card rounded-image"/></a>
-<a href="https://scryfall.com/card/m14/189/predatory-sliver"><img src="https://c1.scryfall.com/file/scryfall-cards/normal/front/a/2/a2e37de8-66a1-4afa-aa6f-1151f849dfa8.jpg" class="archetype-card rounded-image"/></a>
-<a href="https://scryfall.com/card/tsr/246/virulent-sliver"><img src="https://c1.scryfall.com/file/scryfall-cards/normal/front/d/5/d5082a2a-e8b1-4799-ad29-a632d95ae1da.jpg" class="archetype-card rounded-image"/></a>
+<a href="https://scryfall.com/card/tpr/182/muscle-sliver"><img src="https://cards.scryfall.io/normal/front/f/3/f36faada-4f9c-43f9-b3e4-55714737a5c9.jpg" class="archetype-card rounded-image"/></a>
+<a href="https://scryfall.com/card/lgn/19/plated-sliver"><img src="https://cards.scryfall.io/normal/front/8/2/82846d31-4981-4ef1-85c3-703569146a84.jpg" class="archetype-card rounded-image"/></a>
+<a href="https://scryfall.com/card/m14/189/predatory-sliver"><img src="https://cards.scryfall.io/normal/front/a/2/a2e37de8-66a1-4afa-aa6f-1151f849dfa8.jpg" class="archetype-card rounded-image"/></a>
+<a href="https://scryfall.com/card/tsr/43/sidewinder-sliver"><img src="https://cards.scryfall.io/normal/front/5/6/5616e0c7-1f1d-4716-95e5-773a8e3ae5e3.jpg" class="archetype-card rounded-image"/></a>
+<a href="https://scryfall.com/card/cmm/837/sinew-sliver"><img src="https://cards.scryfall.io/normal/front/1/e/1ecc983e-bbe3-4bc1-97e9-e40ead987ef0.jpg" class="archetype-card rounded-image"/></a>
 </details><br/>
 
 
@@ -29,24 +30,9 @@
 
 <details>
   <summary>Click here to expand</summary>
-<a href="https://scryfall.com/card/mh1/119/bladeback-sliver"><img src="https://c1.scryfall.com/file/scryfall-cards/normal/front/7/0/7066c9ab-9420-46f9-a6c7-ce4d5273e2fa.jpg" class="archetype-card rounded-image"/></a>
-<a href="https://scryfall.com/card/jmp/302/chain-lightning"><img src="https://c1.scryfall.com/file/scryfall-cards/normal/front/b/7/b7cef88c-0ad6-47c4-b6c8-f989586aa635.jpg" class="archetype-card rounded-image"/></a>
-<a href="https://scryfall.com/card/rtr/93/electrickery"><img src="https://c1.scryfall.com/file/scryfall-cards/normal/front/5/e/5ed81ee8-d5e4-4127-876e-9bff81f9c726.jpg" class="archetype-card rounded-image"/></a>
-<a href="https://scryfall.com/card/tsr/205/gemhide-sliver"><img src="https://c1.scryfall.com/file/scryfall-cards/normal/front/1/1/110887a5-cbfd-431f-9208-06acc4ed2602.jpg" class="archetype-card rounded-image"/></a>
-<a href="https://scryfall.com/card/tmp/182/heart-sliver"><img src="https://c1.scryfall.com/file/scryfall-cards/normal/front/2/7/27a83ab6-0d15-49e4-90e3-b3a2a095c632.jpg" class="archetype-card rounded-image"/></a>
-<a href="https://scryfall.com/card/lgn/102/hunter-sliver"><img src="https://c1.scryfall.com/file/scryfall-cards/normal/front/c/a/ca9aea1a-6f50-4f66-9f36-2e214dce41b4.jpg" class="archetype-card rounded-image"/></a>
-<a href="https://scryfall.com/card/jmp/342/lightning-bolt"><img src="https://c1.scryfall.com/file/scryfall-cards/normal/front/c/e/ce711943-c1a1-43a0-8b89-8d169cfb8e06.jpg" class="archetype-card rounded-image"/></a>
-<a href="https://scryfall.com/card/tpr/226/metallic-sliver"><img src="https://c1.scryfall.com/file/scryfall-cards/normal/front/0/f/0f302984-9bf6-4583-865a-5545711e7a27.jpg" class="archetype-card rounded-image"/></a>
-<a href="https://scryfall.com/card/mm2/149/mutagenic-growth"><img src="https://c1.scryfall.com/file/scryfall-cards/normal/front/2/e/2e0861a2-1858-47af-8154-20a977c2b298.jpg" class="archetype-card rounded-image"/></a>
-<a href="https://scryfall.com/card/lgn/19/plated-sliver"><img src="https://c1.scryfall.com/file/scryfall-cards/normal/front/8/2/82846d31-4981-4ef1-85c3-703569146a84.jpg" class="archetype-card rounded-image"/></a>
-<a href="https://scryfall.com/card/lgn/136/quick-sliver"><img src="https://c1.scryfall.com/file/scryfall-cards/normal/front/3/0/30a60b2d-aeeb-4dbf-bf1a-20a274fe323f.jpg" class="archetype-card rounded-image"/></a>
-<a href="https://scryfall.com/card/m14/30/sentinel-sliver"><img src="https://c1.scryfall.com/file/scryfall-cards/normal/front/7/4/74c28560-e6ac-4be9-a253-22c4613b0d90.jpg" class="archetype-card rounded-image"/></a>
-<a href="https://scryfall.com/card/tsr/43/sidewinder-sliver"><img src="https://c1.scryfall.com/file/scryfall-cards/normal/front/5/6/5616e0c7-1f1d-4716-95e5-773a8e3ae5e3.jpg" class="archetype-card rounded-image"/></a>
-<a href="https://scryfall.com/card/tsr/44/sinew-sliver"><img src="https://c1.scryfall.com/file/scryfall-cards/normal/front/0/0/000edc61-b3ae-49e3-87f4-0250fa6a4501.jpg" class="archetype-card rounded-image"/></a>
-<a href="https://scryfall.com/card/tsr/230/spinneret-sliver"><img src="https://c1.scryfall.com/file/scryfall-cards/normal/front/7/f/7f86e30d-d9e8-48f7-8bd1-f2645f0ab3f4.jpg" class="archetype-card rounded-image"/></a>
-<a href="https://scryfall.com/card/m14/157/striking-sliver"><img src="https://c1.scryfall.com/file/scryfall-cards/normal/front/4/e/4ee9254b-3d98-4477-a82e-1450cf3ee96e.jpg" class="archetype-card rounded-image"/></a>
-<a href="https://scryfall.com/card/mh1/235/universal-automaton"><img src="https://c1.scryfall.com/file/scryfall-cards/normal/front/5/3/53c682e2-c90f-4f4b-9010-00b099e85518.jpg" class="archetype-card rounded-image"/></a>
-<a href="https://scryfall.com/card/mh1/193/winding-way"><img src="https://c1.scryfall.com/file/scryfall-cards/normal/front/4/e/4e5d9776-b6ce-4ad6-8acc-69115ba5de76.jpg" class="archetype-card rounded-image"/></a>
+<a href="https://scryfall.com/card/mh3/318/forest"><img src="https://cards.scryfall.io/normal/front/7/a/7ac34881-de32-42c7-af60-f992638e1da2.jpg" class="archetype-card rounded-image"/></a>
+<a href="https://scryfall.com/card/mh3/310/plains"><img src="https://cards.scryfall.io/normal/front/e/0/e0281fba-d771-4431-931f-920db2f14c47.jpg" class="archetype-card rounded-image"/></a>
+<a href="https://scryfall.com/card/tsr/246/virulent-sliver"><img src="https://cards.scryfall.io/normal/front/d/5/d5082a2a-e8b1-4799-ad29-a632d95ae1da.jpg" class="archetype-card rounded-image"/></a>
 </details><br/>
 
 

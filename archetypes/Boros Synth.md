@@ -19,15 +19,15 @@
 
 <details>
   <summary>Click here to expand</summary>
-<a href="https://scryfall.com/card/neo/138/experimental-synthesizer"><img src="https://c1.scryfall.com/file/scryfall-cards/normal/front/c/4/c47931c9-685d-4b83-8299-bc347224b4e8.jpg" class="archetype-card rounded-image"/></a>
-<a href="https://scryfall.com/card/2xm/125/galvanic-blast"><img src="https://c1.scryfall.com/file/scryfall-cards/normal/front/0/c/0cf8cb1e-314a-4894-82df-f9812825f52e.jpg" class="archetype-card rounded-image"/></a>
-<a href="https://scryfall.com/card/som/10/glint-hawk"><img src="https://c1.scryfall.com/file/scryfall-cards/normal/front/2/8/284c4710-4183-4743-9c8b-515cc98cbbb8.jpg" class="archetype-card rounded-image"/></a>
-<a href="https://scryfall.com/card/mm3/11/kor-skyfisher"><img src="https://c1.scryfall.com/file/scryfall-cards/normal/front/d/7/d7501662-1216-4e08-bd2b-e0a459057942.jpg" class="archetype-card rounded-image"/></a>
-<a href="https://scryfall.com/card/jmp/342/lightning-bolt"><img src="https://c1.scryfall.com/file/scryfall-cards/normal/front/c/e/ce711943-c1a1-43a0-8b89-8d169cfb8e06.jpg" class="archetype-card rounded-image"/></a>
-<a href="https://scryfall.com/card/cmr/191/makeshift-munitions"><img src="https://c1.scryfall.com/file/scryfall-cards/normal/front/1/9/19d1ad9f-e217-49fb-8b27-025ca133b6c9.jpg" class="archetype-card rounded-image"/></a>
-<a href="https://scryfall.com/card/ima/29/seeker-of-the-way"><img src="https://c1.scryfall.com/file/scryfall-cards/normal/front/5/2/52d7aafb-969f-4a39-9af3-125f7f5c99f3.jpg" class="archetype-card rounded-image"/></a>
-<a href="https://scryfall.com/card/znr/254/spare-supplies"><img src="https://c1.scryfall.com/file/scryfall-cards/normal/front/a/5/a53baf25-1782-427b-a9dd-fc9b8dc6444f.jpg" class="archetype-card rounded-image"/></a>
-<a href="https://scryfall.com/card/2xm/35/thraben-inspector"><img src="https://c1.scryfall.com/file/scryfall-cards/normal/front/2/b/2be39749-ad6f-4160-99eb-c677eee7f1b2.jpg" class="archetype-card rounded-image"/></a>
+<a href="https://scryfall.com/card/c21/276/ancient-den"><img src="https://cards.scryfall.io/normal/front/0/a/0a508907-a127-45cd-898a-e936bc08391f.jpg" class="archetype-card rounded-image"/></a>
+<a href="https://scryfall.com/card/neo/138/experimental-synthesizer"><img src="https://cards.scryfall.io/normal/front/c/4/c47931c9-685d-4b83-8299-bc347224b4e8.jpg" class="archetype-card rounded-image"/></a>
+<a href="https://scryfall.com/card/2xm/125/galvanic-blast"><img src="https://cards.scryfall.io/normal/front/0/c/0cf8cb1e-314a-4894-82df-f9812825f52e.jpg" class="archetype-card rounded-image"/></a>
+<a href="https://scryfall.com/card/som/10/glint-hawk"><img src="https://cards.scryfall.io/normal/front/2/8/284c4710-4183-4743-9c8b-515cc98cbbb8.jpg" class="archetype-card rounded-image"/></a>
+<a href="https://scryfall.com/card/mm3/11/kor-skyfisher"><img src="https://cards.scryfall.io/normal/front/d/7/d7501662-1216-4e08-bd2b-e0a459057942.jpg" class="archetype-card rounded-image"/></a>
+<a href="https://scryfall.com/card/clu/141/lightning-bolt"><img src="https://cards.scryfall.io/normal/front/7/7/77c6fa74-5543-42ac-9ead-0e890b188e99.jpg" class="archetype-card rounded-image"/></a>
+<a href="https://scryfall.com/card/clb/463/mountain"><img src="https://c1.scryfall.com/file/scryfall-cards/normal/front/0/a/0ab63e49-0869-4c7c-a033-d8e50032dd13.jpg" class="archetype-card rounded-image"/></a>
+<a href="https://scryfall.com/card/mh3/310/plains"><img src="https://cards.scryfall.io/normal/front/e/0/e0281fba-d771-4431-931f-920db2f14c47.jpg" class="archetype-card rounded-image"/></a>
+<a href="https://scryfall.com/card/cmm/66/thraben-inspector"><img src="https://cards.scryfall.io/normal/front/2/9/299cc386-2ed5-4504-9ba6-17a52e0c9a0c.jpg" class="archetype-card rounded-image"/></a>
 </details><br/>
 
 
@@ -36,11 +36,12 @@
 
 <details>
   <summary>Click here to expand</summary>
-<a href="https://scryfall.com/card/td2/4/ardent-recruit"><img src="https://c1.scryfall.com/file/scryfall-cards/normal/front/3/a/3a7f9bd7-7232-4956-873d-52ff82eabfb3.jpg" class="archetype-card rounded-image"/></a>
-<a href="https://scryfall.com/card/afr/9/dawnbringer-cleric"><img src="https://c1.scryfall.com/file/scryfall-cards/normal/front/c/0/c00856f7-fef5-4ba5-9079-59a81d452c82.jpg" class="archetype-card rounded-image"/></a>
-<a href="https://scryfall.com/card/mh1/122/firebolt"><img src="https://c1.scryfall.com/file/scryfall-cards/normal/front/8/8/882b8f98-ee51-4c94-a3eb-c79eb2b50d78.jpg" class="archetype-card rounded-image"/></a>
-<a href="https://scryfall.com/card/c21/245/ichor-wellspring"><img src="https://c1.scryfall.com/file/scryfall-cards/normal/front/1/c/1ccdb407-ac8f-4736-89d3-ab0d086096ea.jpg" class="archetype-card rounded-image"/></a>
-<a href="https://scryfall.com/card/cmd/17/journey-to-nowhere"><img src="https://c1.scryfall.com/file/scryfall-cards/normal/front/4/6/4686b51c-e02b-48c1-bafe-e8d08a5407b9.jpg" class="archetype-card rounded-image"/></a>
+<a href="https://scryfall.com/card/clb/15/dawnbringer-cleric"><img src="https://cards.scryfall.io/normal/front/2/0/201f06ef-c180-4ce3-afaf-bec3b14c0222.jpg" class="archetype-card rounded-image"/></a>
+<a href="https://scryfall.com/card/phed/24/great-furnace"><img src="https://c1.scryfall.com/file/scryfall-cards/normal/front/2/a/2a7d2d8f-4736-4c99-aba2-b14960395ad6.jpg" class="archetype-card rounded-image"/></a>
+<a href="https://scryfall.com/card/cmd/17/journey-to-nowhere"><img src="https://cards.scryfall.io/normal/front/4/6/4686b51c-e02b-48c1-bafe-e8d08a5407b9.jpg" class="archetype-card rounded-image"/></a>
+<a href="https://scryfall.com/card/cmm/242/makeshift-munitions"><img src="https://cards.scryfall.io/normal/front/6/0/60715b6d-b223-431a-85d8-27d7c05469b2.jpg" class="archetype-card rounded-image"/></a>
+<a href="https://scryfall.com/card/mh2/253/rustvale-bridge"><img src="https://cards.scryfall.io/normal/front/2/2/2207467a-b82a-47ae-8867-15a859328fe9.jpg" class="archetype-card rounded-image"/></a>
+<a href="https://scryfall.com/card/mom/276/wind-scarred-crag"><img src="https://cards.scryfall.io/normal/front/7/f/7f2642cd-e3cc-4aab-8c00-4987284509b3.jpg" class="archetype-card rounded-image"/></a>
 </details><br/>
 
 

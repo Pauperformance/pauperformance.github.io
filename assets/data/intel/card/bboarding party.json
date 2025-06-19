@@ -1,0 +1,253 @@
+{
+    "archetypes": {
+        "py/set": [
+            {
+                "aliases": [
+                    "WRG Turbo Emblem"
+                ],
+                "description": "_Still missing. Please join us on [Discord](https://discord.gg/fYQbpjjkQ3) to contribute to the Academy._",
+                "dominant_mana": [
+                    "W",
+                    "R",
+                    "G"
+                ],
+                "family": "Turbo Emblem",
+                "game_type": [
+                    "Aggro",
+                    "Combo"
+                ],
+                "must_have_cards": [
+                    "Crimson Fleet Commodore",
+                    "Simian Spirit Guide",
+                    "Avenging Hunter",
+                    "Goliath Paladin"
+                ],
+                "must_not_have_cards": [],
+                "name": "Naya Turbo Emblem",
+                "py/object": "pauperformance_bot.entity.config.archetype.ArchetypeConfig",
+                "reference_decks": [],
+                "resource_sideboard": null,
+                "resources": [],
+                "resources_discord": []
+            },
+            {
+                "aliases": [],
+                "description": "_Still missing. Please join us on [Discord](https://discord.gg/fYQbpjjkQ3) to contribute to the Academy._",
+                "dominant_mana": [
+                    "R"
+                ],
+                "family": "Tron",
+                "game_type": [
+                    "Control"
+                ],
+                "must_have_cards": [
+                    "Rolling Thunder"
+                ],
+                "must_not_have_cards": [],
+                "name": "MonoR Tron",
+                "py/object": "pauperformance_bot.entity.config.archetype.ArchetypeConfig",
+                "reference_decks": [],
+                "resource_sideboard": null,
+                "resources": [],
+                "resources_discord": []
+            },
+            {
+                "aliases": [
+                    "URG Ponza"
+                ],
+                "description": "_Still missing. Please join us on [Discord](https://discord.gg/fYQbpjjkQ3) to contribute to the Academy._",
+                "dominant_mana": [
+                    "U",
+                    "R",
+                    "G"
+                ],
+                "family": "Ponza",
+                "game_type": [
+                    "Control"
+                ],
+                "must_have_cards": [
+                    "Mulldrifter"
+                ],
+                "must_not_have_cards": [],
+                "name": "Temur Ponza",
+                "py/object": "pauperformance_bot.entity.config.archetype.ArchetypeConfig",
+                "reference_decks": [],
+                "resource_sideboard": null,
+                "resources": [],
+                "resources_discord": []
+            },
+            {
+                "aliases": [
+                    "Jund Wildfire"
+                ],
+                "description": "_Still missing. Please join us on [Discord](https://discord.gg/fYQbpjjkQ3) to contribute to the Academy._",
+                "dominant_mana": [
+                    "B",
+                    "R",
+                    "G"
+                ],
+                "family": "Cascade",
+                "game_type": [
+                    "Midrange"
+                ],
+                "must_have_cards": [],
+                "must_not_have_cards": [],
+                "name": "Jund Cascade",
+                "py/object": "pauperformance_bot.entity.config.archetype.ArchetypeConfig",
+                "reference_decks": [
+                    "Jund Cascade 701.001.Ixidor29"
+                ],
+                "resource_sideboard": null,
+                "resources": [
+                    {
+                        "author": "<i class=\"fa-brands fa-discord\"></i>",
+                        "date": "~",
+                        "language": "\ud83c\uddec\ud83c\udde7",
+                        "link": "https://discord.gg/wTxNJkpmJS",
+                        "name": "Pauper Cascade Discord",
+                        "py/object": "pauperformance_bot.entity.config.archetype.Resource"
+                    }
+                ],
+                "resources_discord": []
+            },
+            {
+                "aliases": [
+                    "RG Ponza"
+                ],
+                "description": "_Still missing. Please join us on [Discord](https://discord.gg/fYQbpjjkQ3) to contribute to the Academy._",
+                "dominant_mana": [
+                    "R",
+                    "G"
+                ],
+                "family": "Ponza",
+                "game_type": [
+                    "Control"
+                ],
+                "must_have_cards": [],
+                "must_not_have_cards": [
+                    "Mulldrifter"
+                ],
+                "name": "Gruul Ponza",
+                "py/object": "pauperformance_bot.entity.config.archetype.ArchetypeConfig",
+                "reference_decks": [
+                    "Gruul Ponza 735.001.apas72"
+                ],
+                "resource_sideboard": null,
+                "resources": [],
+                "resources_discord": []
+            },
+            {
+                "aliases": [
+                    "Wonderwalls"
+                ],
+                "description": "\nWalls is a deck based around the mana generation capability of [Overgrown Battlement](https://scryfall.com/card/jmp/417/overgrown-battlement) and [Axebane Guardian](https://scryfall.com/card/rtr/115/axebane-guardian), that both produce mana equal to the total amount of [defenders](https://mtg.fandom.com/wiki/Defender) the player controls.\nTwo main versions of the deck exists, with many sub-versions: combo and [cascade](https://mtg.fandom.com/wiki/Cascade).\n\nThe first version is a pure combo deck that allows to kill through infinite damage usually by turn 4, or to mill the opponent.\nKey cards to enable the combo are [Galvanic Alchemist](https://scryfall.com/card/avr/54/galvanic-alchemist), [Freed from the Real](https://scryfall.com/card/a25/58/freed-from-the-real), and [Secret Door](https://scryfall.com/card/afr/71/secret-door).\n\nThe second version aims at quickly putting into play [Boarding Party](https://scryfall.com/card/cmr/163/boarding-party) and [Annoyed Altisaur](https://scryfall.com/card/cmr/216/annoyed-altisaur), overwhelming the opponent on the board by turn 4-5.\n\nA hybrid version of the two exists, with main deck cascade that can transform into combo with a transformational sideboard.",
+                "dominant_mana": [
+                    "G"
+                ],
+                "family": null,
+                "game_type": [
+                    "Combo"
+                ],
+                "must_have_cards": [],
+                "must_not_have_cards": [],
+                "name": "Walls",
+                "py/object": "pauperformance_bot.entity.config.archetype.ArchetypeConfig",
+                "reference_decks": [
+                    "Walls 722.002.apas72",
+                    "Walls 696.001.HouseOfManaMTG",
+                    "Walls 658.001.Mathonical"
+                ],
+                "resource_sideboard": {
+                    "link": "https://docs.google.com/spreadsheets/d/15SW61fnBwcNJeBYf9ROgkhmYnqnQNOcyAXTr61SAWjk/edit?usp=sharing",
+                    "py/object": "pauperformance_bot.entity.config.archetype.SideboardResource"
+                },
+                "resources": [
+                    {
+                        "author": "Andrea Passaro (apas72)",
+                        "date": "2022-03-11",
+                        "language": "\ud83c\uddec\ud83c\udde7",
+                        "link": "https://www.legapauperonline.com/pauper-walls-combo/",
+                        "name": "Pauper Walls Combo",
+                        "py/object": "pauperformance_bot.entity.config.archetype.Resource"
+                    },
+                    {
+                        "author": "Paige Smith",
+                        "date": "2020-02-12",
+                        "language": "\ud83c\uddec\ud83c\udde7",
+                        "link": "https://www.coolstuffinc.com/a/kendrasmith-02122020-anyway-heres-wonderwalls",
+                        "name": "Anyway, Here's Wonderwalls",
+                        "py/object": "pauperformance_bot.entity.config.archetype.Resource"
+                    }
+                ],
+                "resources_discord": [
+                    {
+                        "language": "\ud83c\uddec\ud83c\udde7",
+                        "link": "https://discord.gg/p4kESAk",
+                        "name": "Pauper Walls Discord",
+                        "py/object": "pauperformance_bot.entity.config.archetype.DiscordResource"
+                    }
+                ]
+            },
+            {
+                "aliases": [
+                    "RG Turbo Emblem"
+                ],
+                "description": "_Still missing. Please join us on [Discord](https://discord.gg/fYQbpjjkQ3) to contribute to the Academy._",
+                "dominant_mana": [
+                    "R",
+                    "G"
+                ],
+                "family": "Turbo Emblem",
+                "game_type": [
+                    "Aggro",
+                    "Combo"
+                ],
+                "must_have_cards": [
+                    "Simian Spirit Guide",
+                    "Avenging Hunter"
+                ],
+                "must_not_have_cards": [
+                    "Goliath Paladin"
+                ],
+                "name": "Gruul Turbo Emblem",
+                "py/object": "pauperformance_bot.entity.config.archetype.ArchetypeConfig",
+                "reference_decks": [],
+                "resource_sideboard": null,
+                "resources": [],
+                "resources_discord": []
+            },
+            {
+                "aliases": [
+                    "Temur Wildfire"
+                ],
+                "description": "_Still missing. Please join us on [Discord](https://discord.gg/fYQbpjjkQ3) to contribute to the Academy._",
+                "dominant_mana": [
+                    "U",
+                    "G",
+                    "R"
+                ],
+                "family": "Cascade",
+                "game_type": [
+                    "Midrange"
+                ],
+                "must_have_cards": [],
+                "must_not_have_cards": [],
+                "name": "Temur Cascade",
+                "py/object": "pauperformance_bot.entity.config.archetype.ArchetypeConfig",
+                "reference_decks": [
+                    "Temur Cascade 701.001.King-Strawberry"
+                ],
+                "resource_sideboard": null,
+                "resources": [],
+                "resources_discord": [
+                    {
+                        "language": "\ud83c\uddec\ud83c\udde7",
+                        "link": "https://discord.gg/wTxNJkpmJS",
+                        "name": "Pauper Cascade Discord",
+                        "py/object": "pauperformance_bot.entity.config.archetype.DiscordResource"
+                    }
+                ]
+            }
+        ]
+    }
+}

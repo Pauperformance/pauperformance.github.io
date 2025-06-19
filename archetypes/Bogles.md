@@ -23,7 +23,7 @@ Staples of the archetype are [Rancor](https://scryfall.com/card/a25/186/rancor),
 
 To fix its mana base, Bogles uses additional enchantments like [Abundant Growth](https://scryfall.com/card/ema/156/abundant-growth) and [Utopia Sprawl](https://scryfall.com/card/a25/192/utopia-sprawl), that also contribute to the offensive strategy.
 
-Bogle is a non-interactive deck, with a fast clock, a low mana curve and all-in strategy that doesn't offer many mid/late-game options.
+Bogles is a non-interactive deck, with a fast clock, a low mana curve and all-in strategy that doesn't offer many mid/late-game options.
 However, given its popularity, opponents typically reserve sideboard slots for (mass) enchantment removals that can disrupt the aggro plan.
 
 
@@ -31,37 +31,19 @@ However, given its popularity, opponents typically reserve sideboard slots for (
 
 <details>
   <summary>Click here to expand</summary>
-<a href="https://scryfall.com/card/ema/156/abundant-growth"><img src="https://c1.scryfall.com/file/scryfall-cards/normal/front/b/f/bfc00bf8-236b-4c68-be85-1609be122259.jpg" class="archetype-card rounded-image"/></a>
-<a href="https://scryfall.com/card/ema/157/ancestral-mask"><img src="https://c1.scryfall.com/file/scryfall-cards/normal/front/c/7/c7a19fc5-20f3-48d2-8c12-e012d3b302e7.jpg" class="archetype-card rounded-image"/></a>
-<a href="https://scryfall.com/card/ema/195/armadillo-cloak"><img src="https://c1.scryfall.com/file/scryfall-cards/normal/front/f/a/fa232c65-dbb4-4414-bd95-b3bbd321c653.jpg" class="archetype-card rounded-image"/></a>
-<a href="https://scryfall.com/card/rtr/9/ethereal-armor"><img src="https://c1.scryfall.com/file/scryfall-cards/normal/front/7/6/76960e65-e5c7-4414-b9a5-37d7b2ded4a0.jpg" class="archetype-card rounded-image"/></a>
-<a href="https://scryfall.com/card/m14/176/gladecover-scout"><img src="https://c1.scryfall.com/file/scryfall-cards/normal/front/e/1/e112d77d-f019-4709-b31a-b02952df0e35.jpg" class="archetype-card rounded-image"/></a>
-<a href="https://scryfall.com/card/a25/186/rancor"><img src="https://c1.scryfall.com/file/scryfall-cards/normal/front/8/a/8a4d8527-af29-408d-a3a3-6781db0cf439.jpg" class="archetype-card rounded-image"/></a>
-<a href="https://scryfall.com/card/uma/223/slippery-bogle"><img src="https://c1.scryfall.com/file/scryfall-cards/normal/front/c/4/c4e4bbea-7e3f-4de0-bb01-dfd67f21c254.jpg" class="archetype-card rounded-image"/></a>
-<a href="https://scryfall.com/card/a25/192/utopia-sprawl"><img src="https://c1.scryfall.com/file/scryfall-cards/normal/front/1/5/15625580-3cbd-459c-a667-87efdcdaf2b2.jpg" class="archetype-card rounded-image"/></a>
+<a href="https://scryfall.com/card/dmc/128/abundant-growth"><img src="https://cards.scryfall.io/normal/front/6/d/6dba2d06-13af-464d-b007-9027cade1cdf.jpg" class="archetype-card rounded-image"/></a>
+<a href="https://scryfall.com/card/ema/157/ancestral-mask"><img src="https://cards.scryfall.io/normal/front/c/7/c7a19fc5-20f3-48d2-8c12-e012d3b302e7.jpg" class="archetype-card rounded-image"/></a>
+<a href="https://scryfall.com/card/ema/195/armadillo-cloak"><img src="https://cards.scryfall.io/normal/front/f/a/fa232c65-dbb4-4414-bd95-b3bbd321c653.jpg" class="archetype-card rounded-image"/></a>
+<a href="https://scryfall.com/card/rtr/9/ethereal-armor"><img src="https://cards.scryfall.io/normal/front/7/6/76960e65-e5c7-4414-b9a5-37d7b2ded4a0.jpg" class="archetype-card rounded-image"/></a>
+<a href="https://scryfall.com/card/mh3/318/forest"><img src="https://cards.scryfall.io/normal/front/7/a/7ac34881-de32-42c7-af60-f992638e1da2.jpg" class="archetype-card rounded-image"/></a>
+<a href="https://scryfall.com/card/m14/176/gladecover-scout"><img src="https://cards.scryfall.io/normal/front/e/1/e112d77d-f019-4709-b31a-b02952df0e35.jpg" class="archetype-card rounded-image"/></a>
+<a href="https://scryfall.com/card/2x2/156/rancor"><img src="https://cards.scryfall.io/normal/front/8/6/86d6b411-4a31-4bfc-8dd6-e19f553bb29b.jpg" class="archetype-card rounded-image"/></a>
+<a href="https://scryfall.com/card/otc/206/silhana-ledgewalker"><img src="https://cards.scryfall.io/normal/front/2/1/21a2d11e-48b7-4e9a-a574-838cc26c2b17.jpg" class="archetype-card rounded-image"/></a>
+<a href="https://scryfall.com/card/uma/223/slippery-bogle"><img src="https://cards.scryfall.io/normal/front/c/4/c4e4bbea-7e3f-4de0-bb01-dfd67f21c254.jpg" class="archetype-card rounded-image"/></a>
+<a href="https://scryfall.com/card/rvr/159/utopia-sprawl"><img src="https://cards.scryfall.io/normal/front/5/e/5ea568df-04a1-4012-98ec-ba75e189e0ca.jpg" class="archetype-card rounded-image"/></a>
 </details><br/>
 
 
-
-## **Frequent cards**
-
-<details>
-  <summary>Click here to expand</summary>
-<a href="https://scryfall.com/card/mh1/220/arcums-astrolabe"><img src="https://c1.scryfall.com/file/scryfall-cards/normal/front/c/2/c2462fdf-a594-47d0-8e10-b55901e350d9.jpg" class="archetype-card rounded-image"/></a>
-<a href="https://scryfall.com/card/akh/156/benefaction-of-rhonas"><img src="https://c1.scryfall.com/file/scryfall-cards/normal/front/d/c/dc98fcdd-8482-4462-ab71-935cea48e409.jpg" class="archetype-card rounded-image"/></a>
-<a href="https://scryfall.com/card/akh/7/cartouche-of-solidarity"><img src="https://c1.scryfall.com/file/scryfall-cards/normal/front/9/0/90eaf94e-85a7-4958-aa58-8e2fe44db58d.jpg" class="archetype-card rounded-image"/></a>
-<a href="https://scryfall.com/card/akh/158/cartouche-of-strength"><img src="https://c1.scryfall.com/file/scryfall-cards/normal/front/d/6/d6bb237c-4e39-4879-90b4-2f507a90d3d7.jpg" class="archetype-card rounded-image"/></a>
-<a href="https://scryfall.com/card/neo/180/commune-with-spirits"><img src="https://c1.scryfall.com/file/scryfall-cards/normal/front/a/3/a35ff4dd-bad3-4496-82b3-8253f48af06d.jpg" class="archetype-card rounded-image"/></a>
-<a href="https://scryfall.com/card/ema/162/commune-with-the-gods"><img src="https://c1.scryfall.com/file/scryfall-cards/normal/front/6/7/67d95f6f-3ff0-483d-b98f-ccb4fb5715f4.jpg" class="archetype-card rounded-image"/></a>
-<a href="https://scryfall.com/card/thb/20/heliods-pilgrim"><img src="https://c1.scryfall.com/file/scryfall-cards/normal/front/c/a/cafce2f5-f4f4-465b-96dc-bcdd29d4e4bb.jpg" class="archetype-card rounded-image"/></a>
-<a href="https://scryfall.com/card/mm3/11/kor-skyfisher"><img src="https://c1.scryfall.com/file/scryfall-cards/normal/front/d/7/d7501662-1216-4e08-bd2b-e0a459057942.jpg" class="archetype-card rounded-image"/></a>
-<a href="https://scryfall.com/card/iko/170/ram-through"><img src="https://c1.scryfall.com/file/scryfall-cards/normal/front/a/c/ac0b24e7-14e7-45ee-b5d8-bdb8674b669c.jpg" class="archetype-card rounded-image"/></a>
-<a href="https://scryfall.com/card/thb/36/sentinels-eyes"><img src="https://c1.scryfall.com/file/scryfall-cards/normal/front/3/2/32adc118-b81e-48c2-b7ef-b62e8c3308d6.jpg" class="archetype-card rounded-image"/></a>
-<a href="https://scryfall.com/card/pca/77/silhana-ledgewalker"><img src="https://c1.scryfall.com/file/scryfall-cards/normal/front/8/a/8ad3bdce-c0fa-4b5f-af14-7452b683960f.jpg" class="archetype-card rounded-image"/></a>
-<a href="https://scryfall.com/card/uma/184/spider-umbra"><img src="https://c1.scryfall.com/file/scryfall-cards/normal/front/7/6/762b8d61-53c9-41e1-aaa7-098b91d9b938.jpg" class="archetype-card rounded-image"/></a>
-<a href="https://scryfall.com/card/neo/38/spirited-companion"><img src="https://c1.scryfall.com/file/scryfall-cards/normal/front/5/a/5aa91a9e-2fe2-43bc-aa9c-cfb8a71829ff.jpg" class="archetype-card rounded-image"/></a>
-<a href="https://scryfall.com/card/aer/126/unbridled-growth"><img src="https://c1.scryfall.com/file/scryfall-cards/normal/front/3/9/393fc419-a6ce-447d-9994-744cf41f9a27.jpg" class="archetype-card rounded-image"/></a>
-</details><br/>
 
 
 

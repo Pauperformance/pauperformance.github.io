@@ -15,6 +15,22 @@
 **Description**: 
 
 
+## **Staples**
+
+<details>
+  <summary>Click here to expand</summary>
+<a href="https://scryfall.com/card/clb/880/ash-barrens"><img src="https://c1.scryfall.com/file/scryfall-cards/normal/front/f/b/fb71aebf-f5d3-45ee-91a4-51088f7141ec.jpg" class="archetype-card rounded-image"/></a>
+<a href="https://scryfall.com/card/uma/156/basking-rootwalla"><img src="https://cards.scryfall.io/normal/front/2/6/26bfde99-7761-48e1-851a-522f888d0f6c.jpg" class="archetype-card rounded-image"/></a>
+<a href="https://scryfall.com/card/2x2/189/burning-tree-emissary"><img src="https://cards.scryfall.io/normal/front/b/a/ba327a5e-bd57-4e24-b4b4-062202df30e1.jpg" class="archetype-card rounded-image"/></a>
+<a href="https://scryfall.com/card/rtr/93/electrickery"><img src="https://cards.scryfall.io/normal/front/5/e/5ed81ee8-d5e4-4127-876e-9bff81f9c726.jpg" class="archetype-card rounded-image"/></a>
+<a href="https://scryfall.com/card/mh2/280/gorilla-shaman"><img src="https://c1.scryfall.com/file/scryfall-cards/normal/front/c/8/c8f8ee19-3a88-40fa-85d8-386ffe06efd7.jpg" class="archetype-card rounded-image"/></a>
+<a href="https://scryfall.com/card/ema/137/kird-ape"><img src="https://cards.scryfall.io/normal/front/e/1/e14a5c79-29a3-4415-9b70-b287a474a0e0.jpg" class="archetype-card rounded-image"/></a>
+<a href="https://scryfall.com/card/clu/141/lightning-bolt"><img src="https://cards.scryfall.io/normal/front/7/7/77c6fa74-5543-42ac-9ead-0e890b188e99.jpg" class="archetype-card rounded-image"/></a>
+<a href="https://scryfall.com/card/ema/142/pyroblast"><img src="https://cards.scryfall.io/normal/front/b/0/b029eb9a-dd7a-40c2-96c4-0063d9cc002c.jpg" class="archetype-card rounded-image"/></a>
+<a href="https://scryfall.com/card/uma/194/wild-mongrel"><img src="https://c1.scryfall.com/file/scryfall-cards/normal/front/4/d/4d5be4ab-f85a-4272-ac08-99cb0105eb11.jpg" class="archetype-card rounded-image"/></a>
+<a href="https://scryfall.com/card/ddh/4/wild-nacatl"><img src="https://cards.scryfall.io/normal/front/5/a/5a3bb291-11d1-45e0-a60a-e75c7dc94b94.jpg" class="archetype-card rounded-image"/></a>
+</details><br/>
+
 
 
 

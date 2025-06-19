@@ -28,12 +28,13 @@ A hybrid version of the two exists, with main deck cascade that can transform in
 
 <details>
   <summary>Click here to expand</summary>
-<a href="https://scryfall.com/card/rtr/115/axebane-guardian"><img src="https://c1.scryfall.com/file/scryfall-cards/normal/front/7/2/725584fe-9e97-4020-89b1-5e5b45a5beb2.jpg" class="archetype-card rounded-image"/></a>
-<a href="https://scryfall.com/card/iko/163/lead-the-stampede"><img src="https://c1.scryfall.com/file/scryfall-cards/normal/front/9/e/9e76b676-c7a3-4de6-a78d-3059a0df83f2.jpg" class="archetype-card rounded-image"/></a>
-<a href="https://scryfall.com/card/jmp/417/overgrown-battlement"><img src="https://c1.scryfall.com/file/scryfall-cards/normal/front/5/0/50974264-b509-4df9-802b-623805a4cbee.jpg" class="archetype-card rounded-image"/></a>
-<a href="https://scryfall.com/card/mh2/285/quirion-ranger"><img src="https://c1.scryfall.com/file/scryfall-cards/normal/front/3/2/320fdf89-e158-41c5-b0bf-fee9dec36a75.jpg" class="archetype-card rounded-image"/></a>
-<a href="https://scryfall.com/card/rna/139/saruli-caretaker"><img src="https://c1.scryfall.com/file/scryfall-cards/normal/front/e/f/ef3358cb-714c-49bf-b7e9-a69d02d7799e.jpg" class="archetype-card rounded-image"/></a>
-<a href="https://scryfall.com/card/mh1/193/winding-way"><img src="https://c1.scryfall.com/file/scryfall-cards/normal/front/4/e/4e5d9776-b6ce-4ad6-8acc-69115ba5de76.jpg" class="archetype-card rounded-image"/></a>
+<a href="https://scryfall.com/card/rtr/115/axebane-guardian"><img src="https://cards.scryfall.io/normal/front/7/2/725584fe-9e97-4020-89b1-5e5b45a5beb2.jpg" class="archetype-card rounded-image"/></a>
+<a href="https://scryfall.com/card/mh3/318/forest"><img src="https://cards.scryfall.io/normal/front/7/a/7ac34881-de32-42c7-af60-f992638e1da2.jpg" class="archetype-card rounded-image"/></a>
+<a href="https://scryfall.com/card/iko/163/lead-the-stampede"><img src="https://cards.scryfall.io/normal/front/9/e/9e76b676-c7a3-4de6-a78d-3059a0df83f2.jpg" class="archetype-card rounded-image"/></a>
+<a href="https://scryfall.com/card/ncc/303/overgrown-battlement"><img src="https://cards.scryfall.io/normal/front/1/3/137852ce-3699-4dd0-8ead-9b267e9bb900.jpg" class="archetype-card rounded-image"/></a>
+<a href="https://scryfall.com/card/mh2/285/quirion-ranger"><img src="https://cards.scryfall.io/normal/front/3/2/320fdf89-e158-41c5-b0bf-fee9dec36a75.jpg" class="archetype-card rounded-image"/></a>
+<a href="https://scryfall.com/card/rna/139/saruli-caretaker"><img src="https://cards.scryfall.io/normal/front/e/f/ef3358cb-714c-49bf-b7e9-a69d02d7799e.jpg" class="archetype-card rounded-image"/></a>
+<a href="https://scryfall.com/card/otc/213/winding-way"><img src="https://cards.scryfall.io/normal/front/d/3/d3340062-3071-4d8e-98f8-fd3343a011ad.jpg" class="archetype-card rounded-image"/></a>
 </details><br/>
 
 
@@ -42,32 +43,12 @@ A hybrid version of the two exists, with main deck cascade that can transform in
 
 <details>
   <summary>Click here to expand</summary>
-<a href="https://scryfall.com/card/cmr/216/annoyed-altisaur"><img src="https://c1.scryfall.com/file/scryfall-cards/normal/front/7/5/7536d618-0c98-45bb-913b-b8117b4acf87.jpg" class="archetype-card rounded-image"/></a>
-<a href="https://scryfall.com/card/mm3/119/avacyns-pilgrim"><img src="https://c1.scryfall.com/file/scryfall-cards/normal/front/e/9/e9600bdc-6a1b-4f7a-aa7d-538fb89df937.jpg" class="archetype-card rounded-image"/></a>
-<a href="https://scryfall.com/card/ddp/45/bloodrite-invoker"><img src="https://c1.scryfall.com/file/scryfall-cards/normal/front/9/4/94ebd19f-c3ec-41de-bde0-3118b34b76a4.jpg" class="archetype-card rounded-image"/></a>
-<a href="https://scryfall.com/card/cmr/163/boarding-party"><img src="https://c1.scryfall.com/file/scryfall-cards/normal/front/1/8/186adacf-434b-475b-9b85-749615ae002b.jpg" class="archetype-card rounded-image"/></a>
-<a href="https://scryfall.com/card/eld/217/crashing-drawbridge"><img src="https://c1.scryfall.com/file/scryfall-cards/normal/front/b/7/b7d7108f-635c-423b-988a-bc8fc4c6edef.jpg" class="archetype-card rounded-image"/></a>
-<a href="https://scryfall.com/card/rav/46/drift-of-phantasms"><img src="https://c1.scryfall.com/file/scryfall-cards/normal/front/c/1/c1096ce5-f776-4028-b231-e6eaee35014b.jpg" class="archetype-card rounded-image"/></a>
-<a href="https://scryfall.com/card/khc/58/elvish-mystic"><img src="https://c1.scryfall.com/file/scryfall-cards/normal/front/e/d/ed7a0227-ac70-40fb-8198-a55eacf913fa.jpg" class="archetype-card rounded-image"/></a>
-<a href="https://scryfall.com/card/a25/58/freed-from-the-real"><img src="https://c1.scryfall.com/file/scryfall-cards/normal/front/c/4/c47ee6f6-50c1-4f56-b9ce-4c309bfb92ca.jpg" class="archetype-card rounded-image"/></a>
-<a href="https://scryfall.com/card/cmr/228/fyndhorn-elves"><img src="https://c1.scryfall.com/file/scryfall-cards/normal/front/4/5/450744cf-7eba-491b-97b0-ca80c6368bbb.jpg" class="archetype-card rounded-image"/></a>
-<a href="https://scryfall.com/card/avr/54/galvanic-alchemist"><img src="https://c1.scryfall.com/file/scryfall-cards/normal/front/b/0/b0e24d65-0e6f-4978-8de1-c5e4acac12fb.jpg" class="archetype-card rounded-image"/></a>
-<a href="https://scryfall.com/card/khm/178/jaspera-sentinel"><img src="https://c1.scryfall.com/file/scryfall-cards/normal/front/1/a/1a68615d-9808-479d-aa80-50651246954e.jpg" class="archetype-card rounded-image"/></a>
-<a href="https://scryfall.com/card/m19/314/llanowar-elves"><img src="https://c1.scryfall.com/file/scryfall-cards/normal/front/7/3/73542493-cd0b-4bb7-a5b8-8f889c76e4d6.jpg" class="archetype-card rounded-image"/></a>
-<a href="https://scryfall.com/card/ima/67/mnemonic-wall"><img src="https://c1.scryfall.com/file/scryfall-cards/normal/front/a/3/a3e6784b-78e8-4f0b-8d27-d49c7cea9252.jpg" class="archetype-card rounded-image"/></a>
-<a href="https://scryfall.com/card/khc/42/mulldrifter"><img src="https://c1.scryfall.com/file/scryfall-cards/normal/front/3/4/345fd005-5052-4500-a260-3649500e21f4.jpg" class="archetype-card rounded-image"/></a>
-<a href="https://scryfall.com/card/chk/234/orochi-leafcaller"><img src="https://c1.scryfall.com/file/scryfall-cards/normal/front/f/6/f6c39031-1c49-4c1e-83df-66c3795ddc72.jpg" class="archetype-card rounded-image"/></a>
-<a href="https://scryfall.com/card/c21/202/pulse-of-murasa"><img src="https://c1.scryfall.com/file/scryfall-cards/normal/front/a/4/a4b9f8f4-d704-4f16-8495-cf8185285859.jpg" class="archetype-card rounded-image"/></a>
-<a href="https://scryfall.com/card/scg/72/reaping-the-graves"><img src="https://c1.scryfall.com/file/scryfall-cards/normal/front/7/6/760a66bd-2821-4710-8f02-3c30772dd884.jpg" class="archetype-card rounded-image"/></a>
-<a href="https://scryfall.com/card/afr/71/secret-door"><img src="https://c1.scryfall.com/file/scryfall-cards/normal/front/3/1/3191e400-aa4e-4955-aca0-ecbe63ea240f.jpg" class="archetype-card rounded-image"/></a>
-<a href="https://scryfall.com/card/me1/166/shield-sphere"><img src="https://c1.scryfall.com/file/scryfall-cards/normal/front/7/a/7a76a97e-a857-4593-ae7c-e393d8a868ac.jpg" class="archetype-card rounded-image"/></a>
-<a href="https://scryfall.com/card/me2/184/tinder-wall"><img src="https://c1.scryfall.com/file/scryfall-cards/normal/front/1/e/1e62598f-0a91-4cfd-9a28-c3bda61c9ead.jpg" class="archetype-card rounded-image"/></a>
-<a href="https://scryfall.com/card/znr/173/tuktuk-rubblefort"><img src="https://c1.scryfall.com/file/scryfall-cards/normal/front/0/2/02eedf9d-e26c-405c-aee5-1b3493dc5e9b.jpg" class="archetype-card rounded-image"/></a>
-<a href="https://scryfall.com/card/uma/8/ulamogs-crusher"><img src="https://c1.scryfall.com/file/scryfall-cards/normal/front/e/d/eda0fd38-38e6-4e9b-9c17-4d855e01b1e1.jpg" class="archetype-card rounded-image"/></a>
-<a href="https://scryfall.com/card/cmr/206/valakut-invoker"><img src="https://c1.scryfall.com/file/scryfall-cards/normal/front/b/8/b8000d86-60e7-4edd-b685-14ade08b76f2.jpg" class="archetype-card rounded-image"/></a>
-<a href="https://scryfall.com/card/ima/153/vent-sentinel"><img src="https://c1.scryfall.com/file/scryfall-cards/normal/front/6/b/6b6f563e-4f94-4caf-83b9-bfc64e18bc9c.jpg" class="archetype-card rounded-image"/></a>
-<a href="https://scryfall.com/card/war/182/viviens-grizzly"><img src="https://c1.scryfall.com/file/scryfall-cards/normal/front/3/7/37f2571b-6756-462c-9e71-3121fa458160.jpg" class="archetype-card rounded-image"/></a>
-<a href="https://scryfall.com/card/ima/190/wall-of-roots"><img src="https://c1.scryfall.com/file/scryfall-cards/normal/front/b/6/b65cb901-bfb0-454a-97ef-138021e524ff.jpg" class="archetype-card rounded-image"/></a>
+<a href="https://scryfall.com/card/rvr/42/drift-of-phantasms"><img src="https://cards.scryfall.io/normal/front/d/7/d722c22d-3cab-48b5-96cd-0874060ac9a4.jpg" class="archetype-card rounded-image"/></a>
+<a href="https://scryfall.com/card/a25/58/freed-from-the-real"><img src="https://cards.scryfall.io/normal/front/c/4/c47ee6f6-50c1-4f56-b9ce-4c309bfb92ca.jpg" class="archetype-card rounded-image"/></a>
+<a href="https://scryfall.com/card/avr/54/galvanic-alchemist"><img src="https://cards.scryfall.io/normal/front/b/0/b0e24d65-0e6f-4978-8de1-c5e4acac12fb.jpg" class="archetype-card rounded-image"/></a>
+<a href="https://scryfall.com/card/chk/234/orochi-leafcaller"><img src="https://cards.scryfall.io/normal/front/f/6/f6c39031-1c49-4c1e-83df-66c3795ddc72.jpg" class="archetype-card rounded-image"/></a>
+<a href="https://scryfall.com/card/scg/72/reaping-the-graves"><img src="https://cards.scryfall.io/normal/front/7/6/760a66bd-2821-4710-8f02-3c30772dd884.jpg" class="archetype-card rounded-image"/></a>
+<a href="https://scryfall.com/card/znr/173/tuktuk-rubblefort"><img src="https://cards.scryfall.io/normal/front/0/2/02eedf9d-e26c-405c-aee5-1b3493dc5e9b.jpg" class="archetype-card rounded-image"/></a>
 </details><br/>
 
 
