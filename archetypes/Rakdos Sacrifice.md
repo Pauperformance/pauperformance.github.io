@@ -56,7 +56,7 @@
 
 | Name | Set name | Set date | Legal |
 | -----| -------- | -------- | ----- |
-| [Rakdos Sacrifice 735.001.CosmicCharles](https://www.mtggoldfish.com/deck/4870922) | Streets of New Capenna | 2022-04-29 | ✅ |
+| [Rakdos Sacrifice 735.001.CosmicCharles](https://www.mtggoldfish.com/deck/4870922) | Streets of New Capenna | 2022-04-29 | Ban 🔨 |
 
 
 
@@ -65,7 +65,7 @@
 
 | Name | Set name | Set date | Legal |
 | -----| -------- | -------- | ----- |
-| [Rakdos Sacrifice 735.001.Mikk](https://www.mtggoldfish.com/deck/4796578) | Streets of New Capenna | 2022-04-29 | ✅ |
+| [Rakdos Sacrifice 735.001.Mikk](https://www.mtggoldfish.com/deck/4796578) | Streets of New Capenna | 2022-04-29 | Ban 🔨 |
 | [Rakdos Sacrifice 735.001.CooperTheRed](https://www.mtggoldfish.com/deck/4796579) | Streets of New Capenna | 2022-04-29 | ✅ |
 
 

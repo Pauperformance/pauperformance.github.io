@@ -8,7 +8,7 @@
 
 **Dominant mana**: <img src="../resources/images/mana/W.png" class="dominant-mana-icon"/> <img src="../resources/images/mana/U.png" class="dominant-mana-icon"/> <img src="../resources/images/mana/B.png" class="dominant-mana-icon"/> <img src="../resources/images/mana/R.png" class="dominant-mana-icon"/> <img src="../resources/images/mana/G.png" class="dominant-mana-icon"/>
 
-**Type**: `Aggro`/`Midrange`/`Control`/`Combo`
+**Type**: `Aggro`/`Midrange`/`Control`/`Tempo`/`Combo`
 
 **Description**: 
 Generic archetype, for decks that do not fit those in the [Archetypes Index](../../pages/archetypes_index.html).

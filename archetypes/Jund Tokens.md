@@ -50,7 +50,7 @@
 
 | Name | Set name | Set date | Legal |
 | -----| -------- | -------- | ----- |
-| [Jund Tokens 722.001.Milkk](https://www.mtggoldfish.com/deck/4893098) | Kamigawa: Neon Dynasty | 2022-02-18 | ✅ |
+| [Jund Tokens 722.001.Milkk](https://www.mtggoldfish.com/deck/4893098) | Kamigawa: Neon Dynasty | 2022-02-18 | Ban 🔨 |
 
 
 
@@ -59,8 +59,8 @@
 
 | Name | Set name | Set date | Legal |
 | -----| -------- | -------- | ----- |
-| [Jund Tokens 722.003.Milkk](https://www.mtggoldfish.com/deck/4893101) | Kamigawa: Neon Dynasty | 2022-02-18 | ✅ |
-| [Jund Tokens 722.002.Milkk](https://www.mtggoldfish.com/deck/4675385) | Kamigawa: Neon Dynasty | 2022-02-18 | ✅ |
+| [Jund Tokens 722.003.Milkk](https://www.mtggoldfish.com/deck/4893101) | Kamigawa: Neon Dynasty | 2022-02-18 | Ban 🔨 |
+| [Jund Tokens 722.002.Milkk](https://www.mtggoldfish.com/deck/4675385) | Kamigawa: Neon Dynasty | 2022-02-18 | Ban 🔨 |
 
 
 

@@ -54,7 +54,7 @@
 
 | Name | Set name | Set date | Legal |
 | -----| -------- | -------- | ----- |
-| [Moggwarts 683.001.Hamuda](https://www.mtggoldfish.com/deck/4624432) | Adventures in the Forgotten Realms | 2021-07-23 | ✅ |
+| [Moggwarts 683.001.Hamuda](https://www.mtggoldfish.com/deck/4624432) | Adventures in the Forgotten Realms | 2021-07-23 | Ban 🔨 |
 | [Moggwarts 669.001.Hamuda](https://www.mtggoldfish.com/deck/4351108) | Strixhaven: School of Mages | 2021-04-23 | ✅ |
 
 
@@ -64,9 +64,9 @@
 
 | Name | Set name | Set date | Legal |
 | -----| -------- | -------- | ----- |
-| [Moggwarts 722.001.Shika93](https://www.mtggoldfish.com/deck/4680046) | Kamigawa: Neon Dynasty | 2022-02-18 | ✅ |
-| [Moggwarts 722.001.Kiiiittyman](https://www.mtggoldfish.com/deck/4667108) | Kamigawa: Neon Dynasty | 2022-02-18 | ✅ |
-| [Moggwarts 722.001.AMzobud](https://www.mtggoldfish.com/deck/4645828) | Kamigawa: Neon Dynasty | 2022-02-18 | ✅ |
+| [Moggwarts 722.001.Shika93](https://www.mtggoldfish.com/deck/4680046) | Kamigawa: Neon Dynasty | 2022-02-18 | Ban 🔨 |
+| [Moggwarts 722.001.Kiiiittyman](https://www.mtggoldfish.com/deck/4667108) | Kamigawa: Neon Dynasty | 2022-02-18 | Ban 🔨 |
+| [Moggwarts 722.001.AMzobud](https://www.mtggoldfish.com/deck/4645828) | Kamigawa: Neon Dynasty | 2022-02-18 | Ban 🔨 |
 | [Moggwarts 669.001.pepeisra](https://www.mtggoldfish.com/deck/4351109) | Strixhaven: School of Mages | 2021-04-23 | ✅ |
 | [Moggwarts 669.001.Milkk](https://www.mtggoldfish.com/deck/4351099) | Strixhaven: School of Mages | 2021-04-23 | ✅ |
 

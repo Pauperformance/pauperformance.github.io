@@ -65,9 +65,9 @@ The deck is sometimes considered unstable due to the high number of lands it req
 
 | Name | Set name | Set date | Legal |
 | -----| -------- | -------- | ----- |
-| [Orzhov Pestilence 722.001.Antonio1993](https://www.mtggoldfish.com/deck/4690585) | Kamigawa: Neon Dynasty | 2022-02-18 | ✅ |
+| [Orzhov Pestilence 722.001.Antonio1993](https://www.mtggoldfish.com/deck/4690585) | Kamigawa: Neon Dynasty | 2022-02-18 | Ban 🔨 |
 | [Orzhov Pestilence 584.001.Shika93](https://www.mtggoldfish.com/deck/4351746) | War of the Spark | 2019-05-03 | ✅ |
-| [Orzhov Pestilence 572.001.donzauker84](https://www.mtggoldfish.com/deck/4618593) | Ultimate Masters | 2018-12-07 | Ban 🔨 |
+| [Orzhov Pestilence 572.001.donzauker84](https://www.mtggoldfish.com/deck/4618593) | Ultimate Masters | 2018-12-07 | ✅ |
 
 
 

@@ -58,7 +58,7 @@
 
 | Name | Set name | Set date | Legal |
 | -----| -------- | -------- | ----- |
-| [Rakdos Metalcraft 701.001.A_AdeptoTerra](https://www.mtggoldfish.com/deck/4870921) | Innistrad: Crimson Vow | 2021-11-19 | ✅ |
+| [Rakdos Metalcraft 701.001.A_AdeptoTerra](https://www.mtggoldfish.com/deck/4870921) | Innistrad: Crimson Vow | 2021-11-19 | Ban 🔨 |
 
 
 
@@ -67,8 +67,8 @@
 
 | Name | Set name | Set date | Legal |
 | -----| -------- | -------- | ----- |
-| [Rakdos Metalcraft 701.001.ANIKI](https://www.mtggoldfish.com/deck/4800226) | Innistrad: Crimson Vow | 2021-11-19 | ✅ |
-| [Rakdos Metalcraft 683.001.A_AdeptoTerra](https://www.mtggoldfish.com/deck/4800228) | Adventures in the Forgotten Realms | 2021-07-23 | ✅ |
+| [Rakdos Metalcraft 701.001.ANIKI](https://www.mtggoldfish.com/deck/4800226) | Innistrad: Crimson Vow | 2021-11-19 | Ban 🔨 |
+| [Rakdos Metalcraft 683.001.A_AdeptoTerra](https://www.mtggoldfish.com/deck/4800228) | Adventures in the Forgotten Realms | 2021-07-23 | Ban 🔨 |
 
 
 
