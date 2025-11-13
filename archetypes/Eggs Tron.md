@@ -56,7 +56,7 @@
 
 | Name | Set name | Set date | Legal |
 | -----| -------- | -------- | ----- |
-| [Eggs Tron 722.001.chumpblocckami](https://www.mtggoldfish.com/deck/4805227) | Kamigawa: Neon Dynasty | 2022-02-18 | ✅ |
+| [Eggs Tron 722.001.chumpblocckami](https://www.mtggoldfish.com/deck/4805227) | Kamigawa: Neon Dynasty | 2022-02-18 | Ban 🔨 |
 
 
 
@@ -65,8 +65,8 @@
 
 | Name | Set name | Set date | Legal |
 | -----| -------- | -------- | ----- |
-| [Eggs Tron 722.001.MandrillMan](https://www.mtggoldfish.com/deck/4805232) | Kamigawa: Neon Dynasty | 2022-02-18 | ✅ |
-| [Eggs Tron 533.001.fedetoro](https://www.mtggoldfish.com/deck/4894197) | Masters 25 | 2018-03-16 | Ban 🔨 |
+| [Eggs Tron 722.001.MandrillMan](https://www.mtggoldfish.com/deck/4805232) | Kamigawa: Neon Dynasty | 2022-02-18 | Ban 🔨 |
+| [Eggs Tron 533.001.fedetoro](https://www.mtggoldfish.com/deck/4894197) | Masters 25 | 2018-03-16 | ✅ |
 
 
 

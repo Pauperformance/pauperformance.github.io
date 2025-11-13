@@ -45,8 +45,8 @@
 
 | Name | Set name | Set date | Legal |
 | -----| -------- | -------- | ----- |
-| [Affinity 735.001.JoaoMarcos](https://www.mtggoldfish.com/deck/4848400) | Streets of New Capenna | 2022-04-29 | ✅ |
-| [Affinity 722.001.ziofrancone](https://www.mtggoldfish.com/deck/4871405) | Kamigawa: Neon Dynasty | 2022-02-18 | ✅ |
+| [Affinity 735.001.JoaoMarcos](https://www.mtggoldfish.com/deck/4848400) | Streets of New Capenna | 2022-04-29 | Ban 🔨 |
+| [Affinity 722.001.ziofrancone](https://www.mtggoldfish.com/deck/4871405) | Kamigawa: Neon Dynasty | 2022-02-18 | Ban 🔨 |
 
 
 

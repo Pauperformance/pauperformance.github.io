@@ -967,36 +967,101 @@ Lines in **bold** correspond to sets that have introduced new cards in the [Paup
 | 946       | fdn           | Foundations                                     | 2024-11-15   |
 | 947       | jp1           | Hobby Japan Promos                              | 2002-07-01   |
 | 948       | dci           | DCI Promos                                      | 2006-01-01   |
-| 949       | smh3          | Modern Horizons 3 Substitute Cards              | 2024-06-14   |
-| 950       | aacr          | Assassin's Creed Art Series                     | 2024-07-05   |
-| 951       | macr          | Assassin's Creed Minigames                      | 2024-07-05   |
-| 952       | ablb          | Bloomburrow Art Series                          | 2024-08-02   |
-| 953       | mb2           | Mystery Booster 2                               | 2024-08-02   |
-| 954       | pblb          | Bloomburrow Promos                              | 2024-08-02   |
-| 955       | yblb          | Alchemy: Bloomburrow                            | 2024-08-20   |
-| 956       | adsk          | Duskmourn: House of Horror Art Series           | 2024-09-27   |
-| 957       | pdsk          | Duskmourn: House of Horror Promos               | 2024-09-27   |
-| 958       | tdsc          | Duskmourn Commander Tokens                      | 2024-09-27   |
-| 959       | tdsk          | Duskmourn: House of Horror Tokens               | 2024-09-27   |
-| 960       | ydsk          | Alchemy: Duskmourn                              | 2024-10-15   |
-| 961       | pltc          | Tales of Middle-earth Deluxe Commander Kit      | 2024-10-16   |
-| 962       | afdn          | Foundations Art Series                          | 2024-11-15   |
-| 963       | fdc           | Foundations Commander                           | 2024-11-15   |
-| 964       | ffdn          | Foundations Front Cards                         | 2024-11-15   |
-| 965       | fj25          | Foundations Jumpstart Front Cards               | 2024-11-15   |
-| **966**   | **j25**       | **Foundations Jumpstart**                       | **2024-11-15** |
-| 967       | pfdn          | Foundations Promos                              | 2024-11-15   |
-| 968       | tfdn          | Foundations Tokens                              | 2024-11-15   |
-| 969       | pio           | Pioneer Masters                                 | 2024-12-10   |
-| 970       | pf25          | MagicFest 2025                                  | 2025-01-01   |
-| 971       | pspl          | Spotlight Series                                | 2025-01-03   |
-| 972       | ainr          | Innistrad Remastered Art Series                 | 2025-01-24   |
-| 973       | inr           | Innistrad Remastered                            | 2025-01-24   |
-| 974       | tinr          | Innistrad Remastered Tokens                     | 2025-01-24   |
-| 975       | pjsc          | Japan Standard Cup                              | 2025-02-09   |
-| 976       | dft           | Aetherdrift                                     | 2025-02-14   |
-| 977       | drc           | Aetherdrift Commander                           | 2025-02-14   |
-| 978       | pdft          | Aetherdrift Promos                              | 2025-02-14   |
-| 979       | tdft          | Aetherdrift Tokens                              | 2025-02-14   |
-| 980       | tdrc          | Aetherdrift Commander Tokens                    | 2025-02-14   |
+| 949       | unk           | Unknown Event                                   | 2023-02-15   |
+| 950       | altc          | Tales of Middle-earth Scene Box                 | 2023-11-04   |
+| 951       | smh3          | Modern Horizons 3 Substitute Cards              | 2024-06-14   |
+| 952       | aacr          | Assassin's Creed Art Series                     | 2024-07-05   |
+| 953       | macr          | Assassin's Creed Minigames                      | 2024-07-05   |
+| 954       | ablb          | Bloomburrow Art Series                          | 2024-08-02   |
+| 955       | mb2           | Mystery Booster 2                               | 2024-08-02   |
+| 956       | pblb          | Bloomburrow Promos                              | 2024-08-02   |
+| 957       | yblb          | Alchemy: Bloomburrow                            | 2024-08-20   |
+| 958       | adsk          | Duskmourn: House of Horror Art Series           | 2024-09-27   |
+| 959       | pdsk          | Duskmourn: House of Horror Promos               | 2024-09-27   |
+| 960       | tdsc          | Duskmourn Commander Tokens                      | 2024-09-27   |
+| **961**   | **tdsk**      | **Duskmourn: House of Horror Tokens**           | **2024-09-27** |
+| 962       | ydsk          | Alchemy: Duskmourn                              | 2024-10-15   |
+| 963       | pltc          | Tales of Middle-earth Deluxe Commander Kit      | 2024-10-16   |
+| 964       | afdn          | Foundations Art Series                          | 2024-11-15   |
+| 965       | fdc           | Foundations Commander                           | 2024-11-15   |
+| 966       | ffdn          | Foundations Front Cards                         | 2024-11-15   |
+| 967       | fj25          | Foundations Jumpstart Front Cards               | 2024-11-15   |
+| **968**   | **j25**       | **Foundations Jumpstart**                       | **2024-11-15** |
+| 969       | pfdn          | Foundations Promos                              | 2024-11-15   |
+| 970       | tfdn          | Foundations Tokens                              | 2024-11-15   |
+| 971       | pio           | Pioneer Masters                                 | 2024-12-10   |
+| 972       | pw25          | Wizards Play Network 2025                       | 2025-01-01   |
+| 973       | pspl          | Spotlight Series                                | 2025-01-03   |
+| 974       | ainr          | Innistrad Remastered Art Series                 | 2025-01-24   |
+| **975**   | **inr**       | **Innistrad Remastered**                        | **2025-01-24** |
+| 976       | tinr          | Innistrad Remastered Tokens                     | 2025-01-24   |
+| 977       | pf25          | MagicFest 2025                                  | 2025-02-03   |
+| 978       | pjsc          | Japan Standard Cup                              | 2025-02-09   |
+| 979       | adft          | Aetherdrift Art Series                          | 2025-02-14   |
+| **980**   | **dft**       | **Aetherdrift**                                 | **2025-02-14** |
+| 981       | drc           | Aetherdrift Commander                           | 2025-02-14   |
+| 982       | pdft          | Aetherdrift Promos                              | 2025-02-14   |
+| 983       | pl25          | Year of the Snake 2025                          | 2025-02-14   |
+| 984       | tdft          | Aetherdrift Tokens                              | 2025-02-14   |
+| 985       | tdrc          | Aetherdrift Commander Tokens                    | 2025-02-14   |
+| 986       | pssc          | Secret Lair Showcase Planes                     | 2025-02-21   |
+| 987       | ydft          | Alchemy: Aetherdrift                            | 2025-03-04   |
+| 988       | plg25         | Love Your LGS 2025                              | 2025-03-26   |
+| 989       | atdm          | Tarkir: Dragonstorm Art Series                  | 2025-04-11   |
+| 990       | ptdm          | Tarkir: Dragonstorm Promos                      | 2025-04-11   |
+| **991**   | **tdc**       | **Tarkir: Dragonstorm Commander**               | **2025-04-11** |
+| 992       | tdm           | Tarkir: Dragonstorm                             | 2025-04-11   |
+| 993       | ttdc          | Tarkir: Dragonstorm Commander Tokens            | 2025-04-11   |
+| 994       | ttdm          | Tarkir: Dragonstorm Tokens                      | 2025-04-11   |
+| 995       | ytdm          | Alchemy: Tarkir                                 | 2025-04-29   |
+| 996       | afin          | Final Fantasy Art Series                        | 2025-06-13   |
+| 997       | fca           | Final Fantasy: Through the Ages                 | 2025-06-13   |
+| 998       | fic           | Final Fantasy Commander                         | 2025-06-13   |
+| **999**   | **fin**       | **Final Fantasy**                               | **2025-06-13** |
+| 1000      | pfin          | Final Fantasy Promos                            | 2025-06-13   |
+| 1001      | pss5          | FIN Standard Showdown                           | 2025-06-13   |
+| 1002      | rfin          | Final Fantasy Regional Promos                   | 2025-06-13   |
+| 1003      | tfic          | Final Fantasy Commander Tokens                  | 2025-06-13   |
+| 1004      | tfin          | Final Fantasy Tokens                            | 2025-06-13   |
+| 1005      | eoe           | Edge of Eternities                              | 2025-08-01   |
+| 1006      | mar           | Marvel Universe                                 | 2025-09-26   |
+| 1007      | spe           | Marvel's Spider-Man Eternal                     | 2025-09-26   |
+| 1008      | spm           | Marvel's Spider-Man                             | 2025-09-26   |
+| 1009      | tspm          | Marvel's Spider-Man Tokens                      | 2025-09-26   |
+| 1010      | eoc           | Edge of Eternities Commander                    | 2025-08-01   |
+| 1011      | eos           | Edge of Eternities: Stellar Sights              | 2025-08-01   |
+| 1012      | tla           | Avatar: The Last Airbender                      | 2025-11-21   |
+| 1013      | pa1           | Pioneer Anthology 1                             | 2025-05-05   |
+| 1014      | teoc          | Edge of Eternities Commander Tokens             | 2025-08-01   |
+| 1015      | teoe          | Edge of Eternities Tokens                       | 2025-08-01   |
+| 1016      | mltr          | The Lord of the Rings: Tales of Middle-earth Minigames | 2023-06-23   |
+| 1017      | oafr          | Forgotten Realms Oversized Cards                | 2021-07-23   |
+| 1018      | oclb          | Battle for Baldur's Gate Oversized Cards        | 2022-06-10   |
+| 1019      | punk          | Black Lotus Unknown Planechase                  | 2024-02-24   |
+| 1020      | wfin          | FIN Asia WPN Promo Tokens                       | 2025-06-13   |
+| 1021      | aeoe          | Edge of Eternities Art Series                   | 2025-08-01   |
+| 1022      | pbig          | The Big Score Promos                            | 2025-08-01   |
+| 1023      | peoe          | Edge of Eternities Promos                       | 2025-08-01   |
+| 1024      | aa1           | Arena Anthology 1                               | 2025-08-19   |
+| 1025      | aa2           | Arena Anthology 2                               | 2025-08-19   |
+| 1026      | yeoe          | Alchemy: Edge of Eternities                     | 2025-08-19   |
+| 1027      | ph23          | 2023 Heroes of the Realm                        | 2025-08-24   |
+| 1028      | aa3           | Arena Anthology 3                               | 2025-09-23   |
+| 1029      | aa4           | Arena Anthology 4                               | 2025-09-23   |
+| **1030**  | **om1**       | **Through the Omenpaths**                       | **2025-09-23** |
+| 1031      | omb           | Through the Omenpaths Bonus Sheet               | 2025-09-23   |
+| 1032      | pspm          | Marvel's Spider-Man Promos                      | 2025-09-26   |
+| 1033      | lmar          | Marvel Legends Series Inserts                   | 2025-09-30   |
+| 1034      | ftla          | Avatar: The Last Airbender Beginner Box Front Cards | 2025-11-21   |
+| 1035      | jtla          | Avatar: The Last Airbender Jumpstart Front Cards | 2025-11-21   |
+| **1036**  | **tle**       | **Avatar: The Last Airbender Eternal**          | **2025-11-21** |
+| 1037      | ttla          | Avatar: The Last Airbender Tokens               | 2025-11-21   |
+| 1038      | ttle          | Avatar: The Last Airbender Eternal Tokens       | 2025-11-21   |
+| 1039      | afic          | Final Fantasy Commander Art Series              | 2025-12-05   |
+| 1040      | ecl           | Lorwyn Eclipsed                                 | 2026-01-23   |
+| 1041      | pza           | Teenage Mutant Hero Turtles Source Material     | 2026-03-06   |
+| 1042      | tmc           | Teenage Mutant Ninja Turtles Eternal            | 2026-03-06   |
+| 1043      | tmt           | Teenage Mutant Ninja Turtles                    | 2026-03-06   |
+| 1044      | ttmc          | Teenage Mutant Ninja Turtles Eternal Tokens     | 2026-03-06   |
+| 1045      | ttmt          | Teenage Mutant Ninja Turtles Tokens             | 2026-03-06   |
 

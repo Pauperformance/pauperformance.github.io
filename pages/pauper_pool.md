@@ -13,7 +13,7 @@ This page should be useful for Pauper players that haven't followed the latest r
 
 Further information about reference numbers used by Pauperformance (p12e) to uniquely identify Magic sets can be found in the [Set Index page](set_index.html).
 
-The total number of cards in the Pauper pool is: 9574.
+The total number of cards in the Pauper pool is: 9901.
 
 ---
 Table of Contents
@@ -195,7 +195,14 @@ Table of Contents
 * [Fallout](#fallout-pip) (*release: 2024-03-08 ~ p12e_code: 915*)
 * [Outlaws of Thunder Junction Commander](#outlaws-of-thunder-junction-commander-otc) (*release: 2024-04-19 ~ p12e_code: 918*)
 * [Outlaws of Thunder Junction](#outlaws-of-thunder-junction-otj) (*release: 2024-04-19 ~ p12e_code: 919*)
-* [Foundations Jumpstart](#foundations-jumpstart-j25) (*release: 2024-11-15 ~ p12e_code: 966*)
+* [Duskmourn: House of Horror Tokens](#duskmourn-house-of-horror-tokens-tdsk) (*release: 2024-09-27 ~ p12e_code: 961*)
+* [Foundations Jumpstart](#foundations-jumpstart-j25) (*release: 2024-11-15 ~ p12e_code: 968*)
+* [Innistrad Remastered](#innistrad-remastered-inr) (*release: 2025-01-24 ~ p12e_code: 975*)
+* [Aetherdrift](#aetherdrift-dft) (*release: 2025-02-14 ~ p12e_code: 980*)
+* [Tarkir: Dragonstorm Commander](#tarkir-dragonstorm-commander-tdc) (*release: 2025-04-11 ~ p12e_code: 991*)
+* [Final Fantasy](#final-fantasy-fin) (*release: 2025-06-13 ~ p12e_code: 999*)
+* [Through the Omenpaths](#through-the-omenpaths-om1) (*release: 2025-09-23 ~ p12e_code: 1030*)
+* [Avatar: The Last Airbender Eternal](#avatar-the-last-airbender-eternal-tle) (*release: 2025-11-21 ~ p12e_code: 1036*)
 
 ---
 
@@ -11348,30 +11355,420 @@ Table of Contents
 </details>
 []()
 
-## Foundations Jumpstart (j25)
-*release: 2024-11-15 | p12e_code: 966*
+## Duskmourn: House of Horror Tokens (tdsk)
+*release: 2024-09-27 | p12e_code: 961*
 
 <details>
-  <summary>Click to see 18 new cards</summary>
+  <summary>Click to see 2 new cards</summary>
 
 <a href="https://scryfall.com/card/j25/534/cyclops-electromancer?utm_source=api">Cyclops Electromancer</a><br/>
+<a href="https://scryfall.com/card/j25/354/shipwreck-dowser?utm_source=api">Shipwreck Dowser</a><br/>
+</details>
+[]()
+
+## Foundations Jumpstart (j25)
+*release: 2024-11-15 | p12e_code: 968*
+
+<details>
+  <summary>Click to see 17 new cards</summary>
+
 <a href="https://scryfall.com/card/j25/3/faithful-pikemaster?utm_source=api">Faithful Pikemaster</a><br/>
 <a href="https://scryfall.com/card/j25/7/gilded-scuttler?utm_source=api">Gilded Scuttler</a><br/>
 <a href="https://scryfall.com/card/j25/20/go-forth?utm_source=api">Go Forth</a><br/>
 <a href="https://scryfall.com/card/j25/17/hearts-on-fire?utm_source=api">Hearts on Fire</a><br/>
 <a href="https://scryfall.com/card/j25/5/hinterland-sanctifier?utm_source=api">Hinterland Sanctifier</a><br/>
+<a href="https://scryfall.com/card/j25/758/prophetic-prism?utm_source=api">Prophetic Prism</a><br/>
 <a href="https://scryfall.com/card/j25/22/razorgrass-invoker?utm_source=api">Razorgrass Invoker</a><br/>
 <a href="https://scryfall.com/card/j25/10/revoke-demise?utm_source=api">Revoke Demise</a><br/>
 <a href="https://scryfall.com/card/j25/23/saurian-symbiote?utm_source=api">Saurian Symbiote</a><br/>
 <a href="https://scryfall.com/card/j25/19/scholar-of-combustion?utm_source=api">Scholar of Combustion</a><br/>
 <a href="https://scryfall.com/card/j25/11/scourge-of-the-undercity?utm_source=api">Scourge of the Undercity</a><br/>
 <a href="https://scryfall.com/card/j25/28/shardless-outlander?utm_source=api">Shardless Outlander</a><br/>
-<a href="https://scryfall.com/card/j25/354/shipwreck-dowser?utm_source=api">Shipwreck Dowser</a><br/>
 <a href="https://scryfall.com/card/j25/356/shorecomber-crab?utm_source=api">Shorecomber Crab</a><br/>
 <a href="https://scryfall.com/card/j25/25/slimy-piper?utm_source=api">Slimy Piper</a><br/>
 <a href="https://scryfall.com/card/j25/9/starlight-snare?utm_source=api">Starlight Snare</a><br/>
 <a href="https://scryfall.com/card/j25/386/waterkin-shaman?utm_source=api">Waterkin Shaman</a><br/>
 <a href="https://scryfall.com/card/j25/27/woodland-liege?utm_source=api">Woodland Liege</a><br/>
+</details>
+[]()
+
+## Innistrad Remastered (inr)
+*release: 2025-01-24 | p12e_code: 975*
+
+<details>
+  <summary>Click to see 16 new cards</summary>
+
+<a href="https://scryfall.com/card/inr/1/abundant-maw?utm_source=api">Abundant Maw</a><br/>
+<a href="https://scryfall.com/card/inr/53/battleground-geist?utm_source=api">Battleground Geist</a><br/>
+<a href="https://scryfall.com/card/inr/13/bound-by-moonsilver?utm_source=api">Bound by Moonsilver</a><br/>
+<a href="https://scryfall.com/card/inr/187/bramble-wurm?utm_source=api">Bramble Wurm</a><br/>
+<a href="https://scryfall.com/card/inr/150/conduit-of-storms-conduit-of-emrakul?utm_source=api">Conduit of Storms // Conduit of Emrakul</a><br/>
+<a href="https://scryfall.com/card/inr/20/drogskol-shieldmate?utm_source=api">Drogskol Shieldmate</a><br/>
+<a href="https://scryfall.com/card/inr/262/epitaph-golem?utm_source=api">Epitaph Golem</a><br/>
+<a href="https://scryfall.com/card/inr/64/essence-flux?utm_source=api">Essence Flux</a><br/>
+<a href="https://scryfall.com/card/inr/111/gisas-bidding?utm_source=api">Gisa's Bidding</a><br/>
+<a href="https://scryfall.com/card/inr/158/hanweir-watchkeep-bane-of-hanweir?utm_source=api">Hanweir Watchkeep // Bane of Hanweir</a><br/>
+<a href="https://scryfall.com/card/inr/265/harvest-hand-scrounged-scythe?utm_source=api">Harvest Hand // Scrounged Scythe</a><br/>
+<a href="https://scryfall.com/card/inr/69/imprisoned-in-the-moon?utm_source=api">Imprisoned in the Moon</a><br/>
+<a href="https://scryfall.com/card/inr/170/seize-the-storm?utm_source=api">Seize the Storm</a><br/>
+<a href="https://scryfall.com/card/inr/93/tower-geist?utm_source=api">Tower Geist</a><br/>
+<a href="https://scryfall.com/card/inr/179/village-messenger-moonrise-intruder?utm_source=api">Village Messenger // Moonrise Intruder</a><br/>
+<a href="https://scryfall.com/card/inr/274/wild-field-scarecrow?utm_source=api">Wild-Field Scarecrow</a><br/>
+</details>
+[]()
+
+## Aetherdrift (dft)
+*release: 2025-02-14 | p12e_code: 980*
+
+<details>
+  <summary>Click to see 78 new cards</summary>
+
+<a href="https://scryfall.com/card/dft/230/aetherjacket?utm_source=api">Aetherjacket</a><br/>
+<a href="https://scryfall.com/card/dft/152/alacrian-jaguar?utm_source=api">Alacrian Jaguar</a><br/>
+<a href="https://scryfall.com/card/dft/249/avishkar-raceway?utm_source=api">Avishkar Raceway</a><br/>
+<a href="https://scryfall.com/card/dft/154/beastrider-vanguard?utm_source=api">Beastrider Vanguard</a><br/>
+<a href="https://scryfall.com/card/dft/155/bestow-greatness?utm_source=api">Bestow Greatness</a><br/>
+<a href="https://scryfall.com/card/dft/39/bounce-off?utm_source=api">Bounce Off</a><br/>
+<a href="https://scryfall.com/card/dft/4/brightfield-glider?utm_source=api">Brightfield Glider</a><br/>
+<a href="https://scryfall.com/card/dft/5/brightfield-mustang?utm_source=api">Brightfield Mustang</a><br/>
+<a href="https://scryfall.com/card/dft/6/broadcast-rambler?utm_source=api">Broadcast Rambler</a><br/>
+<a href="https://scryfall.com/card/dft/114/burner-rocket?utm_source=api">Burner Rocket</a><br/>
+<a href="https://scryfall.com/card/dft/232/camera-launcher?utm_source=api">Camera Launcher</a><br/>
+<a href="https://scryfall.com/card/dft/79/chitin-gravestalker?utm_source=api">Chitin Gravestalker</a><br/>
+<a href="https://scryfall.com/card/dft/117/clamorous-ironclad?utm_source=api">Clamorous Ironclad</a><br/>
+<a href="https://scryfall.com/card/dft/10/collision-course?utm_source=api">Collision Course</a><br/>
+<a href="https://scryfall.com/card/dft/119/crash-and-burn?utm_source=api">Crash and Burn</a><br/>
+<a href="https://scryfall.com/card/dft/11/daring-mechanic?utm_source=api">Daring Mechanic</a><br/>
+<a href="https://scryfall.com/card/dft/82/deathless-pilot?utm_source=api">Deathless Pilot</a><br/>
+<a href="https://scryfall.com/card/dft/123/dynamite-diver?utm_source=api">Dynamite Diver</a><br/>
+<a href="https://scryfall.com/card/dft/124/endrider-catalyzer?utm_source=api">Endrider Catalyzer</a><br/>
+<a href="https://scryfall.com/card/dft/84/engine-rat?utm_source=api">Engine Rat</a><br/>
+<a href="https://scryfall.com/card/dft/42/flood-the-engine?utm_source=api">Flood the Engine</a><br/>
+<a href="https://scryfall.com/card/dft/128/gastal-blockbuster?utm_source=api">Gastal Blockbuster</a><br/>
+<a href="https://scryfall.com/card/dft/130/gilded-ghoda?utm_source=api">Gilded Ghoda</a><br/>
+<a href="https://scryfall.com/card/dft/44/glitch-ghost-surveyor?utm_source=api">Glitch Ghost Surveyor</a><br/>
+<a href="https://scryfall.com/card/dft/131/goblin-surveyor?utm_source=api">Goblin Surveyor</a><br/>
+<a href="https://scryfall.com/card/dft/88/grim-bauble?utm_source=api">Grim Bauble</a><br/>
+<a href="https://scryfall.com/card/dft/89/grim-javelineer?utm_source=api">Grim Javelineer</a><br/>
+<a href="https://scryfall.com/card/dft/233/guidelight-matrix?utm_source=api">Guidelight Matrix</a><br/>
+<a href="https://scryfall.com/card/dft/45/guidelight-optimizer?utm_source=api">Guidelight Optimizer</a><br/>
+<a href="https://scryfall.com/card/dft/165/hazard-of-the-dunes?utm_source=api">Hazard of the Dunes</a><br/>
+<a href="https://scryfall.com/card/dft/46/howlers-heavy?utm_source=api">Howler's Heavy</a><br/>
+<a href="https://scryfall.com/card/dft/47/hulldrifter?utm_source=api">Hulldrifter</a><br/>
+<a href="https://scryfall.com/card/dft/17/interface-ace?utm_source=api">Interface Ace</a><br/>
+<a href="https://scryfall.com/card/dft/166/jibbirik-omnivore?utm_source=api">Jibbirik Omnivore</a><br/>
+<a href="https://scryfall.com/card/dft/48/keen-buccaneer?utm_source=api">Keen Buccaneer</a><br/>
+<a href="https://scryfall.com/card/dft/135/kickoff-celebrations?utm_source=api">Kickoff Celebrations</a><br/>
+<a href="https://scryfall.com/card/dft/18/leonin-surveyor?utm_source=api">Leonin Surveyor</a><br/>
+<a href="https://scryfall.com/card/dft/19/lightshield-parry?utm_source=api">Lightshield Parry</a><br/>
+<a href="https://scryfall.com/card/dft/20/lightwheel-enhancements?utm_source=api">Lightwheel Enhancements</a><br/>
+<a href="https://scryfall.com/card/dft/21/lotusguard-disciple?utm_source=api">Lotusguard Disciple</a><br/>
+<a href="https://scryfall.com/card/dft/167/loxodon-surveyor?utm_source=api">Loxodon Surveyor</a><br/>
+<a href="https://scryfall.com/card/dft/137/magmakin-artillerist?utm_source=api">Magmakin Artillerist</a><br/>
+<a href="https://scryfall.com/card/dft/96/maximum-overdrive?utm_source=api">Maximum Overdrive</a><br/>
+<a href="https://scryfall.com/card/dft/50/midnight-mangler?utm_source=api">Midnight Mangler</a><br/>
+<a href="https://scryfall.com/card/dft/170/migrating-ketradon?utm_source=api">Migrating Ketradon</a><br/>
+<a href="https://scryfall.com/card/dft/98/mutant-surveyor?utm_source=api">Mutant Surveyor</a><br/>
+<a href="https://scryfall.com/card/dft/258/night-market?utm_source=api">Night Market</a><br/>
+<a href="https://scryfall.com/card/dft/53/nimble-thopterist?utm_source=api">Nimble Thopterist</a><br/>
+<a href="https://scryfall.com/card/dft/99/pactdoll-terror?utm_source=api">Pactdoll Terror</a><br/>
+<a href="https://scryfall.com/card/dft/141/pedal-to-the-metal?utm_source=api">Pedal to the Metal</a><br/>
+<a href="https://scryfall.com/card/dft/176/pothole-mole?utm_source=api">Pothole Mole</a><br/>
+<a href="https://scryfall.com/card/dft/142/prowcatcher-specialist?utm_source=api">Prowcatcher Specialist</a><br/>
+<a href="https://scryfall.com/card/dft/25/rides-end?utm_source=api">Ride's End</a><br/>
+<a href="https://scryfall.com/card/dft/101/ripclaw-wrangler?utm_source=api">Ripclaw Wrangler</a><br/>
+<a href="https://scryfall.com/card/dft/103/risky-shortcut?utm_source=api">Risky Shortcut</a><br/>
+<a href="https://scryfall.com/card/dft/179/run-over?utm_source=api">Run Over</a><br/>
+<a href="https://scryfall.com/card/dft/242/scrap-compactor?utm_source=api">Scrap Compactor</a><br/>
+<a href="https://scryfall.com/card/dft/180/silken-strength?utm_source=api">Silken Strength</a><br/>
+<a href="https://scryfall.com/card/dft/243/skybox-ferry?utm_source=api">Skybox Ferry</a><br/>
+<a href="https://scryfall.com/card/dft/61/skystreak-engineer?utm_source=api">Skystreak Engineer</a><br/>
+<a href="https://scryfall.com/card/dft/63/spectral-interference?utm_source=api">Spectral Interference</a><br/>
+<a href="https://scryfall.com/card/dft/106/spin-out?utm_source=api">Spin Out</a><br/>
+<a href="https://scryfall.com/card/dft/30/spotcycle-scouter?utm_source=api">Spotcycle Scouter</a><br/>
+<a href="https://scryfall.com/card/dft/66/stall-out?utm_source=api">Stall Out</a><br/>
+<a href="https://scryfall.com/card/dft/181/stampeding-scurryfoot?utm_source=api">Stampeding Scurryfoot</a><br/>
+<a href="https://scryfall.com/card/dft/244/starting-column?utm_source=api">Starting Column</a><br/>
+<a href="https://scryfall.com/card/dft/107/streaking-oilgorger?utm_source=api">Streaking Oilgorger</a><br/>
+<a href="https://scryfall.com/card/dft/32/swiftwing-assailant?utm_source=api">Swiftwing Assailant</a><br/>
+<a href="https://scryfall.com/card/dft/108/syphon-fuel?utm_source=api">Syphon Fuel</a><br/>
+<a href="https://scryfall.com/card/dft/148/thunderhead-gunner?utm_source=api">Thunderhead Gunner</a><br/>
+<a href="https://scryfall.com/card/dft/245/ticket-tortoise?utm_source=api">Ticket Tortoise</a><br/>
+<a href="https://scryfall.com/card/dft/71/trip-up?utm_source=api">Trip Up</a><br/>
+<a href="https://scryfall.com/card/dft/184/veloheart-bike?utm_source=api">Veloheart Bike</a><br/>
+<a href="https://scryfall.com/card/dft/185/venomsac-lagac?utm_source=api">Venomsac Lagac</a><br/>
+<a href="https://scryfall.com/card/dft/37/voyager-quickwelder?utm_source=api">Voyager Quickwelder</a><br/>
+<a href="https://scryfall.com/card/dft/246/walking-sarcophagus?utm_source=api">Walking Sarcophagus</a><br/>
+<a href="https://scryfall.com/card/dft/110/wreckage-wickerfolk?utm_source=api">Wreckage Wickerfolk</a><br/>
+<a href="https://scryfall.com/card/dft/247/wreck-remover?utm_source=api">Wreck Remover</a><br/>
+</details>
+[]()
+
+## Tarkir: Dragonstorm Commander (tdc)
+*release: 2025-04-11 | p12e_code: 991*
+
+<details>
+  <summary>Click to see 78 new cards</summary>
+
+<a href="https://scryfall.com/card/tdm/68/abzan-devotee?utm_source=api">Abzan Devotee</a><br/>
+<a href="https://scryfall.com/card/tdm/69/adorned-crocodile?utm_source=api">Adorned Crocodile</a><br/>
+<a href="https://scryfall.com/card/tdm/36/agent-of-kotis?utm_source=api">Agent of Kotis</a><br/>
+<a href="https://scryfall.com/card/tdm/70/aggressive-negotiations?utm_source=api">Aggressive Negotiations</a><br/>
+<a href="https://scryfall.com/card/tdm/134/ainok-wayfarer?utm_source=api">Ainok Wayfarer</a><br/>
+<a href="https://scryfall.com/card/tdm/72/aleshas-legacy?utm_source=api">Alesha's Legacy</a><br/>
+<a href="https://scryfall.com/card/tdm/3/arashin-sunshield?utm_source=api">Arashin Sunshield</a><br/>
+<a href="https://scryfall.com/card/tdm/4/bearer-of-glory?utm_source=api">Bearer of Glory</a><br/>
+<a href="https://scryfall.com/card/tdm/239/boulderborn-dragon?utm_source=api">Boulderborn Dragon</a><br/>
+<a href="https://scryfall.com/card/tdm/74/caustic-exhale?utm_source=api">Caustic Exhale</a><br/>
+<a href="https://scryfall.com/card/tdm/137/champion-of-dusan?utm_source=api">Champion of Dusan</a><br/>
+<a href="https://scryfall.com/card/tdm/6/coordinated-maneuver?utm_source=api">Coordinated Maneuver</a><br/>
+<a href="https://scryfall.com/card/tdm/76/cruel-truths?utm_source=api">Cruel Truths</a><br/>
+<a href="https://scryfall.com/card/tdm/77/delta-bloodflies?utm_source=api">Delta Bloodflies</a><br/>
+<a href="https://scryfall.com/card/tdm/104/devoted-duelist?utm_source=api">Devoted Duelist</a><br/>
+<a href="https://scryfall.com/card/tdm/40/dirgur-island-dragon-skimming-strike?utm_source=api">Dirgur Island Dragon // Skimming Strike</a><br/>
+<a href="https://scryfall.com/card/tdm/41/dispelling-exhale?utm_source=api">Dispelling Exhale</a><br/>
+<a href="https://scryfall.com/card/tdm/9/dragonback-lancer?utm_source=api">Dragonback Lancer</a><br/>
+<a href="https://scryfall.com/card/tdm/79/dragons-prey?utm_source=api">Dragon's Prey</a><br/>
+<a href="https://scryfall.com/card/tdm/241/dragonstorm-globe?utm_source=api">Dragonstorm Globe</a><br/>
+<a href="https://scryfall.com/card/tdm/141/dusyut-earthcarver?utm_source=api">Dusyut Earthcarver</a><br/>
+<a href="https://scryfall.com/card/tdm/242/embermouth-sentinel?utm_source=api">Embermouth Sentinel</a><br/>
+<a href="https://scryfall.com/card/tdm/80/feral-deathgorger-dusk-sight?utm_source=api">Feral Deathgorger // Dusk Sight</a><br/>
+<a href="https://scryfall.com/card/tdm/107/fire-rim-form?utm_source=api">Fire-Rim Form</a><br/>
+<a href="https://scryfall.com/card/tdm/45/focus-the-mind?utm_source=api">Focus the Mind</a><br/>
+<a href="https://scryfall.com/card/tdm/12/fortress-kin-guard?utm_source=api">Fortress Kin-Guard</a><br/>
+<a href="https://scryfall.com/card/tdm/190/gurmag-nightwatch?utm_source=api">Gurmag Nightwatch</a><br/>
+<a href="https://scryfall.com/card/tdm/145/heritage-reclamation?utm_source=api">Heritage Reclamation</a><br/>
+<a href="https://scryfall.com/card/tdm/47/highspire-bell-ringer?utm_source=api">Highspire Bell-Ringer</a><br/>
+<a href="https://scryfall.com/card/tdm/48/humbling-elder?utm_source=api">Humbling Elder</a><br/>
+<a href="https://scryfall.com/card/tdm/49/iceridge-serpent?utm_source=api">Iceridge Serpent</a><br/>
+<a href="https://scryfall.com/card/tdm/243/jade-cast-sentinel?utm_source=api">Jade-Cast Sentinel</a><br/>
+<a href="https://scryfall.com/card/tdm/110/jeskai-devotee?utm_source=api">Jeskai Devotee</a><br/>
+<a href="https://scryfall.com/card/tdm/83/kin-tree-nurturer?utm_source=api">Kin-Tree Nurturer</a><br/>
+<a href="https://scryfall.com/card/tdm/148/krotiq-nestguard?utm_source=api">Krotiq Nestguard</a><br/>
+<a href="https://scryfall.com/card/tdm/14/lightfoot-technique?utm_source=api">Lightfoot Technique</a><br/>
+<a href="https://scryfall.com/card/tdm/16/mardu-devotee?utm_source=api">Mardu Devotee</a><br/>
+<a href="https://scryfall.com/card/tdm/112/meticulous-artisan?utm_source=api">Meticulous Artisan</a><br/>
+<a href="https://scryfall.com/card/tdm/113/molten-exhale?utm_source=api">Molten Exhale</a><br/>
+<a href="https://scryfall.com/card/tdm/208/monastery-messenger?utm_source=api">Monastery Messenger</a><br/>
+<a href="https://scryfall.com/card/tdm/114/narsets-rebuke?utm_source=api">Narset's Rebuke</a><br/>
+<a href="https://scryfall.com/card/tdm/85/nightblade-brigade?utm_source=api">Nightblade Brigade</a><br/>
+<a href="https://scryfall.com/card/tdm/17/osseous-exhale?utm_source=api">Osseous Exhale</a><br/>
+<a href="https://scryfall.com/card/tdm/151/piercing-exhale?utm_source=api">Piercing Exhale</a><br/>
+<a href="https://scryfall.com/card/tdm/18/poised-practitioner?utm_source=api">Poised Practitioner</a><br/>
+<a href="https://scryfall.com/card/tdm/20/rebellious-strike?utm_source=api">Rebellious Strike</a><br/>
+<a href="https://scryfall.com/card/tdm/216/reigning-victor?utm_source=api">Reigning Victor</a><br/>
+<a href="https://scryfall.com/card/tdm/217/reputable-merchant?utm_source=api">Reputable Merchant</a><br/>
+<a href="https://scryfall.com/card/tdm/116/rescue-leopard?utm_source=api">Rescue Leopard</a><br/>
+<a href="https://scryfall.com/card/tdm/21/riling-dawnbreaker-signaling-roar?utm_source=api">Riling Dawnbreaker // Signaling Roar</a><br/>
+<a href="https://scryfall.com/card/tdm/53/ringing-strike-mastery?utm_source=api">Ringing Strike Mastery</a><br/>
+<a href="https://scryfall.com/card/tdm/54/riverwalk-technique?utm_source=api">Riverwalk Technique</a><br/>
+<a href="https://scryfall.com/card/tdm/154/roamers-routine?utm_source=api">Roamer's Routine</a><br/>
+<a href="https://scryfall.com/card/tdm/156/sagu-pummeler?utm_source=api">Sagu Pummeler</a><br/>
+<a href="https://scryfall.com/card/tdm/157/sagu-wildling-roost-seek?utm_source=api">Sagu Wildling // Roost Seek</a><br/>
+<a href="https://scryfall.com/card/tdm/23/salt-road-packbeast?utm_source=api">Salt Road Packbeast</a><br/>
+<a href="https://scryfall.com/card/tdm/89/sandskitter-outrider?utm_source=api">Sandskitter Outrider</a><br/>
+<a href="https://scryfall.com/card/tdm/158/sarkhans-resolve?utm_source=api">Sarkhan's Resolve</a><br/>
+<a href="https://scryfall.com/card/tdm/119/seize-opportunity?utm_source=api">Seize Opportunity</a><br/>
+<a href="https://scryfall.com/card/tdm/120/shock-brigade?utm_source=api">Shock Brigade</a><br/>
+<a href="https://scryfall.com/card/tdm/56/sibsig-appraiser?utm_source=api">Sibsig Appraiser</a><br/>
+<a href="https://scryfall.com/card/tdm/57/snowmelt-stag?utm_source=api">Snowmelt Stag</a><br/>
+<a href="https://scryfall.com/card/tdm/28/stormplain-detainment?utm_source=api">Stormplain Detainment</a><br/>
+<a href="https://scryfall.com/card/tdm/124/stormshriek-feral-flush-out?utm_source=api">Stormshriek Feral // Flush Out</a><br/>
+<a href="https://scryfall.com/card/tdm/160/sultai-devotee?utm_source=api">Sultai Devotee</a><br/>
+<a href="https://scryfall.com/card/tdm/125/summit-intimidator?utm_source=api">Summit Intimidator</a><br/>
+<a href="https://scryfall.com/card/tdm/31/tempest-hawk?utm_source=api">Tempest Hawk</a><br/>
+<a href="https://scryfall.com/card/tdm/61/temur-devotee?utm_source=api">Temur Devotee</a><br/>
+<a href="https://scryfall.com/card/tdm/229/temur-tawnyback?utm_source=api">Temur Tawnyback</a><br/>
+<a href="https://scryfall.com/card/tdm/163/trade-route-envoy?utm_source=api">Trade Route Envoy</a><br/>
+<a href="https://scryfall.com/card/tdm/95/unburied-earthcarver?utm_source=api">Unburied Earthcarver</a><br/>
+<a href="https://scryfall.com/card/tdm/129/underfoot-underdogs?utm_source=api">Underfoot Underdogs</a><br/>
+<a href="https://scryfall.com/card/tdm/165/undergrowth-leopard?utm_source=api">Undergrowth Leopard</a><br/>
+<a href="https://scryfall.com/card/tdm/62/unending-whisper?utm_source=api">Unending Whisper</a><br/>
+<a href="https://scryfall.com/card/tdm/249/watcher-of-the-wayside?utm_source=api">Watcher of the Wayside</a><br/>
+<a href="https://scryfall.com/card/tdm/132/wild-ride?utm_source=api">Wild Ride</a><br/>
+<a href="https://scryfall.com/card/tdm/66/wingspan-stride?utm_source=api">Wingspan Stride</a><br/>
+<a href="https://scryfall.com/card/tdm/99/worthy-cost?utm_source=api">Worthy Cost</a><br/>
+</details>
+[]()
+
+## Final Fantasy (fin)
+*release: 2025-06-13 | p12e_code: 999*
+
+<details>
+  <summary>Click to see 89 new cards</summary>
+
+<a href="https://scryfall.com/card/fin/252/adventurers-airship?utm_source=api">Adventurer's Airship</a><br/>
+<a href="https://scryfall.com/card/fin/271/adventurers-inn?utm_source=api">Adventurer's Inn</a><br/>
+<a href="https://scryfall.com/card/fin/5/aerith-rescue-mission?utm_source=api">Aerith Rescue Mission</a><br/>
+<a href="https://scryfall.com/card/fin/87/ahriman?utm_source=api">Ahriman</a><br/>
+<a href="https://scryfall.com/card/fin/171/airship-crash?utm_source=api">Airship Crash</a><br/>
+<a href="https://scryfall.com/card/fin/173/balamb-t-rexaur?utm_source=api">Balamb T-Rexaur</a><br/>
+<a href="https://scryfall.com/card/fin/174/bards-bow?utm_source=api">Bard's Bow</a><br/>
+<a href="https://scryfall.com/card/fin/273/baron-airship-kingdom?utm_source=api">Baron, Airship Kingdom</a><br/>
+<a href="https://scryfall.com/card/fin/90/black-mages-rod?utm_source=api">Black Mage's Rod</a><br/>
+<a href="https://scryfall.com/card/fin/130/blazing-bomb?utm_source=api">Blazing Bomb</a><br/>
+<a href="https://scryfall.com/card/fin/254/blitzball?utm_source=api">Blitzball</a><br/>
+<a href="https://scryfall.com/card/fin/176/blitzball-shot?utm_source=api">Blitzball Shot</a><br/>
+<a href="https://scryfall.com/card/fin/131/call-the-mountain-chocobo?utm_source=api">Call the Mountain Chocobo</a><br/>
+<a href="https://scryfall.com/card/fin/178/chocobo-kick?utm_source=api">Chocobo Kick</a><br/>
+<a href="https://scryfall.com/card/fin/11/cloudbound-moogle?utm_source=api">Cloudbound Moogle</a><br/>
+<a href="https://scryfall.com/card/fin/12/coeurl?utm_source=api">Coeurl</a><br/>
+<a href="https://scryfall.com/card/fin/48/combat-tutorial?utm_source=api">Combat Tutorial</a><br/>
+<a href="https://scryfall.com/card/fin/182/commune-with-beavers?utm_source=api">Commune with Beavers</a><br/>
+<a href="https://scryfall.com/card/fin/93/cornered-by-black-mages?utm_source=api">Cornered by Black Mages</a><br/>
+<a href="https://scryfall.com/card/fin/276/crossroads-village?utm_source=api">Crossroads Village</a><br/>
+<a href="https://scryfall.com/card/fin/49/dragoons-wyvern?utm_source=api">Dragoon's Wyvern</a><br/>
+<a href="https://scryfall.com/card/fin/50/dreams-of-laguna?utm_source=api">Dreams of Laguna</a><br/>
+<a href="https://scryfall.com/card/fin/18/dwarven-castle-guard?utm_source=api">Dwarven Castle Guard</a><br/>
+<a href="https://scryfall.com/card/fin/19/fate-of-the-sun-cryst?utm_source=api">Fate of the Sun-Cryst</a><br/>
+<a href="https://scryfall.com/card/fin/100/fight-on!?utm_source=api">Fight On!</a><br/>
+<a href="https://scryfall.com/card/fin/22/gaelicat?utm_source=api">Gaelicat</a><br/>
+<a href="https://scryfall.com/card/fin/187/gigantoad?utm_source=api">Gigantoad</a><br/>
+<a href="https://scryfall.com/card/fin/278/gohn-town-of-ruin?utm_source=api">Gohn, Town of Ruin</a><br/>
+<a href="https://scryfall.com/card/fin/280/gongaga-reactor-town?utm_source=api">Gongaga, Reactor Town</a><br/>
+<a href="https://scryfall.com/card/fin/188/goobbue-gardener?utm_source=api">Goobbue Gardener</a><br/>
+<a href="https://scryfall.com/card/fin/189/gran-pulse-ochu?utm_source=api">Gran Pulse Ochu</a><br/>
+<a href="https://scryfall.com/card/fin/281/guadosalam-farplane-gateway?utm_source=api">Guadosalam, Farplane Gateway</a><br/>
+<a href="https://scryfall.com/card/fin/190/gysahl-greens?utm_source=api">Gysahl Greens</a><br/>
+<a href="https://scryfall.com/card/fin/140/haste-magic?utm_source=api">Haste Magic</a><br/>
+<a href="https://scryfall.com/card/fin/103/hecteyes?utm_source=api">Hecteyes</a><br/>
+<a href="https://scryfall.com/card/fin/141/hill-gigas?utm_source=api">Hill Gigas</a><br/>
+<a href="https://scryfall.com/card/fin/55/ice-flan?utm_source=api">Ice Flan</a><br/>
+<a href="https://scryfall.com/card/fin/56/ice-magic?utm_source=api">Ice Magic</a><br/>
+<a href="https://scryfall.com/card/fin/282/insomnia-crown-city?utm_source=api">Insomnia, Crown City</a><br/>
+<a href="https://scryfall.com/card/fin/259/instant-ramen?utm_source=api">Instant Ramen</a><br/>
+<a href="https://scryfall.com/card/fin/260/iron-giant?utm_source=api">Iron Giant</a><br/>
+<a href="https://scryfall.com/card/fin/142/item-shopkeep?utm_source=api">Item Shopkeep</a><br/>
+<a href="https://scryfall.com/card/fin/143/laughing-mad?utm_source=api">Laughing Mad</a><br/>
+<a href="https://scryfall.com/card/fin/144/light-of-judgment?utm_source=api">Light of Judgment</a><br/>
+<a href="https://scryfall.com/card/fin/192/loporrit-scout?utm_source=api">Loporrit Scout</a><br/>
+<a href="https://scryfall.com/card/fin/262/lunatic-pandora?utm_source=api">Lunatic Pandora</a><br/>
+<a href="https://scryfall.com/card/fin/61/magic-damper?utm_source=api">Magic Damper</a><br/>
+<a href="https://scryfall.com/card/fin/263/magic-pot?utm_source=api">Magic Pot</a><br/>
+<a href="https://scryfall.com/card/fin/25/magitek-infantry?utm_source=api">Magitek Infantry</a><br/>
+<a href="https://scryfall.com/card/fin/106/malboro?utm_source=api">Malboro</a><br/>
+<a href="https://scryfall.com/card/fin/265/monks-fist?utm_source=api">Monk's Fist</a><br/>
+<a href="https://scryfall.com/card/fin/145/mysidian-elder?utm_source=api">Mysidian Elder</a><br/>
+<a href="https://scryfall.com/card/fin/107/namazu-trader?utm_source=api">Namazu Trader</a><br/>
+<a href="https://scryfall.com/card/fin/28/paladins-arms?utm_source=api">Paladin's Arms</a><br/>
+<a href="https://scryfall.com/card/fin/193/prishes-wanderings?utm_source=api">Prishe's Wanderings</a><br/>
+<a href="https://scryfall.com/card/fin/65/qiqirn-merchant?utm_source=api">Qiqirn Merchant</a><br/>
+<a href="https://scryfall.com/card/fin/112/qutrub-forayer?utm_source=api">Qutrub Forayer</a><br/>
+<a href="https://scryfall.com/card/fin/287/rabanastre-royal-city?utm_source=api">Rabanastre, Royal City</a><br/>
+<a href="https://scryfall.com/card/fin/152/red-mages-rapier?utm_source=api">Red Mage's Rapier</a><br/>
+<a href="https://scryfall.com/card/fin/114/resentful-revelation?utm_source=api">Resentful Revelation</a><br/>
+<a href="https://scryfall.com/card/fin/68/retrieve-the-esper?utm_source=api">Retrieve the Esper</a><br/>
+<a href="https://scryfall.com/card/fin/69/rook-turret?utm_source=api">Rook Turret</a><br/>
+<a href="https://scryfall.com/card/fin/153/sabotender?utm_source=api">Sabotender</a><br/>
+<a href="https://scryfall.com/card/fin/70/sages-nouliths?utm_source=api">Sage's Nouliths</a><br/>
+<a href="https://scryfall.com/card/fin/71/sahagin?utm_source=api">Sahagin</a><br/>
+<a href="https://scryfall.com/card/fin/72/scorpion-sentinel?utm_source=api">Scorpion Sentinel</a><br/>
+<a href="https://scryfall.com/card/fin/116/sephiroths-intervention?utm_source=api">Sephiroth's Intervention</a><br/>
+<a href="https://scryfall.com/card/fin/288/sharlayan-nation-of-scholars?utm_source=api">Sharlayan, Nation of Scholars</a><br/>
+<a href="https://scryfall.com/card/fin/118/shinra-reinforcements?utm_source=api">Shinra Reinforcements</a><br/>
+<a href="https://scryfall.com/card/fin/32/slash-of-light?utm_source=api">Slash of Light</a><br/>
+<a href="https://scryfall.com/card/fin/76/stuck-in-summoners-sanctum?utm_source=api">Stuck in Summoner's Sanctum</a><br/>
+<a href="https://scryfall.com/card/fin/35/summon:-chocomog?utm_source=api">Summon: Choco/Mog</a><br/>
+<a href="https://scryfall.com/card/fin/202/summon:-fat-chocobo?utm_source=api">Summon: Fat Chocobo</a><br/>
+<a href="https://scryfall.com/card/fin/163/summon:-gf-ifrit?utm_source=api">Summon: G.F. Ifrit</a><br/>
+<a href="https://scryfall.com/card/fin/164/suplex?utm_source=api">Suplex</a><br/>
+<a href="https://scryfall.com/card/fin/165/thunder-magic?utm_source=api">Thunder Magic</a><br/>
+<a href="https://scryfall.com/card/fin/209/town-greeter?utm_source=api">Town Greeter</a><br/>
+<a href="https://scryfall.com/card/fin/290/treno-dark-city?utm_source=api">Treno, Dark City</a><br/>
+<a href="https://scryfall.com/card/fin/123/undercity-dire-rat?utm_source=api">Undercity Dire Rat</a><br/>
+<a href="https://scryfall.com/card/fin/124/vaynes-treachery?utm_source=api">Vayne's Treachery</a><br/>
+<a href="https://scryfall.com/card/fin/291/vector-imperial-capital?utm_source=api">Vector, Imperial Capital</a><br/>
+<a href="https://scryfall.com/card/fin/126/vincents-limit-break?utm_source=api">Vincent's Limit Break</a><br/>
+<a href="https://scryfall.com/card/fin/169/warriors-sword?utm_source=api">Warrior's Sword</a><br/>
+<a href="https://scryfall.com/card/fin/40/weapons-vendor?utm_source=api">Weapons Vendor</a><br/>
+<a href="https://scryfall.com/card/fin/41/white-auracite?utm_source=api">White Auracite</a><br/>
+<a href="https://scryfall.com/card/fin/42/white-mages-staff?utm_source=api">White Mage's Staff</a><br/>
+<a href="https://scryfall.com/card/fin/292/windurst-federation-center?utm_source=api">Windurst, Federation Center</a><br/>
+<a href="https://scryfall.com/card/fin/270/world-map?utm_source=api">World Map</a><br/>
+<a href="https://scryfall.com/card/fin/44/youre-not-alone?utm_source=api">You're Not Alone</a><br/>
+</details>
+[]()
+
+## Through the Omenpaths (om1)
+*release: 2025-09-23 | p12e_code: 1030*
+
+<details>
+  <summary>Click to see 64 new cards</summary>
+
+<a href="https://scryfall.com/card/om1/29/amazing-acrobatics?utm_source=api">Amazing Acrobatics</a><br/>
+<a href="https://scryfall.com/card/om1/81/angry-rabble?utm_source=api">Angry Rabble</a><br/>
+<a href="https://scryfall.com/card/om1/170/bagel-and-schmear?utm_source=api">Bagel and Schmear</a><br/>
+<a href="https://scryfall.com/card/om1/25/beetle-legacy-criminal?utm_source=api">Beetle, Legacy Criminal</a><br/>
+<a href="https://scryfall.com/card/om1/5/city-pigeon?utm_source=api">City Pigeon</a><br/>
+<a href="https://scryfall.com/card/om1/53/common-crook?utm_source=api">Common Crook</a><br/>
+<a href="https://scryfall.com/card/om1/16/daily-bugle-reporters?utm_source=api">Daily Bugle Reporters</a><br/>
+<a href="https://scryfall.com/card/om1/35/doc-ocks-henchmen?utm_source=api">Doc Ock's Henchmen</a><br/>
+<a href="https://scryfall.com/card/om1/38/doc-ock-sinister-scientist?utm_source=api">Doc Ock, Sinister Scientist</a><br/>
+<a href="https://scryfall.com/card/om1/164/eerie-gravestone?utm_source=api">Eerie Gravestone</a><br/>
+<a href="https://scryfall.com/card/om1/78/electros-bolt?utm_source=api">Electro's Bolt</a><br/>
+<a href="https://scryfall.com/card/om1/137/gallant-citizen?utm_source=api">Gallant Citizen</a><br/>
+<a href="https://scryfall.com/card/om1/107/grow-extra-arms?utm_source=api">Grow Extra Arms</a><br/>
+<a href="https://scryfall.com/card/om1/104/guy-in-the-chair?utm_source=api">Guy in the Chair</a><br/>
+<a href="https://scryfall.com/card/om1/177/hot-dog-cart?utm_source=api">Hot Dog Cart</a><br/>
+<a href="https://scryfall.com/card/om1/51/inner-demons-gangsters?utm_source=api">Inner Demons Gangsters</a><br/>
+<a href="https://scryfall.com/card/om1/111/kapow!?utm_source=api">Kapow!</a><br/>
+<a href="https://scryfall.com/card/om1/103/kravens-cats?utm_source=api">Kraven's Cats</a><br/>
+<a href="https://scryfall.com/card/om1/109/lurking-lizards?utm_source=api">Lurking Lizards</a><br/>
+<a href="https://scryfall.com/card/om1/96/masked-meower?utm_source=api">Masked Meower</a><br/>
+<a href="https://scryfall.com/card/om1/163/mechanical-mobster?utm_source=api">Mechanical Mobster</a><br/>
+<a href="https://scryfall.com/card/om1/61/merciless-enforcers?utm_source=api">Merciless Enforcers</a><br/>
+<a href="https://scryfall.com/card/om1/147/mob-lookout?utm_source=api">Mob Lookout</a><br/>
+<a href="https://scryfall.com/card/om1/39/mysterios-phantasm?utm_source=api">Mysterio's Phantasm</a><br/>
+<a href="https://scryfall.com/card/om1/169/news-helicopter?utm_source=api">News Helicopter</a><br/>
+<a href="https://scryfall.com/card/om1/182/ominous-asylum?utm_source=api">Ominous Asylum</a><br/>
+<a href="https://scryfall.com/card/om1/40/oscorp-research-team?utm_source=api">Oscorp Research Team</a><br/>
+<a href="https://scryfall.com/card/om1/162/passenger-ferry?utm_source=api">Passenger Ferry</a><br/>
+<a href="https://scryfall.com/card/om1/106/professional-wrestler?utm_source=api">Professional Wrestler</a><br/>
+<a href="https://scryfall.com/card/om1/142/pumpkin-bombardment?utm_source=api">Pumpkin Bombardment</a><br/>
+<a href="https://scryfall.com/card/om1/52/risky-research?utm_source=api">Risky Research</a><br/>
+<a href="https://scryfall.com/card/om1/93/romantic-rendezvous?utm_source=api">Romantic Rendezvous</a><br/>
+<a href="https://scryfall.com/card/om1/183/savage-mansion?utm_source=api">Savage Mansion</a><br/>
+<a href="https://scryfall.com/card/om1/67/scorpions-sting?utm_source=api">Scorpion's Sting</a><br/>
+<a href="https://scryfall.com/card/om1/114/scout-the-city?utm_source=api">Scout the City</a><br/>
+<a href="https://scryfall.com/card/om1/8/selfless-police-captain?utm_source=api">Selfless Police Captain</a><br/>
+<a href="https://scryfall.com/card/om1/184/sinister-hideout?utm_source=api">Sinister Hideout</a><br/>
+<a href="https://scryfall.com/card/om1/159/skyward-spider?utm_source=api">Skyward Spider</a><br/>
+<a href="https://scryfall.com/card/om1/19/spectacular-tactics?utm_source=api">Spectacular Tactics</a><br/>
+<a href="https://scryfall.com/card/om1/174/spider-bot?utm_source=api">Spider-Bot</a><br/>
+<a href="https://scryfall.com/card/om1/97/spider-gwen-free-spirit?utm_source=api">Spider-Gwen, Free Spirit</a><br/>
+<a href="https://scryfall.com/card/om1/94/spider-islanders?utm_source=api">Spider-Islanders</a><br/>
+<a href="https://scryfall.com/card/om1/122/spider-man-brooklyn-visionary?utm_source=api">Spider-Man, Brooklyn Visionary</a><br/>
+<a href="https://scryfall.com/card/om1/144/spider-manifestation?utm_source=api">Spider Manifestation</a><br/>
+<a href="https://scryfall.com/card/om1/31/spider-man-no-more?utm_source=api">Spider-Man No More</a><br/>
+<a href="https://scryfall.com/card/om1/9/spider-man-web-slinger?utm_source=api">Spider-Man, Web-Slinger</a><br/>
+<a href="https://scryfall.com/card/om1/100/spider-rex-daring-dino?utm_source=api">Spider-Rex, Daring Dino</a><br/>
+<a href="https://scryfall.com/card/om1/10/starling-aerial-ally?utm_source=api">Starling, Aerial Ally</a><br/>
+<a href="https://scryfall.com/card/om1/176/steel-wrecking-ball?utm_source=api">Steel Wrecking Ball</a><br/>
+<a href="https://scryfall.com/card/om1/84/stegron-the-dinosaur-man?utm_source=api">Stegron the Dinosaur Man</a><br/>
+<a href="https://scryfall.com/card/om1/185/suburban-sanctuary?utm_source=api">Suburban Sanctuary</a><br/>
+<a href="https://scryfall.com/card/om1/178/subway-train?utm_source=api">Subway Train</a><br/>
+<a href="https://scryfall.com/card/om1/73/swarm-being-of-bees?utm_source=api">Swarm, Being of Bees</a><br/>
+<a href="https://scryfall.com/card/om1/80/taxi-driver?utm_source=api">Taxi Driver</a><br/>
+<a href="https://scryfall.com/card/om1/13/thwip!?utm_source=api">Thwip!</a><br/>
+<a href="https://scryfall.com/card/om1/186/university-campus?utm_source=api">University Campus</a><br/>
+<a href="https://scryfall.com/card/om1/45/unstable-experiment?utm_source=api">Unstable Experiment</a><br/>
+<a href="https://scryfall.com/card/om1/70/venom-evil-unleashed?utm_source=api">Venom, Evil Unleashed</a><br/>
+<a href="https://scryfall.com/card/om1/50/venomized-cat?utm_source=api">Venomized Cat</a><br/>
+<a href="https://scryfall.com/card/om1/54/venoms-hunger?utm_source=api">Venom's Hunger</a><br/>
+<a href="https://scryfall.com/card/om1/188/vibrant-cityscape?utm_source=api">Vibrant Cityscape</a><br/>
+<a href="https://scryfall.com/card/om1/15/web-up?utm_source=api">Web Up</a><br/>
+<a href="https://scryfall.com/card/om1/43/whoosh!?utm_source=api">Whoosh!</a><br/>
+<a href="https://scryfall.com/card/om1/11/wild-pack-squad?utm_source=api">Wild Pack Squad</a><br/>
+</details>
+[]()
+
+## Avatar: The Last Airbender Eternal (tle)
+*release: 2025-11-21 | p12e_code: 1036*
+
+<details>
+  <summary>Click to see 1 new cards</summary>
+
+<a href="https://scryfall.com/card/tle/162/diresight?utm_source=api">Diresight</a><br/>
 </details>
 []()
 
