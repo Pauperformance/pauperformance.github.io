@@ -25,8 +25,8 @@ Please, read the [PhD Guidelines](./pages/phd_guidelines.html).**
 
 ---
 
-## The current Pauperformance code for decks is **1030**.
-It refers to Through the Omenpaths (om1), released on 2025-09-23.
+## The current Pauperformance code for decks is **1036**.
+It refers to Avatar: The Last Airbender Eternal (tle), released on 2025-11-21.
 
 ---
 
