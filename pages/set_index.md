@@ -1058,10 +1058,11 @@ Lines in **bold** correspond to sets that have introduced new cards in the [Paup
 | 1037      | ttla          | Avatar: The Last Airbender Tokens               | 2025-11-21   |
 | 1038      | ttle          | Avatar: The Last Airbender Eternal Tokens       | 2025-11-21   |
 | 1039      | afic          | Final Fantasy Commander Art Series              | 2025-12-05   |
-| 1040      | ecl           | Lorwyn Eclipsed                                 | 2026-01-23   |
-| 1041      | pza           | Teenage Mutant Ninja Turtles Source Material    | 2026-03-06   |
-| 1042      | tmc           | Teenage Mutant Ninja Turtles Eternal            | 2026-03-06   |
-| 1043      | tmt           | Teenage Mutant Ninja Turtles                    | 2026-03-06   |
-| 1044      | ttmc          | Teenage Mutant Ninja Turtles Eternal Tokens     | 2026-03-06   |
-| 1045      | ttmt          | Teenage Mutant Ninja Turtles Tokens             | 2026-03-06   |
+| 1040      | pf26          | MagicFest 2026                                  | 2026-01-01   |
+| 1041      | ecl           | Lorwyn Eclipsed                                 | 2026-01-23   |
+| 1042      | pza           | Teenage Mutant Ninja Turtles Source Material    | 2026-03-06   |
+| 1043      | tmc           | Teenage Mutant Ninja Turtles Eternal            | 2026-03-06   |
+| 1044      | tmt           | Teenage Mutant Ninja Turtles                    | 2026-03-06   |
+| 1045      | ttmc          | Teenage Mutant Ninja Turtles Eternal Tokens     | 2026-03-06   |
+| 1046      | ttmt          | Teenage Mutant Ninja Turtles Tokens             | 2026-03-06   |
 
