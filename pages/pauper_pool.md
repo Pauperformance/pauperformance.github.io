@@ -13,7 +13,7 @@ This page should be useful for Pauper players that haven't followed the latest r
 
 Further information about reference numbers used by Pauperformance (p12e) to uniquely identify Magic sets can be found in the [Set Index page](set_index.html).
 
-The total number of cards in the Pauper pool is: 9836.
+The total number of cards in the Pauper pool is: 9938.
 
 ---
 Table of Contents
@@ -201,6 +201,8 @@ Table of Contents
 * [Aetherdrift](#aetherdrift-dft) (*release: 2025-02-14 ~ p12e_code: 980*)
 * [Tarkir: Dragonstorm Commander](#tarkir-dragonstorm-commander-tdc) (*release: 2025-04-11 ~ p12e_code: 991*)
 * [Final Fantasy](#final-fantasy-fin) (*release: 2025-06-13 ~ p12e_code: 999*)
+* [Through the Omenpaths](#through-the-omenpaths-om1) (*release: 2025-09-23 ~ p12e_code: 1030*)
+* [Avatar: The Last Airbender Eternal](#avatar-the-last-airbender-eternal-tle) (*release: 2025-11-21 ~ p12e_code: 1036*)
 
 ---
 
@@ -11684,6 +11686,126 @@ Table of Contents
 <a href="https://scryfall.com/card/fin/292/windurst-federation-center?utm_source=api">Windurst, Federation Center</a><br/>
 <a href="https://scryfall.com/card/fin/270/world-map?utm_source=api">World Map</a><br/>
 <a href="https://scryfall.com/card/fin/44/youre-not-alone?utm_source=api">You're Not Alone</a><br/>
+</details>
+[]()
+
+## Through the Omenpaths (om1)
+*release: 2025-09-23 | p12e_code: 1030*
+
+<details>
+  <summary>Click to see 64 new cards</summary>
+
+<a href="https://scryfall.com/card/om1/29/amazing-acrobatics?utm_source=api">Amazing Acrobatics</a><br/>
+<a href="https://scryfall.com/card/om1/81/angry-rabble?utm_source=api">Angry Rabble</a><br/>
+<a href="https://scryfall.com/card/om1/170/bagel-and-schmear?utm_source=api">Bagel and Schmear</a><br/>
+<a href="https://scryfall.com/card/om1/25/beetle-legacy-criminal?utm_source=api">Beetle, Legacy Criminal</a><br/>
+<a href="https://scryfall.com/card/om1/5/city-pigeon?utm_source=api">City Pigeon</a><br/>
+<a href="https://scryfall.com/card/om1/53/common-crook?utm_source=api">Common Crook</a><br/>
+<a href="https://scryfall.com/card/om1/16/daily-bugle-reporters?utm_source=api">Daily Bugle Reporters</a><br/>
+<a href="https://scryfall.com/card/om1/35/doc-ocks-henchmen?utm_source=api">Doc Ock's Henchmen</a><br/>
+<a href="https://scryfall.com/card/om1/38/doc-ock-sinister-scientist?utm_source=api">Doc Ock, Sinister Scientist</a><br/>
+<a href="https://scryfall.com/card/om1/164/eerie-gravestone?utm_source=api">Eerie Gravestone</a><br/>
+<a href="https://scryfall.com/card/om1/78/electros-bolt?utm_source=api">Electro's Bolt</a><br/>
+<a href="https://scryfall.com/card/om1/137/gallant-citizen?utm_source=api">Gallant Citizen</a><br/>
+<a href="https://scryfall.com/card/om1/107/grow-extra-arms?utm_source=api">Grow Extra Arms</a><br/>
+<a href="https://scryfall.com/card/om1/104/guy-in-the-chair?utm_source=api">Guy in the Chair</a><br/>
+<a href="https://scryfall.com/card/om1/177/hot-dog-cart?utm_source=api">Hot Dog Cart</a><br/>
+<a href="https://scryfall.com/card/om1/51/inner-demons-gangsters?utm_source=api">Inner Demons Gangsters</a><br/>
+<a href="https://scryfall.com/card/om1/111/kapow!?utm_source=api">Kapow!</a><br/>
+<a href="https://scryfall.com/card/om1/103/kravens-cats?utm_source=api">Kraven's Cats</a><br/>
+<a href="https://scryfall.com/card/om1/109/lurking-lizards?utm_source=api">Lurking Lizards</a><br/>
+<a href="https://scryfall.com/card/om1/96/masked-meower?utm_source=api">Masked Meower</a><br/>
+<a href="https://scryfall.com/card/om1/163/mechanical-mobster?utm_source=api">Mechanical Mobster</a><br/>
+<a href="https://scryfall.com/card/om1/61/merciless-enforcers?utm_source=api">Merciless Enforcers</a><br/>
+<a href="https://scryfall.com/card/om1/147/mob-lookout?utm_source=api">Mob Lookout</a><br/>
+<a href="https://scryfall.com/card/om1/39/mysterios-phantasm?utm_source=api">Mysterio's Phantasm</a><br/>
+<a href="https://scryfall.com/card/om1/169/news-helicopter?utm_source=api">News Helicopter</a><br/>
+<a href="https://scryfall.com/card/om1/182/ominous-asylum?utm_source=api">Ominous Asylum</a><br/>
+<a href="https://scryfall.com/card/om1/40/oscorp-research-team?utm_source=api">Oscorp Research Team</a><br/>
+<a href="https://scryfall.com/card/om1/162/passenger-ferry?utm_source=api">Passenger Ferry</a><br/>
+<a href="https://scryfall.com/card/om1/106/professional-wrestler?utm_source=api">Professional Wrestler</a><br/>
+<a href="https://scryfall.com/card/om1/142/pumpkin-bombardment?utm_source=api">Pumpkin Bombardment</a><br/>
+<a href="https://scryfall.com/card/om1/52/risky-research?utm_source=api">Risky Research</a><br/>
+<a href="https://scryfall.com/card/om1/93/romantic-rendezvous?utm_source=api">Romantic Rendezvous</a><br/>
+<a href="https://scryfall.com/card/om1/183/savage-mansion?utm_source=api">Savage Mansion</a><br/>
+<a href="https://scryfall.com/card/om1/67/scorpions-sting?utm_source=api">Scorpion's Sting</a><br/>
+<a href="https://scryfall.com/card/om1/114/scout-the-city?utm_source=api">Scout the City</a><br/>
+<a href="https://scryfall.com/card/om1/8/selfless-police-captain?utm_source=api">Selfless Police Captain</a><br/>
+<a href="https://scryfall.com/card/om1/184/sinister-hideout?utm_source=api">Sinister Hideout</a><br/>
+<a href="https://scryfall.com/card/om1/159/skyward-spider?utm_source=api">Skyward Spider</a><br/>
+<a href="https://scryfall.com/card/om1/19/spectacular-tactics?utm_source=api">Spectacular Tactics</a><br/>
+<a href="https://scryfall.com/card/om1/174/spider-bot?utm_source=api">Spider-Bot</a><br/>
+<a href="https://scryfall.com/card/om1/97/spider-gwen-free-spirit?utm_source=api">Spider-Gwen, Free Spirit</a><br/>
+<a href="https://scryfall.com/card/om1/94/spider-islanders?utm_source=api">Spider-Islanders</a><br/>
+<a href="https://scryfall.com/card/om1/122/spider-man-brooklyn-visionary?utm_source=api">Spider-Man, Brooklyn Visionary</a><br/>
+<a href="https://scryfall.com/card/om1/144/spider-manifestation?utm_source=api">Spider Manifestation</a><br/>
+<a href="https://scryfall.com/card/om1/31/spider-man-no-more?utm_source=api">Spider-Man No More</a><br/>
+<a href="https://scryfall.com/card/om1/9/spider-man-web-slinger?utm_source=api">Spider-Man, Web-Slinger</a><br/>
+<a href="https://scryfall.com/card/om1/100/spider-rex-daring-dino?utm_source=api">Spider-Rex, Daring Dino</a><br/>
+<a href="https://scryfall.com/card/om1/10/starling-aerial-ally?utm_source=api">Starling, Aerial Ally</a><br/>
+<a href="https://scryfall.com/card/om1/176/steel-wrecking-ball?utm_source=api">Steel Wrecking Ball</a><br/>
+<a href="https://scryfall.com/card/om1/84/stegron-the-dinosaur-man?utm_source=api">Stegron the Dinosaur Man</a><br/>
+<a href="https://scryfall.com/card/om1/185/suburban-sanctuary?utm_source=api">Suburban Sanctuary</a><br/>
+<a href="https://scryfall.com/card/om1/178/subway-train?utm_source=api">Subway Train</a><br/>
+<a href="https://scryfall.com/card/om1/73/swarm-being-of-bees?utm_source=api">Swarm, Being of Bees</a><br/>
+<a href="https://scryfall.com/card/om1/80/taxi-driver?utm_source=api">Taxi Driver</a><br/>
+<a href="https://scryfall.com/card/om1/13/thwip!?utm_source=api">Thwip!</a><br/>
+<a href="https://scryfall.com/card/om1/186/university-campus?utm_source=api">University Campus</a><br/>
+<a href="https://scryfall.com/card/om1/45/unstable-experiment?utm_source=api">Unstable Experiment</a><br/>
+<a href="https://scryfall.com/card/om1/70/venom-evil-unleashed?utm_source=api">Venom, Evil Unleashed</a><br/>
+<a href="https://scryfall.com/card/om1/50/venomized-cat?utm_source=api">Venomized Cat</a><br/>
+<a href="https://scryfall.com/card/om1/54/venoms-hunger?utm_source=api">Venom's Hunger</a><br/>
+<a href="https://scryfall.com/card/om1/188/vibrant-cityscape?utm_source=api">Vibrant Cityscape</a><br/>
+<a href="https://scryfall.com/card/om1/15/web-up?utm_source=api">Web Up</a><br/>
+<a href="https://scryfall.com/card/om1/43/whoosh!?utm_source=api">Whoosh!</a><br/>
+<a href="https://scryfall.com/card/om1/11/wild-pack-squad?utm_source=api">Wild Pack Squad</a><br/>
+</details>
+[]()
+
+## Avatar: The Last Airbender Eternal (tle)
+*release: 2025-11-21 | p12e_code: 1036*
+
+<details>
+  <summary>Click to see 38 new cards</summary>
+
+<a href="https://scryfall.com/card/tle/211/aangs-defense?utm_source=api">Aang's Defense</a><br/>
+<a href="https://scryfall.com/card/tle/212/aardvark-sloth?utm_source=api">Aardvark Sloth</a><br/>
+<a href="https://scryfall.com/card/tle/234/capital-guard?utm_source=api">Capital Guard</a><br/>
+<a href="https://scryfall.com/card/tle/102/dai-li-censor?utm_source=api">Dai Li Censor</a><br/>
+<a href="https://scryfall.com/card/tle/114/deer-dog?utm_source=api">Deer-Dog</a><br/>
+<a href="https://scryfall.com/card/tle/222/deny-entry?utm_source=api">Deny Entry</a><br/>
+<a href="https://scryfall.com/card/tle/162/diresight?utm_source=api">Diresight</a><br/>
+<a href="https://scryfall.com/card/tle/235/dragon-moose?utm_source=api">Dragon Moose</a><br/>
+<a href="https://scryfall.com/card/tle/228/elephant-rat?utm_source=api">Elephant-Rat</a><br/>
+<a href="https://scryfall.com/card/tle/236/explosive-shot?utm_source=api">Explosive Shot</a><br/>
+<a href="https://scryfall.com/card/tle/229/fire-nation-ambushers?utm_source=api">Fire Nation Ambushers</a><br/>
+<a href="https://scryfall.com/card/tle/238/fire-nation-soldier?utm_source=api">Fire Nation Soldier</a><br/>
+<a href="https://scryfall.com/card/tle/223/flying-dolphin-fish?utm_source=api">Flying Dolphin-Fish</a><br/>
+<a href="https://scryfall.com/card/tle/118/freedom-fighter-recruit?utm_source=api">Freedom Fighter Recruit</a><br/>
+<a href="https://scryfall.com/card/tle/251/frog-squirrels?utm_source=api">Frog-Squirrels</a><br/>
+<a href="https://scryfall.com/card/tle/107/giant-fly?utm_source=api">Giant Fly</a><br/>
+<a href="https://scryfall.com/card/tle/231/gilacorn?utm_source=api">Gilacorn</a><br/>
+<a href="https://scryfall.com/card/tle/252/hippo-cows?utm_source=api">Hippo-Cows</a><br/>
+<a href="https://scryfall.com/card/tle/77/inspired-insurgent?utm_source=api">Inspired Insurgent</a><br/>
+<a href="https://scryfall.com/card/tle/79/kindly-customer?utm_source=api">Kindly Customer</a><br/>
+<a href="https://scryfall.com/card/tle/80/koala-sheep?utm_source=api">Koala-Sheep</a><br/>
+<a href="https://scryfall.com/card/tle/241/komodo-rhino?utm_source=api">Komodo Rhino</a><br/>
+<a href="https://scryfall.com/card/tle/216/kyoshi-warrior-guard?utm_source=api">Kyoshi Warrior Guard</a><br/>
+<a href="https://scryfall.com/card/tle/256/mechanical-glider?utm_source=api">Mechanical Glider</a><br/>
+<a href="https://scryfall.com/card/tle/271/path-to-redemption?utm_source=api">Path to Redemption</a><br/>
+<a href="https://scryfall.com/card/tle/233/purple-pentapus?utm_source=api">Purple Pentapus</a><br/>
+<a href="https://scryfall.com/card/tle/272/razor-rings?utm_source=api">Razor Rings</a><br/>
+<a href="https://scryfall.com/card/tle/218/sledding-otter-penguin?utm_source=api">Sledding Otter-Penguin</a><br/>
+<a href="https://scryfall.com/card/tle/84/sokkas-sword-training?utm_source=api">Sokka's Sword Training</a><br/>
+<a href="https://scryfall.com/card/tle/149/stand-united?utm_source=api">Stand United</a><br/>
+<a href="https://scryfall.com/card/tle/129/the-art-of-tea?utm_source=api">The Art of Tea</a><br/>
+<a href="https://scryfall.com/card/tle/88/toucan-puffin?utm_source=api">Toucan-Puffin</a><br/>
+<a href="https://scryfall.com/card/tle/220/tundra-wall?utm_source=api">Tundra Wall</a><br/>
+<a href="https://scryfall.com/card/tle/226/turtle-seals?utm_source=api">Turtle-Seals</a><br/>
+<a href="https://scryfall.com/card/tle/97/unagis-spray?utm_source=api">Unagi's Spray</a><br/>
+<a href="https://scryfall.com/card/tle/244/warship-scout?utm_source=api">Warship Scout</a><br/>
+<a href="https://scryfall.com/card/tle/221/wolf-cove-villager?utm_source=api">Wolf Cove Villager</a><br/>
+<a href="https://scryfall.com/card/tle/247/zukos-offense?utm_source=api">Zuko's Offense</a><br/>
 </details>
 []()
 
