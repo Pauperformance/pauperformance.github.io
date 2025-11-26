@@ -11768,18 +11768,18 @@ Table of Contents
 <details>
   <summary>Click to see 38 new cards</summary>
 
-<a href="https://scryfall.com/card/tle/266/aangs-defense?utm_source=api">Aang's Defense</a><br/>
-<a href="https://scryfall.com/card/tle/267/aardvark-sloth?utm_source=api">Aardvark Sloth</a><br/>
-<a href="https://scryfall.com/card/tle/277/capital-guard?utm_source=api">Capital Guard</a><br/>
+<a href="https://scryfall.com/card/tle/211/aangs-defense?utm_source=api">Aang's Defense</a><br/>
+<a href="https://scryfall.com/card/tle/212/aardvark-sloth?utm_source=api">Aardvark Sloth</a><br/>
+<a href="https://scryfall.com/card/tle/234/capital-guard?utm_source=api">Capital Guard</a><br/>
 <a href="https://scryfall.com/card/tle/102/dai-li-censor?utm_source=api">Dai Li Censor</a><br/>
 <a href="https://scryfall.com/card/tle/114/deer-dog?utm_source=api">Deer-Dog</a><br/>
 <a href="https://scryfall.com/card/tle/222/deny-entry?utm_source=api">Deny Entry</a><br/>
 <a href="https://scryfall.com/card/tle/162/diresight?utm_source=api">Diresight</a><br/>
-<a href="https://scryfall.com/card/tle/278/dragon-moose?utm_source=api">Dragon Moose</a><br/>
+<a href="https://scryfall.com/card/tle/235/dragon-moose?utm_source=api">Dragon Moose</a><br/>
 <a href="https://scryfall.com/card/tle/228/elephant-rat?utm_source=api">Elephant-Rat</a><br/>
-<a href="https://scryfall.com/card/tle/279/explosive-shot?utm_source=api">Explosive Shot</a><br/>
+<a href="https://scryfall.com/card/tle/236/explosive-shot?utm_source=api">Explosive Shot</a><br/>
 <a href="https://scryfall.com/card/tle/229/fire-nation-ambushers?utm_source=api">Fire Nation Ambushers</a><br/>
-<a href="https://scryfall.com/card/tle/280/fire-nation-soldier?utm_source=api">Fire Nation Soldier</a><br/>
+<a href="https://scryfall.com/card/tle/238/fire-nation-soldier?utm_source=api">Fire Nation Soldier</a><br/>
 <a href="https://scryfall.com/card/tle/223/flying-dolphin-fish?utm_source=api">Flying Dolphin-Fish</a><br/>
 <a href="https://scryfall.com/card/tle/118/freedom-fighter-recruit?utm_source=api">Freedom Fighter Recruit</a><br/>
 <a href="https://scryfall.com/card/tle/251/frog-squirrels?utm_source=api">Frog-Squirrels</a><br/>
@@ -11789,23 +11789,23 @@ Table of Contents
 <a href="https://scryfall.com/card/tle/77/inspired-insurgent?utm_source=api">Inspired Insurgent</a><br/>
 <a href="https://scryfall.com/card/tle/79/kindly-customer?utm_source=api">Kindly Customer</a><br/>
 <a href="https://scryfall.com/card/tle/80/koala-sheep?utm_source=api">Koala-Sheep</a><br/>
-<a href="https://scryfall.com/card/tle/283/komodo-rhino?utm_source=api">Komodo Rhino</a><br/>
+<a href="https://scryfall.com/card/tle/241/komodo-rhino?utm_source=api">Komodo Rhino</a><br/>
 <a href="https://scryfall.com/card/tle/216/kyoshi-warrior-guard?utm_source=api">Kyoshi Warrior Guard</a><br/>
 <a href="https://scryfall.com/card/tle/256/mechanical-glider?utm_source=api">Mechanical Glider</a><br/>
 <a href="https://scryfall.com/card/tle/271/path-to-redemption?utm_source=api">Path to Redemption</a><br/>
 <a href="https://scryfall.com/card/tle/233/purple-pentapus?utm_source=api">Purple Pentapus</a><br/>
 <a href="https://scryfall.com/card/tle/272/razor-rings?utm_source=api">Razor Rings</a><br/>
-<a href="https://scryfall.com/card/tle/273/sledding-otter-penguin?utm_source=api">Sledding Otter-Penguin</a><br/>
+<a href="https://scryfall.com/card/tle/218/sledding-otter-penguin?utm_source=api">Sledding Otter-Penguin</a><br/>
 <a href="https://scryfall.com/card/tle/84/sokkas-sword-training?utm_source=api">Sokka's Sword Training</a><br/>
 <a href="https://scryfall.com/card/tle/149/stand-united?utm_source=api">Stand United</a><br/>
 <a href="https://scryfall.com/card/tle/129/the-art-of-tea?utm_source=api">The Art of Tea</a><br/>
 <a href="https://scryfall.com/card/tle/88/toucan-puffin?utm_source=api">Toucan-Puffin</a><br/>
-<a href="https://scryfall.com/card/tle/275/tundra-wall?utm_source=api">Tundra Wall</a><br/>
+<a href="https://scryfall.com/card/tle/220/tundra-wall?utm_source=api">Tundra Wall</a><br/>
 <a href="https://scryfall.com/card/tle/226/turtle-seals?utm_source=api">Turtle-Seals</a><br/>
 <a href="https://scryfall.com/card/tle/97/unagis-spray?utm_source=api">Unagi's Spray</a><br/>
-<a href="https://scryfall.com/card/tle/285/warship-scout?utm_source=api">Warship Scout</a><br/>
-<a href="https://scryfall.com/card/tle/276/wolf-cove-villager?utm_source=api">Wolf Cove Villager</a><br/>
-<a href="https://scryfall.com/card/tle/288/zukos-offense?utm_source=api">Zuko's Offense</a><br/>
+<a href="https://scryfall.com/card/tle/244/warship-scout?utm_source=api">Warship Scout</a><br/>
+<a href="https://scryfall.com/card/tle/221/wolf-cove-villager?utm_source=api">Wolf Cove Villager</a><br/>
+<a href="https://scryfall.com/card/tle/247/zukos-offense?utm_source=api">Zuko's Offense</a><br/>
 </details>
 []()
 
