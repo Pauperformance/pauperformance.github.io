@@ -1052,17 +1052,18 @@ Lines in **bold** correspond to sets that have introduced new cards in the [Paup
 | 1031      | omb           | Through the Omenpaths Bonus Sheet               | 2025-09-23   |
 | 1032      | pspm          | Marvel's Spider-Man Promos                      | 2025-09-26   |
 | 1033      | lmar          | Marvel Legends Series Inserts                   | 2025-09-30   |
-| 1034      | ftla          | Avatar: The Last Airbender Beginner Box Front Cards | 2025-11-21   |
-| 1035      | jtla          | Avatar: The Last Airbender Jumpstart Front Cards | 2025-11-21   |
-| **1036**  | **tle**       | **Avatar: The Last Airbender Eternal**          | **2025-11-21** |
-| 1037      | ttla          | Avatar: The Last Airbender Tokens               | 2025-11-21   |
-| 1038      | ttle          | Avatar: The Last Airbender Eternal Tokens       | 2025-11-21   |
-| 1039      | afic          | Final Fantasy Commander Art Series              | 2025-12-05   |
-| 1040      | pf26          | MagicFest 2026                                  | 2026-01-01   |
-| 1041      | ecl           | Lorwyn Eclipsed                                 | 2026-01-23   |
-| 1042      | pza           | Teenage Mutant Ninja Turtles Source Material    | 2026-03-06   |
-| 1043      | tmc           | Teenage Mutant Ninja Turtles Eternal            | 2026-03-06   |
-| 1044      | tmt           | Teenage Mutant Ninja Turtles                    | 2026-03-06   |
-| 1045      | ttmc          | Teenage Mutant Ninja Turtles Eternal Tokens     | 2026-03-06   |
-| 1046      | ttmt          | Teenage Mutant Ninja Turtles Tokens             | 2026-03-06   |
+| 1034      | atla          | Avatar: the Last Airbender Art Cards            | 2025-11-21   |
+| 1035      | ftla          | Avatar: The Last Airbender Beginner Box Front Cards | 2025-11-21   |
+| 1036      | jtla          | Avatar: The Last Airbender Jumpstart Front Cards | 2025-11-21   |
+| **1037**  | **tle**       | **Avatar: The Last Airbender Eternal**          | **2025-11-21** |
+| 1038      | ttla          | Avatar: The Last Airbender Tokens               | 2025-11-21   |
+| 1039      | ttle          | Avatar: The Last Airbender Eternal Tokens       | 2025-11-21   |
+| 1040      | afic          | Final Fantasy Commander Art Series              | 2025-12-05   |
+| 1041      | pf26          | MagicFest 2026                                  | 2026-01-01   |
+| 1042      | ecl           | Lorwyn Eclipsed                                 | 2026-01-23   |
+| 1043      | pza           | Teenage Mutant Ninja Turtles Source Material    | 2026-03-06   |
+| 1044      | tmc           | Teenage Mutant Ninja Turtles Eternal            | 2026-03-06   |
+| 1045      | tmt           | Teenage Mutant Ninja Turtles                    | 2026-03-06   |
+| 1046      | ttmc          | Teenage Mutant Ninja Turtles Eternal Tokens     | 2026-03-06   |
+| 1047      | ttmt          | Teenage Mutant Ninja Turtles Tokens             | 2026-03-06   |
 
