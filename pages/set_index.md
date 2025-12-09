@@ -1066,4 +1066,8 @@ Lines in **bold** correspond to sets that have introduced new cards in the [Paup
 | 1045      | tmt           | Teenage Mutant Ninja Turtles                    | 2026-03-06   |
 | 1046      | ttmc          | Teenage Mutant Ninja Turtles Eternal Tokens     | 2026-03-06   |
 | 1047      | ttmt          | Teenage Mutant Ninja Turtles Tokens             | 2026-03-06   |
+| 1048      | msc           | Marvel Super Heroes Commander                   | 2026-06-26   |
+| 1049      | msh           | Marvel Super Heroes                             | 2026-06-26   |
+| 1050      | om2           | Through the Omenpaths 2                         | 2026-06-26   |
+| 1051      | tmsh          | Marvel Super Heroes Tokens                      | 2026-06-26   |
 
