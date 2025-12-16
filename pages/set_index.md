@@ -1053,22 +1053,23 @@ Lines in **bold** correspond to sets that have introduced new cards in the [Paup
 | 1032      | pspm          | Marvel's Spider-Man Promos                      | 2025-09-26   |
 | 1033      | lmar          | Marvel Legends Series Inserts                   | 2025-09-30   |
 | 1034      | atla          | Avatar: the Last Airbender Art Cards            | 2025-11-21   |
-| 1035      | ftla          | Avatar: The Last Airbender Beginner Box Front Cards | 2025-11-21   |
-| 1036      | jtla          | Avatar: The Last Airbender Jumpstart Front Cards | 2025-11-21   |
-| 1037      | ptla          | Avatar: The Last Airbender Promos               | 2025-11-21   |
-| **1038**  | **tle**       | **Avatar: The Last Airbender Eternal**          | **2025-11-21** |
-| 1039      | ttla          | Avatar: The Last Airbender Tokens               | 2025-11-21   |
-| 1040      | ttle          | Avatar: The Last Airbender Eternal Tokens       | 2025-11-21   |
-| 1041      | afic          | Final Fantasy Commander Art Series              | 2025-12-05   |
-| 1042      | pf26          | MagicFest 2026                                  | 2026-01-01   |
-| 1043      | ecl           | Lorwyn Eclipsed                                 | 2026-01-23   |
-| 1044      | pza           | Teenage Mutant Ninja Turtles Source Material    | 2026-03-06   |
-| 1045      | tmc           | Teenage Mutant Ninja Turtles Eternal            | 2026-03-06   |
-| 1046      | tmt           | Teenage Mutant Ninja Turtles                    | 2026-03-06   |
-| 1047      | ttmc          | Teenage Mutant Ninja Turtles Eternal Tokens     | 2026-03-06   |
-| 1048      | ttmt          | Teenage Mutant Ninja Turtles Tokens             | 2026-03-06   |
-| 1049      | msc           | Marvel Super Heroes Commander                   | 2026-06-26   |
-| 1050      | msh           | Marvel Super Heroes                             | 2026-06-26   |
-| 1051      | om2           | Through the Omenpaths 2                         | 2026-06-26   |
-| 1052      | tmsh          | Marvel Super Heroes Tokens                      | 2026-06-26   |
+| 1035      | atle          | Avatar: the Last Airbender Eternal Art Cards    | 2025-11-21   |
+| 1036      | ftla          | Avatar: The Last Airbender Beginner Box Front Cards | 2025-11-21   |
+| 1037      | jtla          | Avatar: The Last Airbender Jumpstart Front Cards | 2025-11-21   |
+| 1038      | ptla          | Avatar: The Last Airbender Promos               | 2025-11-21   |
+| **1039**  | **tle**       | **Avatar: The Last Airbender Eternal**          | **2025-11-21** |
+| 1040      | ttla          | Avatar: The Last Airbender Tokens               | 2025-11-21   |
+| 1041      | ttle          | Avatar: The Last Airbender Eternal Tokens       | 2025-11-21   |
+| 1042      | afic          | Final Fantasy Commander Art Series              | 2025-12-05   |
+| 1043      | pf26          | MagicFest 2026                                  | 2026-01-01   |
+| 1044      | ecl           | Lorwyn Eclipsed                                 | 2026-01-23   |
+| 1045      | pza           | Teenage Mutant Ninja Turtles Source Material    | 2026-03-06   |
+| 1046      | tmc           | Teenage Mutant Ninja Turtles Eternal            | 2026-03-06   |
+| 1047      | tmt           | Teenage Mutant Ninja Turtles                    | 2026-03-06   |
+| 1048      | ttmc          | Teenage Mutant Ninja Turtles Eternal Tokens     | 2026-03-06   |
+| 1049      | ttmt          | Teenage Mutant Ninja Turtles Tokens             | 2026-03-06   |
+| 1050      | msc           | Marvel Super Heroes Commander                   | 2026-06-26   |
+| 1051      | msh           | Marvel Super Heroes                             | 2026-06-26   |
+| 1052      | om2           | Through the Omenpaths 2                         | 2026-06-26   |
+| 1053      | tmsh          | Marvel Super Heroes Tokens                      | 2026-06-26   |
 
