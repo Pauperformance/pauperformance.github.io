@@ -25,7 +25,7 @@ Please, read the [PhD Guidelines](./pages/phd_guidelines.html).**
 
 ---
 
-## The current Pauperformance code for decks is **1038**.
+## The current Pauperformance code for decks is **1039**.
 It refers to Avatar: The Last Airbender Eternal (tle), released on 2025-11-21.
 
 ---

@@ -202,7 +202,7 @@ Table of Contents
 * [Tarkir: Dragonstorm Commander](#tarkir-dragonstorm-commander-tdc) (*release: 2025-04-11 ~ p12e_code: 991*)
 * [Final Fantasy](#final-fantasy-fin) (*release: 2025-06-13 ~ p12e_code: 999*)
 * [Through the Omenpaths](#through-the-omenpaths-om1) (*release: 2025-09-23 ~ p12e_code: 1030*)
-* [Avatar: The Last Airbender Eternal](#avatar-the-last-airbender-eternal-tle) (*release: 2025-11-21 ~ p12e_code: 1038*)
+* [Avatar: The Last Airbender Eternal](#avatar-the-last-airbender-eternal-tle) (*release: 2025-11-21 ~ p12e_code: 1039*)
 
 ---
 
@@ -11763,7 +11763,7 @@ Table of Contents
 []()
 
 ## Avatar: The Last Airbender Eternal (tle)
-*release: 2025-11-21 | p12e_code: 1038*
+*release: 2025-11-21 | p12e_code: 1039*
 
 <details>
   <summary>Click to see 38 new cards</summary>
