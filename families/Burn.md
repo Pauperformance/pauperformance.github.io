@@ -11,5 +11,6 @@
 [Burn](../archetypes/Burn.html)  
 [MonoB Burn](../archetypes/MonoB%20Burn.html)  
 [MonoR Kuldotha](../archetypes/MonoR%20Kuldotha.html)  
+[MonoR Madness](../archetypes/MonoR%20Madness.html)  
 [Rakdos Burn](../archetypes/Rakdos%20Burn.html)  
 
