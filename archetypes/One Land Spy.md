@@ -5,7 +5,7 @@
 # One Land Spy
 <br/>
 
-**Aliases**: `Balustrade Spy`, `Oops All Spells`
+**Aliases**: `Balustrade Spy`, `Balustrade Combo`
 
 
 **Dominant mana**: <img src="../resources/images/mana/B.png" class="dominant-mana-icon"/>
