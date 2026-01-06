@@ -1073,4 +1073,5 @@ Lines in **bold** correspond to sets that have introduced new cards in the [Paup
 | 1052      | om2           | Through the Omenpaths 2                         | 2026-06-26   |
 | 1053      | tmsh          | Marvel Super Heroes Tokens                      | 2026-06-26   |
 | 1054      | ecc           | Lorwyn Eclipsed Commander                       | 2026-01-23   |
+| 1055      | tecl          | Lorwyn Eclipsed Tokens                          | 2026-01-23   |
 
