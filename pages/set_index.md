@@ -1074,7 +1074,8 @@ Lines in **bold** correspond to sets that have introduced new cards in the [Paup
 | 1053      | tmsh          | Marvel Super Heroes Tokens                      | 2026-06-26   |
 | 1054      | aspm          | Marvel's Spider-Man Art Series                  | 2025-09-26   |
 | 1055      | pw26          | Wizards Play Network 2026                       | 2026-01-01   |
-| 1056      | ecc           | Lorwyn Eclipsed Commander                       | 2026-01-23   |
-| 1057      | tecc          | Lorwyn Eclipsed Commander Tokens                | 2026-01-23   |
-| 1058      | tecl          | Lorwyn Eclipsed Tokens                          | 2026-01-23   |
+| 1056      | aecl          | Lorwyn Eclipsed Art Series                      | 2026-01-23   |
+| 1057      | ecc           | Lorwyn Eclipsed Commander                       | 2026-01-23   |
+| 1058      | tecc          | Lorwyn Eclipsed Commander Tokens                | 2026-01-23   |
+| 1059      | tecl          | Lorwyn Eclipsed Tokens                          | 2026-01-23   |
 
