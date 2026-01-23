@@ -1076,6 +1076,7 @@ Lines in **bold** correspond to sets that have introduced new cards in the [Paup
 | 1055      | pw26          | Wizards Play Network 2026                       | 2026-01-01   |
 | 1056      | aecl          | Lorwyn Eclipsed Art Series                      | 2026-01-23   |
 | 1057      | ecc           | Lorwyn Eclipsed Commander                       | 2026-01-23   |
-| 1058      | tecc          | Lorwyn Eclipsed Commander Tokens                | 2026-01-23   |
-| 1059      | tecl          | Lorwyn Eclipsed Tokens                          | 2026-01-23   |
+| 1058      | pecl          | Lorwyn Eclipsed Promos                          | 2026-01-23   |
+| 1059      | tecc          | Lorwyn Eclipsed Commander Tokens                | 2026-01-23   |
+| 1060      | tecl          | Lorwyn Eclipsed Tokens                          | 2026-01-23   |
 
