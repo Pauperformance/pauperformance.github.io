@@ -1072,12 +1072,4 @@ Lines in **bold** correspond to sets that have introduced new cards in the [Paup
 | 1051      | msh           | Marvel Super Heroes                             | 2026-06-26   |
 | 1052      | om2           | Through the Omenpaths 2                         | 2026-06-26   |
 | 1053      | tmsh          | Marvel Super Heroes Tokens                      | 2026-06-26   |
-| 1054      | aspm          | Marvel's Spider-Man Art Series                  | 2025-09-26   |
-| 1055      | pw26          | Wizards Play Network 2026                       | 2026-01-01   |
-| 1056      | aecl          | Lorwyn Eclipsed Art Series                      | 2026-01-23   |
-| 1057      | ecc           | Lorwyn Eclipsed Commander                       | 2026-01-23   |
-| 1058      | pecl          | Lorwyn Eclipsed Promos                          | 2026-01-23   |
-| 1059      | tecc          | Lorwyn Eclipsed Commander Tokens                | 2026-01-23   |
-| 1060      | tecl          | Lorwyn Eclipsed Tokens                          | 2026-01-23   |
-| 1061      | pl26          | Year of the Horse 2026                          | 2026-02-17   |
 
