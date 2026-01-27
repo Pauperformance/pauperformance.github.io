@@ -1081,4 +1081,7 @@ Lines in **bold** correspond to sets that have introduced new cards in the [Paup
 | 1060      | tecl          | Lorwyn Eclipsed Tokens                          | 2026-01-23   |
 | 1061      | yecl          | Alchemy: Lorwyn Eclipsed                        | 2026-02-03   |
 | 1062      | pl26          | Year of the Horse 2026                          | 2026-02-17   |
+| 1063      | soa           | Secrets of Strixhaven Mystical Archive          | 2026-04-24   |
+| 1064      | soc           | Secrets of Strixhaven Commander                 | 2026-04-24   |
+| 1065      | sos           | Secrets of Strixhaven                           | 2026-04-24   |
 
