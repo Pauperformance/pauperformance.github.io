@@ -1079,5 +1079,6 @@ Lines in **bold** correspond to sets that have introduced new cards in the [Paup
 | 1058      | pecl          | Lorwyn Eclipsed Promos                          | 2026-01-23   |
 | 1059      | tecc          | Lorwyn Eclipsed Commander Tokens                | 2026-01-23   |
 | 1060      | tecl          | Lorwyn Eclipsed Tokens                          | 2026-01-23   |
-| 1061      | pl26          | Year of the Horse 2026                          | 2026-02-17   |
+| 1061      | yecl          | Alchemy: Lorwyn Eclipsed                        | 2026-02-03   |
+| 1062      | pl26          | Year of the Horse 2026                          | 2026-02-17   |
 
