@@ -14,17 +14,17 @@
 Generic archetype, for decks that do not fit those in the [Archetypes Index](../../pages/archetypes_index.html).
 
 
-## **Staples**
+
+
+## **Frequent cards**
 
 <details>
   <summary>Click here to expand</summary>
-<a href="https://scryfall.com/card/m12/94/distress"><img src="https://cards.scryfall.io/normal/front/6/3/630d4080-8183-41fb-8091-740719083765.jpg" class="archetype-card rounded-image"/></a>
-<a href="https://scryfall.com/card/cm2/77/sign-in-blood"><img src="https://cards.scryfall.io/normal/front/6/1/61388c28-9428-473c-973a-0a82b6b83d62.jpg" class="archetype-card rounded-image"/></a>
-<a href="https://scryfall.com/card/otj/281/swamp"><img src="https://cards.scryfall.io/normal/front/e/b/eb7dc259-9949-4673-a8f1-874396948392.jpg" class="archetype-card rounded-image"/></a>
-<a href="https://scryfall.com/card/2x2/96/unearth"><img src="https://cards.scryfall.io/normal/front/b/1/b1f73271-b70f-40ae-be64-f8de7805923a.jpg" class="archetype-card rounded-image"/></a>
+<a href="https://scryfall.com/card/cmm/153/dread-return"><img src="https://cards.scryfall.io/normal/front/3/4/34a87901-98bb-41dd-b566-bcb510c20022.jpg" class="archetype-card rounded-image"/></a>
+<a href="https://scryfall.com/card/cmm/171/lotleth-giant"><img src="https://cards.scryfall.io/normal/front/0/9/09237f1b-eff6-45bf-bd7d-a883deda122a.jpg" class="archetype-card rounded-image"/></a>
+<a href="https://scryfall.com/card/bro/164/scrapwork-mutt"><img src="https://cards.scryfall.io/normal/front/4/7/4742800a-4872-4c2d-b884-01e0ba16950c.jpg" class="archetype-card rounded-image"/></a>
+<a href="https://scryfall.com/card/dvd/36/stinkweed-imp"><img src="https://cards.scryfall.io/normal/front/2/a/2ab08d69-210b-4b06-88a2-45281a1a4e1e.jpg" class="archetype-card rounded-image"/></a>
 </details><br/>
-
-
 
 
 

@@ -15,7 +15,32 @@
 **Description**: _Still missing. Please join us on [Discord](https://discord.gg/fYQbpjjkQ3) to contribute to the Academy._
 
 
+## **Staples**
 
+<details>
+  <summary>Click here to expand</summary>
+<a href="https://scryfall.com/card/a25/43/blue-elemental-blast"><img src="https://cards.scryfall.io/normal/front/2/f/2f51f88f-f662-4572-a371-9a77718ed079.jpg" class="archetype-card rounded-image"/></a>
+<a href="https://scryfall.com/card/mh3/318/forest"><img src="https://cards.scryfall.io/normal/front/7/a/7ac34881-de32-42c7-af60-f992638e1da2.jpg" class="archetype-card rounded-image"/></a>
+<a href="https://scryfall.com/card/ltr/169/generous-ent"><img src="https://cards.scryfall.io/normal/front/8/5/85d22d5d-3875-42ff-b51e-c6e21db201f5.jpg" class="archetype-card rounded-image"/></a>
+<a href="https://scryfall.com/card/one/54/glistener-seer"><img src="https://cards.scryfall.io/normal/front/c/2/c22aaaec-bad5-43e9-8e92-9c4bde95fcfd.jpg" class="archetype-card rounded-image"/></a>
+<a href="https://scryfall.com/card/isd/183/gnaw-to-the-bone"><img src="https://cards.scryfall.io/normal/front/4/1/416148c8-13d3-46d3-ac93-6eb7cbab2881.jpg" class="archetype-card rounded-image"/></a>
+<a href="https://scryfall.com/card/clb/455/island"><img src="https://c1.scryfall.com/file/scryfall-cards/normal/front/f/f/ff3ffe47-53a3-42ec-ae89-afc79793380d.jpg" class="archetype-card rounded-image"/></a>
+<a href="https://scryfall.com/card/khm/184/masked-vandal"><img src="https://cards.scryfall.io/normal/front/f/0/f0a9c72a-e450-41e3-80e5-06f2f1171245.jpg" class="archetype-card rounded-image"/></a>
+<a href="https://scryfall.com/card/mma/53/mothdust-changeling"><img src="https://cards.scryfall.io/normal/front/1/8/18acffb1-c1e8-4729-a350-64823b2f9d29.jpg" class="archetype-card rounded-image"/></a>
+<a href="https://scryfall.com/card/rvr/53/persistent-petitioners"><img src="https://cards.scryfall.io/normal/front/2/7/27be522d-bdef-4a95-a405-98247c58b71a.jpg" class="archetype-card rounded-image"/></a>
+<a href="https://scryfall.com/card/blb/229/pond-prophet"><img src="https://cards.scryfall.io/normal/front/f/b/fb959e74-61ea-453d-bb9f-ad0183c0e1b1.jpg" class="archetype-card rounded-image"/></a>
+<a href="https://scryfall.com/card/dmu/258/tangled-islet"><img src="https://cards.scryfall.io/normal/front/4/a/4a325fb4-fe71-47f1-9a2f-05b8cfe88fe6.jpg" class="archetype-card rounded-image"/></a>
+<a href="https://scryfall.com/card/otc/213/winding-way"><img src="https://cards.scryfall.io/normal/front/d/3/d3340062-3071-4d8e-98f8-fd3343a011ad.jpg" class="archetype-card rounded-image"/></a>
+</details><br/>
+
+
+
+## **Frequent cards**
+
+<details>
+  <summary>Click here to expand</summary>
+<a href="https://scryfall.com/card/ody/251/moments-peace"><img src="https://cards.scryfall.io/normal/front/4/0/40ebe935-ccf9-435e-8fe8-53bcbf3526e7.jpg" class="archetype-card rounded-image"/></a>
+</details><br/>
 
 
 

@@ -19,7 +19,6 @@
 
 <details>
   <summary>Click here to expand</summary>
-<a href="https://scryfall.com/card/tsr/263/chromatic-star"><img src="https://cards.scryfall.io/normal/front/c/2/c2e8d492-2c67-410b-b556-c157a14c4cec.jpg" class="archetype-card rounded-image"/></a>
 <a href="https://scryfall.com/card/2xm/125/galvanic-blast"><img src="https://cards.scryfall.io/normal/front/0/c/0cf8cb1e-314a-4894-82df-f9812825f52e.jpg" class="archetype-card rounded-image"/></a>
 <a href="https://scryfall.com/card/phed/24/great-furnace"><img src="https://c1.scryfall.com/file/scryfall-cards/normal/front/2/a/2a7d2d8f-4736-4c99-aba2-b14960395ad6.jpg" class="archetype-card rounded-image"/></a>
 <a href="https://scryfall.com/card/mm2/224/myr-enforcer"><img src="https://cards.scryfall.io/normal/front/d/f/dff51ae7-4b68-4770-915b-fb6bcf9ca1ed.jpg" class="archetype-card rounded-image"/></a>
@@ -33,7 +32,7 @@
 
 <details>
   <summary>Click here to expand</summary>
-<a href="https://scryfall.com/card/me4/109/atog"><img src="https://cards.scryfall.io/normal/front/a/d/adf3bd18-d9c1-4f18-86c0-579db8ea37c7.jpg" class="archetype-card rounded-image"/></a>
+<a href="https://scryfall.com/card/tsr/263/chromatic-star"><img src="https://cards.scryfall.io/normal/front/c/2/c2e8d492-2c67-410b-b556-c157a14c4cec.jpg" class="archetype-card rounded-image"/></a>
 <a href="https://scryfall.com/card/mm2/215/frogmite"><img src="https://cards.scryfall.io/normal/front/b/2/b2991802-e313-40de-b167-0ede5efff101.jpg" class="archetype-card rounded-image"/></a>
 <a href="https://scryfall.com/card/mrd/98/krark-clan-shaman"><img src="https://cards.scryfall.io/normal/front/9/7/975f9ea8-af2c-456f-acd0-ffa9ea0d98c1.jpg" class="archetype-card rounded-image"/></a>
 <a href="https://scryfall.com/card/hop/141/vault-of-whispers"><img src="https://cards.scryfall.io/normal/front/6/9/69e50871-bde7-4109-8811-a1c1bf70d3ae.jpg" class="archetype-card rounded-image"/></a>

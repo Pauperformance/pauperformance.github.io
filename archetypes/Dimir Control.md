@@ -30,6 +30,7 @@
 
 <details>
   <summary>Click here to expand</summary>
+<a href="https://scryfall.com/card/clb/882/bojuka-bog"><img src="https://c1.scryfall.com/file/scryfall-cards/normal/front/f/8/f8f1c157-cebc-45fe-9caa-1ea4b305ccfc.jpg" class="archetype-card rounded-image"/></a>
 <a href="https://scryfall.com/card/2x2/322/dimir-aqueduct"><img src="https://c1.scryfall.com/file/scryfall-cards/normal/front/8/7/877b7b90-80d4-4cad-af7c-a0b36c590ca0.jpg" class="archetype-card rounded-image"/></a>
 <a href="https://scryfall.com/card/bfz/76/dispel"><img src="https://cards.scryfall.io/normal/front/b/c/bceab6b3-6b64-4964-a501-ce806a6c13ad.jpg" class="archetype-card rounded-image"/></a>
 <a href="https://scryfall.com/card/dst/41/echoing-decay"><img src="https://cards.scryfall.io/normal/front/f/8/f8e688e7-8350-4b78-bd49-a6ffdedad556.jpg" class="archetype-card rounded-image"/></a>

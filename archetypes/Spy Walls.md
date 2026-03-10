@@ -5,15 +5,49 @@
 # Spy Walls
 <br/>
 
+**Aliases**: `Walls Spy`
 
-**Dominant mana**: <img src="../resources/images/mana/B.png" class="dominant-mana-icon"/>
+
+**Dominant mana**: <img src="../resources/images/mana/G.png" class="dominant-mana-icon"/> <img src="../resources/images/mana/B.png" class="dominant-mana-icon"/>
 
 **Type**: `Combo`
 
 **Description**: _Still missing. Please join us on [Discord](https://discord.gg/fYQbpjjkQ3) to contribute to the Academy._
 
 
+## **Staples**
 
+<details>
+  <summary>Click here to expand</summary>
+<a href="https://scryfall.com/card/rvr/66/balustrade-spy"><img src="https://cards.scryfall.io/normal/front/2/4/24c852a5-4f38-464b-89b6-2100cf405ff5.jpg" class="archetype-card rounded-image"/></a>
+<a href="https://scryfall.com/card/cmm/153/dread-return"><img src="https://cards.scryfall.io/normal/front/3/4/34a87901-98bb-41dd-b566-bcb510c20022.jpg" class="archetype-card rounded-image"/></a>
+<a href="https://scryfall.com/card/gvl/42/faerie-macabre"><img src="https://cards.scryfall.io/normal/front/6/2/62103ceb-b16d-48ea-af42-d3df88d1ee4c.jpg" class="archetype-card rounded-image"/></a>
+<a href="https://scryfall.com/card/mh3/318/forest"><img src="https://cards.scryfall.io/normal/front/7/a/7ac34881-de32-42c7-af60-f992638e1da2.jpg" class="archetype-card rounded-image"/></a>
+<a href="https://scryfall.com/card/ddm/48/gatecreeper-vine"><img src="https://cards.scryfall.io/normal/front/e/1/e1ebaed7-b3d5-4eb8-93f7-3a65fd7b89b6.jpg" class="archetype-card rounded-image"/></a>
+<a href="https://scryfall.com/card/ltr/169/generous-ent"><img src="https://cards.scryfall.io/normal/front/8/5/85d22d5d-3875-42ff-b51e-c6e21db201f5.jpg" class="archetype-card rounded-image"/></a>
+<a href="https://scryfall.com/card/mmq/255/land-grant"><img src="https://cards.scryfall.io/normal/front/d/6/d6862005-32d1-473e-a28b-5dfc4b7782cd.jpg" class="archetype-card rounded-image"/></a>
+<a href="https://scryfall.com/card/iko/163/lead-the-stampede"><img src="https://cards.scryfall.io/normal/front/9/e/9e76b676-c7a3-4de6-a78d-3059a0df83f2.jpg" class="archetype-card rounded-image"/></a>
+<a href="https://scryfall.com/card/cmm/171/lotleth-giant"><img src="https://cards.scryfall.io/normal/front/0/9/09237f1b-eff6-45bf-bd7d-a883deda122a.jpg" class="archetype-card rounded-image"/></a>
+<a href="https://scryfall.com/card/khm/184/masked-vandal"><img src="https://cards.scryfall.io/normal/front/f/0/f0a9c72a-e450-41e3-80e5-06f2f1171245.jpg" class="archetype-card rounded-image"/></a>
+<a href="https://scryfall.com/card/a25/97/mesmeric-fiend"><img src="https://cards.scryfall.io/normal/front/8/6/864930ce-7c56-4ad2-9b90-57b10e5a0842.jpg" class="archetype-card rounded-image"/></a>
+<a href="https://scryfall.com/card/ncc/303/overgrown-battlement"><img src="https://cards.scryfall.io/normal/front/1/3/137852ce-3699-4dd0-8ead-9b267e9bb900.jpg" class="archetype-card rounded-image"/></a>
+<a href="https://scryfall.com/card/tdm/157/sagu-wildling-roost-seek"><img src="https://cards.scryfall.io/normal/front/d/8/d8b43b00-f4d1-436c-bf3f-6d414cd4ce38.jpg" class="archetype-card rounded-image"/></a>
+<a href="https://scryfall.com/card/rna/139/saruli-caretaker"><img src="https://cards.scryfall.io/normal/front/e/f/ef3358cb-714c-49bf-b7e9-a69d02d7799e.jpg" class="archetype-card rounded-image"/></a>
+<a href="https://scryfall.com/card/otj/281/swamp"><img src="https://cards.scryfall.io/normal/front/e/b/eb7dc259-9949-4673-a8f1-874396948392.jpg" class="archetype-card rounded-image"/></a>
+<a href="https://scryfall.com/card/otc/213/winding-way"><img src="https://cards.scryfall.io/normal/front/d/3/d3340062-3071-4d8e-98f8-fd3343a011ad.jpg" class="archetype-card rounded-image"/></a>
+</details><br/>
+
+
+
+## **Frequent cards**
+
+<details>
+  <summary>Click here to expand</summary>
+<a href="https://scryfall.com/card/jud/89/flaring-pain"><img src="https://c1.scryfall.com/file/scryfall-cards/normal/front/e/e/eeb5c96a-1d16-459d-9968-ced9a8f1c520.jpg" class="archetype-card rounded-image"/></a>
+<a href="https://scryfall.com/card/mh2/285/quirion-ranger"><img src="https://cards.scryfall.io/normal/front/3/2/320fdf89-e158-41c5-b0bf-fee9dec36a75.jpg" class="archetype-card rounded-image"/></a>
+<a href="https://scryfall.com/card/ltr/111/troll-of-khazad-d%C3%BBm"><img src="https://cards.scryfall.io/normal/front/a/6/a6539e26-b63b-4725-9407-caaf451de084.jpg" class="archetype-card rounded-image"/></a>
+<a href="https://scryfall.com/card/ncc/319/wall-of-roots"><img src="https://cards.scryfall.io/normal/front/d/8/d80940ad-8e36-4226-ad5f-b54487c75c76.jpg" class="archetype-card rounded-image"/></a>
+</details><br/>
 
 
 

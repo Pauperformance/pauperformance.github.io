@@ -27,14 +27,6 @@
 
 
 
-## **Frequent cards**
-
-<details>
-  <summary>Click here to expand</summary>
-<a href="https://scryfall.com/card/ema/55/hydroblast"><img src="https://c1.scryfall.com/file/scryfall-cards/normal/front/4/c/4c9c9b16-5567-4473-95e6-622292f77336.jpg" class="archetype-card rounded-image"/></a>
-<a href="https://scryfall.com/card/c21/202/pulse-of-murasa"><img src="https://cards.scryfall.io/normal/front/a/4/a4b9f8f4-d704-4f16-8495-cf8185285859.jpg" class="archetype-card rounded-image"/></a>
-</details><br/>
-
 
 
 ## **Reference decks**

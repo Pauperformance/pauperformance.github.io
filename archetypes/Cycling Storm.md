@@ -19,7 +19,6 @@
 
 <details>
   <summary>Click here to expand</summary>
-<a href="https://scryfall.com/card/arc/77/architects-of-will"><img src="https://cards.scryfall.io/normal/front/6/f/6f614bb4-92e3-4ae0-9f2f-294434706c48.jpg" class="archetype-card rounded-image"/></a>
 <a href="https://scryfall.com/card/c21/277/barren-moor"><img src="https://cards.scryfall.io/normal/front/b/3/b38d7666-0791-44b4-877e-8fd33ce008aa.jpg" class="archetype-card rounded-image"/></a>
 <a href="https://scryfall.com/card/vma/106/cabal-ritual"><img src="https://cards.scryfall.io/normal/front/a/5/a5d85875-22da-4054-ae42-e85b472a6d5d.jpg" class="archetype-card rounded-image"/></a>
 <a href="https://scryfall.com/card/a25/82/dark-ritual"><img src="https://cards.scryfall.io/normal/front/9/5/95f27eeb-6f14-4db3-adb9-9be5ed76b34b.jpg" class="archetype-card rounded-image"/></a>
@@ -38,11 +37,11 @@
 
 <details>
   <summary>Click here to expand</summary>
-<a href="https://scryfall.com/card/tsb/40/darkness"><img src="https://cards.scryfall.io/normal/front/5/8/584834fb-b7b6-40eb-9fec-8df17172ce5f.jpg" class="archetype-card rounded-image"/></a>
+<a href="https://scryfall.com/card/arc/77/architects-of-will"><img src="https://cards.scryfall.io/normal/front/6/f/6f614bb4-92e3-4ae0-9f2f-294434706c48.jpg" class="archetype-card rounded-image"/></a>
+<a href="https://scryfall.com/card/lgn/61/blood-celebrant"><img src="https://cards.scryfall.io/normal/front/8/0/805de325-6f14-4a52-bb85-f9a9545d82a4.jpg" class="archetype-card rounded-image"/></a>
 <a href="https://scryfall.com/card/one/92/duress"><img src="https://cards.scryfall.io/normal/front/3/5/3557e601-9b71-4ce9-9047-1a8baa72e574.jpg" class="archetype-card rounded-image"/></a>
-<a href="https://scryfall.com/card/isd/183/gnaw-to-the-bone"><img src="https://cards.scryfall.io/normal/front/4/1/416148c8-13d3-46d3-ac93-6eb7cbab2881.jpg" class="archetype-card rounded-image"/></a>
 <a href="https://scryfall.com/card/tpr/225/lotus-petal"><img src="https://cards.scryfall.io/normal/front/f/8/f85ab5f9-508e-45de-8fa1-ce1f16552ffc.jpg" class="archetype-card rounded-image"/></a>
-<a href="https://scryfall.com/card/tsr/76/mystical-teachings"><img src="https://cards.scryfall.io/normal/front/f/7/f7cb51cd-8418-43ee-bf4f-6b959cc5b131.jpg" class="archetype-card rounded-image"/></a>
+<a href="https://scryfall.com/card/ema/142/pyroblast"><img src="https://cards.scryfall.io/normal/front/b/0/b029eb9a-dd7a-40c2-96c4-0063d9cc002c.jpg" class="archetype-card rounded-image"/></a>
 <a href="https://scryfall.com/card/otj/281/swamp"><img src="https://cards.scryfall.io/normal/front/e/b/eb7dc259-9949-4673-a8f1-874396948392.jpg" class="archetype-card rounded-image"/></a>
 </details><br/>
 

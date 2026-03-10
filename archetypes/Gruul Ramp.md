@@ -15,7 +15,34 @@
 **Description**: _Still missing. Please join us on [Discord](https://discord.gg/fYQbpjjkQ3) to contribute to the Academy._
 
 
+## **Staples**
 
+<details>
+  <summary>Click here to expand</summary>
+<a href="https://scryfall.com/card/a25/160/arbor-elf"><img src="https://cards.scryfall.io/normal/front/4/b/4b81165e-f091-4211-8b47-5ea6868b0d4c.jpg" class="archetype-card rounded-image"/></a>
+<a href="https://scryfall.com/card/clb/215/avenging-hunter"><img src="https://cards.scryfall.io/normal/front/f/4/f4072640-0f9b-4f0a-84cc-eda415cc92e7.jpg" class="archetype-card rounded-image"/></a>
+<a href="https://scryfall.com/card/mh3/150/eldrazi-repurposer"><img src="https://cards.scryfall.io/normal/front/3/7/37f79ba7-7b65-4387-b498-f770816ce8dd.jpg" class="archetype-card rounded-image"/></a>
+<a href="https://scryfall.com/card/mh3/318/forest"><img src="https://cards.scryfall.io/normal/front/7/a/7ac34881-de32-42c7-af60-f992638e1da2.jpg" class="archetype-card rounded-image"/></a>
+<a href="https://scryfall.com/card/snc/151/jewel-thief"><img src="https://cards.scryfall.io/normal/front/7/3/736e498e-1245-40c1-96a4-c9bcfd1cfe1f.jpg" class="archetype-card rounded-image"/></a>
+<a href="https://scryfall.com/card/mh3/161/malevolent-rumble"><img src="https://cards.scryfall.io/normal/front/a/1/a178cfe8-f9fa-4255-88d0-54a0bed079f5.jpg" class="archetype-card rounded-image"/></a>
+<a href="https://scryfall.com/card/clb/463/mountain"><img src="https://c1.scryfall.com/file/scryfall-cards/normal/front/0/a/0ab63e49-0869-4c7c-a033-d8e50032dd13.jpg" class="archetype-card rounded-image"/></a>
+<a href="https://scryfall.com/card/rvr/159/utopia-sprawl"><img src="https://cards.scryfall.io/normal/front/5/e/5ea568df-04a1-4012-98ec-ba75e189e0ca.jpg" class="archetype-card rounded-image"/></a>
+<a href="https://scryfall.com/card/mkc/195/wild-growth"><img src="https://cards.scryfall.io/normal/front/4/7/47260e7c-29bf-46f1-a029-9da7bbb418b5.jpg" class="archetype-card rounded-image"/></a>
+<a href="https://scryfall.com/card/mh3/208/writhing-chrysalis"><img src="https://cards.scryfall.io/normal/front/f/5/f54dbeb1-51f8-40e2-912a-ec25457de5a2.jpg" class="archetype-card rounded-image"/></a>
+</details><br/>
+
+
+
+## **Frequent cards**
+
+<details>
+  <summary>Click here to expand</summary>
+<a href="https://scryfall.com/card/mh2/149/bannerhide-krushok"><img src="https://cards.scryfall.io/normal/front/1/2/1271251b-7d79-4cb4-80bb-98574aa63249.jpg" class="archetype-card rounded-image"/></a>
+<a href="https://scryfall.com/card/clb/165/breath-weapon"><img src="https://cards.scryfall.io/normal/front/0/1/0174e40a-0ef5-4439-91e6-3fc39f482520.jpg" class="archetype-card rounded-image"/></a>
+<a href="https://scryfall.com/card/mor/118/deglamer"><img src="https://cards.scryfall.io/normal/front/9/8/985b43aa-58f0-42fc-9ef0-a7925727d58f.jpg" class="archetype-card rounded-image"/></a>
+<a href="https://scryfall.com/card/mh3/164/nyxborn-hydra"><img src="https://cards.scryfall.io/normal/front/9/0/902a969e-9f22-4e92-93eb-9d4536ca82e5.jpg" class="archetype-card rounded-image"/></a>
+<a href="https://scryfall.com/card/ema/231/relic-of-progenitus"><img src="https://c1.scryfall.com/file/scryfall-cards/normal/front/4/3/436cd66c-0622-43cd-8748-af4d21a2db3f.jpg" class="archetype-card rounded-image"/></a>
+</details><br/>
 
 
 

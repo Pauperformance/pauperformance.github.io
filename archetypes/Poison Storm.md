@@ -25,7 +25,6 @@
 <a href="https://scryfall.com/card/2xm/281/pentad-prism"><img src="https://cards.scryfall.io/normal/front/2/a/2a2862c5-afa8-4e38-a312-483300f8b194.jpg" class="archetype-card rounded-image"/></a>
 <a href="https://scryfall.com/card/one/65/prologue-to-phyresis"><img src="https://cards.scryfall.io/normal/front/a/c/ac625f30-ed91-4b21-ada8-aaa5b2ad79b8.jpg" class="archetype-card rounded-image"/></a>
 <a href="https://scryfall.com/card/mmq/328/saprazzan-skerry"><img src="https://cards.scryfall.io/normal/front/0/0/006871fd-2641-42cb-a2ac-a33d05fc5a35.jpg" class="archetype-card rounded-image"/></a>
-<a href="https://scryfall.com/card/one/185/thirsting-roots"><img src="https://cards.scryfall.io/normal/front/7/5/75a4a340-453b-471a-82ba-48ebf20b271a.jpg" class="archetype-card rounded-image"/></a>
 <a href="https://scryfall.com/card/one/77/vivisurgeons-insight"><img src="https://cards.scryfall.io/normal/front/c/d/cd244359-781e-4e1d-946d-243664f40c7c.jpg" class="archetype-card rounded-image"/></a>
 <a href="https://scryfall.com/card/mh1/191/weather-the-storm"><img src="https://cards.scryfall.io/normal/front/f/6/f6a9fa51-78c3-42e6-8c2e-39658f59ed87.jpg" class="archetype-card rounded-image"/></a>
 </details><br/>
@@ -37,6 +36,7 @@
 <details>
   <summary>Click here to expand</summary>
 <a href="https://scryfall.com/card/mkc/227/everflowing-chalice"><img src="https://cards.scryfall.io/normal/front/e/8/e89eca1c-19f5-4db0-9330-cecb87be8b55.jpg" class="archetype-card rounded-image"/></a>
+<a href="https://scryfall.com/card/ltr/60/l%C3%B3rien-revealed"><img src="https://cards.scryfall.io/normal/front/0/c/0ce44270-a684-4489-9077-521456e6dfaa.jpg" class="archetype-card rounded-image"/></a>
 <a href="https://scryfall.com/card/ody/251/moments-peace"><img src="https://cards.scryfall.io/normal/front/4/0/40ebe935-ccf9-435e-8fe8-53bcbf3526e7.jpg" class="archetype-card rounded-image"/></a>
 </details><br/>
 

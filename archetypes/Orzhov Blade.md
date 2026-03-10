@@ -21,7 +21,6 @@
   <summary>Click here to expand</summary>
 <a href="https://scryfall.com/card/clb/882/bojuka-bog"><img src="https://c1.scryfall.com/file/scryfall-cards/normal/front/f/8/f8f1c157-cebc-45fe-9caa-1ea4b305ccfc.jpg" class="archetype-card rounded-image"/></a>
 <a href="https://scryfall.com/card/clb/119/cast-down"><img src="https://cards.scryfall.io/normal/front/a/b/aba79021-39af-4e74-beb5-f2f508c865b2.jpg" class="archetype-card rounded-image"/></a>
-<a href="https://scryfall.com/card/me4/11/dust-to-dust"><img src="https://cards.scryfall.io/normal/front/d/f/dff1ee4e-cba1-4d2d-94fb-e3068d807cac.jpg" class="archetype-card rounded-image"/></a>
 <a href="https://scryfall.com/card/som/10/glint-hawk"><img src="https://cards.scryfall.io/normal/front/2/8/284c4710-4183-4743-9c8b-515cc98cbbb8.jpg" class="archetype-card rounded-image"/></a>
 <a href="https://scryfall.com/card/mm3/11/kor-skyfisher"><img src="https://cards.scryfall.io/normal/front/d/7/d7501662-1216-4e08-bd2b-e0a459057942.jpg" class="archetype-card rounded-image"/></a>
 <a href="https://scryfall.com/card/ltr/243/lembas"><img src="https://cards.scryfall.io/normal/front/3/b/3b46aacf-b31a-4380-9e4b-82795fbaba3b.jpg" class="archetype-card rounded-image"/></a>
@@ -39,10 +38,10 @@
 
 <details>
   <summary>Click here to expand</summary>
+<a href="https://scryfall.com/card/c21/276/ancient-den"><img src="https://cards.scryfall.io/normal/front/0/a/0a508907-a127-45cd-898a-e936bc08391f.jpg" class="archetype-card rounded-image"/></a>
 <a href="https://scryfall.com/card/clb/15/dawnbringer-cleric"><img src="https://cards.scryfall.io/normal/front/2/0/201f06ef-c180-4ce3-afaf-bec3b14c0222.jpg" class="archetype-card rounded-image"/></a>
-<a href="https://scryfall.com/card/otc/131/deadly-dispute"><img src="https://cards.scryfall.io/normal/front/e/d/ed01650e-4eb5-4884-9cc6-947b0e20dd3c.jpg" class="archetype-card rounded-image"/></a>
 <a href="https://scryfall.com/card/one/92/duress"><img src="https://cards.scryfall.io/normal/front/3/5/3557e601-9b71-4ce9-9047-1a8baa72e574.jpg" class="archetype-card rounded-image"/></a>
-<a href="https://scryfall.com/card/snc/252/obscura-storefront"><img src="https://cards.scryfall.io/normal/front/1/0/1016b884-9a4c-41de-bd65-14271f4f6f9a.jpg" class="archetype-card rounded-image"/></a>
+<a href="https://scryfall.com/card/me4/11/dust-to-dust"><img src="https://cards.scryfall.io/normal/front/d/f/dff1ee4e-cba1-4d2d-94fb-e3068d807cac.jpg" class="archetype-card rounded-image"/></a>
 <a href="https://scryfall.com/card/iko/100/suffocating-fumes"><img src="https://cards.scryfall.io/normal/front/6/6/66b562e4-35df-4aee-848d-ceb4204bbe58.jpg" class="archetype-card rounded-image"/></a>
 <a href="https://scryfall.com/card/cmm/190/thorn-of-the-black-rose"><img src="https://cards.scryfall.io/normal/front/b/4/b4b266e2-1cad-40df-bc0e-3e1464b299b3.jpg" class="archetype-card rounded-image"/></a>
 </details><br/>

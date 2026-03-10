@@ -34,7 +34,6 @@
 <details>
   <summary>Click here to expand</summary>
 <a href="https://scryfall.com/card/mor/118/deglamer"><img src="https://cards.scryfall.io/normal/front/9/8/985b43aa-58f0-42fc-9ef0-a7925727d58f.jpg" class="archetype-card rounded-image"/></a>
-<a href="https://scryfall.com/card/cmr/178/fiery-cannonade"><img src="https://cards.scryfall.io/normal/front/3/9/396f1cdf-712b-4518-a0e8-0039303dccdc.jpg" class="archetype-card rounded-image"/></a>
 <a href="https://scryfall.com/card/clb/896/highland-forest"><img src="https://cards.scryfall.io/normal/front/5/9/59f64a32-c364-4750-94ed-d4d71c1a3511.jpg" class="archetype-card rounded-image"/></a>
 <a href="https://scryfall.com/card/khm/266/rimewood-falls"><img src="https://cards.scryfall.io/normal/front/d/a/da1db084-f235-4e26-8867-5f0835a0d283.jpg" class="archetype-card rounded-image"/></a>
 <a href="https://scryfall.com/card/me2/183/thermokarst"><img src="https://cards.scryfall.io/normal/front/7/4/74e907ed-76f7-476c-b128-bb6bfd892e06.jpg" class="archetype-card rounded-image"/></a>

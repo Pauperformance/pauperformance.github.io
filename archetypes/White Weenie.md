@@ -28,12 +28,10 @@
 
 <details>
   <summary>Click here to expand</summary>
-<a href="https://scryfall.com/card/cmr/458/bonesplitter"><img src="https://cards.scryfall.io/normal/front/6/9/690972a8-72df-4050-a353-16e45589167c.jpg" class="archetype-card rounded-image"/></a>
 <a href="https://scryfall.com/card/me4/11/dust-to-dust"><img src="https://cards.scryfall.io/normal/front/d/f/dff1ee4e-cba1-4d2d-94fb-e3068d807cac.jpg" class="archetype-card rounded-image"/></a>
 <a href="https://scryfall.com/card/me1/16/holy-light"><img src="https://cards.scryfall.io/normal/front/3/4/34fbb723-2507-489a-acf1-22ac0dcbcd9c.jpg" class="archetype-card rounded-image"/></a>
 <a href="https://scryfall.com/card/dmr/9/icatian-javelineers"><img src="https://cards.scryfall.io/normal/front/9/c/9ccce13a-77e6-4c74-9acc-d5e7c271872a.jpg" class="archetype-card rounded-image"/></a>
 <a href="https://scryfall.com/card/c19/69/prismatic-strands"><img src="https://cards.scryfall.io/normal/front/e/f/efd85985-abc1-430a-9210-63109c90a82d.jpg" class="archetype-card rounded-image"/></a>
-<a href="https://scryfall.com/card/dst/137/razor-golem"><img src="https://cards.scryfall.io/normal/front/6/4/64a86ec3-378f-4fca-b5f7-6dc02d47f7b9.jpg" class="archetype-card rounded-image"/></a>
 <a href="https://scryfall.com/card/a25/34/squadron-hawk"><img src="https://cards.scryfall.io/normal/front/9/e/9e81806d-5d87-4032-ad94-c2cdeabecdbf.jpg" class="archetype-card rounded-image"/></a>
 </details><br/>
 

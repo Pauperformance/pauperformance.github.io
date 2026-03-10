@@ -21,7 +21,6 @@
 <a href="https://scryfall.com/card/mh3/318/forest"><img src="https://cards.scryfall.io/normal/front/7/a/7ac34881-de32-42c7-af60-f992638e1da2.jpg" class="archetype-card rounded-image"/></a>
 <a href="https://scryfall.com/card/nph/111/glistener-elf"><img src="https://cards.scryfall.io/normal/front/8/b/8b94f4c6-b518-43b3-be52-e889d1f3ea38.jpg" class="archetype-card rounded-image"/></a>
 <a href="https://scryfall.com/card/som/166/ichorclaw-myr"><img src="https://cards.scryfall.io/normal/front/f/a/faef8b8b-2c45-4fed-b6ba-a8ac49c66330.jpg" class="archetype-card rounded-image"/></a>
-<a href="https://scryfall.com/card/2xm/172/invigorate"><img src="https://cards.scryfall.io/normal/front/e/0/e0899da3-7beb-4161-81a3-e2d694e5b8a5.jpg" class="archetype-card rounded-image"/></a>
 <a href="https://scryfall.com/card/mm2/149/mutagenic-growth"><img src="https://cards.scryfall.io/normal/front/2/e/2e0861a2-1858-47af-8154-20a977c2b298.jpg" class="archetype-card rounded-image"/></a>
 <a href="https://scryfall.com/card/2x2/156/rancor"><img src="https://cards.scryfall.io/normal/front/8/6/86d6b411-4a31-4bfc-8dd6-e19f553bb29b.jpg" class="archetype-card rounded-image"/></a>
 <a href="https://scryfall.com/card/mm2/168/vines-of-vastwood"><img src="https://cards.scryfall.io/normal/front/6/2/6203e3d4-8998-41d6-9f7e-b68af0f1f8b5.jpg" class="archetype-card rounded-image"/></a>
@@ -36,6 +35,7 @@
 <a href="https://scryfall.com/card/mm2/8/apostles-blessing"><img src="https://cards.scryfall.io/normal/front/f/d/fdfbc07e-d726-4d42-9394-6aa0f5fc3a3a.jpg" class="archetype-card rounded-image"/></a>
 <a href="https://scryfall.com/card/ddp/15/groundswell"><img src="https://cards.scryfall.io/normal/front/8/2/821e9cb9-f78e-4d11-9c36-42e8b84b49cd.jpg" class="archetype-card rounded-image"/></a>
 <a href="https://scryfall.com/card/m11/181/hornet-sting"><img src="https://cards.scryfall.io/normal/front/a/f/af6b3bf7-bd09-4f0d-a670-2efc1c6d416f.jpg" class="archetype-card rounded-image"/></a>
+<a href="https://scryfall.com/card/2xm/172/invigorate"><img src="https://cards.scryfall.io/normal/front/e/0/e0899da3-7beb-4161-81a3-e2d694e5b8a5.jpg" class="archetype-card rounded-image"/></a>
 <a href="https://scryfall.com/card/ima/177/natures-claim"><img src="https://cards.scryfall.io/normal/front/d/2/d24b6640-ef2f-4c92-beb3-afdf78f9c2d5.jpg" class="archetype-card rounded-image"/></a>
 </details><br/>
 

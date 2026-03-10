@@ -23,12 +23,10 @@ Generic archetype, for Grixis decks that do not fit those in the [Archetypes Ind
 <details>
   <summary>Click here to expand</summary>
 <a href="https://scryfall.com/card/war/41/augur-of-bolas"><img src="https://cards.scryfall.io/normal/front/d/1/d19fbfe6-69bb-452a-be3c-b9c625e23193.jpg" class="archetype-card rounded-image"/></a>
-<a href="https://scryfall.com/card/a25/43/blue-elemental-blast"><img src="https://cards.scryfall.io/normal/front/2/f/2f51f88f-f662-4572-a371-9a77718ed079.jpg" class="archetype-card rounded-image"/></a>
 <a href="https://scryfall.com/card/mkc/96/brainstorm"><img src="https://cards.scryfall.io/normal/front/8/4/84479779-d570-4eee-9982-f6e918b4d75b.jpg" class="archetype-card rounded-image"/></a>
 <a href="https://scryfall.com/card/clb/119/cast-down"><img src="https://cards.scryfall.io/normal/front/a/b/aba79021-39af-4e74-beb5-f2f508c865b2.jpg" class="archetype-card rounded-image"/></a>
 <a href="https://scryfall.com/card/cmm/81/counterspell"><img src="https://cards.scryfall.io/normal/front/8/4/8493131c-0a7b-4be6-a8a2-0b425f4f67fb.jpg" class="archetype-card rounded-image"/></a>
 <a href="https://scryfall.com/card/mh2/246/drossforge-bridge"><img src="https://cards.scryfall.io/normal/front/5/b/5b46b8d8-723a-4752-b97d-29ef83bd294c.jpg" class="archetype-card rounded-image"/></a>
-<a href="https://scryfall.com/card/clu/141/lightning-bolt"><img src="https://cards.scryfall.io/normal/front/7/7/77c6fa74-5543-42ac-9ead-0e890b188e99.jpg" class="archetype-card rounded-image"/></a>
 <a href="https://scryfall.com/card/ltr/60/l%C3%B3rien-revealed"><img src="https://cards.scryfall.io/normal/front/0/c/0ce44270-a684-4489-9077-521456e6dfaa.jpg" class="archetype-card rounded-image"/></a>
 <a href="https://scryfall.com/card/otc/102/murmuring-mystic"><img src="https://cards.scryfall.io/normal/front/9/e/9e68dcc2-bba4-4efa-97bb-3ed892037595.jpg" class="archetype-card rounded-image"/></a>
 <a href="https://scryfall.com/card/a25/226/nihil-spellbomb"><img src="https://cards.scryfall.io/normal/front/e/5/e5892a23-efae-4731-9b8f-41c87960fe93.jpg" class="archetype-card rounded-image"/></a>

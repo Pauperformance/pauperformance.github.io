@@ -13,7 +13,45 @@
 **Description**: _Still missing. Please join us on [Discord](https://discord.gg/fYQbpjjkQ3) to contribute to the Academy._
 
 
+## **Staples**
 
+<details>
+  <summary>Click here to expand</summary>
+<a href="https://scryfall.com/card/vow/95/blood-fountain"><img src="https://cards.scryfall.io/normal/front/d/d/dd03651e-ada0-41dc-8722-0eba476943e3.jpg" class="archetype-card rounded-image"/></a>
+<a href="https://scryfall.com/card/clb/119/cast-down"><img src="https://cards.scryfall.io/normal/front/a/b/aba79021-39af-4e74-beb5-f2f508c865b2.jpg" class="archetype-card rounded-image"/></a>
+<a href="https://scryfall.com/card/znr/137/cleansing-wildfire"><img src="https://cards.scryfall.io/normal/front/4/9/492d77e5-acc6-41b8-8930-f39d69234919.jpg" class="archetype-card rounded-image"/></a>
+<a href="https://scryfall.com/card/mh2/246/drossforge-bridge"><img src="https://cards.scryfall.io/normal/front/5/b/5b46b8d8-723a-4752-b97d-29ef83bd294c.jpg" class="archetype-card rounded-image"/></a>
+<a href="https://scryfall.com/card/one/92/duress"><img src="https://cards.scryfall.io/normal/front/3/5/3557e601-9b71-4ce9-9047-1a8baa72e574.jpg" class="archetype-card rounded-image"/></a>
+<a href="https://scryfall.com/card/mh3/93/eviscerators-insight"><img src="https://cards.scryfall.io/normal/front/b/0/b00573bd-5bbb-4531-a0bb-a40f62b92b88.jpg" class="archetype-card rounded-image"/></a>
+<a href="https://scryfall.com/card/lci/105/fanatical-offering"><img src="https://cards.scryfall.io/normal/front/d/8/d896dd52-b134-4b55-ab91-ccb05ecc50f4.jpg" class="archetype-card rounded-image"/></a>
+<a href="https://scryfall.com/card/mh3/318/forest"><img src="https://cards.scryfall.io/normal/front/7/a/7ac34881-de32-42c7-af60-f992638e1da2.jpg" class="archetype-card rounded-image"/></a>
+<a href="https://scryfall.com/card/c21/245/ichor-wellspring"><img src="https://cards.scryfall.io/normal/front/1/c/1ccdb407-ac8f-4736-89d3-ab0d086096ea.jpg" class="archetype-card rounded-image"/></a>
+<a href="https://scryfall.com/card/mrd/98/krark-clan-shaman"><img src="https://cards.scryfall.io/normal/front/9/7/975f9ea8-af2c-456f-acd0-ffa9ea0d98c1.jpg" class="archetype-card rounded-image"/></a>
+<a href="https://scryfall.com/card/clb/463/mountain"><img src="https://c1.scryfall.com/file/scryfall-cards/normal/front/0/a/0ab63e49-0869-4c7c-a033-d8e50032dd13.jpg" class="archetype-card rounded-image"/></a>
+<a href="https://scryfall.com/card/a25/226/nihil-spellbomb"><img src="https://cards.scryfall.io/normal/front/e/5/e5892a23-efae-4731-9b8f-41c87960fe93.jpg" class="archetype-card rounded-image"/></a>
+<a href="https://scryfall.com/card/mh3/105/refurbished-familiar"><img src="https://cards.scryfall.io/normal/front/b/3/b338e078-629c-4cac-bd1d-e1f0a132728d.jpg" class="archetype-card rounded-image"/></a>
+<a href="https://scryfall.com/card/mh2/256/slagwoods-bridge"><img src="https://cards.scryfall.io/normal/front/e/5/e51b48e9-a75a-4acd-9462-5e1ac2b0d803.jpg" class="archetype-card rounded-image"/></a>
+<a href="https://scryfall.com/card/otj/281/swamp"><img src="https://cards.scryfall.io/normal/front/e/b/eb7dc259-9949-4673-a8f1-874396948392.jpg" class="archetype-card rounded-image"/></a>
+<a href="https://scryfall.com/card/mh3/232/twisted-landscape"><img src="https://cards.scryfall.io/normal/front/d/0/d0e3e7b3-7ba9-47a2-b46c-a40bffb445e2.jpg" class="archetype-card rounded-image"/></a>
+<a href="https://scryfall.com/card/hop/141/vault-of-whispers"><img src="https://cards.scryfall.io/normal/front/6/9/69e50871-bde7-4109-8811-a1c1bf70d3ae.jpg" class="archetype-card rounded-image"/></a>
+<a href="https://scryfall.com/card/mh3/208/writhing-chrysalis"><img src="https://cards.scryfall.io/normal/front/f/5/f54dbeb1-51f8-40e2-912a-ec25457de5a2.jpg" class="archetype-card rounded-image"/></a>
+</details><br/>
+
+
+
+## **Frequent cards**
+
+<details>
+  <summary>Click here to expand</summary>
+<a href="https://scryfall.com/card/clb/165/breath-weapon"><img src="https://cards.scryfall.io/normal/front/0/1/0174e40a-0ef5-4439-91e6-3fc39f482520.jpg" class="archetype-card rounded-image"/></a>
+<a href="https://scryfall.com/card/ltr/243/lembas"><img src="https://cards.scryfall.io/normal/front/3/b/3b46aacf-b31a-4380-9e4b-82795fbaba3b.jpg" class="archetype-card rounded-image"/></a>
+<a href="https://scryfall.com/card/cmm/242/makeshift-munitions"><img src="https://cards.scryfall.io/normal/front/6/0/60715b6d-b223-431a-85d8-27d7c05469b2.jpg" class="archetype-card rounded-image"/></a>
+<a href="https://scryfall.com/card/mh3/164/nyxborn-hydra"><img src="https://cards.scryfall.io/normal/front/9/0/902a969e-9f22-4e92-93eb-9d4536ca82e5.jpg" class="archetype-card rounded-image"/></a>
+<a href="https://scryfall.com/card/c21/202/pulse-of-murasa"><img src="https://cards.scryfall.io/normal/front/a/4/a4b9f8f4-d704-4f16-8495-cf8185285859.jpg" class="archetype-card rounded-image"/></a>
+<a href="https://scryfall.com/card/ema/142/pyroblast"><img src="https://cards.scryfall.io/normal/front/b/0/b029eb9a-dd7a-40c2-96c4-0063d9cc002c.jpg" class="archetype-card rounded-image"/></a>
+<a href="https://scryfall.com/card/mkm/107/toxin-analysis"><img src="https://cards.scryfall.io/normal/front/0/e/0eda1aff-c1f4-4171-a800-605396cc8168.jpg" class="archetype-card rounded-image"/></a>
+<a href="https://scryfall.com/card/woe/194/troublemaker-ouphe"><img src="https://cards.scryfall.io/normal/front/7/f/7f7b2fc0-d3f6-4c4d-a163-986a372e5b12.jpg" class="archetype-card rounded-image"/></a>
+</details><br/>
 
 
 

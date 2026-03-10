@@ -46,7 +46,6 @@
   <summary>Click here to expand</summary>
 <a href="https://scryfall.com/card/clu/231/boros-garrison"><img src="https://cards.scryfall.io/normal/front/7/6/76ec3366-98f3-4903-8f7b-cfcdd60e3be1.jpg" class="archetype-card rounded-image"/></a>
 <a href="https://scryfall.com/card/clb/165/breath-weapon"><img src="https://cards.scryfall.io/normal/front/0/1/0174e40a-0ef5-4439-91e6-3fc39f482520.jpg" class="archetype-card rounded-image"/></a>
-<a href="https://scryfall.com/card/rtr/93/electrickery"><img src="https://cards.scryfall.io/normal/front/5/e/5ed81ee8-d5e4-4127-876e-9bff81f9c726.jpg" class="archetype-card rounded-image"/></a>
 <a href="https://scryfall.com/card/otc/165/faithless-looting"><img src="https://cards.scryfall.io/normal/front/1/e/1ea23c17-6960-44fd-bae3-e24595b00c22.jpg" class="archetype-card rounded-image"/></a>
 </details><br/>
 
