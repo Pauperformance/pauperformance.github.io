@@ -13,7 +13,33 @@
 **Description**: 
 
 
+## **Staples**
 
+<details>
+  <summary>Click here to expand</summary>
+<a href="https://scryfall.com/card/otc/165/faithless-looting"><img src="https://cards.scryfall.io/normal/front/1/e/1ea23c17-6960-44fd-bae3-e24595b00c22.jpg" class="archetype-card rounded-image"/></a>
+<a href="https://scryfall.com/card/c19/142/fiery-temper"><img src="https://cards.scryfall.io/normal/front/f/c/fc8282aa-5347-44c7-8397-609aed82bc8c.jpg" class="archetype-card rounded-image"/></a>
+<a href="https://scryfall.com/card/dmr/119/fireblast"><img src="https://cards.scryfall.io/normal/front/a/0/a0ab67cc-b553-4451-9cda-0e5fe3303940.jpg" class="archetype-card rounded-image"/></a>
+<a href="https://scryfall.com/card/dsk/138/grab-the-prize"><img src="https://cards.scryfall.io/normal/front/5/0/50895202-f1a1-4840-a11a-55b78b8b5929.jpg" class="archetype-card rounded-image"/></a>
+<a href="https://scryfall.com/card/otc/169/guttersnipe"><img src="https://cards.scryfall.io/normal/front/9/0/90907737-ad75-48f6-a350-87d4021d89f8.jpg" class="archetype-card rounded-image"/></a>
+<a href="https://scryfall.com/card/otj/129/highway-robbery"><img src="https://cards.scryfall.io/normal/front/3/1/31a88429-9204-4a23-a7a8-babbd6bab79f.jpg" class="archetype-card rounded-image"/></a>
+<a href="https://scryfall.com/card/vow/164/kessig-flamebreather"><img src="https://cards.scryfall.io/normal/front/3/0/303ad78a-b02a-44dc-afe6-7f95781a5062.jpg" class="archetype-card rounded-image"/></a>
+<a href="https://scryfall.com/card/mh1/134/lava-dart"><img src="https://cards.scryfall.io/normal/front/b/1/b16dd041-451d-4914-8c46-aa315a90d802.jpg" class="archetype-card rounded-image"/></a>
+<a href="https://scryfall.com/card/clu/141/lightning-bolt"><img src="https://cards.scryfall.io/normal/front/7/7/77c6fa74-5543-42ac-9ead-0e890b188e99.jpg" class="archetype-card rounded-image"/></a>
+<a href="https://scryfall.com/card/clb/463/mountain"><img src="https://c1.scryfall.com/file/scryfall-cards/normal/front/0/a/0ab63e49-0869-4c7c-a033-d8e50032dd13.jpg" class="archetype-card rounded-image"/></a>
+<a href="https://scryfall.com/card/ema/142/pyroblast"><img src="https://cards.scryfall.io/normal/front/b/0/b029eb9a-dd7a-40c2-96c4-0063d9cc002c.jpg" class="archetype-card rounded-image"/></a>
+<a href="https://scryfall.com/card/mh3/205/sneaky-snacker"><img src="https://cards.scryfall.io/normal/front/0/e/0e3aedae-e4bb-48e3-9f8b-bea0430df306.jpg" class="archetype-card rounded-image"/></a>
+</details><br/>
+
+
+
+## **Frequent cards**
+
+<details>
+  <summary>Click here to expand</summary>
+<a href="https://scryfall.com/card/a25/147/red-elemental-blast"><img src="https://c1.scryfall.com/file/scryfall-cards/normal/front/7/0/70a45e9b-699e-425a-9f3d-267274830d3e.jpg" class="archetype-card rounded-image"/></a>
+<a href="https://scryfall.com/card/vow/182/voldaren-epicure"><img src="https://cards.scryfall.io/normal/front/a/e/ae154e64-f626-45fb-bd52-840c1c27b2d3.jpg" class="archetype-card rounded-image"/></a>
+</details><br/>
 
 
 

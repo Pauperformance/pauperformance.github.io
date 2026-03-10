@@ -26,7 +26,6 @@
 <a href="https://scryfall.com/card/eve/103/inside-out"><img src="https://cards.scryfall.io/normal/front/a/5/a51180ee-8677-4d5a-9685-3861c67a1d1f.jpg" class="archetype-card rounded-image"/></a>
 <a href="https://scryfall.com/card/otc/105/ponder"><img src="https://cards.scryfall.io/normal/front/5/a/5af43ceb-56d2-47d4-ab43-853338ab293c.jpg" class="archetype-card rounded-image"/></a>
 <a href="https://scryfall.com/card/otc/107/preordain"><img src="https://cards.scryfall.io/normal/front/1/2/122f2cc2-5f4d-497c-96b5-ed5698f28b51.jpg" class="archetype-card rounded-image"/></a>
-<a href="https://scryfall.com/card/tpr/66/shadow-rift"><img src="https://cards.scryfall.io/normal/front/0/6/06f6d0bd-19b9-45d0-8768-691a6a593d81.jpg" class="archetype-card rounded-image"/></a>
 <a href="https://scryfall.com/card/ody/56/tireless-tribe"><img src="https://cards.scryfall.io/normal/front/1/d/1d23e47a-21d5-4d7e-8aa0-3b3064da5967.jpg" class="archetype-card rounded-image"/></a>
 </details><br/>
 
@@ -36,10 +35,10 @@
 
 <details>
   <summary>Click here to expand</summary>
-<a href="https://scryfall.com/card/war/41/augur-of-bolas"><img src="https://cards.scryfall.io/normal/front/d/1/d19fbfe6-69bb-452a-be3c-b9c625e23193.jpg" class="archetype-card rounded-image"/></a>
 <a href="https://scryfall.com/card/clb/352/evolving-wilds"><img src="https://c1.scryfall.com/file/scryfall-cards/normal/front/b/b/bbc8841a-0f6e-4078-a0b9-a4bda642182e.jpg" class="archetype-card rounded-image"/></a>
 <a href="https://scryfall.com/card/gpt/26/gigadrowse"><img src="https://cards.scryfall.io/normal/front/b/f/bf9f85b3-eb8c-43de-aaac-8a887e9c58da.jpg" class="archetype-card rounded-image"/></a>
 <a href="https://scryfall.com/card/ema/55/hydroblast"><img src="https://c1.scryfall.com/file/scryfall-cards/normal/front/4/c/4c9c9b16-5567-4473-95e6-622292f77336.jpg" class="archetype-card rounded-image"/></a>
+<a href="https://scryfall.com/card/tpr/66/shadow-rift"><img src="https://cards.scryfall.io/normal/front/0/6/06f6d0bd-19b9-45d0-8768-691a6a593d81.jpg" class="archetype-card rounded-image"/></a>
 </details><br/>
 
 

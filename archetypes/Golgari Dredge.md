@@ -19,9 +19,7 @@
 
 <details>
   <summary>Click here to expand</summary>
-<a href="https://scryfall.com/card/tor/118/acorn-harvest"><img src="https://cards.scryfall.io/normal/front/3/2/32987720-cc0c-416b-b79b-217d3b37542d.jpg" class="archetype-card rounded-image"/></a>
 <a href="https://scryfall.com/card/tsr/151/ancient-grudge"><img src="https://c1.scryfall.com/file/scryfall-cards/normal/front/5/f/5f28d4a2-6c75-44c2-93ac-e7159c1c623f.jpg" class="archetype-card rounded-image"/></a>
-<a href="https://scryfall.com/card/bro/172/blanchwood-prowler"><img src="https://cards.scryfall.io/normal/front/9/c/9c6988b6-ade0-4cd5-b27c-146e5e7ae91f.jpg" class="archetype-card rounded-image"/></a>
 <a href="https://scryfall.com/card/cmm/153/dread-return"><img src="https://cards.scryfall.io/normal/front/3/4/34a87901-98bb-41dd-b566-bcb510c20022.jpg" class="archetype-card rounded-image"/></a>
 <a href="https://scryfall.com/card/mh3/318/forest"><img src="https://cards.scryfall.io/normal/front/7/a/7ac34881-de32-42c7-af60-f992638e1da2.jpg" class="archetype-card rounded-image"/></a>
 <a href="https://scryfall.com/card/ltr/169/generous-ent"><img src="https://cards.scryfall.io/normal/front/8/5/85d22d5d-3875-42ff-b51e-c6e21db201f5.jpg" class="archetype-card rounded-image"/></a>
@@ -43,8 +41,9 @@
 
 <details>
   <summary>Click here to expand</summary>
+<a href="https://scryfall.com/card/tor/118/acorn-harvest"><img src="https://cards.scryfall.io/normal/front/3/2/32987720-cc0c-416b-b79b-217d3b37542d.jpg" class="archetype-card rounded-image"/></a>
+<a href="https://scryfall.com/card/bro/172/blanchwood-prowler"><img src="https://cards.scryfall.io/normal/front/9/c/9c6988b6-ade0-4cd5-b27c-146e5e7ae91f.jpg" class="archetype-card rounded-image"/></a>
 <a href="https://scryfall.com/card/jmp/230/exhume"><img src="https://cards.scryfall.io/normal/front/5/f/5f1cdcba-a04a-4a2f-8bc1-0dd7fa03754d.jpg" class="archetype-card rounded-image"/></a>
-<a href="https://scryfall.com/card/jud/89/flaring-pain"><img src="https://c1.scryfall.com/file/scryfall-cards/normal/front/e/e/eeb5c96a-1d16-459d-9968-ced9a8f1c520.jpg" class="archetype-card rounded-image"/></a>
 </details><br/>
 
 

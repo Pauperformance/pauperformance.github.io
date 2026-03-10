@@ -19,11 +19,12 @@
 
 <details>
   <summary>Click here to expand</summary>
-<a href="https://scryfall.com/card/2xm/78/bone-picker"><img src="https://cards.scryfall.io/normal/front/f/7/f7de3d27-f3e0-4aea-a737-6577de1bd1c5.jpg" class="archetype-card rounded-image"/></a>
+<a href="https://scryfall.com/card/mh3/80/accursed-marauder"><img src="https://cards.scryfall.io/normal/front/5/d/5da14d86-0780-4821-a799-96f64b377df4.jpg" class="archetype-card rounded-image"/></a>
 <a href="https://scryfall.com/card/mh1/81/carrion-feeder"><img src="https://cards.scryfall.io/normal/front/0/a/0a19da90-880e-4eca-8cf7-6d7baf090d53.jpg" class="archetype-card rounded-image"/></a>
-<a href="https://scryfall.com/card/nph/61/geths-verdict"><img src="https://cards.scryfall.io/normal/front/7/a/7a20b5a2-8613-49ed-b5cc-7cae9d0e0850.jpg" class="archetype-card rounded-image"/></a>
+<a href="https://scryfall.com/card/fdn/64/infestation-sage"><img src="https://cards.scryfall.io/normal/front/d/4/d40c73de-7a5f-46f2-a70b-449bc8ecfe24.jpg" class="archetype-card rounded-image"/></a>
 <a href="https://scryfall.com/card/mm3/78/mortician-beetle"><img src="https://cards.scryfall.io/normal/front/9/7/978f2a31-1c89-43cb-92f2-195026c9311a.jpg" class="archetype-card rounded-image"/></a>
-<a href="https://scryfall.com/card/cmr/330/perilous-myr"><img src="https://cards.scryfall.io/normal/front/5/a/5a15c8ef-04ad-4aab-a7f1-c7a90c10eb50.jpg" class="archetype-card rounded-image"/></a>
+<a href="https://scryfall.com/card/mh2/95/nested-shambler"><img src="https://cards.scryfall.io/normal/front/9/8/9851f290-f502-49f8-9b48-67f7966d4e34.jpg" class="archetype-card rounded-image"/></a>
+<a href="https://scryfall.com/card/otj/96/nezumi-linkbreaker"><img src="https://cards.scryfall.io/normal/front/6/d/6dd0095b-6136-4368-94cb-4c82621aaf37.jpg" class="archetype-card rounded-image"/></a>
 <a href="https://scryfall.com/card/otj/281/swamp"><img src="https://cards.scryfall.io/normal/front/e/b/eb7dc259-9949-4673-a8f1-874396948392.jpg" class="archetype-card rounded-image"/></a>
 <a href="https://scryfall.com/card/lcc/212/village-rites"><img src="https://cards.scryfall.io/normal/front/2/8/2841339b-faef-407d-9838-d03fe80e6294.jpg" class="archetype-card rounded-image"/></a>
 </details><br/>
@@ -34,9 +35,12 @@
 
 <details>
   <summary>Click here to expand</summary>
-<a href="https://scryfall.com/card/one/92/duress"><img src="https://cards.scryfall.io/normal/front/3/5/3557e601-9b71-4ce9-9047-1a8baa72e574.jpg" class="archetype-card rounded-image"/></a>
-<a href="https://scryfall.com/card/uma/102/gurmag-angler"><img src="https://cards.scryfall.io/normal/front/c/e/cedd44eb-f381-46e1-bcb0-88416b4ce33d.jpg" class="archetype-card rounded-image"/></a>
-<a href="https://scryfall.com/card/iko/100/suffocating-fumes"><img src="https://cards.scryfall.io/normal/front/6/6/66b562e4-35df-4aee-848d-ceb4204bbe58.jpg" class="archetype-card rounded-image"/></a>
+<a href="https://scryfall.com/card/ddp/46/bloodthrone-vampire"><img src="https://cards.scryfall.io/normal/front/e/e/ee7354fe-fb76-4196-a69b-0916af73bf45.jpg" class="archetype-card rounded-image"/></a>
+<a href="https://scryfall.com/card/otj/84/corrupted-conviction"><img src="https://cards.scryfall.io/normal/front/8/0/8046f892-3317-4ef7-9cf7-97b9060540c8.jpg" class="archetype-card rounded-image"/></a>
+<a href="https://scryfall.com/card/a25/97/mesmeric-fiend"><img src="https://cards.scryfall.io/normal/front/8/6/864930ce-7c56-4ad2-9b90-57b10e5a0842.jpg" class="archetype-card rounded-image"/></a>
+<a href="https://scryfall.com/card/shm/76/rite-of-consumption"><img src="https://cards.scryfall.io/normal/front/f/6/f62d999c-c81e-4bea-aefd-0d12251dcdd1.jpg" class="archetype-card rounded-image"/></a>
+<a href="https://scryfall.com/card/mid/119/rotten-reunion"><img src="https://cards.scryfall.io/normal/front/9/7/97398ad2-675b-4a34-aab7-935dd6714f1c.jpg" class="archetype-card rounded-image"/></a>
+<a href="https://scryfall.com/card/cmm/188/supernatural-stamina"><img src="https://cards.scryfall.io/normal/front/2/b/2b349b4b-f08d-45e8-81f6-3467a02e6d23.jpg" class="archetype-card rounded-image"/></a>
 </details><br/>
 
 

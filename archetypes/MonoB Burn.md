@@ -23,7 +23,6 @@
 <a href="https://scryfall.com/card/ddk/57/bump-in-the-night"><img src="https://cards.scryfall.io/normal/front/3/2/320e394c-c8b1-42ad-91a5-6d57296f85ab.jpg" class="archetype-card rounded-image"/></a>
 <a href="https://scryfall.com/card/neo/117/okiba-reckoner-raid-nezumi-road-captain"><img src="https://cards.scryfall.io/normal/front/4/f/4f0582b4-d951-4450-b158-4a34109e48cd.jpg" class="archetype-card rounded-image"/></a>
 <a href="https://scryfall.com/card/clu/243/rakdos-carnarium"><img src="https://cards.scryfall.io/normal/front/b/2/b2eaa0f2-9f8e-4b41-8916-9c9a985c39de.jpg" class="archetype-card rounded-image"/></a>
-<a href="https://scryfall.com/card/cm2/77/sign-in-blood"><img src="https://cards.scryfall.io/normal/front/6/1/61388c28-9428-473c-973a-0a82b6b83d62.jpg" class="archetype-card rounded-image"/></a>
 <a href="https://scryfall.com/card/m19/120/sovereigns-bite"><img src="https://cards.scryfall.io/normal/front/5/3/5326d251-bb91-4653-b1fa-44f14c4e0b88.jpg" class="archetype-card rounded-image"/></a>
 <a href="https://scryfall.com/card/otj/281/swamp"><img src="https://cards.scryfall.io/normal/front/e/b/eb7dc259-9949-4673-a8f1-874396948392.jpg" class="archetype-card rounded-image"/></a>
 <a href="https://scryfall.com/card/vma/143/tyrants-choice"><img src="https://cards.scryfall.io/normal/front/5/e/5ed37b1c-7377-40bd-ae98-7f5ce56156b1.jpg" class="archetype-card rounded-image"/></a>
@@ -36,10 +35,10 @@
 
 <details>
   <summary>Click here to expand</summary>
-<a href="https://scryfall.com/card/mh1/84/crypt-rats"><img src="https://cards.scryfall.io/normal/front/9/6/96916db2-5121-4ff1-880c-369744f11ecf.jpg" class="archetype-card rounded-image"/></a>
 <a href="https://scryfall.com/card/otc/131/deadly-dispute"><img src="https://cards.scryfall.io/normal/front/e/d/ed01650e-4eb5-4884-9cc6-947b0e20dd3c.jpg" class="archetype-card rounded-image"/></a>
 <a href="https://scryfall.com/card/nph/61/geths-verdict"><img src="https://cards.scryfall.io/normal/front/7/a/7a20b5a2-8613-49ed-b5cc-7cae9d0e0850.jpg" class="archetype-card rounded-image"/></a>
 <a href="https://scryfall.com/card/cmm/185/serrated-scorpion"><img src="https://cards.scryfall.io/normal/front/7/8/78509763-4bb8-4030-b205-76917de75c57.jpg" class="archetype-card rounded-image"/></a>
+<a href="https://scryfall.com/card/cm2/77/sign-in-blood"><img src="https://cards.scryfall.io/normal/front/6/1/61388c28-9428-473c-973a-0a82b6b83d62.jpg" class="archetype-card rounded-image"/></a>
 <a href="https://scryfall.com/card/eve/44/soul-reap"><img src="https://cards.scryfall.io/normal/front/e/2/e2a129e2-bed5-4ee7-b223-851452f72682.jpg" class="archetype-card rounded-image"/></a>
 <a href="https://scryfall.com/card/hop/141/vault-of-whispers"><img src="https://cards.scryfall.io/normal/front/6/9/69e50871-bde7-4109-8811-a1c1bf70d3ae.jpg" class="archetype-card rounded-image"/></a>
 </details><br/>

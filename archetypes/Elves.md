@@ -17,7 +17,6 @@
 
 <details>
   <summary>Click here to expand</summary>
-<a href="https://scryfall.com/card/ons/248/birchlore-rangers"><img src="https://cards.scryfall.io/normal/front/8/c/8ce3a3a1-3569-4909-a604-f78d4888781e.jpg" class="archetype-card rounded-image"/></a>
 <a href="https://scryfall.com/card/mh3/318/forest"><img src="https://cards.scryfall.io/normal/front/7/a/7ac34881-de32-42c7-af60-f992638e1da2.jpg" class="archetype-card rounded-image"/></a>
 <a href="https://scryfall.com/card/gnt/46/llanowar-elves"><img src="https://cards.scryfall.io/normal/front/8/b/8bbcfb77-daa1-4ce5-b5f9-48d0a8edbba9.jpg" class="archetype-card rounded-image"/></a>
 <a href="https://scryfall.com/card/mh3/286/priest-of-titania"><img src="https://cards.scryfall.io/normal/front/e/b/eb11921b-1b28-483f-a707-4de21a6daa31.jpg" class="archetype-card rounded-image"/></a>
@@ -31,15 +30,11 @@
 
 <details>
   <summary>Click here to expand</summary>
+<a href="https://scryfall.com/card/ons/248/birchlore-rangers"><img src="https://cards.scryfall.io/normal/front/8/c/8ce3a3a1-3569-4909-a604-f78d4888781e.jpg" class="archetype-card rounded-image"/></a>
 <a href="https://scryfall.com/card/lcc/154/distant-melody"><img src="https://cards.scryfall.io/normal/front/b/b/bba22321-526e-4587-903b-a60cda2093fa.jpg" class="archetype-card rounded-image"/></a>
 <a href="https://scryfall.com/card/cmm/284/elvish-mystic"><img src="https://cards.scryfall.io/normal/front/7/5/75918859-c93f-41b4-9ad0-a4a96c389f0d.jpg" class="archetype-card rounded-image"/></a>
-<a href="https://scryfall.com/card/ddu/8/elvish-vanguard"><img src="https://cards.scryfall.io/normal/front/8/3/838a8d40-5268-467e-8d14-d9fd72253df6.jpg" class="archetype-card rounded-image"/></a>
 <a href="https://scryfall.com/card/cmr/228/fyndhorn-elves"><img src="https://cards.scryfall.io/normal/front/4/5/450744cf-7eba-491b-97b0-ca80c6368bbb.jpg" class="archetype-card rounded-image"/></a>
-<a href="https://scryfall.com/card/arc/58/gleeful-sabotage"><img src="https://cards.scryfall.io/normal/front/7/8/7802c7f8-ca2a-4bac-a579-77a8204aa5d4.jpg" class="archetype-card rounded-image"/></a>
-<a href="https://scryfall.com/card/khc/67/lys-alana-huntmaster"><img src="https://cards.scryfall.io/normal/front/0/8/0849f67b-da5d-49f7-840f-f87f48518156.jpg" class="archetype-card rounded-image"/></a>
-<a href="https://scryfall.com/card/con/90/scattershot-archer"><img src="https://cards.scryfall.io/normal/front/d/7/d74d6cdb-a087-4b3d-bf25-509200ed6d93.jpg" class="archetype-card rounded-image"/></a>
-<a href="https://scryfall.com/card/ddg/32/spidersilk-armor"><img src="https://cards.scryfall.io/normal/front/e/5/e55202a1-c246-4b5b-94d6-43c86a69d61a.jpg" class="archetype-card rounded-image"/></a>
-<a href="https://scryfall.com/card/afc/221/viridian-longbow"><img src="https://cards.scryfall.io/normal/front/f/4/f4607634-6206-4c6c-b389-abcbfe969b65.jpg" class="archetype-card rounded-image"/></a>
+<a href="https://scryfall.com/card/iko/163/lead-the-stampede"><img src="https://cards.scryfall.io/normal/front/9/e/9e76b676-c7a3-4de6-a78d-3059a0df83f2.jpg" class="archetype-card rounded-image"/></a>
 <a href="https://scryfall.com/card/cma/166/wellwisher"><img src="https://cards.scryfall.io/normal/front/1/9/19dbbecb-b4d0-49d2-b36e-58279e051c5c.jpg" class="archetype-card rounded-image"/></a>
 </details><br/>
 

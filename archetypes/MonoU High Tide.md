@@ -15,7 +15,38 @@
 **Description**: _Still missing. Please join us on [Discord](https://discord.gg/fYQbpjjkQ3) to contribute to the Academy._
 
 
+## **Staples**
 
+<details>
+  <summary>Click here to expand</summary>
+<a href="https://scryfall.com/card/mkc/96/brainstorm"><img src="https://cards.scryfall.io/normal/front/8/4/84479779-d570-4eee-9982-f6e918b4d75b.jpg" class="archetype-card rounded-image"/></a>
+<a href="https://scryfall.com/card/bfz/76/dispel"><img src="https://cards.scryfall.io/normal/front/b/c/bceab6b3-6b64-4964-a501-ce806a6c13ad.jpg" class="archetype-card rounded-image"/></a>
+<a href="https://scryfall.com/card/jud/39/envelop"><img src="https://c1.scryfall.com/file/scryfall-cards/normal/front/e/7/e7ed250e-12d0-4ebc-9410-5711e71c6d1f.jpg" class="archetype-card rounded-image"/></a>
+<a href="https://scryfall.com/card/gpt/26/gigadrowse"><img src="https://cards.scryfall.io/normal/front/b/f/bf9f85b3-eb8c-43de-aaac-8a887e9c58da.jpg" class="archetype-card rounded-image"/></a>
+<a href="https://scryfall.com/card/dmr/54/high-tide"><img src="https://cards.scryfall.io/normal/front/b/a/babd2248-5517-4b7b-a159-9a1f7b5583c8.jpg" class="archetype-card rounded-image"/></a>
+<a href="https://scryfall.com/card/sok/40/ideas-unbound"><img src="https://cards.scryfall.io/normal/front/1/b/1b0fe46d-08d6-48c3-be0d-650d8d3d66af.jpg" class="archetype-card rounded-image"/></a>
+<a href="https://scryfall.com/card/clb/455/island"><img src="https://c1.scryfall.com/file/scryfall-cards/normal/front/f/f/ff3ffe47-53a3-42ec-ae89-afc79793380d.jpg" class="archetype-card rounded-image"/></a>
+<a href="https://scryfall.com/card/ltr/60/l%C3%B3rien-revealed"><img src="https://cards.scryfall.io/normal/front/0/c/0ce44270-a684-4489-9077-521456e6dfaa.jpg" class="archetype-card rounded-image"/></a>
+<a href="https://scryfall.com/card/8ed/91/merchant-scroll"><img src="https://cards.scryfall.io/normal/front/b/b/bb5385d2-ca5d-4fb9-934b-b7cc8b38ac89.jpg" class="archetype-card rounded-image"/></a>
+<a href="https://scryfall.com/card/dds/5/peer-through-depths"><img src="https://cards.scryfall.io/normal/front/d/f/df0994df-730c-4947-8248-0aaf97998fa1.jpg" class="archetype-card rounded-image"/></a>
+<a href="https://scryfall.com/card/otc/107/preordain"><img src="https://cards.scryfall.io/normal/front/1/2/122f2cc2-5f4d-497c-96b5-ed5698f28b51.jpg" class="archetype-card rounded-image"/></a>
+<a href="https://scryfall.com/card/chk/80/psychic-puppetry"><img src="https://cards.scryfall.io/normal/front/9/e/9e341d6b-f4b0-4347-8055-f5fab756334c.jpg" class="archetype-card rounded-image"/></a>
+<a href="https://scryfall.com/card/mh1/71/stream-of-thought"><img src="https://cards.scryfall.io/normal/front/8/b/8b75bef5-a039-4edf-8e43-56b8d089605e.jpg" class="archetype-card rounded-image"/></a>
+</details><br/>
+
+
+
+## **Frequent cards**
+
+<details>
+  <summary>Click here to expand</summary>
+<a href="https://scryfall.com/card/otc/94/deep-analysis"><img src="https://cards.scryfall.io/normal/front/6/b/6bb58d70-8944-4507-aeca-6b3d5f792a91.jpg" class="archetype-card rounded-image"/></a>
+<a href="https://scryfall.com/card/dgm/12/hidden-strings"><img src="https://c1.scryfall.com/file/scryfall-cards/normal/front/2/1/216e8047-6f54-49ce-bf86-27dc8fc8c8f7.jpg" class="archetype-card rounded-image"/></a>
+<a href="https://scryfall.com/card/rvr/50/muddle-the-mixture"><img src="https://cards.scryfall.io/normal/front/e/6/e69d760c-48fb-4e7f-8611-547b0c22928c.jpg" class="archetype-card rounded-image"/></a>
+<a href="https://scryfall.com/card/mma/60/petals-of-insight"><img src="https://cards.scryfall.io/normal/front/1/3/134c8764-028e-4f7f-988d-ffd4d3827eb6.jpg" class="archetype-card rounded-image"/></a>
+<a href="https://scryfall.com/card/soi/78/pieces-of-the-puzzle"><img src="https://cards.scryfall.io/normal/front/6/9/69204c83-2e43-4ca1-a4cd-d75399a7d6dd.jpg" class="archetype-card rounded-image"/></a>
+<a href="https://scryfall.com/card/dds/7/reach-through-mists"><img src="https://cards.scryfall.io/normal/front/0/b/0b6d5d29-4f38-4229-ac50-c4fa97fcc536.jpg" class="archetype-card rounded-image"/></a>
+</details><br/>
 
 
 

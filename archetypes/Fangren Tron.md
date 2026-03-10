@@ -13,7 +13,43 @@
 **Description**: _Still missing. Please join us on [Discord](https://discord.gg/fYQbpjjkQ3) to contribute to the Academy._
 
 
+## **Staples**
 
+<details>
+  <summary>Click here to expand</summary>
+<a href="https://scryfall.com/card/woe/243/candy-trail"><img src="https://cards.scryfall.io/normal/front/1/a/1a860925-d912-49e5-9ddc-41ab26916bb3.jpg" class="archetype-card rounded-image"/></a>
+<a href="https://scryfall.com/card/clb/119/cast-down"><img src="https://cards.scryfall.io/normal/front/a/b/aba79021-39af-4e74-beb5-f2f508c865b2.jpg" class="archetype-card rounded-image"/></a>
+<a href="https://scryfall.com/card/mh1/84/crypt-rats"><img src="https://cards.scryfall.io/normal/front/9/6/96916db2-5121-4ff1-880c-369744f11ecf.jpg" class="archetype-card rounded-image"/></a>
+<a href="https://scryfall.com/card/mh3/93/eviscerators-insight"><img src="https://cards.scryfall.io/normal/front/b/0/b00573bd-5bbb-4531-a0bb-a40f62b92b88.jpg" class="archetype-card rounded-image"/></a>
+<a href="https://scryfall.com/card/2xm/255/expedition-map"><img src="https://cards.scryfall.io/normal/front/5/5/551c0a45-9515-4e51-84e5-79703832a661.jpg" class="archetype-card rounded-image"/></a>
+<a href="https://scryfall.com/card/lci/105/fanatical-offering"><img src="https://cards.scryfall.io/normal/front/d/8/d896dd52-b134-4b55-ab91-ccb05ecc50f4.jpg" class="archetype-card rounded-image"/></a>
+<a href="https://scryfall.com/card/mbs/79/fangren-marauder"><img src="https://cards.scryfall.io/normal/front/f/5/f5cf62a2-d03a-495d-924a-bf79524175fa.jpg" class="archetype-card rounded-image"/></a>
+<a href="https://scryfall.com/card/tdm/145/heritage-reclamation"><img src="https://cards.scryfall.io/normal/front/4/f/4f8fee37-a050-4329-8b10-46d150e7a95e.jpg" class="archetype-card rounded-image"/></a>
+<a href="https://scryfall.com/card/c21/245/ichor-wellspring"><img src="https://cards.scryfall.io/normal/front/1/c/1ccdb407-ac8f-4736-89d3-ab0d086096ea.jpg" class="archetype-card rounded-image"/></a>
+<a href="https://scryfall.com/card/mrd/98/krark-clan-shaman"><img src="https://cards.scryfall.io/normal/front/9/7/975f9ea8-af2c-456f-acd0-ffa9ea0d98c1.jpg" class="archetype-card rounded-image"/></a>
+<a href="https://scryfall.com/card/ody/146/last-rites"><img src="https://cards.scryfall.io/normal/front/0/b/0b140a36-6686-4781-a432-cb2ef58afa81.jpg" class="archetype-card rounded-image"/></a>
+<a href="https://scryfall.com/card/woe/249/prophetic-prism"><img src="https://cards.scryfall.io/normal/front/1/f/1fae351c-b918-4648-a361-d5239ae63156.jpg" class="archetype-card rounded-image"/></a>
+<a href="https://scryfall.com/card/otj/281/swamp"><img src="https://cards.scryfall.io/normal/front/e/b/eb7dc259-9949-4673-a8f1-874396948392.jpg" class="archetype-card rounded-image"/></a>
+<a href="https://scryfall.com/card/cmm/1051/urzas-mine"><img src="https://cards.scryfall.io/normal/front/3/9/396bbb7d-ae61-4d8d-b931-9ed2f712832e.jpg" class="archetype-card rounded-image"/></a>
+<a href="https://scryfall.com/card/cmm/1052/urzas-power-plant"><img src="https://cards.scryfall.io/normal/front/b/0/b0449a19-37f7-4169-9e32-928db5ec76fe.jpg" class="archetype-card rounded-image"/></a>
+<a href="https://scryfall.com/card/cmm/1053/urzas-tower"><img src="https://cards.scryfall.io/normal/front/1/e/1e9f09b3-dd2d-4ba9-a57e-4f3c1793f752.jpg" class="archetype-card rounded-image"/></a>
+<a href="https://scryfall.com/card/ltr/252/wizards-rockets"><img src="https://cards.scryfall.io/normal/front/1/c/1c6ed742-dfb1-41e2-8f19-184555109e34.jpg" class="archetype-card rounded-image"/></a>
+</details><br/>
+
+
+
+## **Frequent cards**
+
+<details>
+  <summary>Click here to expand</summary>
+<a href="https://scryfall.com/card/clb/165/breath-weapon"><img src="https://cards.scryfall.io/normal/front/0/1/0174e40a-0ef5-4439-91e6-3fc39f482520.jpg" class="archetype-card rounded-image"/></a>
+<a href="https://scryfall.com/card/woe/254/crystal-grotto"><img src="https://cards.scryfall.io/normal/front/6/f/6f6f9d3d-600d-43f3-a915-612e5d53aaa1.jpg" class="archetype-card rounded-image"/></a>
+<a href="https://scryfall.com/card/c18/254/haunted-fengraf"><img src="https://cards.scryfall.io/normal/front/9/7/97a1d55a-39a8-4bf4-91b7-5565146c9c40.jpg" class="archetype-card rounded-image"/></a>
+<a href="https://scryfall.com/card/lci/255/hunters-blowgun"><img src="https://cards.scryfall.io/normal/front/3/3/3348abe7-6aa3-47f7-8203-a15f75007e33.jpg" class="archetype-card rounded-image"/></a>
+<a href="https://scryfall.com/card/mom/68/negate"><img src="https://cards.scryfall.io/normal/front/8/1/81752db1-374e-4723-b695-a2f4a634dfc6.jpg" class="archetype-card rounded-image"/></a>
+<a href="https://scryfall.com/card/a25/226/nihil-spellbomb"><img src="https://cards.scryfall.io/normal/front/e/5/e5892a23-efae-4731-9b8f-41c87960fe93.jpg" class="archetype-card rounded-image"/></a>
+<a href="https://scryfall.com/card/mh1/71/stream-of-thought"><img src="https://cards.scryfall.io/normal/front/8/b/8b75bef5-a039-4edf-8e43-56b8d089605e.jpg" class="archetype-card rounded-image"/></a>
+</details><br/>
 
 
 

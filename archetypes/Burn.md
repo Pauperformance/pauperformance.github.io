@@ -27,11 +27,8 @@ Common decisions for Burn players often involve choosing whether to use removals
   <summary>Click here to expand</summary>
 <a href="https://scryfall.com/card/dmr/113/chain-lightning"><img src="https://cards.scryfall.io/normal/front/2/1/2105a0d9-ea2e-4ffc-be08-424b5617205d.jpg" class="archetype-card rounded-image"/></a>
 <a href="https://scryfall.com/card/dmr/119/fireblast"><img src="https://cards.scryfall.io/normal/front/a/0/a0ab67cc-b553-4451-9cda-0e5fe3303940.jpg" class="archetype-card rounded-image"/></a>
-<a href="https://scryfall.com/card/uma/136/lava-spike"><img src="https://cards.scryfall.io/normal/front/7/9/79c21c1f-eaa4-454d-a1c7-b41466d0a428.jpg" class="archetype-card rounded-image"/></a>
 <a href="https://scryfall.com/card/clu/141/lightning-bolt"><img src="https://cards.scryfall.io/normal/front/7/7/77c6fa74-5543-42ac-9ead-0e890b188e99.jpg" class="archetype-card rounded-image"/></a>
 <a href="https://scryfall.com/card/clb/463/mountain"><img src="https://c1.scryfall.com/file/scryfall-cards/normal/front/0/a/0ab63e49-0869-4c7c-a033-d8e50032dd13.jpg" class="archetype-card rounded-image"/></a>
-<a href="https://scryfall.com/card/2x2/122/rift-bolt"><img src="https://cards.scryfall.io/normal/front/4/c/4ccd0ada-92b2-48f3-b5ae-96346fc138b6.jpg" class="archetype-card rounded-image"/></a>
-<a href="https://scryfall.com/card/ddi/67/searing-blaze"><img src="https://cards.scryfall.io/normal/front/f/6/f659d464-13dd-49e2-a842-098dcba49659.jpg" class="archetype-card rounded-image"/></a>
 </details><br/>
 
 
@@ -40,9 +37,10 @@ Common decisions for Burn players often involve choosing whether to use removals
 
 <details>
   <summary>Click here to expand</summary>
-<a href="https://scryfall.com/card/c21/289/forgotten-cave"><img src="https://c1.scryfall.com/file/scryfall-cards/normal/front/6/2/62b0b5f8-6b51-4fa5-85ae-290475525a9d.jpg" class="archetype-card rounded-image"/></a>
-<a href="https://scryfall.com/card/ema/136/keldon-marauders"><img src="https://cards.scryfall.io/normal/front/b/f/bf42524c-97e5-40b2-8a6d-d2a1f0a9eb65.jpg" class="archetype-card rounded-image"/></a>
+<a href="https://scryfall.com/card/uma/136/lava-spike"><img src="https://cards.scryfall.io/normal/front/7/9/79c21c1f-eaa4-454d-a1c7-b41466d0a428.jpg" class="archetype-card rounded-image"/></a>
 <a href="https://scryfall.com/card/lrw/186/needle-drop"><img src="https://cards.scryfall.io/normal/front/d/3/d3f89bcf-46f8-4598-a949-7f10134606aa.jpg" class="archetype-card rounded-image"/></a>
+<a href="https://scryfall.com/card/2x2/122/rift-bolt"><img src="https://cards.scryfall.io/normal/front/4/c/4ccd0ada-92b2-48f3-b5ae-96346fc138b6.jpg" class="archetype-card rounded-image"/></a>
+<a href="https://scryfall.com/card/ddi/67/searing-blaze"><img src="https://cards.scryfall.io/normal/front/f/6/f659d464-13dd-49e2-a842-098dcba49659.jpg" class="archetype-card rounded-image"/></a>
 </details><br/>
 
 
