@@ -22,16 +22,14 @@
 <a href="https://scryfall.com/card/mh3/145/basking-broodscale"><img src="https://cards.scryfall.io/normal/front/5/f/5feba5d6-99a6-4e9b-8a7d-90d955868fc3.jpg" class="archetype-card rounded-image"/></a>
 <a href="https://scryfall.com/card/otc/131/deadly-dispute"><img src="https://cards.scryfall.io/normal/front/e/d/ed01650e-4eb5-4884-9cc6-947b0e20dd3c.jpg" class="archetype-card rounded-image"/></a>
 <a href="https://scryfall.com/card/one/92/duress"><img src="https://cards.scryfall.io/normal/front/3/5/3557e601-9b71-4ce9-9047-1a8baa72e574.jpg" class="archetype-card rounded-image"/></a>
+<a href="https://scryfall.com/card/mh3/93/eviscerators-insight"><img src="https://cards.scryfall.io/normal/front/b/0/b00573bd-5bbb-4531-a0bb-a40f62b92b88.jpg" class="archetype-card rounded-image"/></a>
 <a href="https://scryfall.com/card/mh3/318/forest"><img src="https://cards.scryfall.io/normal/front/7/a/7ac34881-de32-42c7-af60-f992638e1da2.jpg" class="archetype-card rounded-image"/></a>
 <a href="https://scryfall.com/card/c21/245/ichor-wellspring"><img src="https://cards.scryfall.io/normal/front/1/c/1ccdb407-ac8f-4736-89d3-ab0d086096ea.jpg" class="archetype-card rounded-image"/></a>
-<a href="https://scryfall.com/card/cmm/242/makeshift-munitions"><img src="https://cards.scryfall.io/normal/front/6/0/60715b6d-b223-431a-85d8-27d7c05469b2.jpg" class="archetype-card rounded-image"/></a>
 <a href="https://scryfall.com/card/mh3/161/malevolent-rumble"><img src="https://cards.scryfall.io/normal/front/a/1/a178cfe8-f9fa-4255-88d0-54a0bed079f5.jpg" class="archetype-card rounded-image"/></a>
-<a href="https://scryfall.com/card/clb/463/mountain"><img src="https://c1.scryfall.com/file/scryfall-cards/normal/front/0/a/0ab63e49-0869-4c7c-a033-d8e50032dd13.jpg" class="archetype-card rounded-image"/></a>
 <a href="https://scryfall.com/card/tmp/153/sadistic-glee"><img src="https://cards.scryfall.io/normal/front/d/9/d9e1959c-b87b-4e17-a0d2-0489ea79220b.jpg" class="archetype-card rounded-image"/></a>
 <a href="https://scryfall.com/card/gvl/53/snuff-out"><img src="https://cards.scryfall.io/normal/front/7/5/75bbe89f-09af-494e-b58e-271f64bde4b5.jpg" class="archetype-card rounded-image"/></a>
 <a href="https://scryfall.com/card/otj/281/swamp"><img src="https://cards.scryfall.io/normal/front/e/b/eb7dc259-9949-4673-a8f1-874396948392.jpg" class="archetype-card rounded-image"/></a>
 <a href="https://scryfall.com/card/mh3/232/twisted-landscape"><img src="https://cards.scryfall.io/normal/front/d/0/d0e3e7b3-7ba9-47a2-b46c-a40bffb445e2.jpg" class="archetype-card rounded-image"/></a>
-<a href="https://scryfall.com/card/mh3/208/writhing-chrysalis"><img src="https://cards.scryfall.io/normal/front/f/5/f54dbeb1-51f8-40e2-912a-ec25457de5a2.jpg" class="archetype-card rounded-image"/></a>
 </details><br/>
 
 
@@ -40,11 +38,12 @@
 
 <details>
   <summary>Click here to expand</summary>
-<a href="https://scryfall.com/card/znr/137/cleansing-wildfire"><img src="https://cards.scryfall.io/normal/front/4/9/492d77e5-acc6-41b8-8930-f39d69234919.jpg" class="archetype-card rounded-image"/></a>
-<a href="https://scryfall.com/card/mh2/246/drossforge-bridge"><img src="https://cards.scryfall.io/normal/front/5/b/5b46b8d8-723a-4752-b97d-29ef83bd294c.jpg" class="archetype-card rounded-image"/></a>
-<a href="https://scryfall.com/card/mh3/93/eviscerators-insight"><img src="https://cards.scryfall.io/normal/front/b/0/b00573bd-5bbb-4531-a0bb-a40f62b92b88.jpg" class="archetype-card rounded-image"/></a>
-<a href="https://scryfall.com/card/mrd/98/krark-clan-shaman"><img src="https://cards.scryfall.io/normal/front/9/7/975f9ea8-af2c-456f-acd0-ffa9ea0d98c1.jpg" class="archetype-card rounded-image"/></a>
-<a href="https://scryfall.com/card/mh2/256/slagwoods-bridge"><img src="https://cards.scryfall.io/normal/front/e/5/e51b48e9-a75a-4acd-9462-5e1ac2b0d803.jpg" class="archetype-card rounded-image"/></a>
+<a href="https://scryfall.com/card/c18/262/khalni-garden"><img src="https://cards.scryfall.io/normal/front/3/e/3e0f6ae6-b303-405a-8efa-91de9692768e.jpg" class="archetype-card rounded-image"/></a>
+<a href="https://scryfall.com/card/cmm/242/makeshift-munitions"><img src="https://cards.scryfall.io/normal/front/6/0/60715b6d-b223-431a-85d8-27d7c05469b2.jpg" class="archetype-card rounded-image"/></a>
+<a href="https://scryfall.com/card/clb/463/mountain"><img src="https://c1.scryfall.com/file/scryfall-cards/normal/front/0/a/0ab63e49-0869-4c7c-a033-d8e50032dd13.jpg" class="archetype-card rounded-image"/></a>
+<a href="https://scryfall.com/card/mh3/275/nadiers-nightblade"><img src="https://cards.scryfall.io/normal/front/b/c/bc9926d7-91b7-4067-b590-a0430bf68d16.jpg" class="archetype-card rounded-image"/></a>
+<a href="https://scryfall.com/card/neo/211/tamiyos-safekeeping"><img src="https://cards.scryfall.io/normal/front/f/d/fd4b7ee2-de65-4288-872d-486065a4f226.jpg" class="archetype-card rounded-image"/></a>
+<a href="https://scryfall.com/card/mh3/208/writhing-chrysalis"><img src="https://cards.scryfall.io/normal/front/f/5/f54dbeb1-51f8-40e2-912a-ec25457de5a2.jpg" class="archetype-card rounded-image"/></a>
 </details><br/>
 
 

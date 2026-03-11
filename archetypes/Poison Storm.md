@@ -36,6 +36,7 @@
 <details>
   <summary>Click here to expand</summary>
 <a href="https://scryfall.com/card/mkc/227/everflowing-chalice"><img src="https://cards.scryfall.io/normal/front/e/8/e89eca1c-19f5-4db0-9330-cecb87be8b55.jpg" class="archetype-card rounded-image"/></a>
+<a href="https://scryfall.com/card/clb/455/island"><img src="https://c1.scryfall.com/file/scryfall-cards/normal/front/f/f/ff3ffe47-53a3-42ec-ae89-afc79793380d.jpg" class="archetype-card rounded-image"/></a>
 <a href="https://scryfall.com/card/ltr/60/l%C3%B3rien-revealed"><img src="https://cards.scryfall.io/normal/front/0/c/0ce44270-a684-4489-9077-521456e6dfaa.jpg" class="archetype-card rounded-image"/></a>
 <a href="https://scryfall.com/card/ody/251/moments-peace"><img src="https://cards.scryfall.io/normal/front/4/0/40ebe935-ccf9-435e-8fe8-53bcbf3526e7.jpg" class="archetype-card rounded-image"/></a>
 </details><br/>

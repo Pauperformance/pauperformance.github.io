@@ -38,7 +38,6 @@
 
 <details>
   <summary>Click here to expand</summary>
-<a href="https://scryfall.com/card/dmr/78/chainers-edict"><img src="https://cards.scryfall.io/normal/front/8/c/8c204471-d908-4a08-83e4-cf38999fa80f.jpg" class="archetype-card rounded-image"/></a>
 <a href="https://scryfall.com/card/uma/102/gurmag-angler"><img src="https://cards.scryfall.io/normal/front/c/e/cedd44eb-f381-46e1-bcb0-88416b4ce33d.jpg" class="archetype-card rounded-image"/></a>
 <a href="https://scryfall.com/card/clb/455/island"><img src="https://c1.scryfall.com/file/scryfall-cards/normal/front/f/f/ff3ffe47-53a3-42ec-ae89-afc79793380d.jpg" class="archetype-card rounded-image"/></a>
 <a href="https://scryfall.com/card/iko/100/suffocating-fumes"><img src="https://cards.scryfall.io/normal/front/6/6/66b562e4-35df-4aee-848d-ceb4204bbe58.jpg" class="archetype-card rounded-image"/></a>

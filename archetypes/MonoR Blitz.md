@@ -34,7 +34,6 @@
   <summary>Click here to expand</summary>
 <a href="https://scryfall.com/card/mid/140/festival-crasher"><img src="https://cards.scryfall.io/normal/front/6/2/626b0477-6165-443a-8a75-dfeac26ac9f9.jpg" class="archetype-card rounded-image"/></a>
 <a href="https://scryfall.com/card/jud/89/flaring-pain"><img src="https://c1.scryfall.com/file/scryfall-cards/normal/front/e/e/eeb5c96a-1d16-459d-9968-ced9a8f1c520.jpg" class="archetype-card rounded-image"/></a>
-<a href="https://scryfall.com/card/clu/141/lightning-bolt"><img src="https://cards.scryfall.io/normal/front/7/7/77c6fa74-5543-42ac-9ead-0e890b188e99.jpg" class="archetype-card rounded-image"/></a>
 <a href="https://scryfall.com/card/2xm/208/manamorphose"><img src="https://cards.scryfall.io/normal/front/f/a/faf9070e-14be-4ce5-a19a-6addc79359c1.jpg" class="archetype-card rounded-image"/></a>
 <a href="https://scryfall.com/card/ema/142/pyroblast"><img src="https://cards.scryfall.io/normal/front/b/0/b029eb9a-dd7a-40c2-96c4-0063d9cc002c.jpg" class="archetype-card rounded-image"/></a>
 <a href="https://scryfall.com/card/cmm/264/temur-battle-rage"><img src="https://cards.scryfall.io/normal/front/3/7/375bc646-942e-4bf5-9c71-2c5471828e35.jpg" class="archetype-card rounded-image"/></a>

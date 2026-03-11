@@ -19,7 +19,6 @@
 
 <details>
   <summary>Click here to expand</summary>
-<a href="https://scryfall.com/card/a25/43/blue-elemental-blast"><img src="https://cards.scryfall.io/normal/front/2/f/2f51f88f-f662-4572-a371-9a77718ed079.jpg" class="archetype-card rounded-image"/></a>
 <a href="https://scryfall.com/card/mh3/318/forest"><img src="https://cards.scryfall.io/normal/front/7/a/7ac34881-de32-42c7-af60-f992638e1da2.jpg" class="archetype-card rounded-image"/></a>
 <a href="https://scryfall.com/card/ltr/169/generous-ent"><img src="https://cards.scryfall.io/normal/front/8/5/85d22d5d-3875-42ff-b51e-c6e21db201f5.jpg" class="archetype-card rounded-image"/></a>
 <a href="https://scryfall.com/card/one/54/glistener-seer"><img src="https://cards.scryfall.io/normal/front/c/2/c22aaaec-bad5-43e9-8e92-9c4bde95fcfd.jpg" class="archetype-card rounded-image"/></a>
@@ -39,7 +38,7 @@
 
 <details>
   <summary>Click here to expand</summary>
-<a href="https://scryfall.com/card/ody/251/moments-peace"><img src="https://cards.scryfall.io/normal/front/4/0/40ebe935-ccf9-435e-8fe8-53bcbf3526e7.jpg" class="archetype-card rounded-image"/></a>
+<a href="https://scryfall.com/card/a25/43/blue-elemental-blast"><img src="https://cards.scryfall.io/normal/front/2/f/2f51f88f-f662-4572-a371-9a77718ed079.jpg" class="archetype-card rounded-image"/></a>
 </details><br/>
 
 

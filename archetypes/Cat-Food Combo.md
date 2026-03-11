@@ -15,7 +15,34 @@
 **Description**: _Still missing. Please join us on [Discord](https://discord.gg/fYQbpjjkQ3) to contribute to the Academy._
 
 
+## **Staples**
 
+<details>
+  <summary>Click here to expand</summary>
+<a href="https://scryfall.com/card/2xm/151/ancient-stirrings"><img src="https://cards.scryfall.io/normal/front/7/2/726039a0-6c0d-48ef-9b42-99de5d4e41d2.jpg" class="archetype-card rounded-image"/></a>
+<a href="https://scryfall.com/card/cmm/368/ashnods-altar"><img src="https://cards.scryfall.io/normal/front/3/c/3c0f7157-a375-499c-92c7-d47d2e95dbad.jpg" class="archetype-card rounded-image"/></a>
+<a href="https://scryfall.com/card/jmp/216/cauldron-familiar"><img src="https://cards.scryfall.io/normal/front/3/2/32cf273e-b8f7-434b-9d5d-883dfd6f7423.jpg" class="archetype-card rounded-image"/></a>
+<a href="https://scryfall.com/card/clb/308/clockwork-fox"><img src="https://cards.scryfall.io/normal/front/8/f/8fbb37d7-7053-4b1f-b899-91695f88f7e0.jpg" class="archetype-card rounded-image"/></a>
+<a href="https://scryfall.com/card/one/92/duress"><img src="https://cards.scryfall.io/normal/front/3/5/3557e601-9b71-4ce9-9047-1a8baa72e574.jpg" class="archetype-card rounded-image"/></a>
+<a href="https://scryfall.com/card/eld/220/golden-egg"><img src="https://cards.scryfall.io/normal/front/5/2/525142c3-f17c-4e02-a02d-fa385215aa12.jpg" class="archetype-card rounded-image"/></a>
+<a href="https://scryfall.com/card/ltr/243/lembas"><img src="https://cards.scryfall.io/normal/front/3/b/3b46aacf-b31a-4380-9e4b-82795fbaba3b.jpg" class="archetype-card rounded-image"/></a>
+<a href="https://scryfall.com/card/mh3/161/malevolent-rumble"><img src="https://cards.scryfall.io/normal/front/a/1/a178cfe8-f9fa-4255-88d0-54a0bed079f5.jpg" class="archetype-card rounded-image"/></a>
+<a href="https://scryfall.com/card/ltr/176/many-partings"><img src="https://cards.scryfall.io/normal/front/d/1/d179dbbe-9c79-4dbc-955a-5209a3e2745a.jpg" class="archetype-card rounded-image"/></a>
+<a href="https://scryfall.com/card/2xm/277/myr-retriever"><img src="https://cards.scryfall.io/normal/front/7/f/7f0149d4-0731-474a-a1c3-28c25e486c14.jpg" class="archetype-card rounded-image"/></a>
+<a href="https://scryfall.com/card/a25/226/nihil-spellbomb"><img src="https://cards.scryfall.io/normal/front/e/5/e5892a23-efae-4731-9b8f-41c87960fe93.jpg" class="archetype-card rounded-image"/></a>
+<a href="https://scryfall.com/card/eoe/243/nutrient-block"><img src="https://cards.scryfall.io/normal/front/a/2/a26064bb-c568-4ed6-86db-3aab69b050db.jpg" class="archetype-card rounded-image"/></a>
+</details><br/>
+
+
+
+## **Frequent cards**
+
+<details>
+  <summary>Click here to expand</summary>
+<a href="https://scryfall.com/card/blb/167/cache-grab"><img src="https://cards.scryfall.io/normal/front/d/f/dfd977dc-a7c3-4d0a-aca7-b25bd154e963.jpg" class="archetype-card rounded-image"/></a>
+<a href="https://scryfall.com/card/ody/251/moments-peace"><img src="https://cards.scryfall.io/normal/front/4/0/40ebe935-ccf9-435e-8fe8-53bcbf3526e7.jpg" class="archetype-card rounded-image"/></a>
+<a href="https://scryfall.com/card/mh1/191/weather-the-storm"><img src="https://cards.scryfall.io/normal/front/f/6/f6a9fa51-78c3-42e6-8c2e-39658f59ed87.jpg" class="archetype-card rounded-image"/></a>
+</details><br/>
 
 
 

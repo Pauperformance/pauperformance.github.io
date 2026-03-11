@@ -29,6 +29,7 @@
 <a href="https://scryfall.com/card/clb/463/mountain"><img src="https://c1.scryfall.com/file/scryfall-cards/normal/front/0/a/0ab63e49-0869-4c7c-a033-d8e50032dd13.jpg" class="archetype-card rounded-image"/></a>
 <a href="https://scryfall.com/card/ema/142/pyroblast"><img src="https://cards.scryfall.io/normal/front/b/0/b029eb9a-dd7a-40c2-96c4-0063d9cc002c.jpg" class="archetype-card rounded-image"/></a>
 <a href="https://scryfall.com/card/mh3/205/sneaky-snacker"><img src="https://cards.scryfall.io/normal/front/0/e/0e3aedae-e4bb-48e3-9f8b-bea0430df306.jpg" class="archetype-card rounded-image"/></a>
+<a href="https://scryfall.com/card/vow/182/voldaren-epicure"><img src="https://cards.scryfall.io/normal/front/a/e/ae154e64-f626-45fb-bd52-840c1c27b2d3.jpg" class="archetype-card rounded-image"/></a>
 </details><br/>
 
 
@@ -38,7 +39,6 @@
 <details>
   <summary>Click here to expand</summary>
 <a href="https://scryfall.com/card/a25/147/red-elemental-blast"><img src="https://c1.scryfall.com/file/scryfall-cards/normal/front/7/0/70a45e9b-699e-425a-9f3d-267274830d3e.jpg" class="archetype-card rounded-image"/></a>
-<a href="https://scryfall.com/card/vow/182/voldaren-epicure"><img src="https://cards.scryfall.io/normal/front/a/e/ae154e64-f626-45fb-bd52-840c1c27b2d3.jpg" class="archetype-card rounded-image"/></a>
 </details><br/>
 
 

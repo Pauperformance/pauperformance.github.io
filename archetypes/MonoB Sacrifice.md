@@ -40,6 +40,7 @@
 <a href="https://scryfall.com/card/a25/97/mesmeric-fiend"><img src="https://cards.scryfall.io/normal/front/8/6/864930ce-7c56-4ad2-9b90-57b10e5a0842.jpg" class="archetype-card rounded-image"/></a>
 <a href="https://scryfall.com/card/shm/76/rite-of-consumption"><img src="https://cards.scryfall.io/normal/front/f/6/f62d999c-c81e-4bea-aefd-0d12251dcdd1.jpg" class="archetype-card rounded-image"/></a>
 <a href="https://scryfall.com/card/mid/119/rotten-reunion"><img src="https://cards.scryfall.io/normal/front/9/7/97398ad2-675b-4a34-aab7-935dd6714f1c.jpg" class="archetype-card rounded-image"/></a>
+<a href="https://scryfall.com/card/afr/119/shambling-ghast"><img src="https://cards.scryfall.io/normal/front/d/9/d96198a7-dd19-4940-bf8f-23135011fc84.jpg" class="archetype-card rounded-image"/></a>
 <a href="https://scryfall.com/card/cmm/188/supernatural-stamina"><img src="https://cards.scryfall.io/normal/front/2/b/2b349b4b-f08d-45e8-81f6-3467a02e6d23.jpg" class="archetype-card rounded-image"/></a>
 </details><br/>
 
