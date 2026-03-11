@@ -31,7 +31,6 @@
 <details>
   <summary>Click here to expand</summary>
 <a href="https://scryfall.com/card/ons/248/birchlore-rangers"><img src="https://cards.scryfall.io/normal/front/8/c/8ce3a3a1-3569-4909-a604-f78d4888781e.jpg" class="archetype-card rounded-image"/></a>
-<a href="https://scryfall.com/card/lcc/154/distant-melody"><img src="https://cards.scryfall.io/normal/front/b/b/bba22321-526e-4587-903b-a60cda2093fa.jpg" class="archetype-card rounded-image"/></a>
 <a href="https://scryfall.com/card/cmm/284/elvish-mystic"><img src="https://cards.scryfall.io/normal/front/7/5/75918859-c93f-41b4-9ad0-a4a96c389f0d.jpg" class="archetype-card rounded-image"/></a>
 <a href="https://scryfall.com/card/cmr/228/fyndhorn-elves"><img src="https://cards.scryfall.io/normal/front/4/5/450744cf-7eba-491b-97b0-ca80c6368bbb.jpg" class="archetype-card rounded-image"/></a>
 <a href="https://scryfall.com/card/iko/163/lead-the-stampede"><img src="https://cards.scryfall.io/normal/front/9/e/9e76b676-c7a3-4de6-a78d-3059a0df83f2.jpg" class="archetype-card rounded-image"/></a>

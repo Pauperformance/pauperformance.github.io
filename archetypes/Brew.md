@@ -14,9 +14,7 @@
 Generic archetype, for decks that do not fit those in the [Archetypes Index](../../pages/archetypes_index.html).
 
 
-
-
-## **Frequent cards**
+## **Staples**
 
 <details>
   <summary>Click here to expand</summary>
@@ -25,6 +23,8 @@ Generic archetype, for decks that do not fit those in the [Archetypes Index](../
 <a href="https://scryfall.com/card/bro/164/scrapwork-mutt"><img src="https://cards.scryfall.io/normal/front/4/7/4742800a-4872-4c2d-b884-01e0ba16950c.jpg" class="archetype-card rounded-image"/></a>
 <a href="https://scryfall.com/card/dvd/36/stinkweed-imp"><img src="https://cards.scryfall.io/normal/front/2/a/2ab08d69-210b-4b06-88a2-45281a1a4e1e.jpg" class="archetype-card rounded-image"/></a>
 </details><br/>
+
+
 
 
 

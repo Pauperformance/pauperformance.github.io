@@ -20,9 +20,7 @@
 <a href="https://scryfall.com/card/cmr/163/boarding-party"><img src="https://cards.scryfall.io/normal/front/1/8/186adacf-434b-475b-9b85-749615ae002b.jpg" class="archetype-card rounded-image"/></a>
 <a href="https://scryfall.com/card/woe/243/candy-trail"><img src="https://cards.scryfall.io/normal/front/1/a/1a860925-d912-49e5-9ddc-41ab26916bb3.jpg" class="archetype-card rounded-image"/></a>
 <a href="https://scryfall.com/card/ltr/118/cast-into-the-fire"><img src="https://cards.scryfall.io/normal/front/2/e/2ef878cb-27b6-47d8-ad11-bd20529b0e7e.jpg" class="archetype-card rounded-image"/></a>
-<a href="https://scryfall.com/card/cmm/211/crimson-fleet-commodore"><img src="https://cards.scryfall.io/normal/front/e/d/edf54657-5943-4a45-a296-dc91c41109d4.jpg" class="archetype-card rounded-image"/></a>
 <a href="https://scryfall.com/card/2xm/255/expedition-map"><img src="https://cards.scryfall.io/normal/front/5/5/551c0a45-9515-4e51-84e5-79703832a661.jpg" class="archetype-card rounded-image"/></a>
-<a href="https://scryfall.com/card/clu/141/lightning-bolt"><img src="https://cards.scryfall.io/normal/front/7/7/77c6fa74-5543-42ac-9ead-0e890b188e99.jpg" class="archetype-card rounded-image"/></a>
 <a href="https://scryfall.com/card/clb/463/mountain"><img src="https://c1.scryfall.com/file/scryfall-cards/normal/front/0/a/0ab63e49-0869-4c7c-a033-d8e50032dd13.jpg" class="archetype-card rounded-image"/></a>
 <a href="https://scryfall.com/card/ltr/139/oliphaunt"><img src="https://cards.scryfall.io/normal/front/6/9/6989018c-37b1-4282-a4af-9cc97f160b4d.jpg" class="archetype-card rounded-image"/></a>
 <a href="https://scryfall.com/card/gnt/40/rolling-thunder"><img src="https://cards.scryfall.io/normal/front/0/d/0df50703-5655-4bc4-adc9-d719c2da3bfd.jpg" class="archetype-card rounded-image"/></a>
@@ -39,9 +37,10 @@
 
 <details>
   <summary>Click here to expand</summary>
+<a href="https://scryfall.com/card/cmm/211/crimson-fleet-commodore"><img src="https://cards.scryfall.io/normal/front/e/d/edf54657-5943-4a45-a296-dc91c41109d4.jpg" class="archetype-card rounded-image"/></a>
 <a href="https://scryfall.com/card/cmr/178/fiery-cannonade"><img src="https://cards.scryfall.io/normal/front/3/9/396f1cdf-712b-4518-a0e8-0039303dccdc.jpg" class="archetype-card rounded-image"/></a>
+<a href="https://scryfall.com/card/clu/141/lightning-bolt"><img src="https://cards.scryfall.io/normal/front/7/7/77c6fa74-5543-42ac-9ead-0e890b188e99.jpg" class="archetype-card rounded-image"/></a>
 <a href="https://scryfall.com/card/2xm/283/pyrite-spellbomb"><img src="https://cards.scryfall.io/normal/front/0/8/088c801d-381f-403b-aeb7-fbbfafee99bf.jpg" class="archetype-card rounded-image"/></a>
-<a href="https://scryfall.com/card/dmr/257/smoldering-crater"><img src="https://cards.scryfall.io/normal/front/d/d/ddcfaaed-c139-4787-946f-59800bde71e4.jpg" class="archetype-card rounded-image"/></a>
 </details><br/>
 
 

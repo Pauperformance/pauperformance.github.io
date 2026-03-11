@@ -37,7 +37,6 @@
 
 <details>
   <summary>Click here to expand</summary>
-<a href="https://scryfall.com/card/arc/77/architects-of-will"><img src="https://cards.scryfall.io/normal/front/6/f/6f614bb4-92e3-4ae0-9f2f-294434706c48.jpg" class="archetype-card rounded-image"/></a>
 <a href="https://scryfall.com/card/lgn/61/blood-celebrant"><img src="https://cards.scryfall.io/normal/front/8/0/805de325-6f14-4a52-bb85-f9a9545d82a4.jpg" class="archetype-card rounded-image"/></a>
 <a href="https://scryfall.com/card/one/92/duress"><img src="https://cards.scryfall.io/normal/front/3/5/3557e601-9b71-4ce9-9047-1a8baa72e574.jpg" class="archetype-card rounded-image"/></a>
 <a href="https://scryfall.com/card/tpr/225/lotus-petal"><img src="https://cards.scryfall.io/normal/front/f/8/f85ab5f9-508e-45de-8fa1-ce1f16552ffc.jpg" class="archetype-card rounded-image"/></a>
