@@ -1085,4 +1085,6 @@ Lines in **bold** correspond to sets that have introduced new cards in the [Paup
 | 1064      | soa           | Secrets of Strixhaven Mystical Archive          | 2026-04-24   |
 | 1065      | soc           | Secrets of Strixhaven Commander                 | 2026-04-24   |
 | 1066      | sos           | Secrets of Strixhaven                           | 2026-04-24   |
+| 1067      | tsoc          | Secrets of Strixhaven Commander Tokens          | 2026-04-24   |
+| 1068      | tsos          | Secrets of Strixhaven Tokens                    | 2026-04-24   |
 
