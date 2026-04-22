@@ -137,8 +137,8 @@ Every archetype in the list is linked to its dedicated page, where you will find
 [MonoR Blitz](../archetypes/MonoR%20Blitz.html) | <img src="../resources/images/mana/R.png" class="dominant-mana-icon"/> | Aggro           | [Blitz       ](../families/Blitz.html) |
 [MonoR Dredge](../archetypes/MonoR%20Dredge.html) | <img src="../resources/images/mana/R.png" class="dominant-mana-icon"/> | Midrange, Combo | [Dredge      ](../families/Dredge.html) |
 [MonoR Heroic](../archetypes/MonoR%20Heroic.html) | <img src="../resources/images/mana/R.png" class="dominant-mana-icon"/> | Aggro           | [            ](../families/.html) |
-[MonoR Kuldotha](../archetypes/MonoR%20Kuldotha.html) | <img src="../resources/images/mana/R.png" class="dominant-mana-icon"/> | Aggro           | [            ](../families/.html) |
 [MonoR Kuldotha](../archetypes/MonoR%20Kuldotha.html) | <img src="../resources/images/mana/R.png" class="dominant-mana-icon"/> | Aggro           | [Burn        ](../families/Burn.html) |
+[MonoR Kuldotha](../archetypes/MonoR%20Kuldotha.html) | <img src="../resources/images/mana/R.png" class="dominant-mana-icon"/> | Aggro           | [            ](../families/.html) |
 [MonoR Madness](../archetypes/MonoR%20Madness.html) | <img src="../resources/images/mana/R.png" class="dominant-mana-icon"/> | Aggro           | [Burn        ](../families/Burn.html) |
 [MonoR Tron](../archetypes/MonoR%20Tron.html) | <img src="../resources/images/mana/R.png" class="dominant-mana-icon"/> | Control         | [Tron        ](../families/Tron.html) |
 [MonoR Turbo Emblem](../archetypes/MonoR%20Turbo%20Emblem.html) | <img src="../resources/images/mana/R.png" class="dominant-mana-icon"/> | Aggro, Combo    | [Turbo Emblem](../families/Turbo%20Emblem.html) |
