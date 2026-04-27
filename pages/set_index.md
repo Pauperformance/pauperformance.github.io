@@ -1084,9 +1084,10 @@ Lines in **bold** correspond to sets that have introduced new cards in the [Paup
 | 1063      | atmt          | Teenage Mutant Ninja Turtles Art Series         | 2026-03-06   |
 | 1064      | ftmc          | Teenage Mutant Ninja Turtles Eternal Front Cards | 2026-03-06   |
 | 1065      | asos          | Secrets of Strixhaven Art Series                | 2026-04-24   |
-| 1066      | soa           | Secrets of Strixhaven Mystical Archive          | 2026-04-24   |
-| 1067      | soc           | Secrets of Strixhaven Commander                 | 2026-04-24   |
-| **1068**  | **sos**       | **Secrets of Strixhaven**                       | **2026-04-24** |
-| 1069      | tsoc          | Secrets of Strixhaven Commander Tokens          | 2026-04-24   |
-| 1070      | tsos          | Secrets of Strixhaven Tokens                    | 2026-04-24   |
+| 1066      | psos          | Secrets of Strixhaven Promos                    | 2026-04-24   |
+| 1067      | soa           | Secrets of Strixhaven Mystical Archive          | 2026-04-24   |
+| 1068      | soc           | Secrets of Strixhaven Commander                 | 2026-04-24   |
+| **1069**  | **sos**       | **Secrets of Strixhaven**                       | **2026-04-24** |
+| 1070      | tsoc          | Secrets of Strixhaven Commander Tokens          | 2026-04-24   |
+| 1071      | tsos          | Secrets of Strixhaven Tokens                    | 2026-04-24   |
 
