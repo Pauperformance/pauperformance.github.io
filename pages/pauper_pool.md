@@ -203,7 +203,7 @@ Table of Contents
 * [Final Fantasy](#final-fantasy-fin) (*release: 2025-06-13 ~ p12e_code: 999*)
 * [Through the Omenpaths](#through-the-omenpaths-om1) (*release: 2025-09-23 ~ p12e_code: 1030*)
 * [Avatar: The Last Airbender Eternal](#avatar-the-last-airbender-eternal-tle) (*release: 2025-11-21 ~ p12e_code: 1039*)
-* [Secrets of Strixhaven](#secrets-of-strixhaven-sos) (*release: 2026-04-24 ~ p12e_code: 1068*)
+* [Secrets of Strixhaven](#secrets-of-strixhaven-sos) (*release: 2026-04-24 ~ p12e_code: 1069*)
 
 ---
 
@@ -11811,7 +11811,7 @@ Table of Contents
 []()
 
 ## Secrets of Strixhaven (sos)
-*release: 2026-04-24 | p12e_code: 1068*
+*release: 2026-04-24 | p12e_code: 1069*
 
 <details>
   <summary>Click to see 80 new cards</summary>
