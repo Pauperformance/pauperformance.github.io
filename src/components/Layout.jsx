@@ -19,8 +19,11 @@ export default function Layout({ children }) {
     <div className="min-h-screen bg-gray-900 text-gray-100">
       <header className="border-b border-gray-700 bg-gray-950 sticky top-0 z-10">
         <div className="max-w-5xl mx-auto px-6 py-4 flex items-center gap-8">
-          <Link to="/" className="text-xl font-bold tracking-tight text-white shrink-0">
-            Pauperformance <span className="text-amber-400">Academy</span>
+          <Link to="/" className="shrink-0">
+            <div className="text-xl font-bold tracking-tight text-white">
+              Pauperformance <span className="text-amber-400">Academy</span>
+            </div>
+            <div className="text-xs text-gray-500 tracking-wide mt-0.5">A common journey to optimal Pauper</div>
           </Link>
           <nav className="flex gap-1 flex-1">
             {NAV_ITEMS.map(({ to, label }) => (
