@@ -25,8 +25,8 @@ Please, read the [PhD Guidelines](./pages/phd_guidelines.html).**
 
 ---
 
-## The current Pauperformance code for decks is **1069**.
-It refers to Secrets of Strixhaven (sos), released on 2026-04-24.
+## The current Pauperformance code for decks is **1039**.
+It refers to Avatar: The Last Airbender Eternal (tle), released on 2025-11-21.
 
 ---
 

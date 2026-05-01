@@ -1081,13 +1081,13 @@ Lines in **bold** correspond to sets that have introduced new cards in the [Paup
 | 1060      | tecl          | Lorwyn Eclipsed Tokens                          | 2026-01-23   |
 | 1061      | yecl          | Alchemy: Lorwyn Eclipsed                        | 2026-02-03   |
 | 1062      | pl26          | Year of the Horse 2026                          | 2026-02-17   |
-| 1063      | atmt          | Teenage Mutant Ninja Turtles Art Series         | 2026-03-06   |
-| 1064      | ftmc          | Teenage Mutant Ninja Turtles Eternal Front Cards | 2026-03-06   |
-| 1065      | asos          | Secrets of Strixhaven Art Series                | 2026-04-24   |
-| 1066      | psos          | Secrets of Strixhaven Promos                    | 2026-04-24   |
-| 1067      | soa           | Secrets of Strixhaven Mystical Archive          | 2026-04-24   |
-| 1068      | soc           | Secrets of Strixhaven Commander                 | 2026-04-24   |
-| **1069**  | **sos**       | **Secrets of Strixhaven**                       | **2026-04-24** |
+| 1063      | ftmc          | Teenage Mutant Ninja Turtles Eternal Front Cards | 2026-03-06   |
+| 1064      | soa           | Secrets of Strixhaven Mystical Archive          | 2026-04-24   |
+| 1065      | soc           | Secrets of Strixhaven Commander                 | 2026-04-24   |
+| 1066      | sos           | Secrets of Strixhaven                           | 2026-04-24   |
+| 1067      | atmt          | Teenage Mutant Ninja Turtles Art Series         | 2026-03-06   |
+| 1068      | asos          | Secrets of Strixhaven Art Series                | 2026-04-24   |
+| 1069      | psos          | Secrets of Strixhaven Promos                    | 2026-04-24   |
 | 1070      | tsoc          | Secrets of Strixhaven Commander Tokens          | 2026-04-24   |
 | 1071      | tsos          | Secrets of Strixhaven Tokens                    | 2026-04-24   |
 
