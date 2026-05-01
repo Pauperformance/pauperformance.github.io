@@ -3,6 +3,10 @@ import { Link, useLocation } from 'react-router-dom'
 const NAV_ITEMS = [
   { to: '/', label: 'Home' },
   { to: '/archetypes', label: 'Archetypes' },
+  { to: '/sets', label: 'Set Index' },
+  { to: '/timeline', label: 'Format Timeline' },
+  { to: '/pool', label: 'Pauper Pool' },
+  { to: '/phd-guidelines', label: 'PhD Guidelines' },
 ]
 
 const SOCIAL_LINKS = [

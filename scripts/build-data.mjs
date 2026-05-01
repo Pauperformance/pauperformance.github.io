@@ -81,3 +81,74 @@ for (const archetype of archetypes) {
 }
 
 console.log(`Built ${detailCount} archetype detail files.`)
+
+// Parse set index from markdown
+const setLines = readFileSync('pages/set_index.md', 'utf8').split('\n')
+const sets = []
+for (const line of setLines) {
+  const trimmed = line.trim()
+  if (!trimmed.startsWith('|') || trimmed.includes('----') || trimmed.includes('p12e code')) continue
+  const cols = trimmed.split('|').map(c => c.trim()).filter(Boolean)
+  if (cols.length < 4) continue
+  const clean = s => s.replace(/\*\*/g, '').trim()
+  const pauper_pool = cols[2].startsWith('**')
+  sets.push({
+    code: parseInt(clean(cols[0])),
+    scryfall: clean(cols[1]),
+    name: clean(cols[2]),
+    date: clean(cols[3]),
+    pauper_pool,
+  })
+}
+writeFileSync(join(outDir, 'sets.json'), JSON.stringify(sets))
+console.log(`Built sets.json with ${sets.length} entries (${sets.filter(s => s.pauper_pool).length} in Pauper pool).`)
+
+// Parse format timeline from markdown
+const timelineContent = readFileSync('pages/format_timeline.md', 'utf8')
+const timelineSections = timelineContent.split('\n---\n')
+const timeline = []
+const refLinkRe = /^\[(.+?)\]\((.+?)\)$/
+
+for (const sec of timelineSections) {
+  const trimmed = sec.trim()
+  if (!trimmed.startsWith('###')) continue
+  const lines = trimmed.split('\n')
+  const header = lines[0].replace(/^###\s*/, '').trim()
+  const dashIdx = header.indexOf(' - ')
+  const date = dashIdx >= 0 ? header.slice(0, dashIdx).trim() : header
+  const subtitle = dashIdx >= 0 ? header.slice(dashIdx + 3).trim() : null
+
+  const bullets = []
+  const refs = []
+  for (const line of lines.slice(1)) {
+    const l = line.trim()
+    if (l.startsWith('* ')) bullets.push(l.slice(2))
+    else if (l.startsWith('ref: ')) {
+      const raw = l.slice(5).trim()
+      const m = raw.match(refLinkRe)
+      refs.push(m ? { text: m[1], url: m[2] } : { text: raw, url: null })
+    }
+  }
+  timeline.push({ date, subtitle, bullets, refs })
+}
+writeFileSync(join(outDir, 'timeline.json'), JSON.stringify(timeline))
+console.log(`Built timeline.json with ${timeline.length} entries.`)
+
+// Parse pauper pool from markdown
+const poolContent = readFileSync('pages/pauper_pool.md', 'utf8')
+const poolSections = poolContent.split('\n## ')
+const pool = []
+for (const sec of poolSections.slice(1)) {
+  const headerMatch = sec.match(/^(.+?)\s+\(([^)]+)\)/)
+  if (!headerMatch) continue
+  const [, name, scryfall] = headerMatch
+  const metaMatch = sec.match(/release:\s*(\S+)\s*\|\s*p12e_code:\s*(\d+)/)
+  const date = metaMatch?.[1] ?? null
+  const code = metaMatch ? parseInt(metaMatch[2]) : null
+  const cards = [...sec.matchAll(/<a href="([^"]+)">([^<]+)<\/a>/g)]
+    .map(([, url, cardName]) => ({ name: cardName, url: url.split('?')[0] }))
+  pool.push({ code, scryfall, name, date, cards })
+}
+const totalCards = pool.reduce((sum, s) => sum + s.cards.length, 0)
+writeFileSync(join(outDir, 'pauper_pool.json'), JSON.stringify(pool))
+console.log(`Built pauper_pool.json with ${pool.length} sets and ${totalCards} cards.`)
