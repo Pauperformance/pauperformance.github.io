@@ -1091,5 +1091,7 @@ Lines in **bold** correspond to sets that have introduced new cards in the [Paup
 | 1070      | tsoc          | Secrets of Strixhaven Commander Tokens          | 2026-04-24   |
 | 1071      | tsos          | Secrets of Strixhaven Tokens                    | 2026-04-24   |
 | 1072      | hob           | The Hobbit                                      | 2026-08-14   |
-| 1073      | fra           | Reality Fracture                                | 2026-10-02   |
+| 1073      | hoc           | The Hobbit Commander                            | 2026-08-14   |
+| 1074      | thob          | The Hobbit Tokens                               | 2026-08-14   |
+| 1075      | fra           | Reality Fracture                                | 2026-10-02   |
 
