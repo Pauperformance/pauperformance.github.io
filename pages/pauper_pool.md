@@ -13,7 +13,7 @@ This page should be useful for Pauper players that haven't followed the latest r
 
 Further information about reference numbers used by Pauperformance (p12e) to uniquely identify Magic sets can be found in the [Set Index page](set_index.html).
 
-The total number of cards in the Pauper pool is: 10018.
+The total number of cards in the Pauper pool is: 9938.
 
 ---
 Table of Contents
@@ -203,7 +203,6 @@ Table of Contents
 * [Final Fantasy](#final-fantasy-fin) (*release: 2025-06-13 ~ p12e_code: 999*)
 * [Through the Omenpaths](#through-the-omenpaths-om1) (*release: 2025-09-23 ~ p12e_code: 1030*)
 * [Avatar: The Last Airbender Eternal](#avatar-the-last-airbender-eternal-tle) (*release: 2025-11-21 ~ p12e_code: 1039*)
-* [Secrets of Strixhaven](#secrets-of-strixhaven-sos) (*release: 2026-04-24 ~ p12e_code: 1069*)
 
 ---
 
@@ -11807,95 +11806,6 @@ Table of Contents
 <a href="https://scryfall.com/card/tle/285/warship-scout?utm_source=api">Warship Scout</a><br/>
 <a href="https://scryfall.com/card/tle/276/wolf-cove-villager?utm_source=api">Wolf Cove Villager</a><br/>
 <a href="https://scryfall.com/card/tle/288/zukos-offense?utm_source=api">Zuko's Offense</a><br/>
-</details>
-[]()
-
-## Secrets of Strixhaven (sos)
-*release: 2026-04-24 | p12e_code: 1069*
-
-<details>
-  <summary>Click to see 80 new cards</summary>
-
-<a href="https://scryfall.com/card/sos/72/adventurous-eater-have-a-bite?utm_source=api">Adventurous Eater // Have a Bite</a><br/>
-<a href="https://scryfall.com/card/sos/6/ajanis-response?utm_source=api">Ajani's Response</a><br/>
-<a href="https://scryfall.com/card/sos/8/ascendant-dustspeaker?utm_source=api">Ascendant Dustspeaker</a><br/>
-<a href="https://scryfall.com/card/sos/38/banishing-betrayal?utm_source=api">Banishing Betrayal</a><br/>
-<a href="https://scryfall.com/card/sos/247/biblioplex-tomekeeper?utm_source=api">Biblioplex Tomekeeper</a><br/>
-<a href="https://scryfall.com/card/sos/177/bogwater-lumaret?utm_source=api">Bogwater Lumaret</a><br/>
-<a href="https://scryfall.com/card/sos/75/burrog-banemaker?utm_source=api">Burrog Banemaker</a><br/>
-<a href="https://scryfall.com/card/sos/141/burrog-barrage?utm_source=api">Burrog Barrage</a><br/>
-<a href="https://scryfall.com/card/sos/41/chase-inspiration?utm_source=api">Chase Inspiration</a><br/>
-<a href="https://scryfall.com/card/sos/76/cheerful-osteomancer-raise-dead?utm_source=api">Cheerful Osteomancer // Raise Dead</a><br/>
-<a href="https://scryfall.com/card/sos/77/cost-of-brilliance?utm_source=api">Cost of Brilliance</a><br/>
-<a href="https://scryfall.com/card/sos/42/deluge-virtuoso?utm_source=api">Deluge Virtuoso</a><br/>
-<a href="https://scryfall.com/card/sos/10/dig-site-inventory?utm_source=api">Dig Site Inventory</a><br/>
-<a href="https://scryfall.com/card/sos/11/eager-glyphmage?utm_source=api">Eager Glyphmage</a><br/>
-<a href="https://scryfall.com/card/sos/144/efflorescence?utm_source=api">Efflorescence</a><br/>
-<a href="https://scryfall.com/card/sos/185/elemental-mascot?utm_source=api">Elemental Mascot</a><br/>
-<a href="https://scryfall.com/card/sos/12/elite-interceptor-rejoinder?utm_source=api">Elite Interceptor // Rejoinder</a><br/>
-<a href="https://scryfall.com/card/sos/186/embrace-the-paradox?utm_source=api">Embrace the Paradox</a><br/>
-<a href="https://scryfall.com/card/sos/114/expressive-firedancer?utm_source=api">Expressive Firedancer</a><br/>
-<a href="https://scryfall.com/card/sos/255/fields-of-strife?utm_source=api">Fields of Strife</a><br/>
-<a href="https://scryfall.com/card/sos/148/follow-the-lumarets?utm_source=api">Follow the Lumarets</a><br/>
-<a href="https://scryfall.com/card/sos/256/forum-of-amity?utm_source=api">Forum of Amity</a><br/>
-<a href="https://scryfall.com/card/sos/189/fractal-mascot?utm_source=api">Fractal Mascot</a><br/>
-<a href="https://scryfall.com/card/sos/150/glorious-decay?utm_source=api">Glorious Decay</a><br/>
-<a href="https://scryfall.com/card/sos/117/goblin-glasswright-craft-with-pride?utm_source=api">Goblin Glasswright // Craft with Pride</a><br/>
-<a href="https://scryfall.com/card/sos/192/grapple-with-death?utm_source=api">Grapple with Death</a><br/>
-<a href="https://scryfall.com/card/sos/118/heated-argument?utm_source=api">Heated Argument</a><br/>
-<a href="https://scryfall.com/card/sos/19/honorbound-page-forums-favor?utm_source=api">Honorbound Page // Forum's Favor</a><br/>
-<a href="https://scryfall.com/card/sos/151/hungry-graffalon?utm_source=api">Hungry Graffalon</a><br/>
-<a href="https://scryfall.com/card/sos/54/hydro-channeler?utm_source=api">Hydro-Channeler</a><br/>
-<a href="https://scryfall.com/card/sos/195/imperious-inkmage?utm_source=api">Imperious Inkmage</a><br/>
-<a href="https://scryfall.com/card/sos/196/inkling-mascot?utm_source=api">Inkling Mascot</a><br/>
-<a href="https://scryfall.com/card/sos/22/interjection?utm_source=api">Interjection</a><br/>
-<a href="https://scryfall.com/card/sos/56/landscape-painter-vibrant-idea?utm_source=api">Landscape Painter // Vibrant Idea</a><br/>
-<a href="https://scryfall.com/card/sos/249/mage-tower-referee?utm_source=api">Mage Tower Referee</a><br/>
-<a href="https://scryfall.com/card/sos/89/masterful-flourish?utm_source=api">Masterful Flourish</a><br/>
-<a href="https://scryfall.com/card/sos/90/melancholic-poet?utm_source=api">Melancholic Poet</a><br/>
-<a href="https://scryfall.com/card/sos/154/mindful-biomancer?utm_source=api">Mindful Biomancer</a><br/>
-<a href="https://scryfall.com/card/sos/61/muses-encouragement?utm_source=api">Muse's Encouragement</a><br/>
-<a href="https://scryfall.com/card/sos/155/noxious-newt?utm_source=api">Noxious Newt</a><br/>
-<a href="https://scryfall.com/card/sos/156/oracles-restoration?utm_source=api">Oracle's Restoration</a><br/>
-<a href="https://scryfall.com/card/sos/24/owlin-historian?utm_source=api">Owlin Historian</a><br/>
-<a href="https://scryfall.com/card/sos/250/page-loose-leaf?utm_source=api">Page, Loose Leaf</a><br/>
-<a href="https://scryfall.com/card/sos/258/paradox-gardens?utm_source=api">Paradox Gardens</a><br/>
-<a href="https://scryfall.com/card/sos/209/pest-mascot?utm_source=api">Pest Mascot</a><br/>
-<a href="https://scryfall.com/card/sos/251/potioners-trove?utm_source=api">Potioner's Trove</a><br/>
-<a href="https://scryfall.com/card/sos/64/procrastinate?utm_source=api">Procrastinate</a><br/>
-<a href="https://scryfall.com/card/sos/215/pterafractyl?utm_source=api">Pterafractyl</a><br/>
-<a href="https://scryfall.com/card/sos/95/pull-from-the-grave?utm_source=api">Pull from the Grave</a><br/>
-<a href="https://scryfall.com/card/sos/216/pursue-the-past?utm_source=api">Pursue the Past</a><br/>
-<a href="https://scryfall.com/card/sos/2/rancorous-archaic?utm_source=api">Rancorous Archaic</a><br/>
-<a href="https://scryfall.com/card/sos/28/rapier-wit?utm_source=api">Rapier Wit</a><br/>
-<a href="https://scryfall.com/card/sos/127/rearing-embermare?utm_source=api">Rearing Embermare</a><br/>
-<a href="https://scryfall.com/card/sos/29/rehearsed-debater?utm_source=api">Rehearsed Debater</a><br/>
-<a href="https://scryfall.com/card/sos/220/render-speechless?utm_source=api">Render Speechless</a><br/>
-<a href="https://scryfall.com/card/sos/128/rubble-rouser?utm_source=api">Rubble Rouser</a><br/>
-<a href="https://scryfall.com/card/sos/66/run-behind?utm_source=api">Run Behind</a><br/>
-<a href="https://scryfall.com/card/sos/100/send-in-the-pest?utm_source=api">Send in the Pest</a><br/>
-<a href="https://scryfall.com/card/sos/31/shattered-acolyte?utm_source=api">Shattered Acolyte</a><br/>
-<a href="https://scryfall.com/card/sos/159/shopkeepers-bane?utm_source=api">Shopkeeper's Bane</a><br/>
-<a href="https://scryfall.com/card/sos/101/sneering-shadewriter?utm_source=api">Sneering Shadewriter</a><br/>
-<a href="https://scryfall.com/card/sos/262/spectacle-summit?utm_source=api">Spectacle Summit</a><br/>
-<a href="https://scryfall.com/card/sos/68/spellbook-seeker-careful-study?utm_source=api">Spellbook Seeker // Careful Study</a><br/>
-<a href="https://scryfall.com/card/sos/230/spirit-mascot?utm_source=api">Spirit Mascot</a><br/>
-<a href="https://scryfall.com/card/sos/232/stadium-tidalmage?utm_source=api">Stadium Tidalmage</a><br/>
-<a href="https://scryfall.com/card/sos/36/stone-docent?utm_source=api">Stone Docent</a><br/>
-<a href="https://scryfall.com/card/sos/131/strife-scholar-awaken-the-ages?utm_source=api">Strife Scholar // Awaken the Ages</a><br/>
-<a href="https://scryfall.com/card/sos/162/studious-first-year-rampant-growth?utm_source=api">Studious First-Year // Rampant Growth</a><br/>
-<a href="https://scryfall.com/card/sos/133/tackle-artist?utm_source=api">Tackle Artist</a><br/>
-<a href="https://scryfall.com/card/sos/163/tenured-concocter?utm_source=api">Tenured Concocter</a><br/>
-<a href="https://scryfall.com/card/sos/70/textbook-tabulator?utm_source=api">Textbook Tabulator</a><br/>
-<a href="https://scryfall.com/card/sos/266/titans-grave?utm_source=api">Titan's Grave</a><br/>
-<a href="https://scryfall.com/card/sos/135/tome-blast?utm_source=api">Tome Blast</a><br/>
-<a href="https://scryfall.com/card/sos/103/ulna-alley-shopkeep?utm_source=api">Ulna Alley Shopkeep</a><br/>
-<a href="https://scryfall.com/card/sos/136/unsubtle-mockery?utm_source=api">Unsubtle Mockery</a><br/>
-<a href="https://scryfall.com/card/sos/242/visionarys-dance?utm_source=api">Visionary's Dance</a><br/>
-<a href="https://scryfall.com/card/sos/104/wander-off?utm_source=api">Wander Off</a><br/>
-<a href="https://scryfall.com/card/sos/167/wild-hypothesis?utm_source=api">Wild Hypothesis</a><br/>
-<a href="https://scryfall.com/card/sos/243/wilt-in-the-heat?utm_source=api">Wilt in the Heat</a><br/>
-<a href="https://scryfall.com/card/sos/137/zealous-lorecaster?utm_source=api">Zealous Lorecaster</a><br/>
 </details>
 []()
 
