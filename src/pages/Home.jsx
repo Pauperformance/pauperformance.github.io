@@ -40,6 +40,10 @@ export default function Home() {
   return (
     <Layout>
       <div className="space-y-12">
+        <section className="bg-yellow-900/30 border border-yellow-600/40 rounded-xl p-4 text-sm text-yellow-300">
+          🚧 We are currently restructuring the website. Some pages might be temporarily unavailable.
+        </section>
+
         <section>
           <p className="text-lg text-gray-300 leading-relaxed">
             Hello Pauper player, and welcome to the <strong className="text-white">Academy</strong>!
