@@ -1,15 +1,11 @@
-const NAV_LINKS = [
-  { href: './pages/archetypes_index.html', label: 'Archetypes Index', description: 'A curated list of the most important Pauper archetypes.' },
+import { Link } from 'react-router-dom'
+import Layout from '../components/Layout'
+
+const PAGES = [
+  { to: '/archetypes', label: 'Archetypes Index', description: 'A curated list of the most important Pauper archetypes.' },
   { href: './pages/set_index.html', label: 'Set Index', description: 'Reference numbers used by Pauperformance to uniquely identify Magic sets.' },
   { href: './pages/pauper_pool.html', label: 'Pauper Pool', description: 'How the pool of legal Pauper cards has grown over time.' },
   { href: './pages/format_timeline.html', label: 'Format Timeline', description: 'The most important events in Pauper history.' },
-]
-
-const SOCIAL_LINKS = [
-  { href: 'https://www.twitch.tv/pauperformance', label: 'Twitch' },
-  { href: 'https://www.youtube.com/channel/UCDUiIskNnmuJ3XJ1SdQqs0A', label: 'YouTube' },
-  { href: 'https://www.instagram.com/pauperformance/', label: 'Instagram' },
-  { href: 'https://discord.gg/fYQbpjjkQ3', label: 'Discord' },
 ]
 
 const PHDS = [
@@ -27,26 +23,23 @@ const NEWS = [
   { flag: '🇬🇧', href: 'https://magic.wizards.com/en/articles/archive/news/announcing-pauper-format-panel-2022-01-10', title: 'ANNOUNCING THE PAUPER FORMAT PANEL', author: 'Gavin Verhey', date: '2022-01-10' },
 ]
 
+function PageCard({ to, href, label, description }) {
+  const cls = 'block bg-gray-800 border border-gray-700 rounded-xl p-5 hover:border-amber-400/50 transition-all group'
+  const inner = (
+    <>
+      <p className="font-semibold text-white group-hover:text-amber-400 transition-colors">{label}</p>
+      <p className="mt-1 text-sm text-gray-400">{description}</p>
+    </>
+  )
+  return to
+    ? <Link to={to} className={cls}>{inner}</Link>
+    : <a href={href} className={cls}>{inner}</a>
+}
+
 export default function Home() {
   return (
-    <div className="min-h-screen bg-gray-900 text-gray-100">
-      <header className="border-b border-gray-700 bg-gray-950">
-        <div className="max-w-4xl mx-auto px-6 py-6 flex items-center justify-between">
-          <h1 className="text-2xl font-bold tracking-tight text-white">
-            Pauperformance <span className="text-amber-400">Academy</span>
-          </h1>
-          <nav className="flex gap-4">
-            {SOCIAL_LINKS.map(({ href, label }) => (
-              <a key={label} href={href} target="_blank" rel="noreferrer"
-                className="text-sm text-gray-400 hover:text-amber-400 transition-colors">
-                {label}
-              </a>
-            ))}
-          </nav>
-        </div>
-      </header>
-
-      <main className="max-w-4xl mx-auto px-6 py-12 space-y-12">
+    <Layout>
+      <div className="space-y-12">
         <section>
           <p className="text-lg text-gray-300 leading-relaxed">
             Hello Pauper player, and welcome to the <strong className="text-white">Academy</strong>!
@@ -87,13 +80,7 @@ export default function Home() {
         <section>
           <h2 className="text-xl font-semibold text-white mb-4">Pages</h2>
           <div className="grid gap-3 sm:grid-cols-2">
-            {NAV_LINKS.map(({ href, label, description }) => (
-              <a key={label} href={href}
-                className="block bg-gray-800 border border-gray-700 rounded-xl p-5 hover:border-amber-400/50 hover:bg-gray-750 transition-all group">
-                <p className="font-semibold text-white group-hover:text-amber-400 transition-colors">{label}</p>
-                <p className="mt-1 text-sm text-gray-400">{description}</p>
-              </a>
-            ))}
+            {PAGES.map(p => <PageCard key={p.label} {...p} />)}
           </div>
         </section>
 
@@ -112,13 +99,7 @@ export default function Home() {
             ))}
           </div>
         </section>
-      </main>
-
-      <footer className="border-t border-gray-700 mt-16">
-        <div className="max-w-4xl mx-auto px-6 py-8 text-center text-sm text-gray-500">
-          <p>Pauperformance Academy · <a href="./pages/contributors.html" className="hover:text-amber-400 transition-colors">Contributors</a></p>
-        </div>
-      </footer>
-    </div>
+      </div>
+    </Layout>
   )
 }
