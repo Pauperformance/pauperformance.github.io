@@ -1,0 +1,385 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blind Spy - Probability Calculator</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: #956C58;
+            min-height: 100vh;
+            padding: 15px;
+        }
+
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+            background: #E6A65D;
+            border-radius: 16px;
+            box-shadow: 0 20px 60px rgba(0, 0, 0, 0.4);
+            padding: 25px;
+        }
+
+        h1 {
+            color: #584446;
+            text-align: center;
+            margin-bottom: 8px;
+            font-size: 2em;
+        }
+
+        .subtitle {
+            text-align: center;
+            color: #956C58;
+            margin-bottom: 25px;
+            font-style: italic;
+            font-size: 0.95em;
+            font-weight: bold;
+        }
+
+        .section {
+            margin-bottom: 20px;
+            padding: 18px;
+            background: #f0fdf4;
+            border-radius: 10px;
+            border-left: 4px solid #E6A65D;
+        }
+
+        .section h2 {
+            color: #956C58;
+            margin-bottom: 15px;
+            font-size: 1.2em;
+        }
+
+        .input-group {
+            margin-bottom: 15px;
+        }
+
+        label {
+            display: block;
+            margin-bottom: 6px;
+            color: #475569;
+            font-weight: 600;
+            font-size: 0.95em;
+        }
+
+        select, input[type="number"] {
+            width: 100%;
+            padding: 10px;
+            border: 2px solid #E6A65D;
+            border-radius: 6px;
+            font-size: 15px;
+            transition: all 0.3s;
+        }
+
+        select:focus, input[type="number"]:focus {
+            outline: none;
+            border-color: #F8CFA9;
+            box-shadow: 0 0 0 3px rgba(22, 163, 74, 0.1);
+        }
+
+        .row {
+            display: flex;
+            gap: 15px;
+            flex-wrap: wrap;
+        }
+
+        .row .input-group {
+            flex: 1;
+            min-width: 200px;
+        }
+
+        .results {
+            margin-top: 20px;
+        }
+
+        .result-card {
+            background: white;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            margin-bottom: 15px;
+        }
+
+        .result-card h3 {
+            color: #956C58;
+            margin-bottom: 12px;
+            font-size: 1.2em;
+        }
+
+        .expected-value {
+            font-size: 2.8em;
+            font-weight: bold;
+            color: #FF6A39;
+            text-align: center;
+            margin: 15px 0;
+        }
+
+        .dark-text {
+            color: #584446;
+        }
+
+        .light-text {
+            color: #584446;
+        }
+
+        .info-box {
+            background: #E6A65D;
+            padding: 12px;
+            border-radius: 8px;
+            margin-top: 12px;
+            border-left: 4px solid #956C58;
+        }
+
+        .info-box p {
+            color: #584446;
+            line-height: 1.5;
+            font-size: 0.95em;
+        }
+
+        .footer {
+            text-align: center;
+            margin-top: 30px;
+            padding: 20px;
+            color: #956C58;
+            font-size: 0.9em;
+            border-top: 2px solid #584446;
+        }
+
+        .footer p {
+            margin-bottom: 8px;
+        }
+
+        a {
+            color: #956C58;
+            font-weight: 600;
+            transition: color 0.3s;
+        }
+
+        a:hover {
+            color: #FF6A39;
+            text-decoration: underline;
+        }
+
+        .hidden {
+            display: none;
+        }
+
+        @media (max-width: 768px) {
+            body {
+                padding: 10px;
+            }
+
+            .container {
+                padding: 15px;
+            }
+
+            h1 {
+                font-size: 1.5em;
+            }
+
+            .subtitle {
+                font-size: 0.85em;
+            }
+
+            .section {
+                padding: 15px;
+                margin-bottom: 15px;
+            }
+
+            .section h2 {
+                font-size: 1.1em;
+                margin-bottom: 12px;
+            }
+
+            .row {
+                flex-direction: column;
+            }
+
+            .row .input-group {
+                min-width: 100%;
+            }
+
+            .expected-value {
+                font-size: 2em;
+            }
+        }
+
+        @media (min-width: 769px) and (max-width: 1024px) {
+            .container {
+                max-width: 750px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>🎲 <span class="h1">Blind Spy</span> 🕵️‍♂️</h1>
+        <p class="subtitle">Probability Calculator for Non-deterministic Wins</p>
+
+        <div class="info-box" style="margin-bottom: 25px; background: #F8CFA9; border-color: #956C58;">
+            <p style="margin-bottom: 10px;"><strong>Purpose:</strong></p>
+            <p style="font-size: 0.9em; line-height: 1.6; margin-bottom: 15px;">
+                This calculator computes your probability to win a game with <em>Balustrade Spy</em> in a
+                <strong>non-deterministic</strong> way (i.e. with some lands left in your deck and some
+                luck required), based on deck composition and game state parameters.
+                We call this situation <em>Blind Spy</em>.
+            </p>
+            <p style="margin-bottom: 10px;"><strong>Limitations and Future Work:</strong></p>
+            <p style="font-size: 0.9em; line-height: 1.6; margin-bottom: 15px;">
+                The tool <em>currently</em> assumes your <strong>only</strong> win-condition is a flashback of
+                <em>Dread Return</em> targeting a <em>Lotleth Giant</em> in the graveyard.
+                For this reason, at least 3 creatures (including the <em>Balustrade Spy</em> being cast)
+                need to be on the battlefield when the mill trigger resolves: these creatures will be the additional
+                cost for <em>Dread Return</em>.<br>
+                However, in real games, this <strong>will not</strong> often be your only win-condition.
+                Another win-condition you might have is the <em>Double Spy</em>.
+                This situation requires you to have at least 5 creatures (including the <em>Balustrade Spy</em>
+                being cast) when the mill trigger resolves.
+                At that point, you might be able to flashback <em>Dread Return</em> <strong>twice</strong>: the 1st time to reanimate another
+                <em>Balustrade Spy</em> (and mill again), the 2nd time to reanimate a <em>Lotleth Giant</em> for the
+                win (typically deterministic).<br>
+                This situation happens frequently and the tool will be evolved to take it into account: more simulations
+                are on the way!
+            </p>
+            <p style="margin-bottom: 10px;"><strong>How to use:</strong></p>
+            <p style="font-size: 0.9em; line-height: 1.6; margin-bottom: 15px;">
+                Enter the game state parameters at the snapshot when the <em>Balustrade Spy</em> mill trigger is
+                <strong>on the stack, just before resolution</strong>.
+                <br>
+                * <strong>Creatures in Deck</strong> is the number of initial creatures in your mainboard -
+                the number of creatures on your battlefield -
+                1 (because a <em>Lotleth Giant</em> will be reanimated and won't be counted for damage).
+                So, for a deck with 41 initial creatures and 3 on the battlefield at combo time, set  37.
+                <br>
+                * <strong>Blanks in Deck</strong> is the total number of cards that are not relevant for the damage count,
+                such as <em>Winding Way</em>, <em>Lead the Stamped</em>, <em>Land Grant</em> and <em>Lotus Petal</em>.
+                Do not count <em>Dread Return</em> here.
+                So, for a deck with 4 {<em>Winding Way</em>, <em>Lead the Stamped</em>, <em>Land Grant</em>} and 1 <em>Lotus Petal</em>, set  13.
+            </p>
+            <p style="margin-bottom: 10px;"><strong>Notes:</strong></p>
+            <p style="font-size: 0.9em; line-height: 1.6; margin-bottom: 15px;">
+                Every configuration has been simulated 1000000 times and can be used both for Spy Walls and Spy Elves.
+                <br>
+                <strong>If you are interested in mastering Spy Walls, a comprehensive guide is available on
+                    <a href="https://mfy.gg/guides/view/spy-walls-the-bible-JA8uEV94lKN" target="_blank">Metafy</a></strong>.
+            </p>
+
+        </div>
+
+        <div class="section" style="margin-bottom: 25px; background: #F8CFA9; border-color: #956C58;">
+            <h2>Game State</h2>
+            <div class="row">
+                <div class="input-group">
+                    <label for="creaturestowin" class="dark-text">Opponent Life</label>
+                    <input type="number" id="creaturestowin" min="3" max="40" value="20">
+                </div>
+                <div class="input-group">
+                    <label for="landsindeck" class="dark-text">Lands in Deck</label>
+                    <input type="number" id="landsindeck" min="1" max="2" value="1">
+                </div>
+                <div class="input-group">
+                    <label for="dreadsindeck" class="dark-text">Dread Returns in Deck</label>
+                    <input type="number" id="dreadsindeck" min="1" max="2" value="2">
+                </div>
+            </div>
+            <div class="row">
+                <div class="input-group">
+                    <label for="targetsindeck" class="dark-text">Lotleth Giants in Deck</label>
+                    <input type="number" id="targetsindeck" min="1" max="2" value="2">
+                </div>
+                <div class="input-group">
+                    <label for="creaturesindeck" class="dark-text">Creatures in Deck</label>
+                    <input type="number" id="creaturesindeck" min="17" max="37" value="37">
+                </div>
+                <div class="input-group">
+                    <label for="blanksindeck" class="dark-text">Blanks in Deck</label>
+                    <input type="number" id="blanksindeck" min="0" max="15" value="13">
+                </div>
+            </div>
+        </div>
+
+        <div class="results" id="results" >
+            <div class="result-card" style="margin-bottom: 25px; background: #F8CFA9; border-left: 4px solid #956C58;">
+                <h3>Results</h3>
+                <div class="row" style="margin-top: 12px;">
+                    <div class="input-group" style="text-align: center;">
+                        <label class="light-text">Fail %</label>
+                        <div class="expected-value" id="failPct">—</div>
+                    </div>
+                    <div class="input-group" style="text-align: center;">
+                        <label class="light-text">Win %</label>
+                        <div class="expected-value" id="winPct">—</div>
+                    </div>
+                    <div class="input-group" style="text-align: center;">
+                        <label class="light-text">Avg Creatures in Graveyard</label>
+                        <div class="expected-value" id="avgCreatures">—</div>
+                    </div>
+                </div>
+                <div class="info-box hidden" id="noMatchBox">
+                    <p>No simulation data found for this combination.</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="footer">
+            <p>Created by <strong style="color: #956C58;">Pauperformance</strong></p>
+            <p style="font-size: 0.9em; margin-bottom: 12px;">
+                Based on the <a href="https://hypergeomancer.github.io/creature-selection-calculator/" target="_blank">interactive calculator for creature selection</a> by <a href="https://www.youtube.com/@Hypergeomancer" target="_blank">Hypergeomancer</a>
+            </p>
+        </div>
+    </div>
+
+    <script>
+        let simData = [];
+
+        fetch('../blind_spy_consolidated.json')
+            .then(r => r.json())
+            .then(data => {
+                simData = data;
+                updateResults();
+            });
+
+        const fieldIds = ['creaturestowin', 'landsindeck', 'dreadsindeck', 'targetsindeck', 'creaturesindeck', 'blanksindeck'];
+        fieldIds.forEach(id => document.getElementById(id).addEventListener('input', updateResults));
+
+        function updateResults() {
+            const n           = parseInt(document.getElementById('creaturestowin').value);
+            const lands       = parseInt(document.getElementById('landsindeck').value);
+            const drs         = parseInt(document.getElementById('dreadsindeck').value);
+            const targets     = parseInt(document.getElementById('targetsindeck').value);
+            const creatures   = parseInt(document.getElementById('creaturesindeck').value);
+            const blanks      = parseInt(document.getElementById('blanksindeck').value);
+
+            const record = simData.find(r =>
+                r.creatures_to_win  === n       &&
+                r.lands_in_deck     === lands   &&
+                r.drs_in_deck       === drs     &&
+                r.targets_in_deck   === targets &&
+                r.creatures_in_deck === creatures &&
+                r.blanks_in_deck    === blanks
+            );
+
+            const noMatchBox = document.getElementById('noMatchBox');
+            if (!record) {
+                document.getElementById('winPct').textContent     = '—';
+                document.getElementById('failPct').textContent    = '—';
+                document.getElementById('avgCreatures').textContent = '—';
+                noMatchBox.classList.remove('hidden');
+                return;
+            }
+
+            noMatchBox.classList.add('hidden');
+            document.getElementById('winPct').textContent      = record['win_%'] + '%';
+            document.getElementById('failPct').textContent     = record['fail_%'] + '%';
+            document.getElementById('avgCreatures').textContent = record['avg_creatures_in_gy'];
+        }
+    </script>
+</body>
+</html>
