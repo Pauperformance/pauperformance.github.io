@@ -3,9 +3,10 @@ import Layout from '../components/Layout'
 
 const PAGES = [
   { to: '/archetypes', label: 'Archetypes Index', description: 'A curated list of the most important Pauper archetypes.' },
-  { href: './pages/set_index.html', label: 'Set Index', description: 'Reference numbers used by Pauperformance to uniquely identify Magic sets.' },
-  { href: './pages/pauper_pool.html', label: 'Pauper Pool', description: 'How the pool of legal Pauper cards has grown over time.' },
-  { href: './pages/format_timeline.html', label: 'Format Timeline', description: 'The most important events in Pauper history.' },
+  { to: '/sets', label: 'Set Index', description: 'Reference numbers used by Pauperformance to uniquely identify Magic sets.' },
+  { to: '/pool', label: 'Pauper Pool', description: 'How the pool of legal Pauper cards has grown over time.' },
+  { to: '/timeline', label: 'Format Timeline', description: 'The most important events in Pauper history.' },
+  { to: '/phd-guidelines', label: 'PhD Guidelines', description: 'How to join the network and contribute content to the Academy.' },
 ]
 
 const PHDS = [
@@ -60,7 +61,7 @@ export default function Home() {
           <p className="text-gray-300 leading-relaxed">
             <strong className="text-white">If you are a content creator</strong>, you can join the Pauperformance
             network and autonomously contribute to the Academy with original content. Read the{' '}
-            <a href="./pages/phd_guidelines.html" className="text-amber-400 hover:underline">PhD Guidelines</a>.
+            <Link to="/phd-guidelines" className="text-amber-400 hover:underline">PhD Guidelines</Link>.
           </p>
           <p className="mt-3 text-gray-400 text-sm">
             {PHDS.length} PhDs have already joined the Academy:{' '}
