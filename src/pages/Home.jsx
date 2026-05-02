@@ -27,10 +27,10 @@ const NEWS = [
 ]
 
 const CHART_COLORS = [
-  '#f59e0b', '#fb923c', '#a78bfa', '#34d399', '#60a5fa',
-  '#f472b6', '#4ade80', '#38bdf8', '#6366f1',
+  '#ff6a39', '#e6a65d', '#956c58', '#ff9e78', '#c87340',
+  '#d4855a', '#ffb899', '#7a4a46', '#b07060',
 ]
-const OTHER_COLOR = '#4b5563'
+const OTHER_COLOR = '#3d2a2b'
 const SHOWN_SLICES = 8
 
 function MetagameSection() {
@@ -77,7 +77,7 @@ function MetagameSection() {
                   if (!active || !payload?.length) return null
                   const { name, value } = payload[0].payload
                   return (
-                    <div style={{ background: '#1f2937', border: '1px solid #374151', borderRadius: 8, padding: '8px 12px' }}>
+                    <div style={{ background: '#261819', border: '1px solid #3d2a2b', borderRadius: 8, padding: '8px 12px' }}>
                       <p style={{ color: '#f59e0b', fontWeight: 600, marginBottom: 2 }}>{name}</p>
                       <p style={{ color: '#e5e7eb', fontSize: 13 }}>{value}%</p>
                     </div>
@@ -138,7 +138,7 @@ export default function Home() {
   return (
     <Layout>
       <div className="space-y-12">
-        <section className="bg-yellow-900/30 border border-yellow-600/40 rounded-xl p-4 text-sm text-yellow-300">
+        <section className="bg-amber-950/40 border border-amber-400/40 rounded-xl p-4 text-sm text-amber-300">
           🚧 We are currently restructuring the website. Some pages might be temporarily unavailable.
         </section>
 
