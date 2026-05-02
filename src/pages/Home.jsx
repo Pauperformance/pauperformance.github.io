@@ -1,4 +1,6 @@
+import { useState, useEffect } from 'react'
 import { Link } from 'react-router-dom'
+import { PieChart, Pie, Cell, Tooltip, ResponsiveContainer } from 'recharts'
 import Layout from '../components/Layout'
 
 const PAGES = [
@@ -23,6 +25,101 @@ const NEWS = [
   { flag: '🇬🇧', href: 'https://magic.wizards.com/en/articles/archive/news/january-20-2022-banned-and-restricted-announcement', title: 'JANUARY 20, 2022 BANNED AND RESTRICTED ANNOUNCEMENT', author: 'Gavin Verhey', date: '2022-01-20' },
   { flag: '🇬🇧', href: 'https://magic.wizards.com/en/articles/archive/news/announcing-pauper-format-panel-2022-01-10', title: 'ANNOUNCING THE PAUPER FORMAT PANEL', author: 'Gavin Verhey', date: '2022-01-10' },
 ]
+
+const CHART_COLORS = [
+  '#f59e0b', '#fb923c', '#a78bfa', '#34d399', '#60a5fa',
+  '#f472b6', '#4ade80', '#38bdf8', '#6366f1',
+]
+const OTHER_COLOR = '#4b5563'
+const SHOWN_SLICES = 8
+
+function MetagameSection() {
+  const [data, setData] = useState([])
+
+  useEffect(() => {
+    fetch('/data/metagame.json')
+      .then(r => r.json())
+      .then(setData)
+  }, [])
+
+  if (!data.length) return null
+
+  const top = data.slice(0, SHOWN_SLICES)
+  const otherShare = data.slice(SHOWN_SLICES).reduce((s, d) => s + d.meta_share, 0)
+  const chartData = [
+    ...top.map((d, i) => ({ name: d.archetype_name, value: +d.meta_share.toFixed(1), color: CHART_COLORS[i] })),
+    { name: 'Other', value: +otherShare.toFixed(1), color: OTHER_COLOR },
+  ]
+
+  return (
+    <section>
+      <h2 className="text-xl font-semibold text-white mb-4">Metagame Snapshot</h2>
+      <div className="bg-gray-800 border border-gray-700 rounded-xl p-5">
+        <div className="flex flex-col sm:flex-row gap-6 items-start">
+          <div className="w-full sm:w-56 shrink-0 h-56">
+            <ResponsiveContainer width="100%" height="100%">
+              <PieChart>
+                <Pie
+                  data={chartData}
+                  cx="50%"
+                  cy="50%"
+                  innerRadius={55}
+                  outerRadius={100}
+                  paddingAngle={2}
+                  dataKey="value"
+                  stroke="none"
+                >
+                  {chartData.map((entry, i) => (
+                    <Cell key={i} fill={entry.color} />
+                  ))}
+                </Pie>
+                <Tooltip content={({ active, payload }) => {
+                  if (!active || !payload?.length) return null
+                  const { name, value } = payload[0].payload
+                  return (
+                    <div style={{ background: '#1f2937', border: '1px solid #374151', borderRadius: 8, padding: '8px 12px' }}>
+                      <p style={{ color: '#f59e0b', fontWeight: 600, marginBottom: 2 }}>{name}</p>
+                      <p style={{ color: '#e5e7eb', fontSize: 13 }}>{value}%</p>
+                    </div>
+                  )
+                }} />
+              </PieChart>
+            </ResponsiveContainer>
+          </div>
+
+          <div className="flex-1 min-w-0 space-y-1.5">
+            {data.map((entry, i) => {
+              const color = i < SHOWN_SLICES ? CHART_COLORS[i] : OTHER_COLOR
+              const pct = +entry.meta_share.toFixed(1)
+              const maxShare = data[0].meta_share
+              return (
+                <div key={entry.archetype_name} className="flex items-center gap-2 group">
+                  <span className="w-2.5 h-2.5 rounded-full shrink-0" style={{ background: color }} />
+                  <Link
+                    to={`/archetypes/${encodeURIComponent(entry.archetype_name)}`}
+                    className="text-sm text-gray-300 hover:text-amber-400 transition-colors truncate min-w-0 flex-1"
+                  >
+                    {entry.archetype_name}
+                  </Link>
+                  <div className="hidden sm:flex items-center gap-2 shrink-0">
+                    <div className="w-20 h-1.5 bg-gray-700 rounded-full overflow-hidden">
+                      <div
+                        className="h-full rounded-full"
+                        style={{ width: `${(pct / maxShare) * 100}%`, background: color }}
+                      />
+                    </div>
+                    <span className="text-xs text-gray-400 w-10 text-right">{pct}%</span>
+                  </div>
+                  <span className="sm:hidden text-xs text-gray-400 shrink-0">{pct}%</span>
+                </div>
+              )
+            })}
+          </div>
+        </div>
+      </div>
+    </section>
+  )
+}
 
 function PageCard({ to, href, label, description }) {
   const cls = 'block bg-gray-800 border border-gray-700 rounded-xl p-5 hover:border-amber-400/50 transition-all group'
@@ -88,6 +185,8 @@ export default function Home() {
             {PAGES.map(p => <PageCard key={p.label} {...p} />)}
           </div>
         </section>
+
+        <MetagameSection />
 
         <section>
           <h2 className="text-xl font-semibold text-white mb-4">Newspauper</h2>

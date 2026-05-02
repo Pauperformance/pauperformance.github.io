@@ -152,3 +152,11 @@ for (const sec of poolSections.slice(1)) {
 const totalCards = pool.reduce((sum, s) => sum + s.cards.length, 0)
 writeFileSync(join(outDir, 'pauper_pool.json'), JSON.stringify(pool))
 console.log(`Built pauper_pool.json with ${pool.length} sets and ${totalCards} cards.`)
+
+// Copy metagame data
+const metagame = JSON.parse(readFileSync('assets/data/intel/metagame.json', 'utf8'))
+const metagameOut = metagame.meta_shares
+  .map(({ archetype_name, meta_share, accuracy }) => ({ archetype_name, meta_share, accuracy }))
+  .sort((a, b) => b.meta_share - a.meta_share)
+writeFileSync(join(outDir, 'metagame.json'), JSON.stringify(metagameOut))
+console.log(`Built metagame.json with ${metagameOut.length} archetypes.`)
