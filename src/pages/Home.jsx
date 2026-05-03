@@ -68,10 +68,10 @@ function TopDecksSection() {
         {decks.map(deck => (
           <div key={deck.archetype_name} className="bg-gray-800 border border-gray-700 rounded-xl overflow-hidden hover:border-amber-400/50 transition-all group">
             <Link to={`/archetypes/${encodeURIComponent(deck.archetype_name)}`} className="block">
-              <div className="aspect-[5/4] bg-gray-900 overflow-hidden mt-[-20px] mb-[-20px] mx-[-5px]" style={{ clipPath: 'inset(30px 15px 20px 15px)' }}>
+              <div className="card-image-clip aspect-[5/4] bg-gray-900 overflow-hidden mt-[-20px] mb-[-20px] mx-[-5px]">
                 {deck.featured_image
                   ? <img src={deck.featured_image} alt={deck.archetype_name} loading="lazy"
-                      className="w-full h-full object-cover object-top group-hover:scale-105 transition-transform duration-300" />
+                      className="w-full h-full object-cover object-top scale-110 group-hover:scale-125 transition-transform duration-300" />
                   : <div className="w-full h-full flex items-center justify-center text-gray-600 text-xs">No image</div>
                 }
               </div>
@@ -203,7 +203,7 @@ function MetagameSection() {
             />
           </div>
 
-          <div className="flex-1 min-w-0 grid sm:grid-flow-col sm:grid-rows-9 gap-x-6 gap-y-1.5">
+          <div className="flex-1 min-w-0 grid grid-cols-2 sm:grid-cols-[none] sm:grid-flow-col sm:grid-rows-9 gap-x-6 gap-y-1.5">
             {data.map((entry, i) => {
               const color = i < SHOWN_SLICES ? CHART_COLORS[i] : OTHER_COLOR
               const pct = +entry.meta_share.toFixed(1)
