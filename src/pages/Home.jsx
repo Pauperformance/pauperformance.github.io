@@ -1,4 +1,5 @@
-import { useState, useEffect } from 'react'
+import { useState, useEffect, useRef } from 'react'
+import { createPortal } from 'react-dom'
 import { Link } from 'react-router-dom'
 import { PieChart, Pie, Cell, Tooltip, ResponsiveContainer } from 'recharts'
 import Layout from '../components/Layout'
@@ -8,15 +9,8 @@ const PAGES = [
   { to: '/sets', label: 'Set Index', description: 'Reference numbers used by Pauperformance to uniquely identify Magic sets.' },
   { to: '/pool', label: 'Pauper Pool', description: 'How the pool of legal Pauper cards has grown over time.' },
   { to: '/timeline', label: 'Format Timeline', description: 'The most important events in Pauper history.' },
-  { to: '/phd-guidelines', label: 'PhD Guidelines', description: 'How to join the network and contribute content to the Academy.' },
 ]
 
-const PHDS = [
-  { href: './phds/PAUPERGANDA.html', label: 'PAUPERGANDA' },
-  { href: './phds/tarmogoyf_ita.html', label: 'tarmogoyf_ita' },
-  { href: './phds/Heisen01.html', label: 'Heisen01' },
-  { href: './phds/Adepto Terra.html', label: 'Adepto Terra' },
-]
 
 const NEWS = [
   { flag: '🇬🇧', href: 'https://magic.wizards.com/en/articles/archive/news/march-7-2022-banned-and-restricted-announcement', title: 'MARCH 7, 2022 BANNED AND RESTRICTED ANNOUNCEMENT', author: 'Wizards of the Coast', date: '2022-03-07' },
@@ -25,6 +19,93 @@ const NEWS = [
   { flag: '🇬🇧', href: 'https://magic.wizards.com/en/articles/archive/news/january-20-2022-banned-and-restricted-announcement', title: 'JANUARY 20, 2022 BANNED AND RESTRICTED ANNOUNCEMENT', author: 'Gavin Verhey', date: '2022-01-20' },
   { flag: '🇬🇧', href: 'https://magic.wizards.com/en/articles/archive/news/announcing-pauper-format-panel-2022-01-10', title: 'ANNOUNCING THE PAUPER FORMAT PANEL', author: 'Gavin Verhey', date: '2022-01-10' },
 ]
+
+function StapleLink({ card }) {
+  const [pos, setPos] = useState(null)
+  const timerRef = useRef(null)
+
+  const show = (e) => {
+    clearTimeout(timerRef.current)
+    timerRef.current = setTimeout(() => setPos({ x: e.clientX, y: e.clientY }), 150)
+  }
+  const move = (e) => { if (pos) setPos({ x: e.clientX, y: e.clientY }) }
+  const hide = () => { clearTimeout(timerRef.current); setPos(null) }
+
+  const imgStyle = pos ? {
+    left: pos.x + 220 > window.innerWidth ? pos.x - 220 : pos.x + 16,
+    top: Math.max(8, Math.min(pos.y - 80, window.innerHeight - 320)),
+  } : null
+
+  return (
+    <>
+      <a href={card.link} target="_blank" rel="noreferrer"
+        onMouseEnter={show} onMouseMove={move} onMouseLeave={hide}
+        className="px-2 py-0.5 rounded-md text-xs border bg-gray-800 border-gray-700 text-gray-300 hover:border-amber-400/50 hover:text-amber-400 transition-colors whitespace-nowrap">
+        {card.name}
+      </a>
+      {pos && card.preview && createPortal(
+        <img src={card.preview} alt={card.name}
+          className="fixed z-50 w-48 rounded-xl shadow-2xl border border-gray-700 pointer-events-none"
+          style={imgStyle} />,
+        document.body
+      )}
+    </>
+  )
+}
+
+function TopDecksSection() {
+  const [decks, setDecks] = useState([])
+
+  useEffect(() => {
+    fetch('/data/top_decks.json').then(r => r.json()).then(setDecks)
+  }, [])
+
+  if (!decks.length) return null
+
+  return (
+    <section>
+      <h2 className="text-xl font-semibold text-white mb-4">Top Decks</h2>
+      <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 xl:grid-cols-7 2xl:grid-cols-8 gap-3">
+        {decks.map(deck => (
+          <div key={deck.archetype_name} className="bg-gray-800 border border-gray-700 rounded-xl overflow-hidden hover:border-amber-400/50 transition-all group">
+            <Link to={`/archetypes/${encodeURIComponent(deck.archetype_name)}`} className="block">
+              <div className="aspect-[5/4] bg-gray-900 overflow-hidden mt-[-20px] mb-[-20px] mx-[-5px]" style={{ clipPath: 'inset(30px 15px 20px 15px)' }}>
+                {deck.featured_image
+                  ? <img src={deck.featured_image} alt={deck.archetype_name} loading="lazy"
+                      className="w-full h-full object-cover object-top group-hover:scale-105 transition-transform duration-300" />
+                  : <div className="w-full h-full flex items-center justify-center text-gray-600 text-xs">No image</div>
+                }
+              </div>
+              <div className="p-2.5 space-y-1.5">
+                <div className="flex items-start justify-between gap-1">
+                  <span className="text-base font-semibold text-white leading-tight group-hover:text-amber-400 transition-colors line-clamp-2">{deck.archetype_name}</span>
+                  <div className="flex items-center gap-0.5 shrink-0">
+                    {deck.dominant_mana.map(m => (
+                      <img key={m} src={`/images/mana/${m}.png`} alt={m} className="w-3.5 h-3.5" />
+                    ))}
+                  </div>
+                </div>
+                <div className="flex items-center gap-1 flex-wrap">
+                  {deck.game_type.map(g => (
+                    <span key={g} className="text-[10px] text-gray-400 bg-gray-700 rounded px-1 py-0.5 leading-none">{g}</span>
+                  ))}
+                </div>
+                <span className="text-xs text-amber-400 font-mono">Meta: {deck.meta_share.toFixed(1)}%</span>
+              </div>
+            </Link>
+            {deck.staples.length > 0 && (
+              <div className="px-2.5 pb-2.5 flex flex-col gap-1 items-start">
+                {deck.staples.map(card => (
+                  <StapleLink key={card.name} card={card} />
+                ))}
+              </div>
+            )}
+          </div>
+        ))}
+      </div>
+    </section>
+  )
+}
 
 const CHART_COLORS = [
   '#ff6a39', '#e6a65d', '#956c58', '#ff9e78', '#c87340',
@@ -87,7 +168,7 @@ function MetagameSection() {
             </ResponsiveContainer>
           </div>
 
-          <div className="flex-1 min-w-0 space-y-1.5">
+          <div className="flex-1 min-w-0 grid sm:grid-flow-col sm:grid-rows-10 gap-x-6 gap-y-1.5">
             {data.map((entry, i) => {
               const color = i < SHOWN_SLICES ? CHART_COLORS[i] : OTHER_COLOR
               const pct = +entry.meta_share.toFixed(1)
@@ -154,22 +235,6 @@ export default function Home() {
           </p>
         </section>
 
-        <section className="bg-gray-800 border border-amber-400/30 rounded-xl p-6">
-          <p className="text-gray-300 leading-relaxed">
-            <strong className="text-white">If you are a content creator</strong>, you can join the Pauperformance
-            network and autonomously contribute to the Academy with original content. Read the{' '}
-            <Link to="/phd-guidelines" className="text-amber-400 hover:underline">PhD Guidelines</Link>.
-          </p>
-          <p className="mt-3 text-gray-400 text-sm">
-            {PHDS.length} PhDs have already joined the Academy:{' '}
-            {PHDS.map(({ href, label }, i) => (
-              <span key={label}>
-                <a href={href} className="text-amber-400 hover:underline">{label}</a>
-                {i < PHDS.length - 1 ? ', ' : ''}
-              </span>
-            ))}! 🎉
-          </p>
-        </section>
 
         <section className="bg-gray-800 border border-gray-700 rounded-xl p-6">
           <p className="text-sm text-gray-500 uppercase tracking-widest mb-1">Current code</p>
@@ -185,6 +250,8 @@ export default function Home() {
             {PAGES.map(p => <PageCard key={p.label} {...p} />)}
           </div>
         </section>
+
+        <TopDecksSection />
 
         <MetagameSection />
 

@@ -160,3 +160,25 @@ const metagameOut = metagame.meta_shares
   .sort((a, b) => b.meta_share - a.meta_share)
 writeFileSync(join(outDir, 'metagame.json'), JSON.stringify(metagameOut))
 console.log(`Built metagame.json with ${metagameOut.length} archetypes.`)
+
+// Build top decks (top 15 metagame archetypes enriched with archetype detail)
+const archetypeMap = Object.fromEntries(
+  archetypes.map(a => [a.name, a])
+)
+const topDecks = metagameOut.slice(0, 16).map(entry => {
+  const arch = archetypeMap[entry.archetype_name]
+  const staples = (arch?.staples || [])
+    .filter(s => s.preview)
+    .slice(0, 5)
+    .map(({ name, link, preview }) => ({ name, link, preview }))
+  return {
+    archetype_name: entry.archetype_name,
+    meta_share: entry.meta_share,
+    dominant_mana: arch?.dominant_mana || [],
+    game_type: arch?.game_type || [],
+    featured_image: staples[0]?.preview || null,
+    staples,
+  }
+})
+writeFileSync(join(outDir, 'top_decks.json'), JSON.stringify(topDecks))
+console.log(`Built top_decks.json with ${topDecks.length} entries.`)
