@@ -4,6 +4,13 @@ import Layout from '../components/Layout'
 
 const MANA_ORDER = ['W', 'U', 'B', 'R', 'G', 'C']
 const GAME_TYPES = ['Aggro', 'Midrange', 'Control', 'Tempo', 'Combo']
+const META_RANGES = [
+  { label: '< 0.5%', min: 0, max: 0.5, maxInclusive: false },
+  { label: '0.5–1%', min: 0.5, max: 1, maxInclusive: false },
+  { label: '1–5%', min: 1, max: 5, maxInclusive: false },
+  { label: '5–10%', min: 5, max: 10, maxInclusive: false },
+  { label: '≥ 10%', min: 10, max: 100, maxInclusive: true },
+]
 
 const MANA_LABELS = { W: 'White', U: 'Blue', B: 'Black', R: 'Red', G: 'Green', C: 'Colorless' }
 
@@ -34,15 +41,22 @@ function FilterButton({ active, onClick, children }) {
 
 export default function ArchetypesIndex() {
   const [archetypes, setArchetypes] = useState([])
+  const [metaMap, setMetaMap] = useState({})
   const [loading, setLoading] = useState(true)
   const [search, setSearch] = useState('')
   const [activeTypes, setActiveTypes] = useState(new Set())
   const [activeMana, setActiveMana] = useState(new Set())
+  const [activeMetaRange, setActiveMetaRange] = useState(null)
 
   useEffect(() => {
-    fetch('/data/archetypes.json')
-      .then(r => r.json())
-      .then(data => { setArchetypes(data); setLoading(false) })
+    Promise.all([
+      fetch('/data/archetypes.json').then(r => r.json()),
+      fetch('/data/metagame.json').then(r => r.json()),
+    ]).then(([archetypeData, metagameData]) => {
+      setArchetypes(archetypeData)
+      setMetaMap(Object.fromEntries(metagameData.map(e => [e.archetype_name, e.meta_share])))
+      setLoading(false)
+    })
   }, [])
 
   function toggleType(t) {
@@ -67,9 +81,14 @@ export default function ArchetypesIndex() {
       if (q && !a.name.toLowerCase().includes(q) && !(a.aliases || []).some(alias => alias.toLowerCase().includes(q))) return false
       if (activeTypes.size > 0 && ![...activeTypes].every(t => a.game_type.includes(t))) return false
       if (activeMana.size > 0 && ![...activeMana].every(m => a.dominant_mana.includes(m))) return false
+      if (activeMetaRange !== null) {
+        const r = META_RANGES.find(r => r.label === activeMetaRange)
+        const pct = metaMap[a.name] ?? 0
+        if (!(pct >= r.min && (r.maxInclusive ? pct <= r.max : pct < r.max))) return false
+      }
       return true
     })
-  }, [archetypes, search, activeTypes, activeMana])
+  }, [archetypes, search, activeTypes, activeMana, activeMetaRange, metaMap])
 
   return (
     <Layout>
@@ -91,12 +110,6 @@ export default function ArchetypesIndex() {
             className="w-full bg-gray-900 border border-gray-600 rounded-lg px-4 py-2 text-sm text-gray-100 placeholder-gray-500 focus:outline-none focus:border-amber-400"
           />
           <div className="flex flex-wrap gap-2 items-center">
-            <span className="text-sm text-gray-500 w-10 shrink-0">Type:</span>
-            {GAME_TYPES.map(t => (
-              <FilterButton key={t} active={activeTypes.has(t)} onClick={() => toggleType(t)}>{t}</FilterButton>
-            ))}
-          </div>
-          <div className="flex flex-wrap gap-2 items-center">
             <span className="text-sm text-gray-500 w-10 shrink-0">Color:</span>
             {MANA_ORDER.map(m => (
               <FilterButton key={m} active={activeMana.has(m)} onClick={() => toggleMana(m)}>
@@ -104,6 +117,21 @@ export default function ArchetypesIndex() {
                   <ManaIcon color={m} size="w-4 h-4" />
                   {MANA_LABELS[m]}
                 </span>
+              </FilterButton>
+            ))}
+          </div>
+          <div className="flex flex-wrap gap-2 items-center">
+            <span className="text-sm text-gray-500 w-10 shrink-0">Type:</span>
+            {GAME_TYPES.map(t => (
+              <FilterButton key={t} active={activeTypes.has(t)} onClick={() => toggleType(t)}>{t}</FilterButton>
+            ))}
+          </div>
+          <div className="flex flex-wrap gap-2 items-center">
+            <span className="text-sm text-gray-500 w-10 shrink-0">Meta:</span>
+            {META_RANGES.map(r => (
+              <FilterButton key={r.label} active={activeMetaRange === r.label}
+                onClick={() => setActiveMetaRange(prev => prev === r.label ? null : r.label)}>
+                {r.label}
               </FilterButton>
             ))}
           </div>
@@ -123,6 +151,7 @@ export default function ArchetypesIndex() {
                     <th className="text-left px-4 py-3 text-xs font-semibold text-gray-400 uppercase tracking-wider">Colors</th>
                     <th className="text-left px-4 py-3 text-xs font-semibold text-gray-400 uppercase tracking-wider">Type</th>
                     <th className="text-left px-4 py-3 text-xs font-semibold text-gray-400 uppercase tracking-wider hidden sm:table-cell">Family</th>
+                    <th className="text-right px-4 py-3 text-xs font-semibold text-gray-400 uppercase tracking-wider">Meta %</th>
                   </tr>
                 </thead>
                 <tbody className="divide-y divide-gray-700/50">
@@ -147,6 +176,9 @@ export default function ArchetypesIndex() {
                       </td>
                       <td className="px-4 py-3 text-base text-gray-400">{a.game_type.join(', ')}</td>
                       <td className="px-4 py-3 text-gray-500 hidden sm:table-cell">{a.family || '—'}</td>
+                      <td className="px-4 py-3 text-right font-mono text-amber-400">
+                        {(metaMap[a.name] ?? 0).toFixed(1)}%
+                      </td>
                     </tr>
                   ))}
                 </tbody>
