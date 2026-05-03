@@ -75,7 +75,7 @@ function TopDecksSection() {
                   : <div className="w-full h-full flex items-center justify-center text-gray-600 text-xs">No image</div>
                 }
               </div>
-              <div className="p-2.5 space-y-1.5">
+              <div className="p-2.5 space-y-2">
                 <div className="flex items-start justify-between gap-1">
                   <span className="text-base font-semibold text-white leading-tight group-hover:text-amber-400 transition-colors line-clamp-2">{deck.archetype_name}</span>
                   <div className="flex items-center gap-0.5 shrink-0">
@@ -84,7 +84,7 @@ function TopDecksSection() {
                     ))}
                   </div>
                 </div>
-                <div className="flex items-center gap-1 flex-wrap">
+                <div className="-ml-[2px] mt-0.5 flex items-center gap-1 flex-wrap">
                   {deck.game_type.map(g => (
                     <span key={g} className="text-[10px] text-gray-400 bg-gray-700 rounded px-1 py-0.5 leading-none">{g}</span>
                   ))}
