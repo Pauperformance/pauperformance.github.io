@@ -7,13 +7,13 @@ const GAME_TYPES = ['Aggro', 'Midrange', 'Control', 'Tempo', 'Combo']
 
 const MANA_LABELS = { W: 'White', U: 'Blue', B: 'Black', R: 'Red', G: 'Green', C: 'Colorless' }
 
-function ManaIcon({ color }) {
+function ManaIcon({ color, size = 'w-6 h-6' }) {
   return (
     <img
       src={`/images/mana/${color}.png`}
       alt={MANA_LABELS[color] ?? color}
       title={MANA_LABELS[color] ?? color}
-      className="w-5 h-5 inline-block"
+      className={`${size} inline-block`}
     />
   )
 }
@@ -64,9 +64,9 @@ export default function ArchetypesIndex() {
   const filtered = useMemo(() => {
     const q = search.toLowerCase()
     return archetypes.filter(a => {
-      if (q && !a.name.toLowerCase().includes(q)) return false
-      if (activeTypes.size > 0 && !a.game_type.some(t => activeTypes.has(t))) return false
-      if (activeMana.size > 0 && !a.dominant_mana.some(m => activeMana.has(m))) return false
+      if (q && !a.name.toLowerCase().includes(q) && !(a.aliases || []).some(alias => alias.toLowerCase().includes(q))) return false
+      if (activeTypes.size > 0 && ![...activeTypes].every(t => a.game_type.includes(t))) return false
+      if (activeMana.size > 0 && ![...activeMana].every(m => a.dominant_mana.includes(m))) return false
       return true
     })
   }, [archetypes, search, activeTypes, activeMana])
@@ -91,17 +91,17 @@ export default function ArchetypesIndex() {
             className="w-full bg-gray-900 border border-gray-600 rounded-lg px-4 py-2 text-sm text-gray-100 placeholder-gray-500 focus:outline-none focus:border-amber-400"
           />
           <div className="flex flex-wrap gap-2 items-center">
-            <span className="text-xs text-gray-500 mr-1">Type:</span>
+            <span className="text-sm text-gray-500 w-10 shrink-0">Type:</span>
             {GAME_TYPES.map(t => (
               <FilterButton key={t} active={activeTypes.has(t)} onClick={() => toggleType(t)}>{t}</FilterButton>
             ))}
           </div>
           <div className="flex flex-wrap gap-2 items-center">
-            <span className="text-xs text-gray-500 mr-1">Color:</span>
+            <span className="text-sm text-gray-500 w-10 shrink-0">Color:</span>
             {MANA_ORDER.map(m => (
               <FilterButton key={m} active={activeMana.has(m)} onClick={() => toggleMana(m)}>
                 <span className="flex items-center gap-1">
-                  <ManaIcon color={m} />
+                  <ManaIcon color={m} size="w-4 h-4" />
                   {MANA_LABELS[m]}
                 </span>
               </FilterButton>
@@ -145,7 +145,7 @@ export default function ArchetypesIndex() {
                           ))}
                         </div>
                       </td>
-                      <td className="px-4 py-3 text-gray-400">{a.game_type.join(', ')}</td>
+                      <td className="px-4 py-3 text-base text-gray-400">{a.game_type.join(', ')}</td>
                       <td className="px-4 py-3 text-gray-500 hidden sm:table-cell">{a.family || '—'}</td>
                     </tr>
                   ))}
