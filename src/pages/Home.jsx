@@ -1,7 +1,6 @@
 import { useState, useEffect, useRef } from 'react'
 import { createPortal } from 'react-dom'
 import { Link } from 'react-router-dom'
-import { PieChart, Pie, Cell, Tooltip, ResponsiveContainer } from 'recharts'
 import Layout from '../components/Layout'
 
 const PAGES = [
@@ -64,7 +63,7 @@ function TopDecksSection() {
 
   return (
     <section>
-      <h2 className="text-xl font-semibold text-white mb-4">Top Decks</h2>
+      <h2 className="text-xl font-semibold text-white mb-4">Top Archetypes</h2>
       <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 xl:grid-cols-7 2xl:grid-cols-8 gap-3">
         {decks.map(deck => (
           <div key={deck.archetype_name} className="bg-gray-800 border border-gray-700 rounded-xl overflow-hidden hover:border-amber-400/50 transition-all group">
@@ -114,8 +113,66 @@ const CHART_COLORS = [
 const OTHER_COLOR = '#3d2a2b'
 const SHOWN_SLICES = 8
 
+function DonutChart({ data, activeIndex, onSliceEnter, onSliceLeave }) {
+  const [tooltip, setTooltip] = useState(null)
+  const SIZE = 220, cx = 110, cy = 110, innerR = 55, outerR = 95
+  const total = data.reduce((s, d) => s + d.value, 0)
+
+  let cum = -Math.PI / 2
+  const slices = data.map((d, i) => {
+    const sweep = (d.value / total) * 2 * Math.PI
+    const start = cum + 0.02
+    const end = cum + sweep - 0.02
+    cum += sweep
+    return { ...d, start, end, mid: (start + end) / 2 }
+  })
+
+  const pt = (r, a) => [cx + r * Math.cos(a), cy + r * Math.sin(a)]
+  const arc = (s) => {
+    const [ox1, oy1] = pt(outerR, s.start)
+    const [ox2, oy2] = pt(outerR, s.end)
+    const [ix2, iy2] = pt(innerR, s.end)
+    const [ix1, iy1] = pt(innerR, s.start)
+    const lg = s.end - s.start > Math.PI ? 1 : 0
+    return `M${ox1},${oy1}A${outerR},${outerR},0,${lg},1,${ox2},${oy2}L${ix2},${iy2}A${innerR},${innerR},0,${lg},0,${ix1},${iy1}Z`
+  }
+
+  return (
+    <div className="relative w-full h-full">
+      <svg width="100%" height="100%" viewBox={`0 0 ${SIZE} ${SIZE}`}>
+        {slices.map((s, i) => {
+          const active = i === activeIndex
+          const tx = active ? Math.cos(s.mid) * 8 : 0
+          const ty = active ? Math.sin(s.mid) * 8 : 0
+          return (
+            <path key={i} d={arc(s)} fill={s.color}
+              transform={`translate(${tx},${ty})`}
+              style={{ transition: 'transform 0.15s ease', cursor: 'default' }}
+              onMouseEnter={(e) => {
+                onSliceEnter(i)
+                setTooltip({ name: s.name, value: s.value, x: e.clientX, y: e.clientY })
+              }}
+              onMouseMove={(e) => setTooltip(t => t ? { ...t, x: e.clientX, y: e.clientY } : null)}
+              onMouseLeave={() => { onSliceLeave(); setTooltip(null) }}
+            />
+          )
+        })}
+      </svg>
+      {tooltip && createPortal(
+        <div className="fixed z-50 pointer-events-none rounded-xl px-3 py-2 text-sm shadow-xl"
+          style={{ left: tooltip.x + 12, top: tooltip.y - 40, background: '#261819', border: '1px solid #3d2a2b' }}>
+          <p className="font-semibold text-amber-400">{tooltip.name}</p>
+          <p className="text-gray-300">{tooltip.value}%</p>
+        </div>,
+        document.body
+      )}
+    </div>
+  )
+}
+
 function MetagameSection() {
   const [data, setData] = useState([])
+  const [activeIndex, setActiveIndex] = useState(undefined)
 
   useEffect(() => {
     fetch('/data/metagame.json')
@@ -134,47 +191,27 @@ function MetagameSection() {
 
   return (
     <section>
-      <h2 className="text-xl font-semibold text-white mb-4">Metagame Snapshot</h2>
+      <h2 className="text-xl font-semibold text-white mb-4">Bake into a Pie</h2>
       <div className="bg-gray-800 border border-gray-700 rounded-xl p-5">
         <div className="flex flex-col sm:flex-row gap-6 items-start">
           <div className="w-full sm:w-56 shrink-0 h-56">
-            <ResponsiveContainer width="100%" height="100%">
-              <PieChart>
-                <Pie
-                  data={chartData}
-                  cx="50%"
-                  cy="50%"
-                  innerRadius={55}
-                  outerRadius={100}
-                  paddingAngle={2}
-                  dataKey="value"
-                  stroke="none"
-                >
-                  {chartData.map((entry, i) => (
-                    <Cell key={i} fill={entry.color} />
-                  ))}
-                </Pie>
-                <Tooltip content={({ active, payload }) => {
-                  if (!active || !payload?.length) return null
-                  const { name, value } = payload[0].payload
-                  return (
-                    <div style={{ background: '#261819', border: '1px solid #3d2a2b', borderRadius: 8, padding: '8px 12px' }}>
-                      <p style={{ color: '#f59e0b', fontWeight: 600, marginBottom: 2 }}>{name}</p>
-                      <p style={{ color: '#e5e7eb', fontSize: 13 }}>{value}%</p>
-                    </div>
-                  )
-                }} />
-              </PieChart>
-            </ResponsiveContainer>
+            <DonutChart
+              data={chartData}
+              activeIndex={activeIndex}
+              onSliceEnter={(i) => setActiveIndex(i)}
+              onSliceLeave={() => setActiveIndex(undefined)}
+            />
           </div>
 
-          <div className="flex-1 min-w-0 grid sm:grid-flow-col sm:grid-rows-10 gap-x-6 gap-y-1.5">
+          <div className="flex-1 min-w-0 grid sm:grid-flow-col sm:grid-rows-9 gap-x-6 gap-y-1.5">
             {data.map((entry, i) => {
               const color = i < SHOWN_SLICES ? CHART_COLORS[i] : OTHER_COLOR
               const pct = +entry.meta_share.toFixed(1)
               const maxShare = data[0].meta_share
               return (
-                <div key={entry.archetype_name} className="flex items-center gap-2 group">
+                <div key={entry.archetype_name} className="flex items-center gap-2 group"
+                  onMouseEnter={() => setActiveIndex(i < SHOWN_SLICES ? i : SHOWN_SLICES)}
+                  onMouseLeave={() => setActiveIndex(undefined)}>
                   <span className="w-2.5 h-2.5 rounded-full shrink-0" style={{ background: color }} />
                   <Link
                     to={`/archetypes/${encodeURIComponent(entry.archetype_name)}`}
