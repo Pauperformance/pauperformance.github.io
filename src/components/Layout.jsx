@@ -22,7 +22,7 @@ export default function Layout({ children }) {
   return (
     <div className="min-h-screen bg-gray-900 text-gray-100">
       <header className="border-b border-gray-700 bg-gray-950 sticky top-0 z-10">
-        <div className="max-w-5xl mx-auto px-6 py-4 flex items-center gap-8">
+        <div className="max-w-screen-2xl mx-auto px-4 py-4 flex items-center gap-8">
           <Link to="/" className="shrink-0">
             <div className="text-xl font-bold tracking-tight text-white">
               Pauperformance <span className="text-amber-400">Academy</span>
@@ -52,12 +52,12 @@ export default function Layout({ children }) {
         </div>
       </header>
 
-      <main className="max-w-5xl mx-auto px-6 py-10">
+      <main className="max-w-screen-2xl mx-auto px-4 py-10">
         {children}
       </main>
 
       <footer className="border-t border-gray-700 mt-16">
-        <div className="max-w-5xl mx-auto px-6 py-8 text-center text-sm text-gray-500">
+        <div className="max-w-screen-2xl mx-auto px-4 py-8 text-center text-sm text-gray-500">
           Pauperformance Academy
         </div>
       </footer>
