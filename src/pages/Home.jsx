@@ -203,7 +203,7 @@ function MetagameSection() {
             />
           </div>
 
-          <div className="flex-1 min-w-0 grid grid-cols-2 sm:grid-cols-[none] sm:grid-flow-col sm:grid-rows-16 min-[900px]:grid-rows-11 lg:grid-rows-8 gap-x-4 gap-y-1.5">
+          <div className="flex-1 min-w-0 grid grid-cols-2 sm:grid-cols-[none] sm:grid-flow-col sm:grid-rows-23 min-[900px]:grid-rows-16 lg:grid-rows-12 gap-x-4 gap-y-1.5">
             {data.map((entry, i) => {
               const color = i < SHOWN_SLICES ? CHART_COLORS[i] : OTHER_COLOR
               const pct = +entry.meta_share.toFixed(1)
@@ -220,7 +220,7 @@ function MetagameSection() {
                     {entry.archetype_name}
                   </Link>
                   <div className="hidden 2xl:flex items-center gap-2 shrink-0">
-                    <div className="w-20 h-1.5 bg-gray-700 rounded-full overflow-hidden">
+                    <div className="w-12 h-1.5 bg-gray-700 rounded-full overflow-hidden">
                       <div
                         className="h-full rounded-full"
                         style={{ width: `${(pct / maxShare) * 100}%`, background: color }}
