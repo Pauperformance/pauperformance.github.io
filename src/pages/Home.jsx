@@ -203,23 +203,23 @@ function MetagameSection() {
             />
           </div>
 
-          <div className="flex-1 min-w-0 grid grid-cols-2 sm:grid-cols-[none] sm:grid-flow-col sm:grid-rows-9 gap-x-6 gap-y-1.5">
+          <div className="flex-1 min-w-0 grid grid-cols-2 sm:grid-cols-[none] sm:grid-flow-col sm:grid-rows-16 min-[900px]:grid-rows-11 lg:grid-rows-8 gap-x-4 gap-y-1.5">
             {data.map((entry, i) => {
               const color = i < SHOWN_SLICES ? CHART_COLORS[i] : OTHER_COLOR
               const pct = +entry.meta_share.toFixed(1)
               const maxShare = data[0].meta_share
               return (
-                <div key={entry.archetype_name} className="flex items-center gap-2 group"
+                <div key={entry.archetype_name} className="flex items-center gap-2 group min-w-0"
                   onMouseEnter={() => setActiveIndex(i < SHOWN_SLICES ? i : SHOWN_SLICES)}
                   onMouseLeave={() => setActiveIndex(undefined)}>
                   <span className="w-2.5 h-2.5 rounded-full shrink-0" style={{ background: color }} />
                   <Link
                     to={`/archetypes/${encodeURIComponent(entry.archetype_name)}`}
-                    className="text-sm text-gray-300 hover:text-amber-400 transition-colors truncate min-w-0 flex-1"
+                    className="text-sm text-gray-300 hover:text-amber-400 transition-colors flex-1"
                   >
                     {entry.archetype_name}
                   </Link>
-                  <div className="hidden sm:flex items-center gap-2 shrink-0">
+                  <div className="hidden 2xl:flex items-center gap-2 shrink-0">
                     <div className="w-20 h-1.5 bg-gray-700 rounded-full overflow-hidden">
                       <div
                         className="h-full rounded-full"
@@ -228,7 +228,7 @@ function MetagameSection() {
                     </div>
                     <span className="text-xs text-gray-400 w-10 text-right">{pct}%</span>
                   </div>
-                  <span className="sm:hidden text-xs text-gray-400 shrink-0">{pct}%</span>
+                  <span className="2xl:hidden text-xs text-gray-400 shrink-0">{pct}%</span>
                 </div>
               )
             })}
