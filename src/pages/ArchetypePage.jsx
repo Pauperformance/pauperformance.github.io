@@ -125,6 +125,73 @@ function VideosSection({ videos }) {
   )
 }
 
+const PAGE_SIZE = 20
+
+function IntelDecksSection({ name }) {
+  const [decks, setDecks] = useState(null)
+  const [page, setPage] = useState(0)
+
+  useEffect(() => {
+    fetch(`/data/intel-decks/${encodeURIComponent(name)}.json`)
+      .then(r => r.ok ? r.json() : [])
+      .then(setDecks)
+  }, [name])
+
+  if (!decks) return <p className="text-gray-500 text-sm">Loading decklists…</p>
+  if (!decks.length) return <p className="text-gray-500 text-sm">No decklists recorded.</p>
+
+  const totalPages = Math.ceil(decks.length / PAGE_SIZE)
+  const page_decks = decks.slice(page * PAGE_SIZE, (page + 1) * PAGE_SIZE)
+
+  return (
+    <div className="space-y-3">
+      <p className="text-xs text-gray-500">{decks.length} decklists</p>
+      <div className="border border-gray-700 rounded-xl overflow-hidden">
+        <table className="w-full text-sm">
+          <thead>
+            <tr className="bg-gray-800 border-b border-gray-700">
+              <th className="text-left px-4 py-2 text-xs font-semibold text-gray-400 uppercase tracking-wider">Set</th>
+              <th className="text-left px-4 py-2 text-xs font-semibold text-gray-400 uppercase tracking-wider hidden sm:table-cell">Date</th>
+              <th className="text-left px-4 py-2 text-xs font-semibold text-gray-400 uppercase tracking-wider">Legal</th>
+              <th className="text-left px-4 py-2 text-xs font-semibold text-gray-400 uppercase tracking-wider">Link</th>
+            </tr>
+          </thead>
+          <tbody className="divide-y divide-gray-700/50">
+            {page_decks.map((deck, i) => (
+              <tr key={deck.url} className="bg-gray-900 hover:bg-gray-800 transition-colors">
+                <td className="px-4 py-2.5 text-gray-300">{deck.set_name}</td>
+                <td className="px-4 py-2.5 text-gray-500 hidden sm:table-cell">{deck.set_date}</td>
+                <td className="px-4 py-2.5">
+                  {deck.legal
+                    ? <span className="text-green-400 text-xs font-medium">Legal</span>
+                    : <span className="text-red-400 text-xs font-medium">Banned</span>}
+                </td>
+                <td className="px-4 py-2.5">
+                  <a href={deck.url} target="_blank" rel="noreferrer"
+                    className="text-amber-400 hover:underline text-xs">View →</a>
+                </td>
+              </tr>
+            ))}
+          </tbody>
+        </table>
+      </div>
+      {totalPages > 1 && (
+        <div className="flex items-center justify-between text-xs text-gray-500">
+          <button onClick={() => setPage(p => Math.max(0, p - 1))} disabled={page === 0}
+            className="px-3 py-1 rounded-md border border-gray-700 hover:border-amber-400/50 disabled:opacity-30 disabled:cursor-not-allowed transition-colors">
+            ← Prev
+          </button>
+          <span>Page {page + 1} of {totalPages}</span>
+          <button onClick={() => setPage(p => Math.min(totalPages - 1, p + 1))} disabled={page === totalPages - 1}
+            className="px-3 py-1 rounded-md border border-gray-700 hover:border-amber-400/50 disabled:opacity-30 disabled:cursor-not-allowed transition-colors">
+            Next →
+          </button>
+        </div>
+      )}
+    </div>
+  )
+}
+
 function ResourcesSection({ resources, discord, sideboard }) {
   const hasAny = resources?.length || discord?.length || sideboard
 
@@ -255,10 +322,10 @@ export default function ArchetypePage() {
           </section>
         )}
 
-        {/* Decks */}
+        {/* Decklists */}
         <section>
-          <SectionHeader>Decks</SectionHeader>
-          <DecksTable decks={data.decks} />
+          <SectionHeader>Decklists</SectionHeader>
+          <IntelDecksSection name={data.name} />
         </section>
 
         {/* Videos */}
