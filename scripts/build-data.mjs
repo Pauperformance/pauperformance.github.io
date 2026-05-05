@@ -1,4 +1,4 @@
-import { readFileSync, readdirSync, writeFileSync, mkdirSync, existsSync } from 'fs'
+import { readFileSync, readdirSync, writeFileSync, copyFileSync, mkdirSync, existsSync } from 'fs'
 import { join } from 'path'
 
 const archetypeDir = 'assets/data/archetype'
@@ -153,13 +153,11 @@ const totalCards = pool.reduce((sum, s) => sum + s.cards.length, 0)
 writeFileSync(join(outDir, 'pauper_pool.json'), JSON.stringify(pool))
 console.log(`Built pauper_pool.json with ${pool.length} sets and ${totalCards} cards.`)
 
-// Copy metagame data
+// Copy metagame data as-is (no transformation)
+copyFileSync('assets/data/intel/metagame.json', join(outDir, 'metagame.json'))
 const metagame = JSON.parse(readFileSync('assets/data/intel/metagame.json', 'utf8'))
-const metagameOut = metagame.meta_shares
-  .map(({ archetype_name, meta_share, accuracy }) => ({ archetype_name, meta_share, accuracy }))
-  .sort((a, b) => b.meta_share - a.meta_share)
-writeFileSync(join(outDir, 'metagame.json'), JSON.stringify(metagameOut))
-console.log(`Built metagame.json with ${metagameOut.length} archetypes.`)
+const metagameOut = metagame.meta_shares.slice().sort((a, b) => b.meta_share - a.meta_share)
+console.log(`Copied metagame.json with ${metagameOut.length} archetypes.`)
 
 // Build top decks (top 15 metagame archetypes enriched with archetype detail)
 const archetypeMap = Object.fromEntries(
