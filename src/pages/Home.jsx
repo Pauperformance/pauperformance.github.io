@@ -177,7 +177,7 @@ function MetagameSection() {
   useEffect(() => {
     fetch('/data/metagame.json')
       .then(r => r.json())
-      .then(setData)
+      .then(d => setData((d.meta_shares || d).slice().sort((a, b) => b.meta_share - a.meta_share)))
   }, [])
 
   if (!data.length) return null

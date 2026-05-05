@@ -54,7 +54,8 @@ export default function ArchetypesIndex() {
       fetch('/data/metagame.json').then(r => r.json()),
     ]).then(([archetypeData, metagameData]) => {
       setArchetypes(archetypeData)
-      setMetaMap(Object.fromEntries(metagameData.map(e => [e.archetype_name, e.meta_share])))
+      const entries = metagameData.meta_shares || metagameData
+      setMetaMap(Object.fromEntries(entries.map(e => [e.archetype_name, e.meta_share])))
       setLoading(false)
     })
   }, [])
