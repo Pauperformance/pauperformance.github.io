@@ -3,12 +3,15 @@ import { join } from 'path'
 
 const archetypeDir = 'assets/data/archetype'
 const deckDir = 'assets/data/deck/academy'
+const intelDeckDir = 'assets/data/intel/deck'
 const videoDir = 'assets/data/video'
 const outDir = 'public/data'
 const detailsDir = join(outDir, 'archetype-details')
+const intelDecksDir = join(outDir, 'intel-decks')
 
 mkdirSync(outDir, { recursive: true })
 mkdirSync(detailsDir, { recursive: true })
+mkdirSync(intelDecksDir, { recursive: true })
 
 function readJsonDir(dir) {
   if (!existsSync(dir)) return []
@@ -81,6 +84,24 @@ for (const archetype of archetypes) {
 }
 
 console.log(`Built ${detailCount} archetype detail files.`)
+
+// Build intel decks per archetype
+let intelDeckCount = 0
+for (const archetype of archetypes) {
+  const name = archetype.name
+  const folder = join(intelDeckDir, name)
+  if (!existsSync(folder)) continue
+  const decks = readdirSync(folder)
+    .filter(f => f.endsWith('.json'))
+    .map(f => {
+      const d = JSON.parse(readFileSync(join(folder, f), 'utf8'))
+      return { url: d.url, set_name: d.set_name, set_date: d.set_date, legal: d.legal }
+    })
+    .sort((a, b) => b.set_date.localeCompare(a.set_date))
+  writeFileSync(join(intelDecksDir, `${name}.json`), JSON.stringify(decks))
+  intelDeckCount++
+}
+console.log(`Built intel-decks for ${intelDeckCount} archetypes.`)
 
 // Parse set index from markdown
 const setLines = readFileSync('pages/set_index.md', 'utf8').split('\n')
