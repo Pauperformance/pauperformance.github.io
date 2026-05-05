@@ -41,7 +41,7 @@ for (const archetype of archetypes) {
     .sort((a, b) => b.set_date.localeCompare(a.set_date))
     .map(({ name: deckName, url, set_name, set_date, legal }) => ({
       name: deckName, url, set_name, set_date, legal,
-      is_reference: archetype.reference_decks?.includes(deckName) ?? false,
+      is_reference: archetype.reference_decks ? archetype.reference_decks.includes(deckName) : false,
     }))
 
   // Load videos
@@ -143,7 +143,7 @@ for (const sec of poolSections.slice(1)) {
   if (!headerMatch) continue
   const [, name, scryfall] = headerMatch
   const metaMatch = sec.match(/release:\s*(\S+)\s*\|\s*p12e_code:\s*(\d+)/)
-  const date = metaMatch?.[1] ?? null
+  const date = metaMatch ? metaMatch[1] : null
   const code = metaMatch ? parseInt(metaMatch[2]) : null
   const cards = [...sec.matchAll(/<a href="([^"]+)">([^<]+)<\/a>/g)]
     .map(([, url, cardName]) => ({ name: cardName, url: url.split('?')[0] }))
@@ -167,16 +167,16 @@ const archetypeMap = Object.fromEntries(
 )
 const topDecks = metagameOut.slice(0, 16).map(entry => {
   const arch = archetypeMap[entry.archetype_name]
-  const staples = (arch?.staples || [])
+  const staples = ((arch && arch.staples) || [])
     .filter(s => s.preview)
     .slice(0, 5)
     .map(({ name, link, preview }) => ({ name, link, preview }))
   return {
     archetype_name: entry.archetype_name,
     meta_share: entry.meta_share,
-    dominant_mana: arch?.dominant_mana || [],
-    game_type: arch?.game_type || [],
-    featured_image: staples[0]?.preview || null,
+    dominant_mana: (arch && arch.dominant_mana) || [],
+    game_type: (arch && arch.game_type) || [],
+    featured_image: (staples[0] && staples[0].preview) || null,
     staples,
   }
 })
