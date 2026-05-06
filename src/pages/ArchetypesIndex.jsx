@@ -176,7 +176,14 @@ export default function ArchetypesIndex() {
                         </div>
                       </td>
                       <td className="px-4 py-3 text-base text-gray-400">{a.game_type.join(', ')}</td>
-                      <td className="px-4 py-3 text-gray-500 hidden sm:table-cell">{a.family || '—'}</td>
+                      <td className="px-4 py-3 hidden sm:table-cell">
+                        {a.family
+                          ? <Link to={`/families/${encodeURIComponent(a.family)}`}
+                              className="text-gray-500 hover:text-amber-400 transition-colors">
+                              {a.family}
+                            </Link>
+                          : <span className="text-gray-700">—</span>}
+                      </td>
                       <td className="px-4 py-3 text-right font-mono text-amber-400">
                         {(metaMap[a.name] ?? 0).toFixed(1)}%
                       </td>
