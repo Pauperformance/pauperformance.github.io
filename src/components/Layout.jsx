@@ -7,7 +7,7 @@ const NAV_ITEMS = [
   { to: '/sets', label: 'Set Index' },
   { to: '/timeline', label: 'Format Timeline' },
   { to: '/pool', label: 'Pauper Pool' },
-  { to: '/phd-guidelines', label: 'PhD Guidelines' },
+  { to: '/creators', label: 'Creators' },
 ]
 
 const SOCIAL_LINKS = [

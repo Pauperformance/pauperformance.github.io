@@ -180,6 +180,24 @@ const totalCards = pool.reduce((sum, s) => sum + s.cards.length, 0)
 writeFileSync(join(outDir, 'pauper_pool.json'), JSON.stringify(pool))
 console.log(`Built pauper_pool.json with ${pool.length} sets and ${totalCards} cards.`)
 
+// Build creators index
+const creatorDir = 'assets/data/creator'
+const creators = readdirSync(creatorDir)
+  .filter(function(f) { return f.endsWith('.json') })
+  .map(function(f) {
+    var c = JSON.parse(readFileSync(join(creatorDir, f), 'utf8'))
+    return {
+      name: c.name,
+      mtgo_name: c.mtgo_name || null,
+      mtgo_name2: c.mtgo_name2 || null,
+      twitch_channel_url: c.twitch_channel_url || null,
+      youtube_channel_url: c.youtube_channel_url || null,
+    }
+  })
+  .sort(function(a, b) { return a.name.toLowerCase().localeCompare(b.name.toLowerCase()) })
+writeFileSync(join(outDir, 'creators.json'), JSON.stringify(creators))
+console.log('Built creators.json with ' + creators.length + ' entries.')
+
 // Copy metagame data as-is (no transformation)
 copyFileSync('assets/data/intel/metagame.json', join(outDir, 'metagame.json'))
 const metagame = JSON.parse(readFileSync('assets/data/intel/metagame.json', 'utf8'))
