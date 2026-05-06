@@ -5,6 +5,7 @@ const archetypeDir = 'assets/data/archetype'
 const deckDir = 'assets/data/deck/academy'
 const intelDeckDir = 'assets/data/intel/deck'
 const videoDir = 'assets/data/video'
+const familyMdDir = 'families'
 const outDir = 'public/data'
 const detailsDir = join(outDir, 'archetype-details')
 const intelDecksDir = join(outDir, 'intel-decks')
@@ -102,6 +103,37 @@ for (const archetype of archetypes) {
   intelDeckCount++
 }
 console.log(`Built intel-decks for ${intelDeckCount} archetypes.`)
+
+// Build families index from archetype family fields
+const familyMap = {}
+for (const arch of archetypes) {
+  var fam = arch.family
+  if (!fam) continue
+  if (!familyMap[fam]) familyMap[fam] = { name: fam, description: null, archetypes: [] }
+  familyMap[fam].archetypes.push({
+    name: arch.name,
+    aliases: arch.aliases || [],
+    dominant_mana: arch.dominant_mana || [],
+    game_type: arch.game_type || [],
+  })
+}
+// Parse descriptions from families/*.md
+if (existsSync(familyMdDir)) {
+  readdirSync(familyMdDir).filter(function(f) { return f.endsWith('.md') }).forEach(function(fname) {
+    var famName = fname.slice(0, -3)
+    var content = readFileSync(join(familyMdDir, fname), 'utf8')
+    var descMatch = content.match(/\*\*Description\*\*:\s*(.+)/)
+    if (descMatch && familyMap[famName]) {
+      var desc = descMatch[1].trim()
+      if (desc.indexOf('Still missing') === -1 && desc !== 'TODO.') {
+        familyMap[famName].description = desc
+      }
+    }
+  })
+}
+const families = Object.values(familyMap).sort(function(a, b) { return a.name.localeCompare(b.name) })
+writeFileSync(join(outDir, 'families.json'), JSON.stringify(families))
+console.log('Built families.json with ' + families.length + ' families.')
 
 // Parse set index from markdown
 const setLines = readFileSync('pages/set_index.md', 'utf8').split('\n')
