@@ -114,7 +114,7 @@ ref: [SEPTEMBER 27, 2013, DCI BANNED & RESTRICTED LIST ANNOUNCEMENT](https://mag
 ### February 1, 2013
 * [Empty the Warrens](https://scryfall.com/card/tsr/162/empty-the-warrens), [Grapeshot](https://scryfall.com/card/tsr/166/grapeshot), and [Invigorate](https://scryfall.com/card/2xm/172/invigorate) are banned.
 
-ref: [RAPID HYBRID-IZATION](https://magic.wizards.com/en/articles/archive/latest-developments/rapid-hybrid-ization-2013-02-01)
+ref: [RAPID HYBRID-IZATION](https://web.archive.org/web/20220626123926/https://magic.wizards.com/en/articles/archive/latest-developments/rapid-hybrid-ization-2013-02-01)
 
 ---
 ### June 20, 2011
