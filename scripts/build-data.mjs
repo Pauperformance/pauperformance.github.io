@@ -156,36 +156,10 @@ for (const line of setLines) {
 writeFileSync(join(outDir, 'sets.json'), JSON.stringify(sets))
 console.log(`Built sets.json with ${sets.length} entries (${sets.filter(s => s.pauper_pool).length} in Pauper pool).`)
 
-// Parse format timeline from markdown
-const timelineContent = readFileSync('pages/format_timeline.md', 'utf8')
-const timelineSections = timelineContent.split('\n---\n')
-const timeline = []
-const refLinkRe = /^\[(.+?)\]\((.+?)\)$/
-
-for (const sec of timelineSections) {
-  const trimmed = sec.trim()
-  if (!trimmed.startsWith('###')) continue
-  const lines = trimmed.split('\n')
-  const header = lines[0].replace(/^###\s*/, '').trim()
-  const dashIdx = header.indexOf(' - ')
-  const date = dashIdx >= 0 ? header.slice(0, dashIdx).trim() : header
-  const subtitle = dashIdx >= 0 ? header.slice(dashIdx + 3).trim() : null
-
-  const bullets = []
-  const refs = []
-  for (const line of lines.slice(1)) {
-    const l = line.trim()
-    if (l.startsWith('* ')) bullets.push(l.slice(2))
-    else if (l.startsWith('ref: ')) {
-      const raw = l.slice(5).trim()
-      const m = raw.match(refLinkRe)
-      refs.push(m ? { text: m[1], url: m[2] } : { text: raw, url: null })
-    }
-  }
-  timeline.push({ date, subtitle, bullets, refs })
-}
-writeFileSync(join(outDir, 'timeline.json'), JSON.stringify(timeline))
-console.log(`Built timeline.json with ${timeline.length} entries.`)
+// Copy format timeline as-is from source
+copyFileSync('assets/data/timeline.json', join(outDir, 'timeline.json'))
+const timeline = JSON.parse(readFileSync('assets/data/timeline.json', 'utf8'))
+console.log('Copied timeline.json with ' + timeline.length + ' entries.')
 
 // Parse pauper pool from markdown
 const poolContent = readFileSync('pages/pauper_pool.md', 'utf8')
