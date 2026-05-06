@@ -185,16 +185,12 @@ const cardIntelDir = 'assets/data/intel/card'
 const cardDetailsDir = join(outDir, 'card-details')
 mkdirSync(cardDetailsDir, { recursive: true })
 
-function slugToName(slug) {
-  return slug.split('-').map(function(w) { return w.charAt(0).toUpperCase() + w.slice(1) }).join(' ')
-}
-
 const cardFiles = readdirSync(cardIntelDir).filter(function(f) { return f.endsWith('.json') }).sort()
 const cardsIndex = []
 for (const f of cardFiles) {
   const slug = f.slice(0, -5)
-  const name = slugToName(slug)
   const raw = JSON.parse(readFileSync(join(cardIntelDir, f), 'utf8'))
+  const name = raw.name || slug
   const archetypes = (raw.archetypes && raw.archetypes['py/set']) || []
   cardsIndex.push({ slug, name, archetypeCount: archetypes.length })
   writeFileSync(join(cardDetailsDir, f), JSON.stringify({ slug, name, archetypes }))
