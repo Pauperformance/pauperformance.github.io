@@ -1,6 +1,47 @@
 import { useState, useEffect } from 'react'
+import { createPortal } from 'react-dom'
 import ReactMarkdown from 'react-markdown'
 import Layout from '../components/Layout'
+
+function CardLink({ href, children }) {
+  const [pos, setPos] = useState(null)
+  const match = href?.match(/scryfall\.com\/card\/([^/]+)\/(\d+)/)
+
+  if (!match) {
+    return <a href={href} target="_blank" rel="noreferrer">{children}</a>
+  }
+
+  const [, set, num] = match
+  const imgUrl = `https://api.scryfall.com/cards/${set}/${num}?format=image&version=normal`
+
+  return (
+    <a
+      href={href}
+      target="_blank"
+      rel="noreferrer"
+      onMouseMove={e => setPos({ x: e.clientX, y: e.clientY })}
+      onMouseLeave={() => setPos(null)}
+    >
+      {children}
+      {pos && createPortal(
+        <div
+          className="fixed z-50 pointer-events-none"
+          style={{
+            left: pos.x + 16,
+            top: Math.max(8, pos.y - 180),
+          }}
+        >
+          <img src={imgUrl} alt="" className="w-44 rounded-xl shadow-2xl border border-gray-700" />
+        </div>,
+        document.body
+      )}
+    </a>
+  )
+}
+
+const mdComponents = {
+  a: ({ href, children }) => <CardLink href={href}>{children}</CardLink>
+}
 
 export default function FormatTimeline() {
   const [entries, setEntries] = useState([])
@@ -24,13 +65,11 @@ export default function FormatTimeline() {
           <p className="text-gray-400 text-sm py-8 text-center">Loading...</p>
         ) : (
           <div className="relative">
-            {/* Vertical line */}
             <div className="absolute left-3 top-2 bottom-2 w-px bg-gray-700" />
 
             <div className="space-y-8">
               {entries.map((entry, i) => (
                 <div key={i} className="relative pl-10">
-                  {/* Dot */}
                   <div className="absolute left-0 top-1.5 w-7 h-7 rounded-full bg-gray-800 border-2 border-amber-400 flex items-center justify-center">
                     <div className="w-2 h-2 rounded-full bg-amber-400" />
                   </div>
@@ -38,7 +77,7 @@ export default function FormatTimeline() {
                   <div className="bg-gray-800 border border-gray-700 rounded-xl p-5">
                     <p className="text-amber-400 font-semibold text-base">{entry.date}</p>
                     {entry.subtitle && (
-                      <p className="text-gray-300 font-medium mt-0.5">"{entry.subtitle}"</p>
+                      <p className="text-gray-300 font-medium mt-0.5">{entry.subtitle}</p>
                     )}
 
                     <ul className="mt-3 space-y-1.5">
@@ -46,14 +85,14 @@ export default function FormatTimeline() {
                         <li key={j} className="flex gap-2 text-sm text-gray-300">
                           <span className="text-amber-400 mt-0.5 shrink-0">•</span>
                           <span className="prose prose-invert prose-sm max-w-none [&_a]:text-amber-400 [&_a]:no-underline [&_a:hover]:underline">
-                            <ReactMarkdown>{bullet}</ReactMarkdown>
+                            <ReactMarkdown components={mdComponents}>{bullet}</ReactMarkdown>
                           </span>
                         </li>
                       ))}
                     </ul>
 
                     {entry.refs?.length > 0 && (
-                      <div className="mt-3 pt-3 border-t border-gray-700 flex flex-wrap gap-2">
+                      <div className="mt-3 pt-3 border-t border-gray-700 flex flex-col gap-1">
                         {entry.refs.map((ref, j) => (
                           ref.url
                             ? <a key={j} href={ref.url} target="_blank" rel="noreferrer"
