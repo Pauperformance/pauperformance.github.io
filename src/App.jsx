@@ -6,7 +6,7 @@ import FamilyPage from './pages/FamilyPage'
 import SetIndex from './pages/SetIndex'
 import FormatTimeline from './pages/FormatTimeline'
 import PauperPool from './pages/PauperPool'
-import PhDGuidelines from './pages/PhDGuidelines'
+import Creators from './pages/Creators'
 
 function App() {
   return (
@@ -18,7 +18,7 @@ function App() {
       <Route path="/sets" element={<SetIndex />} />
       <Route path="/timeline" element={<FormatTimeline />} />
       <Route path="/pool" element={<PauperPool />} />
-      <Route path="/phd-guidelines" element={<PhDGuidelines />} />
+      <Route path="/creators" element={<Creators />} />
     </Routes>
   )
 }
