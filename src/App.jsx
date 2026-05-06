@@ -7,6 +7,8 @@ import SetIndex from './pages/SetIndex'
 import FormatTimeline from './pages/FormatTimeline'
 import PauperPool from './pages/PauperPool'
 import Creators from './pages/Creators'
+import CardsIndex from './pages/CardsIndex'
+import CardPage from './pages/CardPage'
 
 function App() {
   return (
@@ -19,6 +21,8 @@ function App() {
       <Route path="/timeline" element={<FormatTimeline />} />
       <Route path="/pool" element={<PauperPool />} />
       <Route path="/creators" element={<Creators />} />
+      <Route path="/cards" element={<CardsIndex />} />
+      <Route path="/cards/:slug" element={<CardPage />} />
     </Routes>
   )
 }
