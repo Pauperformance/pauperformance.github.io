@@ -4,11 +4,11 @@ import { Link, useLocation } from 'react-router-dom'
 const NAV_ITEMS = [
   { to: '/', label: 'Home' },
   { to: '/archetypes', label: 'Archetypes' },
-  { to: '/sets', label: 'Set Index' },
+  { to: '/cards', label: 'Cards' },
+  { to: '/sets', label: 'Sets' },
   { to: '/timeline', label: 'Format Timeline' },
   { to: '/pool', label: 'Pauper Pool' },
   { to: '/creators', label: 'Creators' },
-  { to: '/cards', label: 'Cards' },
 ]
 
 const SOCIAL_LINKS = [

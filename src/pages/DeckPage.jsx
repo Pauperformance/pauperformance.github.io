@@ -73,7 +73,7 @@ export default function DeckPage() {
   const [cardImages, setCardImages] = useState({})
   const [cardTypes, setCardTypes] = useState({})
   const [hoveredCard, setHoveredCard] = useState(null)
-  const [groupByType, setGroupByType] = useState(false)
+  const [groupByType, setGroupByType] = useState(true)
   const [copied, setCopied] = useState(false)
 
   function toMtgoText(decklist) {
@@ -185,15 +185,19 @@ export default function DeckPage() {
             {deck.decklist ? (
               <>
                 <div className="flex flex-wrap gap-2">
-                  <button
-                    onClick={() => setGroupByType(v => !v)}
-                    className={`px-3 py-1.5 rounded-lg text-sm font-medium border transition-colors ${
-                      groupByType
-                        ? 'bg-amber-400 text-gray-900 border-amber-400'
-                        : 'bg-transparent text-gray-400 border-gray-600 hover:border-gray-400 hover:text-gray-200'
-                    }`}>
-                    Group cards by type
-                  </button>
+                  <div className="inline-flex rounded-lg border border-gray-600 overflow-hidden text-sm font-medium">
+                    <button
+                      onClick={() => setGroupByType(true)}
+                      className={`px-3 py-1.5 transition-colors ${groupByType ? 'bg-amber-400 text-gray-900' : 'text-gray-400 hover:text-gray-200'}`}>
+                      Group by type
+                    </button>
+                    <div className="w-px bg-gray-600" />
+                    <button
+                      onClick={() => setGroupByType(false)}
+                      className={`px-3 py-1.5 transition-colors ${!groupByType ? 'bg-amber-400 text-gray-900' : 'text-gray-400 hover:text-gray-200'}`}>
+                      Compact View
+                    </button>
+                  </div>
                   <button
                     onClick={handleDownload}
                     className="px-3 py-1.5 rounded-lg text-sm font-medium border border-gray-600 text-gray-400 hover:border-gray-400 hover:text-gray-200 transition-colors">
