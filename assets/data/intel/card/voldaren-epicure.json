@@ -1,17 +1,167 @@
 {
     "archetypes": {
         "py/set": [
-            "Goblins",
+            "Brew",
             "Brew Rakdos",
-            "Burn",
-            "MonoR Kuldotha",
-            "Brew MonoR",
             "Rakdos Burn",
-            "Brew Grixis",
-            "MonoR Madness",
+            "MonoR Kuldotha",
+            "Burn",
             "MonoR Dredge",
-            "Brew"
+            "Brew Grixis",
+            "Brew MonoR",
+            "MonoR Madness",
+            "Goblins"
         ]
     },
-    "name": "Voldaren Epicure"
+    "name": "Voldaren Epicure",
+    "scryfall": {
+        "all_parts": [
+            {
+                "component": "token",
+                "id": "a6f374bc-cd29-469f-808a-6a6c004ee8aa",
+                "name": "Blood",
+                "object": "related_card",
+                "type_line": "Token Artifact \u2014 Blood",
+                "uri": "https://api.scryfall.com/cards/a6f374bc-cd29-469f-808a-6a6c004ee8aa"
+            },
+            {
+                "component": "combo_piece",
+                "id": "feda6bb3-ee22-489c-bcfd-52ef04841024",
+                "name": "Voldaren Epicure",
+                "object": "related_card",
+                "type_line": "Creature \u2014 Vampire",
+                "uri": "https://api.scryfall.com/cards/feda6bb3-ee22-489c-bcfd-52ef04841024"
+            }
+        ],
+        "arena_id": 78989,
+        "artist": "Martina Fa\u010dkov\u00e1",
+        "artist_ids": [
+            "6338124e-8e53-498d-8bf9-93a55db2f61c"
+        ],
+        "booster": true,
+        "border_color": "black",
+        "card_back_id": "0aeebaf5-8c7d-4636-9e82-8c27447861f7",
+        "cardmarket_id": 583571,
+        "cmc": 1.0,
+        "collector_number": "182",
+        "color_identity": [
+            "R"
+        ],
+        "colors": [
+            "R"
+        ],
+        "digital": false,
+        "edhrec_rank": 4368,
+        "finishes": [
+            "nonfoil",
+            "foil"
+        ],
+        "flavor_text": "\"If you're not refining your tastes, what's the point of living forever?\"",
+        "foil": true,
+        "frame": "2015",
+        "full_art": false,
+        "games": [
+            "arena",
+            "paper",
+            "mtgo"
+        ],
+        "highres_image": true,
+        "id": "ae154e64-f626-45fb-bd52-840c1c27b2d3",
+        "illustration_id": "7edeaad8-c7b0-45e4-a765-3dbc1426d416",
+        "image_status": "highres_scan",
+        "image_uris": {
+            "art_crop": "https://cards.scryfall.io/art_crop/front/a/e/ae154e64-f626-45fb-bd52-840c1c27b2d3.jpg?1643592109",
+            "border_crop": "https://cards.scryfall.io/border_crop/front/a/e/ae154e64-f626-45fb-bd52-840c1c27b2d3.jpg?1643592109",
+            "large": "https://cards.scryfall.io/large/front/a/e/ae154e64-f626-45fb-bd52-840c1c27b2d3.jpg?1643592109",
+            "normal": "https://cards.scryfall.io/normal/front/a/e/ae154e64-f626-45fb-bd52-840c1c27b2d3.jpg?1643592109",
+            "png": "https://cards.scryfall.io/png/front/a/e/ae154e64-f626-45fb-bd52-840c1c27b2d3.png?1643592109",
+            "small": "https://cards.scryfall.io/small/front/a/e/ae154e64-f626-45fb-bd52-840c1c27b2d3.jpg?1643592109"
+        },
+        "keywords": [],
+        "lang": "en",
+        "layout": "normal",
+        "legalities": {
+            "alchemy": "not_legal",
+            "brawl": "legal",
+            "commander": "legal",
+            "duel": "legal",
+            "explorer": "legal",
+            "future": "legal",
+            "gladiator": "legal",
+            "historic": "legal",
+            "legacy": "legal",
+            "modern": "legal",
+            "oathbreaker": "legal",
+            "oldschool": "not_legal",
+            "pauper": "legal",
+            "paupercommander": "legal",
+            "penny": "not_legal",
+            "pioneer": "legal",
+            "predh": "not_legal",
+            "premodern": "not_legal",
+            "standard": "legal",
+            "standardbrawl": "legal",
+            "timeless": "legal",
+            "vintage": "legal"
+        },
+        "mana_cost": "{R}",
+        "mtgo_id": 94710,
+        "multiverse_ids": [
+            541041
+        ],
+        "name": "Voldaren Epicure",
+        "nonfoil": true,
+        "object": "card",
+        "oracle_id": "cef82674-1f61-407b-801b-a76a3803e598",
+        "oracle_text": "When Voldaren Epicure enters the battlefield, it deals 1 damage to each opponent. Create a Blood token. (It's an artifact with \"{1}, {T}, Discard a card, Sacrifice this artifact: Draw a card.\")",
+        "oversized": false,
+        "penny_rank": 442,
+        "power": "1",
+        "preview": {
+            "previewed_at": "2021-11-05",
+            "source": "Wizards of the Coast",
+            "source_uri": "https://magic.wizards.com/en/articles/archive/card-image-gallery/innistrad-crimson-vow"
+        },
+        "prices": {
+            "eur": "0.27",
+            "eur_foil": "0.74",
+            "tix": "0.03",
+            "usd": "0.34",
+            "usd_etched": null,
+            "usd_foil": "1.40"
+        },
+        "prints_search_uri": "https://api.scryfall.com/cards/search?order=released&q=oracleid%3Acef82674-1f61-407b-801b-a76a3803e598&unique=prints",
+        "promo": false,
+        "purchase_uris": {
+            "cardhoarder": "https://www.cardhoarder.com/cards/94710?affiliate_id=scryfall&ref=card-profile&utm_campaign=affiliate&utm_medium=card&utm_source=scryfall",
+            "cardmarket": "https://www.cardmarket.com/en/Magic/Products/Singles/Innistrad-Crimson-Vow/Voldaren-Epicure?referrer=scryfall&utm_campaign=card_prices&utm_medium=text&utm_source=scryfall",
+            "tcgplayer": "https://tcgplayer.pxf.io/c/4931599/1830156/21018?subId1=api&u=https%3A%2F%2Fwww.tcgplayer.com%2Fproduct%2F253753%3Fpage%3D1"
+        },
+        "rarity": "common",
+        "related_uris": {
+            "edhrec": "https://edhrec.com/route/?cc=Voldaren+Epicure",
+            "gatherer": "https://gatherer.wizards.com/Pages/Card/Details.aspx?multiverseid=541041&printed=false",
+            "tcgplayer_infinite_articles": "https://tcgplayer.pxf.io/c/4931599/1830156/21018?subId1=api&trafcat=infinite&u=https%3A%2F%2Finfinite.tcgplayer.com%2Fsearch%3FcontentMode%3Darticle%26game%3Dmagic%26partner%3Dscryfall%26q%3DVoldaren%2BEpicure",
+            "tcgplayer_infinite_decks": "https://tcgplayer.pxf.io/c/4931599/1830156/21018?subId1=api&trafcat=infinite&u=https%3A%2F%2Finfinite.tcgplayer.com%2Fsearch%3FcontentMode%3Ddeck%26game%3Dmagic%26partner%3Dscryfall%26q%3DVoldaren%2BEpicure"
+        },
+        "released_at": "2021-11-19",
+        "reprint": false,
+        "reserved": false,
+        "rulings_uri": "https://api.scryfall.com/cards/ae154e64-f626-45fb-bd52-840c1c27b2d3/rulings",
+        "scryfall_set_uri": "https://scryfall.com/sets/vow?utm_source=api",
+        "scryfall_uri": "https://scryfall.com/card/vow/182/voldaren-epicure?utm_source=api",
+        "set": "vow",
+        "set_id": "8144b676-569f-4716-8005-bc8f0778f3fa",
+        "set_name": "Innistrad: Crimson Vow",
+        "set_search_uri": "https://api.scryfall.com/cards/search?order=set&q=e%3Avow&unique=prints",
+        "set_type": "expansion",
+        "set_uri": "https://api.scryfall.com/sets/8144b676-569f-4716-8005-bc8f0778f3fa",
+        "story_spotlight": false,
+        "tcgplayer_id": 253753,
+        "textless": false,
+        "toughness": "1",
+        "type_line": "Creature \u2014 Vampire",
+        "uri": "https://api.scryfall.com/cards/ae154e64-f626-45fb-bd52-840c1c27b2d3",
+        "variation": false
+    }
 }

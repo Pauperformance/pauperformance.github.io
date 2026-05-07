@@ -1,28 +1,179 @@
 {
     "archetypes": {
         "py/set": [
-            "Golgari Ponza",
-            "Aristocrats",
-            "Petitioners Mill",
-            "One Land Spy",
-            "Spy Walls",
-            "Brew",
-            "Cycling Storm",
-            "Gruul Ponza",
             "Temur Cascade",
-            "Golgari Dredge",
             "Abzan TortEx",
-            "Spy Elves",
-            "Golgari Gardens",
             "Brew Jund",
+            "Golgari Ponza",
             "Temur Ponza",
+            "Golgari Gardens",
+            "Spy Walls",
+            "Gruul Ponza",
+            "Turbofog",
+            "Brew",
+            "Aristocrats",
+            "Cycling Storm",
+            "Elves",
+            "One Land Spy",
+            "Golgari Dredge",
+            "Walls",
             "Brew Golgari",
+            "Spy Elves",
             "Gruul Turbo Emblem",
             "MonoG Tron",
-            "Turbofog",
-            "Walls",
-            "Elves"
+            "Petitioners Mill"
         ]
     },
-    "name": "Generous Ent"
+    "name": "Generous Ent",
+    "scryfall": {
+        "all_parts": [
+            {
+                "component": "token",
+                "id": "4a029bdc-92e3-4d85-8af5-e33429a5f017",
+                "name": "Food",
+                "object": "related_card",
+                "type_line": "Token Artifact \u2014 Food",
+                "uri": "https://api.scryfall.com/cards/4a029bdc-92e3-4d85-8af5-e33429a5f017"
+            },
+            {
+                "component": "combo_piece",
+                "id": "ffabb307-87f0-428b-a4dc-a147c6c926a8",
+                "name": "Generous Ent",
+                "object": "related_card",
+                "type_line": "Creature \u2014 Treefolk",
+                "uri": "https://api.scryfall.com/cards/ffabb307-87f0-428b-a4dc-a147c6c926a8"
+            }
+        ],
+        "arena_id": 84861,
+        "artist": "Simon Dominic",
+        "artist_ids": [
+            "b0e80135-db5a-4b88-a0bc-815a0e94faa1"
+        ],
+        "booster": true,
+        "border_color": "black",
+        "card_back_id": "0aeebaf5-8c7d-4636-9e82-8c27447861f7",
+        "cardmarket_id": 715942,
+        "cmc": 6.0,
+        "collector_number": "169",
+        "color_identity": [
+            "G"
+        ],
+        "colors": [
+            "G"
+        ],
+        "digital": false,
+        "edhrec_rank": 5654,
+        "finishes": [
+            "nonfoil",
+            "foil"
+        ],
+        "foil": true,
+        "frame": "2015",
+        "full_art": false,
+        "games": [
+            "paper",
+            "mtgo",
+            "arena"
+        ],
+        "highres_image": true,
+        "id": "85d22d5d-3875-42ff-b51e-c6e21db201f5",
+        "illustration_id": "d0c226a3-ac56-4c3b-832d-d11d8de07e78",
+        "image_status": "highres_scan",
+        "image_uris": {
+            "art_crop": "https://cards.scryfall.io/art_crop/front/8/5/85d22d5d-3875-42ff-b51e-c6e21db201f5.jpg?1687210970",
+            "border_crop": "https://cards.scryfall.io/border_crop/front/8/5/85d22d5d-3875-42ff-b51e-c6e21db201f5.jpg?1687210970",
+            "large": "https://cards.scryfall.io/large/front/8/5/85d22d5d-3875-42ff-b51e-c6e21db201f5.jpg?1687210970",
+            "normal": "https://cards.scryfall.io/normal/front/8/5/85d22d5d-3875-42ff-b51e-c6e21db201f5.jpg?1687210970",
+            "png": "https://cards.scryfall.io/png/front/8/5/85d22d5d-3875-42ff-b51e-c6e21db201f5.png?1687210970",
+            "small": "https://cards.scryfall.io/small/front/8/5/85d22d5d-3875-42ff-b51e-c6e21db201f5.jpg?1687210970"
+        },
+        "keywords": [
+            "Reach",
+            "Landcycling",
+            "Food",
+            "Forestcycling",
+            "Typecycling",
+            "Cycling"
+        ],
+        "lang": "en",
+        "layout": "normal",
+        "legalities": {
+            "alchemy": "legal",
+            "brawl": "legal",
+            "commander": "legal",
+            "duel": "legal",
+            "explorer": "not_legal",
+            "future": "not_legal",
+            "gladiator": "legal",
+            "historic": "legal",
+            "legacy": "legal",
+            "modern": "legal",
+            "oathbreaker": "legal",
+            "oldschool": "not_legal",
+            "pauper": "legal",
+            "paupercommander": "legal",
+            "penny": "not_legal",
+            "pioneer": "not_legal",
+            "predh": "not_legal",
+            "premodern": "not_legal",
+            "standard": "not_legal",
+            "standardbrawl": "not_legal",
+            "timeless": "legal",
+            "vintage": "legal"
+        },
+        "mana_cost": "{5}{G}",
+        "mtgo_id": 112248,
+        "multiverse_ids": [
+            616999
+        ],
+        "name": "Generous Ent",
+        "nonfoil": true,
+        "object": "card",
+        "oracle_id": "b6859c7a-4c4d-4652-938f-ecedce29d506",
+        "oracle_text": "Reach\nWhen Generous Ent enters the battlefield, create a Food token. (It's an artifact with \"{2}, {T}, Sacrifice this artifact: You gain 3 life.\")\nForestcycling {1} ({1}, Discard this card: Search your library for a Forest card, reveal it, put it into your hand, then shuffle.)",
+        "oversized": false,
+        "power": "5",
+        "prices": {
+            "eur": "0.44",
+            "eur_foil": "1.55",
+            "tix": "0.03",
+            "usd": "0.41",
+            "usd_etched": null,
+            "usd_foil": "0.84"
+        },
+        "prints_search_uri": "https://api.scryfall.com/cards/search?order=released&q=oracleid%3Ab6859c7a-4c4d-4652-938f-ecedce29d506&unique=prints",
+        "promo": false,
+        "purchase_uris": {
+            "cardhoarder": "https://www.cardhoarder.com/cards/112248?affiliate_id=scryfall&ref=card-profile&utm_campaign=affiliate&utm_medium=card&utm_source=scryfall",
+            "cardmarket": "https://www.cardmarket.com/en/Magic/Products/Singles/The-Lord-of-the-Rings-Tales-of-Middle-earth/Generous-Ent?referrer=scryfall&utm_campaign=card_prices&utm_medium=text&utm_source=scryfall",
+            "tcgplayer": "https://tcgplayer.pxf.io/c/4931599/1830156/21018?subId1=api&u=https%3A%2F%2Fwww.tcgplayer.com%2Fproduct%2F498328%3Fpage%3D1"
+        },
+        "rarity": "common",
+        "related_uris": {
+            "edhrec": "https://edhrec.com/route/?cc=Generous+Ent",
+            "gatherer": "https://gatherer.wizards.com/Pages/Card/Details.aspx?multiverseid=616999&printed=false",
+            "tcgplayer_infinite_articles": "https://tcgplayer.pxf.io/c/4931599/1830156/21018?subId1=api&trafcat=infinite&u=https%3A%2F%2Finfinite.tcgplayer.com%2Fsearch%3FcontentMode%3Darticle%26game%3Dmagic%26partner%3Dscryfall%26q%3DGenerous%2BEnt",
+            "tcgplayer_infinite_decks": "https://tcgplayer.pxf.io/c/4931599/1830156/21018?subId1=api&trafcat=infinite&u=https%3A%2F%2Finfinite.tcgplayer.com%2Fsearch%3FcontentMode%3Ddeck%26game%3Dmagic%26partner%3Dscryfall%26q%3DGenerous%2BEnt"
+        },
+        "released_at": "2023-06-23",
+        "reprint": false,
+        "reserved": false,
+        "rulings_uri": "https://api.scryfall.com/cards/85d22d5d-3875-42ff-b51e-c6e21db201f5/rulings",
+        "scryfall_set_uri": "https://scryfall.com/sets/ltr?utm_source=api",
+        "scryfall_uri": "https://scryfall.com/card/ltr/169/generous-ent?utm_source=api",
+        "security_stamp": "triangle",
+        "set": "ltr",
+        "set_id": "08078706-ac5d-439b-8f01-894d38751367",
+        "set_name": "The Lord of the Rings: Tales of Middle-earth",
+        "set_search_uri": "https://api.scryfall.com/cards/search?order=set&q=e%3Altr&unique=prints",
+        "set_type": "draft_innovation",
+        "set_uri": "https://api.scryfall.com/sets/08078706-ac5d-439b-8f01-894d38751367",
+        "story_spotlight": false,
+        "tcgplayer_id": 498328,
+        "textless": false,
+        "toughness": "7",
+        "type_line": "Creature \u2014 Treefolk",
+        "uri": "https://api.scryfall.com/cards/85d22d5d-3875-42ff-b51e-c6e21db201f5",
+        "variation": false
+    }
 }
