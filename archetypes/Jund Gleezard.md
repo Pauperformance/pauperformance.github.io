@@ -38,6 +38,7 @@
 
 <details>
   <summary>Click here to expand</summary>
+<a href="https://scryfall.com/card/clb/165/breath-weapon"><img src="https://cards.scryfall.io/normal/front/0/1/0174e40a-0ef5-4439-91e6-3fc39f482520.jpg" class="archetype-card rounded-image"/></a>
 <a href="https://scryfall.com/card/c18/262/khalni-garden"><img src="https://cards.scryfall.io/normal/front/3/e/3e0f6ae6-b303-405a-8efa-91de9692768e.jpg" class="archetype-card rounded-image"/></a>
 <a href="https://scryfall.com/card/cmm/242/makeshift-munitions"><img src="https://cards.scryfall.io/normal/front/6/0/60715b6d-b223-431a-85d8-27d7c05469b2.jpg" class="archetype-card rounded-image"/></a>
 <a href="https://scryfall.com/card/clb/463/mountain"><img src="https://c1.scryfall.com/file/scryfall-cards/normal/front/0/a/0ab63e49-0869-4c7c-a033-d8e50032dd13.jpg" class="archetype-card rounded-image"/></a>
