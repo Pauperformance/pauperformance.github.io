@@ -49,7 +49,7 @@ export default function SetIndex() {
                 ? 'bg-amber-400 text-gray-900 border-amber-400'
                 : 'bg-transparent text-gray-400 border-gray-600 hover:border-gray-400 hover:text-gray-200'
             }`}>
-            Pauper pool only
+            With new Pauper cards
           </button>
         </div>
 
