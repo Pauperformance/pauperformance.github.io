@@ -45,6 +45,7 @@ Once the board is in control, the player typically wins by beating with creature
 <details>
   <summary>Click here to expand</summary>
 <a href="https://scryfall.com/card/cmr/20/faiths-fetters"><img src="https://c1.scryfall.com/file/scryfall-cards/normal/front/0/4/04a7da8c-a444-4deb-89b9-2fc9e5475bff.jpg" class="archetype-card rounded-image"/></a>
+<a href="https://scryfall.com/card/me1/16/holy-light"><img src="https://cards.scryfall.io/normal/front/3/4/34fbb723-2507-489a-acf1-22ac0dcbcd9c.jpg" class="archetype-card rounded-image"/></a>
 <a href="https://scryfall.com/card/2x2/20/momentary-blink"><img src="https://c1.scryfall.com/file/scryfall-cards/normal/front/1/f/1fa0d1c6-9110-4956-97eb-e18c457bb130.jpg" class="archetype-card rounded-image"/></a>
 <a href="https://scryfall.com/card/khc/43/sea-gate-oracle"><img src="https://cards.scryfall.io/normal/front/4/9/498743ce-0ca5-488a-ae5e-d348b274bf3b.jpg" class="archetype-card rounded-image"/></a>
 </details><br/>

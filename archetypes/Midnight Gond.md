@@ -25,6 +25,7 @@
 <a href="https://scryfall.com/card/mma/9/cenns-enlistment"><img src="https://c1.scryfall.com/file/scryfall-cards/normal/front/3/7/37bcc0fd-1eea-4eb0-8099-e0e94ffe00b6.jpg" class="archetype-card rounded-image"/></a>
 <a href="https://scryfall.com/card/ema/162/commune-with-the-gods"><img src="https://cards.scryfall.io/normal/front/6/7/67d95f6f-3ff0-483d-b98f-ccb4fb5715f4.jpg" class="archetype-card rounded-image"/></a>
 <a href="https://scryfall.com/card/mh3/318/forest"><img src="https://cards.scryfall.io/normal/front/7/a/7ac34881-de32-42c7-af60-f992638e1da2.jpg" class="archetype-card rounded-image"/></a>
+<a href="https://scryfall.com/card/cmd/17/journey-to-nowhere"><img src="https://cards.scryfall.io/normal/front/4/6/4686b51c-e02b-48c1-bafe-e8d08a5407b9.jpg" class="archetype-card rounded-image"/></a>
 <a href="https://scryfall.com/card/c18/262/khalni-garden"><img src="https://cards.scryfall.io/normal/front/3/e/3e0f6ae6-b303-405a-8efa-91de9692768e.jpg" class="archetype-card rounded-image"/></a>
 <a href="https://scryfall.com/card/bbd/99/midnight-guard"><img src="https://cards.scryfall.io/normal/front/8/7/87c1d85d-b2b8-4c9d-84fa-2566b14cb5ea.jpg" class="archetype-card rounded-image"/></a>
 <a href="https://scryfall.com/card/clb/463/mountain"><img src="https://c1.scryfall.com/file/scryfall-cards/normal/front/0/a/0ab63e49-0869-4c7c-a033-d8e50032dd13.jpg" class="archetype-card rounded-image"/></a>
@@ -36,18 +37,10 @@
 <a href="https://scryfall.com/card/clu/246/selesnya-sanctuary"><img src="https://cards.scryfall.io/normal/front/f/d/fdc53c6a-8e28-4314-9bcf-b31b6c6f56d7.jpg" class="archetype-card rounded-image"/></a>
 <a href="https://scryfall.com/card/mm3/24/soul-warden"><img src="https://cards.scryfall.io/normal/front/d/9/d96266b3-a7cb-40ce-a328-ac13719fe5f0.jpg" class="archetype-card rounded-image"/></a>
 <a href="https://scryfall.com/card/roe/44/souls-attendant"><img src="https://cards.scryfall.io/normal/front/3/2/3223c0ac-cc22-4886-8919-11273b477cc7.jpg" class="archetype-card rounded-image"/></a>
+<a href="https://scryfall.com/card/ddg/32/spidersilk-armor"><img src="https://cards.scryfall.io/normal/front/e/5/e55202a1-c246-4b5b-94d6-43c86a69d61a.jpg" class="archetype-card rounded-image"/></a>
 </details><br/>
 
 
-
-## **Frequent cards**
-
-<details>
-  <summary>Click here to expand</summary>
-<a href="https://scryfall.com/card/cmd/17/journey-to-nowhere"><img src="https://cards.scryfall.io/normal/front/4/6/4686b51c-e02b-48c1-bafe-e8d08a5407b9.jpg" class="archetype-card rounded-image"/></a>
-<a href="https://scryfall.com/card/ema/142/pyroblast"><img src="https://cards.scryfall.io/normal/front/b/0/b029eb9a-dd7a-40c2-96c4-0063d9cc002c.jpg" class="archetype-card rounded-image"/></a>
-<a href="https://scryfall.com/card/mom/276/wind-scarred-crag"><img src="https://cards.scryfall.io/normal/front/7/f/7f2642cd-e3cc-4aab-8c00-4987284509b3.jpg" class="archetype-card rounded-image"/></a>
-</details><br/>
 
 
 

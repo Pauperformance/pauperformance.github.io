@@ -26,6 +26,13 @@ Generic archetype, for decks that do not fit those in the [Archetypes Index](../
 
 
 
+## **Frequent cards**
+
+<details>
+  <summary>Click here to expand</summary>
+<a href="https://scryfall.com/card/jud/89/flaring-pain"><img src="https://c1.scryfall.com/file/scryfall-cards/normal/front/e/e/eeb5c96a-1d16-459d-9968-ced9a8f1c520.jpg" class="archetype-card rounded-image"/></a>
+</details><br/>
+
 
 
 
