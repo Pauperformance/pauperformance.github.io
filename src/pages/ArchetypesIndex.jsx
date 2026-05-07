@@ -1,5 +1,6 @@
 import { useState, useEffect, useMemo } from 'react'
 import { Link, useNavigate } from 'react-router-dom'
+import { nameToSlug } from '../utils/slugs'
 import Layout from '../components/Layout'
 
 const MANA_ORDER = ['W', 'U', 'B', 'R', 'G', 'C']
@@ -211,8 +212,8 @@ export default function ArchetypesIndex() {
                 <tbody className="divide-y divide-gray-700/50">
                   {sorted.map(a => (
                     <tr key={a.name}
-                      onClick={() => navigate(`/archetypes/${encodeURIComponent(a.name)}`)}
-                      onAuxClick={e => { if (e.button === 1) window.open(`/#/archetypes/${encodeURIComponent(a.name)}`, '_blank') }}
+                      onClick={() => navigate(`/archetypes/${nameToSlug(a.name)}`)}
+                      onAuxClick={e => { if (e.button === 1) window.open(`/#/archetypes/${nameToSlug(a.name)}`, '_blank') }}
                       className="bg-gray-900 hover:bg-gray-800 transition-colors cursor-pointer group">
                       <td className="px-4 py-3">
                         <span className="font-medium text-gray-200 group-hover:text-amber-400 transition-colors">
@@ -232,7 +233,7 @@ export default function ArchetypesIndex() {
                       <td className="px-4 py-3 text-base text-gray-400">{a.game_type.join(', ')}</td>
                       <td className="px-4 py-3 hidden sm:table-cell">
                         {a.family
-                          ? <Link to={`/families/${encodeURIComponent(a.family)}`}
+                          ? <Link to={`/families/${nameToSlug(a.family)}`}
                               onClick={e => e.stopPropagation()}
                               className="text-gray-500 hover:text-amber-400 transition-colors">
                               {a.family}

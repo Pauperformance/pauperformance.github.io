@@ -1,5 +1,6 @@
 import { useState, useEffect } from 'react'
 import { useParams, Link } from 'react-router-dom'
+import { nameToSlug } from '../utils/slugs'
 import Layout from '../components/Layout'
 
 const TYPE_ORDER = ['Creature', 'Instant', 'Sorcery', 'Enchantment', 'Artifact', 'Land', 'Sticker', 'Other']
@@ -140,7 +141,7 @@ export default function DeckPage() {
             <div>
               <h1 className="text-2xl font-bold text-white">
                 {deck.archetype
-                  ? <><Link to={`/archetypes/${deck.archetype}`} className="text-amber-400 hover:text-amber-300 transition-colors">{deck.archetype}</Link>{deck.pilot && <span className="text-white"> by {deck.pilot}</span>}</>
+                  ? <><Link to={`/archetypes/${nameToSlug(deck.archetype)}`} className="text-amber-400 hover:text-amber-300 transition-colors">{deck.archetype}</Link>{deck.pilot && <span className="text-white"> by {deck.pilot}</span>}</>
                   : deck.pilot || 'Unknown'}
               </h1>
               <p className="mt-2 text-gray-400">

@@ -1,6 +1,7 @@
 import { useState, useEffect } from 'react'
 import { useParams, Link } from 'react-router-dom'
 import Layout from '../components/Layout'
+import { nameToSlug, slugToName } from '../utils/slugs'
 
 const MANA_ORDER = ['W', 'U', 'B', 'R', 'G', 'C']
 const MANA_LABELS = { W: 'White', U: 'Blue', B: 'Black', R: 'Red', G: 'Green', C: 'Colorless' }
@@ -14,7 +15,7 @@ function ManaIcon({ color }) {
 
 export default function FamilyPage() {
   const { name } = useParams()
-  const decodedName = decodeURIComponent(name)
+  const decodedName = slugToName(name)
   const [family, setFamily] = useState(null)
   const [metaMap, setMetaMap] = useState({})
   const [notFound, setNotFound] = useState(false)
@@ -74,7 +75,7 @@ export default function FamilyPage() {
               {family.archetypes.map(a => (
                 <tr key={a.name} className="bg-gray-900 hover:bg-gray-800 transition-colors group">
                   <td className="px-4 py-3">
-                    <Link to={`/archetypes/${encodeURIComponent(a.name)}`}
+                    <Link to={`/archetypes/${nameToSlug(a.name)}`}
                       className="font-medium text-gray-200 group-hover:text-amber-400 transition-colors">
                       {a.name}
                     </Link>
