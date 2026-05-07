@@ -3,6 +3,7 @@ import { useParams, Link } from 'react-router-dom'
 import Layout from '../components/Layout'
 
 const TYPE_ORDER = ['Creature', 'Instant', 'Sorcery', 'Enchantment', 'Artifact', 'Land', 'Sticker', 'Other']
+const TYPE_PRIORITY = ['Land', 'Creature', 'Instant', 'Sorcery', 'Enchantment', 'Artifact', 'Sticker']
 
 function CardName({ c, onHover }) {
   return (
@@ -29,7 +30,7 @@ function DeckList({ cards, label, onHover, cardTypes, groupByType }) {
     const groups = {}
     cards.forEach(c => {
       const types = cardTypes[c.name] || []
-      const key = TYPE_ORDER.find(t => types.includes(t)) || 'Other'
+      const key = TYPE_PRIORITY.find(t => types.includes(t)) || 'Other'
       if (!groups[key]) groups[key] = []
       groups[key].push(c)
     })
@@ -73,6 +74,34 @@ export default function DeckPage() {
   const [cardTypes, setCardTypes] = useState({})
   const [hoveredCard, setHoveredCard] = useState(null)
   const [groupByType, setGroupByType] = useState(false)
+  const [copied, setCopied] = useState(false)
+
+  function toMtgoText(decklist) {
+    const lines = (decklist.main || []).map(c => `${c.qty} ${c.name}`)
+    if (decklist.side && decklist.side.length) {
+      lines.push('')
+      decklist.side.forEach(c => lines.push(`${c.qty} ${c.name}`))
+    }
+    return lines.join('\n')
+  }
+
+  function handleDownload() {
+    const text = toMtgoText(deck.decklist)
+    const blob = new Blob([text], { type: 'text/plain' })
+    const url = URL.createObjectURL(blob)
+    const a = document.createElement('a')
+    a.href = url
+    a.download = `${id}.txt`
+    a.click()
+    URL.revokeObjectURL(url)
+  }
+
+  function handleCopy() {
+    navigator.clipboard.writeText(toMtgoText(deck.decklist)).then(() => {
+      setCopied(true)
+      setTimeout(() => setCopied(false), 2000)
+    })
+  }
 
   useEffect(() => {
     Promise.all([
@@ -109,37 +138,43 @@ export default function DeckPage() {
         {deck && (
           <>
             <div>
-              <h1 className="text-2xl font-bold text-white">{deck.tournament_name}</h1>
-              <p className="mt-2 text-gray-400">{deck.tournament_date}</p>
+              <h1 className="text-2xl font-bold text-white">
+                {deck.archetype
+                  ? <><Link to={`/archetypes/${deck.archetype}`} className="text-amber-400 hover:text-amber-300 transition-colors">{deck.archetype}</Link>{deck.pilot && <span className="text-white"> by {deck.pilot}</span>}</>
+                  : deck.pilot || 'Unknown'}
+              </h1>
+              <p className="mt-2 text-gray-400">
+                Played on {deck.tournament_date} @ {deck.tournament_name}
+              </p>
             </div>
 
             <div className="flex flex-wrap gap-4">
               {deck.pilot && (
                 <div>
-                  <p className="text-xs text-gray-500 mb-0.5">Pilot</p>
+                  <p className="text-base text-gray-500 mb-0.5">Pilot</p>
                   <p className="font-medium text-gray-200">{deck.pilot}</p>
                 </div>
               )}
               {deck.place && (
                 <div>
-                  <p className="text-xs text-gray-500 mb-0.5">Result</p>
+                  <p className="text-base text-gray-500 mb-0.5">Result</p>
                   <p className="font-medium text-gray-200">{deck.place}</p>
                 </div>
               )}
               {deck.mtgo_price && (
                 <div>
-                  <p className="text-xs text-gray-500 mb-0.5">MTGO</p>
+                  <p className="text-base text-gray-500 mb-0.5">MTGO</p>
                   <p className="font-medium text-gray-200">{deck.mtgo_price} tix</p>
                 </div>
               )}
               {deck.tabletop_price && (
                 <div>
-                  <p className="text-xs text-gray-500 mb-0.5">Paper</p>
+                  <p className="text-base text-gray-500 mb-0.5">Paper</p>
                   <p className="font-medium text-gray-200">${deck.tabletop_price}</p>
                 </div>
               )}
               <div>
-                <p className="text-xs text-gray-500 mb-0.5">Source</p>
+                <p className="text-base text-gray-500 mb-0.5">Source</p>
                 <a href={deck.url} target="_blank" rel="noopener noreferrer"
                   className="text-amber-400 hover:text-amber-300">
                   MTGGoldfish →
@@ -149,7 +184,7 @@ export default function DeckPage() {
 
             {deck.decklist ? (
               <>
-                <div className="flex items-center gap-3">
+                <div className="flex flex-wrap gap-2">
                   <button
                     onClick={() => setGroupByType(v => !v)}
                     className={`px-3 py-1.5 rounded-lg text-sm font-medium border transition-colors ${
@@ -158,6 +193,16 @@ export default function DeckPage() {
                         : 'bg-transparent text-gray-400 border-gray-600 hover:border-gray-400 hover:text-gray-200'
                     }`}>
                     Group cards by type
+                  </button>
+                  <button
+                    onClick={handleDownload}
+                    className="px-3 py-1.5 rounded-lg text-sm font-medium border border-gray-600 text-gray-400 hover:border-gray-400 hover:text-gray-200 transition-colors">
+                    ⤓ Download for MTGO
+                  </button>
+                  <button
+                    onClick={handleCopy}
+                    className="px-3 py-1.5 rounded-lg text-sm font-medium border border-gray-600 text-gray-400 hover:border-gray-400 hover:text-gray-200 transition-colors">
+                    {copied ? '✓ Copied!' : '⧉ Copy for MTGO'}
                   </button>
                 </div>
                 <div className="flex gap-8 items-start">
