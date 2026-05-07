@@ -25,6 +25,23 @@ function ManaIcon({ color, size = 'w-6 h-6' }) {
   )
 }
 
+function SortHeader({ col, label, sortCol, sortDir, onSort, align = 'left', extraClass = '' }) {
+  const active = sortCol === col
+  const indicator = active ? (sortDir === 'asc' ? '↑' : '↓') : '↕'
+  const alignClass = align === 'right' ? 'text-right' : 'text-left'
+  return (
+    <th
+      onClick={() => onSort(col)}
+      className={`px-4 py-3 text-xs font-semibold uppercase tracking-wider cursor-pointer select-none group ${alignClass} ${extraClass}`}>
+      <span className={`inline-flex items-center gap-1 transition-colors ${active ? 'text-amber-400' : 'text-gray-400 group-hover:text-gray-200'}`}>
+        {align === 'right' && <span className={`${active ? 'text-amber-400' : 'text-gray-600 group-hover:text-gray-400'}`}>{indicator}</span>}
+        {label}
+        {align !== 'right' && <span className={`${active ? 'text-amber-400' : 'text-gray-600 group-hover:text-gray-400'}`}>{indicator}</span>}
+      </span>
+    </th>
+  )
+}
+
 function FilterButton({ active, onClick, children }) {
   return (
     <button
@@ -47,6 +64,8 @@ export default function ArchetypesIndex() {
   const [activeTypes, setActiveTypes] = useState(new Set())
   const [activeMana, setActiveMana] = useState(new Set())
   const [activeMetaRange, setActiveMetaRange] = useState(null)
+  const [sortCol, setSortCol] = useState('meta')
+  const [sortDir, setSortDir] = useState('desc')
 
   useEffect(() => {
     Promise.all([
@@ -92,6 +111,38 @@ export default function ArchetypesIndex() {
       return true
     })
   }, [archetypes, search, activeTypes, activeMana, activeMetaRange, metaMap])
+
+  function handleSort(col) {
+    if (sortCol === col) {
+      setSortDir(d => d === 'asc' ? 'desc' : 'asc')
+    } else {
+      setSortCol(col)
+      setSortDir(col === 'meta' ? 'desc' : 'asc')
+    }
+  }
+
+  const sorted = useMemo(() => {
+    if (!sortCol) return filtered
+    return [...filtered].sort((a, b) => {
+      let av, bv
+      if (sortCol === 'name') {
+        av = a.name.toLowerCase(); bv = b.name.toLowerCase()
+      } else if (sortCol === 'colors') {
+        av = a.dominant_mana.map(c => MANA_ORDER.indexOf(c)).sort().join('-') || 'Z'
+        bv = b.dominant_mana.map(c => MANA_ORDER.indexOf(c)).sort().join('-') || 'Z'
+      } else if (sortCol === 'type') {
+        av = a.game_type.join(', ').toLowerCase(); bv = b.game_type.join(', ').toLowerCase()
+      } else if (sortCol === 'family') {
+        av = a.family ? a.family.toLowerCase() : '￿'
+        bv = b.family ? b.family.toLowerCase() : '￿'
+      } else if (sortCol === 'meta') {
+        av = metaMap[a.name] || 0; bv = metaMap[b.name] || 0
+      }
+      if (av < bv) return sortDir === 'asc' ? -1 : 1
+      if (av > bv) return sortDir === 'asc' ? 1 : -1
+      return 0
+    })
+  }, [filtered, sortCol, sortDir, metaMap])
 
   return (
     <Layout>
@@ -150,15 +201,15 @@ export default function ArchetypesIndex() {
               <table className="w-full text-sm">
                 <thead>
                   <tr className="bg-gray-800 border-b border-gray-700">
-                    <th className="text-left px-4 py-3 text-xs font-semibold text-gray-400 uppercase tracking-wider">Name</th>
-                    <th className="text-left px-4 py-3 text-xs font-semibold text-gray-400 uppercase tracking-wider">Colors</th>
-                    <th className="text-left px-4 py-3 text-xs font-semibold text-gray-400 uppercase tracking-wider">Type</th>
-                    <th className="text-left px-4 py-3 text-xs font-semibold text-gray-400 uppercase tracking-wider hidden sm:table-cell">Family</th>
-                    <th className="text-right px-4 py-3 text-xs font-semibold text-gray-400 uppercase tracking-wider">Meta %</th>
+                    <SortHeader col="name"   label="Name"    sortCol={sortCol} sortDir={sortDir} onSort={handleSort} />
+                    <SortHeader col="colors" label="Colors"  sortCol={sortCol} sortDir={sortDir} onSort={handleSort} />
+                    <SortHeader col="type"   label="Type"    sortCol={sortCol} sortDir={sortDir} onSort={handleSort} />
+                    <SortHeader col="family" label="Family"  sortCol={sortCol} sortDir={sortDir} onSort={handleSort} align="left" extraClass="hidden sm:table-cell" />
+                    <SortHeader col="meta"   label="Meta %"  sortCol={sortCol} sortDir={sortDir} onSort={handleSort} align="right" />
                   </tr>
                 </thead>
                 <tbody className="divide-y divide-gray-700/50">
-                  {filtered.map(a => (
+                  {sorted.map(a => (
                     <tr key={a.name}
                       onClick={() => navigate(`/archetypes/${encodeURIComponent(a.name)}`)}
                       onAuxClick={e => { if (e.button === 1) window.open(`/#/archetypes/${encodeURIComponent(a.name)}`, '_blank') }}
