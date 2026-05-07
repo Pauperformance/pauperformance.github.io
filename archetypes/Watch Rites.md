@@ -18,6 +18,7 @@
 <details>
   <summary>Click here to expand</summary>
 <a href="https://scryfall.com/card/dmc/128/abundant-growth"><img src="https://cards.scryfall.io/normal/front/6/d/6dba2d06-13af-464d-b007-9027cade1cdf.jpg" class="archetype-card rounded-image"/></a>
+<a href="https://scryfall.com/card/tsr/151/ancient-grudge"><img src="https://c1.scryfall.com/file/scryfall-cards/normal/front/5/f/5f28d4a2-6c75-44c2-93ac-e7159c1c623f.jpg" class="archetype-card rounded-image"/></a>
 <a href="https://scryfall.com/card/2xm/157/chatter-of-the-squirrel"><img src="https://cards.scryfall.io/normal/front/5/f/5f7e1991-9ffa-4a57-b8eb-ebe542a47f09.jpg" class="archetype-card rounded-image"/></a>
 <a href="https://scryfall.com/card/cmr/223/elvish-visionary"><img src="https://cards.scryfall.io/normal/front/a/2/a2f174e6-9532-4fc3-815b-2dc3966c6523.jpg" class="archetype-card rounded-image"/></a>
 <a href="https://scryfall.com/card/cma/106/essence-warden"><img src="https://cards.scryfall.io/normal/front/3/1/31ca84d1-30a6-432b-966c-089fb6652a89.jpg" class="archetype-card rounded-image"/></a>
@@ -25,23 +26,19 @@
 <a href="https://scryfall.com/card/clb/455/island"><img src="https://c1.scryfall.com/file/scryfall-cards/normal/front/f/f/ff3ffe47-53a3-42ec-ae89-afc79793380d.jpg" class="archetype-card rounded-image"/></a>
 <a href="https://scryfall.com/card/hop/10/keep-watch"><img src="https://cards.scryfall.io/normal/front/e/9/e98489bc-b5fd-43f2-9afb-198e34e70723.jpg" class="archetype-card rounded-image"/></a>
 <a href="https://scryfall.com/card/c18/262/khalni-garden"><img src="https://cards.scryfall.io/normal/front/3/e/3e0f6ae6-b303-405a-8efa-91de9692768e.jpg" class="archetype-card rounded-image"/></a>
+<a href="https://scryfall.com/card/2xm/208/manamorphose"><img src="https://cards.scryfall.io/normal/front/f/a/faf9070e-14be-4ce5-a19a-6addc79359c1.jpg" class="archetype-card rounded-image"/></a>
+<a href="https://scryfall.com/card/ody/251/moments-peace"><img src="https://cards.scryfall.io/normal/front/4/0/40ebe935-ccf9-435e-8fe8-53bcbf3526e7.jpg" class="archetype-card rounded-image"/></a>
 <a href="https://scryfall.com/card/clb/463/mountain"><img src="https://c1.scryfall.com/file/scryfall-cards/normal/front/0/a/0ab63e49-0869-4c7c-a033-d8e50032dd13.jpg" class="archetype-card rounded-image"/></a>
 <a href="https://scryfall.com/card/pca/69/nest-invader"><img src="https://cards.scryfall.io/normal/front/3/0/3085f5b1-d2e3-4dd4-8263-024b2b5da4b4.jpg" class="archetype-card rounded-image"/></a>
+<a href="https://scryfall.com/card/ema/142/pyroblast"><img src="https://cards.scryfall.io/normal/front/b/0/b029eb9a-dd7a-40c2-96c4-0063d9cc002c.jpg" class="archetype-card rounded-image"/></a>
 <a href="https://scryfall.com/card/vma/182/rites-of-initiation"><img src="https://cards.scryfall.io/normal/front/f/1/f17d9c60-5f81-4b65-8af1-9c5bb757bd7d.jpg" class="archetype-card rounded-image"/></a>
 <a href="https://scryfall.com/card/mm2/159/scatter-the-seeds"><img src="https://cards.scryfall.io/normal/front/6/b/6b28c2a8-ee7d-4eea-8046-a47e81ddd28d.jpg" class="archetype-card rounded-image"/></a>
+<a href="https://scryfall.com/card/ddg/32/spidersilk-armor"><img src="https://cards.scryfall.io/normal/front/e/5/e55202a1-c246-4b5b-94d6-43c86a69d61a.jpg" class="archetype-card rounded-image"/></a>
 <a href="https://scryfall.com/card/fut/138/sprout-swarm"><img src="https://cards.scryfall.io/normal/front/0/b/0b915355-4e98-44df-81bd-961a3d3c86b8.jpg" class="archetype-card rounded-image"/></a>
 <a href="https://scryfall.com/card/jmp/435/sylvan-ranger"><img src="https://cards.scryfall.io/normal/front/e/3/e36a5be0-a730-4cb7-9d1e-6ae84b5bc872.jpg" class="archetype-card rounded-image"/></a>
 </details><br/>
 
 
-
-## **Frequent cards**
-
-<details>
-  <summary>Click here to expand</summary>
-<a href="https://scryfall.com/card/woe/249/prophetic-prism"><img src="https://cards.scryfall.io/normal/front/1/f/1fae351c-b918-4648-a361-d5239ae63156.jpg" class="archetype-card rounded-image"/></a>
-<a href="https://scryfall.com/card/ddg/32/spidersilk-armor"><img src="https://cards.scryfall.io/normal/front/e/5/e55202a1-c246-4b5b-94d6-43c86a69d61a.jpg" class="archetype-card rounded-image"/></a>
-</details><br/>
 
 
 
