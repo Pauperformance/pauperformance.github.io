@@ -35,11 +35,14 @@
 <details>
   <summary>Click here to expand</summary>
 <a href="https://scryfall.com/card/tsr/151/ancient-grudge"><img src="https://c1.scryfall.com/file/scryfall-cards/normal/front/5/f/5f28d4a2-6c75-44c2-93ac-e7159c1c623f.jpg" class="archetype-card rounded-image"/></a>
+<a href="https://scryfall.com/card/jmp/450/dinrova-horror"><img src="https://cards.scryfall.io/normal/front/7/d/7da93bf0-2075-4e36-b69b-3db3d4288e7a.jpg" class="archetype-card rounded-image"/></a>
 <a href="https://scryfall.com/card/2xm/255/expedition-map"><img src="https://cards.scryfall.io/normal/front/5/5/551c0a45-9515-4e51-84e5-79703832a661.jpg" class="archetype-card rounded-image"/></a>
 <a href="https://scryfall.com/card/ema/55/hydroblast"><img src="https://c1.scryfall.com/file/scryfall-cards/normal/front/4/c/4c9c9b16-5567-4473-95e6-622292f77336.jpg" class="archetype-card rounded-image"/></a>
+<a href="https://scryfall.com/card/dmr/56/impulse"><img src="https://cards.scryfall.io/normal/front/3/e/3ec50625-5e14-4fd0-9a96-86f195342695.jpg" class="archetype-card rounded-image"/></a>
 <a href="https://scryfall.com/card/clb/455/island"><img src="https://c1.scryfall.com/file/scryfall-cards/normal/front/f/f/ff3ffe47-53a3-42ec-ae89-afc79793380d.jpg" class="archetype-card rounded-image"/></a>
 <a href="https://scryfall.com/card/mh1/64/prohibit"><img src="https://cards.scryfall.io/normal/front/0/a/0ae544bf-7229-4b82-99ad-32c3af36e30f.jpg" class="archetype-card rounded-image"/></a>
 <a href="https://scryfall.com/card/woe/249/prophetic-prism"><img src="https://cards.scryfall.io/normal/front/1/f/1fae351c-b918-4648-a361-d5239ae63156.jpg" class="archetype-card rounded-image"/></a>
+<a href="https://scryfall.com/card/ema/142/pyroblast"><img src="https://cards.scryfall.io/normal/front/b/0/b029eb9a-dd7a-40c2-96c4-0063d9cc002c.jpg" class="archetype-card rounded-image"/></a>
 </details><br/>
 
 

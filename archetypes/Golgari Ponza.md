@@ -24,6 +24,7 @@
 <a href="https://scryfall.com/card/mor/118/deglamer"><img src="https://cards.scryfall.io/normal/front/9/8/985b43aa-58f0-42fc-9ef0-a7925727d58f.jpg" class="archetype-card rounded-image"/></a>
 <a href="https://scryfall.com/card/m21/193/llanowar-visionary"><img src="https://cards.scryfall.io/normal/front/d/6/d6e23afa-7e08-4049-baf0-d4d0134ba2c8.jpg" class="archetype-card rounded-image"/></a>
 <a href="https://scryfall.com/card/rvr/159/utopia-sprawl"><img src="https://cards.scryfall.io/normal/front/5/e/5ea568df-04a1-4012-98ec-ba75e189e0ca.jpg" class="archetype-card rounded-image"/></a>
+<a href="https://scryfall.com/card/mkc/195/wild-growth"><img src="https://cards.scryfall.io/normal/front/4/7/47260e7c-29bf-46f1-a029-9da7bbb418b5.jpg" class="archetype-card rounded-image"/></a>
 </details><br/>
 
 
@@ -33,8 +34,8 @@
 <details>
   <summary>Click here to expand</summary>
 <a href="https://scryfall.com/card/clb/215/avenging-hunter"><img src="https://cards.scryfall.io/normal/front/f/4/f4072640-0f9b-4f0a-84cc-eda415cc92e7.jpg" class="archetype-card rounded-image"/></a>
-<a href="https://scryfall.com/card/tsp/207/mwonvuli-acid-moss"><img src="https://cards.scryfall.io/normal/front/6/8/6841dbf6-5023-4612-bbd7-182fd35b05c8.jpg" class="archetype-card rounded-image"/></a>
-<a href="https://scryfall.com/card/mkc/195/wild-growth"><img src="https://cards.scryfall.io/normal/front/4/7/47260e7c-29bf-46f1-a029-9da7bbb418b5.jpg" class="archetype-card rounded-image"/></a>
+<a href="https://scryfall.com/card/ltr/169/generous-ent"><img src="https://cards.scryfall.io/normal/front/8/5/85d22d5d-3875-42ff-b51e-c6e21db201f5.jpg" class="archetype-card rounded-image"/></a>
+<a href="https://scryfall.com/card/ltr/111/troll-of-khazad-d%C3%BBm"><img src="https://cards.scryfall.io/normal/front/a/6/a6539e26-b63b-4725-9407-caaf451de084.jpg" class="archetype-card rounded-image"/></a>
 </details><br/>
 
 

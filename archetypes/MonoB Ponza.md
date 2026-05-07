@@ -17,11 +17,13 @@
 
 <details>
   <summary>Click here to expand</summary>
+<a href="https://scryfall.com/card/chk/102/befoul"><img src="https://cards.scryfall.io/normal/front/2/d/2dfff5d3-1433-4a24-83e6-6361a446b974.jpg" class="archetype-card rounded-image"/></a>
 <a href="https://scryfall.com/card/vma/109/choking-sands"><img src="https://cards.scryfall.io/normal/front/d/6/d63b5e4c-e6be-4df5-bb22-d0610067adf6.jpg" class="archetype-card rounded-image"/></a>
 <a href="https://scryfall.com/card/a25/82/dark-ritual"><img src="https://cards.scryfall.io/normal/front/9/5/95f27eeb-6f14-4db3-adb9-9be5ed76b34b.jpg" class="archetype-card rounded-image"/></a>
 <a href="https://scryfall.com/card/uma/102/gurmag-angler"><img src="https://cards.scryfall.io/normal/front/c/e/cedd44eb-f381-46e1-bcb0-88416b4ce33d.jpg" class="archetype-card rounded-image"/></a>
 <a href="https://scryfall.com/card/me2/94/icequake"><img src="https://cards.scryfall.io/normal/front/5/5/550880ba-26a0-463d-9da2-0160d224cda1.jpg" class="archetype-card rounded-image"/></a>
 <a href="https://scryfall.com/card/mmq/322/peat-bog"><img src="https://cards.scryfall.io/normal/front/b/c/bcc9d1e0-c8f4-4bac-90d4-8167f7a1515a.jpg" class="archetype-card rounded-image"/></a>
+<a href="https://scryfall.com/card/c21/310/radiant-fountain"><img src="https://c1.scryfall.com/file/scryfall-cards/normal/front/7/e/7ee5e77f-ca43-480d-ac37-48336d3bf044.jpg" class="archetype-card rounded-image"/></a>
 <a href="https://scryfall.com/card/tor/78/rancid-earth"><img src="https://cards.scryfall.io/normal/front/2/3/23d07a96-85ba-4714-94a5-4a8125954f58.jpg" class="archetype-card rounded-image"/></a>
 <a href="https://scryfall.com/card/cm2/77/sign-in-blood"><img src="https://cards.scryfall.io/normal/front/6/1/61388c28-9428-473c-973a-0a82b6b83d62.jpg" class="archetype-card rounded-image"/></a>
 <a href="https://scryfall.com/card/otj/281/swamp"><img src="https://cards.scryfall.io/normal/front/e/b/eb7dc259-9949-4673-a8f1-874396948392.jpg" class="archetype-card rounded-image"/></a>
@@ -29,16 +31,6 @@
 </details><br/>
 
 
-
-## **Frequent cards**
-
-<details>
-  <summary>Click here to expand</summary>
-<a href="https://scryfall.com/card/c21/277/barren-moor"><img src="https://cards.scryfall.io/normal/front/b/3/b38d7666-0791-44b4-877e-8fd33ce008aa.jpg" class="archetype-card rounded-image"/></a>
-<a href="https://scryfall.com/card/chk/102/befoul"><img src="https://cards.scryfall.io/normal/front/2/d/2dfff5d3-1433-4a24-83e6-6361a446b974.jpg" class="archetype-card rounded-image"/></a>
-<a href="https://scryfall.com/card/one/92/duress"><img src="https://cards.scryfall.io/normal/front/3/5/3557e601-9b71-4ce9-9047-1a8baa72e574.jpg" class="archetype-card rounded-image"/></a>
-<a href="https://scryfall.com/card/moc/259/nights-whisper"><img src="https://cards.scryfall.io/normal/front/2/2/221c82a2-b558-4c3a-b7ad-4452ef8e9067.jpg" class="archetype-card rounded-image"/></a>
-</details><br/>
 
 
 

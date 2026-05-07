@@ -30,6 +30,7 @@
 <a href="https://scryfall.com/card/mm3/78/mortician-beetle"><img src="https://cards.scryfall.io/normal/front/9/7/978f2a31-1c89-43cb-92f2-195026c9311a.jpg" class="archetype-card rounded-image"/></a>
 <a href="https://scryfall.com/card/clb/463/mountain"><img src="https://c1.scryfall.com/file/scryfall-cards/normal/front/0/a/0ab63e49-0869-4c7c-a033-d8e50032dd13.jpg" class="archetype-card rounded-image"/></a>
 <a href="https://scryfall.com/card/mh2/95/nested-shambler"><img src="https://cards.scryfall.io/normal/front/9/8/9851f290-f502-49f8-9b48-67f7966d4e34.jpg" class="archetype-card rounded-image"/></a>
+<a href="https://scryfall.com/card/cmr/330/perilous-myr"><img src="https://cards.scryfall.io/normal/front/5/a/5a15c8ef-04ad-4aab-a7f1-c7a90c10eb50.jpg" class="archetype-card rounded-image"/></a>
 <a href="https://scryfall.com/card/ema/142/pyroblast"><img src="https://cards.scryfall.io/normal/front/b/0/b029eb9a-dd7a-40c2-96c4-0063d9cc002c.jpg" class="archetype-card rounded-image"/></a>
 <a href="https://scryfall.com/card/clu/243/rakdos-carnarium"><img src="https://cards.scryfall.io/normal/front/b/2/b2eaa0f2-9f8e-4b41-8916-9c9a985c39de.jpg" class="archetype-card rounded-image"/></a>
 <a href="https://scryfall.com/card/iko/100/suffocating-fumes"><img src="https://cards.scryfall.io/normal/front/6/6/66b562e4-35df-4aee-848d-ceb4204bbe58.jpg" class="archetype-card rounded-image"/></a>
@@ -41,14 +42,6 @@
 </details><br/>
 
 
-
-## **Frequent cards**
-
-<details>
-  <summary>Click here to expand</summary>
-<a href="https://scryfall.com/card/a25/226/nihil-spellbomb"><img src="https://cards.scryfall.io/normal/front/e/5/e5892a23-efae-4731-9b8f-41c87960fe93.jpg" class="archetype-card rounded-image"/></a>
-<a href="https://scryfall.com/card/cmr/330/perilous-myr"><img src="https://cards.scryfall.io/normal/front/5/a/5a15c8ef-04ad-4aab-a7f1-c7a90c10eb50.jpg" class="archetype-card rounded-image"/></a>
-</details><br/>
 
 
 
