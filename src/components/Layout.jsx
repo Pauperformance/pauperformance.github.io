@@ -9,6 +9,7 @@ const NAV_ITEMS = [
   { to: '/timeline', label: 'Format Timeline' },
   { to: '/pool', label: 'Pauper Pool' },
   { to: '/creators', label: 'Creators' },
+  { to: '/faq', label: 'FAQ' },
 ]
 
 const SOCIAL_LINKS = [
