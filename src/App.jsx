@@ -11,6 +11,8 @@ import CardsIndex from './pages/CardsIndex'
 import CardPage from './pages/CardPage'
 import DeckPage from './pages/DeckPage'
 import FAQ from './pages/FAQ'
+import Contact from './pages/Contact'
+import BlindSpy from './pages/BlindSpy'
 
 function App() {
   return (
@@ -26,7 +28,9 @@ function App() {
       <Route path="/cards" element={<CardsIndex />} />
       <Route path="/cards/:slug" element={<CardPage />} />
       <Route path="/decks/:id" element={<DeckPage />} />
+      <Route path="/blind-spy" element={<BlindSpy />} />
       <Route path="/faq" element={<FAQ />} />
+      <Route path="/contact" element={<Contact />} />
     </Routes>
   )
 }
