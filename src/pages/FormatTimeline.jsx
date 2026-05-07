@@ -69,9 +69,9 @@ export default function FormatTimeline() {
 
             <div className="space-y-8">
               {entries.map((entry, i) => (
-                <div key={i} className="relative pl-10">
-                  <div className="absolute left-0 top-1.5 w-7 h-7 rounded-full bg-gray-800 border-2 border-amber-400 flex items-center justify-center">
-                    <div className="w-2 h-2 rounded-full bg-amber-400" />
+                <div key={i} className="relative pl-10 group">
+                  <div className="absolute left-0 top-1.5 w-7 h-7 rounded-full bg-gray-800 border-2 border-amber-400 group-hover:border-amber-300 flex items-center justify-center transition-colors">
+                    <div className="w-2 h-2 rounded-full bg-amber-400 group-hover:bg-amber-300 transition-colors" />
                   </div>
 
                   <div className="bg-gray-800 border border-gray-700 rounded-xl p-5">

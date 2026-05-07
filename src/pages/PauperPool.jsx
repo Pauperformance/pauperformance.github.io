@@ -42,7 +42,7 @@ function CardLink({ card, highlighted }) {
         className={`px-2.5 py-1 rounded-md text-xs border transition-colors ${
           highlighted
             ? 'bg-amber-400/10 border-amber-400/40 text-amber-300 hover:bg-amber-400/20'
-            : 'bg-gray-800 border-gray-700 text-gray-300 hover:border-amber-400/50 hover:text-amber-300'
+            : 'bg-gray-900 border-gray-700 text-gray-300 hover:border-amber-400/50 hover:text-amber-300'
         }`}>
         {card.name}
       </Link>
@@ -59,9 +59,11 @@ function CardLink({ card, highlighted }) {
   )
 }
 
-function SetEntry({ set, searchQuery, defaultOpen, isLast }) {
+function SetEntry({ set, searchQuery, defaultOpen }) {
   const [open, setOpen] = useState(defaultOpen)
   const [hovered, setHovered] = useState(false)
+
+  useEffect(() => { setOpen(!!searchQuery) }, [searchQuery])
 
   const visibleCards = useMemo(() => {
     if (!searchQuery) return set.cards
@@ -72,35 +74,31 @@ function SetEntry({ set, searchQuery, defaultOpen, isLast }) {
   if (searchQuery && visibleCards.length === 0) return null
 
   return (
-    <div className="flex">
-      {/* date column */}
-      <div className="w-28 shrink-0 text-right pr-5 pt-2">
-        <span className="text-sm text-gray-500 font-mono">{set.date}</span>
+    <div className="relative pl-10">
+      {/* dot */}
+      <div className={`absolute left-0 top-1.5 w-7 h-7 rounded-full bg-gray-800 border-2 flex items-center justify-center transition-colors ${hovered ? 'border-amber-300' : 'border-amber-400'}`}>
+        <div className={`w-2 h-2 rounded-full transition-colors ${hovered ? 'bg-amber-300' : 'bg-amber-400'}`} />
       </div>
 
-      {/* timeline spine */}
-      <div className="shrink-0 flex flex-col items-center">
-        <div className={`w-2.5 h-2.5 rounded-full border mt-2 shrink-0 z-10 transition-colors ${hovered ? 'bg-amber-400 border-amber-400' : 'bg-gray-600 border-gray-500'}`} />
-        {!isLast && <div className="w-px flex-1 bg-gray-700 mt-1" />}
-      </div>
-
-      {/* content */}
-      <div className="flex-1 pl-5 pb-8"
+      {/* box */}
+      <div
+        className="bg-gray-800 border border-gray-700 rounded-xl p-5"
         onMouseEnter={() => setHovered(true)}
         onMouseLeave={() => setHovered(false)}>
         <button
           onClick={() => setOpen(v => !v)}
-          className="flex items-center gap-3 text-left w-full group">
-          <span className="font-semibold text-white group-hover:text-amber-300 transition-colors">{set.name}</span>
-          <span className="font-mono text-xs text-amber-400 shrink-0">#{set.code}</span>
-          <span className="text-sm text-gray-500 shrink-0">
-            {searchQuery ? `${visibleCards.length} / ${set.cards.length}` : set.cards.length} cards
+          className="w-full text-left flex items-center gap-3 flex-wrap">
+          <span className="text-amber-400 font-semibold text-base">{set.date}</span>
+          <span className="font-medium text-white">{set.name}</span>
+          <span className="text-sm text-gray-500 ml-auto shrink-0 flex items-center gap-3">
+            <span>Code: <span className="text-amber-400 font-mono">#{set.code}</span></span>
+            <span>New Cards: <span className="text-amber-400 font-mono">{set.cards.length}</span></span>
+            <span className="text-gray-600">{open ? '▲' : '▼'}</span>
           </span>
-          <span className="text-gray-600 text-xs shrink-0">{open ? '▲' : '▼'}</span>
         </button>
 
         {open && (
-          <div className="mt-3 flex flex-wrap gap-2">
+          <div className="mt-4 pt-4 border-t border-gray-700 flex flex-wrap gap-2">
             {visibleCards.map(card => (
               <CardLink key={card.url} card={card} highlighted={!!searchQuery} />
             ))}
@@ -119,11 +117,11 @@ export default function PauperPool() {
   useEffect(() => {
     fetch('/data/pauper_pool.json')
       .then(r => r.json())
-      .then(data => { setPool(data); setLoading(false) })
+      .then(data => { setPool([...data].reverse()); setLoading(false) })
   }, [])
 
   const totalCards = useMemo(() => pool.reduce((s, set) => s + set.cards.length, 0), [pool])
-  const isSearching = search.trim().length > 0
+  const isSearching = search.trim().length >= 2
 
   const visibleSets = useMemo(() => {
     if (!isSearching) return pool
@@ -170,16 +168,18 @@ export default function PauperPool() {
             {isSearching && visibleSets.length === 0 ? (
               <p className="text-center text-gray-500 text-sm py-12">No cards match your search.</p>
             ) : (
-              <div>
-                {visibleSets.map((set, i) => (
-                  <SetEntry
-                    key={set.code}
-                    set={set}
-                    searchQuery={isSearching ? search.trim() : ''}
-                    defaultOpen={isSearching}
-                    isLast={i === visibleSets.length - 1}
-                  />
-                ))}
+              <div className="relative">
+                <div className="absolute left-3 top-2 bottom-2 w-px bg-gray-700" />
+                <div className="space-y-6">
+                  {visibleSets.map((set, i) => (
+                    <SetEntry
+                      key={set.code}
+                      set={set}
+                      searchQuery={isSearching ? search.trim() : ''}
+                      defaultOpen={isSearching}
+                    />
+                  ))}
+                </div>
               </div>
             )}
           </>
