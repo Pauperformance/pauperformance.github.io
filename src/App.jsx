@@ -10,6 +10,7 @@ import Creators from './pages/Creators'
 import CardsIndex from './pages/CardsIndex'
 import CardPage from './pages/CardPage'
 import DeckPage from './pages/DeckPage'
+import FAQ from './pages/FAQ'
 
 function App() {
   return (
@@ -25,6 +26,7 @@ function App() {
       <Route path="/cards" element={<CardsIndex />} />
       <Route path="/cards/:slug" element={<CardPage />} />
       <Route path="/decks/:id" element={<DeckPage />} />
+      <Route path="/faq" element={<FAQ />} />
     </Routes>
   )
 }
