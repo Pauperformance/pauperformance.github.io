@@ -258,6 +258,7 @@ mkdirSync(cardDetailsDir, { recursive: true })
 const cardFiles = readdirSync(cardIntelDir).filter(function(f) { return f.endsWith('.json') }).sort()
 const cardsIndex = []
 const cardImageMap = {}
+const cardTypeMap = {}
 for (const f of cardFiles) {
   const slug = f.slice(0, -5)
   const raw = JSON.parse(readFileSync(join(cardIntelDir, f), 'utf8'))
@@ -298,9 +299,16 @@ for (const f of cardFiles) {
       || (scryfall.card_faces && scryfall.card_faces[0] && scryfall.card_faces[0].image_uris && scryfall.card_faces[0].image_uris.normal)
       || null
     : null
+  // Map both full name and front-face name (for DFCs) to types
+  cardTypeMap[name] = types
+  if (name.indexOf(' // ') !== -1) {
+    var frontName2 = name.split(' // ')[0]
+    if (!cardTypeMap[frontName2]) cardTypeMap[frontName2] = types
+  }
 }
 writeFileSync(join(outDir, 'cards.json'), JSON.stringify(cardsIndex))
 writeFileSync(join(outDir, 'card-images.json'), JSON.stringify(cardImageMap))
+writeFileSync(join(outDir, 'card-types.json'), JSON.stringify(cardTypeMap))
 console.log('Built cards.json with ' + cardsIndex.length + ' entries and card-images.json.')
 
 // Build card-decks reverse index: card slug → decks containing that card

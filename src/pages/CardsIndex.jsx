@@ -186,7 +186,7 @@ export default function CardsIndex() {
             ))}
           </div>
           <div className="flex flex-wrap gap-2 items-center">
-            <span className="text-sm text-gray-500 w-10 shrink-0">Arch:</span>
+            <span className="text-sm text-gray-500 shrink-0">Archetype:</span>
             {visibleArchetypes.map(a => (
               <FilterButton key={a} small active={activeArchetypes.has(a)} onClick={() => toggleArchetype(a)}>{a}</FilterButton>
             ))}
@@ -214,7 +214,9 @@ export default function CardsIndex() {
                   </thead>
                   <tbody className="divide-y divide-gray-700/50">
                     {filtered.map(c => (
-                      <tr key={c.slug} onClick={() => navigate(`/cards/${c.slug}`)}
+                      <tr key={c.slug}
+                        onClick={() => navigate(`/cards/${c.slug}`)}
+                        onAuxClick={e => { if (e.button === 1) window.open(`/#/cards/${c.slug}`, '_blank') }}
                         className="bg-gray-900 hover:bg-gray-800 transition-colors cursor-pointer">
                         <td className="px-4 py-2.5 text-amber-400">{c.name}</td>
                         <td className="px-4 py-2.5">

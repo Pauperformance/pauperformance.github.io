@@ -2,29 +2,64 @@ import { useState, useEffect } from 'react'
 import { useParams, Link } from 'react-router-dom'
 import Layout from '../components/Layout'
 
-function DeckList({ cards, label, onHover }) {
+const TYPE_ORDER = ['Creature', 'Instant', 'Sorcery', 'Enchantment', 'Artifact', 'Land', 'Sticker', 'Other']
+
+function CardName({ c, onHover }) {
+  return (
+    <li className="flex items-baseline gap-2">
+      <span className="w-5 text-right text-gray-500 shrink-0">{c.qty}</span>
+      <Link
+        to={`/cards/${c.name.toLowerCase().replace(/\s+/g, '-').replace(/[^a-z0-9-]/g, '')}`}
+        className="text-gray-200 hover:text-amber-400 transition-colors"
+        onMouseEnter={() => onHover(c.name)}
+        onMouseLeave={() => onHover(null)}
+      >
+        {c.name}
+      </Link>
+    </li>
+  )
+}
+
+function DeckList({ cards, label, onHover, cardTypes, groupByType }) {
   if (!cards || !cards.length) return null
   const total = cards.reduce((sum, c) => sum + c.qty, 0)
+
+  let content
+  if (groupByType) {
+    const groups = {}
+    cards.forEach(c => {
+      const types = cardTypes[c.name] || []
+      const key = TYPE_ORDER.find(t => types.includes(t)) || 'Other'
+      if (!groups[key]) groups[key] = []
+      groups[key].push(c)
+    })
+    content = TYPE_ORDER.filter(t => groups[t]).map(t => {
+      const groupTotal = groups[t].reduce((sum, c) => sum + c.qty, 0)
+      return (
+        <div key={t}>
+          <p className="text-xs text-gray-600 uppercase tracking-wider mt-3 mb-1">
+            {t}s <span className="text-gray-700">({groupTotal})</span>
+          </p>
+          <ul className="space-y-0.5">
+            {groups[t].map((c, i) => <CardName key={i} c={c} onHover={onHover} />)}
+          </ul>
+        </div>
+      )
+    })
+  } else {
+    content = (
+      <ul className="space-y-0.5">
+        {cards.map((c, i) => <CardName key={i} c={c} onHover={onHover} />)}
+      </ul>
+    )
+  }
+
   return (
     <div>
       <h3 className="text-xs font-semibold text-gray-500 uppercase tracking-wider mb-2">
         {label} <span className="text-gray-600">({total})</span>
       </h3>
-      <ul className="space-y-0.5">
-        {cards.map((c, i) => (
-          <li key={i} className="flex items-baseline gap-2 text-sm">
-            <span className="w-5 text-right text-gray-500 shrink-0">{c.qty}</span>
-            <Link
-              to={`/cards/${c.name.toLowerCase().replace(/\s+/g, '-').replace(/[^a-z0-9-]/g, '')}`}
-              className="text-gray-200 hover:text-amber-400 transition-colors"
-              onMouseEnter={() => onHover(c.name)}
-              onMouseLeave={() => onHover(null)}
-            >
-              {c.name}
-            </Link>
-          </li>
-        ))}
-      </ul>
+      {content}
     </div>
   )
 }
@@ -35,13 +70,18 @@ export default function DeckPage() {
   const [loading, setLoading] = useState(true)
   const [notFound, setNotFound] = useState(false)
   const [cardImages, setCardImages] = useState({})
+  const [cardTypes, setCardTypes] = useState({})
   const [hoveredCard, setHoveredCard] = useState(null)
+  const [groupByType, setGroupByType] = useState(false)
 
   useEffect(() => {
-    fetch('/data/card-images.json')
-      .then(r => r.json())
-      .then(setCardImages)
-      .catch(() => {})
+    Promise.all([
+      fetch('/data/card-images.json').then(r => r.json()),
+      fetch('/data/card-types.json').then(r => r.json()),
+    ]).then(([images, types]) => {
+      setCardImages(images)
+      setCardTypes(types)
+    }).catch(() => {})
   }, [])
 
   useEffect(() => {
@@ -56,7 +96,7 @@ export default function DeckPage() {
 
   return (
     <Layout>
-      <div className="max-w-4xl mx-auto px-4 py-8">
+      <div className="space-y-6">
         {loading && <p className="text-gray-500 text-sm">Loading…</p>}
 
         {notFound && (
@@ -68,68 +108,78 @@ export default function DeckPage() {
 
         {deck && (
           <>
-            <div className="mb-6">
-              <Link to={`/archetypes/${encodeURIComponent(deck.archetype)}`}
-                className="text-xs text-gray-500 hover:text-gray-300">
-                ← {deck.archetype}
-              </Link>
+            <div>
+              <h1 className="text-2xl font-bold text-white">{deck.tournament_name}</h1>
+              <p className="mt-2 text-gray-400">{deck.tournament_date}</p>
             </div>
 
-            <h1 className="text-xl font-bold text-gray-100 mb-1">{deck.tournament_name}</h1>
-            <p className="text-sm text-gray-500 mb-6">{deck.tournament_date}</p>
-
-            <div className="flex flex-wrap gap-4 mb-8">
+            <div className="flex flex-wrap gap-4">
               {deck.pilot && (
                 <div>
                   <p className="text-xs text-gray-500 mb-0.5">Pilot</p>
-                  <p className="text-sm font-medium text-gray-200">{deck.pilot}</p>
+                  <p className="font-medium text-gray-200">{deck.pilot}</p>
                 </div>
               )}
               {deck.place && (
                 <div>
                   <p className="text-xs text-gray-500 mb-0.5">Result</p>
-                  <p className="text-sm font-medium text-gray-200">{deck.place}</p>
+                  <p className="font-medium text-gray-200">{deck.place}</p>
                 </div>
               )}
               {deck.mtgo_price && (
                 <div>
                   <p className="text-xs text-gray-500 mb-0.5">MTGO</p>
-                  <p className="text-sm font-medium text-gray-200">{deck.mtgo_price} tix</p>
+                  <p className="font-medium text-gray-200">{deck.mtgo_price} tix</p>
                 </div>
               )}
               {deck.tabletop_price && (
                 <div>
                   <p className="text-xs text-gray-500 mb-0.5">Paper</p>
-                  <p className="text-sm font-medium text-gray-200">${deck.tabletop_price}</p>
+                  <p className="font-medium text-gray-200">${deck.tabletop_price}</p>
                 </div>
               )}
               <div>
                 <p className="text-xs text-gray-500 mb-0.5">Source</p>
                 <a href={deck.url} target="_blank" rel="noopener noreferrer"
-                  className="text-sm text-amber-400 hover:text-amber-300">
+                  className="text-amber-400 hover:text-amber-300">
                   MTGGoldfish →
                 </a>
               </div>
             </div>
 
             {deck.decklist ? (
-              <div className="flex gap-8 items-start">
-                <div className="flex flex-col sm:flex-row gap-8">
-                  <DeckList cards={deck.decklist.main} label="Maindeck" onHover={setHoveredCard} />
-                  <DeckList cards={deck.decklist.side} label="Sideboard" onHover={setHoveredCard} />
+              <>
+                <div className="flex items-center gap-3">
+                  <button
+                    onClick={() => setGroupByType(v => !v)}
+                    className={`px-3 py-1.5 rounded-lg text-sm font-medium border transition-colors ${
+                      groupByType
+                        ? 'bg-amber-400 text-gray-900 border-amber-400'
+                        : 'bg-transparent text-gray-400 border-gray-600 hover:border-gray-400 hover:text-gray-200'
+                    }`}>
+                    Group cards by type
+                  </button>
                 </div>
-                <div className="hidden lg:block w-56 shrink-0 sticky top-8">
-                  {hoveredCard && cardImages[hoveredCard] ? (
-                    <img
-                      src={cardImages[hoveredCard]}
-                      alt={hoveredCard}
-                      className="w-full rounded-xl shadow-lg border border-gray-700"
-                    />
-                  ) : (
-                    <div className="w-full aspect-[5/7] rounded-xl border border-gray-800 bg-gray-900" />
-                  )}
+                <div className="flex gap-8 items-start">
+                  <div className="flex flex-col sm:flex-row gap-8">
+                    <DeckList cards={deck.decklist.main} label="Maindeck" onHover={setHoveredCard}
+                      cardTypes={cardTypes} groupByType={groupByType} />
+                    <DeckList cards={deck.decklist.side} label="Sideboard" onHover={setHoveredCard}
+                      cardTypes={cardTypes} groupByType={groupByType} />
+                  </div>
+                  <div className="hidden lg:block w-56 shrink-0 sticky top-8">
+                    {hoveredCard && cardImages[hoveredCard] ? (
+                      <img
+                        src={cardImages[hoveredCard]}
+                        alt={hoveredCard}
+                        className="w-full rounded-xl shadow-lg border border-gray-700"
+                      />
+                    ) : (
+                      <div className="w-full aspect-[5/7] rounded-xl border border-gray-800 bg-gray-900" />
+                    )}
+                  </div>
                 </div>
-              </div>
+              </>
             ) : (
               <p className="text-gray-500 text-sm">Decklist not available.</p>
             )}
