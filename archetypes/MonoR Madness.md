@@ -39,6 +39,7 @@
 <details>
   <summary>Click here to expand</summary>
 <a href="https://scryfall.com/card/a25/147/red-elemental-blast"><img src="https://c1.scryfall.com/file/scryfall-cards/normal/front/7/0/70a45e9b-699e-425a-9f3d-267274830d3e.jpg" class="archetype-card rounded-image"/></a>
+<a href="https://scryfall.com/card/ema/231/relic-of-progenitus"><img src="https://c1.scryfall.com/file/scryfall-cards/normal/front/4/3/436cd66c-0622-43cd-8748-af4d21a2db3f.jpg" class="archetype-card rounded-image"/></a>
 </details><br/>
 
 

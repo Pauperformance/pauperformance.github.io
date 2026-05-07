@@ -40,7 +40,6 @@
 <a href="https://scryfall.com/card/mh1/237/cave-of-temptation"><img src="https://cards.scryfall.io/normal/front/d/8/d86e9149-6fd9-44fc-b765-3e646c7d83d6.jpg" class="archetype-card rounded-image"/></a>
 <a href="https://scryfall.com/card/jmp/462/chromatic-sphere"><img src="https://cards.scryfall.io/normal/front/e/d/edabc8b2-4413-48e4-8d6f-521b19d839a6.jpg" class="archetype-card rounded-image"/></a>
 <a href="https://scryfall.com/card/mbs/6/frantic-salvage"><img src="https://cards.scryfall.io/normal/front/a/f/aff909bc-0bda-4e8a-b7a3-ebc963552246.jpg" class="archetype-card rounded-image"/></a>
-<a href="https://scryfall.com/card/eld/220/golden-egg"><img src="https://cards.scryfall.io/normal/front/5/2/525142c3-f17c-4e02-a02d-fa385215aa12.jpg" class="archetype-card rounded-image"/></a>
 <a href="https://scryfall.com/card/m12/60/jaces-erasure"><img src="https://cards.scryfall.io/normal/front/9/7/970f4f34-f834-41a7-aff1-7cef82cefc74.jpg" class="archetype-card rounded-image"/></a>
 <a href="https://scryfall.com/card/tsr/76/mystical-teachings"><img src="https://cards.scryfall.io/normal/front/f/7/f7cb51cd-8418-43ee-bf4f-6b959cc5b131.jpg" class="archetype-card rounded-image"/></a>
 <a href="https://scryfall.com/card/ima/177/natures-claim"><img src="https://cards.scryfall.io/normal/front/d/2/d24b6640-ef2f-4c92-beb3-afdf78f9c2d5.jpg" class="archetype-card rounded-image"/></a>
