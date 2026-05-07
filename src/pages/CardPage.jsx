@@ -131,7 +131,9 @@ function CardDecksSection({ slug }) {
           </thead>
           <tbody className="divide-y divide-gray-700/50">
             {paginated.map(deck => (
-              <tr key={deck.id} onClick={() => navigate(`/decks/${deck.id}`)}
+              <tr key={deck.id}
+                onClick={() => navigate(`/decks/${deck.id}`)}
+                onAuxClick={e => { if (e.button === 1) window.open(`/#/decks/${deck.id}`, '_blank') }}
                 className="bg-gray-900 hover:bg-gray-800 transition-colors cursor-pointer">
                 <td className="px-4 py-2.5 text-amber-400 text-xs">{deck.archetype}</td>
                 <td className="px-4 py-2.5 text-gray-300 hidden sm:table-cell">{deck.tournament_name}</td>
