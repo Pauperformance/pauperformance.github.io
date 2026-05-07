@@ -2,6 +2,7 @@ import { useState, useEffect, useRef } from 'react'
 import { createPortal } from 'react-dom'
 import { Link } from 'react-router-dom'
 import Layout from '../components/Layout'
+import { nameToSlug } from '../utils/slugs'
 
 const PAGES = [
   { to: '/archetypes', label: 'Archetypes Index', description: 'A curated list of the most important Pauper archetypes.' },
@@ -69,7 +70,7 @@ function TopDecksSection() {
       <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 xl:grid-cols-7 2xl:grid-cols-8 gap-3">
         {decks.map(deck => (
           <div key={deck.archetype_name} className="bg-gray-800 border border-gray-700 rounded-xl overflow-hidden hover:border-amber-400/50 transition-all group">
-            <Link to={`/archetypes/${encodeURIComponent(deck.archetype_name)}`} className="block">
+            <Link to={`/archetypes/${nameToSlug(deck.archetype_name)}`} className="block">
               <div className="card-image-clip aspect-[5/4] bg-gray-900 overflow-hidden mt-[-20px] mb-[-20px] mx-[-5px]">
                 {deck.featured_image
                   ? <img src={deck.featured_image} alt={deck.archetype_name} loading="lazy"
@@ -216,7 +217,7 @@ function MetagameSection() {
                   onMouseLeave={() => setActiveIndex(undefined)}>
                   <span className="w-2.5 h-2.5 rounded-full shrink-0" style={{ background: color }} />
                   <Link
-                    to={`/archetypes/${encodeURIComponent(entry.archetype_name)}`}
+                    to={`/archetypes/${nameToSlug(entry.archetype_name)}`}
                     className="text-sm text-gray-300 hover:text-amber-400 transition-colors flex-1"
                   >
                     {entry.archetype_name}

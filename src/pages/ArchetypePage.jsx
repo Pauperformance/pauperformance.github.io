@@ -2,6 +2,7 @@ import { useState, useEffect } from 'react'
 import { useParams, Link } from 'react-router-dom'
 import ReactMarkdown from 'react-markdown'
 import Layout from '../components/Layout'
+import { slugToName } from '../utils/slugs'
 
 const MANA_ORDER = ['W', 'U', 'B', 'R', 'G', 'C']
 const LANG_FLAG = {
@@ -242,7 +243,7 @@ function ResourcesSection({ resources, discord, sideboard }) {
 
 export default function ArchetypePage() {
   const { name } = useParams()
-  const decodedName = decodeURIComponent(name)
+  const decodedName = slugToName(name)
   const [data, setData] = useState(null)
   const [notFound, setNotFound] = useState(false)
 
