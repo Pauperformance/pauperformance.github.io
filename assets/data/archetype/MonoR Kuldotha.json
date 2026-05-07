@@ -6,7 +6,7 @@
     "dominant_mana": [
         "R"
     ],
-    "family": "Burn",
+    "family": null,
     "frequent": [
         {
             "link": "https://scryfall.com/card/dmr/113/chain-lightning",
@@ -43,10 +43,13 @@
         "Aggro"
     ],
     "must_have_cards": [
-        "Experimental Synthesizer",
-        "Kuldotha Rebirth"
+        "Kuldotha Rebirth",
+        "Goblin Bushwhacker",
+        "Experimental Synthesizer"
     ],
-    "must_not_have_cards": [],
+    "must_not_have_cards": [
+        "Thermo-Alchemist"
+    ],
     "name": "MonoR Kuldotha",
     "py/object": "pauperformance_bot.entity.api.archetype.Archetype",
     "reference_decks": [],
