@@ -3,7 +3,7 @@
         {
             "accuracy": 99.0,
             "archetype_name": "MonoR Madness",
-            "meta_share": 11.0,
+            "meta_share": 11.1,
             "mtggolfish_urls": [
                 "https://www.mtggoldfish.com/archetype/pauper-mono-red-madness"
             ],
@@ -12,7 +12,7 @@
         {
             "accuracy": 90.1,
             "archetype_name": "MonoU Terror",
-            "meta_share": 10.2,
+            "meta_share": 10.0,
             "mtggolfish_urls": [
                 "https://www.mtggoldfish.com/archetype/pauper-blue-terror-2b4f6710-ccb2-4660-b5f9-ea85c8875ec5"
             ],
@@ -41,7 +41,7 @@
         {
             "accuracy": 77.5,
             "archetype_name": "Elves",
-            "meta_share": 6.7,
+            "meta_share": 6.5,
             "mtggolfish_urls": [
                 "https://www.mtggoldfish.com/archetype/elves-67156d3a-d400-4269-8400-3a0258a274b3"
             ],
@@ -57,9 +57,9 @@
             "py/object": "pauperformance_bot.entity.api.miscellanea.MetaShare"
         },
         {
-            "accuracy": 79.89999999999999,
+            "accuracy": 80.36666666666667,
             "archetype_name": "Burn",
-            "meta_share": 5.2,
+            "meta_share": 5.3999999999999995,
             "mtggolfish_urls": [
                 "https://www.mtggoldfish.com/archetype/pauper-mono-red-rally",
                 "https://www.mtggoldfish.com/archetype/burn-3854fe58-5ff9-4046-bac9-ae9617c3caf5",
@@ -79,21 +79,12 @@
             "py/object": "pauperformance_bot.entity.api.miscellanea.MetaShare"
         },
         {
-            "accuracy": 66.85,
-            "archetype_name": "Brew Golgari",
-            "meta_share": 5.800000000000001,
+            "accuracy": 70.3,
+            "archetype_name": "Golgari Gardens",
+            "meta_share": 5.9,
             "mtggolfish_urls": [
                 "https://www.mtggoldfish.com/archetype/pauper-golgari-gardens",
                 "https://www.mtggoldfish.com/archetype/pauper-food-gardens"
-            ],
-            "py/object": "pauperformance_bot.entity.api.miscellanea.MetaShare"
-        },
-        {
-            "accuracy": 74.3,
-            "archetype_name": "Jeskai Ephemerate",
-            "meta_share": 3.0,
-            "mtggolfish_urls": [
-                "https://www.mtggoldfish.com/archetype/pauper-jeskai-ephemerate"
             ],
             "py/object": "pauperformance_bot.entity.api.miscellanea.MetaShare"
         },
@@ -103,6 +94,15 @@
             "meta_share": 3.0,
             "mtggolfish_urls": [
                 "https://www.mtggoldfish.com/archetype/pauper-madness-burn"
+            ],
+            "py/object": "pauperformance_bot.entity.api.miscellanea.MetaShare"
+        },
+        {
+            "accuracy": 74.3,
+            "archetype_name": "Jeskai Ephemerate",
+            "meta_share": 3.0,
+            "mtggolfish_urls": [
+                "https://www.mtggoldfish.com/archetype/pauper-jeskai-ephemerate"
             ],
             "py/object": "pauperformance_bot.entity.api.miscellanea.MetaShare"
         },
@@ -118,7 +118,7 @@
         {
             "accuracy": 62.0,
             "archetype_name": "Brew Azorius",
-            "meta_share": 2.4,
+            "meta_share": 2.3,
             "mtggolfish_urls": [
                 "https://www.mtggoldfish.com/archetype/pauper-caw-gates"
             ],
@@ -127,7 +127,7 @@
         {
             "accuracy": 82.2,
             "archetype_name": "Spy Walls",
-            "meta_share": 2.2,
+            "meta_share": 2.1,
             "mtggolfish_urls": [
                 "https://www.mtggoldfish.com/archetype/pauper-spy-combo"
             ],
@@ -163,9 +163,18 @@
         {
             "accuracy": 82.1,
             "archetype_name": "MonoB Sacrifice",
-            "meta_share": 1.9,
+            "meta_share": 1.8,
             "mtggolfish_urls": [
                 "https://www.mtggoldfish.com/archetype/pauper-black-sacrifice"
+            ],
+            "py/object": "pauperformance_bot.entity.api.miscellanea.MetaShare"
+        },
+        {
+            "accuracy": 87.9,
+            "archetype_name": "Dimir Terror",
+            "meta_share": 1.7,
+            "mtggolfish_urls": [
+                "https://www.mtggoldfish.com/archetype/pauper-dimir-terror"
             ],
             "py/object": "pauperformance_bot.entity.api.miscellanea.MetaShare"
         },
@@ -180,15 +189,6 @@
             "py/object": "pauperformance_bot.entity.api.miscellanea.MetaShare"
         },
         {
-            "accuracy": 87.9,
-            "archetype_name": "Dimir Terror",
-            "meta_share": 1.7,
-            "mtggolfish_urls": [
-                "https://www.mtggoldfish.com/archetype/pauper-dimir-terror"
-            ],
-            "py/object": "pauperformance_bot.entity.api.miscellanea.MetaShare"
-        },
-        {
             "accuracy": 91.9,
             "archetype_name": "MonoU Faeries",
             "meta_share": 1.3,
@@ -198,13 +198,30 @@
             "py/object": "pauperformance_bot.entity.api.miscellanea.MetaShare"
         },
         {
-            "accuracy": 80.66666666666667,
+            "accuracy": 94.0,
+            "archetype_name": "Ruby Storm",
+            "meta_share": 1.2,
+            "mtggolfish_urls": [
+                "https://www.mtggoldfish.com/archetype/pauper-ruby-storm"
+            ],
+            "py/object": "pauperformance_bot.entity.api.miscellanea.MetaShare"
+        },
+        {
+            "accuracy": 82.30000000000001,
             "archetype_name": "Izzet Terror",
             "meta_share": 1.2000000000000002,
             "mtggolfish_urls": [
                 "https://www.mtggoldfish.com/archetype/pauper-izzet-terror",
-                "https://www.mtggoldfish.com/archetype/pauper-4c-control",
-                "https://www.mtggoldfish.com/archetype/pauper-izzet-control-8e3ed126-fb08-4665-bf00-3a0e10902d99"
+                "https://www.mtggoldfish.com/archetype/pauper-4c-control"
+            ],
+            "py/object": "pauperformance_bot.entity.api.miscellanea.MetaShare"
+        },
+        {
+            "accuracy": 84.0,
+            "archetype_name": "Turbofog",
+            "meta_share": 1.0,
+            "mtggolfish_urls": [
+                "https://www.mtggoldfish.com/archetype/pauper-turbo-fog-fe589501-15e6-4511-b259-e066f9f36c51"
             ],
             "py/object": "pauperformance_bot.entity.api.miscellanea.MetaShare"
         },
@@ -219,34 +236,16 @@
             "py/object": "pauperformance_bot.entity.api.miscellanea.MetaShare"
         },
         {
-            "accuracy": 90.7,
-            "archetype_name": "Ruby Storm",
-            "meta_share": 1.0,
-            "mtggolfish_urls": [
-                "https://www.mtggoldfish.com/archetype/pauper-ruby-storm"
-            ],
-            "py/object": "pauperformance_bot.entity.api.miscellanea.MetaShare"
-        },
-        {
-            "accuracy": 84.0,
-            "archetype_name": "Turbofog",
-            "meta_share": 0.9,
-            "mtggolfish_urls": [
-                "https://www.mtggoldfish.com/archetype/pauper-turbo-fog-fe589501-15e6-4511-b259-e066f9f36c51"
-            ],
-            "py/object": "pauperformance_bot.entity.api.miscellanea.MetaShare"
-        },
-        {
             "accuracy": 34.8,
             "archetype_name": "MonoR Dredge",
-            "meta_share": 0.8,
+            "meta_share": 0.9,
             "mtggolfish_urls": [
                 "https://www.mtggoldfish.com/archetype/pauper-inside-out-combo"
             ],
             "py/object": "pauperformance_bot.entity.api.miscellanea.MetaShare"
         },
         {
-            "accuracy": 81.3,
+            "accuracy": 78.9,
             "archetype_name": "Brew",
             "meta_share": 0.8,
             "mtggolfish_urls": [
@@ -255,9 +254,9 @@
             "py/object": "pauperformance_bot.entity.api.miscellanea.MetaShare"
         },
         {
-            "accuracy": 89.9,
+            "accuracy": 100.0,
             "archetype_name": "Cycling Storm",
-            "meta_share": 0.8,
+            "meta_share": 0.7,
             "mtggolfish_urls": [
                 "https://www.mtggoldfish.com/archetype/pauper-cycle-storm"
             ],
@@ -282,15 +281,6 @@
             "py/object": "pauperformance_bot.entity.api.miscellanea.MetaShare"
         },
         {
-            "accuracy": 76.9,
-            "archetype_name": "MonoR Blitz",
-            "meta_share": 0.4,
-            "mtggolfish_urls": [
-                "https://www.mtggoldfish.com/archetype/pauper-kiln-fiend"
-            ],
-            "py/object": "pauperformance_bot.entity.api.miscellanea.MetaShare"
-        },
-        {
             "accuracy": 88.3,
             "archetype_name": "Dimir Control",
             "meta_share": 0.4,
@@ -300,12 +290,48 @@
             "py/object": "pauperformance_bot.entity.api.miscellanea.MetaShare"
         },
         {
+            "accuracy": 76.9,
+            "archetype_name": "MonoR Blitz",
+            "meta_share": 0.4,
+            "mtggolfish_urls": [
+                "https://www.mtggoldfish.com/archetype/pauper-kiln-fiend"
+            ],
+            "py/object": "pauperformance_bot.entity.api.miscellanea.MetaShare"
+        },
+        {
             "accuracy": 68.0,
             "archetype_name": "Boros Synth",
-            "meta_share": 0.8,
+            "meta_share": 0.6,
             "mtggolfish_urls": [
-                "https://www.mtggoldfish.com/archetype/pauper-boros-synthesizer",
-                "https://www.mtggoldfish.com/archetype/pauper-jeskai-affinity-de7a3292-fefc-4cb7-857f-d257a6d0b7f3"
+                "https://www.mtggoldfish.com/archetype/pauper-jeskai-affinity-de7a3292-fefc-4cb7-857f-d257a6d0b7f3",
+                "https://www.mtggoldfish.com/archetype/pauper-boros-synthesizer"
+            ],
+            "py/object": "pauperformance_bot.entity.api.miscellanea.MetaShare"
+        },
+        {
+            "accuracy": 100.0,
+            "archetype_name": "Walls",
+            "meta_share": 0.3,
+            "mtggolfish_urls": [
+                "https://www.mtggoldfish.com/archetype/pauper-walls-combo"
+            ],
+            "py/object": "pauperformance_bot.entity.api.miscellanea.MetaShare"
+        },
+        {
+            "accuracy": 74.1,
+            "archetype_name": "Poison Storm",
+            "meta_share": 0.3,
+            "mtggolfish_urls": [
+                "https://www.mtggoldfish.com/archetype/pauper-poison-storm"
+            ],
+            "py/object": "pauperformance_bot.entity.api.miscellanea.MetaShare"
+        },
+        {
+            "accuracy": 100.0,
+            "archetype_name": "MonoW Heroic",
+            "meta_share": 0.2,
+            "mtggolfish_urls": [
+                "https://www.mtggoldfish.com/archetype/mono-white-heroic"
             ],
             "py/object": "pauperformance_bot.entity.api.miscellanea.MetaShare"
         },
@@ -329,33 +355,6 @@
             "py/object": "pauperformance_bot.entity.api.miscellanea.MetaShare"
         },
         {
-            "accuracy": 74.1,
-            "archetype_name": "Poison Storm",
-            "meta_share": 0.2,
-            "mtggolfish_urls": [
-                "https://www.mtggoldfish.com/archetype/pauper-poison-storm"
-            ],
-            "py/object": "pauperformance_bot.entity.api.miscellanea.MetaShare"
-        },
-        {
-            "accuracy": 100.0,
-            "archetype_name": "MonoW Heroic",
-            "meta_share": 0.2,
-            "mtggolfish_urls": [
-                "https://www.mtggoldfish.com/archetype/mono-white-heroic"
-            ],
-            "py/object": "pauperformance_bot.entity.api.miscellanea.MetaShare"
-        },
-        {
-            "accuracy": 100.0,
-            "archetype_name": "Walls",
-            "meta_share": 0.2,
-            "mtggolfish_urls": [
-                "https://www.mtggoldfish.com/archetype/pauper-walls-combo"
-            ],
-            "py/object": "pauperformance_bot.entity.api.miscellanea.MetaShare"
-        },
-        {
             "accuracy": 100.0,
             "archetype_name": "Infect",
             "meta_share": 0.1,
@@ -374,6 +373,15 @@
             "py/object": "pauperformance_bot.entity.api.miscellanea.MetaShare"
         },
         {
+            "accuracy": 60.1,
+            "archetype_name": "Brew Dimir",
+            "meta_share": 0.1,
+            "mtggolfish_urls": [
+                "https://www.mtggoldfish.com/archetype/pauper-esper-affinity"
+            ],
+            "py/object": "pauperformance_bot.entity.api.miscellanea.MetaShare"
+        },
+        {
             "accuracy": 38.7,
             "archetype_name": "Zubera Storm",
             "meta_share": 0.1,
@@ -388,6 +396,15 @@
             "meta_share": 0.1,
             "mtggolfish_urls": [
                 "https://www.mtggoldfish.com/archetype/pauper-mardu-synthesizer"
+            ],
+            "py/object": "pauperformance_bot.entity.api.miscellanea.MetaShare"
+        },
+        {
+            "accuracy": 41.4,
+            "archetype_name": "Azorius Evoke",
+            "meta_share": 0.1,
+            "mtggolfish_urls": [
+                "https://www.mtggoldfish.com/archetype/pauper-azorius-ephemerate"
             ],
             "py/object": "pauperformance_bot.entity.api.miscellanea.MetaShare"
         },
@@ -416,15 +433,6 @@
             "meta_share": 0.1,
             "mtggolfish_urls": [
                 "https://www.mtggoldfish.com/archetype/pauper-food-retriever-combo"
-            ],
-            "py/object": "pauperformance_bot.entity.api.miscellanea.MetaShare"
-        },
-        {
-            "accuracy": 42.7,
-            "archetype_name": "Azorius Evoke",
-            "meta_share": 0.1,
-            "mtggolfish_urls": [
-                "https://www.mtggoldfish.com/archetype/pauper-azorius-ephemerate"
             ],
             "py/object": "pauperformance_bot.entity.api.miscellanea.MetaShare"
         }
