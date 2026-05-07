@@ -1,5 +1,5 @@
-import { useState, useEffect } from 'react'
-import { useParams, Link } from 'react-router-dom'
+import { useState, useEffect, useMemo } from 'react'
+import { useParams, Link, useNavigate } from 'react-router-dom'
 import Layout from '../components/Layout'
 
 const MANA_ICONS = new Set(['W', 'U', 'B', 'R', 'G', 'C'])
@@ -45,26 +45,78 @@ function FaceDetails({ face }) {
 
 const PAGE_SIZE = 20
 
+function FilterButton({ active, onClick, children }) {
+  return (
+    <button
+      onClick={onClick}
+      className={`px-1.5 py-0.5 rounded-full text-xs font-semibold transition-colors border ${
+        active
+          ? 'bg-amber-400 text-gray-900 border-amber-400'
+          : 'bg-transparent text-gray-400 border-gray-600 hover:border-gray-400 hover:text-gray-200'
+      }`}>
+      {children}
+    </button>
+  )
+}
+
 function CardDecksSection({ slug }) {
   const [decks, setDecks] = useState(null)
   const [page, setPage] = useState(0)
+  const [activeArchetypes, setActiveArchetypes] = useState(new Set())
+  const navigate = useNavigate()
 
   useEffect(() => {
     fetch(`/data/card-decks/${slug}.json`)
       .then(r => r.ok ? r.json() : [])
-      .then(setDecks)
+      .then(d => { setDecks(d); setActiveArchetypes(new Set()) })
       .catch(() => setDecks([]))
   }, [slug])
+
+  const archetypeNames = useMemo(() => {
+    if (!decks) return []
+    return [...new Set(decks.map(d => d.archetype))].sort()
+  }, [decks])
+
+  function toggleArchetype(a) {
+    setActiveArchetypes(prev => prev.has(a) ? new Set() : new Set([a]))
+  }
+
+  const visibleDecks = useMemo(() => {
+    if (!decks) return []
+    if (activeArchetypes.size === 0) return decks
+    return decks.filter(d => activeArchetypes.has(d.archetype))
+  }, [decks, activeArchetypes])
+
+  useEffect(() => { setPage(0) }, [activeArchetypes])
 
   if (!decks) return <p className="text-gray-500 text-sm">Loading decklists…</p>
   if (!decks.length) return <p className="text-gray-500 text-sm">No decklists recorded.</p>
 
-  const totalPages = Math.ceil(decks.length / PAGE_SIZE)
-  const paginated = decks.slice(page * PAGE_SIZE, (page + 1) * PAGE_SIZE)
+  const totalPages = Math.ceil(visibleDecks.length / PAGE_SIZE)
+  const paginated = visibleDecks.slice(page * PAGE_SIZE, (page + 1) * PAGE_SIZE)
 
   return (
     <div className="space-y-3">
-      <p className="text-xs text-gray-500">{decks.length} decklists</p>
+      <div className="flex flex-col gap-1">
+        <h2 className="text-xs font-semibold text-gray-500 uppercase tracking-wider">
+          Archetypes
+        </h2>
+        <p className="text-sm text-gray-400">
+          Played in <span className="text-gray-200 font-medium">{archetypeNames.length}</span> {archetypeNames.length === 1 ? 'archetype' : 'archetypes'}.
+        </p>
+      </div>
+      {archetypeNames.length > 1 && (
+        <div className="bg-gray-800 border border-gray-700 rounded-xl p-3 flex flex-wrap gap-2 items-center">
+          <span className="text-xs text-gray-500 shrink-0">Archetype:</span>
+          {archetypeNames.map(a => (
+            <FilterButton key={a} active={activeArchetypes.has(a)} onClick={() => toggleArchetype(a)}>{a}</FilterButton>
+          ))}
+        </div>
+      )}
+      {archetypeNames.length > 1 && (
+        <p className="text-xs text-gray-500 italic">Click an archetype to filter the decklists.</p>
+      )}
+      <p className="text-xs text-gray-500">{visibleDecks.length} decklists</p>
       <div className="border border-gray-700 rounded-xl overflow-hidden">
         <table className="w-full text-sm">
           <thead>
@@ -74,23 +126,19 @@ function CardDecksSection({ slug }) {
               <th className="text-left px-4 py-2 text-xs font-semibold text-gray-400 uppercase tracking-wider hidden sm:table-cell">Date</th>
               <th className="text-left px-4 py-2 text-xs font-semibold text-gray-400 uppercase tracking-wider hidden md:table-cell">Pilot</th>
               <th className="text-left px-4 py-2 text-xs font-semibold text-gray-400 uppercase tracking-wider hidden md:table-cell">Place</th>
-              <th className="text-left px-4 py-2 text-xs font-semibold text-gray-400 uppercase tracking-wider">Link</th>
+              <th className="text-left px-4 py-2 text-xs font-semibold text-gray-400 uppercase tracking-wider"></th>
             </tr>
           </thead>
           <tbody className="divide-y divide-gray-700/50">
             {paginated.map(deck => (
-              <tr key={deck.id} className="bg-gray-900 hover:bg-gray-800 transition-colors">
-                <td className="px-4 py-2.5">
-                  <Link to={`/archetypes/${encodeURIComponent(deck.archetype)}`}
-                    className="text-amber-400 hover:underline text-xs">{deck.archetype}</Link>
-                </td>
+              <tr key={deck.id} onClick={() => navigate(`/decks/${deck.id}`)}
+                className="bg-gray-900 hover:bg-gray-800 transition-colors cursor-pointer">
+                <td className="px-4 py-2.5 text-amber-400 text-xs">{deck.archetype}</td>
                 <td className="px-4 py-2.5 text-gray-300 hidden sm:table-cell">{deck.tournament_name}</td>
                 <td className="px-4 py-2.5 text-gray-500 hidden sm:table-cell">{deck.tournament_date}</td>
                 <td className="px-4 py-2.5 text-gray-400 hidden md:table-cell">{deck.pilot}</td>
                 <td className="px-4 py-2.5 text-gray-400 hidden md:table-cell">{deck.place}</td>
-                <td className="px-4 py-2.5">
-                  <Link to={`/decks/${deck.id}`} className="text-amber-400 hover:underline text-xs">View →</Link>
-                </td>
+                <td className="px-4 py-2.5 text-amber-400 text-xs">View →</td>
               </tr>
             ))}
           </tbody>
@@ -230,34 +278,9 @@ export default function CardPage() {
                 </div>
               </div>
 
-              {/* Archetypes */}
-              {card.archetypes.length > 0 ? (
-                <section>
-                  <h2 className="text-xs font-semibold text-gray-500 uppercase tracking-wider mb-3">
-                    Played in {card.archetypes.length} {card.archetypes.length === 1 ? 'archetype' : 'archetypes'}
-                  </h2>
-                  <div className="flex flex-wrap gap-2">
-                    {[...card.archetypes].sort().map(name => (
-                      <Link
-                        key={name}
-                        to={`/archetypes/${encodeURIComponent(name)}`}
-                        className="text-xs font-medium px-3 py-1.5 rounded-full bg-gray-800 border border-gray-700 text-amber-400 hover:border-amber-400 hover:bg-gray-750 transition-colors"
-                      >
-                        {name}
-                      </Link>
-                    ))}
-                  </div>
-                </section>
-              ) : (
-                <p className="text-gray-500 text-sm">No archetype data available yet.</p>
-              )}
-
-              {card.archetypes.length > 0 && (
-                <section className="mt-8">
-                  <h2 className="text-xs font-semibold text-gray-500 uppercase tracking-wider mb-3">Decklists</h2>
-                  <CardDecksSection slug={slug} />
-                </section>
-              )}
+              <section>
+                <CardDecksSection slug={slug} />
+              </section>
             </>
           )
         })()}

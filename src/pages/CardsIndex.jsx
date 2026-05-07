@@ -1,5 +1,5 @@
 import { useState, useEffect, useMemo } from 'react'
-import { Link } from 'react-router-dom'
+import { Link, useNavigate } from 'react-router-dom'
 import Layout from '../components/Layout'
 
 const MANA_ORDER = ['W', 'U', 'B', 'R', 'G', 'C']
@@ -42,6 +42,7 @@ export default function CardsIndex() {
   const [activeTypes, setActiveTypes] = useState(new Set())
   const [activeCmc, setActiveCmc] = useState(new Set())
   const [activeArchetypes, setActiveArchetypes] = useState(new Set())
+  const navigate = useNavigate()
 
   useEffect(() => {
     Promise.all([
@@ -213,12 +214,9 @@ export default function CardsIndex() {
                   </thead>
                   <tbody className="divide-y divide-gray-700/50">
                     {filtered.map(c => (
-                      <tr key={c.slug} className="bg-gray-900 hover:bg-gray-800 transition-colors">
-                        <td className="px-4 py-2.5">
-                          <Link to={`/cards/${c.slug}`} className="text-amber-400 hover:text-amber-300">
-                            {c.name}
-                          </Link>
-                        </td>
+                      <tr key={c.slug} onClick={() => navigate(`/cards/${c.slug}`)}
+                        className="bg-gray-900 hover:bg-gray-800 transition-colors cursor-pointer">
+                        <td className="px-4 py-2.5 text-amber-400">{c.name}</td>
                         <td className="px-4 py-2.5">
                           <div className="flex gap-0.5">
                             {(c.colors || []).length === 0
