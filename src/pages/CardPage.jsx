@@ -131,7 +131,7 @@ export default function CardPage() {
 
   return (
     <Layout>
-      <div className="max-w-4xl mx-auto px-4 py-8">
+      <div className="space-y-6">
         {loading && <p className="text-gray-500 text-sm">Loading…</p>}
 
         {notFound && (
@@ -151,13 +151,10 @@ export default function CardPage() {
 
           return (
             <>
-              <div className="mb-6">
-                <Link to="/cards" className="text-xs text-gray-500 hover:text-gray-300">← Cards</Link>
-              </div>
-
               <div className="flex flex-col md:flex-row gap-8 mb-10">
                 {/* Images */}
-                <div className={`shrink-0 flex gap-3 ${isDFC ? 'flex-row md:flex-col' : ''}`}>
+                <div className={`shrink-0 flex flex-col gap-3`}>
+                  <div className={`flex gap-3 ${isDFC ? 'flex-row md:flex-col' : ''}`}>
                   {isDFC ? (
                     faces.map((face, i) =>
                       face.image_uris?.normal && (
@@ -179,6 +176,7 @@ export default function CardPage() {
                       />
                     </a>
                   ) : null}
+                  </div>
                 </div>
 
                 {/* Card details */}
@@ -227,6 +225,8 @@ export default function CardPage() {
                       View on Scryfall →
                     </a>
                   )}
+
+                  <Link to="/cards" className="text-xs text-gray-500 hover:text-amber-400 transition-colors w-fit">Cards Index →</Link>
                 </div>
               </div>
 
