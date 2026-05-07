@@ -10,6 +10,7 @@ const NAV_ITEMS = [
   { to: '/pool', label: 'Pauper Pool' },
   { to: '/creators', label: 'Creators' },
   { to: '/faq', label: 'FAQ' },
+  { to: '/contact', label: 'Contact' },
 ]
 
 const SOCIAL_LINKS = [
