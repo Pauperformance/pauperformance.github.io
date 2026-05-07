@@ -1,5 +1,6 @@
 import { useState, useEffect, useMemo, useRef } from 'react'
 import { createPortal } from 'react-dom'
+import { Link } from 'react-router-dom'
 import Layout from '../components/Layout'
 
 function CardLink({ card, highlighted }) {
@@ -31,10 +32,12 @@ function CardLink({ card, highlighted }) {
     top: Math.max(8, Math.min(pos.y - 80, window.innerHeight - 320)),
   } : null
 
+  const slug = card.name.toLowerCase().replace(/\s+/g, '-').replace(/[^a-z0-9-]/g, '')
+
   return (
     <>
-      <a
-        href={card.url} target="_blank" rel="noreferrer"
+      <Link
+        to={`/cards/${slug}`}
         onMouseEnter={show} onMouseMove={move} onMouseLeave={hide}
         className={`px-2.5 py-1 rounded-md text-xs border transition-colors ${
           highlighted
@@ -42,7 +45,7 @@ function CardLink({ card, highlighted }) {
             : 'bg-gray-800 border-gray-700 text-gray-300 hover:border-amber-400/50 hover:text-amber-300'
         }`}>
         {card.name}
-      </a>
+      </Link>
       {pos && imgSrc && createPortal(
         <img
           src={imgSrc}
@@ -58,6 +61,7 @@ function CardLink({ card, highlighted }) {
 
 function SetEntry({ set, searchQuery, defaultOpen, isLast }) {
   const [open, setOpen] = useState(defaultOpen)
+  const [hovered, setHovered] = useState(false)
 
   const visibleCards = useMemo(() => {
     if (!searchQuery) return set.cards
@@ -71,23 +75,25 @@ function SetEntry({ set, searchQuery, defaultOpen, isLast }) {
     <div className="flex">
       {/* date column */}
       <div className="w-28 shrink-0 text-right pr-5 pt-2">
-        <span className="text-xs text-gray-500 font-mono">{set.date}</span>
+        <span className="text-sm text-gray-500 font-mono">{set.date}</span>
       </div>
 
       {/* timeline spine */}
       <div className="shrink-0 flex flex-col items-center">
-        <div className="w-2.5 h-2.5 rounded-full bg-gray-600 border border-gray-500 mt-2 shrink-0 z-10" />
+        <div className={`w-2.5 h-2.5 rounded-full border mt-2 shrink-0 z-10 transition-colors ${hovered ? 'bg-amber-400 border-amber-400' : 'bg-gray-600 border-gray-500'}`} />
         {!isLast && <div className="w-px flex-1 bg-gray-700 mt-1" />}
       </div>
 
       {/* content */}
-      <div className="flex-1 pl-5 pb-8">
+      <div className="flex-1 pl-5 pb-8"
+        onMouseEnter={() => setHovered(true)}
+        onMouseLeave={() => setHovered(false)}>
         <button
           onClick={() => setOpen(v => !v)}
           className="flex items-center gap-3 text-left w-full group">
           <span className="font-semibold text-white group-hover:text-amber-300 transition-colors">{set.name}</span>
           <span className="font-mono text-xs text-amber-400 shrink-0">#{set.code}</span>
-          <span className="text-xs text-gray-500 shrink-0">
+          <span className="text-sm text-gray-500 shrink-0">
             {searchQuery ? `${visibleCards.length} / ${set.cards.length}` : set.cards.length} cards
           </span>
           <span className="text-gray-600 text-xs shrink-0">{open ? '▲' : '▼'}</span>
