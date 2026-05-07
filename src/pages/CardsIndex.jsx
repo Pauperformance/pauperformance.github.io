@@ -23,7 +23,7 @@ export default function CardsIndex() {
     <Layout>
       <div className="max-w-4xl mx-auto px-4 py-8">
         <h1 className="text-2xl font-bold text-amber-400 mb-1">Cards</h1>
-        <p className="text-gray-400 text-sm mb-6">{cards.length} cards in the Pauper card pool</p>
+        <p className="text-gray-400 text-sm mb-6">{cards.length} cards played in Pauper decks</p>
 
         <input
           type="search"

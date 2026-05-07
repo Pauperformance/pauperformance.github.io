@@ -192,8 +192,9 @@ for (const f of cardFiles) {
   const raw = JSON.parse(readFileSync(join(cardIntelDir, f), 'utf8'))
   const name = raw.name || slug
   const archetypes = (raw.archetypes && raw.archetypes['py/set']) || []
+  const scryfall = raw.scryfall || null
   cardsIndex.push({ slug, name, archetypeCount: archetypes.length })
-  writeFileSync(join(cardDetailsDir, f), JSON.stringify({ slug, name, archetypes }))
+  writeFileSync(join(cardDetailsDir, f), JSON.stringify({ slug, name, archetypes, scryfall }))
 }
 writeFileSync(join(outDir, 'cards.json'), JSON.stringify(cardsIndex))
 console.log('Built cards.json with ' + cardsIndex.length + ' entries.')
