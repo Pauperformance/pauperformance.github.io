@@ -29,7 +29,7 @@ function CardGallery({ cards }) {
           title={card.name}
           className="group relative shrink-0">
           <img src={card.preview} alt={card.name}
-            className="h-32 rounded-lg shadow border border-gray-700 group-hover:border-amber-400 transition-colors object-cover" />
+            className="h-64 rounded-lg shadow border border-gray-700 group-hover:border-amber-400 transition-colors object-cover" />
         </a>
       ))}
     </div>
