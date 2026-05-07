@@ -150,25 +150,23 @@ function IntelDecksSection({ name }) {
         <table className="w-full text-sm">
           <thead>
             <tr className="bg-gray-800 border-b border-gray-700">
-              <th className="text-left px-4 py-2 text-xs font-semibold text-gray-400 uppercase tracking-wider">Set</th>
+              <th className="text-left px-4 py-2 text-xs font-semibold text-gray-400 uppercase tracking-wider">Tournament</th>
               <th className="text-left px-4 py-2 text-xs font-semibold text-gray-400 uppercase tracking-wider hidden sm:table-cell">Date</th>
-              <th className="text-left px-4 py-2 text-xs font-semibold text-gray-400 uppercase tracking-wider">Legal</th>
+              <th className="text-left px-4 py-2 text-xs font-semibold text-gray-400 uppercase tracking-wider hidden md:table-cell">Pilot</th>
+              <th className="text-left px-4 py-2 text-xs font-semibold text-gray-400 uppercase tracking-wider hidden md:table-cell">Place</th>
               <th className="text-left px-4 py-2 text-xs font-semibold text-gray-400 uppercase tracking-wider">Link</th>
             </tr>
           </thead>
           <tbody className="divide-y divide-gray-700/50">
-            {page_decks.map((deck, i) => (
-              <tr key={deck.url} className="bg-gray-900 hover:bg-gray-800 transition-colors">
-                <td className="px-4 py-2.5 text-gray-300">{deck.set_name}</td>
-                <td className="px-4 py-2.5 text-gray-500 hidden sm:table-cell">{deck.set_date}</td>
+            {page_decks.map((deck) => (
+              <tr key={deck.id} className="bg-gray-900 hover:bg-gray-800 transition-colors">
+                <td className="px-4 py-2.5 text-gray-300">{deck.tournament_name}</td>
+                <td className="px-4 py-2.5 text-gray-500 hidden sm:table-cell">{deck.tournament_date}</td>
+                <td className="px-4 py-2.5 text-gray-400 hidden md:table-cell">{deck.pilot}</td>
+                <td className="px-4 py-2.5 text-gray-400 hidden md:table-cell">{deck.place}</td>
                 <td className="px-4 py-2.5">
-                  {deck.legal
-                    ? <span className="text-green-400 text-xs font-medium">Legal</span>
-                    : <span className="text-red-400 text-xs font-medium">Banned</span>}
-                </td>
-                <td className="px-4 py-2.5">
-                  <a href={deck.url} target="_blank" rel="noreferrer"
-                    className="text-amber-400 hover:underline text-xs">View →</a>
+                  <Link to={`/decks/${deck.id}`}
+                    className="text-amber-400 hover:underline text-xs">View →</Link>
                 </td>
               </tr>
             ))}

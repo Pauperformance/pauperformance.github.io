@@ -9,10 +9,14 @@ const familyMdDir = 'families'
 const outDir = 'public/data'
 const detailsDir = join(outDir, 'archetype-details')
 const intelDecksDir = join(outDir, 'intel-decks')
+const deckDetailsDir = join(outDir, 'deck-details')
+const cardDecksDir = join(outDir, 'card-decks')
 
 mkdirSync(outDir, { recursive: true })
 mkdirSync(detailsDir, { recursive: true })
 mkdirSync(intelDecksDir, { recursive: true })
+mkdirSync(deckDetailsDir, { recursive: true })
+mkdirSync(cardDecksDir, { recursive: true })
 
 function readJsonDir(dir) {
   if (!existsSync(dir)) return []
@@ -86,23 +90,95 @@ for (const archetype of archetypes) {
 
 console.log(`Built ${detailCount} archetype detail files.`)
 
-// Build intel decks per archetype
+// Build intel decks per archetype + individual deck detail files
+function parseDecklist(txt) {
+  var lines = txt.trim().split('\n')
+  var main = []
+  var side = []
+  var inSide = false
+  for (var i = 0; i < lines.length; i++) {
+    var line = lines[i].trim()
+    if (!line) { inSide = true; continue }
+    var match = line.match(/^(\d+)\s+(.+)$/)
+    if (!match) continue
+    var entry = { qty: parseInt(match[1]), name: match[2] }
+    if (inSide) side.push(entry)
+    else main.push(entry)
+  }
+  return { main: main, side: side }
+}
+
+const tournamentDeckDir = 'assets/data/deck/mtggoldfish_tournament'
+const cardDecksMap = {}
 let intelDeckCount = 0
+let deckDetailCount = 0
 for (const archetype of archetypes) {
   const name = archetype.name
   const folder = join(intelDeckDir, name)
   if (!existsSync(folder)) continue
   const decks = readdirSync(folder)
-    .filter(f => f.endsWith('.json'))
-    .map(f => {
+    .filter(function(f) { return f.endsWith('.json') })
+    .map(function(f) {
+      const id = f.slice(0, -5)
       const d = JSON.parse(readFileSync(join(folder, f), 'utf8'))
-      return { url: d.url, set_name: d.set_name, set_date: d.set_date, legal: d.legal }
+
+      // Write individual deck detail file
+      const txtPath = join(tournamentDeckDir, id + '.txt')
+      var decklist = null
+      if (existsSync(txtPath)) {
+        decklist = parseDecklist(readFileSync(txtPath, 'utf8'))
+      }
+      writeFileSync(join(deckDetailsDir, id + '.json'), JSON.stringify({
+        id: id,
+        archetype: name,
+        url: d.url,
+        pilot: d.pilot || null,
+        place: d.place || null,
+        tournament_name: d.tournament_name || null,
+        tournament_date: d.tournament_date || null,
+        mtgo_price: d.mtgo_price || null,
+        tabletop_price: d.tabletop_price || null,
+        decklist: decklist,
+      }))
+      deckDetailCount++
+
+      // Build reverse index: card name → decks containing it
+      if (decklist) {
+        var deckMeta = {
+          id: id,
+          archetype: name,
+          pilot: d.pilot || null,
+          place: d.place || null,
+          tournament_name: d.tournament_name || null,
+          tournament_date: d.tournament_date || null,
+        }
+        var seen = {}
+        var allCards = decklist.main.concat(decklist.side)
+        for (var ci = 0; ci < allCards.length; ci++) {
+          var cardName = allCards[ci].name
+          if (seen[cardName]) continue
+          seen[cardName] = true
+          if (!cardDecksMap[cardName]) cardDecksMap[cardName] = []
+          cardDecksMap[cardName].push(deckMeta)
+        }
+      }
+
+      return {
+        id: id,
+        url: d.url,
+        pilot: d.pilot || null,
+        place: d.place || null,
+        tournament_name: d.tournament_name || null,
+        tournament_date: d.tournament_date || null,
+      }
     })
-    .sort((a, b) => b.set_date.localeCompare(a.set_date))
+    .sort(function(a, b) {
+      return (b.tournament_date || '').localeCompare(a.tournament_date || '')
+    })
   writeFileSync(join(intelDecksDir, `${name}.json`), JSON.stringify(decks))
   intelDeckCount++
 }
-console.log(`Built intel-decks for ${intelDeckCount} archetypes.`)
+console.log('Built intel-decks for ' + intelDeckCount + ' archetypes, ' + deckDetailCount + ' deck detail files.')
 
 // Build families index from archetype family fields
 const familyMap = {}
@@ -181,17 +257,97 @@ mkdirSync(cardDetailsDir, { recursive: true })
 
 const cardFiles = readdirSync(cardIntelDir).filter(function(f) { return f.endsWith('.json') }).sort()
 const cardsIndex = []
+const cardImageMap = {}
 for (const f of cardFiles) {
   const slug = f.slice(0, -5)
   const raw = JSON.parse(readFileSync(join(cardIntelDir, f), 'utf8'))
   const name = raw.name || slug
   const archetypes = (raw.archetypes && raw.archetypes['py/set']) || []
   const scryfall = raw.scryfall || null
-  cardsIndex.push({ slug, name, archetypeCount: archetypes.length })
+  var colors = (scryfall && scryfall.colors) || []
+  if (scryfall && colors.length === 0 && scryfall.card_faces) {
+    var faceColorSet = {}
+    for (var fci = 0; fci < scryfall.card_faces.length; fci++) {
+      var faceColors = scryfall.card_faces[fci].colors || []
+      for (var fci2 = 0; fci2 < faceColors.length; fci2++) faceColorSet[faceColors[fci2]] = true
+    }
+    colors = Object.keys(faceColorSet)
+  }
+  var CARD_TYPES = ['Creature', 'Instant', 'Sorcery', 'Enchantment', 'Artifact', 'Land']
+  var TYPE_RENAME = { 'Stickers': 'Sticker' }
+  var typeLine = (scryfall && scryfall.type_line) || ''
+  if (!typeLine && scryfall && scryfall.card_faces) {
+    typeLine = scryfall.card_faces.map(function(f) { return f.type_line || '' }).join(' // ')
+  }
+  var typeSet = {}
+  var tlParts = typeLine.split(' // ')
+  for (var tli = 0; tli < tlParts.length; tli++) {
+    var tlWords = tlParts[tli].split(' — ')[0].split(' ')
+    for (var wi = 0; wi < tlWords.length; wi++) {
+      var tw = tlWords[wi]
+      if (CARD_TYPES.indexOf(tw) !== -1) typeSet[tw] = true
+      else if (TYPE_RENAME[tw]) typeSet[TYPE_RENAME[tw]] = true
+    }
+  }
+  var types = Object.keys(typeSet)
+  var cmc = (scryfall && scryfall.cmc !== undefined) ? scryfall.cmc : null
+  cardsIndex.push({ slug, name, archetypeCount: archetypes.length, colors: colors, types: types, cmc: cmc })
   writeFileSync(join(cardDetailsDir, f), JSON.stringify({ slug, name, archetypes, scryfall }))
+  cardImageMap[name] = scryfall
+    ? (scryfall.image_uris && scryfall.image_uris.normal)
+      || (scryfall.card_faces && scryfall.card_faces[0] && scryfall.card_faces[0].image_uris && scryfall.card_faces[0].image_uris.normal)
+      || null
+    : null
 }
 writeFileSync(join(outDir, 'cards.json'), JSON.stringify(cardsIndex))
-console.log('Built cards.json with ' + cardsIndex.length + ' entries.')
+writeFileSync(join(outDir, 'card-images.json'), JSON.stringify(cardImageMap))
+console.log('Built cards.json with ' + cardsIndex.length + ' entries and card-images.json.')
+
+// Build card-decks reverse index: card slug → decks containing that card
+var cardNameToSlug = {}
+for (var ci2 = 0; ci2 < cardsIndex.length; ci2++) {
+  var ci2entry = cardsIndex[ci2]
+  cardNameToSlug[ci2entry.name] = ci2entry.slug
+  if (ci2entry.name.indexOf(' // ') !== -1) {
+    var frontFaceName = ci2entry.name.split(' // ')[0]
+    if (!cardNameToSlug[frontFaceName]) cardNameToSlug[frontFaceName] = ci2entry.slug
+  }
+}
+var cardDeckCount = 0
+var cardNames = Object.keys(cardDecksMap)
+for (var ci3 = 0; ci3 < cardNames.length; ci3++) {
+  var cname = cardNames[ci3]
+  var cslug = cardNameToSlug[cname]
+  if (!cslug) continue
+  var sortedDecks = cardDecksMap[cname].slice().sort(function(a, b) {
+    return (b.tournament_date || '').localeCompare(a.tournament_date || '')
+  })
+  writeFileSync(join(cardDecksDir, cslug + '.json'), JSON.stringify(sortedDecks))
+  cardDeckCount++
+}
+console.log('Built card-decks for ' + cardDeckCount + ' cards.')
+
+// Build archetype → card slugs index (from actual deck appearances)
+var archetypeCardMap = {}
+var cardNamesAll = Object.keys(cardDecksMap)
+for (var aci = 0; aci < cardNamesAll.length; aci++) {
+  var acName = cardNamesAll[aci]
+  var acSlug = cardNameToSlug[acName]
+  if (!acSlug) continue
+  var acDecks = cardDecksMap[acName]
+  for (var adi = 0; adi < acDecks.length; adi++) {
+    var acArch = acDecks[adi].archetype
+    if (!archetypeCardMap[acArch]) archetypeCardMap[acArch] = {}
+    archetypeCardMap[acArch][acSlug] = true
+  }
+}
+var archetypeCardSlugs = {}
+var acArchNames = Object.keys(archetypeCardMap).sort()
+for (var acai = 0; acai < acArchNames.length; acai++) {
+  archetypeCardSlugs[acArchNames[acai]] = Object.keys(archetypeCardMap[acArchNames[acai]]).sort()
+}
+writeFileSync(join(outDir, 'archetype-card-slugs.json'), JSON.stringify(archetypeCardSlugs))
+console.log('Built archetype-card-slugs.json for ' + acArchNames.length + ' archetypes.')
 
 // Build creators index
 const creatorDir = 'assets/data/creator'

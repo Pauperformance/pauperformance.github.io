@@ -26,7 +26,7 @@ function CreatorCard({ creator }) {
 
   return (
     <div className="min-w-0 bg-gray-800 border border-gray-700 rounded-lg p-4 flex flex-col gap-3 hover:border-gray-500 transition-colors">
-      <div className="font-semibold text-gray-100 text-sm leading-tight break-words">{creator.name}</div>
+      <div className="font-semibold text-amber-400 text-sm leading-tight break-words">{creator.name}</div>
 
       {mtgoNames.length > 0 && (
         <div className="flex flex-col gap-1">
@@ -82,18 +82,20 @@ export default function Creators() {
 
   return (
     <Layout>
-      <div className="max-w-5xl mx-auto px-4 py-8">
-        <h1 className="text-2xl font-bold text-amber-400 mb-1">Pauper Creators</h1>
-        <p className="text-gray-400 text-sm mb-6">
-          {creators.length} content creators in the Pauper community
-        </p>
+      <div className="space-y-6">
+        <div>
+          <h1 className="text-2xl font-bold text-white">Pauper Creators</h1>
+          <p className="mt-2 text-gray-400 text-sm">
+            {creators.length} content creators in the Pauper community
+          </p>
+        </div>
 
         <input
           type="search"
           placeholder="Search by name or MTGO username…"
           value={search}
           onChange={e => setSearch(e.target.value)}
-          className="w-full max-w-sm bg-gray-800 border border-gray-700 rounded px-3 py-1.5 text-sm text-gray-100 placeholder-gray-500 focus:outline-none focus:border-amber-400 mb-6"
+          className="w-full bg-gray-800 border border-gray-600 rounded-xl px-4 py-2.5 text-sm text-gray-100 placeholder-gray-500 focus:outline-none focus:border-amber-400"
         />
 
         {loading ? (
@@ -101,7 +103,7 @@ export default function Creators() {
         ) : filtered.length === 0 ? (
           <p className="text-gray-500 text-sm">No creators found.</p>
         ) : (
-          <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 gap-3">
+          <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 2xl:grid-cols-6 gap-3">
             {filtered.map(c => <CreatorCard key={c.name} creator={c} />)}
           </div>
         )}

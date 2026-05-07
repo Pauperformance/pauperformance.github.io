@@ -43,6 +43,76 @@ function FaceDetails({ face }) {
   )
 }
 
+const PAGE_SIZE = 20
+
+function CardDecksSection({ slug }) {
+  const [decks, setDecks] = useState(null)
+  const [page, setPage] = useState(0)
+
+  useEffect(() => {
+    fetch(`/data/card-decks/${slug}.json`)
+      .then(r => r.ok ? r.json() : [])
+      .then(setDecks)
+      .catch(() => setDecks([]))
+  }, [slug])
+
+  if (!decks) return <p className="text-gray-500 text-sm">Loading decklists…</p>
+  if (!decks.length) return <p className="text-gray-500 text-sm">No decklists recorded.</p>
+
+  const totalPages = Math.ceil(decks.length / PAGE_SIZE)
+  const paginated = decks.slice(page * PAGE_SIZE, (page + 1) * PAGE_SIZE)
+
+  return (
+    <div className="space-y-3">
+      <p className="text-xs text-gray-500">{decks.length} decklists</p>
+      <div className="border border-gray-700 rounded-xl overflow-hidden">
+        <table className="w-full text-sm">
+          <thead>
+            <tr className="bg-gray-800 border-b border-gray-700">
+              <th className="text-left px-4 py-2 text-xs font-semibold text-gray-400 uppercase tracking-wider">Archetype</th>
+              <th className="text-left px-4 py-2 text-xs font-semibold text-gray-400 uppercase tracking-wider hidden sm:table-cell">Tournament</th>
+              <th className="text-left px-4 py-2 text-xs font-semibold text-gray-400 uppercase tracking-wider hidden sm:table-cell">Date</th>
+              <th className="text-left px-4 py-2 text-xs font-semibold text-gray-400 uppercase tracking-wider hidden md:table-cell">Pilot</th>
+              <th className="text-left px-4 py-2 text-xs font-semibold text-gray-400 uppercase tracking-wider hidden md:table-cell">Place</th>
+              <th className="text-left px-4 py-2 text-xs font-semibold text-gray-400 uppercase tracking-wider">Link</th>
+            </tr>
+          </thead>
+          <tbody className="divide-y divide-gray-700/50">
+            {paginated.map(deck => (
+              <tr key={deck.id} className="bg-gray-900 hover:bg-gray-800 transition-colors">
+                <td className="px-4 py-2.5">
+                  <Link to={`/archetypes/${encodeURIComponent(deck.archetype)}`}
+                    className="text-amber-400 hover:underline text-xs">{deck.archetype}</Link>
+                </td>
+                <td className="px-4 py-2.5 text-gray-300 hidden sm:table-cell">{deck.tournament_name}</td>
+                <td className="px-4 py-2.5 text-gray-500 hidden sm:table-cell">{deck.tournament_date}</td>
+                <td className="px-4 py-2.5 text-gray-400 hidden md:table-cell">{deck.pilot}</td>
+                <td className="px-4 py-2.5 text-gray-400 hidden md:table-cell">{deck.place}</td>
+                <td className="px-4 py-2.5">
+                  <Link to={`/decks/${deck.id}`} className="text-amber-400 hover:underline text-xs">View →</Link>
+                </td>
+              </tr>
+            ))}
+          </tbody>
+        </table>
+      </div>
+      {totalPages > 1 && (
+        <div className="flex items-center justify-between text-xs text-gray-500">
+          <button onClick={() => setPage(p => Math.max(0, p - 1))} disabled={page === 0}
+            className="px-3 py-1 rounded-md border border-gray-700 hover:border-amber-400/50 disabled:opacity-30 disabled:cursor-not-allowed transition-colors">
+            ← Prev
+          </button>
+          <span>Page {page + 1} of {totalPages}</span>
+          <button onClick={() => setPage(p => Math.min(totalPages - 1, p + 1))} disabled={page === totalPages - 1}
+            className="px-3 py-1 rounded-md border border-gray-700 hover:border-amber-400/50 disabled:opacity-30 disabled:cursor-not-allowed transition-colors">
+            Next →
+          </button>
+        </div>
+      )}
+    </div>
+  )
+}
+
 export default function CardPage() {
   const { slug } = useParams()
   const [card, setCard] = useState(null)
@@ -180,6 +250,13 @@ export default function CardPage() {
                 </section>
               ) : (
                 <p className="text-gray-500 text-sm">No archetype data available yet.</p>
+              )}
+
+              {card.archetypes.length > 0 && (
+                <section className="mt-8">
+                  <h2 className="text-xs font-semibold text-gray-500 uppercase tracking-wider mb-3">Decklists</h2>
+                  <CardDecksSection slug={slug} />
+                </section>
               )}
             </>
           )
