@@ -9,21 +9,9 @@
     "family": null,
     "frequent": [
         {
-            "link": "https://scryfall.com/card/rvr/42/drift-of-phantasms",
-            "name": "Drift of Phantasms",
-            "preview": "https://cards.scryfall.io/normal/front/d/7/d722c22d-3cab-48b5-96cd-0874060ac9a4.jpg",
-            "py/object": "pauperformance_bot.entity.api.archetype.ArchetypeCard"
-        },
-        {
             "link": "https://scryfall.com/card/a25/58/freed-from-the-real",
             "name": "Freed from the Real",
             "preview": "https://cards.scryfall.io/normal/front/c/4/c47ee6f6-50c1-4f56-b9ce-4c309bfb92ca.jpg",
-            "py/object": "pauperformance_bot.entity.api.archetype.ArchetypeCard"
-        },
-        {
-            "link": "https://scryfall.com/card/avr/54/galvanic-alchemist",
-            "name": "Galvanic Alchemist",
-            "preview": "https://cards.scryfall.io/normal/front/b/0/b0e24d65-0e6f-4978-8de1-c5e4acac12fb.jpg",
             "py/object": "pauperformance_bot.entity.api.archetype.ArchetypeCard"
         },
         {
@@ -43,13 +31,21 @@
             "name": "Tuktuk Rubblefort",
             "preview": "https://cards.scryfall.io/normal/front/0/2/02eedf9d-e26c-405c-aee5-1b3493dc5e9b.jpg",
             "py/object": "pauperformance_bot.entity.api.archetype.ArchetypeCard"
+        },
+        {
+            "link": "https://scryfall.com/card/cmr/206/valakut-invoker",
+            "name": "Valakut Invoker",
+            "preview": "https://cards.scryfall.io/normal/front/b/8/b8000d86-60e7-4edd-b685-14ade08b76f2.jpg",
+            "py/object": "pauperformance_bot.entity.api.archetype.ArchetypeCard"
         }
     ],
     "game_type": [
         "Combo"
     ],
     "must_have_cards": [],
-    "must_not_have_cards": [],
+    "must_not_have_cards": [
+        "Balustrade Spy"
+    ],
     "name": "Walls",
     "py/object": "pauperformance_bot.entity.api.archetype.Archetype",
     "reference_decks": [
@@ -95,9 +91,21 @@
             "py/object": "pauperformance_bot.entity.api.archetype.ArchetypeCard"
         },
         {
+            "link": "https://scryfall.com/card/rvr/42/drift-of-phantasms",
+            "name": "Drift of Phantasms",
+            "preview": "https://cards.scryfall.io/normal/front/d/7/d722c22d-3cab-48b5-96cd-0874060ac9a4.jpg",
+            "py/object": "pauperformance_bot.entity.api.archetype.ArchetypeCard"
+        },
+        {
             "link": "https://scryfall.com/card/mh3/318/forest",
             "name": "Forest",
             "preview": "https://cards.scryfall.io/normal/front/7/a/7ac34881-de32-42c7-af60-f992638e1da2.jpg",
+            "py/object": "pauperformance_bot.entity.api.archetype.ArchetypeCard"
+        },
+        {
+            "link": "https://scryfall.com/card/avr/54/galvanic-alchemist",
+            "name": "Galvanic Alchemist",
+            "preview": "https://cards.scryfall.io/normal/front/b/0/b0e24d65-0e6f-4978-8de1-c5e4acac12fb.jpg",
             "py/object": "pauperformance_bot.entity.api.archetype.ArchetypeCard"
         },
         {
