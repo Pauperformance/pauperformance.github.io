@@ -135,26 +135,20 @@ const families = Object.values(familyMap).sort(function(a, b) { return a.name.lo
 writeFileSync(join(outDir, 'families.json'), JSON.stringify(families))
 console.log('Built families.json with ' + families.length + ' families.')
 
-// Parse set index from markdown
-const setLines = readFileSync('pages/set_index.md', 'utf8').split('\n')
-const sets = []
-for (const line of setLines) {
-  const trimmed = line.trim()
-  if (!trimmed.startsWith('|') || trimmed.includes('----') || trimmed.includes('p12e code')) continue
-  const cols = trimmed.split('|').map(c => c.trim()).filter(Boolean)
-  if (cols.length < 4) continue
-  const clean = s => s.replace(/\*\*/g, '').trim()
-  const pauper_pool = cols[2].startsWith('**')
-  sets.push({
-    code: parseInt(clean(cols[0])),
-    scryfall: clean(cols[1]),
-    name: clean(cols[2]),
-    date: clean(cols[3]),
-    pauper_pool,
-  })
-}
+// Build set index from assets/data/set_index.json
+const setIndexRaw = JSON.parse(readFileSync('assets/data/set_index.json', 'utf8'))
+const sets = setIndexRaw['py/reduce'][4]['py/tuple'].map(function(entry) {
+  var d = entry['py/tuple'][1]
+  return {
+    code: d.p12e_code,
+    scryfall: d.scryfall_code,
+    name: d.name,
+    date: d.date,
+    pauper_pool: d.new_pauper_cards,
+  }
+})
 writeFileSync(join(outDir, 'sets.json'), JSON.stringify(sets))
-console.log(`Built sets.json with ${sets.length} entries (${sets.filter(s => s.pauper_pool).length} in Pauper pool).`)
+console.log('Built sets.json with ' + sets.length + ' entries (' + sets.filter(function(s) { return s.pauper_pool }).length + ' in Pauper pool).')
 
 // Copy format timeline as-is from source
 copyFileSync('assets/data/timeline.json', join(outDir, 'timeline.json'))
