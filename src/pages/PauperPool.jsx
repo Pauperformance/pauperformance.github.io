@@ -56,7 +56,7 @@ function CardLink({ card, highlighted }) {
   )
 }
 
-function SetSection({ set, searchQuery, defaultOpen }) {
+function SetEntry({ set, searchQuery, defaultOpen, isLast }) {
   const [open, setOpen] = useState(defaultOpen)
 
   const visibleCards = useMemo(() => {
@@ -68,33 +68,39 @@ function SetSection({ set, searchQuery, defaultOpen }) {
   if (searchQuery && visibleCards.length === 0) return null
 
   return (
-    <div className="border border-gray-700 rounded-xl overflow-hidden">
-      <button
-        onClick={() => setOpen(v => !v)}
-        className="w-full flex items-center justify-between px-5 py-3.5 bg-gray-800 hover:bg-gray-750 transition-colors text-left gap-4">
-        <div className="flex items-center gap-3 min-w-0">
+    <div className="flex">
+      {/* date column */}
+      <div className="w-28 shrink-0 text-right pr-5 pt-2">
+        <span className="text-xs text-gray-500 font-mono">{set.date}</span>
+      </div>
+
+      {/* timeline spine */}
+      <div className="shrink-0 flex flex-col items-center">
+        <div className="w-2.5 h-2.5 rounded-full bg-gray-600 border border-gray-500 mt-2 shrink-0 z-10" />
+        {!isLast && <div className="w-px flex-1 bg-gray-700 mt-1" />}
+      </div>
+
+      {/* content */}
+      <div className="flex-1 pl-5 pb-8">
+        <button
+          onClick={() => setOpen(v => !v)}
+          className="flex items-center gap-3 text-left w-full group">
+          <span className="font-semibold text-white group-hover:text-amber-300 transition-colors">{set.name}</span>
           <span className="font-mono text-xs text-amber-400 shrink-0">#{set.code}</span>
-          <span className="font-semibold text-white truncate">{set.name}</span>
-          <span className="font-mono text-xs text-gray-500 shrink-0 hidden sm:inline">{set.scryfall}</span>
-        </div>
-        <div className="flex items-center gap-3 shrink-0">
-          <span className="text-xs text-gray-400">
+          <span className="text-xs text-gray-500 shrink-0">
             {searchQuery ? `${visibleCards.length} / ${set.cards.length}` : set.cards.length} cards
           </span>
-          <span className="text-gray-500 text-sm">{open ? '▲' : '▼'}</span>
-        </div>
-      </button>
+          <span className="text-gray-600 text-xs shrink-0">{open ? '▲' : '▼'}</span>
+        </button>
 
-      {open && (
-        <div className="px-5 py-4 bg-gray-900 border-t border-gray-700">
-          <p className="text-xs text-gray-500 mb-3">{set.date}</p>
-          <div className="flex flex-wrap gap-2">
+        {open && (
+          <div className="mt-3 flex flex-wrap gap-2">
             {visibleCards.map(card => (
               <CardLink key={card.url} card={card} highlighted={!!searchQuery} />
             ))}
           </div>
-        </div>
-      )}
+        )}
+      </div>
     </div>
   )
 }
@@ -155,19 +161,21 @@ export default function PauperPool() {
                 {matchCount} result{matchCount !== 1 ? 's' : ''} across {visibleSets.length} set{visibleSets.length !== 1 ? 's' : ''}
               </p>
             )}
-            <div className="space-y-2">
-              {visibleSets.map(set => (
-                <SetSection
-                  key={set.code}
-                  set={set}
-                  searchQuery={isSearching ? search.trim() : ''}
-                  defaultOpen={isSearching}
-                />
-              ))}
-              {isSearching && visibleSets.length === 0 && (
-                <p className="text-center text-gray-500 text-sm py-12">No cards match your search.</p>
-              )}
-            </div>
+            {isSearching && visibleSets.length === 0 ? (
+              <p className="text-center text-gray-500 text-sm py-12">No cards match your search.</p>
+            ) : (
+              <div>
+                {visibleSets.map((set, i) => (
+                  <SetEntry
+                    key={set.code}
+                    set={set}
+                    searchQuery={isSearching ? search.trim() : ''}
+                    defaultOpen={isSearching}
+                    isLast={i === visibleSets.length - 1}
+                  />
+                ))}
+              </div>
+            )}
           </>
         )}
       </div>

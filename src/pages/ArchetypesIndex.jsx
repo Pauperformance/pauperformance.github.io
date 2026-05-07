@@ -1,5 +1,5 @@
 import { useState, useEffect, useMemo } from 'react'
-import { Link } from 'react-router-dom'
+import { Link, useNavigate } from 'react-router-dom'
 import Layout from '../components/Layout'
 
 const MANA_ORDER = ['W', 'U', 'B', 'R', 'G', 'C']
@@ -75,6 +75,8 @@ export default function ArchetypesIndex() {
       return next
     })
   }
+
+  const navigate = useNavigate()
 
   const filtered = useMemo(() => {
     const q = search.toLowerCase()
@@ -157,13 +159,14 @@ export default function ArchetypesIndex() {
                 </thead>
                 <tbody className="divide-y divide-gray-700/50">
                   {filtered.map(a => (
-                    <tr key={a.name} className="bg-gray-900 hover:bg-gray-800 transition-colors group">
+                    <tr key={a.name}
+                      onClick={() => navigate(`/archetypes/${encodeURIComponent(a.name)}`)}
+                      onAuxClick={e => { if (e.button === 1) window.open(`/#/archetypes/${encodeURIComponent(a.name)}`, '_blank') }}
+                      className="bg-gray-900 hover:bg-gray-800 transition-colors cursor-pointer group">
                       <td className="px-4 py-3">
-                        <Link
-                          to={`/archetypes/${encodeURIComponent(a.name)}`}
-                          className="font-medium text-gray-200 group-hover:text-amber-400 transition-colors">
+                        <span className="font-medium text-gray-200 group-hover:text-amber-400 transition-colors">
                           {a.name}
-                        </Link>
+                        </span>
                         {a.aliases?.length > 0 && (
                           <span className="ml-2 text-xs text-gray-500">({a.aliases.join(', ')})</span>
                         )}
@@ -179,6 +182,7 @@ export default function ArchetypesIndex() {
                       <td className="px-4 py-3 hidden sm:table-cell">
                         {a.family
                           ? <Link to={`/families/${encodeURIComponent(a.family)}`}
+                              onClick={e => e.stopPropagation()}
                               className="text-gray-500 hover:text-amber-400 transition-colors">
                               {a.family}
                             </Link>
