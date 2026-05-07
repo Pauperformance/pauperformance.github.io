@@ -150,7 +150,7 @@ export default function CardsIndex() {
     <Layout>
       <div className="space-y-6">
         <div>
-          <h1 className="text-2xl font-bold text-white">Cards</h1>
+          <h1 className="text-2xl font-bold text-white">Cards Index</h1>
           <p className="mt-2 text-gray-400 text-sm">{cards.length} cards played in Pauper decks</p>
         </div>
 

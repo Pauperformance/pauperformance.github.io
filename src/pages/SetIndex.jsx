@@ -26,7 +26,7 @@ export default function SetIndex() {
     <Layout>
       <div className="space-y-6">
         <div>
-          <h1 className="text-2xl font-bold text-white">Set Index</h1>
+          <h1 className="text-2xl font-bold text-white">Sets Index</h1>
           <p className="mt-2 text-gray-400 text-sm leading-relaxed">
             Reference numbers used by Pauperformance (p12e) to uniquely identify Magic sets.
             Generated from the <a href="https://scryfall.com/docs/api/sets" target="_blank" rel="noreferrer" className="text-amber-400 hover:underline">Scryfall API</a>.
