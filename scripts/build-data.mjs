@@ -231,24 +231,11 @@ copyFileSync('assets/data/timeline.json', join(outDir, 'timeline.json'))
 const timeline = JSON.parse(readFileSync('assets/data/timeline.json', 'utf8'))
 console.log('Copied timeline.json with ' + timeline.length + ' entries.')
 
-// Parse pauper pool from markdown
-const poolContent = readFileSync('pages/pauper_pool.md', 'utf8')
-const poolSections = poolContent.split('\n## ')
-const pool = []
-for (const sec of poolSections.slice(1)) {
-  const headerMatch = sec.match(/^(.+?)\s+\(([^)]+)\)/)
-  if (!headerMatch) continue
-  const [, name, scryfall] = headerMatch
-  const metaMatch = sec.match(/release:\s*(\S+)\s*\|\s*p12e_code:\s*(\d+)/)
-  const date = metaMatch ? metaMatch[1] : null
-  const code = metaMatch ? parseInt(metaMatch[2]) : null
-  const cards = [...sec.matchAll(/<a href="([^"]+)">([^<]+)<\/a>/g)]
-    .map(([, url, cardName]) => ({ name: cardName, url: url.split('?')[0] }))
-  pool.push({ code, scryfall, name, date, cards })
-}
-const totalCards = pool.reduce((sum, s) => sum + s.cards.length, 0)
+// Copy pauper pool from assets
+const pool = JSON.parse(readFileSync('assets/data/pauper_pool.json', 'utf8'))
+const totalCards = pool.reduce(function(sum, s) { return sum + s.cards.length }, 0)
 writeFileSync(join(outDir, 'pauper_pool.json'), JSON.stringify(pool))
-console.log(`Built pauper_pool.json with ${pool.length} sets and ${totalCards} cards.`)
+console.log('Built pauper_pool.json with ' + pool.length + ' sets and ' + totalCards + ' cards.')
 
 // Build cards index + per-card detail files
 const cardIntelDir = 'assets/data/intel/card'
