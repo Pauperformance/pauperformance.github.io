@@ -265,7 +265,7 @@ export default function CardsIndex() {
               <p className="text-gray-500 text-sm">No cards found.</p>
             ) : (
               <div className="border border-gray-700 rounded-xl overflow-hidden bg-gray-900">
-                <table className="w-full text-sm">
+                <table className="w-full text-sm bg-gray-900">
                   <thead>
                     <tr className="bg-gray-800 border-b border-gray-700">
                       <th className="text-left px-4 py-3 text-xs font-semibold text-gray-400 uppercase tracking-wider">Card</th>
@@ -275,7 +275,7 @@ export default function CardsIndex() {
                       <th className="text-right px-4 py-3 text-xs font-semibold text-gray-400 uppercase tracking-wider">Archetypes</th>
                     </tr>
                   </thead>
-                  <tbody className="divide-y divide-gray-700/50">
+                  <tbody className="divide-y divide-gray-700/50 bg-gray-900">
                     {filtered.map(c => (
                       <tr key={c.slug}
                         onClick={() => navigate(`/cards/${c.slug}`)}

@@ -68,7 +68,7 @@ function DecksTable({ decks, referenceNames }) {
 function DeckRows({ decks }) {
   return (
     <div className="border border-gray-700 rounded-xl overflow-hidden bg-gray-900">
-      <table className="w-full text-sm">
+      <table className="w-full text-sm bg-gray-900">
         <thead>
           <tr className="bg-gray-800 border-b border-gray-700">
             <th className="text-left px-4 py-2 text-xs font-semibold text-gray-400 uppercase tracking-wider">Name</th>
@@ -77,7 +77,7 @@ function DeckRows({ decks }) {
             <th className="text-left px-4 py-2 text-xs font-semibold text-gray-400 uppercase tracking-wider">Legal</th>
           </tr>
         </thead>
-        <tbody className="divide-y divide-gray-700/50">
+        <tbody className="divide-y divide-gray-700/50 bg-gray-900">
           {decks.map(deck => (
             <tr key={deck.name} className="bg-gray-900 hover:bg-gray-800 transition-colors">
               <td className="px-4 py-2.5">
@@ -103,7 +103,7 @@ function VideosSection({ videos }) {
   if (!videos?.length) return <p className="text-gray-500 text-sm">No videos recorded.</p>
   return (
     <div className="border border-gray-700 rounded-xl overflow-hidden bg-gray-900">
-      <table className="w-full text-sm">
+      <table className="w-full text-sm bg-gray-900">
         <thead>
           <tr className="bg-gray-800 border-b border-gray-700">
             <th className="text-left px-4 py-2 text-xs font-semibold text-gray-400 uppercase tracking-wider w-8">🗣️</th>
@@ -112,7 +112,7 @@ function VideosSection({ videos }) {
             <th className="text-left px-4 py-2 text-xs font-semibold text-gray-400 uppercase tracking-wider hidden sm:table-cell">Date</th>
           </tr>
         </thead>
-        <tbody className="divide-y divide-gray-700/50">
+        <tbody className="divide-y divide-gray-700/50 bg-gray-900">
           {videos.map(v => (
             <tr key={v.link} className="bg-gray-900 hover:bg-gray-800 transition-colors">
               <td className="px-4 py-2.5 text-base">{LANG_FLAG[v.language] ?? v.language}</td>
@@ -152,7 +152,7 @@ function IntelDecksSection({ name }) {
     <div className="space-y-3">
       <p className="text-xs text-gray-500">{decks.length} decklists</p>
       <div className="border border-gray-700 rounded-xl overflow-hidden">
-        <table className="w-full text-sm">
+        <table className="w-full text-sm bg-gray-900">
           <thead>
             <tr className="bg-gray-800 border-b border-gray-700">
               <th className="text-left px-4 py-2 text-xs font-semibold text-gray-400 uppercase tracking-wider">Tournament</th>
@@ -162,7 +162,7 @@ function IntelDecksSection({ name }) {
               <th className="text-left px-4 py-2 text-xs font-semibold text-gray-400 uppercase tracking-wider">Link</th>
             </tr>
           </thead>
-          <tbody className="divide-y divide-gray-700/50">
+          <tbody className="divide-y divide-gray-700/50 bg-gray-900">
             {page_decks.map((deck) => (
               <tr key={deck.id} className="bg-gray-900 hover:bg-gray-800 transition-colors">
                 <td className="px-4 py-2.5 text-gray-300">{deck.tournament_name}</td>
@@ -216,7 +216,7 @@ function ResourcesSection({ resources, discord, sideboard }) {
       ))}
       {resources?.length > 0 && (
         <div className="border border-gray-700 rounded-xl overflow-hidden">
-          <table className="w-full text-sm">
+          <table className="w-full text-sm bg-gray-900">
             <thead>
               <tr className="bg-gray-800 border-b border-gray-700">
                 <th className="text-left px-4 py-2 text-xs font-semibold text-gray-400 uppercase tracking-wider w-8">🗣️</th>
@@ -225,7 +225,7 @@ function ResourcesSection({ resources, discord, sideboard }) {
                 <th className="text-left px-4 py-2 text-xs font-semibold text-gray-400 uppercase tracking-wider hidden sm:table-cell">Date</th>
               </tr>
             </thead>
-            <tbody className="divide-y divide-gray-700/50">
+            <tbody className="divide-y divide-gray-700/50 bg-gray-900">
               {resources.map(r => (
                 <tr key={r.link} className="bg-gray-900 hover:bg-gray-800 transition-colors">
                   <td className="px-4 py-2.5 text-base">{r.language}</td>
@@ -299,7 +299,7 @@ export default function ArchetypePage() {
               ))}
             </div>
             {data.family && (
-              <span className="text-xs text-gray-500">Family: <span className="text-gray-300">{data.family}</span></span>
+              <span className="text-xs text-gray-500">Family: <Link to={`/families/${nameToSlug(data.family)}`} className="text-amber-400 hover:text-amber-300 transition-colors">{data.family}</Link></span>
             )}
           </div>
         </div>
