@@ -249,7 +249,7 @@ const cardTypeMap = {}
 for (const f of cardFiles) {
   const slug = f.slice(0, -5)
   const raw = JSON.parse(readFileSync(join(cardIntelDir, f), 'utf8'))
-  const name = raw.name || slug
+  const name = (raw.scryfall && raw.scryfall.name) || slug
   const archetypes = (raw.archetypes && raw.archetypes['py/set']) || []
   const scryfall = raw.scryfall || null
   var colors = (scryfall && scryfall.colors) || []

@@ -2,7 +2,7 @@ import { useState, useEffect } from 'react'
 import { useParams, Link } from 'react-router-dom'
 import ReactMarkdown from 'react-markdown'
 import Layout from '../components/Layout'
-import { slugToName } from '../utils/slugs'
+import { nameToSlug, slugToName } from '../utils/slugs'
 
 const MANA_ORDER = ['W', 'U', 'B', 'R', 'G', 'C']
 const LANG_FLAG = {
@@ -21,17 +21,21 @@ function SectionHeader({ children }) {
   return <h2 className="text-lg font-semibold text-white mb-3 pb-2 border-b border-gray-700">{children}</h2>
 }
 
+function cardNameToSlug(name) {
+  return name.toLowerCase().replace(/\s+/g, '-').replace(/[^a-z0-9-]/g, '')
+}
+
 function CardGallery({ cards }) {
   if (!cards?.length) return <p className="text-gray-500 text-sm">None listed.</p>
   return (
     <div className="flex flex-wrap gap-2">
       {cards.map(card => (
-        <a key={card.name} href={card.link} target="_blank" rel="noreferrer"
+        <Link key={card.name} to={`/cards/${cardNameToSlug(card.name)}`}
           title={card.name}
           className="group relative shrink-0">
           <img src={card.preview} alt={card.name}
             className="h-64 rounded-lg shadow border border-gray-700 group-hover:border-amber-400 transition-colors object-cover" />
-        </a>
+        </Link>
       ))}
     </div>
   )
