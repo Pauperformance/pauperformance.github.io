@@ -126,7 +126,7 @@ function CardDecksSection({ slug }) {
         <p className="text-xs text-gray-500 italic">Click an archetype to filter the decklists.</p>
       )}
       <p className="text-xs text-gray-500">{visibleDecks.length} decklists</p>
-      <div className="border border-gray-700 rounded-xl overflow-hidden">
+      <div className="border border-gray-700 rounded-xl overflow-hidden bg-gray-900">
         <table className="w-full text-sm">
           <thead>
             <tr className="bg-gray-800 border-b border-gray-700">

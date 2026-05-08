@@ -63,7 +63,7 @@ function DecksTable({ decks, referenceNames }) {
 
 function DeckRows({ decks }) {
   return (
-    <div className="border border-gray-700 rounded-xl overflow-hidden">
+    <div className="border border-gray-700 rounded-xl overflow-hidden bg-gray-900">
       <table className="w-full text-sm">
         <thead>
           <tr className="bg-gray-800 border-b border-gray-700">
@@ -98,7 +98,7 @@ function DeckRows({ decks }) {
 function VideosSection({ videos }) {
   if (!videos?.length) return <p className="text-gray-500 text-sm">No videos recorded.</p>
   return (
-    <div className="border border-gray-700 rounded-xl overflow-hidden">
+    <div className="border border-gray-700 rounded-xl overflow-hidden bg-gray-900">
       <table className="w-full text-sm">
         <thead>
           <tr className="bg-gray-800 border-b border-gray-700">

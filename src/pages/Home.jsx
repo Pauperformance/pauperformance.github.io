@@ -297,7 +297,7 @@ export default function Home() {
 
         <section>
           <h2 className="text-xl font-semibold text-white mb-4">Newspauper</h2>
-          <div className="divide-y divide-gray-700 border border-gray-700 rounded-xl overflow-hidden">
+          <div className="divide-y divide-gray-700 border border-gray-700 rounded-xl overflow-hidden bg-gray-800">
             {NEWS.map(({ flag, href, title, author, date }) => (
               <a key={href} href={href} target="_blank" rel="noreferrer"
                 className="flex items-start gap-3 px-5 py-4 bg-gray-800 hover:bg-gray-750 transition-colors group">

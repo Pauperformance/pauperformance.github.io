@@ -1,4 +1,4 @@
-import { useState, useEffect, useMemo } from 'react'
+import { useState, useEffect, useMemo, useRef } from 'react'
 import { Link, useNavigate } from 'react-router-dom'
 import Layout from '../components/Layout'
 
@@ -42,7 +42,22 @@ export default function CardsIndex() {
   const [activeTypes, setActiveTypes] = useState(new Set())
   const [activeCmc, setActiveCmc] = useState(new Set())
   const [activeArchetypes, setActiveArchetypes] = useState(new Set())
+  const [archetypeSearch, setArchetypeSearch] = useState('')
+  const [dropdownOpen, setDropdownOpen] = useState(false)
+  const dropdownRef = useRef(null)
   const navigate = useNavigate()
+
+  useEffect(() => {
+    if (!dropdownOpen) return
+    function handleClick(e) {
+      if (dropdownRef.current && !dropdownRef.current.contains(e.target)) {
+        setDropdownOpen(false)
+        setArchetypeSearch('')
+      }
+    }
+    document.addEventListener('mousedown', handleClick)
+    return () => document.removeEventListener('mousedown', handleClick)
+  }, [dropdownOpen])
 
   useEffect(() => {
     Promise.all([
@@ -185,11 +200,59 @@ export default function CardsIndex() {
               <FilterButton key={v} active={activeCmc.has(v)} onClick={() => toggleCmc(v)}>{v}</FilterButton>
             ))}
           </div>
-          <div className="flex flex-wrap gap-2 items-center">
-            <span className="text-sm text-gray-500 shrink-0">Archetype:</span>
-            {visibleArchetypes.map(a => (
-              <FilterButton key={a} small active={activeArchetypes.has(a)} onClick={() => toggleArchetype(a)}>{a}</FilterButton>
-            ))}
+          <div className="flex flex-col gap-2">
+            <div className="flex items-center gap-2">
+              <span className="text-sm text-gray-500 shrink-0">Archetype:</span>
+              <div className="relative" ref={dropdownRef}>
+                <button
+                  onClick={() => setDropdownOpen(o => !o)}
+                  className="bg-gray-900 border border-gray-600 rounded-lg px-3 py-1 text-sm text-gray-300 hover:border-gray-400 focus:outline-none focus:border-amber-400 cursor-pointer flex items-center gap-2">
+                  Add archetype… <span className="text-gray-500 text-xs">▾</span>
+                </button>
+                {dropdownOpen && (
+                  <div className="absolute z-20 mt-1 w-64 bg-gray-900 border border-gray-600 rounded-lg shadow-lg overflow-hidden">
+                    <div className="p-2">
+                      <input
+                        autoFocus
+                        type="search"
+                        placeholder="Search archetypes…"
+                        value={archetypeSearch}
+                        onChange={e => setArchetypeSearch(e.target.value)}
+                        className="w-full bg-gray-800 border border-gray-600 rounded px-2 py-1 text-sm text-gray-100 placeholder-gray-500 focus:outline-none focus:border-amber-400"
+                      />
+                    </div>
+                    <ul className="max-h-52 overflow-y-auto">
+                      {(() => {
+                        const opts = visibleArchetypes
+                          .filter(a => !activeArchetypes.has(a))
+                          .filter(a => !archetypeSearch || a.toLowerCase().includes(archetypeSearch.toLowerCase()))
+                        return opts.length === 0
+                          ? <li className="px-3 py-2 text-sm text-gray-500">No archetypes found</li>
+                          : opts.map(a => (
+                              <li key={a}>
+                                <button
+                                  onClick={() => { toggleArchetype(a); setArchetypeSearch(''); setDropdownOpen(false) }}
+                                  className="w-full text-left px-3 py-1.5 text-sm text-gray-300 hover:bg-gray-800 hover:text-white transition-colors">
+                                  {a}
+                                </button>
+                              </li>
+                            ))
+                      })()}
+                    </ul>
+                  </div>
+                )}
+              </div>
+            </div>
+            {activeArchetypes.size > 0 && (
+              <div className="flex flex-wrap gap-1.5 pl-[calc(theme(spacing.2)+4.5rem)]">
+                {[...activeArchetypes].map(a => (
+                  <span key={a} className="inline-flex items-center gap-1 px-2 py-0.5 rounded-full text-xs font-semibold bg-amber-400 text-gray-900">
+                    {a}
+                    <button onClick={() => toggleArchetype(a)} className="hover:text-gray-700 leading-none">×</button>
+                  </span>
+                ))}
+              </div>
+            )}
           </div>
         </div>
 
@@ -201,7 +264,7 @@ export default function CardsIndex() {
             {filtered.length === 0 ? (
               <p className="text-gray-500 text-sm">No cards found.</p>
             ) : (
-              <div className="border border-gray-700 rounded-xl overflow-hidden">
+              <div className="border border-gray-700 rounded-xl overflow-hidden bg-gray-900">
                 <table className="w-full text-sm">
                   <thead>
                     <tr className="bg-gray-800 border-b border-gray-700">

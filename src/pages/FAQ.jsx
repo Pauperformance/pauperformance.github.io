@@ -81,7 +81,7 @@ function FAQItem({ q, a }) {
   const [open, setOpen] = useState(false)
 
   return (
-    <div className="border border-gray-700 rounded-xl overflow-hidden">
+    <div className="border border-gray-700 rounded-xl overflow-hidden bg-gray-800">
       <button
         onClick={() => setOpen(v => !v)}
         className="w-full flex items-center justify-between px-5 py-4 bg-gray-800 hover:bg-gray-750 transition-colors text-left gap-4">

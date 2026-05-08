@@ -198,7 +198,7 @@ export default function ArchetypesIndex() {
         ) : (
           <>
             <p className="text-xs text-gray-500">{filtered.length} archetype{filtered.length !== 1 ? 's' : ''}</p>
-            <div className="border border-gray-700 rounded-xl overflow-hidden">
+            <div className="border border-gray-700 rounded-xl overflow-hidden bg-gray-900">
               <table className="w-full text-sm">
                 <thead>
                   <tr className="bg-gray-800 border-b border-gray-700">
