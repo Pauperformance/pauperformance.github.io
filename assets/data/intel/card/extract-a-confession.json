@@ -1,14 +1,14 @@
 {
     "archetypes": {
         "py/set": [
-            "Golgari Gardens",
-            "Dimir Terror",
-            "Affinity",
-            "Dimir Faeries",
-            "Dimir Control",
-            "Brew",
             "MonoB Burn",
-            "Rakdos Burn"
+            "Affinity",
+            "Rakdos Burn",
+            "Dimir Control",
+            "Golgari Gardens",
+            "Brew",
+            "Dimir Faeries",
+            "Dimir Terror"
         ]
     },
     "scryfall": {
@@ -30,7 +30,7 @@
             "B"
         ],
         "digital": false,
-        "edhrec_rank": 15358,
+        "edhrec_rank": 10142,
         "finishes": [
             "nonfoil",
             "foil"
@@ -38,6 +38,7 @@
         "foil": true,
         "frame": "2015",
         "full_art": false,
+        "game_changer": false,
         "games": [
             "paper",
             "arena",
@@ -61,11 +62,10 @@
         "lang": "en",
         "layout": "normal",
         "legalities": {
-            "alchemy": "legal",
+            "alchemy": "not_legal",
             "brawl": "legal",
             "commander": "legal",
             "duel": "legal",
-            "explorer": "legal",
             "future": "legal",
             "gladiator": "legal",
             "historic": "legal",
@@ -75,13 +75,14 @@
             "oldschool": "not_legal",
             "pauper": "legal",
             "paupercommander": "legal",
-            "penny": "legal",
+            "penny": "not_legal",
             "pioneer": "legal",
             "predh": "not_legal",
             "premodern": "not_legal",
             "standard": "legal",
             "standardbrawl": "legal",
             "timeless": "legal",
+            "tlr": "legal",
             "vintage": "legal"
         },
         "mana_cost": "{1}{B}",
@@ -93,30 +94,30 @@
         "nonfoil": true,
         "object": "card",
         "oracle_id": "96480e86-70a8-401d-abf8-a7d509311b73",
-        "oracle_text": "As an additional cost to cast this spell, you may collect evidence 6. (Exile cards with total mana value 6 or greater from your graveyard.)\nEach opponent sacrifices a creature. If evidence was collected, instead each opponent sacrifices a creature with the greatest power among creatures they control.",
+        "oracle_text": "As an additional cost to cast this spell, you may collect evidence 6. (Exile cards with total mana value 6 or greater from your graveyard.)\nEach opponent sacrifices a creature of their choice. If evidence was collected, instead each opponent sacrifices a creature with the greatest power among creatures they control.",
         "oversized": false,
-        "penny_rank": 9815,
+        "penny_rank": 12194,
         "prices": {
-            "eur": "0.09",
-            "eur_foil": "0.11",
-            "tix": "0.02",
-            "usd": "0.04",
+            "eur": "0.17",
+            "eur_foil": "0.43",
+            "tix": "0.03",
+            "usd": "0.32",
             "usd_etched": null,
-            "usd_foil": "0.06"
+            "usd_foil": "0.26"
         },
         "prints_search_uri": "https://api.scryfall.com/cards/search?order=released&q=oracleid%3A96480e86-70a8-401d-abf8-a7d509311b73&unique=prints",
         "promo": false,
         "purchase_uris": {
             "cardhoarder": "https://www.cardhoarder.com/cards/121646?affiliate_id=scryfall&ref=card-profile&utm_campaign=affiliate&utm_medium=card&utm_source=scryfall",
-            "cardmarket": "https://www.cardmarket.com/en/Magic/Products/Singles/Murders-at-Karlov-Manor/Extract-a-Confession?referrer=scryfall&utm_campaign=card_prices&utm_medium=text&utm_source=scryfall",
-            "tcgplayer": "https://tcgplayer.pxf.io/c/4931599/1830156/21018?subId1=api&u=https%3A%2F%2Fwww.tcgplayer.com%2Fproduct%2F532879%3Fpage%3D1"
+            "cardmarket": "https://www.cardmarket.com/en/Magic/Products?idProduct=750889&referrer=scryfall&utm_campaign=card_prices&utm_medium=text&utm_source=scryfall",
+            "tcgplayer": "https://partner.tcgplayer.com/c/4931599/1830156/21018?subId1=api&u=https%3A%2F%2Fwww.tcgplayer.com%2Fproduct%2F532879%3Fpage%3D1"
         },
         "rarity": "common",
         "related_uris": {
             "edhrec": "https://edhrec.com/route/?cc=Extract+a+Confession",
             "gatherer": "https://gatherer.wizards.com/Pages/Card/Details.aspx?multiverseid=646642&printed=false",
-            "tcgplayer_infinite_articles": "https://tcgplayer.pxf.io/c/4931599/1830156/21018?subId1=api&trafcat=infinite&u=https%3A%2F%2Finfinite.tcgplayer.com%2Fsearch%3FcontentMode%3Darticle%26game%3Dmagic%26partner%3Dscryfall%26q%3DExtract%2Ba%2BConfession",
-            "tcgplayer_infinite_decks": "https://tcgplayer.pxf.io/c/4931599/1830156/21018?subId1=api&trafcat=infinite&u=https%3A%2F%2Finfinite.tcgplayer.com%2Fsearch%3FcontentMode%3Ddeck%26game%3Dmagic%26partner%3Dscryfall%26q%3DExtract%2Ba%2BConfession"
+            "tcgplayer_infinite_articles": "https://partner.tcgplayer.com/c/4931599/1830156/21018?subId1=api&trafcat=tcgplayer.com%2Fsearch%2Farticles&u=https%3A%2F%2Fwww.tcgplayer.com%2Fsearch%2Farticles%3FproductLineName%3Dmagic%26q%3DExtract%2Ba%2BConfession",
+            "tcgplayer_infinite_decks": "https://partner.tcgplayer.com/c/4931599/1830156/21018?subId1=api&trafcat=tcgplayer.com%2Fsearch%2Fdecks&u=https%3A%2F%2Fwww.tcgplayer.com%2Fsearch%2Fdecks%3FproductLineName%3Dmagic%26q%3DExtract%2Ba%2BConfession"
         },
         "released_at": "2024-02-09",
         "reprint": false,

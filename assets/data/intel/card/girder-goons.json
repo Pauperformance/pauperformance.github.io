@@ -39,7 +39,7 @@
             "B"
         ],
         "digital": false,
-        "edhrec_rank": 15348,
+        "edhrec_rank": 22402,
         "finishes": [
             "nonfoil",
             "foil"
@@ -47,6 +47,7 @@
         "foil": true,
         "frame": "2015",
         "full_art": false,
+        "game_changer": false,
         "games": [
             "paper",
             "mtgo",
@@ -74,8 +75,7 @@
             "brawl": "legal",
             "commander": "legal",
             "duel": "legal",
-            "explorer": "legal",
-            "future": "legal",
+            "future": "not_legal",
             "gladiator": "legal",
             "historic": "legal",
             "legacy": "legal",
@@ -84,13 +84,14 @@
             "oldschool": "not_legal",
             "pauper": "legal",
             "paupercommander": "legal",
-            "penny": "legal",
+            "penny": "not_legal",
             "pioneer": "legal",
             "predh": "not_legal",
             "premodern": "not_legal",
-            "standard": "legal",
-            "standardbrawl": "legal",
+            "standard": "not_legal",
+            "standardbrawl": "not_legal",
             "timeless": "legal",
+            "tlr": "not_legal",
             "vintage": "legal"
         },
         "mana_cost": "{4}{B}",
@@ -102,7 +103,7 @@
         "nonfoil": true,
         "object": "card",
         "oracle_id": "655961a3-94b5-4600-b9f1-f93163d03a49",
-        "oracle_text": "When Girder Goons dies, create a tapped 2/2 black Rogue creature token.\nBlitz {3}{B} (If you cast this spell for its blitz cost, it gains haste and \"When this creature dies, draw a card.\" Sacrifice it at the beginning of the next end step.)",
+        "oracle_text": "When this creature dies, create a tapped 2/2 black Rogue creature token.\nBlitz {3}{B} (If you cast this spell for its blitz cost, it gains haste and \"When this creature dies, draw a card.\" Sacrifice it at the beginning of the next end step.)",
         "oversized": false,
         "power": "4",
         "preview": {
@@ -111,26 +112,26 @@
             "source_uri": "https://www.facebook.com/MagicTheGathering.ct/posts/3522243691335508"
         },
         "prices": {
-            "eur": "0.08",
-            "eur_foil": "0.09",
-            "tix": "0.02",
-            "usd": "0.01",
+            "eur": "0.06",
+            "eur_foil": "0.21",
+            "tix": "0.03",
+            "usd": "0.04",
             "usd_etched": null,
-            "usd_foil": "0.03"
+            "usd_foil": "0.16"
         },
         "prints_search_uri": "https://api.scryfall.com/cards/search?order=released&q=oracleid%3A655961a3-94b5-4600-b9f1-f93163d03a49&unique=prints",
         "promo": false,
         "purchase_uris": {
             "cardhoarder": "https://www.cardhoarder.com/cards/98379?affiliate_id=scryfall&ref=card-profile&utm_campaign=affiliate&utm_medium=card&utm_source=scryfall",
-            "cardmarket": "https://www.cardmarket.com/en/Magic/Products/Singles/Streets-of-New-Capenna/Girder-Goons?referrer=scryfall&utm_campaign=card_prices&utm_medium=text&utm_source=scryfall",
-            "tcgplayer": "https://tcgplayer.pxf.io/c/4931599/1830156/21018?subId1=api&u=https%3A%2F%2Fwww.tcgplayer.com%2Fproduct%2F269084%3Fpage%3D1"
+            "cardmarket": "https://www.cardmarket.com/en/Magic/Products?idProduct=652092&referrer=scryfall&utm_campaign=card_prices&utm_medium=text&utm_source=scryfall",
+            "tcgplayer": "https://partner.tcgplayer.com/c/4931599/1830156/21018?subId1=api&u=https%3A%2F%2Fwww.tcgplayer.com%2Fproduct%2F269084%3Fpage%3D1"
         },
         "rarity": "common",
         "related_uris": {
             "edhrec": "https://edhrec.com/route/?cc=Girder+Goons",
             "gatherer": "https://gatherer.wizards.com/Pages/Card/Details.aspx?multiverseid=555281&printed=false",
-            "tcgplayer_infinite_articles": "https://tcgplayer.pxf.io/c/4931599/1830156/21018?subId1=api&trafcat=infinite&u=https%3A%2F%2Finfinite.tcgplayer.com%2Fsearch%3FcontentMode%3Darticle%26game%3Dmagic%26partner%3Dscryfall%26q%3DGirder%2BGoons",
-            "tcgplayer_infinite_decks": "https://tcgplayer.pxf.io/c/4931599/1830156/21018?subId1=api&trafcat=infinite&u=https%3A%2F%2Finfinite.tcgplayer.com%2Fsearch%3FcontentMode%3Ddeck%26game%3Dmagic%26partner%3Dscryfall%26q%3DGirder%2BGoons"
+            "tcgplayer_infinite_articles": "https://partner.tcgplayer.com/c/4931599/1830156/21018?subId1=api&trafcat=tcgplayer.com%2Fsearch%2Farticles&u=https%3A%2F%2Fwww.tcgplayer.com%2Fsearch%2Farticles%3FproductLineName%3Dmagic%26q%3DGirder%2BGoons",
+            "tcgplayer_infinite_decks": "https://partner.tcgplayer.com/c/4931599/1830156/21018?subId1=api&trafcat=tcgplayer.com%2Fsearch%2Fdecks&u=https%3A%2F%2Fwww.tcgplayer.com%2Fsearch%2Fdecks%3FproductLineName%3Dmagic%26q%3DGirder%2BGoons"
         },
         "released_at": "2022-04-29",
         "reprint": false,

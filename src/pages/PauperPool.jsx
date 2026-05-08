@@ -65,11 +65,18 @@ function SetEntry({ set, searchQuery, defaultOpen }) {
 
   useEffect(() => { setOpen(!!searchQuery) }, [searchQuery])
 
+  const setNameMatch = useMemo(() => {
+    if (!searchQuery) return false
+    const q = searchQuery.toLowerCase()
+    return set.name.toLowerCase().includes(q) || set.scryfall.toLowerCase().includes(q)
+  }, [set.name, set.scryfall, searchQuery])
+
   const visibleCards = useMemo(() => {
     if (!searchQuery) return set.cards
+    if (setNameMatch) return set.cards
     const q = searchQuery.toLowerCase()
     return set.cards.filter(c => c.name.toLowerCase().includes(q))
-  }, [set.cards, searchQuery])
+  }, [set.cards, searchQuery, setNameMatch])
 
   if (searchQuery && visibleCards.length === 0) return null
 
@@ -91,7 +98,8 @@ function SetEntry({ set, searchQuery, defaultOpen }) {
           <span className="text-amber-400 font-semibold text-base">{set.date}</span>
           <span className={`font-medium transition-colors ${hovered ? 'text-amber-300' : 'text-white'}`}>{set.name}</span>
           <span className="text-sm text-gray-500 ml-auto shrink-0 flex items-center gap-3">
-            <span>Code: <span className="text-amber-400 font-mono">#{set.code}</span></span>
+            <span>Scryfall: <span className="text-amber-400 font-mono">{set.scryfall}</span></span>
+            <span>Pauperformance: <span className="text-amber-400 font-mono">#{set.code}</span></span>
             <span>New Cards: <span className="text-amber-400 font-mono">{set.cards.length}</span></span>
             <span className="text-gray-600">{open ? '▲' : '▼'}</span>
           </span>
@@ -100,7 +108,7 @@ function SetEntry({ set, searchQuery, defaultOpen }) {
         {open && (
           <div className="mt-4 pt-4 border-t border-gray-700 flex flex-wrap gap-2">
             {visibleCards.map(card => (
-              <CardLink key={card.url} card={card} highlighted={!!searchQuery} />
+              <CardLink key={card.url} card={card} highlighted={!!searchQuery && !setNameMatch} />
             ))}
           </div>
         )}
@@ -126,14 +134,21 @@ export default function PauperPool() {
   const visibleSets = useMemo(() => {
     if (!isSearching) return pool
     const q = search.toLowerCase()
-    return pool.filter(set => set.cards.some(c => c.name.toLowerCase().includes(q)))
+    return pool.filter(set =>
+      set.name.toLowerCase().includes(q) ||
+      set.scryfall.toLowerCase().includes(q) ||
+      set.cards.some(c => c.name.toLowerCase().includes(q))
+    )
   }, [pool, search, isSearching])
 
   const matchCount = useMemo(() => {
     if (!isSearching) return 0
     const q = search.toLowerCase()
-    return pool.reduce((sum, set) => sum + set.cards.filter(c => c.name.toLowerCase().includes(q)).length, 0)
-  }, [pool, search, isSearching])
+    return visibleSets.reduce((sum, set) => {
+      if (set.name.toLowerCase().includes(q) || set.scryfall.toLowerCase().includes(q)) return sum + set.cards.length
+      return sum + set.cards.filter(c => c.name.toLowerCase().includes(q)).length
+    }, 0)
+  }, [visibleSets, search, isSearching])
 
   return (
     <Layout>
@@ -150,7 +165,7 @@ export default function PauperPool() {
 
         <input
           type="text"
-          placeholder="Search for a card..."
+          placeholder="Search for a card, set name, or Scryfall code..."
           value={search}
           onChange={e => setSearch(e.target.value)}
           className="w-full bg-gray-800 border border-gray-600 rounded-xl px-4 py-2.5 text-sm text-gray-100 placeholder-gray-500 focus:outline-none focus:border-amber-400"

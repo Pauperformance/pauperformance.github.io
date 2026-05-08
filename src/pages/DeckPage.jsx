@@ -141,8 +141,8 @@ export default function DeckPage() {
             <div>
               <h1 className="text-2xl font-bold text-white">
                 {deck.archetype
-                  ? <><Link to={`/archetypes/${nameToSlug(deck.archetype)}`} className="text-amber-400 hover:text-amber-300 transition-colors">{deck.archetype}</Link>{deck.pilot && <span className="text-white"> by {deck.pilot}</span>}</>
-                  : deck.pilot || 'Unknown'}
+                  ? <><Link to={`/archetypes/${nameToSlug(deck.archetype)}`} className="text-amber-400 hover:text-amber-300 transition-colors">{deck.archetype}</Link><span className="text-white"> by {deck.pilot || 'Anonymous'}</span></>
+                  : deck.pilot || 'Anonymous'}
               </h1>
               <p className="mt-2 text-gray-400">
                 Played on {deck.tournament_date} @ {deck.tournament_name}
@@ -150,12 +150,10 @@ export default function DeckPage() {
             </div>
 
             <div className="flex flex-wrap gap-4">
-              {deck.pilot && (
-                <div>
-                  <p className="text-base text-gray-500 mb-0.5">Pilot</p>
-                  <p className="font-medium text-gray-200">{deck.pilot}</p>
-                </div>
-              )}
+              <div>
+                <p className="text-base text-gray-500 mb-0.5">Pilot</p>
+                <p className="font-medium text-gray-200">{deck.pilot || 'Anonymous'}</p>
+              </div>
               {deck.place && (
                 <div>
                   <p className="text-base text-gray-500 mb-0.5">Result</p>

@@ -39,7 +39,7 @@
             "W"
         ],
         "digital": false,
-        "edhrec_rank": 19714,
+        "edhrec_rank": 23275,
         "finishes": [
             "nonfoil",
             "foil"
@@ -47,6 +47,7 @@
         "foil": true,
         "frame": "2015",
         "full_art": false,
+        "game_changer": false,
         "games": [
             "paper",
             "arena",
@@ -71,11 +72,10 @@
         "lang": "en",
         "layout": "normal",
         "legalities": {
-            "alchemy": "legal",
+            "alchemy": "not_legal",
             "brawl": "legal",
             "commander": "legal",
             "duel": "legal",
-            "explorer": "legal",
             "future": "legal",
             "gladiator": "legal",
             "historic": "legal",
@@ -85,13 +85,14 @@
             "oldschool": "not_legal",
             "pauper": "legal",
             "paupercommander": "legal",
-            "penny": "not_legal",
+            "penny": "legal",
             "pioneer": "legal",
             "predh": "not_legal",
             "premodern": "not_legal",
             "standard": "legal",
             "standardbrawl": "legal",
             "timeless": "legal",
+            "tlr": "not_legal",
             "vintage": "legal"
         },
         "mana_cost": "{4}{W}",
@@ -103,7 +104,7 @@
         "nonfoil": true,
         "object": "card",
         "oracle_id": "ad0e6b12-a6bd-4860-9eac-68b2492d9567",
-        "oracle_text": "Flying\nWhen Charmed Clothier enters the battlefield, create a Royal Role token attached to another target creature you control. (If you control another Role on it, put that one into the graveyard. Enchanted creature gets +1/+1 and has ward {1}.)",
+        "oracle_text": "Flying\nWhen this creature enters, create a Royal Role token attached to another target creature you control. (If you control another Role on it, put that one into the graveyard. Enchanted creature gets +1/+1 and has ward {1}.)",
         "oversized": false,
         "power": "3",
         "preview": {
@@ -112,26 +113,26 @@
             "source_uri": "https://pbs.twimg.com/media/F34WSupXUAAI4Y_?format=jpg&name=medium"
         },
         "prices": {
-            "eur": "0.07",
-            "eur_foil": "0.08",
+            "eur": "0.06",
+            "eur_foil": "0.06",
             "tix": "0.03",
-            "usd": "0.01",
+            "usd": "0.05",
             "usd_etched": null,
-            "usd_foil": "0.01"
+            "usd_foil": "0.09"
         },
         "prints_search_uri": "https://api.scryfall.com/cards/search?order=released&q=oracleid%3Aad0e6b12-a6bd-4860-9eac-68b2492d9567&unique=prints",
         "promo": false,
         "purchase_uris": {
             "cardhoarder": "https://www.cardhoarder.com/cards/116302?affiliate_id=scryfall&ref=card-profile&utm_campaign=affiliate&utm_medium=card&utm_source=scryfall",
-            "cardmarket": "https://www.cardmarket.com/en/Magic/Products/Singles/Wilds-of-Eldraine/Charmed-Clothier?referrer=scryfall&utm_campaign=card_prices&utm_medium=text&utm_source=scryfall",
-            "tcgplayer": "https://tcgplayer.pxf.io/c/4931599/1830156/21018?subId1=api&u=https%3A%2F%2Fwww.tcgplayer.com%2Fproduct%2F512865%3Fpage%3D1"
+            "cardmarket": "https://www.cardmarket.com/en/Magic/Products?idProduct=729050&referrer=scryfall&utm_campaign=card_prices&utm_medium=text&utm_source=scryfall",
+            "tcgplayer": "https://partner.tcgplayer.com/c/4931599/1830156/21018?subId1=api&u=https%3A%2F%2Fwww.tcgplayer.com%2Fproduct%2F512865%3Fpage%3D1"
         },
         "rarity": "common",
         "related_uris": {
             "edhrec": "https://edhrec.com/route/?cc=Charmed+Clothier",
             "gatherer": "https://gatherer.wizards.com/Pages/Card/Details.aspx?multiverseid=629507&printed=false",
-            "tcgplayer_infinite_articles": "https://tcgplayer.pxf.io/c/4931599/1830156/21018?subId1=api&trafcat=infinite&u=https%3A%2F%2Finfinite.tcgplayer.com%2Fsearch%3FcontentMode%3Darticle%26game%3Dmagic%26partner%3Dscryfall%26q%3DCharmed%2BClothier",
-            "tcgplayer_infinite_decks": "https://tcgplayer.pxf.io/c/4931599/1830156/21018?subId1=api&trafcat=infinite&u=https%3A%2F%2Finfinite.tcgplayer.com%2Fsearch%3FcontentMode%3Ddeck%26game%3Dmagic%26partner%3Dscryfall%26q%3DCharmed%2BClothier"
+            "tcgplayer_infinite_articles": "https://partner.tcgplayer.com/c/4931599/1830156/21018?subId1=api&trafcat=tcgplayer.com%2Fsearch%2Farticles&u=https%3A%2F%2Fwww.tcgplayer.com%2Fsearch%2Farticles%3FproductLineName%3Dmagic%26q%3DCharmed%2BClothier",
+            "tcgplayer_infinite_decks": "https://partner.tcgplayer.com/c/4931599/1830156/21018?subId1=api&trafcat=tcgplayer.com%2Fsearch%2Fdecks&u=https%3A%2F%2Fwww.tcgplayer.com%2Fsearch%2Fdecks%3FproductLineName%3Dmagic%26q%3DCharmed%2BClothier"
         },
         "released_at": "2023-09-08",
         "reprint": false,

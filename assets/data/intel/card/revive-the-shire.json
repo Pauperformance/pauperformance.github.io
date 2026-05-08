@@ -39,7 +39,7 @@
             "G"
         ],
         "digital": false,
-        "edhrec_rank": 3550,
+        "edhrec_rank": 2882,
         "finishes": [
             "nonfoil",
             "foil"
@@ -48,6 +48,7 @@
         "foil": true,
         "frame": "2015",
         "full_art": false,
+        "game_changer": false,
         "games": [
             "paper",
             "arena",
@@ -71,11 +72,10 @@
         "lang": "en",
         "layout": "normal",
         "legalities": {
-            "alchemy": "legal",
+            "alchemy": "not_legal",
             "brawl": "legal",
             "commander": "legal",
             "duel": "legal",
-            "explorer": "not_legal",
             "future": "not_legal",
             "gladiator": "legal",
             "historic": "legal",
@@ -92,6 +92,7 @@
             "standard": "not_legal",
             "standardbrawl": "not_legal",
             "timeless": "legal",
+            "tlr": "legal",
             "vintage": "legal"
         },
         "mana_cost": "{1}{G}",
@@ -103,7 +104,7 @@
         "nonfoil": true,
         "object": "card",
         "oracle_id": "67afcfef-3f0c-4823-b690-01732f28a005",
-        "oracle_text": "Return target permanent card from your graveyard to your hand. Create a Food token. (It's an artifact with \"{2}, {T}, Sacrifice this artifact: You gain 3 life.\")",
+        "oracle_text": "Return target permanent card from your graveyard to your hand. Create a Food token. (It's an artifact with \"{2}, {T}, Sacrifice this token: You gain 3 life.\")",
         "oversized": false,
         "preview": {
             "previewed_at": "2023-06-06",
@@ -111,26 +112,29 @@
             "source_uri": "https://www.twitch.tv/videos/1839333853"
         },
         "prices": {
-            "eur": "0.09",
-            "eur_foil": "0.12",
+            "eur": "0.11",
+            "eur_foil": "0.21",
             "tix": "0.03",
-            "usd": "0.05",
+            "usd": "0.27",
             "usd_etched": null,
-            "usd_foil": "0.14"
+            "usd_foil": "0.36"
         },
         "prints_search_uri": "https://api.scryfall.com/cards/search?order=released&q=oracleid%3A67afcfef-3f0c-4823-b690-01732f28a005&unique=prints",
         "promo": false,
+        "promo_types": [
+            "universesbeyond"
+        ],
         "purchase_uris": {
             "cardhoarder": "https://www.cardhoarder.com/cards/112280?affiliate_id=scryfall&ref=card-profile&utm_campaign=affiliate&utm_medium=card&utm_source=scryfall",
-            "cardmarket": "https://www.cardmarket.com/en/Magic/Products/Singles/The-Lord-of-the-Rings-Tales-of-Middle-earth/Revive-the-Shire?referrer=scryfall&utm_campaign=card_prices&utm_medium=text&utm_source=scryfall",
-            "tcgplayer": "https://tcgplayer.pxf.io/c/4931599/1830156/21018?subId1=api&u=https%3A%2F%2Fwww.tcgplayer.com%2Fproduct%2F499332%3Fpage%3D1"
+            "cardmarket": "https://www.cardmarket.com/en/Magic/Products?idProduct=716279&referrer=scryfall&utm_campaign=card_prices&utm_medium=text&utm_source=scryfall",
+            "tcgplayer": "https://partner.tcgplayer.com/c/4931599/1830156/21018?subId1=api&u=https%3A%2F%2Fwww.tcgplayer.com%2Fproduct%2F499332%3Fpage%3D1"
         },
         "rarity": "common",
         "related_uris": {
             "edhrec": "https://edhrec.com/route/?cc=Revive+the+Shire",
             "gatherer": "https://gatherer.wizards.com/Pages/Card/Details.aspx?multiverseid=617015&printed=false",
-            "tcgplayer_infinite_articles": "https://tcgplayer.pxf.io/c/4931599/1830156/21018?subId1=api&trafcat=infinite&u=https%3A%2F%2Finfinite.tcgplayer.com%2Fsearch%3FcontentMode%3Darticle%26game%3Dmagic%26partner%3Dscryfall%26q%3DRevive%2Bthe%2BShire",
-            "tcgplayer_infinite_decks": "https://tcgplayer.pxf.io/c/4931599/1830156/21018?subId1=api&trafcat=infinite&u=https%3A%2F%2Finfinite.tcgplayer.com%2Fsearch%3FcontentMode%3Ddeck%26game%3Dmagic%26partner%3Dscryfall%26q%3DRevive%2Bthe%2BShire"
+            "tcgplayer_infinite_articles": "https://partner.tcgplayer.com/c/4931599/1830156/21018?subId1=api&trafcat=tcgplayer.com%2Fsearch%2Farticles&u=https%3A%2F%2Fwww.tcgplayer.com%2Fsearch%2Farticles%3FproductLineName%3Dmagic%26q%3DRevive%2Bthe%2BShire",
+            "tcgplayer_infinite_decks": "https://partner.tcgplayer.com/c/4931599/1830156/21018?subId1=api&trafcat=tcgplayer.com%2Fsearch%2Fdecks&u=https%3A%2F%2Fwww.tcgplayer.com%2Fsearch%2Fdecks%3FproductLineName%3Dmagic%26q%3DRevive%2Bthe%2BShire"
         },
         "released_at": "2023-06-23",
         "reprint": false,

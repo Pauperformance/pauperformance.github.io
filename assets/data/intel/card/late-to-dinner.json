@@ -1,12 +1,12 @@
 {
     "archetypes": {
         "py/set": [
-            "Brew Jeskai",
-            "Brew Boros",
             "Mardu Initiative",
+            "Brew Esper",
             "Jeskai Ephemerate",
             "Boros Initiative",
-            "Brew Esper"
+            "Brew Boros",
+            "Brew Jeskai"
         ]
     },
     "scryfall": {
@@ -21,11 +21,11 @@
             },
             {
                 "component": "token",
-                "id": "ad8860ba-5147-496a-86b9-725167e0c100",
+                "id": "80f84312-9a4e-4dce-b6a0-365679574cf7",
                 "name": "Food",
                 "object": "related_card",
                 "type_line": "Token Artifact \u2014 Food",
-                "uri": "https://api.scryfall.com/cards/ad8860ba-5147-496a-86b9-725167e0c100"
+                "uri": "https://api.scryfall.com/cards/80f84312-9a4e-4dce-b6a0-365679574cf7"
             }
         ],
         "artist": "Kev Walker",
@@ -45,7 +45,7 @@
             "W"
         ],
         "digital": false,
-        "edhrec_rank": 5717,
+        "edhrec_rank": 7505,
         "finishes": [
             "nonfoil"
         ],
@@ -56,6 +56,7 @@
             "showcase"
         ],
         "full_art": false,
+        "game_changer": false,
         "games": [
             "paper"
         ],
@@ -81,7 +82,6 @@
             "brawl": "legal",
             "commander": "legal",
             "duel": "legal",
-            "explorer": "not_legal",
             "future": "not_legal",
             "gladiator": "legal",
             "historic": "legal",
@@ -98,6 +98,7 @@
             "standard": "not_legal",
             "standardbrawl": "not_legal",
             "timeless": "legal",
+            "tlr": "not_legal",
             "vintage": "legal"
         },
         "mana_cost": "{3}{W}",
@@ -106,14 +107,14 @@
         "nonfoil": true,
         "object": "card",
         "oracle_id": "31bf199b-dfb1-428e-96a5-eb25104e2b43",
-        "oracle_text": "Return target creature card from your graveyard to the battlefield. Create a Food token. (It's an artifact with \"{2}, {T}, Sacrifice this artifact: You gain 3 life.\")",
+        "oracle_text": "Return target creature card from your graveyard to the battlefield. Create a Food token. (It's an artifact with \"{2}, {T}, Sacrifice this token: You gain 3 life.\")",
         "oversized": false,
-        "penny_rank": 4294,
+        "penny_rank": 4713,
         "prices": {
-            "eur": "0.19",
+            "eur": "0.25",
             "eur_foil": null,
             "tix": null,
-            "usd": "0.09",
+            "usd": "0.29",
             "usd_etched": null,
             "usd_foil": null
         },
@@ -121,14 +122,14 @@
         "promo": false,
         "purchase_uris": {
             "cardhoarder": "https://www.cardhoarder.com/cards?affiliate_id=scryfall&data%5Bsearch%5D=Late+to+Dinner&ref=card-profile&utm_campaign=affiliate&utm_medium=card&utm_source=scryfall",
-            "cardmarket": "https://www.cardmarket.com/en/Magic/Products/Singles/The-List/Late-to-Dinner?referrer=scryfall&utm_campaign=card_prices&utm_medium=text&utm_source=scryfall",
-            "tcgplayer": "https://tcgplayer.pxf.io/c/4931599/1830156/21018?subId1=api&u=https%3A%2F%2Fwww.tcgplayer.com%2Fproduct%2F254594%3Fpage%3D1"
+            "cardmarket": "https://www.cardmarket.com/en/Magic/Products?idProduct=583945&referrer=scryfall&utm_campaign=card_prices&utm_medium=text&utm_source=scryfall",
+            "tcgplayer": "https://partner.tcgplayer.com/c/4931599/1830156/21018?subId1=api&u=https%3A%2F%2Fwww.tcgplayer.com%2Fproduct%2F254594%3Fpage%3D1"
         },
         "rarity": "common",
         "related_uris": {
             "edhrec": "https://edhrec.com/route/?cc=Late+to+Dinner",
-            "tcgplayer_infinite_articles": "https://tcgplayer.pxf.io/c/4931599/1830156/21018?subId1=api&trafcat=infinite&u=https%3A%2F%2Finfinite.tcgplayer.com%2Fsearch%3FcontentMode%3Darticle%26game%3Dmagic%26partner%3Dscryfall%26q%3DLate%2Bto%2BDinner",
-            "tcgplayer_infinite_decks": "https://tcgplayer.pxf.io/c/4931599/1830156/21018?subId1=api&trafcat=infinite&u=https%3A%2F%2Finfinite.tcgplayer.com%2Fsearch%3FcontentMode%3Ddeck%26game%3Dmagic%26partner%3Dscryfall%26q%3DLate%2Bto%2BDinner"
+            "tcgplayer_infinite_articles": "https://partner.tcgplayer.com/c/4931599/1830156/21018?subId1=api&trafcat=tcgplayer.com%2Fsearch%2Farticles&u=https%3A%2F%2Fwww.tcgplayer.com%2Fsearch%2Farticles%3FproductLineName%3Dmagic%26q%3DLate%2Bto%2BDinner",
+            "tcgplayer_infinite_decks": "https://partner.tcgplayer.com/c/4931599/1830156/21018?subId1=api&trafcat=tcgplayer.com%2Fsearch%2Fdecks&u=https%3A%2F%2Fwww.tcgplayer.com%2Fsearch%2Fdecks%3FproductLineName%3Dmagic%26q%3DLate%2Bto%2BDinner"
         },
         "released_at": "2021-11-19",
         "reprint": true,

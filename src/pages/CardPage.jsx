@@ -147,7 +147,7 @@ function CardDecksSection({ slug }) {
                 <td className="px-4 py-2.5 text-amber-400 text-xs">{deck.archetype}</td>
                 <td className="px-4 py-2.5 text-gray-300 hidden sm:table-cell">{deck.tournament_name}</td>
                 <td className="px-4 py-2.5 text-gray-500 hidden sm:table-cell">{deck.tournament_date}</td>
-                <td className="px-4 py-2.5 text-gray-400 hidden md:table-cell">{deck.pilot}</td>
+                <td className="px-4 py-2.5 text-gray-400 hidden md:table-cell">{deck.pilot || 'Anonymous'}</td>
                 <td className="px-4 py-2.5 text-gray-400 hidden md:table-cell">{deck.place}</td>
                 <td className="px-4 py-2.5 text-amber-400 text-xs">View →</td>
               </tr>
