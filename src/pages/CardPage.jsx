@@ -127,7 +127,7 @@ function CardDecksSection({ slug }) {
       )}
       <p className="text-xs text-gray-500">{visibleDecks.length} decklists</p>
       <div className="border border-gray-700 rounded-xl overflow-hidden bg-gray-900">
-        <table className="w-full text-sm bg-gray-900">
+        <table className="w-full text-base bg-gray-900">
           <thead>
             <tr className="bg-gray-800 border-b border-gray-700">
               <th className="text-left px-4 py-2 text-xs font-semibold text-gray-400 uppercase tracking-wider">Archetype</th>

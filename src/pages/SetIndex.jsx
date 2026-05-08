@@ -42,15 +42,19 @@ export default function SetIndex() {
             onChange={e => setSearch(e.target.value)}
             className="flex-1 bg-gray-900 border border-gray-600 rounded-lg px-4 py-2 text-sm text-gray-100 placeholder-gray-500 focus:outline-none focus:border-amber-400"
           />
-          <button
-            onClick={() => setPauperOnly(v => !v)}
-            className={`px-4 py-2 rounded-lg text-sm font-semibold border transition-colors shrink-0 ${
-              pauperOnly
-                ? 'bg-amber-400 text-gray-900 border-amber-400'
-                : 'bg-transparent text-gray-400 border-gray-600 hover:border-gray-400 hover:text-gray-200'
-            }`}>
-            With new Pauper cards
-          </button>
+          <div className="inline-flex rounded-lg border border-gray-600 overflow-hidden text-sm font-semibold shrink-0">
+            <button
+              onClick={() => setPauperOnly(false)}
+              className={`px-4 py-2 transition-colors ${!pauperOnly ? 'bg-amber-400 text-gray-900' : 'text-gray-400 hover:text-gray-200'}`}>
+              All
+            </button>
+            <div className="w-px bg-gray-600" />
+            <button
+              onClick={() => setPauperOnly(true)}
+              className={`px-4 py-2 transition-colors ${pauperOnly ? 'bg-amber-400 text-gray-900' : 'text-gray-400 hover:text-gray-200'}`}>
+              Relevant
+            </button>
+          </div>
         </div>
 
         {loading ? (
@@ -59,7 +63,7 @@ export default function SetIndex() {
           <>
             <p className="text-xs text-gray-500">{filtered.length} set{filtered.length !== 1 ? 's' : ''}</p>
             <div className="border border-gray-700 rounded-xl overflow-hidden bg-gray-900">
-              <table className="w-full text-sm bg-gray-900">
+              <table className="w-full text-base bg-gray-900">
                 <thead>
                   <tr className="bg-gray-800 border-b border-gray-700">
                     <th className="text-left px-4 py-3 text-xs font-semibold text-gray-400 uppercase tracking-wider">p12e</th>
@@ -71,12 +75,12 @@ export default function SetIndex() {
                 <tbody className="divide-y divide-gray-700/50 bg-gray-900">
                   {filtered.map(s => (
                     <tr key={s.code}
-                      className={`transition-colors ${s.pauper_pool ? 'bg-amber-950/20 hover:bg-amber-950/40' : 'bg-gray-900 hover:bg-gray-800'}`}>
+                      className={`transition-colors group ${s.pauper_pool ? 'bg-amber-950/20 hover:bg-amber-950/40' : 'bg-gray-900 hover:bg-gray-800'}`}>
                       <td className={`px-4 py-2.5 font-mono font-semibold ${s.pauper_pool ? 'text-amber-400' : 'text-gray-400'}`}>
                         {s.code}
                       </td>
                       <td className="px-4 py-2.5 font-mono text-gray-500 hidden sm:table-cell">{s.scryfall}</td>
-                      <td className={`px-4 py-2.5 ${s.pauper_pool ? 'text-amber-200 font-medium' : 'text-gray-300'}`}>
+                      <td className={`px-4 py-2.5 transition-colors group-hover:text-amber-400 ${s.pauper_pool ? 'text-amber-200 font-medium' : 'text-gray-300'}`}>
                         {s.name}
                       </td>
                       <td className="px-4 py-2.5 text-gray-500 hidden sm:table-cell">{s.date}</td>

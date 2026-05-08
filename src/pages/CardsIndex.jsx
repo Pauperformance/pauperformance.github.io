@@ -7,14 +7,30 @@ const MANA_LABELS = { W: 'White', U: 'Blue', B: 'Black', R: 'Red', G: 'Green', C
 const CARD_TYPES = ['Creature', 'Instant', 'Sorcery', 'Enchantment', 'Artifact', 'Land', 'Sticker']
 const CMC_VALUES = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
 
-function ManaIcon({ color }) {
+function ManaIcon({ color, size = 'w-6 h-6' }) {
   return (
     <img
       src={`/images/mana/${color}.png`}
       alt={MANA_LABELS[color]}
       title={MANA_LABELS[color]}
-      className="w-4 h-4 inline-block"
+      className={`${size} inline-block`}
     />
+  )
+}
+
+function SortHeader({ col, label, sortCol, sortDir, onSort, align = 'left', extraClass = '' }) {
+  const active = sortCol === col
+  const indicator = active ? (sortDir === 'asc' ? '↑' : '↓') : '↕'
+  const alignClass = align === 'right' ? 'text-right' : 'text-left'
+  return (
+    <th
+      onClick={() => onSort(col)}
+      className={`px-4 py-3 text-xs font-semibold uppercase tracking-wider cursor-pointer select-none group ${alignClass} ${extraClass}`}>
+      <span className={`inline-flex items-center gap-1 transition-colors ${active ? 'text-amber-400' : 'text-gray-400 group-hover:text-gray-200'}`}>
+        {label}
+        <span className={`${active ? 'text-amber-400' : 'text-gray-600 group-hover:text-gray-400'}`}>{indicator}</span>
+      </span>
+    </th>
   )
 }
 
@@ -42,6 +58,8 @@ export default function CardsIndex() {
   const [activeTypes, setActiveTypes] = useState(new Set())
   const [activeCmc, setActiveCmc] = useState(new Set())
   const [activeArchetypes, setActiveArchetypes] = useState(new Set())
+  const [sortCol, setSortCol] = useState('name')
+  const [sortDir, setSortDir] = useState('asc')
   const [archetypeSearch, setArchetypeSearch] = useState('')
   const [dropdownOpen, setDropdownOpen] = useState(false)
   const dropdownRef = useRef(null)
@@ -161,6 +179,36 @@ export default function CardsIndex() {
     })
   }, [cards, search, activeMana, activeTypes, activeCmc, allowedSlugs])
 
+  function handleSort(col) {
+    if (sortCol === col) {
+      setSortDir(d => d === 'asc' ? 'desc' : 'asc')
+    } else {
+      setSortCol(col)
+      setSortDir(col === 'archetypes' || col === 'cmc' ? 'desc' : 'asc')
+    }
+  }
+
+  const sorted = useMemo(() => {
+    return [...filtered].sort((a, b) => {
+      let av, bv
+      if (sortCol === 'name') {
+        av = a.name.toLowerCase(); bv = b.name.toLowerCase()
+      } else if (sortCol === 'colors') {
+        av = (a.colors || []).map(c => MANA_ORDER.indexOf(c)).sort().join('-') || 'Z'
+        bv = (b.colors || []).map(c => MANA_ORDER.indexOf(c)).sort().join('-') || 'Z'
+      } else if (sortCol === 'type') {
+        av = (a.types || []).join(', ').toLowerCase(); bv = (b.types || []).join(', ').toLowerCase()
+      } else if (sortCol === 'cmc') {
+        av = a.cmc ?? -1; bv = b.cmc ?? -1
+      } else if (sortCol === 'archetypes') {
+        av = a.archetypeCount; bv = b.archetypeCount
+      }
+      if (av < bv) return sortDir === 'asc' ? -1 : 1
+      if (av > bv) return sortDir === 'asc' ? 1 : -1
+      return 0
+    })
+  }, [filtered, sortCol, sortDir])
+
   return (
     <Layout>
       <div className="space-y-6">
@@ -182,7 +230,7 @@ export default function CardsIndex() {
             {MANA_ORDER.map(m => (
               <FilterButton key={m} active={activeMana.has(m)} onClick={() => toggleMana(m)}>
                 <span className="flex items-center gap-1">
-                  <ManaIcon color={m} />
+                  <ManaIcon color={m} size="w-4 h-4" />
                   {MANA_LABELS[m]}
                 </span>
               </FilterButton>
@@ -265,23 +313,23 @@ export default function CardsIndex() {
               <p className="text-gray-500 text-sm">No cards found.</p>
             ) : (
               <div className="border border-gray-700 rounded-xl overflow-hidden bg-gray-900">
-                <table className="w-full text-sm bg-gray-900">
+                <table className="w-full text-base bg-gray-900">
                   <thead>
                     <tr className="bg-gray-800 border-b border-gray-700">
-                      <th className="text-left px-4 py-3 text-xs font-semibold text-gray-400 uppercase tracking-wider">Card</th>
-                      <th className="text-left px-4 py-3 text-xs font-semibold text-gray-400 uppercase tracking-wider">Colors</th>
-                      <th className="text-left px-4 py-3 text-xs font-semibold text-gray-400 uppercase tracking-wider hidden sm:table-cell">Type</th>
-                      <th className="text-right px-4 py-3 text-xs font-semibold text-gray-400 uppercase tracking-wider hidden sm:table-cell">CMC</th>
-                      <th className="text-right px-4 py-3 text-xs font-semibold text-gray-400 uppercase tracking-wider">Archetypes</th>
+                      <SortHeader col="name"       label="Name"       sortCol={sortCol} sortDir={sortDir} onSort={handleSort} extraClass="w-2/5" />
+                      <SortHeader col="colors"     label="Colors"     sortCol={sortCol} sortDir={sortDir} onSort={handleSort} />
+                      <SortHeader col="type"       label="Type"       sortCol={sortCol} sortDir={sortDir} onSort={handleSort} extraClass="hidden sm:table-cell" />
+                      <SortHeader col="cmc"        label="CMC"        sortCol={sortCol} sortDir={sortDir} onSort={handleSort} align="right" extraClass="hidden sm:table-cell" />
+                      <SortHeader col="archetypes" label="Archetypes" sortCol={sortCol} sortDir={sortDir} onSort={handleSort} align="right" />
                     </tr>
                   </thead>
                   <tbody className="divide-y divide-gray-700/50 bg-gray-900">
-                    {filtered.map(c => (
+                    {sorted.map(c => (
                       <tr key={c.slug}
                         onClick={() => navigate(`/cards/${c.slug}`)}
                         onAuxClick={e => { if (e.button === 1) window.open(`/#/cards/${c.slug}`, '_blank') }}
-                        className="bg-gray-900 hover:bg-gray-800 transition-colors cursor-pointer">
-                        <td className="px-4 py-2.5 text-amber-400">{c.name}</td>
+                        className="bg-gray-900 hover:bg-gray-800 cursor-pointer group">
+                        <td className="px-4 py-2.5 font-medium text-gray-200 group-hover:text-amber-400 transition-colors">{c.name}</td>
                         <td className="px-4 py-2.5">
                           <div className="flex gap-0.5">
                             {(c.colors || []).length === 0

@@ -35,9 +35,8 @@ function SortHeader({ col, label, sortCol, sortDir, onSort, align = 'left', extr
       onClick={() => onSort(col)}
       className={`px-4 py-3 text-xs font-semibold uppercase tracking-wider cursor-pointer select-none group ${alignClass} ${extraClass}`}>
       <span className={`inline-flex items-center gap-1 transition-colors ${active ? 'text-amber-400' : 'text-gray-400 group-hover:text-gray-200'}`}>
-        {align === 'right' && <span className={`${active ? 'text-amber-400' : 'text-gray-600 group-hover:text-gray-400'}`}>{indicator}</span>}
         {label}
-        {align !== 'right' && <span className={`${active ? 'text-amber-400' : 'text-gray-600 group-hover:text-gray-400'}`}>{indicator}</span>}
+        <span className={`${active ? 'text-amber-400' : 'text-gray-600 group-hover:text-gray-400'}`}>{indicator}</span>
       </span>
     </th>
   )
@@ -199,10 +198,10 @@ export default function ArchetypesIndex() {
           <>
             <p className="text-xs text-gray-500">{filtered.length} archetype{filtered.length !== 1 ? 's' : ''}</p>
             <div className="border border-gray-700 rounded-xl overflow-hidden bg-gray-900">
-              <table className="w-full text-sm bg-gray-900">
+              <table className="w-full text-base bg-gray-900">
                 <thead>
                   <tr className="bg-gray-800 border-b border-gray-700">
-                    <SortHeader col="name"   label="Name"    sortCol={sortCol} sortDir={sortDir} onSort={handleSort} />
+                    <SortHeader col="name"   label="Name"    sortCol={sortCol} sortDir={sortDir} onSort={handleSort} extraClass="w-2/5" />
                     <SortHeader col="colors" label="Colors"  sortCol={sortCol} sortDir={sortDir} onSort={handleSort} />
                     <SortHeader col="type"   label="Type"    sortCol={sortCol} sortDir={sortDir} onSort={handleSort} />
                     <SortHeader col="family" label="Family"  sortCol={sortCol} sortDir={sortDir} onSort={handleSort} align="left" extraClass="hidden sm:table-cell" />
@@ -230,7 +229,7 @@ export default function ArchetypesIndex() {
                           ))}
                         </div>
                       </td>
-                      <td className="px-4 py-3 text-base text-gray-400">{a.game_type.join(', ')}</td>
+                      <td className="px-4 py-3 text-gray-400">{a.game_type.join(', ')}</td>
                       <td className="px-4 py-3 hidden sm:table-cell">
                         {a.family
                           ? <Link to={`/families/${nameToSlug(a.family)}`}

@@ -1,7 +1,7 @@
 import { useState, useEffect, useMemo } from 'react'
 import { useParams, Link, useNavigate } from 'react-router-dom'
 import Layout from '../components/Layout'
-import { nameToSlug, slugToName } from '../utils/slugs'
+import { nameToSlug } from '../utils/slugs'
 
 const MANA_ORDER = ['W', 'U', 'B', 'R', 'G', 'C']
 const MANA_LABELS = { W: 'White', U: 'Blue', B: 'Black', R: 'Red', G: 'Green', C: 'Colorless' }
@@ -15,9 +15,8 @@ function SortHeader({ col, label, sortCol, sortDir, onSort, align = 'left' }) {
       onClick={() => onSort(col)}
       className={`px-4 py-3 text-xs font-semibold uppercase tracking-wider cursor-pointer select-none group ${alignClass}`}>
       <span className={`inline-flex items-center gap-1 transition-colors ${active ? 'text-amber-400' : 'text-gray-400 group-hover:text-gray-200'}`}>
-        {align === 'right' && <span className={`${active ? 'text-amber-400' : 'text-gray-600 group-hover:text-gray-400'}`}>{indicator}</span>}
         {label}
-        {align !== 'right' && <span className={`${active ? 'text-amber-400' : 'text-gray-600 group-hover:text-gray-400'}`}>{indicator}</span>}
+        <span className={`${active ? 'text-amber-400' : 'text-gray-600 group-hover:text-gray-400'}`}>{indicator}</span>
       </span>
     </th>
   )
@@ -32,7 +31,6 @@ function ManaIcon({ color }) {
 
 export default function FamilyPage() {
   const { name } = useParams()
-  const decodedName = slugToName(name)
   const navigate = useNavigate()
   const [family, setFamily] = useState(null)
   const [metaMap, setMetaMap] = useState({})
@@ -45,13 +43,13 @@ export default function FamilyPage() {
       fetch('/data/families.json').then(r => r.json()),
       fetch('/data/metagame.json').then(r => r.json()),
     ]).then(([families, metagameData]) => {
-      const found = families.find(f => f.name === decodedName)
+      const found = families.find(f => f.slug === name)
       if (!found) { setNotFound(true); return }
       setFamily(found)
       const entries = metagameData.meta_shares || metagameData
       setMetaMap(Object.fromEntries(entries.map(e => [e.archetype_name, e.meta_share])))
     })
-  }, [decodedName])
+  }, [name])
 
   function handleSort(col) {
     if (sortCol === col) {
@@ -85,7 +83,7 @@ export default function FamilyPage() {
   if (notFound) return (
     <Layout>
       <div className="text-center py-20">
-        <p className="text-gray-400">Family <strong className="text-white">{decodedName}</strong> not found.</p>
+        <p className="text-gray-400">Family <strong className="text-white">{name}</strong> not found.</p>
         <Link to="/archetypes" className="mt-4 inline-block text-amber-400 hover:underline text-sm">← Back to Archetypes Index</Link>
       </div>
     </Layout>
@@ -111,7 +109,7 @@ export default function FamilyPage() {
         </div>
 
         <div className="border border-gray-700 rounded-xl overflow-hidden bg-gray-900">
-          <table className="w-full text-sm bg-gray-900">
+          <table className="w-full text-base bg-gray-900">
             <thead>
               <tr className="bg-gray-800 border-b border-gray-700">
                 <SortHeader col="name"   label="Name"   sortCol={sortCol} sortDir={sortDir} onSort={handleSort} />
