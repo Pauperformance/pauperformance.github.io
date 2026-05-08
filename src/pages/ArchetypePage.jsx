@@ -1,5 +1,5 @@
 import { useState, useEffect, useMemo } from 'react'
-import { useParams, Link } from 'react-router-dom'
+import { useParams, Link, useNavigate } from 'react-router-dom'
 import ReactMarkdown from 'react-markdown'
 import Layout from '../components/Layout'
 import { nameToSlug } from '../utils/slugs'
@@ -337,16 +337,32 @@ function ResourcesSection({ resources, discord, sideboard }) {
 
 export default function ArchetypePage() {
   const { name } = useParams()
+  const navigate = useNavigate()
   const [data, setData] = useState(null)
   const [notFound, setNotFound] = useState(false)
 
   useEffect(() => {
+    let cancelled = false
+    setData(null)
+    setNotFound(false)
     fetch(`/data/archetype-details/${name}.json`)
       .then(r => {
-        if (!r.ok) { setNotFound(true); return null }
+        if (!r.ok) throw new Error('not-found')
         return r.json()
       })
-      .then(d => d && setData(d))
+      .then(d => { if (!cancelled) setData(d) })
+      .catch(() => {
+        fetch('/data/archetype-alias-map.json')
+          .then(r => r.ok ? r.json() : {})
+          .then(aliasMap => {
+            if (!cancelled) {
+              if (aliasMap[name]) navigate(`/archetypes/${aliasMap[name]}`, { replace: true })
+              else setNotFound(true)
+            }
+          })
+          .catch(() => { if (!cancelled) setNotFound(true) })
+      })
+    return () => { cancelled = true }
   }, [name])
 
   if (notFound) return (
