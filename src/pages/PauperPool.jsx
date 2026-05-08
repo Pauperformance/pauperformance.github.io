@@ -69,8 +69,8 @@ function SetEntry({ set, searchQuery, defaultOpen }) {
   const setNameMatch = useMemo(() => {
     if (!searchQuery) return false
     const q = searchQuery.toLowerCase()
-    return set.name.toLowerCase().includes(q) || set.scryfall.toLowerCase().includes(q)
-  }, [set.name, set.scryfall, searchQuery])
+    return set.name.toLowerCase().includes(q) || set.scryfall.toLowerCase().includes(q) || String(set.code).includes(q)
+  }, [set.name, set.scryfall, set.code, searchQuery])
 
   const visibleCards = useMemo(() => {
     if (!searchQuery) return set.cards
@@ -156,6 +156,7 @@ export default function PauperPool() {
     return basePool.filter(set =>
       set.name.toLowerCase().includes(q) ||
       set.scryfall.toLowerCase().includes(q) ||
+      String(set.code).includes(q) ||
       set.cards.some(c => c.name.toLowerCase().includes(q))
     )
   }, [basePool, search, isSearching])
@@ -164,7 +165,7 @@ export default function PauperPool() {
     if (!isSearching) return 0
     const q = search.toLowerCase()
     return visibleSets.reduce((sum, set) => {
-      if (set.name.toLowerCase().includes(q) || set.scryfall.toLowerCase().includes(q)) return sum + set.cards.length
+      if (set.name.toLowerCase().includes(q) || set.scryfall.toLowerCase().includes(q) || String(set.code).includes(q)) return sum + set.cards.length
       return sum + set.cards.filter(c => c.name.toLowerCase().includes(q)).length
     }, 0)
   }, [visibleSets, search, isSearching])
@@ -185,7 +186,7 @@ export default function PauperPool() {
         <div className="flex gap-3">
           <input
             type="text"
-            placeholder="Search for a card, set name, or Scryfall code..."
+            placeholder="Search for a card, set name, Scryfall or Pauperformance code..."
             value={search}
             onChange={e => setSearch(e.target.value)}
             className="flex-1 bg-gray-800 border border-gray-600 rounded-xl px-4 py-2.5 text-sm text-gray-100 placeholder-gray-500 focus:outline-none focus:border-amber-400"
