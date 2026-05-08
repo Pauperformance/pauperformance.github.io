@@ -396,3 +396,17 @@ const topDecks = metagameOut.slice(0, 16).map(entry => {
 })
 writeFileSync(join(outDir, 'top_decks.json'), JSON.stringify(topDecks))
 console.log(`Built top_decks.json with ${topDecks.length} entries.`)
+
+// Build alias → canonical slug redirect map
+const aliasMap = {}
+for (const archetype of archetypes) {
+  const canonicalSlug = nameToSlug(archetype.name)
+  for (const alias of (archetype.aliases || [])) {
+    const aliasSlug = nameToSlug(alias)
+    if (aliasSlug !== canonicalSlug) {
+      aliasMap[aliasSlug] = canonicalSlug
+    }
+  }
+}
+writeFileSync(join(outDir, 'archetype-alias-map.json'), JSON.stringify(aliasMap))
+console.log(`Built archetype-alias-map.json with ${Object.keys(aliasMap).length} alias redirects.`)
