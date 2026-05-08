@@ -242,9 +242,9 @@ function IntelDecksSection({ name }) {
           <thead>
             <tr className="bg-gray-800 border-b border-gray-700">
               <th className="text-left px-4 py-2 text-xs font-semibold text-gray-400 uppercase tracking-wider">Tournament</th>
-              <th className="text-left px-4 py-2 text-xs font-semibold text-gray-400 uppercase tracking-wider hidden sm:table-cell">Deck Date</th>
               <th className="text-left px-4 py-2 text-xs font-semibold text-gray-400 uppercase tracking-wider hidden md:table-cell">Pilot</th>
-              <th className="text-left px-4 py-2 text-xs font-semibold text-gray-400 uppercase tracking-wider hidden md:table-cell">Place</th>
+              <th className="text-left px-4 py-2 text-xs font-semibold text-gray-400 uppercase tracking-wider hidden sm:table-cell">Deck Date</th>
+              <th className="text-left px-4 py-2 text-xs font-semibold text-gray-400 uppercase tracking-wider hidden md:table-cell">Result</th>
               <th className="text-left px-4 py-2 text-xs font-semibold text-gray-400 uppercase tracking-wider">Link</th>
             </tr>
           </thead>
@@ -256,8 +256,8 @@ function IntelDecksSection({ name }) {
               <tr key={deck.id} className="bg-gray-900 hover:bg-gray-800 transition-colors cursor-pointer"
                 onAuxClick={(e) => { if (e.button === 1) window.open(`/#/decks/${deck.id}`, '_blank') }}>
                 <td className="px-4 py-2.5 text-gray-300">{deck.tournament_name}</td>
-                <td className="px-4 py-2.5 text-gray-500 hidden sm:table-cell">{deck.tournament_date}</td>
                 <td className="px-4 py-2.5 text-gray-400 hidden md:table-cell">{deck.pilot || 'Anonymous'}</td>
+                <td className="px-4 py-2.5 text-gray-500 hidden sm:table-cell">{deck.tournament_date}</td>
                 <td className="px-4 py-2.5 text-gray-400 hidden md:table-cell">{deck.place}</td>
                 <td className="px-4 py-2.5">
                   <Link to={`/decks/${deck.id}`}
