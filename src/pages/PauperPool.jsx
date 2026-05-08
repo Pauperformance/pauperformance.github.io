@@ -62,8 +62,9 @@ function CardLink({ card, highlighted }) {
 function SetEntry({ set, searchQuery, defaultOpen }) {
   const [open, setOpen] = useState(defaultOpen)
   const [hovered, setHovered] = useState(false)
+  const hasCards = set.cards.length > 0
 
-  useEffect(() => { setOpen(!!searchQuery) }, [searchQuery])
+  useEffect(() => { if (hasCards) setOpen(!!searchQuery) }, [searchQuery, hasCards])
 
   const setNameMatch = useMemo(() => {
     if (!searchQuery) return false
@@ -78,7 +79,7 @@ function SetEntry({ set, searchQuery, defaultOpen }) {
     return set.cards.filter(c => c.name.toLowerCase().includes(q))
   }, [set.cards, searchQuery, setNameMatch])
 
-  if (searchQuery && visibleCards.length === 0) return null
+  if (searchQuery && visibleCards.length === 0 && !setNameMatch) return null
 
   return (
     <div className="relative pl-10">
@@ -93,19 +94,19 @@ function SetEntry({ set, searchQuery, defaultOpen }) {
         onMouseEnter={() => setHovered(true)}
         onMouseLeave={() => setHovered(false)}>
         <button
-          onClick={() => setOpen(v => !v)}
-          className="w-full text-left flex items-center gap-3 flex-wrap">
+          onClick={() => hasCards && setOpen(v => !v)}
+          className={`w-full text-left flex items-center gap-3 flex-wrap ${hasCards ? '' : 'cursor-default'}`}>
           <span className="text-amber-400 font-semibold text-base">{set.date}</span>
           <span className={`font-medium transition-colors ${hovered ? 'text-amber-300' : 'text-white'}`}>{set.name}</span>
           <span className="text-sm text-gray-500 ml-auto shrink-0 flex items-center gap-3">
             <span>Scryfall: <span className="text-amber-400 font-mono">{set.scryfall}</span></span>
             <span>Pauperformance: <span className="text-amber-400 font-mono">#{set.code}</span></span>
             <span>New Cards: <span className="text-amber-400 font-mono">{set.cards.length}</span></span>
-            <span className="text-gray-600">{open ? '▲' : '▼'}</span>
+            {hasCards && <span className="text-gray-600">{open ? '▲' : '▼'}</span>}
           </span>
         </button>
 
-        {open && (
+        {open && hasCards && (
           <div className="mt-4 pt-4 border-t border-gray-700 flex flex-wrap gap-2">
             {visibleCards.map(card => (
               <CardLink key={card.url} card={card} highlighted={!!searchQuery && !setNameMatch} />
@@ -120,26 +121,44 @@ function SetEntry({ set, searchQuery, defaultOpen }) {
 export default function PauperPool() {
   const [pool, setPool] = useState([])
   const [loading, setLoading] = useState(true)
+  const [filter, setFilter] = useState('relevant')
   const [search, setSearch] = useState('')
 
   useEffect(() => {
-    fetch('/data/pauper_pool.json')
-      .then(r => r.json())
-      .then(data => { setPool([...data].reverse()); setLoading(false) })
+    Promise.all([
+      fetch('/data/pauper_pool.json').then(r => r.json()),
+      fetch('/data/sets.json').then(r => r.json()),
+    ]).then(([poolData, setsData]) => {
+      const poolMap = new Map(poolData.map(s => [s.code, s]))
+      const today = new Date().toISOString().slice(0, 10)
+      const merged = [...setsData].reverse()
+        .filter(s => s.date <= today)
+        .map(s => ({
+          ...s,
+          cards: poolMap.has(s.code) ? poolMap.get(s.code).cards : [],
+        }))
+      setPool(merged)
+      setLoading(false)
+    })
   }, [])
 
-  const totalCards = useMemo(() => pool.reduce((s, set) => s + set.cards.length, 0), [pool])
+  const totalCards = useMemo(() => pool.filter(s => s.pauper_pool).reduce((s, set) => s + set.cards.length, 0), [pool])
+  const totalRelevantSets = useMemo(() => pool.filter(s => s.pauper_pool).length, [pool])
   const isSearching = search.trim().length >= 2
 
+  const basePool = useMemo(() =>
+    filter === 'relevant' ? pool.filter(s => s.pauper_pool) : pool
+  , [pool, filter])
+
   const visibleSets = useMemo(() => {
-    if (!isSearching) return pool
+    if (!isSearching) return basePool
     const q = search.toLowerCase()
-    return pool.filter(set =>
+    return basePool.filter(set =>
       set.name.toLowerCase().includes(q) ||
       set.scryfall.toLowerCase().includes(q) ||
       set.cards.some(c => c.name.toLowerCase().includes(q))
     )
-  }, [pool, search, isSearching])
+  }, [basePool, search, isSearching])
 
   const matchCount = useMemo(() => {
     if (!isSearching) return 0
@@ -154,22 +173,37 @@ export default function PauperPool() {
     <Layout>
       <div className="space-y-6">
         <div>
-          <h1 className="text-2xl font-bold text-white">Pauper Pool</h1>
+          <h1 className="text-2xl font-bold text-white">Sets Index</h1>
           <p className="mt-2 text-gray-400 text-sm leading-relaxed">
             Common cards introduced in the format over time — new cards and downshifts, excluding reprints.
             Currently <span className="text-white font-medium">{totalCards.toLocaleString()}</span> cards across{' '}
-            <span className="text-white font-medium">{pool.length}</span> sets.
+            <span className="text-white font-medium">{totalRelevantSets}</span> sets.
             Hover over any card to preview it.
           </p>
         </div>
 
-        <input
-          type="text"
-          placeholder="Search for a card, set name, or Scryfall code..."
-          value={search}
-          onChange={e => setSearch(e.target.value)}
-          className="w-full bg-gray-800 border border-gray-600 rounded-xl px-4 py-2.5 text-sm text-gray-100 placeholder-gray-500 focus:outline-none focus:border-amber-400"
-        />
+        <div className="flex gap-3">
+          <input
+            type="text"
+            placeholder="Search for a card, set name, or Scryfall code..."
+            value={search}
+            onChange={e => setSearch(e.target.value)}
+            className="flex-1 bg-gray-800 border border-gray-600 rounded-xl px-4 py-2.5 text-sm text-gray-100 placeholder-gray-500 focus:outline-none focus:border-amber-400"
+          />
+          <div className="inline-flex rounded-xl border border-gray-600 overflow-hidden text-sm font-semibold shrink-0">
+            <button
+              onClick={() => setFilter('relevant')}
+              className={`px-4 py-2 transition-colors ${filter === 'relevant' ? 'bg-amber-400 text-gray-900' : 'text-gray-400 hover:text-gray-200'}`}>
+              Relevant
+            </button>
+            <div className="w-px bg-gray-600" />
+            <button
+              onClick={() => setFilter('all')}
+              className={`px-4 py-2 transition-colors ${filter === 'all' ? 'bg-amber-400 text-gray-900' : 'text-gray-400 hover:text-gray-200'}`}>
+              All
+            </button>
+          </div>
+        </div>
 
         {loading ? (
           <p className="text-gray-400 text-sm py-8 text-center">Loading...</p>
@@ -181,17 +215,17 @@ export default function PauperPool() {
               </p>
             )}
             {isSearching && visibleSets.length === 0 ? (
-              <p className="text-center text-gray-500 text-sm py-12">No cards match your search.</p>
+              <p className="text-center text-gray-500 text-sm py-12">No results match your search.</p>
             ) : (
               <div className="relative">
                 <div className="absolute left-3 top-2 bottom-2 w-px bg-gray-700" />
                 <div className="space-y-6">
-                  {visibleSets.map((set, i) => (
+                  {visibleSets.map((set) => (
                     <SetEntry
                       key={set.code}
                       set={set}
                       searchQuery={isSearching ? search.trim() : ''}
-                      defaultOpen={isSearching}
+                      defaultOpen={false}
                     />
                   ))}
                 </div>

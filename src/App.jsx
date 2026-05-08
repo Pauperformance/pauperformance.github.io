@@ -3,7 +3,6 @@ import Home from './pages/Home'
 import ArchetypesIndex from './pages/ArchetypesIndex'
 import ArchetypePage from './pages/ArchetypePage'
 import FamilyPage from './pages/FamilyPage'
-import SetIndex from './pages/SetIndex'
 import FormatTimeline from './pages/FormatTimeline'
 import PauperPool from './pages/PauperPool'
 import Creators from './pages/Creators'
@@ -21,7 +20,6 @@ function App() {
       <Route path="/archetypes" element={<ArchetypesIndex />} />
       <Route path="/archetypes/:name" element={<ArchetypePage />} />
       <Route path="/families/:name" element={<FamilyPage />} />
-      <Route path="/sets" element={<SetIndex />} />
       <Route path="/timeline" element={<FormatTimeline />} />
       <Route path="/pool" element={<PauperPool />} />
       <Route path="/creators" element={<Creators />} />

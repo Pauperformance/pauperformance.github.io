@@ -84,7 +84,7 @@ export default function Creators() {
     <Layout>
       <div className="space-y-6">
         <div>
-          <h1 className="text-2xl font-bold text-white">Pauper Creators</h1>
+          <h1 className="text-2xl font-bold text-white">Content Creators</h1>
           <p className="mt-2 text-gray-400 text-sm">
             {creators.length} content creators in the Pauper community
           </p>
