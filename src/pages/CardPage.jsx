@@ -210,6 +210,10 @@ export default function CardPage() {
 
           return (
             <>
+              <div className="md:hidden flex items-center gap-3 flex-wrap mb-2">
+                <h1 className="text-2xl font-bold text-gray-100">{card.name}</h1>
+                {!isMultiFace && s?.mana_cost && <ManaCost cost={s.mana_cost} />}
+              </div>
               <div className="flex flex-col md:flex-row gap-8 mb-10">
                 {/* Images */}
                 <div className={`shrink-0 flex flex-col gap-3`}>
@@ -242,7 +246,7 @@ export default function CardPage() {
                 <div className="flex flex-col gap-5 min-w-0">
                   {isMultiFace ? (
                     <>
-                      <h1 className="text-2xl font-bold text-gray-100">{card.name}</h1>
+                      <h1 className="hidden md:block text-2xl font-bold text-gray-100">{card.name}</h1>
                       {faces.map((face, i) => (
                         <div key={i}>
                           {i > 0 && <div className="border-t border-gray-700 mb-5" />}
@@ -252,7 +256,7 @@ export default function CardPage() {
                     </>
                   ) : (
                     <>
-                      <div className="flex items-center gap-3 flex-wrap">
+                      <div className="hidden md:flex items-center gap-3 flex-wrap">
                         <h1 className="text-2xl font-bold text-gray-100">{card.name}</h1>
                         {s?.mana_cost && <ManaCost cost={s.mana_cost} />}
                       </div>
