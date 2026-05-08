@@ -21,7 +21,7 @@ function App() {
       <Route path="/archetypes/:name" element={<ArchetypePage />} />
       <Route path="/families/:name" element={<FamilyPage />} />
       <Route path="/timeline" element={<FormatTimeline />} />
-      <Route path="/pool" element={<PauperPool />} />
+      <Route path="/sets" element={<PauperPool />} />
       <Route path="/creators" element={<Creators />} />
       <Route path="/cards" element={<CardsIndex />} />
       <Route path="/cards/:slug" element={<CardPage />} />

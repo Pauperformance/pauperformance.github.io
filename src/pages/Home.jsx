@@ -9,7 +9,7 @@ const PAGES = [
   { to: '/cards', label: 'Cards Index', description: 'All cards played in Pauper decks, with archetype information.' },
   { to: '/creators', label: 'Creators', description: 'Content creators covering the Pauper format.' },
   { to: '/sets', label: 'Set Index', description: 'Reference numbers used by Pauperformance to uniquely identify Magic sets.' },
-  { to: '/pool', label: 'Pauper Pool', description: 'How the pool of legal Pauper cards has grown over time.' },
+  { to: '/sets', label: 'Pauper Pool', description: 'How the pool of legal Pauper cards has grown over time.' },
   { to: '/timeline', label: 'Format Timeline', description: 'The most important events in Pauper history.' },
 ]
 
