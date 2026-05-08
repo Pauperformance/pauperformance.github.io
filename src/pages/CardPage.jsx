@@ -1,4 +1,4 @@
-import { useState, useEffect, useMemo } from 'react'
+import { useState, useEffect, useMemo, useRef } from 'react'
 import { useParams, Link, useNavigate } from 'react-router-dom'
 import Layout from '../components/Layout'
 
@@ -53,18 +53,35 @@ function FaceDetails({ face }) {
 }
 
 const PAGE_SIZE = 20
+const MONTHS = ['Jan','Feb','Mar','Apr','May','Jun','Jul','Aug','Sep','Oct','Nov','Dec']
+const SELECT_CLS = 'bg-gray-800 border border-gray-600 rounded-lg px-2 py-1.5 text-sm text-gray-100 focus:outline-none focus:border-amber-400 [color-scheme:dark]'
 
-function FilterButton({ active, onClick, children }) {
+function MonthPicker({ label, value, onChange }) {
+  const [year, setYear] = useState(value ? value.split('-')[0] : '')
+  const [month, setMonth] = useState(value ? value.split('-')[1] : '')
+  const currentYear = new Date().getFullYear()
+  const years = Array.from({ length: currentYear - 2018 }, (_, i) => String(2019 + i))
+
+  useEffect(() => {
+    setYear(value ? value.split('-')[0] : '')
+    setMonth(value ? value.split('-')[1] : '')
+  }, [value])
+
+  const handleYear = (y) => { setYear(y); onChange(y && month ? `${y}-${month}` : '') }
+  const handleMonth = (m) => { setMonth(m); onChange(year && m ? `${year}-${m}` : '') }
+
   return (
-    <button
-      onClick={onClick}
-      className={`px-1.5 py-0.5 rounded-full text-xs font-semibold transition-colors border ${
-        active
-          ? 'bg-amber-400 text-gray-900 border-amber-400'
-          : 'bg-transparent text-gray-400 border-gray-600 hover:border-gray-400 hover:text-gray-200'
-      }`}>
-      {children}
-    </button>
+    <div className="flex items-center gap-1.5">
+      <span className="text-sm text-gray-400 shrink-0">{label}</span>
+      <select value={month} onChange={e => handleMonth(e.target.value)} className={SELECT_CLS}>
+        <option value="">Month</option>
+        {MONTHS.map((m, i) => <option key={i} value={String(i + 1).padStart(2, '0')}>{m}</option>)}
+      </select>
+      <select value={year} onChange={e => handleYear(e.target.value)} className={SELECT_CLS}>
+        <option value="">Year</option>
+        {years.map(y => <option key={y} value={y}>{y}</option>)}
+      </select>
+    </div>
   )
 }
 
@@ -72,6 +89,13 @@ function CardDecksSection({ slug }) {
   const [decks, setDecks] = useState(null)
   const [page, setPage] = useState(0)
   const [activeArchetypes, setActiveArchetypes] = useState(new Set())
+  const [filterTournament, setFilterTournament] = useState('')
+  const [filterPilot, setFilterPilot] = useState('')
+  const [filterDateFrom, setFilterDateFrom] = useState('')
+  const [filterDateTo, setFilterDateTo] = useState('')
+  const [archetypeSearch, setArchetypeSearch] = useState('')
+  const [dropdownOpen, setDropdownOpen] = useState(false)
+  const dropdownRef = useRef(null)
   const navigate = useNavigate()
 
   useEffect(() => {
@@ -81,70 +105,155 @@ function CardDecksSection({ slug }) {
       .catch(() => setDecks([]))
   }, [slug])
 
+  useEffect(() => {
+    if (!dropdownOpen) return
+    function handleClick(e) {
+      if (dropdownRef.current && !dropdownRef.current.contains(e.target)) {
+        setDropdownOpen(false); setArchetypeSearch('')
+      }
+    }
+    document.addEventListener('mousedown', handleClick)
+    return () => document.removeEventListener('mousedown', handleClick)
+  }, [dropdownOpen])
+
   const archetypeNames = useMemo(() => {
     if (!decks) return []
     return [...new Set(decks.map(d => d.archetype))].sort()
   }, [decks])
 
   function toggleArchetype(a) {
-    setActiveArchetypes(prev => prev.has(a) ? new Set() : new Set([a]))
+    setActiveArchetypes(prev => { const next = new Set(prev); next.has(a) ? next.delete(a) : next.add(a); return next })
+    setPage(0)
   }
 
-  const visibleDecks = useMemo(() => {
-    if (!decks) return []
-    if (activeArchetypes.size === 0) return decks
-    return decks.filter(d => activeArchetypes.has(d.archetype))
-  }, [decks, activeArchetypes])
+  const toYM = (d) => d.toISOString().slice(0, 7)
+  const applyRange = (daysAgo) => {
+    const to = new Date(), from = new Date()
+    if (daysAgo === 7) from.setDate(from.getDate() - 7)
+    else if (daysAgo === 30) from.setMonth(from.getMonth() - 1)
+    else from.setFullYear(from.getFullYear() - 1)
+    setFilterDateFrom(toYM(from)); setFilterDateTo(toYM(to)); setPage(0)
+  }
 
-  useEffect(() => { setPage(0) }, [activeArchetypes])
+  const filtered = useMemo(() => {
+    if (!decks) return []
+    return decks.filter(d => {
+      if (activeArchetypes.size > 0 && !activeArchetypes.has(d.archetype)) return false
+      if (filterTournament && !(d.tournament_name || '').toLowerCase().includes(filterTournament.toLowerCase())) return false
+      if (filterPilot && !(d.pilot || '').toLowerCase().includes(filterPilot.toLowerCase())) return false
+      if (filterDateFrom && (d.tournament_date || '').slice(0, 7) < filterDateFrom) return false
+      if (filterDateTo && (d.tournament_date || '').slice(0, 7) > filterDateTo) return false
+      return true
+    })
+  }, [decks, activeArchetypes, filterTournament, filterPilot, filterDateFrom, filterDateTo])
 
   if (!decks) return <p className="text-gray-500 text-sm">Loading decklists…</p>
   if (!decks.length) return <p className="text-gray-500 text-sm">No decklists recorded.</p>
 
-  const totalPages = Math.ceil(visibleDecks.length / PAGE_SIZE)
-  const paginated = visibleDecks.slice(page * PAGE_SIZE, (page + 1) * PAGE_SIZE)
+  const totalPages = Math.ceil(filtered.length / PAGE_SIZE)
+  const paginated = filtered.slice(page * PAGE_SIZE, (page + 1) * PAGE_SIZE)
+  const setFilter = (setter) => (e) => { setter(e.target.value); setPage(0) }
 
   return (
     <div className="space-y-3">
-      <div className="flex flex-col gap-1">
-        <h2 className="text-xs font-semibold text-gray-500 uppercase tracking-wider">
-          Archetypes
-        </h2>
-        <p className="text-sm text-gray-400">
-          Played in <span className="text-gray-200 font-medium">{archetypeNames.length}</span> {archetypeNames.length === 1 ? 'archetype' : 'archetypes'}.
-        </p>
-      </div>
-      {archetypeNames.length > 1 && (
-        <div className="bg-gray-800 border border-gray-700 rounded-xl p-3 flex flex-wrap gap-2 items-center">
-          <span className="text-xs text-gray-500 shrink-0">Archetype:</span>
-          {archetypeNames.map(a => (
-            <FilterButton key={a} active={activeArchetypes.has(a)} onClick={() => toggleArchetype(a)}>{a}</FilterButton>
-          ))}
+      <h2 className="text-lg font-semibold text-white mb-3 pb-2 border-b border-gray-700">Decklists</h2>
+      <div className="bg-gray-800 border border-gray-700 rounded-xl p-4 space-y-3">
+        <input
+          type="search" placeholder="Search tournaments…" value={filterTournament} onChange={setFilter(setFilterTournament)}
+          className="w-full bg-gray-900 border border-gray-600 rounded-lg px-4 py-2 text-sm text-gray-100 placeholder-gray-500 focus:outline-none focus:border-amber-400" />
+        <input
+          type="text" placeholder="Search pilots…" value={filterPilot} onChange={setFilter(setFilterPilot)}
+          className="w-full bg-gray-900 border border-gray-600 rounded-lg px-4 py-2 text-sm text-gray-100 placeholder-gray-500 focus:outline-none focus:border-amber-400" />
+        <div className="flex flex-wrap gap-4 items-center">
+          <MonthPicker label="From" value={filterDateFrom} onChange={v => { setFilterDateFrom(v); setPage(0) }} />
+          <MonthPicker label="To" value={filterDateTo} onChange={v => { setFilterDateTo(v); setPage(0) }} />
+          <div className="flex gap-1.5">
+            {[['Last week', 7], ['Last month', 30], ['Last year', 365]].map(([label, days]) => (
+              <button key={label} onClick={() => applyRange(days)}
+                className="px-2.5 py-1 text-xs rounded-md border border-gray-600 text-gray-400 hover:border-amber-400/50 hover:text-amber-400 transition-colors">
+                {label}
+              </button>
+            ))}
+            <button onClick={() => { setFilterDateFrom(''); setFilterDateTo(''); setPage(0) }}
+              className="px-2.5 py-1 text-xs rounded-md border border-gray-600 text-gray-400 hover:border-amber-400/50 hover:text-amber-400 transition-colors">
+              Reset
+            </button>
+          </div>
         </div>
-      )}
-      {archetypeNames.length > 1 && (
-        <p className="text-xs text-gray-500 italic">Click an archetype to filter the decklists.</p>
-      )}
-      <p className="text-xs text-gray-500">{visibleDecks.length} decklists</p>
+        <div className="flex flex-col gap-2">
+          <div className="flex items-center gap-2">
+            <span className="text-sm text-gray-500 shrink-0">Archetype:</span>
+            <div className="relative" ref={dropdownRef}>
+              <button
+                onClick={() => setDropdownOpen(o => !o)}
+                className="bg-gray-900 border border-gray-600 rounded-lg px-3 py-1 text-sm text-gray-300 hover:border-gray-400 focus:outline-none focus:border-amber-400 cursor-pointer flex items-center gap-2">
+                Add archetype… <span className="text-gray-500 text-xs">▾</span>
+              </button>
+              {dropdownOpen && (
+                <div className="absolute z-20 mt-1 w-64 bg-gray-900 border border-gray-600 rounded-lg shadow-lg overflow-hidden">
+                  <div className="p-2">
+                    <input autoFocus type="search" placeholder="Search archetypes…" value={archetypeSearch}
+                      onChange={e => setArchetypeSearch(e.target.value)}
+                      className="w-full bg-gray-800 border border-gray-600 rounded px-2 py-1 text-sm text-gray-100 placeholder-gray-500 focus:outline-none focus:border-amber-400" />
+                  </div>
+                  <ul className="max-h-52 overflow-y-auto">
+                    {(() => {
+                      const opts = archetypeNames.filter(a => !activeArchetypes.has(a) && (!archetypeSearch || a.toLowerCase().includes(archetypeSearch.toLowerCase())))
+                      return opts.length === 0
+                        ? <li className="px-3 py-2 text-sm text-gray-500">No archetypes found</li>
+                        : opts.map(a => (
+                          <li key={a}>
+                            <button onClick={() => { toggleArchetype(a); setArchetypeSearch(''); setDropdownOpen(false) }}
+                              className="w-full text-left px-3 py-1.5 text-sm text-gray-300 hover:bg-gray-800 hover:text-white transition-colors">
+                              {a}
+                            </button>
+                          </li>
+                        ))
+                    })()}
+                  </ul>
+                </div>
+              )}
+            </div>
+          </div>
+          {activeArchetypes.size > 0 && (
+            <div className="flex flex-wrap gap-1.5 pl-[calc(theme(spacing.2)+5.5rem)]">
+              {[...activeArchetypes].map(a => (
+                <span key={a} className="inline-flex items-center gap-1 px-2 py-0.5 rounded-full text-xs font-semibold bg-amber-400 text-gray-900">
+                  {a}
+                  <button onClick={() => toggleArchetype(a)} className="hover:text-gray-700 leading-none">×</button>
+                </span>
+              ))}
+            </div>
+          )}
+        </div>
+      </div>
+
+      <p className="text-xs text-gray-500">
+        {filtered.length !== decks.length ? `${filtered.length} of ${decks.length}` : decks.length} decklists
+      </p>
+
       <div className="border border-gray-700 rounded-xl overflow-hidden bg-gray-900">
         <table className="w-full text-base bg-gray-900">
           <thead>
             <tr className="bg-gray-800 border-b border-gray-700">
               <th className="text-left px-4 py-2 text-xs font-semibold text-gray-400 uppercase tracking-wider">Archetype</th>
               <th className="text-left px-4 py-2 text-xs font-semibold text-gray-400 uppercase tracking-wider hidden sm:table-cell">Tournament</th>
-              <th className="text-left px-4 py-2 text-xs font-semibold text-gray-400 uppercase tracking-wider hidden sm:table-cell">Date</th>
+              <th className="text-left px-4 py-2 text-xs font-semibold text-gray-400 uppercase tracking-wider hidden sm:table-cell">Deck Date</th>
               <th className="text-left px-4 py-2 text-xs font-semibold text-gray-400 uppercase tracking-wider hidden md:table-cell">Pilot</th>
-              <th className="text-left px-4 py-2 text-xs font-semibold text-gray-400 uppercase tracking-wider hidden md:table-cell">Place</th>
+              <th className="text-left px-4 py-2 text-xs font-semibold text-gray-400 uppercase tracking-wider hidden md:table-cell">Result</th>
               <th className="text-left px-4 py-2 text-xs font-semibold text-gray-400 uppercase tracking-wider"></th>
             </tr>
           </thead>
           <tbody className="divide-y divide-gray-700/50 bg-gray-900">
+            {paginated.length === 0 && (
+              <tr><td colSpan="6" className="px-4 py-8 text-center text-gray-500 text-sm">No decklists match your filters.</td></tr>
+            )}
             {paginated.map(deck => (
               <tr key={deck.id}
                 onClick={() => navigate(`/decks/${deck.id}`)}
                 onAuxClick={e => { if (e.button === 1) window.open(`/#/decks/${deck.id}`, '_blank') }}
                 className="bg-gray-900 hover:bg-gray-800 transition-colors cursor-pointer">
-                <td className="px-4 py-2.5 text-amber-400 text-xs">{deck.archetype}</td>
+                <td className="px-4 py-2.5 text-amber-400 text-base">{deck.archetype}</td>
                 <td className="px-4 py-2.5 text-gray-300 hidden sm:table-cell">{deck.tournament_name}</td>
                 <td className="px-4 py-2.5 text-gray-500 hidden sm:table-cell">{deck.tournament_date}</td>
                 <td className="px-4 py-2.5 text-gray-400 hidden md:table-cell">{deck.pilot || 'Anonymous'}</td>
