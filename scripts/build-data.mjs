@@ -1,6 +1,13 @@
 import { readFileSync, readdirSync, writeFileSync, copyFileSync, mkdirSync, existsSync } from 'fs'
 import { join } from 'path'
 
+function nameToSlug(name) {
+  return name.toLowerCase()
+    .replace(/ \/\/ /g, '_')
+    .replace(/ /g, '_')
+    .replace(/[^a-z0-9_-]/g, '')
+}
+
 const archetypeDir = 'assets/data/archetype'
 const deckDir = 'assets/data/deck/academy'
 const intelDeckDir = 'assets/data/intel/deck'
@@ -84,7 +91,7 @@ for (const archetype of archetypes) {
     videos,
   }
 
-  writeFileSync(join(detailsDir, `${name}.json`), JSON.stringify(detail))
+  writeFileSync(join(detailsDir, `${nameToSlug(name)}.json`), JSON.stringify(detail))
   detailCount++
 }
 
@@ -175,7 +182,7 @@ for (const archetype of archetypes) {
     .sort(function(a, b) {
       return (b.tournament_date || '').localeCompare(a.tournament_date || '')
     })
-  writeFileSync(join(intelDecksDir, `${name}.json`), JSON.stringify(decks))
+  writeFileSync(join(intelDecksDir, `${nameToSlug(name)}.json`), JSON.stringify(decks))
   intelDeckCount++
 }
 console.log('Built intel-decks for ' + intelDeckCount + ' archetypes, ' + deckDetailCount + ' deck detail files.')
@@ -185,7 +192,7 @@ const familyMap = {}
 for (const arch of archetypes) {
   var fam = arch.family
   if (!fam) continue
-  if (!familyMap[fam]) familyMap[fam] = { name: fam, description: null, archetypes: [] }
+  if (!familyMap[fam]) familyMap[fam] = { name: fam, slug: nameToSlug(fam), description: null, archetypes: [] }
   familyMap[fam].archetypes.push({
     name: arch.name,
     aliases: arch.aliases || [],
@@ -247,9 +254,9 @@ const cardsIndex = []
 const cardImageMap = {}
 const cardTypeMap = {}
 for (const f of cardFiles) {
-  const slug = f.slice(0, -5)
   const raw = JSON.parse(readFileSync(join(cardIntelDir, f), 'utf8'))
-  const name = (raw.scryfall && raw.scryfall.name) || slug
+  const name = (raw.scryfall && raw.scryfall.name) || f.slice(0, -5)
+  const slug = nameToSlug(name)
   const archetypes = (raw.archetypes && raw.archetypes['py/set']) || []
   const scryfall = raw.scryfall || null
   var colors = (scryfall && scryfall.colors) || []
@@ -280,7 +287,7 @@ for (const f of cardFiles) {
   var types = Object.keys(typeSet)
   var cmc = (scryfall && scryfall.cmc !== undefined) ? scryfall.cmc : null
   cardsIndex.push({ slug, name, archetypeCount: archetypes.length, colors: colors, types: types, cmc: cmc })
-  writeFileSync(join(cardDetailsDir, f), JSON.stringify({ slug, name, archetypes, scryfall }))
+  writeFileSync(join(cardDetailsDir, slug + '.json'), JSON.stringify({ slug, name, archetypes, scryfall }))
   cardImageMap[name] = scryfall
     ? (scryfall.image_uris && scryfall.image_uris.normal)
       || (scryfall.card_faces && scryfall.card_faces[0] && scryfall.card_faces[0].image_uris && scryfall.card_faces[0].image_uris.normal)

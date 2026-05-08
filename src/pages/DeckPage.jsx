@@ -11,7 +11,7 @@ function CardName({ c, onHover }) {
     <li className="flex items-baseline gap-2">
       <span className="w-5 text-right text-gray-500 shrink-0">{c.qty}</span>
       <Link
-        to={`/cards/${c.name.toLowerCase().replace(/\s+/g, '-').replace(/[^a-z0-9-]/g, '')}`}
+        to={`/cards/${c.name.toLowerCase().replace(/ \/\/ /g, '_').replace(/\s+/g, '_').replace(/[^a-z0-9_-]/g, '')}`}
         className="text-gray-200 hover:text-amber-400 transition-colors"
         onMouseEnter={() => onHover(c.name)}
         onMouseLeave={() => onHover(null)}

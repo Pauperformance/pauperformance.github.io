@@ -2,7 +2,7 @@ import { useState, useEffect } from 'react'
 import { useParams, Link } from 'react-router-dom'
 import ReactMarkdown from 'react-markdown'
 import Layout from '../components/Layout'
-import { nameToSlug, slugToName } from '../utils/slugs'
+import { nameToSlug } from '../utils/slugs'
 
 const MANA_ORDER = ['W', 'U', 'B', 'R', 'G', 'C']
 const LANG_FLAG = {
@@ -22,7 +22,7 @@ function SectionHeader({ children }) {
 }
 
 function cardNameToSlug(name) {
-  return name.toLowerCase().replace(/\s+/g, '-').replace(/[^a-z0-9-]/g, '')
+  return nameToSlug(name)
 }
 
 function CardGallery({ cards }) {
@@ -68,7 +68,7 @@ function DecksTable({ decks, referenceNames }) {
 function DeckRows({ decks }) {
   return (
     <div className="border border-gray-700 rounded-xl overflow-hidden bg-gray-900">
-      <table className="w-full text-sm bg-gray-900">
+      <table className="w-full text-base bg-gray-900">
         <thead>
           <tr className="bg-gray-800 border-b border-gray-700">
             <th className="text-left px-4 py-2 text-xs font-semibold text-gray-400 uppercase tracking-wider">Name</th>
@@ -103,7 +103,7 @@ function VideosSection({ videos }) {
   if (!videos?.length) return <p className="text-gray-500 text-sm">No videos recorded.</p>
   return (
     <div className="border border-gray-700 rounded-xl overflow-hidden bg-gray-900">
-      <table className="w-full text-sm bg-gray-900">
+      <table className="w-full text-base bg-gray-900">
         <thead>
           <tr className="bg-gray-800 border-b border-gray-700">
             <th className="text-left px-4 py-2 text-xs font-semibold text-gray-400 uppercase tracking-wider w-8">🗣️</th>
@@ -137,7 +137,7 @@ function IntelDecksSection({ name }) {
   const [page, setPage] = useState(0)
 
   useEffect(() => {
-    fetch(`/data/intel-decks/${encodeURIComponent(name)}.json`)
+    fetch(`/data/intel-decks/${name}.json`)
       .then(r => r.ok ? r.json() : [])
       .then(setDecks)
   }, [name])
@@ -152,7 +152,7 @@ function IntelDecksSection({ name }) {
     <div className="space-y-3">
       <p className="text-xs text-gray-500">{decks.length} decklists</p>
       <div className="border border-gray-700 rounded-xl overflow-hidden">
-        <table className="w-full text-sm bg-gray-900">
+        <table className="w-full text-base bg-gray-900">
           <thead>
             <tr className="bg-gray-800 border-b border-gray-700">
               <th className="text-left px-4 py-2 text-xs font-semibold text-gray-400 uppercase tracking-wider">Tournament</th>
@@ -216,7 +216,7 @@ function ResourcesSection({ resources, discord, sideboard }) {
       ))}
       {resources?.length > 0 && (
         <div className="border border-gray-700 rounded-xl overflow-hidden">
-          <table className="w-full text-sm bg-gray-900">
+          <table className="w-full text-base bg-gray-900">
             <thead>
               <tr className="bg-gray-800 border-b border-gray-700">
                 <th className="text-left px-4 py-2 text-xs font-semibold text-gray-400 uppercase tracking-wider w-8">🗣️</th>
@@ -247,23 +247,22 @@ function ResourcesSection({ resources, discord, sideboard }) {
 
 export default function ArchetypePage() {
   const { name } = useParams()
-  const decodedName = slugToName(name)
   const [data, setData] = useState(null)
   const [notFound, setNotFound] = useState(false)
 
   useEffect(() => {
-    fetch(`/data/archetype-details/${encodeURIComponent(decodedName)}.json`)
+    fetch(`/data/archetype-details/${name}.json`)
       .then(r => {
         if (!r.ok) { setNotFound(true); return null }
         return r.json()
       })
       .then(d => d && setData(d))
-  }, [decodedName])
+  }, [name])
 
   if (notFound) return (
     <Layout>
       <div className="text-center py-20">
-        <p className="text-gray-400">Archetype <strong className="text-white">{decodedName}</strong> not found.</p>
+        <p className="text-gray-400">Archetype <strong className="text-white">{name}</strong> not found.</p>
         <Link to="/archetypes" className="mt-4 inline-block text-amber-400 hover:underline text-sm">← Back to index</Link>
       </div>
     </Layout>
@@ -328,7 +327,7 @@ export default function ArchetypePage() {
         {/* Decklists */}
         <section>
           <SectionHeader>Decklists</SectionHeader>
-          <IntelDecksSection name={data.name} />
+          <IntelDecksSection name={name} />
         </section>
 
         {/* Videos */}

@@ -32,7 +32,7 @@ function CardLink({ card, highlighted }) {
     top: Math.max(8, Math.min(pos.y - 80, window.innerHeight - 320)),
   } : null
 
-  const slug = card.name.toLowerCase().replace(/\s+/g, '-').replace(/[^a-z0-9-]/g, '')
+  const slug = card.name.toLowerCase().replace(/ \/\/ /g, '_').replace(/\s+/g, '_').replace(/[^a-z0-9_-]/g, '')
 
   return (
     <>
@@ -89,7 +89,7 @@ function SetEntry({ set, searchQuery, defaultOpen }) {
           onClick={() => setOpen(v => !v)}
           className="w-full text-left flex items-center gap-3 flex-wrap">
           <span className="text-amber-400 font-semibold text-base">{set.date}</span>
-          <span className="font-medium text-white">{set.name}</span>
+          <span className={`font-medium transition-colors ${hovered ? 'text-amber-300' : 'text-white'}`}>{set.name}</span>
           <span className="text-sm text-gray-500 ml-auto shrink-0 flex items-center gap-3">
             <span>Code: <span className="text-amber-400 font-mono">#{set.code}</span></span>
             <span>New Cards: <span className="text-amber-400 font-mono">{set.cards.length}</span></span>
