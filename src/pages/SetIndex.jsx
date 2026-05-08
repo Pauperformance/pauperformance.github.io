@@ -59,7 +59,7 @@ export default function SetIndex() {
           <>
             <p className="text-xs text-gray-500">{filtered.length} set{filtered.length !== 1 ? 's' : ''}</p>
             <div className="border border-gray-700 rounded-xl overflow-hidden bg-gray-900">
-              <table className="w-full text-sm">
+              <table className="w-full text-sm bg-gray-900">
                 <thead>
                   <tr className="bg-gray-800 border-b border-gray-700">
                     <th className="text-left px-4 py-3 text-xs font-semibold text-gray-400 uppercase tracking-wider">p12e</th>
@@ -68,7 +68,7 @@ export default function SetIndex() {
                     <th className="text-left px-4 py-3 text-xs font-semibold text-gray-400 uppercase tracking-wider hidden sm:table-cell">Release date</th>
                   </tr>
                 </thead>
-                <tbody className="divide-y divide-gray-700/50">
+                <tbody className="divide-y divide-gray-700/50 bg-gray-900">
                   {filtered.map(s => (
                     <tr key={s.code}
                       className={`transition-colors ${s.pauper_pool ? 'bg-amber-950/20 hover:bg-amber-950/40' : 'bg-gray-900 hover:bg-gray-800'}`}>

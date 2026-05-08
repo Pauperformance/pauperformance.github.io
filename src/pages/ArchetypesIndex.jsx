@@ -199,7 +199,7 @@ export default function ArchetypesIndex() {
           <>
             <p className="text-xs text-gray-500">{filtered.length} archetype{filtered.length !== 1 ? 's' : ''}</p>
             <div className="border border-gray-700 rounded-xl overflow-hidden bg-gray-900">
-              <table className="w-full text-sm">
+              <table className="w-full text-sm bg-gray-900">
                 <thead>
                   <tr className="bg-gray-800 border-b border-gray-700">
                     <SortHeader col="name"   label="Name"    sortCol={sortCol} sortDir={sortDir} onSort={handleSort} />
@@ -209,12 +209,12 @@ export default function ArchetypesIndex() {
                     <SortHeader col="meta"   label="Meta %"  sortCol={sortCol} sortDir={sortDir} onSort={handleSort} align="right" />
                   </tr>
                 </thead>
-                <tbody className="divide-y divide-gray-700/50">
+                <tbody className="divide-y divide-gray-700/50 bg-gray-900">
                   {sorted.map(a => (
                     <tr key={a.name}
                       onClick={() => navigate(`/archetypes/${nameToSlug(a.name)}`)}
                       onAuxClick={e => { if (e.button === 1) window.open(`/#/archetypes/${nameToSlug(a.name)}`, '_blank') }}
-                      className="bg-gray-900 hover:bg-gray-800 transition-colors cursor-pointer group">
+                      className="bg-gray-900 hover:bg-gray-800 cursor-pointer group">
                       <td className="px-4 py-3">
                         <span className="font-medium text-gray-200 group-hover:text-amber-400 transition-colors">
                           {a.name}

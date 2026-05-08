@@ -1,10 +1,27 @@
-import { useState, useEffect } from 'react'
-import { useParams, Link } from 'react-router-dom'
+import { useState, useEffect, useMemo } from 'react'
+import { useParams, Link, useNavigate } from 'react-router-dom'
 import Layout from '../components/Layout'
 import { nameToSlug, slugToName } from '../utils/slugs'
 
 const MANA_ORDER = ['W', 'U', 'B', 'R', 'G', 'C']
 const MANA_LABELS = { W: 'White', U: 'Blue', B: 'Black', R: 'Red', G: 'Green', C: 'Colorless' }
+
+function SortHeader({ col, label, sortCol, sortDir, onSort, align = 'left' }) {
+  const active = sortCol === col
+  const indicator = active ? (sortDir === 'asc' ? '↑' : '↓') : '↕'
+  const alignClass = align === 'right' ? 'text-right' : 'text-left'
+  return (
+    <th
+      onClick={() => onSort(col)}
+      className={`px-4 py-3 text-xs font-semibold uppercase tracking-wider cursor-pointer select-none group ${alignClass}`}>
+      <span className={`inline-flex items-center gap-1 transition-colors ${active ? 'text-amber-400' : 'text-gray-400 group-hover:text-gray-200'}`}>
+        {align === 'right' && <span className={`${active ? 'text-amber-400' : 'text-gray-600 group-hover:text-gray-400'}`}>{indicator}</span>}
+        {label}
+        {align !== 'right' && <span className={`${active ? 'text-amber-400' : 'text-gray-600 group-hover:text-gray-400'}`}>{indicator}</span>}
+      </span>
+    </th>
+  )
+}
 
 function ManaIcon({ color }) {
   return (
@@ -16,9 +33,12 @@ function ManaIcon({ color }) {
 export default function FamilyPage() {
   const { name } = useParams()
   const decodedName = slugToName(name)
+  const navigate = useNavigate()
   const [family, setFamily] = useState(null)
   const [metaMap, setMetaMap] = useState({})
   const [notFound, setNotFound] = useState(false)
+  const [sortCol, setSortCol] = useState('name')
+  const [sortDir, setSortDir] = useState('asc')
 
   useEffect(() => {
     Promise.all([
@@ -32,6 +52,35 @@ export default function FamilyPage() {
       setMetaMap(Object.fromEntries(entries.map(e => [e.archetype_name, e.meta_share])))
     })
   }, [decodedName])
+
+  function handleSort(col) {
+    if (sortCol === col) {
+      setSortDir(d => d === 'asc' ? 'desc' : 'asc')
+    } else {
+      setSortCol(col)
+      setSortDir(col === 'meta' ? 'desc' : 'asc')
+    }
+  }
+
+  const sorted = useMemo(() => {
+    if (!family) return []
+    return [...family.archetypes].sort((a, b) => {
+      let av, bv
+      if (sortCol === 'name') {
+        av = a.name.toLowerCase(); bv = b.name.toLowerCase()
+      } else if (sortCol === 'colors') {
+        av = a.dominant_mana.map(c => MANA_ORDER.indexOf(c)).sort().join('-') || 'Z'
+        bv = b.dominant_mana.map(c => MANA_ORDER.indexOf(c)).sort().join('-') || 'Z'
+      } else if (sortCol === 'type') {
+        av = a.game_type.join(', ').toLowerCase(); bv = b.game_type.join(', ').toLowerCase()
+      } else if (sortCol === 'meta') {
+        av = metaMap[a.name] || 0; bv = metaMap[b.name] || 0
+      }
+      if (av < bv) return sortDir === 'asc' ? -1 : 1
+      if (av > bv) return sortDir === 'asc' ? 1 : -1
+      return 0
+    })
+  }, [family, sortCol, sortDir, metaMap])
 
   if (notFound) return (
     <Layout>
@@ -62,18 +111,21 @@ export default function FamilyPage() {
         </div>
 
         <div className="border border-gray-700 rounded-xl overflow-hidden bg-gray-900">
-          <table className="w-full text-sm">
+          <table className="w-full text-sm bg-gray-900">
             <thead>
               <tr className="bg-gray-800 border-b border-gray-700">
-                <th className="text-left px-4 py-3 text-xs font-semibold text-gray-400 uppercase tracking-wider">Name</th>
-                <th className="text-left px-4 py-3 text-xs font-semibold text-gray-400 uppercase tracking-wider">Colors</th>
-                <th className="text-left px-4 py-3 text-xs font-semibold text-gray-400 uppercase tracking-wider">Type</th>
-                <th className="text-right px-4 py-3 text-xs font-semibold text-gray-400 uppercase tracking-wider">Meta %</th>
+                <SortHeader col="name"   label="Name"   sortCol={sortCol} sortDir={sortDir} onSort={handleSort} />
+                <SortHeader col="colors" label="Colors" sortCol={sortCol} sortDir={sortDir} onSort={handleSort} />
+                <SortHeader col="type"   label="Type"   sortCol={sortCol} sortDir={sortDir} onSort={handleSort} />
+                <SortHeader col="meta"   label="Meta %"  sortCol={sortCol} sortDir={sortDir} onSort={handleSort} align="right" />
               </tr>
             </thead>
-            <tbody className="divide-y divide-gray-700/50">
-              {family.archetypes.map(a => (
-                <tr key={a.name} className="bg-gray-900 hover:bg-gray-800 transition-colors group">
+            <tbody className="divide-y divide-gray-700/50 bg-gray-900">
+              {sorted.map(a => (
+                <tr key={a.name}
+                  onClick={() => navigate(`/archetypes/${nameToSlug(a.name)}`)}
+                  onAuxClick={e => { if (e.button === 1) window.open(`/#/archetypes/${nameToSlug(a.name)}`, '_blank') }}
+                  className="bg-gray-900 hover:bg-gray-800 cursor-pointer group">
                   <td className="px-4 py-3">
                     <Link to={`/archetypes/${nameToSlug(a.name)}`}
                       className="font-medium text-gray-200 group-hover:text-amber-400 transition-colors">
