@@ -329,7 +329,7 @@ export default function CardsIndex() {
                         onClick={() => navigate(`/cards/${c.slug}`)}
                         onAuxClick={e => { if (e.button === 1) window.open(`/#/cards/${c.slug}`, '_blank') }}
                         className="bg-gray-900 hover:bg-gray-800 cursor-pointer group">
-                        <td className="px-4 py-2.5 font-medium text-gray-200 group-hover:text-amber-400 transition-colors">{c.name}</td>
+                        <td className="px-4 py-2.5 font-medium text-gray-200 group-hover:text-amber-400">{c.name}</td>
                         <td className="px-4 py-2.5">
                           <div className="flex gap-0.5">
                             {(c.colors || []).length === 0
