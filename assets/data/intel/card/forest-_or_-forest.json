@@ -3,6 +3,24 @@
         "py/set": []
     },
     "scryfall": {
+        "all_parts": [
+            {
+                "component": "combo_piece",
+                "id": "7e703632-5ed0-4509-a12b-594269f865f1",
+                "name": "Forest // Forest",
+                "object": "related_card",
+                "type_line": "Basic Land \u2014 Forest // Basic Land \u2014 Forest",
+                "uri": "https://api.scryfall.com/cards/7e703632-5ed0-4509-a12b-594269f865f1"
+            },
+            {
+                "component": "combo_piece",
+                "id": "aed8ae06-ae54-4a16-8830-6547164ce6ae",
+                "name": "Gilt-Leaf Alchemist",
+                "object": "related_card",
+                "type_line": "Creature \u2014 Elf Druid",
+                "uri": "https://api.scryfall.com/cards/aed8ae06-ae54-4a16-8830-6547164ce6ae"
+            }
+        ],
         "artist": "Yeong-Hao Han",
         "artist_ids": [
             "f8e7f8d6-6dde-4059-973c-30f1fd1bbe4e"
@@ -37,7 +55,6 @@
                 "artist_id": "f8e7f8d6-6dde-4059-973c-30f1fd1bbe4e",
                 "cmc": 0.0,
                 "colors": [],
-                "flavor_name": "",
                 "illustration_id": "6a9c8c48-e347-482a-a1cf-f5e12f7efe92",
                 "image_uris": {
                     "art_crop": "https://cards.scryfall.io/art_crop/back/7/e/7e703632-5ed0-4509-a12b-594269f865f1.jpg?1698992898",
@@ -69,6 +86,7 @@
         "foil": true,
         "frame": "2015",
         "full_art": true,
+        "game_changer": false,
         "games": [
             "paper",
             "mtgo"
@@ -84,7 +102,6 @@
             "brawl": "legal",
             "commander": "legal",
             "duel": "legal",
-            "explorer": "legal",
             "future": "legal",
             "gladiator": "legal",
             "historic": "legal",
@@ -101,9 +118,10 @@
             "standard": "legal",
             "standardbrawl": "legal",
             "timeless": "legal",
+            "tlr": "legal",
             "vintage": "legal"
         },
-        "mtgo_id": 117458,
+        "mtgo_id": 117466,
         "multiverse_ids": [
             642584,
             642585
@@ -113,12 +131,12 @@
         "object": "card",
         "oversized": false,
         "prices": {
-            "eur": "2.26",
-            "eur_foil": "4.14",
-            "tix": "0.12",
-            "usd": "4.07",
+            "eur": "5.18",
+            "eur_foil": "12.48",
+            "tix": "1.99",
+            "usd": "8.11",
             "usd_etched": null,
-            "usd_foil": "8.77"
+            "usd_foil": "17.41"
         },
         "prints_search_uri": "https://api.scryfall.com/cards/search?order=released&q=oracleid%3Ab34bb2dc-c1af-4d77-b0b3-a0fb342a5fc6&unique=prints",
         "produced_mana": [
@@ -126,19 +144,20 @@
         ],
         "promo": false,
         "promo_types": [
+            "universesbeyond",
             "boosterfun"
         ],
         "purchase_uris": {
-            "cardhoarder": "https://www.cardhoarder.com/cards/117458?affiliate_id=scryfall&ref=card-profile&utm_campaign=affiliate&utm_medium=card&utm_source=scryfall",
-            "cardmarket": "https://www.cardmarket.com/en/Magic/Products/Singles/Universes-Beyond-Jurassic-World-Collection/Forest?referrer=scryfall&utm_campaign=card_prices&utm_medium=text&utm_source=scryfall",
-            "tcgplayer": "https://tcgplayer.pxf.io/c/4931599/1830156/21018?subId1=api&u=https%3A%2F%2Fwww.tcgplayer.com%2Fproduct%2F524345%3Fpage%3D1"
+            "cardhoarder": "https://www.cardhoarder.com/cards/117466?affiliate_id=scryfall&ref=card-profile&utm_campaign=affiliate&utm_medium=card&utm_source=scryfall",
+            "cardmarket": "https://www.cardmarket.com/en/Magic/Products?idProduct=741070&referrer=scryfall&utm_campaign=card_prices&utm_medium=text&utm_source=scryfall",
+            "tcgplayer": "https://partner.tcgplayer.com/c/4931599/1830156/21018?subId1=api&u=https%3A%2F%2Fwww.tcgplayer.com%2Fproduct%2F524345%3Fpage%3D1"
         },
         "rarity": "common",
         "related_uris": {
             "edhrec": "https://edhrec.com/route/?cc=Forest+%2F%2F+Forest",
             "gatherer": "https://gatherer.wizards.com/Pages/Card/Details.aspx?multiverseid=642584&printed=false",
-            "tcgplayer_infinite_articles": "https://tcgplayer.pxf.io/c/4931599/1830156/21018?subId1=api&trafcat=infinite&u=https%3A%2F%2Finfinite.tcgplayer.com%2Fsearch%3FcontentMode%3Darticle%26game%3Dmagic%26partner%3Dscryfall%26q%3DForest%2B%252F%252F%2BForest",
-            "tcgplayer_infinite_decks": "https://tcgplayer.pxf.io/c/4931599/1830156/21018?subId1=api&trafcat=infinite&u=https%3A%2F%2Finfinite.tcgplayer.com%2Fsearch%3FcontentMode%3Ddeck%26game%3Dmagic%26partner%3Dscryfall%26q%3DForest%2B%252F%252F%2BForest"
+            "tcgplayer_infinite_articles": "https://partner.tcgplayer.com/c/4931599/1830156/21018?subId1=api&trafcat=tcgplayer.com%2Fsearch%2Farticles&u=https%3A%2F%2Fwww.tcgplayer.com%2Fsearch%2Farticles%3FproductLineName%3Dmagic%26q%3DForest%2B%252F%252F%2BForest",
+            "tcgplayer_infinite_decks": "https://partner.tcgplayer.com/c/4931599/1830156/21018?subId1=api&trafcat=tcgplayer.com%2Fsearch%2Fdecks&u=https%3A%2F%2Fwww.tcgplayer.com%2Fsearch%2Fdecks%3FproductLineName%3Dmagic%26q%3DForest%2B%252F%252F%2BForest"
         },
         "released_at": "2023-11-17",
         "reprint": true,
@@ -151,7 +170,7 @@
         "set_id": "647b6fd3-6935-4b96-85a4-d0191487ea5a",
         "set_name": "Jurassic World Collection",
         "set_search_uri": "https://api.scryfall.com/cards/search?order=set&q=e%3Arex&unique=prints",
-        "set_type": "masterpiece",
+        "set_type": "eternal",
         "set_uri": "https://api.scryfall.com/sets/647b6fd3-6935-4b96-85a4-d0191487ea5a",
         "story_spotlight": false,
         "tcgplayer_id": 524345,

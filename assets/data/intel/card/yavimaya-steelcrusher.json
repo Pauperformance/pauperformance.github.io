@@ -21,7 +21,7 @@
             "R"
         ],
         "digital": false,
-        "edhrec_rank": 7684,
+        "edhrec_rank": 9666,
         "finishes": [
             "nonfoil",
             "foil"
@@ -29,6 +29,7 @@
         "foil": true,
         "frame": "2015",
         "full_art": false,
+        "game_changer": false,
         "games": [
             "paper",
             "arena",
@@ -52,12 +53,11 @@
         "lang": "en",
         "layout": "normal",
         "legalities": {
-            "alchemy": "legal",
+            "alchemy": "not_legal",
             "brawl": "legal",
             "commander": "legal",
             "duel": "legal",
-            "explorer": "legal",
-            "future": "legal",
+            "future": "not_legal",
             "gladiator": "legal",
             "historic": "legal",
             "legacy": "legal",
@@ -66,13 +66,14 @@
             "oldschool": "not_legal",
             "pauper": "legal",
             "paupercommander": "legal",
-            "penny": "not_legal",
+            "penny": "legal",
             "pioneer": "legal",
             "predh": "not_legal",
             "premodern": "not_legal",
-            "standard": "legal",
-            "standardbrawl": "legal",
+            "standard": "not_legal",
+            "standardbrawl": "not_legal",
             "timeless": "legal",
+            "tlr": "legal",
             "vintage": "legal"
         },
         "mana_cost": "{1}{R}",
@@ -84,9 +85,9 @@
         "nonfoil": true,
         "object": "card",
         "oracle_id": "ad181ee7-756f-4002-9009-023ea6172991",
-        "oracle_text": "Enlist (As this creature attacks, you may tap a nonattacking creature you control without summoning sickness. When you do, add its power to this creature's until end of turn.)\n{1}, Sacrifice Yavimaya Steelcrusher: Destroy target artifact.",
+        "oracle_text": "Enlist (As this creature attacks, you may tap a nonattacking creature you control without summoning sickness. When you do, add its power to this creature's until end of turn.)\n{1}, Sacrifice this creature: Destroy target artifact.",
         "oversized": false,
-        "penny_rank": 10576,
+        "penny_rank": 12880,
         "power": "2",
         "preview": {
             "previewed_at": "2022-08-19",
@@ -94,26 +95,26 @@
             "source_uri": "https://twitter.com/PrincessLilyMTG/status/1560726040401645568"
         },
         "prices": {
-            "eur": "0.14",
-            "eur_foil": "0.15",
+            "eur": "0.11",
+            "eur_foil": "0.14",
             "tix": "0.03",
-            "usd": "0.04",
+            "usd": "0.31",
             "usd_etched": null,
-            "usd_foil": "0.14"
+            "usd_foil": "0.19"
         },
         "prints_search_uri": "https://api.scryfall.com/cards/search?order=released&q=oracleid%3Aad181ee7-756f-4002-9009-023ea6172991&unique=prints",
         "promo": false,
         "purchase_uris": {
             "cardhoarder": "https://www.cardhoarder.com/cards/102780?affiliate_id=scryfall&ref=card-profile&utm_campaign=affiliate&utm_medium=card&utm_source=scryfall",
-            "cardmarket": "https://www.cardmarket.com/en/Magic/Products/Singles/Dominaria-United/Yavimaya-Steelcrusher?referrer=scryfall&utm_campaign=card_prices&utm_medium=text&utm_source=scryfall",
-            "tcgplayer": "https://tcgplayer.pxf.io/c/4931599/1830156/21018?subId1=api&u=https%3A%2F%2Fwww.tcgplayer.com%2Fproduct%2F283092%3Fpage%3D1"
+            "cardmarket": "https://www.cardmarket.com/en/Magic/Products?idProduct=671622&referrer=scryfall&utm_campaign=card_prices&utm_medium=text&utm_source=scryfall",
+            "tcgplayer": "https://partner.tcgplayer.com/c/4931599/1830156/21018?subId1=api&u=https%3A%2F%2Fwww.tcgplayer.com%2Fproduct%2F283092%3Fpage%3D1"
         },
         "rarity": "common",
         "related_uris": {
             "edhrec": "https://edhrec.com/route/?cc=Yavimaya+Steelcrusher",
             "gatherer": "https://gatherer.wizards.com/Pages/Card/Details.aspx?multiverseid=574632&printed=false",
-            "tcgplayer_infinite_articles": "https://tcgplayer.pxf.io/c/4931599/1830156/21018?subId1=api&trafcat=infinite&u=https%3A%2F%2Finfinite.tcgplayer.com%2Fsearch%3FcontentMode%3Darticle%26game%3Dmagic%26partner%3Dscryfall%26q%3DYavimaya%2BSteelcrusher",
-            "tcgplayer_infinite_decks": "https://tcgplayer.pxf.io/c/4931599/1830156/21018?subId1=api&trafcat=infinite&u=https%3A%2F%2Finfinite.tcgplayer.com%2Fsearch%3FcontentMode%3Ddeck%26game%3Dmagic%26partner%3Dscryfall%26q%3DYavimaya%2BSteelcrusher"
+            "tcgplayer_infinite_articles": "https://partner.tcgplayer.com/c/4931599/1830156/21018?subId1=api&trafcat=tcgplayer.com%2Fsearch%2Farticles&u=https%3A%2F%2Fwww.tcgplayer.com%2Fsearch%2Farticles%3FproductLineName%3Dmagic%26q%3DYavimaya%2BSteelcrusher",
+            "tcgplayer_infinite_decks": "https://partner.tcgplayer.com/c/4931599/1830156/21018?subId1=api&trafcat=tcgplayer.com%2Fsearch%2Fdecks&u=https%3A%2F%2Fwww.tcgplayer.com%2Fsearch%2Fdecks%3FproductLineName%3Dmagic%26q%3DYavimaya%2BSteelcrusher"
         },
         "released_at": "2022-09-09",
         "reprint": false,

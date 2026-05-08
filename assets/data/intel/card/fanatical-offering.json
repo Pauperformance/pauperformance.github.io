@@ -1,29 +1,29 @@
 {
     "archetypes": {
         "py/set": [
-            "Jund Gardens",
-            "Brew Sultai",
-            "Brew Golgari",
-            "Mardu Synth",
-            "Golgari Gleezard",
-            "Aristocrats",
-            "Altar Tron",
             "Moggwarts",
-            "Brew",
-            "Golgari Gardens",
-            "Orzhov Pestilence",
-            "Brew Jund",
-            "Orzhov Blade",
+            "Brew Sultai",
+            "Aristocrats",
             "MonoB Sacrifice",
-            "Orzhov Food Gates",
-            "Jund Wildfire",
-            "Golgari Food Pestilence",
-            "Jund Gleezard",
             "MonoB Control",
+            "Mardu Synth",
+            "Brew Abzan",
+            "Golgari Gleezard",
             "Fangren Tron",
+            "Brew Golgari",
+            "Jund Gleezard",
+            "Golgari Gardens",
             "Brew Rakdos",
             "Affinity",
-            "Brew Abzan"
+            "Orzhov Blade",
+            "Altar Tron",
+            "Jund Gardens",
+            "Jund Wildfire",
+            "Golgari Food Pestilence",
+            "Orzhov Food Gates",
+            "Brew Jund",
+            "Brew",
+            "Orzhov Pestilence"
         ]
     },
     "scryfall": {
@@ -63,7 +63,7 @@
             "B"
         ],
         "digital": false,
-        "edhrec_rank": 5864,
+        "edhrec_rank": 4116,
         "finishes": [
             "nonfoil",
             "foil"
@@ -72,6 +72,7 @@
         "foil": true,
         "frame": "2015",
         "full_art": false,
+        "game_changer": false,
         "games": [
             "paper",
             "arena",
@@ -95,11 +96,10 @@
         "lang": "en",
         "layout": "normal",
         "legalities": {
-            "alchemy": "legal",
+            "alchemy": "not_legal",
             "brawl": "legal",
             "commander": "legal",
             "duel": "legal",
-            "explorer": "legal",
             "future": "legal",
             "gladiator": "legal",
             "historic": "legal",
@@ -109,13 +109,14 @@
             "oldschool": "not_legal",
             "pauper": "legal",
             "paupercommander": "legal",
-            "penny": "legal",
+            "penny": "not_legal",
             "pioneer": "legal",
             "predh": "not_legal",
             "premodern": "not_legal",
             "standard": "legal",
             "standardbrawl": "legal",
             "timeless": "legal",
+            "tlr": "legal",
             "vintage": "legal"
         },
         "mana_cost": "{1}{B}",
@@ -127,30 +128,30 @@
         "nonfoil": true,
         "object": "card",
         "oracle_id": "3e5402bf-ce7b-4c23-9333-0acdcf349caf",
-        "oracle_text": "As an additional cost to cast this spell, sacrifice an artifact or creature.\nDraw two cards and create a Map token. (It's an artifact with \"{1}, {T}, Sacrifice this artifact: Target creature you control explores. Activate only as a sorcery.\")",
+        "oracle_text": "As an additional cost to cast this spell, sacrifice an artifact or creature.\nDraw two cards and create a Map token. (It's an artifact with \"{1}, {T}, Sacrifice this token: Target creature you control explores. Activate only as a sorcery.\")",
         "oversized": false,
-        "penny_rank": 1283,
+        "penny_rank": 1822,
         "prices": {
-            "eur": "0.34",
-            "eur_foil": "0.73",
-            "tix": "0.02",
-            "usd": "0.15",
+            "eur": "2.41",
+            "eur_foil": "3.12",
+            "tix": "0.03",
+            "usd": "1.99",
             "usd_etched": null,
-            "usd_foil": "0.25"
+            "usd_foil": "1.85"
         },
         "prints_search_uri": "https://api.scryfall.com/cards/search?order=released&q=oracleid%3A3e5402bf-ce7b-4c23-9333-0acdcf349caf&unique=prints",
         "promo": false,
         "purchase_uris": {
             "cardhoarder": "https://www.cardhoarder.com/cards/118014?affiliate_id=scryfall&ref=card-profile&utm_campaign=affiliate&utm_medium=card&utm_source=scryfall",
-            "cardmarket": "https://www.cardmarket.com/en/Magic/Products/Singles/The-Lost-Caverns-of-Ixalan/Fanatical-Offering?referrer=scryfall&utm_campaign=card_prices&utm_medium=text&utm_source=scryfall",
-            "tcgplayer": "https://tcgplayer.pxf.io/c/4931599/1830156/21018?subId1=api&u=https%3A%2F%2Fwww.tcgplayer.com%2Fproduct%2F526191%3Fpage%3D1"
+            "cardmarket": "https://www.cardmarket.com/en/Magic/Products?idProduct=743994&referrer=scryfall&utm_campaign=card_prices&utm_medium=text&utm_source=scryfall",
+            "tcgplayer": "https://partner.tcgplayer.com/c/4931599/1830156/21018?subId1=api&u=https%3A%2F%2Fwww.tcgplayer.com%2Fproduct%2F526191%3Fpage%3D1"
         },
         "rarity": "common",
         "related_uris": {
             "edhrec": "https://edhrec.com/route/?cc=Fanatical+Offering",
             "gatherer": "https://gatherer.wizards.com/Pages/Card/Details.aspx?multiverseid=636809&printed=false",
-            "tcgplayer_infinite_articles": "https://tcgplayer.pxf.io/c/4931599/1830156/21018?subId1=api&trafcat=infinite&u=https%3A%2F%2Finfinite.tcgplayer.com%2Fsearch%3FcontentMode%3Darticle%26game%3Dmagic%26partner%3Dscryfall%26q%3DFanatical%2BOffering",
-            "tcgplayer_infinite_decks": "https://tcgplayer.pxf.io/c/4931599/1830156/21018?subId1=api&trafcat=infinite&u=https%3A%2F%2Finfinite.tcgplayer.com%2Fsearch%3FcontentMode%3Ddeck%26game%3Dmagic%26partner%3Dscryfall%26q%3DFanatical%2BOffering"
+            "tcgplayer_infinite_articles": "https://partner.tcgplayer.com/c/4931599/1830156/21018?subId1=api&trafcat=tcgplayer.com%2Fsearch%2Farticles&u=https%3A%2F%2Fwww.tcgplayer.com%2Fsearch%2Farticles%3FproductLineName%3Dmagic%26q%3DFanatical%2BOffering",
+            "tcgplayer_infinite_decks": "https://partner.tcgplayer.com/c/4931599/1830156/21018?subId1=api&trafcat=tcgplayer.com%2Fsearch%2Fdecks&u=https%3A%2F%2Fwww.tcgplayer.com%2Fsearch%2Fdecks%3FproductLineName%3Dmagic%26q%3DFanatical%2BOffering"
         },
         "released_at": "2023-11-17",
         "reprint": false,

@@ -29,7 +29,7 @@
                 "mana_cost": "{1}{U}",
                 "name": "Inverted Iceberg",
                 "object": "card_face",
-                "oracle_text": "When Inverted Iceberg enters the battlefield, mill a card, then draw a card. (To mill a card, put the top card of your library into your graveyard.)\nCraft with artifact {4}{U}{U} ({4}{U}{U}, Exile this artifact, Exile another artifact you control or an artifact card from your graveyard: Return this card transformed under its owner's control. Craft only as a sorcery.)",
+                "oracle_text": "When this artifact enters, mill a card, then draw a card. (To mill a card, put the top card of your library into your graveyard.)\nCraft with artifact {4}{U}{U} ({4}{U}{U}, Exile this artifact, Exile another artifact you control or an artifact card from your graveyard: Return this card transformed under its owner's control. Craft only as a sorcery.)",
                 "type_line": "Artifact"
             },
             {
@@ -41,7 +41,6 @@
                 "colors": [
                     "U"
                 ],
-                "flavor_name": "",
                 "flavor_text": "The force of a blizzard. The rage of a monstrosaur.",
                 "illustration_id": "689b9495-a6d9-4810-a580-19a5f6e75f4d",
                 "image_uris": {
@@ -55,7 +54,7 @@
                 "mana_cost": "",
                 "name": "Iceberg Titan",
                 "object": "card_face",
-                "oracle_text": "Whenever Iceberg Titan attacks, you may tap or untap target artifact or creature.",
+                "oracle_text": "Whenever this creature attacks, you may tap or untap target artifact or creature.",
                 "power": "6",
                 "toughness": "6",
                 "type_line": "Artifact Creature \u2014 Golem"
@@ -68,7 +67,7 @@
             "U"
         ],
         "digital": false,
-        "edhrec_rank": 12664,
+        "edhrec_rank": 13480,
         "finishes": [
             "nonfoil",
             "foil"
@@ -76,6 +75,7 @@
         "foil": true,
         "frame": "2015",
         "full_art": false,
+        "game_changer": false,
         "games": [
             "paper",
             "arena",
@@ -92,11 +92,10 @@
         "lang": "en",
         "layout": "transform",
         "legalities": {
-            "alchemy": "legal",
+            "alchemy": "not_legal",
             "brawl": "legal",
             "commander": "legal",
             "duel": "legal",
-            "explorer": "legal",
             "future": "legal",
             "gladiator": "legal",
             "historic": "legal",
@@ -113,6 +112,7 @@
             "standard": "legal",
             "standardbrawl": "legal",
             "timeless": "legal",
+            "tlr": "legal",
             "vintage": "legal"
         },
         "mtgo_id": 117914,
@@ -125,33 +125,33 @@
         "object": "card",
         "oracle_id": "3feedc63-173e-4713-8e96-8f1c9576055f",
         "oversized": false,
-        "penny_rank": 8214,
+        "penny_rank": 8635,
         "preview": {
             "previewed_at": "2023-10-31",
             "source": "LigaMagic",
             "source_uri": "https://www.instagram.com/p/CzEHlRwsnDB/"
         },
         "prices": {
-            "eur": "0.06",
-            "eur_foil": "0.14",
-            "tix": "0.01",
-            "usd": "0.01",
+            "eur": "0.07",
+            "eur_foil": "0.13",
+            "tix": "0.03",
+            "usd": "0.17",
             "usd_etched": null,
-            "usd_foil": "0.05"
+            "usd_foil": "0.20"
         },
         "prints_search_uri": "https://api.scryfall.com/cards/search?order=released&q=oracleid%3A3feedc63-173e-4713-8e96-8f1c9576055f&unique=prints",
         "promo": false,
         "purchase_uris": {
             "cardhoarder": "https://www.cardhoarder.com/cards/117914?affiliate_id=scryfall&ref=card-profile&utm_campaign=affiliate&utm_medium=card&utm_source=scryfall",
-            "cardmarket": "https://www.cardmarket.com/en/Magic/Products/Singles/The-Lost-Caverns-of-Ixalan/Inverted-Iceberg-Iceberg-Titan?referrer=scryfall&utm_campaign=card_prices&utm_medium=text&utm_source=scryfall",
-            "tcgplayer": "https://tcgplayer.pxf.io/c/4931599/1830156/21018?subId1=api&u=https%3A%2F%2Fwww.tcgplayer.com%2Fproduct%2F526423%3Fpage%3D1"
+            "cardmarket": "https://www.cardmarket.com/en/Magic/Products?idProduct=743972&referrer=scryfall&utm_campaign=card_prices&utm_medium=text&utm_source=scryfall",
+            "tcgplayer": "https://partner.tcgplayer.com/c/4931599/1830156/21018?subId1=api&u=https%3A%2F%2Fwww.tcgplayer.com%2Fproduct%2F526423%3Fpage%3D1"
         },
         "rarity": "common",
         "related_uris": {
             "edhrec": "https://edhrec.com/route/?cc=Inverted+Iceberg",
             "gatherer": "https://gatherer.wizards.com/Pages/Card/Details.aspx?multiverseid=636759&printed=false",
-            "tcgplayer_infinite_articles": "https://tcgplayer.pxf.io/c/4931599/1830156/21018?subId1=api&trafcat=infinite&u=https%3A%2F%2Finfinite.tcgplayer.com%2Fsearch%3FcontentMode%3Darticle%26game%3Dmagic%26partner%3Dscryfall%26q%3DInverted%2BIceberg%2B%252F%252F%2BIceberg%2BTitan",
-            "tcgplayer_infinite_decks": "https://tcgplayer.pxf.io/c/4931599/1830156/21018?subId1=api&trafcat=infinite&u=https%3A%2F%2Finfinite.tcgplayer.com%2Fsearch%3FcontentMode%3Ddeck%26game%3Dmagic%26partner%3Dscryfall%26q%3DInverted%2BIceberg%2B%252F%252F%2BIceberg%2BTitan"
+            "tcgplayer_infinite_articles": "https://partner.tcgplayer.com/c/4931599/1830156/21018?subId1=api&trafcat=tcgplayer.com%2Fsearch%2Farticles&u=https%3A%2F%2Fwww.tcgplayer.com%2Fsearch%2Farticles%3FproductLineName%3Dmagic%26q%3DInverted%2BIceberg%2B%252F%252F%2BIceberg%2BTitan",
+            "tcgplayer_infinite_decks": "https://partner.tcgplayer.com/c/4931599/1830156/21018?subId1=api&trafcat=tcgplayer.com%2Fsearch%2Fdecks&u=https%3A%2F%2Fwww.tcgplayer.com%2Fsearch%2Fdecks%3FproductLineName%3Dmagic%26q%3DInverted%2BIceberg%2B%252F%252F%2BIceberg%2BTitan"
         },
         "released_at": "2023-11-17",
         "reprint": false,

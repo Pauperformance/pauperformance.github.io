@@ -1,70 +1,73 @@
 {
     "archetypes": {
         "py/set": [
-            "Zombies",
+            "Golgari Turbo Emblem",
             "MonoB Sacrifice",
+            "Zombies",
             "MonoB Control",
-            "Orzhov Food Gates",
-            "Golgari Turbo Emblem"
+            "Orzhov Food Gates"
         ]
     },
     "scryfall": {
         "all_parts": [
             {
                 "component": "token",
-                "id": "f90bb066-79fd-48cd-ab5a-eaed71139b4e",
+                "id": "5a6ec62e-0e9b-4312-bfe8-cc85d76fd9e0",
                 "name": "Squirrel",
                 "object": "related_card",
                 "type_line": "Token Creature \u2014 Squirrel",
-                "uri": "https://api.scryfall.com/cards/f90bb066-79fd-48cd-ab5a-eaed71139b4e"
+                "uri": "https://api.scryfall.com/cards/5a6ec62e-0e9b-4312-bfe8-cc85d76fd9e0"
             },
             {
                 "component": "combo_piece",
-                "id": "d9a0ff44-e7c6-4347-a222-0598e2b4ecf7",
+                "id": "202011d5-755e-497b-b4a7-f2b6e6a0b464",
                 "name": "Nested Shambler",
                 "object": "related_card",
                 "type_line": "Creature \u2014 Zombie",
-                "uri": "https://api.scryfall.com/cards/d9a0ff44-e7c6-4347-a222-0598e2b4ecf7"
+                "uri": "https://api.scryfall.com/cards/202011d5-755e-497b-b4a7-f2b6e6a0b464"
             }
         ],
-        "arena_id": 76969,
         "artist": "Nicholas Gregory",
         "artist_ids": [
             "a1bba8ff-63b4-4786-b1c4-f1bfe5d3ab1c"
         ],
-        "booster": true,
+        "booster": false,
         "border_color": "black",
         "card_back_id": "0aeebaf5-8c7d-4636-9e82-8c27447861f7",
+        "cardmarket_id": 779408,
         "cmc": 1.0,
-        "collector_number": "365",
+        "collector_number": "185",
         "color_identity": [
             "B"
         ],
         "colors": [
             "B"
         ],
-        "digital": true,
-        "edhrec_rank": 4036,
+        "digital": false,
+        "edhrec_rank": 4103,
         "finishes": [
             "nonfoil"
         ],
+        "flavor_text": "Home is where the heart was.",
         "foil": false,
         "frame": "2015",
         "full_art": false,
+        "game_changer": false,
         "games": [
-            "arena"
+            "paper",
+            "mtgo"
         ],
-        "highres_image": false,
-        "id": "d9a0ff44-e7c6-4347-a222-0598e2b4ecf7",
+        "highres_image": true,
+        "id": "202011d5-755e-497b-b4a7-f2b6e6a0b464",
         "illustration_id": "679fb16e-d2e1-4967-98fb-d5fcd287a058",
-        "image_status": "lowres",
+        "image_status": "highres_scan",
         "image_uris": {
-            "art_crop": "https://cards.scryfall.io/art_crop/front/d/9/d9a0ff44-e7c6-4347-a222-0598e2b4ecf7.jpg?1630248030",
-            "border_crop": "https://cards.scryfall.io/border_crop/front/d/9/d9a0ff44-e7c6-4347-a222-0598e2b4ecf7.jpg?1630248030",
-            "large": "https://cards.scryfall.io/large/front/d/9/d9a0ff44-e7c6-4347-a222-0598e2b4ecf7.jpg?1630248030",
-            "normal": "https://cards.scryfall.io/normal/front/d/9/d9a0ff44-e7c6-4347-a222-0598e2b4ecf7.jpg?1630248030",
-            "png": "https://cards.scryfall.io/png/front/d/9/d9a0ff44-e7c6-4347-a222-0598e2b4ecf7.png?1630248030",
-            "small": "https://cards.scryfall.io/small/front/d/9/d9a0ff44-e7c6-4347-a222-0598e2b4ecf7.jpg?1630248030"
+            "art_crop": "https://cards.scryfall.io/art_crop/front/2/0/202011d5-755e-497b-b4a7-f2b6e6a0b464.jpg?1721429096",
+            "border_crop": "https://cards.scryfall.io/border_crop/front/2/0/202011d5-755e-497b-b4a7-f2b6e6a0b464.jpg?1721429096",
+            "large": "https://cards.scryfall.io/large/front/2/0/202011d5-755e-497b-b4a7-f2b6e6a0b464.jpg?1721429096",
+            "normal": "https://cards.scryfall.io/normal/front/2/0/202011d5-755e-497b-b4a7-f2b6e6a0b464.jpg?1721429096",
+            "png": "https://cards.scryfall.io/png/front/2/0/202011d5-755e-497b-b4a7-f2b6e6a0b464.png?1721429096",
+            "small": "https://cards.scryfall.io/small/front/2/0/202011d5-755e-497b-b4a7-f2b6e6a0b464.jpg?1721429096"
         },
         "keywords": [],
         "lang": "en",
@@ -74,7 +77,6 @@
             "brawl": "legal",
             "commander": "legal",
             "duel": "legal",
-            "explorer": "not_legal",
             "future": "not_legal",
             "gladiator": "legal",
             "historic": "legal",
@@ -91,51 +93,62 @@
             "standard": "not_legal",
             "standardbrawl": "not_legal",
             "timeless": "legal",
+            "tlr": "legal",
             "vintage": "legal"
         },
         "mana_cost": "{B}",
-        "multiverse_ids": [],
+        "mtgo_id": 128517,
+        "multiverse_ids": [
+            671543
+        ],
         "name": "Nested Shambler",
         "nonfoil": true,
         "object": "card",
         "oracle_id": "bfa882ee-de18-4ef8-8957-3e04ed6e3c1e",
-        "oracle_text": "When Nested Shambler dies, create X tapped 1/1 green Squirrel creature tokens, where X is Nested Shambler's power.",
+        "oracle_text": "When this creature dies, create X tapped 1/1 green Squirrel creature tokens, where X is this creature's power.",
         "oversized": false,
-        "penny_rank": 2217,
+        "penny_rank": 2579,
         "power": "1",
         "prices": {
-            "eur": null,
+            "eur": "0.18",
             "eur_foil": null,
-            "tix": null,
-            "usd": null,
+            "tix": "1.55",
+            "usd": "0.26",
             "usd_etched": null,
             "usd_foil": null
         },
         "prints_search_uri": "https://api.scryfall.com/cards/search?order=released&q=oracleid%3Abfa882ee-de18-4ef8-8957-3e04ed6e3c1e&unique=prints",
         "promo": false,
+        "purchase_uris": {
+            "cardhoarder": "https://www.cardhoarder.com/cards/128517?affiliate_id=scryfall&ref=card-profile&utm_campaign=affiliate&utm_medium=card&utm_source=scryfall",
+            "cardmarket": "https://www.cardmarket.com/en/Magic/Products?idProduct=779408&referrer=scryfall&utm_campaign=card_prices&utm_medium=text&utm_source=scryfall",
+            "tcgplayer": "https://partner.tcgplayer.com/c/4931599/1830156/21018?subId1=api&u=https%3A%2F%2Fwww.tcgplayer.com%2Fproduct%2F559982%3Fpage%3D1"
+        },
         "rarity": "common",
         "related_uris": {
             "edhrec": "https://edhrec.com/route/?cc=Nested+Shambler",
-            "tcgplayer_infinite_articles": "https://tcgplayer.pxf.io/c/4931599/1830156/21018?subId1=api&trafcat=infinite&u=https%3A%2F%2Finfinite.tcgplayer.com%2Fsearch%3FcontentMode%3Darticle%26game%3Dmagic%26partner%3Dscryfall%26q%3DNested%2BShambler",
-            "tcgplayer_infinite_decks": "https://tcgplayer.pxf.io/c/4931599/1830156/21018?subId1=api&trafcat=infinite&u=https%3A%2F%2Finfinite.tcgplayer.com%2Fsearch%3FcontentMode%3Ddeck%26game%3Dmagic%26partner%3Dscryfall%26q%3DNested%2BShambler"
+            "gatherer": "https://gatherer.wizards.com/Pages/Card/Details.aspx?multiverseid=671543&printed=false",
+            "tcgplayer_infinite_articles": "https://partner.tcgplayer.com/c/4931599/1830156/21018?subId1=api&trafcat=tcgplayer.com%2Fsearch%2Farticles&u=https%3A%2F%2Fwww.tcgplayer.com%2Fsearch%2Farticles%3FproductLineName%3Dmagic%26q%3DNested%2BShambler",
+            "tcgplayer_infinite_decks": "https://partner.tcgplayer.com/c/4931599/1830156/21018?subId1=api&trafcat=tcgplayer.com%2Fsearch%2Fdecks&u=https%3A%2F%2Fwww.tcgplayer.com%2Fsearch%2Fdecks%3FproductLineName%3Dmagic%26q%3DNested%2BShambler"
         },
-        "released_at": "2021-08-26",
+        "released_at": "2024-08-02",
         "reprint": true,
         "reserved": false,
-        "rulings_uri": "https://api.scryfall.com/cards/d9a0ff44-e7c6-4347-a222-0598e2b4ecf7/rulings",
-        "scryfall_set_uri": "https://scryfall.com/sets/j21?utm_source=api",
-        "scryfall_uri": "https://scryfall.com/card/j21/365/nested-shambler?utm_source=api",
-        "set": "j21",
-        "set_id": "e1cc23bd-379b-4f2c-a4e0-83fc1e7be023",
-        "set_name": "Jumpstart: Historic Horizons",
-        "set_search_uri": "https://api.scryfall.com/cards/search?order=set&q=e%3Aj21&unique=prints",
-        "set_type": "draft_innovation",
-        "set_uri": "https://api.scryfall.com/sets/e1cc23bd-379b-4f2c-a4e0-83fc1e7be023",
+        "rulings_uri": "https://api.scryfall.com/cards/202011d5-755e-497b-b4a7-f2b6e6a0b464/rulings",
+        "scryfall_set_uri": "https://scryfall.com/sets/blc?utm_source=api",
+        "scryfall_uri": "https://scryfall.com/card/blc/185/nested-shambler?utm_source=api",
+        "set": "blc",
+        "set_id": "c0f860b9-a2d0-4fd7-bfac-a49ac60c84f1",
+        "set_name": "Bloomburrow Commander",
+        "set_search_uri": "https://api.scryfall.com/cards/search?order=set&q=e%3Ablc&unique=prints",
+        "set_type": "commander",
+        "set_uri": "https://api.scryfall.com/sets/c0f860b9-a2d0-4fd7-bfac-a49ac60c84f1",
         "story_spotlight": false,
+        "tcgplayer_id": 559982,
         "textless": false,
         "toughness": "1",
         "type_line": "Creature \u2014 Zombie",
-        "uri": "https://api.scryfall.com/cards/d9a0ff44-e7c6-4347-a222-0598e2b4ecf7",
+        "uri": "https://api.scryfall.com/cards/202011d5-755e-497b-b4a7-f2b6e6a0b464",
         "variation": false
     }
 }

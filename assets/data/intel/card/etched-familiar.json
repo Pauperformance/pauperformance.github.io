@@ -21,7 +21,7 @@
             "B"
         ],
         "digital": false,
-        "edhrec_rank": 12303,
+        "edhrec_rank": 15704,
         "finishes": [
             "nonfoil",
             "foil"
@@ -30,6 +30,7 @@
         "foil": true,
         "frame": "2015",
         "full_art": false,
+        "game_changer": false,
         "games": [
             "paper",
             "arena",
@@ -51,12 +52,11 @@
         "lang": "en",
         "layout": "normal",
         "legalities": {
-            "alchemy": "legal",
+            "alchemy": "not_legal",
             "brawl": "legal",
             "commander": "legal",
             "duel": "legal",
-            "explorer": "legal",
-            "future": "legal",
+            "future": "not_legal",
             "gladiator": "legal",
             "historic": "legal",
             "legacy": "legal",
@@ -69,9 +69,10 @@
             "pioneer": "legal",
             "predh": "not_legal",
             "premodern": "not_legal",
-            "standard": "legal",
-            "standardbrawl": "legal",
+            "standard": "not_legal",
+            "standardbrawl": "not_legal",
             "timeless": "legal",
+            "tlr": "legal",
             "vintage": "legal"
         },
         "mana_cost": "{2}{B}",
@@ -83,30 +84,31 @@
         "nonfoil": true,
         "object": "card",
         "oracle_id": "e2bc064e-4739-4eb1-ba44-1fd92b2829d7",
-        "oracle_text": "When Etched Familiar dies, each opponent loses 2 life and you gain 2 life.",
+        "oracle_text": "When this creature dies, each opponent loses 2 life and you gain 2 life.",
         "oversized": false,
+        "penny_rank": 11858,
         "power": "3",
         "prices": {
-            "eur": "0.09",
-            "eur_foil": "0.17",
-            "tix": "0.03",
-            "usd": "0.03",
+            "eur": "0.10",
+            "eur_foil": "0.23",
+            "tix": "0.04",
+            "usd": "0.07",
             "usd_etched": null,
-            "usd_foil": "0.09"
+            "usd_foil": "0.15"
         },
         "prints_search_uri": "https://api.scryfall.com/cards/search?order=released&q=oracleid%3Ae2bc064e-4739-4eb1-ba44-1fd92b2829d7&unique=prints",
         "promo": false,
         "purchase_uris": {
             "cardhoarder": "https://www.cardhoarder.com/cards/110038?affiliate_id=scryfall&ref=card-profile&utm_campaign=affiliate&utm_medium=card&utm_source=scryfall",
-            "cardmarket": "https://www.cardmarket.com/en/Magic/Products/Singles/March-of-the-Machine/Etched-Familiar?referrer=scryfall&utm_campaign=card_prices&utm_medium=text&utm_source=scryfall",
-            "tcgplayer": "https://tcgplayer.pxf.io/c/4931599/1830156/21018?subId1=api&u=https%3A%2F%2Fwww.tcgplayer.com%2Fproduct%2F491701%3Fpage%3D1"
+            "cardmarket": "https://www.cardmarket.com/en/Magic/Products?idProduct=704787&referrer=scryfall&utm_campaign=card_prices&utm_medium=text&utm_source=scryfall",
+            "tcgplayer": "https://partner.tcgplayer.com/c/4931599/1830156/21018?subId1=api&u=https%3A%2F%2Fwww.tcgplayer.com%2Fproduct%2F491701%3Fpage%3D1"
         },
         "rarity": "common",
         "related_uris": {
             "edhrec": "https://edhrec.com/route/?cc=Etched+Familiar",
             "gatherer": "https://gatherer.wizards.com/Pages/Card/Details.aspx?multiverseid=607133&printed=false",
-            "tcgplayer_infinite_articles": "https://tcgplayer.pxf.io/c/4931599/1830156/21018?subId1=api&trafcat=infinite&u=https%3A%2F%2Finfinite.tcgplayer.com%2Fsearch%3FcontentMode%3Darticle%26game%3Dmagic%26partner%3Dscryfall%26q%3DEtched%2BFamiliar",
-            "tcgplayer_infinite_decks": "https://tcgplayer.pxf.io/c/4931599/1830156/21018?subId1=api&trafcat=infinite&u=https%3A%2F%2Finfinite.tcgplayer.com%2Fsearch%3FcontentMode%3Ddeck%26game%3Dmagic%26partner%3Dscryfall%26q%3DEtched%2BFamiliar"
+            "tcgplayer_infinite_articles": "https://partner.tcgplayer.com/c/4931599/1830156/21018?subId1=api&trafcat=tcgplayer.com%2Fsearch%2Farticles&u=https%3A%2F%2Fwww.tcgplayer.com%2Fsearch%2Farticles%3FproductLineName%3Dmagic%26q%3DEtched%2BFamiliar",
+            "tcgplayer_infinite_decks": "https://partner.tcgplayer.com/c/4931599/1830156/21018?subId1=api&trafcat=tcgplayer.com%2Fsearch%2Fdecks&u=https%3A%2F%2Fwww.tcgplayer.com%2Fsearch%2Fdecks%3FproductLineName%3Dmagic%26q%3DEtched%2BFamiliar"
         },
         "released_at": "2023-04-21",
         "reprint": false,

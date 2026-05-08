@@ -1,9 +1,9 @@
 {
     "archetypes": {
         "py/set": [
-            "Brew Gruul",
+            "Brew MonoR",
             "Brew Rakdos",
-            "Brew MonoR"
+            "Brew Gruul"
         ]
     },
     "scryfall": {
@@ -42,7 +42,7 @@
             "R"
         ],
         "digital": false,
-        "edhrec_rank": 1432,
+        "edhrec_rank": 1774,
         "finishes": [
             "nonfoil",
             "foil"
@@ -50,8 +50,10 @@
         "foil": true,
         "frame": "2015",
         "full_art": false,
+        "game_changer": false,
         "games": [
-            "paper"
+            "paper",
+            "mtgo"
         ],
         "highres_image": true,
         "id": "f748393d-5845-45d7-96e9-bbdbb701151f",
@@ -76,8 +78,7 @@
             "brawl": "legal",
             "commander": "legal",
             "duel": "legal",
-            "explorer": "legal",
-            "future": "legal",
+            "future": "not_legal",
             "gladiator": "legal",
             "historic": "legal",
             "legacy": "legal",
@@ -86,16 +87,18 @@
             "oldschool": "not_legal",
             "pauper": "legal",
             "paupercommander": "legal",
-            "penny": "legal",
+            "penny": "not_legal",
             "pioneer": "legal",
             "predh": "not_legal",
             "premodern": "not_legal",
-            "standard": "legal",
-            "standardbrawl": "legal",
+            "standard": "not_legal",
+            "standardbrawl": "not_legal",
             "timeless": "legal",
+            "tlr": "legal",
             "vintage": "legal"
         },
         "mana_cost": "{R}",
+        "mtgo_id": 132005,
         "multiverse_ids": [
             653154
         ],
@@ -103,16 +106,16 @@
         "nonfoil": true,
         "object": "card",
         "oracle_id": "fa8ddc13-5108-4fe9-b3aa-dc28df476f7b",
-        "oracle_text": "Enchant creature\nEnchanted creature has menace and \"Whenever this creature deals combat damage to a player, create a Treasure token.\" (It can't be blocked except by two or more creatures. The token is an artifact with \"{T}, Sacrifice this artifact: Add one mana of any color.\")\nWhen enchanted creature dies, draw a card.",
+        "oracle_text": "Enchant creature\nEnchanted creature has menace and \"Whenever this creature deals combat damage to a player, create a Treasure token.\" (It can't be blocked except by two or more creatures. The token is an artifact with \"{T}, Sacrifice this token: Add one mana of any color.\")\nWhen enchanted creature dies, draw a card.",
         "oversized": false,
-        "penny_rank": 4621,
+        "penny_rank": 4702,
         "prices": {
-            "eur": "0.16",
-            "eur_foil": "0.42",
-            "tix": null,
-            "usd": "0.14",
+            "eur": "0.26",
+            "eur_foil": "0.79",
+            "tix": "0.04",
+            "usd": "0.37",
             "usd_etched": null,
-            "usd_foil": "0.63"
+            "usd_foil": "5.18"
         },
         "prints_search_uri": "https://api.scryfall.com/cards/search?order=released&q=oracleid%3Afa8ddc13-5108-4fe9-b3aa-dc28df476f7b&unique=prints",
         "produced_mana": [
@@ -124,19 +127,19 @@
         ],
         "promo": false,
         "promo_types": [
-            "boosterfun"
+            "universesbeyond"
         ],
         "purchase_uris": {
-            "cardhoarder": "https://www.cardhoarder.com/cards?affiliate_id=scryfall&data%5Bsearch%5D=Sticky+Fingers&ref=card-profile&utm_campaign=affiliate&utm_medium=card&utm_source=scryfall",
-            "cardmarket": "https://www.cardmarket.com/en/Magic/Products/Singles/Universes-Beyond-Fallout/Sticky-Fingers?referrer=scryfall&utm_campaign=card_prices&utm_medium=text&utm_source=scryfall",
-            "tcgplayer": "https://tcgplayer.pxf.io/c/4931599/1830156/21018?subId1=api&u=https%3A%2F%2Fwww.tcgplayer.com%2Fproduct%2F539571%3Fpage%3D1"
+            "cardhoarder": "https://www.cardhoarder.com/cards/132005?affiliate_id=scryfall&ref=card-profile&utm_campaign=affiliate&utm_medium=card&utm_source=scryfall",
+            "cardmarket": "https://www.cardmarket.com/en/Magic/Products?idProduct=757884&referrer=scryfall&utm_campaign=card_prices&utm_medium=text&utm_source=scryfall",
+            "tcgplayer": "https://partner.tcgplayer.com/c/4931599/1830156/21018?subId1=api&u=https%3A%2F%2Fwww.tcgplayer.com%2Fproduct%2F539571%3Fpage%3D1"
         },
         "rarity": "common",
         "related_uris": {
             "edhrec": "https://edhrec.com/route/?cc=Sticky+Fingers",
             "gatherer": "https://gatherer.wizards.com/Pages/Card/Details.aspx?multiverseid=653154&printed=false",
-            "tcgplayer_infinite_articles": "https://tcgplayer.pxf.io/c/4931599/1830156/21018?subId1=api&trafcat=infinite&u=https%3A%2F%2Finfinite.tcgplayer.com%2Fsearch%3FcontentMode%3Darticle%26game%3Dmagic%26partner%3Dscryfall%26q%3DSticky%2BFingers",
-            "tcgplayer_infinite_decks": "https://tcgplayer.pxf.io/c/4931599/1830156/21018?subId1=api&trafcat=infinite&u=https%3A%2F%2Finfinite.tcgplayer.com%2Fsearch%3FcontentMode%3Ddeck%26game%3Dmagic%26partner%3Dscryfall%26q%3DSticky%2BFingers"
+            "tcgplayer_infinite_articles": "https://partner.tcgplayer.com/c/4931599/1830156/21018?subId1=api&trafcat=tcgplayer.com%2Fsearch%2Farticles&u=https%3A%2F%2Fwww.tcgplayer.com%2Fsearch%2Farticles%3FproductLineName%3Dmagic%26q%3DSticky%2BFingers",
+            "tcgplayer_infinite_decks": "https://partner.tcgplayer.com/c/4931599/1830156/21018?subId1=api&trafcat=tcgplayer.com%2Fsearch%2Fdecks&u=https%3A%2F%2Fwww.tcgplayer.com%2Fsearch%2Fdecks%3FproductLineName%3Dmagic%26q%3DSticky%2BFingers"
         },
         "released_at": "2024-03-08",
         "reprint": true,

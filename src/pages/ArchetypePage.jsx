@@ -51,7 +51,7 @@ function DecksTable({ decks, referenceNames }) {
     <div className="space-y-4">
       {ref.length > 0 && (
         <div>
-          <p className="text-xs text-amber-400 font-semibold uppercase tracking-wider mb-2">Reference decks</p>
+          <p className="text-xs text-gray-500 font-semibold uppercase tracking-wider mb-2">Reference decks</p>
           <DeckRows decks={ref} />
         </div>
       )}
@@ -68,24 +68,24 @@ function DecksTable({ decks, referenceNames }) {
 function DeckRows({ decks }) {
   return (
     <div className="border border-gray-700 rounded-xl overflow-hidden bg-gray-900">
-      <table className="w-full text-base bg-gray-900">
+      <table className="w-full text-base bg-gray-900 table-fixed">
         <thead>
           <tr className="bg-gray-800 border-b border-gray-700">
-            <th className="text-left px-4 py-2 text-xs font-semibold text-gray-400 uppercase tracking-wider">Name</th>
-            <th className="text-left px-4 py-2 text-xs font-semibold text-gray-400 uppercase tracking-wider hidden sm:table-cell">Set</th>
-            <th className="text-left px-4 py-2 text-xs font-semibold text-gray-400 uppercase tracking-wider hidden sm:table-cell">Date</th>
-            <th className="text-left px-4 py-2 text-xs font-semibold text-gray-400 uppercase tracking-wider">Legal</th>
+            <th className="text-left px-4 py-2 text-xs font-semibold text-gray-400 uppercase tracking-wider w-[40%]">Name</th>
+            <th className="text-left px-4 py-2 text-xs font-semibold text-gray-400 uppercase tracking-wider hidden sm:table-cell w-28">Date</th>
+            <th className="text-left px-4 py-2 text-xs font-semibold text-gray-400 uppercase tracking-wider hidden sm:table-cell w-48">Set</th>
+            <th className="text-left px-4 py-2 text-xs font-semibold text-gray-400 uppercase tracking-wider w-16">Legal</th>
           </tr>
         </thead>
         <tbody className="divide-y divide-gray-700/50 bg-gray-900">
           {decks.map(deck => (
             <tr key={deck.name} className="bg-gray-900 hover:bg-gray-800 transition-colors">
-              <td className="px-4 py-2.5">
+              <td className="px-4 py-2.5 truncate">
                 <a href={deck.url} target="_blank" rel="noreferrer"
                   className="text-amber-400 hover:underline font-medium">{deck.name}</a>
               </td>
-              <td className="px-4 py-2.5 text-gray-400 hidden sm:table-cell">{deck.set_name}</td>
               <td className="px-4 py-2.5 text-gray-500 hidden sm:table-cell">{deck.set_date}</td>
+              <td className="px-4 py-2.5 text-gray-400 hidden sm:table-cell">{deck.set_name}</td>
               <td className="px-4 py-2.5">
                 {deck.legal
                   ? <span className="text-green-400">✅</span>
@@ -164,10 +164,11 @@ function IntelDecksSection({ name }) {
           </thead>
           <tbody className="divide-y divide-gray-700/50 bg-gray-900">
             {page_decks.map((deck) => (
-              <tr key={deck.id} className="bg-gray-900 hover:bg-gray-800 transition-colors">
+              <tr key={deck.id} className="bg-gray-900 hover:bg-gray-800 transition-colors cursor-pointer"
+                onAuxClick={(e) => { if (e.button === 1) window.open(`/#/decks/${deck.id}`, '_blank') }}>
                 <td className="px-4 py-2.5 text-gray-300">{deck.tournament_name}</td>
                 <td className="px-4 py-2.5 text-gray-500 hidden sm:table-cell">{deck.tournament_date}</td>
-                <td className="px-4 py-2.5 text-gray-400 hidden md:table-cell">{deck.pilot}</td>
+                <td className="px-4 py-2.5 text-gray-400 hidden md:table-cell">{deck.pilot || 'Anonymous'}</td>
                 <td className="px-4 py-2.5 text-gray-400 hidden md:table-cell">{deck.place}</td>
                 <td className="px-4 py-2.5">
                   <Link to={`/decks/${deck.id}`}
@@ -321,6 +322,14 @@ export default function ArchetypePage() {
           <section>
             <SectionHeader>Frequent cards</SectionHeader>
             <CardGallery cards={data.frequent} />
+          </section>
+        )}
+
+        {/* Reference decks */}
+        {data.decks?.length > 0 && (
+          <section>
+            <SectionHeader>Reference decks</SectionHeader>
+            <DecksTable decks={data.decks} />
           </section>
         )}
 

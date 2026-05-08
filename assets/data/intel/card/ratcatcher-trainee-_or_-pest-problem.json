@@ -46,7 +46,7 @@
                 "mana_cost": "{1}{R}",
                 "name": "Ratcatcher Trainee",
                 "object": "card_face",
-                "oracle_text": "As long as it's your turn, Ratcatcher Trainee has first strike.",
+                "oracle_text": "During your turn, this creature has first strike.",
                 "power": "2",
                 "toughness": "1",
                 "type_line": "Creature \u2014 Human Peasant"
@@ -54,11 +54,10 @@
             {
                 "artist": "Michele Giorgi",
                 "artist_id": "60ff7459-c81d-41e6-bec1-4264c2161014",
-                "flavor_name": "",
                 "mana_cost": "{2}{R}",
                 "name": "Pest Problem",
                 "object": "card_face",
-                "oracle_text": "Create two 1/1 black Rat creature tokens with \"This creature can't block.\" (Then exile this card. You may cast the creature later from exile.)",
+                "oracle_text": "Create two 1/1 black Rat creature tokens with \"This token can't block.\" (Then exile this card. You may cast the creature later from exile.)",
                 "type_line": "Instant \u2014 Adventure"
             }
         ],
@@ -72,7 +71,7 @@
             "R"
         ],
         "digital": false,
-        "edhrec_rank": 13110,
+        "edhrec_rank": 15129,
         "finishes": [
             "nonfoil",
             "foil"
@@ -81,6 +80,7 @@
         "foil": true,
         "frame": "2015",
         "full_art": false,
+        "game_changer": false,
         "games": [
             "paper",
             "arena",
@@ -91,22 +91,21 @@
         "illustration_id": "d9ca5167-a01f-469c-bca5-69d093c29869",
         "image_status": "highres_scan",
         "image_uris": {
-            "art_crop": "https://cards.scryfall.io/art_crop/front/7/f/7f4c0959-a107-4d61-9e51-256b2955f6ba.jpg?1692938424",
-            "border_crop": "https://cards.scryfall.io/border_crop/front/7/f/7f4c0959-a107-4d61-9e51-256b2955f6ba.jpg?1692938424",
-            "large": "https://cards.scryfall.io/large/front/7/f/7f4c0959-a107-4d61-9e51-256b2955f6ba.jpg?1692938424",
-            "normal": "https://cards.scryfall.io/normal/front/7/f/7f4c0959-a107-4d61-9e51-256b2955f6ba.jpg?1692938424",
-            "png": "https://cards.scryfall.io/png/front/7/f/7f4c0959-a107-4d61-9e51-256b2955f6ba.png?1692938424",
-            "small": "https://cards.scryfall.io/small/front/7/f/7f4c0959-a107-4d61-9e51-256b2955f6ba.jpg?1692938424"
+            "art_crop": "https://cards.scryfall.io/art_crop/front/7/f/7f4c0959-a107-4d61-9e51-256b2955f6ba.jpg?1739663117",
+            "border_crop": "https://cards.scryfall.io/border_crop/front/7/f/7f4c0959-a107-4d61-9e51-256b2955f6ba.jpg?1739663117",
+            "large": "https://cards.scryfall.io/large/front/7/f/7f4c0959-a107-4d61-9e51-256b2955f6ba.jpg?1739663117",
+            "normal": "https://cards.scryfall.io/normal/front/7/f/7f4c0959-a107-4d61-9e51-256b2955f6ba.jpg?1739663117",
+            "png": "https://cards.scryfall.io/png/front/7/f/7f4c0959-a107-4d61-9e51-256b2955f6ba.png?1739663117",
+            "small": "https://cards.scryfall.io/small/front/7/f/7f4c0959-a107-4d61-9e51-256b2955f6ba.jpg?1739663117"
         },
         "keywords": [],
         "lang": "en",
         "layout": "adventure",
         "legalities": {
-            "alchemy": "legal",
+            "alchemy": "not_legal",
             "brawl": "legal",
             "commander": "legal",
             "duel": "legal",
-            "explorer": "legal",
             "future": "legal",
             "gladiator": "legal",
             "historic": "legal",
@@ -123,6 +122,7 @@
             "standard": "legal",
             "standardbrawl": "legal",
             "timeless": "legal",
+            "tlr": "legal",
             "vintage": "legal"
         },
         "mana_cost": "{1}{R} // {2}{R}",
@@ -135,7 +135,7 @@
         "object": "card",
         "oracle_id": "ecc91e38-90fa-4d89-b262-d5f36dce5be4",
         "oversized": false,
-        "penny_rank": 5929,
+        "penny_rank": 6857,
         "power": "2",
         "preview": {
             "previewed_at": "2023-08-15",
@@ -143,26 +143,26 @@
             "source_uri": "https://twitter.com/screenrant/status/1691513869154275329/photo/4"
         },
         "prices": {
-            "eur": "0.08",
-            "eur_foil": "0.16",
+            "eur": "0.05",
+            "eur_foil": "0.13",
             "tix": "0.03",
-            "usd": "0.05",
+            "usd": "0.15",
             "usd_etched": null,
-            "usd_foil": "0.07"
+            "usd_foil": "0.19"
         },
         "prints_search_uri": "https://api.scryfall.com/cards/search?order=released&q=oracleid%3Aecc91e38-90fa-4d89-b262-d5f36dce5be4&unique=prints",
         "promo": false,
         "purchase_uris": {
             "cardhoarder": "https://www.cardhoarder.com/cards/116614?affiliate_id=scryfall&ref=card-profile&utm_campaign=affiliate&utm_medium=card&utm_source=scryfall",
-            "cardmarket": "https://www.cardmarket.com/en/Magic/Products/Singles/Wilds-of-Eldraine/Ratcatcher-Trainee-Pest-Problem?referrer=scryfall&utm_campaign=card_prices&utm_medium=text&utm_source=scryfall",
-            "tcgplayer": "https://tcgplayer.pxf.io/c/4931599/1830156/21018?subId1=api&u=https%3A%2F%2Fwww.tcgplayer.com%2Fproduct%2F512384%3Fpage%3D1"
+            "cardmarket": "https://www.cardmarket.com/en/Magic/Products?idProduct=728059&referrer=scryfall&utm_campaign=card_prices&utm_medium=text&utm_source=scryfall",
+            "tcgplayer": "https://partner.tcgplayer.com/c/4931599/1830156/21018?subId1=api&u=https%3A%2F%2Fwww.tcgplayer.com%2Fproduct%2F512384%3Fpage%3D1"
         },
         "rarity": "common",
         "related_uris": {
             "edhrec": "https://edhrec.com/route/?cc=Ratcatcher+Trainee",
             "gatherer": "https://gatherer.wizards.com/Pages/Card/Details.aspx?multiverseid=629645&printed=false",
-            "tcgplayer_infinite_articles": "https://tcgplayer.pxf.io/c/4931599/1830156/21018?subId1=api&trafcat=infinite&u=https%3A%2F%2Finfinite.tcgplayer.com%2Fsearch%3FcontentMode%3Darticle%26game%3Dmagic%26partner%3Dscryfall%26q%3DRatcatcher%2BTrainee%2B%252F%252F%2BPest%2BProblem",
-            "tcgplayer_infinite_decks": "https://tcgplayer.pxf.io/c/4931599/1830156/21018?subId1=api&trafcat=infinite&u=https%3A%2F%2Finfinite.tcgplayer.com%2Fsearch%3FcontentMode%3Ddeck%26game%3Dmagic%26partner%3Dscryfall%26q%3DRatcatcher%2BTrainee%2B%252F%252F%2BPest%2BProblem"
+            "tcgplayer_infinite_articles": "https://partner.tcgplayer.com/c/4931599/1830156/21018?subId1=api&trafcat=tcgplayer.com%2Fsearch%2Farticles&u=https%3A%2F%2Fwww.tcgplayer.com%2Fsearch%2Farticles%3FproductLineName%3Dmagic%26q%3DRatcatcher%2BTrainee%2B%252F%252F%2BPest%2BProblem",
+            "tcgplayer_infinite_decks": "https://partner.tcgplayer.com/c/4931599/1830156/21018?subId1=api&trafcat=tcgplayer.com%2Fsearch%2Fdecks&u=https%3A%2F%2Fwww.tcgplayer.com%2Fsearch%2Fdecks%3FproductLineName%3Dmagic%26q%3DRatcatcher%2BTrainee%2B%252F%252F%2BPest%2BProblem"
         },
         "released_at": "2023-09-08",
         "reprint": false,
