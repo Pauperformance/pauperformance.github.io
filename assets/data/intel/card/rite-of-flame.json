@@ -1,16 +1,34 @@
 {
     "archetypes": {
         "py/set": [
-            "MonoR Turbo Emblem",
-            "Grapeshot Storm",
-            "Brew Dune",
-            "Empty The Warrens Storm",
-            "MonoR Kuldotha",
             "Naya Turbo Emblem",
-            "Gruul Turbo Emblem"
+            "Gruul Turbo Emblem",
+            "MonoR Kuldotha",
+            "Empty The Warrens Storm",
+            "Grapeshot Storm",
+            "MonoR Turbo Emblem",
+            "Brew Dune"
         ]
     },
     "scryfall": {
+        "all_parts": [
+            {
+                "component": "combo_piece",
+                "id": "240374d3-6a10-487d-8e2f-3fa79c262895",
+                "name": "Salacinder and Soot, Rascals",
+                "object": "related_card",
+                "type_line": "Legendary Creature \u2014 Elemental",
+                "uri": "https://api.scryfall.com/cards/240374d3-6a10-487d-8e2f-3fa79c262895"
+            },
+            {
+                "component": "combo_piece",
+                "id": "cbd00730-3137-4a75-a061-0508d1882eff",
+                "name": "Rite of Flame",
+                "object": "related_card",
+                "type_line": "Sorcery",
+                "uri": "https://api.scryfall.com/cards/cbd00730-3137-4a75-a061-0508d1882eff"
+            }
+        ],
         "artist": "Dany Orizio",
         "artist_ids": [
             "fcd5ea36-64e0-4af0-992a-3c68a34a400f"
@@ -28,7 +46,7 @@
             "R"
         ],
         "digital": false,
-        "edhrec_rank": 825,
+        "edhrec_rank": 686,
         "finishes": [
             "nonfoil"
         ],
@@ -38,7 +56,8 @@
         "full_art": false,
         "game_changer": false,
         "games": [
-            "paper"
+            "paper",
+            "mtgo"
         ],
         "highres_image": true,
         "id": "cbd00730-3137-4a75-a061-0508d1882eff",
@@ -60,7 +79,6 @@
             "brawl": "not_legal",
             "commander": "legal",
             "duel": "legal",
-            "explorer": "not_legal",
             "future": "not_legal",
             "gladiator": "not_legal",
             "historic": "not_legal",
@@ -77,6 +95,7 @@
             "standard": "not_legal",
             "standardbrawl": "not_legal",
             "timeless": "not_legal",
+            "tlr": "legal",
             "vintage": "legal"
         },
         "mana_cost": "{R}",
@@ -91,10 +110,10 @@
         "oracle_text": "Add {R}{R}, then add {R} for each card named Rite of Flame in each graveyard.",
         "oversized": false,
         "prices": {
-            "eur": "2.16",
+            "eur": "3.64",
             "eur_foil": null,
-            "tix": null,
-            "usd": "4.14",
+            "tix": "0.01",
+            "usd": "4.64",
             "usd_etched": null,
             "usd_foil": null
         },
@@ -105,7 +124,7 @@
         "promo": false,
         "purchase_uris": {
             "cardhoarder": "https://www.cardhoarder.com/cards/134010?affiliate_id=scryfall&ref=card-profile&utm_campaign=affiliate&utm_medium=card&utm_source=scryfall",
-            "cardmarket": "https://www.cardmarket.com/en/Magic/Products/Singles/Mystery-Booster-2/Rite-of-Flame?referrer=scryfall&utm_campaign=card_prices&utm_medium=text&utm_source=scryfall",
+            "cardmarket": "https://www.cardmarket.com/en/Magic/Products?idProduct=784060&referrer=scryfall&utm_campaign=card_prices&utm_medium=text&utm_source=scryfall",
             "tcgplayer": "https://partner.tcgplayer.com/c/4931599/1830156/21018?subId1=api&u=https%3A%2F%2Fwww.tcgplayer.com%2Fproduct%2F563119%3Fpage%3D1"
         },
         "rarity": "common",
