@@ -2,12 +2,12 @@ import { useState, useEffect, useMemo } from 'react'
 import Layout from '../components/Layout'
 
 const FIELDS = [
-  { key: 'creatures_to_win',  label: 'Opponent Life',          min: 3,  max: 40, def: 20 },
-  { key: 'lands_in_deck',     label: 'Lands in Deck',          min: 1,  max: 2,  def: 1  },
-  { key: 'drs_in_deck',       label: 'Dread Returns in Deck',  min: 1,  max: 2,  def: 2  },
-  { key: 'targets_in_deck',   label: 'Lotleth Giants in Deck', min: 1,  max: 2,  def: 2  },
-  { key: 'creatures_in_deck', label: 'Creatures in Deck',      min: 17, max: 37, def: 37 },
-  { key: 'blanks_in_deck',    label: 'Blanks in Deck',         min: 0,  max: 15, def: 13 },
+  { key: 'creatures_on_board', label: 'Creatures on Board',       min: 3,  max: 5,  def: 3  },
+  { key: 'lands_in_deck',      label: 'Lands in Deck',            min: 1,  max: 2,  def: 1  },
+  { key: 'drs_in_deck',        label: 'Dread Returns in Deck',    min: 1,  max: 2,  def: 2  },
+  { key: 'giants_in_deck',     label: 'Lotleth Giants in Deck',   min: 1,  max: 2,  def: 2  },
+  { key: 'spies_in_deck',      label: 'Balustrade Spies in Deck', min: 0,  max: 3,  def: 3  },
+  { key: 'creatures_in_deck',  label: 'Other Creatures in Deck',  min: 17, max: 38, def: 34 },
 ]
 
 function range(min, max) {
@@ -22,7 +22,7 @@ export default function BlindSpy() {
   const [inputs, setInputs] = useState(DEFAULT_INPUTS)
 
   useEffect(() => {
-    fetch('/data/blind_spy_consolidated.json')
+    fetch('/data/blind_spy_full_consolidated.json')
       .then(r => r.json())
       .then(d => { setRawData(d); setDataLoading(false) })
   }, [])
@@ -31,15 +31,15 @@ export default function BlindSpy() {
     if (!rawData) return null
     const map = {}
     rawData.forEach(r => {
-      map[`${r.creatures_to_win}_${r.lands_in_deck}_${r.drs_in_deck}_${r.targets_in_deck}_${r.creatures_in_deck}_${r.blanks_in_deck}`] = r
+      map[`${r.creatures_on_board}_${r.lands_in_deck}_${r.drs_in_deck}_${r.giants_in_deck}_${r.spies_in_deck}_${r.creatures_in_deck}`] = r
     })
     return map
   }, [rawData])
 
   const result = useMemo(() => {
     if (!lookupMap) return null
-    const { creatures_to_win, lands_in_deck, drs_in_deck, targets_in_deck, creatures_in_deck, blanks_in_deck } = inputs
-    return lookupMap[`${creatures_to_win}_${lands_in_deck}_${drs_in_deck}_${targets_in_deck}_${creatures_in_deck}_${blanks_in_deck}`] || null
+    const { creatures_on_board, lands_in_deck, drs_in_deck, giants_in_deck, spies_in_deck, creatures_in_deck } = inputs
+    return lookupMap[`${creatures_on_board}_${lands_in_deck}_${drs_in_deck}_${giants_in_deck}_${spies_in_deck}_${creatures_in_deck}`] || null
   }, [lookupMap, inputs])
 
   function set(key, value) {
@@ -67,9 +67,9 @@ export default function BlindSpy() {
           </div>
 
           <div>
-            <p className="text-base font-semibold text-gray-200 mb-1">Limitations and Future Work:</p>
+            <p className="text-base font-semibold text-gray-200 mb-1">Winning Lines:</p>
             <p className="text-gray-400">
-              The tool <em className="text-gray-300">currently</em> assumes your <strong className="text-gray-200">only</strong> win-condition is a flashback of{' '}
+              During a <em className="text-gray-300">Blind Spy</em>, your <strong className="text-gray-200">usual</strong> win-condition is a flashback of{' '}
               <em className="text-gray-300">Dread Return</em> targeting a <em className="text-gray-300">Lotleth Giant</em> in the graveyard.
               For this reason, at least 3 creatures (including the <em className="text-gray-300">Balustrade Spy</em> being cast)
               need to be on the battlefield when the mill trigger resolves: these creatures will be the additional
@@ -84,11 +84,23 @@ export default function BlindSpy() {
               <strong className="text-gray-200">twice</strong>: the 1st time to reanimate another{' '}
               <em className="text-gray-300">Balustrade Spy</em> (and mill again), the 2nd time to reanimate a{' '}
               <em className="text-gray-300">Lotleth Giant</em> for the win (typically deterministic).
-              This situation happens frequently and the tool will be evolved to take it into account: more simulations
-              are on the way!
+            </p>
+            <p className="text-gray-400 mt-2">
+              Yet another win-condition you might have is the <em className="text-gray-300">Double Giant</em>.
+              This situation requires you to have at least 5 creatures (including the <em className="text-gray-300">Balustrade Spy</em>{' '}
+              being cast) when the mill trigger resolves.
+              At that point, you might be able to flashback <em className="text-gray-300">Dread Return</em>{' '}
+              <strong className="text-gray-200">twice</strong>, to reanimate two different {' '}
+              <em className="text-gray-300">Lotleth Giants</em> for the win.
+              You might be forced to follow this winning line if, for example, you have not milled a <em className="text-gray-300">Balustrade Spy</em> and/or only one <em className="text-gray-300">Lotleth Giant</em> is not enough to win.
+            </p>
+            <p className="text-gray-400 mt-2">
+              These situations happen frequently and the tool takes all of them into account!
+              You can find a recap of the possible strategies implemented by the tool{' '}
+                <a href="https://docs.google.com/spreadsheets/d/18xDeWn4Xl49WQNfKuFoKms785DGDeiP6dfzDv0W3zTA/edit?gid=0#gid=0" target="_blank" rel="noreferrer"
+                  className="text-amber-400 hover:underline">here</a>.
             </p>
           </div>
-
           <div>
             <p className="text-base font-semibold text-gray-200 mb-1">How to use:</p>
             <p className="text-gray-400">
@@ -96,29 +108,26 @@ export default function BlindSpy() {
               <strong className="text-gray-200">on the stack, just before resolution</strong>.
             </p>
             <p className="text-gray-400 mt-2">
-              * <strong className="text-gray-200">Creatures in Deck</strong> is the number of initial creatures in your mainboard -
-              the number of creatures on your battlefield -
-              1 (because a <em className="text-gray-300">Lotleth Giant</em> will be reanimated and won't be counted for damage).
-              So, for a deck with 41 initial creatures and 3 on the battlefield at combo time, set 37.
+              * <strong className="text-gray-200">Creatures on Board</strong> is the number creatures on your board, including the Balustrade Spy triggering the ability.
             </p>
             <p className="text-gray-400 mt-2">
-              * <strong className="text-gray-200">Blanks in Deck</strong> is the total number of cards that are not relevant for the damage count,
-              such as <em className="text-gray-300">Winding Way</em>, <em className="text-gray-300">Lead the Stamped</em>,{' '}
-              <em className="text-gray-300">Land Grant</em> and <em className="text-gray-300">Lotus Petal</em>.
-              Do not count <em className="text-gray-300">Dread Return</em> here.
-              So, for a deck with 4 &#123;<em className="text-gray-300">Winding Way</em>, <em className="text-gray-300">Lead the Stamped</em>,{' '}
-              <em className="text-gray-300">Land Grant</em>&#125; and 1 <em className="text-gray-300">Lotus Petal</em>, set 13.
+              * <strong className="text-gray-200">Other Creatures in Deck</strong> is the number of remaining creatures in your deck. Do not count <em className="text-gray-300">Lotleth Giant</em> and <em className="text-gray-300">Double Spy</em>, as they have their dedicated fields.
+            </p>
+            <p className="text-gray-400 mt-2">
+              For example, for the{' '}
+                <a href="https://www.mtggoldfish.com/deck/7662534#online" target="_blank" rel="noreferrer"
+                  className="text-amber-400 hover:underline">4-land deck used for our guide</a> (41 total creatures), we initially set at combo time: 3 <em className="text-gray-300">Creatures on Board</em>, 2 <em className="text-gray-300">Lotleth Giants in Deck</em>, 3 <em className="text-gray-300">Balustrade Spies in Deck</em> and 34 <em className="text-gray-300">Other Creatures in Deck</em>.
             </p>
           </div>
 
           <div>
             <p className="text-base font-semibold text-gray-200 mb-1">Notes:</p>
             <p className="text-gray-400">
-              Every configuration has been simulated 1000000 times and can be used both for Spy Walls and Spy Elves.
+              Every configuration has been simulated 1,000,000 times and can be used both for any Spy variant.
             </p>
             <p className="text-gray-400 mt-2">
               <strong className="text-gray-200">
-                If you are interested in mastering Spy Walls, a comprehensive guide is available on{' '}
+                If you are interested in mastering Spy Walls, a comprehensive guide by the Pauperformance team is available on{' '}
                 <a href="https://mfy.gg/guides/view/spy-walls-the-bible-JA8uEV94lKN" target="_blank" rel="noreferrer"
                   className="text-amber-400 hover:underline">Metafy</a>
               </strong>.
@@ -150,11 +159,11 @@ export default function BlindSpy() {
         <div className="bg-gray-800 border border-gray-700 rounded-xl p-5">
           <h2 className="text-sm font-semibold text-gray-400 uppercase tracking-wider mb-5">Results</h2>
           {dataLoading ? (
-            <p className="text-gray-500 text-sm text-center py-6">Loading simulation data… (23 MB)</p>
+            <p className="text-gray-500 text-sm text-center py-6">Loading simulation data…</p>
           ) : !result ? (
             <p className="text-gray-500 text-sm text-center py-6">No simulation data found for this combination.</p>
           ) : (
-            <div className="grid grid-cols-3 gap-4 text-center">
+            <div className="grid grid-cols-2 sm:grid-cols-4 gap-4 text-center">
               <div className="bg-gray-900 rounded-xl py-5 px-3">
                 <p className="text-xs text-gray-500 uppercase tracking-wider mb-3">Fail %</p>
                 <p className="text-4xl font-bold text-amber-300 font-mono">{result['fail_%']}%</p>
@@ -164,8 +173,12 @@ export default function BlindSpy() {
                 <p className="text-4xl font-bold text-amber-300 font-mono">{result['win_%']}%</p>
               </div>
               <div className="bg-gray-900 rounded-xl py-5 px-3">
-                <p className="text-xs text-gray-500 uppercase tracking-wider mb-3">Avg creatures in GY</p>
-                <p className="text-4xl font-bold text-amber-300 font-mono">{result['avg_creatures_in_gy']}</p>
+                <p className="text-xs text-gray-500 uppercase tracking-wider mb-3">Average Damage</p>
+                <p className="text-4xl font-bold text-amber-300 font-mono">{result['avg_damage']}</p>
+              </div>
+              <div className="bg-gray-900 rounded-xl py-5 px-3">
+                <p className="text-xs text-gray-500 uppercase tracking-wider mb-3">Median Damage</p>
+                <p className="text-4xl font-bold text-amber-300 font-mono">{result['median_damage']}</p>
               </div>
             </div>
           )}
