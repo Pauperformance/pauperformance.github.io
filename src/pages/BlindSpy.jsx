@@ -2,7 +2,7 @@ import { useState, useEffect, useMemo } from 'react'
 import Layout from '../components/Layout'
 
 const FIELDS = [
-  { key: 'creatures_on_board', label: 'Creatures on Board',       min: 3,  max: 5,  def: 3  },
+  { key: 'creatures_on_board', label: 'Creatures on Board',       min: 3,  max: 5,  def: 3, maxLabel: '5+' },
   { key: 'lands_in_deck',      label: 'Lands in Deck',            min: 1,  max: 2,  def: 1  },
   { key: 'drs_in_deck',        label: 'Dread Returns in Deck',    min: 1,  max: 2,  def: 2  },
   { key: 'giants_in_deck',     label: 'Lotleth Giants in Deck',   min: 1,  max: 2,  def: 2  },
@@ -139,7 +139,7 @@ export default function BlindSpy() {
         <div className="bg-gray-800 border border-gray-700 rounded-xl p-5 space-y-4">
           <h2 className="text-sm font-semibold text-gray-400 uppercase tracking-wider">Game State</h2>
           <div className="grid grid-cols-1 sm:grid-cols-3 gap-4">
-            {FIELDS.map(({ key, label, min, max }) => (
+            {FIELDS.map(({ key, label, min, max, maxLabel }) => (
               <div key={key} className="space-y-1.5">
                 <label className="block text-sm font-medium text-gray-400">{label}</label>
                 <select
@@ -147,7 +147,7 @@ export default function BlindSpy() {
                   onChange={e => set(key, e.target.value)}
                   className="w-full bg-gray-900 border border-gray-600 rounded-lg px-3 py-2 text-sm text-gray-100 focus:outline-none focus:border-amber-400 cursor-pointer">
                   {range(min, max).map(v => (
-                    <option key={v} value={v}>{v}</option>
+                    <option key={v} value={v}>{maxLabel && v === max ? maxLabel : v}</option>
                   ))}
                 </select>
               </div>
