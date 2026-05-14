@@ -16,10 +16,15 @@ function range(min, max) {
 
 const DEFAULT_INPUTS = Object.fromEntries(FIELDS.map(f => [f.key, f.def]))
 
+const LIFE_MIN = 3
+const LIFE_MAX = 82
+const LIFE_DEF = 20
+
 export default function BlindSpy() {
   const [rawData, setRawData] = useState(null)
   const [dataLoading, setDataLoading] = useState(true)
   const [inputs, setInputs] = useState(DEFAULT_INPUTS)
+  const [opponentLife, setOpponentLife] = useState(LIFE_DEF)
 
   useEffect(() => {
     fetch('/data/blind_spy_full_consolidated.json')
@@ -152,6 +157,17 @@ export default function BlindSpy() {
                 </select>
               </div>
             ))}
+            <div className="space-y-1.5">
+              <label className="block text-sm font-medium text-gray-400">Opponent Life</label>
+              <select
+                value={opponentLife}
+                onChange={e => setOpponentLife(parseInt(e.target.value, 10))}
+                className="w-full bg-gray-900 border border-gray-600 rounded-lg px-3 py-2 text-sm text-gray-100 focus:outline-none focus:border-amber-400 cursor-pointer">
+                {range(LIFE_MIN, LIFE_MAX).map(v => (
+                  <option key={v} value={v}>{v}</option>
+                ))}
+              </select>
+            </div>
           </div>
         </div>
 
@@ -163,22 +179,18 @@ export default function BlindSpy() {
           ) : !result ? (
             <p className="text-gray-500 text-sm text-center py-6">No simulation data found for this combination.</p>
           ) : (
-            <div className="grid grid-cols-2 sm:grid-cols-4 gap-4 text-center">
-              <div className="bg-gray-900 rounded-xl py-5 px-3">
-                <p className="text-xs text-gray-500 uppercase tracking-wider mb-3">Fail %</p>
-                <p className="text-4xl font-bold text-amber-300 font-mono">{result['fail_%']}%</p>
-              </div>
+            <div className="grid grid-cols-2 gap-4 text-center max-w-sm mx-auto">
               <div className="bg-gray-900 rounded-xl py-5 px-3">
                 <p className="text-xs text-gray-500 uppercase tracking-wider mb-3">Win %</p>
-                <p className="text-4xl font-bold text-amber-300 font-mono">{result['win_%']}%</p>
+                <p className="text-4xl font-bold text-amber-300 font-mono">
+                  {(result[`win_${opponentLife}%`] * 100).toFixed(2)}%
+                </p>
               </div>
               <div className="bg-gray-900 rounded-xl py-5 px-3">
-                <p className="text-xs text-gray-500 uppercase tracking-wider mb-3">Average Damage</p>
-                <p className="text-4xl font-bold text-amber-300 font-mono">{result['avg_damage']}</p>
-              </div>
-              <div className="bg-gray-900 rounded-xl py-5 px-3">
-                <p className="text-xs text-gray-500 uppercase tracking-wider mb-3">Median Damage</p>
-                <p className="text-4xl font-bold text-amber-300 font-mono">{result['median_damage']}</p>
+                <p className="text-xs text-gray-500 uppercase tracking-wider mb-3">Lose %</p>
+                <p className="text-4xl font-bold text-amber-300 font-mono">
+                  {(result[`lose_${opponentLife}%`] * 100).toFixed(2)}%
+                </p>
               </div>
             </div>
           )}
