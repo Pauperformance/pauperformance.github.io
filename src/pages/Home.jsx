@@ -263,11 +263,6 @@ export default function Home() {
           🚧 We are currently restructuring the website. Some pages might be temporarily unavailable.
         </section>
 
-        <Link to="/market" className="block bg-amber-400 hover:bg-amber-300 transition-colors rounded-xl px-6 py-5 text-center group">
-          <p className="text-2xl font-bold text-gray-950">Playing the Leipzig IPT?</p>
-          <p className="mt-1 text-lg font-semibold text-gray-900 group-hover:underline">Visit our online store! →</p>
-        </Link>
-
         <section>
           <p className="text-lg text-gray-300 leading-relaxed">
             Hello Pauper player, and welcome to the <strong className="text-white">Academy</strong>!
