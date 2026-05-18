@@ -22,6 +22,88 @@ const NEWS = [
   { flag: '🇬🇧', href: 'https://magic.wizards.com/en/articles/archive/news/announcing-pauper-format-panel-2022-01-10', title: 'ANNOUNCING THE PAUPER FORMAT PANEL', author: 'Gavin Verhey', date: '2022-01-10' },
 ]
 
+function useCountUp(target, duration = 1600) {
+  const [count, setCount] = useState(0)
+  const [started, setStarted] = useState(false)
+  const ref = useRef(null)
+
+  useEffect(() => {
+    const el = ref.current
+    if (!el) return
+    const observer = new IntersectionObserver(
+      ([entry]) => { if (entry.isIntersecting) { setStarted(true); observer.disconnect() } },
+      { threshold: 0.3 }
+    )
+    observer.observe(el)
+    return () => observer.disconnect()
+  }, [])
+
+  useEffect(() => {
+    if (!started || !target) return
+    let frame
+    const startTime = performance.now()
+    const step = (now) => {
+      const progress = Math.min((now - startTime) / duration, 1)
+      const eased = 1 - Math.pow(1 - progress, 3)
+      setCount(Math.floor(eased * target))
+      if (progress < 1) frame = requestAnimationFrame(step)
+      else setCount(target)
+    }
+    frame = requestAnimationFrame(step)
+    return () => cancelAnimationFrame(frame)
+  }, [started, target, duration])
+
+  return { count, ref }
+}
+
+function StatCounter({ value, label }) {
+  const { count, ref } = useCountUp(value)
+  return (
+    <div ref={ref} className="flex flex-col items-center gap-2 py-2">
+      <span className="text-4xl sm:text-5xl font-bold text-amber-400 tabular-nums leading-none">
+        {count.toLocaleString()}
+      </span>
+      <span className="text-xs sm:text-sm text-gray-400 uppercase tracking-widest text-center">{label}</span>
+    </div>
+  )
+}
+
+function StatsSection() {
+  const [stats, setStats] = useState(null)
+
+  useEffect(() => {
+    Promise.all([
+      fetch('/data/archetypes.json').then(r => r.json()),
+      fetch('/data/cards.json').then(r => r.json()),
+      fetch('/data/pauper_pool.json').then(r => r.json()),
+      fetch('/data/creators.json').then(r => r.json()),
+      fetch('/data/stats.json').then(r => r.json()),
+    ]).then(([archetypes, cards, sets, creators, statsData]) => {
+      setStats({
+        archetypes: archetypes.length,
+        cards: cards.length,
+        sets: sets.length,
+        creators: creators.length,
+        decks: statsData.classifiedDecks,
+      })
+    })
+  }, [])
+
+  if (!stats) return null
+
+  return (
+    <section className="bg-gray-800 border border-gray-700 rounded-xl px-6 py-8">
+      <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-5 gap-6 divide-y-0 sm:divide-x sm:divide-gray-700">
+        <StatCounter value={stats.archetypes} label="Archetypes" />
+        <StatCounter value={stats.cards} label="Common Cards" />
+        <StatCounter value={stats.sets} label="Pauper Sets" />
+        <StatCounter value={stats.decks} label="Classified Decks" />
+        <StatCounter value={stats.creators} label="Content Creators" />
+      </div>
+    </section>
+  )
+}
+
 function StapleLink({ card }) {
   const [pos, setPos] = useState(null)
   const timerRef = useRef(null)
@@ -275,6 +357,8 @@ export default function Home() {
           </p>
         </section>
 
+
+        <StatsSection />
 
         <section className="bg-gray-800 border border-gray-700 rounded-xl p-6">
           <p className="text-sm text-gray-500 uppercase tracking-widest mb-1">Current code</p>

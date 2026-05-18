@@ -48,6 +48,24 @@ function FilterButton({ active, onClick, children, small = false }) {
   )
 }
 
+function AndOrToggle({ value, onChange }) {
+  return (
+    <div className="inline-flex rounded-lg border border-gray-600 overflow-hidden text-xs font-semibold shrink-0">
+      <button
+        onClick={() => onChange('or')}
+        className={`px-2 py-1 transition-colors ${value === 'or' ? 'bg-amber-400 text-gray-900' : 'text-gray-400 hover:text-gray-200'}`}>
+        OR
+      </button>
+      <div className="w-px bg-gray-600" />
+      <button
+        onClick={() => onChange('and')}
+        className={`px-2 py-1 transition-colors ${value === 'and' ? 'bg-amber-400 text-gray-900' : 'text-gray-400 hover:text-gray-200'}`}>
+        AND
+      </button>
+    </div>
+  )
+}
+
 
 export default function CardsIndex() {
   const [cards, setCards] = useState([])
@@ -58,6 +76,9 @@ export default function CardsIndex() {
   const [activeTypes, setActiveTypes] = useState(new Set())
   const [activeCmc, setActiveCmc] = useState(new Set())
   const [activeArchetypes, setActiveArchetypes] = useState(new Set())
+  const [manaMode, setManaMode] = useState('or')
+  const [typeMode, setTypeMode] = useState('or')
+  const [archetypeMode, setArchetypeMode] = useState('or')
   const [sortCol, setSortCol] = useState('name')
   const [sortDir, setSortDir] = useState('asc')
   const [archetypeSearch, setArchetypeSearch] = useState('')
@@ -91,11 +112,12 @@ export default function CardsIndex() {
   const allowedSlugs = useMemo(() => {
     if (activeArchetypes.size === 0) return null
     const sets = [...activeArchetypes].map(a => new Set(archetypeCardSlugs[a] || []))
-    // AND logic: intersection of all selected archetypes
+    if (archetypeMode === 'or') {
+      return new Set(sets.flatMap(s => [...s]))
+    }
     const [first, ...rest] = sets
-    const intersection = new Set([...first].filter(slug => rest.every(s => s.has(slug))))
-    return intersection
-  }, [activeArchetypes, archetypeCardSlugs])
+    return new Set([...first].filter(slug => rest.every(s => s.has(slug))))
+  }, [activeArchetypes, archetypeCardSlugs, archetypeMode])
 
   function toggleMana(m) {
     setActiveMana(prev => {
@@ -132,14 +154,17 @@ export default function CardsIndex() {
       if (q && !c.name.toLowerCase().includes(q)) return
       if (activeMana.size > 0) {
         const colors = c.colors || []
-        for (const m of activeMana) {
-          if (m === 'C') { if (colors.length !== 0) return }
-          else { if (!colors.includes(m)) return }
-        }
+        const manaMatch = manaMode === 'and'
+          ? [...activeMana].every(m => m === 'C' ? colors.length === 0 : colors.includes(m))
+          : [...activeMana].some(m => m === 'C' ? colors.length === 0 : colors.includes(m))
+        if (!manaMatch) return
       }
       if (activeTypes.size > 0) {
         const types = c.types || []
-        if (![...activeTypes].every(t => types.includes(t))) return
+        const typeMatch = typeMode === 'and'
+          ? [...activeTypes].every(t => types.includes(t))
+          : [...activeTypes].some(t => types.includes(t))
+        if (!typeMatch) return
       }
       if (activeCmc.size > 0) {
         if (![...activeCmc].some(v => c.cmc === v)) return
@@ -147,7 +172,7 @@ export default function CardsIndex() {
       slugs.add(c.slug)
     })
     return slugs
-  }, [cards, search, activeMana, activeTypes, activeCmc])
+  }, [cards, search, activeMana, activeTypes, activeCmc, manaMode, typeMode])
 
   const visibleArchetypes = useMemo(() => {
     return Object.keys(archetypeCardSlugs).sort().filter(a =>
@@ -162,14 +187,17 @@ export default function CardsIndex() {
       if (q && !c.name.toLowerCase().includes(q)) return false
       if (activeMana.size > 0) {
         const colors = c.colors || []
-        for (const m of activeMana) {
-          if (m === 'C') { if (colors.length !== 0) return false }
-          else { if (!colors.includes(m)) return false }
-        }
+        const manaMatch = manaMode === 'and'
+          ? [...activeMana].every(m => m === 'C' ? colors.length === 0 : colors.includes(m))
+          : [...activeMana].some(m => m === 'C' ? colors.length === 0 : colors.includes(m))
+        if (!manaMatch) return false
       }
       if (activeTypes.size > 0) {
         const types = c.types || []
-        if (![...activeTypes].every(t => types.includes(t))) return false
+        const typeMatch = typeMode === 'and'
+          ? [...activeTypes].every(t => types.includes(t))
+          : [...activeTypes].some(t => types.includes(t))
+        if (!typeMatch) return false
       }
       if (activeCmc.size > 0) {
         if (![...activeCmc].some(v => c.cmc === v)) return false
@@ -177,7 +205,7 @@ export default function CardsIndex() {
       if (allowedSlugs !== null && !allowedSlugs.has(c.slug)) return false
       return true
     })
-  }, [cards, search, activeMana, activeTypes, activeCmc, allowedSlugs])
+  }, [cards, search, activeMana, activeTypes, activeCmc, allowedSlugs, manaMode, typeMode])
 
   function handleSort(col) {
     if (sortCol === col) {
@@ -235,12 +263,14 @@ export default function CardsIndex() {
                 </span>
               </FilterButton>
             ))}
+            <AndOrToggle value={manaMode} onChange={setManaMode} />
           </div>
           <div className="flex flex-wrap gap-2 items-center">
             <span className="text-sm text-gray-500 w-10 shrink-0">Type:</span>
             {CARD_TYPES.map(t => (
               <FilterButton key={t} active={activeTypes.has(t)} onClick={() => toggleType(t)}>{t}</FilterButton>
             ))}
+            <AndOrToggle value={typeMode} onChange={setTypeMode} />
           </div>
           <div className="flex flex-wrap gap-2 items-center">
             <span className="text-sm text-gray-500 w-10 shrink-0">CMC:</span>
@@ -290,6 +320,7 @@ export default function CardsIndex() {
                   </div>
                 )}
               </div>
+              <AndOrToggle value={archetypeMode} onChange={setArchetypeMode} />
             </div>
             {activeArchetypes.size > 0 && (
               <div className="flex flex-wrap gap-1.5 pl-[calc(theme(spacing.2)+4.5rem)]">

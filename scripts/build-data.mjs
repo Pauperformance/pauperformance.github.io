@@ -397,6 +397,10 @@ const topDecks = metagameOut.slice(0, 16).map(entry => {
 writeFileSync(join(outDir, 'top_decks.json'), JSON.stringify(topDecks))
 console.log(`Built top_decks.json with ${topDecks.length} entries.`)
 
+// Write aggregate stats used by the home page counters
+writeFileSync(join(outDir, 'stats.json'), JSON.stringify({ classifiedDecks: deckDetailCount }))
+console.log('Built stats.json (classifiedDecks: ' + deckDetailCount + ').')
+
 // Build alias → canonical slug redirect map
 const aliasMap = {}
 for (const archetype of archetypes) {

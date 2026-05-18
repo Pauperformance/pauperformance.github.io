@@ -56,6 +56,24 @@ function FilterButton({ active, onClick, children }) {
   )
 }
 
+function AndOrToggle({ value, onChange }) {
+  return (
+    <div className="inline-flex rounded-lg border border-gray-600 overflow-hidden text-xs font-semibold shrink-0">
+      <button
+        onClick={() => onChange('or')}
+        className={`px-2 py-1 transition-colors ${value === 'or' ? 'bg-amber-400 text-gray-900' : 'text-gray-400 hover:text-gray-200'}`}>
+        OR
+      </button>
+      <div className="w-px bg-gray-600" />
+      <button
+        onClick={() => onChange('and')}
+        className={`px-2 py-1 transition-colors ${value === 'and' ? 'bg-amber-400 text-gray-900' : 'text-gray-400 hover:text-gray-200'}`}>
+        AND
+      </button>
+    </div>
+  )
+}
+
 export default function ArchetypesIndex() {
   const [archetypes, setArchetypes] = useState([])
   const [metaMap, setMetaMap] = useState({})
@@ -63,6 +81,8 @@ export default function ArchetypesIndex() {
   const [search, setSearch] = useState('')
   const [activeTypes, setActiveTypes] = useState(new Set())
   const [activeMana, setActiveMana] = useState(new Set())
+  const [manaMode, setManaMode] = useState('or')
+  const [typeMode, setTypeMode] = useState('or')
   const [activeMetaRange, setActiveMetaRange] = useState(null)
   const [sortCol, setSortCol] = useState('meta')
   const [sortDir, setSortDir] = useState('desc')
@@ -101,8 +121,18 @@ export default function ArchetypesIndex() {
     const q = search.toLowerCase()
     return archetypes.filter(a => {
       if (q && !a.name.toLowerCase().includes(q) && !(a.aliases || []).some(alias => alias.toLowerCase().includes(q))) return false
-      if (activeTypes.size > 0 && ![...activeTypes].every(t => a.game_type.includes(t))) return false
-      if (activeMana.size > 0 && ![...activeMana].every(m => a.dominant_mana.includes(m))) return false
+      if (activeTypes.size > 0) {
+        const match = typeMode === 'and'
+          ? [...activeTypes].every(t => a.game_type.includes(t))
+          : [...activeTypes].some(t => a.game_type.includes(t))
+        if (!match) return false
+      }
+      if (activeMana.size > 0) {
+        const match = manaMode === 'and'
+          ? [...activeMana].every(m => a.dominant_mana.includes(m))
+          : [...activeMana].some(m => a.dominant_mana.includes(m))
+        if (!match) return false
+      }
       if (activeMetaRange !== null) {
         const r = META_RANGES.find(r => r.label === activeMetaRange)
         const pct = metaMap[a.name] ?? 0
@@ -110,7 +140,7 @@ export default function ArchetypesIndex() {
       }
       return true
     })
-  }, [archetypes, search, activeTypes, activeMana, activeMetaRange, metaMap])
+  }, [archetypes, search, activeTypes, activeMana, manaMode, typeMode, activeMetaRange, metaMap])
 
   function handleSort(col) {
     if (sortCol === col) {
@@ -173,12 +203,14 @@ export default function ArchetypesIndex() {
                 </span>
               </FilterButton>
             ))}
+            <AndOrToggle value={manaMode} onChange={setManaMode} />
           </div>
           <div className="flex flex-wrap gap-2 items-center">
             <span className="text-sm text-gray-500 w-10 shrink-0">Type:</span>
             {GAME_TYPES.map(t => (
               <FilterButton key={t} active={activeTypes.has(t)} onClick={() => toggleType(t)}>{t}</FilterButton>
             ))}
+            <AndOrToggle value={typeMode} onChange={setTypeMode} />
           </div>
           <div className="flex flex-wrap gap-2 items-center">
             <span className="text-sm text-gray-500 w-10 shrink-0">Meta:</span>
