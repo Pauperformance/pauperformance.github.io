@@ -6,7 +6,7 @@ import { nameToSlug } from '../utils/slugs'
 
 const MANA_ORDER = ['W', 'U', 'B', 'R', 'G', 'C']
 const LANG_FLAG = {
-  en: '🇬🇧', eng: '🇬🇧',
+  en: '🇬🇧', eng: '🇬🇧', 'en-US': '🇬🇧',
   it: '🇮🇹', ita: '🇮🇹', IT: '🇮🇹',
 }
 
