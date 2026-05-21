@@ -1,4 +1,4 @@
-import { readFileSync, readdirSync, writeFileSync, copyFileSync, mkdirSync, existsSync } from 'fs'
+import { readFileSync, readdirSync, writeFileSync, copyFileSync, mkdirSync, existsSync, statSync } from 'fs'
 import { join } from 'path'
 
 function nameToSlug(name) {
@@ -63,8 +63,8 @@ for (const archetype of archetypes) {
   const videoFolder = join(videoDir, name)
   const videos = readJsonDir(videoFolder)
     .sort((a, b) => b.date.localeCompare(a.date))
-    .map(({ name: title, link, language, date, phd_name, deck_name }) => ({
-      title, link, language, date, phd_name, deck_name: deck_name || null,
+    .map(({ name: title, link, language, date, creator_name, deck_name }) => ({
+      title, link, language, date, creator_name, deck_name: deck_name || null,
     }))
 
   const detail = {
@@ -396,6 +396,29 @@ const topDecks = metagameOut.slice(0, 16).map(entry => {
 })
 writeFileSync(join(outDir, 'top_decks.json'), JSON.stringify(topDecks))
 console.log(`Built top_decks.json with ${topDecks.length} entries.`)
+
+// Build global videos index
+var allVideos = []
+readdirSync(videoDir).forEach(function(archetypeName) {
+  var folder = join(videoDir, archetypeName)
+  if (!statSync(folder).isDirectory()) return
+  readdirSync(folder).filter(function(f) { return f.endsWith('.json') }).forEach(function(f) {
+    var v = JSON.parse(readFileSync(join(folder, f), 'utf8'))
+    allVideos.push({
+      title: v.name,
+      link: v.link,
+      language: v.language,
+      date: v.date,
+      creator_name: v.creator_name || null,
+      deck_name: v.deck_name || null,
+      archetype: archetypeName,
+      video_id: v.video_id,
+    })
+  })
+})
+allVideos.sort(function(a, b) { return (b.date || '').localeCompare(a.date || '') })
+writeFileSync(join(outDir, 'videos.json'), JSON.stringify(allVideos))
+console.log('Built videos.json with ' + allVideos.length + ' entries.')
 
 // Write aggregate stats used by the home page counters
 writeFileSync(join(outDir, 'stats.json'), JSON.stringify({ classifiedDecks: deckDetailCount }))
