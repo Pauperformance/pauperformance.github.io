@@ -413,6 +413,7 @@ readdirSync(videoDir).forEach(function(archetypeName) {
       deck_name: v.deck_name || null,
       archetype: archetypeName,
       video_id: v.video_id,
+      is_short: v.is_short === true,
     })
   })
 })
