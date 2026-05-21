@@ -218,8 +218,8 @@ function IntelDecksSection({ name }) {
           type="text" placeholder="Search pilots…" value={filterPilot} onChange={setFilter(setFilterPilot)}
           className="w-full bg-gray-900 border border-gray-600 rounded-lg px-4 py-2 text-sm text-gray-100 placeholder-gray-500 focus:outline-none focus:border-amber-400" />
         <div className="flex flex-wrap gap-4 items-center">
-          <MonthPicker label="From" value={filterDateFrom} onChange={v => { setFilterDateFrom(v); setPage(0) }} />
-          <MonthPicker label="To" value={filterDateTo} onChange={v => { setFilterDateTo(v); setPage(0) }} />
+          <MonthPicker label="From:" value={filterDateFrom} onChange={v => { setFilterDateFrom(v); setPage(0) }} />
+          <MonthPicker label="To:" value={filterDateTo} onChange={v => { setFilterDateTo(v); setPage(0) }} />
           <div className="flex gap-1.5">
             {[['Last week', 7], ['Last month', 30], ['Last year', 365]].map(([label, days]) => (
               <button key={label} onClick={() => applyRange(days)}
@@ -227,10 +227,12 @@ function IntelDecksSection({ name }) {
                 {label}
               </button>
             ))}
-            <button onClick={() => { setFilterDateFrom(''); setFilterDateTo(''); setPage(0) }}
-              className="px-2.5 py-1 text-xs rounded-md border border-gray-600 text-gray-400 hover:border-amber-400/50 hover:text-amber-400 transition-colors">
-              Reset
-            </button>
+            {(filterDateFrom || filterDateTo) && (
+              <button onClick={() => { setFilterDateFrom(''); setFilterDateTo(''); setPage(0) }}
+                className="px-2.5 py-1 text-xs rounded-md border border-gray-600 text-gray-400 hover:border-amber-400/50 hover:text-amber-400 transition-colors">
+                Reset
+              </button>
+            )}
           </div>
         </div>
       </div>
