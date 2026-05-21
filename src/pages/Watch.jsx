@@ -64,28 +64,48 @@ function MonthPicker({ label, value, onChange }) {
 }
 
 function VideoCard({ v }) {
+  const [playing, setPlaying] = useState(false)
+
   return (
-    <a href={v.link} target="_blank" rel="noreferrer"
-      className="group bg-gray-800 border border-gray-700 rounded-xl overflow-hidden hover:border-amber-400/50 transition-all flex flex-col">
+    <div className="group bg-gray-800 border border-gray-700 rounded-xl overflow-hidden hover:border-amber-400/50 transition-all flex flex-col">
       <div className="relative aspect-video bg-gray-900 overflow-hidden">
-        <img
-          src={`https://img.youtube.com/vi/${v.video_id}/hqdefault.jpg`}
-          alt={v.title}
-          loading="lazy"
-          className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
-        />
+        {playing ? (
+          <iframe
+            src={`https://www.youtube.com/embed/${v.video_id}?autoplay=1`}
+            title={v.title}
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+            allowFullScreen
+            className="w-full h-full"
+          />
+        ) : (
+          <button onClick={() => setPlaying(true)} className="relative w-full h-full block">
+            <img
+              src={`https://img.youtube.com/vi/${v.video_id}/hqdefault.jpg`}
+              alt={v.title}
+              loading="lazy"
+              className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
+            />
+            <div className="absolute inset-0 flex items-center justify-center">
+              <div className="w-14 h-14 rounded-full bg-black/60 flex items-center justify-center group-hover:bg-amber-400/90 transition-colors">
+                <svg className="w-6 h-6 text-white fill-current translate-x-0.5" viewBox="0 0 24 24">
+                  <path d="M8 5v14l11-7z" />
+                </svg>
+              </div>
+            </div>
+          </button>
+        )}
       </div>
       <div className="p-3 flex flex-col gap-1.5 flex-1">
-        <p className="text-sm font-medium text-gray-200 group-hover:text-amber-400 transition-colors line-clamp-2 leading-snug">
+        <a href={v.link} target="_blank" rel="noreferrer"
+          className="text-sm font-medium text-gray-200 hover:text-amber-400 transition-colors line-clamp-2 leading-snug">
           {v.title}
-        </p>
+        </a>
         <p className="text-xs text-gray-400">{v.creator_name}</p>
         <div className="mt-auto pt-1.5 flex items-center justify-between gap-2">
           <div className="flex items-center gap-1.5 min-w-0">
             <span className="text-base leading-none shrink-0">{LANG_FLAG[v.language] ?? v.language}</span>
             <Link
               to={`/archetypes/${nameToSlug(v.archetype)}`}
-              onClick={e => e.stopPropagation()}
               className="inline-block px-2 py-0.5 rounded-full text-xs font-semibold bg-gray-700 text-amber-400 hover:bg-gray-600 transition-colors truncate">
               {v.archetype}
             </Link>
@@ -93,7 +113,7 @@ function VideoCard({ v }) {
           <span className="text-xs text-gray-500 shrink-0">{v.date}</span>
         </div>
       </div>
-    </a>
+    </div>
   )
 }
 
