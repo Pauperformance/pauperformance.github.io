@@ -65,10 +65,18 @@ function MonthPicker({ label, value, onChange }) {
 
 function VideoCard({ v }) {
   const [playing, setPlaying] = useState(false)
+  const containerRef = useRef(null)
+
+  function handlePlay() {
+    setPlaying(true)
+    if (containerRef.current && containerRef.current.requestFullscreen) {
+      containerRef.current.requestFullscreen().catch(() => {})
+    }
+  }
 
   return (
     <div className="group bg-gray-800 border border-gray-700 rounded-xl overflow-hidden hover:border-amber-400/50 transition-all flex flex-col">
-      <div className="relative aspect-video bg-gray-900 overflow-hidden">
+      <div ref={containerRef} className="relative aspect-video bg-gray-900 overflow-hidden">
         {playing ? (
           <iframe
             src={`https://www.youtube.com/embed/${v.video_id}?autoplay=1`}
@@ -78,7 +86,7 @@ function VideoCard({ v }) {
             className="w-full h-full"
           />
         ) : (
-          <button onClick={() => setPlaying(true)} className="relative w-full h-full block">
+          <button onClick={handlePlay} className="relative w-full h-full block">
             <img
               src={`https://img.youtube.com/vi/${v.video_id}/hqdefault.jpg`}
               alt={v.title}
