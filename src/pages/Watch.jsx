@@ -4,11 +4,11 @@ import Layout from '../components/Layout'
 import { nameToSlug } from '../utils/slugs'
 
 const LANG_FLAG = {
-  en: '🇬🇧', eng: '🇬🇧',
+  en: '🇬🇧', eng: '🇬🇧', 'en-US': '🇬🇧',
   it: '🇮🇹', ita: '🇮🇹', IT: '🇮🇹',
 }
 const LANG_CANONICAL = {
-  en: 'en', eng: 'en',
+  en: 'en', eng: 'en', 'en-US': 'en',
   it: 'it', ita: 'it', IT: 'it',
 }
 const LANG_DISPLAY = {
