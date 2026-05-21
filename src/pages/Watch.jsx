@@ -87,8 +87,8 @@ function VideoCard({ v }) {
             />
             <div className="absolute inset-0 flex items-center justify-center">
               <div className="w-14 h-14 rounded-full bg-black/60 flex items-center justify-center group-hover:bg-amber-400/90 transition-colors">
-                <svg className="w-6 h-6 text-white fill-current translate-x-0.5" viewBox="0 0 24 24">
-                  <path d="M8 5v14l11-7z" />
+                <svg className="w-9 h-9 text-white fill-current translate-x-0.5" viewBox="0 0 24 24">
+                  <path d="M5 4.623V19.38a1.5 1.5 0 002.26 1.29L22 12 7.26 3.33A1.5 1.5 0 005 4.623Z" />
                 </svg>
               </div>
             </div>
