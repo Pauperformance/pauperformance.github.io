@@ -34,7 +34,7 @@ function FilterButton({ active, onClick, children }) {
   )
 }
 
-function MonthPicker({ label, value, onChange }) {
+function MonthPicker({ label, value, onChange, labelClass = 'w-16' }) {
   const [year, setYear] = useState(value ? value.split('-')[0] : '')
   const [month, setMonth] = useState(value ? value.split('-')[1] : '')
   const currentYear = new Date().getFullYear()
@@ -49,8 +49,8 @@ function MonthPicker({ label, value, onChange }) {
   const handleMonth = (m) => { setMonth(m); onChange(year && m ? `${year}-${m}` : '') }
 
   return (
-    <div className="flex items-center gap-1.5">
-      <span className="text-sm text-gray-500 w-16 shrink-0">{label}</span>
+    <div className="flex items-center gap-1.5" data-picker>
+      <span className={`text-sm text-gray-500 shrink-0 ${labelClass}`}>{label}</span>
       <select value={month} onChange={e => handleMonth(e.target.value)} className={SELECT_CLS}>
         <option value="">Month</option>
         {MONTHS.map((m, i) => <option key={i} value={String(i + 1).padStart(2, '0')}>{m}</option>)}
@@ -137,11 +137,13 @@ export default function Watch() {
   const [activeType, setActiveType] = useState('')
   const [filterDateFrom, setFilterDateFrom] = useState('')
   const [filterDateTo, setFilterDateTo] = useState('')
+  const [toWrapped, setToWrapped] = useState(false)
   const [viewMode, setViewMode] = useState('infinite')
   const [page, setPage] = useState(0)
   const [visibleCount, setVisibleCount] = useState(PAGE_SIZE)
   const dropdownRef = useRef(null)
   const sentinelRef = useRef(null)
+  const dateRowRef = useRef(null)
   const resultsRef = useRef(null)
   const paginationRef = useRef(null)
   const pageInitRef = useRef(true)
@@ -151,6 +153,19 @@ export default function Watch() {
       setVideos(data)
       setLoading(false)
     })
+  }, [])
+
+  useEffect(() => {
+    const el = dateRowRef.current
+    if (!el) return
+    const check = () => {
+      const pickers = el.querySelectorAll('[data-picker]')
+      if (pickers.length >= 2) setToWrapped(pickers[1].offsetTop > pickers[0].offsetTop)
+    }
+    const observer = new ResizeObserver(check)
+    observer.observe(el)
+    check()
+    return () => observer.disconnect()
   }, [])
 
   useEffect(() => {
@@ -346,9 +361,9 @@ export default function Watch() {
               </div>
             )}
           </div>
-          <div className="flex flex-wrap items-center gap-2">
+          <div ref={dateRowRef} className="flex flex-wrap items-center gap-4">
             <MonthPicker label="From:" value={filterDateFrom} onChange={v => setFilterDateFrom(v)} />
-            <MonthPicker label="To:" value={filterDateTo} onChange={v => setFilterDateTo(v)} />
+            <MonthPicker label="To:" value={filterDateTo} onChange={v => setFilterDateTo(v)} labelClass={toWrapped ? 'w-16' : ''} />
             <div className="flex gap-1.5 flex-wrap">
               {[{ label: 'Last week', days: 7 }, { label: 'Last month', days: 30 }, { label: 'Last year', days: 365 }].map(({ label, days }) => (
                 <button key={label} onClick={() => applyRange(days)}

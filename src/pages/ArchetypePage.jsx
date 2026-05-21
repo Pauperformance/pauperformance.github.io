@@ -1,4 +1,4 @@
-import { useState, useEffect, useMemo } from 'react'
+import { useState, useEffect, useMemo, useRef } from 'react'
 import { useParams, Link, useNavigate } from 'react-router-dom'
 import ReactMarkdown from 'react-markdown'
 import Layout from '../components/Layout'
@@ -166,6 +166,8 @@ function MonthPicker({ label, value, onChange }) {
 function IntelDecksSection({ name }) {
   const [decks, setDecks] = useState(null)
   const [page, setPage] = useState(0)
+  const paginationRef = useRef(null)
+  const pageInitRef = useRef(true)
   const [filterTournament, setFilterTournament] = useState('')
   const [filterDateFrom, setFilterDateFrom] = useState('')
   const [filterDateTo, setFilterDateTo] = useState('')
@@ -176,6 +178,14 @@ function IntelDecksSection({ name }) {
       .then(r => r.ok ? r.json() : [])
       .then(setDecks)
   }, [name])
+
+  useEffect(() => {
+    if (pageInitRef.current) { pageInitRef.current = false; return }
+    const el = paginationRef.current
+    if (!el) return
+    const headerHeight = document.querySelector('header')?.offsetHeight ?? 64
+    window.scrollTo({ top: el.getBoundingClientRect().top + window.scrollY - headerHeight - 16, behavior: 'smooth' })
+  }, [page])
 
   const filtered = useMemo(() => {
     if (!decks) return []
@@ -239,6 +249,19 @@ function IntelDecksSection({ name }) {
       <p className="text-xs text-gray-500">
         {filtered.length !== decks.length ? `${filtered.length} of ${decks.length}` : decks.length} decklists
       </p>
+      {totalPages > 1 && (
+        <div ref={paginationRef} className="flex items-center justify-center gap-3">
+          <button onClick={() => setPage(p => Math.max(0, p - 1))} disabled={page === 0}
+            className="px-4 py-2 rounded-lg text-sm font-semibold border border-gray-600 text-gray-400 hover:border-gray-400 hover:text-gray-200 transition-colors disabled:opacity-30 disabled:cursor-not-allowed">
+            ← Previous
+          </button>
+          <span className="text-sm text-gray-400">Page {page + 1} of {totalPages}</span>
+          <button onClick={() => setPage(p => Math.min(totalPages - 1, p + 1))} disabled={page === totalPages - 1}
+            className="px-4 py-2 rounded-lg text-sm font-semibold border border-gray-600 text-gray-400 hover:border-gray-400 hover:text-gray-200 transition-colors disabled:opacity-30 disabled:cursor-not-allowed">
+            Next →
+          </button>
+        </div>
+      )}
       <div className="border border-gray-700 rounded-xl overflow-hidden">
         <table className="w-full text-base bg-gray-900">
           <thead>
@@ -271,14 +294,14 @@ function IntelDecksSection({ name }) {
         </table>
       </div>
       {totalPages > 1 && (
-        <div className="flex items-center justify-between text-xs text-gray-500">
+        <div className="flex items-center justify-center gap-3">
           <button onClick={() => setPage(p => Math.max(0, p - 1))} disabled={page === 0}
-            className="px-3 py-1 rounded-md border border-gray-700 hover:border-amber-400/50 disabled:opacity-30 disabled:cursor-not-allowed transition-colors">
-            ← Prev
+            className="px-4 py-2 rounded-lg text-sm font-semibold border border-gray-600 text-gray-400 hover:border-gray-400 hover:text-gray-200 transition-colors disabled:opacity-30 disabled:cursor-not-allowed">
+            ← Previous
           </button>
-          <span>Page {page + 1} of {totalPages}</span>
+          <span className="text-sm text-gray-400">Page {page + 1} of {totalPages}</span>
           <button onClick={() => setPage(p => Math.min(totalPages - 1, p + 1))} disabled={page === totalPages - 1}
-            className="px-3 py-1 rounded-md border border-gray-700 hover:border-amber-400/50 disabled:opacity-30 disabled:cursor-not-allowed transition-colors">
+            className="px-4 py-2 rounded-lg text-sm font-semibold border border-gray-600 text-gray-400 hover:border-gray-400 hover:text-gray-200 transition-colors disabled:opacity-30 disabled:cursor-not-allowed">
             Next →
           </button>
         </div>
