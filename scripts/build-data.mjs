@@ -63,8 +63,9 @@ for (const archetype of archetypes) {
   const videoFolder = join(videoDir, name)
   const videos = readJsonDir(videoFolder)
     .sort((a, b) => b.date.localeCompare(a.date))
-    .map(({ name: title, link, language, date, creator_name, deck_name }) => ({
+    .map(({ name: title, link, language, date, creator_name, deck_name, video_id, is_short }) => ({
       title, link, language, date, creator_name, deck_name: deck_name || null,
+      video_id: video_id || null, is_short: is_short === true,
     }))
 
   const detail = {
