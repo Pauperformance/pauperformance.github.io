@@ -106,6 +106,7 @@ export default function Watch() {
   const [activeArchetypes, setActiveArchetypes] = useState(new Set())
   const [archetypeSearch, setArchetypeSearch] = useState('')
   const [dropdownOpen, setDropdownOpen] = useState(false)
+  const [activeTypes, setActiveTypes] = useState(new Set())
   const [filterDateFrom, setFilterDateFrom] = useState('')
   const [filterDateTo, setFilterDateTo] = useState('')
   const [viewMode, setViewMode] = useState('infinite')
@@ -149,6 +150,9 @@ export default function Watch() {
   function toggleArchetype(a) {
     setActiveArchetypes(prev => { const n = new Set(prev); n.has(a) ? n.delete(a) : n.add(a); return n })
   }
+  function toggleType(t) {
+    setActiveTypes(prev => { const n = new Set(prev); n.has(t) ? n.delete(t) : n.add(t); return n })
+  }
 
   const toYM = (d) => d.toISOString().slice(0, 7)
   function applyRange(daysAgo) {
@@ -167,11 +171,16 @@ export default function Watch() {
       if (activeCreators.size > 0 && !activeCreators.has(v.creator_name)) return false
       if (activeLanguages.size > 0 && !activeLanguages.has(LANG_CANONICAL[v.language] ?? v.language)) return false
       if (activeArchetypes.size > 0 && !activeArchetypes.has(v.archetype)) return false
+      if (activeTypes.size > 0) {
+        const isShort = v.is_short === true
+        if (activeTypes.has('videos') && isShort) return false
+        if (activeTypes.has('shorts') && !isShort) return false
+      }
       if (filterDateFrom && v.date.slice(0, 7) < filterDateFrom) return false
       if (filterDateTo && v.date.slice(0, 7) > filterDateTo) return false
       return true
     })
-  }, [videos, search, activeCreators, activeLanguages, activeArchetypes, filterDateFrom, filterDateTo])
+  }, [videos, search, activeCreators, activeLanguages, activeArchetypes, activeTypes, filterDateFrom, filterDateTo])
 
   // Reset paging whenever filters change
   useEffect(() => {
@@ -218,12 +227,17 @@ export default function Watch() {
         if (q && !v.title.toLowerCase().includes(q)) return false
         if (activeCreators.size > 0 && !activeCreators.has(v.creator_name)) return false
         if (activeLanguages.size > 0 && !activeLanguages.has(LANG_CANONICAL[v.language] ?? v.language)) return false
+        if (activeTypes.size > 0) {
+          const isShort = v.is_short === true
+          if (activeTypes.has('videos') && isShort) return false
+          if (activeTypes.has('shorts') && !isShort) return false
+        }
         if (filterDateFrom && v.date.slice(0, 7) < filterDateFrom) return false
         if (filterDateTo && v.date.slice(0, 7) > filterDateTo) return false
         return true
       })
     })
-  }, [archetypes, archetypeSearch, activeArchetypes, videos, search, activeCreators, activeLanguages, filterDateFrom, filterDateTo])
+  }, [archetypes, archetypeSearch, activeArchetypes, videos, search, activeCreators, activeLanguages, activeTypes, filterDateFrom, filterDateTo])
 
   return (
     <Layout>
@@ -248,6 +262,11 @@ export default function Watch() {
                 {LANG_DISPLAY[l] ?? l}
               </FilterButton>
             ))}
+          </div>
+          <div className="flex flex-wrap gap-2 items-center">
+            <span className="text-sm text-gray-500 w-16 shrink-0">Type:</span>
+            <FilterButton active={activeTypes.has('videos')} onClick={() => toggleType('videos')}>Videos</FilterButton>
+            <FilterButton active={activeTypes.has('shorts')} onClick={() => toggleType('shorts')}>Shorts</FilterButton>
           </div>
           <div className="flex flex-wrap gap-2 items-center">
             <span className="text-sm text-gray-500 w-16 shrink-0">Creator:</span>
