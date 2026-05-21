@@ -120,7 +120,7 @@ function VideosSection({ videos }) {
                 <a href={v.link} target="_blank" rel="noreferrer"
                   className="text-amber-400 hover:underline">{v.title}</a>
               </td>
-              <td className="px-4 py-2.5 text-gray-400 hidden sm:table-cell">{v.phd_name}</td>
+              <td className="px-4 py-2.5 text-gray-400 hidden sm:table-cell">{v.creator_name}</td>
               <td className="px-4 py-2.5 text-gray-500 hidden sm:table-cell">{v.date}</td>
             </tr>
           ))}
