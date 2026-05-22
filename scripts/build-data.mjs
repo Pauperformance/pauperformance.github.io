@@ -1,11 +1,24 @@
-import { readFileSync, readdirSync, writeFileSync, copyFileSync, mkdirSync, existsSync, statSync } from 'fs'
+import { readFileSync, readdirSync, writeFileSync, unlinkSync, copyFileSync, mkdirSync, existsSync, statSync } from 'fs'
 import { join } from 'path'
+
+const buildStart = Date.now()
 
 function nameToSlug(name) {
   return name.toLowerCase()
     .replace(/ \/\/ /g, '_')
     .replace(/ /g, '_')
     .replace(/[^a-z0-9_-]/g, '')
+}
+
+// Returns true if outputPath does not exist or any existing inputPath is newer than it
+function needsRebuild(outputPath, inputPaths) {
+  if (!existsSync(outputPath)) return true
+  var outMtime = statSync(outputPath).mtimeMs
+  for (var i = 0; i < inputPaths.length; i++) {
+    var p = inputPaths[i]
+    if (existsSync(p) && statSync(p).mtimeMs > outMtime) return true
+  }
+  return false
 }
 
 const archetypeDir = 'assets/data/archetype'
@@ -32,11 +45,15 @@ function readJsonDir(dir) {
     .map(f => JSON.parse(readFileSync(join(dir, f), 'utf8')))
 }
 
-// Load all archetypes
+// Load all archetypes (track source path for incremental checks)
 const archetypes = readdirSync(archetypeDir)
   .filter(f => f.endsWith('.json'))
   .sort()
-  .map(f => JSON.parse(readFileSync(join(archetypeDir, f), 'utf8')))
+  .map(f => {
+    var data = JSON.parse(readFileSync(join(archetypeDir, f), 'utf8'))
+    data._srcPath = join(archetypeDir, f)
+    return data
+  })
 
 // Write combined index (slim fields only)
 const index = archetypes.map(({ name, aliases, dominant_mana, game_type, family }) => ({
@@ -45,14 +62,22 @@ const index = archetypes.map(({ name, aliases, dominant_mana, game_type, family 
 writeFileSync(join(outDir, 'archetypes.json'), JSON.stringify(index))
 console.log(`Built archetypes.json with ${index.length} entries.`)
 
-// Write per-archetype detail files
-let detailCount = 0
+// Write per-archetype detail files (incremental)
+let detailWritten = 0, detailSkipped = 0
 for (const archetype of archetypes) {
   const name = archetype.name
+  const outputPath = join(detailsDir, `${nameToSlug(name)}.json`)
+  const deckFolderPath = join(deckDir, name)
+  const videoFolderPath = join(videoDir, name)
+
+  // Check archetype JSON + folder mtimes (folder mtime changes on add/remove)
+  if (!needsRebuild(outputPath, [archetype._srcPath, deckFolderPath, videoFolderPath])) {
+    detailSkipped++
+    continue
+  }
 
   // Load decks
-  const deckFolder = join(deckDir, name)
-  const decks = readJsonDir(deckFolder)
+  const decks = readJsonDir(deckFolderPath)
     .sort((a, b) => b.set_date.localeCompare(a.set_date))
     .map(({ name: deckName, url, set_name, set_date, legal }) => ({
       name: deckName, url, set_name, set_date, legal,
@@ -60,8 +85,7 @@ for (const archetype of archetypes) {
     }))
 
   // Load videos
-  const videoFolder = join(videoDir, name)
-  const videos = readJsonDir(videoFolder)
+  const videos = readJsonDir(videoFolderPath)
     .sort((a, b) => b.date.localeCompare(a.date))
     .map(({ name: title, link, language, date, creator_name, deck_name, video_id, is_short }) => ({
       title, link, language, date, creator_name, deck_name: deck_name || null,
@@ -92,11 +116,11 @@ for (const archetype of archetypes) {
     videos,
   }
 
-  writeFileSync(join(detailsDir, `${nameToSlug(name)}.json`), JSON.stringify(detail))
-  detailCount++
+  writeFileSync(outputPath, JSON.stringify(detail))
+  detailWritten++
 }
 
-console.log(`Built ${detailCount} archetype detail files.`)
+console.log(`Built archetype details: ${detailWritten} written, ${detailSkipped} unchanged.`)
 
 // Build intel decks per archetype + individual deck detail files
 function parseDecklist(txt) {
@@ -118,8 +142,22 @@ function parseDecklist(txt) {
 
 const tournamentDeckDir = 'assets/data/deck/mtggoldfish_tournament'
 const cardDecksMap = {}
+
+// Snapshot existing deck-detail IDs to detect deletions
+const existingDeckDetailIds = new Set(
+  readdirSync(deckDetailsDir).filter(function(f) { return f.endsWith('.json') }).map(function(f) { return f.slice(0, -5) })
+)
+const activeDeckIds = new Set()
+// Cards that appear in any freshly-written deck-detail (need card-decks update)
+const dirtyCardNames = {}
+
 let intelDeckCount = 0
-let deckDetailCount = 0
+let deckDetailWritten = 0, deckDetailSkipped = 0
+
+// Cached decks whose deck-detail reads are deferred until we know if any deck changed
+var cachedDecks = []
+var anyDeckChanged = false
+
 for (const archetype of archetypes) {
   const name = archetype.name
   const folder = join(intelDeckDir, name)
@@ -128,46 +166,60 @@ for (const archetype of archetypes) {
     .filter(function(f) { return f.endsWith('.json') })
     .map(function(f) {
       const id = f.slice(0, -5)
-      const d = JSON.parse(readFileSync(join(folder, f), 'utf8'))
-
-      // Write individual deck detail file
+      const inputPath = join(folder, f)
+      const outputPath = join(deckDetailsDir, id + '.json')
       const txtPath = join(tournamentDeckDir, id + '.txt')
-      var decklist = null
-      if (existsSync(txtPath)) {
-        decklist = parseDecklist(readFileSync(txtPath, 'utf8'))
-      }
-      writeFileSync(join(deckDetailsDir, id + '.json'), JSON.stringify({
+
+      activeDeckIds.add(id)
+
+      const d = JSON.parse(readFileSync(inputPath, 'utf8'))
+
+      var deckMeta = {
         id: id,
         archetype: name,
-        url: d.url,
         pilot: d.pilot || null,
         place: d.place || null,
         tournament_name: d.tournament_name || null,
         tournament_date: d.tournament_date || null,
-        mtgo_price: d.mtgo_price || null,
-        tabletop_price: d.tabletop_price || null,
-        decklist: decklist,
-      }))
-      deckDetailCount++
+      }
 
-      // Build reverse index: card name → decks containing it
-      if (decklist) {
-        var deckMeta = {
+      if (!needsRebuild(outputPath, [inputPath, txtPath])) {
+        // Cache hit: defer deck-detail read until we know if cardDecksMap is needed
+        cachedDecks.push({ outputPath: outputPath, meta: deckMeta })
+        deckDetailSkipped++
+      } else {
+        // Cache miss: read TXT, write deck-detail
+        var decklist = null
+        if (existsSync(txtPath)) {
+          decklist = parseDecklist(readFileSync(txtPath, 'utf8'))
+        }
+        writeFileSync(outputPath, JSON.stringify({
           id: id,
           archetype: name,
+          url: d.url,
           pilot: d.pilot || null,
           place: d.place || null,
           tournament_name: d.tournament_name || null,
           tournament_date: d.tournament_date || null,
-        }
-        var seen = {}
-        var allCards = decklist.main.concat(decklist.side)
-        for (var ci = 0; ci < allCards.length; ci++) {
-          var cardName = allCards[ci].name
-          if (seen[cardName]) continue
-          seen[cardName] = true
-          if (!cardDecksMap[cardName]) cardDecksMap[cardName] = []
-          cardDecksMap[cardName].push(deckMeta)
+          mtgo_price: d.mtgo_price || null,
+          tabletop_price: d.tabletop_price || null,
+          decklist: decklist,
+        }))
+        deckDetailWritten++
+        anyDeckChanged = true
+
+        // Add to cardDecksMap immediately; mark cards dirty
+        if (decklist) {
+          var allDirtyCards = decklist.main.concat(decklist.side)
+          var seenDirty = {}
+          for (var dci = 0; dci < allDirtyCards.length; dci++) {
+            var dcName = allDirtyCards[dci].name
+            dirtyCardNames[dcName] = true
+            if (seenDirty[dcName]) continue
+            seenDirty[dcName] = true
+            if (!cardDecksMap[dcName]) cardDecksMap[dcName] = []
+            cardDecksMap[dcName].push(deckMeta)
+          }
         }
       }
 
@@ -186,7 +238,48 @@ for (const archetype of archetypes) {
   writeFileSync(join(intelDecksDir, `${nameToSlug(name)}.json`), JSON.stringify(decks))
   intelDeckCount++
 }
-console.log('Built intel-decks for ' + intelDeckCount + ' archetypes, ' + deckDetailCount + ' deck detail files.')
+
+// Handle deleted decks: remove stale deck-detail files, mark their cards dirty
+var deletedCount = 0
+existingDeckDetailIds.forEach(function(id) {
+  if (activeDeckIds.has(id)) return
+  var outputPath = join(deckDetailsDir, id + '.json')
+  try {
+    var old = JSON.parse(readFileSync(outputPath, 'utf8'))
+    if (old.decklist) {
+      var oldCards = old.decklist.main.concat(old.decklist.side)
+      for (var i = 0; i < oldCards.length; i++) dirtyCardNames[oldCards[i].name] = true
+      anyDeckChanged = true
+    }
+  } catch (e) {}
+  unlinkSync(outputPath)
+  deletedCount++
+})
+
+// If any deck changed, complete cardDecksMap by reading cached deck-details.
+// If nothing changed, skip entirely — card-decks and archetype-card-slugs are still correct.
+if (anyDeckChanged) {
+  for (var cdi2 = 0; cdi2 < cachedDecks.length; cdi2++) {
+    var cd = cachedDecks[cdi2]
+    try {
+      var cdData = JSON.parse(readFileSync(cd.outputPath, 'utf8'))
+      if (cdData.decklist) {
+        var cdCards = cdData.decklist.main.concat(cdData.decklist.side)
+        var cdSeen = {}
+        for (var cdi3 = 0; cdi3 < cdCards.length; cdi3++) {
+          var cdName = cdCards[cdi3].name
+          if (cdSeen[cdName]) continue
+          cdSeen[cdName] = true
+          if (!cardDecksMap[cdName]) cardDecksMap[cdName] = []
+          cardDecksMap[cdName].push(cd.meta)
+        }
+      }
+    } catch (e) {}
+  }
+}
+
+var deletedMsg = deletedCount ? ', removed ' + deletedCount + ' deleted' : ''
+console.log('Built intel-decks for ' + intelDeckCount + ' archetypes. Deck-details: ' + deckDetailWritten + ' written, ' + deckDetailSkipped + ' cached' + deletedMsg + '.')
 
 // Build families index from archetype family fields
 const familyMap = {}
@@ -245,7 +338,7 @@ const totalCards = pool.reduce(function(sum, s) { return sum + s.cards.length },
 writeFileSync(join(outDir, 'pauper_pool.json'), JSON.stringify(pool))
 console.log('Built pauper_pool.json with ' + pool.length + ' sets and ' + totalCards + ' cards.')
 
-// Build cards index + per-card detail files
+// Build cards index + per-card detail files (incremental)
 const cardIntelDir = 'assets/data/intel/card'
 const cardDetailsDir = join(outDir, 'card-details')
 mkdirSync(cardDetailsDir, { recursive: true })
@@ -254,8 +347,11 @@ const cardFiles = readdirSync(cardIntelDir).filter(function(f) { return f.endsWi
 const cardsIndex = []
 const cardImageMap = {}
 const cardTypeMap = {}
+let cardDetailWritten = 0, cardDetailSkipped = 0
+
 for (const f of cardFiles) {
-  const raw = JSON.parse(readFileSync(join(cardIntelDir, f), 'utf8'))
+  const cardInputPath = join(cardIntelDir, f)
+  const raw = JSON.parse(readFileSync(cardInputPath, 'utf8'))
   const name = (raw.scryfall && raw.scryfall.name) || f.slice(0, -5)
   const slug = nameToSlug(name)
   const archetypes = (raw.archetypes && raw.archetypes['py/set']) || []
@@ -288,7 +384,15 @@ for (const f of cardFiles) {
   var types = Object.keys(typeSet)
   var cmc = (scryfall && scryfall.cmc !== undefined) ? scryfall.cmc : null
   cardsIndex.push({ slug, name, archetypeCount: archetypes.length, colors: colors, types: types, cmc: cmc })
-  writeFileSync(join(cardDetailsDir, slug + '.json'), JSON.stringify({ slug, name, archetypes, scryfall }))
+
+  const cardDetailOutputPath = join(cardDetailsDir, slug + '.json')
+  if (needsRebuild(cardDetailOutputPath, [cardInputPath])) {
+    writeFileSync(cardDetailOutputPath, JSON.stringify({ slug, name, archetypes, scryfall }))
+    cardDetailWritten++
+  } else {
+    cardDetailSkipped++
+  }
+
   cardImageMap[name] = scryfall
     ? (scryfall.image_uris && scryfall.image_uris.normal)
       || (scryfall.card_faces && scryfall.card_faces[0] && scryfall.card_faces[0].image_uris && scryfall.card_faces[0].image_uris.normal)
@@ -304,9 +408,9 @@ for (const f of cardFiles) {
 writeFileSync(join(outDir, 'cards.json'), JSON.stringify(cardsIndex))
 writeFileSync(join(outDir, 'card-images.json'), JSON.stringify(cardImageMap))
 writeFileSync(join(outDir, 'card-types.json'), JSON.stringify(cardTypeMap))
-console.log('Built cards.json with ' + cardsIndex.length + ' entries and card-images.json.')
+console.log('Built cards.json with ' + cardsIndex.length + ' entries. Card-details: ' + cardDetailWritten + ' written, ' + cardDetailSkipped + ' unchanged.')
 
-// Build card-decks reverse index: card slug → decks containing that card
+// Build card-decks + archetype-card-slugs — only needed when decks changed
 var cardNameToSlug = {}
 for (var ci2 = 0; ci2 < cardsIndex.length; ci2++) {
   var ci2entry = cardsIndex[ci2]
@@ -316,41 +420,52 @@ for (var ci2 = 0; ci2 < cardsIndex.length; ci2++) {
     if (!cardNameToSlug[frontFaceName]) cardNameToSlug[frontFaceName] = ci2entry.slug
   }
 }
-var cardDeckCount = 0
-var cardNames = Object.keys(cardDecksMap)
-for (var ci3 = 0; ci3 < cardNames.length; ci3++) {
-  var cname = cardNames[ci3]
-  var cslug = cardNameToSlug[cname]
-  if (!cslug) continue
-  var sortedDecks = cardDecksMap[cname].slice().sort(function(a, b) {
-    return (b.tournament_date || '').localeCompare(a.tournament_date || '')
-  })
-  writeFileSync(join(cardDecksDir, cslug + '.json'), JSON.stringify(sortedDecks))
-  cardDeckCount++
-}
-console.log('Built card-decks for ' + cardDeckCount + ' cards.')
 
-// Build archetype → card slugs index (from actual deck appearances)
-var archetypeCardMap = {}
-var cardNamesAll = Object.keys(cardDecksMap)
-for (var aci = 0; aci < cardNamesAll.length; aci++) {
-  var acName = cardNamesAll[aci]
-  var acSlug = cardNameToSlug[acName]
-  if (!acSlug) continue
-  var acDecks = cardDecksMap[acName]
-  for (var adi = 0; adi < acDecks.length; adi++) {
-    var acArch = acDecks[adi].archetype
-    if (!archetypeCardMap[acArch]) archetypeCardMap[acArch] = {}
-    archetypeCardMap[acArch][acSlug] = true
+if (anyDeckChanged) {
+  var cardDeckWritten = 0, cardDeckSkipped = 0
+  var cardNames = Object.keys(cardDecksMap)
+  for (var ci3 = 0; ci3 < cardNames.length; ci3++) {
+    var cname = cardNames[ci3]
+    var cslug = cardNameToSlug[cname]
+    if (!cslug) continue
+    var cardDeckOutputPath = join(cardDecksDir, cslug + '.json')
+    // Skip if card is clean (not in any changed deck) and file already exists
+    if (!dirtyCardNames[cname] && existsSync(cardDeckOutputPath)) {
+      cardDeckSkipped++
+      continue
+    }
+    var sortedDecks = cardDecksMap[cname].slice().sort(function(a, b) {
+      return (b.tournament_date || '').localeCompare(a.tournament_date || '')
+    })
+    writeFileSync(cardDeckOutputPath, JSON.stringify(sortedDecks))
+    cardDeckWritten++
   }
+  console.log('Built card-decks: ' + cardDeckWritten + ' updated, ' + cardDeckSkipped + ' unchanged.')
+
+  var archetypeCardMap = {}
+  var cardNamesAll = Object.keys(cardDecksMap)
+  for (var aci = 0; aci < cardNamesAll.length; aci++) {
+    var acName = cardNamesAll[aci]
+    var acSlug = cardNameToSlug[acName]
+    if (!acSlug) continue
+    var acDecks = cardDecksMap[acName]
+    for (var adi = 0; adi < acDecks.length; adi++) {
+      var acArch = acDecks[adi].archetype
+      if (!archetypeCardMap[acArch]) archetypeCardMap[acArch] = {}
+      archetypeCardMap[acArch][acSlug] = true
+    }
+  }
+  var archetypeCardSlugs = {}
+  var acArchNames = Object.keys(archetypeCardMap).sort()
+  for (var acai = 0; acai < acArchNames.length; acai++) {
+    archetypeCardSlugs[acArchNames[acai]] = Object.keys(archetypeCardMap[acArchNames[acai]]).sort()
+  }
+  writeFileSync(join(outDir, 'archetype-card-slugs.json'), JSON.stringify(archetypeCardSlugs))
+  console.log('Built archetype-card-slugs.json for ' + acArchNames.length + ' archetypes.')
+} else {
+  console.log('card-decks: all unchanged.')
+  console.log('archetype-card-slugs: unchanged.')
 }
-var archetypeCardSlugs = {}
-var acArchNames = Object.keys(archetypeCardMap).sort()
-for (var acai = 0; acai < acArchNames.length; acai++) {
-  archetypeCardSlugs[acArchNames[acai]] = Object.keys(archetypeCardMap[acArchNames[acai]]).sort()
-}
-writeFileSync(join(outDir, 'archetype-card-slugs.json'), JSON.stringify(archetypeCardSlugs))
-console.log('Built archetype-card-slugs.json for ' + acArchNames.length + ' archetypes.')
 
 // Build creators index
 const creatorDir = 'assets/data/creator'
@@ -423,8 +538,8 @@ writeFileSync(join(outDir, 'videos.json'), JSON.stringify(allVideos))
 console.log('Built videos.json with ' + allVideos.length + ' entries.')
 
 // Write aggregate stats used by the home page counters
-writeFileSync(join(outDir, 'stats.json'), JSON.stringify({ classifiedDecks: deckDetailCount }))
-console.log('Built stats.json (classifiedDecks: ' + deckDetailCount + ').')
+writeFileSync(join(outDir, 'stats.json'), JSON.stringify({ classifiedDecks: deckDetailWritten + deckDetailSkipped }))
+console.log('Built stats.json (classifiedDecks: ' + (deckDetailWritten + deckDetailSkipped) + ').')
 
 // Build alias → canonical slug redirect map
 const aliasMap = {}
@@ -439,3 +554,5 @@ for (const archetype of archetypes) {
 }
 writeFileSync(join(outDir, 'archetype-alias-map.json'), JSON.stringify(aliasMap))
 console.log(`Built archetype-alias-map.json with ${Object.keys(aliasMap).length} alias redirects.`)
+
+console.log(`Build completed in ${((Date.now() - buildStart) / 1000).toFixed(1)}s`)
