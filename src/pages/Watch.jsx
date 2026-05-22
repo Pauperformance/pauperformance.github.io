@@ -4,16 +4,34 @@ import Layout from '../components/Layout'
 import { nameToSlug } from '../utils/slugs'
 
 const LANG_FLAG = {
-  en: '🇬🇧', eng: '🇬🇧', 'en-US': '🇬🇧',
+  en: '🇬🇧', eng: '🇬🇧', 'en-US': '🇬🇧', 'en-GB': '🇬🇧',
   it: '🇮🇹', ita: '🇮🇹', IT: '🇮🇹',
+  pt: '🇵🇹', 'pt-BR': '🇵🇹', 'pt-PT': '🇵🇹',
+  de: '🇩🇪',
+  es: '🇪🇸', 'es-419': '🇪🇸',
+  fr: '🇫🇷',
+  hi: '🇮🇳',
+  pl: '🇵🇱',
 }
 const LANG_CANONICAL = {
-  en: 'en', eng: 'en', 'en-US': 'en',
+  en: 'en', eng: 'en', 'en-US': 'en', 'en-GB': 'en',
   it: 'it', ita: 'it', IT: 'it',
+  pt: 'pt', 'pt-BR': 'pt', 'pt-PT': 'pt',
+  de: 'de',
+  es: 'es', 'es-419': 'es',
+  fr: 'fr',
+  hi: 'hi',
+  pl: 'pl',
 }
 const LANG_DISPLAY = {
   en: '🇬🇧 English',
   it: '🇮🇹 Italian',
+  pt: '🇵🇹 Portuguese',
+  de: '🇩🇪 German',
+  es: '🇪🇸 Spanish',
+  fr: '🇫🇷 French',
+  hi: '🇮🇳 Hindi',
+  pl: '🇵🇱 Polish',
 }
 
 const MONTHS = ['Jan','Feb','Mar','Apr','May','Jun','Jul','Aug','Sep','Oct','Nov','Dec']
