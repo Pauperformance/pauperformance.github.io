@@ -26,12 +26,6 @@
             "name": "Troll of Khazad-dum",
             "preview": "https://cards.scryfall.io/normal/front/a/6/a6539e26-b63b-4725-9407-caaf451de084.jpg",
             "py/object": "pauperformance_bot.entity.api.archetype.ArchetypeCard"
-        },
-        {
-            "link": "https://scryfall.com/card/ncc/319/wall-of-roots",
-            "name": "Wall of Roots",
-            "preview": "https://cards.scryfall.io/normal/front/d/8/d80940ad-8e36-4226-ad5f-b54487c75c76.jpg",
-            "py/object": "pauperformance_bot.entity.api.archetype.ArchetypeCard"
         }
     ],
     "game_type": [
@@ -46,7 +40,15 @@
     "name": "Spy Walls",
     "py/object": "pauperformance_bot.entity.api.archetype.Archetype",
     "reference_decks": [],
-    "resource_sideboard": null,
+    "resource_sideboards": [
+        {
+            "author": "Sodek",
+            "link": "https://mystical-teachings.com/spy-walls-primer/",
+            "notes": "Primer Only",
+            "price": "Free",
+            "py/object": "pauperformance_bot.entity.config.archetype.SideboardResource"
+        }
+    ],
     "resources": [],
     "resources_discord": [],
     "staples": [
@@ -138,6 +140,12 @@
             "link": "https://scryfall.com/card/otj/281/swamp",
             "name": "Swamp",
             "preview": "https://cards.scryfall.io/normal/front/e/b/eb7dc259-9949-4673-a8f1-874396948392.jpg",
+            "py/object": "pauperformance_bot.entity.api.archetype.ArchetypeCard"
+        },
+        {
+            "link": "https://scryfall.com/card/ncc/319/wall-of-roots",
+            "name": "Wall of Roots",
+            "preview": "https://cards.scryfall.io/normal/front/d/8/d80940ad-8e36-4226-ad5f-b54487c75c76.jpg",
             "py/object": "pauperformance_bot.entity.api.archetype.ArchetypeCard"
         },
         {

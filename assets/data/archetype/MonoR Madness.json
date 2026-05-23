@@ -32,7 +32,22 @@
     "name": "MonoR Madness",
     "py/object": "pauperformance_bot.entity.api.archetype.Archetype",
     "reference_decks": [],
-    "resource_sideboard": null,
+    "resource_sideboards": [
+        {
+            "author": "MisterTwin",
+            "link": "https://x.com/TwinMister89",
+            "notes": "DM for guide",
+            "price": "$12/15 Tix",
+            "py/object": "pauperformance_bot.entity.config.archetype.SideboardResource"
+        },
+        {
+            "author": "Kalikaiz",
+            "link": "https://www.patreon.com/posts/mono-red-madness-137649921?source=storefront",
+            "notes": null,
+            "price": "$5",
+            "py/object": "pauperformance_bot.entity.config.archetype.SideboardResource"
+        }
+    ],
     "resources": [],
     "resources_discord": [],
     "staples": [

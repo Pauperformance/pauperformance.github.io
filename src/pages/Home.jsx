@@ -85,6 +85,7 @@ function StatsSection() {
         sets: sets.length,
         creators: creators.length,
         decks: statsData.classifiedDecks,
+        videos: statsData.videos,
       })
     })
   }, [])
@@ -93,12 +94,13 @@ function StatsSection() {
 
   return (
     <section className="bg-gray-800 border border-gray-700 rounded-xl px-6 py-8">
-      <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-5 gap-6 divide-y-0 sm:divide-x sm:divide-gray-700">
+      <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-6 gap-6 divide-y-0 sm:divide-x sm:divide-gray-700">
         <StatCounter value={stats.archetypes} label="Archetypes" />
         <StatCounter value={stats.cards} label="Common Cards" />
         <StatCounter value={stats.sets} label="Pauper Sets" />
         <StatCounter value={stats.decks} label="Classified Decks" />
         <StatCounter value={stats.creators} label="Content Creators" />
+        <StatCounter value={stats.videos} label="Videos" />
       </div>
     </section>
   )
