@@ -43,7 +43,22 @@
     "name": "Poison Storm",
     "py/object": "pauperformance_bot.entity.api.archetype.Archetype",
     "reference_decks": [],
-    "resource_sideboard": null,
+    "resource_sideboards": [
+        {
+            "author": "Kalikaiz",
+            "link": "https://www.patreon.com/posts/poison-storm-29-137653580?source=storefront",
+            "notes": null,
+            "price": "$5",
+            "py/object": "pauperformance_bot.entity.config.archetype.SideboardResource"
+        },
+        {
+            "author": "Bryant Cook",
+            "link": "https://www.theepicstorm.com/product/poison-storm-sideboard-guide/",
+            "notes": null,
+            "price": "$5",
+            "py/object": "pauperformance_bot.entity.config.archetype.SideboardResource"
+        }
+    ],
     "resources": [],
     "resources_discord": [],
     "staples": [

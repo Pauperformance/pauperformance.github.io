@@ -103,9 +103,9 @@ for (const archetype of archetypes) {
     frequent: (archetype.frequent || []).map(({ name, link, preview }) => ({ name, link, preview })),
     must_have_cards: archetype.must_have_cards || [],
     must_not_have_cards: archetype.must_not_have_cards || [],
-    resource_sideboard: archetype.resource_sideboard
-      ? { link: archetype.resource_sideboard.link }
-      : null,
+    resource_sideboards: (archetype.resource_sideboards || []).map(function(s) {
+      return { author: s.author || null, link: s.link, notes: s.notes || null, price: s.price || null }
+    }),
     resources: (archetype.resources || []).map(({ name, link, language, author, date }) => ({
       name, link, language, author, date,
     })),
@@ -538,8 +538,8 @@ writeFileSync(join(outDir, 'videos.json'), JSON.stringify(allVideos))
 console.log('Built videos.json with ' + allVideos.length + ' entries.')
 
 // Write aggregate stats used by the home page counters
-writeFileSync(join(outDir, 'stats.json'), JSON.stringify({ classifiedDecks: deckDetailWritten + deckDetailSkipped }))
-console.log('Built stats.json (classifiedDecks: ' + (deckDetailWritten + deckDetailSkipped) + ').')
+writeFileSync(join(outDir, 'stats.json'), JSON.stringify({ classifiedDecks: deckDetailWritten + deckDetailSkipped, videos: allVideos.length }))
+console.log('Built stats.json (classifiedDecks: ' + (deckDetailWritten + deckDetailSkipped) + ', videos: ' + allVideos.length + ').')
 
 // Build alias → canonical slug redirect map
 const aliasMap = {}

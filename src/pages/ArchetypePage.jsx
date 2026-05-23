@@ -539,18 +539,39 @@ function IntelDecksSection({ name }) {
   )
 }
 
-function ResourcesSection({ resources, discord, sideboard }) {
-  const hasAny = resources?.length || discord?.length || sideboard
+function ResourcesSection({ resources, discord, sideboards }) {
+  const hasAny = resources?.length || discord?.length || sideboards?.length
 
   if (!hasAny) return <p className="text-gray-500 text-sm">No resources listed.</p>
 
   return (
-    <div className="space-y-3">
-      {sideboard && (
-        <a href={sideboard.link} target="_blank" rel="noreferrer"
-          className="flex items-center gap-2 text-sm text-amber-400 hover:underline">
-          📋 Sideboard guide
-        </a>
+    <div className="space-y-4">
+      {sideboards?.length > 0 && (
+        <div className="border border-gray-700 rounded-xl overflow-hidden">
+          <table className="w-full text-base bg-gray-900">
+            <thead>
+              <tr className="bg-gray-800 border-b border-gray-700">
+                <th className="text-left px-4 py-2 text-xs font-semibold text-gray-400 uppercase tracking-wider">📋 Sideboard Guide</th>
+                <th className="text-left px-4 py-2 text-xs font-semibold text-gray-400 uppercase tracking-wider hidden sm:table-cell">Author</th>
+                <th className="text-left px-4 py-2 text-xs font-semibold text-gray-400 uppercase tracking-wider hidden sm:table-cell">Price</th>
+                <th className="text-left px-4 py-2 text-xs font-semibold text-gray-400 uppercase tracking-wider hidden md:table-cell">Notes</th>
+              </tr>
+            </thead>
+            <tbody className="divide-y divide-gray-700/50 bg-gray-900">
+              {sideboards.map(s => (
+                <tr key={s.link} className="bg-gray-900 hover:bg-gray-800 transition-colors">
+                  <td className="px-4 py-2.5">
+                    <a href={s.link} target="_blank" rel="noreferrer"
+                      className="text-amber-400 hover:underline font-medium">{s.author || 'Guide'}</a>
+                  </td>
+                  <td className="px-4 py-2.5 text-gray-400 hidden sm:table-cell">{s.author}</td>
+                  <td className="px-4 py-2.5 text-gray-400 hidden sm:table-cell">{s.price || '—'}</td>
+                  <td className="px-4 py-2.5 text-gray-500 hidden md:table-cell">{s.notes || '—'}</td>
+                </tr>
+              ))}
+            </tbody>
+          </table>
+        </div>
       )}
       {discord?.length > 0 && discord.map(d => (
         <a key={d.link} href={d.link} target="_blank" rel="noreferrer"
@@ -694,6 +715,16 @@ export default function ArchetypePage() {
           </section>
         )}
 
+        {/* Resources */}
+        <section>
+          <SectionHeader>Resources</SectionHeader>
+          <ResourcesSection
+            resources={data.resources}
+            discord={data.resources_discord}
+            sideboards={data.resource_sideboards}
+          />
+        </section>
+
         {/* Reference decks */}
         {data.decks?.length > 0 && (
           <section>
@@ -706,16 +737,6 @@ export default function ArchetypePage() {
         <section>
           <SectionHeader>Decklists</SectionHeader>
           <IntelDecksSection name={name} />
-        </section>
-
-        {/* Resources */}
-        <section>
-          <SectionHeader>Resources</SectionHeader>
-          <ResourcesSection
-            resources={data.resources}
-            discord={data.resources_discord}
-            sideboard={data.resource_sideboard}
-          />
         </section>
 
         {/* Videos */}

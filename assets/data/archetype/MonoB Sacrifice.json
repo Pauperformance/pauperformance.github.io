@@ -23,12 +23,6 @@
             "py/object": "pauperformance_bot.entity.api.archetype.ArchetypeCard"
         },
         {
-            "link": "https://scryfall.com/card/cmm/154/drown-in-sorrow",
-            "name": "Drown in Sorrow",
-            "preview": "https://cards.scryfall.io/normal/front/4/5/4512357b-0d08-4996-9301-5853eae1ea64.jpg",
-            "py/object": "pauperformance_bot.entity.api.archetype.ArchetypeCard"
-        },
-        {
             "link": "https://scryfall.com/card/shm/76/rite-of-consumption",
             "name": "Rite of Consumption",
             "preview": "https://cards.scryfall.io/normal/front/f/6/f62d999c-c81e-4bea-aefd-0d12251dcdd1.jpg",
@@ -69,7 +63,15 @@
     "reference_decks": [
         "MonoB Sacrifice 669.001.albana"
     ],
-    "resource_sideboard": null,
+    "resource_sideboards": [
+        {
+            "author": "MarshFlats",
+            "link": "https://metafy.gg/guides/view/black-sac-pauper-guide-GBuuIoJNm3q",
+            "notes": null,
+            "price": "$15",
+            "py/object": "pauperformance_bot.entity.config.archetype.SideboardResource"
+        }
+    ],
     "resources": [
         {
             "author": "Muhammad \"Hamuda\"",
