@@ -10,6 +10,13 @@ function nameToSlug(name) {
     .replace(/[^a-z0-9_-]/g, '')
 }
 
+function pilotToSlug(name) {
+  return name
+    .replace(/ \/\/ /g, '_')
+    .replace(/ /g, '_')
+    .replace(/[^a-zA-Z0-9._~-]/g, '')
+}
+
 // Returns true if outputPath does not exist or any existing inputPath is newer than it
 function needsRebuild(outputPath, inputPaths) {
   if (!existsSync(outputPath)) return true
@@ -31,12 +38,14 @@ const detailsDir = join(outDir, 'archetype-details')
 const intelDecksDir = join(outDir, 'intel-decks')
 const deckDetailsDir = join(outDir, 'deck-details')
 const cardDecksDir = join(outDir, 'card-decks')
+const playerDecksDir = join(outDir, 'player-decks')
 
 mkdirSync(outDir, { recursive: true })
 mkdirSync(detailsDir, { recursive: true })
 mkdirSync(intelDecksDir, { recursive: true })
 mkdirSync(deckDetailsDir, { recursive: true })
 mkdirSync(cardDecksDir, { recursive: true })
+mkdirSync(playerDecksDir, { recursive: true })
 
 function readJsonDir(dir) {
   if (!existsSync(dir)) return []
@@ -122,6 +131,40 @@ for (const archetype of archetypes) {
 
 console.log(`Built archetype details: ${detailWritten} written, ${detailSkipped} unchanged.`)
 
+// Build resources-by-author map (used later to enrich creators.json)
+var resourcesByAuthor = {}
+for (var ai = 0; ai < archetypes.length; ai++) {
+  var at = archetypes[ai]
+  var atResources = at.resources || []
+  for (var ri = 0; ri < atResources.length; ri++) {
+    var res = atResources[ri]
+    if (!res.author) continue
+    if (!resourcesByAuthor[res.author]) resourcesByAuthor[res.author] = []
+    resourcesByAuthor[res.author].push({
+      name: res.name,
+      link: res.link,
+      language: res.language || null,
+      date: res.date || null,
+      archetype: at.name,
+      archetype_slug: nameToSlug(at.name),
+    })
+  }
+  var atSideboards = at.resource_sideboards || []
+  for (var si = 0; si < atSideboards.length; si++) {
+    var sb = atSideboards[si]
+    if (!sb.author) continue
+    if (!resourcesByAuthor[sb.author]) resourcesByAuthor[sb.author] = []
+    resourcesByAuthor[sb.author].push({
+      name: 'Sideboard Guide',
+      link: sb.link,
+      language: null,
+      date: null,
+      archetype: at.name,
+      archetype_slug: nameToSlug(at.name),
+    })
+  }
+}
+
 // Build intel decks per archetype + individual deck detail files
 function parseDecklist(txt) {
   var lines = txt.trim().split('\n')
@@ -153,6 +196,7 @@ const dirtyCardNames = {}
 
 let intelDeckCount = 0
 let deckDetailWritten = 0, deckDetailSkipped = 0
+var playersMap = {}
 
 // Cached decks whose deck-detail reads are deferred until we know if any deck changed
 var cachedDecks = []
@@ -237,6 +281,21 @@ for (const archetype of archetypes) {
     })
   writeFileSync(join(intelDecksDir, `${nameToSlug(name)}.json`), JSON.stringify(decks))
   intelDeckCount++
+
+  for (var pi = 0; pi < decks.length; pi++) {
+    var pilot = decks[pi].pilot
+    if (!pilot) continue
+    var slug = pilotToSlug(pilot)
+    if (!playersMap[slug]) {
+      playersMap[slug] = { name: pilot, slug: slug, deckCount: 0, archetypeSet: {}, firstSeen: '', lastSeen: '', decks: [] }
+    }
+    playersMap[slug].deckCount++
+    playersMap[slug].archetypeSet[name] = true
+    var pdate = decks[pi].tournament_date || ''
+    if (pdate > playersMap[slug].lastSeen) playersMap[slug].lastSeen = pdate
+    if (!playersMap[slug].firstSeen || (pdate && pdate < playersMap[slug].firstSeen)) playersMap[slug].firstSeen = pdate
+    playersMap[slug].decks.push({ id: decks[pi].id, url: decks[pi].url, archetype: name, place: decks[pi].place, tournament_name: decks[pi].tournament_name, tournament_date: decks[pi].tournament_date })
+  }
 }
 
 // Handle deleted decks: remove stale deck-detail files, mark their cards dirty
@@ -280,6 +339,44 @@ if (anyDeckChanged) {
 
 var deletedMsg = deletedCount ? ', removed ' + deletedCount + ' deleted' : ''
 console.log('Built intel-decks for ' + intelDeckCount + ' archetypes. Deck-details: ' + deckDetailWritten + ' written, ' + deckDetailSkipped + ' cached' + deletedMsg + '.')
+
+// Build players index + per-player deck files
+var players = Object.values(playersMap).map(function(p) {
+  return { name: p.name, slug: p.slug, deckCount: p.deckCount, archetypeCount: Object.keys(p.archetypeSet).length, firstSeen: p.firstSeen, lastSeen: p.lastSeen }
+}).sort(function(a, b) { return b.deckCount - a.deckCount })
+writeFileSync(join(outDir, 'players.json'), JSON.stringify(players))
+console.log('Built players.json with ' + players.length + ' players.')
+
+// Remove stale player-decks files (covers slug format changes as well as deleted players)
+var existingPlayerDecks = readdirSync(playerDecksDir).filter(function(f) { return f.endsWith('.json') })
+var activePlayerSlugsSet = new Set(Object.keys(playersMap))
+var stalePlayerDecksRemoved = 0
+existingPlayerDecks.forEach(function(f) {
+  if (!activePlayerSlugsSet.has(f.slice(0, -5))) {
+    unlinkSync(join(playerDecksDir, f))
+    stalePlayerDecksRemoved++
+  }
+})
+
+var playerDecksEmpty = readdirSync(playerDecksDir).length === 0
+if (anyDeckChanged || playerDecksEmpty || stalePlayerDecksRemoved > 0) {
+  var playerSlugs = Object.keys(playersMap)
+  for (var pdi = 0; pdi < playerSlugs.length; pdi++) {
+    var pd = playersMap[playerSlugs[pdi]]
+    var pdArchetypes = Object.keys(pd.archetypeSet).sort()
+    var pdDecks = pd.decks.slice().sort(function(a, b) {
+      return (b.tournament_date || '').localeCompare(a.tournament_date || '')
+    })
+    writeFileSync(join(playerDecksDir, pd.slug + '.json'), JSON.stringify({
+      name: pd.name, slug: pd.slug, deckCount: pd.deckCount,
+      archetypeCount: pdArchetypes.length, firstSeen: pd.firstSeen, lastSeen: pd.lastSeen,
+      archetypes: pdArchetypes, decks: pdDecks,
+    }))
+  }
+  console.log('Built player-decks for ' + playerSlugs.length + ' players.')
+} else {
+  console.log('player-decks: all unchanged.')
+}
 
 // Build families index from archetype family fields
 const familyMap = {}
@@ -473,12 +570,17 @@ const creators = readdirSync(creatorDir)
   .filter(function(f) { return f.endsWith('.json') })
   .map(function(f) {
     var c = JSON.parse(readFileSync(join(creatorDir, f), 'utf8'))
+    var slug1 = c.mtgo_name ? pilotToSlug(c.mtgo_name) : null
+    var slug2 = c.mtgo_name2 ? pilotToSlug(c.mtgo_name2) : null
     return {
       name: c.name,
       mtgo_name: c.mtgo_name || null,
       mtgo_name2: c.mtgo_name2 || null,
+      player_slug: (slug1 && playersMap[slug1]) ? slug1 : null,
+      player_slug2: (slug2 && playersMap[slug2]) ? slug2 : null,
       twitch_channel_url: c.twitch_channel_url || null,
       youtube_channel_url: c.youtube_channel_url || null,
+      resources: (resourcesByAuthor[c.name] || []).sort(function(a, b) { return (b.date || '').localeCompare(a.date || '') }),
     }
   })
   .sort(function(a, b) { return a.name.toLowerCase().localeCompare(b.name.toLowerCase()) })
