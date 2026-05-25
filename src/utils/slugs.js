@@ -13,5 +13,5 @@ export function pilotToSlug(name) {
   return name
     .replace(/ \/\/ /g, '_')
     .replace(/ /g, '_')
-    .replace(/[^a-zA-Z0-9_-]/g, '')
+    .replace(/[^a-zA-Z0-9._~-]/g, '')
 }
