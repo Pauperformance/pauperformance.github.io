@@ -24,7 +24,7 @@ function ManaIcon({ color }) {
 }
 
 function SectionHeader({ children }) {
-  return <h2 className="text-lg font-semibold text-white mb-3 pb-2 border-b border-gray-700">{children}</h2>
+  return <h2 className="text-lg font-semibold text-white mb-3 pt-4 border-t border-gray-700">{children}</h2>
 }
 
 function cardNameToSlug(name) {
@@ -778,7 +778,7 @@ export default function ArchetypePage() {
 
         {/* Decklists */}
         <section>
-          <SectionHeader>Decklists</SectionHeader>
+          <SectionHeader>Decks</SectionHeader>
           <IntelDecksSection name={name} />
         </section>
 

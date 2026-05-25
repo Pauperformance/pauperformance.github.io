@@ -131,8 +131,9 @@ for (const archetype of archetypes) {
 
 console.log(`Built archetype details: ${detailWritten} written, ${detailSkipped} unchanged.`)
 
-// Build resources-by-author map (used later to enrich creators.json)
+// Build resources-by-author and sideboards-by-author maps (used later to enrich creators.json)
 var resourcesByAuthor = {}
+var sideboardsByAuthor = {}
 for (var ai = 0; ai < archetypes.length; ai++) {
   var at = archetypes[ai]
   var atResources = at.resources || []
@@ -153,12 +154,11 @@ for (var ai = 0; ai < archetypes.length; ai++) {
   for (var si = 0; si < atSideboards.length; si++) {
     var sb = atSideboards[si]
     if (!sb.author) continue
-    if (!resourcesByAuthor[sb.author]) resourcesByAuthor[sb.author] = []
-    resourcesByAuthor[sb.author].push({
-      name: 'Sideboard Guide',
+    if (!sideboardsByAuthor[sb.author]) sideboardsByAuthor[sb.author] = []
+    sideboardsByAuthor[sb.author].push({
       link: sb.link,
-      language: null,
-      date: null,
+      price: sb.price || null,
+      notes: sb.notes || null,
       archetype: at.name,
       archetype_slug: nameToSlug(at.name),
     })
@@ -581,6 +581,7 @@ const creators = readdirSync(creatorDir)
       twitch_channel_url: c.twitch_channel_url || null,
       youtube_channel_url: c.youtube_channel_url || null,
       resources: (resourcesByAuthor[c.name] || []).sort(function(a, b) { return (b.date || '').localeCompare(a.date || '') }),
+      sideboards: (sideboardsByAuthor[c.name] || []),
     }
   })
   .sort(function(a, b) { return a.name.toLowerCase().localeCompare(b.name.toLowerCase()) })
