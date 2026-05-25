@@ -553,7 +553,7 @@ function IntelDecksSection({ name }) {
             )}
             {page_decks.map((deck) => (
               <tr key={deck.id} className="bg-gray-900 hover:bg-gray-800 transition-colors cursor-pointer"
-                onAuxClick={(e) => { if (e.button === 1) window.open(`/#/decks/${deck.id}`, '_blank') }}>
+                onAuxClick={(e) => { if (e.button === 1) window.open(`/decks/${deck.id}`, '_blank') }}>
                 <td className="px-4 py-2.5 text-gray-300">{deck.tournament_name}</td>
                 <td className="px-4 py-2.5 text-gray-400 hidden md:table-cell">{deck.pilot || 'Anonymous'}</td>
                 <td className="px-4 py-2.5 text-gray-500 hidden sm:table-cell">{deck.tournament_date}</td>

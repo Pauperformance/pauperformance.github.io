@@ -252,7 +252,7 @@ export default function ArchetypesIndex() {
                   {sorted.map(a => (
                     <tr key={a.name}
                       onClick={() => navigate(`/archetypes/${nameToSlug(a.name)}`)}
-                      onAuxClick={e => { if (e.button === 1) window.open(`/#/archetypes/${nameToSlug(a.name)}`, '_blank') }}
+                      onAuxClick={e => { if (e.button === 1) window.open(`/archetypes/${nameToSlug(a.name)}`, '_blank') }}
                       className="bg-gray-900 hover:bg-gray-800 cursor-pointer group">
                       <td className="px-4 py-3">
                         <span className="font-medium text-gray-200 group-hover:text-amber-400 transition-colors">

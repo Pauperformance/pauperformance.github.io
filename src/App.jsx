@@ -1,4 +1,4 @@
-import { Routes, Route } from 'react-router-dom'
+import { Routes, Route, Link } from 'react-router-dom'
 import Home from './pages/Home'
 import ArchetypesIndex from './pages/ArchetypesIndex'
 import ArchetypePage from './pages/ArchetypePage'
@@ -13,6 +13,19 @@ import FAQ from './pages/FAQ'
 import Contact from './pages/Contact'
 import BlindSpy from './pages/BlindSpy'
 import Watch from './pages/Watch'
+import Layout from './components/Layout'
+
+function NotFound() {
+  return (
+    <Layout>
+      <div className="text-center py-20">
+        <p className="text-4xl font-bold text-gray-600 mb-4">404</p>
+        <p className="text-gray-400 mb-6">Page not found.</p>
+        <Link to="/" className="text-amber-400 hover:underline text-sm">← Back to home</Link>
+      </div>
+    </Layout>
+  )
+}
 
 function App() {
   return (
@@ -31,6 +44,7 @@ function App() {
       <Route path="/blind-spy" element={<BlindSpy />} />
       <Route path="/faq" element={<FAQ />} />
       <Route path="/contact" element={<Contact />} />
+      <Route path="*" element={<NotFound />} />
     </Routes>
   )
 }
