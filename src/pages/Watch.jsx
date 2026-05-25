@@ -408,7 +408,7 @@ export default function Watch() {
               </div>
             </div>
             {activeCreators.size > 0 && (
-              <div className="flex flex-wrap gap-1.5 pl-[calc(theme(spacing.2)+5rem)]">
+              <div className="flex flex-wrap gap-1.5 pl-[calc(theme(spacing.2)+4rem)]">
                 {[...activeCreators].map(c => (
                   <span key={c} className="inline-flex items-center gap-1 px-3 py-1 rounded-full text-xs font-semibold bg-amber-400 text-gray-900">
                     {c}
@@ -458,7 +458,7 @@ export default function Watch() {
               </div>
             </div>
             {activeArchetypes.size > 0 && (
-              <div className="flex flex-wrap gap-1.5 pl-[calc(theme(spacing.2)+5rem)]">
+              <div className="flex flex-wrap gap-1.5 pl-[calc(theme(spacing.2)+4rem)]">
                 {[...activeArchetypes].map(a => (
                   <span key={a} className="inline-flex items-center gap-1 px-3 py-1 rounded-full text-xs font-semibold bg-amber-400 text-gray-900">
                     {a}

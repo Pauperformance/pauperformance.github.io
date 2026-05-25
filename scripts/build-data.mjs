@@ -342,7 +342,7 @@ console.log('Built intel-decks for ' + intelDeckCount + ' archetypes. Deck-detai
 
 // Build players index + per-player deck files
 var players = Object.values(playersMap).map(function(p) {
-  return { name: p.name, slug: p.slug, deckCount: p.deckCount, archetypeCount: Object.keys(p.archetypeSet).length, firstSeen: p.firstSeen, lastSeen: p.lastSeen }
+  return { name: p.name, slug: p.slug, deckCount: p.deckCount, archetypeCount: Object.keys(p.archetypeSet).length, archetypes: Object.keys(p.archetypeSet).sort(), firstSeen: p.firstSeen, lastSeen: p.lastSeen }
 }).sort(function(a, b) { return b.deckCount - a.deckCount })
 writeFileSync(join(outDir, 'players.json'), JSON.stringify(players))
 console.log('Built players.json with ' + players.length + ' players.')
@@ -580,15 +580,11 @@ const creators = readdirSync(creatorDir)
       player_slug2: (slug2 && playersMap[slug2]) ? slug2 : null,
       twitch_channel_url: c.twitch_channel_url || null,
       youtube_channel_url: c.youtube_channel_url || null,
-      resources: ([]
-        .concat(resourcesByAuthor[c.name] || [])
-        .concat(c.mtgo_name ? (resourcesByAuthor[c.mtgo_name] || []) : [])
-        .concat(c.mtgo_name2 ? (resourcesByAuthor[c.mtgo_name2] || []) : [])
-      ).sort(function(a, b) { return (b.date || '').localeCompare(a.date || '') }),
-      sideboards: []
-        .concat(sideboardsByAuthor[c.name] || [])
-        .concat(c.mtgo_name ? (sideboardsByAuthor[c.mtgo_name] || []) : [])
-        .concat(c.mtgo_name2 ? (sideboardsByAuthor[c.mtgo_name2] || []) : []),
+      resources: Array.from(new Set([c.name, c.mtgo_name, c.mtgo_name2].filter(Boolean)))
+        .flatMap(function(n) { return resourcesByAuthor[n] || [] })
+        .sort(function(a, b) { return (b.date || '').localeCompare(a.date || '') }),
+      sideboards: Array.from(new Set([c.name, c.mtgo_name, c.mtgo_name2].filter(Boolean)))
+        .flatMap(function(n) { return sideboardsByAuthor[n] || [] }),
     }
   })
   .sort(function(a, b) { return a.name.toLowerCase().localeCompare(b.name.toLowerCase()) })
