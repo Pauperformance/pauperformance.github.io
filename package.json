@@ -6,7 +6,7 @@
     "prebuild": "node scripts/build-data.mjs",
     "predev": "node scripts/build-data.mjs",
     "dev": "vite",
-    "build": "vite build",
+    "build": "vite build && node scripts/prerender.mjs",
     "preview": "vite preview"
   },
   "dependencies": {
