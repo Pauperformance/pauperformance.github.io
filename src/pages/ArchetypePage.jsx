@@ -6,8 +6,14 @@ import { nameToSlug } from '../utils/slugs'
 
 const MANA_ORDER = ['W', 'U', 'B', 'R', 'G', 'C']
 const LANG_FLAG = {
-  en: '🇬🇧', eng: '🇬🇧', 'en-US': '🇬🇧',
+  en: '🇬🇧', eng: '🇬🇧', 'en-US': '🇬🇧', 'en-GB': '🇬🇧',
   it: '🇮🇹', ita: '🇮🇹', IT: '🇮🇹',
+  pt: '🇵🇹', 'pt-BR': '🇵🇹', 'pt-PT': '🇵🇹',
+  de: '🇩🇪',
+  es: '🇪🇸', 'es-419': '🇪🇸',
+  fr: '🇫🇷',
+  hi: '🇮🇳',
+  pl: '🇵🇱',
 }
 
 function ManaIcon({ color }) {
@@ -259,8 +265,16 @@ function VideosSection({ videos: allVideos }) {
   return (
     <div className="space-y-3">
       <div className="bg-gray-800 border border-gray-700 rounded-xl p-4 space-y-3">
-        <input type="search" placeholder="Search videos…" value={search} onChange={e => setSearch(e.target.value)}
-          className="w-full bg-gray-900 border border-gray-600 rounded-lg px-4 py-2 text-sm text-gray-100 placeholder-gray-500 focus:outline-none focus:border-amber-400" />
+        <div className="relative">
+          <input type="search" placeholder="Search videos…" value={search} onChange={e => setSearch(e.target.value)}
+            onKeyDown={e => { if (e.key === 'Enter') e.target.blur() }}
+            className="w-full bg-gray-900 border border-gray-600 rounded-lg px-4 py-2 pr-8 text-sm text-gray-100 placeholder-gray-500 focus:outline-none focus:border-amber-400 [&::-webkit-search-cancel-button]:hidden" />
+          {search && (
+            <button onClick={() => setSearch('')} className="absolute right-2 top-1/2 -translate-y-1/2 text-gray-500 hover:text-gray-300 transition-colors" aria-label="Clear search">
+              <svg className="w-4 h-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round"><path d="M18 6 6 18M6 6l12 12"/></svg>
+            </button>
+          )}
+        </div>
         {languages.length > 1 && (
           <div className="flex flex-wrap gap-2 items-center">
             <span className="text-sm text-gray-500 w-16 shrink-0">Language:</span>
@@ -340,10 +354,25 @@ function VideosSection({ videos: allVideos }) {
 }
 
 const LANG_CANONICAL = {
-  en: 'en', eng: 'en', 'en-US': 'en',
+  en: 'en', eng: 'en', 'en-US': 'en', 'en-GB': 'en',
   it: 'it', ita: 'it', IT: 'it',
+  pt: 'pt', 'pt-BR': 'pt', 'pt-PT': 'pt',
+  de: 'de',
+  es: 'es', 'es-419': 'es',
+  fr: 'fr',
+  hi: 'hi',
+  pl: 'pl',
 }
-const LANG_DISPLAY = { en: '🇬🇧 English', it: '🇮🇹 Italian' }
+const LANG_DISPLAY = {
+  en: '🇬🇧 English',
+  it: '🇮🇹 Italian',
+  pt: '🇵🇹 Portuguese',
+  de: '🇩🇪 German',
+  es: '🇪🇸 Spanish',
+  fr: '🇫🇷 French',
+  hi: '🇮🇳 Hindi',
+  pl: '🇵🇱 Polish',
+}
 
 const DECKS_PAGE_SIZE = 20
 const VIDEOS_PAGE_SIZE = 50
@@ -450,12 +479,28 @@ function IntelDecksSection({ name }) {
   return (
     <div className="space-y-3">
       <div className="bg-gray-800 border border-gray-700 rounded-xl p-4 space-y-3">
-        <input
-          type="search" placeholder="Search tournaments…" value={filterTournament} onChange={setFilter(setFilterTournament)}
-          className="w-full bg-gray-900 border border-gray-600 rounded-lg px-4 py-2 text-sm text-gray-100 placeholder-gray-500 focus:outline-none focus:border-amber-400" />
-        <input
-          type="text" placeholder="Search pilots…" value={filterPilot} onChange={setFilter(setFilterPilot)}
-          className="w-full bg-gray-900 border border-gray-600 rounded-lg px-4 py-2 text-sm text-gray-100 placeholder-gray-500 focus:outline-none focus:border-amber-400" />
+        <div className="relative">
+          <input
+            type="search" placeholder="Search tournaments…" value={filterTournament} onChange={setFilter(setFilterTournament)}
+            onKeyDown={e => { if (e.key === 'Enter') e.target.blur() }}
+            className="w-full bg-gray-900 border border-gray-600 rounded-lg px-4 py-2 pr-8 text-sm text-gray-100 placeholder-gray-500 focus:outline-none focus:border-amber-400 [&::-webkit-search-cancel-button]:hidden" />
+          {filterTournament && (
+            <button onClick={() => { setFilterTournament(''); setPage(0) }} className="absolute right-2 top-1/2 -translate-y-1/2 text-gray-500 hover:text-gray-300 transition-colors" aria-label="Clear search">
+              <svg className="w-4 h-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round"><path d="M18 6 6 18M6 6l12 12"/></svg>
+            </button>
+          )}
+        </div>
+        <div className="relative">
+          <input
+            type="search" placeholder="Search pilots…" value={filterPilot} onChange={setFilter(setFilterPilot)}
+            onKeyDown={e => { if (e.key === 'Enter') e.target.blur() }}
+            className="w-full bg-gray-900 border border-gray-600 rounded-lg px-4 py-2 pr-8 text-sm text-gray-100 placeholder-gray-500 focus:outline-none focus:border-amber-400 [&::-webkit-search-cancel-button]:hidden" />
+          {filterPilot && (
+            <button onClick={() => { setFilterPilot(''); setPage(0) }} className="absolute right-2 top-1/2 -translate-y-1/2 text-gray-500 hover:text-gray-300 transition-colors" aria-label="Clear search">
+              <svg className="w-4 h-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round"><path d="M18 6 6 18M6 6l12 12"/></svg>
+            </button>
+          )}
+        </div>
         <div className="flex flex-wrap gap-4 items-center">
           <MonthPicker label="From:" value={filterDateFrom} onChange={v => { setFilterDateFrom(v); setPage(0) }} />
           <MonthPicker label="To:" value={filterDateTo} onChange={v => { setFilterDateTo(v); setPage(0) }} />
@@ -552,7 +597,6 @@ function ResourcesSection({ resources, discord, sideboards }) {
             <thead>
               <tr className="bg-gray-800 border-b border-gray-700">
                 <th className="text-left px-4 py-2 text-xs font-semibold text-gray-400 uppercase tracking-wider">📋 Sideboard Guide</th>
-                <th className="text-left px-4 py-2 text-xs font-semibold text-gray-400 uppercase tracking-wider hidden sm:table-cell">Author</th>
                 <th className="text-left px-4 py-2 text-xs font-semibold text-gray-400 uppercase tracking-wider hidden sm:table-cell">Price</th>
                 <th className="text-left px-4 py-2 text-xs font-semibold text-gray-400 uppercase tracking-wider hidden md:table-cell">Notes</th>
               </tr>
@@ -564,7 +608,6 @@ function ResourcesSection({ resources, discord, sideboards }) {
                     <a href={s.link} target="_blank" rel="noreferrer"
                       className="text-amber-400 hover:underline font-medium">{s.author || 'Guide'}</a>
                   </td>
-                  <td className="px-4 py-2.5 text-gray-400 hidden sm:table-cell">{s.author}</td>
                   <td className="px-4 py-2.5 text-gray-400 hidden sm:table-cell">{s.price || '—'}</td>
                   <td className="px-4 py-2.5 text-gray-500 hidden md:table-cell">{s.notes || '—'}</td>
                 </tr>
@@ -593,7 +636,7 @@ function ResourcesSection({ resources, discord, sideboards }) {
             <tbody className="divide-y divide-gray-700/50 bg-gray-900">
               {resources.map(r => (
                 <tr key={r.link} className="bg-gray-900 hover:bg-gray-800 transition-colors">
-                  <td className="px-4 py-2.5 text-base">{r.language}</td>
+                  <td className="px-4 py-2.5 text-base">{LANG_FLAG[r.language] ?? r.language}</td>
                   <td className="px-4 py-2.5">
                     <a href={r.link} target="_blank" rel="noreferrer"
                       className="text-amber-400 hover:underline">{r.name}</a>
