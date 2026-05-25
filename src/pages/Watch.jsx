@@ -410,7 +410,7 @@ export default function Watch() {
             {activeCreators.size > 0 && (
               <div className="flex flex-wrap gap-1.5 pl-[calc(theme(spacing.2)+5rem)]">
                 {[...activeCreators].map(c => (
-                  <span key={c} className="inline-flex items-center gap-1 px-2 py-0.5 rounded-full text-xs font-semibold bg-amber-400 text-gray-900">
+                  <span key={c} className="inline-flex items-center gap-1 px-3 py-1 rounded-full text-xs font-semibold bg-amber-400 text-gray-900">
                     {c}
                     <button onClick={() => toggleCreator(c)} className="hover:text-gray-700 leading-none">×</button>
                   </span>
@@ -460,7 +460,7 @@ export default function Watch() {
             {activeArchetypes.size > 0 && (
               <div className="flex flex-wrap gap-1.5 pl-[calc(theme(spacing.2)+5rem)]">
                 {[...activeArchetypes].map(a => (
-                  <span key={a} className="inline-flex items-center gap-1 px-2 py-0.5 rounded-full text-xs font-semibold bg-amber-400 text-gray-900">
+                  <span key={a} className="inline-flex items-center gap-1 px-3 py-1 rounded-full text-xs font-semibold bg-amber-400 text-gray-900">
                     {a}
                     <button onClick={() => toggleArchetype(a)} className="hover:text-gray-700 leading-none">×</button>
                   </span>
