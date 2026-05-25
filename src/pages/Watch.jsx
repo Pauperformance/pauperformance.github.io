@@ -152,6 +152,8 @@ export default function Watch() {
   const [activeArchetypes, setActiveArchetypes] = useState(new Set())
   const [archetypeSearch, setArchetypeSearch] = useState('')
   const [dropdownOpen, setDropdownOpen] = useState(false)
+  const [creatorDropdownOpen, setCreatorDropdownOpen] = useState(false)
+  const [creatorSearch, setCreatorSearch] = useState('')
   const [activeType, setActiveType] = useState('')
   const [filterDateFrom, setFilterDateFrom] = useState('')
   const [filterDateTo, setFilterDateTo] = useState('')
@@ -160,6 +162,7 @@ export default function Watch() {
   const [page, setPage] = useState(0)
   const [visibleCount, setVisibleCount] = useState(PAGE_SIZE)
   const dropdownRef = useRef(null)
+  const creatorDropdownRef = useRef(null)
   const sentinelRef = useRef(null)
   const dateRowRef = useRef(null)
   const resultsRef = useRef(null)
@@ -197,6 +200,18 @@ export default function Watch() {
     document.addEventListener('mousedown', handleClick)
     return () => document.removeEventListener('mousedown', handleClick)
   }, [dropdownOpen])
+
+  useEffect(() => {
+    if (!creatorDropdownOpen) return
+    function handleClick(e) {
+      if (creatorDropdownRef.current && !creatorDropdownRef.current.contains(e.target)) {
+        setCreatorDropdownOpen(false)
+        setCreatorSearch('')
+      }
+    }
+    document.addEventListener('mousedown', handleClick)
+    return () => document.removeEventListener('mousedown', handleClick)
+  }, [creatorDropdownOpen])
 
   const creators = useMemo(() => [...new Set(videos.map(v => v.creator_name).filter(Boolean))].sort(), [videos])
   const languages = useMemo(() => [...new Set(videos.map(v => LANG_CANONICAL[v.language] ?? v.language).filter(Boolean))].sort(), [videos])
@@ -294,6 +309,25 @@ export default function Watch() {
     })
   }, [archetypes, archetypeSearch, activeArchetypes, videos, search, activeCreators, activeLanguages, activeType, filterDateFrom, filterDateTo])
 
+  const visibleCreators = useMemo(() => {
+    const q = search.trim().toLowerCase()
+    return creators.filter(c => {
+      if (activeCreators.has(c)) return false
+      if (creatorSearch && !c.toLowerCase().includes(creatorSearch.toLowerCase())) return false
+      return videos.some(v => {
+        if (v.creator_name !== c) return false
+        if (q && !v.title.toLowerCase().includes(q)) return false
+        if (activeLanguages.size > 0 && !activeLanguages.has(LANG_CANONICAL[v.language] ?? v.language)) return false
+        if (activeArchetypes.size > 0 && !activeArchetypes.has(v.archetype)) return false
+        if (activeType === 'videos' && v.is_short === true) return false
+        if (activeType === 'shorts' && v.is_short !== true) return false
+        if (filterDateFrom && v.date.slice(0, 7) < filterDateFrom) return false
+        if (filterDateTo && v.date.slice(0, 7) > filterDateTo) return false
+        return true
+      })
+    })
+  }, [creators, creatorSearch, activeCreators, videos, search, activeLanguages, activeArchetypes, activeType, filterDateFrom, filterDateTo])
+
   return (
     <Layout>
       <div className="space-y-6">
@@ -303,13 +337,24 @@ export default function Watch() {
         </div>
 
         <div className="bg-gray-800 border border-gray-700 rounded-xl p-4 space-y-3">
-          <input
-            type="search"
-            placeholder="Search videos…"
-            value={search}
-            onChange={e => setSearch(e.target.value)}
-            className="w-full bg-gray-900 border border-gray-600 rounded-lg px-4 py-2 text-sm text-gray-100 placeholder-gray-500 focus:outline-none focus:border-amber-400"
-          />
+          <div className="relative">
+            <input
+              type="search"
+              placeholder="Search videos…"
+              value={search}
+              onChange={e => setSearch(e.target.value)}
+              onKeyDown={e => { if (e.key === 'Enter') e.target.blur() }}
+              className="w-full bg-gray-900 border border-gray-600 rounded-lg px-4 py-2 pr-8 text-sm text-gray-100 placeholder-gray-500 focus:outline-none focus:border-amber-400 [&::-webkit-search-cancel-button]:hidden"
+            />
+            {search && (
+              <button
+                onClick={() => setSearch('')}
+                className="absolute right-2 top-1/2 -translate-y-1/2 text-gray-500 hover:text-gray-300 transition-colors"
+                aria-label="Clear search">
+                <svg className="w-4 h-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round"><path d="M18 6 6 18M6 6l12 12"/></svg>
+              </button>
+            )}
+          </div>
           <div className="flex flex-wrap gap-2 items-center">
             <span className="text-sm text-gray-500 w-16 shrink-0">Language:</span>
             {languages.map(l => (
@@ -323,11 +368,55 @@ export default function Watch() {
             <FilterButton active={activeType === 'videos'} onClick={() => toggleType('videos')}>Videos</FilterButton>
             <FilterButton active={activeType === 'shorts'} onClick={() => toggleType('shorts')}>Shorts</FilterButton>
           </div>
-          <div className="flex flex-wrap gap-2 items-center">
-            <span className="text-sm text-gray-500 w-16 shrink-0">Creator:</span>
-            {creators.map(c => (
-              <FilterButton key={c} active={activeCreators.has(c)} onClick={() => toggleCreator(c)}>{c}</FilterButton>
-            ))}
+          <div className="flex flex-col gap-2">
+            <div className="flex items-center gap-2">
+              <span className="text-sm text-gray-500 w-16 shrink-0">Creator:</span>
+              <div className="relative" ref={creatorDropdownRef}>
+                <button
+                  onClick={() => setCreatorDropdownOpen(o => !o)}
+                  className="bg-gray-900 border border-gray-600 rounded-lg px-3 py-1 text-sm text-gray-300 hover:border-gray-400 focus:outline-none focus:border-amber-400 cursor-pointer flex items-center gap-2">
+                  Add creator… <span className="text-gray-500 text-xs">▾</span>
+                </button>
+                {creatorDropdownOpen && (
+                  <div className="absolute z-20 mt-1 w-56 bg-gray-900 border border-gray-600 rounded-lg shadow-lg overflow-hidden">
+                    <div className="p-2">
+                      <input
+                        autoFocus
+                        type="search"
+                        placeholder="Search creators…"
+                        value={creatorSearch}
+                        onChange={e => setCreatorSearch(e.target.value)}
+                        className="w-full bg-gray-800 border border-gray-600 rounded px-2 py-1 text-sm text-gray-100 placeholder-gray-500 focus:outline-none focus:border-amber-400"
+                      />
+                    </div>
+                    <ul className="max-h-52 overflow-y-auto">
+                      {visibleCreators.length === 0
+                        ? <li className="px-3 py-2 text-sm text-gray-500">No creators found</li>
+                        : visibleCreators.map(c => (
+                            <li key={c}>
+                              <button
+                                onClick={() => { toggleCreator(c); setCreatorSearch(''); setCreatorDropdownOpen(false) }}
+                                className="w-full text-left px-3 py-1.5 text-sm text-gray-300 hover:bg-gray-800 hover:text-white transition-colors">
+                                {c}
+                              </button>
+                            </li>
+                          ))
+                      }
+                    </ul>
+                  </div>
+                )}
+              </div>
+            </div>
+            {activeCreators.size > 0 && (
+              <div className="flex flex-wrap gap-1.5 pl-[calc(theme(spacing.2)+5rem)]">
+                {[...activeCreators].map(c => (
+                  <span key={c} className="inline-flex items-center gap-1 px-2 py-0.5 rounded-full text-xs font-semibold bg-amber-400 text-gray-900">
+                    {c}
+                    <button onClick={() => toggleCreator(c)} className="hover:text-gray-700 leading-none">×</button>
+                  </span>
+                ))}
+              </div>
+            )}
           </div>
           <div className="flex flex-col gap-2">
             <div className="flex items-center gap-2">
