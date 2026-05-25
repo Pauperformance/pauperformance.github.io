@@ -291,6 +291,74 @@ export default function PlayerPage() {
               </div>
             </div>
 
+            {creator && creator.resources && creator.resources.length > 0 && (
+              <div className="space-y-2">
+                <h2 className="text-lg font-semibold text-white border-t border-gray-700 pt-4">Resources</h2>
+                <div className="border border-gray-700 rounded-xl overflow-hidden bg-gray-900">
+                  <table className="w-full text-base bg-gray-900 table-fixed">
+                    <thead>
+                      <tr className="bg-gray-800 border-b border-gray-700">
+                        <th className="text-left px-4 py-2 text-xs font-semibold text-gray-400 uppercase tracking-wider w-1/2">Title</th>
+                        <th className="text-left px-4 py-2 text-xs font-semibold text-gray-400 uppercase tracking-wider w-1/4 hidden sm:table-cell">Archetype</th>
+                        <th className="text-left px-4 py-2 text-xs font-semibold text-gray-400 uppercase tracking-wider w-1/4 hidden md:table-cell">Date</th>
+                      </tr>
+                    </thead>
+                    <tbody className="divide-y divide-gray-700/50">
+                      {creator.resources.map((r, i) => (
+                        <tr key={i} className="hover:bg-gray-800 transition-colors">
+                          <td className="px-4 py-2.5">
+                            <a href={r.link} target="_blank" rel="noreferrer"
+                              className="text-amber-400 hover:underline font-medium leading-snug">
+                              {r.language && <span className="mr-1.5 text-base leading-none">{r.language}</span>}
+                              {r.name}
+                            </a>
+                          </td>
+                          <td className="px-4 py-2.5 hidden sm:table-cell">
+                            <Link to={`/archetypes/${r.archetype_slug}`}
+                              className="text-amber-400 hover:underline font-medium">
+                              {r.archetype}
+                            </Link>
+                          </td>
+                          <td className="px-4 py-2.5 text-gray-500 hidden md:table-cell">{r.date || '—'}</td>
+                        </tr>
+                      ))}
+                    </tbody>
+                  </table>
+                </div>
+              </div>
+            )}
+
+            {creator && creator.sideboards && creator.sideboards.length > 0 && (
+              <div className="space-y-2">
+                <h2 className="text-lg font-semibold text-white border-t border-gray-700 pt-4">Sideboard Guides</h2>
+                <div className="border border-gray-700 rounded-xl overflow-hidden bg-gray-900">
+                  <table className="w-full text-base bg-gray-900">
+                    <thead>
+                      <tr className="bg-gray-800 border-b border-gray-700">
+                        <th className="text-left px-4 py-2 text-xs font-semibold text-gray-400 uppercase tracking-wider">Sideboard Guide</th>
+                        <th className="text-left px-4 py-2 text-xs font-semibold text-gray-400 uppercase tracking-wider hidden sm:table-cell">Price</th>
+                        <th className="text-left px-4 py-2 text-xs font-semibold text-gray-400 uppercase tracking-wider hidden md:table-cell">Notes</th>
+                      </tr>
+                    </thead>
+                    <tbody className="divide-y divide-gray-700/50 bg-gray-900">
+                      {creator.sideboards.map((s, i) => (
+                        <tr key={i} className="bg-gray-900 hover:bg-gray-800 transition-colors">
+                          <td className="px-4 py-2.5">
+                            <a href={s.link} target="_blank" rel="noreferrer"
+                              className="text-amber-400 hover:underline font-medium">{s.archetype}</a>
+                          </td>
+                          <td className="px-4 py-2.5 text-gray-400 hidden sm:table-cell">{s.price || '—'}</td>
+                          <td className="px-4 py-2.5 text-gray-500 hidden md:table-cell">{s.notes || '—'}</td>
+                        </tr>
+                      ))}
+                    </tbody>
+                  </table>
+                </div>
+              </div>
+            )}
+
+            <h2 className="text-lg font-semibold text-white border-t border-gray-700 pt-4">Decks</h2>
+
             <div className="bg-gray-800 border border-gray-700 rounded-xl p-4 space-y-3">
               <div className="relative">
                 <input
@@ -371,43 +439,6 @@ export default function PlayerPage() {
               </div>
             </div>
 
-            {creator && creator.resources && creator.resources.length > 0 && (
-              <div className="space-y-2">
-                <h2 className="text-base font-semibold text-white">Resources by {creator.name}</h2>
-                <div className="border border-gray-700 rounded-xl overflow-hidden bg-gray-900">
-                  <table className="w-full text-base bg-gray-900">
-                    <thead>
-                      <tr className="bg-gray-800 border-b border-gray-700">
-                        <th className="text-left px-4 py-2 text-xs font-semibold text-gray-400 uppercase tracking-wider">Title</th>
-                        <th className="text-left px-4 py-2 text-xs font-semibold text-gray-400 uppercase tracking-wider hidden sm:table-cell">Archetype</th>
-                        <th className="text-left px-4 py-2 text-xs font-semibold text-gray-400 uppercase tracking-wider w-28 hidden md:table-cell">Date</th>
-                      </tr>
-                    </thead>
-                    <tbody className="divide-y divide-gray-700/50">
-                      {creator.resources.map((r, i) => (
-                        <tr key={i} className="hover:bg-gray-800 transition-colors">
-                          <td className="px-4 py-2.5">
-                            <a href={r.link} target="_blank" rel="noreferrer"
-                              className="text-amber-400 hover:underline font-medium leading-snug">
-                              {r.language && <span className="mr-1.5 text-base leading-none">{r.language}</span>}
-                              {r.name}
-                            </a>
-                          </td>
-                          <td className="px-4 py-2.5 hidden sm:table-cell">
-                            <Link to={`/archetypes/${r.archetype_slug}`}
-                              className="text-amber-400 hover:underline font-medium">
-                              {r.archetype}
-                            </Link>
-                          </td>
-                          <td className="px-4 py-2.5 text-gray-500 text-xs hidden md:table-cell">{r.date || '—'}</td>
-                        </tr>
-                      ))}
-                    </tbody>
-                  </table>
-                </div>
-              </div>
-            )}
-
             <p className="text-xs text-gray-500">{filtered.length.toLocaleString()} deck{filtered.length !== 1 ? 's' : ''}</p>
 
             {filtered.length === 0 ? (
@@ -454,9 +485,9 @@ export default function PlayerPage() {
             )}
 
             {creator && (
-              <div className="space-y-4 pt-4 border-t border-gray-700">
+              <div className="space-y-4">
                 <div>
-                  <h2 className="text-lg font-semibold text-white">Videos by {creator.name}</h2>
+                  <h2 className="text-lg font-semibold text-white border-t border-gray-700 pt-4">Videos</h2>
                   <p className="mt-1 text-sm text-gray-400">
                     {filteredVideos.length} video{filteredVideos.length !== 1 ? 's' : ''}{activeArchetypes.size > 0 && creatorVideos.length !== filteredVideos.length ? ` (${creatorVideos.length} total)` : ''}
                   </p>

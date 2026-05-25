@@ -6,6 +6,7 @@ const MANA_ORDER = ['W', 'U', 'B', 'R', 'G', 'C']
 const MANA_LABELS = { W: 'White', U: 'Blue', B: 'Black', R: 'Red', G: 'Green', C: 'Colorless' }
 const CARD_TYPES = ['Creature', 'Instant', 'Sorcery', 'Enchantment', 'Artifact', 'Land', 'Sticker']
 const CMC_VALUES = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
+const PAGE_SIZE = 50
 
 function ManaIcon({ color, size = 'w-6 h-6' }) {
   return (
@@ -83,7 +84,10 @@ export default function CardsIndex() {
   const [sortDir, setSortDir] = useState('asc')
   const [archetypeSearch, setArchetypeSearch] = useState('')
   const [dropdownOpen, setDropdownOpen] = useState(false)
+  const [page, setPage] = useState(0)
   const dropdownRef = useRef(null)
+  const paginationRef = useRef(null)
+  const pageInitRef = useRef(true)
   const navigate = useNavigate()
 
   useEffect(() => {
@@ -207,6 +211,15 @@ export default function CardsIndex() {
     })
   }, [cards, search, activeMana, activeTypes, activeCmc, allowedSlugs, manaMode, typeMode])
 
+  useEffect(() => {
+    if (pageInitRef.current) { pageInitRef.current = false; return }
+    const el = paginationRef.current
+    if (!el) return
+    const headerHeight = document.querySelector('header')?.offsetHeight ?? 64
+    const top = el.getBoundingClientRect().top + window.scrollY - headerHeight - 16
+    window.scrollTo({ top, behavior: 'smooth' })
+  }, [page])
+
   function handleSort(col) {
     if (sortCol === col) {
       setSortDir(d => d === 'asc' ? 'desc' : 'asc')
@@ -236,6 +249,25 @@ export default function CardsIndex() {
       return 0
     })
   }, [filtered, sortCol, sortDir])
+
+  useEffect(() => { setPage(0) }, [sorted])
+
+  const totalPages = Math.ceil(sorted.length / PAGE_SIZE)
+  const pageCards = sorted.slice(page * PAGE_SIZE, (page + 1) * PAGE_SIZE)
+
+  const paginationBar = (ref) => totalPages > 1 && (
+    <div ref={ref} className="flex items-center justify-center gap-3 py-2">
+      <button onClick={() => setPage(p => Math.max(0, p - 1))} disabled={page === 0}
+        className="px-4 py-2 rounded-lg text-sm font-semibold border border-gray-600 text-gray-400 hover:border-gray-400 hover:text-gray-200 transition-colors disabled:opacity-30 disabled:cursor-not-allowed">
+        ← Previous
+      </button>
+      <span className="text-sm text-gray-400">Page {page + 1} of {totalPages}</span>
+      <button onClick={() => setPage(p => Math.min(totalPages - 1, p + 1))} disabled={page >= totalPages - 1}
+        className="px-4 py-2 rounded-lg text-sm font-semibold border border-gray-600 text-gray-400 hover:border-gray-400 hover:text-gray-200 transition-colors disabled:opacity-30 disabled:cursor-not-allowed">
+        Next →
+      </button>
+    </div>
+  )
 
   return (
     <Layout>
@@ -351,42 +383,46 @@ export default function CardsIndex() {
             {filtered.length === 0 ? (
               <p className="text-gray-500 text-sm">No cards found.</p>
             ) : (
-              <div className="border border-gray-700 rounded-xl overflow-hidden bg-gray-900">
-                <table className="w-full text-base bg-gray-900">
-                  <thead>
-                    <tr className="bg-gray-800 border-b border-gray-700">
-                      <SortHeader col="name"       label="Name"       sortCol={sortCol} sortDir={sortDir} onSort={handleSort} extraClass="w-2/5" />
-                      <SortHeader col="colors"     label="Colors"     sortCol={sortCol} sortDir={sortDir} onSort={handleSort} />
-                      <SortHeader col="type"       label="Type"       sortCol={sortCol} sortDir={sortDir} onSort={handleSort} extraClass="hidden sm:table-cell" />
-                      <SortHeader col="cmc"        label="CMC"        sortCol={sortCol} sortDir={sortDir} onSort={handleSort} align="right" extraClass="hidden sm:table-cell" />
-                      <SortHeader col="archetypes" label="Archetypes" sortCol={sortCol} sortDir={sortDir} onSort={handleSort} align="right" />
-                    </tr>
-                  </thead>
-                  <tbody className="divide-y divide-gray-700/50 bg-gray-900">
-                    {sorted.map(c => (
-                      <tr key={c.slug}
-                        onClick={() => navigate(`/cards/${c.slug}`)}
-                        onAuxClick={e => { if (e.button === 1) window.open(`/cards/${c.slug}`, '_blank') }}
-                        className="bg-gray-900 hover:bg-gray-800 cursor-pointer group">
-                        <td className="px-4 py-2.5 font-medium text-gray-200 group-hover:text-amber-400">{c.name}</td>
-                        <td className="px-4 py-2.5">
-                          <div className="flex gap-0.5">
-                            {(c.colors || []).length === 0
-                              ? <ManaIcon color="C" />
-                              : MANA_ORDER.filter(m => m !== 'C' && (c.colors || []).includes(m)).map(m => (
-                                  <ManaIcon key={m} color={m} />
-                                ))
-                            }
-                          </div>
-                        </td>
-                        <td className="px-4 py-2.5 text-gray-400 hidden sm:table-cell">{(c.types || []).join(', ')}</td>
-                        <td className="px-4 py-2.5 text-right text-gray-400 hidden sm:table-cell">{c.cmc ?? '—'}</td>
-                        <td className="px-4 py-2.5 text-right text-gray-400">{c.archetypeCount}</td>
+              <>
+                {paginationBar(paginationRef)}
+                <div className="border border-gray-700 rounded-xl overflow-hidden bg-gray-900">
+                  <table className="w-full text-base bg-gray-900">
+                    <thead>
+                      <tr className="bg-gray-800 border-b border-gray-700">
+                        <SortHeader col="name"       label="Name"       sortCol={sortCol} sortDir={sortDir} onSort={handleSort} extraClass="w-2/5" />
+                        <SortHeader col="colors"     label="Colors"     sortCol={sortCol} sortDir={sortDir} onSort={handleSort} />
+                        <SortHeader col="type"       label="Type"       sortCol={sortCol} sortDir={sortDir} onSort={handleSort} extraClass="hidden sm:table-cell" />
+                        <SortHeader col="cmc"        label="CMC"        sortCol={sortCol} sortDir={sortDir} onSort={handleSort} align="right" extraClass="hidden sm:table-cell" />
+                        <SortHeader col="archetypes" label="Archetypes" sortCol={sortCol} sortDir={sortDir} onSort={handleSort} align="right" />
                       </tr>
-                    ))}
-                  </tbody>
-                </table>
-              </div>
+                    </thead>
+                    <tbody className="divide-y divide-gray-700/50 bg-gray-900">
+                      {pageCards.map(c => (
+                        <tr key={c.slug}
+                          onClick={() => navigate(`/cards/${c.slug}`)}
+                          onAuxClick={e => { if (e.button === 1) window.open(`/cards/${c.slug}`, '_blank') }}
+                          className="bg-gray-900 hover:bg-gray-800 cursor-pointer group">
+                          <td className="px-4 py-2.5 font-medium text-gray-200 group-hover:text-amber-400">{c.name}</td>
+                          <td className="px-4 py-2.5">
+                            <div className="flex gap-0.5">
+                              {(c.colors || []).length === 0
+                                ? <ManaIcon color="C" />
+                                : MANA_ORDER.filter(m => m !== 'C' && (c.colors || []).includes(m)).map(m => (
+                                    <ManaIcon key={m} color={m} />
+                                  ))
+                              }
+                            </div>
+                          </td>
+                          <td className="px-4 py-2.5 text-gray-400 hidden sm:table-cell">{(c.types || []).join(', ')}</td>
+                          <td className="px-4 py-2.5 text-right text-gray-400 hidden sm:table-cell">{c.cmc ?? '—'}</td>
+                          <td className="px-4 py-2.5 text-right text-gray-400">{c.archetypeCount}</td>
+                        </tr>
+                      ))}
+                    </tbody>
+                  </table>
+                </div>
+                {paginationBar(null)}
+              </>
             )}
           </>
         )}
