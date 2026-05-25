@@ -335,7 +335,7 @@ export default function PlayerPage() {
                   <table className="w-full text-base bg-gray-900">
                     <thead>
                       <tr className="bg-gray-800 border-b border-gray-700">
-                        <th className="text-left px-4 py-2 text-xs font-semibold text-gray-400 uppercase tracking-wider">Sideboard Guide</th>
+                        <th className="text-left px-4 py-2 text-xs font-semibold text-gray-400 uppercase tracking-wider">Archetype</th>
                         <th className="text-left px-4 py-2 text-xs font-semibold text-gray-400 uppercase tracking-wider hidden sm:table-cell">Price</th>
                         <th className="text-left px-4 py-2 text-xs font-semibold text-gray-400 uppercase tracking-wider hidden md:table-cell">Notes</th>
                       </tr>

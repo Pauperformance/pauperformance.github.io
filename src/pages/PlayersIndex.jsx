@@ -1,5 +1,5 @@
 import { useState, useEffect, useMemo, useRef } from 'react'
-import { Link, useNavigate } from 'react-router-dom'
+import { useNavigate } from 'react-router-dom'
 import Layout from '../components/Layout'
 
 const PAGE_SIZE = 50
@@ -24,9 +24,13 @@ export default function PlayersIndex() {
   const [players, setPlayers] = useState([])
   const [loading, setLoading] = useState(true)
   const [search, setSearch] = useState('')
+  const [activeArchetypes, setActiveArchetypes] = useState(new Set())
+  const [archetypeSearch, setArchetypeSearch] = useState('')
+  const [dropdownOpen, setDropdownOpen] = useState(false)
   const [sortCol, setSortCol] = useState('decks')
   const [sortDir, setSortDir] = useState('desc')
   const [page, setPage] = useState(0)
+  const dropdownRef = useRef(null)
   const paginationRef = useRef(null)
   const pageInitRef = useRef(true)
   const navigate = useNavigate()
@@ -37,6 +41,18 @@ export default function PlayersIndex() {
       setLoading(false)
     })
   }, [])
+
+  useEffect(() => {
+    if (!dropdownOpen) return
+    function handleClick(e) {
+      if (dropdownRef.current && !dropdownRef.current.contains(e.target)) {
+        setDropdownOpen(false)
+        setArchetypeSearch('')
+      }
+    }
+    document.addEventListener('mousedown', handleClick)
+    return () => document.removeEventListener('mousedown', handleClick)
+  }, [dropdownOpen])
 
   useEffect(() => {
     if (pageInitRef.current) { pageInitRef.current = false; return }
@@ -56,11 +72,32 @@ export default function PlayersIndex() {
     }
   }
 
+  function toggleArchetype(a) {
+    setActiveArchetypes(prev => { const n = new Set(prev); n.has(a) ? n.delete(a) : n.add(a); return n })
+  }
+
+  const allArchetypes = useMemo(() => {
+    const set = new Set()
+    players.forEach(p => (p.archetypes || []).forEach(a => set.add(a)))
+    return [...set].sort()
+  }, [players])
+
+  const visibleArchetypes = useMemo(() => {
+    return allArchetypes.filter(a => {
+      if (activeArchetypes.has(a)) return false
+      if (archetypeSearch && !a.toLowerCase().includes(archetypeSearch.toLowerCase())) return false
+      return true
+    })
+  }, [allArchetypes, archetypeSearch, activeArchetypes])
+
   const filtered = useMemo(() => {
     const q = search.trim().toLowerCase()
-    if (!q) return players
-    return players.filter(p => p.name.toLowerCase().includes(q))
-  }, [players, search])
+    return players.filter(p => {
+      if (q && !p.name.toLowerCase().includes(q)) return false
+      if (activeArchetypes.size > 0 && !(p.archetypes || []).some(a => activeArchetypes.has(a))) return false
+      return true
+    })
+  }, [players, search, activeArchetypes])
 
   const sorted = useMemo(() => {
     return [...filtered].sort((a, b) => {
@@ -108,20 +145,72 @@ export default function PlayersIndex() {
           </p>
         </div>
 
-        <div className="relative">
-          <input
-            type="search"
-            placeholder="Search players…"
-            value={search}
-            onChange={e => setSearch(e.target.value)}
-            onKeyDown={e => { if (e.key === 'Enter') e.target.blur() }}
-            className="w-full bg-gray-800 border border-gray-600 rounded-xl px-4 py-2.5 pr-8 text-sm text-gray-100 placeholder-gray-500 focus:outline-none focus:border-amber-400 [&::-webkit-search-cancel-button]:hidden"
-          />
-          {search && (
-            <button onClick={() => setSearch('')} className="absolute right-2 top-1/2 -translate-y-1/2 text-gray-500 hover:text-gray-300 transition-colors" aria-label="Clear search">
-              <svg className="w-4 h-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round"><path d="M18 6 6 18M6 6l12 12"/></svg>
-            </button>
-          )}
+        <div className="bg-gray-800 border border-gray-700 rounded-xl p-4 space-y-3">
+          <div className="relative">
+            <input
+              type="search"
+              placeholder="Search players…"
+              value={search}
+              onChange={e => setSearch(e.target.value)}
+              onKeyDown={e => { if (e.key === 'Enter') e.target.blur() }}
+              className="w-full bg-gray-900 border border-gray-600 rounded-lg px-4 py-2 pr-8 text-sm text-gray-100 placeholder-gray-500 focus:outline-none focus:border-amber-400 [&::-webkit-search-cancel-button]:hidden"
+            />
+            {search && (
+              <button onClick={() => setSearch('')} className="absolute right-2 top-1/2 -translate-y-1/2 text-gray-500 hover:text-gray-300 transition-colors" aria-label="Clear search">
+                <svg className="w-4 h-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round"><path d="M18 6 6 18M6 6l12 12"/></svg>
+              </button>
+            )}
+          </div>
+          <div className="flex flex-col gap-2">
+            <div className="flex items-center gap-2">
+              <span className="text-sm text-gray-500 w-20 shrink-0">Archetype:</span>
+              <div className="relative" ref={dropdownRef}>
+                <button
+                  onClick={() => setDropdownOpen(o => !o)}
+                  className="bg-gray-900 border border-gray-600 rounded-lg px-3 py-1 text-sm text-gray-300 hover:border-gray-400 focus:outline-none focus:border-amber-400 cursor-pointer flex items-center gap-2">
+                  Add archetype… <span className="text-gray-500 text-xs">▾</span>
+                </button>
+                {dropdownOpen && (
+                  <div className="absolute z-20 mt-1 w-64 bg-gray-900 border border-gray-600 rounded-lg shadow-lg overflow-hidden">
+                    <div className="p-2">
+                      <input
+                        autoFocus
+                        type="search"
+                        placeholder="Search archetypes…"
+                        value={archetypeSearch}
+                        onChange={e => setArchetypeSearch(e.target.value)}
+                        className="w-full bg-gray-800 border border-gray-600 rounded px-2 py-1 text-sm text-gray-100 placeholder-gray-500 focus:outline-none focus:border-amber-400"
+                      />
+                    </div>
+                    <ul className="max-h-52 overflow-y-auto">
+                      {visibleArchetypes.length === 0
+                        ? <li className="px-3 py-2 text-sm text-gray-500">No archetypes found</li>
+                        : visibleArchetypes.map(a => (
+                            <li key={a}>
+                              <button
+                                onClick={() => { toggleArchetype(a); setArchetypeSearch(''); setDropdownOpen(false) }}
+                                className="w-full text-left px-3 py-1.5 text-sm text-gray-300 hover:bg-gray-800 hover:text-white transition-colors">
+                                {a}
+                              </button>
+                            </li>
+                          ))
+                      }
+                    </ul>
+                  </div>
+                )}
+              </div>
+            </div>
+            {activeArchetypes.size > 0 && (
+              <div className="flex flex-wrap gap-1.5 pl-[calc(theme(spacing.2)+5rem)]">
+                {[...activeArchetypes].map(a => (
+                  <span key={a} className="inline-flex items-center gap-1 px-3 py-1 rounded-full text-xs font-semibold bg-amber-400 text-gray-900">
+                    {a}
+                    <button onClick={() => toggleArchetype(a)} className="hover:text-gray-700 leading-none">×</button>
+                  </span>
+                ))}
+              </div>
+            )}
+          </div>
         </div>
 
         {loading ? (
