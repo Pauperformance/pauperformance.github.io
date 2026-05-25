@@ -2,7 +2,7 @@ import { useState, useEffect, useMemo, useRef } from 'react'
 import { useParams, Link, useNavigate } from 'react-router-dom'
 import ReactMarkdown from 'react-markdown'
 import Layout from '../components/Layout'
-import { nameToSlug } from '../utils/slugs'
+import { nameToSlug, pilotToSlug } from '../utils/slugs'
 
 const MANA_ORDER = ['W', 'U', 'B', 'R', 'G', 'C']
 const LANG_FLAG = {
@@ -555,7 +555,11 @@ function IntelDecksSection({ name }) {
               <tr key={deck.id} className="bg-gray-900 hover:bg-gray-800 transition-colors cursor-pointer"
                 onAuxClick={(e) => { if (e.button === 1) window.open(`/decks/${deck.id}`, '_blank') }}>
                 <td className="px-4 py-2.5 text-gray-300">{deck.tournament_name}</td>
-                <td className="px-4 py-2.5 text-gray-400 hidden md:table-cell">{deck.pilot || 'Anonymous'}</td>
+                <td className="px-4 py-2.5 hidden md:table-cell">
+                  {deck.pilot
+                    ? <Link to={`/players/${pilotToSlug(deck.pilot)}`} className="text-gray-400 hover:text-amber-400 transition-colors">{deck.pilot}</Link>
+                    : <span className="text-gray-600">Anonymous</span>}
+                </td>
                 <td className="px-4 py-2.5 text-gray-500 hidden sm:table-cell">{deck.tournament_date}</td>
                 <td className="px-4 py-2.5 text-gray-400 hidden md:table-cell">{deck.place}</td>
                 <td className="px-4 py-2.5">

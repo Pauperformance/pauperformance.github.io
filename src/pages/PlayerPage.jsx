@@ -291,6 +291,35 @@ export default function PlayerPage() {
               </div>
             </div>
 
+            {creator && creator.sideboards && creator.sideboards.length > 0 && (
+              <div className="space-y-2">
+                <h2 className="text-lg font-semibold text-white border-t border-gray-700 pt-4">Sideboard Guides</h2>
+                <div className="border border-gray-700 rounded-xl overflow-hidden bg-gray-900">
+                  <table className="w-full text-base bg-gray-900">
+                    <thead>
+                      <tr className="bg-gray-800 border-b border-gray-700">
+                        <th className="text-left px-4 py-2 text-xs font-semibold text-gray-400 uppercase tracking-wider">Archetype</th>
+                        <th className="text-left px-4 py-2 text-xs font-semibold text-gray-400 uppercase tracking-wider hidden sm:table-cell">Price</th>
+                        <th className="text-left px-4 py-2 text-xs font-semibold text-gray-400 uppercase tracking-wider hidden md:table-cell">Notes</th>
+                      </tr>
+                    </thead>
+                    <tbody className="divide-y divide-gray-700/50 bg-gray-900">
+                      {creator.sideboards.map((s, i) => (
+                        <tr key={i} className="bg-gray-900 hover:bg-gray-800 transition-colors">
+                          <td className="px-4 py-2.5">
+                            <a href={s.link} target="_blank" rel="noreferrer"
+                              className="text-amber-400 hover:underline font-medium">{s.archetype}</a>
+                          </td>
+                          <td className="px-4 py-2.5 text-gray-400 hidden sm:table-cell">{s.price || '—'}</td>
+                          <td className="px-4 py-2.5 text-gray-500 hidden md:table-cell">{s.notes || '—'}</td>
+                        </tr>
+                      ))}
+                    </tbody>
+                  </table>
+                </div>
+              </div>
+            )}
+
             {creator && creator.resources && creator.resources.length > 0 && (
               <div className="space-y-2">
                 <h2 className="text-lg font-semibold text-white border-t border-gray-700 pt-4">Resources</h2>
@@ -320,35 +349,6 @@ export default function PlayerPage() {
                             </Link>
                           </td>
                           <td className="px-4 py-2.5 text-gray-500 hidden md:table-cell">{r.date || '—'}</td>
-                        </tr>
-                      ))}
-                    </tbody>
-                  </table>
-                </div>
-              </div>
-            )}
-
-            {creator && creator.sideboards && creator.sideboards.length > 0 && (
-              <div className="space-y-2">
-                <h2 className="text-lg font-semibold text-white border-t border-gray-700 pt-4">Sideboard Guides</h2>
-                <div className="border border-gray-700 rounded-xl overflow-hidden bg-gray-900">
-                  <table className="w-full text-base bg-gray-900">
-                    <thead>
-                      <tr className="bg-gray-800 border-b border-gray-700">
-                        <th className="text-left px-4 py-2 text-xs font-semibold text-gray-400 uppercase tracking-wider">Archetype</th>
-                        <th className="text-left px-4 py-2 text-xs font-semibold text-gray-400 uppercase tracking-wider hidden sm:table-cell">Price</th>
-                        <th className="text-left px-4 py-2 text-xs font-semibold text-gray-400 uppercase tracking-wider hidden md:table-cell">Notes</th>
-                      </tr>
-                    </thead>
-                    <tbody className="divide-y divide-gray-700/50 bg-gray-900">
-                      {creator.sideboards.map((s, i) => (
-                        <tr key={i} className="bg-gray-900 hover:bg-gray-800 transition-colors">
-                          <td className="px-4 py-2.5">
-                            <a href={s.link} target="_blank" rel="noreferrer"
-                              className="text-amber-400 hover:underline font-medium">{s.archetype}</a>
-                          </td>
-                          <td className="px-4 py-2.5 text-gray-400 hidden sm:table-cell">{s.price || '—'}</td>
-                          <td className="px-4 py-2.5 text-gray-500 hidden md:table-cell">{s.notes || '—'}</td>
                         </tr>
                       ))}
                     </tbody>
