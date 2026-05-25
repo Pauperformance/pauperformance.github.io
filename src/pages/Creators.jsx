@@ -1,8 +1,10 @@
 import { useState, useEffect } from 'react'
+import { Link } from 'react-router-dom'
 import Layout from '../components/Layout'
 
 const TWITCH_ICON = 'M11.571 4.714h1.715v5.143H11.57zm4.715 0H18v5.143h-1.714zM6 0L1.714 4.286v15.428h5.143V24l4.286-4.286h3.428L22.286 12V0zm14.571 11.143l-3.428 3.428h-3.429l-3 3v-3H6.857V1.714h13.714z'
 const YOUTUBE_ICON = 'M23.495 6.205a3.007 3.007 0 0 0-2.088-2.088c-1.87-.501-9.396-.501-9.396-.501s-7.507-.01-9.396.501A3.007 3.007 0 0 0 .527 6.205a31.247 31.247 0 0 0-.522 5.805 31.247 31.247 0 0 0 .522 5.783 3.007 3.007 0 0 0 2.088 2.088c1.868.502 9.396.502 9.396.502s7.506 0 9.396-.502a3.007 3.007 0 0 0 2.088-2.088 31.247 31.247 0 0 0 .5-5.783 31.247 31.247 0 0 0-.5-5.805zM9.609 15.601V8.408l6.264 3.602z'
+const PLAYER_ICON = 'M12 12c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm0 2c-2.67 0-8 1.34-8 4v2h16v-2c0-2.66-5.33-4-8-4z'
 
 function SocialLink({ href, icon, label, color }) {
   return (
@@ -22,18 +24,35 @@ function SocialLink({ href, icon, label, color }) {
 }
 
 function CreatorCard({ creator }) {
-  const mtgoNames = [creator.mtgo_name, creator.mtgo_name2].filter(Boolean)
+  const mtgoEntries = [
+    { name: creator.mtgo_name, slug: creator.player_slug },
+    { name: creator.mtgo_name2, slug: creator.player_slug2 },
+  ].filter(e => e.name)
 
   return (
     <div className="min-w-0 bg-gray-800 border border-gray-700 rounded-lg p-4 flex flex-col gap-3 hover:border-gray-500 transition-colors">
       <div className="font-semibold text-amber-400 text-sm leading-tight break-words">{creator.name}</div>
 
-      {mtgoNames.length > 0 && (
+      {mtgoEntries.length > 0 && (
         <div className="flex flex-col gap-1">
-          {mtgoNames.map(n => (
+          {mtgoEntries.map(({ name: n, slug }) => (
             <span key={n} className="flex items-center gap-1 text-xs min-w-0">
               <span className="text-gray-500 font-medium shrink-0">MTGO:</span>
               <span className="text-gray-400 bg-gray-750 px-2 py-0.5 rounded">{n}</span>
+              {slug && (
+                <Link
+                  to={`/players/${slug}`}
+                  title="Players"
+                  className="flex items-center gap-0.5 font-medium px-1.5 py-0.5 rounded transition-colors bg-amber-950/60 text-amber-400 hover:bg-amber-900/60 shrink-0"
+                >
+                  <svg viewBox="0 0 24 24" className="w-3 h-3 shrink-0 fill-current">
+                    <path d={PLAYER_ICON} />
+                  </svg>
+                  <svg viewBox="0 0 24 24" className="w-3 h-3 shrink-0 fill-none stroke-current" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round">
+                    <path d="M7 17L17 7M7 7h10v10"/>
+                  </svg>
+                </Link>
+              )}
             </span>
           ))}
         </div>
@@ -84,7 +103,7 @@ export default function Creators() {
     <Layout>
       <div className="space-y-6">
         <div>
-          <h1 className="text-2xl font-bold text-white">Content Creators</h1>
+          <h1 className="text-2xl font-bold text-white">Creators Index</h1>
           <p className="mt-2 text-gray-400 text-sm">
             {creators.length} content creators in the Pauper community
           </p>

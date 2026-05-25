@@ -8,6 +8,7 @@ const NAV_ITEMS = [
   { to: '/sets', label: 'Sets' },
   { to: '/timeline', label: 'Timeline' },
   { to: '/watch', label: 'Watch' },
+  { to: '/players', label: 'Players' },
   { to: '/creators', label: 'Creators' },
   { to: '/faq', label: 'FAQ' },
   { to: '/contact', label: 'Contact' },
