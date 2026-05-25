@@ -1,6 +1,8 @@
-import { useState, useEffect, useMemo } from 'react'
+import { useState, useEffect, useMemo, useRef } from 'react'
 import { Link, useNavigate } from 'react-router-dom'
 import Layout from '../components/Layout'
+
+const PAGE_SIZE = 50
 
 function SortHeader({ col, label, sortCol, sortDir, onSort, align = 'left', extraClass = '' }) {
   const active = sortCol === col
@@ -24,6 +26,9 @@ export default function PlayersIndex() {
   const [search, setSearch] = useState('')
   const [sortCol, setSortCol] = useState('decks')
   const [sortDir, setSortDir] = useState('desc')
+  const [page, setPage] = useState(0)
+  const paginationRef = useRef(null)
+  const pageInitRef = useRef(true)
   const navigate = useNavigate()
 
   useEffect(() => {
@@ -32,6 +37,15 @@ export default function PlayersIndex() {
       setLoading(false)
     })
   }, [])
+
+  useEffect(() => {
+    if (pageInitRef.current) { pageInitRef.current = false; return }
+    const el = paginationRef.current
+    if (!el) return
+    const headerHeight = document.querySelector('header')?.offsetHeight ?? 64
+    const top = el.getBoundingClientRect().top + window.scrollY - headerHeight - 16
+    window.scrollTo({ top, behavior: 'smooth' })
+  }, [page])
 
   function handleSort(col) {
     if (sortCol === col) {
@@ -66,6 +80,24 @@ export default function PlayersIndex() {
     })
   }, [filtered, sortCol, sortDir])
 
+  useEffect(() => { setPage(0) }, [sorted])
+
+  const totalPages = Math.ceil(sorted.length / PAGE_SIZE)
+  const pagePlayers = sorted.slice(page * PAGE_SIZE, (page + 1) * PAGE_SIZE)
+  const paginationBar = (ref) => totalPages > 1 && (
+    <div ref={ref} className="flex items-center justify-center gap-3 py-2">
+      <button onClick={() => setPage(p => Math.max(0, p - 1))} disabled={page === 0}
+        className="px-4 py-2 rounded-lg text-sm font-semibold border border-gray-600 text-gray-400 hover:border-gray-400 hover:text-gray-200 transition-colors disabled:opacity-30 disabled:cursor-not-allowed">
+        ← Previous
+      </button>
+      <span className="text-sm text-gray-400">Page {page + 1} of {totalPages}</span>
+      <button onClick={() => setPage(p => Math.min(totalPages - 1, p + 1))} disabled={page >= totalPages - 1}
+        className="px-4 py-2 rounded-lg text-sm font-semibold border border-gray-600 text-gray-400 hover:border-gray-400 hover:text-gray-200 transition-colors disabled:opacity-30 disabled:cursor-not-allowed">
+        Next →
+      </button>
+    </div>
+  )
+
   return (
     <Layout>
       <div className="space-y-6">
@@ -97,6 +129,7 @@ export default function PlayersIndex() {
         ) : (
           <>
             <p className="text-xs text-gray-500">{filtered.length.toLocaleString()} player{filtered.length !== 1 ? 's' : ''}</p>
+            {paginationBar(paginationRef)}
             <div className="border border-gray-700 rounded-xl overflow-hidden bg-gray-900">
               <table className="w-full text-base bg-gray-900">
                 <thead>
@@ -108,7 +141,7 @@ export default function PlayersIndex() {
                   </tr>
                 </thead>
                 <tbody className="divide-y divide-gray-700/50 bg-gray-900">
-                  {sorted.map(p => (
+                  {pagePlayers.map(p => (
                     <tr key={p.slug}
                       onClick={() => navigate(`/players/${p.slug}`)}
                       onAuxClick={e => { if (e.button === 1) window.open(`/#/players/${p.slug}`, '_blank') }}
@@ -125,6 +158,7 @@ export default function PlayersIndex() {
                 <p className="text-center text-gray-500 text-sm py-12">No players match your search.</p>
               )}
             </div>
+            {paginationBar(null)}
           </>
         )}
       </div>

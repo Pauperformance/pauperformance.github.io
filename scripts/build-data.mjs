@@ -580,8 +580,15 @@ const creators = readdirSync(creatorDir)
       player_slug2: (slug2 && playersMap[slug2]) ? slug2 : null,
       twitch_channel_url: c.twitch_channel_url || null,
       youtube_channel_url: c.youtube_channel_url || null,
-      resources: (resourcesByAuthor[c.name] || []).sort(function(a, b) { return (b.date || '').localeCompare(a.date || '') }),
-      sideboards: (sideboardsByAuthor[c.name] || []),
+      resources: ([]
+        .concat(resourcesByAuthor[c.name] || [])
+        .concat(c.mtgo_name ? (resourcesByAuthor[c.mtgo_name] || []) : [])
+        .concat(c.mtgo_name2 ? (resourcesByAuthor[c.mtgo_name2] || []) : [])
+      ).sort(function(a, b) { return (b.date || '').localeCompare(a.date || '') }),
+      sideboards: []
+        .concat(sideboardsByAuthor[c.name] || [])
+        .concat(c.mtgo_name ? (sideboardsByAuthor[c.mtgo_name] || []) : [])
+        .concat(c.mtgo_name2 ? (sideboardsByAuthor[c.mtgo_name2] || []) : []),
     }
   })
   .sort(function(a, b) { return a.name.toLowerCase().localeCompare(b.name.toLowerCase()) })
