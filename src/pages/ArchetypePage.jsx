@@ -164,7 +164,7 @@ function VideosSection({ videos: allVideos }) {
   const [search, setSearch] = useState('')
   const [activeCreators, setActiveCreators] = useState(new Set())
   const [activeLanguages, setActiveLanguages] = useState(new Set())
-  const [activeType, setActiveType] = useState('')
+  const [activeType, setActiveType] = useState('videos')
   const [filterDateFrom, setFilterDateFrom] = useState('')
   const [filterDateTo, setFilterDateTo] = useState('')
   const [toWrapped, setToWrapped] = useState(false)
