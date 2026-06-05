@@ -154,7 +154,7 @@ export default function Watch() {
   const [dropdownOpen, setDropdownOpen] = useState(false)
   const [creatorDropdownOpen, setCreatorDropdownOpen] = useState(false)
   const [creatorSearch, setCreatorSearch] = useState('')
-  const [activeType, setActiveType] = useState('')
+  const [activeType, setActiveType] = useState('videos')
   const [filterDateFrom, setFilterDateFrom] = useState('')
   const [filterDateTo, setFilterDateTo] = useState('')
   const [toWrapped, setToWrapped] = useState(false)
