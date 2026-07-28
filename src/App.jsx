@@ -16,6 +16,7 @@ const Watch          = lazy(() => import('./pages/Watch'))
 const PlayersIndex   = lazy(() => import('./pages/PlayersIndex'))
 const PlayerPage     = lazy(() => import('./pages/PlayerPage'))
 const BlindSpy       = lazy(() => import('./pages/BlindSpy'))
+const Diff            = lazy(() => import('./pages/Diff'))
 const FAQ            = lazy(() => import('./pages/FAQ'))
 const Contact        = lazy(() => import('./pages/Contact'))
 
@@ -49,6 +50,7 @@ function App() {
         <Route path="/players" element={<PlayersIndex />} />
         <Route path="/players/:slug" element={<PlayerPage />} />
         <Route path="/blind-spy" element={<BlindSpy />} />
+        <Route path="/diff" element={<Diff />} />
         <Route path="/faq" element={<FAQ />} />
         <Route path="/contact" element={<Contact />} />
         <Route path="*" element={<NotFound />} />
