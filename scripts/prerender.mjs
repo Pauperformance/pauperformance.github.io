@@ -25,6 +25,7 @@ const routes = [
   '/cards',
   '/watch',
   '/blind-spy',
+  '/diff',
   '/faq',
   '/contact',
   ...archetypes.map(a => `/archetypes/${nameToSlug(a.name)}`),
