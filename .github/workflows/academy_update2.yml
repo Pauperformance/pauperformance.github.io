@@ -22,6 +22,7 @@ jobs:
         repository: 'Pauperformance/pauperformance-bot'
         ref: 'master'
         path: './myr'
+        ssh-key: ${{ secrets.MYR_DEPLOY_KEY }}
         persist-credentials: false
         fetch-depth: 0
 
