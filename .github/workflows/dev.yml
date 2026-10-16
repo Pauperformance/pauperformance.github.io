@@ -64,4 +64,6 @@ jobs:
       run: |
         pwd
         source myr/venv/bin/activate
+        ACADEMY_PATH="$(pwd)/academy"
+        export ACADEMY_PATH
         myr --help
