@@ -1,0 +1,55 @@
+# This workflow rebuilds the website (docs/) on every push to master,
+# so that changes to sources and data go live without a manual build.
+# Its own commit is pushed with GITHUB_TOKEN, which does not trigger
+# workflows again: no loop.
+
+name: build-site
+
+on:
+  push:
+    branches: [ master ]
+    paths-ignore:
+      - 'docs/**'
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+concurrency:
+  group: build-site
+  cancel-in-progress: true
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+
+    - name: Clone Academy repository
+      uses: actions/checkout@v4
+      with:
+        ref: 'master'
+
+    - name: Set up Node
+      uses: actions/setup-node@v4
+      with:
+        node-version: '22'
+        cache: 'npm'
+
+    - name: Build website
+      run: |
+        npm ci
+        npm run build
+
+    - name: Push changes
+      run: |
+        git config --local user.email "ShadowTemplate@users.noreply.github.com"
+        git config --local user.name "Myr"
+        git add -A docs
+        if git diff --cached --quiet; then
+          echo "Website already up to date."
+        else
+          git commit -m "Rebuild website: $(date -u +'%Y-%m-%d, %H:%M:%S')"
+          # master may have moved meanwhile (e.g. a Myr update).
+          git pull --rebase
+          git push
+        fi
