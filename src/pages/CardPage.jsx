@@ -1,7 +1,8 @@
 import { useState, useEffect, useMemo, useRef } from 'react'
 import { useParams, Link, useNavigate } from 'react-router-dom'
 import Layout from '../components/Layout'
-import { RulesText, fullCardSlug } from '../components/CardPreview'
+import { RulesText } from '../components/CardPreview'
+import { fullCardSlug } from '../utils/cardPages'
 
 const MANA_ICONS = new Set([
   'W', 'U', 'B', 'R', 'G', 'C',
