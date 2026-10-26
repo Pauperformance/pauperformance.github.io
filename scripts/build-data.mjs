@@ -517,6 +517,13 @@ for (var ci2 = 0; ci2 < cardsIndex.length; ci2++) {
     if (!cardNameToSlug[frontFaceName]) cardNameToSlug[frontFaceName] = ci2entry.slug
   }
 }
+// Decklists name double-faced/adventure cards by their front face only: map
+// those names to the card's slug for the hover preview (components/CardPreview.jsx).
+var frontFaceSlugs = {}
+Object.keys(cardNameToSlug).forEach(function(n) {
+  if (nameToSlug(n) !== cardNameToSlug[n]) frontFaceSlugs[n] = cardNameToSlug[n]
+})
+writeFileSync(join(outDir, 'card-front-face-slugs.json'), JSON.stringify(frontFaceSlugs))
 
 if (anyDeckChanged) {
   var cardDeckWritten = 0, cardDeckSkipped = 0

@@ -2,6 +2,7 @@ import { useState, useEffect } from 'react'
 import { useParams, Link } from 'react-router-dom'
 import { nameToSlug } from '../utils/slugs'
 import Layout from '../components/Layout'
+import { OracleText, useCardData } from '../components/CardPreview'
 
 const TYPE_ORDER = ['Creature', 'Instant', 'Sorcery', 'Enchantment', 'Artifact', 'Land', 'Sticker', 'Other']
 const TYPE_PRIORITY = ['Land', 'Creature', 'Instant', 'Sorcery', 'Enchantment', 'Artifact', 'Sticker']
@@ -75,6 +76,10 @@ export default function DeckPage() {
   const [cardTypes, setCardTypes] = useState({})
   const [hoveredCard, setHoveredCard] = useState(null)
   const [groupByType, setGroupByType] = useState(true)
+  // Oracle text of the hovered card, shown next to its image; also supplies
+  // the image of double-faced cards, listed by their front face only.
+  const hoveredData = useCardData(hoveredCard)
+  const hoveredImage = hoveredCard && (cardImages[hoveredCard] || (hoveredData && hoveredData.images[0]))
   const [copied, setCopied] = useState(false)
 
   function toMtgoText(decklist) {
@@ -222,16 +227,19 @@ export default function DeckPage() {
                     <DeckList cards={deck.decklist.side} label="Sideboard" onHover={setHoveredCard}
                       cardTypes={cardTypes} groupByType={groupByType} />
                   </div>
-                  <div className="hidden lg:block w-56 shrink-0 sticky top-8">
-                    {hoveredCard && cardImages[hoveredCard] ? (
-                      <img
-                        src={cardImages[hoveredCard]}
-                        alt={hoveredCard}
-                        className="w-full rounded-xl shadow-lg border border-gray-700"
-                      />
-                    ) : (
-                      <div className="w-full aspect-[5/7] rounded-xl border border-gray-800 bg-gray-900" />
-                    )}
+                  <div className="hidden lg:flex flex-col xl:flex-row gap-4 items-start shrink-0 sticky top-8">
+                    <div className="w-56 shrink-0">
+                      {hoveredImage ? (
+                        <img
+                          src={hoveredImage}
+                          alt={hoveredCard}
+                          className="w-full rounded-xl shadow-lg border border-gray-700"
+                        />
+                      ) : (
+                        <div className="w-full aspect-[5/7] rounded-xl border border-gray-800 bg-gray-900" />
+                      )}
+                    </div>
+                    {hoveredCard && <OracleText card={hoveredData} className="w-56 xl:w-64 text-gray-200" />}
                   </div>
                 </div>
               </>

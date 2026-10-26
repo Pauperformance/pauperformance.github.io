@@ -1,6 +1,7 @@
 import { useState, useEffect, useMemo, useRef } from 'react'
 import { useParams, Link, useNavigate } from 'react-router-dom'
 import Layout from '../components/Layout'
+import { RulesText, fullCardSlug } from '../components/CardPreview'
 
 const MANA_ICONS = new Set([
   'W', 'U', 'B', 'R', 'G', 'C',
@@ -41,9 +42,8 @@ function FaceDetails({ face }) {
       </div>
       {face.type_line && <span className="text-gray-300 text-sm">{face.type_line}</span>}
       {face.oracle_text && (
-        <p className="text-sm text-gray-200 whitespace-pre-line leading-relaxed bg-gray-800 border border-gray-700 rounded-lg px-4 py-3">
-          {face.oracle_text}
-        </p>
+        <RulesText text={face.oracle_text}
+          className="text-sm text-gray-200 leading-relaxed bg-gray-800 border border-gray-700 rounded-lg px-4 py-3 space-y-1" />
       )}
       {face.flavor_text && (
         <p className="text-xs text-gray-400 italic leading-relaxed">{face.flavor_text}</p>
@@ -286,15 +286,26 @@ export default function CardPage() {
   const [card, setCard] = useState(null)
   const [loading, setLoading] = useState(true)
   const [notFound, setNotFound] = useState(false)
+  const navigate = useNavigate()
 
   useEffect(() => {
+    let cancelled = false
     setLoading(true)
     setNotFound(false)
     setCard(null)
     fetch(`/data/card-details/${slug}.json`)
       .then(r => { if (!r.ok) throw new Error(); return r.json() })
-      .then(data => { setCard(data); setLoading(false) })
-      .catch(() => { setNotFound(true); setLoading(false) })
+      .then(data => { if (!cancelled) { setCard(data); setLoading(false) } })
+      .catch(() => {
+        // Decklists link double-faced and adventure cards by their front
+        // face alone: redirect those to the full card.
+        fullCardSlug(slug).then(full => {
+          if (cancelled) return
+          if (full) navigate(`/cards/${full}`, { replace: true })
+          else { setNotFound(true); setLoading(false) }
+        })
+      })
+    return () => { cancelled = true }
   }, [slug])
 
   return (
@@ -371,9 +382,8 @@ export default function CardPage() {
                       </div>
                       {s?.type_line && <span className="text-gray-300 text-sm">{s.type_line}</span>}
                       {s?.oracle_text && (
-                        <p className="text-sm text-gray-200 whitespace-pre-line leading-relaxed bg-gray-800 border border-gray-700 rounded-lg px-4 py-3">
-                          {s.oracle_text}
-                        </p>
+                        <RulesText text={s.oracle_text}
+                          className="text-sm text-gray-200 leading-relaxed bg-gray-800 border border-gray-700 rounded-lg px-4 py-3 space-y-1" />
                       )}
                       {s?.flavor_text && (
                         <p className="text-xs text-gray-400 italic leading-relaxed">{s.flavor_text}</p>
