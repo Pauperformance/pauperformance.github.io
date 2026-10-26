@@ -1,6 +1,7 @@
 import { useState, useEffect, useMemo, useRef } from 'react'
 import { Link, useNavigate } from 'react-router-dom'
 import Layout from '../components/Layout'
+import { useCardPreview } from '../components/CardPreview'
 
 const MANA_ORDER = ['W', 'U', 'B', 'R', 'G', 'C']
 const MANA_LABELS = { W: 'White', U: 'Blue', B: 'Black', R: 'Red', G: 'Green', C: 'Colorless' }
@@ -89,6 +90,7 @@ export default function CardsIndex() {
   const paginationRef = useRef(null)
   const pageInitRef = useRef(true)
   const navigate = useNavigate()
+  const { bind: bindPreview, preview } = useCardPreview()
 
   useEffect(() => {
     if (!dropdownOpen) return
@@ -402,7 +404,9 @@ export default function CardsIndex() {
                           onClick={() => navigate(`/cards/${c.slug}`)}
                           onAuxClick={e => { if (e.button === 1) window.open(`/cards/${c.slug}`, '_blank') }}
                           className="bg-gray-900 hover:bg-gray-800 cursor-pointer group">
-                          <td className="px-4 py-2.5 font-medium text-gray-200 group-hover:text-amber-400">{c.name}</td>
+                          <td className="px-4 py-2.5 font-medium text-gray-200 group-hover:text-amber-400">
+                            <span {...bindPreview(c.name, { slug: c.slug })}>{c.name}</span>
+                          </td>
                           <td className="px-4 py-2.5">
                             <div className="flex gap-0.5">
                               {(c.colors || []).length === 0
@@ -422,6 +426,7 @@ export default function CardsIndex() {
                   </table>
                 </div>
                 {paginationBar(null)}
+                {preview}
               </>
             )}
           </>

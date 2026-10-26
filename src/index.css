@@ -36,3 +36,21 @@
     clip-path: inset(35px 15px 20px 15px);
   }
 }
+
+/* Card hover preview (components/CardPreview.jsx) */
+@keyframes card-preview-in {
+  from {
+    opacity: 0;
+    transform: scale(0.95);
+  }
+}
+
+.card-preview-in {
+  animation: card-preview-in 150ms ease-out;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .card-preview-in {
+    animation: none;
+  }
+}
