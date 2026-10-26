@@ -6,21 +6,22 @@
         "all_parts": [
             {
                 "component": "token",
-                "id": "fb66ddf1-9efc-458a-962d-f28294986845",
+                "id": "a3a684b7-27e0-4d9e-a064-9e03c6e50c89",
                 "name": "Treasure",
                 "object": "related_card",
                 "type_line": "Token Artifact \u2014 Treasure",
-                "uri": "https://api.scryfall.com/cards/fb66ddf1-9efc-458a-962d-f28294986845"
+                "uri": "https://api.scryfall.com/cards/a3a684b7-27e0-4d9e-a064-9e03c6e50c89"
             },
             {
                 "component": "combo_piece",
-                "id": "6aaf74f7-ba92-47b5-97d1-f2708b375f36",
+                "id": "df39eaac-b13f-4cb3-960d-8f7a0d590663",
                 "name": "Hoarding Ogre",
                 "object": "related_card",
                 "type_line": "Creature \u2014 Ogre",
-                "uri": "https://api.scryfall.com/cards/6aaf74f7-ba92-47b5-97d1-f2708b375f36"
+                "uri": "https://api.scryfall.com/cards/df39eaac-b13f-4cb3-960d-8f7a0d590663"
             }
         ],
+        "arena_id": 77251,
         "artist": "Tuan Duong Chu",
         "artist_ids": [
             "d84246f9-a536-485f-a21d-a237302ed100"
@@ -28,8 +29,9 @@
         "booster": true,
         "border_color": "black",
         "card_back_id": "0aeebaf5-8c7d-4636-9e82-8c27447861f7",
+        "cardmarket_id": 571365,
         "cmc": 4.0,
-        "collector_number": "AFR-146",
+        "collector_number": "146",
         "color_identity": [
             "R"
         ],
@@ -37,28 +39,30 @@
             "R"
         ],
         "digital": false,
-        "edhrec_rank": 3397,
+        "edhrec_rank": 2639,
         "finishes": [
-            "nonfoil"
+            "nonfoil",
+            "foil"
         ],
-        "foil": false,
+        "foil": true,
         "frame": "2015",
         "full_art": false,
-        "game_changer": false,
         "games": [
-            "paper"
+            "arena",
+            "paper",
+            "mtgo"
         ],
         "highres_image": true,
-        "id": "6aaf74f7-ba92-47b5-97d1-f2708b375f36",
+        "id": "df39eaac-b13f-4cb3-960d-8f7a0d590663",
         "illustration_id": "f6f9d09e-6a2c-4a8a-b401-3fcfa7eef1e0",
         "image_status": "highres_scan",
         "image_uris": {
-            "art_crop": "https://cards.scryfall.io/art_crop/front/6/a/6aaf74f7-ba92-47b5-97d1-f2708b375f36.jpg?1723433397",
-            "border_crop": "https://cards.scryfall.io/border_crop/front/6/a/6aaf74f7-ba92-47b5-97d1-f2708b375f36.jpg?1723433397",
-            "large": "https://cards.scryfall.io/large/front/6/a/6aaf74f7-ba92-47b5-97d1-f2708b375f36.jpg?1723433397",
-            "normal": "https://cards.scryfall.io/normal/front/6/a/6aaf74f7-ba92-47b5-97d1-f2708b375f36.jpg?1723433397",
-            "png": "https://cards.scryfall.io/png/front/6/a/6aaf74f7-ba92-47b5-97d1-f2708b375f36.png?1723433397",
-            "small": "https://cards.scryfall.io/small/front/6/a/6aaf74f7-ba92-47b5-97d1-f2708b375f36.jpg?1723433397"
+            "art_crop": "https://cards.scryfall.io/art_crop/front/d/f/df39eaac-b13f-4cb3-960d-8f7a0d590663.jpg?1627706327",
+            "border_crop": "https://cards.scryfall.io/border_crop/front/d/f/df39eaac-b13f-4cb3-960d-8f7a0d590663.jpg?1627706327",
+            "large": "https://cards.scryfall.io/large/front/d/f/df39eaac-b13f-4cb3-960d-8f7a0d590663.jpg?1627706327",
+            "normal": "https://cards.scryfall.io/normal/front/d/f/df39eaac-b13f-4cb3-960d-8f7a0d590663.jpg?1627706327",
+            "png": "https://cards.scryfall.io/png/front/d/f/df39eaac-b13f-4cb3-960d-8f7a0d590663.png?1627706327",
+            "small": "https://cards.scryfall.io/small/front/d/f/df39eaac-b13f-4cb3-960d-8f7a0d590663.jpg?1627706327"
         },
         "keywords": [
             "Treasure"
@@ -70,6 +74,7 @@
             "brawl": "legal",
             "commander": "legal",
             "duel": "legal",
+            "explorer": "legal",
             "future": "not_legal",
             "gladiator": "legal",
             "historic": "legal",
@@ -86,26 +91,33 @@
             "standard": "not_legal",
             "standardbrawl": "not_legal",
             "timeless": "legal",
-            "tlr": "not_legal",
             "vintage": "legal"
         },
         "mana_cost": "{3}{R}",
-        "multiverse_ids": [],
+        "mtgo_id": 91794,
+        "multiverse_ids": [
+            527433
+        ],
         "name": "Hoarding Ogre",
         "nonfoil": true,
         "object": "card",
         "oracle_id": "faeee3a7-c66c-48d8-a994-12377d3bb729",
-        "oracle_text": "Whenever this creature attacks, roll a d20.\n1\u20149 | Create a Treasure token. (It's an artifact with \"{T}, Sacrifice this token: Add one mana of any color.\")\n10\u201419 | Create two Treasure tokens.\n20 | Create three Treasure tokens.",
+        "oracle_text": "Whenever Hoarding Ogre attacks, roll a d20.\n1\u20149 | Create a Treasure token. (It's an artifact with \"{T}, Sacrifice this artifact: Add one mana of any color.\")\n10\u201419 | Create two Treasure tokens.\n20 | Create three Treasure tokens.",
         "oversized": false,
-        "penny_rank": 13112,
+        "penny_rank": 11506,
         "power": "3",
+        "preview": {
+            "previewed_at": "2021-07-01",
+            "source": "Captain RoBear",
+            "source_uri": "https://twitter.com/CaptainRoBear/status/1410685736068734978"
+        },
         "prices": {
-            "eur": null,
-            "eur_foil": null,
-            "tix": null,
-            "usd": "0.16",
+            "eur": "0.13",
+            "eur_foil": "0.11",
+            "tix": "0.03",
+            "usd": "0.12",
             "usd_etched": null,
-            "usd_foil": null
+            "usd_foil": "0.19"
         },
         "prints_search_uri": "https://api.scryfall.com/cards/search?order=released&q=oracleid%3Afaeee3a7-c66c-48d8-a994-12377d3bb729&unique=prints",
         "produced_mana": [
@@ -117,34 +129,35 @@
         ],
         "promo": false,
         "purchase_uris": {
-            "cardhoarder": "https://www.cardhoarder.com/cards?affiliate_id=scryfall&data%5Bsearch%5D=Hoarding+Ogre&ref=card-profile&utm_campaign=affiliate&utm_medium=card&utm_source=scryfall",
-            "cardmarket": "https://www.cardmarket.com/en/Magic/Products/Search?referrer=scryfall&searchString=Hoarding+Ogre&utm_campaign=card_prices&utm_medium=text&utm_source=scryfall",
-            "tcgplayer": "https://partner.tcgplayer.com/c/4931599/1830156/21018?subId1=api&u=https%3A%2F%2Fwww.tcgplayer.com%2Fproduct%2F583367%3Fpage%3D1"
+            "cardhoarder": "https://www.cardhoarder.com/cards/91794?affiliate_id=scryfall&ref=card-profile&utm_campaign=affiliate&utm_medium=card&utm_source=scryfall",
+            "cardmarket": "https://www.cardmarket.com/en/Magic/Products/Singles/Adventures-in-the-Forgotten-Realms/Hoarding-Ogre?referrer=scryfall&utm_campaign=card_prices&utm_medium=text&utm_source=scryfall",
+            "tcgplayer": "https://tcgplayer.pxf.io/c/4931599/1830156/21018?subId1=api&u=https%3A%2F%2Fwww.tcgplayer.com%2Fproduct%2F243264%3Fpage%3D1"
         },
         "rarity": "common",
         "related_uris": {
             "edhrec": "https://edhrec.com/route/?cc=Hoarding+Ogre",
-            "tcgplayer_infinite_articles": "https://partner.tcgplayer.com/c/4931599/1830156/21018?subId1=api&trafcat=tcgplayer.com%2Fsearch%2Farticles&u=https%3A%2F%2Fwww.tcgplayer.com%2Fsearch%2Farticles%3FproductLineName%3Dmagic%26q%3DHoarding%2BOgre",
-            "tcgplayer_infinite_decks": "https://partner.tcgplayer.com/c/4931599/1830156/21018?subId1=api&trafcat=tcgplayer.com%2Fsearch%2Fdecks&u=https%3A%2F%2Fwww.tcgplayer.com%2Fsearch%2Fdecks%3FproductLineName%3Dmagic%26q%3DHoarding%2BOgre"
+            "gatherer": "https://gatherer.wizards.com/Pages/Card/Details.aspx?multiverseid=527433&printed=false",
+            "tcgplayer_infinite_articles": "https://tcgplayer.pxf.io/c/4931599/1830156/21018?subId1=api&trafcat=infinite&u=https%3A%2F%2Finfinite.tcgplayer.com%2Fsearch%3FcontentMode%3Darticle%26game%3Dmagic%26partner%3Dscryfall%26q%3DHoarding%2BOgre",
+            "tcgplayer_infinite_decks": "https://tcgplayer.pxf.io/c/4931599/1830156/21018?subId1=api&trafcat=infinite&u=https%3A%2F%2Finfinite.tcgplayer.com%2Fsearch%3FcontentMode%3Ddeck%26game%3Dmagic%26partner%3Dscryfall%26q%3DHoarding%2BOgre"
         },
-        "released_at": "2024-08-02",
-        "reprint": true,
+        "released_at": "2021-07-23",
+        "reprint": false,
         "reserved": false,
-        "rulings_uri": "https://api.scryfall.com/cards/6aaf74f7-ba92-47b5-97d1-f2708b375f36/rulings",
-        "scryfall_set_uri": "https://scryfall.com/sets/plst?utm_source=api",
-        "scryfall_uri": "https://scryfall.com/card/plst/AFR-146/hoarding-ogre?utm_source=api",
-        "set": "plst",
-        "set_id": "67e47ba2-b019-4181-9005-fe9fc021de44",
-        "set_name": "The List",
-        "set_search_uri": "https://api.scryfall.com/cards/search?order=set&q=e%3Aplst&unique=prints",
-        "set_type": "masters",
-        "set_uri": "https://api.scryfall.com/sets/67e47ba2-b019-4181-9005-fe9fc021de44",
+        "rulings_uri": "https://api.scryfall.com/cards/df39eaac-b13f-4cb3-960d-8f7a0d590663/rulings",
+        "scryfall_set_uri": "https://scryfall.com/sets/afr?utm_source=api",
+        "scryfall_uri": "https://scryfall.com/card/afr/146/hoarding-ogre?utm_source=api",
+        "set": "afr",
+        "set_id": "e1ef87ba-ba92-4573-817f-543b996d2851",
+        "set_name": "Adventures in the Forgotten Realms",
+        "set_search_uri": "https://api.scryfall.com/cards/search?order=set&q=e%3Aafr&unique=prints",
+        "set_type": "expansion",
+        "set_uri": "https://api.scryfall.com/sets/e1ef87ba-ba92-4573-817f-543b996d2851",
         "story_spotlight": false,
-        "tcgplayer_id": 583367,
+        "tcgplayer_id": 243264,
         "textless": false,
         "toughness": "3",
         "type_line": "Creature \u2014 Ogre",
-        "uri": "https://api.scryfall.com/cards/6aaf74f7-ba92-47b5-97d1-f2708b375f36",
+        "uri": "https://api.scryfall.com/cards/df39eaac-b13f-4cb3-960d-8f7a0d590663",
         "variation": false
     }
 }

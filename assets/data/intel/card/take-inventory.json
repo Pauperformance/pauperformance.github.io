@@ -3,63 +3,47 @@
         "py/set": []
     },
     "scryfall": {
-        "all_parts": [
-            {
-                "component": "combo_piece",
-                "id": "240374d3-6a10-487d-8e2f-3fa79c262895",
-                "name": "Salacinder and Soot, Rascals",
-                "object": "related_card",
-                "type_line": "Legendary Creature \u2014 Elemental",
-                "uri": "https://api.scryfall.com/cards/240374d3-6a10-487d-8e2f-3fa79c262895"
-            },
-            {
-                "component": "combo_piece",
-                "id": "b4f414aa-b170-4883-9c8c-2e4b45507493",
-                "name": "Take Inventory",
-                "object": "related_card",
-                "type_line": "Sorcery",
-                "uri": "https://api.scryfall.com/cards/b4f414aa-b170-4883-9c8c-2e4b45507493"
-            }
-        ],
-        "arena_id": 86134,
         "artist": "Greg Staples",
         "artist_ids": [
             "93d65564-bf00-447b-8406-e2031f03b6b1"
         ],
-        "booster": false,
+        "booster": true,
         "border_color": "black",
         "card_back_id": "0aeebaf5-8c7d-4636-9e82-8c27447861f7",
+        "cardmarket_id": 290937,
         "cmc": 2.0,
-        "collector_number": "93",
+        "collector_number": "76",
         "color_identity": [
             "U"
         ],
         "colors": [
             "U"
         ],
-        "digital": true,
-        "edhrec_rank": 30248,
+        "digital": false,
+        "edhrec_rank": 26088,
         "finishes": [
-            "nonfoil"
+            "nonfoil",
+            "foil"
         ],
-        "foil": false,
+        "flavor_text": "A place for everything, and everything in its place.",
+        "foil": true,
         "frame": "2015",
         "full_art": false,
-        "game_changer": false,
         "games": [
-            "arena"
+            "paper",
+            "mtgo"
         ],
         "highres_image": true,
-        "id": "b4f414aa-b170-4883-9c8c-2e4b45507493",
+        "id": "a3584150-4f09-4c15-b13e-707bd91b3004",
         "illustration_id": "c69f8b6a-0baf-47e1-9c16-aa53213124c9",
         "image_status": "highres_scan",
         "image_uris": {
-            "art_crop": "https://cards.scryfall.io/art_crop/front/b/4/b4f414aa-b170-4883-9c8c-2e4b45507493.jpg?1678945021",
-            "border_crop": "https://cards.scryfall.io/border_crop/front/b/4/b4f414aa-b170-4883-9c8c-2e4b45507493.jpg?1678945021",
-            "large": "https://cards.scryfall.io/large/front/b/4/b4f414aa-b170-4883-9c8c-2e4b45507493.jpg?1678945021",
-            "normal": "https://cards.scryfall.io/normal/front/b/4/b4f414aa-b170-4883-9c8c-2e4b45507493.jpg?1678945021",
-            "png": "https://cards.scryfall.io/png/front/b/4/b4f414aa-b170-4883-9c8c-2e4b45507493.png?1678945021",
-            "small": "https://cards.scryfall.io/small/front/b/4/b4f414aa-b170-4883-9c8c-2e4b45507493.jpg?1678945021"
+            "art_crop": "https://cards.scryfall.io/art_crop/front/a/3/a3584150-4f09-4c15-b13e-707bd91b3004.jpg?1576384228",
+            "border_crop": "https://cards.scryfall.io/border_crop/front/a/3/a3584150-4f09-4c15-b13e-707bd91b3004.jpg?1576384228",
+            "large": "https://cards.scryfall.io/large/front/a/3/a3584150-4f09-4c15-b13e-707bd91b3004.jpg?1576384228",
+            "normal": "https://cards.scryfall.io/normal/front/a/3/a3584150-4f09-4c15-b13e-707bd91b3004.jpg?1576384228",
+            "png": "https://cards.scryfall.io/png/front/a/3/a3584150-4f09-4c15-b13e-707bd91b3004.png?1576384228",
+            "small": "https://cards.scryfall.io/small/front/a/3/a3584150-4f09-4c15-b13e-707bd91b3004.jpg?1576384228"
         },
         "keywords": [],
         "lang": "en",
@@ -69,6 +53,7 @@
             "brawl": "legal",
             "commander": "legal",
             "duel": "legal",
+            "explorer": "legal",
             "future": "not_legal",
             "gladiator": "legal",
             "historic": "legal",
@@ -85,12 +70,13 @@
             "standard": "not_legal",
             "standardbrawl": "not_legal",
             "timeless": "legal",
-            "tlr": "legal",
             "vintage": "legal"
         },
         "mana_cost": "{1}{U}",
+        "mtgo_foil_id": 61353,
+        "mtgo_id": 61352,
         "multiverse_ids": [
-            606708
+            414371
         ],
         "name": "Take Inventory",
         "nonfoil": true,
@@ -98,40 +84,46 @@
         "oracle_id": "925b3d1b-98cd-44f5-8aa0-e2b17df2808a",
         "oracle_text": "Draw a card, then draw cards equal to the number of cards named Take Inventory in your graveyard.",
         "oversized": false,
-        "penny_rank": 2827,
+        "penny_rank": 2227,
         "prices": {
-            "eur": null,
-            "eur_foil": null,
-            "tix": null,
-            "usd": null,
+            "eur": "0.08",
+            "eur_foil": "0.31",
+            "tix": "0.03",
+            "usd": "0.09",
             "usd_etched": null,
-            "usd_foil": null
+            "usd_foil": "0.44"
         },
         "prints_search_uri": "https://api.scryfall.com/cards/search?order=released&q=oracleid%3A925b3d1b-98cd-44f5-8aa0-e2b17df2808a&unique=prints",
         "promo": false,
+        "purchase_uris": {
+            "cardhoarder": "https://www.cardhoarder.com/cards/61352?affiliate_id=scryfall&ref=card-profile&utm_campaign=affiliate&utm_medium=card&utm_source=scryfall",
+            "cardmarket": "https://www.cardmarket.com/en/Magic/Products/Singles/Eldritch-Moon/Take-Inventory?referrer=scryfall&utm_campaign=card_prices&utm_medium=text&utm_source=scryfall",
+            "tcgplayer": "https://tcgplayer.pxf.io/c/4931599/1830156/21018?subId1=api&u=https%3A%2F%2Fwww.tcgplayer.com%2Fproduct%2F119747%3Fpage%3D1"
+        },
         "rarity": "common",
         "related_uris": {
             "edhrec": "https://edhrec.com/route/?cc=Take+Inventory",
-            "gatherer": "https://gatherer.wizards.com/Pages/Card/Details.aspx?multiverseid=606708&printed=false",
-            "tcgplayer_infinite_articles": "https://partner.tcgplayer.com/c/4931599/1830156/21018?subId1=api&trafcat=tcgplayer.com%2Fsearch%2Farticles&u=https%3A%2F%2Fwww.tcgplayer.com%2Fsearch%2Farticles%3FproductLineName%3Dmagic%26q%3DTake%2BInventory",
-            "tcgplayer_infinite_decks": "https://partner.tcgplayer.com/c/4931599/1830156/21018?subId1=api&trafcat=tcgplayer.com%2Fsearch%2Fdecks&u=https%3A%2F%2Fwww.tcgplayer.com%2Fsearch%2Fdecks%3FproductLineName%3Dmagic%26q%3DTake%2BInventory"
+            "gatherer": "https://gatherer.wizards.com/Pages/Card/Details.aspx?multiverseid=414371&printed=false",
+            "tcgplayer_infinite_articles": "https://tcgplayer.pxf.io/c/4931599/1830156/21018?subId1=api&trafcat=infinite&u=https%3A%2F%2Finfinite.tcgplayer.com%2Fsearch%3FcontentMode%3Darticle%26game%3Dmagic%26partner%3Dscryfall%26q%3DTake%2BInventory",
+            "tcgplayer_infinite_decks": "https://tcgplayer.pxf.io/c/4931599/1830156/21018?subId1=api&trafcat=infinite&u=https%3A%2F%2Finfinite.tcgplayer.com%2Fsearch%3FcontentMode%3Ddeck%26game%3Dmagic%26partner%3Dscryfall%26q%3DTake%2BInventory"
         },
-        "released_at": "2023-03-21",
-        "reprint": true,
+        "released_at": "2016-07-22",
+        "reprint": false,
         "reserved": false,
-        "rulings_uri": "https://api.scryfall.com/cards/b4f414aa-b170-4883-9c8c-2e4b45507493/rulings",
-        "scryfall_set_uri": "https://scryfall.com/sets/sir?utm_source=api",
-        "scryfall_uri": "https://scryfall.com/card/sir/93/take-inventory?utm_source=api",
-        "set": "sir",
-        "set_id": "c3694ff5-7b12-4f29-8d82-2c9b553ac60e",
-        "set_name": "Shadows over Innistrad Remastered",
-        "set_search_uri": "https://api.scryfall.com/cards/search?order=set&q=e%3Asir&unique=prints",
-        "set_type": "masters",
-        "set_uri": "https://api.scryfall.com/sets/c3694ff5-7b12-4f29-8d82-2c9b553ac60e",
+        "rulings_uri": "https://api.scryfall.com/cards/a3584150-4f09-4c15-b13e-707bd91b3004/rulings",
+        "scryfall_set_uri": "https://scryfall.com/sets/emn?utm_source=api",
+        "scryfall_uri": "https://scryfall.com/card/emn/76/take-inventory?utm_source=api",
+        "set": "emn",
+        "set_id": "5f0e4093-334f-4439-bbb5-a0affafd0ffc",
+        "set_name": "Eldritch Moon",
+        "set_search_uri": "https://api.scryfall.com/cards/search?order=set&q=e%3Aemn&unique=prints",
+        "set_type": "expansion",
+        "set_uri": "https://api.scryfall.com/sets/5f0e4093-334f-4439-bbb5-a0affafd0ffc",
         "story_spotlight": false,
+        "tcgplayer_id": 119747,
         "textless": false,
         "type_line": "Sorcery",
-        "uri": "https://api.scryfall.com/cards/b4f414aa-b170-4883-9c8c-2e4b45507493",
+        "uri": "https://api.scryfall.com/cards/a3584150-4f09-4c15-b13e-707bd91b3004",
         "variation": false
     }
 }

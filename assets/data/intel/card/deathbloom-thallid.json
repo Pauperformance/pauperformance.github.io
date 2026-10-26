@@ -6,21 +6,22 @@
         "all_parts": [
             {
                 "component": "token",
-                "id": "248ade83-ac57-42d6-985c-1e4cc3639f36",
+                "id": "a49da8fe-559f-4c34-b904-c285188fb98d",
                 "name": "Saproling",
                 "object": "related_card",
                 "type_line": "Token Creature \u2014 Saproling",
-                "uri": "https://api.scryfall.com/cards/248ade83-ac57-42d6-985c-1e4cc3639f36"
+                "uri": "https://api.scryfall.com/cards/a49da8fe-559f-4c34-b904-c285188fb98d"
             },
             {
                 "component": "combo_piece",
-                "id": "bbe74b50-a2a9-4ace-95ed-4ad5d12e3f2e",
+                "id": "236ead00-d43e-4079-b74d-09be9875fd2d",
                 "name": "Deathbloom Thallid",
                 "object": "related_card",
                 "type_line": "Creature \u2014 Fungus",
-                "uri": "https://api.scryfall.com/cards/bbe74b50-a2a9-4ace-95ed-4ad5d12e3f2e"
+                "uri": "https://api.scryfall.com/cards/236ead00-d43e-4079-b74d-09be9875fd2d"
             }
         ],
+        "arena_id": 67272,
         "artist": "Mike Burns",
         "artist_ids": [
             "184b88b1-b679-4907-91b0-b2f2a458ae20"
@@ -28,9 +29,9 @@
         "booster": true,
         "border_color": "black",
         "card_back_id": "0aeebaf5-8c7d-4636-9e82-8c27447861f7",
-        "cardmarket_id": 686872,
+        "cardmarket_id": 355411,
         "cmc": 3.0,
-        "collector_number": "395",
+        "collector_number": "84",
         "color_identity": [
             "B"
         ],
@@ -38,29 +39,31 @@
             "B"
         ],
         "digital": false,
-        "edhrec_rank": 15503,
+        "edhrec_rank": 11066,
         "finishes": [
-            "nonfoil"
+            "nonfoil",
+            "foil"
         ],
         "flavor_text": "\"Nature is not always gentle or kind, but all life begets life.\"\n\u2014Marwyn of Llanowar",
-        "foil": false,
+        "foil": true,
         "frame": "2015",
         "full_art": false,
-        "game_changer": false,
         "games": [
-            "paper"
+            "arena",
+            "paper",
+            "mtgo"
         ],
         "highres_image": true,
-        "id": "bbe74b50-a2a9-4ace-95ed-4ad5d12e3f2e",
+        "id": "236ead00-d43e-4079-b74d-09be9875fd2d",
         "illustration_id": "b4f24f53-a919-4ff4-9339-67e6de1bbdb1",
         "image_status": "highres_scan",
         "image_uris": {
-            "art_crop": "https://cards.scryfall.io/art_crop/front/b/b/bbe74b50-a2a9-4ace-95ed-4ad5d12e3f2e.jpg?1675649325",
-            "border_crop": "https://cards.scryfall.io/border_crop/front/b/b/bbe74b50-a2a9-4ace-95ed-4ad5d12e3f2e.jpg?1675649325",
-            "large": "https://cards.scryfall.io/large/front/b/b/bbe74b50-a2a9-4ace-95ed-4ad5d12e3f2e.jpg?1675649325",
-            "normal": "https://cards.scryfall.io/normal/front/b/b/bbe74b50-a2a9-4ace-95ed-4ad5d12e3f2e.jpg?1675649325",
-            "png": "https://cards.scryfall.io/png/front/b/b/bbe74b50-a2a9-4ace-95ed-4ad5d12e3f2e.png?1675649325",
-            "small": "https://cards.scryfall.io/small/front/b/b/bbe74b50-a2a9-4ace-95ed-4ad5d12e3f2e.jpg?1675649325"
+            "art_crop": "https://cards.scryfall.io/art_crop/front/2/3/236ead00-d43e-4079-b74d-09be9875fd2d.jpg?1592317493",
+            "border_crop": "https://cards.scryfall.io/border_crop/front/2/3/236ead00-d43e-4079-b74d-09be9875fd2d.jpg?1592317493",
+            "large": "https://cards.scryfall.io/large/front/2/3/236ead00-d43e-4079-b74d-09be9875fd2d.jpg?1592317493",
+            "normal": "https://cards.scryfall.io/normal/front/2/3/236ead00-d43e-4079-b74d-09be9875fd2d.jpg?1592317493",
+            "png": "https://cards.scryfall.io/png/front/2/3/236ead00-d43e-4079-b74d-09be9875fd2d.png?1592317493",
+            "small": "https://cards.scryfall.io/small/front/2/3/236ead00-d43e-4079-b74d-09be9875fd2d.jpg?1592317493"
         },
         "keywords": [],
         "lang": "en",
@@ -70,6 +73,7 @@
             "brawl": "legal",
             "commander": "legal",
             "duel": "legal",
+            "explorer": "legal",
             "future": "not_legal",
             "gladiator": "legal",
             "historic": "legal",
@@ -86,61 +90,61 @@
             "standard": "not_legal",
             "standardbrawl": "not_legal",
             "timeless": "legal",
-            "tlr": "legal",
             "vintage": "legal"
         },
         "mana_cost": "{2}{B}",
+        "mtgo_id": 67633,
         "multiverse_ids": [
-            593935
+            442972
         ],
         "name": "Deathbloom Thallid",
         "nonfoil": true,
         "object": "card",
         "oracle_id": "ce873790-de4d-4ba3-8023-c44306ba3ff8",
-        "oracle_text": "When this creature dies, create a 1/1 green Saproling creature token.",
+        "oracle_text": "When Deathbloom Thallid dies, create a 1/1 green Saproling creature token.",
         "oversized": false,
-        "penny_rank": 12560,
+        "penny_rank": 10649,
         "power": "3",
         "prices": {
-            "eur": "0.16",
-            "eur_foil": null,
-            "tix": null,
-            "usd": "0.09",
+            "eur": "0.07",
+            "eur_foil": "0.21",
+            "tix": "0.03",
+            "usd": "0.04",
             "usd_etched": null,
-            "usd_foil": null
+            "usd_foil": "0.22"
         },
         "prints_search_uri": "https://api.scryfall.com/cards/search?order=released&q=oracleid%3Ace873790-de4d-4ba3-8023-c44306ba3ff8&unique=prints",
         "promo": false,
         "purchase_uris": {
-            "cardhoarder": "https://www.cardhoarder.com/cards?affiliate_id=scryfall&data%5Bsearch%5D=Deathbloom+Thallid&ref=card-profile&utm_campaign=affiliate&utm_medium=card&utm_source=scryfall",
-            "cardmarket": "https://www.cardmarket.com/en/Magic/Products?idProduct=686872&referrer=scryfall&utm_campaign=card_prices&utm_medium=text&utm_source=scryfall",
-            "tcgplayer": "https://partner.tcgplayer.com/c/4931599/1830156/21018?subId1=api&u=https%3A%2F%2Fwww.tcgplayer.com%2Fproduct%2F455325%3Fpage%3D1"
+            "cardhoarder": "https://www.cardhoarder.com/cards/67633?affiliate_id=scryfall&ref=card-profile&utm_campaign=affiliate&utm_medium=card&utm_source=scryfall",
+            "cardmarket": "https://www.cardmarket.com/en/Magic/Products/Singles/Dominaria/Deathbloom-Thallid?referrer=scryfall&utm_campaign=card_prices&utm_medium=text&utm_source=scryfall",
+            "tcgplayer": "https://tcgplayer.pxf.io/c/4931599/1830156/21018?subId1=api&u=https%3A%2F%2Fwww.tcgplayer.com%2Fproduct%2F164728%3Fpage%3D1"
         },
         "rarity": "common",
         "related_uris": {
             "edhrec": "https://edhrec.com/route/?cc=Deathbloom+Thallid",
-            "gatherer": "https://gatherer.wizards.com/Pages/Card/Details.aspx?multiverseid=593935&printed=false",
-            "tcgplayer_infinite_articles": "https://partner.tcgplayer.com/c/4931599/1830156/21018?subId1=api&trafcat=tcgplayer.com%2Fsearch%2Farticles&u=https%3A%2F%2Fwww.tcgplayer.com%2Fsearch%2Farticles%3FproductLineName%3Dmagic%26q%3DDeathbloom%2BThallid",
-            "tcgplayer_infinite_decks": "https://partner.tcgplayer.com/c/4931599/1830156/21018?subId1=api&trafcat=tcgplayer.com%2Fsearch%2Fdecks&u=https%3A%2F%2Fwww.tcgplayer.com%2Fsearch%2Fdecks%3FproductLineName%3Dmagic%26q%3DDeathbloom%2BThallid"
+            "gatherer": "https://gatherer.wizards.com/Pages/Card/Details.aspx?multiverseid=442972&printed=false",
+            "tcgplayer_infinite_articles": "https://tcgplayer.pxf.io/c/4931599/1830156/21018?subId1=api&trafcat=infinite&u=https%3A%2F%2Finfinite.tcgplayer.com%2Fsearch%3FcontentMode%3Darticle%26game%3Dmagic%26partner%3Dscryfall%26q%3DDeathbloom%2BThallid",
+            "tcgplayer_infinite_decks": "https://tcgplayer.pxf.io/c/4931599/1830156/21018?subId1=api&trafcat=infinite&u=https%3A%2F%2Finfinite.tcgplayer.com%2Fsearch%3FcontentMode%3Ddeck%26game%3Dmagic%26partner%3Dscryfall%26q%3DDeathbloom%2BThallid"
         },
-        "released_at": "2022-12-02",
-        "reprint": true,
+        "released_at": "2018-04-27",
+        "reprint": false,
         "reserved": false,
-        "rulings_uri": "https://api.scryfall.com/cards/bbe74b50-a2a9-4ace-95ed-4ad5d12e3f2e/rulings",
-        "scryfall_set_uri": "https://scryfall.com/sets/j22?utm_source=api",
-        "scryfall_uri": "https://scryfall.com/card/j22/395/deathbloom-thallid?utm_source=api",
-        "set": "j22",
-        "set_id": "247df475-e4ce-4e5e-9317-11892d2211e0",
-        "set_name": "Jumpstart 2022",
-        "set_search_uri": "https://api.scryfall.com/cards/search?order=set&q=e%3Aj22&unique=prints",
-        "set_type": "draft_innovation",
-        "set_uri": "https://api.scryfall.com/sets/247df475-e4ce-4e5e-9317-11892d2211e0",
+        "rulings_uri": "https://api.scryfall.com/cards/236ead00-d43e-4079-b74d-09be9875fd2d/rulings",
+        "scryfall_set_uri": "https://scryfall.com/sets/dom?utm_source=api",
+        "scryfall_uri": "https://scryfall.com/card/dom/84/deathbloom-thallid?utm_source=api",
+        "set": "dom",
+        "set_id": "be1daba3-51c9-4e7e-9212-36e68addc26c",
+        "set_name": "Dominaria",
+        "set_search_uri": "https://api.scryfall.com/cards/search?order=set&q=e%3Adom&unique=prints",
+        "set_type": "expansion",
+        "set_uri": "https://api.scryfall.com/sets/be1daba3-51c9-4e7e-9212-36e68addc26c",
         "story_spotlight": false,
-        "tcgplayer_id": 455325,
+        "tcgplayer_id": 164728,
         "textless": false,
         "toughness": "2",
         "type_line": "Creature \u2014 Fungus",
-        "uri": "https://api.scryfall.com/cards/bbe74b50-a2a9-4ace-95ed-4ad5d12e3f2e",
+        "uri": "https://api.scryfall.com/cards/236ead00-d43e-4079-b74d-09be9875fd2d",
         "variation": false
     }
 }

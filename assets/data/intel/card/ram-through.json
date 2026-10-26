@@ -1,15 +1,16 @@
 {
     "archetypes": {
         "py/set": [
-            "Bogles",
-            "Infect",
-            "Elves",
             "Gruul Ramp",
+            "Bogles",
+            "Brew MonoG",
             "Stompy",
-            "Brew MonoG"
+            "Infect",
+            "Elves"
         ]
     },
     "scryfall": {
+        "arena_id": 71237,
         "artist": "Zoltan Boros",
         "artist_ids": [
             "1885e6cb-c827-4896-994e-3d0a027d602f"
@@ -17,8 +18,9 @@
         "booster": true,
         "border_color": "black",
         "card_back_id": "0aeebaf5-8c7d-4636-9e82-8c27447861f7",
+        "cardmarket_id": 455353,
         "cmc": 2.0,
-        "collector_number": "IKO-170",
+        "collector_number": "170",
         "color_identity": [
             "G"
         ],
@@ -26,29 +28,31 @@
             "G"
         ],
         "digital": false,
-        "edhrec_rank": 1096,
+        "edhrec_rank": 1070,
         "finishes": [
-            "nonfoil"
+            "nonfoil",
+            "foil"
         ],
         "flavor_text": "\"Need a medic! And some stonemasons!\"\n\u2014Wyllon, Drannith merchant",
-        "foil": false,
+        "foil": true,
         "frame": "2015",
         "full_art": false,
-        "game_changer": false,
         "games": [
-            "paper"
+            "arena",
+            "paper",
+            "mtgo"
         ],
         "highres_image": true,
-        "id": "a6989928-3004-41c8-a20d-4bbc84a9b334",
+        "id": "ac0b24e7-14e7-45ee-b5d8-bdb8674b669c",
         "illustration_id": "820603e6-81b9-4b05-a17f-936e595696fe",
         "image_status": "highres_scan",
         "image_uris": {
-            "art_crop": "https://cards.scryfall.io/art_crop/front/a/6/a6989928-3004-41c8-a20d-4bbc84a9b334.jpg?1723437148",
-            "border_crop": "https://cards.scryfall.io/border_crop/front/a/6/a6989928-3004-41c8-a20d-4bbc84a9b334.jpg?1723437148",
-            "large": "https://cards.scryfall.io/large/front/a/6/a6989928-3004-41c8-a20d-4bbc84a9b334.jpg?1723437148",
-            "normal": "https://cards.scryfall.io/normal/front/a/6/a6989928-3004-41c8-a20d-4bbc84a9b334.jpg?1723437148",
-            "png": "https://cards.scryfall.io/png/front/a/6/a6989928-3004-41c8-a20d-4bbc84a9b334.png?1723437148",
-            "small": "https://cards.scryfall.io/small/front/a/6/a6989928-3004-41c8-a20d-4bbc84a9b334.jpg?1723437148"
+            "art_crop": "https://cards.scryfall.io/art_crop/front/a/c/ac0b24e7-14e7-45ee-b5d8-bdb8674b669c.jpg?1591723419",
+            "border_crop": "https://cards.scryfall.io/border_crop/front/a/c/ac0b24e7-14e7-45ee-b5d8-bdb8674b669c.jpg?1591723419",
+            "large": "https://cards.scryfall.io/large/front/a/c/ac0b24e7-14e7-45ee-b5d8-bdb8674b669c.jpg?1591723419",
+            "normal": "https://cards.scryfall.io/normal/front/a/c/ac0b24e7-14e7-45ee-b5d8-bdb8674b669c.jpg?1591723419",
+            "png": "https://cards.scryfall.io/png/front/a/c/ac0b24e7-14e7-45ee-b5d8-bdb8674b669c.png?1591723419",
+            "small": "https://cards.scryfall.io/small/front/a/c/ac0b24e7-14e7-45ee-b5d8-bdb8674b669c.jpg?1591723419"
         },
         "keywords": [],
         "lang": "en",
@@ -58,6 +62,7 @@
             "brawl": "legal",
             "commander": "legal",
             "duel": "legal",
+            "explorer": "legal",
             "future": "not_legal",
             "gladiator": "legal",
             "historic": "legal",
@@ -74,56 +79,59 @@
             "standard": "not_legal",
             "standardbrawl": "not_legal",
             "timeless": "legal",
-            "tlr": "legal",
             "vintage": "legal"
         },
         "mana_cost": "{1}{G}",
-        "multiverse_ids": [],
+        "mtgo_id": 80349,
+        "multiverse_ids": [
+            479690
+        ],
         "name": "Ram Through",
         "nonfoil": true,
         "object": "card",
         "oracle_id": "4b1befff-48fa-47a3-832e-bdaf43495c02",
         "oracle_text": "Target creature you control deals damage equal to its power to target creature you don't control. If the creature you control has trample, excess damage is dealt to that creature's controller instead.",
         "oversized": false,
-        "penny_rank": 4688,
+        "penny_rank": 4058,
         "prices": {
-            "eur": null,
-            "eur_foil": null,
-            "tix": null,
-            "usd": "0.44",
+            "eur": "0.19",
+            "eur_foil": "1.36",
+            "tix": "0.03",
+            "usd": "0.14",
             "usd_etched": null,
-            "usd_foil": null
+            "usd_foil": "2.22"
         },
         "prints_search_uri": "https://api.scryfall.com/cards/search?order=released&q=oracleid%3A4b1befff-48fa-47a3-832e-bdaf43495c02&unique=prints",
         "promo": false,
         "purchase_uris": {
-            "cardhoarder": "https://www.cardhoarder.com/cards?affiliate_id=scryfall&data%5Bsearch%5D=Ram+Through&ref=card-profile&utm_campaign=affiliate&utm_medium=card&utm_source=scryfall",
-            "cardmarket": "https://www.cardmarket.com/en/Magic/Products/Search?referrer=scryfall&searchString=Ram+Through&utm_campaign=card_prices&utm_medium=text&utm_source=scryfall",
-            "tcgplayer": "https://partner.tcgplayer.com/c/4931599/1830156/21018?subId1=api&u=https%3A%2F%2Fwww.tcgplayer.com%2Fproduct%2F583217%3Fpage%3D1"
+            "cardhoarder": "https://www.cardhoarder.com/cards/80349?affiliate_id=scryfall&ref=card-profile&utm_campaign=affiliate&utm_medium=card&utm_source=scryfall",
+            "cardmarket": "https://www.cardmarket.com/en/Magic/Products/Singles/Ikoria-Lair-of-Behemoths/Ram-Through?referrer=scryfall&utm_campaign=card_prices&utm_medium=text&utm_source=scryfall",
+            "tcgplayer": "https://tcgplayer.pxf.io/c/4931599/1830156/21018?subId1=api&u=https%3A%2F%2Fwww.tcgplayer.com%2Fproduct%2F212717%3Fpage%3D1"
         },
         "rarity": "common",
         "related_uris": {
             "edhrec": "https://edhrec.com/route/?cc=Ram+Through",
-            "tcgplayer_infinite_articles": "https://partner.tcgplayer.com/c/4931599/1830156/21018?subId1=api&trafcat=tcgplayer.com%2Fsearch%2Farticles&u=https%3A%2F%2Fwww.tcgplayer.com%2Fsearch%2Farticles%3FproductLineName%3Dmagic%26q%3DRam%2BThrough",
-            "tcgplayer_infinite_decks": "https://partner.tcgplayer.com/c/4931599/1830156/21018?subId1=api&trafcat=tcgplayer.com%2Fsearch%2Fdecks&u=https%3A%2F%2Fwww.tcgplayer.com%2Fsearch%2Fdecks%3FproductLineName%3Dmagic%26q%3DRam%2BThrough"
+            "gatherer": "https://gatherer.wizards.com/Pages/Card/Details.aspx?multiverseid=479690&printed=false",
+            "tcgplayer_infinite_articles": "https://tcgplayer.pxf.io/c/4931599/1830156/21018?subId1=api&trafcat=infinite&u=https%3A%2F%2Finfinite.tcgplayer.com%2Fsearch%3FcontentMode%3Darticle%26game%3Dmagic%26partner%3Dscryfall%26q%3DRam%2BThrough",
+            "tcgplayer_infinite_decks": "https://tcgplayer.pxf.io/c/4931599/1830156/21018?subId1=api&trafcat=infinite&u=https%3A%2F%2Finfinite.tcgplayer.com%2Fsearch%3FcontentMode%3Ddeck%26game%3Dmagic%26partner%3Dscryfall%26q%3DRam%2BThrough"
         },
-        "released_at": "2024-08-02",
-        "reprint": true,
+        "released_at": "2020-04-24",
+        "reprint": false,
         "reserved": false,
-        "rulings_uri": "https://api.scryfall.com/cards/a6989928-3004-41c8-a20d-4bbc84a9b334/rulings",
-        "scryfall_set_uri": "https://scryfall.com/sets/plst?utm_source=api",
-        "scryfall_uri": "https://scryfall.com/card/plst/IKO-170/ram-through?utm_source=api",
-        "set": "plst",
-        "set_id": "67e47ba2-b019-4181-9005-fe9fc021de44",
-        "set_name": "The List",
-        "set_search_uri": "https://api.scryfall.com/cards/search?order=set&q=e%3Aplst&unique=prints",
-        "set_type": "masters",
-        "set_uri": "https://api.scryfall.com/sets/67e47ba2-b019-4181-9005-fe9fc021de44",
+        "rulings_uri": "https://api.scryfall.com/cards/ac0b24e7-14e7-45ee-b5d8-bdb8674b669c/rulings",
+        "scryfall_set_uri": "https://scryfall.com/sets/iko?utm_source=api",
+        "scryfall_uri": "https://scryfall.com/card/iko/170/ram-through?utm_source=api",
+        "set": "iko",
+        "set_id": "19feda43-15ab-427e-a0e4-148a4bf2b03a",
+        "set_name": "Ikoria: Lair of Behemoths",
+        "set_search_uri": "https://api.scryfall.com/cards/search?order=set&q=e%3Aiko&unique=prints",
+        "set_type": "expansion",
+        "set_uri": "https://api.scryfall.com/sets/19feda43-15ab-427e-a0e4-148a4bf2b03a",
         "story_spotlight": false,
-        "tcgplayer_id": 583217,
+        "tcgplayer_id": 212717,
         "textless": false,
         "type_line": "Instant",
-        "uri": "https://api.scryfall.com/cards/a6989928-3004-41c8-a20d-4bbc84a9b334",
+        "uri": "https://api.scryfall.com/cards/ac0b24e7-14e7-45ee-b5d8-bdb8674b669c",
         "variation": false
     }
 }

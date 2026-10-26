@@ -1,44 +1,26 @@
 {
     "archetypes": {
         "py/set": [
-            "Gruul Turbo Emblem",
-            "Grapeshot Storm",
-            "Brew Dune",
             "Naya Turbo Emblem",
-            "MonoR Turbo Emblem",
+            "Brew Dune",
             "Empty The Warrens Storm",
-            "MonoR Kuldotha"
+            "MonoR Turbo Emblem",
+            "MonoR Kuldotha",
+            "Grapeshot Storm",
+            "Gruul Turbo Emblem"
         ]
     },
     "scryfall": {
-        "all_parts": [
-            {
-                "component": "combo_piece",
-                "id": "240374d3-6a10-487d-8e2f-3fa79c262895",
-                "name": "Salacinder and Soot, Rascals",
-                "object": "related_card",
-                "type_line": "Legendary Creature \u2014 Elemental",
-                "uri": "https://api.scryfall.com/cards/240374d3-6a10-487d-8e2f-3fa79c262895"
-            },
-            {
-                "component": "combo_piece",
-                "id": "cbd00730-3137-4a75-a061-0508d1882eff",
-                "name": "Rite of Flame",
-                "object": "related_card",
-                "type_line": "Sorcery",
-                "uri": "https://api.scryfall.com/cards/cbd00730-3137-4a75-a061-0508d1882eff"
-            }
-        ],
         "artist": "Dany Orizio",
         "artist_ids": [
             "fcd5ea36-64e0-4af0-992a-3c68a34a400f"
         ],
-        "booster": false,
-        "border_color": "white",
+        "booster": true,
+        "border_color": "black",
         "card_back_id": "0aeebaf5-8c7d-4636-9e82-8c27447861f7",
-        "cardmarket_id": 784060,
+        "cardmarket_id": 13710,
         "cmc": 1.0,
-        "collector_number": "59",
+        "collector_number": "96",
         "color_identity": [
             "R"
         ],
@@ -46,30 +28,30 @@
             "R"
         ],
         "digital": false,
-        "edhrec_rank": 686,
+        "edhrec_rank": 1006,
         "finishes": [
-            "nonfoil"
+            "nonfoil",
+            "foil"
         ],
         "flavor_text": "Deep beneath the ice, beneath the soil and the rock, Dominaria's fire still burned hot.",
-        "foil": false,
-        "frame": "2015",
+        "foil": true,
+        "frame": "2003",
         "full_art": false,
-        "game_changer": false,
         "games": [
             "paper",
             "mtgo"
         ],
         "highres_image": true,
-        "id": "cbd00730-3137-4a75-a061-0508d1882eff",
+        "id": "c062caf7-f0eb-44db-9f74-e6711a13fada",
         "illustration_id": "45de2acb-62e1-4261-ae4a-af5172d3a08b",
         "image_status": "highres_scan",
         "image_uris": {
-            "art_crop": "https://cards.scryfall.io/art_crop/front/c/b/cbd00730-3137-4a75-a061-0508d1882eff.jpg?1723227144",
-            "border_crop": "https://cards.scryfall.io/border_crop/front/c/b/cbd00730-3137-4a75-a061-0508d1882eff.jpg?1723227144",
-            "large": "https://cards.scryfall.io/large/front/c/b/cbd00730-3137-4a75-a061-0508d1882eff.jpg?1723227144",
-            "normal": "https://cards.scryfall.io/normal/front/c/b/cbd00730-3137-4a75-a061-0508d1882eff.jpg?1723227144",
-            "png": "https://cards.scryfall.io/png/front/c/b/cbd00730-3137-4a75-a061-0508d1882eff.png?1723227144",
-            "small": "https://cards.scryfall.io/small/front/c/b/cbd00730-3137-4a75-a061-0508d1882eff.jpg?1723227144"
+            "art_crop": "https://cards.scryfall.io/art_crop/front/c/0/c062caf7-f0eb-44db-9f74-e6711a13fada.jpg?1593275318",
+            "border_crop": "https://cards.scryfall.io/border_crop/front/c/0/c062caf7-f0eb-44db-9f74-e6711a13fada.jpg?1593275318",
+            "large": "https://cards.scryfall.io/large/front/c/0/c062caf7-f0eb-44db-9f74-e6711a13fada.jpg?1593275318",
+            "normal": "https://cards.scryfall.io/normal/front/c/0/c062caf7-f0eb-44db-9f74-e6711a13fada.jpg?1593275318",
+            "png": "https://cards.scryfall.io/png/front/c/0/c062caf7-f0eb-44db-9f74-e6711a13fada.png?1593275318",
+            "small": "https://cards.scryfall.io/small/front/c/0/c062caf7-f0eb-44db-9f74-e6711a13fada.jpg?1593275318"
         },
         "keywords": [],
         "lang": "en",
@@ -79,6 +61,7 @@
             "brawl": "not_legal",
             "commander": "legal",
             "duel": "legal",
+            "explorer": "not_legal",
             "future": "not_legal",
             "gladiator": "not_legal",
             "historic": "not_legal",
@@ -95,13 +78,13 @@
             "standard": "not_legal",
             "standardbrawl": "not_legal",
             "timeless": "not_legal",
-            "tlr": "legal",
             "vintage": "legal"
         },
         "mana_cost": "{R}",
-        "mtgo_id": 134010,
+        "mtgo_foil_id": 24676,
+        "mtgo_id": 24675,
         "multiverse_ids": [
-            677735
+            121217
         ],
         "name": "Rite of Flame",
         "nonfoil": true,
@@ -110,12 +93,12 @@
         "oracle_text": "Add {R}{R}, then add {R} for each card named Rite of Flame in each graveyard.",
         "oversized": false,
         "prices": {
-            "eur": "3.64",
-            "eur_foil": null,
-            "tix": "0.01",
-            "usd": "4.64",
+            "eur": "1.13",
+            "eur_foil": "20.66",
+            "tix": "0.26",
+            "usd": "4.55",
             "usd_etched": null,
-            "usd_foil": null
+            "usd_foil": "52.20"
         },
         "prints_search_uri": "https://api.scryfall.com/cards/search?order=released&q=oracleid%3A8a2e53f9-8100-488f-8504-b59e9bd1cc29&unique=prints",
         "produced_mana": [
@@ -123,34 +106,34 @@
         ],
         "promo": false,
         "purchase_uris": {
-            "cardhoarder": "https://www.cardhoarder.com/cards/134010?affiliate_id=scryfall&ref=card-profile&utm_campaign=affiliate&utm_medium=card&utm_source=scryfall",
-            "cardmarket": "https://www.cardmarket.com/en/Magic/Products?idProduct=784060&referrer=scryfall&utm_campaign=card_prices&utm_medium=text&utm_source=scryfall",
-            "tcgplayer": "https://partner.tcgplayer.com/c/4931599/1830156/21018?subId1=api&u=https%3A%2F%2Fwww.tcgplayer.com%2Fproduct%2F563119%3Fpage%3D1"
+            "cardhoarder": "https://www.cardhoarder.com/cards/24675?affiliate_id=scryfall&ref=card-profile&utm_campaign=affiliate&utm_medium=card&utm_source=scryfall",
+            "cardmarket": "https://www.cardmarket.com/en/Magic/Products/Singles/Coldsnap/Rite-of-Flame?referrer=scryfall&utm_campaign=card_prices&utm_medium=text&utm_source=scryfall",
+            "tcgplayer": "https://tcgplayer.pxf.io/c/4931599/1830156/21018?subId1=api&u=https%3A%2F%2Fwww.tcgplayer.com%2Fproduct%2F14103%3Fpage%3D1"
         },
         "rarity": "common",
         "related_uris": {
             "edhrec": "https://edhrec.com/route/?cc=Rite+of+Flame",
-            "gatherer": "https://gatherer.wizards.com/Pages/Card/Details.aspx?multiverseid=677735&printed=false",
-            "tcgplayer_infinite_articles": "https://partner.tcgplayer.com/c/4931599/1830156/21018?subId1=api&trafcat=tcgplayer.com%2Fsearch%2Farticles&u=https%3A%2F%2Fwww.tcgplayer.com%2Fsearch%2Farticles%3FproductLineName%3Dmagic%26q%3DRite%2Bof%2BFlame",
-            "tcgplayer_infinite_decks": "https://partner.tcgplayer.com/c/4931599/1830156/21018?subId1=api&trafcat=tcgplayer.com%2Fsearch%2Fdecks&u=https%3A%2F%2Fwww.tcgplayer.com%2Fsearch%2Fdecks%3FproductLineName%3Dmagic%26q%3DRite%2Bof%2BFlame"
+            "gatherer": "https://gatherer.wizards.com/Pages/Card/Details.aspx?multiverseid=121217&printed=false",
+            "tcgplayer_infinite_articles": "https://tcgplayer.pxf.io/c/4931599/1830156/21018?subId1=api&trafcat=infinite&u=https%3A%2F%2Finfinite.tcgplayer.com%2Fsearch%3FcontentMode%3Darticle%26game%3Dmagic%26partner%3Dscryfall%26q%3DRite%2Bof%2BFlame",
+            "tcgplayer_infinite_decks": "https://tcgplayer.pxf.io/c/4931599/1830156/21018?subId1=api&trafcat=infinite&u=https%3A%2F%2Finfinite.tcgplayer.com%2Fsearch%3FcontentMode%3Ddeck%26game%3Dmagic%26partner%3Dscryfall%26q%3DRite%2Bof%2BFlame"
         },
-        "released_at": "2024-08-02",
-        "reprint": true,
+        "released_at": "2006-07-21",
+        "reprint": false,
         "reserved": false,
-        "rulings_uri": "https://api.scryfall.com/cards/cbd00730-3137-4a75-a061-0508d1882eff/rulings",
-        "scryfall_set_uri": "https://scryfall.com/sets/mb2?utm_source=api",
-        "scryfall_uri": "https://scryfall.com/card/mb2/59/rite-of-flame?utm_source=api",
-        "set": "mb2",
-        "set_id": "1e6879fe-2f29-4ad7-8d42-7f5bfb469f4a",
-        "set_name": "Mystery Booster 2",
-        "set_search_uri": "https://api.scryfall.com/cards/search?order=set&q=e%3Amb2&unique=prints",
-        "set_type": "masters",
-        "set_uri": "https://api.scryfall.com/sets/1e6879fe-2f29-4ad7-8d42-7f5bfb469f4a",
+        "rulings_uri": "https://api.scryfall.com/cards/c062caf7-f0eb-44db-9f74-e6711a13fada/rulings",
+        "scryfall_set_uri": "https://scryfall.com/sets/csp?utm_source=api",
+        "scryfall_uri": "https://scryfall.com/card/csp/96/rite-of-flame?utm_source=api",
+        "set": "csp",
+        "set_id": "1f4f105f-73e4-4f03-849e-82a204807847",
+        "set_name": "Coldsnap",
+        "set_search_uri": "https://api.scryfall.com/cards/search?order=set&q=e%3Acsp&unique=prints",
+        "set_type": "expansion",
+        "set_uri": "https://api.scryfall.com/sets/1f4f105f-73e4-4f03-849e-82a204807847",
         "story_spotlight": false,
-        "tcgplayer_id": 563119,
+        "tcgplayer_id": 14103,
         "textless": false,
         "type_line": "Sorcery",
-        "uri": "https://api.scryfall.com/cards/cbd00730-3137-4a75-a061-0508d1882eff",
+        "uri": "https://api.scryfall.com/cards/c062caf7-f0eb-44db-9f74-e6711a13fada",
         "variation": false
     }
 }

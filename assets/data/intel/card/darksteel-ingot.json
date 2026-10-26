@@ -14,48 +14,49 @@
             },
             {
                 "component": "combo_piece",
-                "id": "1fa9117c-9c77-41f0-a290-4954bbf1cc0b",
+                "id": "b02b9634-77e9-48ae-a6bf-859598d12c52",
                 "name": "Darksteel Ingot",
                 "object": "related_card",
                 "type_line": "Artifact",
-                "uri": "https://api.scryfall.com/cards/1fa9117c-9c77-41f0-a290-4954bbf1cc0b"
+                "uri": "https://api.scryfall.com/cards/b02b9634-77e9-48ae-a6bf-859598d12c52"
             }
         ],
-        "arena_id": 94493,
         "artist": "Martina Pilcerova",
         "artist_ids": [
             "30fead7c-da53-4c1b-b514-4be6e5ce487c"
         ],
-        "booster": false,
+        "booster": true,
         "border_color": "black",
         "card_back_id": "0aeebaf5-8c7d-4636-9e82-8c27447861f7",
+        "cardmarket_id": 328,
         "cmc": 3.0,
-        "collector_number": "254",
+        "collector_number": "112",
         "color_identity": [],
         "colors": [],
-        "digital": true,
-        "edhrec_rank": 1892,
+        "digital": false,
+        "edhrec_rank": 1182,
         "finishes": [
-            "nonfoil"
+            "nonfoil",
+            "foil"
         ],
-        "foil": false,
-        "frame": "2015",
+        "foil": true,
+        "frame": "2003",
         "full_art": false,
-        "game_changer": false,
         "games": [
-            "arena"
+            "paper",
+            "mtgo"
         ],
         "highres_image": true,
-        "id": "1fa9117c-9c77-41f0-a290-4954bbf1cc0b",
+        "id": "b02b9634-77e9-48ae-a6bf-859598d12c52",
         "illustration_id": "fa864803-3d08-49ac-a040-0e4d2cc4fd86",
         "image_status": "highres_scan",
         "image_uris": {
-            "art_crop": "https://cards.scryfall.io/art_crop/front/1/f/1fa9117c-9c77-41f0-a290-4954bbf1cc0b.jpg?1733180562",
-            "border_crop": "https://cards.scryfall.io/border_crop/front/1/f/1fa9117c-9c77-41f0-a290-4954bbf1cc0b.jpg?1733180562",
-            "large": "https://cards.scryfall.io/large/front/1/f/1fa9117c-9c77-41f0-a290-4954bbf1cc0b.jpg?1733180562",
-            "normal": "https://cards.scryfall.io/normal/front/1/f/1fa9117c-9c77-41f0-a290-4954bbf1cc0b.jpg?1733180562",
-            "png": "https://cards.scryfall.io/png/front/1/f/1fa9117c-9c77-41f0-a290-4954bbf1cc0b.png?1733180562",
-            "small": "https://cards.scryfall.io/small/front/1/f/1fa9117c-9c77-41f0-a290-4954bbf1cc0b.jpg?1733180562"
+            "art_crop": "https://cards.scryfall.io/art_crop/front/b/0/b02b9634-77e9-48ae-a6bf-859598d12c52.jpg?1562638955",
+            "border_crop": "https://cards.scryfall.io/border_crop/front/b/0/b02b9634-77e9-48ae-a6bf-859598d12c52.jpg?1562638955",
+            "large": "https://cards.scryfall.io/large/front/b/0/b02b9634-77e9-48ae-a6bf-859598d12c52.jpg?1562638955",
+            "normal": "https://cards.scryfall.io/normal/front/b/0/b02b9634-77e9-48ae-a6bf-859598d12c52.jpg?1562638955",
+            "png": "https://cards.scryfall.io/png/front/b/0/b02b9634-77e9-48ae-a6bf-859598d12c52.png?1562638955",
+            "small": "https://cards.scryfall.io/small/front/b/0/b02b9634-77e9-48ae-a6bf-859598d12c52.jpg?1562638955"
         },
         "keywords": [
             "Indestructible"
@@ -64,12 +65,13 @@
         "layout": "normal",
         "legalities": {
             "alchemy": "not_legal",
-            "brawl": "legal",
+            "brawl": "not_legal",
             "commander": "legal",
             "duel": "legal",
+            "explorer": "not_legal",
             "future": "not_legal",
-            "gladiator": "legal",
-            "historic": "legal",
+            "gladiator": "not_legal",
+            "historic": "not_legal",
             "legacy": "legal",
             "modern": "legal",
             "oathbreaker": "legal",
@@ -82,26 +84,29 @@
             "premodern": "not_legal",
             "standard": "not_legal",
             "standardbrawl": "not_legal",
-            "timeless": "legal",
-            "tlr": "legal",
+            "timeless": "not_legal",
             "vintage": "legal"
         },
         "mana_cost": "{3}",
-        "multiverse_ids": [],
+        "mtgo_foil_id": 20414,
+        "mtgo_id": 20413,
+        "multiverse_ids": [
+            48048
+        ],
         "name": "Darksteel Ingot",
         "nonfoil": true,
         "object": "card",
         "oracle_id": "a2529491-7389-4cfa-92d2-145eda779603",
-        "oracle_text": "Indestructible (Effects that say \"destroy\" don't destroy this artifact.)\n{T}: Add one mana of any color.",
+        "oracle_text": "Indestructible\n{T}: Add one mana of any color.",
         "oversized": false,
-        "penny_rank": 5128,
+        "penny_rank": 4425,
         "prices": {
-            "eur": null,
-            "eur_foil": null,
-            "tix": null,
-            "usd": null,
+            "eur": "0.10",
+            "eur_foil": "1.35",
+            "tix": "0.03",
+            "usd": "0.35",
             "usd_etched": null,
-            "usd_foil": null
+            "usd_foil": "3.55"
         },
         "prints_search_uri": "https://api.scryfall.com/cards/search?order=released&q=oracleid%3Aa2529491-7389-4cfa-92d2-145eda779603&unique=prints",
         "produced_mana": [
@@ -112,28 +117,35 @@
             "W"
         ],
         "promo": false,
+        "purchase_uris": {
+            "cardhoarder": "https://www.cardhoarder.com/cards/20413?affiliate_id=scryfall&ref=card-profile&utm_campaign=affiliate&utm_medium=card&utm_source=scryfall",
+            "cardmarket": "https://www.cardmarket.com/en/Magic/Products/Singles/Darksteel/Darksteel-Ingot?referrer=scryfall&utm_campaign=card_prices&utm_medium=text&utm_source=scryfall",
+            "tcgplayer": "https://tcgplayer.pxf.io/c/4931599/1830156/21018?subId1=api&u=https%3A%2F%2Fwww.tcgplayer.com%2Fproduct%2F11627%3Fpage%3D1"
+        },
         "rarity": "common",
         "related_uris": {
             "edhrec": "https://edhrec.com/route/?cc=Darksteel+Ingot",
-            "tcgplayer_infinite_articles": "https://partner.tcgplayer.com/c/4931599/1830156/21018?subId1=api&trafcat=tcgplayer.com%2Fsearch%2Farticles&u=https%3A%2F%2Fwww.tcgplayer.com%2Fsearch%2Farticles%3FproductLineName%3Dmagic%26q%3DDarksteel%2BIngot",
-            "tcgplayer_infinite_decks": "https://partner.tcgplayer.com/c/4931599/1830156/21018?subId1=api&trafcat=tcgplayer.com%2Fsearch%2Fdecks&u=https%3A%2F%2Fwww.tcgplayer.com%2Fsearch%2Fdecks%3FproductLineName%3Dmagic%26q%3DDarksteel%2BIngot"
+            "gatherer": "https://gatherer.wizards.com/Pages/Card/Details.aspx?multiverseid=48048&printed=false",
+            "tcgplayer_infinite_articles": "https://tcgplayer.pxf.io/c/4931599/1830156/21018?subId1=api&trafcat=infinite&u=https%3A%2F%2Finfinite.tcgplayer.com%2Fsearch%3FcontentMode%3Darticle%26game%3Dmagic%26partner%3Dscryfall%26q%3DDarksteel%2BIngot",
+            "tcgplayer_infinite_decks": "https://tcgplayer.pxf.io/c/4931599/1830156/21018?subId1=api&trafcat=infinite&u=https%3A%2F%2Finfinite.tcgplayer.com%2Fsearch%3FcontentMode%3Ddeck%26game%3Dmagic%26partner%3Dscryfall%26q%3DDarksteel%2BIngot"
         },
-        "released_at": "2024-12-10",
-        "reprint": true,
+        "released_at": "2004-02-06",
+        "reprint": false,
         "reserved": false,
-        "rulings_uri": "https://api.scryfall.com/cards/1fa9117c-9c77-41f0-a290-4954bbf1cc0b/rulings",
-        "scryfall_set_uri": "https://scryfall.com/sets/pio?utm_source=api",
-        "scryfall_uri": "https://scryfall.com/card/pio/254/darksteel-ingot?utm_source=api",
-        "set": "pio",
-        "set_id": "713c226b-d4d9-46e1-b9c9-a04689d90ff6",
-        "set_name": "Pioneer Masters",
-        "set_search_uri": "https://api.scryfall.com/cards/search?order=set&q=e%3Apio&unique=prints",
-        "set_type": "masters",
-        "set_uri": "https://api.scryfall.com/sets/713c226b-d4d9-46e1-b9c9-a04689d90ff6",
+        "rulings_uri": "https://api.scryfall.com/cards/b02b9634-77e9-48ae-a6bf-859598d12c52/rulings",
+        "scryfall_set_uri": "https://scryfall.com/sets/dst?utm_source=api",
+        "scryfall_uri": "https://scryfall.com/card/dst/112/darksteel-ingot?utm_source=api",
+        "set": "dst",
+        "set_id": "e29cb2dd-1345-4032-abfe-e52e8c8ce074",
+        "set_name": "Darksteel",
+        "set_search_uri": "https://api.scryfall.com/cards/search?order=set&q=e%3Adst&unique=prints",
+        "set_type": "expansion",
+        "set_uri": "https://api.scryfall.com/sets/e29cb2dd-1345-4032-abfe-e52e8c8ce074",
         "story_spotlight": false,
+        "tcgplayer_id": 11627,
         "textless": false,
         "type_line": "Artifact",
-        "uri": "https://api.scryfall.com/cards/1fa9117c-9c77-41f0-a290-4954bbf1cc0b",
+        "uri": "https://api.scryfall.com/cards/b02b9634-77e9-48ae-a6bf-859598d12c52",
         "variation": false
     }
 }

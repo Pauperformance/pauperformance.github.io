@@ -6,21 +6,22 @@
         "all_parts": [
             {
                 "component": "token",
-                "id": "c6e096bb-ad9e-4a8b-8b42-26852fa32c1d",
+                "id": "1a2d027f-8996-4761-a776-47cd428f6779",
                 "name": "Treasure",
                 "object": "related_card",
                 "type_line": "Token Artifact \u2014 Treasure",
-                "uri": "https://api.scryfall.com/cards/c6e096bb-ad9e-4a8b-8b42-26852fa32c1d"
+                "uri": "https://api.scryfall.com/cards/1a2d027f-8996-4761-a776-47cd428f6779"
             },
             {
                 "component": "combo_piece",
-                "id": "c78dd917-7748-41dd-b294-943302bdab34",
+                "id": "b011707a-471b-41c2-bc73-376a55d26bee",
                 "name": "Sudden Breakthrough",
                 "object": "related_card",
                 "type_line": "Instant",
-                "uri": "https://api.scryfall.com/cards/c78dd917-7748-41dd-b294-943302bdab34"
+                "uri": "https://api.scryfall.com/cards/b011707a-471b-41c2-bc73-376a55d26bee"
             }
         ],
+        "arena_id": 76509,
         "artist": "Colin Boyer",
         "artist_ids": [
             "9c201dbe-db56-429a-87e6-189ea70c2632"
@@ -28,9 +29,9 @@
         "booster": true,
         "border_color": "black",
         "card_back_id": "0aeebaf5-8c7d-4636-9e82-8c27447861f7",
-        "cardmarket_id": 686990,
+        "cardmarket_id": 557482,
         "cmc": 2.0,
-        "collector_number": "610",
+        "collector_number": "116",
         "color_identity": [
             "R"
         ],
@@ -38,29 +39,31 @@
             "R"
         ],
         "digital": false,
-        "edhrec_rank": 5029,
+        "edhrec_rank": 3829,
         "finishes": [
-            "nonfoil"
+            "nonfoil",
+            "foil"
         ],
         "flavor_text": "Rootha created constantly, passionately, in hopes of impressing her greatest critic: herself.",
-        "foil": false,
+        "foil": true,
         "frame": "2015",
         "full_art": false,
-        "game_changer": false,
         "games": [
-            "paper"
+            "arena",
+            "paper",
+            "mtgo"
         ],
         "highres_image": true,
-        "id": "c78dd917-7748-41dd-b294-943302bdab34",
+        "id": "b011707a-471b-41c2-bc73-376a55d26bee",
         "illustration_id": "3458df48-ca5a-4370-a974-7f8e0b04e356",
         "image_status": "highres_scan",
         "image_uris": {
-            "art_crop": "https://cards.scryfall.io/art_crop/front/c/7/c78dd917-7748-41dd-b294-943302bdab34.jpg?1675651054",
-            "border_crop": "https://cards.scryfall.io/border_crop/front/c/7/c78dd917-7748-41dd-b294-943302bdab34.jpg?1675651054",
-            "large": "https://cards.scryfall.io/large/front/c/7/c78dd917-7748-41dd-b294-943302bdab34.jpg?1675651054",
-            "normal": "https://cards.scryfall.io/normal/front/c/7/c78dd917-7748-41dd-b294-943302bdab34.jpg?1675651054",
-            "png": "https://cards.scryfall.io/png/front/c/7/c78dd917-7748-41dd-b294-943302bdab34.png?1675651054",
-            "small": "https://cards.scryfall.io/small/front/c/7/c78dd917-7748-41dd-b294-943302bdab34.jpg?1675651054"
+            "art_crop": "https://cards.scryfall.io/art_crop/front/b/0/b011707a-471b-41c2-bc73-376a55d26bee.jpg?1624592238",
+            "border_crop": "https://cards.scryfall.io/border_crop/front/b/0/b011707a-471b-41c2-bc73-376a55d26bee.jpg?1624592238",
+            "large": "https://cards.scryfall.io/large/front/b/0/b011707a-471b-41c2-bc73-376a55d26bee.jpg?1624592238",
+            "normal": "https://cards.scryfall.io/normal/front/b/0/b011707a-471b-41c2-bc73-376a55d26bee.jpg?1624592238",
+            "png": "https://cards.scryfall.io/png/front/b/0/b011707a-471b-41c2-bc73-376a55d26bee.png?1624592238",
+            "small": "https://cards.scryfall.io/small/front/b/0/b011707a-471b-41c2-bc73-376a55d26bee.jpg?1624592238"
         },
         "keywords": [
             "Treasure"
@@ -72,6 +75,7 @@
             "brawl": "legal",
             "commander": "legal",
             "duel": "legal",
+            "explorer": "legal",
             "future": "not_legal",
             "gladiator": "legal",
             "historic": "legal",
@@ -88,27 +92,32 @@
             "standard": "not_legal",
             "standardbrawl": "not_legal",
             "timeless": "legal",
-            "tlr": "legal",
             "vintage": "legal"
         },
         "mana_cost": "{1}{R}",
+        "mtgo_id": 88709,
         "multiverse_ids": [
-            590183
+            513593
         ],
         "name": "Sudden Breakthrough",
         "nonfoil": true,
         "object": "card",
         "oracle_id": "f5576cd4-6b21-4b29-902c-9c1fbdd7b2be",
-        "oracle_text": "Target creature gets +2/+0 and gains first strike until end of turn.\nCreate a Treasure token. (It's an artifact with \"{T}, Sacrifice this token: Add one mana of any color.\")",
+        "oracle_text": "Target creature gets +2/+0 and gains first strike until end of turn.\nCreate a Treasure token. (It's an artifact with \"{T}, Sacrifice this artifact: Add one mana of any color.\")",
         "oversized": false,
-        "penny_rank": 11722,
+        "penny_rank": 10220,
+        "preview": {
+            "previewed_at": "2021-03-30",
+            "source": "Radical Mari",
+            "source_uri": "https://twitter.com/TheRadicalMari/status/1376957403703373826"
+        },
         "prices": {
-            "eur": "0.13",
-            "eur_foil": null,
-            "tix": null,
-            "usd": "0.28",
+            "eur": "0.09",
+            "eur_foil": "0.10",
+            "tix": "0.03",
+            "usd": "0.08",
             "usd_etched": null,
-            "usd_foil": null
+            "usd_foil": "0.19"
         },
         "prints_search_uri": "https://api.scryfall.com/cards/search?order=released&q=oracleid%3Af5576cd4-6b21-4b29-902c-9c1fbdd7b2be&unique=prints",
         "produced_mana": [
@@ -120,34 +129,35 @@
         ],
         "promo": false,
         "purchase_uris": {
-            "cardhoarder": "https://www.cardhoarder.com/cards?affiliate_id=scryfall&data%5Bsearch%5D=Sudden+Breakthrough&ref=card-profile&utm_campaign=affiliate&utm_medium=card&utm_source=scryfall",
-            "cardmarket": "https://www.cardmarket.com/en/Magic/Products?idProduct=686990&referrer=scryfall&utm_campaign=card_prices&utm_medium=text&utm_source=scryfall",
-            "tcgplayer": "https://partner.tcgplayer.com/c/4931599/1830156/21018?subId1=api&u=https%3A%2F%2Fwww.tcgplayer.com%2Fproduct%2F455644%3Fpage%3D1"
+            "cardhoarder": "https://www.cardhoarder.com/cards/88709?affiliate_id=scryfall&ref=card-profile&utm_campaign=affiliate&utm_medium=card&utm_source=scryfall",
+            "cardmarket": "https://www.cardmarket.com/en/Magic/Products/Singles/Strixhaven-School-of-Mages/Sudden-Breakthrough?referrer=scryfall&utm_campaign=card_prices&utm_medium=text&utm_source=scryfall",
+            "tcgplayer": "https://tcgplayer.pxf.io/c/4931599/1830156/21018?subId1=api&u=https%3A%2F%2Fwww.tcgplayer.com%2Fproduct%2F235670%3Fpage%3D1"
         },
         "rarity": "common",
         "related_uris": {
             "edhrec": "https://edhrec.com/route/?cc=Sudden+Breakthrough",
-            "gatherer": "https://gatherer.wizards.com/Pages/Card/Details.aspx?multiverseid=590183&printed=false",
-            "tcgplayer_infinite_articles": "https://partner.tcgplayer.com/c/4931599/1830156/21018?subId1=api&trafcat=tcgplayer.com%2Fsearch%2Farticles&u=https%3A%2F%2Fwww.tcgplayer.com%2Fsearch%2Farticles%3FproductLineName%3Dmagic%26q%3DSudden%2BBreakthrough",
-            "tcgplayer_infinite_decks": "https://partner.tcgplayer.com/c/4931599/1830156/21018?subId1=api&trafcat=tcgplayer.com%2Fsearch%2Fdecks&u=https%3A%2F%2Fwww.tcgplayer.com%2Fsearch%2Fdecks%3FproductLineName%3Dmagic%26q%3DSudden%2BBreakthrough"
+            "gatherer": "https://gatherer.wizards.com/Pages/Card/Details.aspx?multiverseid=513593&printed=false",
+            "tcgplayer_infinite_articles": "https://tcgplayer.pxf.io/c/4931599/1830156/21018?subId1=api&trafcat=infinite&u=https%3A%2F%2Finfinite.tcgplayer.com%2Fsearch%3FcontentMode%3Darticle%26game%3Dmagic%26partner%3Dscryfall%26q%3DSudden%2BBreakthrough",
+            "tcgplayer_infinite_decks": "https://tcgplayer.pxf.io/c/4931599/1830156/21018?subId1=api&trafcat=infinite&u=https%3A%2F%2Finfinite.tcgplayer.com%2Fsearch%3FcontentMode%3Ddeck%26game%3Dmagic%26partner%3Dscryfall%26q%3DSudden%2BBreakthrough"
         },
-        "released_at": "2022-12-02",
-        "reprint": true,
+        "released_at": "2021-04-23",
+        "reprint": false,
         "reserved": false,
-        "rulings_uri": "https://api.scryfall.com/cards/c78dd917-7748-41dd-b294-943302bdab34/rulings",
-        "scryfall_set_uri": "https://scryfall.com/sets/j22?utm_source=api",
-        "scryfall_uri": "https://scryfall.com/card/j22/610/sudden-breakthrough?utm_source=api",
-        "set": "j22",
-        "set_id": "247df475-e4ce-4e5e-9317-11892d2211e0",
-        "set_name": "Jumpstart 2022",
-        "set_search_uri": "https://api.scryfall.com/cards/search?order=set&q=e%3Aj22&unique=prints",
-        "set_type": "draft_innovation",
-        "set_uri": "https://api.scryfall.com/sets/247df475-e4ce-4e5e-9317-11892d2211e0",
+        "rulings_uri": "https://api.scryfall.com/cards/b011707a-471b-41c2-bc73-376a55d26bee/rulings",
+        "scryfall_set_uri": "https://scryfall.com/sets/stx?utm_source=api",
+        "scryfall_uri": "https://scryfall.com/card/stx/116/sudden-breakthrough?utm_source=api",
+        "set": "stx",
+        "set_id": "541c3c28-8747-40e5-a231-8e8f33234859",
+        "set_name": "Strixhaven: School of Mages",
+        "set_search_uri": "https://api.scryfall.com/cards/search?order=set&q=e%3Astx&unique=prints",
+        "set_type": "expansion",
+        "set_uri": "https://api.scryfall.com/sets/541c3c28-8747-40e5-a231-8e8f33234859",
         "story_spotlight": false,
-        "tcgplayer_id": 455644,
+        "tcgplayer_id": 235670,
         "textless": false,
         "type_line": "Instant",
-        "uri": "https://api.scryfall.com/cards/c78dd917-7748-41dd-b294-943302bdab34",
-        "variation": false
+        "uri": "https://api.scryfall.com/cards/b011707a-471b-41c2-bc73-376a55d26bee",
+        "variation": false,
+        "watermark": "prismari"
     }
 }

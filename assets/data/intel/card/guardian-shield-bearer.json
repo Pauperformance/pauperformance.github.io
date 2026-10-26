@@ -6,19 +6,19 @@
         "all_parts": [
             {
                 "component": "combo_piece",
-                "id": "59d6e5dd-1243-4135-b6a7-adb9e3a847c9",
+                "id": "dcbd7958-29a0-4f59-9648-eabe0fbfb4f9",
                 "name": "Guardian Shield-Bearer",
                 "object": "related_card",
                 "type_line": "Creature \u2014 Human Soldier",
-                "uri": "https://api.scryfall.com/cards/59d6e5dd-1243-4135-b6a7-adb9e3a847c9"
+                "uri": "https://api.scryfall.com/cards/dcbd7958-29a0-4f59-9648-eabe0fbfb4f9"
             },
             {
                 "component": "combo_piece",
-                "id": "5430da88-b72e-4d64-bd3c-b21062cac1c2",
+                "id": "5f29231c-dd21-4a45-a1f0-464d338128ed",
                 "name": "Morph",
                 "object": "related_card",
                 "type_line": "Creature",
-                "uri": "https://api.scryfall.com/cards/5430da88-b72e-4d64-bd3c-b21062cac1c2"
+                "uri": "https://api.scryfall.com/cards/5f29231c-dd21-4a45-a1f0-464d338128ed"
             }
         ],
         "artist": "Lindsey Look",
@@ -28,9 +28,9 @@
         "booster": true,
         "border_color": "black",
         "card_back_id": "0aeebaf5-8c7d-4636-9e82-8c27447861f7",
-        "cardmarket_id": 421866,
+        "cardmarket_id": 273391,
         "cmc": 2.0,
-        "collector_number": "DTK-189",
+        "collector_number": "189",
         "color_identity": [
             "G"
         ],
@@ -38,28 +38,29 @@
             "G"
         ],
         "digital": false,
-        "edhrec_rank": 25649,
+        "edhrec_rank": 20100,
         "finishes": [
-            "nonfoil"
+            "nonfoil",
+            "foil"
         ],
-        "foil": false,
+        "foil": true,
         "frame": "2015",
         "full_art": false,
-        "game_changer": false,
         "games": [
-            "paper"
+            "paper",
+            "mtgo"
         ],
         "highres_image": true,
-        "id": "59d6e5dd-1243-4135-b6a7-adb9e3a847c9",
+        "id": "dcbd7958-29a0-4f59-9648-eabe0fbfb4f9",
         "illustration_id": "8f884c3a-82f8-4938-8320-67bfb7846341",
         "image_status": "highres_scan",
         "image_uris": {
-            "art_crop": "https://cards.scryfall.io/art_crop/front/5/9/59d6e5dd-1243-4135-b6a7-adb9e3a847c9.jpg?1573513819",
-            "border_crop": "https://cards.scryfall.io/border_crop/front/5/9/59d6e5dd-1243-4135-b6a7-adb9e3a847c9.jpg?1573513819",
-            "large": "https://cards.scryfall.io/large/front/5/9/59d6e5dd-1243-4135-b6a7-adb9e3a847c9.jpg?1573513819",
-            "normal": "https://cards.scryfall.io/normal/front/5/9/59d6e5dd-1243-4135-b6a7-adb9e3a847c9.jpg?1573513819",
-            "png": "https://cards.scryfall.io/png/front/5/9/59d6e5dd-1243-4135-b6a7-adb9e3a847c9.png?1573513819",
-            "small": "https://cards.scryfall.io/small/front/5/9/59d6e5dd-1243-4135-b6a7-adb9e3a847c9.jpg?1573513819"
+            "art_crop": "https://cards.scryfall.io/art_crop/front/d/c/dcbd7958-29a0-4f59-9648-eabe0fbfb4f9.jpg?1562794106",
+            "border_crop": "https://cards.scryfall.io/border_crop/front/d/c/dcbd7958-29a0-4f59-9648-eabe0fbfb4f9.jpg?1562794106",
+            "large": "https://cards.scryfall.io/large/front/d/c/dcbd7958-29a0-4f59-9648-eabe0fbfb4f9.jpg?1562794106",
+            "normal": "https://cards.scryfall.io/normal/front/d/c/dcbd7958-29a0-4f59-9648-eabe0fbfb4f9.jpg?1562794106",
+            "png": "https://cards.scryfall.io/png/front/d/c/dcbd7958-29a0-4f59-9648-eabe0fbfb4f9.png?1562794106",
+            "small": "https://cards.scryfall.io/small/front/d/c/dcbd7958-29a0-4f59-9648-eabe0fbfb4f9.jpg?1562794106"
         },
         "keywords": [
             "Megamorph"
@@ -71,6 +72,7 @@
             "brawl": "not_legal",
             "commander": "legal",
             "duel": "legal",
+            "explorer": "not_legal",
             "future": "not_legal",
             "gladiator": "not_legal",
             "historic": "not_legal",
@@ -87,57 +89,61 @@
             "standard": "not_legal",
             "standardbrawl": "not_legal",
             "timeless": "not_legal",
-            "tlr": "legal",
             "vintage": "legal"
         },
         "mana_cost": "{1}{G}",
-        "multiverse_ids": [],
+        "mtgo_foil_id": 56059,
+        "mtgo_id": 56058,
+        "multiverse_ids": [
+            394587
+        ],
         "name": "Guardian Shield-Bearer",
         "nonfoil": true,
         "object": "card",
         "oracle_id": "2bd8a6a4-d0ac-4da3-be1d-5f404ae4b614",
-        "oracle_text": "Megamorph {3}{G} (You may cast this card face down as a 2/2 creature for {3}. Turn it face up any time for its megamorph cost and put a +1/+1 counter on it.)\nWhen this creature is turned face up, put a +1/+1 counter on another target creature you control.",
+        "oracle_text": "Megamorph {3}{G} (You may cast this card face down as a 2/2 creature for {3}. Turn it face up any time for its megamorph cost and put a +1/+1 counter on it.)\nWhen Guardian Shield-Bearer is turned face up, put a +1/+1 counter on another target creature you control.",
         "oversized": false,
         "power": "2",
         "prices": {
-            "eur": "0.06",
-            "eur_foil": null,
-            "tix": null,
-            "usd": "0.40",
+            "eur": "0.08",
+            "eur_foil": "0.17",
+            "tix": "0.03",
+            "usd": "0.03",
             "usd_etched": null,
-            "usd_foil": null
+            "usd_foil": "0.13"
         },
         "prints_search_uri": "https://api.scryfall.com/cards/search?order=released&q=oracleid%3A2bd8a6a4-d0ac-4da3-be1d-5f404ae4b614&unique=prints",
         "promo": false,
         "purchase_uris": {
-            "cardhoarder": "https://www.cardhoarder.com/cards?affiliate_id=scryfall&data%5Bsearch%5D=Guardian+Shield-Bearer&ref=card-profile&utm_campaign=affiliate&utm_medium=card&utm_source=scryfall",
-            "cardmarket": "https://www.cardmarket.com/en/Magic/Products?idProduct=421866&referrer=scryfall&utm_campaign=card_prices&utm_medium=text&utm_source=scryfall",
-            "tcgplayer": "https://partner.tcgplayer.com/c/4931599/1830156/21018?subId1=api&u=https%3A%2F%2Fwww.tcgplayer.com%2Fproduct%2F203384%3Fpage%3D1"
+            "cardhoarder": "https://www.cardhoarder.com/cards/56058?affiliate_id=scryfall&ref=card-profile&utm_campaign=affiliate&utm_medium=card&utm_source=scryfall",
+            "cardmarket": "https://www.cardmarket.com/en/Magic/Products/Singles/Dragons-of-Tarkir/Guardian-Shield-Bearer?referrer=scryfall&utm_campaign=card_prices&utm_medium=text&utm_source=scryfall",
+            "tcgplayer": "https://tcgplayer.pxf.io/c/4931599/1830156/21018?subId1=api&u=https%3A%2F%2Fwww.tcgplayer.com%2Fproduct%2F96736%3Fpage%3D1"
         },
         "rarity": "common",
         "related_uris": {
             "edhrec": "https://edhrec.com/route/?cc=Guardian+Shield-Bearer",
-            "tcgplayer_infinite_articles": "https://partner.tcgplayer.com/c/4931599/1830156/21018?subId1=api&trafcat=tcgplayer.com%2Fsearch%2Farticles&u=https%3A%2F%2Fwww.tcgplayer.com%2Fsearch%2Farticles%3FproductLineName%3Dmagic%26q%3DGuardian%2BShield-Bearer",
-            "tcgplayer_infinite_decks": "https://partner.tcgplayer.com/c/4931599/1830156/21018?subId1=api&trafcat=tcgplayer.com%2Fsearch%2Fdecks&u=https%3A%2F%2Fwww.tcgplayer.com%2Fsearch%2Fdecks%3FproductLineName%3Dmagic%26q%3DGuardian%2BShield-Bearer"
+            "gatherer": "https://gatherer.wizards.com/Pages/Card/Details.aspx?multiverseid=394587&printed=false",
+            "tcgplayer_infinite_articles": "https://tcgplayer.pxf.io/c/4931599/1830156/21018?subId1=api&trafcat=infinite&u=https%3A%2F%2Finfinite.tcgplayer.com%2Fsearch%3FcontentMode%3Darticle%26game%3Dmagic%26partner%3Dscryfall%26q%3DGuardian%2BShield-Bearer",
+            "tcgplayer_infinite_decks": "https://tcgplayer.pxf.io/c/4931599/1830156/21018?subId1=api&trafcat=infinite&u=https%3A%2F%2Finfinite.tcgplayer.com%2Fsearch%3FcontentMode%3Ddeck%26game%3Dmagic%26partner%3Dscryfall%26q%3DGuardian%2BShield-Bearer"
         },
-        "released_at": "2019-11-07",
-        "reprint": true,
+        "released_at": "2015-03-27",
+        "reprint": false,
         "reserved": false,
-        "rulings_uri": "https://api.scryfall.com/cards/59d6e5dd-1243-4135-b6a7-adb9e3a847c9/rulings",
-        "scryfall_set_uri": "https://scryfall.com/sets/plst?utm_source=api",
-        "scryfall_uri": "https://scryfall.com/card/plst/DTK-189/guardian-shield-bearer?utm_source=api",
-        "set": "plst",
-        "set_id": "67e47ba2-b019-4181-9005-fe9fc021de44",
-        "set_name": "The List",
-        "set_search_uri": "https://api.scryfall.com/cards/search?order=set&q=e%3Aplst&unique=prints",
-        "set_type": "masters",
-        "set_uri": "https://api.scryfall.com/sets/67e47ba2-b019-4181-9005-fe9fc021de44",
+        "rulings_uri": "https://api.scryfall.com/cards/dcbd7958-29a0-4f59-9648-eabe0fbfb4f9/rulings",
+        "scryfall_set_uri": "https://scryfall.com/sets/dtk?utm_source=api",
+        "scryfall_uri": "https://scryfall.com/card/dtk/189/guardian-shield-bearer?utm_source=api",
+        "set": "dtk",
+        "set_id": "7e72625f-f320-4552-a719-d11e2f1853bd",
+        "set_name": "Dragons of Tarkir",
+        "set_search_uri": "https://api.scryfall.com/cards/search?order=set&q=e%3Adtk&unique=prints",
+        "set_type": "expansion",
+        "set_uri": "https://api.scryfall.com/sets/7e72625f-f320-4552-a719-d11e2f1853bd",
         "story_spotlight": false,
-        "tcgplayer_id": 203384,
+        "tcgplayer_id": 96736,
         "textless": false,
         "toughness": "1",
         "type_line": "Creature \u2014 Human Soldier",
-        "uri": "https://api.scryfall.com/cards/59d6e5dd-1243-4135-b6a7-adb9e3a847c9",
+        "uri": "https://api.scryfall.com/cards/dcbd7958-29a0-4f59-9648-eabe0fbfb4f9",
         "variation": false,
         "watermark": "dromoka"
     }

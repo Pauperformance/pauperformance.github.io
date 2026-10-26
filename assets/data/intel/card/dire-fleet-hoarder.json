@@ -6,32 +6,32 @@
         "all_parts": [
             {
                 "component": "token",
-                "id": "21210145-8edd-41f5-9a64-9f0b5be79864",
+                "id": "bbe8bced-9524-47f6-a600-bf4ddc072698",
                 "name": "Treasure",
                 "object": "related_card",
                 "type_line": "Token Artifact \u2014 Treasure",
-                "uri": "https://api.scryfall.com/cards/21210145-8edd-41f5-9a64-9f0b5be79864"
+                "uri": "https://api.scryfall.com/cards/bbe8bced-9524-47f6-a600-bf4ddc072698"
             },
             {
                 "component": "combo_piece",
-                "id": "9cd2e253-db7c-4c34-8cd5-8aca28752a60",
+                "id": "0fcd719e-fa21-42bb-968b-ccc0cd3829c6",
                 "name": "Dire Fleet Hoarder",
                 "object": "related_card",
                 "type_line": "Creature \u2014 Human Pirate",
-                "uri": "https://api.scryfall.com/cards/9cd2e253-db7c-4c34-8cd5-8aca28752a60"
+                "uri": "https://api.scryfall.com/cards/0fcd719e-fa21-42bb-968b-ccc0cd3829c6"
             }
         ],
-        "arena_id": 92973,
+        "arena_id": 66169,
         "artist": "Deruchenko Alexander",
         "artist_ids": [
             "806f6ff9-6ed4-4e93-998a-a562c0b792e6"
         ],
-        "booster": false,
+        "booster": true,
         "border_color": "black",
         "card_back_id": "0aeebaf5-8c7d-4636-9e82-8c27447861f7",
-        "cardmarket_id": 796491,
+        "cardmarket_id": 301716,
         "cmc": 2.0,
-        "collector_number": "422",
+        "collector_number": "102",
         "color_identity": [
             "B"
         ],
@@ -39,30 +39,31 @@
             "B"
         ],
         "digital": false,
-        "edhrec_rank": 11792,
+        "edhrec_rank": 9409,
         "finishes": [
-            "nonfoil"
+            "nonfoil",
+            "foil"
         ],
         "flavor_text": "Among the pirates of the Brazen Coalition, the only thing more dangerous than failure is success.",
-        "foil": false,
+        "foil": true,
         "frame": "2015",
         "full_art": false,
-        "game_changer": false,
         "games": [
+            "arena",
             "paper",
-            "arena"
+            "mtgo"
         ],
         "highres_image": true,
-        "id": "9cd2e253-db7c-4c34-8cd5-8aca28752a60",
+        "id": "0fcd719e-fa21-42bb-968b-ccc0cd3829c6",
         "illustration_id": "d770fe01-0c94-4496-89e8-dd2ce7a3bfaf",
         "image_status": "highres_scan",
         "image_uris": {
-            "art_crop": "https://cards.scryfall.io/art_crop/front/9/c/9cd2e253-db7c-4c34-8cd5-8aca28752a60.jpg?1730487218",
-            "border_crop": "https://cards.scryfall.io/border_crop/front/9/c/9cd2e253-db7c-4c34-8cd5-8aca28752a60.jpg?1730487218",
-            "large": "https://cards.scryfall.io/large/front/9/c/9cd2e253-db7c-4c34-8cd5-8aca28752a60.jpg?1730487218",
-            "normal": "https://cards.scryfall.io/normal/front/9/c/9cd2e253-db7c-4c34-8cd5-8aca28752a60.jpg?1730487218",
-            "png": "https://cards.scryfall.io/png/front/9/c/9cd2e253-db7c-4c34-8cd5-8aca28752a60.png?1730487218",
-            "small": "https://cards.scryfall.io/small/front/9/c/9cd2e253-db7c-4c34-8cd5-8aca28752a60.jpg?1730487218"
+            "art_crop": "https://cards.scryfall.io/art_crop/front/0/f/0fcd719e-fa21-42bb-968b-ccc0cd3829c6.jpg?1562550807",
+            "border_crop": "https://cards.scryfall.io/border_crop/front/0/f/0fcd719e-fa21-42bb-968b-ccc0cd3829c6.jpg?1562550807",
+            "large": "https://cards.scryfall.io/large/front/0/f/0fcd719e-fa21-42bb-968b-ccc0cd3829c6.jpg?1562550807",
+            "normal": "https://cards.scryfall.io/normal/front/0/f/0fcd719e-fa21-42bb-968b-ccc0cd3829c6.jpg?1562550807",
+            "png": "https://cards.scryfall.io/png/front/0/f/0fcd719e-fa21-42bb-968b-ccc0cd3829c6.png?1562550807",
+            "small": "https://cards.scryfall.io/small/front/0/f/0fcd719e-fa21-42bb-968b-ccc0cd3829c6.jpg?1562550807"
         },
         "keywords": [
             "Treasure"
@@ -74,6 +75,7 @@
             "brawl": "legal",
             "commander": "legal",
             "duel": "legal",
+            "explorer": "legal",
             "future": "not_legal",
             "gladiator": "legal",
             "historic": "legal",
@@ -90,28 +92,29 @@
             "standard": "not_legal",
             "standardbrawl": "not_legal",
             "timeless": "legal",
-            "tlr": "legal",
             "vintage": "legal"
         },
         "mana_cost": "{1}{B}",
+        "mtgo_foil_id": 65221,
+        "mtgo_id": 65220,
         "multiverse_ids": [
-            681892
+            435256
         ],
         "name": "Dire Fleet Hoarder",
         "nonfoil": true,
         "object": "card",
         "oracle_id": "7d48ad95-d428-4e2d-b697-56907c3ce579",
-        "oracle_text": "When this creature dies, create a Treasure token. (It's an artifact with \"{T}, Sacrifice this token: Add one mana of any color.\")",
+        "oracle_text": "When Dire Fleet Hoarder dies, create a Treasure token. (It's an artifact with \"{T}, Sacrifice this artifact: Add one mana of any color.\")",
         "oversized": false,
-        "penny_rank": 8507,
+        "penny_rank": 7128,
         "power": "2",
         "prices": {
-            "eur": "0.10",
-            "eur_foil": null,
-            "tix": null,
-            "usd": "0.14",
+            "eur": "0.03",
+            "eur_foil": "0.16",
+            "tix": "0.03",
+            "usd": "0.06",
             "usd_etched": null,
-            "usd_foil": null
+            "usd_foil": "0.25"
         },
         "prints_search_uri": "https://api.scryfall.com/cards/search?order=released&q=oracleid%3A7d48ad95-d428-4e2d-b697-56907c3ce579&unique=prints",
         "produced_mana": [
@@ -123,35 +126,35 @@
         ],
         "promo": false,
         "purchase_uris": {
-            "cardhoarder": "https://www.cardhoarder.com/cards?affiliate_id=scryfall&data%5Bsearch%5D=Dire+Fleet+Hoarder&ref=card-profile&utm_campaign=affiliate&utm_medium=card&utm_source=scryfall",
-            "cardmarket": "https://www.cardmarket.com/en/Magic/Products?idProduct=796491&referrer=scryfall&utm_campaign=card_prices&utm_medium=text&utm_source=scryfall",
-            "tcgplayer": "https://partner.tcgplayer.com/c/4931599/1830156/21018?subId1=api&u=https%3A%2F%2Fwww.tcgplayer.com%2Fproduct%2F590197%3Fpage%3D1"
+            "cardhoarder": "https://www.cardhoarder.com/cards/65220?affiliate_id=scryfall&ref=card-profile&utm_campaign=affiliate&utm_medium=card&utm_source=scryfall",
+            "cardmarket": "https://www.cardmarket.com/en/Magic/Products/Singles/Ixalan/Dire-Fleet-Hoarder?referrer=scryfall&utm_campaign=card_prices&utm_medium=text&utm_source=scryfall",
+            "tcgplayer": "https://tcgplayer.pxf.io/c/4931599/1830156/21018?subId1=api&u=https%3A%2F%2Fwww.tcgplayer.com%2Fproduct%2F145783%3Fpage%3D1"
         },
         "rarity": "common",
         "related_uris": {
             "edhrec": "https://edhrec.com/route/?cc=Dire+Fleet+Hoarder",
-            "gatherer": "https://gatherer.wizards.com/Pages/Card/Details.aspx?multiverseid=681892&printed=false",
-            "tcgplayer_infinite_articles": "https://partner.tcgplayer.com/c/4931599/1830156/21018?subId1=api&trafcat=tcgplayer.com%2Fsearch%2Farticles&u=https%3A%2F%2Fwww.tcgplayer.com%2Fsearch%2Farticles%3FproductLineName%3Dmagic%26q%3DDire%2BFleet%2BHoarder",
-            "tcgplayer_infinite_decks": "https://partner.tcgplayer.com/c/4931599/1830156/21018?subId1=api&trafcat=tcgplayer.com%2Fsearch%2Fdecks&u=https%3A%2F%2Fwww.tcgplayer.com%2Fsearch%2Fdecks%3FproductLineName%3Dmagic%26q%3DDire%2BFleet%2BHoarder"
+            "gatherer": "https://gatherer.wizards.com/Pages/Card/Details.aspx?multiverseid=435256&printed=false",
+            "tcgplayer_infinite_articles": "https://tcgplayer.pxf.io/c/4931599/1830156/21018?subId1=api&trafcat=infinite&u=https%3A%2F%2Finfinite.tcgplayer.com%2Fsearch%3FcontentMode%3Darticle%26game%3Dmagic%26partner%3Dscryfall%26q%3DDire%2BFleet%2BHoarder",
+            "tcgplayer_infinite_decks": "https://tcgplayer.pxf.io/c/4931599/1830156/21018?subId1=api&trafcat=infinite&u=https%3A%2F%2Finfinite.tcgplayer.com%2Fsearch%3FcontentMode%3Ddeck%26game%3Dmagic%26partner%3Dscryfall%26q%3DDire%2BFleet%2BHoarder"
         },
-        "released_at": "2024-11-15",
-        "reprint": true,
+        "released_at": "2017-09-29",
+        "reprint": false,
         "reserved": false,
-        "rulings_uri": "https://api.scryfall.com/cards/9cd2e253-db7c-4c34-8cd5-8aca28752a60/rulings",
-        "scryfall_set_uri": "https://scryfall.com/sets/j25?utm_source=api",
-        "scryfall_uri": "https://scryfall.com/card/j25/422/dire-fleet-hoarder?utm_source=api",
-        "set": "j25",
-        "set_id": "9201567c-bab5-4720-aac9-260e6741f115",
-        "set_name": "Foundations Jumpstart",
-        "set_search_uri": "https://api.scryfall.com/cards/search?order=set&q=e%3Aj25&unique=prints",
-        "set_type": "draft_innovation",
-        "set_uri": "https://api.scryfall.com/sets/9201567c-bab5-4720-aac9-260e6741f115",
+        "rulings_uri": "https://api.scryfall.com/cards/0fcd719e-fa21-42bb-968b-ccc0cd3829c6/rulings",
+        "scryfall_set_uri": "https://scryfall.com/sets/xln?utm_source=api",
+        "scryfall_uri": "https://scryfall.com/card/xln/102/dire-fleet-hoarder?utm_source=api",
+        "set": "xln",
+        "set_id": "fe0dad85-54bc-4151-9200-d68da84dd0f2",
+        "set_name": "Ixalan",
+        "set_search_uri": "https://api.scryfall.com/cards/search?order=set&q=e%3Axln&unique=prints",
+        "set_type": "expansion",
+        "set_uri": "https://api.scryfall.com/sets/fe0dad85-54bc-4151-9200-d68da84dd0f2",
         "story_spotlight": false,
-        "tcgplayer_id": 590197,
+        "tcgplayer_id": 145783,
         "textless": false,
         "toughness": "1",
         "type_line": "Creature \u2014 Human Pirate",
-        "uri": "https://api.scryfall.com/cards/9cd2e253-db7c-4c34-8cd5-8aca28752a60",
+        "uri": "https://api.scryfall.com/cards/0fcd719e-fa21-42bb-968b-ccc0cd3829c6",
         "variation": false
     }
 }

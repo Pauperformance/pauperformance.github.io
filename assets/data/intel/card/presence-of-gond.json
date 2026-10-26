@@ -8,19 +8,19 @@
         "all_parts": [
             {
                 "component": "combo_piece",
-                "id": "74e28915-216d-45c1-a3fc-aa34120afddf",
+                "id": "546c647d-8d0a-4b88-804e-ce0348eb772a",
                 "name": "Presence of Gond",
                 "object": "related_card",
                 "type_line": "Enchantment \u2014 Aura",
-                "uri": "https://api.scryfall.com/cards/74e28915-216d-45c1-a3fc-aa34120afddf"
+                "uri": "https://api.scryfall.com/cards/546c647d-8d0a-4b88-804e-ce0348eb772a"
             },
             {
                 "component": "token",
-                "id": "29e9326a-a435-44c7-939a-8da6ed3c4510",
+                "id": "b7663358-c85c-4ba4-ac9b-6be6105363a9",
                 "name": "Elf Warrior",
                 "object": "related_card",
                 "type_line": "Token Creature \u2014 Elf Warrior",
-                "uri": "https://api.scryfall.com/cards/29e9326a-a435-44c7-939a-8da6ed3c4510"
+                "uri": "https://api.scryfall.com/cards/b7663358-c85c-4ba4-ac9b-6be6105363a9"
             }
         ],
         "artist": "Brandon Kitkouski",
@@ -30,8 +30,9 @@
         "booster": true,
         "border_color": "black",
         "card_back_id": "0aeebaf5-8c7d-4636-9e82-8c27447861f7",
+        "cardmarket_id": 19139,
         "cmc": 3.0,
-        "collector_number": "SHM-125",
+        "collector_number": "125",
         "color_identity": [
             "G"
         ],
@@ -39,29 +40,30 @@
             "G"
         ],
         "digital": false,
-        "edhrec_rank": 7729,
+        "edhrec_rank": 6530,
         "finishes": [
-            "nonfoil"
+            "nonfoil",
+            "foil"
         ],
         "flavor_text": "\"Here lies Gond, hero of Safehold Taldwen. May he ever guide our quest.\"",
-        "foil": false,
+        "foil": true,
         "frame": "2003",
         "full_art": false,
-        "game_changer": false,
         "games": [
-            "paper"
+            "paper",
+            "mtgo"
         ],
         "highres_image": true,
-        "id": "74e28915-216d-45c1-a3fc-aa34120afddf",
+        "id": "546c647d-8d0a-4b88-804e-ce0348eb772a",
         "illustration_id": "4e2df9ad-6761-422c-a023-a5553027a6e3",
         "image_status": "highres_scan",
         "image_uris": {
-            "art_crop": "https://cards.scryfall.io/art_crop/front/7/4/74e28915-216d-45c1-a3fc-aa34120afddf.jpg?1723442540",
-            "border_crop": "https://cards.scryfall.io/border_crop/front/7/4/74e28915-216d-45c1-a3fc-aa34120afddf.jpg?1723442540",
-            "large": "https://cards.scryfall.io/large/front/7/4/74e28915-216d-45c1-a3fc-aa34120afddf.jpg?1723442540",
-            "normal": "https://cards.scryfall.io/normal/front/7/4/74e28915-216d-45c1-a3fc-aa34120afddf.jpg?1723442540",
-            "png": "https://cards.scryfall.io/png/front/7/4/74e28915-216d-45c1-a3fc-aa34120afddf.png?1723442540",
-            "small": "https://cards.scryfall.io/small/front/7/4/74e28915-216d-45c1-a3fc-aa34120afddf.jpg?1723442540"
+            "art_crop": "https://cards.scryfall.io/art_crop/front/5/4/546c647d-8d0a-4b88-804e-ce0348eb772a.jpg?1562830264",
+            "border_crop": "https://cards.scryfall.io/border_crop/front/5/4/546c647d-8d0a-4b88-804e-ce0348eb772a.jpg?1562830264",
+            "large": "https://cards.scryfall.io/large/front/5/4/546c647d-8d0a-4b88-804e-ce0348eb772a.jpg?1562830264",
+            "normal": "https://cards.scryfall.io/normal/front/5/4/546c647d-8d0a-4b88-804e-ce0348eb772a.jpg?1562830264",
+            "png": "https://cards.scryfall.io/png/front/5/4/546c647d-8d0a-4b88-804e-ce0348eb772a.png?1562830264",
+            "small": "https://cards.scryfall.io/small/front/5/4/546c647d-8d0a-4b88-804e-ce0348eb772a.jpg?1562830264"
         },
         "keywords": [
             "Enchant"
@@ -73,6 +75,7 @@
             "brawl": "legal",
             "commander": "legal",
             "duel": "legal",
+            "explorer": "not_legal",
             "future": "not_legal",
             "gladiator": "legal",
             "historic": "legal",
@@ -82,63 +85,67 @@
             "oldschool": "not_legal",
             "pauper": "legal",
             "paupercommander": "legal",
-            "penny": "not_legal",
+            "penny": "legal",
             "pioneer": "not_legal",
             "predh": "legal",
             "premodern": "not_legal",
             "standard": "not_legal",
             "standardbrawl": "not_legal",
             "timeless": "legal",
-            "tlr": "legal",
             "vintage": "legal"
         },
         "mana_cost": "{2}{G}",
-        "multiverse_ids": [],
+        "mtgo_foil_id": 29840,
+        "mtgo_id": 29839,
+        "multiverse_ids": [
+            158768
+        ],
         "name": "Presence of Gond",
         "nonfoil": true,
         "object": "card",
         "oracle_id": "ab42398c-f0a1-4b94-ac5f-b8768e1b4e05",
         "oracle_text": "Enchant creature\nEnchanted creature has \"{T}: Create a 1/1 green Elf Warrior creature token.\"",
         "oversized": false,
-        "penny_rank": 4094,
+        "penny_rank": 3342,
         "prices": {
-            "eur": null,
-            "eur_foil": null,
-            "tix": null,
-            "usd": "0.19",
+            "eur": "0.23",
+            "eur_foil": "0.74",
+            "tix": "0.03",
+            "usd": "0.23",
             "usd_etched": null,
-            "usd_foil": null
+            "usd_foil": "8.24"
         },
         "prints_search_uri": "https://api.scryfall.com/cards/search?order=released&q=oracleid%3Aab42398c-f0a1-4b94-ac5f-b8768e1b4e05&unique=prints",
         "promo": false,
         "purchase_uris": {
-            "cardhoarder": "https://www.cardhoarder.com/cards?affiliate_id=scryfall&data%5Bsearch%5D=Presence+of+Gond&ref=card-profile&utm_campaign=affiliate&utm_medium=card&utm_source=scryfall",
-            "cardmarket": "https://www.cardmarket.com/en/Magic/Products/Search?referrer=scryfall&searchString=Presence+of+Gond&utm_campaign=card_prices&utm_medium=text&utm_source=scryfall",
-            "tcgplayer": "https://partner.tcgplayer.com/c/4931599/1830156/21018?subId1=api&u=https%3A%2F%2Fwww.tcgplayer.com%2Fproduct%2F583170%3Fpage%3D1"
+            "cardhoarder": "https://www.cardhoarder.com/cards/29839?affiliate_id=scryfall&ref=card-profile&utm_campaign=affiliate&utm_medium=card&utm_source=scryfall",
+            "cardmarket": "https://www.cardmarket.com/en/Magic/Products/Singles/Shadowmoor/Presence-of-Gond?referrer=scryfall&utm_campaign=card_prices&utm_medium=text&utm_source=scryfall",
+            "tcgplayer": "https://tcgplayer.pxf.io/c/4931599/1830156/21018?subId1=api&u=https%3A%2F%2Fwww.tcgplayer.com%2Fproduct%2F18745%3Fpage%3D1"
         },
         "rarity": "common",
         "related_uris": {
             "edhrec": "https://edhrec.com/route/?cc=Presence+of+Gond",
-            "tcgplayer_infinite_articles": "https://partner.tcgplayer.com/c/4931599/1830156/21018?subId1=api&trafcat=tcgplayer.com%2Fsearch%2Farticles&u=https%3A%2F%2Fwww.tcgplayer.com%2Fsearch%2Farticles%3FproductLineName%3Dmagic%26q%3DPresence%2Bof%2BGond",
-            "tcgplayer_infinite_decks": "https://partner.tcgplayer.com/c/4931599/1830156/21018?subId1=api&trafcat=tcgplayer.com%2Fsearch%2Fdecks&u=https%3A%2F%2Fwww.tcgplayer.com%2Fsearch%2Fdecks%3FproductLineName%3Dmagic%26q%3DPresence%2Bof%2BGond"
+            "gatherer": "https://gatherer.wizards.com/Pages/Card/Details.aspx?multiverseid=158768&printed=false",
+            "tcgplayer_infinite_articles": "https://tcgplayer.pxf.io/c/4931599/1830156/21018?subId1=api&trafcat=infinite&u=https%3A%2F%2Finfinite.tcgplayer.com%2Fsearch%3FcontentMode%3Darticle%26game%3Dmagic%26partner%3Dscryfall%26q%3DPresence%2Bof%2BGond",
+            "tcgplayer_infinite_decks": "https://tcgplayer.pxf.io/c/4931599/1830156/21018?subId1=api&trafcat=infinite&u=https%3A%2F%2Finfinite.tcgplayer.com%2Fsearch%3FcontentMode%3Ddeck%26game%3Dmagic%26partner%3Dscryfall%26q%3DPresence%2Bof%2BGond"
         },
-        "released_at": "2024-08-02",
-        "reprint": true,
+        "released_at": "2008-05-02",
+        "reprint": false,
         "reserved": false,
-        "rulings_uri": "https://api.scryfall.com/cards/74e28915-216d-45c1-a3fc-aa34120afddf/rulings",
-        "scryfall_set_uri": "https://scryfall.com/sets/plst?utm_source=api",
-        "scryfall_uri": "https://scryfall.com/card/plst/SHM-125/presence-of-gond?utm_source=api",
-        "set": "plst",
-        "set_id": "67e47ba2-b019-4181-9005-fe9fc021de44",
-        "set_name": "The List",
-        "set_search_uri": "https://api.scryfall.com/cards/search?order=set&q=e%3Aplst&unique=prints",
-        "set_type": "masters",
-        "set_uri": "https://api.scryfall.com/sets/67e47ba2-b019-4181-9005-fe9fc021de44",
+        "rulings_uri": "https://api.scryfall.com/cards/546c647d-8d0a-4b88-804e-ce0348eb772a/rulings",
+        "scryfall_set_uri": "https://scryfall.com/sets/shm?utm_source=api",
+        "scryfall_uri": "https://scryfall.com/card/shm/125/presence-of-gond?utm_source=api",
+        "set": "shm",
+        "set_id": "c18c0ba1-2081-4808-9b2e-549bc3a666f3",
+        "set_name": "Shadowmoor",
+        "set_search_uri": "https://api.scryfall.com/cards/search?order=set&q=e%3Ashm&unique=prints",
+        "set_type": "expansion",
+        "set_uri": "https://api.scryfall.com/sets/c18c0ba1-2081-4808-9b2e-549bc3a666f3",
         "story_spotlight": false,
-        "tcgplayer_id": 583170,
+        "tcgplayer_id": 18745,
         "textless": false,
         "type_line": "Enchantment \u2014 Aura",
-        "uri": "https://api.scryfall.com/cards/74e28915-216d-45c1-a3fc-aa34120afddf",
+        "uri": "https://api.scryfall.com/cards/546c647d-8d0a-4b88-804e-ce0348eb772a",
         "variation": false
     }
 }

@@ -6,19 +6,19 @@
         "all_parts": [
             {
                 "component": "token",
-                "id": "96b0ffdf-351e-4b89-92f2-79b20420b3bc",
+                "id": "d0da4f8d-cce9-4d08-8d11-792e0b2af7d0",
                 "name": "Eldrazi Spawn",
                 "object": "related_card",
                 "type_line": "Token Creature \u2014 Eldrazi Spawn",
-                "uri": "https://api.scryfall.com/cards/96b0ffdf-351e-4b89-92f2-79b20420b3bc"
+                "uri": "https://api.scryfall.com/cards/d0da4f8d-cce9-4d08-8d11-792e0b2af7d0"
             },
             {
                 "component": "combo_piece",
-                "id": "63a21f8c-d5b5-4270-b534-f04234ede9aa",
+                "id": "38d65339-e419-40b9-814a-374874f5585f",
                 "name": "Dread Drone",
                 "object": "related_card",
                 "type_line": "Creature \u2014 Eldrazi Drone",
-                "uri": "https://api.scryfall.com/cards/63a21f8c-d5b5-4270-b534-f04234ede9aa"
+                "uri": "https://api.scryfall.com/cards/38d65339-e419-40b9-814a-374874f5585f"
             }
         ],
         "artist": "Raymond Swanland",
@@ -28,9 +28,9 @@
         "booster": true,
         "border_color": "black",
         "card_back_id": "0aeebaf5-8c7d-4636-9e82-8c27447861f7",
-        "cardmarket_id": 418521,
+        "cardmarket_id": 22556,
         "cmc": 5.0,
-        "collector_number": "MM2-80",
+        "collector_number": "108",
         "color_identity": [
             "B"
         ],
@@ -38,29 +38,30 @@
             "B"
         ],
         "digital": false,
-        "edhrec_rank": 16098,
+        "edhrec_rank": 15916,
         "finishes": [
-            "nonfoil"
+            "nonfoil",
+            "foil"
         ],
         "flavor_text": "Each Eldrazi ancient spawned a lineage of horrors in unfathomable shapes.",
-        "foil": false,
-        "frame": "2015",
+        "foil": true,
+        "frame": "2003",
         "full_art": false,
-        "game_changer": false,
         "games": [
-            "paper"
+            "paper",
+            "mtgo"
         ],
         "highres_image": true,
-        "id": "63a21f8c-d5b5-4270-b534-f04234ede9aa",
+        "id": "38d65339-e419-40b9-814a-374874f5585f",
         "illustration_id": "a6ffe13e-7fc7-49d2-8edf-12252003499f",
         "image_status": "highres_scan",
         "image_uris": {
-            "art_crop": "https://cards.scryfall.io/art_crop/front/6/3/63a21f8c-d5b5-4270-b534-f04234ede9aa.jpg?1573509461",
-            "border_crop": "https://cards.scryfall.io/border_crop/front/6/3/63a21f8c-d5b5-4270-b534-f04234ede9aa.jpg?1573509461",
-            "large": "https://cards.scryfall.io/large/front/6/3/63a21f8c-d5b5-4270-b534-f04234ede9aa.jpg?1573509461",
-            "normal": "https://cards.scryfall.io/normal/front/6/3/63a21f8c-d5b5-4270-b534-f04234ede9aa.jpg?1573509461",
-            "png": "https://cards.scryfall.io/png/front/6/3/63a21f8c-d5b5-4270-b534-f04234ede9aa.png?1573509461",
-            "small": "https://cards.scryfall.io/small/front/6/3/63a21f8c-d5b5-4270-b534-f04234ede9aa.jpg?1573509461"
+            "art_crop": "https://cards.scryfall.io/art_crop/front/3/8/38d65339-e419-40b9-814a-374874f5585f.jpg?1562702833",
+            "border_crop": "https://cards.scryfall.io/border_crop/front/3/8/38d65339-e419-40b9-814a-374874f5585f.jpg?1562702833",
+            "large": "https://cards.scryfall.io/large/front/3/8/38d65339-e419-40b9-814a-374874f5585f.jpg?1562702833",
+            "normal": "https://cards.scryfall.io/normal/front/3/8/38d65339-e419-40b9-814a-374874f5585f.jpg?1562702833",
+            "png": "https://cards.scryfall.io/png/front/3/8/38d65339-e419-40b9-814a-374874f5585f.png?1562702833",
+            "small": "https://cards.scryfall.io/small/front/3/8/38d65339-e419-40b9-814a-374874f5585f.jpg?1562702833"
         },
         "keywords": [],
         "lang": "en",
@@ -70,6 +71,7 @@
             "brawl": "not_legal",
             "commander": "legal",
             "duel": "legal",
+            "explorer": "not_legal",
             "future": "not_legal",
             "gladiator": "not_legal",
             "historic": "not_legal",
@@ -86,26 +88,29 @@
             "standard": "not_legal",
             "standardbrawl": "not_legal",
             "timeless": "not_legal",
-            "tlr": "not_legal",
             "vintage": "legal"
         },
         "mana_cost": "{4}{B}",
-        "multiverse_ids": [],
+        "mtgo_foil_id": 36521,
+        "mtgo_id": 36520,
+        "multiverse_ids": [
+            193542
+        ],
         "name": "Dread Drone",
         "nonfoil": true,
         "object": "card",
         "oracle_id": "b6821131-9ae1-4a3c-8235-90deae33c05f",
-        "oracle_text": "When this creature enters, create two 0/1 colorless Eldrazi Spawn creature tokens. They have \"Sacrifice this token: Add {C}.\"",
+        "oracle_text": "When Dread Drone enters the battlefield, create two 0/1 colorless Eldrazi Spawn creature tokens. They have \"Sacrifice this creature: Add {C}.\"",
         "oversized": false,
-        "penny_rank": 13014,
+        "penny_rank": 11420,
         "power": "4",
         "prices": {
-            "eur": "0.16",
-            "eur_foil": null,
-            "tix": null,
-            "usd": "0.12",
+            "eur": "0.10",
+            "eur_foil": "0.24",
+            "tix": "0.03",
+            "usd": "0.10",
             "usd_etched": null,
-            "usd_foil": null
+            "usd_foil": "0.48"
         },
         "prints_search_uri": "https://api.scryfall.com/cards/search?order=released&q=oracleid%3Ab6821131-9ae1-4a3c-8235-90deae33c05f&unique=prints",
         "produced_mana": [
@@ -113,34 +118,35 @@
         ],
         "promo": false,
         "purchase_uris": {
-            "cardhoarder": "https://www.cardhoarder.com/cards?affiliate_id=scryfall&data%5Bsearch%5D=Dread+Drone&ref=card-profile&utm_campaign=affiliate&utm_medium=card&utm_source=scryfall",
-            "cardmarket": "https://www.cardmarket.com/en/Magic/Products?idProduct=418521&referrer=scryfall&utm_campaign=card_prices&utm_medium=text&utm_source=scryfall",
-            "tcgplayer": "https://partner.tcgplayer.com/c/4931599/1830156/21018?subId1=api&u=https%3A%2F%2Fwww.tcgplayer.com%2Fproduct%2F203661%3Fpage%3D1"
+            "cardhoarder": "https://www.cardhoarder.com/cards/36520?affiliate_id=scryfall&ref=card-profile&utm_campaign=affiliate&utm_medium=card&utm_source=scryfall",
+            "cardmarket": "https://www.cardmarket.com/en/Magic/Products/Singles/Rise-of-the-Eldrazi/Dread-Drone?referrer=scryfall&utm_campaign=card_prices&utm_medium=text&utm_source=scryfall",
+            "tcgplayer": "https://tcgplayer.pxf.io/c/4931599/1830156/21018?subId1=api&u=https%3A%2F%2Fwww.tcgplayer.com%2Fproduct%2F34802%3Fpage%3D1"
         },
         "rarity": "common",
         "related_uris": {
             "edhrec": "https://edhrec.com/route/?cc=Dread+Drone",
-            "tcgplayer_infinite_articles": "https://partner.tcgplayer.com/c/4931599/1830156/21018?subId1=api&trafcat=tcgplayer.com%2Fsearch%2Farticles&u=https%3A%2F%2Fwww.tcgplayer.com%2Fsearch%2Farticles%3FproductLineName%3Dmagic%26q%3DDread%2BDrone",
-            "tcgplayer_infinite_decks": "https://partner.tcgplayer.com/c/4931599/1830156/21018?subId1=api&trafcat=tcgplayer.com%2Fsearch%2Fdecks&u=https%3A%2F%2Fwww.tcgplayer.com%2Fsearch%2Fdecks%3FproductLineName%3Dmagic%26q%3DDread%2BDrone"
+            "gatherer": "https://gatherer.wizards.com/Pages/Card/Details.aspx?multiverseid=193542&printed=false",
+            "tcgplayer_infinite_articles": "https://tcgplayer.pxf.io/c/4931599/1830156/21018?subId1=api&trafcat=infinite&u=https%3A%2F%2Finfinite.tcgplayer.com%2Fsearch%3FcontentMode%3Darticle%26game%3Dmagic%26partner%3Dscryfall%26q%3DDread%2BDrone",
+            "tcgplayer_infinite_decks": "https://tcgplayer.pxf.io/c/4931599/1830156/21018?subId1=api&trafcat=infinite&u=https%3A%2F%2Finfinite.tcgplayer.com%2Fsearch%3FcontentMode%3Ddeck%26game%3Dmagic%26partner%3Dscryfall%26q%3DDread%2BDrone"
         },
-        "released_at": "2019-11-07",
-        "reprint": true,
+        "released_at": "2010-04-23",
+        "reprint": false,
         "reserved": false,
-        "rulings_uri": "https://api.scryfall.com/cards/63a21f8c-d5b5-4270-b534-f04234ede9aa/rulings",
-        "scryfall_set_uri": "https://scryfall.com/sets/plst?utm_source=api",
-        "scryfall_uri": "https://scryfall.com/card/plst/MM2-80/dread-drone?utm_source=api",
-        "set": "plst",
-        "set_id": "67e47ba2-b019-4181-9005-fe9fc021de44",
-        "set_name": "The List",
-        "set_search_uri": "https://api.scryfall.com/cards/search?order=set&q=e%3Aplst&unique=prints",
-        "set_type": "masters",
-        "set_uri": "https://api.scryfall.com/sets/67e47ba2-b019-4181-9005-fe9fc021de44",
+        "rulings_uri": "https://api.scryfall.com/cards/38d65339-e419-40b9-814a-374874f5585f/rulings",
+        "scryfall_set_uri": "https://scryfall.com/sets/roe?utm_source=api",
+        "scryfall_uri": "https://scryfall.com/card/roe/108/dread-drone?utm_source=api",
+        "set": "roe",
+        "set_id": "eadb8a82-ec56-4623-b50e-42e7e60cb535",
+        "set_name": "Rise of the Eldrazi",
+        "set_search_uri": "https://api.scryfall.com/cards/search?order=set&q=e%3Aroe&unique=prints",
+        "set_type": "expansion",
+        "set_uri": "https://api.scryfall.com/sets/eadb8a82-ec56-4623-b50e-42e7e60cb535",
         "story_spotlight": false,
-        "tcgplayer_id": 203661,
+        "tcgplayer_id": 34802,
         "textless": false,
         "toughness": "1",
         "type_line": "Creature \u2014 Eldrazi Drone",
-        "uri": "https://api.scryfall.com/cards/63a21f8c-d5b5-4270-b534-f04234ede9aa",
+        "uri": "https://api.scryfall.com/cards/38d65339-e419-40b9-814a-374874f5585f",
         "variation": false
     }
 }

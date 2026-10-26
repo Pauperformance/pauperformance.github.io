@@ -6,19 +6,19 @@
         "all_parts": [
             {
                 "component": "combo_piece",
-                "id": "ff301010-c9c9-4abb-9bf2-78d123cff292",
+                "id": "8b6723f5-a7a9-425d-b4b0-f380da578ef8",
                 "name": "Kolaghan Stormsinger",
                 "object": "related_card",
                 "type_line": "Creature \u2014 Human Shaman",
-                "uri": "https://api.scryfall.com/cards/ff301010-c9c9-4abb-9bf2-78d123cff292"
+                "uri": "https://api.scryfall.com/cards/8b6723f5-a7a9-425d-b4b0-f380da578ef8"
             },
             {
                 "component": "combo_piece",
-                "id": "5430da88-b72e-4d64-bd3c-b21062cac1c2",
+                "id": "5f29231c-dd21-4a45-a1f0-464d338128ed",
                 "name": "Morph",
                 "object": "related_card",
                 "type_line": "Creature",
-                "uri": "https://api.scryfall.com/cards/5430da88-b72e-4d64-bd3c-b21062cac1c2"
+                "uri": "https://api.scryfall.com/cards/5f29231c-dd21-4a45-a1f0-464d338128ed"
             }
         ],
         "artist": "Scott Murphy",
@@ -28,9 +28,9 @@
         "booster": true,
         "border_color": "black",
         "card_back_id": "0aeebaf5-8c7d-4636-9e82-8c27447861f7",
-        "cardmarket_id": 420321,
+        "cardmarket_id": 273367,
         "cmc": 1.0,
-        "collector_number": "DTK-145",
+        "collector_number": "145",
         "color_identity": [
             "R"
         ],
@@ -38,28 +38,29 @@
             "R"
         ],
         "digital": false,
-        "edhrec_rank": 25985,
+        "edhrec_rank": 21156,
         "finishes": [
-            "nonfoil"
+            "nonfoil",
+            "foil"
         ],
-        "foil": false,
+        "foil": true,
         "frame": "2015",
         "full_art": false,
-        "game_changer": false,
         "games": [
-            "paper"
+            "paper",
+            "mtgo"
         ],
         "highres_image": true,
-        "id": "ff301010-c9c9-4abb-9bf2-78d123cff292",
+        "id": "8b6723f5-a7a9-425d-b4b0-f380da578ef8",
         "illustration_id": "5faa1bd3-1e43-43a7-b247-bf7787bf5039",
         "image_status": "highres_scan",
         "image_uris": {
-            "art_crop": "https://cards.scryfall.io/art_crop/front/f/f/ff301010-c9c9-4abb-9bf2-78d123cff292.jpg?1573512128",
-            "border_crop": "https://cards.scryfall.io/border_crop/front/f/f/ff301010-c9c9-4abb-9bf2-78d123cff292.jpg?1573512128",
-            "large": "https://cards.scryfall.io/large/front/f/f/ff301010-c9c9-4abb-9bf2-78d123cff292.jpg?1573512128",
-            "normal": "https://cards.scryfall.io/normal/front/f/f/ff301010-c9c9-4abb-9bf2-78d123cff292.jpg?1573512128",
-            "png": "https://cards.scryfall.io/png/front/f/f/ff301010-c9c9-4abb-9bf2-78d123cff292.png?1573512128",
-            "small": "https://cards.scryfall.io/small/front/f/f/ff301010-c9c9-4abb-9bf2-78d123cff292.jpg?1573512128"
+            "art_crop": "https://cards.scryfall.io/art_crop/front/8/b/8b6723f5-a7a9-425d-b4b0-f380da578ef8.jpg?1562789571",
+            "border_crop": "https://cards.scryfall.io/border_crop/front/8/b/8b6723f5-a7a9-425d-b4b0-f380da578ef8.jpg?1562789571",
+            "large": "https://cards.scryfall.io/large/front/8/b/8b6723f5-a7a9-425d-b4b0-f380da578ef8.jpg?1562789571",
+            "normal": "https://cards.scryfall.io/normal/front/8/b/8b6723f5-a7a9-425d-b4b0-f380da578ef8.jpg?1562789571",
+            "png": "https://cards.scryfall.io/png/front/8/b/8b6723f5-a7a9-425d-b4b0-f380da578ef8.png?1562789571",
+            "small": "https://cards.scryfall.io/small/front/8/b/8b6723f5-a7a9-425d-b4b0-f380da578ef8.jpg?1562789571"
         },
         "keywords": [
             "Haste",
@@ -72,6 +73,7 @@
             "brawl": "not_legal",
             "commander": "legal",
             "duel": "legal",
+            "explorer": "not_legal",
             "future": "not_legal",
             "gladiator": "not_legal",
             "historic": "not_legal",
@@ -88,58 +90,62 @@
             "standard": "not_legal",
             "standardbrawl": "not_legal",
             "timeless": "not_legal",
-            "tlr": "legal",
             "vintage": "legal"
         },
         "mana_cost": "{R}",
-        "multiverse_ids": [],
+        "mtgo_foil_id": 55981,
+        "mtgo_id": 55980,
+        "multiverse_ids": [
+            394612
+        ],
         "name": "Kolaghan Stormsinger",
         "nonfoil": true,
         "object": "card",
         "oracle_id": "0790c8bd-a094-49b5-8843-e8b02cba145b",
-        "oracle_text": "Haste\nMegamorph {R} (You may cast this card face down as a 2/2 creature for {3}. Turn it face up any time for its megamorph cost and put a +1/+1 counter on it.)\nWhen this creature is turned face up, target creature gains haste until end of turn.",
+        "oracle_text": "Haste\nMegamorph {R} (You may cast this card face down as a 2/2 creature for {3}. Turn it face up any time for its megamorph cost and put a +1/+1 counter on it.)\nWhen Kolaghan Stormsinger is turned face up, target creature gains haste until end of turn.",
         "oversized": false,
-        "penny_rank": 9850,
+        "penny_rank": 8218,
         "power": "1",
         "prices": {
-            "eur": "0.10",
-            "eur_foil": null,
-            "tix": null,
-            "usd": "0.12",
+            "eur": "0.16",
+            "eur_foil": "0.15",
+            "tix": "0.04",
+            "usd": "0.03",
             "usd_etched": null,
-            "usd_foil": null
+            "usd_foil": "0.27"
         },
         "prints_search_uri": "https://api.scryfall.com/cards/search?order=released&q=oracleid%3A0790c8bd-a094-49b5-8843-e8b02cba145b&unique=prints",
         "promo": false,
         "purchase_uris": {
-            "cardhoarder": "https://www.cardhoarder.com/cards?affiliate_id=scryfall&data%5Bsearch%5D=Kolaghan+Stormsinger&ref=card-profile&utm_campaign=affiliate&utm_medium=card&utm_source=scryfall",
-            "cardmarket": "https://www.cardmarket.com/en/Magic/Products?idProduct=420321&referrer=scryfall&utm_campaign=card_prices&utm_medium=text&utm_source=scryfall",
-            "tcgplayer": "https://partner.tcgplayer.com/c/4931599/1830156/21018?subId1=api&u=https%3A%2F%2Fwww.tcgplayer.com%2Fproduct%2F204712%3Fpage%3D1"
+            "cardhoarder": "https://www.cardhoarder.com/cards/55980?affiliate_id=scryfall&ref=card-profile&utm_campaign=affiliate&utm_medium=card&utm_source=scryfall",
+            "cardmarket": "https://www.cardmarket.com/en/Magic/Products/Singles/Dragons-of-Tarkir/Kolaghan-Stormsinger?referrer=scryfall&utm_campaign=card_prices&utm_medium=text&utm_source=scryfall",
+            "tcgplayer": "https://tcgplayer.pxf.io/c/4931599/1830156/21018?subId1=api&u=https%3A%2F%2Fwww.tcgplayer.com%2Fproduct%2F96702%3Fpage%3D1"
         },
         "rarity": "common",
         "related_uris": {
             "edhrec": "https://edhrec.com/route/?cc=Kolaghan+Stormsinger",
-            "tcgplayer_infinite_articles": "https://partner.tcgplayer.com/c/4931599/1830156/21018?subId1=api&trafcat=tcgplayer.com%2Fsearch%2Farticles&u=https%3A%2F%2Fwww.tcgplayer.com%2Fsearch%2Farticles%3FproductLineName%3Dmagic%26q%3DKolaghan%2BStormsinger",
-            "tcgplayer_infinite_decks": "https://partner.tcgplayer.com/c/4931599/1830156/21018?subId1=api&trafcat=tcgplayer.com%2Fsearch%2Fdecks&u=https%3A%2F%2Fwww.tcgplayer.com%2Fsearch%2Fdecks%3FproductLineName%3Dmagic%26q%3DKolaghan%2BStormsinger"
+            "gatherer": "https://gatherer.wizards.com/Pages/Card/Details.aspx?multiverseid=394612&printed=false",
+            "tcgplayer_infinite_articles": "https://tcgplayer.pxf.io/c/4931599/1830156/21018?subId1=api&trafcat=infinite&u=https%3A%2F%2Finfinite.tcgplayer.com%2Fsearch%3FcontentMode%3Darticle%26game%3Dmagic%26partner%3Dscryfall%26q%3DKolaghan%2BStormsinger",
+            "tcgplayer_infinite_decks": "https://tcgplayer.pxf.io/c/4931599/1830156/21018?subId1=api&trafcat=infinite&u=https%3A%2F%2Finfinite.tcgplayer.com%2Fsearch%3FcontentMode%3Ddeck%26game%3Dmagic%26partner%3Dscryfall%26q%3DKolaghan%2BStormsinger"
         },
-        "released_at": "2019-11-07",
-        "reprint": true,
+        "released_at": "2015-03-27",
+        "reprint": false,
         "reserved": false,
-        "rulings_uri": "https://api.scryfall.com/cards/ff301010-c9c9-4abb-9bf2-78d123cff292/rulings",
-        "scryfall_set_uri": "https://scryfall.com/sets/plst?utm_source=api",
-        "scryfall_uri": "https://scryfall.com/card/plst/DTK-145/kolaghan-stormsinger?utm_source=api",
-        "set": "plst",
-        "set_id": "67e47ba2-b019-4181-9005-fe9fc021de44",
-        "set_name": "The List",
-        "set_search_uri": "https://api.scryfall.com/cards/search?order=set&q=e%3Aplst&unique=prints",
-        "set_type": "masters",
-        "set_uri": "https://api.scryfall.com/sets/67e47ba2-b019-4181-9005-fe9fc021de44",
+        "rulings_uri": "https://api.scryfall.com/cards/8b6723f5-a7a9-425d-b4b0-f380da578ef8/rulings",
+        "scryfall_set_uri": "https://scryfall.com/sets/dtk?utm_source=api",
+        "scryfall_uri": "https://scryfall.com/card/dtk/145/kolaghan-stormsinger?utm_source=api",
+        "set": "dtk",
+        "set_id": "7e72625f-f320-4552-a719-d11e2f1853bd",
+        "set_name": "Dragons of Tarkir",
+        "set_search_uri": "https://api.scryfall.com/cards/search?order=set&q=e%3Adtk&unique=prints",
+        "set_type": "expansion",
+        "set_uri": "https://api.scryfall.com/sets/7e72625f-f320-4552-a719-d11e2f1853bd",
         "story_spotlight": false,
-        "tcgplayer_id": 204712,
+        "tcgplayer_id": 96702,
         "textless": false,
         "toughness": "1",
         "type_line": "Creature \u2014 Human Shaman",
-        "uri": "https://api.scryfall.com/cards/ff301010-c9c9-4abb-9bf2-78d123cff292",
+        "uri": "https://api.scryfall.com/cards/8b6723f5-a7a9-425d-b4b0-f380da578ef8",
         "variation": false,
         "watermark": "kolaghan"
     }
