@@ -139,6 +139,32 @@ function StapleLink({ card }) {
   )
 }
 
+// The current Pauperformance code: the most recently released set that
+// added cards to the Pauper pool (set codes are not chronological).
+function CurrentCodeSection() {
+  const [set, setSet] = useState(null)
+
+  useEffect(() => {
+    const today = new Date().toISOString().slice(0, 10)
+    fetch('/data/sets.json').then(r => r.json()).then(sets => {
+      const released = sets.filter(s => s.pauper_pool && s.date <= today)
+      if (released.length) setSet(released.reduce((a, b) => (b.date > a.date || (b.date === a.date && b.code > a.code) ? b : a)))
+    })
+  }, [])
+
+  if (!set) return null
+
+  return (
+    <section className="bg-gray-800 border border-gray-700 rounded-xl p-6">
+      <p className="text-sm text-gray-500 uppercase tracking-widest mb-1">Current code</p>
+      <p className="text-2xl font-bold text-white">
+        {set.code} <span className="text-base font-normal text-gray-400">— {set.name}</span>
+      </p>
+      <p className="text-sm text-gray-500 mt-1">Released {set.date}</p>
+    </section>
+  )
+}
+
 function TopDecksSection() {
   const [decks, setDecks] = useState([])
 
@@ -362,13 +388,7 @@ export default function Home() {
 
         <StatsSection />
 
-        <section className="bg-gray-800 border border-gray-700 rounded-xl p-6">
-          <p className="text-sm text-gray-500 uppercase tracking-widest mb-1">Current code</p>
-          <p className="text-2xl font-bold text-white">
-            1069 <span className="text-base font-normal text-gray-400">— Secrets of Strixhaven</span>
-          </p>
-          <p className="text-sm text-gray-500 mt-1">Released 2026-04-24</p>
-        </section>
+        <CurrentCodeSection />
 
         <section>
           <h2 className="text-xl font-semibold text-white mb-4">Pages</h2>
