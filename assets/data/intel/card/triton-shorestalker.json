@@ -1,62 +1,65 @@
 {
     "archetypes": {
         "py/set": [
-            "Brew Dimir",
-            "Brew"
+            "Brew",
+            "Brew Dimir"
         ]
     },
     "scryfall": {
-        "arena_id": 55263,
         "artist": "Svetlin Velinov",
         "artist_ids": [
             "ffd063ae-c097-4f26-b2e6-b1e2137708bc"
         ],
-        "booster": false,
+        "booster": true,
         "border_color": "black",
         "card_back_id": "0aeebaf5-8c7d-4636-9e82-8c27447861f7",
+        "cardmarket_id": 266697,
         "cmc": 1.0,
-        "collector_number": "1",
+        "collector_number": "56",
         "color_identity": [
             "U"
         ],
         "colors": [
             "U"
         ],
-        "digital": true,
-        "edhrec_rank": 1944,
+        "digital": false,
+        "edhrec_rank": 1618,
         "finishes": [
-            "nonfoil"
+            "nonfoil",
+            "foil"
         ],
-        "foil": false,
-        "frame": "2015",
+        "flavor_text": "\"Who will miss you, drywalker? A wife? A child? Perhaps they will blame the sea for your fate, and teach future generations to stay far away from it.\"",
+        "foil": true,
+        "frame": "2003",
         "full_art": false,
-        "game_changer": false,
         "games": [
-            "arena"
+            "paper",
+            "mtgo"
         ],
         "highres_image": true,
-        "id": "2cb1a356-99f8-4264-8162-5fecc3583b7c",
+        "id": "881c554e-2324-41e2-89f1-db9f4017bc31",
         "illustration_id": "9d699ae1-42de-4b12-b46c-9e9a025d6cb1",
         "image_status": "highres_scan",
         "image_uris": {
-            "art_crop": "https://cards.scryfall.io/art_crop/front/2/c/2cb1a356-99f8-4264-8162-5fecc3583b7c.jpg?1750836316",
-            "border_crop": "https://cards.scryfall.io/border_crop/front/2/c/2cb1a356-99f8-4264-8162-5fecc3583b7c.jpg?1750836316",
-            "large": "https://cards.scryfall.io/large/front/2/c/2cb1a356-99f8-4264-8162-5fecc3583b7c.jpg?1750836316",
-            "normal": "https://cards.scryfall.io/normal/front/2/c/2cb1a356-99f8-4264-8162-5fecc3583b7c.jpg?1750836316",
-            "png": "https://cards.scryfall.io/png/front/2/c/2cb1a356-99f8-4264-8162-5fecc3583b7c.png?1750836316",
-            "small": "https://cards.scryfall.io/small/front/2/c/2cb1a356-99f8-4264-8162-5fecc3583b7c.jpg?1750836316"
+            "art_crop": "https://cards.scryfall.io/art_crop/front/8/8/881c554e-2324-41e2-89f1-db9f4017bc31.jpg?1593095595",
+            "border_crop": "https://cards.scryfall.io/border_crop/front/8/8/881c554e-2324-41e2-89f1-db9f4017bc31.jpg?1593095595",
+            "large": "https://cards.scryfall.io/large/front/8/8/881c554e-2324-41e2-89f1-db9f4017bc31.jpg?1593095595",
+            "normal": "https://cards.scryfall.io/normal/front/8/8/881c554e-2324-41e2-89f1-db9f4017bc31.jpg?1593095595",
+            "png": "https://cards.scryfall.io/png/front/8/8/881c554e-2324-41e2-89f1-db9f4017bc31.png?1593095595",
+            "small": "https://cards.scryfall.io/small/front/8/8/881c554e-2324-41e2-89f1-db9f4017bc31.jpg?1593095595"
         },
         "keywords": [],
         "lang": "en",
         "layout": "normal",
         "legalities": {
             "alchemy": "not_legal",
-            "brawl": "legal",
+            "brawl": "not_legal",
             "commander": "legal",
             "duel": "legal",
+            "explorer": "not_legal",
             "future": "not_legal",
-            "gladiator": "legal",
-            "historic": "legal",
+            "gladiator": "not_legal",
+            "historic": "not_legal",
             "legacy": "legal",
             "modern": "legal",
             "oathbreaker": "legal",
@@ -69,58 +72,63 @@
             "premodern": "not_legal",
             "standard": "not_legal",
             "standardbrawl": "not_legal",
-            "timeless": "legal",
-            "tlr": "legal",
+            "timeless": "not_legal",
             "vintage": "legal"
         },
         "mana_cost": "{U}",
-        "multiverse_ids": [],
+        "mtgo_foil_id": 51985,
+        "mtgo_id": 51984,
+        "multiverse_ids": [
+            380522
+        ],
         "name": "Triton Shorestalker",
         "nonfoil": true,
         "object": "card",
         "oracle_id": "71a60247-17e5-44bd-9fed-f7d550b09ef3",
-        "oracle_text": "This creature can't be blocked.",
+        "oracle_text": "Triton Shorestalker can't be blocked.",
         "oversized": false,
-        "penny_rank": 4013,
+        "penny_rank": 3445,
         "power": "1",
-        "preview": {
-            "previewed_at": "2025-06-25",
-            "source": "Wizards of the Coast",
-            "source_uri": "https://magic.wizards.com/en/news/mtg-arena/announcing-pioneer"
-        },
         "prices": {
-            "eur": null,
-            "eur_foil": null,
-            "tix": null,
-            "usd": null,
+            "eur": "0.24",
+            "eur_foil": "1.53",
+            "tix": "0.03",
+            "usd": "0.20",
             "usd_etched": null,
-            "usd_foil": null
+            "usd_foil": "6.01"
         },
         "prints_search_uri": "https://api.scryfall.com/cards/search?order=released&q=oracleid%3A71a60247-17e5-44bd-9fed-f7d550b09ef3&unique=prints",
         "promo": false,
+        "purchase_uris": {
+            "cardhoarder": "https://www.cardhoarder.com/cards/51984?affiliate_id=scryfall&ref=card-profile&utm_campaign=affiliate&utm_medium=card&utm_source=scryfall",
+            "cardmarket": "https://www.cardmarket.com/en/Magic/Products/Singles/Journey-into-Nyx/Triton-Shorestalker?referrer=scryfall&utm_campaign=card_prices&utm_medium=text&utm_source=scryfall",
+            "tcgplayer": "https://tcgplayer.pxf.io/c/4931599/1830156/21018?subId1=api&u=https%3A%2F%2Fwww.tcgplayer.com%2Fproduct%2F82349%3Fpage%3D1"
+        },
         "rarity": "common",
         "related_uris": {
             "edhrec": "https://edhrec.com/route/?cc=Triton+Shorestalker",
-            "tcgplayer_infinite_articles": "https://partner.tcgplayer.com/c/4931599/1830156/21018?subId1=api&trafcat=tcgplayer.com%2Fsearch%2Farticles&u=https%3A%2F%2Fwww.tcgplayer.com%2Fsearch%2Farticles%3FproductLineName%3Dmagic%26q%3DTriton%2BShorestalker",
-            "tcgplayer_infinite_decks": "https://partner.tcgplayer.com/c/4931599/1830156/21018?subId1=api&trafcat=tcgplayer.com%2Fsearch%2Fdecks&u=https%3A%2F%2Fwww.tcgplayer.com%2Fsearch%2Fdecks%3FproductLineName%3Dmagic%26q%3DTriton%2BShorestalker"
+            "gatherer": "https://gatherer.wizards.com/Pages/Card/Details.aspx?multiverseid=380522&printed=false",
+            "tcgplayer_infinite_articles": "https://tcgplayer.pxf.io/c/4931599/1830156/21018?subId1=api&trafcat=infinite&u=https%3A%2F%2Finfinite.tcgplayer.com%2Fsearch%3FcontentMode%3Darticle%26game%3Dmagic%26partner%3Dscryfall%26q%3DTriton%2BShorestalker",
+            "tcgplayer_infinite_decks": "https://tcgplayer.pxf.io/c/4931599/1830156/21018?subId1=api&trafcat=infinite&u=https%3A%2F%2Finfinite.tcgplayer.com%2Fsearch%3FcontentMode%3Ddeck%26game%3Dmagic%26partner%3Dscryfall%26q%3DTriton%2BShorestalker"
         },
-        "released_at": "2025-05-05",
-        "reprint": true,
+        "released_at": "2014-05-02",
+        "reprint": false,
         "reserved": false,
-        "rulings_uri": "https://api.scryfall.com/cards/2cb1a356-99f8-4264-8162-5fecc3583b7c/rulings",
-        "scryfall_set_uri": "https://scryfall.com/sets/pa1?utm_source=api",
-        "scryfall_uri": "https://scryfall.com/card/pa1/1/triton-shorestalker?utm_source=api",
-        "set": "pa1",
-        "set_id": "f254a2f7-eeac-4aeb-8487-8583bf39811c",
-        "set_name": "Pioneer Anthology 1",
-        "set_search_uri": "https://api.scryfall.com/cards/search?order=set&q=e%3Apa1&unique=prints",
-        "set_type": "box",
-        "set_uri": "https://api.scryfall.com/sets/f254a2f7-eeac-4aeb-8487-8583bf39811c",
+        "rulings_uri": "https://api.scryfall.com/cards/881c554e-2324-41e2-89f1-db9f4017bc31/rulings",
+        "scryfall_set_uri": "https://scryfall.com/sets/jou?utm_source=api",
+        "scryfall_uri": "https://scryfall.com/card/jou/56/triton-shorestalker?utm_source=api",
+        "set": "jou",
+        "set_id": "204d2dca-1887-4721-9558-164aa7bbeb4f",
+        "set_name": "Journey into Nyx",
+        "set_search_uri": "https://api.scryfall.com/cards/search?order=set&q=e%3Ajou&unique=prints",
+        "set_type": "expansion",
+        "set_uri": "https://api.scryfall.com/sets/204d2dca-1887-4721-9558-164aa7bbeb4f",
         "story_spotlight": false,
+        "tcgplayer_id": 82349,
         "textless": false,
         "toughness": "1",
         "type_line": "Creature \u2014 Merfolk Rogue",
-        "uri": "https://api.scryfall.com/cards/2cb1a356-99f8-4264-8162-5fecc3583b7c",
+        "uri": "https://api.scryfall.com/cards/881c554e-2324-41e2-89f1-db9f4017bc31",
         "variation": false
     }
 }

@@ -6,21 +6,22 @@
         "all_parts": [
             {
                 "component": "token",
-                "id": "d40a39b5-1361-4a12-8694-56f6307963ae",
+                "id": "a49da8fe-559f-4c34-b904-c285188fb98d",
                 "name": "Saproling",
                 "object": "related_card",
                 "type_line": "Token Creature \u2014 Saproling",
-                "uri": "https://api.scryfall.com/cards/d40a39b5-1361-4a12-8694-56f6307963ae"
+                "uri": "https://api.scryfall.com/cards/a49da8fe-559f-4c34-b904-c285188fb98d"
             },
             {
                 "component": "combo_piece",
-                "id": "ae7eb7e9-288e-447e-919d-a91a40717eb6",
+                "id": "5ef6b657-7273-4abe-92f4-e1e4cda78f96",
                 "name": "Yavimaya Sapherd",
                 "object": "related_card",
                 "type_line": "Creature \u2014 Fungus",
-                "uri": "https://api.scryfall.com/cards/ae7eb7e9-288e-447e-919d-a91a40717eb6"
+                "uri": "https://api.scryfall.com/cards/5ef6b657-7273-4abe-92f4-e1e4cda78f96"
             }
         ],
+        "arena_id": 67482,
         "artist": "Christine Choi",
         "artist_ids": [
             "b8266529-1ffe-41e7-9969-fcf39f61426b"
@@ -28,9 +29,9 @@
         "booster": true,
         "border_color": "black",
         "card_back_id": "0aeebaf5-8c7d-4636-9e82-8c27447861f7",
-        "cardmarket_id": 422611,
+        "cardmarket_id": 355441,
         "cmc": 3.0,
-        "collector_number": "DOM-189",
+        "collector_number": "189",
         "color_identity": [
             "G"
         ],
@@ -38,29 +39,31 @@
             "G"
         ],
         "digital": false,
-        "edhrec_rank": 16350,
+        "edhrec_rank": 12163,
         "finishes": [
-            "nonfoil"
+            "nonfoil",
+            "foil"
         ],
         "flavor_text": "\"When their community grows cluttered, thallids begin a traditional bobbing dance, then trek out in all directions.\"\n\u2014*Sarpadian Empires, vol. III*",
-        "foil": false,
+        "foil": true,
         "frame": "2015",
         "full_art": false,
-        "game_changer": false,
         "games": [
-            "paper"
+            "arena",
+            "paper",
+            "mtgo"
         ],
         "highres_image": true,
-        "id": "ae7eb7e9-288e-447e-919d-a91a40717eb6",
+        "id": "5ef6b657-7273-4abe-92f4-e1e4cda78f96",
         "illustration_id": "d059864e-f4f4-4a20-b45e-75722335ef48",
         "image_status": "highres_scan",
         "image_uris": {
-            "art_crop": "https://cards.scryfall.io/art_crop/front/a/e/ae7eb7e9-288e-447e-919d-a91a40717eb6.jpg?1573514897",
-            "border_crop": "https://cards.scryfall.io/border_crop/front/a/e/ae7eb7e9-288e-447e-919d-a91a40717eb6.jpg?1573514897",
-            "large": "https://cards.scryfall.io/large/front/a/e/ae7eb7e9-288e-447e-919d-a91a40717eb6.jpg?1573514897",
-            "normal": "https://cards.scryfall.io/normal/front/a/e/ae7eb7e9-288e-447e-919d-a91a40717eb6.jpg?1573514897",
-            "png": "https://cards.scryfall.io/png/front/a/e/ae7eb7e9-288e-447e-919d-a91a40717eb6.png?1573514897",
-            "small": "https://cards.scryfall.io/small/front/a/e/ae7eb7e9-288e-447e-919d-a91a40717eb6.jpg?1573514897"
+            "art_crop": "https://cards.scryfall.io/art_crop/front/5/e/5ef6b657-7273-4abe-92f4-e1e4cda78f96.jpg?1562736504",
+            "border_crop": "https://cards.scryfall.io/border_crop/front/5/e/5ef6b657-7273-4abe-92f4-e1e4cda78f96.jpg?1562736504",
+            "large": "https://cards.scryfall.io/large/front/5/e/5ef6b657-7273-4abe-92f4-e1e4cda78f96.jpg?1562736504",
+            "normal": "https://cards.scryfall.io/normal/front/5/e/5ef6b657-7273-4abe-92f4-e1e4cda78f96.jpg?1562736504",
+            "png": "https://cards.scryfall.io/png/front/5/e/5ef6b657-7273-4abe-92f4-e1e4cda78f96.png?1562736504",
+            "small": "https://cards.scryfall.io/small/front/5/e/5ef6b657-7273-4abe-92f4-e1e4cda78f96.jpg?1562736504"
         },
         "keywords": [],
         "lang": "en",
@@ -70,6 +73,7 @@
             "brawl": "legal",
             "commander": "legal",
             "duel": "legal",
+            "explorer": "legal",
             "future": "not_legal",
             "gladiator": "legal",
             "historic": "legal",
@@ -86,58 +90,61 @@
             "standard": "not_legal",
             "standardbrawl": "not_legal",
             "timeless": "legal",
-            "tlr": "legal",
             "vintage": "legal"
         },
         "mana_cost": "{2}{G}",
-        "multiverse_ids": [],
+        "mtgo_id": 67843,
+        "multiverse_ids": [
+            443077
+        ],
         "name": "Yavimaya Sapherd",
         "nonfoil": true,
         "object": "card",
         "oracle_id": "42a1954f-774e-4d80-98b3-a736f23e2060",
-        "oracle_text": "When this creature enters, create a 1/1 green Saproling creature token.",
+        "oracle_text": "When Yavimaya Sapherd enters the battlefield, create a 1/1 green Saproling creature token.",
         "oversized": false,
-        "penny_rank": 10294,
+        "penny_rank": 8603,
         "power": "2",
         "prices": {
-            "eur": "0.15",
-            "eur_foil": null,
-            "tix": null,
-            "usd": "0.20",
+            "eur": "0.09",
+            "eur_foil": "0.32",
+            "tix": "0.03",
+            "usd": "0.03",
             "usd_etched": null,
-            "usd_foil": null
+            "usd_foil": "0.45"
         },
         "prints_search_uri": "https://api.scryfall.com/cards/search?order=released&q=oracleid%3A42a1954f-774e-4d80-98b3-a736f23e2060&unique=prints",
         "promo": false,
         "purchase_uris": {
-            "cardhoarder": "https://www.cardhoarder.com/cards?affiliate_id=scryfall&data%5Bsearch%5D=Yavimaya+Sapherd&ref=card-profile&utm_campaign=affiliate&utm_medium=card&utm_source=scryfall",
-            "cardmarket": "https://www.cardmarket.com/en/Magic/Products?idProduct=422611&referrer=scryfall&utm_campaign=card_prices&utm_medium=text&utm_source=scryfall",
-            "tcgplayer": "https://partner.tcgplayer.com/c/4931599/1830156/21018?subId1=api&u=https%3A%2F%2Fwww.tcgplayer.com%2Fproduct%2F203557%3Fpage%3D1"
+            "cardhoarder": "https://www.cardhoarder.com/cards/67843?affiliate_id=scryfall&ref=card-profile&utm_campaign=affiliate&utm_medium=card&utm_source=scryfall",
+            "cardmarket": "https://www.cardmarket.com/en/Magic/Products/Singles/Dominaria/Yavimaya-Sapherd?referrer=scryfall&utm_campaign=card_prices&utm_medium=text&utm_source=scryfall",
+            "tcgplayer": "https://tcgplayer.pxf.io/c/4931599/1830156/21018?subId1=api&u=https%3A%2F%2Fwww.tcgplayer.com%2Fproduct%2F164718%3Fpage%3D1"
         },
         "rarity": "common",
         "related_uris": {
             "edhrec": "https://edhrec.com/route/?cc=Yavimaya+Sapherd",
-            "tcgplayer_infinite_articles": "https://partner.tcgplayer.com/c/4931599/1830156/21018?subId1=api&trafcat=tcgplayer.com%2Fsearch%2Farticles&u=https%3A%2F%2Fwww.tcgplayer.com%2Fsearch%2Farticles%3FproductLineName%3Dmagic%26q%3DYavimaya%2BSapherd",
-            "tcgplayer_infinite_decks": "https://partner.tcgplayer.com/c/4931599/1830156/21018?subId1=api&trafcat=tcgplayer.com%2Fsearch%2Fdecks&u=https%3A%2F%2Fwww.tcgplayer.com%2Fsearch%2Fdecks%3FproductLineName%3Dmagic%26q%3DYavimaya%2BSapherd"
+            "gatherer": "https://gatherer.wizards.com/Pages/Card/Details.aspx?multiverseid=443077&printed=false",
+            "tcgplayer_infinite_articles": "https://tcgplayer.pxf.io/c/4931599/1830156/21018?subId1=api&trafcat=infinite&u=https%3A%2F%2Finfinite.tcgplayer.com%2Fsearch%3FcontentMode%3Darticle%26game%3Dmagic%26partner%3Dscryfall%26q%3DYavimaya%2BSapherd",
+            "tcgplayer_infinite_decks": "https://tcgplayer.pxf.io/c/4931599/1830156/21018?subId1=api&trafcat=infinite&u=https%3A%2F%2Finfinite.tcgplayer.com%2Fsearch%3FcontentMode%3Ddeck%26game%3Dmagic%26partner%3Dscryfall%26q%3DYavimaya%2BSapherd"
         },
-        "released_at": "2019-11-07",
-        "reprint": true,
+        "released_at": "2018-04-27",
+        "reprint": false,
         "reserved": false,
-        "rulings_uri": "https://api.scryfall.com/cards/ae7eb7e9-288e-447e-919d-a91a40717eb6/rulings",
-        "scryfall_set_uri": "https://scryfall.com/sets/plst?utm_source=api",
-        "scryfall_uri": "https://scryfall.com/card/plst/DOM-189/yavimaya-sapherd?utm_source=api",
-        "set": "plst",
-        "set_id": "67e47ba2-b019-4181-9005-fe9fc021de44",
-        "set_name": "The List",
-        "set_search_uri": "https://api.scryfall.com/cards/search?order=set&q=e%3Aplst&unique=prints",
-        "set_type": "masters",
-        "set_uri": "https://api.scryfall.com/sets/67e47ba2-b019-4181-9005-fe9fc021de44",
+        "rulings_uri": "https://api.scryfall.com/cards/5ef6b657-7273-4abe-92f4-e1e4cda78f96/rulings",
+        "scryfall_set_uri": "https://scryfall.com/sets/dom?utm_source=api",
+        "scryfall_uri": "https://scryfall.com/card/dom/189/yavimaya-sapherd?utm_source=api",
+        "set": "dom",
+        "set_id": "be1daba3-51c9-4e7e-9212-36e68addc26c",
+        "set_name": "Dominaria",
+        "set_search_uri": "https://api.scryfall.com/cards/search?order=set&q=e%3Adom&unique=prints",
+        "set_type": "expansion",
+        "set_uri": "https://api.scryfall.com/sets/be1daba3-51c9-4e7e-9212-36e68addc26c",
         "story_spotlight": false,
-        "tcgplayer_id": 203557,
+        "tcgplayer_id": 164718,
         "textless": false,
         "toughness": "2",
         "type_line": "Creature \u2014 Fungus",
-        "uri": "https://api.scryfall.com/cards/ae7eb7e9-288e-447e-919d-a91a40717eb6",
+        "uri": "https://api.scryfall.com/cards/5ef6b657-7273-4abe-92f4-e1e4cda78f96",
         "variation": false
     }
 }

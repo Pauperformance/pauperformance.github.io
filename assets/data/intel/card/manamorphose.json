@@ -1,20 +1,20 @@
 {
     "archetypes": {
         "py/set": [
-            "Burn",
-            "Gruul Turbo Emblem",
-            "Turbo Goblins",
-            "Grapeshot Storm",
-            "Bogles",
-            "Brew Dune",
-            "MonoR Blitz",
+            "Brew",
             "Naya Turbo Emblem",
-            "Ruby Storm",
-            "Poison Storm",
+            "Brew Dune",
+            "Turbo Goblins",
             "Empty The Warrens Storm",
-            "Rakdos Burn",
+            "Grapeshot Storm",
+            "MonoR Blitz",
+            "Bogles",
+            "Burn",
             "Izzet Blitz",
-            "Brew"
+            "Gruul Turbo Emblem",
+            "Poison Storm",
+            "Rakdos Burn",
+            "Ruby Storm"
         ]
     },
     "scryfall": {
@@ -25,9 +25,9 @@
         "booster": true,
         "border_color": "black",
         "card_back_id": "0aeebaf5-8c7d-4636-9e82-8c27447861f7",
-        "cardmarket_id": 423346,
+        "cardmarket_id": 19225,
         "cmc": 2.0,
-        "collector_number": "SHM-211",
+        "collector_number": "211",
         "color_identity": [
             "G",
             "R"
@@ -37,41 +37,43 @@
             "R"
         ],
         "digital": false,
-        "edhrec_rank": 2542,
+        "edhrec_rank": 3361,
         "finishes": [
-            "nonfoil"
+            "nonfoil",
+            "foil"
         ],
         "flavor_text": "For a moment, objects of pure mana glimmered in the wonderstruck boggart's hands. In the next moment, they were in his mouth, as he chewed contentedly.",
-        "foil": false,
+        "foil": true,
         "frame": "2003",
         "full_art": false,
-        "game_changer": false,
         "games": [
-            "paper"
+            "paper",
+            "mtgo"
         ],
         "highres_image": true,
-        "id": "12ed4051-31c4-4f63-b576-e3761b9d35ae",
+        "id": "50283122-b8c4-4fb3-8eba-6252b72222f4",
         "illustration_id": "a29561c9-2bff-4d74-8654-90d9ddabce6d",
         "image_status": "highres_scan",
         "image_uris": {
-            "art_crop": "https://cards.scryfall.io/art_crop/front/1/2/12ed4051-31c4-4f63-b576-e3761b9d35ae.jpg?1573515966",
-            "border_crop": "https://cards.scryfall.io/border_crop/front/1/2/12ed4051-31c4-4f63-b576-e3761b9d35ae.jpg?1573515966",
-            "large": "https://cards.scryfall.io/large/front/1/2/12ed4051-31c4-4f63-b576-e3761b9d35ae.jpg?1573515966",
-            "normal": "https://cards.scryfall.io/normal/front/1/2/12ed4051-31c4-4f63-b576-e3761b9d35ae.jpg?1573515966",
-            "png": "https://cards.scryfall.io/png/front/1/2/12ed4051-31c4-4f63-b576-e3761b9d35ae.png?1573515966",
-            "small": "https://cards.scryfall.io/small/front/1/2/12ed4051-31c4-4f63-b576-e3761b9d35ae.jpg?1573515966"
+            "art_crop": "https://cards.scryfall.io/art_crop/front/5/0/50283122-b8c4-4fb3-8eba-6252b72222f4.jpg?1562830064",
+            "border_crop": "https://cards.scryfall.io/border_crop/front/5/0/50283122-b8c4-4fb3-8eba-6252b72222f4.jpg?1562830064",
+            "large": "https://cards.scryfall.io/large/front/5/0/50283122-b8c4-4fb3-8eba-6252b72222f4.jpg?1562830064",
+            "normal": "https://cards.scryfall.io/normal/front/5/0/50283122-b8c4-4fb3-8eba-6252b72222f4.jpg?1562830064",
+            "png": "https://cards.scryfall.io/png/front/5/0/50283122-b8c4-4fb3-8eba-6252b72222f4.png?1562830064",
+            "small": "https://cards.scryfall.io/small/front/5/0/50283122-b8c4-4fb3-8eba-6252b72222f4.jpg?1562830064"
         },
         "keywords": [],
         "lang": "en",
         "layout": "normal",
         "legalities": {
             "alchemy": "not_legal",
-            "brawl": "legal",
+            "brawl": "not_legal",
             "commander": "legal",
             "duel": "legal",
+            "explorer": "not_legal",
             "future": "not_legal",
-            "gladiator": "legal",
-            "historic": "legal",
+            "gladiator": "not_legal",
+            "historic": "not_legal",
             "legacy": "legal",
             "modern": "legal",
             "oathbreaker": "legal",
@@ -84,12 +86,15 @@
             "premodern": "not_legal",
             "standard": "not_legal",
             "standardbrawl": "not_legal",
-            "timeless": "legal",
-            "tlr": "legal",
+            "timeless": "not_legal",
             "vintage": "legal"
         },
         "mana_cost": "{1}{R/G}",
-        "multiverse_ids": [],
+        "mtgo_foil_id": 29654,
+        "mtgo_id": 29653,
+        "multiverse_ids": [
+            153968
+        ],
         "name": "Manamorphose",
         "nonfoil": true,
         "object": "card",
@@ -97,12 +102,12 @@
         "oracle_text": "Add two mana in any combination of colors.\nDraw a card.",
         "oversized": false,
         "prices": {
-            "eur": "3.28",
-            "eur_foil": null,
-            "tix": null,
-            "usd": "5.03",
+            "eur": "2.23",
+            "eur_foil": "17.03",
+            "tix": "0.49",
+            "usd": "2.57",
             "usd_etched": null,
-            "usd_foil": null
+            "usd_foil": "34.84"
         },
         "prints_search_uri": "https://api.scryfall.com/cards/search?order=released&q=oracleid%3A89c83a6d-f6c8-4984-a888-0db62dfb93b1&unique=prints",
         "produced_mana": [
@@ -114,33 +119,34 @@
         ],
         "promo": false,
         "purchase_uris": {
-            "cardhoarder": "https://www.cardhoarder.com/cards?affiliate_id=scryfall&data%5Bsearch%5D=Manamorphose&ref=card-profile&utm_campaign=affiliate&utm_medium=card&utm_source=scryfall",
-            "cardmarket": "https://www.cardmarket.com/en/Magic/Products?idProduct=423346&referrer=scryfall&utm_campaign=card_prices&utm_medium=text&utm_source=scryfall",
-            "tcgplayer": "https://partner.tcgplayer.com/c/4931599/1830156/21018?subId1=api&u=https%3A%2F%2Fwww.tcgplayer.com%2Fproduct%2F204617%3Fpage%3D1"
+            "cardhoarder": "https://www.cardhoarder.com/cards/29653?affiliate_id=scryfall&ref=card-profile&utm_campaign=affiliate&utm_medium=card&utm_source=scryfall",
+            "cardmarket": "https://www.cardmarket.com/en/Magic/Products/Singles/Shadowmoor/Manamorphose?referrer=scryfall&utm_campaign=card_prices&utm_medium=text&utm_source=scryfall",
+            "tcgplayer": "https://tcgplayer.pxf.io/c/4931599/1830156/21018?subId1=api&u=https%3A%2F%2Fwww.tcgplayer.com%2Fproduct%2F18700%3Fpage%3D1"
         },
         "rarity": "common",
         "related_uris": {
             "edhrec": "https://edhrec.com/route/?cc=Manamorphose",
-            "tcgplayer_infinite_articles": "https://partner.tcgplayer.com/c/4931599/1830156/21018?subId1=api&trafcat=tcgplayer.com%2Fsearch%2Farticles&u=https%3A%2F%2Fwww.tcgplayer.com%2Fsearch%2Farticles%3FproductLineName%3Dmagic%26q%3DManamorphose",
-            "tcgplayer_infinite_decks": "https://partner.tcgplayer.com/c/4931599/1830156/21018?subId1=api&trafcat=tcgplayer.com%2Fsearch%2Fdecks&u=https%3A%2F%2Fwww.tcgplayer.com%2Fsearch%2Fdecks%3FproductLineName%3Dmagic%26q%3DManamorphose"
+            "gatherer": "https://gatherer.wizards.com/Pages/Card/Details.aspx?multiverseid=153968&printed=false",
+            "tcgplayer_infinite_articles": "https://tcgplayer.pxf.io/c/4931599/1830156/21018?subId1=api&trafcat=infinite&u=https%3A%2F%2Finfinite.tcgplayer.com%2Fsearch%3FcontentMode%3Darticle%26game%3Dmagic%26partner%3Dscryfall%26q%3DManamorphose",
+            "tcgplayer_infinite_decks": "https://tcgplayer.pxf.io/c/4931599/1830156/21018?subId1=api&trafcat=infinite&u=https%3A%2F%2Finfinite.tcgplayer.com%2Fsearch%3FcontentMode%3Ddeck%26game%3Dmagic%26partner%3Dscryfall%26q%3DManamorphose"
         },
-        "released_at": "2019-11-07",
-        "reprint": true,
+        "released_at": "2008-05-02",
+        "reprint": false,
         "reserved": false,
-        "rulings_uri": "https://api.scryfall.com/cards/12ed4051-31c4-4f63-b576-e3761b9d35ae/rulings",
-        "scryfall_set_uri": "https://scryfall.com/sets/plst?utm_source=api",
-        "scryfall_uri": "https://scryfall.com/card/plst/SHM-211/manamorphose?utm_source=api",
-        "set": "plst",
-        "set_id": "67e47ba2-b019-4181-9005-fe9fc021de44",
-        "set_name": "The List",
-        "set_search_uri": "https://api.scryfall.com/cards/search?order=set&q=e%3Aplst&unique=prints",
-        "set_type": "masters",
-        "set_uri": "https://api.scryfall.com/sets/67e47ba2-b019-4181-9005-fe9fc021de44",
+        "rulings_uri": "https://api.scryfall.com/cards/50283122-b8c4-4fb3-8eba-6252b72222f4/rulings",
+        "scryfall_set_uri": "https://scryfall.com/sets/shm?utm_source=api",
+        "scryfall_uri": "https://scryfall.com/card/shm/211/manamorphose?utm_source=api",
+        "set": "shm",
+        "set_id": "c18c0ba1-2081-4808-9b2e-549bc3a666f3",
+        "set_name": "Shadowmoor",
+        "set_search_uri": "https://api.scryfall.com/cards/search?order=set&q=e%3Ashm&unique=prints",
+        "set_type": "expansion",
+        "set_uri": "https://api.scryfall.com/sets/c18c0ba1-2081-4808-9b2e-549bc3a666f3",
         "story_spotlight": false,
-        "tcgplayer_id": 204617,
+        "tcgplayer_id": 18700,
         "textless": false,
         "type_line": "Instant",
-        "uri": "https://api.scryfall.com/cards/12ed4051-31c4-4f63-b576-e3761b9d35ae",
+        "uri": "https://api.scryfall.com/cards/50283122-b8c4-4fb3-8eba-6252b72222f4",
         "variation": false
     }
 }

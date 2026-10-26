@@ -1,9 +1,9 @@
 {
     "archetypes": {
         "py/set": [
-            "Dimir Alchemy",
+            "MonoU Delver",
             "Izzet 8-Post",
-            "MonoU Delver"
+            "Dimir Alchemy"
         ]
     },
     "scryfall": {
@@ -11,40 +11,42 @@
         "artist_ids": [
             "7c5b6391-2a5a-4b78-b19d-2b181149cb0f"
         ],
-        "booster": false,
+        "booster": true,
         "border_color": "black",
         "card_back_id": "0aeebaf5-8c7d-4636-9e82-8c27447861f7",
+        "cardmarket_id": 10593,
         "cmc": 2.0,
-        "collector_number": "6",
+        "collector_number": "36",
         "color_identity": [
             "U"
         ],
         "colors": [
             "U"
         ],
-        "digital": true,
-        "edhrec_rank": 10891,
+        "digital": false,
+        "edhrec_rank": 7969,
         "finishes": [
-            "nonfoil"
+            "nonfoil",
+            "foil"
         ],
-        "foil": false,
+        "foil": true,
         "frame": "1997",
         "full_art": false,
-        "game_changer": false,
         "games": [
-            "arena"
+            "paper",
+            "mtgo"
         ],
         "highres_image": true,
-        "id": "d607bfae-d445-4844-b752-9b672c622cfc",
+        "id": "4b4956a2-9a39-4152-9c98-70e4b2acfa26",
         "illustration_id": "ae0dfde5-7b10-405e-8851-1860fcfac893",
         "image_status": "highres_scan",
         "image_uris": {
-            "art_crop": "https://cards.scryfall.io/art_crop/front/d/6/d607bfae-d445-4844-b752-9b672c622cfc.jpg?1775113323",
-            "border_crop": "https://cards.scryfall.io/border_crop/front/d/6/d607bfae-d445-4844-b752-9b672c622cfc.jpg?1775113323",
-            "large": "https://cards.scryfall.io/large/front/d/6/d607bfae-d445-4844-b752-9b672c622cfc.jpg?1775113323",
-            "normal": "https://cards.scryfall.io/normal/front/d/6/d607bfae-d445-4844-b752-9b672c622cfc.jpg?1775113323",
-            "png": "https://cards.scryfall.io/png/front/d/6/d607bfae-d445-4844-b752-9b672c622cfc.png?1775113323",
-            "small": "https://cards.scryfall.io/small/front/d/6/d607bfae-d445-4844-b752-9b672c622cfc.jpg?1775113323"
+            "art_crop": "https://cards.scryfall.io/art_crop/front/4/b/4b4956a2-9a39-4152-9c98-70e4b2acfa26.jpg?1562862809",
+            "border_crop": "https://cards.scryfall.io/border_crop/front/4/b/4b4956a2-9a39-4152-9c98-70e4b2acfa26.jpg?1562862809",
+            "large": "https://cards.scryfall.io/large/front/4/b/4b4956a2-9a39-4152-9c98-70e4b2acfa26.jpg?1562862809",
+            "normal": "https://cards.scryfall.io/normal/front/4/b/4b4956a2-9a39-4152-9c98-70e4b2acfa26.jpg?1562862809",
+            "png": "https://cards.scryfall.io/png/front/4/b/4b4956a2-9a39-4152-9c98-70e4b2acfa26.png?1562862809",
+            "small": "https://cards.scryfall.io/small/front/4/b/4b4956a2-9a39-4152-9c98-70e4b2acfa26.jpg?1562862809"
         },
         "keywords": [
             "Cycling"
@@ -53,12 +55,13 @@
         "layout": "normal",
         "legalities": {
             "alchemy": "not_legal",
-            "brawl": "legal",
+            "brawl": "not_legal",
             "commander": "legal",
             "duel": "legal",
+            "explorer": "not_legal",
             "future": "not_legal",
-            "gladiator": "legal",
-            "historic": "legal",
+            "gladiator": "not_legal",
+            "historic": "not_legal",
             "legacy": "legal",
             "modern": "not_legal",
             "oathbreaker": "legal",
@@ -71,12 +74,15 @@
             "premodern": "legal",
             "standard": "not_legal",
             "standardbrawl": "not_legal",
-            "timeless": "legal",
-            "tlr": "legal",
+            "timeless": "not_legal",
             "vintage": "legal"
         },
         "mana_cost": "{1}{U}",
-        "multiverse_ids": [],
+        "mtgo_foil_id": 12608,
+        "mtgo_id": 12607,
+        "multiverse_ids": [
+            12376
+        ],
         "name": "Miscalculation",
         "nonfoil": true,
         "object": "card",
@@ -84,37 +90,44 @@
         "oracle_text": "Counter target spell unless its controller pays {2}.\nCycling {2} ({2}, Discard this card: Draw a card.)",
         "oversized": false,
         "prices": {
-            "eur": null,
-            "eur_foil": null,
-            "tix": null,
-            "usd": null,
+            "eur": "0.59",
+            "eur_foil": "25.26",
+            "tix": "0.04",
+            "usd": "0.66",
             "usd_etched": null,
-            "usd_foil": null
+            "usd_foil": "36.39"
         },
         "prints_search_uri": "https://api.scryfall.com/cards/search?order=released&q=oracleid%3A9078db26-3a54-4a11-9aae-e45c38da7226&unique=prints",
         "promo": false,
+        "purchase_uris": {
+            "cardhoarder": "https://www.cardhoarder.com/cards/12607?affiliate_id=scryfall&ref=card-profile&utm_campaign=affiliate&utm_medium=card&utm_source=scryfall",
+            "cardmarket": "https://www.cardmarket.com/en/Magic/Products/Singles/Urzas-Legacy/Miscalculation?referrer=scryfall&utm_campaign=card_prices&utm_medium=text&utm_source=scryfall",
+            "tcgplayer": "https://tcgplayer.pxf.io/c/4931599/1830156/21018?subId1=api&u=https%3A%2F%2Fwww.tcgplayer.com%2Fproduct%2F6343%3Fpage%3D1"
+        },
         "rarity": "common",
         "related_uris": {
             "edhrec": "https://edhrec.com/route/?cc=Miscalculation",
-            "tcgplayer_infinite_articles": "https://partner.tcgplayer.com/c/4931599/1830156/21018?subId1=api&trafcat=tcgplayer.com%2Fsearch%2Farticles&u=https%3A%2F%2Fwww.tcgplayer.com%2Fsearch%2Farticles%3FproductLineName%3Dmagic%26q%3DMiscalculation",
-            "tcgplayer_infinite_decks": "https://partner.tcgplayer.com/c/4931599/1830156/21018?subId1=api&trafcat=tcgplayer.com%2Fsearch%2Fdecks&u=https%3A%2F%2Fwww.tcgplayer.com%2Fsearch%2Fdecks%3FproductLineName%3Dmagic%26q%3DMiscalculation"
+            "gatherer": "https://gatherer.wizards.com/Pages/Card/Details.aspx?multiverseid=12376&printed=false",
+            "tcgplayer_infinite_articles": "https://tcgplayer.pxf.io/c/4931599/1830156/21018?subId1=api&trafcat=infinite&u=https%3A%2F%2Finfinite.tcgplayer.com%2Fsearch%3FcontentMode%3Darticle%26game%3Dmagic%26partner%3Dscryfall%26q%3DMiscalculation",
+            "tcgplayer_infinite_decks": "https://tcgplayer.pxf.io/c/4931599/1830156/21018?subId1=api&trafcat=infinite&u=https%3A%2F%2Finfinite.tcgplayer.com%2Fsearch%3FcontentMode%3Ddeck%26game%3Dmagic%26partner%3Dscryfall%26q%3DMiscalculation"
         },
-        "released_at": "2025-09-23",
-        "reprint": true,
+        "released_at": "1999-02-15",
+        "reprint": false,
         "reserved": false,
-        "rulings_uri": "https://api.scryfall.com/cards/d607bfae-d445-4844-b752-9b672c622cfc/rulings",
-        "scryfall_set_uri": "https://scryfall.com/sets/aa3?utm_source=api",
-        "scryfall_uri": "https://scryfall.com/card/aa3/6/miscalculation?utm_source=api",
-        "set": "aa3",
-        "set_id": "55244c74-8af5-429e-ae99-2172acd7830b",
-        "set_name": "Arena Anthology 3",
-        "set_search_uri": "https://api.scryfall.com/cards/search?order=set&q=e%3Aaa3&unique=prints",
-        "set_type": "box",
-        "set_uri": "https://api.scryfall.com/sets/55244c74-8af5-429e-ae99-2172acd7830b",
+        "rulings_uri": "https://api.scryfall.com/cards/4b4956a2-9a39-4152-9c98-70e4b2acfa26/rulings",
+        "scryfall_set_uri": "https://scryfall.com/sets/ulg?utm_source=api",
+        "scryfall_uri": "https://scryfall.com/card/ulg/36/miscalculation?utm_source=api",
+        "set": "ulg",
+        "set_id": "78ced61b-4b8a-4b33-b6b2-f5bd66f1a75a",
+        "set_name": "Urza's Legacy",
+        "set_search_uri": "https://api.scryfall.com/cards/search?order=set&q=e%3Aulg&unique=prints",
+        "set_type": "expansion",
+        "set_uri": "https://api.scryfall.com/sets/78ced61b-4b8a-4b33-b6b2-f5bd66f1a75a",
         "story_spotlight": false,
+        "tcgplayer_id": 6343,
         "textless": false,
         "type_line": "Instant",
-        "uri": "https://api.scryfall.com/cards/d607bfae-d445-4844-b752-9b672c622cfc",
+        "uri": "https://api.scryfall.com/cards/4b4956a2-9a39-4152-9c98-70e4b2acfa26",
         "variation": false
     }
 }

@@ -6,19 +6,19 @@
         "all_parts": [
             {
                 "component": "token",
-                "id": "861bc4e3-0445-44e6-bf58-a469b4a92192",
+                "id": "3d66ec9c-7e5d-47ca-bce4-46798152d1f4",
                 "name": "Clue",
                 "object": "related_card",
                 "type_line": "Token Artifact \u2014 Clue",
-                "uri": "https://api.scryfall.com/cards/861bc4e3-0445-44e6-bf58-a469b4a92192"
+                "uri": "https://api.scryfall.com/cards/3d66ec9c-7e5d-47ca-bce4-46798152d1f4"
             },
             {
                 "component": "combo_piece",
-                "id": "9bb816aa-8476-4ef6-927e-dfd1592059dd",
+                "id": "e88ae6bf-9c58-4543-ba66-19ea41d01e9b",
                 "name": "Gone Missing",
                 "object": "related_card",
                 "type_line": "Sorcery",
-                "uri": "https://api.scryfall.com/cards/9bb816aa-8476-4ef6-927e-dfd1592059dd"
+                "uri": "https://api.scryfall.com/cards/e88ae6bf-9c58-4543-ba66-19ea41d01e9b"
             }
         ],
         "artist": "James Paick",
@@ -28,9 +28,9 @@
         "booster": true,
         "border_color": "black",
         "card_back_id": "0aeebaf5-8c7d-4636-9e82-8c27447861f7",
-        "cardmarket_id": 417311,
+        "cardmarket_id": 289157,
         "cmc": 5.0,
-        "collector_number": "SOI-67",
+        "collector_number": "67",
         "color_identity": [
             "U"
         ],
@@ -38,29 +38,30 @@
             "U"
         ],
         "digital": false,
-        "edhrec_rank": 23179,
+        "edhrec_rank": 16637,
         "finishes": [
-            "nonfoil"
+            "nonfoil",
+            "foil"
         ],
         "flavor_text": "\"Sometimes it's best for the lost to stay lost.\"\n\u2014Herzag, mayor of Havengul",
-        "foil": false,
+        "foil": true,
         "frame": "2015",
         "full_art": false,
-        "game_changer": false,
         "games": [
-            "paper"
+            "paper",
+            "mtgo"
         ],
         "highres_image": true,
-        "id": "9bb816aa-8476-4ef6-927e-dfd1592059dd",
+        "id": "e88ae6bf-9c58-4543-ba66-19ea41d01e9b",
         "illustration_id": "a2eb7f9f-dd85-48d5-bc25-e0bfc6d42107",
         "image_status": "highres_scan",
         "image_uris": {
-            "art_crop": "https://cards.scryfall.io/art_crop/front/9/b/9bb816aa-8476-4ef6-927e-dfd1592059dd.jpg?1573507654",
-            "border_crop": "https://cards.scryfall.io/border_crop/front/9/b/9bb816aa-8476-4ef6-927e-dfd1592059dd.jpg?1573507654",
-            "large": "https://cards.scryfall.io/large/front/9/b/9bb816aa-8476-4ef6-927e-dfd1592059dd.jpg?1573507654",
-            "normal": "https://cards.scryfall.io/normal/front/9/b/9bb816aa-8476-4ef6-927e-dfd1592059dd.jpg?1573507654",
-            "png": "https://cards.scryfall.io/png/front/9/b/9bb816aa-8476-4ef6-927e-dfd1592059dd.png?1573507654",
-            "small": "https://cards.scryfall.io/small/front/9/b/9bb816aa-8476-4ef6-927e-dfd1592059dd.jpg?1573507654"
+            "art_crop": "https://cards.scryfall.io/art_crop/front/e/8/e88ae6bf-9c58-4543-ba66-19ea41d01e9b.jpg?1576384102",
+            "border_crop": "https://cards.scryfall.io/border_crop/front/e/8/e88ae6bf-9c58-4543-ba66-19ea41d01e9b.jpg?1576384102",
+            "large": "https://cards.scryfall.io/large/front/e/8/e88ae6bf-9c58-4543-ba66-19ea41d01e9b.jpg?1576384102",
+            "normal": "https://cards.scryfall.io/normal/front/e/8/e88ae6bf-9c58-4543-ba66-19ea41d01e9b.jpg?1576384102",
+            "png": "https://cards.scryfall.io/png/front/e/8/e88ae6bf-9c58-4543-ba66-19ea41d01e9b.png?1576384102",
+            "small": "https://cards.scryfall.io/small/front/e/8/e88ae6bf-9c58-4543-ba66-19ea41d01e9b.jpg?1576384102"
         },
         "keywords": [
             "Investigate"
@@ -72,6 +73,7 @@
             "brawl": "not_legal",
             "commander": "legal",
             "duel": "legal",
+            "explorer": "not_legal",
             "future": "not_legal",
             "gladiator": "not_legal",
             "historic": "not_legal",
@@ -88,56 +90,60 @@
             "standard": "not_legal",
             "standardbrawl": "not_legal",
             "timeless": "not_legal",
-            "tlr": "not_legal",
             "vintage": "legal"
         },
         "mana_cost": "{4}{U}",
-        "multiverse_ids": [],
+        "mtgo_foil_id": 60357,
+        "mtgo_id": 60356,
+        "multiverse_ids": [
+            409810
+        ],
         "name": "Gone Missing",
         "nonfoil": true,
         "object": "card",
         "oracle_id": "a31a66ee-5ddf-4d70-9ae9-725fc7327706",
-        "oracle_text": "Put target permanent on top of its owner's library.\nInvestigate. (Create a Clue token. It's an artifact with \"{2}, Sacrifice this token: Draw a card.\")",
+        "oracle_text": "Put target permanent on top of its owner's library.\nInvestigate. (Create a Clue token. It's an artifact with \"{2}, Sacrifice this artifact: Draw a card.\")",
         "oversized": false,
-        "penny_rank": 6722,
+        "penny_rank": 5537,
         "prices": {
-            "eur": "0.14",
-            "eur_foil": null,
-            "tix": null,
-            "usd": "0.21",
+            "eur": "0.04",
+            "eur_foil": "0.17",
+            "tix": "0.03",
+            "usd": "0.03",
             "usd_etched": null,
-            "usd_foil": null
+            "usd_foil": "0.33"
         },
         "prints_search_uri": "https://api.scryfall.com/cards/search?order=released&q=oracleid%3Aa31a66ee-5ddf-4d70-9ae9-725fc7327706&unique=prints",
         "promo": false,
         "purchase_uris": {
-            "cardhoarder": "https://www.cardhoarder.com/cards?affiliate_id=scryfall&data%5Bsearch%5D=Gone+Missing&ref=card-profile&utm_campaign=affiliate&utm_medium=card&utm_source=scryfall",
-            "cardmarket": "https://www.cardmarket.com/en/Magic/Products?idProduct=417311&referrer=scryfall&utm_campaign=card_prices&utm_medium=text&utm_source=scryfall",
-            "tcgplayer": "https://partner.tcgplayer.com/c/4931599/1830156/21018?subId1=api&u=https%3A%2F%2Fwww.tcgplayer.com%2Fproduct%2F204002%3Fpage%3D1"
+            "cardhoarder": "https://www.cardhoarder.com/cards/60356?affiliate_id=scryfall&ref=card-profile&utm_campaign=affiliate&utm_medium=card&utm_source=scryfall",
+            "cardmarket": "https://www.cardmarket.com/en/Magic/Products/Singles/Shadows-over-Innistrad/Gone-Missing?referrer=scryfall&utm_campaign=card_prices&utm_medium=text&utm_source=scryfall",
+            "tcgplayer": "https://tcgplayer.pxf.io/c/4931599/1830156/21018?subId1=api&u=https%3A%2F%2Fwww.tcgplayer.com%2Fproduct%2F116402%3Fpage%3D1"
         },
         "rarity": "common",
         "related_uris": {
             "edhrec": "https://edhrec.com/route/?cc=Gone+Missing",
-            "tcgplayer_infinite_articles": "https://partner.tcgplayer.com/c/4931599/1830156/21018?subId1=api&trafcat=tcgplayer.com%2Fsearch%2Farticles&u=https%3A%2F%2Fwww.tcgplayer.com%2Fsearch%2Farticles%3FproductLineName%3Dmagic%26q%3DGone%2BMissing",
-            "tcgplayer_infinite_decks": "https://partner.tcgplayer.com/c/4931599/1830156/21018?subId1=api&trafcat=tcgplayer.com%2Fsearch%2Fdecks&u=https%3A%2F%2Fwww.tcgplayer.com%2Fsearch%2Fdecks%3FproductLineName%3Dmagic%26q%3DGone%2BMissing"
+            "gatherer": "https://gatherer.wizards.com/Pages/Card/Details.aspx?multiverseid=409810&printed=false",
+            "tcgplayer_infinite_articles": "https://tcgplayer.pxf.io/c/4931599/1830156/21018?subId1=api&trafcat=infinite&u=https%3A%2F%2Finfinite.tcgplayer.com%2Fsearch%3FcontentMode%3Darticle%26game%3Dmagic%26partner%3Dscryfall%26q%3DGone%2BMissing",
+            "tcgplayer_infinite_decks": "https://tcgplayer.pxf.io/c/4931599/1830156/21018?subId1=api&trafcat=infinite&u=https%3A%2F%2Finfinite.tcgplayer.com%2Fsearch%3FcontentMode%3Ddeck%26game%3Dmagic%26partner%3Dscryfall%26q%3DGone%2BMissing"
         },
-        "released_at": "2019-11-07",
-        "reprint": true,
+        "released_at": "2016-04-08",
+        "reprint": false,
         "reserved": false,
-        "rulings_uri": "https://api.scryfall.com/cards/9bb816aa-8476-4ef6-927e-dfd1592059dd/rulings",
-        "scryfall_set_uri": "https://scryfall.com/sets/plst?utm_source=api",
-        "scryfall_uri": "https://scryfall.com/card/plst/SOI-67/gone-missing?utm_source=api",
-        "set": "plst",
-        "set_id": "67e47ba2-b019-4181-9005-fe9fc021de44",
-        "set_name": "The List",
-        "set_search_uri": "https://api.scryfall.com/cards/search?order=set&q=e%3Aplst&unique=prints",
-        "set_type": "masters",
-        "set_uri": "https://api.scryfall.com/sets/67e47ba2-b019-4181-9005-fe9fc021de44",
+        "rulings_uri": "https://api.scryfall.com/cards/e88ae6bf-9c58-4543-ba66-19ea41d01e9b/rulings",
+        "scryfall_set_uri": "https://scryfall.com/sets/soi?utm_source=api",
+        "scryfall_uri": "https://scryfall.com/card/soi/67/gone-missing?utm_source=api",
+        "set": "soi",
+        "set_id": "5e914d7e-c1e9-446c-a33d-d093c02b2743",
+        "set_name": "Shadows over Innistrad",
+        "set_search_uri": "https://api.scryfall.com/cards/search?order=set&q=e%3Asoi&unique=prints",
+        "set_type": "expansion",
+        "set_uri": "https://api.scryfall.com/sets/5e914d7e-c1e9-446c-a33d-d093c02b2743",
         "story_spotlight": false,
-        "tcgplayer_id": 204002,
+        "tcgplayer_id": 116402,
         "textless": false,
         "type_line": "Sorcery",
-        "uri": "https://api.scryfall.com/cards/9bb816aa-8476-4ef6-927e-dfd1592059dd",
+        "uri": "https://api.scryfall.com/cards/e88ae6bf-9c58-4543-ba66-19ea41d01e9b",
         "variation": false
     }
 }

@@ -1,23 +1,23 @@
 {
     "archetypes": {
         "py/set": [
-            "Izzet Terror",
-            "Inside Out",
-            "Dimir Flicker",
-            "Dimir Delver",
-            "Jeskai Ephemerate",
-            "Brew Temur",
-            "Brew Grixis",
-            "Familiars",
-            "Izzet Control",
-            "Dimir Faeries",
-            "Dimir Terror",
-            "Izzet Blitz",
             "Dimir Teachings",
-            "Izzet Faeries",
-            "Dimir Alchemy",
+            "Dimir Delver",
+            "Dimir Flicker",
+            "Dimir Terror",
+            "Dimir Control",
             "MonoU Faeries",
-            "Dimir Control"
+            "Izzet Faeries",
+            "Izzet Control",
+            "Izzet Terror",
+            "Dimir Faeries",
+            "Izzet Blitz",
+            "Inside Out",
+            "Brew Temur",
+            "Dimir Alchemy",
+            "Jeskai Ephemerate",
+            "Familiars",
+            "Brew Grixis"
         ]
     },
     "scryfall": {
@@ -28,9 +28,9 @@
         "booster": true,
         "border_color": "black",
         "card_back_id": "0aeebaf5-8c7d-4636-9e82-8c27447861f7",
-        "cardmarket_id": 416806,
+        "cardmarket_id": 295876,
         "cmc": 2.0,
-        "collector_number": "MM3-30",
+        "collector_number": "30",
         "color_identity": [
             "U"
         ],
@@ -38,28 +38,29 @@
             "U"
         ],
         "digital": false,
-        "edhrec_rank": 10962,
+        "edhrec_rank": 7439,
         "finishes": [
-            "nonfoil"
+            "nonfoil",
+            "foil"
         ],
-        "foil": false,
+        "foil": true,
         "frame": "2015",
         "full_art": false,
-        "game_changer": false,
         "games": [
-            "paper"
+            "paper",
+            "mtgo"
         ],
         "highres_image": true,
-        "id": "e33ad733-6706-420f-940c-d228ddcbf638",
+        "id": "8f7eca7a-5f42-4e58-a6c0-8d07517bda8a",
         "illustration_id": "8837928e-325d-431d-bbe8-8e4622255b19",
         "image_status": "highres_scan",
         "image_uris": {
-            "art_crop": "https://cards.scryfall.io/art_crop/front/e/3/e33ad733-6706-420f-940c-d228ddcbf638.jpg?1573506896",
-            "border_crop": "https://cards.scryfall.io/border_crop/front/e/3/e33ad733-6706-420f-940c-d228ddcbf638.jpg?1573506896",
-            "large": "https://cards.scryfall.io/large/front/e/3/e33ad733-6706-420f-940c-d228ddcbf638.jpg?1573506896",
-            "normal": "https://cards.scryfall.io/normal/front/e/3/e33ad733-6706-420f-940c-d228ddcbf638.jpg?1573506896",
-            "png": "https://cards.scryfall.io/png/front/e/3/e33ad733-6706-420f-940c-d228ddcbf638.png?1573506896",
-            "small": "https://cards.scryfall.io/small/front/e/3/e33ad733-6706-420f-940c-d228ddcbf638.jpg?1573506896"
+            "art_crop": "https://cards.scryfall.io/art_crop/front/8/f/8f7eca7a-5f42-4e58-a6c0-8d07517bda8a.jpg?1593812985",
+            "border_crop": "https://cards.scryfall.io/border_crop/front/8/f/8f7eca7a-5f42-4e58-a6c0-8d07517bda8a.jpg?1593812985",
+            "large": "https://cards.scryfall.io/large/front/8/f/8f7eca7a-5f42-4e58-a6c0-8d07517bda8a.jpg?1593812985",
+            "normal": "https://cards.scryfall.io/normal/front/8/f/8f7eca7a-5f42-4e58-a6c0-8d07517bda8a.jpg?1593812985",
+            "png": "https://cards.scryfall.io/png/front/8/f/8f7eca7a-5f42-4e58-a6c0-8d07517bda8a.png?1593812985",
+            "small": "https://cards.scryfall.io/small/front/8/f/8f7eca7a-5f42-4e58-a6c0-8d07517bda8a.jpg?1593812985"
         },
         "keywords": [],
         "lang": "en",
@@ -69,6 +70,7 @@
             "brawl": "legal",
             "commander": "legal",
             "duel": "legal",
+            "explorer": "legal",
             "future": "not_legal",
             "gladiator": "legal",
             "historic": "legal",
@@ -85,58 +87,62 @@
             "standard": "not_legal",
             "standardbrawl": "not_legal",
             "timeless": "legal",
-            "tlr": "legal",
             "vintage": "legal"
         },
         "mana_cost": "{1}{U}",
-        "multiverse_ids": [],
+        "mtgo_foil_id": 63354,
+        "mtgo_id": 63353,
+        "multiverse_ids": [
+            425855
+        ],
         "name": "Augur of Bolas",
         "nonfoil": true,
         "object": "card",
         "oracle_id": "be5d6779-ecc9-44b9-8c4d-97a243059d55",
-        "oracle_text": "When this creature enters, look at the top three cards of your library. You may reveal an instant or sorcery card from among them and put it into your hand. Put the rest on the bottom of your library in any order.",
+        "oracle_text": "When Augur of Bolas enters the battlefield, look at the top three cards of your library. You may reveal an instant or sorcery card from among them and put it into your hand. Put the rest on the bottom of your library in any order.",
         "oversized": false,
-        "penny_rank": 1792,
+        "penny_rank": 1530,
         "power": "1",
         "prices": {
-            "eur": "0.18",
-            "eur_foil": null,
-            "tix": null,
-            "usd": "0.18",
+            "eur": "0.17",
+            "eur_foil": "0.93",
+            "tix": "0.05",
+            "usd": "0.11",
             "usd_etched": null,
-            "usd_foil": null
+            "usd_foil": "0.32"
         },
         "prints_search_uri": "https://api.scryfall.com/cards/search?order=released&q=oracleid%3Abe5d6779-ecc9-44b9-8c4d-97a243059d55&unique=prints",
         "promo": false,
         "purchase_uris": {
-            "cardhoarder": "https://www.cardhoarder.com/cards?affiliate_id=scryfall&data%5Bsearch%5D=Augur+of+Bolas&ref=card-profile&utm_campaign=affiliate&utm_medium=card&utm_source=scryfall",
-            "cardmarket": "https://www.cardmarket.com/en/Magic/Products?idProduct=416806&referrer=scryfall&utm_campaign=card_prices&utm_medium=text&utm_source=scryfall",
-            "tcgplayer": "https://partner.tcgplayer.com/c/4931599/1830156/21018?subId1=api&u=https%3A%2F%2Fwww.tcgplayer.com%2Fproduct%2F203674%3Fpage%3D1"
+            "cardhoarder": "https://www.cardhoarder.com/cards/63353?affiliate_id=scryfall&ref=card-profile&utm_campaign=affiliate&utm_medium=card&utm_source=scryfall",
+            "cardmarket": "https://www.cardmarket.com/en/Magic/Products/Singles/Modern-Masters-2017/Augur-of-Bolas?referrer=scryfall&utm_campaign=card_prices&utm_medium=text&utm_source=scryfall",
+            "tcgplayer": "https://tcgplayer.pxf.io/c/4931599/1830156/21018?subId1=api&u=https%3A%2F%2Fwww.tcgplayer.com%2Fproduct%2F128634%3Fpage%3D1"
         },
         "rarity": "common",
         "related_uris": {
             "edhrec": "https://edhrec.com/route/?cc=Augur+of+Bolas",
-            "tcgplayer_infinite_articles": "https://partner.tcgplayer.com/c/4931599/1830156/21018?subId1=api&trafcat=tcgplayer.com%2Fsearch%2Farticles&u=https%3A%2F%2Fwww.tcgplayer.com%2Fsearch%2Farticles%3FproductLineName%3Dmagic%26q%3DAugur%2Bof%2BBolas",
-            "tcgplayer_infinite_decks": "https://partner.tcgplayer.com/c/4931599/1830156/21018?subId1=api&trafcat=tcgplayer.com%2Fsearch%2Fdecks&u=https%3A%2F%2Fwww.tcgplayer.com%2Fsearch%2Fdecks%3FproductLineName%3Dmagic%26q%3DAugur%2Bof%2BBolas"
+            "gatherer": "https://gatherer.wizards.com/Pages/Card/Details.aspx?multiverseid=425855&printed=false",
+            "tcgplayer_infinite_articles": "https://tcgplayer.pxf.io/c/4931599/1830156/21018?subId1=api&trafcat=infinite&u=https%3A%2F%2Finfinite.tcgplayer.com%2Fsearch%3FcontentMode%3Darticle%26game%3Dmagic%26partner%3Dscryfall%26q%3DAugur%2Bof%2BBolas",
+            "tcgplayer_infinite_decks": "https://tcgplayer.pxf.io/c/4931599/1830156/21018?subId1=api&trafcat=infinite&u=https%3A%2F%2Finfinite.tcgplayer.com%2Fsearch%3FcontentMode%3Ddeck%26game%3Dmagic%26partner%3Dscryfall%26q%3DAugur%2Bof%2BBolas"
         },
-        "released_at": "2019-11-07",
+        "released_at": "2017-03-17",
         "reprint": true,
         "reserved": false,
-        "rulings_uri": "https://api.scryfall.com/cards/e33ad733-6706-420f-940c-d228ddcbf638/rulings",
-        "scryfall_set_uri": "https://scryfall.com/sets/plst?utm_source=api",
-        "scryfall_uri": "https://scryfall.com/card/plst/MM3-30/augur-of-bolas?utm_source=api",
-        "set": "plst",
-        "set_id": "67e47ba2-b019-4181-9005-fe9fc021de44",
-        "set_name": "The List",
-        "set_search_uri": "https://api.scryfall.com/cards/search?order=set&q=e%3Aplst&unique=prints",
+        "rulings_uri": "https://api.scryfall.com/cards/8f7eca7a-5f42-4e58-a6c0-8d07517bda8a/rulings",
+        "scryfall_set_uri": "https://scryfall.com/sets/mm3?utm_source=api",
+        "scryfall_uri": "https://scryfall.com/card/mm3/30/augur-of-bolas?utm_source=api",
+        "set": "mm3",
+        "set_id": "02624962-f727-4c31-bbf2-a94fa6c5b653",
+        "set_name": "Modern Masters 2017",
+        "set_search_uri": "https://api.scryfall.com/cards/search?order=set&q=e%3Amm3&unique=prints",
         "set_type": "masters",
-        "set_uri": "https://api.scryfall.com/sets/67e47ba2-b019-4181-9005-fe9fc021de44",
+        "set_uri": "https://api.scryfall.com/sets/02624962-f727-4c31-bbf2-a94fa6c5b653",
         "story_spotlight": false,
-        "tcgplayer_id": 203674,
+        "tcgplayer_id": 128634,
         "textless": false,
         "toughness": "3",
         "type_line": "Creature \u2014 Merfolk Wizard",
-        "uri": "https://api.scryfall.com/cards/e33ad733-6706-420f-940c-d228ddcbf638",
+        "uri": "https://api.scryfall.com/cards/8f7eca7a-5f42-4e58-a6c0-8d07517bda8a",
         "variation": false
     }
 }

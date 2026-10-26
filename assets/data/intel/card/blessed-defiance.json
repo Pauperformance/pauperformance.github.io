@@ -6,21 +6,22 @@
         "all_parts": [
             {
                 "component": "combo_piece",
-                "id": "184e5208-edbe-417f-8ff8-1950d08071ab",
+                "id": "1555cdcb-3471-4ee7-99c3-d05311bf433c",
                 "name": "Blessed Defiance",
                 "object": "related_card",
                 "type_line": "Instant",
-                "uri": "https://api.scryfall.com/cards/184e5208-edbe-417f-8ff8-1950d08071ab"
+                "uri": "https://api.scryfall.com/cards/1555cdcb-3471-4ee7-99c3-d05311bf433c"
             },
             {
                 "component": "token",
-                "id": "6f5a5786-e2be-4bb0-b971-81d1d5cc8f52",
+                "id": "c865bc02-0562-408c-b18e-0e66da906fc6",
                 "name": "Spirit",
                 "object": "related_card",
                 "type_line": "Token Creature \u2014 Spirit",
-                "uri": "https://api.scryfall.com/cards/6f5a5786-e2be-4bb0-b971-81d1d5cc8f52"
+                "uri": "https://api.scryfall.com/cards/c865bc02-0562-408c-b18e-0e66da906fc6"
             }
         ],
+        "arena_id": 78329,
         "artist": "Kim Sokol",
         "artist_ids": [
             "f2bd4ad3-6359-4592-9b34-90a70cfe1b61"
@@ -28,9 +29,9 @@
         "booster": true,
         "border_color": "black",
         "card_back_id": "0aeebaf5-8c7d-4636-9e82-8c27447861f7",
-        "cardmarket_id": 791488,
+        "cardmarket_id": 575003,
         "cmc": 1.0,
-        "collector_number": "J22-156",
+        "collector_number": "5",
         "color_identity": [
             "W"
         ],
@@ -38,29 +39,31 @@
             "W"
         ],
         "digital": false,
-        "edhrec_rank": 17501,
+        "edhrec_rank": 14833,
         "finishes": [
-            "nonfoil"
+            "nonfoil",
+            "foil"
         ],
         "flavor_text": "\"If I'm going, I'm taking you with me!\"",
-        "foil": false,
+        "foil": true,
         "frame": "2015",
         "full_art": false,
-        "game_changer": false,
         "games": [
-            "paper"
+            "arena",
+            "paper",
+            "mtgo"
         ],
         "highres_image": true,
-        "id": "184e5208-edbe-417f-8ff8-1950d08071ab",
+        "id": "1555cdcb-3471-4ee7-99c3-d05311bf433c",
         "illustration_id": "35a09207-3fa7-4ba3-a074-fbae84ba7a3c",
         "image_status": "highres_scan",
         "image_uris": {
-            "art_crop": "https://cards.scryfall.io/art_crop/front/1/8/184e5208-edbe-417f-8ff8-1950d08071ab.jpg?1723437469",
-            "border_crop": "https://cards.scryfall.io/border_crop/front/1/8/184e5208-edbe-417f-8ff8-1950d08071ab.jpg?1723437469",
-            "large": "https://cards.scryfall.io/large/front/1/8/184e5208-edbe-417f-8ff8-1950d08071ab.jpg?1723437469",
-            "normal": "https://cards.scryfall.io/normal/front/1/8/184e5208-edbe-417f-8ff8-1950d08071ab.jpg?1723437469",
-            "png": "https://cards.scryfall.io/png/front/1/8/184e5208-edbe-417f-8ff8-1950d08071ab.png?1723437469",
-            "small": "https://cards.scryfall.io/small/front/1/8/184e5208-edbe-417f-8ff8-1950d08071ab.jpg?1723437469"
+            "art_crop": "https://cards.scryfall.io/art_crop/front/1/5/1555cdcb-3471-4ee7-99c3-d05311bf433c.jpg?1634346564",
+            "border_crop": "https://cards.scryfall.io/border_crop/front/1/5/1555cdcb-3471-4ee7-99c3-d05311bf433c.jpg?1634346564",
+            "large": "https://cards.scryfall.io/large/front/1/5/1555cdcb-3471-4ee7-99c3-d05311bf433c.jpg?1634346564",
+            "normal": "https://cards.scryfall.io/normal/front/1/5/1555cdcb-3471-4ee7-99c3-d05311bf433c.jpg?1634346564",
+            "png": "https://cards.scryfall.io/png/front/1/5/1555cdcb-3471-4ee7-99c3-d05311bf433c.png?1634346564",
+            "small": "https://cards.scryfall.io/small/front/1/5/1555cdcb-3471-4ee7-99c3-d05311bf433c.jpg?1634346564"
         },
         "keywords": [],
         "lang": "en",
@@ -70,7 +73,8 @@
             "brawl": "legal",
             "commander": "legal",
             "duel": "legal",
-            "future": "not_legal",
+            "explorer": "legal",
+            "future": "legal",
             "gladiator": "legal",
             "historic": "legal",
             "legacy": "legal",
@@ -83,59 +87,62 @@
             "pioneer": "legal",
             "predh": "not_legal",
             "premodern": "not_legal",
-            "standard": "not_legal",
-            "standardbrawl": "not_legal",
+            "standard": "legal",
+            "standardbrawl": "legal",
             "timeless": "legal",
-            "tlr": "legal",
             "vintage": "legal"
         },
         "mana_cost": "{W}",
-        "multiverse_ids": [],
+        "mtgo_id": 92930,
+        "multiverse_ids": [
+            534758
+        ],
         "name": "Blessed Defiance",
         "nonfoil": true,
         "object": "card",
         "oracle_id": "04e3d36f-5dec-422c-a371-15e135fdface",
         "oracle_text": "Target creature you control gets +2/+0 and gains lifelink until end of turn. When that creature dies this turn, create a 1/1 white Spirit creature token with flying.",
         "oversized": false,
-        "penny_rank": 7561,
+        "penny_rank": 6357,
         "prices": {
-            "eur": "0.03",
-            "eur_foil": null,
-            "tix": null,
-            "usd": "0.06",
+            "eur": "0.13",
+            "eur_foil": "0.16",
+            "tix": "0.03",
+            "usd": "0.03",
             "usd_etched": null,
-            "usd_foil": null
+            "usd_foil": "0.05"
         },
         "prints_search_uri": "https://api.scryfall.com/cards/search?order=released&q=oracleid%3A04e3d36f-5dec-422c-a371-15e135fdface&unique=prints",
         "promo": false,
         "purchase_uris": {
-            "cardhoarder": "https://www.cardhoarder.com/cards?affiliate_id=scryfall&data%5Bsearch%5D=Blessed+Defiance&ref=card-profile&utm_campaign=affiliate&utm_medium=card&utm_source=scryfall",
-            "cardmarket": "https://www.cardmarket.com/en/Magic/Products?idProduct=791488&referrer=scryfall&utm_campaign=card_prices&utm_medium=text&utm_source=scryfall",
-            "tcgplayer": "https://partner.tcgplayer.com/c/4931599/1830156/21018?subId1=api&u=https%3A%2F%2Fwww.tcgplayer.com%2Fproduct%2F581627%3Fpage%3D1"
+            "cardhoarder": "https://www.cardhoarder.com/cards/92930?affiliate_id=scryfall&ref=card-profile&utm_campaign=affiliate&utm_medium=card&utm_source=scryfall",
+            "cardmarket": "https://www.cardmarket.com/en/Magic/Products/Singles/Innistrad-Midnight-Hunt/Blessed-Defiance?referrer=scryfall&utm_campaign=card_prices&utm_medium=text&utm_source=scryfall",
+            "tcgplayer": "https://tcgplayer.pxf.io/c/4931599/1830156/21018?subId1=api&u=https%3A%2F%2Fwww.tcgplayer.com%2Fproduct%2F248247%3Fpage%3D1"
         },
         "rarity": "common",
         "related_uris": {
             "edhrec": "https://edhrec.com/route/?cc=Blessed+Defiance",
-            "tcgplayer_infinite_articles": "https://partner.tcgplayer.com/c/4931599/1830156/21018?subId1=api&trafcat=tcgplayer.com%2Fsearch%2Farticles&u=https%3A%2F%2Fwww.tcgplayer.com%2Fsearch%2Farticles%3FproductLineName%3Dmagic%26q%3DBlessed%2BDefiance",
-            "tcgplayer_infinite_decks": "https://partner.tcgplayer.com/c/4931599/1830156/21018?subId1=api&trafcat=tcgplayer.com%2Fsearch%2Fdecks&u=https%3A%2F%2Fwww.tcgplayer.com%2Fsearch%2Fdecks%3FproductLineName%3Dmagic%26q%3DBlessed%2BDefiance"
+            "gatherer": "https://gatherer.wizards.com/Pages/Card/Details.aspx?multiverseid=534758&printed=false",
+            "tcgplayer_infinite_articles": "https://tcgplayer.pxf.io/c/4931599/1830156/21018?subId1=api&trafcat=infinite&u=https%3A%2F%2Finfinite.tcgplayer.com%2Fsearch%3FcontentMode%3Darticle%26game%3Dmagic%26partner%3Dscryfall%26q%3DBlessed%2BDefiance",
+            "tcgplayer_infinite_decks": "https://tcgplayer.pxf.io/c/4931599/1830156/21018?subId1=api&trafcat=infinite&u=https%3A%2F%2Finfinite.tcgplayer.com%2Fsearch%3FcontentMode%3Ddeck%26game%3Dmagic%26partner%3Dscryfall%26q%3DBlessed%2BDefiance"
         },
-        "released_at": "2024-08-02",
-        "reprint": true,
+        "released_at": "2021-09-24",
+        "reprint": false,
         "reserved": false,
-        "rulings_uri": "https://api.scryfall.com/cards/184e5208-edbe-417f-8ff8-1950d08071ab/rulings",
-        "scryfall_set_uri": "https://scryfall.com/sets/plst?utm_source=api",
-        "scryfall_uri": "https://scryfall.com/card/plst/J22-156/blessed-defiance?utm_source=api",
-        "set": "plst",
-        "set_id": "67e47ba2-b019-4181-9005-fe9fc021de44",
-        "set_name": "The List",
-        "set_search_uri": "https://api.scryfall.com/cards/search?order=set&q=e%3Aplst&unique=prints",
-        "set_type": "masters",
-        "set_uri": "https://api.scryfall.com/sets/67e47ba2-b019-4181-9005-fe9fc021de44",
+        "rulings_uri": "https://api.scryfall.com/cards/1555cdcb-3471-4ee7-99c3-d05311bf433c/rulings",
+        "scryfall_set_uri": "https://scryfall.com/sets/mid?utm_source=api",
+        "scryfall_uri": "https://scryfall.com/card/mid/5/blessed-defiance?utm_source=api",
+        "set": "mid",
+        "set_id": "44b8eb8f-fa23-401a-98b5-1fbb9871128e",
+        "set_name": "Innistrad: Midnight Hunt",
+        "set_search_uri": "https://api.scryfall.com/cards/search?order=set&q=e%3Amid&unique=prints",
+        "set_type": "expansion",
+        "set_uri": "https://api.scryfall.com/sets/44b8eb8f-fa23-401a-98b5-1fbb9871128e",
         "story_spotlight": false,
-        "tcgplayer_id": 581627,
+        "tcgplayer_id": 248247,
         "textless": false,
         "type_line": "Instant",
-        "uri": "https://api.scryfall.com/cards/184e5208-edbe-417f-8ff8-1950d08071ab",
+        "uri": "https://api.scryfall.com/cards/1555cdcb-3471-4ee7-99c3-d05311bf433c",
         "variation": false
     }
 }

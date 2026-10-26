@@ -1,50 +1,52 @@
 {
     "archetypes": {
         "py/set": [
+            "Dimir Control",
             "Altar Tron",
-            "Rainbow Tron",
-            "Flicker Tron",
             "Fangren Tron",
-            "MonoG Tron",
-            "Dimir Control"
+            "Flicker Tron",
+            "Rainbow Tron",
+            "MonoG Tron"
         ]
     },
     "scryfall": {
-        "arena_id": 86450,
         "artist": "Adam Paquette",
         "artist_ids": [
             "89023dad-e6c0-41e0-83fb-eb2bfbbdc3f2"
         ],
-        "booster": false,
+        "booster": true,
         "border_color": "black",
         "card_back_id": "0aeebaf5-8c7d-4636-9e82-8c27447861f7",
+        "cardmarket_id": 252632,
         "cmc": 0.0,
-        "collector_number": "76",
+        "collector_number": "157",
         "color_identity": [],
         "colors": [],
-        "digital": true,
-        "edhrec_rank": 7174,
+        "digital": false,
+        "edhrec_rank": 5080,
         "finishes": [
-            "nonfoil"
+            "nonfoil",
+            "foil"
         ],
-        "foil": false,
-        "frame": "2015",
+        "flavor_text": "A ghoulcaller's playground.",
+        "foil": true,
+        "frame": "2003",
         "full_art": false,
-        "game_changer": false,
         "games": [
-            "arena"
+            "paper",
+            "mtgo"
         ],
-        "highres_image": false,
-        "id": "dd4c9a60-6cb9-4487-897b-28a370cb9ed7",
+        "highres_image": true,
+        "id": "84bca9e1-c0b7-4dce-9ee4-370db2c322b6",
         "illustration_id": "b70f0b97-d169-46a2-82f6-c6f92f31d930",
-        "image_status": "lowres",
+        "image_status": "highres_scan",
         "image_uris": {
-            "art_crop": "https://cards.scryfall.io/art_crop/front/d/d/dd4c9a60-6cb9-4487-897b-28a370cb9ed7.jpg?1679615315",
-            "border_crop": "https://cards.scryfall.io/border_crop/front/d/d/dd4c9a60-6cb9-4487-897b-28a370cb9ed7.jpg?1679615315",
-            "large": "https://cards.scryfall.io/large/front/d/d/dd4c9a60-6cb9-4487-897b-28a370cb9ed7.jpg?1679615315",
-            "normal": "https://cards.scryfall.io/normal/front/d/d/dd4c9a60-6cb9-4487-897b-28a370cb9ed7.jpg?1679615315",
-            "png": "https://cards.scryfall.io/png/front/d/d/dd4c9a60-6cb9-4487-897b-28a370cb9ed7.png?1679615315",
-            "small": "https://cards.scryfall.io/small/front/d/d/dd4c9a60-6cb9-4487-897b-28a370cb9ed7.jpg?1679615315"
+            "art_crop": "https://cards.scryfall.io/art_crop/front/8/4/84bca9e1-c0b7-4dce-9ee4-370db2c322b6.jpg?1562926244",
+            "border_crop": "https://cards.scryfall.io/border_crop/front/8/4/84bca9e1-c0b7-4dce-9ee4-370db2c322b6.jpg?1562926244",
+            "large": "https://cards.scryfall.io/large/front/8/4/84bca9e1-c0b7-4dce-9ee4-370db2c322b6.jpg?1562926244",
+            "normal": "https://cards.scryfall.io/normal/front/8/4/84bca9e1-c0b7-4dce-9ee4-370db2c322b6.jpg?1562926244",
+            "png": "https://cards.scryfall.io/png/front/8/4/84bca9e1-c0b7-4dce-9ee4-370db2c322b6.png?1562926244",
+            "small": "https://cards.scryfall.io/small/front/8/4/84bca9e1-c0b7-4dce-9ee4-370db2c322b6.jpg?1562926244"
         },
         "keywords": [],
         "lang": "en",
@@ -54,6 +56,7 @@
             "brawl": "legal",
             "commander": "legal",
             "duel": "legal",
+            "explorer": "not_legal",
             "future": "not_legal",
             "gladiator": "legal",
             "historic": "legal",
@@ -63,63 +66,70 @@
             "oldschool": "not_legal",
             "pauper": "legal",
             "paupercommander": "legal",
-            "penny": "not_legal",
+            "penny": "legal",
             "pioneer": "not_legal",
             "predh": "not_legal",
             "premodern": "not_legal",
             "standard": "not_legal",
             "standardbrawl": "not_legal",
             "timeless": "legal",
-            "tlr": "legal",
             "vintage": "legal"
         },
         "mana_cost": "",
+        "mtgo_foil_id": 43260,
+        "mtgo_id": 43259,
         "multiverse_ids": [
-            607010
+            245289
         ],
         "name": "Haunted Fengraf",
         "nonfoil": true,
         "object": "card",
         "oracle_id": "7c6143f3-ad2c-4d7f-9041-aa59f01d8fb7",
-        "oracle_text": "{T}: Add {C}.\n{3}, {T}, Sacrifice this land: Return a creature card at random from your graveyard to your hand.",
+        "oracle_text": "{T}: Add {C}.\n{3}, {T}, Sacrifice Haunted Fengraf: Return a creature card at random from your graveyard to your hand.",
         "oversized": false,
-        "penny_rank": 4933,
+        "penny_rank": 4170,
         "prices": {
-            "eur": null,
-            "eur_foil": null,
-            "tix": null,
-            "usd": null,
+            "eur": "0.11",
+            "eur_foil": "1.08",
+            "tix": "0.03",
+            "usd": "0.12",
             "usd_etched": null,
-            "usd_foil": null
+            "usd_foil": "1.00"
         },
         "prints_search_uri": "https://api.scryfall.com/cards/search?order=released&q=oracleid%3A7c6143f3-ad2c-4d7f-9041-aa59f01d8fb7&unique=prints",
         "produced_mana": [
             "C"
         ],
         "promo": false,
+        "purchase_uris": {
+            "cardhoarder": "https://www.cardhoarder.com/cards/43259?affiliate_id=scryfall&ref=card-profile&utm_campaign=affiliate&utm_medium=card&utm_source=scryfall",
+            "cardmarket": "https://www.cardmarket.com/en/Magic/Products/Singles/Dark-Ascension/Haunted-Fengraf?referrer=scryfall&utm_campaign=card_prices&utm_medium=text&utm_source=scryfall",
+            "tcgplayer": "https://tcgplayer.pxf.io/c/4931599/1830156/21018?subId1=api&u=https%3A%2F%2Fwww.tcgplayer.com%2Fproduct%2F57896%3Fpage%3D1"
+        },
         "rarity": "common",
         "related_uris": {
             "edhrec": "https://edhrec.com/route/?cc=Haunted+Fengraf",
-            "gatherer": "https://gatherer.wizards.com/Pages/Card/Details.aspx?multiverseid=607010&printed=false",
-            "tcgplayer_infinite_articles": "https://partner.tcgplayer.com/c/4931599/1830156/21018?subId1=api&trafcat=tcgplayer.com%2Fsearch%2Farticles&u=https%3A%2F%2Fwww.tcgplayer.com%2Fsearch%2Farticles%3FproductLineName%3Dmagic%26q%3DHaunted%2BFengraf",
-            "tcgplayer_infinite_decks": "https://partner.tcgplayer.com/c/4931599/1830156/21018?subId1=api&trafcat=tcgplayer.com%2Fsearch%2Fdecks&u=https%3A%2F%2Fwww.tcgplayer.com%2Fsearch%2Fdecks%3FproductLineName%3Dmagic%26q%3DHaunted%2BFengraf"
+            "gatherer": "https://gatherer.wizards.com/Pages/Card/Details.aspx?multiverseid=245289&printed=false",
+            "tcgplayer_infinite_articles": "https://tcgplayer.pxf.io/c/4931599/1830156/21018?subId1=api&trafcat=infinite&u=https%3A%2F%2Finfinite.tcgplayer.com%2Fsearch%3FcontentMode%3Darticle%26game%3Dmagic%26partner%3Dscryfall%26q%3DHaunted%2BFengraf",
+            "tcgplayer_infinite_decks": "https://tcgplayer.pxf.io/c/4931599/1830156/21018?subId1=api&trafcat=infinite&u=https%3A%2F%2Finfinite.tcgplayer.com%2Fsearch%3FcontentMode%3Ddeck%26game%3Dmagic%26partner%3Dscryfall%26q%3DHaunted%2BFengraf"
         },
-        "released_at": "2023-03-21",
-        "reprint": true,
+        "released_at": "2012-02-03",
+        "reprint": false,
         "reserved": false,
-        "rulings_uri": "https://api.scryfall.com/cards/dd4c9a60-6cb9-4487-897b-28a370cb9ed7/rulings",
-        "scryfall_set_uri": "https://scryfall.com/sets/sis?utm_source=api",
-        "scryfall_uri": "https://scryfall.com/card/sis/76/haunted-fengraf?utm_source=api",
-        "set": "sis",
-        "set_id": "5b046a48-760d-4192-a8e8-8725c9052a6e",
-        "set_name": "Shadows of the Past",
-        "set_search_uri": "https://api.scryfall.com/cards/search?order=set&q=e%3Asis&unique=prints",
-        "set_type": "masters",
-        "set_uri": "https://api.scryfall.com/sets/5b046a48-760d-4192-a8e8-8725c9052a6e",
+        "rulings_uri": "https://api.scryfall.com/cards/84bca9e1-c0b7-4dce-9ee4-370db2c322b6/rulings",
+        "scryfall_set_uri": "https://scryfall.com/sets/dka?utm_source=api",
+        "scryfall_uri": "https://scryfall.com/card/dka/157/haunted-fengraf?utm_source=api",
+        "set": "dka",
+        "set_id": "8052750a-aaf2-46fc-b46d-633f14124017",
+        "set_name": "Dark Ascension",
+        "set_search_uri": "https://api.scryfall.com/cards/search?order=set&q=e%3Adka&unique=prints",
+        "set_type": "expansion",
+        "set_uri": "https://api.scryfall.com/sets/8052750a-aaf2-46fc-b46d-633f14124017",
         "story_spotlight": false,
+        "tcgplayer_id": 57896,
         "textless": false,
         "type_line": "Land",
-        "uri": "https://api.scryfall.com/cards/dd4c9a60-6cb9-4487-897b-28a370cb9ed7",
+        "uri": "https://api.scryfall.com/cards/84bca9e1-c0b7-4dce-9ee4-370db2c322b6",
         "variation": false
     }
 }
