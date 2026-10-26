@@ -27,7 +27,7 @@ export default function BlindSpy() {
   const [opponentLife, setOpponentLife] = useState(LIFE_DEF)
 
   useEffect(() => {
-    fetch('/data/blind_spy_full_consolidated.json')
+    fetch('/blind-spy-data/blind_spy_full_consolidated.json')
       .then(r => r.json())
       .then(d => { setRawData(d); setDataLoading(false) })
   }, [])
