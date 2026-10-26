@@ -212,6 +212,7 @@ export default function DeckPage() {
                     className="px-3 py-1.5 rounded-lg text-sm font-medium border border-gray-600 text-gray-400 hover:border-gray-400 hover:text-gray-200 transition-colors">
                     {copied ? '✓ Copied!' : '⧉ Copy for MTGO'}
                   </button>
+                  {/* Buy Deck button, hidden for now.
                   <a
                     href={`https://pauperformance.market/wizard?deck=https://pauperformance.com/decks/${id}`}
                     target="_blank"
@@ -219,6 +220,7 @@ export default function DeckPage() {
                     className="px-3 py-1.5 rounded-lg text-sm font-medium border border-gray-600 text-gray-400 hover:border-gray-400 hover:text-gray-200 transition-colors">
                     🛒 Buy Deck
                   </a>
+                  */}
                 </div>
                 <div className="flex gap-8 items-start">
                   <div className="flex flex-col sm:flex-row gap-8">
