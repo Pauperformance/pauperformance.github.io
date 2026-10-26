@@ -2,6 +2,7 @@ import { useState, useEffect, useMemo, useRef } from 'react'
 import { useParams, Link, useNavigate } from 'react-router-dom'
 import ReactMarkdown from 'react-markdown'
 import Layout from '../components/Layout'
+import { useCardPreview } from '../components/CardPreview'
 import { nameToSlug, pilotToSlug } from '../utils/slugs'
 
 const MANA_ORDER = ['W', 'U', 'B', 'R', 'G', 'C']
@@ -31,13 +32,13 @@ function cardNameToSlug(name) {
   return nameToSlug(name)
 }
 
-function CardGallery({ cards }) {
+function CardGallery({ cards, bindPreview }) {
   if (!cards?.length) return <p className="text-gray-500 text-sm">None listed.</p>
   return (
     <div className="flex flex-wrap gap-2">
       {cards.map(card => (
         <Link key={card.name} to={`/cards/${cardNameToSlug(card.name)}`}
-          title={card.name}
+          {...bindPreview(card.name, { showImage: false })}
           className="group relative shrink-0">
           <img src={card.preview} alt={card.name}
             className="h-64 rounded-lg shadow border border-gray-700 group-hover:border-amber-400 transition-colors object-cover" />
@@ -660,6 +661,7 @@ function ResourcesSection({ resources, discord, sideboards }) {
 export default function ArchetypePage() {
   const { name } = useParams()
   const navigate = useNavigate()
+  const { bind: bindPreview, preview } = useCardPreview()
   const [data, setData] = useState(null)
   const [notFound, setNotFound] = useState(false)
 
@@ -751,14 +753,14 @@ export default function ArchetypePage() {
         {/* Staples */}
         <section>
           <SectionHeader>Staples</SectionHeader>
-          <CardGallery cards={data.staples} />
+          <CardGallery cards={data.staples} bindPreview={bindPreview} />
         </section>
 
         {/* Frequent cards */}
         {data.frequent?.length > 0 && (
           <section>
             <SectionHeader>Frequent cards</SectionHeader>
-            <CardGallery cards={data.frequent} />
+            <CardGallery cards={data.frequent} bindPreview={bindPreview} />
           </section>
         )}
 
@@ -792,6 +794,7 @@ export default function ArchetypePage() {
           <VideosSection videos={data.videos} />
         </section>
       </div>
+      {preview}
     </Layout>
   )
 }
