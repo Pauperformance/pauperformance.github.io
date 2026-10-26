@@ -1,4 +1,5 @@
-# This workflow updates the Academy every 2 hours:
+# This workflow updates the Academy every 2 hours (at minute 17, off the
+# top of the hour, when GitHub delays and drops many scheduled runs):
 # scrape tournaments and videos, classify them, export the Academy data,
 # rebuild the website and push everything to master.
 
@@ -6,7 +7,7 @@ name: myr-academy-update
 
 on:
   schedule:
-    - cron: "0 */2 * * *"
+    - cron: "17 */2 * * *"
   workflow_dispatch:
 
 # Never run two updates at once: they would push conflicting commits and
