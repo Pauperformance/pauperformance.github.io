@@ -380,7 +380,7 @@ function BrainstormSection() {
             </Link>
             <div className="p-3 sm:p-4 space-y-2 min-w-0">
               <div className="flex items-center gap-2 flex-wrap">
-                <span className="text-xs text-gray-500 font-mono">#{front + 1}</span>
+                <span className="text-3xl font-bold text-gray-400 font-mono leading-none">#{front + 1}</span>
                 <Link to={`/archetypes/${nameToSlug(deck.archetype_name)}`}
                   className="text-lg font-semibold text-white hover:text-amber-400 transition-colors">{deck.archetype_name}</Link>
                 <div className="flex items-center gap-0.5">
