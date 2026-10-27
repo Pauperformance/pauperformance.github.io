@@ -1,6 +1,7 @@
 import { useState, useEffect, useMemo, useRef } from 'react'
 import { useNavigate } from 'react-router-dom'
 import Layout from '../components/Layout'
+import { useSearchShortcut, searchShortcutLabel } from '../utils/useSearchShortcut'
 
 const PAGE_SIZE = 50
 
@@ -24,6 +25,7 @@ export default function PlayersIndex() {
   const [players, setPlayers] = useState([])
   const [loading, setLoading] = useState(true)
   const [search, setSearch] = useState('')
+  const searchRef = useSearchShortcut()
   const [activeArchetypes, setActiveArchetypes] = useState(new Set())
   const [archetypeSearch, setArchetypeSearch] = useState('')
   const [dropdownOpen, setDropdownOpen] = useState(false)
@@ -148,8 +150,9 @@ export default function PlayersIndex() {
         <div className="bg-gray-800 border border-gray-700 rounded-xl p-4 space-y-3">
           <div className="relative">
             <input
+              ref={searchRef}
               type="search"
-              placeholder="Search players…"
+              placeholder={`Search players… (${searchShortcutLabel})`}
               value={search}
               onChange={e => setSearch(e.target.value)}
               onKeyDown={e => { if (e.key === 'Enter') e.target.blur() }}

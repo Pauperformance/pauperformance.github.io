@@ -6,7 +6,7 @@ const NAV_ITEMS = [
   { to: '/archetypes', label: 'Archetypes' },
   { to: '/cards', label: 'Cards' },
   { to: '/sets', label: 'Sets' },
-  { to: '/metagame', label: 'Metagames' },
+  { to: '/metagames', label: 'Metagames' },
   { to: '/timeline', label: 'Timeline' },
   { to: '/watch', label: 'Watch' },
   { to: '/players', label: 'Players' },

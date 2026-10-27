@@ -2,6 +2,7 @@ import { useState, useEffect, useMemo } from 'react'
 import { Link, useNavigate } from 'react-router-dom'
 import { nameToSlug } from '../utils/slugs'
 import Layout from '../components/Layout'
+import { useSearchShortcut, searchShortcutLabel } from '../utils/useSearchShortcut'
 
 const MANA_ORDER = ['W', 'U', 'B', 'R', 'G', 'C']
 const GAME_TYPES = ['Aggro', 'Midrange', 'Control', 'Tempo', 'Combo']
@@ -79,6 +80,7 @@ export default function ArchetypesIndex() {
   const [metaMap, setMetaMap] = useState({})
   const [loading, setLoading] = useState(true)
   const [search, setSearch] = useState('')
+  const searchRef = useSearchShortcut()
   const [activeTypes, setActiveTypes] = useState(new Set())
   const [activeMana, setActiveMana] = useState(new Set())
   const [manaMode, setManaMode] = useState('or')
@@ -188,8 +190,9 @@ export default function ArchetypesIndex() {
         <div className="bg-gray-800 border border-gray-700 rounded-xl p-4 space-y-3">
           <div className="relative">
             <input
+              ref={searchRef}
               type="search"
-              placeholder="Search archetypes..."
+              placeholder={`Search archetypes... (${searchShortcutLabel})`}
               value={search}
               onChange={e => setSearch(e.target.value)}
               onKeyDown={e => { if (e.key === 'Enter') e.target.blur() }}

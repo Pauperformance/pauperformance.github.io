@@ -1,6 +1,7 @@
 import { useState, useEffect, useMemo, useRef } from 'react'
 import { Link } from 'react-router-dom'
 import Layout from '../components/Layout'
+import { useSearchShortcut, searchShortcutLabel } from '../utils/useSearchShortcut'
 import { nameToSlug } from '../utils/slugs'
 
 const LANG_FLAG = {
@@ -155,6 +156,7 @@ export default function Watch() {
   const [videos, setVideos] = useState([])
   const [loading, setLoading] = useState(true)
   const [search, setSearch] = useState('')
+  const searchRef = useSearchShortcut()
   const [activeCreators, setActiveCreators] = useState(new Set())
   const [activeLanguages, setActiveLanguages] = useState(new Set())
   const [activeArchetypes, setActiveArchetypes] = useState(new Set())
@@ -347,8 +349,9 @@ export default function Watch() {
         <div className="bg-gray-800 border border-gray-700 rounded-xl p-4 space-y-3">
           <div className="relative">
             <input
+              ref={searchRef}
               type="search"
-              placeholder="Search videos…"
+              placeholder={`Search videos… (${searchShortcutLabel})`}
               value={search}
               onChange={e => setSearch(e.target.value)}
               onKeyDown={e => { if (e.key === 'Enter') e.target.blur() }}

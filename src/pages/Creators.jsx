@@ -1,6 +1,7 @@
 import { useState, useEffect } from 'react'
 import { Link } from 'react-router-dom'
 import Layout from '../components/Layout'
+import { useSearchShortcut, searchShortcutLabel } from '../utils/useSearchShortcut'
 
 const TWITCH_ICON = 'M11.571 4.714h1.715v5.143H11.57zm4.715 0H18v5.143h-1.714zM6 0L1.714 4.286v15.428h5.143V24l4.286-4.286h3.428L22.286 12V0zm14.571 11.143l-3.428 3.428h-3.429l-3 3v-3H6.857V1.714h13.714z'
 const YOUTUBE_ICON = 'M23.495 6.205a3.007 3.007 0 0 0-2.088-2.088c-1.87-.501-9.396-.501-9.396-.501s-7.507-.01-9.396.501A3.007 3.007 0 0 0 .527 6.205a31.247 31.247 0 0 0-.522 5.805 31.247 31.247 0 0 0 .522 5.783 3.007 3.007 0 0 0 2.088 2.088c1.868.502 9.396.502 9.396.502s7.506 0 9.396-.502a3.007 3.007 0 0 0 2.088-2.088 31.247 31.247 0 0 0 .5-5.783 31.247 31.247 0 0 0-.5-5.805zM9.609 15.601V8.408l6.264 3.602z'
@@ -84,6 +85,7 @@ export default function Creators() {
   const [creators, setCreators] = useState([])
   const [loading, setLoading] = useState(true)
   const [search, setSearch] = useState('')
+  const searchRef = useSearchShortcut()
 
   useEffect(() => {
     fetch('/data/creators.json')
@@ -111,8 +113,9 @@ export default function Creators() {
 
         <div className="relative">
           <input
+            ref={searchRef}
             type="search"
-            placeholder="Search by name or MTGO username…"
+            placeholder={`Search by name or MTGO username… (${searchShortcutLabel})`}
             value={search}
             onChange={e => setSearch(e.target.value)}
             onKeyDown={e => { if (e.key === 'Enter') e.target.blur() }}

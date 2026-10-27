@@ -1,6 +1,7 @@
 import { useState, useEffect, useMemo, useRef } from 'react'
 import { Link, useNavigate } from 'react-router-dom'
 import Layout from '../components/Layout'
+import { useSearchShortcut, searchShortcutLabel } from '../utils/useSearchShortcut'
 import { useCardPreview } from '../components/CardPreview'
 
 const MANA_ORDER = ['W', 'U', 'B', 'R', 'G', 'C']
@@ -74,6 +75,7 @@ export default function CardsIndex() {
   const [archetypeCardSlugs, setArchetypeCardSlugs] = useState({})
   const [loading, setLoading] = useState(true)
   const [search, setSearch] = useState('')
+  const searchRef = useSearchShortcut()
   const [activeMana, setActiveMana] = useState(new Set())
   const [activeTypes, setActiveTypes] = useState(new Set())
   const [activeCmc, setActiveCmc] = useState(new Set())
@@ -282,8 +284,9 @@ export default function CardsIndex() {
         <div className="bg-gray-800 border border-gray-700 rounded-xl p-4 space-y-3">
           <div className="relative">
             <input
+              ref={searchRef}
               type="search"
-              placeholder="Search cards…"
+              placeholder={`Search cards… (${searchShortcutLabel})`}
               value={search}
               onChange={e => setSearch(e.target.value)}
               onKeyDown={e => { if (e.key === 'Enter') e.target.blur() }}
