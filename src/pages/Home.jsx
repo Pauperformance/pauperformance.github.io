@@ -123,7 +123,6 @@ function TopDecksSection() {
 
   return (
     <section>
-      <h2 className="text-xl font-semibold text-white mb-4">Top Archetypes</h2>
       <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 xl:grid-cols-7 2xl:grid-cols-8 gap-3">
         {decks.map(deck => (
           <div key={deck.archetype_name} className="bg-gray-800 border border-gray-700 rounded-xl overflow-hidden hover:border-amber-400/50 transition-all group">
@@ -161,6 +160,285 @@ function TopDecksSection() {
             )}
           </div>
         ))}
+      </div>
+      {preview}
+    </section>
+  )
+}
+
+function ManaSymbols({ mana, className }) {
+  return (
+    <div className={`${className} shrink-0 items-center gap-0.5`}>
+      {mana.map(m => <img key={m} src={`/images/mana/${m}.png`} alt={m} className="w-4 h-4" />)}
+    </div>
+  )
+}
+
+// The Brainstorm art split in two layers: the character stays put and the 16
+// glyphs orbit her, one per top archetype. Sprite i is rank i: the largest
+// glyph first, then its neighbours in the (mirrored) painting. Each next rank
+// sits to the right of the front, so stepping through the ranks turns the
+// ring clockwise.
+const GLYPHS = 16
+const STEP = (2 * Math.PI) / GLYPHS
+// Ring geometry, as a fraction of the 1407×1118 painting
+const RING = { cx: 0.505, cy: 0.493, rx: 0.45, ry: 0.383 }
+const SPRITE = 200 / 1407
+// Her headdress, cut out of the painting and drawn over the back of the ring
+// so glyphs passing behind her head are hidden by it
+const HEADDRESS = { left: 300 / 1407, width: 850 / 1407 }
+const HEADDRESS_Z = 30
+
+const wrap = (i) => ((i % GLYPHS) + GLYPHS) % GLYPHS
+
+const easeInOut = (t) => (t < 0.5 ? 4 * t * t * t : 1 - Math.pow(-2 * t + 2, 3) / 2)
+
+// The hint wiggle: how far the ring rocks (in glyphs), how many full
+// right-left swings, and how long it lasts (ms)
+const WIGGLE = { amplitude: 0.18, swings: 2, duration: 1800 }
+
+// Phones: short tabs centred on the card; wider: as tall as the card
+const RING_ARROW = 'shrink-0 self-center h-20 w-7 rounded-lg text-2xl sm:self-stretch sm:h-auto sm:w-12 sm:rounded-xl sm:text-3xl flex items-center justify-center border border-gray-700 bg-gray-800 leading-none text-gray-400 hover:border-amber-400/50 hover:text-amber-400 transition-colors'
+
+function BrainstormSection() {
+  const [decks, setDecks] = useState([])
+  const [rot, setRot] = useState(0)
+  const rotRef = useRef(0)
+  const targetRef = useRef(0)
+  const frameRef = useRef(null)
+  const dragRef = useRef(null)
+  const draggedRef = useRef(false)
+  const introRef = useRef(false)
+  const interactedRef = useRef(false)
+  const sceneRef = useRef(null)
+  const cardPages = useCardPages()
+  const { bind: bindPreview, preview } = useCardPreview()
+
+  useEffect(() => {
+    fetch('/data/top_decks.json').then(r => r.json()).then(d => setDecks(d.slice(0, GLYPHS)))
+  }, [])
+
+  useEffect(() => () => cancelAnimationFrame(frameRef.current), [])
+
+  const setNow = (value) => {
+    rotRef.current = value
+    setRot(value)
+  }
+
+  // Turn the ring to the target angle, taking longer the further it goes.
+  // Clicks and keys ease in and out; a released drag is already moving, so it
+  // only eases out.
+  const animateTo = (target, { fromDrag = false } = {}) => {
+    targetRef.current = target
+    cancelAnimationFrame(frameRef.current)
+    if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) return setNow(target)
+    const from = rotRef.current
+    const distance = target - from
+    const duration = 350 + 160 * Math.abs(distance)
+    const ease = fromDrag
+      ? (t) => 1 - Math.pow(1 - t, 3)
+      : easeInOut
+    const start = performance.now()
+    const step = (now) => {
+      const t = Math.min((now - start) / duration, 1)
+      setNow(from + distance * ease(t))
+      if (t < 1) frameRef.current = requestAnimationFrame(step)
+    }
+    frameRef.current = requestAnimationFrame(step)
+  }
+
+  // The ring rocks right and left in place, each swing smaller than the last,
+  // as a hint that it can be turned
+  const playWiggle = () => {
+    introRef.current = true
+    const start = performance.now()
+    const frame = (now) => {
+      if (!introRef.current) return
+      const t = Math.min((now - start) / WIGGLE.duration, 1)
+      // negative first: the front glyph sets off to the right
+      setNow(-WIGGLE.amplitude * Math.sin(2 * Math.PI * WIGGLE.swings * t) * (1 - t))
+      if (t < 1) frameRef.current = requestAnimationFrame(frame)
+      else introRef.current = false
+    }
+    frameRef.current = requestAnimationFrame(frame)
+  }
+
+  // The wiggle plays the first time the ring comes into view
+  useEffect(() => {
+    const scene = sceneRef.current
+    if (!scene || window.matchMedia('(prefers-reduced-motion: reduce)').matches) return
+    const observer = new IntersectionObserver(([entry]) => {
+      if (!entry.isIntersecting) return
+      observer.disconnect()
+      if (!interactedRef.current) playWiggle()
+    }, { threshold: 0.5 })
+    observer.observe(scene)
+    return () => observer.disconnect()
+  }, [decks.length])
+
+  // Any interaction cancels the wiggle where it is
+  const interrupt = () => {
+    interactedRef.current = true
+    if (!introRef.current) return
+    introRef.current = false
+    cancelAnimationFrame(frameRef.current)
+    targetRef.current = Math.round(rotRef.current)
+  }
+
+  // Bring deck i to the front the short way round
+  const focus = (i) => {
+    interrupt()
+    const base = targetRef.current
+    let delta = wrap(i - base)
+    if (delta > GLYPHS / 2) delta -= GLYPHS
+    animateTo(Math.round(base) + delta)
+  }
+
+  const onPointerDown = (e) => {
+    if (e.button !== 0) return
+    interrupt()
+    cancelAnimationFrame(frameRef.current)
+    draggedRef.current = false
+    dragRef.current = { x: e.clientX, rot: rotRef.current, moved: false, lastX: e.clientX, lastT: e.timeStamp, v: 0 }
+  }
+
+  const onPointerMove = (e) => {
+    const drag = dragRef.current
+    if (!drag) return
+    const dx = e.clientX - drag.x
+    if (!drag.moved && Math.abs(dx) > 5) {
+      drag.moved = true
+      sceneRef.current.setPointerCapture(e.pointerId)
+    }
+    if (!drag.moved) return
+    const pxPerGlyph = sceneRef.current.clientWidth * 0.12
+    const dt = Math.max(e.timeStamp - drag.lastT, 1)
+    drag.v = (e.clientX - drag.lastX) / pxPerGlyph / dt
+    drag.lastX = e.clientX
+    drag.lastT = e.timeStamp
+    setNow(drag.rot - dx / pxPerGlyph)
+  }
+
+  const onPointerUp = () => {
+    const drag = dragRef.current
+    dragRef.current = null
+    draggedRef.current = !!drag?.moved
+    // A flick carries on for a few glyphs before snapping; a press that stopped
+    // the ring between glyphs settles on the nearest one
+    if (drag?.moved) animateTo(Math.round(rotRef.current - drag.v * 250), { fromDrag: true })
+    else if (rotRef.current !== Math.round(rotRef.current)) animateTo(Math.round(rotRef.current))
+  }
+
+  const stepBy = (by) => {
+    interrupt()
+    focus(Math.round(targetRef.current) + by)
+  }
+
+  const onKeyDown = (e) => {
+    if (e.key === 'ArrowLeft') stepBy(-1)
+    else if (e.key === 'ArrowRight') stepBy(1)
+    else return
+    e.preventDefault()
+  }
+
+  if (!decks.length) return null
+
+  const front = wrap(Math.round(rot))
+  const deck = decks[front]
+  // At rest on a glyph (or just wiggling on it): it reads as selected and its
+  // card as opened
+  const settled = (introRef.current || Math.abs(rot - Math.round(rot)) < 1e-3) && !dragRef.current
+
+  return (
+    <section>
+      <div className="max-w-3xl mx-auto">
+        <div ref={sceneRef} tabIndex={0} role="listbox" aria-label="Top archetypes"
+          aria-activedescendant={`glyph-${front}`}
+          onPointerDown={onPointerDown} onPointerMove={onPointerMove}
+          onPointerUp={onPointerUp} onPointerCancel={onPointerUp} onKeyDown={onKeyDown}
+          className="relative isolate aspect-[1407/1118] rounded-xl overflow-hidden border border-gray-700 select-none touch-pan-y cursor-grab active:cursor-grabbing focus:outline-none focus-visible:ring-2 focus-visible:ring-amber-400">
+          <img src="/images/brainstorm/character.webp" alt="" draggable={false}
+            className="absolute inset-0 w-full h-full pointer-events-none" />
+          {decks.map((d, i) => {
+            const theta = Math.PI / 2 - (i - rot) * STEP
+            const depth = (Math.sin(theta) + 1) / 2 // 0 at the back, 1 at the front
+            const near = Math.max(0, 1 - Math.abs(wrap(i - rot + GLYPHS / 2) - GLYPHS / 2))
+            // The glyph at the very back slips behind her head
+            const behind = Math.min(1, Math.max(0, (Math.abs(wrap(i - rot) - GLYPHS / 2) - 0.15) / 0.7))
+            const scale = 0.7 + 0.35 * depth + 0.35 * near
+            return (
+              <button key={d.archetype_name} id={`glyph-${i}`} role="option" aria-selected={i === front}
+                aria-label={`${d.archetype_name}, ${d.meta_share.toFixed(1)}%`} tabIndex={-1}
+                onClick={() => { if (!draggedRef.current) focus(i) }}
+                className="absolute p-0 border-0 bg-transparent cursor-pointer focus:outline-none"
+                style={{
+                  left: `${(RING.cx + RING.rx * Math.cos(theta)) * 100}%`,
+                  top: `${(RING.cy + RING.ry * Math.sin(theta)) * 100}%`,
+                  width: `${SPRITE * 100}%`,
+                  transform: `translate(-50%, -50%) scale(${scale})`,
+                  opacity: (0.45 + 0.55 * Math.max(depth, near)) * behind,
+                  pointerEvents: behind < 0.5 ? 'none' : undefined,
+                  zIndex: Math.round(depth * 100),
+                  filter: near > 0.5 ? `drop-shadow(0 0 ${12 * near}px rgba(190, 255, 90, ${0.7 * near}))` : undefined,
+                }}>
+                <img src={`/images/brainstorm/glyph-${String(i).padStart(2, '0')}.webp`} alt="" draggable={false}
+                  className={`w-full pointer-events-none ${settled && i === front ? 'glyph-selected' : ''}`} />
+              </button>
+            )
+          })}
+          <img src="/images/brainstorm/headdress.webp" alt="" draggable={false}
+            className="absolute top-0 pointer-events-none"
+            style={{ left: `${HEADDRESS.left * 100}%`, width: `${HEADDRESS.width * 100}%`, zIndex: HEADDRESS_Z }} />
+        </div>
+
+        <div className="mt-3 relative isolate flex items-stretch gap-2">
+          {settled && <div key={`light-${front}`} aria-hidden="true" className="ring-light absolute inset-x-0 -top-2 bottom-0 -z-10 pointer-events-none" />}
+          <button onClick={() => stepBy(-1)} aria-label="Previous archetype" className={RING_ARROW}>‹</button>
+          {/* Phones: the art as a banner on top with the text below; wider: side by side */}
+          {/* Every line below has a fixed height, so the box is the same size
+              for every archetype */}
+          <div className={`relative flex-1 min-w-0 bg-gray-800 border rounded-xl overflow-hidden flex flex-col sm:flex-row transition-[border-color,box-shadow] duration-500 ${settled ? 'border-lime-300/40 shadow-[0_0_24px_rgba(190,255,90,0.18)]' : 'border-gray-700'}`}>
+            <Link to={`/archetypes/${nameToSlug(deck.archetype_name)}`}
+              className="relative w-full aspect-[2/1] sm:aspect-auto sm:w-32 md:w-44 shrink-0 bg-gray-900 overflow-hidden group">
+              {deck.featured_image
+                // Scryfall's art crop of the same card: the artwork without its frame
+                ? <img src={deck.featured_image.replace('/normal/', '/art_crop/')} alt={deck.archetype_name}
+                    className="absolute inset-0 w-full h-full object-cover group-hover:scale-110 transition-transform duration-300" />
+                : <div className="absolute inset-0 flex items-center justify-center text-gray-600 text-xs">No image</div>
+              }
+            </Link>
+            {/* Phones: the type tags sit in the box's top-right corner, over the art */}
+            <div className="sm:hidden absolute top-2 right-2 flex gap-1 pointer-events-none">
+              {deck.game_type.map(g => (
+                <span key={g} className="text-xs text-gray-100 bg-gray-900/85 rounded-md px-2 py-1 leading-none">{g}</span>
+              ))}
+            </div>
+            <div className="flex-1 px-3 py-2.5 sm:px-4 sm:py-3 space-y-1.5 min-w-0">
+              <div className="flex items-center gap-2 min-w-0">
+                <span className="shrink-0 text-3xl font-bold text-gray-400 font-mono leading-none">#{front + 1}</span>
+                <Link to={`/archetypes/${nameToSlug(deck.archetype_name)}`}
+                  className="truncate min-w-0 text-lg font-semibold text-white hover:text-amber-400 transition-colors">{deck.archetype_name}</Link>
+                <ManaSymbols mana={deck.dominant_mana} className="hidden sm:flex" />
+                <div className="hidden sm:flex ml-auto self-start shrink-0 gap-1">
+                  {deck.game_type.map(g => (
+                    <span key={g} className="text-xs text-gray-300 bg-gray-700 rounded-md px-2 py-1 leading-none">{g}</span>
+                  ))}
+                </div>
+              </div>
+              <div className="flex items-center gap-2">
+                <ManaSymbols mana={deck.dominant_mana} className="flex sm:hidden" />
+                <span className="text-lg text-amber-400 font-mono">Meta: {deck.meta_share.toFixed(1)}%</span>
+              </div>
+              {/* staples come most played first; room for two rows on phones, one otherwise */}
+              <div className="flex flex-wrap content-start gap-1 overflow-hidden h-12 sm:h-[22px]">
+                {deck.staples.slice(0, 3).map(card => (
+                  <StapleLink key={card.name} card={card} cardPages={cardPages} bindPreview={bindPreview} />
+                ))}
+              </div>
+            </div>
+          </div>
+          <button onClick={() => stepBy(1)} aria-label="Next archetype" className={RING_ARROW}>›</button>
+        </div>
       </div>
       {preview}
     </section>
@@ -300,28 +578,58 @@ function MetagameSection() {
   )
 }
 
+// How the top archetypes are shown: the Brainstorm glyph ring (default) or
+// the card table. The choice is remembered per browser.
+const META_VIEW_KEY = 'home-meta-view'
+
+function useMetaView() {
+  const [view, setView] = useState(() => {
+    try {
+      return localStorage.getItem(META_VIEW_KEY) === 'table' ? 'table' : 'brainstorm'
+    } catch {
+      return 'brainstorm'
+    }
+  })
+  const choose = (next) => {
+    setView(next)
+    try { localStorage.setItem(META_VIEW_KEY, next) } catch { /* private mode: just don't remember */ }
+  }
+  return [view, choose]
+}
+
+
 export default function Home() {
+  const [metaView, setMetaView] = useMetaView()
+
   return (
     <Layout>
       <div className="space-y-12">
-        <section>
-          <p className="text-lg text-gray-300 leading-relaxed">
-            Hello Pauper player, and welcome to the <strong className="text-white">Academy</strong>!
-          </p>
-          <p className="mt-4 text-gray-400 leading-relaxed">
-            This website aims to be the online encyclopedia for Pauper, collecting and organising resources
-            for players with different skill levels. The Academy is currently being restructured — read the{' '}
-            <a href="./pages/faq.html" className="text-amber-400 hover:underline">FAQs</a>{' '}
-            to learn more about this project and its roadmap.
-          </p>
-        </section>
+        {/* The welcome sits close to the top archetypes it introduces */}
+        <div className="space-y-4">
+          <section>
+            <p className="text-lg text-gray-300 leading-relaxed">
+              Pauper people, welcome to the <strong className="text-white">Academy</strong>!
+            </p>
+            <p className="mt-4 text-gray-400 leading-relaxed">
+              This website is the online encyclopedia for Pauper, collecting and organising resources
+              for players with different skill levels.
+            </p>
+          </section>
 
+          {metaView === 'table' ? <TopDecksSection /> : <BrainstormSection />}
 
-        <StatsSection />
-
-        <TopDecksSection />
+          {/* Brainstorm: clear of the light that pools under the archetype card */}
+          <div className={`flex justify-center ${metaView === 'table' ? '' : 'pt-4'}`}>
+            <button onClick={() => setMetaView(metaView === 'table' ? 'brainstorm' : 'table')}
+              className="px-4 py-2 rounded-lg border border-gray-700 bg-gray-800 text-sm text-gray-300 hover:border-amber-400/50 hover:text-amber-400 transition-colors">
+              {metaView === 'table' ? 'Switch to Brainstorm' : 'Switch to Table View'}
+            </button>
+          </div>
+        </div>
 
         <MetagameSection />
+
+        <StatsSection />
 
         <section>
           <h2 className="text-xl font-semibold text-white mb-4">Newspauper</h2>
