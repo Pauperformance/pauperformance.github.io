@@ -3,6 +3,8 @@ import { createPortal } from 'react-dom'
 import { Link } from 'react-router-dom'
 import Layout from '../components/Layout'
 import { nameToSlug } from '../utils/slugs'
+import { cardLinkSlug, useCardPages } from '../utils/cardPages'
+import { useCardPreview } from '../components/CardPreview'
 
 
 const NEWS = [
@@ -97,41 +99,21 @@ function StatsSection() {
   )
 }
 
-function StapleLink({ card }) {
-  const [pos, setPos] = useState(null)
-  const timerRef = useRef(null)
-
-  const show = (e) => {
-    clearTimeout(timerRef.current)
-    timerRef.current = setTimeout(() => setPos({ x: e.clientX, y: e.clientY }), 150)
-  }
-  const move = (e) => { if (pos) setPos({ x: e.clientX, y: e.clientY }) }
-  const hide = () => { clearTimeout(timerRef.current); setPos(null) }
-
-  const imgStyle = pos ? {
-    left: pos.x + 220 > window.innerWidth ? pos.x - 220 : pos.x + 16,
-    top: Math.max(8, Math.min(pos.y - 80, window.innerHeight - 320)),
-  } : null
-
-  return (
-    <>
-      <a href={card.link} target="_blank" rel="noreferrer"
-        onMouseEnter={show} onMouseMove={move} onMouseLeave={hide}
-        className="px-2 py-0.5 rounded-md text-xs border bg-gray-800 border-gray-700 text-gray-300 hover:border-amber-400/50 hover:text-amber-400 transition-colors whitespace-nowrap">
-        {card.name}
-      </a>
-      {pos && card.preview && createPortal(
-        <img src={card.preview} alt={card.name}
-          className="fixed z-50 w-48 rounded-xl shadow-2xl border border-gray-700 pointer-events-none"
-          style={imgStyle} />,
-        document.body
-      )}
-    </>
-  )
+// A staple: links to its card page and previews it on hover (image and
+// Oracle text); plain text for a card without a page.
+function StapleLink({ card, cardPages, bindPreview }) {
+  const slug = cardLinkSlug(cardPages, card.name)
+  const handlers = bindPreview(card.name, { slug: slug || undefined, image: card.preview })
+  const cls = 'px-2 py-0.5 rounded-md text-xs border bg-gray-800 border-gray-700 text-gray-300 whitespace-nowrap'
+  return slug
+    ? <Link to={`/cards/${slug}`} {...handlers} className={`${cls} hover:border-amber-400/50 hover:text-amber-400 transition-colors`}>{card.name}</Link>
+    : <span {...handlers} className={cls}>{card.name}</span>
 }
 
 function TopDecksSection() {
   const [decks, setDecks] = useState([])
+  const cardPages = useCardPages()
+  const { bind: bindPreview, preview } = useCardPreview()
 
   useEffect(() => {
     fetch('/data/top_decks.json').then(r => r.json()).then(setDecks)
@@ -173,13 +155,14 @@ function TopDecksSection() {
             {deck.staples.length > 0 && (
               <div className="px-2.5 pb-2.5 flex flex-col gap-1 items-start">
                 {deck.staples.map(card => (
-                  <StapleLink key={card.name} card={card} />
+                  <StapleLink key={card.name} card={card} cardPages={cardPages} bindPreview={bindPreview} />
                 ))}
               </div>
             )}
           </div>
         ))}
       </div>
+      {preview}
     </section>
   )
 }
