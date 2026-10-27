@@ -136,7 +136,15 @@ function VideoCard({ v }) {
               {v.archetype}
             </Link>
           </div>
-          <span className="text-xs text-gray-500 shrink-0">{v.date}</span>
+          <div className="flex items-center gap-2 shrink-0">
+            {v.deck_url && (
+              <a href={v.deck_url} target="_blank" rel="noreferrer"
+                className="text-xs font-semibold text-gray-400 hover:text-amber-400 transition-colors">
+                Decklist
+              </a>
+            )}
+            <span className="text-xs text-gray-500">{v.date}</span>
+          </div>
         </div>
       </div>
     </div>
