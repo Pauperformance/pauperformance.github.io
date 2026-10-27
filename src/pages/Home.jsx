@@ -179,7 +179,7 @@ const RING = { cx: 0.505, cy: 0.493, rx: 0.45, ry: 0.383 }
 const SPRITE = 200 / 1407
 // Her headdress, cut out of the painting and drawn over the back of the ring
 // so glyphs passing behind her head are hidden by it
-const HEADDRESS = { left: 320 / 1407, width: 810 / 1407 }
+const HEADDRESS = { left: 300 / 1407, width: 850 / 1407 }
 const HEADDRESS_Z = 30
 
 const wrap = (i) => ((i % GLYPHS) + GLYPHS) % GLYPHS
