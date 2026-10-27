@@ -184,6 +184,12 @@ const HEADDRESS_Z = 30
 
 const wrap = (i) => ((i % GLYPHS) + GLYPHS) % GLYPHS
 
+const easeInOut = (t) => (t < 0.5 ? 4 * t * t * t : 1 - Math.pow(-2 * t + 2, 3) / 2)
+
+// The hint wiggle: how far the ring rocks (in glyphs), how many full
+// right-left swings, and how long it lasts (ms)
+const WIGGLE = { amplitude: 0.18, swings: 2, duration: 1800 }
+
 const RING_ARROW = 'shrink-0 w-9 sm:w-12 flex items-center justify-center rounded-xl border border-gray-700 bg-gray-800 text-3xl leading-none text-gray-400 hover:border-amber-400/50 hover:text-amber-400 transition-colors'
 
 function BrainstormSection() {
@@ -214,43 +220,55 @@ function BrainstormSection() {
   // Turn the ring to the target angle, taking longer the further it goes.
   // Clicks and keys ease in and out; a released drag is already moving, so it
   // only eases out.
-  const animateTo = (target, { fromDrag = false, duration, onDone } = {}) => {
+  const animateTo = (target, { fromDrag = false } = {}) => {
     targetRef.current = target
     cancelAnimationFrame(frameRef.current)
     if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) return setNow(target)
     const from = rotRef.current
     const distance = target - from
-    duration ??= 350 + 160 * Math.abs(distance)
+    const duration = 350 + 160 * Math.abs(distance)
     const ease = fromDrag
       ? (t) => 1 - Math.pow(1 - t, 3)
-      : (t) => (t < 0.5 ? 4 * t * t * t : 1 - Math.pow(-2 * t + 2, 3) / 2)
+      : easeInOut
     const start = performance.now()
     const step = (now) => {
       const t = Math.min((now - start) / duration, 1)
       setNow(from + distance * ease(t))
       if (t < 1) frameRef.current = requestAnimationFrame(step)
-      else onDone?.()
     }
     frameRef.current = requestAnimationFrame(step)
   }
 
-  // The first time the ring comes into view it makes one slow turn, to show
-  // that it can be spun
+  // The ring rocks right and left in place, each swing smaller than the last,
+  // as a hint that it can be turned
+  const playWiggle = () => {
+    introRef.current = true
+    const start = performance.now()
+    const frame = (now) => {
+      if (!introRef.current) return
+      const t = Math.min((now - start) / WIGGLE.duration, 1)
+      // negative first: the front glyph sets off to the right
+      setNow(-WIGGLE.amplitude * Math.sin(2 * Math.PI * WIGGLE.swings * t) * (1 - t))
+      if (t < 1) frameRef.current = requestAnimationFrame(frame)
+      else introRef.current = false
+    }
+    frameRef.current = requestAnimationFrame(frame)
+  }
+
+  // The wiggle plays the first time the ring comes into view
   useEffect(() => {
     const scene = sceneRef.current
     if (!scene || window.matchMedia('(prefers-reduced-motion: reduce)').matches) return
     const observer = new IntersectionObserver(([entry]) => {
       if (!entry.isIntersecting) return
       observer.disconnect()
-      if (interactedRef.current) return
-      introRef.current = true
-      animateTo(GLYPHS, { duration: 9000, onDone: () => { introRef.current = false } })
+      if (!interactedRef.current) playWiggle()
     }, { threshold: 0.5 })
     observer.observe(scene)
     return () => observer.disconnect()
   }, [decks.length])
 
-  // Any interaction cancels the intro turn where it is
+  // Any interaction cancels the wiggle where it is
   const interrupt = () => {
     interactedRef.current = true
     if (!introRef.current) return
@@ -319,8 +337,9 @@ function BrainstormSection() {
 
   const front = wrap(Math.round(rot))
   const deck = decks[front]
-  // At rest on a glyph: it reads as selected and its card as opened
-  const settled = Math.abs(rot - Math.round(rot)) < 1e-3 && !dragRef.current
+  // At rest on a glyph (or just wiggling on it): it reads as selected and its
+  // card as opened
+  const settled = (introRef.current || Math.abs(rot - Math.round(rot)) < 1e-3) && !dragRef.current
 
   return (
     <section>
@@ -366,7 +385,7 @@ function BrainstormSection() {
         </div>
 
         <div className="mt-3 relative isolate flex items-stretch gap-2">
-          {settled && <div key={`light-${front}`} aria-hidden="true" className="ring-light absolute inset-x-0 top-[10%] -bottom-12 -z-10 pointer-events-none" />}
+          {settled && <div key={`light-${front}`} aria-hidden="true" className="ring-light absolute inset-x-0 top-0 -bottom-8 -z-10 pointer-events-none" />}
           <button onClick={() => stepBy(-1)} aria-label="Previous archetype" className={RING_ARROW}>‹</button>
           <div className={`flex-1 min-w-0 bg-gray-800 border rounded-xl overflow-hidden flex transition-[border-color,box-shadow] duration-500 ${settled ? 'border-lime-300/40 shadow-[0_0_24px_rgba(190,255,90,0.18)]' : 'border-gray-700'}`}>
             <Link to={`/archetypes/${nameToSlug(deck.archetype_name)}`}
