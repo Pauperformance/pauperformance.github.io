@@ -3,7 +3,7 @@
   "version": "0.1.0",
   "type": "module",
   "scripts": {
-    "prebuild": "node scripts/build-data.mjs",
+    "prebuild": "node scripts/build-data.mjs && node scripts/check-links.mjs",
     "predev": "node scripts/build-data.mjs",
     "dev": "vite",
     "build": "vite build && node scripts/prerender.mjs",
