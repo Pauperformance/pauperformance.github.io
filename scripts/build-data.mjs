@@ -685,6 +685,7 @@ readdirSync(videoDir).forEach(function(archetypeName) {
       date: v.date,
       creator_name: v.creator_name || null,
       deck_name: v.deck_name || null,
+      deck_url: v.deck_url || null,
       archetype: archetypeName,
       video_id: v.video_id,
       is_short: v.is_short === true,
