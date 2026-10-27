@@ -319,6 +319,8 @@ function BrainstormSection() {
 
   const front = wrap(Math.round(rot))
   const deck = decks[front]
+  // At rest on a glyph: it reads as selected and its card as opened
+  const settled = Math.abs(rot - Math.round(rot)) < 1e-3 && !dragRef.current
 
   return (
     <section>
@@ -354,7 +356,7 @@ function BrainstormSection() {
                   filter: near > 0.5 ? `drop-shadow(0 0 ${12 * near}px rgba(190, 255, 90, ${0.7 * near}))` : undefined,
                 }}>
                 <img src={`/images/brainstorm/glyph-${String(i).padStart(2, '0')}.webp`} alt="" draggable={false}
-                  className="w-full pointer-events-none" />
+                  className={`w-full pointer-events-none ${settled && i === front ? 'glyph-selected' : ''}`} />
               </button>
             )
           })}
@@ -363,38 +365,40 @@ function BrainstormSection() {
             style={{ left: `${HEADDRESS.left * 100}%`, width: `${HEADDRESS.width * 100}%`, zIndex: HEADDRESS_Z }} />
         </div>
 
-        <div className="mt-3 flex items-stretch gap-2">
+        <div className="mt-3 relative isolate flex items-stretch gap-2">
+          {settled && <div key={`light-${front}`} aria-hidden="true" className="ring-light absolute inset-x-0 top-1/4 -bottom-16 -z-10 pointer-events-none" />}
           <button onClick={() => stepBy(-1)} aria-label="Previous archetype" className={RING_ARROW}>‹</button>
-          <div className="flex-1 min-w-0 bg-gray-800 border border-gray-700 rounded-xl overflow-hidden flex">
+          <div key={settled ? `card-${front}` : 'card-moving'}
+            className={`flex-1 min-w-0 bg-gray-800 border rounded-xl overflow-hidden flex transition-[border-color,box-shadow] duration-500 ${settled ? 'ring-card-open border-lime-300/40 shadow-[0_0_24px_rgba(190,255,90,0.18)]' : 'border-gray-700'}`}>
             <Link to={`/archetypes/${nameToSlug(deck.archetype_name)}`}
-              className="w-28 sm:w-56 shrink-0 bg-gray-900 flex items-center group">
-              <div className="w-full aspect-[4/3] overflow-hidden">
-                {deck.featured_image
-                  // Full card scan: oversize it so only the art box shows
-                  ? <img src={deck.featured_image} alt={deck.archetype_name}
-                      style={{ width: '119%', maxWidth: 'none', marginLeft: '-9.5%', marginTop: '-18.3%' }}
-                      className="block origin-[50%_30%] group-hover:scale-110 transition-transform duration-300" />
-                  : <div className="w-full h-full flex items-center justify-center text-gray-600 text-xs">No image</div>
-                }
-              </div>
+              className="relative w-28 sm:w-44 shrink-0 bg-gray-900 overflow-hidden group">
+              {deck.featured_image
+                // Scryfall's art crop of the same card: the artwork without its frame
+                ? <img src={deck.featured_image.replace('/normal/', '/art_crop/')} alt={deck.archetype_name}
+                    className="absolute inset-0 w-full h-full object-cover group-hover:scale-110 transition-transform duration-300" />
+                : <div className="absolute inset-0 flex items-center justify-center text-gray-600 text-xs">No image</div>
+              }
             </Link>
-            <div className="p-3 sm:p-4 space-y-2 min-w-0">
-              <div className="flex items-center gap-2 flex-wrap">
-                <span className="text-3xl font-bold text-gray-400 font-mono leading-none">#{front + 1}</span>
+            <div className="flex-1 px-3 py-2.5 sm:px-4 sm:py-3 space-y-1.5 min-w-0">
+              {/* The type tags sit top-right: beside the rank on phones, with the
+                  name on the next line; at the end of the name's line otherwise */}
+              <div className="flex flex-wrap items-center gap-x-2 gap-y-1.5">
+                <span className="order-1 text-3xl font-bold text-gray-400 font-mono leading-none">#{front + 1}</span>
+                <div className="order-2 sm:order-5 ml-auto self-start flex flex-wrap justify-end gap-1">
+                  {deck.game_type.map(g => (
+                    <span key={g} className="text-xs text-gray-300 bg-gray-700 rounded-md px-2 py-1 leading-none">{g}</span>
+                  ))}
+                </div>
+                <div className="order-3 basis-full h-0 sm:hidden" />
                 <Link to={`/archetypes/${nameToSlug(deck.archetype_name)}`}
-                  className="text-lg font-semibold text-white hover:text-amber-400 transition-colors">{deck.archetype_name}</Link>
-                <div className="flex items-center gap-0.5">
+                  className="order-4 text-lg font-semibold text-white hover:text-amber-400 transition-colors">{deck.archetype_name}</Link>
+                <div className="order-4 flex items-center gap-0.5">
                   {deck.dominant_mana.map(m => (
                     <img key={m} src={`/images/mana/${m}.png`} alt={m} className="w-4 h-4" />
                   ))}
                 </div>
               </div>
-              <div className="flex items-center gap-2 flex-wrap">
-                <span className="text-lg text-amber-400 font-mono">Meta: {deck.meta_share.toFixed(1)}%</span>
-                {deck.game_type.map(g => (
-                  <span key={g} className="text-[10px] text-gray-400 bg-gray-700 rounded px-1 py-0.5 leading-none">{g}</span>
-                ))}
-              </div>
+              <span className="block text-lg text-amber-400 font-mono">Meta: {deck.meta_share.toFixed(1)}%</span>
               {deck.staples.length > 0 && (
                 <div className="flex flex-wrap gap-1">
                   {deck.staples.map(card => (
