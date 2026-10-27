@@ -184,6 +184,8 @@ const HEADDRESS_Z = 30
 
 const wrap = (i) => ((i % GLYPHS) + GLYPHS) % GLYPHS
 
+const RING_ARROW = 'shrink-0 w-9 sm:w-12 flex items-center justify-center rounded-xl border border-gray-700 bg-gray-800 text-3xl leading-none text-gray-400 hover:border-amber-400/50 hover:text-amber-400 transition-colors'
+
 function BrainstormSection() {
   const [decks, setDecks] = useState([])
   const [rot, setRot] = useState(0)
@@ -192,6 +194,8 @@ function BrainstormSection() {
   const frameRef = useRef(null)
   const dragRef = useRef(null)
   const draggedRef = useRef(false)
+  const introRef = useRef(false)
+  const interactedRef = useRef(false)
   const sceneRef = useRef(null)
   const cardPages = useCardPages()
   const { bind: bindPreview, preview } = useCardPreview()
@@ -210,13 +214,13 @@ function BrainstormSection() {
   // Turn the ring to the target angle, taking longer the further it goes.
   // Clicks and keys ease in and out; a released drag is already moving, so it
   // only eases out.
-  const animateTo = (target, { fromDrag = false } = {}) => {
+  const animateTo = (target, { fromDrag = false, duration, onDone } = {}) => {
     targetRef.current = target
     cancelAnimationFrame(frameRef.current)
     if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) return setNow(target)
     const from = rotRef.current
     const distance = target - from
-    const duration = 350 + 160 * Math.abs(distance)
+    duration ??= 350 + 160 * Math.abs(distance)
     const ease = fromDrag
       ? (t) => 1 - Math.pow(1 - t, 3)
       : (t) => (t < 0.5 ? 4 * t * t * t : 1 - Math.pow(-2 * t + 2, 3) / 2)
@@ -225,12 +229,39 @@ function BrainstormSection() {
       const t = Math.min((now - start) / duration, 1)
       setNow(from + distance * ease(t))
       if (t < 1) frameRef.current = requestAnimationFrame(step)
+      else onDone?.()
     }
     frameRef.current = requestAnimationFrame(step)
   }
 
+  // The first time the ring comes into view it makes one slow turn, to show
+  // that it can be spun
+  useEffect(() => {
+    const scene = sceneRef.current
+    if (!scene || window.matchMedia('(prefers-reduced-motion: reduce)').matches) return
+    const observer = new IntersectionObserver(([entry]) => {
+      if (!entry.isIntersecting) return
+      observer.disconnect()
+      if (interactedRef.current) return
+      introRef.current = true
+      animateTo(GLYPHS, { duration: 9000, onDone: () => { introRef.current = false } })
+    }, { threshold: 0.5 })
+    observer.observe(scene)
+    return () => observer.disconnect()
+  }, [decks.length])
+
+  // Any interaction cancels the intro turn where it is
+  const interrupt = () => {
+    interactedRef.current = true
+    if (!introRef.current) return
+    introRef.current = false
+    cancelAnimationFrame(frameRef.current)
+    targetRef.current = Math.round(rotRef.current)
+  }
+
   // Bring deck i to the front the short way round
   const focus = (i) => {
+    interrupt()
     const base = targetRef.current
     let delta = wrap(i - base)
     if (delta > GLYPHS / 2) delta -= GLYPHS
@@ -239,6 +270,7 @@ function BrainstormSection() {
 
   const onPointerDown = (e) => {
     if (e.button !== 0) return
+    interrupt()
     cancelAnimationFrame(frameRef.current)
     draggedRef.current = false
     dragRef.current = { x: e.clientX, rot: rotRef.current, moved: false, lastX: e.clientX, lastT: e.timeStamp, v: 0 }
@@ -265,13 +297,20 @@ function BrainstormSection() {
     const drag = dragRef.current
     dragRef.current = null
     draggedRef.current = !!drag?.moved
-    // A flick carries on for a few glyphs before snapping
+    // A flick carries on for a few glyphs before snapping; a press that stopped
+    // the ring between glyphs settles on the nearest one
     if (drag?.moved) animateTo(Math.round(rotRef.current - drag.v * 250), { fromDrag: true })
+    else if (rotRef.current !== Math.round(rotRef.current)) animateTo(Math.round(rotRef.current))
+  }
+
+  const stepBy = (by) => {
+    interrupt()
+    focus(Math.round(targetRef.current) + by)
   }
 
   const onKeyDown = (e) => {
-    if (e.key === 'ArrowLeft') focus(Math.round(targetRef.current) - 1)
-    else if (e.key === 'ArrowRight') focus(Math.round(targetRef.current) + 1)
+    if (e.key === 'ArrowLeft') stepBy(-1)
+    else if (e.key === 'ArrowRight') stepBy(1)
     else return
     e.preventDefault()
   }
@@ -324,52 +363,48 @@ function BrainstormSection() {
             style={{ left: `${HEADDRESS.left * 100}%`, width: `${HEADDRESS.width * 100}%`, zIndex: HEADDRESS_Z }} />
         </div>
 
-        <div className="mt-3 flex items-center justify-between gap-3 text-sm text-gray-400">
-          <button onClick={() => focus(Math.round(targetRef.current) - 1)} aria-label="Previous archetype"
-            className="px-3 py-1 rounded-md border border-gray-700 hover:border-amber-400/50 hover:text-amber-400 transition-colors">‹</button>
-          <span className="text-xs">Drag the glyphs, click one, or use the arrow keys</span>
-          <button onClick={() => focus(Math.round(targetRef.current) + 1)} aria-label="Next archetype"
-            className="px-3 py-1 rounded-md border border-gray-700 hover:border-amber-400/50 hover:text-amber-400 transition-colors">›</button>
-        </div>
-
-        <div className="mt-3 bg-gray-800 border border-gray-700 rounded-xl overflow-hidden flex">
-          <Link to={`/archetypes/${nameToSlug(deck.archetype_name)}`}
-            className="w-28 sm:w-56 shrink-0 bg-gray-900 flex items-center group">
-            <div className="w-full aspect-[4/3] overflow-hidden">
-              {deck.featured_image
-                // Full card scan: oversize it so only the art box shows
-                ? <img src={deck.featured_image} alt={deck.archetype_name}
-                    style={{ width: '119%', maxWidth: 'none', marginLeft: '-9.5%', marginTop: '-18.3%' }}
-                    className="block origin-[50%_30%] group-hover:scale-110 transition-transform duration-300" />
-                : <div className="w-full h-full flex items-center justify-center text-gray-600 text-xs">No image</div>
-              }
-            </div>
-          </Link>
-          <div className="p-3 sm:p-4 space-y-2 min-w-0">
-            <div className="flex items-center gap-2 flex-wrap">
-              <span className="text-xs text-gray-500 font-mono">#{front + 1}</span>
-              <Link to={`/archetypes/${nameToSlug(deck.archetype_name)}`}
-                className="text-lg font-semibold text-white hover:text-amber-400 transition-colors">{deck.archetype_name}</Link>
-              <div className="flex items-center gap-0.5">
-                {deck.dominant_mana.map(m => (
-                  <img key={m} src={`/images/mana/${m}.png`} alt={m} className="w-4 h-4" />
+        <div className="mt-3 flex items-stretch gap-2">
+          <button onClick={() => stepBy(-1)} aria-label="Previous archetype" className={RING_ARROW}>‹</button>
+          <div className="flex-1 min-w-0 bg-gray-800 border border-gray-700 rounded-xl overflow-hidden flex">
+            <Link to={`/archetypes/${nameToSlug(deck.archetype_name)}`}
+              className="w-28 sm:w-56 shrink-0 bg-gray-900 flex items-center group">
+              <div className="w-full aspect-[4/3] overflow-hidden">
+                {deck.featured_image
+                  // Full card scan: oversize it so only the art box shows
+                  ? <img src={deck.featured_image} alt={deck.archetype_name}
+                      style={{ width: '119%', maxWidth: 'none', marginLeft: '-9.5%', marginTop: '-18.3%' }}
+                      className="block origin-[50%_30%] group-hover:scale-110 transition-transform duration-300" />
+                  : <div className="w-full h-full flex items-center justify-center text-gray-600 text-xs">No image</div>
+                }
+              </div>
+            </Link>
+            <div className="p-3 sm:p-4 space-y-2 min-w-0">
+              <div className="flex items-center gap-2 flex-wrap">
+                <span className="text-xs text-gray-500 font-mono">#{front + 1}</span>
+                <Link to={`/archetypes/${nameToSlug(deck.archetype_name)}`}
+                  className="text-lg font-semibold text-white hover:text-amber-400 transition-colors">{deck.archetype_name}</Link>
+                <div className="flex items-center gap-0.5">
+                  {deck.dominant_mana.map(m => (
+                    <img key={m} src={`/images/mana/${m}.png`} alt={m} className="w-4 h-4" />
+                  ))}
+                </div>
+              </div>
+              <div className="flex items-center gap-2 flex-wrap">
+                <span className="text-lg text-amber-400 font-mono">Meta: {deck.meta_share.toFixed(1)}%</span>
+                {deck.game_type.map(g => (
+                  <span key={g} className="text-[10px] text-gray-400 bg-gray-700 rounded px-1 py-0.5 leading-none">{g}</span>
                 ))}
               </div>
+              {deck.staples.length > 0 && (
+                <div className="flex flex-wrap gap-1">
+                  {deck.staples.map(card => (
+                    <StapleLink key={card.name} card={card} cardPages={cardPages} bindPreview={bindPreview} />
+                  ))}
+                </div>
+              )}
             </div>
-            <div className="flex items-center gap-2 flex-wrap">
-              <span className="text-lg text-amber-400 font-mono">Meta: {deck.meta_share.toFixed(1)}%</span>
-              {deck.game_type.map(g => (
-                <span key={g} className="text-[10px] text-gray-400 bg-gray-700 rounded px-1 py-0.5 leading-none">{g}</span>
-              ))}
-            </div>
-            {deck.staples.length > 0 && (
-              <div className="flex flex-wrap gap-1">
-                {deck.staples.map(card => (
-                  <StapleLink key={card.name} card={card} cardPages={cardPages} bindPreview={bindPreview} />
-                ))}
-              </div>
-            )}
           </div>
+          <button onClick={() => stepBy(1)} aria-label="Next archetype" className={RING_ARROW}>›</button>
         </div>
       </div>
       {preview}
