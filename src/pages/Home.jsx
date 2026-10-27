@@ -207,16 +207,24 @@ function BrainstormSection() {
     setRot(value)
   }
 
-  // Ease the ring towards the target angle
-  const animateTo = (target) => {
+  // Turn the ring to the target angle, taking longer the further it goes.
+  // Clicks and keys ease in and out; a released drag is already moving, so it
+  // only eases out.
+  const animateTo = (target, { fromDrag = false } = {}) => {
     targetRef.current = target
     cancelAnimationFrame(frameRef.current)
     if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) return setNow(target)
-    const step = () => {
-      const delta = targetRef.current - rotRef.current
-      if (Math.abs(delta) < 0.001) return setNow(targetRef.current)
-      setNow(rotRef.current + delta * 0.14)
-      frameRef.current = requestAnimationFrame(step)
+    const from = rotRef.current
+    const distance = target - from
+    const duration = 350 + 160 * Math.abs(distance)
+    const ease = fromDrag
+      ? (t) => 1 - Math.pow(1 - t, 3)
+      : (t) => (t < 0.5 ? 4 * t * t * t : 1 - Math.pow(-2 * t + 2, 3) / 2)
+    const start = performance.now()
+    const step = (now) => {
+      const t = Math.min((now - start) / duration, 1)
+      setNow(from + distance * ease(t))
+      if (t < 1) frameRef.current = requestAnimationFrame(step)
     }
     frameRef.current = requestAnimationFrame(step)
   }
@@ -258,7 +266,7 @@ function BrainstormSection() {
     dragRef.current = null
     draggedRef.current = !!drag?.moved
     // A flick carries on for a few glyphs before snapping
-    if (drag?.moved) animateTo(Math.round(rotRef.current - drag.v * 250))
+    if (drag?.moved) animateTo(Math.round(rotRef.current - drag.v * 250), { fromDrag: true })
   }
 
   const onKeyDown = (e) => {
