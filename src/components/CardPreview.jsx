@@ -11,7 +11,7 @@ import { cardLinkSlug, loadCardPages } from '../utils/cardPages'
 // shows the same information.
 //
 // Cards with no data (e.g. banned cards, which aren't in the card index)
-// show no preview.
+// show no preview, or only their image when the trigger supplies one.
 
 const OPEN_DELAY = 200
 const CLOSE_DELAY = 100
@@ -186,8 +186,11 @@ function PreviewPanel({ target }) {
     setPos({ left, top, origin })
   }, [target, card])
 
-  if (card === null) return null
-  const images = !target.showImage ? [] : card ? card.images : [null]
+  if (card === null && !target.image) return null
+  const images = !target.showImage ? []
+    : card ? card.images
+    : card === null ? [target.image]
+    : [null]
   return createPortal(
     <div
       ref={panelRef}
@@ -217,6 +220,7 @@ function PreviewPanel({ target }) {
 //   slug       the card's slug, when known (otherwise looked up from the name)
 //   showImage  false to show the Oracle text only, when the trigger is
 //              already the card's image
+//   image      image to show alone for a card with no data
 export function useCardPreview() {
   const [target, setTarget] = useState(null)
   const openTimer = useRef(null)
@@ -260,8 +264,8 @@ export function useCardPreview() {
     clearTimeout(closeTimer.current)
   }, [])
 
-  const bind = useCallback((name, { slug, showImage = true } = {}) => hoverCapable ? {
-    onMouseEnter: e => show({ el: e.currentTarget, name, slug, showImage }),
+  const bind = useCallback((name, { slug, showImage = true, image } = {}) => hoverCapable ? {
+    onMouseEnter: e => show({ el: e.currentTarget, name, slug, showImage, image }),
     onMouseLeave: hide,
   } : {}, [hoverCapable, show, hide])
 

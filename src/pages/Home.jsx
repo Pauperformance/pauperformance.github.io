@@ -4,16 +4,6 @@ import { Link } from 'react-router-dom'
 import Layout from '../components/Layout'
 import { nameToSlug } from '../utils/slugs'
 
-const PAGES = [
-  { to: '/archetypes', label: 'Archetypes Index', description: 'A curated list of the most important Pauper archetypes.' },
-  { to: '/cards', label: 'Cards Index', description: 'All cards played in Pauper decks, with archetype information.' },
-  { to: '/creators', label: 'Creators', description: 'Content creators covering the Pauper format.' },
-  { to: '/sets', label: 'Set Index', description: 'Reference numbers used by Pauperformance to uniquely identify Magic sets.' },
-  { to: '/sets', label: 'Pauper Pool', description: 'How the pool of legal Pauper cards has grown over time.' },
-  { to: '/metagame', label: 'Metagame Index', description: 'Every change to the Pauper card pool, from new sets to bans and unbans.' },
-  { to: '/timeline', label: 'Format Timeline', description: 'The most important events in Pauper history.' },
-]
-
 
 const NEWS = [
   { flag: '🇬🇧', href: 'https://magic.wizards.com/en/articles/archive/news/march-7-2022-banned-and-restricted-announcement', title: 'MARCH 7, 2022 BANNED AND RESTRICTED ANNOUNCEMENT', author: 'Wizards of the Coast', date: '2022-03-07' },
@@ -137,32 +127,6 @@ function StapleLink({ card }) {
         document.body
       )}
     </>
-  )
-}
-
-// The current Pauperformance code: the most recently released set that
-// added cards to the Pauper pool (set codes are not chronological).
-function CurrentCodeSection() {
-  const [set, setSet] = useState(null)
-
-  useEffect(() => {
-    const today = new Date().toISOString().slice(0, 10)
-    fetch('/data/sets.json').then(r => r.json()).then(sets => {
-      const released = sets.filter(s => s.pauper_pool && s.date <= today)
-      if (released.length) setSet(released.reduce((a, b) => (b.date > a.date || (b.date === a.date && b.code > a.code) ? b : a)))
-    })
-  }, [])
-
-  if (!set) return null
-
-  return (
-    <section className="bg-gray-800 border border-gray-700 rounded-xl p-6">
-      <p className="text-sm text-gray-500 uppercase tracking-widest mb-1">Current code</p>
-      <p className="text-2xl font-bold text-white">
-        {set.code} <span className="text-base font-normal text-gray-400">— {set.name}</span>
-      </p>
-      <p className="text-sm text-gray-500 mt-1">Released {set.date}</p>
-    </section>
   )
 }
 
@@ -353,34 +317,17 @@ function MetagameSection() {
   )
 }
 
-function PageCard({ to, href, label, description }) {
-  const cls = 'block bg-gray-800 border border-gray-700 rounded-xl p-5 hover:border-amber-400/50 transition-all group'
-  const inner = (
-    <>
-      <p className="font-semibold text-white group-hover:text-amber-400 transition-colors">{label}</p>
-      <p className="mt-1 text-sm text-gray-400">{description}</p>
-    </>
-  )
-  return to
-    ? <Link to={to} className={cls}>{inner}</Link>
-    : <a href={href} className={cls}>{inner}</a>
-}
-
 export default function Home() {
   return (
     <Layout>
       <div className="space-y-12">
-        <section className="bg-amber-950/40 border border-amber-400/40 rounded-xl p-4 text-sm text-amber-300">
-          🚧 We are currently restructuring the website. Some pages might be temporarily unavailable.
-        </section>
-
         <section>
           <p className="text-lg text-gray-300 leading-relaxed">
             Hello Pauper player, and welcome to the <strong className="text-white">Academy</strong>!
           </p>
           <p className="mt-4 text-gray-400 leading-relaxed">
             This website aims to be the online encyclopedia for Pauper, collecting and organising resources
-            for players with different skill levels. The Academy is currently under construction — read the{' '}
+            for players with different skill levels. The Academy is currently being restructured — read the{' '}
             <a href="./pages/faq.html" className="text-amber-400 hover:underline">FAQs</a>{' '}
             to learn more about this project and its roadmap.
           </p>
@@ -388,15 +335,6 @@ export default function Home() {
 
 
         <StatsSection />
-
-        <CurrentCodeSection />
-
-        <section>
-          <h2 className="text-xl font-semibold text-white mb-4">Pages</h2>
-          <div className="grid gap-3 sm:grid-cols-2">
-            {PAGES.map(p => <PageCard key={p.label} {...p} />)}
-          </div>
-        </section>
 
         <TopDecksSection />
 

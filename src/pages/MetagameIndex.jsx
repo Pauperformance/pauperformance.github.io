@@ -2,6 +2,7 @@ import { useState, useEffect, useMemo, useDeferredValue, useLayoutEffect, useRef
 import { useWindowVirtualizer } from '@tanstack/react-virtual'
 import Layout from '../components/Layout'
 import CardLink from '../components/PoolCardLink'
+import { useCardPreview } from '../components/CardPreview'
 import { useSearchShortcut, searchShortcutLabel } from '../utils/useSearchShortcut'
 
 // Metagames: one per event that changed the Pauper card pool (sets introducing
@@ -41,11 +42,11 @@ function matches(m, q) {
 
 // A banned or unbanned card: previewed on hover (with the printing that brought
 // it into the pool, from poolUrls), linked to its card page when it has one.
-function BanCard({ name, poolUrls, tone, highlighted }) {
-  return <CardLink card={{ name, url: poolUrls.get(name) }} tone={tone} highlighted={highlighted} />
+function BanCard({ name, poolUrls, tone, highlighted, bindPreview }) {
+  return <CardLink card={{ name, url: poolUrls.get(name) }} tone={tone} highlighted={highlighted} bindPreview={bindPreview} />
 }
 
-function MetagameEntry({ metagame, searchQuery, poolUrls, open, onToggle }) {
+function MetagameEntry({ metagame, searchQuery, poolUrls, open, onToggle, bindPreview }) {
   const [hovered, setHovered] = useState(false)
   const q = searchQuery.toLowerCase()
   const textMatch = !!q && matchesText(metagame, q)
@@ -97,7 +98,7 @@ function MetagameEntry({ metagame, searchQuery, poolUrls, open, onToggle }) {
                 {/* the header already names a lone set */}
                 {mixed && <p className="text-sm text-white mb-2">{s.name}</p>}
                 <div className="flex flex-wrap gap-2">
-                  {s.visible.map(card => <CardLink key={card.url} card={card} highlighted={highlight} />)}
+                  {s.visible.map(card => <CardLink key={card.url} card={card} highlighted={highlight} bindPreview={bindPreview} />)}
                 </div>
               </div>
             ))}
@@ -113,13 +114,13 @@ function MetagameEntry({ metagame, searchQuery, poolUrls, open, onToggle }) {
                 {b.visibleBanned.length > 0 && (
                   <div className="flex flex-wrap gap-2 items-center mb-2">
                     <span className="text-xs text-gray-500 w-16">Banned</span>
-                    {b.visibleBanned.map(n => <BanCard key={n} name={n} poolUrls={poolUrls} tone="banned" highlighted={highlight} />)}
+                    {b.visibleBanned.map(n => <BanCard key={n} name={n} poolUrls={poolUrls} tone="banned" highlighted={highlight} bindPreview={bindPreview} />)}
                   </div>
                 )}
                 {b.visibleUnbanned.length > 0 && (
                   <div className="flex flex-wrap gap-2 items-center">
                     <span className="text-xs text-gray-500 w-16">Unbanned</span>
-                    {b.visibleUnbanned.map(n => <BanCard key={n} name={n} poolUrls={poolUrls} tone="unbanned" highlighted={highlight} />)}
+                    {b.visibleUnbanned.map(n => <BanCard key={n} name={n} poolUrls={poolUrls} tone="unbanned" highlighted={highlight} bindPreview={bindPreview} />)}
                   </div>
                 )}
                 {!b.banned.length && !b.unbanned.length && (
@@ -146,6 +147,7 @@ function MetagameEntry({ metagame, searchQuery, poolUrls, open, onToggle }) {
 
 export default function MetagameIndex() {
   const [metagames, setMetagames] = useState([])
+  const { bind: bindPreview, preview } = useCardPreview()
   const [loading, setLoading] = useState(true)
   const [error, setError] = useState(false)
   const [search, setSearch] = useState('')
@@ -258,6 +260,7 @@ export default function MetagameIndex() {
                         poolUrls={poolUrls}
                         open={!!query !== toggled.has(m.code)}
                         onToggle={() => toggle(m.code)}
+                        bindPreview={bindPreview}
                       />
                     </div>
                   )
@@ -267,6 +270,7 @@ export default function MetagameIndex() {
           )
         )}
       </div>
+      {preview}
     </Layout>
   )
 }

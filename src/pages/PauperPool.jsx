@@ -2,6 +2,7 @@ import { useState, useEffect, useMemo, useDeferredValue, useLayoutEffect, useRef
 import { useWindowVirtualizer } from '@tanstack/react-virtual'
 import Layout from '../components/Layout'
 import CardLink from '../components/PoolCardLink'
+import { useCardPreview } from '../components/CardPreview'
 import { useSearchShortcut, searchShortcutLabel } from '../utils/useSearchShortcut'
 
 // q: a lowercase query
@@ -9,7 +10,7 @@ function setNameMatches(set, q) {
   return set.name.toLowerCase().includes(q) || set.scryfall.toLowerCase().includes(q) || String(set.code).includes(q)
 }
 
-function SetEntry({ set, searchQuery, open, onToggle }) {
+function SetEntry({ set, searchQuery, open, onToggle, bindPreview }) {
   const [hovered, setHovered] = useState(false)
   const hasCards = set.cards.length > 0
   const q = searchQuery.toLowerCase()
@@ -48,7 +49,7 @@ function SetEntry({ set, searchQuery, open, onToggle }) {
         {open && hasCards && (
           <div className="mt-4 pt-4 border-t border-gray-700 flex flex-wrap gap-2">
             {visibleCards.map(card => (
-              <CardLink key={card.url} card={card} highlighted={!!q && !setNameMatch} />
+              <CardLink key={card.url} card={card} highlighted={!!q && !setNameMatch} bindPreview={bindPreview} />
             ))}
           </div>
         )}
@@ -59,6 +60,7 @@ function SetEntry({ set, searchQuery, open, onToggle }) {
 
 export default function PauperPool() {
   const [pool, setPool] = useState([])
+  const { bind: bindPreview, preview } = useCardPreview()
   const [loading, setLoading] = useState(true)
   const [filter, setFilter] = useState('relevant')
   const [search, setSearch] = useState('')
@@ -204,6 +206,7 @@ export default function PauperPool() {
                           searchQuery={query}
                           open={set.cards.length > 0 && isSearching !== toggled.has(set.code)}
                           onToggle={() => toggle(set.code)}
+                          bindPreview={bindPreview}
                         />
                       </div>
                     )
@@ -214,6 +217,7 @@ export default function PauperPool() {
           </>
         )}
       </div>
+      {preview}
     </Layout>
   )
 }
