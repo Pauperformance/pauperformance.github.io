@@ -198,7 +198,8 @@ const easeInOut = (t) => (t < 0.5 ? 4 * t * t * t : 1 - Math.pow(-2 * t + 2, 3) 
 // right-left swings, and how long it lasts (ms)
 const WIGGLE = { amplitude: 0.18, swings: 2, duration: 1800 }
 
-const RING_ARROW = 'shrink-0 w-9 sm:w-12 flex items-center justify-center rounded-xl border border-gray-700 bg-gray-800 text-3xl leading-none text-gray-400 hover:border-amber-400/50 hover:text-amber-400 transition-colors'
+// Phones: short tabs centred on the card; wider: as tall as the card
+const RING_ARROW = 'shrink-0 self-center h-20 w-7 rounded-lg text-2xl sm:self-stretch sm:h-auto sm:w-12 sm:rounded-xl sm:text-3xl flex items-center justify-center border border-gray-700 bg-gray-800 leading-none text-gray-400 hover:border-amber-400/50 hover:text-amber-400 transition-colors'
 
 function BrainstormSection() {
   const [decks, setDecks] = useState([])
@@ -351,7 +352,6 @@ function BrainstormSection() {
 
   return (
     <section>
-      <h2 className="text-xl font-semibold text-white mb-4">Brainstorm the Meta</h2>
       <div className="max-w-3xl mx-auto">
         <div ref={sceneRef} tabIndex={0} role="listbox" aria-label="Top archetypes"
           aria-activedescendant={`glyph-${front}`}
@@ -583,26 +583,26 @@ export default function Home() {
   return (
     <Layout>
       <div className="space-y-12">
-        <section>
-          <p className="text-lg text-gray-300 leading-relaxed">
-            Hello Pauper player, and welcome to the <strong className="text-white">Academy</strong>!
-          </p>
-          <p className="mt-4 text-gray-400 leading-relaxed">
-            This website aims to be the online encyclopedia for Pauper, collecting and organising resources
-            for players with different skill levels. The Academy is currently being restructured — read the{' '}
-            <a href="./pages/faq.html" className="text-amber-400 hover:underline">FAQs</a>{' '}
-            to learn more about this project and its roadmap.
-          </p>
-        </section>
+        {/* The welcome sits close to the glyph ring it introduces */}
+        <div className="space-y-4">
+          <section>
+            <p className="text-lg text-gray-300 leading-relaxed">
+              Pauper people, welcome to the <strong className="text-white">Academy</strong>!
+            </p>
+            <p className="mt-4 text-gray-400 leading-relaxed">
+              This website is the online encyclopedia for Pauper, collecting and organising resources
+              for players with different skill levels. The Academy is currently being restructured.
+            </p>
+          </section>
 
-
-        <StatsSection />
-
-        <BrainstormSection />
+          <BrainstormSection />
+        </div>
 
         <TopDecksSection />
 
         <MetagameSection />
+
+        <StatsSection />
 
         <section>
           <h2 className="text-xl font-semibold text-white mb-4">Newspauper</h2>
