@@ -1,8 +1,8 @@
 {
     "archetypes": {
         "py/set": [
-            "MonoG Tron",
-            "MonoR Tron"
+            "MonoR Tron",
+            "MonoG Tron"
         ]
     },
     "scryfall": {
@@ -19,7 +19,7 @@
         "color_identity": [],
         "colors": [],
         "digital": false,
-        "edhrec_rank": 4283,
+        "edhrec_rank": 4544,
         "finishes": [
             "nonfoil",
             "foil"
@@ -28,6 +28,7 @@
         "foil": true,
         "frame": "2015",
         "full_art": false,
+        "game_changer": false,
         "games": [
             "paper",
             "mtgo"
@@ -36,13 +37,20 @@
         "id": "322491d2-d082-4d38-8d81-8588c011e725",
         "illustration_id": "78bd834a-cb67-4d4d-95e7-63470bdd2110",
         "image_status": "highres_scan",
+        "image_updated_at": "2026-07-13T07:45:54Z",
         "image_uris": {
-            "art_crop": "https://cards.scryfall.io/art_crop/front/3/2/322491d2-d082-4d38-8d81-8588c011e725.jpg?1608911533",
-            "border_crop": "https://cards.scryfall.io/border_crop/front/3/2/322491d2-d082-4d38-8d81-8588c011e725.jpg?1608911533",
-            "large": "https://cards.scryfall.io/large/front/3/2/322491d2-d082-4d38-8d81-8588c011e725.jpg?1608911533",
-            "normal": "https://cards.scryfall.io/normal/front/3/2/322491d2-d082-4d38-8d81-8588c011e725.jpg?1608911533",
-            "png": "https://cards.scryfall.io/png/front/3/2/322491d2-d082-4d38-8d81-8588c011e725.png?1608911533",
-            "small": "https://cards.scryfall.io/small/front/3/2/322491d2-d082-4d38-8d81-8588c011e725.jpg?1608911533"
+            "art": "https://cards.scryfall.io/art/front/3/2/322491d2-d082-4d38-8d81-8588c011e725.webp?1783928754",
+            "art_crop": "https://cards.scryfall.io/art_crop/front/3/2/322491d2-d082-4d38-8d81-8588c011e725.jpg?1783928754",
+            "border_crop": "https://cards.scryfall.io/border_crop/front/3/2/322491d2-d082-4d38-8d81-8588c011e725.jpg?1783928754",
+            "crop": "https://cards.scryfall.io/crop/front/3/2/322491d2-d082-4d38-8d81-8588c011e725.webp?1783928754",
+            "display": "https://cards.scryfall.io/display/front/3/2/322491d2-d082-4d38-8d81-8588c011e725.webp?1783928754",
+            "grid": "https://cards.scryfall.io/grid/front/3/2/322491d2-d082-4d38-8d81-8588c011e725.webp?1783928754",
+            "jpeg": "https://cards.scryfall.io/normal/front/3/2/322491d2-d082-4d38-8d81-8588c011e725.jpg?1783928754",
+            "large": "https://cards.scryfall.io/large/front/3/2/322491d2-d082-4d38-8d81-8588c011e725.jpg?1783928754",
+            "normal": "https://cards.scryfall.io/normal/front/3/2/322491d2-d082-4d38-8d81-8588c011e725.jpg?1783928754",
+            "png": "https://cards.scryfall.io/png/front/3/2/322491d2-d082-4d38-8d81-8588c011e725.png?1783928754",
+            "small": "https://cards.scryfall.io/small/front/3/2/322491d2-d082-4d38-8d81-8588c011e725.jpg?1783928754",
+            "thumb": "https://cards.scryfall.io/thumb/front/3/2/322491d2-d082-4d38-8d81-8588c011e725.webp?1783928754"
         },
         "keywords": [
             "Cascade"
@@ -51,13 +59,13 @@
         "layout": "normal",
         "legalities": {
             "alchemy": "not_legal",
-            "brawl": "not_legal",
+            "brawl": "legal",
             "commander": "legal",
+            "competitivebrawl": "legal",
             "duel": "legal",
-            "explorer": "not_legal",
             "future": "not_legal",
-            "gladiator": "not_legal",
-            "historic": "not_legal",
+            "gladiator": "legal",
+            "historic": "legal",
             "legacy": "legal",
             "modern": "not_legal",
             "oathbreaker": "legal",
@@ -70,7 +78,8 @@
             "premodern": "not_legal",
             "standard": "not_legal",
             "standardbrawl": "not_legal",
-            "timeless": "not_legal",
+            "timeless": "legal",
+            "tlr": "not_legal",
             "vintage": "legal"
         },
         "mana_cost": "{8}",
@@ -82,7 +91,7 @@
         "nonfoil": true,
         "object": "card",
         "oracle_id": "06fc3eb1-7a48-42a0-8a5c-d61bd5aacfff",
-        "oracle_text": "Cascade (When you cast this spell, exile cards from the top of your library until you exile a nonland card that costs less. You may cast it without paying its mana cost. Put the exiled cards on the bottom of your library in a random order.)",
+        "oracle_text": "Cascade (When you cast this spell, exile cards from the top of your library until you exile a nonland card that costs less. You may cast it without paying its mana cost. Put the exiled cards on the bottom in a random order.)",
         "oversized": false,
         "power": "7",
         "preview": {
@@ -91,26 +100,26 @@
             "source_uri": "https://twitter.com/CommandersBrew/status/1320757353491386368"
         },
         "prices": {
-            "eur": "0.15",
-            "eur_foil": "0.29",
-            "tix": "0.85",
-            "usd": "0.14",
+            "eur": "1.75",
+            "eur_foil": "3.31",
+            "tix": "7.19",
+            "usd": "0.44",
             "usd_etched": null,
-            "usd_foil": "0.27"
+            "usd_foil": "1.03"
         },
         "prints_search_uri": "https://api.scryfall.com/cards/search?order=released&q=oracleid%3A06fc3eb1-7a48-42a0-8a5c-d61bd5aacfff&unique=prints",
         "promo": false,
         "purchase_uris": {
             "cardhoarder": "https://www.cardhoarder.com/cards/85426?affiliate_id=scryfall&ref=card-profile&utm_campaign=affiliate&utm_medium=card&utm_source=scryfall",
-            "cardmarket": "https://www.cardmarket.com/en/Magic/Products/Singles/Commander-Legends/Maelstrom-Colossus?referrer=scryfall&utm_campaign=card_prices&utm_medium=text&utm_source=scryfall",
-            "tcgplayer": "https://tcgplayer.pxf.io/c/4931599/1830156/21018?subId1=api&u=https%3A%2F%2Fwww.tcgplayer.com%2Fproduct%2F226151%3Fpage%3D1"
+            "cardmarket": "https://www.cardmarket.com/en/Magic/Products?idProduct=510045&referrer=scryfall&utm_campaign=card_prices&utm_medium=text&utm_source=scryfall",
+            "tcgplayer": "https://partner.tcgplayer.com/c/4931599/1830156/21018?subId1=api&u=https%3A%2F%2Fwww.tcgplayer.com%2Fproduct%2F226151%3Fpage%3D1"
         },
         "rarity": "common",
         "related_uris": {
             "edhrec": "https://edhrec.com/route/?cc=Maelstrom+Colossus",
             "gatherer": "https://gatherer.wizards.com/Pages/Card/Details.aspx?multiverseid=497842&printed=false",
-            "tcgplayer_infinite_articles": "https://tcgplayer.pxf.io/c/4931599/1830156/21018?subId1=api&trafcat=infinite&u=https%3A%2F%2Finfinite.tcgplayer.com%2Fsearch%3FcontentMode%3Darticle%26game%3Dmagic%26partner%3Dscryfall%26q%3DMaelstrom%2BColossus",
-            "tcgplayer_infinite_decks": "https://tcgplayer.pxf.io/c/4931599/1830156/21018?subId1=api&trafcat=infinite&u=https%3A%2F%2Finfinite.tcgplayer.com%2Fsearch%3FcontentMode%3Ddeck%26game%3Dmagic%26partner%3Dscryfall%26q%3DMaelstrom%2BColossus"
+            "tcgplayer_infinite_articles": "https://partner.tcgplayer.com/c/4931599/1830156/21018?subId1=api&trafcat=tcgplayer.com%2Fsearch%2Farticles&u=https%3A%2F%2Fwww.tcgplayer.com%2Fsearch%2Farticles%3FproductLineName%3Dmagic%26q%3DMaelstrom%2BColossus",
+            "tcgplayer_infinite_decks": "https://partner.tcgplayer.com/c/4931599/1830156/21018?subId1=api&trafcat=tcgplayer.com%2Fsearch%2Fdecks&u=https%3A%2F%2Fwww.tcgplayer.com%2Fsearch%2Fdecks%3FproductLineName%3Dmagic%26q%3DMaelstrom%2BColossus"
         },
         "released_at": "2020-11-20",
         "reprint": false,

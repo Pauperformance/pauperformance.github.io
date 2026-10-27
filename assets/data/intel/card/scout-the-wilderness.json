@@ -13,14 +13,6 @@
                 "uri": "https://api.scryfall.com/cards/5ccd67d4-1a22-4378-804d-6e2c93dc4938"
             },
             {
-                "component": "combo_piece",
-                "id": "2b0f8ee9-9db6-4648-97ab-a49a16359c80",
-                "name": "A-Scout the Wilderness",
-                "object": "related_card",
-                "type_line": "Sorcery",
-                "uri": "https://api.scryfall.com/cards/2b0f8ee9-9db6-4648-97ab-a49a16359c80"
-            },
-            {
                 "component": "token",
                 "id": "8c4b0257-2ca5-4015-9d63-d7cf6e87ab9d",
                 "name": "Soldier",
@@ -48,7 +40,7 @@
             "G"
         ],
         "digital": false,
-        "edhrec_rank": 19320,
+        "edhrec_rank": 20782,
         "finishes": [
             "nonfoil",
             "foil"
@@ -66,13 +58,20 @@
         "id": "5ccd67d4-1a22-4378-804d-6e2c93dc4938",
         "illustration_id": "66abfacc-a669-490a-932c-4c91ab4027e2",
         "image_status": "highres_scan",
+        "image_updated_at": "2026-07-13T05:41:35Z",
         "image_uris": {
-            "art_crop": "https://cards.scryfall.io/art_crop/front/5/c/5ccd67d4-1a22-4378-804d-6e2c93dc4938.jpg?1673307775",
-            "border_crop": "https://cards.scryfall.io/border_crop/front/5/c/5ccd67d4-1a22-4378-804d-6e2c93dc4938.jpg?1673307775",
-            "large": "https://cards.scryfall.io/large/front/5/c/5ccd67d4-1a22-4378-804d-6e2c93dc4938.jpg?1673307775",
-            "normal": "https://cards.scryfall.io/normal/front/5/c/5ccd67d4-1a22-4378-804d-6e2c93dc4938.jpg?1673307775",
-            "png": "https://cards.scryfall.io/png/front/5/c/5ccd67d4-1a22-4378-804d-6e2c93dc4938.png?1673307775",
-            "small": "https://cards.scryfall.io/small/front/5/c/5ccd67d4-1a22-4378-804d-6e2c93dc4938.jpg?1673307775"
+            "art": "https://cards.scryfall.io/art/front/5/c/5ccd67d4-1a22-4378-804d-6e2c93dc4938.webp?1783921295",
+            "art_crop": "https://cards.scryfall.io/art_crop/front/5/c/5ccd67d4-1a22-4378-804d-6e2c93dc4938.jpg?1783921295",
+            "border_crop": "https://cards.scryfall.io/border_crop/front/5/c/5ccd67d4-1a22-4378-804d-6e2c93dc4938.jpg?1783921295",
+            "crop": "https://cards.scryfall.io/crop/front/5/c/5ccd67d4-1a22-4378-804d-6e2c93dc4938.webp?1783921295",
+            "display": "https://cards.scryfall.io/display/front/5/c/5ccd67d4-1a22-4378-804d-6e2c93dc4938.webp?1783921295",
+            "grid": "https://cards.scryfall.io/grid/front/5/c/5ccd67d4-1a22-4378-804d-6e2c93dc4938.webp?1783921295",
+            "jpeg": "https://cards.scryfall.io/normal/front/5/c/5ccd67d4-1a22-4378-804d-6e2c93dc4938.jpg?1783921295",
+            "large": "https://cards.scryfall.io/large/front/5/c/5ccd67d4-1a22-4378-804d-6e2c93dc4938.jpg?1783921295",
+            "normal": "https://cards.scryfall.io/normal/front/5/c/5ccd67d4-1a22-4378-804d-6e2c93dc4938.jpg?1783921295",
+            "png": "https://cards.scryfall.io/png/front/5/c/5ccd67d4-1a22-4378-804d-6e2c93dc4938.png?1783921295",
+            "small": "https://cards.scryfall.io/small/front/5/c/5ccd67d4-1a22-4378-804d-6e2c93dc4938.jpg?1783921295",
+            "thumb": "https://cards.scryfall.io/thumb/front/5/c/5ccd67d4-1a22-4378-804d-6e2c93dc4938.webp?1783921295"
         },
         "keywords": [
             "Kicker"
@@ -81,19 +80,20 @@
         "layout": "normal",
         "legalities": {
             "alchemy": "not_legal",
-            "brawl": "not_legal",
+            "brawl": "legal",
             "commander": "legal",
+            "competitivebrawl": "legal",
             "duel": "legal",
             "future": "not_legal",
             "gladiator": "legal",
-            "historic": "not_legal",
+            "historic": "legal",
             "legacy": "legal",
             "modern": "legal",
             "oathbreaker": "legal",
             "oldschool": "not_legal",
             "pauper": "legal",
             "paupercommander": "legal",
-            "penny": "legal",
+            "penny": "not_legal",
             "pioneer": "legal",
             "predh": "not_legal",
             "premodern": "not_legal",
@@ -121,11 +121,11 @@
         },
         "prices": {
             "eur": "0.02",
-            "eur_foil": "0.08",
+            "eur_foil": "0.06",
             "tix": "0.03",
-            "usd": "0.06",
+            "usd": "0.19",
             "usd_etched": null,
-            "usd_foil": "0.06"
+            "usd_foil": "0.26"
         },
         "prints_search_uri": "https://api.scryfall.com/cards/search?order=released&q=oracleid%3A422aca0b-8e8f-4774-9a20-6f7a1cae967e&unique=prints",
         "promo": false,

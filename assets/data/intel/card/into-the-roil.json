@@ -1,9 +1,9 @@
 {
     "archetypes": {
         "py/set": [
+            "Dimir Alchemy",
             "MonoU Delver",
-            "Dimir Delver",
-            "Dimir Alchemy"
+            "Dimir Delver"
         ]
     },
     "scryfall": {
@@ -24,7 +24,7 @@
             "U"
         ],
         "digital": false,
-        "edhrec_rank": 3005,
+        "edhrec_rank": 5400,
         "finishes": [
             "nonfoil",
             "foil"
@@ -33,6 +33,7 @@
         "foil": true,
         "frame": "2003",
         "full_art": false,
+        "game_changer": false,
         "games": [
             "paper",
             "mtgo"
@@ -41,13 +42,20 @@
         "id": "5dba9972-dd8b-407b-9374-a8f0ed1a96db",
         "illustration_id": "8ffead81-8d84-4a8a-969f-dbc046668bfc",
         "image_status": "highres_scan",
+        "image_updated_at": "2026-07-13T11:29:24Z",
         "image_uris": {
-            "art_crop": "https://cards.scryfall.io/art_crop/front/5/d/5dba9972-dd8b-407b-9374-a8f0ed1a96db.jpg?1562612627",
-            "border_crop": "https://cards.scryfall.io/border_crop/front/5/d/5dba9972-dd8b-407b-9374-a8f0ed1a96db.jpg?1562612627",
-            "large": "https://cards.scryfall.io/large/front/5/d/5dba9972-dd8b-407b-9374-a8f0ed1a96db.jpg?1562612627",
-            "normal": "https://cards.scryfall.io/normal/front/5/d/5dba9972-dd8b-407b-9374-a8f0ed1a96db.jpg?1562612627",
-            "png": "https://cards.scryfall.io/png/front/5/d/5dba9972-dd8b-407b-9374-a8f0ed1a96db.png?1562612627",
-            "small": "https://cards.scryfall.io/small/front/5/d/5dba9972-dd8b-407b-9374-a8f0ed1a96db.jpg?1562612627"
+            "art": "https://cards.scryfall.io/art/front/5/d/5dba9972-dd8b-407b-9374-a8f0ed1a96db.webp?1783942164",
+            "art_crop": "https://cards.scryfall.io/art_crop/front/5/d/5dba9972-dd8b-407b-9374-a8f0ed1a96db.jpg?1783942164",
+            "border_crop": "https://cards.scryfall.io/border_crop/front/5/d/5dba9972-dd8b-407b-9374-a8f0ed1a96db.jpg?1783942164",
+            "crop": "https://cards.scryfall.io/crop/front/5/d/5dba9972-dd8b-407b-9374-a8f0ed1a96db.webp?1783942164",
+            "display": "https://cards.scryfall.io/display/front/5/d/5dba9972-dd8b-407b-9374-a8f0ed1a96db.webp?1783942164",
+            "grid": "https://cards.scryfall.io/grid/front/5/d/5dba9972-dd8b-407b-9374-a8f0ed1a96db.webp?1783942164",
+            "jpeg": "https://cards.scryfall.io/normal/front/5/d/5dba9972-dd8b-407b-9374-a8f0ed1a96db.jpg?1783942164",
+            "large": "https://cards.scryfall.io/large/front/5/d/5dba9972-dd8b-407b-9374-a8f0ed1a96db.jpg?1783942164",
+            "normal": "https://cards.scryfall.io/normal/front/5/d/5dba9972-dd8b-407b-9374-a8f0ed1a96db.jpg?1783942164",
+            "png": "https://cards.scryfall.io/png/front/5/d/5dba9972-dd8b-407b-9374-a8f0ed1a96db.png?1783942164",
+            "small": "https://cards.scryfall.io/small/front/5/d/5dba9972-dd8b-407b-9374-a8f0ed1a96db.jpg?1783942164",
+            "thumb": "https://cards.scryfall.io/thumb/front/5/d/5dba9972-dd8b-407b-9374-a8f0ed1a96db.webp?1783942164"
         },
         "keywords": [
             "Kicker"
@@ -55,12 +63,12 @@
         "lang": "en",
         "layout": "normal",
         "legalities": {
-            "alchemy": "not_legal",
+            "alchemy": "legal",
             "brawl": "legal",
             "commander": "legal",
+            "competitivebrawl": "legal",
             "duel": "legal",
-            "explorer": "legal",
-            "future": "not_legal",
+            "future": "legal",
             "gladiator": "legal",
             "historic": "legal",
             "legacy": "legal",
@@ -69,13 +77,14 @@
             "oldschool": "not_legal",
             "pauper": "legal",
             "paupercommander": "legal",
-            "penny": "legal",
+            "penny": "not_legal",
             "pioneer": "legal",
             "predh": "legal",
             "premodern": "not_legal",
-            "standard": "not_legal",
-            "standardbrawl": "not_legal",
+            "standard": "legal",
+            "standardbrawl": "legal",
             "timeless": "legal",
+            "tlr": "legal",
             "vintage": "legal"
         },
         "mana_cost": "{1}{U}",
@@ -90,28 +99,28 @@
         "oracle_id": "c2898bbd-82a4-4d26-b6ee-169b0ebe71b4",
         "oracle_text": "Kicker {1}{U} (You may pay an additional {1}{U} as you cast this spell.)\nReturn target nonland permanent to its owner's hand. If this spell was kicked, draw a card.",
         "oversized": false,
-        "penny_rank": 1202,
+        "penny_rank": 1606,
         "prices": {
-            "eur": "0.05",
-            "eur_foil": "1.66",
+            "eur": "0.10",
+            "eur_foil": "1.16",
             "tix": "0.03",
-            "usd": "0.09",
+            "usd": "0.30",
             "usd_etched": null,
-            "usd_foil": "1.10"
+            "usd_foil": "1.38"
         },
         "prints_search_uri": "https://api.scryfall.com/cards/search?order=released&q=oracleid%3Ac2898bbd-82a4-4d26-b6ee-169b0ebe71b4&unique=prints",
         "promo": false,
         "purchase_uris": {
             "cardhoarder": "https://www.cardhoarder.com/cards/34448?affiliate_id=scryfall&ref=card-profile&utm_campaign=affiliate&utm_medium=card&utm_source=scryfall",
-            "cardmarket": "https://www.cardmarket.com/en/Magic/Products/Singles/Zendikar/Into-the-Roil?referrer=scryfall&utm_campaign=card_prices&utm_medium=text&utm_source=scryfall",
-            "tcgplayer": "https://tcgplayer.pxf.io/c/4931599/1830156/21018?subId1=api&u=https%3A%2F%2Fwww.tcgplayer.com%2Fproduct%2F33329%3Fpage%3D1"
+            "cardmarket": "https://www.cardmarket.com/en/Magic/Products?idProduct=21873&referrer=scryfall&utm_campaign=card_prices&utm_medium=text&utm_source=scryfall",
+            "tcgplayer": "https://partner.tcgplayer.com/c/4931599/1830156/21018?subId1=api&u=https%3A%2F%2Fwww.tcgplayer.com%2Fproduct%2F33329%3Fpage%3D1"
         },
         "rarity": "common",
         "related_uris": {
             "edhrec": "https://edhrec.com/route/?cc=Into+the+Roil",
             "gatherer": "https://gatherer.wizards.com/Pages/Card/Details.aspx?multiverseid=178151&printed=false",
-            "tcgplayer_infinite_articles": "https://tcgplayer.pxf.io/c/4931599/1830156/21018?subId1=api&trafcat=infinite&u=https%3A%2F%2Finfinite.tcgplayer.com%2Fsearch%3FcontentMode%3Darticle%26game%3Dmagic%26partner%3Dscryfall%26q%3DInto%2Bthe%2BRoil",
-            "tcgplayer_infinite_decks": "https://tcgplayer.pxf.io/c/4931599/1830156/21018?subId1=api&trafcat=infinite&u=https%3A%2F%2Finfinite.tcgplayer.com%2Fsearch%3FcontentMode%3Ddeck%26game%3Dmagic%26partner%3Dscryfall%26q%3DInto%2Bthe%2BRoil"
+            "tcgplayer_infinite_articles": "https://partner.tcgplayer.com/c/4931599/1830156/21018?subId1=api&trafcat=tcgplayer.com%2Fsearch%2Farticles&u=https%3A%2F%2Fwww.tcgplayer.com%2Fsearch%2Farticles%3FproductLineName%3Dmagic%26q%3DInto%2Bthe%2BRoil",
+            "tcgplayer_infinite_decks": "https://partner.tcgplayer.com/c/4931599/1830156/21018?subId1=api&trafcat=tcgplayer.com%2Fsearch%2Fdecks&u=https%3A%2F%2Fwww.tcgplayer.com%2Fsearch%2Fdecks%3FproductLineName%3Dmagic%26q%3DInto%2Bthe%2BRoil"
         },
         "released_at": "2009-10-02",
         "reprint": false,

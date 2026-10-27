@@ -6,11 +6,11 @@
         "all_parts": [
             {
                 "component": "token",
-                "id": "c672ee51-0e77-463f-8586-191b413c44dd",
+                "id": "3e55bca3-43a3-44a8-b673-b1d0cf3f203f",
                 "name": "Spirit",
                 "object": "related_card",
                 "type_line": "Token Creature \u2014 Spirit",
-                "uri": "https://api.scryfall.com/cards/c672ee51-0e77-463f-8586-191b413c44dd"
+                "uri": "https://api.scryfall.com/cards/3e55bca3-43a3-44a8-b673-b1d0cf3f203f"
             },
             {
                 "component": "combo_piece",
@@ -38,7 +38,7 @@
             "G"
         ],
         "digital": false,
-        "edhrec_rank": 21119,
+        "edhrec_rank": 27150,
         "finishes": [
             "nonfoil",
             "foil"
@@ -47,6 +47,7 @@
         "foil": true,
         "frame": "2003",
         "full_art": false,
+        "game_changer": false,
         "games": [
             "paper",
             "mtgo"
@@ -55,13 +56,20 @@
         "id": "e752b762-38b7-463c-aa09-37fecfe71a53",
         "illustration_id": "90d63775-fe58-4fbc-bef6-27a1b0664edd",
         "image_status": "highres_scan",
+        "image_updated_at": "2026-07-13T12:04:51Z",
         "image_uris": {
-            "art_crop": "https://cards.scryfall.io/art_crop/front/e/7/e752b762-38b7-463c-aa09-37fecfe71a53.jpg?1562765583",
-            "border_crop": "https://cards.scryfall.io/border_crop/front/e/7/e752b762-38b7-463c-aa09-37fecfe71a53.jpg?1562765583",
-            "large": "https://cards.scryfall.io/large/front/e/7/e752b762-38b7-463c-aa09-37fecfe71a53.jpg?1562765583",
-            "normal": "https://cards.scryfall.io/normal/front/e/7/e752b762-38b7-463c-aa09-37fecfe71a53.jpg?1562765583",
-            "png": "https://cards.scryfall.io/png/front/e/7/e752b762-38b7-463c-aa09-37fecfe71a53.png?1562765583",
-            "small": "https://cards.scryfall.io/small/front/e/7/e752b762-38b7-463c-aa09-37fecfe71a53.jpg?1562765583"
+            "art": "https://cards.scryfall.io/art/front/e/7/e752b762-38b7-463c-aa09-37fecfe71a53.webp?1783944291",
+            "art_crop": "https://cards.scryfall.io/art_crop/front/e/7/e752b762-38b7-463c-aa09-37fecfe71a53.jpg?1783944291",
+            "border_crop": "https://cards.scryfall.io/border_crop/front/e/7/e752b762-38b7-463c-aa09-37fecfe71a53.jpg?1783944291",
+            "crop": "https://cards.scryfall.io/crop/front/e/7/e752b762-38b7-463c-aa09-37fecfe71a53.webp?1783944291",
+            "display": "https://cards.scryfall.io/display/front/e/7/e752b762-38b7-463c-aa09-37fecfe71a53.webp?1783944291",
+            "grid": "https://cards.scryfall.io/grid/front/e/7/e752b762-38b7-463c-aa09-37fecfe71a53.webp?1783944291",
+            "jpeg": "https://cards.scryfall.io/normal/front/e/7/e752b762-38b7-463c-aa09-37fecfe71a53.jpg?1783944291",
+            "large": "https://cards.scryfall.io/large/front/e/7/e752b762-38b7-463c-aa09-37fecfe71a53.jpg?1783944291",
+            "normal": "https://cards.scryfall.io/normal/front/e/7/e752b762-38b7-463c-aa09-37fecfe71a53.jpg?1783944291",
+            "png": "https://cards.scryfall.io/png/front/e/7/e752b762-38b7-463c-aa09-37fecfe71a53.png?1783944291",
+            "small": "https://cards.scryfall.io/small/front/e/7/e752b762-38b7-463c-aa09-37fecfe71a53.jpg?1783944291",
+            "thumb": "https://cards.scryfall.io/thumb/front/e/7/e752b762-38b7-463c-aa09-37fecfe71a53.webp?1783944291"
         },
         "keywords": [],
         "lang": "en",
@@ -70,8 +78,8 @@
             "alchemy": "not_legal",
             "brawl": "not_legal",
             "commander": "legal",
+            "competitivebrawl": "not_legal",
             "duel": "legal",
-            "explorer": "not_legal",
             "future": "not_legal",
             "gladiator": "not_legal",
             "historic": "not_legal",
@@ -81,13 +89,14 @@
             "oldschool": "not_legal",
             "pauper": "legal",
             "paupercommander": "legal",
-            "penny": "legal",
+            "penny": "not_legal",
             "pioneer": "not_legal",
             "predh": "legal",
             "premodern": "not_legal",
             "standard": "not_legal",
             "standardbrawl": "not_legal",
             "timeless": "not_legal",
+            "tlr": "legal",
             "vintage": "legal"
         },
         "mana_cost": "{1}{G}",
@@ -100,31 +109,31 @@
         "nonfoil": true,
         "object": "card",
         "oracle_id": "78b1cb2d-1b48-4068-b6f3-8727ef9e8080",
-        "oracle_text": "When Dripping-Tongue Zubera dies, create a 1/1 colorless Spirit creature token for each Zubera that died this turn.",
+        "oracle_text": "When this creature dies, create a 1/1 colorless Spirit creature token for each Zubera that died this turn.",
         "oversized": false,
-        "penny_rank": 6755,
+        "penny_rank": 8632,
         "power": "1",
         "prices": {
-            "eur": "0.08",
-            "eur_foil": "1.06",
+            "eur": "0.05",
+            "eur_foil": "1.16",
             "tix": "0.03",
-            "usd": "0.11",
+            "usd": "0.10",
             "usd_etched": null,
-            "usd_foil": "1.59"
+            "usd_foil": "3.02"
         },
         "prints_search_uri": "https://api.scryfall.com/cards/search?order=released&q=oracleid%3A78b1cb2d-1b48-4068-b6f3-8727ef9e8080&unique=prints",
         "promo": false,
         "purchase_uris": {
             "cardhoarder": "https://www.cardhoarder.com/cards/21561?affiliate_id=scryfall&ref=card-profile&utm_campaign=affiliate&utm_medium=card&utm_source=scryfall",
-            "cardmarket": "https://www.cardmarket.com/en/Magic/Products/Singles/Champions-of-Kamigawa/Dripping-Tongue-Zubera?referrer=scryfall&utm_campaign=card_prices&utm_medium=text&utm_source=scryfall",
-            "tcgplayer": "https://tcgplayer.pxf.io/c/4931599/1830156/21018?subId1=api&u=https%3A%2F%2Fwww.tcgplayer.com%2Fproduct%2F11982%3Fpage%3D1"
+            "cardmarket": "https://www.cardmarket.com/en/Magic/Products?idProduct=12001&referrer=scryfall&utm_campaign=card_prices&utm_medium=text&utm_source=scryfall",
+            "tcgplayer": "https://partner.tcgplayer.com/c/4931599/1830156/21018?subId1=api&u=https%3A%2F%2Fwww.tcgplayer.com%2Fproduct%2F11982%3Fpage%3D1"
         },
         "rarity": "common",
         "related_uris": {
             "edhrec": "https://edhrec.com/route/?cc=Dripping-Tongue+Zubera",
             "gatherer": "https://gatherer.wizards.com/Pages/Card/Details.aspx?multiverseid=80511&printed=false",
-            "tcgplayer_infinite_articles": "https://tcgplayer.pxf.io/c/4931599/1830156/21018?subId1=api&trafcat=infinite&u=https%3A%2F%2Finfinite.tcgplayer.com%2Fsearch%3FcontentMode%3Darticle%26game%3Dmagic%26partner%3Dscryfall%26q%3DDripping-Tongue%2BZubera",
-            "tcgplayer_infinite_decks": "https://tcgplayer.pxf.io/c/4931599/1830156/21018?subId1=api&trafcat=infinite&u=https%3A%2F%2Finfinite.tcgplayer.com%2Fsearch%3FcontentMode%3Ddeck%26game%3Dmagic%26partner%3Dscryfall%26q%3DDripping-Tongue%2BZubera"
+            "tcgplayer_infinite_articles": "https://partner.tcgplayer.com/c/4931599/1830156/21018?subId1=api&trafcat=tcgplayer.com%2Fsearch%2Farticles&u=https%3A%2F%2Fwww.tcgplayer.com%2Fsearch%2Farticles%3FproductLineName%3Dmagic%26q%3DDripping-Tongue%2BZubera",
+            "tcgplayer_infinite_decks": "https://partner.tcgplayer.com/c/4931599/1830156/21018?subId1=api&trafcat=tcgplayer.com%2Fsearch%2Fdecks&u=https%3A%2F%2Fwww.tcgplayer.com%2Fsearch%2Fdecks%3FproductLineName%3Dmagic%26q%3DDripping-Tongue%2BZubera"
         },
         "released_at": "2004-10-01",
         "reprint": false,

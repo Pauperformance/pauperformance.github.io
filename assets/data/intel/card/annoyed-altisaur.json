@@ -2,16 +2,16 @@
     "archetypes": {
         "py/set": [
             "Jund Cascade",
-            "Walls",
-            "Temur Ponza",
-            "Brew",
-            "Temur Cascade",
-            "Gruul Ponza",
-            "Gruul Ramp",
             "MonoG Tron",
             "Golgari Ponza",
             "Gruul Turbo Emblem",
-            "Brew Golgari"
+            "Gruul Ponza",
+            "Temur Ponza",
+            "Walls",
+            "Brew",
+            "Temur Cascade",
+            "Brew Golgari",
+            "Gruul Ramp"
         ]
     },
     "scryfall": {
@@ -32,7 +32,7 @@
             "G"
         ],
         "digital": false,
-        "edhrec_rank": 4023,
+        "edhrec_rank": 3981,
         "finishes": [
             "nonfoil",
             "foil"
@@ -41,6 +41,7 @@
         "foil": true,
         "frame": "2015",
         "full_art": false,
+        "game_changer": false,
         "games": [
             "paper",
             "mtgo"
@@ -49,13 +50,20 @@
         "id": "7536d618-0c98-45bb-913b-b8117b4acf87",
         "illustration_id": "1de91a60-29bc-4270-9aea-394536402cae",
         "image_status": "highres_scan",
+        "image_updated_at": "2026-07-13T07:46:40Z",
         "image_uris": {
-            "art_crop": "https://cards.scryfall.io/art_crop/front/7/5/7536d618-0c98-45bb-913b-b8117b4acf87.jpg?1608910542",
-            "border_crop": "https://cards.scryfall.io/border_crop/front/7/5/7536d618-0c98-45bb-913b-b8117b4acf87.jpg?1608910542",
-            "large": "https://cards.scryfall.io/large/front/7/5/7536d618-0c98-45bb-913b-b8117b4acf87.jpg?1608910542",
-            "normal": "https://cards.scryfall.io/normal/front/7/5/7536d618-0c98-45bb-913b-b8117b4acf87.jpg?1608910542",
-            "png": "https://cards.scryfall.io/png/front/7/5/7536d618-0c98-45bb-913b-b8117b4acf87.png?1608910542",
-            "small": "https://cards.scryfall.io/small/front/7/5/7536d618-0c98-45bb-913b-b8117b4acf87.jpg?1608910542"
+            "art": "https://cards.scryfall.io/art/front/7/5/7536d618-0c98-45bb-913b-b8117b4acf87.webp?1783928800",
+            "art_crop": "https://cards.scryfall.io/art_crop/front/7/5/7536d618-0c98-45bb-913b-b8117b4acf87.jpg?1783928800",
+            "border_crop": "https://cards.scryfall.io/border_crop/front/7/5/7536d618-0c98-45bb-913b-b8117b4acf87.jpg?1783928800",
+            "crop": "https://cards.scryfall.io/crop/front/7/5/7536d618-0c98-45bb-913b-b8117b4acf87.webp?1783928800",
+            "display": "https://cards.scryfall.io/display/front/7/5/7536d618-0c98-45bb-913b-b8117b4acf87.webp?1783928800",
+            "grid": "https://cards.scryfall.io/grid/front/7/5/7536d618-0c98-45bb-913b-b8117b4acf87.webp?1783928800",
+            "jpeg": "https://cards.scryfall.io/normal/front/7/5/7536d618-0c98-45bb-913b-b8117b4acf87.jpg?1783928800",
+            "large": "https://cards.scryfall.io/large/front/7/5/7536d618-0c98-45bb-913b-b8117b4acf87.jpg?1783928800",
+            "normal": "https://cards.scryfall.io/normal/front/7/5/7536d618-0c98-45bb-913b-b8117b4acf87.jpg?1783928800",
+            "png": "https://cards.scryfall.io/png/front/7/5/7536d618-0c98-45bb-913b-b8117b4acf87.png?1783928800",
+            "small": "https://cards.scryfall.io/small/front/7/5/7536d618-0c98-45bb-913b-b8117b4acf87.jpg?1783928800",
+            "thumb": "https://cards.scryfall.io/thumb/front/7/5/7536d618-0c98-45bb-913b-b8117b4acf87.webp?1783928800"
         },
         "keywords": [
             "Reach",
@@ -66,15 +74,15 @@
         "layout": "normal",
         "legalities": {
             "alchemy": "not_legal",
-            "brawl": "not_legal",
+            "brawl": "legal",
             "commander": "legal",
+            "competitivebrawl": "legal",
             "duel": "legal",
-            "explorer": "not_legal",
             "future": "not_legal",
-            "gladiator": "not_legal",
-            "historic": "not_legal",
+            "gladiator": "legal",
+            "historic": "legal",
             "legacy": "legal",
-            "modern": "not_legal",
+            "modern": "legal",
             "oathbreaker": "legal",
             "oldschool": "not_legal",
             "pauper": "legal",
@@ -85,7 +93,8 @@
             "premodern": "not_legal",
             "standard": "not_legal",
             "standardbrawl": "not_legal",
-            "timeless": "not_legal",
+            "timeless": "legal",
+            "tlr": "not_legal",
             "vintage": "legal"
         },
         "mana_cost": "{5}{G}{G}",
@@ -97,7 +106,7 @@
         "nonfoil": true,
         "object": "card",
         "oracle_id": "a8135179-51ef-454e-98ff-69137440339f",
-        "oracle_text": "Reach, trample\nCascade (When you cast this spell, exile cards from the top of your library until you exile a nonland card that costs less. You may cast it without paying its mana cost. Put the exiled cards on the bottom of your library in a random order.)",
+        "oracle_text": "Reach, trample\nCascade (When you cast this spell, exile cards from the top of your library until you exile a nonland card that costs less. You may cast it without paying its mana cost. Put the exiled cards on the bottom in a random order.)",
         "oversized": false,
         "power": "6",
         "preview": {
@@ -106,26 +115,26 @@
             "source_uri": "https://twitter.com/goberthicks/status/1323741699131109376"
         },
         "prices": {
-            "eur": "0.06",
-            "eur_foil": "0.15",
-            "tix": "0.21",
-            "usd": "0.12",
+            "eur": "0.13",
+            "eur_foil": "0.29",
+            "tix": "0.04",
+            "usd": "0.13",
             "usd_etched": null,
-            "usd_foil": "0.28"
+            "usd_foil": "0.20"
         },
         "prints_search_uri": "https://api.scryfall.com/cards/search?order=released&q=oracleid%3Aa8135179-51ef-454e-98ff-69137440339f&unique=prints",
         "promo": false,
         "purchase_uris": {
             "cardhoarder": "https://www.cardhoarder.com/cards/85214?affiliate_id=scryfall&ref=card-profile&utm_campaign=affiliate&utm_medium=card&utm_source=scryfall",
-            "cardmarket": "https://www.cardmarket.com/en/Magic/Products/Singles/Commander-Legends/Annoyed-Altisaur?referrer=scryfall&utm_campaign=card_prices&utm_medium=text&utm_source=scryfall",
-            "tcgplayer": "https://tcgplayer.pxf.io/c/4931599/1830156/21018?subId1=api&u=https%3A%2F%2Fwww.tcgplayer.com%2Fproduct%2F227023%3Fpage%3D1"
+            "cardmarket": "https://www.cardmarket.com/en/Magic/Products?idProduct=512975&referrer=scryfall&utm_campaign=card_prices&utm_medium=text&utm_source=scryfall",
+            "tcgplayer": "https://partner.tcgplayer.com/c/4931599/1830156/21018?subId1=api&u=https%3A%2F%2Fwww.tcgplayer.com%2Fproduct%2F227023%3Fpage%3D1"
         },
         "rarity": "common",
         "related_uris": {
             "edhrec": "https://edhrec.com/route/?cc=Annoyed+Altisaur",
             "gatherer": "https://gatherer.wizards.com/Pages/Card/Details.aspx?multiverseid=497736&printed=false",
-            "tcgplayer_infinite_articles": "https://tcgplayer.pxf.io/c/4931599/1830156/21018?subId1=api&trafcat=infinite&u=https%3A%2F%2Finfinite.tcgplayer.com%2Fsearch%3FcontentMode%3Darticle%26game%3Dmagic%26partner%3Dscryfall%26q%3DAnnoyed%2BAltisaur",
-            "tcgplayer_infinite_decks": "https://tcgplayer.pxf.io/c/4931599/1830156/21018?subId1=api&trafcat=infinite&u=https%3A%2F%2Finfinite.tcgplayer.com%2Fsearch%3FcontentMode%3Ddeck%26game%3Dmagic%26partner%3Dscryfall%26q%3DAnnoyed%2BAltisaur"
+            "tcgplayer_infinite_articles": "https://partner.tcgplayer.com/c/4931599/1830156/21018?subId1=api&trafcat=tcgplayer.com%2Fsearch%2Farticles&u=https%3A%2F%2Fwww.tcgplayer.com%2Fsearch%2Farticles%3FproductLineName%3Dmagic%26q%3DAnnoyed%2BAltisaur",
+            "tcgplayer_infinite_decks": "https://partner.tcgplayer.com/c/4931599/1830156/21018?subId1=api&trafcat=tcgplayer.com%2Fsearch%2Fdecks&u=https%3A%2F%2Fwww.tcgplayer.com%2Fsearch%2Fdecks%3FproductLineName%3Dmagic%26q%3DAnnoyed%2BAltisaur"
         },
         "released_at": "2020-11-20",
         "reprint": false,

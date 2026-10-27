@@ -21,7 +21,7 @@
             "G"
         ],
         "digital": false,
-        "edhrec_rank": 10497,
+        "edhrec_rank": 13998,
         "finishes": [
             "nonfoil",
             "foil"
@@ -29,6 +29,7 @@
         "foil": true,
         "frame": "2015",
         "full_art": false,
+        "game_changer": false,
         "games": [
             "arena",
             "paper",
@@ -38,13 +39,20 @@
         "id": "9bb0a0c8-158e-4a6f-976e-3de9f57c3463",
         "illustration_id": "cc2132d2-06bc-4b34-a36f-76d011983425",
         "image_status": "highres_scan",
+        "image_updated_at": "2026-07-13T06:52:59Z",
         "image_uris": {
-            "art_crop": "https://cards.scryfall.io/art_crop/front/9/b/9bb0a0c8-158e-4a6f-976e-3de9f57c3463.jpg?1636224300",
-            "border_crop": "https://cards.scryfall.io/border_crop/front/9/b/9bb0a0c8-158e-4a6f-976e-3de9f57c3463.jpg?1636224300",
-            "large": "https://cards.scryfall.io/large/front/9/b/9bb0a0c8-158e-4a6f-976e-3de9f57c3463.jpg?1636224300",
-            "normal": "https://cards.scryfall.io/normal/front/9/b/9bb0a0c8-158e-4a6f-976e-3de9f57c3463.jpg?1636224300",
-            "png": "https://cards.scryfall.io/png/front/9/b/9bb0a0c8-158e-4a6f-976e-3de9f57c3463.png?1636224300",
-            "small": "https://cards.scryfall.io/small/front/9/b/9bb0a0c8-158e-4a6f-976e-3de9f57c3463.jpg?1636224300"
+            "art": "https://cards.scryfall.io/art/front/9/b/9bb0a0c8-158e-4a6f-976e-3de9f57c3463.webp?1783925579",
+            "art_crop": "https://cards.scryfall.io/art_crop/front/9/b/9bb0a0c8-158e-4a6f-976e-3de9f57c3463.jpg?1783925579",
+            "border_crop": "https://cards.scryfall.io/border_crop/front/9/b/9bb0a0c8-158e-4a6f-976e-3de9f57c3463.jpg?1783925579",
+            "crop": "https://cards.scryfall.io/crop/front/9/b/9bb0a0c8-158e-4a6f-976e-3de9f57c3463.webp?1783925579",
+            "display": "https://cards.scryfall.io/display/front/9/b/9bb0a0c8-158e-4a6f-976e-3de9f57c3463.webp?1783925579",
+            "grid": "https://cards.scryfall.io/grid/front/9/b/9bb0a0c8-158e-4a6f-976e-3de9f57c3463.webp?1783925579",
+            "jpeg": "https://cards.scryfall.io/normal/front/9/b/9bb0a0c8-158e-4a6f-976e-3de9f57c3463.jpg?1783925579",
+            "large": "https://cards.scryfall.io/large/front/9/b/9bb0a0c8-158e-4a6f-976e-3de9f57c3463.jpg?1783925579",
+            "normal": "https://cards.scryfall.io/normal/front/9/b/9bb0a0c8-158e-4a6f-976e-3de9f57c3463.jpg?1783925579",
+            "png": "https://cards.scryfall.io/png/front/9/b/9bb0a0c8-158e-4a6f-976e-3de9f57c3463.png?1783925579",
+            "small": "https://cards.scryfall.io/small/front/9/b/9bb0a0c8-158e-4a6f-976e-3de9f57c3463.jpg?1783925579",
+            "thumb": "https://cards.scryfall.io/thumb/front/9/b/9bb0a0c8-158e-4a6f-976e-3de9f57c3463.webp?1783925579"
         },
         "keywords": [
             "Fight",
@@ -56,9 +64,9 @@
             "alchemy": "not_legal",
             "brawl": "legal",
             "commander": "legal",
+            "competitivebrawl": "legal",
             "duel": "legal",
-            "explorer": "legal",
-            "future": "legal",
+            "future": "not_legal",
             "gladiator": "legal",
             "historic": "legal",
             "legacy": "legal",
@@ -71,9 +79,10 @@
             "pioneer": "legal",
             "predh": "not_legal",
             "premodern": "not_legal",
-            "standard": "legal",
-            "standardbrawl": "legal",
+            "standard": "not_legal",
+            "standardbrawl": "not_legal",
             "timeless": "legal",
+            "tlr": "legal",
             "vintage": "legal"
         },
         "mana_cost": "{1}{G}",
@@ -85,7 +94,7 @@
         "nonfoil": true,
         "object": "card",
         "oracle_id": "5064a55a-9692-4a67-9e82-16250b9140d1",
-        "oracle_text": "Coven \u2014 Choose target creature you control and target creature you don't control. If you control three or more creatures with different powers, put a +1/+1 counter on the chosen creature you control. Then the chosen creatures fight each other. (They each deal damage equal to their power to the other.)",
+        "oracle_text": "Coven \u2014 Choose target creature you control and target creature you don't control. If you control three or more creatures with different powers, put a +1/+1 counter on the chosen creature you control. Then the chosen creatures fight each other. (Each deals damage equal to its power to the other.)",
         "oversized": false,
         "preview": {
             "previewed_at": "2021-09-07",
@@ -93,30 +102,31 @@
             "source_uri": "https://photos.smugmug.com/photos/i-5vt4W5r/0/a246451e/X2/i-5vt4W5r-X2.png"
         },
         "prices": {
-            "eur": "0.11",
-            "eur_foil": "0.15",
+            "eur": "0.05",
+            "eur_foil": "0.11",
             "tix": "0.03",
-            "usd": "0.02",
+            "usd": "0.18",
             "usd_etched": null,
-            "usd_foil": "0.05"
+            "usd_foil": "0.25"
         },
         "prints_search_uri": "https://api.scryfall.com/cards/search?order=released&q=oracleid%3A5064a55a-9692-4a67-9e82-16250b9140d1&unique=prints",
         "promo": false,
         "purchase_uris": {
             "cardhoarder": "https://www.cardhoarder.com/cards/93356?affiliate_id=scryfall&ref=card-profile&utm_campaign=affiliate&utm_medium=card&utm_source=scryfall",
-            "cardmarket": "https://www.cardmarket.com/en/Magic/Products/Singles/Innistrad-Midnight-Hunt/Duel-for-Dominance?referrer=scryfall&utm_campaign=card_prices&utm_medium=text&utm_source=scryfall",
-            "tcgplayer": "https://tcgplayer.pxf.io/c/4931599/1830156/21018?subId1=api&u=https%3A%2F%2Fwww.tcgplayer.com%2Fproduct%2F248080%3Fpage%3D1"
+            "cardmarket": "https://www.cardmarket.com/en/Magic/Products?idProduct=574912&referrer=scryfall&utm_campaign=card_prices&utm_medium=text&utm_source=scryfall",
+            "tcgplayer": "https://partner.tcgplayer.com/c/4931599/1830156/21018?subId1=api&u=https%3A%2F%2Fwww.tcgplayer.com%2Fproduct%2F248080%3Fpage%3D1"
         },
         "rarity": "common",
         "related_uris": {
             "edhrec": "https://edhrec.com/route/?cc=Duel+for+Dominance",
             "gatherer": "https://gatherer.wizards.com/Pages/Card/Details.aspx?multiverseid=534971&printed=false",
-            "tcgplayer_infinite_articles": "https://tcgplayer.pxf.io/c/4931599/1830156/21018?subId1=api&trafcat=infinite&u=https%3A%2F%2Finfinite.tcgplayer.com%2Fsearch%3FcontentMode%3Darticle%26game%3Dmagic%26partner%3Dscryfall%26q%3DDuel%2Bfor%2BDominance",
-            "tcgplayer_infinite_decks": "https://tcgplayer.pxf.io/c/4931599/1830156/21018?subId1=api&trafcat=infinite&u=https%3A%2F%2Finfinite.tcgplayer.com%2Fsearch%3FcontentMode%3Ddeck%26game%3Dmagic%26partner%3Dscryfall%26q%3DDuel%2Bfor%2BDominance"
+            "tcgplayer_infinite_articles": "https://partner.tcgplayer.com/c/4931599/1830156/21018?subId1=api&trafcat=tcgplayer.com%2Fsearch%2Farticles&u=https%3A%2F%2Fwww.tcgplayer.com%2Fsearch%2Farticles%3FproductLineName%3Dmagic%26q%3DDuel%2Bfor%2BDominance",
+            "tcgplayer_infinite_decks": "https://partner.tcgplayer.com/c/4931599/1830156/21018?subId1=api&trafcat=tcgplayer.com%2Fsearch%2Fdecks&u=https%3A%2F%2Fwww.tcgplayer.com%2Fsearch%2Fdecks%3FproductLineName%3Dmagic%26q%3DDuel%2Bfor%2BDominance"
         },
         "released_at": "2021-09-24",
         "reprint": false,
         "reserved": false,
+        "resource_id": "CF8A767A92AE2618FE4A1A7D5EF632F5D1BC681258E20FA7AA8922ED5A7F2217",
         "rulings_uri": "https://api.scryfall.com/cards/9bb0a0c8-158e-4a6f-976e-3de9f57c3463/rulings",
         "scryfall_set_uri": "https://scryfall.com/sets/mid?utm_source=api",
         "scryfall_uri": "https://scryfall.com/card/mid/184/duel-for-dominance?utm_source=api",

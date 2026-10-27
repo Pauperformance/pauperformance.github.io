@@ -1,16 +1,16 @@
 {
     "archetypes": {
         "py/set": [
-            "Brew Esper",
-            "Mardu Glitters",
-            "Orzhov Glitters",
-            "Orzhov Blade",
-            "Brew",
-            "Brew Dimir",
             "Mardu Initiative",
-            "Esper Affinity",
             "Brew Orzhov",
-            "Mardu Synth"
+            "Mardu Synth",
+            "Orzhov Blade",
+            "Brew Dimir",
+            "Brew Esper",
+            "Orzhov Glitters",
+            "Brew",
+            "Esper Affinity",
+            "Mardu Glitters"
         ]
     },
     "scryfall": {
@@ -30,7 +30,7 @@
         ],
         "colors": [],
         "digital": false,
-        "edhrec_rank": 1345,
+        "edhrec_rank": 2320,
         "finishes": [
             "nonfoil",
             "foil"
@@ -39,6 +39,7 @@
         "foil": true,
         "frame": "2015",
         "full_art": false,
+        "game_changer": false,
         "games": [
             "paper",
             "mtgo"
@@ -47,13 +48,20 @@
         "id": "dbe2a1fa-196f-497f-a15f-0b3b04da9cbb",
         "illustration_id": "c4e0bf04-b697-47ac-9f0c-4f3a97d4219f",
         "image_status": "highres_scan",
+        "image_updated_at": "2026-07-13T07:13:16Z",
         "image_uris": {
-            "art_crop": "https://cards.scryfall.io/art_crop/front/d/b/dbe2a1fa-196f-497f-a15f-0b3b04da9cbb.jpg?1626099641",
-            "border_crop": "https://cards.scryfall.io/border_crop/front/d/b/dbe2a1fa-196f-497f-a15f-0b3b04da9cbb.jpg?1626099641",
-            "large": "https://cards.scryfall.io/large/front/d/b/dbe2a1fa-196f-497f-a15f-0b3b04da9cbb.jpg?1626099641",
-            "normal": "https://cards.scryfall.io/normal/front/d/b/dbe2a1fa-196f-497f-a15f-0b3b04da9cbb.jpg?1626099641",
-            "png": "https://cards.scryfall.io/png/front/d/b/dbe2a1fa-196f-497f-a15f-0b3b04da9cbb.png?1626099641",
-            "small": "https://cards.scryfall.io/small/front/d/b/dbe2a1fa-196f-497f-a15f-0b3b04da9cbb.jpg?1626099641"
+            "art": "https://cards.scryfall.io/art/front/d/b/dbe2a1fa-196f-497f-a15f-0b3b04da9cbb.webp?1783926796",
+            "art_crop": "https://cards.scryfall.io/art_crop/front/d/b/dbe2a1fa-196f-497f-a15f-0b3b04da9cbb.jpg?1783926796",
+            "border_crop": "https://cards.scryfall.io/border_crop/front/d/b/dbe2a1fa-196f-497f-a15f-0b3b04da9cbb.jpg?1783926796",
+            "crop": "https://cards.scryfall.io/crop/front/d/b/dbe2a1fa-196f-497f-a15f-0b3b04da9cbb.webp?1783926796",
+            "display": "https://cards.scryfall.io/display/front/d/b/dbe2a1fa-196f-497f-a15f-0b3b04da9cbb.webp?1783926796",
+            "grid": "https://cards.scryfall.io/grid/front/d/b/dbe2a1fa-196f-497f-a15f-0b3b04da9cbb.webp?1783926796",
+            "jpeg": "https://cards.scryfall.io/normal/front/d/b/dbe2a1fa-196f-497f-a15f-0b3b04da9cbb.jpg?1783926796",
+            "large": "https://cards.scryfall.io/large/front/d/b/dbe2a1fa-196f-497f-a15f-0b3b04da9cbb.jpg?1783926796",
+            "normal": "https://cards.scryfall.io/normal/front/d/b/dbe2a1fa-196f-497f-a15f-0b3b04da9cbb.jpg?1783926796",
+            "png": "https://cards.scryfall.io/png/front/d/b/dbe2a1fa-196f-497f-a15f-0b3b04da9cbb.png?1783926796",
+            "small": "https://cards.scryfall.io/small/front/d/b/dbe2a1fa-196f-497f-a15f-0b3b04da9cbb.jpg?1783926796",
+            "thumb": "https://cards.scryfall.io/thumb/front/d/b/dbe2a1fa-196f-497f-a15f-0b3b04da9cbb.webp?1783926796"
         },
         "keywords": [
             "Indestructible"
@@ -64,8 +72,8 @@
             "alchemy": "not_legal",
             "brawl": "legal",
             "commander": "legal",
+            "competitivebrawl": "legal",
             "duel": "legal",
-            "explorer": "not_legal",
             "future": "not_legal",
             "gladiator": "legal",
             "historic": "legal",
@@ -82,6 +90,7 @@
             "standard": "not_legal",
             "standardbrawl": "not_legal",
             "timeless": "legal",
+            "tlr": "legal",
             "vintage": "legal"
         },
         "mana_cost": "",
@@ -93,21 +102,21 @@
         "nonfoil": true,
         "object": "card",
         "oracle_id": "c9b7ea9c-3bcb-4538-aa25-cdb82a52037e",
-        "oracle_text": "Goldmire Bridge enters the battlefield tapped.\nIndestructible\n{T}: Add {W} or {B}.",
+        "oracle_text": "This land enters tapped.\nIndestructible\n{T}: Add {W} or {B}.",
         "oversized": false,
-        "penny_rank": 965,
+        "penny_rank": 1188,
         "preview": {
             "previewed_at": "2021-05-26",
             "source": "Wizards of the Coast",
             "source_uri": "https://magic.wizards.com/en/articles/archive/card-preview/bridges-limited-modern-2021-05-26"
         },
         "prices": {
-            "eur": "0.12",
-            "eur_foil": "0.34",
+            "eur": "0.22",
+            "eur_foil": "0.49",
             "tix": "0.03",
-            "usd": "0.10",
+            "usd": "0.29",
             "usd_etched": null,
-            "usd_foil": "0.72"
+            "usd_foil": "0.43"
         },
         "prints_search_uri": "https://api.scryfall.com/cards/search?order=released&q=oracleid%3Ac9b7ea9c-3bcb-4538-aa25-cdb82a52037e&unique=prints",
         "produced_mana": [
@@ -117,15 +126,15 @@
         "promo": false,
         "purchase_uris": {
             "cardhoarder": "https://www.cardhoarder.com/cards/90875?affiliate_id=scryfall&ref=card-profile&utm_campaign=affiliate&utm_medium=card&utm_source=scryfall",
-            "cardmarket": "https://www.cardmarket.com/en/Magic/Products/Singles/Modern-Horizons-2/Goldmire-Bridge?referrer=scryfall&utm_campaign=card_prices&utm_medium=text&utm_source=scryfall",
-            "tcgplayer": "https://tcgplayer.pxf.io/c/4931599/1830156/21018?subId1=api&u=https%3A%2F%2Fwww.tcgplayer.com%2Fproduct%2F239715%3Fpage%3D1"
+            "cardmarket": "https://www.cardmarket.com/en/Magic/Products?idProduct=566282&referrer=scryfall&utm_campaign=card_prices&utm_medium=text&utm_source=scryfall",
+            "tcgplayer": "https://partner.tcgplayer.com/c/4931599/1830156/21018?subId1=api&u=https%3A%2F%2Fwww.tcgplayer.com%2Fproduct%2F239715%3Fpage%3D1"
         },
         "rarity": "common",
         "related_uris": {
             "edhrec": "https://edhrec.com/route/?cc=Goldmire+Bridge",
             "gatherer": "https://gatherer.wizards.com/Pages/Card/Details.aspx?multiverseid=522323&printed=false",
-            "tcgplayer_infinite_articles": "https://tcgplayer.pxf.io/c/4931599/1830156/21018?subId1=api&trafcat=infinite&u=https%3A%2F%2Finfinite.tcgplayer.com%2Fsearch%3FcontentMode%3Darticle%26game%3Dmagic%26partner%3Dscryfall%26q%3DGoldmire%2BBridge",
-            "tcgplayer_infinite_decks": "https://tcgplayer.pxf.io/c/4931599/1830156/21018?subId1=api&trafcat=infinite&u=https%3A%2F%2Finfinite.tcgplayer.com%2Fsearch%3FcontentMode%3Ddeck%26game%3Dmagic%26partner%3Dscryfall%26q%3DGoldmire%2BBridge"
+            "tcgplayer_infinite_articles": "https://partner.tcgplayer.com/c/4931599/1830156/21018?subId1=api&trafcat=tcgplayer.com%2Fsearch%2Farticles&u=https%3A%2F%2Fwww.tcgplayer.com%2Fsearch%2Farticles%3FproductLineName%3Dmagic%26q%3DGoldmire%2BBridge",
+            "tcgplayer_infinite_decks": "https://partner.tcgplayer.com/c/4931599/1830156/21018?subId1=api&trafcat=tcgplayer.com%2Fsearch%2Fdecks&u=https%3A%2F%2Fwww.tcgplayer.com%2Fsearch%2Fdecks%3FproductLineName%3Dmagic%26q%3DGoldmire%2BBridge"
         },
         "released_at": "2021-06-18",
         "reprint": false,

@@ -1,21 +1,21 @@
 {
     "archetypes": {
         "py/set": [
-            "Mardu Glitters",
+            "Brew Jeskai",
             "Jeskai Glitters",
+            "MonoR Kuldotha",
             "MonoR Rally",
+            "MonoR Turbo Emblem",
+            "Mardu Synth",
+            "Boros Synth",
+            "Brew Boros",
             "Burn",
+            "Boros Gates",
+            "Goblins",
+            "Brew MonoR",
             "Brew Rakdos",
             "Boros Glitters",
-            "Goblins",
-            "Mardu Synth",
-            "Brew Jeskai",
-            "Brew MonoR",
-            "Boros Gates",
-            "Brew Boros",
-            "MonoR Turbo Emblem",
-            "Boros Synth",
-            "MonoR Kuldotha",
+            "Mardu Glitters",
             "Turbo Goblins"
         ]
     },
@@ -56,7 +56,7 @@
             "R"
         ],
         "digital": false,
-        "edhrec_rank": 6897,
+        "edhrec_rank": 9612,
         "finishes": [
             "nonfoil",
             "foil"
@@ -64,6 +64,7 @@
         "foil": true,
         "frame": "2015",
         "full_art": false,
+        "game_changer": false,
         "games": [
             "paper",
             "mtgo",
@@ -73,13 +74,20 @@
         "id": "c47931c9-685d-4b83-8299-bc347224b4e8",
         "illustration_id": "4f27420c-5e25-49a8-abd6-32cd96174b1a",
         "image_status": "highres_scan",
+        "image_updated_at": "2026-07-13T06:24:30Z",
         "image_uris": {
-            "art_crop": "https://cards.scryfall.io/art_crop/front/c/4/c47931c9-685d-4b83-8299-bc347224b4e8.jpg?1654567579",
-            "border_crop": "https://cards.scryfall.io/border_crop/front/c/4/c47931c9-685d-4b83-8299-bc347224b4e8.jpg?1654567579",
-            "large": "https://cards.scryfall.io/large/front/c/4/c47931c9-685d-4b83-8299-bc347224b4e8.jpg?1654567579",
-            "normal": "https://cards.scryfall.io/normal/front/c/4/c47931c9-685d-4b83-8299-bc347224b4e8.jpg?1654567579",
-            "png": "https://cards.scryfall.io/png/front/c/4/c47931c9-685d-4b83-8299-bc347224b4e8.png?1654567579",
-            "small": "https://cards.scryfall.io/small/front/c/4/c47931c9-685d-4b83-8299-bc347224b4e8.jpg?1654567579"
+            "art": "https://cards.scryfall.io/art/front/c/4/c47931c9-685d-4b83-8299-bc347224b4e8.webp?1783923870",
+            "art_crop": "https://cards.scryfall.io/art_crop/front/c/4/c47931c9-685d-4b83-8299-bc347224b4e8.jpg?1783923870",
+            "border_crop": "https://cards.scryfall.io/border_crop/front/c/4/c47931c9-685d-4b83-8299-bc347224b4e8.jpg?1783923870",
+            "crop": "https://cards.scryfall.io/crop/front/c/4/c47931c9-685d-4b83-8299-bc347224b4e8.webp?1783923870",
+            "display": "https://cards.scryfall.io/display/front/c/4/c47931c9-685d-4b83-8299-bc347224b4e8.webp?1783923870",
+            "grid": "https://cards.scryfall.io/grid/front/c/4/c47931c9-685d-4b83-8299-bc347224b4e8.webp?1783923870",
+            "jpeg": "https://cards.scryfall.io/normal/front/c/4/c47931c9-685d-4b83-8299-bc347224b4e8.jpg?1783923870",
+            "large": "https://cards.scryfall.io/large/front/c/4/c47931c9-685d-4b83-8299-bc347224b4e8.jpg?1783923870",
+            "normal": "https://cards.scryfall.io/normal/front/c/4/c47931c9-685d-4b83-8299-bc347224b4e8.jpg?1783923870",
+            "png": "https://cards.scryfall.io/png/front/c/4/c47931c9-685d-4b83-8299-bc347224b4e8.png?1783923870",
+            "small": "https://cards.scryfall.io/small/front/c/4/c47931c9-685d-4b83-8299-bc347224b4e8.jpg?1783923870",
+            "thumb": "https://cards.scryfall.io/thumb/front/c/4/c47931c9-685d-4b83-8299-bc347224b4e8.webp?1783923870"
         },
         "keywords": [],
         "lang": "en",
@@ -88,9 +96,9 @@
             "alchemy": "not_legal",
             "brawl": "legal",
             "commander": "legal",
+            "competitivebrawl": "legal",
             "duel": "legal",
-            "explorer": "legal",
-            "future": "legal",
+            "future": "not_legal",
             "gladiator": "legal",
             "historic": "legal",
             "legacy": "legal",
@@ -99,13 +107,14 @@
             "oldschool": "not_legal",
             "pauper": "legal",
             "paupercommander": "legal",
-            "penny": "legal",
+            "penny": "not_legal",
             "pioneer": "legal",
             "predh": "not_legal",
             "premodern": "not_legal",
-            "standard": "legal",
-            "standardbrawl": "legal",
+            "standard": "not_legal",
+            "standardbrawl": "not_legal",
             "timeless": "legal",
+            "tlr": "legal",
             "vintage": "legal"
         },
         "mana_cost": "{R}",
@@ -117,30 +126,30 @@
         "nonfoil": true,
         "object": "card",
         "oracle_id": "11db299a-0918-46a3-b39b-16acc3f4e281",
-        "oracle_text": "When Experimental Synthesizer enters or leaves the battlefield, exile the top card of your library. Until end of turn, you may play that card.\n{2}{R}, Sacrifice Experimental Synthesizer: Create a 2/2 white Samurai creature token with vigilance. Activate only as a sorcery.",
+        "oracle_text": "When this artifact enters or leaves the battlefield, exile the top card of your library. Until end of turn, you may play that card.\n{2}{R}, Sacrifice this artifact: Create a 2/2 white Samurai creature token with vigilance. Activate only as a sorcery.",
         "oversized": false,
-        "penny_rank": 570,
+        "penny_rank": 803,
         "prices": {
-            "eur": "1.18",
-            "eur_foil": "2.46",
-            "tix": "0.01",
-            "usd": "0.42",
+            "eur": "0.71",
+            "eur_foil": "1.67",
+            "tix": "0.03",
+            "usd": "0.45",
             "usd_etched": null,
-            "usd_foil": "1.05"
+            "usd_foil": "0.93"
         },
         "prints_search_uri": "https://api.scryfall.com/cards/search?order=released&q=oracleid%3A11db299a-0918-46a3-b39b-16acc3f4e281&unique=prints",
         "promo": false,
         "purchase_uris": {
             "cardhoarder": "https://www.cardhoarder.com/cards/97204?affiliate_id=scryfall&ref=card-profile&utm_campaign=affiliate&utm_medium=card&utm_source=scryfall",
-            "cardmarket": "https://www.cardmarket.com/en/Magic/Products/Singles/Kamigawa-Neon-Dynasty/Experimental-Synthesizer?referrer=scryfall&utm_campaign=card_prices&utm_medium=text&utm_source=scryfall",
-            "tcgplayer": "https://tcgplayer.pxf.io/c/4931599/1830156/21018?subId1=api&u=https%3A%2F%2Fwww.tcgplayer.com%2Fproduct%2F262794%3Fpage%3D1"
+            "cardmarket": "https://www.cardmarket.com/en/Magic/Products?idProduct=608233&referrer=scryfall&utm_campaign=card_prices&utm_medium=text&utm_source=scryfall",
+            "tcgplayer": "https://partner.tcgplayer.com/c/4931599/1830156/21018?subId1=api&u=https%3A%2F%2Fwww.tcgplayer.com%2Fproduct%2F262794%3Fpage%3D1"
         },
         "rarity": "common",
         "related_uris": {
             "edhrec": "https://edhrec.com/route/?cc=Experimental+Synthesizer",
             "gatherer": "https://gatherer.wizards.com/Pages/Card/Details.aspx?multiverseid=548440&printed=false",
-            "tcgplayer_infinite_articles": "https://tcgplayer.pxf.io/c/4931599/1830156/21018?subId1=api&trafcat=infinite&u=https%3A%2F%2Finfinite.tcgplayer.com%2Fsearch%3FcontentMode%3Darticle%26game%3Dmagic%26partner%3Dscryfall%26q%3DExperimental%2BSynthesizer",
-            "tcgplayer_infinite_decks": "https://tcgplayer.pxf.io/c/4931599/1830156/21018?subId1=api&trafcat=infinite&u=https%3A%2F%2Finfinite.tcgplayer.com%2Fsearch%3FcontentMode%3Ddeck%26game%3Dmagic%26partner%3Dscryfall%26q%3DExperimental%2BSynthesizer"
+            "tcgplayer_infinite_articles": "https://partner.tcgplayer.com/c/4931599/1830156/21018?subId1=api&trafcat=tcgplayer.com%2Fsearch%2Farticles&u=https%3A%2F%2Fwww.tcgplayer.com%2Fsearch%2Farticles%3FproductLineName%3Dmagic%26q%3DExperimental%2BSynthesizer",
+            "tcgplayer_infinite_decks": "https://partner.tcgplayer.com/c/4931599/1830156/21018?subId1=api&trafcat=tcgplayer.com%2Fsearch%2Fdecks&u=https%3A%2F%2Fwww.tcgplayer.com%2Fsearch%2Fdecks%3FproductLineName%3Dmagic%26q%3DExperimental%2BSynthesizer"
         },
         "released_at": "2022-02-18",
         "reprint": false,

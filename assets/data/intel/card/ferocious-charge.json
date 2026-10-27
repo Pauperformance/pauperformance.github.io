@@ -3,9 +3,10 @@
         "py/set": []
     },
     "scryfall": {
-        "artist": "Anthony S. Waters",
+        "artist": "Anthony S. Waters & Cara Mitten",
         "artist_ids": [
-            "f009de11-3c8d-4663-b996-ca0c3e997fad"
+            "f009de11-3c8d-4663-b996-ca0c3e997fad",
+            "de5ed3a2-4914-46dc-9aae-9b7b069cd485"
         ],
         "booster": true,
         "border_color": "black",
@@ -20,7 +21,7 @@
             "G"
         ],
         "digital": false,
-        "edhrec_rank": 22417,
+        "edhrec_rank": 26709,
         "finishes": [
             "nonfoil",
             "foil"
@@ -28,6 +29,7 @@
         "foil": true,
         "frame": "2003",
         "full_art": false,
+        "game_changer": false,
         "games": [
             "paper",
             "mtgo"
@@ -36,13 +38,20 @@
         "id": "3749181f-7b4e-4b9d-aaf3-94f707c306aa",
         "illustration_id": "950e85cf-6352-4b29-88b6-c9340f301094",
         "image_status": "highres_scan",
+        "image_updated_at": "2026-07-13T12:06:30Z",
         "image_uris": {
-            "art_crop": "https://cards.scryfall.io/art_crop/front/3/7/3749181f-7b4e-4b9d-aaf3-94f707c306aa.jpg?1562876287",
-            "border_crop": "https://cards.scryfall.io/border_crop/front/3/7/3749181f-7b4e-4b9d-aaf3-94f707c306aa.jpg?1562876287",
-            "large": "https://cards.scryfall.io/large/front/3/7/3749181f-7b4e-4b9d-aaf3-94f707c306aa.jpg?1562876287",
-            "normal": "https://cards.scryfall.io/normal/front/3/7/3749181f-7b4e-4b9d-aaf3-94f707c306aa.jpg?1562876287",
-            "png": "https://cards.scryfall.io/png/front/3/7/3749181f-7b4e-4b9d-aaf3-94f707c306aa.png?1562876287",
-            "small": "https://cards.scryfall.io/small/front/3/7/3749181f-7b4e-4b9d-aaf3-94f707c306aa.jpg?1562876287"
+            "art": "https://cards.scryfall.io/art/front/3/7/3749181f-7b4e-4b9d-aaf3-94f707c306aa.webp?1783944390",
+            "art_crop": "https://cards.scryfall.io/art_crop/front/3/7/3749181f-7b4e-4b9d-aaf3-94f707c306aa.jpg?1783944390",
+            "border_crop": "https://cards.scryfall.io/border_crop/front/3/7/3749181f-7b4e-4b9d-aaf3-94f707c306aa.jpg?1783944390",
+            "crop": "https://cards.scryfall.io/crop/front/3/7/3749181f-7b4e-4b9d-aaf3-94f707c306aa.webp?1783944390",
+            "display": "https://cards.scryfall.io/display/front/3/7/3749181f-7b4e-4b9d-aaf3-94f707c306aa.webp?1783944390",
+            "grid": "https://cards.scryfall.io/grid/front/3/7/3749181f-7b4e-4b9d-aaf3-94f707c306aa.webp?1783944390",
+            "jpeg": "https://cards.scryfall.io/normal/front/3/7/3749181f-7b4e-4b9d-aaf3-94f707c306aa.jpg?1783944390",
+            "large": "https://cards.scryfall.io/large/front/3/7/3749181f-7b4e-4b9d-aaf3-94f707c306aa.jpg?1783944390",
+            "normal": "https://cards.scryfall.io/normal/front/3/7/3749181f-7b4e-4b9d-aaf3-94f707c306aa.jpg?1783944390",
+            "png": "https://cards.scryfall.io/png/front/3/7/3749181f-7b4e-4b9d-aaf3-94f707c306aa.png?1783944390",
+            "small": "https://cards.scryfall.io/small/front/3/7/3749181f-7b4e-4b9d-aaf3-94f707c306aa.jpg?1783944390",
+            "thumb": "https://cards.scryfall.io/thumb/front/3/7/3749181f-7b4e-4b9d-aaf3-94f707c306aa.webp?1783944390"
         },
         "keywords": [
             "Scry"
@@ -53,8 +62,8 @@
             "alchemy": "not_legal",
             "brawl": "not_legal",
             "commander": "legal",
+            "competitivebrawl": "not_legal",
             "duel": "legal",
-            "explorer": "not_legal",
             "future": "not_legal",
             "gladiator": "not_legal",
             "historic": "not_legal",
@@ -64,13 +73,14 @@
             "oldschool": "not_legal",
             "pauper": "legal",
             "paupercommander": "legal",
-            "penny": "legal",
+            "penny": "not_legal",
             "pioneer": "not_legal",
             "predh": "legal",
             "premodern": "not_legal",
             "standard": "not_legal",
             "standardbrawl": "not_legal",
             "timeless": "not_legal",
+            "tlr": "legal",
             "vintage": "legal"
         },
         "mana_cost": "{2}{G}",
@@ -83,29 +93,29 @@
         "nonfoil": true,
         "object": "card",
         "oracle_id": "a7796af7-d41c-42a6-9033-a4d79dee84d6",
-        "oracle_text": "Target creature gets +4/+4 until end of turn. Scry 2. (Look at the top two cards of your library, then put any number of them on the bottom of your library and the rest on top in any order.)",
+        "oracle_text": "Target creature gets +4/+4 until end of turn. Scry 2. (Look at the top two cards of your library, then put any number of them on the bottom and the rest on top in any order.)",
         "oversized": false,
         "prices": {
-            "eur": "0.02",
-            "eur_foil": "0.28",
+            "eur": "0.06",
+            "eur_foil": "0.22",
             "tix": "0.03",
-            "usd": "0.10",
+            "usd": "0.15",
             "usd_etched": null,
-            "usd_foil": "0.28"
+            "usd_foil": "0.35"
         },
         "prints_search_uri": "https://api.scryfall.com/cards/search?order=released&q=oracleid%3Aa7796af7-d41c-42a6-9033-a4d79dee84d6&unique=prints",
         "promo": false,
         "purchase_uris": {
             "cardhoarder": "https://www.cardhoarder.com/cards/20854?affiliate_id=scryfall&ref=card-profile&utm_campaign=affiliate&utm_medium=card&utm_source=scryfall",
-            "cardmarket": "https://www.cardmarket.com/en/Magic/Products/Singles/Fifth-Dawn/Ferocious-Charge?referrer=scryfall&utm_campaign=card_prices&utm_medium=text&utm_source=scryfall",
-            "tcgplayer": "https://tcgplayer.pxf.io/c/4931599/1830156/21018?subId1=api&u=https%3A%2F%2Fwww.tcgplayer.com%2Fproduct%2F11858%3Fpage%3D1"
+            "cardmarket": "https://www.cardmarket.com/en/Magic/Products?idProduct=564&referrer=scryfall&utm_campaign=card_prices&utm_medium=text&utm_source=scryfall",
+            "tcgplayer": "https://partner.tcgplayer.com/c/4931599/1830156/21018?subId1=api&u=https%3A%2F%2Fwww.tcgplayer.com%2Fproduct%2F11858%3Fpage%3D1"
         },
         "rarity": "common",
         "related_uris": {
             "edhrec": "https://edhrec.com/route/?cc=Ferocious+Charge",
             "gatherer": "https://gatherer.wizards.com/Pages/Card/Details.aspx?multiverseid=51617&printed=false",
-            "tcgplayer_infinite_articles": "https://tcgplayer.pxf.io/c/4931599/1830156/21018?subId1=api&trafcat=infinite&u=https%3A%2F%2Finfinite.tcgplayer.com%2Fsearch%3FcontentMode%3Darticle%26game%3Dmagic%26partner%3Dscryfall%26q%3DFerocious%2BCharge",
-            "tcgplayer_infinite_decks": "https://tcgplayer.pxf.io/c/4931599/1830156/21018?subId1=api&trafcat=infinite&u=https%3A%2F%2Finfinite.tcgplayer.com%2Fsearch%3FcontentMode%3Ddeck%26game%3Dmagic%26partner%3Dscryfall%26q%3DFerocious%2BCharge"
+            "tcgplayer_infinite_articles": "https://partner.tcgplayer.com/c/4931599/1830156/21018?subId1=api&trafcat=tcgplayer.com%2Fsearch%2Farticles&u=https%3A%2F%2Fwww.tcgplayer.com%2Fsearch%2Farticles%3FproductLineName%3Dmagic%26q%3DFerocious%2BCharge",
+            "tcgplayer_infinite_decks": "https://partner.tcgplayer.com/c/4931599/1830156/21018?subId1=api&trafcat=tcgplayer.com%2Fsearch%2Fdecks&u=https%3A%2F%2Fwww.tcgplayer.com%2Fsearch%2Fdecks%3FproductLineName%3Dmagic%26q%3DFerocious%2BCharge"
         },
         "released_at": "2004-06-04",
         "reprint": false,

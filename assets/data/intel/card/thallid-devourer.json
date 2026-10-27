@@ -6,11 +6,11 @@
         "all_parts": [
             {
                 "component": "token",
-                "id": "f38381fd-e368-46b2-94e9-89c9b182435d",
+                "id": "248ade83-ac57-42d6-985c-1e4cc3639f36",
                 "name": "Saproling",
                 "object": "related_card",
                 "type_line": "Token Creature \u2014 Saproling",
-                "uri": "https://api.scryfall.com/cards/f38381fd-e368-46b2-94e9-89c9b182435d"
+                "uri": "https://api.scryfall.com/cards/248ade83-ac57-42d6-985c-1e4cc3639f36"
             },
             {
                 "component": "combo_piece",
@@ -37,7 +37,7 @@
             "G"
         ],
         "digital": true,
-        "edhrec_rank": 10831,
+        "edhrec_rank": 15876,
         "finishes": [
             "nonfoil",
             "foil"
@@ -45,6 +45,7 @@
         "foil": true,
         "frame": "1997",
         "full_art": false,
+        "game_changer": false,
         "games": [
             "mtgo"
         ],
@@ -52,13 +53,20 @@
         "id": "1a392801-bdc8-4342-8cdd-48f874e22afa",
         "illustration_id": "0bbf11ed-cc32-4efa-9faa-f91bdd180435",
         "image_status": "highres_scan",
+        "image_updated_at": "2026-07-13T11:36:41Z",
         "image_uris": {
-            "art_crop": "https://cards.scryfall.io/art_crop/front/1/a/1a392801-bdc8-4342-8cdd-48f874e22afa.jpg?1562867841",
-            "border_crop": "https://cards.scryfall.io/border_crop/front/1/a/1a392801-bdc8-4342-8cdd-48f874e22afa.jpg?1562867841",
-            "large": "https://cards.scryfall.io/large/front/1/a/1a392801-bdc8-4342-8cdd-48f874e22afa.jpg?1562867841",
-            "normal": "https://cards.scryfall.io/normal/front/1/a/1a392801-bdc8-4342-8cdd-48f874e22afa.jpg?1562867841",
-            "png": "https://cards.scryfall.io/png/front/1/a/1a392801-bdc8-4342-8cdd-48f874e22afa.png?1562867841",
-            "small": "https://cards.scryfall.io/small/front/1/a/1a392801-bdc8-4342-8cdd-48f874e22afa.jpg?1562867841"
+            "art": "https://cards.scryfall.io/art/front/1/a/1a392801-bdc8-4342-8cdd-48f874e22afa.webp?1783942601",
+            "art_crop": "https://cards.scryfall.io/art_crop/front/1/a/1a392801-bdc8-4342-8cdd-48f874e22afa.jpg?1783942601",
+            "border_crop": "https://cards.scryfall.io/border_crop/front/1/a/1a392801-bdc8-4342-8cdd-48f874e22afa.jpg?1783942601",
+            "crop": "https://cards.scryfall.io/crop/front/1/a/1a392801-bdc8-4342-8cdd-48f874e22afa.webp?1783942601",
+            "display": "https://cards.scryfall.io/display/front/1/a/1a392801-bdc8-4342-8cdd-48f874e22afa.webp?1783942601",
+            "grid": "https://cards.scryfall.io/grid/front/1/a/1a392801-bdc8-4342-8cdd-48f874e22afa.webp?1783942601",
+            "jpeg": "https://cards.scryfall.io/normal/front/1/a/1a392801-bdc8-4342-8cdd-48f874e22afa.jpg?1783942601",
+            "large": "https://cards.scryfall.io/large/front/1/a/1a392801-bdc8-4342-8cdd-48f874e22afa.jpg?1783942601",
+            "normal": "https://cards.scryfall.io/normal/front/1/a/1a392801-bdc8-4342-8cdd-48f874e22afa.jpg?1783942601",
+            "png": "https://cards.scryfall.io/png/front/1/a/1a392801-bdc8-4342-8cdd-48f874e22afa.png?1783942601",
+            "small": "https://cards.scryfall.io/small/front/1/a/1a392801-bdc8-4342-8cdd-48f874e22afa.jpg?1783942601",
+            "thumb": "https://cards.scryfall.io/thumb/front/1/a/1a392801-bdc8-4342-8cdd-48f874e22afa.webp?1783942601"
         },
         "keywords": [],
         "lang": "en",
@@ -67,8 +75,8 @@
             "alchemy": "not_legal",
             "brawl": "not_legal",
             "commander": "legal",
+            "competitivebrawl": "not_legal",
             "duel": "legal",
-            "explorer": "not_legal",
             "future": "not_legal",
             "gladiator": "not_legal",
             "historic": "not_legal",
@@ -78,13 +86,14 @@
             "oldschool": "not_legal",
             "pauper": "legal",
             "paupercommander": "legal",
-            "penny": "not_legal",
+            "penny": "legal",
             "pioneer": "not_legal",
             "predh": "legal",
             "premodern": "not_legal",
             "standard": "not_legal",
             "standardbrawl": "not_legal",
             "timeless": "not_legal",
+            "tlr": "legal",
             "vintage": "legal"
         },
         "mana_cost": "{1}{G}{G}",
@@ -97,7 +106,7 @@
         "nonfoil": true,
         "object": "card",
         "oracle_id": "b7326fd9-7648-4db3-b506-61a7de8a4094",
-        "oracle_text": "At the beginning of your upkeep, put a spore counter on Thallid Devourer.\nRemove three spore counters from Thallid Devourer: Create a 1/1 green Saproling creature token.\nSacrifice a Saproling: Thallid Devourer gets +1/+2 until end of turn.",
+        "oracle_text": "At the beginning of your upkeep, put a spore counter on this creature.\nRemove three spore counters from this creature: Create a 1/1 green Saproling creature token.\nSacrifice a Saproling: This creature gets +1/+2 until end of turn.",
         "oversized": false,
         "power": "2",
         "prices": {
@@ -113,14 +122,14 @@
         "purchase_uris": {
             "cardhoarder": "https://www.cardhoarder.com/cards/30372?affiliate_id=scryfall&ref=card-profile&utm_campaign=affiliate&utm_medium=card&utm_source=scryfall",
             "cardmarket": "https://www.cardmarket.com/en/Magic/Products/Search?referrer=scryfall&searchString=Thallid+Devourer&utm_campaign=card_prices&utm_medium=text&utm_source=scryfall",
-            "tcgplayer": "https://tcgplayer.pxf.io/c/4931599/1830156/21018?subId1=api&u=https%3A%2F%2Fwww.tcgplayer.com%2Fsearch%2Fmagic%2Fproduct%3FproductLineName%3Dmagic%26q%3DThallid%2BDevourer%26view%3Dgrid"
+            "tcgplayer": "https://partner.tcgplayer.com/c/4931599/1830156/21018?subId1=api&u=https%3A%2F%2Fwww.tcgplayer.com%2Fsearch%2Fmagic%2Fproduct%3FproductLineName%3Dmagic%26q%3DThallid%2BDevourer%26view%3Dgrid"
         },
         "rarity": "common",
         "related_uris": {
             "edhrec": "https://edhrec.com/route/?cc=Thallid+Devourer",
             "gatherer": "https://gatherer.wizards.com/Pages/Card/Details.aspx?multiverseid=184527&printed=false",
-            "tcgplayer_infinite_articles": "https://tcgplayer.pxf.io/c/4931599/1830156/21018?subId1=api&trafcat=infinite&u=https%3A%2F%2Finfinite.tcgplayer.com%2Fsearch%3FcontentMode%3Darticle%26game%3Dmagic%26partner%3Dscryfall%26q%3DThallid%2BDevourer",
-            "tcgplayer_infinite_decks": "https://tcgplayer.pxf.io/c/4931599/1830156/21018?subId1=api&trafcat=infinite&u=https%3A%2F%2Finfinite.tcgplayer.com%2Fsearch%3FcontentMode%3Ddeck%26game%3Dmagic%26partner%3Dscryfall%26q%3DThallid%2BDevourer"
+            "tcgplayer_infinite_articles": "https://partner.tcgplayer.com/c/4931599/1830156/21018?subId1=api&trafcat=tcgplayer.com%2Fsearch%2Farticles&u=https%3A%2F%2Fwww.tcgplayer.com%2Fsearch%2Farticles%3FproductLineName%3Dmagic%26q%3DThallid%2BDevourer",
+            "tcgplayer_infinite_decks": "https://partner.tcgplayer.com/c/4931599/1830156/21018?subId1=api&trafcat=tcgplayer.com%2Fsearch%2Fdecks&u=https%3A%2F%2Fwww.tcgplayer.com%2Fsearch%2Fdecks%3FproductLineName%3Dmagic%26q%3DThallid%2BDevourer"
         },
         "released_at": "2008-09-22",
         "reprint": true,

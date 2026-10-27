@@ -14,6 +14,14 @@
             },
             {
                 "component": "combo_piece",
+                "id": "10d93af8-3e67-4e5c-96b0-1915ff3d2fbc",
+                "name": "Current Curriculum",
+                "object": "related_card",
+                "type_line": "Enchantment",
+                "uri": "https://api.scryfall.com/cards/10d93af8-3e67-4e5c-96b0-1915ff3d2fbc"
+            },
+            {
+                "component": "combo_piece",
                 "id": "69fa2293-f398-4ad8-895e-c739ddea56d0",
                 "name": "Stonybrook Schoolmaster",
                 "object": "related_card",
@@ -39,7 +47,7 @@
             "W"
         ],
         "digital": false,
-        "edhrec_rank": 8549,
+        "edhrec_rank": 11683,
         "finishes": [
             "nonfoil",
             "foil"
@@ -48,6 +56,7 @@
         "foil": true,
         "frame": "2003",
         "full_art": false,
+        "game_changer": false,
         "games": [
             "paper",
             "mtgo"
@@ -56,13 +65,20 @@
         "id": "69fa2293-f398-4ad8-895e-c739ddea56d0",
         "illustration_id": "1a1d65e2-bc27-42c5-81ec-9cd7740d4f9f",
         "image_status": "highres_scan",
+        "image_updated_at": "2026-07-13T11:40:03Z",
         "image_uris": {
-            "art_crop": "https://cards.scryfall.io/art_crop/front/6/9/69fa2293-f398-4ad8-895e-c739ddea56d0.jpg?1562879054",
-            "border_crop": "https://cards.scryfall.io/border_crop/front/6/9/69fa2293-f398-4ad8-895e-c739ddea56d0.jpg?1562879054",
-            "large": "https://cards.scryfall.io/large/front/6/9/69fa2293-f398-4ad8-895e-c739ddea56d0.jpg?1562879054",
-            "normal": "https://cards.scryfall.io/normal/front/6/9/69fa2293-f398-4ad8-895e-c739ddea56d0.jpg?1562879054",
-            "png": "https://cards.scryfall.io/png/front/6/9/69fa2293-f398-4ad8-895e-c739ddea56d0.png?1562879054",
-            "small": "https://cards.scryfall.io/small/front/6/9/69fa2293-f398-4ad8-895e-c739ddea56d0.jpg?1562879054"
+            "art": "https://cards.scryfall.io/art/front/6/9/69fa2293-f398-4ad8-895e-c739ddea56d0.webp?1783942803",
+            "art_crop": "https://cards.scryfall.io/art_crop/front/6/9/69fa2293-f398-4ad8-895e-c739ddea56d0.jpg?1783942803",
+            "border_crop": "https://cards.scryfall.io/border_crop/front/6/9/69fa2293-f398-4ad8-895e-c739ddea56d0.jpg?1783942803",
+            "crop": "https://cards.scryfall.io/crop/front/6/9/69fa2293-f398-4ad8-895e-c739ddea56d0.webp?1783942803",
+            "display": "https://cards.scryfall.io/display/front/6/9/69fa2293-f398-4ad8-895e-c739ddea56d0.webp?1783942803",
+            "grid": "https://cards.scryfall.io/grid/front/6/9/69fa2293-f398-4ad8-895e-c739ddea56d0.webp?1783942803",
+            "jpeg": "https://cards.scryfall.io/normal/front/6/9/69fa2293-f398-4ad8-895e-c739ddea56d0.jpg?1783942803",
+            "large": "https://cards.scryfall.io/large/front/6/9/69fa2293-f398-4ad8-895e-c739ddea56d0.jpg?1783942803",
+            "normal": "https://cards.scryfall.io/normal/front/6/9/69fa2293-f398-4ad8-895e-c739ddea56d0.jpg?1783942803",
+            "png": "https://cards.scryfall.io/png/front/6/9/69fa2293-f398-4ad8-895e-c739ddea56d0.png?1783942803",
+            "small": "https://cards.scryfall.io/small/front/6/9/69fa2293-f398-4ad8-895e-c739ddea56d0.jpg?1783942803",
+            "thumb": "https://cards.scryfall.io/thumb/front/6/9/69fa2293-f398-4ad8-895e-c739ddea56d0.webp?1783942803"
         },
         "keywords": [],
         "lang": "en",
@@ -71,8 +87,8 @@
             "alchemy": "not_legal",
             "brawl": "not_legal",
             "commander": "legal",
+            "competitivebrawl": "not_legal",
             "duel": "legal",
-            "explorer": "not_legal",
             "future": "not_legal",
             "gladiator": "not_legal",
             "historic": "not_legal",
@@ -82,13 +98,14 @@
             "oldschool": "not_legal",
             "pauper": "legal",
             "paupercommander": "legal",
-            "penny": "legal",
+            "penny": "not_legal",
             "pioneer": "not_legal",
             "predh": "legal",
             "premodern": "not_legal",
             "standard": "not_legal",
             "standardbrawl": "not_legal",
             "timeless": "not_legal",
+            "tlr": "legal",
             "vintage": "legal"
         },
         "mana_cost": "{2}{W}",
@@ -101,31 +118,31 @@
         "nonfoil": true,
         "object": "card",
         "oracle_id": "7ef67bae-4af3-47b9-95d2-08f3c5a0b39d",
-        "oracle_text": "Whenever Stonybrook Schoolmaster becomes tapped, you may create a 1/1 blue Merfolk Wizard creature token.",
+        "oracle_text": "Whenever this creature becomes tapped, you may create a 1/1 blue Merfolk Wizard creature token.",
         "oversized": false,
-        "penny_rank": 6210,
+        "penny_rank": 7778,
         "power": "1",
         "prices": {
-            "eur": "0.17",
-            "eur_foil": "1.92",
+            "eur": "0.20",
+            "eur_foil": "1.45",
             "tix": "0.03",
-            "usd": "0.34",
+            "usd": "0.32",
             "usd_etched": null,
-            "usd_foil": "6.40"
+            "usd_foil": "8.91"
         },
         "prints_search_uri": "https://api.scryfall.com/cards/search?order=released&q=oracleid%3A7ef67bae-4af3-47b9-95d2-08f3c5a0b39d&unique=prints",
         "promo": false,
         "purchase_uris": {
             "cardhoarder": "https://www.cardhoarder.com/cards/29190?affiliate_id=scryfall&ref=card-profile&utm_campaign=affiliate&utm_medium=card&utm_source=scryfall",
-            "cardmarket": "https://www.cardmarket.com/en/Magic/Products/Singles/Morningtide/Stonybrook-Schoolmaster?referrer=scryfall&utm_campaign=card_prices&utm_medium=text&utm_source=scryfall",
-            "tcgplayer": "https://tcgplayer.pxf.io/c/4931599/1830156/21018?subId1=api&u=https%3A%2F%2Fwww.tcgplayer.com%2Fproduct%2F18072%3Fpage%3D1"
+            "cardmarket": "https://www.cardmarket.com/en/Magic/Products?idProduct=18854&referrer=scryfall&utm_campaign=card_prices&utm_medium=text&utm_source=scryfall",
+            "tcgplayer": "https://partner.tcgplayer.com/c/4931599/1830156/21018?subId1=api&u=https%3A%2F%2Fwww.tcgplayer.com%2Fproduct%2F18072%3Fpage%3D1"
         },
         "rarity": "common",
         "related_uris": {
             "edhrec": "https://edhrec.com/route/?cc=Stonybrook+Schoolmaster",
             "gatherer": "https://gatherer.wizards.com/Pages/Card/Details.aspx?multiverseid=153166&printed=false",
-            "tcgplayer_infinite_articles": "https://tcgplayer.pxf.io/c/4931599/1830156/21018?subId1=api&trafcat=infinite&u=https%3A%2F%2Finfinite.tcgplayer.com%2Fsearch%3FcontentMode%3Darticle%26game%3Dmagic%26partner%3Dscryfall%26q%3DStonybrook%2BSchoolmaster",
-            "tcgplayer_infinite_decks": "https://tcgplayer.pxf.io/c/4931599/1830156/21018?subId1=api&trafcat=infinite&u=https%3A%2F%2Finfinite.tcgplayer.com%2Fsearch%3FcontentMode%3Ddeck%26game%3Dmagic%26partner%3Dscryfall%26q%3DStonybrook%2BSchoolmaster"
+            "tcgplayer_infinite_articles": "https://partner.tcgplayer.com/c/4931599/1830156/21018?subId1=api&trafcat=tcgplayer.com%2Fsearch%2Farticles&u=https%3A%2F%2Fwww.tcgplayer.com%2Fsearch%2Farticles%3FproductLineName%3Dmagic%26q%3DStonybrook%2BSchoolmaster",
+            "tcgplayer_infinite_decks": "https://partner.tcgplayer.com/c/4931599/1830156/21018?subId1=api&trafcat=tcgplayer.com%2Fsearch%2Fdecks&u=https%3A%2F%2Fwww.tcgplayer.com%2Fsearch%2Fdecks%3FproductLineName%3Dmagic%26q%3DStonybrook%2BSchoolmaster"
         },
         "released_at": "2008-02-01",
         "reprint": false,

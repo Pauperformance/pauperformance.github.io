@@ -13,14 +13,6 @@
                 "uri": "https://api.scryfall.com/cards/f0668413-859d-4ec4-a4d8-17ec7f5b1b8b"
             },
             {
-                "component": "combo_piece",
-                "id": "004c1078-0dea-4885-97b5-497f3f15c8c3",
-                "name": "A-Falcon Abomination",
-                "object": "related_card",
-                "type_line": "Creature \u2014 Zombie Bird",
-                "uri": "https://api.scryfall.com/cards/004c1078-0dea-4885-97b5-497f3f15c8c3"
-            },
-            {
                 "component": "token",
                 "id": "6adb8607-1066-451d-a719-74ad32358278",
                 "name": "Zombie",
@@ -47,7 +39,7 @@
             "U"
         ],
         "digital": false,
-        "edhrec_rank": 13919,
+        "edhrec_rank": 19024,
         "finishes": [
             "nonfoil",
             "foil"
@@ -56,6 +48,7 @@
         "foil": true,
         "frame": "2015",
         "full_art": false,
+        "game_changer": false,
         "games": [
             "arena",
             "paper",
@@ -65,13 +58,20 @@
         "id": "f0668413-859d-4ec4-a4d8-17ec7f5b1b8b",
         "illustration_id": "7d436138-c076-4dcb-abed-d3ebdbb67fae",
         "image_status": "highres_scan",
+        "image_updated_at": "2026-07-13T06:54:01Z",
         "image_uris": {
-            "art_crop": "https://cards.scryfall.io/art_crop/front/f/0/f0668413-859d-4ec4-a4d8-17ec7f5b1b8b.jpg?1634348844",
-            "border_crop": "https://cards.scryfall.io/border_crop/front/f/0/f0668413-859d-4ec4-a4d8-17ec7f5b1b8b.jpg?1634348844",
-            "large": "https://cards.scryfall.io/large/front/f/0/f0668413-859d-4ec4-a4d8-17ec7f5b1b8b.jpg?1634348844",
-            "normal": "https://cards.scryfall.io/normal/front/f/0/f0668413-859d-4ec4-a4d8-17ec7f5b1b8b.jpg?1634348844",
-            "png": "https://cards.scryfall.io/png/front/f/0/f0668413-859d-4ec4-a4d8-17ec7f5b1b8b.png?1634348844",
-            "small": "https://cards.scryfall.io/small/front/f/0/f0668413-859d-4ec4-a4d8-17ec7f5b1b8b.jpg?1634348844"
+            "art": "https://cards.scryfall.io/art/front/f/0/f0668413-859d-4ec4-a4d8-17ec7f5b1b8b.webp?1783925641",
+            "art_crop": "https://cards.scryfall.io/art_crop/front/f/0/f0668413-859d-4ec4-a4d8-17ec7f5b1b8b.jpg?1783925641",
+            "border_crop": "https://cards.scryfall.io/border_crop/front/f/0/f0668413-859d-4ec4-a4d8-17ec7f5b1b8b.jpg?1783925641",
+            "crop": "https://cards.scryfall.io/crop/front/f/0/f0668413-859d-4ec4-a4d8-17ec7f5b1b8b.webp?1783925641",
+            "display": "https://cards.scryfall.io/display/front/f/0/f0668413-859d-4ec4-a4d8-17ec7f5b1b8b.webp?1783925641",
+            "grid": "https://cards.scryfall.io/grid/front/f/0/f0668413-859d-4ec4-a4d8-17ec7f5b1b8b.webp?1783925641",
+            "jpeg": "https://cards.scryfall.io/normal/front/f/0/f0668413-859d-4ec4-a4d8-17ec7f5b1b8b.jpg?1783925641",
+            "large": "https://cards.scryfall.io/large/front/f/0/f0668413-859d-4ec4-a4d8-17ec7f5b1b8b.jpg?1783925641",
+            "normal": "https://cards.scryfall.io/normal/front/f/0/f0668413-859d-4ec4-a4d8-17ec7f5b1b8b.jpg?1783925641",
+            "png": "https://cards.scryfall.io/png/front/f/0/f0668413-859d-4ec4-a4d8-17ec7f5b1b8b.png?1783925641",
+            "small": "https://cards.scryfall.io/small/front/f/0/f0668413-859d-4ec4-a4d8-17ec7f5b1b8b.jpg?1783925641",
+            "thumb": "https://cards.scryfall.io/thumb/front/f/0/f0668413-859d-4ec4-a4d8-17ec7f5b1b8b.webp?1783925641"
         },
         "keywords": [
             "Flying"
@@ -80,13 +80,13 @@
         "layout": "normal",
         "legalities": {
             "alchemy": "not_legal",
-            "brawl": "not_legal",
+            "brawl": "legal",
             "commander": "legal",
+            "competitivebrawl": "legal",
             "duel": "legal",
-            "explorer": "legal",
-            "future": "legal",
+            "future": "not_legal",
             "gladiator": "legal",
-            "historic": "not_legal",
+            "historic": "legal",
             "legacy": "legal",
             "modern": "legal",
             "oathbreaker": "legal",
@@ -97,9 +97,10 @@
             "pioneer": "legal",
             "predh": "not_legal",
             "premodern": "not_legal",
-            "standard": "legal",
-            "standardbrawl": "legal",
+            "standard": "not_legal",
+            "standardbrawl": "not_legal",
             "timeless": "legal",
+            "tlr": "legal",
             "vintage": "legal"
         },
         "mana_cost": "{2}{U}",
@@ -111,35 +112,36 @@
         "nonfoil": true,
         "object": "card",
         "oracle_id": "21eea63f-72b2-4155-bfad-f9937a8f8614",
-        "oracle_text": "Flying\nWhen Falcon Abomination enters the battlefield, create a 2/2 black Zombie creature token with decayed. (It can't block. When it attacks, sacrifice it at end of combat.)",
+        "oracle_text": "Flying\nWhen this creature enters, create a 2/2 black Zombie creature token with decayed. (It can't block. When it attacks, sacrifice it at end of combat.)",
         "oversized": false,
-        "penny_rank": 12630,
+        "penny_rank": 14929,
         "power": "2",
         "prices": {
-            "eur": "0.04",
-            "eur_foil": "0.12",
+            "eur": "0.08",
+            "eur_foil": "0.10",
             "tix": "0.03",
-            "usd": "0.03",
+            "usd": "0.17",
             "usd_etched": null,
-            "usd_foil": "0.05"
+            "usd_foil": "0.16"
         },
         "prints_search_uri": "https://api.scryfall.com/cards/search?order=released&q=oracleid%3A21eea63f-72b2-4155-bfad-f9937a8f8614&unique=prints",
         "promo": false,
         "purchase_uris": {
             "cardhoarder": "https://www.cardhoarder.com/cards/93040?affiliate_id=scryfall&ref=card-profile&utm_campaign=affiliate&utm_medium=card&utm_source=scryfall",
-            "cardmarket": "https://www.cardmarket.com/en/Magic/Products/Singles/Innistrad-Midnight-Hunt/Falcon-Abomination?referrer=scryfall&utm_campaign=card_prices&utm_medium=text&utm_source=scryfall",
-            "tcgplayer": "https://tcgplayer.pxf.io/c/4931599/1830156/21018?subId1=api&u=https%3A%2F%2Fwww.tcgplayer.com%2Fproduct%2F248280%3Fpage%3D1"
+            "cardmarket": "https://www.cardmarket.com/en/Magic/Products?idProduct=575020&referrer=scryfall&utm_campaign=card_prices&utm_medium=text&utm_source=scryfall",
+            "tcgplayer": "https://partner.tcgplayer.com/c/4931599/1830156/21018?subId1=api&u=https%3A%2F%2Fwww.tcgplayer.com%2Fproduct%2F248280%3Fpage%3D1"
         },
         "rarity": "common",
         "related_uris": {
             "edhrec": "https://edhrec.com/route/?cc=Falcon+Abomination",
             "gatherer": "https://gatherer.wizards.com/Pages/Card/Details.aspx?multiverseid=534813&printed=false",
-            "tcgplayer_infinite_articles": "https://tcgplayer.pxf.io/c/4931599/1830156/21018?subId1=api&trafcat=infinite&u=https%3A%2F%2Finfinite.tcgplayer.com%2Fsearch%3FcontentMode%3Darticle%26game%3Dmagic%26partner%3Dscryfall%26q%3DFalcon%2BAbomination",
-            "tcgplayer_infinite_decks": "https://tcgplayer.pxf.io/c/4931599/1830156/21018?subId1=api&trafcat=infinite&u=https%3A%2F%2Finfinite.tcgplayer.com%2Fsearch%3FcontentMode%3Ddeck%26game%3Dmagic%26partner%3Dscryfall%26q%3DFalcon%2BAbomination"
+            "tcgplayer_infinite_articles": "https://partner.tcgplayer.com/c/4931599/1830156/21018?subId1=api&trafcat=tcgplayer.com%2Fsearch%2Farticles&u=https%3A%2F%2Fwww.tcgplayer.com%2Fsearch%2Farticles%3FproductLineName%3Dmagic%26q%3DFalcon%2BAbomination",
+            "tcgplayer_infinite_decks": "https://partner.tcgplayer.com/c/4931599/1830156/21018?subId1=api&trafcat=tcgplayer.com%2Fsearch%2Fdecks&u=https%3A%2F%2Fwww.tcgplayer.com%2Fsearch%2Fdecks%3FproductLineName%3Dmagic%26q%3DFalcon%2BAbomination"
         },
         "released_at": "2021-09-24",
         "reprint": false,
         "reserved": false,
+        "resource_id": "D7BCC3CB7701BDEEE83F8162E9BEC55A013DC5F0E844BD8B04581A8633C3CD1A",
         "rulings_uri": "https://api.scryfall.com/cards/f0668413-859d-4ec4-a4d8-17ec7f5b1b8b/rulings",
         "scryfall_set_uri": "https://scryfall.com/sets/mid?utm_source=api",
         "scryfall_uri": "https://scryfall.com/card/mid/52/falcon-abomination?utm_source=api",

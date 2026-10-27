@@ -3,24 +3,6 @@
         "py/set": []
     },
     "scryfall": {
-        "all_parts": [
-            {
-                "component": "combo_piece",
-                "id": "d9b1ed43-ee6c-43a2-ba94-5bf71c63e070",
-                "name": "Ancestral Katana",
-                "object": "related_card",
-                "type_line": "Artifact \u2014 Equipment",
-                "uri": "https://api.scryfall.com/cards/d9b1ed43-ee6c-43a2-ba94-5bf71c63e070"
-            },
-            {
-                "component": "combo_piece",
-                "id": "0321b706-87b0-4bea-89d3-ec2e7252dc7c",
-                "name": "A-Ancestral Katana",
-                "object": "related_card",
-                "type_line": "Artifact \u2014 Equipment",
-                "uri": "https://api.scryfall.com/cards/0321b706-87b0-4bea-89d3-ec2e7252dc7c"
-            }
-        ],
         "arena_id": 79418,
         "artist": "Daniel Ljunggren",
         "artist_ids": [
@@ -39,7 +21,7 @@
             "W"
         ],
         "digital": false,
-        "edhrec_rank": 9647,
+        "edhrec_rank": 13617,
         "finishes": [
             "nonfoil",
             "foil"
@@ -47,6 +29,7 @@
         "foil": true,
         "frame": "2015",
         "full_art": false,
+        "game_changer": false,
         "games": [
             "paper",
             "mtgo",
@@ -56,13 +39,20 @@
         "id": "d9b1ed43-ee6c-43a2-ba94-5bf71c63e070",
         "illustration_id": "a9661038-f51e-4122-87d0-e6db65c48720",
         "image_status": "highres_scan",
+        "image_updated_at": "2026-07-13T06:25:29Z",
         "image_uris": {
-            "art_crop": "https://cards.scryfall.io/art_crop/front/d/9/d9b1ed43-ee6c-43a2-ba94-5bf71c63e070.jpg?1654566140",
-            "border_crop": "https://cards.scryfall.io/border_crop/front/d/9/d9b1ed43-ee6c-43a2-ba94-5bf71c63e070.jpg?1654566140",
-            "large": "https://cards.scryfall.io/large/front/d/9/d9b1ed43-ee6c-43a2-ba94-5bf71c63e070.jpg?1654566140",
-            "normal": "https://cards.scryfall.io/normal/front/d/9/d9b1ed43-ee6c-43a2-ba94-5bf71c63e070.jpg?1654566140",
-            "png": "https://cards.scryfall.io/png/front/d/9/d9b1ed43-ee6c-43a2-ba94-5bf71c63e070.png?1654566140",
-            "small": "https://cards.scryfall.io/small/front/d/9/d9b1ed43-ee6c-43a2-ba94-5bf71c63e070.jpg?1654566140"
+            "art": "https://cards.scryfall.io/art/front/d/9/d9b1ed43-ee6c-43a2-ba94-5bf71c63e070.webp?1783923929",
+            "art_crop": "https://cards.scryfall.io/art_crop/front/d/9/d9b1ed43-ee6c-43a2-ba94-5bf71c63e070.jpg?1783923929",
+            "border_crop": "https://cards.scryfall.io/border_crop/front/d/9/d9b1ed43-ee6c-43a2-ba94-5bf71c63e070.jpg?1783923929",
+            "crop": "https://cards.scryfall.io/crop/front/d/9/d9b1ed43-ee6c-43a2-ba94-5bf71c63e070.webp?1783923929",
+            "display": "https://cards.scryfall.io/display/front/d/9/d9b1ed43-ee6c-43a2-ba94-5bf71c63e070.webp?1783923929",
+            "grid": "https://cards.scryfall.io/grid/front/d/9/d9b1ed43-ee6c-43a2-ba94-5bf71c63e070.webp?1783923929",
+            "jpeg": "https://cards.scryfall.io/normal/front/d/9/d9b1ed43-ee6c-43a2-ba94-5bf71c63e070.jpg?1783923929",
+            "large": "https://cards.scryfall.io/large/front/d/9/d9b1ed43-ee6c-43a2-ba94-5bf71c63e070.jpg?1783923929",
+            "normal": "https://cards.scryfall.io/normal/front/d/9/d9b1ed43-ee6c-43a2-ba94-5bf71c63e070.jpg?1783923929",
+            "png": "https://cards.scryfall.io/png/front/d/9/d9b1ed43-ee6c-43a2-ba94-5bf71c63e070.png?1783923929",
+            "small": "https://cards.scryfall.io/small/front/d/9/d9b1ed43-ee6c-43a2-ba94-5bf71c63e070.jpg?1783923929",
+            "thumb": "https://cards.scryfall.io/thumb/front/d/9/d9b1ed43-ee6c-43a2-ba94-5bf71c63e070.webp?1783923929"
         },
         "keywords": [
             "Equip"
@@ -71,13 +61,13 @@
         "layout": "normal",
         "legalities": {
             "alchemy": "not_legal",
-            "brawl": "not_legal",
+            "brawl": "legal",
             "commander": "legal",
+            "competitivebrawl": "legal",
             "duel": "legal",
-            "explorer": "legal",
-            "future": "legal",
+            "future": "not_legal",
             "gladiator": "legal",
-            "historic": "not_legal",
+            "historic": "legal",
             "legacy": "legal",
             "modern": "legal",
             "oathbreaker": "legal",
@@ -88,9 +78,10 @@
             "pioneer": "legal",
             "predh": "not_legal",
             "premodern": "not_legal",
-            "standard": "legal",
-            "standardbrawl": "legal",
+            "standard": "not_legal",
+            "standardbrawl": "not_legal",
             "timeless": "legal",
+            "tlr": "legal",
             "vintage": "legal"
         },
         "mana_cost": "{1}{W}",
@@ -102,35 +93,35 @@
         "nonfoil": true,
         "object": "card",
         "oracle_id": "13a9b9fd-20fa-4734-9d95-3ab41ab9c7a0",
-        "oracle_text": "Whenever a Samurai or Warrior you control attacks alone, you may pay {1}. When you do, attach Ancestral Katana to it.\nEquipped creature gets +2/+1.\nEquip {3} ({3}: Attach to target creature you control. Equip only as a sorcery.)",
+        "oracle_text": "Whenever a Samurai or Warrior you control attacks alone, you may pay {1}. When you do, attach this Equipment to it.\nEquipped creature gets +2/+1.\nEquip {3} ({3}: Attach to target creature you control. Equip only as a sorcery.)",
         "oversized": false,
-        "penny_rank": 13163,
+        "penny_rank": 16649,
         "preview": {
             "previewed_at": "2022-01-27",
             "source": "Wizards of the Coast",
             "source_uri": "https://magic.wizards.com/en/articles/archive/feature/kamigawa-neon-dynasty-mechanics-2022-01-27"
         },
         "prices": {
-            "eur": "0.06",
-            "eur_foil": "0.15",
-            "tix": "0.01",
-            "usd": "0.03",
+            "eur": "0.07",
+            "eur_foil": "0.17",
+            "tix": "0.03",
+            "usd": "0.21",
             "usd_etched": null,
-            "usd_foil": "0.08"
+            "usd_foil": "0.32"
         },
         "prints_search_uri": "https://api.scryfall.com/cards/search?order=released&q=oracleid%3A13a9b9fd-20fa-4734-9d95-3ab41ab9c7a0&unique=prints",
         "promo": false,
         "purchase_uris": {
             "cardhoarder": "https://www.cardhoarder.com/cards/96906?affiliate_id=scryfall&ref=card-profile&utm_campaign=affiliate&utm_medium=card&utm_source=scryfall",
-            "cardmarket": "https://www.cardmarket.com/en/Magic/Products/Singles/Kamigawa-Neon-Dynasty/Ancestral-Katana?referrer=scryfall&utm_campaign=card_prices&utm_medium=text&utm_source=scryfall",
-            "tcgplayer": "https://tcgplayer.pxf.io/c/4931599/1830156/21018?subId1=api&u=https%3A%2F%2Fwww.tcgplayer.com%2Fproduct%2F262136%3Fpage%3D1"
+            "cardmarket": "https://www.cardmarket.com/en/Magic/Products?idProduct=607153&referrer=scryfall&utm_campaign=card_prices&utm_medium=text&utm_source=scryfall",
+            "tcgplayer": "https://partner.tcgplayer.com/c/4931599/1830156/21018?subId1=api&u=https%3A%2F%2Fwww.tcgplayer.com%2Fproduct%2F262136%3Fpage%3D1"
         },
         "rarity": "common",
         "related_uris": {
             "edhrec": "https://edhrec.com/route/?cc=Ancestral+Katana",
             "gatherer": "https://gatherer.wizards.com/Pages/Card/Details.aspx?multiverseid=548291&printed=false",
-            "tcgplayer_infinite_articles": "https://tcgplayer.pxf.io/c/4931599/1830156/21018?subId1=api&trafcat=infinite&u=https%3A%2F%2Finfinite.tcgplayer.com%2Fsearch%3FcontentMode%3Darticle%26game%3Dmagic%26partner%3Dscryfall%26q%3DAncestral%2BKatana",
-            "tcgplayer_infinite_decks": "https://tcgplayer.pxf.io/c/4931599/1830156/21018?subId1=api&trafcat=infinite&u=https%3A%2F%2Finfinite.tcgplayer.com%2Fsearch%3FcontentMode%3Ddeck%26game%3Dmagic%26partner%3Dscryfall%26q%3DAncestral%2BKatana"
+            "tcgplayer_infinite_articles": "https://partner.tcgplayer.com/c/4931599/1830156/21018?subId1=api&trafcat=tcgplayer.com%2Fsearch%2Farticles&u=https%3A%2F%2Fwww.tcgplayer.com%2Fsearch%2Farticles%3FproductLineName%3Dmagic%26q%3DAncestral%2BKatana",
+            "tcgplayer_infinite_decks": "https://partner.tcgplayer.com/c/4931599/1830156/21018?subId1=api&trafcat=tcgplayer.com%2Fsearch%2Fdecks&u=https%3A%2F%2Fwww.tcgplayer.com%2Fsearch%2Fdecks%3FproductLineName%3Dmagic%26q%3DAncestral%2BKatana"
         },
         "released_at": "2022-02-18",
         "reprint": false,
