@@ -366,10 +366,9 @@ function BrainstormSection() {
         </div>
 
         <div className="mt-3 relative isolate flex items-stretch gap-2">
-          {settled && <div key={`light-${front}`} aria-hidden="true" className="ring-light absolute inset-x-0 top-1/4 -bottom-16 -z-10 pointer-events-none" />}
+          {settled && <div key={`light-${front}`} aria-hidden="true" className="ring-light absolute inset-x-0 top-[10%] -bottom-12 -z-10 pointer-events-none" />}
           <button onClick={() => stepBy(-1)} aria-label="Previous archetype" className={RING_ARROW}>‹</button>
-          <div key={settled ? `card-${front}` : 'card-moving'}
-            className={`flex-1 min-w-0 bg-gray-800 border rounded-xl overflow-hidden flex transition-[border-color,box-shadow] duration-500 ${settled ? 'ring-card-open border-lime-300/40 shadow-[0_0_24px_rgba(190,255,90,0.18)]' : 'border-gray-700'}`}>
+          <div className={`flex-1 min-w-0 bg-gray-800 border rounded-xl overflow-hidden flex transition-[border-color,box-shadow] duration-500 ${settled ? 'border-lime-300/40 shadow-[0_0_24px_rgba(190,255,90,0.18)]' : 'border-gray-700'}`}>
             <Link to={`/archetypes/${nameToSlug(deck.archetype_name)}`}
               className="relative w-28 sm:w-44 shrink-0 bg-gray-900 overflow-hidden group">
               {deck.featured_image

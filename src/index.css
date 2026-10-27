@@ -70,17 +70,8 @@
   animation: ring-light-open 750ms cubic-bezier(0.2, 0.8, 0.2, 1) 120ms both, ring-light-breathe 3.2s ease-in-out 900ms infinite;
 }
 
-@keyframes ring-card-open {
-  from { opacity: 0.35; transform: translateY(-8px) scaleY(0.96); }
-}
-
-.ring-card-open {
-  transform-origin: 50% 0;
-  animation: ring-card-open 450ms cubic-bezier(0.2, 0.8, 0.2, 1);
-}
-
 @media (prefers-reduced-motion: reduce) {
-  .glyph-selected, .ring-light, .ring-card-open {
+  .glyph-selected, .ring-light {
     animation: none;
   }
 }
