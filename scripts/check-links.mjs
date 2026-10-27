@@ -110,8 +110,8 @@ for (const set of read('pauper_pool.json')) {
 
 // MetagameIndex
 for (const m of read('metagame_index.json')) {
-  for (const s of m.sets) for (const c of s.cards) card(c.name, '/metagame')
-  for (const b of m.bans) for (const n of [...b.banned, ...b.unbanned]) card(n, '/metagame')
+  for (const s of m.sets) for (const c of s.cards) card(c.name, '/metagames')
+  for (const b of m.bans) for (const n of [...b.banned, ...b.unbanned]) card(n, '/metagames')
 }
 
 // Watch, Creators, PlayersIndex

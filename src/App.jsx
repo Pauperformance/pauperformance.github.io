@@ -43,7 +43,7 @@ function App() {
         <Route path="/families/:name" element={<FamilyPage />} />
         <Route path="/timeline" element={<FormatTimeline />} />
         <Route path="/sets" element={<PauperPool />} />
-        <Route path="/metagame" element={<MetagameIndex />} />
+        <Route path="/metagames" element={<MetagameIndex />} />
         <Route path="/creators" element={<Creators />} />
         <Route path="/cards" element={<CardsIndex />} />
         <Route path="/cards/:slug" element={<CardPage />} />
