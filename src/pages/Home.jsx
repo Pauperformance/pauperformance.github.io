@@ -612,7 +612,7 @@ export default function Home() {
             </p>
             <p className="mt-4 text-gray-400 leading-relaxed">
               This website is the online encyclopedia for Pauper, collecting and organising resources
-              for players with different skill levels. The Academy is currently being restructured.
+              for players with different skill levels.
             </p>
           </section>
 
