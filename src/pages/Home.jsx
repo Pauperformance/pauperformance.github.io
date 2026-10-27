@@ -167,6 +167,14 @@ function TopDecksSection() {
   )
 }
 
+function ManaSymbols({ mana, className }) {
+  return (
+    <div className={`${className} shrink-0 items-center gap-0.5`}>
+      {mana.map(m => <img key={m} src={`/images/mana/${m}.png`} alt={m} className="w-4 h-4" />)}
+    </div>
+  )
+}
+
 // The Brainstorm art split in two layers: the character stays put and the 16
 // glyphs orbit her, one per top archetype. Sprite i is rank i: the largest
 // glyph first, then its neighbours in the (mirrored) painting. Each next rank
@@ -388,9 +396,11 @@ function BrainstormSection() {
           {settled && <div key={`light-${front}`} aria-hidden="true" className="ring-light absolute inset-x-0 top-0 -bottom-8 -z-10 pointer-events-none" />}
           <button onClick={() => stepBy(-1)} aria-label="Previous archetype" className={RING_ARROW}>‹</button>
           {/* Phones: the art as a banner on top with the text below; wider: side by side */}
-          <div className={`flex-1 min-w-0 bg-gray-800 border rounded-xl overflow-hidden flex flex-col sm:flex-row transition-[border-color,box-shadow] duration-500 ${settled ? 'border-lime-300/40 shadow-[0_0_24px_rgba(190,255,90,0.18)]' : 'border-gray-700'}`}>
+          {/* Every line below has a fixed height, so the box is the same size
+              for every archetype */}
+          <div className={`relative flex-1 min-w-0 bg-gray-800 border rounded-xl overflow-hidden flex flex-col sm:flex-row transition-[border-color,box-shadow] duration-500 ${settled ? 'border-lime-300/40 shadow-[0_0_24px_rgba(190,255,90,0.18)]' : 'border-gray-700'}`}>
             <Link to={`/archetypes/${nameToSlug(deck.archetype_name)}`}
-              className="relative w-full aspect-[2/1] sm:aspect-auto sm:w-44 shrink-0 bg-gray-900 overflow-hidden group">
+              className="relative w-full aspect-[2/1] sm:aspect-auto sm:w-32 md:w-44 shrink-0 bg-gray-900 overflow-hidden group">
               {deck.featured_image
                 // Scryfall's art crop of the same card: the artwork without its frame
                 ? <img src={deck.featured_image.replace('/normal/', '/art_crop/')} alt={deck.archetype_name}
@@ -398,32 +408,34 @@ function BrainstormSection() {
                 : <div className="absolute inset-0 flex items-center justify-center text-gray-600 text-xs">No image</div>
               }
             </Link>
+            {/* Phones: the type tags sit in the box's top-right corner, over the art */}
+            <div className="sm:hidden absolute top-2 right-2 flex gap-1 pointer-events-none">
+              {deck.game_type.map(g => (
+                <span key={g} className="text-xs text-gray-100 bg-gray-900/85 rounded-md px-2 py-1 leading-none">{g}</span>
+              ))}
+            </div>
             <div className="flex-1 px-3 py-2.5 sm:px-4 sm:py-3 space-y-1.5 min-w-0">
-              {/* The type tags sit top-right, at the end of the name's line */}
-              <div className="flex flex-wrap items-center gap-x-2 gap-y-1.5">
-                <span className="text-3xl font-bold text-gray-400 font-mono leading-none">#{front + 1}</span>
+              <div className="flex items-center gap-2 min-w-0">
+                <span className="shrink-0 text-3xl font-bold text-gray-400 font-mono leading-none">#{front + 1}</span>
                 <Link to={`/archetypes/${nameToSlug(deck.archetype_name)}`}
-                  className="text-lg font-semibold text-white hover:text-amber-400 transition-colors">{deck.archetype_name}</Link>
-                <div className="flex items-center gap-0.5">
-                  {deck.dominant_mana.map(m => (
-                    <img key={m} src={`/images/mana/${m}.png`} alt={m} className="w-4 h-4" />
-                  ))}
-                </div>
-                <div className="ml-auto self-start flex flex-wrap justify-end gap-1">
+                  className="truncate min-w-0 text-lg font-semibold text-white hover:text-amber-400 transition-colors">{deck.archetype_name}</Link>
+                <ManaSymbols mana={deck.dominant_mana} className="hidden sm:flex" />
+                <div className="hidden sm:flex ml-auto self-start shrink-0 gap-1">
                   {deck.game_type.map(g => (
                     <span key={g} className="text-xs text-gray-300 bg-gray-700 rounded-md px-2 py-1 leading-none">{g}</span>
                   ))}
                 </div>
               </div>
-              <span className="block text-lg text-amber-400 font-mono">Meta: {deck.meta_share.toFixed(1)}%</span>
-              {deck.staples.length > 0 && (
-                <div className="flex flex-wrap gap-1">
-                  {/* staples come most played first */}
-                  {deck.staples.slice(0, 3).map(card => (
-                    <StapleLink key={card.name} card={card} cardPages={cardPages} bindPreview={bindPreview} />
-                  ))}
-                </div>
-              )}
+              <div className="flex items-center gap-2">
+                <ManaSymbols mana={deck.dominant_mana} className="flex sm:hidden" />
+                <span className="text-lg text-amber-400 font-mono">Meta: {deck.meta_share.toFixed(1)}%</span>
+              </div>
+              {/* staples come most played first; room for two rows on phones, one otherwise */}
+              <div className="flex flex-wrap content-start gap-1 overflow-hidden h-12 sm:h-[22px]">
+                {deck.staples.slice(0, 3).map(card => (
+                  <StapleLink key={card.name} card={card} cardPages={cardPages} bindPreview={bindPreview} />
+                ))}
+              </div>
             </div>
           </div>
           <button onClick={() => stepBy(1)} aria-label="Next archetype" className={RING_ARROW}>›</button>
