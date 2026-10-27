@@ -168,8 +168,10 @@ function TopDecksSection() {
 }
 
 // The Brainstorm art split in two layers: the character stays put and the 16
-// glyphs orbit her, one per top archetype. Sprites are cut from the painting
-// in clockwise order starting at the front, so at rest the ring matches it.
+// glyphs orbit her, one per top archetype. Sprite i is rank i: the largest
+// glyph first, then its neighbours in the (mirrored) painting. Each next rank
+// sits to the right of the front, so stepping through the ranks turns the
+// ring clockwise.
 const GLYPHS = 16
 const STEP = (2 * Math.PI) / GLYPHS
 // Ring geometry, as a fraction of the 1407×1118 painting
@@ -248,7 +250,7 @@ function BrainstormSection() {
     drag.v = (e.clientX - drag.lastX) / pxPerGlyph / dt
     drag.lastX = e.clientX
     drag.lastT = e.timeStamp
-    setNow(drag.rot + dx / pxPerGlyph)
+    setNow(drag.rot - dx / pxPerGlyph)
   }
 
   const onPointerUp = () => {
@@ -256,12 +258,12 @@ function BrainstormSection() {
     dragRef.current = null
     draggedRef.current = !!drag?.moved
     // A flick carries on for a few glyphs before snapping
-    if (drag?.moved) animateTo(Math.round(rotRef.current + drag.v * 250))
+    if (drag?.moved) animateTo(Math.round(rotRef.current - drag.v * 250))
   }
 
   const onKeyDown = (e) => {
-    if (e.key === 'ArrowLeft') focus(Math.round(targetRef.current) + 1)
-    else if (e.key === 'ArrowRight') focus(Math.round(targetRef.current) - 1)
+    if (e.key === 'ArrowLeft') focus(Math.round(targetRef.current) - 1)
+    else if (e.key === 'ArrowRight') focus(Math.round(targetRef.current) + 1)
     else return
     e.preventDefault()
   }
@@ -283,7 +285,7 @@ function BrainstormSection() {
           <img src="/images/brainstorm/character.webp" alt="" draggable={false}
             className="absolute inset-0 w-full h-full pointer-events-none" />
           {decks.map((d, i) => {
-            const theta = Math.PI / 2 + (i - rot) * STEP
+            const theta = Math.PI / 2 - (i - rot) * STEP
             const depth = (Math.sin(theta) + 1) / 2 // 0 at the back, 1 at the front
             const near = Math.max(0, 1 - Math.abs(wrap(i - rot + GLYPHS / 2) - GLYPHS / 2))
             // The glyph at the very back slips behind her head
@@ -319,10 +321,10 @@ function BrainstormSection() {
         </div>
 
         <div className="mt-3 flex items-center justify-between gap-3 text-sm text-gray-400">
-          <button onClick={() => focus(Math.round(targetRef.current) + 1)} aria-label="Previous glyph"
+          <button onClick={() => focus(Math.round(targetRef.current) - 1)} aria-label="Previous archetype"
             className="px-3 py-1 rounded-md border border-gray-700 hover:border-amber-400/50 hover:text-amber-400 transition-colors">‹</button>
           <span className="text-xs">Drag the glyphs, click one, or use the arrow keys</span>
-          <button onClick={() => focus(Math.round(targetRef.current) - 1)} aria-label="Next glyph"
+          <button onClick={() => focus(Math.round(targetRef.current) + 1)} aria-label="Next archetype"
             className="px-3 py-1 rounded-md border border-gray-700 hover:border-amber-400/50 hover:text-amber-400 transition-colors">›</button>
         </div>
 
