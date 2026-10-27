@@ -175,6 +175,10 @@ const STEP = (2 * Math.PI) / GLYPHS
 // Ring geometry, as a fraction of the 1407×1118 painting
 const RING = { cx: 0.505, cy: 0.493, rx: 0.45, ry: 0.383 }
 const SPRITE = 200 / 1407
+// Her headdress, cut out of the painting and drawn over the back of the ring
+// so glyphs passing behind her head are hidden by it
+const HEADDRESS = { left: 320 / 1407, width: 810 / 1407 }
+const HEADDRESS_Z = 30
 
 const wrap = (i) => ((i % GLYPHS) + GLYPHS) % GLYPHS
 
@@ -289,7 +293,7 @@ function BrainstormSection() {
               <button key={d.archetype_name} id={`glyph-${i}`} role="option" aria-selected={i === front}
                 aria-label={`${d.archetype_name}, ${d.meta_share.toFixed(1)}%`} tabIndex={-1}
                 onClick={() => { if (!draggedRef.current) focus(i) }}
-                className="absolute p-0 border-0 bg-transparent cursor-pointer"
+                className="absolute p-0 border-0 bg-transparent cursor-pointer focus:outline-none"
                 style={{
                   left: `${(RING.cx + RING.rx * Math.cos(theta)) * 100}%`,
                   top: `${(RING.cy + RING.ry * Math.sin(theta)) * 100}%`,
@@ -305,7 +309,10 @@ function BrainstormSection() {
               </button>
             )
           })}
-          <div className="absolute inset-x-0 bottom-0 pt-6 pb-2 text-center pointer-events-none bg-gradient-to-t from-black/70 to-transparent">
+          <img src="/images/brainstorm/headdress.webp" alt="" draggable={false}
+            className="absolute top-0 pointer-events-none"
+            style={{ left: `${HEADDRESS.left * 100}%`, width: `${HEADDRESS.width * 100}%`, zIndex: HEADDRESS_Z }} />
+          <div className="absolute inset-x-0 bottom-0 z-[101] pt-6 pb-2 text-center pointer-events-none bg-gradient-to-t from-black/70 to-transparent">
             <span className="text-sm sm:text-base font-semibold text-white [text-shadow:0_1px_4px_#000]">{deck.archetype_name}</span>
             <span className="ml-2 text-xs sm:text-sm text-amber-400 font-mono">{deck.meta_share.toFixed(1)}%</span>
           </div>
