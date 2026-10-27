@@ -622,10 +622,41 @@ console.log(`Copied metagame.json with ${metagameOut.length} archetypes.`)
 const archetypeMap = Object.fromEntries(
   archetypes.map(a => [a.name, a])
 )
+// Staples are listed alphabetically: rank them by how many of the archetype's
+// most recent decklists play them in the maindeck, so the homepage shows the
+// most played ones (and the top one as the archetype's image). Basic lands
+// are left out.
+const RECENT_DECKS = 100
+const BASIC_LAND = /^(Snow-Covered )?(Plains|Island|Swamp|Mountain|Forest|Wastes)$/
+// Decklists name double-faced cards by their front face only.
+function cardKey(name) {
+  return nameToSlug(name.split(' // ')[0])
+}
+function recentPlayCounts(archetypeName) {
+  const counts = {}
+  const listPath = join(intelDecksDir, nameToSlug(archetypeName) + '.json')
+  if (!existsSync(listPath)) return counts
+  // intel-decks lists are sorted newest first
+  JSON.parse(readFileSync(listPath, 'utf8')).slice(0, RECENT_DECKS).forEach(function(d) {
+    const detailPath = join(deckDetailsDir, d.id + '.json')
+    if (!existsSync(detailPath)) return
+    const deck = JSON.parse(readFileSync(detailPath, 'utf8'))
+    if (!deck.decklist) return
+    new Set(deck.decklist.main.map(function(c) { return cardKey(c.name) })).forEach(function(key) {
+      counts[key] = (counts[key] || 0) + 1
+    })
+  })
+  return counts
+}
+
 const topDecks = metagameOut.slice(0, 16).map(entry => {
   const arch = archetypeMap[entry.archetype_name]
+  const counts = recentPlayCounts(entry.archetype_name)
+  const played = name => counts[cardKey(name)] || 0
   const staples = ((arch && arch.staples) || [])
-    .filter(s => s.preview)
+    .filter(s => s.preview && !BASIC_LAND.test(s.name))
+    // stable sort: equally played staples stay alphabetical
+    .sort((a, b) => played(b.name) - played(a.name))
     .slice(0, 5)
     .map(({ name, link, preview }) => ({ name, link, preview }))
   return {
