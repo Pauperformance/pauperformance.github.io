@@ -624,8 +624,9 @@ const archetypeMap = Object.fromEntries(
 )
 // Staples are listed alphabetically: rank them by how many of the archetype's
 // most recent decklists play them in the maindeck, so the homepage shows the
-// most played ones (and the top one as the archetype's image). Basic lands
-// are left out.
+// most played ones. Basic lands are left out. The archetype's image is its
+// representative card, chosen by hand in Myr's archetype config, or the most
+// played staple when the archetype has none.
 const RECENT_DECKS = 100
 const BASIC_LAND = /^(Snow-Covered )?(Plains|Island|Swamp|Mountain|Forest|Wastes)$/
 // Decklists name double-faced cards by their front face only.
@@ -659,12 +660,14 @@ const topDecks = metagameOut.slice(0, 16).map(entry => {
     .sort((a, b) => played(b.name) - played(a.name))
     .slice(0, 5)
     .map(({ name, link, preview }) => ({ name, link, preview }))
+  const representative = arch && arch.representative_card
   return {
     archetype_name: entry.archetype_name,
     meta_share: entry.meta_share,
     dominant_mana: (arch && arch.dominant_mana) || [],
     game_type: (arch && arch.game_type) || [],
-    featured_image: (staples[0] && staples[0].preview) || null,
+    featured_image: (representative && representative.preview)
+      || (staples[0] && staples[0].preview) || null,
     staples,
   }
 })
