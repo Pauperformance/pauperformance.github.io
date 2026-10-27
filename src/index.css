@@ -37,6 +37,45 @@
   }
 }
 
+/* Brainstorm glyph ring (pages/Home.jsx): the glyph at rest in front flares
+   and keeps glowing, and light spreads out under its archetype card */
+@keyframes glyph-select {
+  0% { transform: scale(1); filter: brightness(1); }
+  35% { transform: scale(1.18); filter: brightness(1.7); }
+  100% { transform: scale(1); filter: brightness(1.15); }
+}
+
+@keyframes glyph-breathe {
+  0%, 100% { filter: brightness(1.15); }
+  50% { filter: brightness(1.4); }
+}
+
+.glyph-selected {
+  animation: glyph-select 650ms ease-out, glyph-breathe 2.6s ease-in-out 650ms infinite;
+}
+
+@keyframes ring-light-open {
+  from { opacity: 0; transform: scaleX(0.15) scaleY(0.5); }
+}
+
+@keyframes ring-light-breathe {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0.65; }
+}
+
+.ring-light {
+  background: radial-gradient(ellipse 55% 50% at 50% 68%, rgba(190, 255, 90, 0.55), rgba(190, 255, 90, 0.16) 55%, transparent 80%);
+  filter: blur(20px);
+  transform-origin: 50% 60%;
+  animation: ring-light-open 750ms cubic-bezier(0.2, 0.8, 0.2, 1) 120ms both, ring-light-breathe 3.2s ease-in-out 900ms infinite;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .glyph-selected, .ring-light {
+    animation: none;
+  }
+}
+
 /* Card hover preview (components/CardPreview.jsx) */
 @keyframes card-preview-in {
   from {
