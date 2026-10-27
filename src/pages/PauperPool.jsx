@@ -1,86 +1,24 @@
-import { useState, useEffect, useMemo, useRef } from 'react'
-import { createPortal } from 'react-dom'
-import { Link } from 'react-router-dom'
-import { nameToSlug } from '../utils/slugs'
+import { useState, useEffect, useMemo, useDeferredValue, useLayoutEffect, useRef } from 'react'
+import { useWindowVirtualizer } from '@tanstack/react-virtual'
 import Layout from '../components/Layout'
+import CardLink from '../components/PoolCardLink'
+import { useSearchShortcut, searchShortcutLabel } from '../utils/useSearchShortcut'
 
-function CardLink({ card, highlighted }) {
-  const [pos, setPos] = useState(null)
-  const timerRef = useRef(null)
-
-  const match = card.url.match(/scryfall\.com\/card\/([^/]+)\/([^/]+)\//)
-  const imgSrc = match
-    ? `https://api.scryfall.com/cards/${match[1]}/${match[2]}?format=image&version=normal`
-    : null
-
-  const show = (e) => {
-    if (!imgSrc) return
-    clearTimeout(timerRef.current)
-    timerRef.current = setTimeout(() => setPos({ x: e.clientX, y: e.clientY }), 150)
-  }
-
-  const move = (e) => {
-    if (pos) setPos({ x: e.clientX, y: e.clientY })
-  }
-
-  const hide = () => {
-    clearTimeout(timerRef.current)
-    setPos(null)
-  }
-
-  const imgStyle = pos ? {
-    left: pos.x + 220 > window.innerWidth ? pos.x - 220 : pos.x + 16,
-    top: Math.max(8, Math.min(pos.y - 80, window.innerHeight - 320)),
-  } : null
-
-  const slug = nameToSlug(card.name)
-
-  return (
-    <>
-      <Link
-        to={`/cards/${slug}`}
-        onMouseEnter={show} onMouseMove={move} onMouseLeave={hide}
-        className={`px-2.5 py-1 rounded-md text-xs border transition-colors ${
-          highlighted
-            ? 'bg-amber-400/10 border-amber-400/40 text-amber-300 hover:bg-amber-400/20'
-            : 'bg-gray-900 border-gray-700 text-gray-300 hover:border-amber-400/50 hover:text-amber-300'
-        }`}>
-        {card.name}
-      </Link>
-      {pos && imgSrc && createPortal(
-        <img
-          src={imgSrc}
-          alt={card.name}
-          className="fixed z-50 w-48 rounded-xl shadow-2xl border border-gray-700 pointer-events-none"
-          style={imgStyle}
-        />,
-        document.body
-      )}
-    </>
-  )
+// q: a lowercase query
+function setNameMatches(set, q) {
+  return set.name.toLowerCase().includes(q) || set.scryfall.toLowerCase().includes(q) || String(set.code).includes(q)
 }
 
-function SetEntry({ set, searchQuery, defaultOpen }) {
-  const [open, setOpen] = useState(defaultOpen)
+function SetEntry({ set, searchQuery, open, onToggle }) {
   const [hovered, setHovered] = useState(false)
   const hasCards = set.cards.length > 0
-
-  useEffect(() => { if (hasCards) setOpen(!!searchQuery) }, [searchQuery, hasCards])
-
-  const setNameMatch = useMemo(() => {
-    if (!searchQuery) return false
-    const q = searchQuery.toLowerCase()
-    return set.name.toLowerCase().includes(q) || set.scryfall.toLowerCase().includes(q) || String(set.code).includes(q)
-  }, [set.name, set.scryfall, set.code, searchQuery])
+  const q = searchQuery.toLowerCase()
+  const setNameMatch = !!q && setNameMatches(set, q)
 
   const visibleCards = useMemo(() => {
-    if (!searchQuery) return set.cards
-    if (setNameMatch) return set.cards
-    const q = searchQuery.toLowerCase()
+    if (!q || setNameMatch) return set.cards
     return set.cards.filter(c => c.name.toLowerCase().includes(q))
-  }, [set.cards, searchQuery, setNameMatch])
-
-  if (searchQuery && visibleCards.length === 0 && !setNameMatch) return null
+  }, [set.cards, q, setNameMatch])
 
   return (
     <div className="relative pl-10">
@@ -95,7 +33,7 @@ function SetEntry({ set, searchQuery, defaultOpen }) {
         onMouseEnter={() => setHovered(true)}
         onMouseLeave={() => setHovered(false)}>
         <button
-          onClick={() => hasCards && setOpen(v => !v)}
+          onClick={() => hasCards && onToggle()}
           className={`w-full text-left flex items-center gap-3 flex-wrap ${hasCards ? '' : 'cursor-default'}`}>
           <span className="text-amber-400 font-semibold text-base">{set.date}</span>
           <span className={`font-medium transition-colors ${hovered ? 'text-amber-300' : 'text-white'}`}>{set.name}</span>
@@ -110,7 +48,7 @@ function SetEntry({ set, searchQuery, defaultOpen }) {
         {open && hasCards && (
           <div className="mt-4 pt-4 border-t border-gray-700 flex flex-wrap gap-2">
             {visibleCards.map(card => (
-              <CardLink key={card.url} card={card} highlighted={!!searchQuery && !setNameMatch} />
+              <CardLink key={card.url} card={card} highlighted={!!q && !setNameMatch} />
             ))}
           </div>
         )}
@@ -124,6 +62,7 @@ export default function PauperPool() {
   const [loading, setLoading] = useState(true)
   const [filter, setFilter] = useState('relevant')
   const [search, setSearch] = useState('')
+  const searchRef = useSearchShortcut()
 
   useEffect(() => {
     Promise.all([
@@ -145,31 +84,56 @@ export default function PauperPool() {
 
   const totalCards = useMemo(() => pool.filter(s => s.pauper_pool).reduce((s, set) => s + set.cards.length, 0), [pool])
   const totalRelevantSets = useMemo(() => pool.filter(s => s.pauper_pool).length, [pool])
-  const isSearching = search.trim().length >= 2
 
   const basePool = useMemo(() =>
     filter === 'relevant' ? pool.filter(s => s.pauper_pool) : pool
   , [pool, filter])
 
+  // The input updates immediately; filtering and rendering lag behind it.
+  const query = useDeferredValue(search.trim().length >= 2 ? search.trim() : '')
+  const isSearching = !!query
+
   const visibleSets = useMemo(() => {
     if (!isSearching) return basePool
-    const q = search.toLowerCase()
-    return basePool.filter(set =>
-      set.name.toLowerCase().includes(q) ||
-      set.scryfall.toLowerCase().includes(q) ||
-      String(set.code).includes(q) ||
-      set.cards.some(c => c.name.toLowerCase().includes(q))
-    )
-  }, [basePool, search, isSearching])
+    const q = query.toLowerCase()
+    return basePool.filter(set => setNameMatches(set, q) || set.cards.some(c => c.name.toLowerCase().includes(q)))
+  }, [basePool, query, isSearching])
 
   const matchCount = useMemo(() => {
     if (!isSearching) return 0
-    const q = search.toLowerCase()
+    const q = query.toLowerCase()
     return visibleSets.reduce((sum, set) => {
-      if (set.name.toLowerCase().includes(q) || set.scryfall.toLowerCase().includes(q) || String(set.code).includes(q)) return sum + set.cards.length
+      if (setNameMatches(set, q)) return sum + set.cards.length
       return sum + set.cards.filter(c => c.name.toLowerCase().includes(q)).length
     }, 0)
-  }, [visibleSets, search, isSearching])
+  }, [visibleSets, query, isSearching])
+
+  // Sets with cards are open while searching, closed otherwise; toggled ones
+  // flip that. Kept here: rows unmount when scrolled out of view.
+  const [toggled, setToggled] = useState(() => new Set())
+  useEffect(() => { setToggled(new Set()) }, [query])
+  const toggle = code => setToggled(prev => {
+    const next = new Set(prev)
+    if (!next.delete(code)) next.add(code)
+    return next
+  })
+
+  // Only the boxes near the viewport are rendered; the page itself scrolls.
+  const listRef = useRef(null)
+  const [scrollMargin, setScrollMargin] = useState(0)
+  useLayoutEffect(() => {
+    if (listRef.current) setScrollMargin(listRef.current.getBoundingClientRect().top + window.scrollY)
+  }, [loading, visibleSets.length, isSearching])
+  const virtualizer = useWindowVirtualizer({
+    count: visibleSets.length,
+    estimateSize: () => 96,
+    overscan: 5,
+    scrollMargin,
+    getItemKey: i => visibleSets[i].code,
+  })
+  const rows = virtualizer.getVirtualItems()
+  const paddingTop = rows.length > 0 ? rows[0].start - scrollMargin : 0
+  const paddingBottom = rows.length > 0 ? virtualizer.getTotalSize() - (rows[rows.length - 1].end - scrollMargin) : 0
 
   return (
     <Layout>
@@ -187,8 +151,9 @@ export default function PauperPool() {
         <div className="flex gap-3">
           <div className="relative flex-1">
             <input
+              ref={searchRef}
               type="search"
-              placeholder="Search for a card, set name, Scryfall or Pauperformance code..."
+              placeholder={`Search for a card, set name, Scryfall or Pauperformance code... (${searchShortcutLabel})`}
               value={search}
               onChange={e => setSearch(e.target.value)}
               onKeyDown={e => { if (e.key === 'Enter') e.target.blur() }}
@@ -227,17 +192,22 @@ export default function PauperPool() {
             {isSearching && visibleSets.length === 0 ? (
               <p className="text-center text-gray-500 text-sm py-12">No results match your search.</p>
             ) : (
-              <div className="relative">
+              <div ref={listRef} className="relative">
                 <div className="absolute left-3 top-2 bottom-2 w-px bg-gray-700" />
-                <div className="space-y-6">
-                  {visibleSets.map((set) => (
-                    <SetEntry
-                      key={set.code}
-                      set={set}
-                      searchQuery={isSearching ? search.trim() : ''}
-                      defaultOpen={false}
-                    />
-                  ))}
+                <div style={{ paddingTop, paddingBottom }}>
+                  {rows.map(row => {
+                    const set = visibleSets[row.index]
+                    return (
+                      <div key={set.code} data-index={row.index} ref={virtualizer.measureElement} className="pb-6">
+                        <SetEntry
+                          set={set}
+                          searchQuery={query}
+                          open={set.cards.length > 0 && isSearching !== toggled.has(set.code)}
+                          onToggle={() => toggle(set.code)}
+                        />
+                      </div>
+                    )
+                  })}
                 </div>
               </div>
             )}

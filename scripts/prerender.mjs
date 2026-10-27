@@ -23,6 +23,7 @@ const routes = [
   '/archetypes',
   '/timeline',
   '/sets',
+  '/metagame',
   '/creators',
   '/cards',
   '/watch',

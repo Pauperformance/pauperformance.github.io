@@ -8,6 +8,7 @@ const ArchetypePage  = lazy(() => import('./pages/ArchetypePage'))
 const FamilyPage     = lazy(() => import('./pages/FamilyPage'))
 const FormatTimeline = lazy(() => import('./pages/FormatTimeline'))
 const PauperPool     = lazy(() => import('./pages/PauperPool'))
+const MetagameIndex  = lazy(() => import('./pages/MetagameIndex'))
 const Creators       = lazy(() => import('./pages/Creators'))
 const CardsIndex     = lazy(() => import('./pages/CardsIndex'))
 const CardPage       = lazy(() => import('./pages/CardPage'))
@@ -42,6 +43,7 @@ function App() {
         <Route path="/families/:name" element={<FamilyPage />} />
         <Route path="/timeline" element={<FormatTimeline />} />
         <Route path="/sets" element={<PauperPool />} />
+        <Route path="/metagame" element={<MetagameIndex />} />
         <Route path="/creators" element={<Creators />} />
         <Route path="/cards" element={<CardsIndex />} />
         <Route path="/cards/:slug" element={<CardPage />} />

@@ -10,6 +10,7 @@ const PAGES = [
   { to: '/creators', label: 'Creators', description: 'Content creators covering the Pauper format.' },
   { to: '/sets', label: 'Set Index', description: 'Reference numbers used by Pauperformance to uniquely identify Magic sets.' },
   { to: '/sets', label: 'Pauper Pool', description: 'How the pool of legal Pauper cards has grown over time.' },
+  { to: '/metagame', label: 'Metagame Index', description: 'Every change to the Pauper card pool, from new sets to bans and unbans.' },
   { to: '/timeline', label: 'Format Timeline', description: 'The most important events in Pauper history.' },
 ]
 
