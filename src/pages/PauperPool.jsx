@@ -1,6 +1,7 @@
 import { useState, useEffect, useMemo, useRef } from 'react'
 import { createPortal } from 'react-dom'
 import { Link } from 'react-router-dom'
+import { nameToSlug } from '../utils/slugs'
 import Layout from '../components/Layout'
 
 function CardLink({ card, highlighted }) {
@@ -32,7 +33,7 @@ function CardLink({ card, highlighted }) {
     top: Math.max(8, Math.min(pos.y - 80, window.innerHeight - 320)),
   } : null
 
-  const slug = card.name.toLowerCase().replace(/ \/\/ /g, '_').replace(/\s+/g, '_').replace(/[^a-z0-9_-]/g, '')
+  const slug = nameToSlug(card.name)
 
   return (
     <>

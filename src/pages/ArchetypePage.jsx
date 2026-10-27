@@ -3,6 +3,7 @@ import { useParams, Link, useNavigate } from 'react-router-dom'
 import ReactMarkdown from 'react-markdown'
 import Layout from '../components/Layout'
 import { useCardPreview } from '../components/CardPreview'
+import { cardLinkSlug, useCardPages } from '../utils/cardPages'
 import { nameToSlug, pilotToSlug } from '../utils/slugs'
 
 const MANA_ORDER = ['W', 'U', 'B', 'R', 'G', 'C']
@@ -28,22 +29,27 @@ function SectionHeader({ children }) {
   return <h2 className="text-lg font-semibold text-white mb-3 pt-4 border-t border-gray-700">{children}</h2>
 }
 
-function cardNameToSlug(name) {
-  return nameToSlug(name)
-}
-
 function CardGallery({ cards, bindPreview }) {
+  const cardPages = useCardPages()
   if (!cards?.length) return <p className="text-gray-500 text-sm">None listed.</p>
   return (
     <div className="flex flex-wrap gap-2">
-      {cards.map(card => (
-        <Link key={card.name} to={`/cards/${cardNameToSlug(card.name)}`}
-          {...bindPreview(card.name, { showImage: false })}
-          className="group relative shrink-0">
-          <img src={card.preview} alt={card.name}
-            className="h-64 rounded-lg shadow border border-gray-700 group-hover:border-amber-400 transition-colors object-cover" />
-        </Link>
-      ))}
+      {cards.map(card => {
+        const slug = cardLinkSlug(cardPages, card.name)
+        // Cards with no page (e.g. banned ones) are shown but not linked.
+        if (!slug) return (
+          <img key={card.name} src={card.preview} alt={card.name}
+            className="h-64 shrink-0 rounded-lg shadow border border-gray-700 object-cover" />
+        )
+        return (
+          <Link key={card.name} to={`/cards/${slug}`}
+            {...bindPreview(card.name, { showImage: false })}
+            className="group relative shrink-0">
+            <img src={card.preview} alt={card.name}
+              className="h-64 rounded-lg shadow border border-gray-700 group-hover:border-amber-400 transition-colors object-cover" />
+          </Link>
+        )
+      })}
     </div>
   )
 }

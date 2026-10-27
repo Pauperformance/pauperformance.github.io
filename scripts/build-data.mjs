@@ -4,7 +4,9 @@ import { join } from 'path'
 const buildStart = Date.now()
 
 function nameToSlug(name) {
-  return name.toLowerCase()
+  // Accented letters become plain ones (Lórien -> lorien), as decklists
+  // spell them, instead of being dropped.
+  return name.normalize('NFD').replace(/[\u0300-\u036f]/g, '').toLowerCase()
     .replace(/ \/\/ /g, '_')
     .replace(/ /g, '_')
     .replace(/[^a-z0-9_-]/g, '')
@@ -503,6 +505,8 @@ for (const f of cardFiles) {
   }
 }
 writeFileSync(join(outDir, 'cards.json'), JSON.stringify(cardsIndex))
+// Every card page, so pages link only cards that have one (src/utils/cardPages.js).
+writeFileSync(join(outDir, 'card-slugs.json'), JSON.stringify(cardsIndex.map(function(c) { return c.slug })))
 writeFileSync(join(outDir, 'card-images.json'), JSON.stringify(cardImageMap))
 writeFileSync(join(outDir, 'card-types.json'), JSON.stringify(cardTypeMap))
 console.log('Built cards.json with ' + cardsIndex.length + ' entries. Card-details: ' + cardDetailWritten + ' written, ' + cardDetailSkipped + ' unchanged.')
@@ -518,7 +522,7 @@ for (var ci2 = 0; ci2 < cardsIndex.length; ci2++) {
   }
 }
 // Decklists name double-faced/adventure cards by their front face only: map
-// those names to the card's slug for the hover preview (components/CardPreview.jsx).
+// those names to the card's slug, to link them (src/utils/cardPages.js).
 var frontFaceSlugs = {}
 Object.keys(cardNameToSlug).forEach(function(n) {
   if (nameToSlug(n) !== cardNameToSlug[n]) frontFaceSlugs[n] = cardNameToSlug[n]

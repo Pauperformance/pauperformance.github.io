@@ -3,27 +3,30 @@ import { useParams, Link } from 'react-router-dom'
 import { nameToSlug } from '../utils/slugs'
 import Layout from '../components/Layout'
 import { OracleText, useCardData } from '../components/CardPreview'
+import { cardLinkSlug, useCardPages } from '../utils/cardPages'
 
 const TYPE_ORDER = ['Creature', 'Instant', 'Sorcery', 'Enchantment', 'Artifact', 'Land', 'Sticker', 'Other']
 const TYPE_PRIORITY = ['Land', 'Creature', 'Instant', 'Sorcery', 'Enchantment', 'Artifact', 'Sticker']
 
-function CardName({ c, onHover }) {
+function CardName({ c, onHover, cardPages }) {
+  const slug = cardLinkSlug(cardPages, c.name)
+  const hover = { onMouseEnter: () => onHover(c.name), onMouseLeave: () => onHover(null) }
   return (
     <li className="flex items-baseline gap-2">
       <span className="w-5 text-right text-gray-500 shrink-0">{c.qty}</span>
-      <Link
-        to={`/cards/${c.name.toLowerCase().replace(/ \/\/ /g, '_').replace(/\s+/g, '_').replace(/[^a-z0-9_-]/g, '')}`}
-        className="text-gray-200 hover:text-amber-400 transition-colors"
-        onMouseEnter={() => onHover(c.name)}
-        onMouseLeave={() => onHover(null)}
-      >
-        {c.name}
-      </Link>
+      {/* Cards with no page (banned, misspelt) are plain text. */}
+      {slug ? (
+        <Link to={`/cards/${slug}`} className="text-gray-200 hover:text-amber-400 transition-colors" {...hover}>
+          {c.name}
+        </Link>
+      ) : (
+        <span className="text-gray-200" {...hover}>{c.name}</span>
+      )}
     </li>
   )
 }
 
-function DeckList({ cards, label, onHover, cardTypes, groupByType }) {
+function DeckList({ cards, label, onHover, cardTypes, groupByType, cardPages }) {
   if (!cards || !cards.length) return null
   const total = cards.reduce((sum, c) => sum + c.qty, 0)
 
@@ -44,7 +47,7 @@ function DeckList({ cards, label, onHover, cardTypes, groupByType }) {
             {t}s <span className="text-gray-700">({groupTotal})</span>
           </p>
           <ul className="space-y-0.5">
-            {groups[t].map((c, i) => <CardName key={i} c={c} onHover={onHover} />)}
+            {groups[t].map((c, i) => <CardName key={i} c={c} onHover={onHover} cardPages={cardPages} />)}
           </ul>
         </div>
       )
@@ -52,7 +55,7 @@ function DeckList({ cards, label, onHover, cardTypes, groupByType }) {
   } else {
     content = (
       <ul className="space-y-0.5">
-        {cards.map((c, i) => <CardName key={i} c={c} onHover={onHover} />)}
+        {cards.map((c, i) => <CardName key={i} c={c} onHover={onHover} cardPages={cardPages} />)}
       </ul>
     )
   }
@@ -76,6 +79,7 @@ export default function DeckPage() {
   const [cardTypes, setCardTypes] = useState({})
   const [hoveredCard, setHoveredCard] = useState(null)
   const [groupByType, setGroupByType] = useState(true)
+  const cardPages = useCardPages()
   // Oracle text of the hovered card, shown next to its image; also supplies
   // the image of double-faced cards, listed by their front face only.
   const hoveredData = useCardData(hoveredCard)
@@ -225,9 +229,9 @@ export default function DeckPage() {
                 <div className="flex gap-8 items-start">
                   <div className="flex flex-col sm:flex-row gap-8">
                     <DeckList cards={deck.decklist.main} label="Maindeck" onHover={setHoveredCard}
-                      cardTypes={cardTypes} groupByType={groupByType} />
+                      cardTypes={cardTypes} groupByType={groupByType} cardPages={cardPages} />
                     <DeckList cards={deck.decklist.side} label="Sideboard" onHover={setHoveredCard}
-                      cardTypes={cardTypes} groupByType={groupByType} />
+                      cardTypes={cardTypes} groupByType={groupByType} cardPages={cardPages} />
                   </div>
                   <div className="hidden lg:flex flex-col xl:flex-row gap-4 items-start shrink-0 sticky top-8">
                     <div className="w-56 shrink-0">
