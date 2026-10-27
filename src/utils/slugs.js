@@ -1,5 +1,7 @@
 export function nameToSlug(name) {
-  return name.toLowerCase()
+  // Accented letters become plain ones (Lórien -> lorien), as decklists
+  // spell them, instead of being dropped.
+  return name.normalize('NFD').replace(/[\u0300-\u036f]/g, '').toLowerCase()
     .replace(/ \/\/ /g, '_')
     .replace(/ /g, '_')
     .replace(/[^a-z0-9_-]/g, '')

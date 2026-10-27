@@ -1,6 +1,6 @@
 import { Fragment, useCallback, useEffect, useLayoutEffect, useRef, useState } from 'react'
 import { createPortal } from 'react-dom'
-import { nameToSlug } from '../utils/slugs'
+import { cardLinkSlug, loadCardPages } from '../utils/cardPages'
 
 // Hover preview of a card: its image (both sides of a double-faced card)
 // beside its current Oracle text, since the wording printed on the image can
@@ -20,33 +20,14 @@ const MARGIN = 12
 const DOUBLE_FACED_LAYOUTS = ['transform', 'modal_dfc']
 
 const cache = new Map()
-let frontFaceSlugs = null
 
-// Decklists name double-faced and adventure cards by their front face only:
-// map those names to the full card's slug.
-function loadFrontFaceSlugs() {
-  if (!frontFaceSlugs) {
-    frontFaceSlugs = fetch('/data/card-front-face-slugs.json')
-      .then(r => r.ok ? r.json() : {})
-      .catch(() => { frontFaceSlugs = null; return {} })
-  }
-  return frontFaceSlugs
-}
-
+// The slug of the card's page, which holds its data; null if it has none.
 function slugFor(name) {
-  return loadFrontFaceSlugs().then(map => map[name] || nameToSlug(name))
-}
-
-// The full card's slug for the slug of a front face alone (delver_of_secrets
-// -> delver_of_secrets_insectile_aberration), or null.
-export function fullCardSlug(slug) {
-  return loadFrontFaceSlugs().then(map => {
-    const name = Object.keys(map).find(n => nameToSlug(n) === slug)
-    return name ? map[name] : null
-  })
+  return loadCardPages().then(pages => cardLinkSlug(pages, name))
 }
 
 function loadCard(slug) {
+  if (!slug) return Promise.resolve(null)
   if (!cache.has(slug)) {
     cache.set(slug, fetch(`/data/card-details/${slug}.json`)
       .then(r => r.ok ? r.json() : null)
