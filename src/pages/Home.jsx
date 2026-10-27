@@ -387,9 +387,10 @@ function BrainstormSection() {
         <div className="mt-3 relative isolate flex items-stretch gap-2">
           {settled && <div key={`light-${front}`} aria-hidden="true" className="ring-light absolute inset-x-0 top-0 -bottom-8 -z-10 pointer-events-none" />}
           <button onClick={() => stepBy(-1)} aria-label="Previous archetype" className={RING_ARROW}>‹</button>
-          <div className={`flex-1 min-w-0 bg-gray-800 border rounded-xl overflow-hidden flex transition-[border-color,box-shadow] duration-500 ${settled ? 'border-lime-300/40 shadow-[0_0_24px_rgba(190,255,90,0.18)]' : 'border-gray-700'}`}>
+          {/* Phones: the art as a banner on top with the text below; wider: side by side */}
+          <div className={`flex-1 min-w-0 bg-gray-800 border rounded-xl overflow-hidden flex flex-col sm:flex-row transition-[border-color,box-shadow] duration-500 ${settled ? 'border-lime-300/40 shadow-[0_0_24px_rgba(190,255,90,0.18)]' : 'border-gray-700'}`}>
             <Link to={`/archetypes/${nameToSlug(deck.archetype_name)}`}
-              className="relative w-28 sm:w-44 shrink-0 bg-gray-900 overflow-hidden group">
+              className="relative w-full aspect-[2/1] sm:aspect-auto sm:w-44 shrink-0 bg-gray-900 overflow-hidden group">
               {deck.featured_image
                 // Scryfall's art crop of the same card: the artwork without its frame
                 ? <img src={deck.featured_image.replace('/normal/', '/art_crop/')} alt={deck.archetype_name}
@@ -398,28 +399,27 @@ function BrainstormSection() {
               }
             </Link>
             <div className="flex-1 px-3 py-2.5 sm:px-4 sm:py-3 space-y-1.5 min-w-0">
-              {/* The type tags sit top-right: beside the rank on phones, with the
-                  name on the next line; at the end of the name's line otherwise */}
+              {/* The type tags sit top-right, at the end of the name's line */}
               <div className="flex flex-wrap items-center gap-x-2 gap-y-1.5">
-                <span className="order-1 text-3xl font-bold text-gray-400 font-mono leading-none">#{front + 1}</span>
-                <div className="order-2 sm:order-5 ml-auto self-start flex flex-wrap justify-end gap-1">
-                  {deck.game_type.map(g => (
-                    <span key={g} className="text-xs text-gray-300 bg-gray-700 rounded-md px-2 py-1 leading-none">{g}</span>
-                  ))}
-                </div>
-                <div className="order-3 basis-full h-0 sm:hidden" />
+                <span className="text-3xl font-bold text-gray-400 font-mono leading-none">#{front + 1}</span>
                 <Link to={`/archetypes/${nameToSlug(deck.archetype_name)}`}
-                  className="order-4 text-lg font-semibold text-white hover:text-amber-400 transition-colors">{deck.archetype_name}</Link>
-                <div className="order-4 flex items-center gap-0.5">
+                  className="text-lg font-semibold text-white hover:text-amber-400 transition-colors">{deck.archetype_name}</Link>
+                <div className="flex items-center gap-0.5">
                   {deck.dominant_mana.map(m => (
                     <img key={m} src={`/images/mana/${m}.png`} alt={m} className="w-4 h-4" />
+                  ))}
+                </div>
+                <div className="ml-auto self-start flex flex-wrap justify-end gap-1">
+                  {deck.game_type.map(g => (
+                    <span key={g} className="text-xs text-gray-300 bg-gray-700 rounded-md px-2 py-1 leading-none">{g}</span>
                   ))}
                 </div>
               </div>
               <span className="block text-lg text-amber-400 font-mono">Meta: {deck.meta_share.toFixed(1)}%</span>
               {deck.staples.length > 0 && (
                 <div className="flex flex-wrap gap-1">
-                  {deck.staples.map(card => (
+                  {/* staples come most played first */}
+                  {deck.staples.slice(0, 3).map(card => (
                     <StapleLink key={card.name} card={card} cardPages={cardPages} bindPreview={bindPreview} />
                   ))}
                 </div>
