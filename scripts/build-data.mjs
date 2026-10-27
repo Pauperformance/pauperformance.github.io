@@ -437,6 +437,16 @@ const totalCards = pool.reduce(function(sum, s) { return sum + s.cards.length },
 writeFileSync(join(outDir, 'pauper_pool.json'), JSON.stringify(pool))
 console.log('Built pauper_pool.json with ' + pool.length + ' sets and ' + totalCards + ' cards.')
 
+// Metagame index, exported by Myr (missing until its first export)
+if (existsSync('assets/data/metagame_index.json')) {
+  const metagames = JSON.parse(readFileSync('assets/data/metagame_index.json', 'utf8'))
+  writeFileSync(join(outDir, 'metagame_index.json'), JSON.stringify(metagames))
+  console.log('Built metagame_index.json with ' + metagames.length + ' metagames.')
+} else {
+  writeFileSync(join(outDir, 'metagame_index.json'), '[]')
+  console.log('No metagame index yet: built an empty metagame_index.json.')
+}
+
 // Build cards index + per-card detail files (incremental)
 const cardIntelDir = 'assets/data/intel/card'
 const cardDetailsDir = join(outDir, 'card-details')

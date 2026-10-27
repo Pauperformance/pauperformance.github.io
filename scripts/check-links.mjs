@@ -103,8 +103,15 @@ for (const f of families) {
 
 // CardsIndex, PauperPool
 for (const c of read('cards.json')) link('cards', c.slug, '/cards')
+// Pool cards include banned ones, which may have no page: resolved like the pages do.
 for (const set of read('pauper_pool.json')) {
-  for (const c of set.cards) link('cards', nameToSlug(c.name), '/sets')
+  for (const c of set.cards) card(c.name, '/sets')
+}
+
+// MetagameIndex
+for (const m of read('metagame_index.json')) {
+  for (const s of m.sets) for (const c of s.cards) card(c.name, '/metagame')
+  for (const b of m.bans) for (const n of [...b.banned, ...b.unbanned]) card(n, '/metagame')
 }
 
 // Watch, Creators, PlayersIndex
