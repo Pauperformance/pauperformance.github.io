@@ -3,24 +3,6 @@
         "py/set": []
     },
     "scryfall": {
-        "all_parts": [
-            {
-                "component": "combo_piece",
-                "id": "3f9e5402-690f-497d-ada3-aa41fa900fdd",
-                "name": "Eyes of the Beholder",
-                "object": "related_card",
-                "type_line": "Instant",
-                "uri": "https://api.scryfall.com/cards/3f9e5402-690f-497d-ada3-aa41fa900fdd"
-            },
-            {
-                "component": "combo_piece",
-                "id": "2a361530-24eb-43df-b731-106788504973",
-                "name": "A-Eyes of the Beholder",
-                "object": "related_card",
-                "type_line": "Instant",
-                "uri": "https://api.scryfall.com/cards/2a361530-24eb-43df-b731-106788504973"
-            }
-        ],
         "arena_id": 77206,
         "artist": "Kari Christensen",
         "artist_ids": [
@@ -39,7 +21,7 @@
             "B"
         ],
         "digital": false,
-        "edhrec_rank": 16902,
+        "edhrec_rank": 21695,
         "finishes": [
             "nonfoil",
             "foil"
@@ -48,6 +30,7 @@
         "foil": true,
         "frame": "2015",
         "full_art": false,
+        "game_changer": false,
         "games": [
             "arena",
             "paper",
@@ -57,26 +40,33 @@
         "id": "3f9e5402-690f-497d-ada3-aa41fa900fdd",
         "illustration_id": "ae1fa4bb-90fb-4f4f-bbcc-1d6f030cead5",
         "image_status": "highres_scan",
+        "image_updated_at": "2026-07-13T07:08:17Z",
         "image_uris": {
-            "art_crop": "https://cards.scryfall.io/art_crop/front/3/f/3f9e5402-690f-497d-ada3-aa41fa900fdd.jpg?1627704757",
-            "border_crop": "https://cards.scryfall.io/border_crop/front/3/f/3f9e5402-690f-497d-ada3-aa41fa900fdd.jpg?1627704757",
-            "large": "https://cards.scryfall.io/large/front/3/f/3f9e5402-690f-497d-ada3-aa41fa900fdd.jpg?1627704757",
-            "normal": "https://cards.scryfall.io/normal/front/3/f/3f9e5402-690f-497d-ada3-aa41fa900fdd.jpg?1627704757",
-            "png": "https://cards.scryfall.io/png/front/3/f/3f9e5402-690f-497d-ada3-aa41fa900fdd.png?1627704757",
-            "small": "https://cards.scryfall.io/small/front/3/f/3f9e5402-690f-497d-ada3-aa41fa900fdd.jpg?1627704757"
+            "art": "https://cards.scryfall.io/art/front/3/f/3f9e5402-690f-497d-ada3-aa41fa900fdd.webp?1783926497",
+            "art_crop": "https://cards.scryfall.io/art_crop/front/3/f/3f9e5402-690f-497d-ada3-aa41fa900fdd.jpg?1783926497",
+            "border_crop": "https://cards.scryfall.io/border_crop/front/3/f/3f9e5402-690f-497d-ada3-aa41fa900fdd.jpg?1783926497",
+            "crop": "https://cards.scryfall.io/crop/front/3/f/3f9e5402-690f-497d-ada3-aa41fa900fdd.webp?1783926497",
+            "display": "https://cards.scryfall.io/display/front/3/f/3f9e5402-690f-497d-ada3-aa41fa900fdd.webp?1783926497",
+            "grid": "https://cards.scryfall.io/grid/front/3/f/3f9e5402-690f-497d-ada3-aa41fa900fdd.webp?1783926497",
+            "jpeg": "https://cards.scryfall.io/normal/front/3/f/3f9e5402-690f-497d-ada3-aa41fa900fdd.jpg?1783926497",
+            "large": "https://cards.scryfall.io/large/front/3/f/3f9e5402-690f-497d-ada3-aa41fa900fdd.jpg?1783926497",
+            "normal": "https://cards.scryfall.io/normal/front/3/f/3f9e5402-690f-497d-ada3-aa41fa900fdd.jpg?1783926497",
+            "png": "https://cards.scryfall.io/png/front/3/f/3f9e5402-690f-497d-ada3-aa41fa900fdd.png?1783926497",
+            "small": "https://cards.scryfall.io/small/front/3/f/3f9e5402-690f-497d-ada3-aa41fa900fdd.jpg?1783926497",
+            "thumb": "https://cards.scryfall.io/thumb/front/3/f/3f9e5402-690f-497d-ada3-aa41fa900fdd.webp?1783926497"
         },
         "keywords": [],
         "lang": "en",
         "layout": "normal",
         "legalities": {
             "alchemy": "not_legal",
-            "brawl": "not_legal",
+            "brawl": "legal",
             "commander": "legal",
+            "competitivebrawl": "legal",
             "duel": "legal",
-            "explorer": "legal",
             "future": "not_legal",
             "gladiator": "legal",
-            "historic": "not_legal",
+            "historic": "legal",
             "legacy": "legal",
             "modern": "legal",
             "oathbreaker": "legal",
@@ -90,6 +80,7 @@
             "standard": "not_legal",
             "standardbrawl": "not_legal",
             "timeless": "legal",
+            "tlr": "not_legal",
             "vintage": "legal"
         },
         "mana_cost": "{4}{B}{B}",
@@ -109,26 +100,26 @@
             "source_uri": "https://www.destructoid.com/adventures-in-the-forgotten-realms-magic-eyes-of-the-beholder/"
         },
         "prices": {
-            "eur": "0.03",
-            "eur_foil": "0.16",
+            "eur": "0.04",
+            "eur_foil": "0.13",
             "tix": "0.03",
-            "usd": "0.01",
+            "usd": "0.15",
             "usd_etched": null,
-            "usd_foil": "0.05"
+            "usd_foil": "0.26"
         },
         "prints_search_uri": "https://api.scryfall.com/cards/search?order=released&q=oracleid%3A0fae0474-25ec-474f-8c7f-9e9061835030&unique=prints",
         "promo": false,
         "purchase_uris": {
             "cardhoarder": "https://www.cardhoarder.com/cards/91704?affiliate_id=scryfall&ref=card-profile&utm_campaign=affiliate&utm_medium=card&utm_source=scryfall",
-            "cardmarket": "https://www.cardmarket.com/en/Magic/Products/Singles/Adventures-in-the-Forgotten-Realms/Eyes-of-the-Beholder?referrer=scryfall&utm_campaign=card_prices&utm_medium=text&utm_source=scryfall",
-            "tcgplayer": "https://tcgplayer.pxf.io/c/4931599/1830156/21018?subId1=api&u=https%3A%2F%2Fwww.tcgplayer.com%2Fproduct%2F243409%3Fpage%3D1"
+            "cardmarket": "https://www.cardmarket.com/en/Magic/Products?idProduct=571739&referrer=scryfall&utm_campaign=card_prices&utm_medium=text&utm_source=scryfall",
+            "tcgplayer": "https://partner.tcgplayer.com/c/4931599/1830156/21018?subId1=api&u=https%3A%2F%2Fwww.tcgplayer.com%2Fproduct%2F243409%3Fpage%3D1"
         },
         "rarity": "common",
         "related_uris": {
             "edhrec": "https://edhrec.com/route/?cc=Eyes+of+the+Beholder",
             "gatherer": "https://gatherer.wizards.com/Pages/Card/Details.aspx?multiverseid=527388&printed=false",
-            "tcgplayer_infinite_articles": "https://tcgplayer.pxf.io/c/4931599/1830156/21018?subId1=api&trafcat=infinite&u=https%3A%2F%2Finfinite.tcgplayer.com%2Fsearch%3FcontentMode%3Darticle%26game%3Dmagic%26partner%3Dscryfall%26q%3DEyes%2Bof%2Bthe%2BBeholder",
-            "tcgplayer_infinite_decks": "https://tcgplayer.pxf.io/c/4931599/1830156/21018?subId1=api&trafcat=infinite&u=https%3A%2F%2Finfinite.tcgplayer.com%2Fsearch%3FcontentMode%3Ddeck%26game%3Dmagic%26partner%3Dscryfall%26q%3DEyes%2Bof%2Bthe%2BBeholder"
+            "tcgplayer_infinite_articles": "https://partner.tcgplayer.com/c/4931599/1830156/21018?subId1=api&trafcat=tcgplayer.com%2Fsearch%2Farticles&u=https%3A%2F%2Fwww.tcgplayer.com%2Fsearch%2Farticles%3FproductLineName%3Dmagic%26q%3DEyes%2Bof%2Bthe%2BBeholder",
+            "tcgplayer_infinite_decks": "https://partner.tcgplayer.com/c/4931599/1830156/21018?subId1=api&trafcat=tcgplayer.com%2Fsearch%2Fdecks&u=https%3A%2F%2Fwww.tcgplayer.com%2Fsearch%2Fdecks%3FproductLineName%3Dmagic%26q%3DEyes%2Bof%2Bthe%2BBeholder"
         },
         "released_at": "2021-07-23",
         "reprint": false,

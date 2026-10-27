@@ -3,6 +3,24 @@
         "py/set": []
     },
     "scryfall": {
+        "all_parts": [
+            {
+                "component": "combo_piece",
+                "id": "ddeb24e8-5caa-4a18-bdfa-47334286a920",
+                "name": "Chicken Troupe",
+                "object": "related_card",
+                "type_line": "Creature \u2014 Bird Performer",
+                "uri": "https://api.scryfall.com/cards/ddeb24e8-5caa-4a18-bdfa-47334286a920"
+            },
+            {
+                "component": "combo_piece",
+                "id": "52942a5c-0552-4a9b-9c0f-7a9ffd04d0af",
+                "name": "Ticket Bucket-Bot",
+                "object": "related_card",
+                "type_line": "Card",
+                "uri": "https://api.scryfall.com/cards/52942a5c-0552-4a9b-9c0f-7a9ffd04d0af"
+            }
+        ],
         "artist": "Leonardo Santanna",
         "artist_ids": [
             "f1f8e6d8-8fb3-472a-a32f-a4b1225bd054"
@@ -20,7 +38,7 @@
             "G"
         ],
         "digital": false,
-        "edhrec_rank": 17836,
+        "edhrec_rank": 22421,
         "finishes": [
             "nonfoil",
             "foil"
@@ -29,6 +47,7 @@
         "foil": true,
         "frame": "2015",
         "full_art": false,
+        "game_changer": false,
         "games": [
             "paper"
         ],
@@ -36,13 +55,20 @@
         "id": "d68cf6bc-3b4f-4765-87a7-f4b390d08bca",
         "illustration_id": "54fb36f3-f844-4bbd-9c9b-e7bf770d3bbf",
         "image_status": "highres_scan",
+        "image_updated_at": "2026-07-13T05:29:17Z",
         "image_uris": {
-            "art_crop": "https://cards.scryfall.io/art_crop/front/d/6/d68cf6bc-3b4f-4765-87a7-f4b390d08bca.jpg?1673914570",
-            "border_crop": "https://cards.scryfall.io/border_crop/front/d/6/d68cf6bc-3b4f-4765-87a7-f4b390d08bca.jpg?1673914570",
-            "large": "https://cards.scryfall.io/large/front/d/6/d68cf6bc-3b4f-4765-87a7-f4b390d08bca.jpg?1673914570",
-            "normal": "https://cards.scryfall.io/normal/front/d/6/d68cf6bc-3b4f-4765-87a7-f4b390d08bca.jpg?1673914570",
-            "png": "https://cards.scryfall.io/png/front/d/6/d68cf6bc-3b4f-4765-87a7-f4b390d08bca.png?1673914570",
-            "small": "https://cards.scryfall.io/small/front/d/6/d68cf6bc-3b4f-4765-87a7-f4b390d08bca.jpg?1673914570"
+            "art": "https://cards.scryfall.io/art/front/d/6/d68cf6bc-3b4f-4765-87a7-f4b390d08bca.webp?1783920557",
+            "art_crop": "https://cards.scryfall.io/art_crop/front/d/6/d68cf6bc-3b4f-4765-87a7-f4b390d08bca.jpg?1783920557",
+            "border_crop": "https://cards.scryfall.io/border_crop/front/d/6/d68cf6bc-3b4f-4765-87a7-f4b390d08bca.jpg?1783920557",
+            "crop": "https://cards.scryfall.io/crop/front/d/6/d68cf6bc-3b4f-4765-87a7-f4b390d08bca.webp?1783920557",
+            "display": "https://cards.scryfall.io/display/front/d/6/d68cf6bc-3b4f-4765-87a7-f4b390d08bca.webp?1783920557",
+            "grid": "https://cards.scryfall.io/grid/front/d/6/d68cf6bc-3b4f-4765-87a7-f4b390d08bca.webp?1783920557",
+            "jpeg": "https://cards.scryfall.io/normal/front/d/6/d68cf6bc-3b4f-4765-87a7-f4b390d08bca.jpg?1783920557",
+            "large": "https://cards.scryfall.io/large/front/d/6/d68cf6bc-3b4f-4765-87a7-f4b390d08bca.jpg?1783920557",
+            "normal": "https://cards.scryfall.io/normal/front/d/6/d68cf6bc-3b4f-4765-87a7-f4b390d08bca.jpg?1783920557",
+            "png": "https://cards.scryfall.io/png/front/d/6/d68cf6bc-3b4f-4765-87a7-f4b390d08bca.png?1783920557",
+            "small": "https://cards.scryfall.io/small/front/d/6/d68cf6bc-3b4f-4765-87a7-f4b390d08bca.jpg?1783920557",
+            "thumb": "https://cards.scryfall.io/thumb/front/d/6/d68cf6bc-3b4f-4765-87a7-f4b390d08bca.webp?1783920557"
         },
         "keywords": [
             "Ward"
@@ -53,16 +79,16 @@
             "alchemy": "not_legal",
             "brawl": "not_legal",
             "commander": "legal",
-            "duel": "legal",
-            "explorer": "not_legal",
+            "competitivebrawl": "not_legal",
+            "duel": "banned",
             "future": "not_legal",
             "gladiator": "not_legal",
             "historic": "not_legal",
-            "legacy": "legal",
+            "legacy": "banned",
             "modern": "not_legal",
-            "oathbreaker": "legal",
+            "oathbreaker": "banned",
             "oldschool": "not_legal",
-            "pauper": "legal",
+            "pauper": "banned",
             "paupercommander": "legal",
             "penny": "not_legal",
             "pioneer": "not_legal",
@@ -71,7 +97,8 @@
             "standard": "not_legal",
             "standardbrawl": "not_legal",
             "timeless": "not_legal",
-            "vintage": "legal"
+            "tlr": "not_legal",
+            "vintage": "banned"
         },
         "mana_cost": "{1}{G}",
         "multiverse_ids": [
@@ -81,30 +108,30 @@
         "nonfoil": true,
         "object": "card",
         "oracle_id": "68982532-c0c8-477b-9dd4-180c6d22731e",
-        "oracle_text": "Ward {2} (Whenever this creature becomes the target of a spell or ability an opponent controls, counter it unless that player pays {2}.)\nWhen Chicken Troupe enters the battlefield, you get {TK}, then you may put a sticker on a nonland permanent you own.",
+        "oracle_text": "Ward {2} (Whenever this creature becomes the target of a spell or ability an opponent controls, counter it unless that player pays {2}.)\nWhen Chicken Troupe enters, you get {TK}, then you may put a sticker on a nonland permanent you own.",
         "oversized": false,
         "power": "2",
         "prices": {
-            "eur": "0.09",
+            "eur": "0.07",
             "eur_foil": "0.15",
             "tix": null,
-            "usd": "0.03",
+            "usd": "0.11",
             "usd_etched": null,
-            "usd_foil": "0.06"
+            "usd_foil": "0.10"
         },
         "prints_search_uri": "https://api.scryfall.com/cards/search?order=released&q=oracleid%3A68982532-c0c8-477b-9dd4-180c6d22731e&unique=prints",
         "promo": false,
         "purchase_uris": {
             "cardhoarder": "https://www.cardhoarder.com/cards?affiliate_id=scryfall&data%5Bsearch%5D=Chicken+Troupe&ref=card-profile&utm_campaign=affiliate&utm_medium=card&utm_source=scryfall",
-            "cardmarket": "https://www.cardmarket.com/en/Magic/Products/Singles/Unfinity/Chicken-Troupe?referrer=scryfall&utm_campaign=card_prices&utm_medium=text&utm_source=scryfall",
-            "tcgplayer": "https://tcgplayer.pxf.io/c/4931599/1830156/21018?subId1=api&u=https%3A%2F%2Fwww.tcgplayer.com%2Fproduct%2F287973%3Fpage%3D1"
+            "cardmarket": "https://www.cardmarket.com/en/Magic/Products?idProduct=677356&referrer=scryfall&utm_campaign=card_prices&utm_medium=text&utm_source=scryfall",
+            "tcgplayer": "https://partner.tcgplayer.com/c/4931599/1830156/21018?subId1=api&u=https%3A%2F%2Fwww.tcgplayer.com%2Fproduct%2F287973%3Fpage%3D1"
         },
         "rarity": "common",
         "related_uris": {
             "edhrec": "https://edhrec.com/route/?cc=Chicken+Troupe",
             "gatherer": "https://gatherer.wizards.com/Pages/Card/Details.aspx?multiverseid=580683&printed=false",
-            "tcgplayer_infinite_articles": "https://tcgplayer.pxf.io/c/4931599/1830156/21018?subId1=api&trafcat=infinite&u=https%3A%2F%2Finfinite.tcgplayer.com%2Fsearch%3FcontentMode%3Darticle%26game%3Dmagic%26partner%3Dscryfall%26q%3DChicken%2BTroupe",
-            "tcgplayer_infinite_decks": "https://tcgplayer.pxf.io/c/4931599/1830156/21018?subId1=api&trafcat=infinite&u=https%3A%2F%2Finfinite.tcgplayer.com%2Fsearch%3FcontentMode%3Ddeck%26game%3Dmagic%26partner%3Dscryfall%26q%3DChicken%2BTroupe"
+            "tcgplayer_infinite_articles": "https://partner.tcgplayer.com/c/4931599/1830156/21018?subId1=api&trafcat=tcgplayer.com%2Fsearch%2Farticles&u=https%3A%2F%2Fwww.tcgplayer.com%2Fsearch%2Farticles%3FproductLineName%3Dmagic%26q%3DChicken%2BTroupe",
+            "tcgplayer_infinite_decks": "https://partner.tcgplayer.com/c/4931599/1830156/21018?subId1=api&trafcat=tcgplayer.com%2Fsearch%2Fdecks&u=https%3A%2F%2Fwww.tcgplayer.com%2Fsearch%2Fdecks%3FproductLineName%3Dmagic%26q%3DChicken%2BTroupe"
         },
         "released_at": "2022-10-07",
         "reprint": false,

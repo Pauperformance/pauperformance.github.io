@@ -1,19 +1,19 @@
 {
     "archetypes": {
         "py/set": [
+            "Turbofog",
+            "Azorius Gates",
+            "Izzet 8-Post",
+            "Inside Out",
+            "Petal Festival",
+            "Dimir Control",
             "Azorius Glitters",
             "Brew",
-            "Petal Festival",
-            "Dimir 8-Post",
-            "Dimir Control",
-            "Turbofog",
-            "Izzet 8-Post",
-            "Jeskai Ephemerate",
-            "Inside Out",
             "Acid Trip",
             "Poison Storm",
-            "Azorius Gates",
-            "MonoU Delver"
+            "MonoU Delver",
+            "Dimir 8-Post",
+            "Jeskai Ephemerate"
         ]
     },
     "scryfall": {
@@ -34,7 +34,7 @@
             "U"
         ],
         "digital": false,
-        "edhrec_rank": 533,
+        "edhrec_rank": 710,
         "finishes": [
             "nonfoil",
             "foil"
@@ -42,6 +42,7 @@
         "foil": true,
         "frame": "2003",
         "full_art": false,
+        "game_changer": false,
         "games": [
             "paper",
             "mtgo"
@@ -50,13 +51,20 @@
         "id": "4cc785b0-0a77-4b02-b0b4-2bda2fc621cc",
         "illustration_id": "d6fe33a0-0424-41a1-b4d9-331734d22b50",
         "image_status": "highres_scan",
+        "image_updated_at": "2026-07-13T11:54:41Z",
         "image_uris": {
-            "art_crop": "https://cards.scryfall.io/art_crop/front/4/c/4cc785b0-0a77-4b02-b0b4-2bda2fc621cc.jpg?1598914378",
-            "border_crop": "https://cards.scryfall.io/border_crop/front/4/c/4cc785b0-0a77-4b02-b0b4-2bda2fc621cc.jpg?1598914378",
-            "large": "https://cards.scryfall.io/large/front/4/c/4cc785b0-0a77-4b02-b0b4-2bda2fc621cc.jpg?1598914378",
-            "normal": "https://cards.scryfall.io/normal/front/4/c/4cc785b0-0a77-4b02-b0b4-2bda2fc621cc.jpg?1598914378",
-            "png": "https://cards.scryfall.io/png/front/4/c/4cc785b0-0a77-4b02-b0b4-2bda2fc621cc.png?1598914378",
-            "small": "https://cards.scryfall.io/small/front/4/c/4cc785b0-0a77-4b02-b0b4-2bda2fc621cc.jpg?1598914378"
+            "art": "https://cards.scryfall.io/art/front/4/c/4cc785b0-0a77-4b02-b0b4-2bda2fc621cc.webp?1783943681",
+            "art_crop": "https://cards.scryfall.io/art_crop/front/4/c/4cc785b0-0a77-4b02-b0b4-2bda2fc621cc.jpg?1783943681",
+            "border_crop": "https://cards.scryfall.io/border_crop/front/4/c/4cc785b0-0a77-4b02-b0b4-2bda2fc621cc.jpg?1783943681",
+            "crop": "https://cards.scryfall.io/crop/front/4/c/4cc785b0-0a77-4b02-b0b4-2bda2fc621cc.webp?1783943681",
+            "display": "https://cards.scryfall.io/display/front/4/c/4cc785b0-0a77-4b02-b0b4-2bda2fc621cc.webp?1783943681",
+            "grid": "https://cards.scryfall.io/grid/front/4/c/4cc785b0-0a77-4b02-b0b4-2bda2fc621cc.webp?1783943681",
+            "jpeg": "https://cards.scryfall.io/normal/front/4/c/4cc785b0-0a77-4b02-b0b4-2bda2fc621cc.jpg?1783943681",
+            "large": "https://cards.scryfall.io/large/front/4/c/4cc785b0-0a77-4b02-b0b4-2bda2fc621cc.jpg?1783943681",
+            "normal": "https://cards.scryfall.io/normal/front/4/c/4cc785b0-0a77-4b02-b0b4-2bda2fc621cc.jpg?1783943681",
+            "png": "https://cards.scryfall.io/png/front/4/c/4cc785b0-0a77-4b02-b0b4-2bda2fc621cc.png?1783943681",
+            "small": "https://cards.scryfall.io/small/front/4/c/4cc785b0-0a77-4b02-b0b4-2bda2fc621cc.jpg?1783943681",
+            "thumb": "https://cards.scryfall.io/thumb/front/4/c/4cc785b0-0a77-4b02-b0b4-2bda2fc621cc.webp?1783943681"
         },
         "keywords": [
             "Transmute"
@@ -67,8 +75,8 @@
             "alchemy": "not_legal",
             "brawl": "not_legal",
             "commander": "legal",
+            "competitivebrawl": "not_legal",
             "duel": "legal",
-            "explorer": "not_legal",
             "future": "not_legal",
             "gladiator": "not_legal",
             "historic": "not_legal",
@@ -78,13 +86,14 @@
             "oldschool": "not_legal",
             "pauper": "legal",
             "paupercommander": "legal",
-            "penny": "legal",
+            "penny": "not_legal",
             "pioneer": "not_legal",
             "predh": "legal",
             "premodern": "not_legal",
             "standard": "not_legal",
             "standardbrawl": "not_legal",
             "timeless": "not_legal",
+            "tlr": "legal",
             "vintage": "legal"
         },
         "mana_cost": "{U}{U}",
@@ -99,28 +108,28 @@
         "oracle_id": "0826cf7d-7ccc-459b-a92f-29dc169628f8",
         "oracle_text": "Counter target instant or sorcery spell.\nTransmute {1}{U}{U} ({1}{U}{U}, Discard this card: Search your library for a card with the same mana value as this card, reveal it, put it into your hand, then shuffle. Transmute only as a sorcery.)",
         "oversized": false,
-        "penny_rank": 1166,
+        "penny_rank": 1478,
         "prices": {
-            "eur": "0.80",
-            "eur_foil": "12.07",
+            "eur": "1.19",
+            "eur_foil": "8.22",
             "tix": "0.03",
-            "usd": "1.27",
+            "usd": "2.53",
             "usd_etched": null,
-            "usd_foil": "39.32"
+            "usd_foil": "13.87"
         },
         "prints_search_uri": "https://api.scryfall.com/cards/search?order=released&q=oracleid%3A0826cf7d-7ccc-459b-a92f-29dc169628f8&unique=prints",
         "promo": false,
         "purchase_uris": {
             "cardhoarder": "https://www.cardhoarder.com/cards/23312?affiliate_id=scryfall&ref=card-profile&utm_campaign=affiliate&utm_medium=card&utm_source=scryfall",
-            "cardmarket": "https://www.cardmarket.com/en/Magic/Products/Singles/Ravnica-City-of-Guilds/Muddle-the-Mixture?referrer=scryfall&utm_campaign=card_prices&utm_medium=text&utm_source=scryfall",
-            "tcgplayer": "https://tcgplayer.pxf.io/c/4931599/1830156/21018?subId1=api&u=https%3A%2F%2Fwww.tcgplayer.com%2Fproduct%2F13359%3Fpage%3D1"
+            "cardmarket": "https://www.cardmarket.com/en/Magic/Products?idProduct=13471&referrer=scryfall&utm_campaign=card_prices&utm_medium=text&utm_source=scryfall",
+            "tcgplayer": "https://partner.tcgplayer.com/c/4931599/1830156/21018?subId1=api&u=https%3A%2F%2Fwww.tcgplayer.com%2Fproduct%2F13359%3Fpage%3D1"
         },
         "rarity": "common",
         "related_uris": {
             "edhrec": "https://edhrec.com/route/?cc=Muddle+the+Mixture",
             "gatherer": "https://gatherer.wizards.com/Pages/Card/Details.aspx?multiverseid=88955&printed=false",
-            "tcgplayer_infinite_articles": "https://tcgplayer.pxf.io/c/4931599/1830156/21018?subId1=api&trafcat=infinite&u=https%3A%2F%2Finfinite.tcgplayer.com%2Fsearch%3FcontentMode%3Darticle%26game%3Dmagic%26partner%3Dscryfall%26q%3DMuddle%2Bthe%2BMixture",
-            "tcgplayer_infinite_decks": "https://tcgplayer.pxf.io/c/4931599/1830156/21018?subId1=api&trafcat=infinite&u=https%3A%2F%2Finfinite.tcgplayer.com%2Fsearch%3FcontentMode%3Ddeck%26game%3Dmagic%26partner%3Dscryfall%26q%3DMuddle%2Bthe%2BMixture"
+            "tcgplayer_infinite_articles": "https://partner.tcgplayer.com/c/4931599/1830156/21018?subId1=api&trafcat=tcgplayer.com%2Fsearch%2Farticles&u=https%3A%2F%2Fwww.tcgplayer.com%2Fsearch%2Farticles%3FproductLineName%3Dmagic%26q%3DMuddle%2Bthe%2BMixture",
+            "tcgplayer_infinite_decks": "https://partner.tcgplayer.com/c/4931599/1830156/21018?subId1=api&trafcat=tcgplayer.com%2Fsearch%2Fdecks&u=https%3A%2F%2Fwww.tcgplayer.com%2Fsearch%2Fdecks%3FproductLineName%3Dmagic%26q%3DMuddle%2Bthe%2BMixture"
         },
         "released_at": "2005-10-07",
         "reprint": false,

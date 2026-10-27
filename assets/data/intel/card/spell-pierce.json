@@ -1,31 +1,31 @@
 {
     "archetypes": {
         "py/set": [
-            "Jeskai Glitters",
+            "Izzet Terror",
             "MonoU Faeries",
-            "Izzet Blitz",
+            "Esper Affinity",
+            "Elves",
+            "Dimir Faeries",
+            "Dimir Delver",
+            "Brew",
+            "Poison Storm",
             "Dimir Reanimator",
             "Brew Simic",
-            "Empty The Warrens Storm",
-            "Acid Trip",
-            "Elves",
-            "Izzet Terror",
             "Dimir Terror",
-            "Esper Familiars",
-            "Izzet Faeries",
-            "Brew",
-            "Azorius Glitters",
-            "Esper Affinity",
-            "Brew Grixis",
+            "Jeskai Glitters",
             "Izzet 8-Post",
-            "Inside Out",
-            "Dimir Delver",
-            "Brew Azorius",
+            "Esper Familiars",
             "MonoU Terror",
-            "Dimir Control",
-            "Poison Storm",
+            "Azorius Glitters",
+            "Brew Azorius",
+            "Acid Trip",
+            "Empty The Warrens Storm",
+            "Brew Grixis",
+            "Izzet Faeries",
             "Azorius Gates",
-            "Dimir Faeries"
+            "Inside Out",
+            "Izzet Blitz",
+            "Dimir Control"
         ]
     },
     "scryfall": {
@@ -46,7 +46,7 @@
             "U"
         ],
         "digital": false,
-        "edhrec_rank": 726,
+        "edhrec_rank": 900,
         "finishes": [
             "nonfoil",
             "foil"
@@ -55,6 +55,7 @@
         "foil": true,
         "frame": "2003",
         "full_art": false,
+        "game_changer": false,
         "games": [
             "paper",
             "mtgo"
@@ -63,23 +64,30 @@
         "id": "cb3d3901-e4a6-45ab-a7b5-c65d91e1875e",
         "illustration_id": "4bdf8068-d062-4205-882c-d4fcd0878c1f",
         "image_status": "highres_scan",
+        "image_updated_at": "2026-07-13T11:29:20Z",
         "image_uris": {
-            "art_crop": "https://cards.scryfall.io/art_crop/front/c/b/cb3d3901-e4a6-45ab-a7b5-c65d91e1875e.jpg?1562616640",
-            "border_crop": "https://cards.scryfall.io/border_crop/front/c/b/cb3d3901-e4a6-45ab-a7b5-c65d91e1875e.jpg?1562616640",
-            "large": "https://cards.scryfall.io/large/front/c/b/cb3d3901-e4a6-45ab-a7b5-c65d91e1875e.jpg?1562616640",
-            "normal": "https://cards.scryfall.io/normal/front/c/b/cb3d3901-e4a6-45ab-a7b5-c65d91e1875e.jpg?1562616640",
-            "png": "https://cards.scryfall.io/png/front/c/b/cb3d3901-e4a6-45ab-a7b5-c65d91e1875e.png?1562616640",
-            "small": "https://cards.scryfall.io/small/front/c/b/cb3d3901-e4a6-45ab-a7b5-c65d91e1875e.jpg?1562616640"
+            "art": "https://cards.scryfall.io/art/front/c/b/cb3d3901-e4a6-45ab-a7b5-c65d91e1875e.webp?1783942160",
+            "art_crop": "https://cards.scryfall.io/art_crop/front/c/b/cb3d3901-e4a6-45ab-a7b5-c65d91e1875e.jpg?1783942160",
+            "border_crop": "https://cards.scryfall.io/border_crop/front/c/b/cb3d3901-e4a6-45ab-a7b5-c65d91e1875e.jpg?1783942160",
+            "crop": "https://cards.scryfall.io/crop/front/c/b/cb3d3901-e4a6-45ab-a7b5-c65d91e1875e.webp?1783942160",
+            "display": "https://cards.scryfall.io/display/front/c/b/cb3d3901-e4a6-45ab-a7b5-c65d91e1875e.webp?1783942160",
+            "grid": "https://cards.scryfall.io/grid/front/c/b/cb3d3901-e4a6-45ab-a7b5-c65d91e1875e.webp?1783942160",
+            "jpeg": "https://cards.scryfall.io/normal/front/c/b/cb3d3901-e4a6-45ab-a7b5-c65d91e1875e.jpg?1783942160",
+            "large": "https://cards.scryfall.io/large/front/c/b/cb3d3901-e4a6-45ab-a7b5-c65d91e1875e.jpg?1783942160",
+            "normal": "https://cards.scryfall.io/normal/front/c/b/cb3d3901-e4a6-45ab-a7b5-c65d91e1875e.jpg?1783942160",
+            "png": "https://cards.scryfall.io/png/front/c/b/cb3d3901-e4a6-45ab-a7b5-c65d91e1875e.png?1783942160",
+            "small": "https://cards.scryfall.io/small/front/c/b/cb3d3901-e4a6-45ab-a7b5-c65d91e1875e.jpg?1783942160",
+            "thumb": "https://cards.scryfall.io/thumb/front/c/b/cb3d3901-e4a6-45ab-a7b5-c65d91e1875e.webp?1783942160"
         },
         "keywords": [],
         "lang": "en",
         "layout": "normal",
         "legalities": {
-            "alchemy": "not_legal",
+            "alchemy": "legal",
             "brawl": "legal",
             "commander": "legal",
+            "competitivebrawl": "legal",
             "duel": "legal",
-            "explorer": "legal",
             "future": "legal",
             "gladiator": "legal",
             "historic": "legal",
@@ -89,13 +97,14 @@
             "oldschool": "not_legal",
             "pauper": "legal",
             "paupercommander": "legal",
-            "penny": "legal",
+            "penny": "not_legal",
             "pioneer": "legal",
             "predh": "legal",
             "premodern": "not_legal",
             "standard": "legal",
             "standardbrawl": "legal",
             "timeless": "legal",
+            "tlr": "legal",
             "vintage": "legal"
         },
         "mana_cost": "{U}",
@@ -112,26 +121,26 @@
         "oversized": false,
         "penny_rank": 53,
         "prices": {
-            "eur": "0.37",
-            "eur_foil": "11.57",
+            "eur": "0.28",
+            "eur_foil": "32.43",
             "tix": "0.03",
-            "usd": "0.37",
+            "usd": "0.40",
             "usd_etched": null,
-            "usd_foil": "18.15"
+            "usd_foil": "14.71"
         },
         "prints_search_uri": "https://api.scryfall.com/cards/search?order=released&q=oracleid%3Ad64b0848-0193-4025-ba62-63ecd8fb9f50&unique=prints",
         "promo": false,
         "purchase_uris": {
             "cardhoarder": "https://www.cardhoarder.com/cards/34442?affiliate_id=scryfall&ref=card-profile&utm_campaign=affiliate&utm_medium=card&utm_source=scryfall",
-            "cardmarket": "https://www.cardmarket.com/en/Magic/Products/Singles/Zendikar/Spell-Pierce?referrer=scryfall&utm_campaign=card_prices&utm_medium=text&utm_source=scryfall",
-            "tcgplayer": "https://tcgplayer.pxf.io/c/4931599/1830156/21018?subId1=api&u=https%3A%2F%2Fwww.tcgplayer.com%2Fproduct%2F33433%3Fpage%3D1"
+            "cardmarket": "https://www.cardmarket.com/en/Magic/Products?idProduct=21885&referrer=scryfall&utm_campaign=card_prices&utm_medium=text&utm_source=scryfall",
+            "tcgplayer": "https://partner.tcgplayer.com/c/4931599/1830156/21018?subId1=api&u=https%3A%2F%2Fwww.tcgplayer.com%2Fproduct%2F33433%3Fpage%3D1"
         },
         "rarity": "common",
         "related_uris": {
             "edhrec": "https://edhrec.com/route/?cc=Spell+Pierce",
             "gatherer": "https://gatherer.wizards.com/Pages/Card/Details.aspx?multiverseid=178144&printed=false",
-            "tcgplayer_infinite_articles": "https://tcgplayer.pxf.io/c/4931599/1830156/21018?subId1=api&trafcat=infinite&u=https%3A%2F%2Finfinite.tcgplayer.com%2Fsearch%3FcontentMode%3Darticle%26game%3Dmagic%26partner%3Dscryfall%26q%3DSpell%2BPierce",
-            "tcgplayer_infinite_decks": "https://tcgplayer.pxf.io/c/4931599/1830156/21018?subId1=api&trafcat=infinite&u=https%3A%2F%2Finfinite.tcgplayer.com%2Fsearch%3FcontentMode%3Ddeck%26game%3Dmagic%26partner%3Dscryfall%26q%3DSpell%2BPierce"
+            "tcgplayer_infinite_articles": "https://partner.tcgplayer.com/c/4931599/1830156/21018?subId1=api&trafcat=tcgplayer.com%2Fsearch%2Farticles&u=https%3A%2F%2Fwww.tcgplayer.com%2Fsearch%2Farticles%3FproductLineName%3Dmagic%26q%3DSpell%2BPierce",
+            "tcgplayer_infinite_decks": "https://partner.tcgplayer.com/c/4931599/1830156/21018?subId1=api&trafcat=tcgplayer.com%2Fsearch%2Fdecks&u=https%3A%2F%2Fwww.tcgplayer.com%2Fsearch%2Fdecks%3FproductLineName%3Dmagic%26q%3DSpell%2BPierce"
         },
         "released_at": "2009-10-02",
         "reprint": false,

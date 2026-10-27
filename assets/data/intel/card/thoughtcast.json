@@ -1,20 +1,20 @@
 {
     "archetypes": {
         "py/set": [
-            "Brew Esper",
             "Brew Temur",
-            "Jeskai Glitters",
-            "Azorius Glitters",
-            "Affinity",
-            "Brew",
-            "Esper Affinity",
             "Brew Jeskai",
-            "Brew Grixis",
-            "Jeskai Ephemerate",
-            "Brew Azorius",
-            "Brew Dimir",
             "Whale Combo",
-            "Trinket Control"
+            "Jeskai Glitters",
+            "Brew Dimir",
+            "Affinity",
+            "Brew Esper",
+            "Azorius Glitters",
+            "Brew Azorius",
+            "Brew",
+            "Trinket Control",
+            "Esper Affinity",
+            "Brew Grixis",
+            "Jeskai Ephemerate"
         ]
     },
     "scryfall": {
@@ -35,7 +35,7 @@
             "U"
         ],
         "digital": false,
-        "edhrec_rank": 934,
+        "edhrec_rank": 922,
         "finishes": [
             "nonfoil",
             "foil"
@@ -44,6 +44,7 @@
         "foil": true,
         "frame": "2003",
         "full_art": false,
+        "game_changer": false,
         "games": [
             "paper",
             "mtgo"
@@ -52,13 +53,20 @@
         "id": "efb965a7-877a-4302-b507-25b0a9e32d9b",
         "illustration_id": "72882e26-d281-4e92-80fa-1b0fc7a2bb6d",
         "image_status": "highres_scan",
+        "image_updated_at": "2026-07-13T12:09:10Z",
         "image_uris": {
-            "art_crop": "https://cards.scryfall.io/art_crop/front/e/f/efb965a7-877a-4302-b507-25b0a9e32d9b.jpg?1562162496",
-            "border_crop": "https://cards.scryfall.io/border_crop/front/e/f/efb965a7-877a-4302-b507-25b0a9e32d9b.jpg?1562162496",
-            "large": "https://cards.scryfall.io/large/front/e/f/efb965a7-877a-4302-b507-25b0a9e32d9b.jpg?1562162496",
-            "normal": "https://cards.scryfall.io/normal/front/e/f/efb965a7-877a-4302-b507-25b0a9e32d9b.jpg?1562162496",
-            "png": "https://cards.scryfall.io/png/front/e/f/efb965a7-877a-4302-b507-25b0a9e32d9b.png?1562162496",
-            "small": "https://cards.scryfall.io/small/front/e/f/efb965a7-877a-4302-b507-25b0a9e32d9b.jpg?1562162496"
+            "art": "https://cards.scryfall.io/art/front/e/f/efb965a7-877a-4302-b507-25b0a9e32d9b.webp?1783944550",
+            "art_crop": "https://cards.scryfall.io/art_crop/front/e/f/efb965a7-877a-4302-b507-25b0a9e32d9b.jpg?1783944550",
+            "border_crop": "https://cards.scryfall.io/border_crop/front/e/f/efb965a7-877a-4302-b507-25b0a9e32d9b.jpg?1783944550",
+            "crop": "https://cards.scryfall.io/crop/front/e/f/efb965a7-877a-4302-b507-25b0a9e32d9b.webp?1783944550",
+            "display": "https://cards.scryfall.io/display/front/e/f/efb965a7-877a-4302-b507-25b0a9e32d9b.webp?1783944550",
+            "grid": "https://cards.scryfall.io/grid/front/e/f/efb965a7-877a-4302-b507-25b0a9e32d9b.webp?1783944550",
+            "jpeg": "https://cards.scryfall.io/normal/front/e/f/efb965a7-877a-4302-b507-25b0a9e32d9b.jpg?1783944550",
+            "large": "https://cards.scryfall.io/large/front/e/f/efb965a7-877a-4302-b507-25b0a9e32d9b.jpg?1783944550",
+            "normal": "https://cards.scryfall.io/normal/front/e/f/efb965a7-877a-4302-b507-25b0a9e32d9b.jpg?1783944550",
+            "png": "https://cards.scryfall.io/png/front/e/f/efb965a7-877a-4302-b507-25b0a9e32d9b.png?1783944550",
+            "small": "https://cards.scryfall.io/small/front/e/f/efb965a7-877a-4302-b507-25b0a9e32d9b.jpg?1783944550",
+            "thumb": "https://cards.scryfall.io/thumb/front/e/f/efb965a7-877a-4302-b507-25b0a9e32d9b.webp?1783944550"
         },
         "keywords": [
             "Affinity"
@@ -67,13 +75,13 @@
         "layout": "normal",
         "legalities": {
             "alchemy": "not_legal",
-            "brawl": "not_legal",
+            "brawl": "legal",
             "commander": "legal",
+            "competitivebrawl": "legal",
             "duel": "legal",
-            "explorer": "not_legal",
             "future": "not_legal",
-            "gladiator": "not_legal",
-            "historic": "not_legal",
+            "gladiator": "legal",
+            "historic": "legal",
             "legacy": "legal",
             "modern": "legal",
             "oathbreaker": "legal",
@@ -86,7 +94,8 @@
             "premodern": "not_legal",
             "standard": "not_legal",
             "standardbrawl": "not_legal",
-            "timeless": "not_legal",
+            "timeless": "legal",
+            "tlr": "not_legal",
             "vintage": "legal"
         },
         "mana_cost": "{4}{U}",
@@ -101,28 +110,28 @@
         "oracle_id": "cce9bbff-82dc-4b2f-addd-d6715588de20",
         "oracle_text": "Affinity for artifacts (This spell costs {1} less to cast for each artifact you control.)\nDraw two cards.",
         "oversized": false,
-        "penny_rank": 509,
+        "penny_rank": 670,
         "prices": {
-            "eur": "0.87",
-            "eur_foil": "12.28",
-            "tix": "0.52",
-            "usd": "1.04",
+            "eur": "1.59",
+            "eur_foil": "13.42",
+            "tix": "0.19",
+            "usd": "2.58",
             "usd_etched": null,
-            "usd_foil": "20.66"
+            "usd_foil": "49.27"
         },
         "prints_search_uri": "https://api.scryfall.com/cards/search?order=released&q=oracleid%3Acce9bbff-82dc-4b2f-addd-d6715588de20&unique=prints",
         "promo": false,
         "purchase_uris": {
             "cardhoarder": "https://www.cardhoarder.com/cards/19787?affiliate_id=scryfall&ref=card-profile&utm_campaign=affiliate&utm_medium=card&utm_source=scryfall",
-            "cardmarket": "https://www.cardmarket.com/en/Magic/Products/Singles/Mirrodin/Thoughtcast?referrer=scryfall&utm_campaign=card_prices&utm_medium=text&utm_source=scryfall",
-            "tcgplayer": "https://tcgplayer.pxf.io/c/4931599/1830156/21018?subId1=api&u=https%3A%2F%2Fwww.tcgplayer.com%2Fproduct%2F11318%3Fpage%3D1"
+            "cardmarket": "https://www.cardmarket.com/en/Magic/Products?idProduct=54&referrer=scryfall&utm_campaign=card_prices&utm_medium=text&utm_source=scryfall",
+            "tcgplayer": "https://partner.tcgplayer.com/c/4931599/1830156/21018?subId1=api&u=https%3A%2F%2Fwww.tcgplayer.com%2Fproduct%2F11318%3Fpage%3D1"
         },
         "rarity": "common",
         "related_uris": {
             "edhrec": "https://edhrec.com/route/?cc=Thoughtcast",
             "gatherer": "https://gatherer.wizards.com/Pages/Card/Details.aspx?multiverseid=46085&printed=false",
-            "tcgplayer_infinite_articles": "https://tcgplayer.pxf.io/c/4931599/1830156/21018?subId1=api&trafcat=infinite&u=https%3A%2F%2Finfinite.tcgplayer.com%2Fsearch%3FcontentMode%3Darticle%26game%3Dmagic%26partner%3Dscryfall%26q%3DThoughtcast",
-            "tcgplayer_infinite_decks": "https://tcgplayer.pxf.io/c/4931599/1830156/21018?subId1=api&trafcat=infinite&u=https%3A%2F%2Finfinite.tcgplayer.com%2Fsearch%3FcontentMode%3Ddeck%26game%3Dmagic%26partner%3Dscryfall%26q%3DThoughtcast"
+            "tcgplayer_infinite_articles": "https://partner.tcgplayer.com/c/4931599/1830156/21018?subId1=api&trafcat=tcgplayer.com%2Fsearch%2Farticles&u=https%3A%2F%2Fwww.tcgplayer.com%2Fsearch%2Farticles%3FproductLineName%3Dmagic%26q%3DThoughtcast",
+            "tcgplayer_infinite_decks": "https://partner.tcgplayer.com/c/4931599/1830156/21018?subId1=api&trafcat=tcgplayer.com%2Fsearch%2Fdecks&u=https%3A%2F%2Fwww.tcgplayer.com%2Fsearch%2Fdecks%3FproductLineName%3Dmagic%26q%3DThoughtcast"
         },
         "released_at": "2003-10-02",
         "reprint": false,

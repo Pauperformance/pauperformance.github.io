@@ -3,6 +3,24 @@
         "py/set": []
     },
     "scryfall": {
+        "all_parts": [
+            {
+                "component": "combo_piece",
+                "id": "405434c7-9206-45b7-af0f-d59aae294d39",
+                "name": "Sunscorched Desert",
+                "object": "related_card",
+                "type_line": "Land \u2014 Desert",
+                "uri": "https://api.scryfall.com/cards/405434c7-9206-45b7-af0f-d59aae294d39"
+            },
+            {
+                "component": "combo_piece",
+                "id": "f461a08c-a025-42c0-89c3-9bc3df5e7eb2",
+                "name": "Sandcloud Harbinger",
+                "object": "related_card",
+                "type_line": "Creature \u2014 Elemental Horse",
+                "uri": "https://api.scryfall.com/cards/f461a08c-a025-42c0-89c3-9bc3df5e7eb2"
+            }
+        ],
         "artist": "Min Yum",
         "artist_ids": [
             "9cb65d6f-8851-4d56-9add-9eefa274bd1b"
@@ -16,7 +34,7 @@
         "color_identity": [],
         "colors": [],
         "digital": false,
-        "edhrec_rank": 2782,
+        "edhrec_rank": 3339,
         "finishes": [
             "nonfoil",
             "foil"
@@ -25,6 +43,7 @@
         "foil": true,
         "frame": "2015",
         "full_art": false,
+        "game_changer": false,
         "games": [
             "paper",
             "mtgo"
@@ -33,13 +52,20 @@
         "id": "405434c7-9206-45b7-af0f-d59aae294d39",
         "illustration_id": "73109d99-e023-46e9-9b3f-51679125065e",
         "image_status": "highres_scan",
+        "image_updated_at": "2026-07-13T09:54:05Z",
         "image_uris": {
-            "art_crop": "https://cards.scryfall.io/art_crop/front/4/0/405434c7-9206-45b7-af0f-d59aae294d39.jpg?1543676421",
-            "border_crop": "https://cards.scryfall.io/border_crop/front/4/0/405434c7-9206-45b7-af0f-d59aae294d39.jpg?1543676421",
-            "large": "https://cards.scryfall.io/large/front/4/0/405434c7-9206-45b7-af0f-d59aae294d39.jpg?1543676421",
-            "normal": "https://cards.scryfall.io/normal/front/4/0/405434c7-9206-45b7-af0f-d59aae294d39.jpg?1543676421",
-            "png": "https://cards.scryfall.io/png/front/4/0/405434c7-9206-45b7-af0f-d59aae294d39.png?1543676421",
-            "small": "https://cards.scryfall.io/small/front/4/0/405434c7-9206-45b7-af0f-d59aae294d39.jpg?1543676421"
+            "art": "https://cards.scryfall.io/art/front/4/0/405434c7-9206-45b7-af0f-d59aae294d39.webp?1783936445",
+            "art_crop": "https://cards.scryfall.io/art_crop/front/4/0/405434c7-9206-45b7-af0f-d59aae294d39.jpg?1783936445",
+            "border_crop": "https://cards.scryfall.io/border_crop/front/4/0/405434c7-9206-45b7-af0f-d59aae294d39.jpg?1783936445",
+            "crop": "https://cards.scryfall.io/crop/front/4/0/405434c7-9206-45b7-af0f-d59aae294d39.webp?1783936445",
+            "display": "https://cards.scryfall.io/display/front/4/0/405434c7-9206-45b7-af0f-d59aae294d39.webp?1783936445",
+            "grid": "https://cards.scryfall.io/grid/front/4/0/405434c7-9206-45b7-af0f-d59aae294d39.webp?1783936445",
+            "jpeg": "https://cards.scryfall.io/normal/front/4/0/405434c7-9206-45b7-af0f-d59aae294d39.jpg?1783936445",
+            "large": "https://cards.scryfall.io/large/front/4/0/405434c7-9206-45b7-af0f-d59aae294d39.jpg?1783936445",
+            "normal": "https://cards.scryfall.io/normal/front/4/0/405434c7-9206-45b7-af0f-d59aae294d39.jpg?1783936445",
+            "png": "https://cards.scryfall.io/png/front/4/0/405434c7-9206-45b7-af0f-d59aae294d39.png?1783936445",
+            "small": "https://cards.scryfall.io/small/front/4/0/405434c7-9206-45b7-af0f-d59aae294d39.jpg?1783936445",
+            "thumb": "https://cards.scryfall.io/thumb/front/4/0/405434c7-9206-45b7-af0f-d59aae294d39.webp?1783936445"
         },
         "keywords": [],
         "lang": "en",
@@ -48,8 +74,8 @@
             "alchemy": "not_legal",
             "brawl": "legal",
             "commander": "legal",
+            "competitivebrawl": "legal",
             "duel": "legal",
-            "explorer": "legal",
             "future": "not_legal",
             "gladiator": "legal",
             "historic": "legal",
@@ -66,6 +92,7 @@
             "standard": "not_legal",
             "standardbrawl": "not_legal",
             "timeless": "legal",
+            "tlr": "legal",
             "vintage": "legal"
         },
         "mana_cost": "",
@@ -78,16 +105,16 @@
         "nonfoil": true,
         "object": "card",
         "oracle_id": "256b8c23-589e-429d-9e6e-433d55079eb4",
-        "oracle_text": "When Sunscorched Desert enters the battlefield, it deals 1 damage to target player or planeswalker.\n{T}: Add {C}.",
+        "oracle_text": "When this land enters, it deals 1 damage to target player or planeswalker.\n{T}: Add {C}.",
         "oversized": false,
-        "penny_rank": 1274,
+        "penny_rank": 1618,
         "prices": {
-            "eur": "0.17",
-            "eur_foil": "3.58",
+            "eur": "0.33",
+            "eur_foil": "13.28",
             "tix": "0.03",
-            "usd": "0.21",
+            "usd": "0.33",
             "usd_etched": null,
-            "usd_foil": "4.90"
+            "usd_foil": "6.79"
         },
         "prints_search_uri": "https://api.scryfall.com/cards/search?order=released&q=oracleid%3A256b8c23-589e-429d-9e6e-433d55079eb4&unique=prints",
         "produced_mana": [
@@ -96,15 +123,15 @@
         "promo": false,
         "purchase_uris": {
             "cardhoarder": "https://www.cardhoarder.com/cards/64160?affiliate_id=scryfall&ref=card-profile&utm_campaign=affiliate&utm_medium=card&utm_source=scryfall",
-            "cardmarket": "https://www.cardmarket.com/en/Magic/Products/Singles/Amonkhet/Sunscorched-Desert?referrer=scryfall&utm_campaign=card_prices&utm_medium=text&utm_source=scryfall",
-            "tcgplayer": "https://tcgplayer.pxf.io/c/4931599/1830156/21018?subId1=api&u=https%3A%2F%2Fwww.tcgplayer.com%2Fproduct%2F130062%3Fpage%3D1"
+            "cardmarket": "https://www.cardmarket.com/en/Magic/Products?idProduct=296813&referrer=scryfall&utm_campaign=card_prices&utm_medium=text&utm_source=scryfall",
+            "tcgplayer": "https://partner.tcgplayer.com/c/4931599/1830156/21018?subId1=api&u=https%3A%2F%2Fwww.tcgplayer.com%2Fproduct%2F130062%3Fpage%3D1"
         },
         "rarity": "common",
         "related_uris": {
             "edhrec": "https://edhrec.com/route/?cc=Sunscorched+Desert",
             "gatherer": "https://gatherer.wizards.com/Pages/Card/Details.aspx?multiverseid=426951&printed=false",
-            "tcgplayer_infinite_articles": "https://tcgplayer.pxf.io/c/4931599/1830156/21018?subId1=api&trafcat=infinite&u=https%3A%2F%2Finfinite.tcgplayer.com%2Fsearch%3FcontentMode%3Darticle%26game%3Dmagic%26partner%3Dscryfall%26q%3DSunscorched%2BDesert",
-            "tcgplayer_infinite_decks": "https://tcgplayer.pxf.io/c/4931599/1830156/21018?subId1=api&trafcat=infinite&u=https%3A%2F%2Finfinite.tcgplayer.com%2Fsearch%3FcontentMode%3Ddeck%26game%3Dmagic%26partner%3Dscryfall%26q%3DSunscorched%2BDesert"
+            "tcgplayer_infinite_articles": "https://partner.tcgplayer.com/c/4931599/1830156/21018?subId1=api&trafcat=tcgplayer.com%2Fsearch%2Farticles&u=https%3A%2F%2Fwww.tcgplayer.com%2Fsearch%2Farticles%3FproductLineName%3Dmagic%26q%3DSunscorched%2BDesert",
+            "tcgplayer_infinite_decks": "https://partner.tcgplayer.com/c/4931599/1830156/21018?subId1=api&trafcat=tcgplayer.com%2Fsearch%2Fdecks&u=https%3A%2F%2Fwww.tcgplayer.com%2Fsearch%2Fdecks%3FproductLineName%3Dmagic%26q%3DSunscorched%2BDesert"
         },
         "released_at": "2017-04-28",
         "reprint": false,

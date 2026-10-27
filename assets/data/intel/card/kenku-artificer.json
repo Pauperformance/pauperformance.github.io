@@ -1,37 +1,19 @@
 {
     "archetypes": {
         "py/set": [
-            "Brew Esper",
             "Jeskai Glitters",
-            "Azorius Glitters",
-            "Affinity",
-            "Esper Affinity",
-            "Jeskai Ephemerate",
-            "Brew Azorius",
-            "Brew Dimir",
             "Izzet Terror",
-            "Trinket Control"
+            "Brew Dimir",
+            "Affinity",
+            "Brew Esper",
+            "Azorius Glitters",
+            "Brew Azorius",
+            "Trinket Control",
+            "Esper Affinity",
+            "Jeskai Ephemerate"
         ]
     },
     "scryfall": {
-        "all_parts": [
-            {
-                "component": "combo_piece",
-                "id": "50f79bde-10eb-467d-8d56-d4d9a2e15d9c",
-                "name": "A-Kenku Artificer",
-                "object": "related_card",
-                "type_line": "Creature \u2014 Bird Artificer",
-                "uri": "https://api.scryfall.com/cards/50f79bde-10eb-467d-8d56-d4d9a2e15d9c"
-            },
-            {
-                "component": "combo_piece",
-                "id": "20f30aca-5055-45f1-9121-e7a5675f07e4",
-                "name": "Kenku Artificer",
-                "object": "related_card",
-                "type_line": "Creature \u2014 Bird Artificer",
-                "uri": "https://api.scryfall.com/cards/20f30aca-5055-45f1-9121-e7a5675f07e4"
-            }
-        ],
         "artist": "Dave Greco",
         "artist_ids": [
             "2b466c0f-fad2-46fe-adc9-0007371d01bf"
@@ -49,7 +31,7 @@
             "U"
         ],
         "digital": false,
-        "edhrec_rank": 22190,
+        "edhrec_rank": 23257,
         "finishes": [
             "nonfoil",
             "foil"
@@ -67,13 +49,20 @@
         "id": "20f30aca-5055-45f1-9121-e7a5675f07e4",
         "illustration_id": "3828da0d-ad3a-4438-ada1-7c66225bd550",
         "image_status": "highres_scan",
+        "image_updated_at": "2026-07-13T06:06:26Z",
         "image_uris": {
-            "art_crop": "https://cards.scryfall.io/art_crop/front/2/0/20f30aca-5055-45f1-9121-e7a5675f07e4.jpg?1674135626",
-            "border_crop": "https://cards.scryfall.io/border_crop/front/2/0/20f30aca-5055-45f1-9121-e7a5675f07e4.jpg?1674135626",
-            "large": "https://cards.scryfall.io/large/front/2/0/20f30aca-5055-45f1-9121-e7a5675f07e4.jpg?1674135626",
-            "normal": "https://cards.scryfall.io/normal/front/2/0/20f30aca-5055-45f1-9121-e7a5675f07e4.jpg?1674135626",
-            "png": "https://cards.scryfall.io/png/front/2/0/20f30aca-5055-45f1-9121-e7a5675f07e4.png?1674135626",
-            "small": "https://cards.scryfall.io/small/front/2/0/20f30aca-5055-45f1-9121-e7a5675f07e4.jpg?1674135626"
+            "art": "https://cards.scryfall.io/art/front/2/0/20f30aca-5055-45f1-9121-e7a5675f07e4.webp?1783922786",
+            "art_crop": "https://cards.scryfall.io/art_crop/front/2/0/20f30aca-5055-45f1-9121-e7a5675f07e4.jpg?1783922786",
+            "border_crop": "https://cards.scryfall.io/border_crop/front/2/0/20f30aca-5055-45f1-9121-e7a5675f07e4.jpg?1783922786",
+            "crop": "https://cards.scryfall.io/crop/front/2/0/20f30aca-5055-45f1-9121-e7a5675f07e4.webp?1783922786",
+            "display": "https://cards.scryfall.io/display/front/2/0/20f30aca-5055-45f1-9121-e7a5675f07e4.webp?1783922786",
+            "grid": "https://cards.scryfall.io/grid/front/2/0/20f30aca-5055-45f1-9121-e7a5675f07e4.webp?1783922786",
+            "jpeg": "https://cards.scryfall.io/normal/front/2/0/20f30aca-5055-45f1-9121-e7a5675f07e4.jpg?1783922786",
+            "large": "https://cards.scryfall.io/large/front/2/0/20f30aca-5055-45f1-9121-e7a5675f07e4.jpg?1783922786",
+            "normal": "https://cards.scryfall.io/normal/front/2/0/20f30aca-5055-45f1-9121-e7a5675f07e4.jpg?1783922786",
+            "png": "https://cards.scryfall.io/png/front/2/0/20f30aca-5055-45f1-9121-e7a5675f07e4.png?1783922786",
+            "small": "https://cards.scryfall.io/small/front/2/0/20f30aca-5055-45f1-9121-e7a5675f07e4.jpg?1783922786",
+            "thumb": "https://cards.scryfall.io/thumb/front/2/0/20f30aca-5055-45f1-9121-e7a5675f07e4.webp?1783922786"
         },
         "keywords": [
             "Homunculus Servant"
@@ -82,12 +71,13 @@
         "layout": "normal",
         "legalities": {
             "alchemy": "not_legal",
-            "brawl": "not_legal",
+            "brawl": "legal",
             "commander": "legal",
+            "competitivebrawl": "legal",
             "duel": "legal",
             "future": "not_legal",
             "gladiator": "legal",
-            "historic": "not_legal",
+            "historic": "legal",
             "legacy": "legal",
             "modern": "not_legal",
             "oathbreaker": "legal",
@@ -117,12 +107,12 @@
         "oversized": false,
         "power": "1",
         "prices": {
-            "eur": "0.38",
-            "eur_foil": "0.77",
-            "tix": "3.78",
-            "usd": "0.21",
+            "eur": "0.50",
+            "eur_foil": "0.74",
+            "tix": "5.32",
+            "usd": "0.29",
             "usd_etched": null,
-            "usd_foil": "0.20"
+            "usd_foil": "0.31"
         },
         "prints_search_uri": "https://api.scryfall.com/cards/search?order=released&q=oracleid%3Ae262b226-9463-40a9-95b2-fe2c3eafc043&unique=prints",
         "promo": false,

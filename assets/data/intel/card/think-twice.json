@@ -1,21 +1,39 @@
 {
     "archetypes": {
         "py/set": [
-            "Izzet Control",
-            "MonoU Control",
-            "Dimir 8-Post",
-            "Dimir Control",
-            "MonoU Faeries",
-            "Flicker Tron",
-            "Izzet 8-Post",
-            "Dimir Delver",
             "Turbofog",
+            "Izzet 8-Post",
+            "Dimir Alchemy",
+            "MonoU Control",
+            "Dimir Control",
+            "Dimir Delver",
+            "MonoU Faeries",
+            "Izzet Control",
             "Dimir Teachings",
             "MonoU Delver",
-            "Dimir Alchemy"
+            "Dimir 8-Post",
+            "Flicker Tron"
         ]
     },
     "scryfall": {
+        "all_parts": [
+            {
+                "component": "combo_piece",
+                "id": "533b1a2c-ead1-4636-9c88-e9b582042372",
+                "name": "Shellfish Scholar",
+                "object": "related_card",
+                "type_line": "Creature \u2014 Rat Wizard",
+                "uri": "https://api.scryfall.com/cards/533b1a2c-ead1-4636-9c88-e9b582042372"
+            },
+            {
+                "component": "combo_piece",
+                "id": "352d99db-de6d-4405-90ec-b144abbaa5a4",
+                "name": "Think Twice",
+                "object": "related_card",
+                "type_line": "Instant",
+                "uri": "https://api.scryfall.com/cards/352d99db-de6d-4405-90ec-b144abbaa5a4"
+            }
+        ],
         "artist": "Jim Nelson",
         "artist_ids": [
             "aa9f64d1-29e1-4c82-877e-44c18183f40b"
@@ -33,7 +51,7 @@
             "U"
         ],
         "digital": false,
-        "edhrec_rank": 4875,
+        "edhrec_rank": 2213,
         "finishes": [
             "nonfoil",
             "foil"
@@ -42,6 +60,7 @@
         "foil": true,
         "frame": "2003",
         "full_art": false,
+        "game_changer": false,
         "games": [
             "paper",
             "mtgo"
@@ -50,13 +69,20 @@
         "id": "352d99db-de6d-4405-90ec-b144abbaa5a4",
         "illustration_id": "20a53404-180c-4d54-b32d-5bd2d61393b9",
         "image_status": "highres_scan",
+        "image_updated_at": "2026-07-13T11:47:18Z",
         "image_uris": {
-            "art_crop": "https://cards.scryfall.io/art_crop/front/3/5/352d99db-de6d-4405-90ec-b144abbaa5a4.jpg?1562906203",
-            "border_crop": "https://cards.scryfall.io/border_crop/front/3/5/352d99db-de6d-4405-90ec-b144abbaa5a4.jpg?1562906203",
-            "large": "https://cards.scryfall.io/large/front/3/5/352d99db-de6d-4405-90ec-b144abbaa5a4.jpg?1562906203",
-            "normal": "https://cards.scryfall.io/normal/front/3/5/352d99db-de6d-4405-90ec-b144abbaa5a4.jpg?1562906203",
-            "png": "https://cards.scryfall.io/png/front/3/5/352d99db-de6d-4405-90ec-b144abbaa5a4.png?1562906203",
-            "small": "https://cards.scryfall.io/small/front/3/5/352d99db-de6d-4405-90ec-b144abbaa5a4.jpg?1562906203"
+            "art": "https://cards.scryfall.io/art/front/3/5/352d99db-de6d-4405-90ec-b144abbaa5a4.webp?1783943238",
+            "art_crop": "https://cards.scryfall.io/art_crop/front/3/5/352d99db-de6d-4405-90ec-b144abbaa5a4.jpg?1783943238",
+            "border_crop": "https://cards.scryfall.io/border_crop/front/3/5/352d99db-de6d-4405-90ec-b144abbaa5a4.jpg?1783943238",
+            "crop": "https://cards.scryfall.io/crop/front/3/5/352d99db-de6d-4405-90ec-b144abbaa5a4.webp?1783943238",
+            "display": "https://cards.scryfall.io/display/front/3/5/352d99db-de6d-4405-90ec-b144abbaa5a4.webp?1783943238",
+            "grid": "https://cards.scryfall.io/grid/front/3/5/352d99db-de6d-4405-90ec-b144abbaa5a4.webp?1783943238",
+            "jpeg": "https://cards.scryfall.io/normal/front/3/5/352d99db-de6d-4405-90ec-b144abbaa5a4.jpg?1783943238",
+            "large": "https://cards.scryfall.io/large/front/3/5/352d99db-de6d-4405-90ec-b144abbaa5a4.jpg?1783943238",
+            "normal": "https://cards.scryfall.io/normal/front/3/5/352d99db-de6d-4405-90ec-b144abbaa5a4.jpg?1783943238",
+            "png": "https://cards.scryfall.io/png/front/3/5/352d99db-de6d-4405-90ec-b144abbaa5a4.png?1783943238",
+            "small": "https://cards.scryfall.io/small/front/3/5/352d99db-de6d-4405-90ec-b144abbaa5a4.jpg?1783943238",
+            "thumb": "https://cards.scryfall.io/thumb/front/3/5/352d99db-de6d-4405-90ec-b144abbaa5a4.webp?1783943238"
         },
         "keywords": [
             "Flashback"
@@ -64,12 +90,12 @@
         "lang": "en",
         "layout": "normal",
         "legalities": {
-            "alchemy": "not_legal",
+            "alchemy": "legal",
             "brawl": "legal",
             "commander": "legal",
+            "competitivebrawl": "legal",
             "duel": "legal",
-            "explorer": "not_legal",
-            "future": "not_legal",
+            "future": "legal",
             "gladiator": "legal",
             "historic": "legal",
             "legacy": "legal",
@@ -79,12 +105,13 @@
             "pauper": "legal",
             "paupercommander": "legal",
             "penny": "legal",
-            "pioneer": "not_legal",
+            "pioneer": "legal",
             "predh": "legal",
             "premodern": "not_legal",
-            "standard": "not_legal",
-            "standardbrawl": "not_legal",
+            "standard": "legal",
+            "standardbrawl": "legal",
             "timeless": "legal",
+            "tlr": "legal",
             "vintage": "legal"
         },
         "mana_cost": "{1}{U}",
@@ -99,28 +126,28 @@
         "oracle_id": "fa85c5a2-8e83-4624-a35a-a0bbf17ecbb4",
         "oracle_text": "Draw a card.\nFlashback {2}{U} (You may cast this card from your graveyard for its flashback cost. Then exile it.)",
         "oversized": false,
-        "penny_rank": 778,
+        "penny_rank": 1068,
         "prices": {
-            "eur": "0.13",
-            "eur_foil": "1.08",
+            "eur": "0.08",
+            "eur_foil": "0.95",
             "tix": "0.03",
-            "usd": "0.18",
+            "usd": "0.13",
             "usd_etched": null,
-            "usd_foil": "2.16"
+            "usd_foil": "1.00"
         },
         "prints_search_uri": "https://api.scryfall.com/cards/search?order=released&q=oracleid%3Afa85c5a2-8e83-4624-a35a-a0bbf17ecbb4&unique=prints",
         "promo": false,
         "purchase_uris": {
             "cardhoarder": "https://www.cardhoarder.com/cards/25419?affiliate_id=scryfall&ref=card-profile&utm_campaign=affiliate&utm_medium=card&utm_source=scryfall",
-            "cardmarket": "https://www.cardmarket.com/en/Magic/Products/Singles/Time-Spiral/Think-Twice?referrer=scryfall&utm_campaign=card_prices&utm_medium=text&utm_source=scryfall",
-            "tcgplayer": "https://tcgplayer.pxf.io/c/4931599/1830156/21018?subId1=api&u=https%3A%2F%2Fwww.tcgplayer.com%2Fproduct%2F14399%3Fpage%3D1"
+            "cardmarket": "https://www.cardmarket.com/en/Magic/Products?idProduct=14021&referrer=scryfall&utm_campaign=card_prices&utm_medium=text&utm_source=scryfall",
+            "tcgplayer": "https://partner.tcgplayer.com/c/4931599/1830156/21018?subId1=api&u=https%3A%2F%2Fwww.tcgplayer.com%2Fproduct%2F14399%3Fpage%3D1"
         },
         "rarity": "common",
         "related_uris": {
             "edhrec": "https://edhrec.com/route/?cc=Think+Twice",
             "gatherer": "https://gatherer.wizards.com/Pages/Card/Details.aspx?multiverseid=108823&printed=false",
-            "tcgplayer_infinite_articles": "https://tcgplayer.pxf.io/c/4931599/1830156/21018?subId1=api&trafcat=infinite&u=https%3A%2F%2Finfinite.tcgplayer.com%2Fsearch%3FcontentMode%3Darticle%26game%3Dmagic%26partner%3Dscryfall%26q%3DThink%2BTwice",
-            "tcgplayer_infinite_decks": "https://tcgplayer.pxf.io/c/4931599/1830156/21018?subId1=api&trafcat=infinite&u=https%3A%2F%2Finfinite.tcgplayer.com%2Fsearch%3FcontentMode%3Ddeck%26game%3Dmagic%26partner%3Dscryfall%26q%3DThink%2BTwice"
+            "tcgplayer_infinite_articles": "https://partner.tcgplayer.com/c/4931599/1830156/21018?subId1=api&trafcat=tcgplayer.com%2Fsearch%2Farticles&u=https%3A%2F%2Fwww.tcgplayer.com%2Fsearch%2Farticles%3FproductLineName%3Dmagic%26q%3DThink%2BTwice",
+            "tcgplayer_infinite_decks": "https://partner.tcgplayer.com/c/4931599/1830156/21018?subId1=api&trafcat=tcgplayer.com%2Fsearch%2Fdecks&u=https%3A%2F%2Fwww.tcgplayer.com%2Fsearch%2Fdecks%3FproductLineName%3Dmagic%26q%3DThink%2BTwice"
         },
         "released_at": "2006-10-06",
         "reprint": false,
