@@ -123,7 +123,6 @@ function TopDecksSection() {
 
   return (
     <section>
-      <h2 className="text-xl font-semibold text-white mb-4">Top Archetypes</h2>
       <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 xl:grid-cols-7 2xl:grid-cols-8 gap-3">
         {decks.map(deck => (
           <div key={deck.archetype_name} className="bg-gray-800 border border-gray-700 rounded-xl overflow-hidden hover:border-amber-400/50 transition-all group">
@@ -393,7 +392,7 @@ function BrainstormSection() {
         </div>
 
         <div className="mt-3 relative isolate flex items-stretch gap-2">
-          {settled && <div key={`light-${front}`} aria-hidden="true" className="ring-light absolute inset-x-0 top-0 -bottom-8 -z-10 pointer-events-none" />}
+          {settled && <div key={`light-${front}`} aria-hidden="true" className="ring-light absolute inset-x-0 -top-2 bottom-0 -z-10 pointer-events-none" />}
           <button onClick={() => stepBy(-1)} aria-label="Previous archetype" className={RING_ARROW}>‹</button>
           {/* Phones: the art as a banner on top with the text below; wider: side by side */}
           {/* Every line below has a fixed height, so the box is the same size
@@ -579,11 +578,33 @@ function MetagameSection() {
   )
 }
 
+// How the top archetypes are shown: the Brainstorm glyph ring (default) or
+// the card table. The choice is remembered per browser.
+const META_VIEW_KEY = 'home-meta-view'
+
+function useMetaView() {
+  const [view, setView] = useState(() => {
+    try {
+      return localStorage.getItem(META_VIEW_KEY) === 'table' ? 'table' : 'brainstorm'
+    } catch {
+      return 'brainstorm'
+    }
+  })
+  const choose = (next) => {
+    setView(next)
+    try { localStorage.setItem(META_VIEW_KEY, next) } catch { /* private mode: just don't remember */ }
+  }
+  return [view, choose]
+}
+
+
 export default function Home() {
+  const [metaView, setMetaView] = useMetaView()
+
   return (
     <Layout>
       <div className="space-y-12">
-        {/* The welcome sits close to the glyph ring it introduces */}
+        {/* The welcome sits close to the top archetypes it introduces */}
         <div className="space-y-4">
           <section>
             <p className="text-lg text-gray-300 leading-relaxed">
@@ -595,10 +616,16 @@ export default function Home() {
             </p>
           </section>
 
-          <BrainstormSection />
-        </div>
+          {metaView === 'table' ? <TopDecksSection /> : <BrainstormSection />}
 
-        <TopDecksSection />
+          {/* Brainstorm: clear of the light that pools under the archetype card */}
+          <div className={`flex justify-center ${metaView === 'table' ? '' : 'pt-4'}`}>
+            <button onClick={() => setMetaView(metaView === 'table' ? 'brainstorm' : 'table')}
+              className="px-4 py-2 rounded-lg border border-gray-700 bg-gray-800 text-sm text-gray-300 hover:border-amber-400/50 hover:text-amber-400 transition-colors">
+              {metaView === 'table' ? 'Switch to Brainstorm' : 'Switch to Table View'}
+            </button>
+          </div>
+        </div>
 
         <MetagameSection />
 
