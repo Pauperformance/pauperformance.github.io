@@ -322,10 +322,6 @@ function BrainstormSection() {
           <img src="/images/brainstorm/headdress.webp" alt="" draggable={false}
             className="absolute top-0 pointer-events-none"
             style={{ left: `${HEADDRESS.left * 100}%`, width: `${HEADDRESS.width * 100}%`, zIndex: HEADDRESS_Z }} />
-          <div className="absolute inset-x-0 bottom-0 z-[101] pt-6 pb-2 text-center pointer-events-none bg-gradient-to-t from-black/70 to-transparent">
-            <span className="text-sm sm:text-base font-semibold text-white [text-shadow:0_1px_4px_#000]">{deck.archetype_name}</span>
-            <span className="ml-2 text-xs sm:text-sm text-amber-400 font-mono">{deck.meta_share.toFixed(1)}%</span>
-          </div>
         </div>
 
         <div className="mt-3 flex items-center justify-between gap-3 text-sm text-gray-400">
@@ -361,7 +357,7 @@ function BrainstormSection() {
               </div>
             </div>
             <div className="flex items-center gap-2 flex-wrap">
-              <span className="text-sm text-amber-400 font-mono">Meta: {deck.meta_share.toFixed(1)}%</span>
+              <span className="text-lg text-amber-400 font-mono">Meta: {deck.meta_share.toFixed(1)}%</span>
               {deck.game_type.map(g => (
                 <span key={g} className="text-[10px] text-gray-400 bg-gray-700 rounded px-1 py-0.5 leading-none">{g}</span>
               ))}
