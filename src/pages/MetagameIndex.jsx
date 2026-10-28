@@ -81,7 +81,8 @@ function MetagameEntry({ metagame, searchQuery, poolUrls, open, onToggle, bindPr
         <button onClick={onToggle} className="w-full text-left flex items-center gap-3 flex-wrap">
           <span className="text-amber-400 font-semibold text-base">{metagame.date}</span>
           <span className={`font-medium transition-colors ${hovered ? 'text-amber-300' : 'text-white'}`}>{metagameTitle(metagame)}</span>
-          <span className="text-sm text-gray-500 ml-auto shrink-0 flex items-center gap-3 flex-wrap">
+          {/* wraps on narrow screens rather than running off the box */}
+          <span className="text-sm text-gray-500 ml-auto min-w-0 flex flex-wrap items-center gap-x-3 gap-y-1">
             {metagame.sets.length > 0 && <span>Scryfall: <span className="text-amber-400 font-mono">{orderedSets(metagame).map(s => s.scryfall_code).join(', ')}</span></span>}
             <span>Pauperformance: <span className="text-amber-400 font-mono">{metagame.p13m}.{metagame.label}</span></span>
             {metagame.sets.length > 0 && <span>New Cards: <span className="text-amber-400 font-mono">{newCards(metagame)}</span></span>}
