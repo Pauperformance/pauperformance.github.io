@@ -87,7 +87,7 @@ export default function Layout({ children }) {
 
       <footer className="border-t border-gray-700 mt-16">
         <div className="max-w-screen-2xl mx-auto px-4 py-8 flex flex-col items-center gap-4 text-sm text-gray-500">
-          <div className="flex gap-6">
+          <div className="flex flex-wrap justify-center gap-x-6 gap-y-2">
             {SOCIAL_LINKS.map(({ href, label, icon }) => (
               <a key={label} href={href} target="_blank" rel="noreferrer"
                 className="flex items-center gap-1.5 hover:text-amber-400 transition-colors">
