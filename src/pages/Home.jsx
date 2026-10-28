@@ -195,7 +195,7 @@ const easeInOut = (t) => (t < 0.5 ? 4 * t * t * t : 1 - Math.pow(-2 * t + 2, 3) 
 
 // The hint wiggle: how far the ring rocks (in glyphs), how many full
 // right-left swings, and how long it lasts (ms)
-const WIGGLE = { amplitude: 0.18, swings: 2, duration: 1800 }
+const WIGGLE = { amplitude: 0.3, swings: 2, duration: 3000 }
 
 // Phones: short tabs centred on the card; wider: as tall as the card
 const RING_ARROW = 'shrink-0 self-center h-20 w-7 rounded-lg text-2xl sm:self-stretch sm:h-auto sm:w-12 sm:rounded-xl sm:text-3xl flex items-center justify-center border border-gray-700 bg-gray-800 leading-none text-gray-400 hover:border-amber-400/50 hover:text-amber-400 transition-colors'
@@ -300,24 +300,45 @@ function BrainstormSection() {
     interrupt()
     cancelAnimationFrame(frameRef.current)
     draggedRef.current = false
-    dragRef.current = { x: e.clientX, rot: rotRef.current, moved: false, lastX: e.clientX, lastT: e.timeStamp, v: 0 }
+    dragRef.current = { x: e.clientX, y: e.clientY, moved: false, last: ringAngle(e), lastT: e.timeStamp, v: 0 }
   }
 
+  // Where the pointer is round the ring: its angle about the ring's centre (in
+  // the ellipse's own proportions, like the glyphs' theta) and how far out it is
+  // (1 on the ring)
+  const ringAngle = (e) => {
+    const scene = sceneRef.current.getBoundingClientRect()
+    const u = (e.clientX - scene.left - RING.cx * scene.width) / (RING.rx * scene.width)
+    const v = (e.clientY - scene.top - RING.cy * scene.height) / (RING.ry * scene.height)
+    return { angle: Math.atan2(v, u), radius: Math.hypot(u, v) }
+  }
+
+  // The ring turns by however far the pointer goes round its centre, so what
+  // is under the pointer follows it, front or back, even when the drag crosses
+  // from one to the other
   const onPointerMove = (e) => {
     const drag = dragRef.current
     if (!drag) return
-    const dx = e.clientX - drag.x
-    if (!drag.moved && Math.abs(dx) > 5) {
+    // a vertical swipe on a phone scrolls the page instead
+    const dist = e.pointerType === 'touch'
+      ? Math.abs(e.clientX - drag.x)
+      : Math.hypot(e.clientX - drag.x, e.clientY - drag.y)
+    if (!drag.moved && dist > 5) {
       drag.moved = true
       e.currentTarget.setPointerCapture(e.pointerId)
     }
+    const now = ringAngle(e)
+    let turn = now.angle - drag.last.angle
+    if (turn > Math.PI) turn -= 2 * Math.PI
+    else if (turn < -Math.PI) turn += 2 * Math.PI
+    drag.last = now
     if (!drag.moved) return
-    const pxPerGlyph = sceneRef.current.clientWidth * 0.12
+    // Near the centre a tiny move sweeps a large angle, so it turns the ring less
+    const glyphs = turn / STEP * Math.min(1, now.radius / 0.4)
     const dt = Math.max(e.timeStamp - drag.lastT, 1)
-    drag.v = (e.clientX - drag.lastX) / pxPerGlyph / dt
-    drag.lastX = e.clientX
+    drag.v = glyphs / dt
     drag.lastT = e.timeStamp
-    setNow(drag.rot - dx / pxPerGlyph)
+    setNow(rotRef.current + glyphs)
   }
 
   const onPointerUp = () => {
@@ -328,7 +349,7 @@ function BrainstormSection() {
     setTimeout(() => { draggedRef.current = false }, 0)
     // A flick carries on for a few glyphs before snapping; a press that stopped
     // the ring between glyphs settles on the nearest one
-    if (drag?.moved) animateTo(Math.round(rotRef.current - drag.v * 250), { fromDrag: true })
+    if (drag?.moved) animateTo(Math.round(rotRef.current + drag.v * 250), { fromDrag: true })
     else if (rotRef.current !== Math.round(rotRef.current)) animateTo(Math.round(rotRef.current))
   }
 
