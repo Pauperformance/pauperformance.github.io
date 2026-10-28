@@ -505,7 +505,7 @@ function BrainstormSection() {
             <span className="shrink-0 text-3xl font-bold text-gray-400 font-mono leading-none">#{rank + 1}</span>
             <Link to={`/archetypes/${nameToSlug(deck.archetype_name)}`}
               className="truncate min-w-0 text-lg font-semibold text-white hover:text-amber-400 transition-colors">{deck.archetype_name}</Link>
-            <ManaSymbols mana={deck.dominant_mana} className="hidden sm:flex" />
+            <ManaSymbols mana={deck.dominant_mana} className="flex" />
             <div className="hidden sm:flex ml-auto self-start shrink-0 gap-1">
               {deck.game_type.map(g => (
                 <span key={g} className="text-xs text-gray-300 bg-gray-700 rounded-md px-2 py-1 leading-none">{g}</span>
@@ -513,7 +513,6 @@ function BrainstormSection() {
             </div>
           </div>
           <div className="flex items-center gap-2">
-            <ManaSymbols mana={deck.dominant_mana} className="flex sm:hidden" />
             <span className="text-lg text-amber-400 font-mono">Meta: {deck.meta_share.toFixed(1)}%</span>
           </div>
           {/* staples come most played first; room for two rows on phones, one otherwise */}
