@@ -294,6 +294,7 @@ function BrainstormSection() {
     animateTo(Math.round(base) + delta)
   }
 
+  // Dragging (or swiping) the ring or the archetype card turns the ring
   const onPointerDown = (e) => {
     if (e.button !== 0) return
     interrupt()
@@ -308,7 +309,7 @@ function BrainstormSection() {
     const dx = e.clientX - drag.x
     if (!drag.moved && Math.abs(dx) > 5) {
       drag.moved = true
-      sceneRef.current.setPointerCapture(e.pointerId)
+      e.currentTarget.setPointerCapture(e.pointerId)
     }
     if (!drag.moved) return
     const pxPerGlyph = sceneRef.current.clientWidth * 0.12
@@ -323,6 +324,8 @@ function BrainstormSection() {
     const drag = dragRef.current
     dragRef.current = null
     draggedRef.current = !!drag?.moved
+    // only the click that ends this drag is ignored
+    setTimeout(() => { draggedRef.current = false }, 0)
     // A flick carries on for a few glyphs before snapping; a press that stopped
     // the ring between glyphs settles on the nearest one
     if (drag?.moved) animateTo(Math.round(rotRef.current - drag.v * 250), { fromDrag: true })
@@ -397,7 +400,13 @@ function BrainstormSection() {
           {/* Phones: the art as a banner on top with the text below; wider: side by side */}
           {/* Every line below has a fixed height, so the box is the same size
               for every archetype */}
-          <div className={`relative flex-1 min-w-0 bg-gray-800 border rounded-xl overflow-hidden flex flex-col sm:flex-row transition-[border-color,box-shadow] duration-500 ${settled ? 'border-lime-300/40 shadow-[0_0_24px_rgba(190,255,90,0.18)]' : 'border-gray-700'}`}>
+          <div
+            onPointerDown={onPointerDown} onPointerMove={onPointerMove}
+            onPointerUp={onPointerUp} onPointerCancel={onPointerUp}
+            // a swipe isn't a click on the card's links, nor a native link/image drag
+            onClickCapture={(e) => { if (draggedRef.current) { e.preventDefault(); e.stopPropagation() } }}
+            onDragStart={(e) => e.preventDefault()}
+            className={`relative flex-1 min-w-0 bg-gray-800 border rounded-xl overflow-hidden flex flex-col sm:flex-row select-none touch-pan-y transition-[border-color,box-shadow] duration-500 ${settled ? 'border-lime-300/40 shadow-[0_0_24px_rgba(190,255,90,0.18)]' : 'border-gray-700'}`}>
             <Link to={`/archetypes/${nameToSlug(deck.archetype_name)}`}
               className="relative w-full aspect-[2/1] sm:aspect-auto sm:w-32 md:w-44 shrink-0 bg-gray-900 overflow-hidden group">
               {deck.featured_image
@@ -578,6 +587,33 @@ function MetagameSection() {
   )
 }
 
+// A slower, eased scroll than the browser's own smooth scroll: 0.7s for a
+// short way, up to 1.4s for a long one. Scrolling or touching the page while
+// it runs hands control back to the reader.
+function scrollGently(to) {
+  const from = window.scrollY
+  const distance = to - from
+  if (Math.abs(distance) < 1) return
+  if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) return window.scrollTo(0, to)
+  const duration = Math.min(1400, 700 + Math.abs(distance) / 3)
+  const start = performance.now()
+  let frame
+  const stop = () => {
+    cancelAnimationFrame(frame)
+    window.removeEventListener('wheel', stop)
+    window.removeEventListener('touchstart', stop)
+  }
+  window.addEventListener('wheel', stop, { passive: true })
+  window.addEventListener('touchstart', stop, { passive: true })
+  const step = (now) => {
+    const t = Math.min((now - start) / duration, 1)
+    window.scrollTo(0, from + distance * easeInOut(t))
+    if (t < 1) frame = requestAnimationFrame(step)
+    else stop()
+  }
+  frame = requestAnimationFrame(step)
+}
+
 // How the top archetypes are shown: the Brainstorm glyph ring (default) or
 // the card table. The choice is remembered per browser.
 const META_VIEW_KEY = 'home-meta-view'
@@ -600,6 +636,20 @@ function useMetaView() {
 
 export default function Home() {
   const [metaView, setMetaView] = useMetaView()
+  const metaViewRef = useRef(null)
+
+  // Swap views and scroll back to where the new view starts, just under the
+  // sticky header (the welcome above it stays out of sight)
+  const switchMetaView = () => {
+    setMetaView(metaView === 'table' ? 'brainstorm' : 'table')
+    // measure once the new view is laid out: a shorter page has already
+    // pulled the scroll position up
+    requestAnimationFrame(() => {
+      const header = document.querySelector('header')?.offsetHeight ?? 0
+      const top = metaViewRef.current.getBoundingClientRect().top + window.scrollY - header - 12
+      scrollGently(Math.max(0, top))
+    })
+  }
 
   return (
     <Layout>
@@ -611,18 +661,20 @@ export default function Home() {
               Pauper people, welcome to the <strong className="text-white">Academy</strong>!
             </p>
             <p className="mt-4 text-gray-400 leading-relaxed">
-              This website is the online encyclopedia for Pauper, collecting and organising resources
-              for players with different skill levels.
+              This is the online encyclopedia for Pauper, organising resources for players with
+              different skill levels.
             </p>
           </section>
 
-          {metaView === 'table' ? <TopDecksSection /> : <BrainstormSection />}
+          <div ref={metaViewRef}>
+            {metaView === 'table' ? <TopDecksSection /> : <BrainstormSection />}
+          </div>
 
           {/* Brainstorm: clear of the light that pools under the archetype card */}
           <div className={`flex justify-center ${metaView === 'table' ? '' : 'pt-4'}`}>
-            <button onClick={() => setMetaView(metaView === 'table' ? 'brainstorm' : 'table')}
+            <button onClick={switchMetaView}
               className="px-4 py-2 rounded-lg border border-gray-700 bg-gray-800 text-sm text-gray-300 hover:border-amber-400/50 hover:text-amber-400 transition-colors">
-              {metaView === 'table' ? 'Switch to Brainstorm' : 'Switch to Table View'}
+              {metaView === 'table' ? 'Switch to Brainstorm View' : 'Switch to Table View'}
             </button>
           </div>
         </div>

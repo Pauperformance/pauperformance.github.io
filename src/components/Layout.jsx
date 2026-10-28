@@ -81,7 +81,7 @@ export default function Layout({ children }) {
         )}
       </header>
 
-      <main className="max-w-screen-2xl mx-auto px-4 py-10">
+      <main className="max-w-screen-2xl mx-auto px-4 pt-5 pb-10">
         {children}
       </main>
 
