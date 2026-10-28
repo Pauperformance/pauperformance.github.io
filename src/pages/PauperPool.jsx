@@ -38,7 +38,8 @@ function SetEntry({ set, searchQuery, open, onToggle, bindPreview }) {
           className={`w-full text-left flex items-center gap-3 flex-wrap ${hasCards ? '' : 'cursor-default'}`}>
           <span className="text-amber-400 font-semibold text-base">{set.date}</span>
           <span className={`font-medium transition-colors ${hovered ? 'text-amber-300' : 'text-white'}`}>{set.name}</span>
-          <span className="text-sm text-gray-500 ml-auto shrink-0 flex items-center gap-3">
+          {/* wraps on narrow screens rather than running off the box */}
+          <span className="text-sm text-gray-500 ml-auto min-w-0 flex flex-wrap items-center gap-x-3 gap-y-1">
             <span>Scryfall: <span className="text-amber-400 font-mono">{set.scryfall}</span></span>
             <span>Pauperformance: <span className="text-amber-400 font-mono">#{set.code}</span></span>
             <span>New Cards: <span className="text-amber-400 font-mono">{set.cards.length}</span></span>
