@@ -197,6 +197,11 @@ const easeInOut = (t) => (t < 0.5 ? 4 * t * t * t : 1 - Math.pow(-2 * t + 2, 3) 
 // right-left swings, and how long it lasts (ms)
 const WIGGLE = { amplitude: 0.3, swings: 2, duration: 3000 }
 
+// The archetype boxes' tape: how far (degrees) the drum it's wound on turns
+// from one box to the next, so the smaller the flatter, and how many box
+// widths away it's seen from
+const TAPE = { step: 30, perspective: 3 }
+
 // Phones: short tabs centred on the card; wider: as tall as the card
 const RING_ARROW = 'shrink-0 self-center h-20 w-7 rounded-lg text-2xl sm:self-stretch sm:h-auto sm:w-12 sm:rounded-xl sm:text-3xl flex items-center justify-center border border-gray-700 bg-gray-800 leading-none text-gray-400 hover:border-amber-400/50 hover:text-amber-400 transition-colors'
 
@@ -211,6 +216,8 @@ function BrainstormSection() {
   const introRef = useRef(false)
   const interactedRef = useRef(false)
   const sceneRef = useRef(null)
+  const boxRef = useRef(null)
+  const [boxWidth, setBoxWidth] = useState(0)
   const cardPages = useCardPages()
   const { bind: bindPreview, preview } = useCardPreview()
 
@@ -219,6 +226,15 @@ function BrainstormSection() {
   }, [])
 
   useEffect(() => () => cancelAnimationFrame(frameRef.current), [])
+
+  // The tape's drum is sized to the box
+  useEffect(() => {
+    const box = boxRef.current
+    if (!box) return
+    const observer = new ResizeObserver(() => setBoxWidth(box.offsetWidth))
+    observer.observe(box)
+    return () => observer.disconnect()
+  }, [decks.length])
 
   const setNow = (value) => {
     rotRef.current = value
@@ -368,7 +384,6 @@ function BrainstormSection() {
   if (!decks.length) return null
 
   const front = wrap(Math.round(rot))
-  const deck = decks[front]
   // At rest on a glyph (or just wiggling on it): it reads as selected and its
   // card as opened
   const settled = (introRef.current || Math.abs(rot - Math.round(rot)) < 1e-3) && !dragRef.current
@@ -415,57 +430,50 @@ function BrainstormSection() {
             style={{ left: `${HEADDRESS.left * 100}%`, width: `${HEADDRESS.width * 100}%`, zIndex: HEADDRESS_Z }} />
         </div>
 
-        <div className="mt-3 relative isolate flex items-stretch gap-2">
+        {/* The arrow keys turn the ring from the box and its buttons too; a link
+            in the box would roll away with its frame, so the box takes the focus */}
+        <div onKeyDown={(e) => {
+          if (e.key === 'ArrowLeft' || e.key === 'ArrowRight') {
+            const box = boxRef.current
+            if (box.contains(document.activeElement) && document.activeElement !== box) box.focus()
+          }
+          onKeyDown(e)
+        }} className="mt-3 relative isolate flex items-stretch gap-2">
           {settled && <div key={`light-${front}`} aria-hidden="true" className="ring-light absolute inset-x-0 -top-2 bottom-0 -z-10 pointer-events-none" />}
           <button onClick={() => stepBy(-1)} aria-label="Previous archetype" className={RING_ARROW}>‹</button>
           {/* Phones: the art as a banner on top with the text below; wider: side by side */}
           {/* Every line below has a fixed height, so the box is the same size
               for every archetype */}
-          <div
+          <div ref={boxRef} tabIndex={-1}
             onPointerDown={onPointerDown} onPointerMove={onPointerMove}
             onPointerUp={onPointerUp} onPointerCancel={onPointerUp}
             // a swipe isn't a click on the card's links, nor a native link/image drag
             onClickCapture={(e) => { if (draggedRef.current) { e.preventDefault(); e.stopPropagation() } }}
             onDragStart={(e) => e.preventDefault()}
-            className={`relative flex-1 min-w-0 bg-gray-800 border rounded-xl overflow-hidden flex flex-col sm:flex-row select-none touch-pan-y transition-[border-color,box-shadow] duration-500 ${settled ? 'border-lime-300/40 shadow-[0_0_24px_rgba(190,255,90,0.18)]' : 'border-gray-700'}`}>
-            <Link to={`/archetypes/${nameToSlug(deck.archetype_name)}`}
-              className="relative w-full aspect-[2/1] sm:aspect-auto sm:w-32 md:w-44 shrink-0 bg-gray-900 overflow-hidden group">
-              {deck.featured_image
-                // Scryfall's art crop of the same card: the artwork without its frame
-                ? <img src={deck.featured_image.replace('/normal/', '/art_crop/')} alt={deck.archetype_name}
-                    className="absolute inset-0 w-full h-full object-cover group-hover:scale-110 transition-transform duration-300" />
-                : <div className="absolute inset-0 flex items-center justify-center text-gray-600 text-xs">No image</div>
-              }
-            </Link>
-            {/* Phones: the type tags sit in the box's top-right corner, over the art */}
-            <div className="sm:hidden absolute top-2 right-2 flex gap-1 pointer-events-none">
-              {deck.game_type.map(g => (
-                <span key={g} className="text-xs text-gray-100 bg-gray-900/85 rounded-md px-2 py-1 leading-none">{g}</span>
-              ))}
-            </div>
-            <div className="flex-1 px-3 py-2.5 sm:px-4 sm:py-3 space-y-1.5 min-w-0">
-              <div className="flex items-center gap-2 min-w-0">
-                <span className="shrink-0 text-3xl font-bold text-gray-400 font-mono leading-none">#{front + 1}</span>
-                <Link to={`/archetypes/${nameToSlug(deck.archetype_name)}`}
-                  className="truncate min-w-0 text-lg font-semibold text-white hover:text-amber-400 transition-colors">{deck.archetype_name}</Link>
-                <ManaSymbols mana={deck.dominant_mana} className="hidden sm:flex" />
-                <div className="hidden sm:flex ml-auto self-start shrink-0 gap-1">
-                  {deck.game_type.map(g => (
-                    <span key={g} className="text-xs text-gray-300 bg-gray-700 rounded-md px-2 py-1 leading-none">{g}</span>
-                  ))}
+            className={`relative flex-1 min-w-0 grid select-none touch-pan-y focus:outline-none bg-gray-800 border rounded-xl overflow-hidden transition-[border-color,box-shadow] duration-500 ${settled ? 'border-lime-300/40 shadow-[0_0_24px_rgba(190,255,90,0.18)]' : 'border-gray-700'}`}
+            style={{ perspective: `${TAPE.perspective * boxWidth}px` }}>
+            {/* The boxes are frames of one tape wound round a wide drum that
+                turns with the ring: the box frame shows one at a time, and between
+                two glyphs the next one slides in joined to the side of the last */}
+            {[-1, 0, 1, 2].map(n => {
+              const k = Math.floor(rot) + n
+              const offset = k - rot
+              if (Math.abs(offset) >= 1.5) return null
+              const rank = wrap(k)
+              const radius = boxWidth / (2 * Math.tan(TAPE.step / 2 * Math.PI / 180))
+              return (
+                <div key={rank} aria-hidden={Math.abs(offset) >= 0.5 || undefined}
+                  className="relative col-start-1 row-start-1 -mx-px border-x border-gray-700 bg-gray-800 flex flex-col sm:flex-row"
+                  style={{
+                    transform: offset ? `translateZ(${-radius}px) rotateY(${offset * TAPE.step}deg) translateZ(${radius}px)` : undefined,
+                    // a frame dims as it rolls away to the side
+                    filter: offset ? `brightness(${1 - 0.35 * Math.min(1, Math.abs(offset))})` : undefined,
+                    pointerEvents: Math.abs(offset) >= 0.5 ? 'none' : undefined,
+                  }}>
+                  {archetypeCard(decks[rank], rank)}
                 </div>
-              </div>
-              <div className="flex items-center gap-2">
-                <ManaSymbols mana={deck.dominant_mana} className="flex sm:hidden" />
-                <span className="text-lg text-amber-400 font-mono">Meta: {deck.meta_share.toFixed(1)}%</span>
-              </div>
-              {/* staples come most played first; room for two rows on phones, one otherwise */}
-              <div className="flex flex-wrap content-start gap-1 overflow-hidden h-12 sm:h-[22px]">
-                {deck.staples.slice(0, 3).map(card => (
-                  <StapleLink key={card.name} card={card} cardPages={cardPages} bindPreview={bindPreview} />
-                ))}
-              </div>
-            </div>
+              )
+            })}
           </div>
           <button onClick={() => stepBy(1)} aria-label="Next archetype" className={RING_ARROW}>›</button>
         </div>
@@ -473,6 +481,51 @@ function BrainstormSection() {
       {preview}
     </section>
   )
+
+  function archetypeCard(deck, rank) {
+    return (
+      <>
+        <Link to={`/archetypes/${nameToSlug(deck.archetype_name)}`}
+          className="relative w-full aspect-[2/1] sm:aspect-auto sm:w-32 md:w-44 shrink-0 bg-gray-900 overflow-hidden group">
+          {deck.featured_image
+            // Scryfall's art crop of the same card: the artwork without its frame
+            ? <img src={deck.featured_image.replace('/normal/', '/art_crop/')} alt={deck.archetype_name}
+                className="absolute inset-0 w-full h-full object-cover group-hover:scale-110 transition-transform duration-300" />
+            : <div className="absolute inset-0 flex items-center justify-center text-gray-600 text-xs">No image</div>
+          }
+        </Link>
+        {/* Phones: the type tags sit in the box's top-right corner, over the art */}
+        <div className="sm:hidden absolute top-2 right-2 flex gap-1 pointer-events-none">
+          {deck.game_type.map(g => (
+            <span key={g} className="text-xs text-gray-100 bg-gray-900/85 rounded-md px-2 py-1 leading-none">{g}</span>
+          ))}
+        </div>
+        <div className="flex-1 px-3 py-2.5 sm:px-4 sm:py-3 space-y-1.5 min-w-0">
+          <div className="flex items-center gap-2 min-w-0">
+            <span className="shrink-0 text-3xl font-bold text-gray-400 font-mono leading-none">#{rank + 1}</span>
+            <Link to={`/archetypes/${nameToSlug(deck.archetype_name)}`}
+              className="truncate min-w-0 text-lg font-semibold text-white hover:text-amber-400 transition-colors">{deck.archetype_name}</Link>
+            <ManaSymbols mana={deck.dominant_mana} className="hidden sm:flex" />
+            <div className="hidden sm:flex ml-auto self-start shrink-0 gap-1">
+              {deck.game_type.map(g => (
+                <span key={g} className="text-xs text-gray-300 bg-gray-700 rounded-md px-2 py-1 leading-none">{g}</span>
+              ))}
+            </div>
+          </div>
+          <div className="flex items-center gap-2">
+            <ManaSymbols mana={deck.dominant_mana} className="flex sm:hidden" />
+            <span className="text-lg text-amber-400 font-mono">Meta: {deck.meta_share.toFixed(1)}%</span>
+          </div>
+          {/* staples come most played first; room for two rows on phones, one otherwise */}
+          <div className="flex flex-wrap content-start gap-1 overflow-hidden h-12 sm:h-[22px]">
+            {deck.staples.slice(0, 3).map(card => (
+              <StapleLink key={card.name} card={card} cardPages={cardPages} bindPreview={bindPreview} />
+            ))}
+          </div>
+        </div>
+      </>
+    )
+  }
 }
 
 const CHART_COLORS = [
