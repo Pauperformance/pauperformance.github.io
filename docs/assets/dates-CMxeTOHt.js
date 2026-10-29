@@ -1,0 +1,1 @@
+const o=["January","February","March","April","May","June","July","August","September","October","November","December"];function m(r,{short:a=!1}={}){const t=typeof r=="string"&&r.match(/^(\d{4})-(\d{2})-(\d{2})$/);if(!t)return r;const[,n,u,c]=t,e=o[Number(u)-1];return e?`${a?e.slice(0,3):e} ${Number(c)}, ${n}`:r}function f(r){return m(r,{short:!0})}export{m as a,f};
