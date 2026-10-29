@@ -31,16 +31,21 @@ jobs:
       YOUTUBE_API_KEY: ${{ secrets.YOUTUBE_API_KEY }}
       # Myr reads ACADEMY_PATH at import time: every step needs it.
       ACADEMY_PATH: ${{ github.workspace }}/academy
+      # The installed Myr has no git history: it dates the families and
+      # archetypes of the Newspauper with the history of this full clone.
+      MYR_PATH: ${{ github.workspace }}/myr
     steps:
 
     # pauperformance-bot is private: it is cloned with a read-only deploy key
     # (public key on pauperformance-bot, private key in MYR_DEPLOY_KEY).
+    # Full history (fetch-depth 0): see MYR_PATH.
     - name: Clone Myr repository
       uses: actions/checkout@v4
       with:
         repository: 'Pauperformance/pauperformance-bot'
         ref: 'master'
         path: './myr'
+        fetch-depth: 0
         ssh-key: ${{ secrets.MYR_DEPLOY_KEY }}
         persist-credentials: false
 
