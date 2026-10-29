@@ -4,6 +4,7 @@ import Layout from '../components/Layout'
 import CardLink from '../components/PoolCardLink'
 import { useCardPreview } from '../components/CardPreview'
 import { useSearchShortcut, searchShortcutLabel } from '../utils/useSearchShortcut'
+import { formatDate } from '../utils/dates'
 
 // Metagames: one per event that changed the Pauper card pool (sets introducing
 // new Pauper cards, B&R announcements), from Myr's metagame index. Codes below
@@ -79,7 +80,7 @@ function MetagameEntry({ metagame, searchQuery, poolUrls, open, onToggle, bindPr
         onMouseEnter={() => setHovered(true)}
         onMouseLeave={() => setHovered(false)}>
         <button onClick={onToggle} className="w-full text-left flex items-center gap-3 flex-wrap">
-          <span className="text-amber-400 font-semibold text-base">{metagame.date}</span>
+          <span className="text-amber-400 font-semibold text-base">{formatDate(metagame.date)}</span>
           <span className={`font-medium transition-colors ${hovered ? 'text-amber-300' : 'text-white'}`}>{metagameTitle(metagame)}</span>
           {/* wraps on narrow screens rather than running off the box */}
           <span className="text-sm text-gray-500 ml-auto min-w-0 flex flex-wrap items-center gap-x-3 gap-y-1">
@@ -109,7 +110,7 @@ function MetagameEntry({ metagame, searchQuery, poolUrls, open, onToggle, bindPr
                   <p className="text-sm text-gray-400 mb-2">
                     {mixed && <span className="text-white">{b.subtitle}</span>}
                     {mixed && b.announced !== metagame.date && ' · '}
-                    {b.announced !== metagame.date && <>Announced <span className="text-amber-400 font-mono">{b.announced}</span></>}
+                    {b.announced !== metagame.date && <>Announced <span className="text-amber-400 font-mono">{formatDate(b.announced)}</span></>}
                   </p>
                 )}
                 {b.visibleBanned.length > 0 && (

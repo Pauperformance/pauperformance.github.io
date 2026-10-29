@@ -5,6 +5,7 @@ import Layout from '../components/Layout'
 import { useCardPreview } from '../components/CardPreview'
 import { cardLinkSlug, useCardPages } from '../utils/cardPages'
 import { nameToSlug, pilotToSlug } from '../utils/slugs'
+import { formatShortDate } from '../utils/dates'
 
 const MANA_ORDER = ['W', 'U', 'B', 'R', 'G', 'C']
 const LANG_FLAG = {
@@ -97,7 +98,7 @@ function DeckRows({ decks }) {
                 <a href={deck.url} target="_blank" rel="noreferrer"
                   className="text-amber-400 hover:underline font-medium">{deck.name}</a>
               </td>
-              <td className="px-4 py-2.5 text-gray-500 hidden sm:table-cell">{deck.set_date}</td>
+              <td className="px-4 py-2.5 text-gray-500 hidden sm:table-cell">{formatShortDate(deck.set_date)}</td>
               <td className="px-4 py-2.5 text-gray-400 hidden sm:table-cell">{deck.set_name}</td>
               <td className="px-4 py-2.5">
                 {deck.legal
@@ -160,7 +161,7 @@ function VideoCard({ v }) {
         <p className="text-xs text-gray-400">{v.creator_name}</p>
         <div className="mt-auto pt-1.5 flex items-center justify-between gap-2">
           <span className="text-base leading-none shrink-0">{LANG_FLAG[v.language] ?? v.language}</span>
-          <span className="text-xs text-gray-500 shrink-0">{v.date}</span>
+          <span className="text-xs text-gray-500 shrink-0">{formatShortDate(v.date)}</span>
         </div>
       </div>
     </div>
@@ -567,7 +568,7 @@ function IntelDecksSection({ name }) {
                     ? <Link to={`/players/${pilotToSlug(deck.pilot)}`} className="text-gray-400 hover:text-amber-400 transition-colors">{deck.pilot}</Link>
                     : <span className="text-gray-600">Anonymous</span>}
                 </td>
-                <td className="px-4 py-2.5 text-gray-500 hidden sm:table-cell">{deck.tournament_date}</td>
+                <td className="px-4 py-2.5 text-gray-500 hidden sm:table-cell">{formatShortDate(deck.tournament_date)}</td>
                 <td className="px-4 py-2.5 text-gray-400 hidden md:table-cell">{deck.place}</td>
                 <td className="px-4 py-2.5">
                   <Link to={`/decks/${deck.id}`}
@@ -653,7 +654,7 @@ function ResourcesSection({ resources, discord, sideboards }) {
                       className="text-amber-400 hover:underline">{r.name}</a>
                   </td>
                   <td className="px-4 py-2.5 text-gray-400 hidden sm:table-cell">{r.author}</td>
-                  <td className="px-4 py-2.5 text-gray-500 hidden sm:table-cell">{r.date}</td>
+                  <td className="px-4 py-2.5 text-gray-500 hidden sm:table-cell">{formatShortDate(r.date)}</td>
                 </tr>
               ))}
             </tbody>

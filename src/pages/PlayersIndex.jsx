@@ -2,6 +2,7 @@ import { useState, useEffect, useMemo, useRef } from 'react'
 import { useNavigate } from 'react-router-dom'
 import Layout from '../components/Layout'
 import { useSearchShortcut, searchShortcutLabel } from '../utils/useSearchShortcut'
+import { formatShortDate } from '../utils/dates'
 
 const PAGE_SIZE = 50
 
@@ -241,7 +242,7 @@ export default function PlayersIndex() {
                       <td className="px-4 py-2.5 font-medium text-gray-200 group-hover:text-amber-400 transition-colors">{p.name}</td>
                       <td className="px-4 py-2.5 text-right text-gray-400 hidden sm:table-cell">{p.archetypeCount}</td>
                       <td className="px-4 py-2.5 text-right font-mono text-amber-400">{p.deckCount.toLocaleString()}</td>
-                      <td className="px-4 py-2.5 text-right text-gray-400 hidden md:table-cell">{p.lastSeen || '—'}</td>
+                      <td className="px-4 py-2.5 text-right text-gray-400 hidden md:table-cell">{formatShortDate(p.lastSeen) || '—'}</td>
                     </tr>
                   ))}
                 </tbody>

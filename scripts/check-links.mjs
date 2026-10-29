@@ -108,6 +108,16 @@ for (const set of read('pauper_pool.json')) {
   for (const c of set.cards) card(c.name, '/sets')
 }
 
+// Home: Newspauper
+for (const n of read('newspauper.json')) {
+  if (n.type === 'archetype') {
+    archetype(n.name, '/')
+    if (n.family) link('families', nameToSlug(n.family), '/')
+  }
+  if (n.type === 'family') link('families', nameToSlug(n.name), '/')
+  if (n.type === 'timeline') for (const c of [...n.banned, ...n.unbanned]) card(c, '/')
+}
+
 // MetagameIndex
 for (const m of read('metagame_index.json')) {
   for (const s of m.sets) for (const c of s.cards) card(c.name, '/metagames')

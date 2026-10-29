@@ -4,6 +4,7 @@ import Layout from '../components/Layout'
 import CardLink from '../components/PoolCardLink'
 import { useCardPreview } from '../components/CardPreview'
 import { useSearchShortcut, searchShortcutLabel } from '../utils/useSearchShortcut'
+import { formatDate } from '../utils/dates'
 
 // q: a lowercase query
 function setNameMatches(set, q) {
@@ -36,7 +37,7 @@ function SetEntry({ set, searchQuery, open, onToggle, bindPreview }) {
         <button
           onClick={() => hasCards && onToggle()}
           className={`w-full text-left flex items-center gap-3 flex-wrap ${hasCards ? '' : 'cursor-default'}`}>
-          <span className="text-amber-400 font-semibold text-base">{set.date}</span>
+          <span className="text-amber-400 font-semibold text-base">{formatDate(set.date)}</span>
           <span className={`font-medium transition-colors ${hovered ? 'text-amber-300' : 'text-white'}`}>{set.name}</span>
           {/* wraps on narrow screens rather than running off the box */}
           <span className="text-sm text-gray-500 ml-auto min-w-0 flex flex-wrap items-center gap-x-3 gap-y-1">

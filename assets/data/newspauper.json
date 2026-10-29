@@ -1,45 +1,71 @@
-{
-    "news": [
-        {
-            "author": "Wizards of the Coast",
-            "date": "2022-03-07",
-            "language": "\ud83c\uddec\ud83c\udde7",
-            "link": "https://magic.wizards.com/en/articles/archive/news/march-7-2022-banned-and-restricted-announcement",
-            "name": "MARCH 7, 2022 BANNED AND RESTRICTED ANNOUNCEMENT",
-            "py/object": "pauperformance_bot.entity.config.archetype.Resource"
-        },
-        {
-            "author": "Gavin Verhey",
-            "date": "2022-03-07",
-            "language": "\ud83c\uddec\ud83c\udde7",
-            "link": "https://magic.wizards.com/en/articles/archive/news/explanation-pauper-bans-march-7-2022",
-            "name": "EXPLANATION OF PAUPER BANS FOR MARCH 7, 2022",
-            "py/object": "pauperformance_bot.entity.config.archetype.Resource"
-        },
-        {
-            "author": "Eisenherz",
-            "date": "2022-03-05",
-            "language": "\ud83c\uddec\ud83c\udde7",
-            "link": "https://www.youtube.com/watch?v=orMPmImTFN4",
-            "name": "MTG School Club - Each One Teach One",
-            "py/object": "pauperformance_bot.entity.config.archetype.Resource"
-        },
-        {
-            "author": "Gavin Verhey",
-            "date": "2022-01-20",
-            "language": "\ud83c\uddec\ud83c\udde7",
-            "link": "https://magic.wizards.com/en/articles/archive/news/january-20-2022-banned-and-restricted-announcement",
-            "name": "JANUARY 20, 2022 BANNED AND RESTRICTED ANNOUNCEMENT",
-            "py/object": "pauperformance_bot.entity.config.archetype.Resource"
-        },
-        {
-            "author": "Gavin Verhey",
-            "date": "2022-01-10",
-            "language": "\ud83c\uddec\ud83c\udde7",
-            "link": "https://magic.wizards.com/en/articles/archive/news/announcing-pauper-format-panel-2022-01-10",
-            "name": "ANNOUNCING THE PAUPER FORMAT PANEL",
-            "py/object": "pauperformance_bot.entity.config.archetype.Resource"
-        }
-    ],
-    "py/object": "pauperformance_bot.entity.api.miscellanea.Newspauper"
-}
+[
+    {
+        "bans": [],
+        "code": 149,
+        "date": "2026-10-02",
+        "label": "fra",
+        "p13m": "149",
+        "sets": [
+            {
+                "name": "Reality Fracture",
+                "new_pauper_cards": 78,
+                "p12e_code": 1075,
+                "scryfall_code": "fra"
+            }
+        ],
+        "type": "metagame"
+    },
+    {
+        "bans": [
+            {
+                "announced": "2026-09-04",
+                "effective": "2026-09-23",
+                "subtitle": "Banned & Restricted Announcement"
+            }
+        ],
+        "code": 148,
+        "date": "2026-09-23",
+        "label": "BNR",
+        "p13m": "148",
+        "sets": [],
+        "type": "metagame"
+    },
+    {
+        "banned": [
+            "Narcomoeba",
+            "Price of Progress"
+        ],
+        "bullets": [
+            "[Narcomoeba](https://scryfall.com/card/slz/26/narcomoeba) is banned.",
+            "[Price of Progress](https://scryfall.com/card/slz/65/price-of-progress) is banned."
+        ],
+        "date": "2026-09-04",
+        "effective_date": "2026-09-23",
+        "legality_change": true,
+        "refs": [
+            {
+                "text": "ON THE ZETA SET IN PAUPER",
+                "url": "https://magic.wizards.com/en/news/announcements/on-the-zeta-set-in-pauper"
+            }
+        ],
+        "subtitle": "Banned & Restricted Announcement",
+        "type": "timeline",
+        "unbanned": []
+    },
+    {
+        "bans": [],
+        "code": 147,
+        "date": "2026-09-02",
+        "label": "slz",
+        "p13m": "147",
+        "sets": [
+            {
+                "name": "The Zeta Set",
+                "new_pauper_cards": 12,
+                "p12e_code": 1086,
+                "scryfall_code": "slz"
+            }
+        ],
+        "type": "metagame"
+    }
+]

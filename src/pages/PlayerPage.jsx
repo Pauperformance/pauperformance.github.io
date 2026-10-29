@@ -2,6 +2,7 @@ import { useState, useEffect, useMemo, useRef } from 'react'
 import { useParams, Link } from 'react-router-dom'
 import Layout from '../components/Layout'
 import { nameToSlug } from '../utils/slugs'
+import { formatDate, formatShortDate } from '../utils/dates'
 
 const LANG_FLAG = {
   en: '🇬🇧', eng: '🇬🇧', 'en-US': '🇬🇧', 'en-GB': '🇬🇧',
@@ -102,7 +103,7 @@ function VideoCard({ v }) {
               {v.archetype}
             </Link>
           </div>
-          <span className="text-xs text-gray-500 shrink-0">{v.date}</span>
+          <span className="text-xs text-gray-500 shrink-0">{formatShortDate(v.date)}</span>
         </div>
       </div>
     </div>
@@ -286,8 +287,8 @@ export default function PlayerPage() {
               <div className="mt-2 flex flex-wrap gap-4 text-sm text-gray-400">
                 <span><span className="text-white font-medium">{player.deckCount.toLocaleString()}</span> decks</span>
                 <span><span className="text-white font-medium">{player.archetypeCount}</span> archetypes</span>
-                {player.firstSeen && <span>First seen: <span className="text-white font-medium">{player.firstSeen}</span></span>}
-                {player.lastSeen && <span>Last seen: <span className="text-white font-medium">{player.lastSeen}</span></span>}
+                {player.firstSeen && <span>First seen: <span className="text-white font-medium">{formatDate(player.firstSeen)}</span></span>}
+                {player.lastSeen && <span>Last seen: <span className="text-white font-medium">{formatDate(player.lastSeen)}</span></span>}
               </div>
             </div>
 
@@ -348,7 +349,7 @@ export default function PlayerPage() {
                               {r.archetype}
                             </Link>
                           </td>
-                          <td className="px-4 py-2.5 text-gray-500 hidden md:table-cell">{r.date || '—'}</td>
+                          <td className="px-4 py-2.5 text-gray-500 hidden md:table-cell">{formatShortDate(r.date) || '—'}</td>
                         </tr>
                       ))}
                     </tbody>
@@ -467,7 +468,7 @@ export default function PlayerPage() {
                               {d.archetype}
                             </Link>
                           </td>
-                          <td className="px-4 py-2.5 text-gray-500 hidden md:table-cell">{d.tournament_date || '—'}</td>
+                          <td className="px-4 py-2.5 text-gray-500 hidden md:table-cell">{formatShortDate(d.tournament_date) || '—'}</td>
                           <td className="px-4 py-2.5 text-gray-400 hidden sm:table-cell">{d.place || '—'}</td>
                           <td className="px-4 py-2.5">
                             <Link to={`/decks/${d.id}`}
