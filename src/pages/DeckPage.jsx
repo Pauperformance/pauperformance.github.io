@@ -4,6 +4,7 @@ import { nameToSlug } from '../utils/slugs'
 import Layout from '../components/Layout'
 import { OracleText, useCardData } from '../components/CardPreview'
 import { cardLinkSlug, useCardPages } from '../utils/cardPages'
+import { formatDate } from '../utils/dates'
 
 const TYPE_ORDER = ['Creature', 'Instant', 'Sorcery', 'Enchantment', 'Artifact', 'Land', 'Sticker', 'Other']
 const TYPE_PRIORITY = ['Land', 'Creature', 'Instant', 'Sorcery', 'Enchantment', 'Artifact', 'Sticker']
@@ -154,7 +155,7 @@ export default function DeckPage() {
                   : deck.pilot || 'Anonymous'}
               </h1>
               <p className="mt-2 text-gray-400">
-                Played on {deck.tournament_date} @ {deck.tournament_name}
+                Played on {formatDate(deck.tournament_date)} @ {deck.tournament_name}
               </p>
             </div>
 

@@ -447,6 +447,16 @@ if (existsSync('assets/data/metagame_index.json')) {
   console.log('No metagame index yet: built an empty metagame_index.json.')
 }
 
+// Newspauper: the homepage news, exported by Myr (missing until its first export)
+if (existsSync('assets/data/newspauper.json')) {
+  const news = JSON.parse(readFileSync('assets/data/newspauper.json', 'utf8'))
+  writeFileSync(join(outDir, 'newspauper.json'), JSON.stringify(news))
+  console.log('Built newspauper.json with ' + news.length + ' entries.')
+} else {
+  writeFileSync(join(outDir, 'newspauper.json'), '[]')
+  console.log('No Newspauper yet: built an empty newspauper.json.')
+}
+
 // Build cards index + per-card detail files (incremental)
 const cardIntelDir = 'assets/data/intel/card'
 const cardDetailsDir = join(outDir, 'card-details')

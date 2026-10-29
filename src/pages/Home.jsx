@@ -4,16 +4,9 @@ import { Link } from 'react-router-dom'
 import Layout from '../components/Layout'
 import { nameToSlug } from '../utils/slugs'
 import { cardLinkSlug, useCardPages } from '../utils/cardPages'
+import { formatShortDate } from '../utils/dates'
 import { useCardPreview } from '../components/CardPreview'
-
-
-const NEWS = [
-  { flag: '🇬🇧', href: 'https://magic.wizards.com/en/articles/archive/news/march-7-2022-banned-and-restricted-announcement', title: 'MARCH 7, 2022 BANNED AND RESTRICTED ANNOUNCEMENT', author: 'Wizards of the Coast', date: '2022-03-07' },
-  { flag: '🇬🇧', href: 'https://magic.wizards.com/en/articles/archive/news/explanation-pauper-bans-march-7-2022', title: 'EXPLANATION OF PAUPER BANS FOR MARCH 7, 2022', author: 'Gavin Verhey', date: '2022-03-07' },
-  { flag: '🇬🇧', href: 'https://www.youtube.com/watch?v=orMPmImTFN4', title: 'MTG School Club - Each One Teach One', author: 'Eisenherz', date: '2022-03-05' },
-  { flag: '🇬🇧', href: 'https://magic.wizards.com/en/articles/archive/news/january-20-2022-banned-and-restricted-announcement', title: 'JANUARY 20, 2022 BANNED AND RESTRICTED ANNOUNCEMENT', author: 'Gavin Verhey', date: '2022-01-20' },
-  { flag: '🇬🇧', href: 'https://magic.wizards.com/en/articles/archive/news/announcing-pauper-format-panel-2022-01-10', title: 'ANNOUNCING THE PAUPER FORMAT PANEL', author: 'Gavin Verhey', date: '2022-01-10' },
-]
+import CardLink from '../components/PoolCardLink'
 
 function useCountUp(target, duration = 1600) {
   const [count, setCount] = useState(0)
@@ -707,6 +700,140 @@ function useMetaView() {
 }
 
 
+// The news of the last two months, exported by Myr newest first: timeline
+// events, new metagames, and archetypes and families added to the Academy.
+// Each kind of news: its name (the icon's tooltip) and icon (Lucide-style
+// stroke paths on a 24x24 grid).
+const NEWS_KINDS = {
+  // a clock turning back: the format's history
+  timeline: {
+    name: 'Timeline',
+    icon: <><path d="M3 12a9 9 0 1 0 9-9 9.75 9.75 0 0 0-6.74 2.74L3 8" /><path d="M3 3v5h5" /><path d="M12 7v5l4 2" /></>,
+  },
+  // stacked layers: the card pool, one layer per metagame
+  metagame: {
+    name: 'Metagame',
+    icon: <><path d="M12.83 2.18a2 2 0 0 0-1.66 0L2.6 6.08a1 1 0 0 0 0 1.83l8.58 3.91a2 2 0 0 0 1.66 0l8.58-3.9a1 1 0 0 0 0-1.83Z" /><path d="m22 17.65-9.17 4.16a2 2 0 0 1-1.66 0L2 17.65" /><path d="m22 12.65-9.17 4.16a2 2 0 0 1-1.66 0L2 12.65" /></>,
+  },
+  // crossed swords: a deck to battle with
+  archetype: {
+    name: 'New archetype',
+    icon: <><path d="M14.5 17.5 3 6V3h3l11.5 11.5" /><path d="m13 19 6-6" /><path d="m16 16 4 4" /><path d="m19 21 2-2" /><path d="M14.5 6.5 18 3h3v3l-3.5 3.5" /><path d="m5 14 4 4" /><path d="m7 17-3 3" /><path d="m3 19 2 2" /></>,
+  },
+  // a tree of boxes: archetypes grouped under a family
+  family: {
+    name: 'New family',
+    icon: <><rect x="16" y="16" width="6" height="6" rx="1" /><rect x="2" y="16" width="6" height="6" rx="1" /><rect x="9" y="2" width="6" height="6" rx="1" /><path d="M5 16v-3a1 1 0 0 1 1-1h12a1 1 0 0 1 1 1v3" /><path d="M12 12V8" /></>,
+  },
+}
+
+function NewsIcon({ kind }) {
+  return (
+    <svg className="w-4 h-4 shrink-0 text-amber-400" fill="none" stroke="currentColor" strokeWidth="2"
+      strokeLinecap="round" strokeLinejoin="round" viewBox="0 0 24 24" role="img" aria-label={kind.name}>
+      <title>{kind.name}</title>
+      {kind.icon}
+    </svg>
+  )
+}
+
+function newsTitle(entry) {
+  switch (entry.type) {
+    case 'timeline':
+      return { to: '/timeline', text: entry.subtitle }
+    case 'metagame':
+      return {
+        to: '/metagames',
+        text: `New metagame begins: ${entry.p13m}.${entry.label} · ${[...entry.sets.map(s => s.name), ...entry.bans.map(b => b.subtitle)].join(' + ')}`,
+      }
+    case 'archetype':
+      return { to: `/archetypes/${nameToSlug(entry.name)}`, text: `New archetype: ${entry.name}` }
+    case 'family':
+      return { to: `/families/${nameToSlug(entry.name)}`, text: `New family: ${entry.name}` }
+    default:
+      return null
+  }
+}
+
+function NewsDetails({ entry, bindPreview }) {
+  if (entry.type === 'timeline') {
+    const cards = [
+      ...entry.banned.map(name => ({ name, tone: 'banned' })),
+      ...entry.unbanned.map(name => ({ name, tone: 'unbanned' })),
+    ]
+    return (
+      <>
+        {cards.length > 0 && (
+          <div className="flex flex-wrap gap-1.5 mt-2">
+            {cards.map(c => <CardLink key={c.name} card={{ name: c.name }} tone={c.tone} bindPreview={bindPreview} />)}
+          </div>
+        )}
+        {entry.refs.map(ref => (
+          <a key={ref.url} href={ref.url} target="_blank" rel="noreferrer"
+            className="block text-xs text-gray-400 hover:text-amber-400 transition-colors mt-2">{ref.text} ↗</a>
+        ))}
+      </>
+    )
+  }
+  if (entry.type === 'metagame') {
+    const cards = entry.sets.reduce((sum, s) => sum + s.new_pauper_cards, 0)
+    return cards > 0
+      ? <p className="text-xs text-gray-400 mt-1">{cards} new Pauper card{cards === 1 ? '' : 's'}</p>
+      : null
+  }
+  if (entry.type === 'archetype' && entry.family) {
+    return (
+      <p className="text-xs text-gray-400 mt-1">
+        Family: <Link to={`/families/${nameToSlug(entry.family)}`} className="hover:text-amber-400 transition-colors">{entry.family}</Link>
+      </p>
+    )
+  }
+  return null
+}
+
+function NewspauperSection() {
+  const [news, setNews] = useState(null)
+  const { bind: bindPreview, preview } = useCardPreview()
+
+  useEffect(() => {
+    fetch('/data/newspauper.json').then(r => r.json()).then(setNews).catch(() => setNews([]))
+  }, [])
+
+  const entries = (news || []).filter(newsTitle)
+
+  return (
+    <section>
+      <h2 className="text-xl font-semibold text-white mb-4">Newspauper</h2>
+      {news && entries.length === 0 ? (
+        <p className="text-sm text-gray-400">No news in the last two months.</p>
+      ) : (
+        <div className="divide-y divide-gray-700 border border-gray-700 rounded-xl overflow-hidden bg-gray-800">
+          {entries.map(entry => {
+            const title = newsTitle(entry)
+            return (
+              <div key={`${entry.type}-${entry.date}-${title.text}`} className="flex items-start gap-3 px-5 py-4">
+                {/* the icon sits above the date on phones, beside it from sm up */}
+                <div className="shrink-0 w-20 sm:w-28 flex flex-col sm:flex-row sm:items-center gap-1.5 sm:gap-2 mt-0.5">
+                  <NewsIcon kind={NEWS_KINDS[entry.type]} />
+                  <span className="text-xs text-gray-500 tabular-nums">{formatShortDate(entry.date)}</span>
+                </div>
+                <div className="min-w-0 flex-1">
+                  <Link to={title.to}
+                    className="text-sm font-medium text-gray-200 hover:text-amber-400 transition-colors leading-snug">
+                    {title.text}
+                  </Link>
+                  <NewsDetails entry={entry} bindPreview={bindPreview} />
+                </div>
+              </div>
+            )
+          })}
+        </div>
+      )}
+      {preview}
+    </section>
+  )
+}
+
 export default function Home() {
   const [metaView, setMetaView] = useMetaView()
   const metaViewRef = useRef(null)
@@ -756,21 +883,7 @@ export default function Home() {
 
         <StatsSection />
 
-        <section>
-          <h2 className="text-xl font-semibold text-white mb-4">Newspauper</h2>
-          <div className="divide-y divide-gray-700 border border-gray-700 rounded-xl overflow-hidden bg-gray-800">
-            {NEWS.map(({ flag, href, title, author, date }) => (
-              <a key={href} href={href} target="_blank" rel="noreferrer"
-                className="flex items-start gap-3 px-5 py-4 bg-gray-800 hover:bg-gray-750 transition-colors group">
-                <span className="text-lg shrink-0">{flag}</span>
-                <div className="min-w-0">
-                  <p className="text-sm font-medium text-gray-200 group-hover:text-amber-400 transition-colors leading-snug">{title}</p>
-                  <p className="text-xs text-gray-500 mt-1">{author} · {date}</p>
-                </div>
-              </a>
-            ))}
-          </div>
-        </section>
+        <NewspauperSection />
       </div>
     </Layout>
   )

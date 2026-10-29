@@ -3,6 +3,7 @@ import { Link } from 'react-router-dom'
 import Layout from '../components/Layout'
 import { useSearchShortcut, searchShortcutLabel } from '../utils/useSearchShortcut'
 import { nameToSlug } from '../utils/slugs'
+import { formatShortDate } from '../utils/dates'
 
 const LANG_FLAG = {
   en: '🇬🇧', eng: '🇬🇧', 'en-US': '🇬🇧', 'en-GB': '🇬🇧',
@@ -148,7 +149,7 @@ function VideoCard({ v }) {
               </a>
             )}
           </div>
-          <span className="text-xs text-gray-500 shrink-0">{v.date}</span>
+          <span className="text-xs text-gray-500 shrink-0">{formatShortDate(v.date)}</span>
         </div>
       </div>
     </div>
