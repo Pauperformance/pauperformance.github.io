@@ -3,6 +3,7 @@ import { Link, useNavigate } from 'react-router-dom'
 import { nameToSlug } from '../utils/slugs'
 import Layout from '../components/Layout'
 import { useSearchShortcut, searchShortcutLabel } from '../utils/useSearchShortcut'
+import { useEnterShortcut } from '../utils/useEnterShortcut'
 
 const MANA_ORDER = ['W', 'U', 'B', 'R', 'G', 'C']
 const GAME_TYPES = ['Aggro', 'Midrange', 'Control', 'Tempo', 'Combo']
@@ -175,6 +176,10 @@ export default function ArchetypesIndex() {
       return 0
     })
   }, [filtered, sortCol, sortDir, metaMap])
+
+  useEnterShortcut(() => {
+    if (sorted.length > 0) navigate(`/archetypes/${nameToSlug(sorted[0].name)}`)
+  }, searchRef)
 
   return (
     <Layout>
