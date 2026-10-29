@@ -2,6 +2,7 @@ import { useState, useEffect, useMemo, useRef } from 'react'
 import { Link, useNavigate } from 'react-router-dom'
 import Layout from '../components/Layout'
 import { useSearchShortcut, searchShortcutLabel } from '../utils/useSearchShortcut'
+import { useEnterShortcut } from '../utils/useEnterShortcut'
 import { useCardPreview } from '../components/CardPreview'
 
 const MANA_ORDER = ['W', 'U', 'B', 'R', 'G', 'C']
@@ -258,6 +259,10 @@ export default function CardsIndex() {
 
   const totalPages = Math.ceil(sorted.length / PAGE_SIZE)
   const pageCards = sorted.slice(page * PAGE_SIZE, (page + 1) * PAGE_SIZE)
+
+  useEnterShortcut(() => {
+    if (pageCards.length > 0) navigate(`/cards/${pageCards[0].slug}`)
+  }, searchRef)
 
   const paginationBar = (ref) => totalPages > 1 && (
     <div ref={ref} className="flex items-center justify-center gap-3 py-2">
