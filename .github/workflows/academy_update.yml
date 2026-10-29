@@ -114,5 +114,16 @@ jobs:
           echo "Nothing to commit."
         else
           git commit -m "Myr update: $(date -u +'%Y-%m-%d, %H:%M:%S')"
+          # master may have moved meanwhile (e.g. a push rebuilt by
+          # build-site). On conflicts keep Myr's side (in a rebase, "theirs"
+          # is the commit being replayed), then rebuild docs/ from the
+          # rebased sources, since this push does not trigger build-site.
+          base=$(git rev-parse HEAD~1)
+          git pull --rebase -X theirs
+          if [ "$(git rev-parse HEAD~1)" != "$base" ]; then
+            npm run build
+            git add -A docs
+            git diff --cached --quiet || git commit --amend --no-edit
+          fi
           git push
         fi
