@@ -105,8 +105,20 @@
   animation: card-sheet-backdrop-in 250ms ease-out;
 }
 
+/* A metagame's sets and B&Rs appearing in the metagame flow (components/MetagameFlow.jsx) */
+@keyframes flow-event-in {
+  from {
+    opacity: 0;
+    transform: translateY(6px) scale(0.96);
+  }
+}
+
+.flow-event-in {
+  animation: flow-event-in 300ms cubic-bezier(0.2, 0.8, 0.2, 1) both;
+}
+
 @media (prefers-reduced-motion: reduce) {
-  .card-preview-in, .card-sheet-in, .card-sheet-backdrop-in {
+  .card-preview-in, .card-sheet-in, .card-sheet-backdrop-in, .flow-event-in {
     animation: none;
   }
 }
