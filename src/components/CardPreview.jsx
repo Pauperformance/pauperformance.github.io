@@ -1,14 +1,17 @@
 import { Fragment, useCallback, useEffect, useLayoutEffect, useRef, useState } from 'react'
 import { createPortal } from 'react-dom'
-import { cardLinkSlug, loadCardPages } from '../utils/cardPages'
+import { Link } from 'react-router-dom'
+import { cardLinkSlug, loadCardPages, useCardPages } from '../utils/cardPages'
 
 // Hover preview of a card: its image (both sides of a double-faced card)
 // beside its current Oracle text, since the wording printed on the image can
 // be outdated. Data comes from /data/card-details/<slug>.json, which already
 // carries the card's Scryfall object; it is fetched on first hover only.
 //
-// Desktop only: on touch devices a tap on a card opens its card page, which
-// shows the same information.
+// Desktop only, by default: on touch devices a tap on a card opens its card
+// page, which shows the same information. With the `sheet` option, a tap
+// opens the preview in a bottom sheet instead, swiped down to close, with a
+// button to the card page.
 //
 // Cards with no data (e.g. banned cards, which aren't in the card index)
 // show no preview, or only their image when the trigger supplies one.
@@ -18,6 +21,11 @@ const CLOSE_DELAY = 100
 const MARGIN = 12
 // Layouts printed on two sides of the card, so with a back image to show.
 const DOUBLE_FACED_LAYOUTS = ['transform', 'modal_dfc']
+// Sheet: how far (px) or how fast (px/ms) a swipe down closes it, and how
+// long it takes to slide out.
+const SWIPE_DISTANCE = 100
+const SWIPE_SPEED = 0.5
+const SHEET_EXIT = 200
 
 const cache = new Map()
 
@@ -215,14 +223,151 @@ function PreviewPanel({ target }) {
   )
 }
 
+// The preview of a tapped card, from the bottom of the screen: the card's
+// image(s) and Oracle text, and a button to its page when it has one. Swiped
+// down (from its top, or from anywhere once its content is scrolled to the
+// top), a tap outside it or Escape closes it.
+function PreviewSheet({ target, onClose }) {
+  const card = useCardData(target.name, target.slug)
+  const pages = useCardPages()
+  const slug = target.slug || cardLinkSlug(pages, target.name)
+  const panelRef = useRef(null)
+  const backdropRef = useRef(null)
+  const scrollRef = useRef(null)
+  const [closing, setClosing] = useState(false)
+
+  const close = useCallback(() => setClosing(true), [])
+
+  useEffect(() => {
+    if (!closing) return
+    const panel = panelRef.current
+    panel.style.transition = `transform ${SHEET_EXIT}ms ease-in`
+    panel.style.transform = 'translateY(100%)'
+    backdropRef.current.style.transition = `opacity ${SHEET_EXIT}ms ease-in`
+    backdropRef.current.style.opacity = '0'
+    const timer = setTimeout(onClose, SHEET_EXIT)
+    return () => clearTimeout(timer)
+  }, [closing, onClose])
+
+  // the page behind doesn't scroll while the sheet is open
+  useEffect(() => {
+    const { overflow } = document.body.style
+    document.body.style.overflow = 'hidden'
+    const onKey = e => { if (e.key === 'Escape') close() }
+    window.addEventListener('keydown', onKey)
+    return () => {
+      document.body.style.overflow = overflow
+      window.removeEventListener('keydown', onKey)
+    }
+  }, [close])
+
+  // Swipe down to close. Native listeners, as touchmove must be cancelable
+  // to stop the content scrolling while the sheet is dragged.
+  useEffect(() => {
+    const panel = panelRef.current
+    const backdrop = backdropRef.current
+    let start = null
+    let dragging = false
+    let dy = 0
+
+    const onStart = e => {
+      start = { y: e.touches[0].clientY, t: e.timeStamp }
+      dragging = false
+      dy = 0
+    }
+    const onMove = e => {
+      if (!start) return
+      dy = e.touches[0].clientY - start.y
+      if (!dragging) {
+        // drag the sheet down only when its content can't scroll up instead
+        const scrolled = scrollRef.current.contains(e.target) && scrollRef.current.scrollTop > 0
+        if (dy === 0) return
+        if (dy < 0 || scrolled) { start = null; return }
+        dragging = true
+        panel.style.transition = 'none'
+        backdrop.style.transition = 'none'
+      }
+      e.preventDefault()
+      const offset = Math.max(0, dy)
+      panel.style.transform = `translateY(${offset}px)`
+      backdrop.style.opacity = String(1 - offset / panel.offsetHeight)
+    }
+    const onEnd = e => {
+      if (dragging) {
+        const speed = dy / Math.max(1, e.timeStamp - start.t)
+        if (dy > SWIPE_DISTANCE || speed > SWIPE_SPEED) {
+          close()
+        } else {
+          panel.style.transition = 'transform 200ms ease-out'
+          panel.style.transform = ''
+          backdrop.style.transition = 'opacity 200ms ease-out'
+          backdrop.style.opacity = ''
+        }
+      }
+      start = null
+      dragging = false
+    }
+
+    panel.addEventListener('touchstart', onStart, { passive: true })
+    panel.addEventListener('touchmove', onMove, { passive: false })
+    panel.addEventListener('touchend', onEnd)
+    panel.addEventListener('touchcancel', onEnd)
+    return () => {
+      panel.removeEventListener('touchstart', onStart)
+      panel.removeEventListener('touchmove', onMove)
+      panel.removeEventListener('touchend', onEnd)
+      panel.removeEventListener('touchcancel', onEnd)
+    }
+  }, [close])
+
+  const images = card ? card.images : card === null ? (target.image ? [target.image] : []) : [null]
+  const imageClass = images.length > 1 ? 'w-[160px]' : 'w-[240px]'
+  return createPortal(
+    <div className="fixed inset-0 z-50" role="dialog" aria-modal="true" aria-label={target.name}>
+      <div ref={backdropRef} onClick={close} className="card-sheet-backdrop-in absolute inset-0 bg-black/60" />
+      <div ref={panelRef}
+        className="card-sheet-in absolute inset-x-0 bottom-0 flex max-h-[85vh] flex-col rounded-t-2xl border-t border-gray-700 bg-gray-800 text-gray-200 shadow-2xl shadow-black/60">
+        <div className="flex justify-center pt-3 pb-2">
+          <div className="h-1.5 w-12 rounded-full bg-gray-600" />
+        </div>
+        <div ref={scrollRef} className="flex flex-col items-center gap-4 overflow-y-auto overscroll-contain px-4 pb-4">
+          {images.length > 0 && <div className="flex items-start gap-2">
+            {images.map((src, i) => (
+              src
+                ? <img key={src} src={src} alt={i === 0 ? target.name : `${target.name} (back face)`}
+                    className={`${imageClass} aspect-[63/88] rounded-[4.5%/3.2%] bg-gray-900 object-cover`} />
+                : <div key={i} className={`${imageClass} aspect-[63/88] rounded-[4.5%/3.2%] bg-gray-900`} />
+            ))}
+          </div>}
+          {card === null && !target.image && <div className="font-semibold text-white">{target.name}</div>}
+          <OracleText card={card} className="w-full max-w-[320px]" />
+        </div>
+        {slug && (
+          <div className="border-t border-gray-700 px-4 pt-3 pb-[max(0.75rem,env(safe-area-inset-bottom))]">
+            <Link to={`/cards/${slug}`}
+              className="block w-full rounded-lg bg-amber-400 py-2.5 text-center text-sm font-semibold text-gray-950 active:bg-amber-200">
+              Open card page
+            </Link>
+          </div>
+        )}
+      </div>
+    </div>,
+    document.body
+  )
+}
+
 // Returns `bind(name, options)`, to spread on each trigger element, and the
 // `preview` element to render once anywhere in the page. Options:
 //   slug       the card's slug, when known (otherwise looked up from the name)
 //   showImage  false to show the Oracle text only, when the trigger is
 //              already the card's image
 //   image      image to show alone for a card with no data
-export function useCardPreview() {
+//   hover      false for no hover preview, only the sheet on touch devices
+// Pass { sheet: true } to open the preview on tap on touch devices, in a
+// bottom sheet (see above).
+export function useCardPreview({ sheet = false } = {}) {
   const [target, setTarget] = useState(null)
+  const [sheetTarget, setSheetTarget] = useState(null)
   const openTimer = useRef(null)
   const closeTimer = useRef(null)
   const shownRef = useRef(false)
@@ -264,11 +409,18 @@ export function useCardPreview() {
     clearTimeout(closeTimer.current)
   }, [])
 
-  const bind = useCallback((name, { slug, showImage = true, image } = {}) => hoverCapable ? {
+  const closeSheet = useCallback(() => setSheetTarget(null), [])
+
+  const bind = useCallback((name, { slug, showImage = true, image, hover = true } = {}) => hoverCapable ? (hover ? {
     onMouseEnter: e => show({ el: e.currentTarget, name, slug, showImage, image }),
     onMouseLeave: hide,
-  } : {}, [hoverCapable, show, hide])
+  } : {}) : sheet ? {
+    onClick: e => { e.preventDefault(); setSheetTarget({ name, slug, image }) },
+  } : {}, [hoverCapable, sheet, show, hide])
 
-  const preview = target && <PreviewPanel target={target} />
+  const preview = <>
+    {target && <PreviewPanel target={target} />}
+    {sheetTarget && <PreviewSheet key={sheetTarget.name} target={sheetTarget} onClose={closeSheet} />}
+  </>
   return { bind, preview }
 }

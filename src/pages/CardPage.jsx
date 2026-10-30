@@ -117,20 +117,23 @@ function PlayedIn({ decks }) {
   if (!counts.length) return null
   const shown = showAll ? counts : counts.slice(0, PLAYED_IN_SHOWN)
   return (
-    <div className="flex flex-wrap items-center gap-1.5 text-sm">
-      <span className="w-24 shrink-0 text-gray-500">Played in:</span>
-      {shown.map(([name, count]) => (
-        <Link key={name} to={`/archetypes/${nameToSlug(name)}`} title={`${count.toLocaleString('en-US')} decklists`}
-          className="inline-flex items-center gap-1 px-2 py-0.5 rounded-full text-xs font-medium bg-gray-700 text-gray-300 border border-gray-600 hover:border-amber-400 hover:text-amber-400 transition-colors">
-          {name}
-          <span className="text-gray-500 tabular-nums">{count.toLocaleString('en-US')}</span>
-        </Link>
-      ))}
-      {counts.length > PLAYED_IN_SHOWN && (
-        <button onClick={() => setShowAll(s => !s)} className="text-xs text-gray-500 hover:text-amber-400 transition-colors">
-          {showAll ? 'Show fewer' : `+${counts.length - PLAYED_IN_SHOWN} more`}
-        </button>
-      )}
+    <div className="flex items-baseline gap-1.5 text-sm">
+      <span className="w-20 shrink-0 text-gray-500">Played in:</span>
+      {/* the badges wrap in their own column, under the first one */}
+      <div className="flex min-w-0 flex-wrap items-center gap-1.5">
+        {shown.map(([name, count]) => (
+          <Link key={name} to={`/archetypes/${nameToSlug(name)}`} title={`${count.toLocaleString('en-US')} decklists`}
+            className="inline-flex items-center gap-1 px-2 py-0.5 rounded-full text-xs font-medium bg-gray-700 text-gray-300 border border-gray-600 hover:border-amber-400 hover:text-amber-400 transition-colors">
+            {name}
+            <span className="text-gray-500 tabular-nums">{count.toLocaleString('en-US')}</span>
+          </Link>
+        ))}
+        {counts.length > PLAYED_IN_SHOWN && (
+          <button onClick={() => setShowAll(s => !s)} className="text-xs text-gray-500 hover:text-amber-400 transition-colors">
+            {showAll ? 'Show fewer' : `+${counts.length - PLAYED_IN_SHOWN} more`}
+          </button>
+        )}
+      </div>
     </div>
   )
 }
@@ -284,9 +287,10 @@ function CardDecksSection({ decks }) {
               <th className="text-left px-4 py-2 text-xs font-semibold text-gray-400 uppercase tracking-wider">Archetype</th>
               <th className="text-left px-4 py-2 text-xs font-semibold text-gray-400 uppercase tracking-wider hidden sm:table-cell">Tournament</th>
               <th className="text-left px-4 py-2 text-xs font-semibold text-gray-400 uppercase tracking-wider hidden sm:table-cell">Deck Date</th>
-              <th className="text-left px-4 py-2 text-xs font-semibold text-gray-400 uppercase tracking-wider hidden md:table-cell">Pilot</th>
+              <th className="text-left px-4 py-2 text-xs font-semibold text-gray-400 uppercase tracking-wider">Pilot</th>
               <th className="text-left px-4 py-2 text-xs font-semibold text-gray-400 uppercase tracking-wider hidden md:table-cell">Result</th>
-              <th className="text-left px-4 py-2 text-xs font-semibold text-gray-400 uppercase tracking-wider"></th>
+              {/* on phones the whole row links to the deck: no room for the button */}
+              <th className="text-left px-4 py-2 text-xs font-semibold text-gray-400 uppercase tracking-wider hidden md:table-cell"></th>
             </tr>
           </thead>
           <tbody className="divide-y divide-gray-700/50 bg-gray-900">
@@ -301,9 +305,9 @@ function CardDecksSection({ decks }) {
                 <td className="px-4 py-2.5 text-amber-400 text-base">{deck.archetype}</td>
                 <td className="px-4 py-2.5 text-gray-300 hidden sm:table-cell">{deck.tournament_name}</td>
                 <td className="px-4 py-2.5 text-gray-500 hidden sm:table-cell">{formatShortDate(deck.tournament_date)}</td>
-                <td className="px-4 py-2.5 text-gray-400 hidden md:table-cell">{deck.pilot || 'Anonymous'}</td>
+                <td className="px-4 py-2.5 text-gray-400">{deck.pilot || 'Anonymous'}</td>
                 <td className="px-4 py-2.5 text-gray-400 hidden md:table-cell">{deck.place}</td>
-                <td className="px-4 py-2.5 text-amber-400 text-xs">View →</td>
+                <td className="px-4 py-2.5 text-amber-400 text-xs hidden md:table-cell">View →</td>
               </tr>
             ))}
           </tbody>
@@ -381,8 +385,9 @@ export default function CardPage() {
                 {!isMultiFace && s?.mana_cost && <ManaCost cost={s.mana_cost} />}
               </div>
               <div className="flex flex-col md:flex-row gap-8 mb-10">
-                {/* Images */}
-                <div className={`shrink-0 flex flex-col gap-3`}>
+                {/* Images; on phones as wide as the images, not the page, so
+                    the links under them end at the card's right edge */}
+                <div className={`shrink-0 flex flex-col gap-3 self-start md:self-stretch`}>
                   <div className={`flex gap-3 ${isDFC ? 'flex-row md:flex-col' : ''}`}>
                   {isDFC ? (
                     faces.map((face, i) =>
@@ -460,9 +465,9 @@ export default function CardPage() {
                   {/* First and last decklists playing it */}
                   {card.first_appearance && (
                     <div className="space-y-2">
-                      <AppearanceRow label="First played:" appearance={card.first_appearance}
+                      <AppearanceRow label="First played:" appearance={card.first_appearance} labelWidth="w-20"
                         note={card.first_on_record && '— our decklists start here: it may have been played earlier'} />
-                      <AppearanceRow label="Last played:" appearance={card.last_appearance} />
+                      <AppearanceRow label="Last played:" appearance={card.last_appearance} labelWidth="w-20" />
                     </div>
                   )}
                   <PlayedIn decks={decks} />
