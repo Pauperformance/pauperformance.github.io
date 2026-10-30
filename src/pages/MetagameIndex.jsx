@@ -5,6 +5,8 @@ import CardLink from '../components/PoolCardLink'
 import { useCardPreview } from '../components/CardPreview'
 import { useSearchShortcut, searchShortcutLabel } from '../utils/useSearchShortcut'
 import { formatDate } from '../utils/dates'
+import { metagameSlug } from '../utils/slugs'
+import { Link } from 'react-router-dom'
 
 // Metagames: one per event that changed the Pauper card pool (sets introducing
 // new Pauper cards, B&R announcements), from Myr's metagame index. Codes below
@@ -79,19 +81,26 @@ function MetagameEntry({ metagame, searchQuery, poolUrls, open, onToggle, bindPr
         className="bg-gray-800 border border-gray-700 rounded-xl p-5"
         onMouseEnter={() => setHovered(true)}
         onMouseLeave={() => setHovered(false)}>
-        <button onClick={onToggle} className="w-full text-left flex items-center gap-3 flex-wrap">
-          <span className="text-amber-400 font-semibold text-base">{formatDate(metagame.date)}</span>
-          <span className={`font-medium transition-colors ${hovered ? 'text-amber-300' : 'text-white'}`}>{metagameTitle(metagame)}</span>
-          {/* wraps on narrow screens rather than running off the box */}
-          <span className="text-sm text-gray-500 ml-auto min-w-0 flex flex-wrap items-center gap-x-3 gap-y-1">
-            {metagame.sets.length > 0 && <span>Scryfall: <span className="text-amber-400 font-mono">{orderedSets(metagame).map(s => s.scryfall_code).join(', ')}</span></span>}
-            <span>Pauperformance: <span className="text-amber-400 font-mono">{metagame.p13m}.{metagame.label}</span></span>
-            {metagame.sets.length > 0 && <span>New Cards: <span className="text-amber-400 font-mono">{newCards(metagame)}</span></span>}
-            {banned > 0 && <span>Banned: <span className="text-amber-400 font-mono">{banned}</span></span>}
-            {unbanned > 0 && <span>Unbanned: <span className="text-amber-400 font-mono">{unbanned}</span></span>}
-            <span className="text-gray-600">{open ? '▲' : '▼'}</span>
-          </span>
-        </button>
+        {/* the metagame's page: beside the toggle, as a link can't sit in a button */}
+        <div className="flex items-start gap-3">
+          <button onClick={onToggle} className="flex-1 min-w-0 text-left flex items-center gap-3 flex-wrap">
+            <span className="text-amber-400 font-semibold text-base">{formatDate(metagame.date)}</span>
+            <span className={`font-medium transition-colors ${hovered ? 'text-amber-300' : 'text-white'}`}>{metagameTitle(metagame)}</span>
+            {/* wraps on narrow screens rather than running off the box */}
+            <span className="text-sm text-gray-500 ml-auto min-w-0 flex flex-wrap items-center gap-x-3 gap-y-1">
+              {metagame.sets.length > 0 && <span>Scryfall: <span className="text-amber-400 font-mono">{orderedSets(metagame).map(s => s.scryfall_code).join(', ')}</span></span>}
+              <span>Pauperformance: <span className="text-amber-400 font-mono">{metagame.p13m}.{metagame.label}</span></span>
+              {metagame.sets.length > 0 && <span>New Cards: <span className="text-amber-400 font-mono">{newCards(metagame)}</span></span>}
+              {banned > 0 && <span>Banned: <span className="text-amber-400 font-mono">{banned}</span></span>}
+              {unbanned > 0 && <span>Unbanned: <span className="text-amber-400 font-mono">{unbanned}</span></span>}
+              <span className="text-gray-600">{open ? '▲' : '▼'}</span>
+            </span>
+          </button>
+          <Link to={`/metagames/${metagameSlug(metagame)}`} title="The archetypes played in this metagame"
+            className="shrink-0 px-2.5 py-1 rounded-md border border-gray-700 bg-gray-900 text-xs text-gray-300 hover:border-amber-400/50 hover:text-amber-400 transition-colors">
+            Metagame →
+          </Link>
+        </div>
 
         {open && (
           <div className="mt-4 pt-4 border-t border-gray-700 space-y-4">

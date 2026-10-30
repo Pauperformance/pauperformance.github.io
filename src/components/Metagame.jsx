@@ -1,11 +1,12 @@
 import { Link } from 'react-router-dom'
 import { formatShortDate } from '../utils/dates'
+import { metagameSlug } from '../utils/slugs'
 
-// A metagame: its p13m code and label (set code or BNR), linking to the
-// metagames page; its start date on hover. count: the decks in it, if given.
+// A metagame: its p13m code and label (set code or BNR), linking to its
+// page; its start date on hover. count: the decks in it, if given.
 export function MetagameBadge({ metagame, count }) {
   return (
-    <Link to="/metagames" title={`Metagame ${metagame.metagame}, since ${formatShortDate(metagame.date)}`}
+    <Link to={`/metagames/${metagameSlug(metagame)}`} title={`Metagame ${metagame.metagame}, since ${formatShortDate(metagame.date)}`}
       className="inline-flex items-center gap-1 px-1.5 py-0.5 rounded-md text-xs bg-gray-700 border border-gray-600 text-gray-300 hover:border-amber-400/50 hover:text-amber-400 transition-colors whitespace-nowrap">
       <span className="font-semibold tabular-nums">{metagame.metagame}</span>
       <span className="uppercase text-gray-400">{metagame.label}</span>
