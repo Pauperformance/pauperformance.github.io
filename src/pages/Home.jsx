@@ -195,6 +195,11 @@ const WIGGLE = { amplitude: 0.3, swings: 2, duration: 3000 }
 // widths away it's seen from
 const TAPE = { step: 30, perspective: 3 }
 
+// A flick on the archetype box carries the tape on for as long as BOX_FLICK_MS
+// at the flick's speed, but at most BOX_FLICK_MAX archetypes
+const BOX_FLICK_MS = 150
+const BOX_FLICK_MAX = 1
+
 // Phones: short tabs centred on the card; wider: as tall as the card
 const RING_ARROW = 'shrink-0 self-center h-20 w-7 rounded-lg text-2xl sm:self-stretch sm:h-auto sm:w-12 sm:rounded-xl sm:text-3xl flex items-center justify-center border border-gray-700 bg-gray-800 leading-none text-gray-400 hover:border-amber-400/50 hover:text-amber-400 transition-colors'
 
@@ -309,7 +314,11 @@ function BrainstormSection() {
     interrupt()
     cancelAnimationFrame(frameRef.current)
     draggedRef.current = false
-    dragRef.current = { x: e.clientX, y: e.clientY, moved: false, last: ringAngle(e), lastT: e.timeStamp, v: 0 }
+    dragRef.current = {
+      x: e.clientX, y: e.clientY, moved: false, last: ringAngle(e), lastT: e.timeStamp, v: 0,
+      // the archetype box turns like a tape, not round the ring's centre
+      onBox: e.currentTarget === boxRef.current, lastX: e.clientX,
+    }
   }
 
   // Where the pointer is round the ring: its angle about the ring's centre (in
@@ -341,9 +350,15 @@ function BrainstormSection() {
     if (turn > Math.PI) turn -= 2 * Math.PI
     else if (turn < -Math.PI) turn += 2 * Math.PI
     drag.last = now
+    const dx = e.clientX - drag.lastX
+    drag.lastX = e.clientX
     if (!drag.moved) return
-    // Near the centre a tiny move sweeps a large angle, so it turns the ring less
-    const glyphs = turn / STEP * Math.min(1, now.radius / 0.4)
+    // On the box, a swipe across its whole width turns one archetype (the way
+    // round the ring turns below its centre). On the ring, near the centre a
+    // tiny move sweeps a large angle, so it turns the ring less.
+    const glyphs = drag.onBox
+      ? -dx / boxRef.current.offsetWidth
+      : turn / STEP * Math.min(1, now.radius / 0.4)
     const dt = Math.max(e.timeStamp - drag.lastT, 1)
     drag.v = glyphs / dt
     drag.lastT = e.timeStamp
@@ -356,9 +371,15 @@ function BrainstormSection() {
     draggedRef.current = !!drag?.moved
     // only the click that ends this drag is ignored
     setTimeout(() => { draggedRef.current = false }, 0)
-    // A flick carries on for a few glyphs before snapping; a press that stopped
-    // the ring between glyphs settles on the nearest one
-    if (drag?.moved) animateTo(Math.round(rotRef.current + drag.v * 250), { fromDrag: true })
+    // A flick carries on for a few glyphs before snapping (on the box, a quick
+    // swipe on a phone is fast but means one archetype: see BOX_FLICK_MAX); a
+    // press that stopped the ring between glyphs settles on the nearest one
+    if (drag?.moved) {
+      const carry = drag.onBox
+        ? Math.max(-BOX_FLICK_MAX, Math.min(BOX_FLICK_MAX, drag.v * BOX_FLICK_MS))
+        : drag.v * 250
+      animateTo(Math.round(rotRef.current + carry), { fromDrag: true })
+    }
     else if (rotRef.current !== Math.round(rotRef.current)) animateTo(Math.round(rotRef.current))
   }
 
@@ -411,7 +432,7 @@ function BrainstormSection() {
                   opacity: (0.45 + 0.55 * Math.max(depth, near)) * behind,
                   pointerEvents: behind < 0.5 ? 'none' : undefined,
                   zIndex: Math.round(depth * 100),
-                  filter: near > 0.5 ? `drop-shadow(0 0 ${12 * near}px rgba(190, 255, 90, ${0.7 * near}))` : undefined,
+                  filter: near > 0.5 ? `drop-shadow(0 0 ${12 * near}px rgba(230, 166, 93, ${0.7 * near}))` : undefined,
                 }}>
                 <img src={`/images/brainstorm/glyph-${String(i).padStart(2, '0')}.webp`} alt="" draggable={false}
                   className={`w-full pointer-events-none ${settled && i === front ? 'glyph-selected' : ''}`} />
@@ -443,7 +464,7 @@ function BrainstormSection() {
             // a swipe isn't a click on the card's links, nor a native link/image drag
             onClickCapture={(e) => { if (draggedRef.current) { e.preventDefault(); e.stopPropagation() } }}
             onDragStart={(e) => e.preventDefault()}
-            className={`relative flex-1 min-w-0 grid select-none touch-pan-y focus:outline-none bg-gray-800 border rounded-xl overflow-hidden transition-[border-color,box-shadow] duration-500 ${settled ? 'border-lime-300/40 shadow-[0_0_24px_rgba(190,255,90,0.18)]' : 'border-gray-700'}`}
+            className={`relative flex-1 min-w-0 grid select-none touch-pan-y focus:outline-none bg-gray-800 border rounded-xl overflow-hidden transition-[border-color,box-shadow] duration-500 ${settled ? 'border-amber-400/40 shadow-[0_0_24px_rgba(230,166,93,0.18)]' : 'border-gray-700'}`}
             style={{ perspective: `${TAPE.perspective * boxWidth}px` }}>
             {/* The boxes are frames of one tape wound round a wide drum that
                 turns with the ring: the box frame shows one at a time, and between
@@ -807,11 +828,13 @@ function NewspauperSection() {
       {news && entries.length === 0 ? (
         <p className="text-sm text-gray-400">No news in the last two months.</p>
       ) : (
-        <div className="divide-y divide-gray-700 border border-gray-700 rounded-xl overflow-hidden bg-gray-800">
+        // one column on phones, two on desktops (newest first, left to right);
+        // the 1px gaps show the lines between entries
+        <div className="grid lg:grid-cols-2 gap-px bg-gray-700 border border-gray-700 rounded-xl overflow-hidden">
           {entries.map(entry => {
             const title = newsTitle(entry)
             return (
-              <div key={`${entry.type}-${entry.date}-${title.text}`} className="flex items-start gap-3 px-5 py-4">
+              <div key={`${entry.type}-${entry.date}-${title.text}`} className="flex items-start gap-3 px-5 py-4 bg-gray-800">
                 {/* the icon sits above the date on phones, beside it from sm up */}
                 <div className="shrink-0 w-20 sm:w-28 flex flex-col sm:flex-row sm:items-center gap-1.5 sm:gap-2 mt-0.5">
                   <NewsIcon kind={NEWS_KINDS[entry.type]} />
@@ -827,6 +850,8 @@ function NewspauperSection() {
               </div>
             )
           })}
+          {/* an odd count leaves the last row half empty: fill it */}
+          {entries.length % 2 === 1 && <div aria-hidden="true" className="hidden lg:block bg-gray-800" />}
         </div>
       )}
       {preview}

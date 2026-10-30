@@ -1,14 +1,37 @@
 {
     "aliases": [],
-    "description": "_Still missing. Please join us on [Discord](https://discord.gg/fYQbpjjkQ3) to contribute to the Academy._",
+    "description": "_Still missing. Coming soon._",
     "dominant_mana": [
         "R"
     ],
     "family": null,
-    "frequent": [],
+    "first_appearance": {
+        "date": "2023-12-16",
+        "metagame": {
+            "date": "2023-12-04",
+            "decks": null,
+            "label": "BNR",
+            "metagame": "119",
+            "name": "Banned & Restricted Announcement",
+            "py/object": "pauperformance_bot.entity.api.archetype.MetagameRef"
+        },
+        "py/object": "pauperformance_bot.entity.api.archetype.Appearance"
+    },
     "game_type": [
         "Aggro"
     ],
+    "last_appearance": {
+        "date": "2024-04-20",
+        "metagame": {
+            "date": "2024-04-19",
+            "decks": null,
+            "label": "otj",
+            "metagame": "122",
+            "name": "Outlaws of Thunder Junction",
+            "py/object": "pauperformance_bot.entity.api.archetype.MetagameRef"
+        },
+        "py/object": "pauperformance_bot.entity.api.archetype.Appearance"
+    },
     "must_have_cards": [],
     "must_not_have_cards": [],
     "name": "MonoR Heroic",
@@ -23,96 +46,493 @@
     "resource_sideboards": [],
     "resources": [],
     "resources_discord": [],
-    "staples": [
-        {
-            "link": "https://scryfall.com/card/ths/111/akroan-crusader",
-            "name": "Akroan Crusader",
-            "preview": "https://cards.scryfall.io/normal/front/a/4/a47c50d9-11ec-486b-a5ce-5a6b70858f30.jpg",
-            "py/object": "pauperformance_bot.entity.api.archetype.ArchetypeCard"
-        },
-        {
-            "link": "https://scryfall.com/card/vow/142/ancestral-anger",
-            "name": "Ancestral Anger",
-            "preview": "https://cards.scryfall.io/normal/front/5/d/5dee47ab-d603-4346-97f4-a25dc3f47765.jpg",
-            "py/object": "pauperformance_bot.entity.api.archetype.ArchetypeCard"
-        },
-        {
-            "link": "https://scryfall.com/card/nph/2/apostles-blessing",
-            "name": "Apostle's Blessing",
-            "preview": "https://cards.scryfall.io/normal/front/9/f/9f7c3571-925d-486e-80dd-bac47aa48283.jpg",
-            "py/object": "pauperformance_bot.entity.api.archetype.ArchetypeCard"
-        },
-        {
-            "link": "https://scryfall.com/card/plc/116/brute-force",
-            "name": "Brute Force",
-            "preview": "https://cards.scryfall.io/normal/front/8/2/82d43220-1e4e-4b61-9844-51c8bb5dde35.jpg",
-            "py/object": "pauperformance_bot.entity.api.archetype.ArchetypeCard"
-        },
-        {
-            "link": "https://scryfall.com/card/ths/119/dragon-mantle",
-            "name": "Dragon Mantle",
-            "preview": "https://cards.scryfall.io/normal/front/d/9/d97b1080-9001-4751-b2f5-7f56d9f58dff.jpg",
-            "py/object": "pauperformance_bot.entity.api.archetype.ArchetypeCard"
-        },
-        {
-            "link": "https://scryfall.com/card/dmu/124/flowstone-infusion",
-            "name": "Flowstone Infusion",
-            "preview": "https://cards.scryfall.io/normal/front/b/5/b57c3674-9a31-4418-b306-e6b0a2514d8f.jpg",
-            "py/object": "pauperformance_bot.entity.api.archetype.ArchetypeCard"
-        },
-        {
-            "link": "https://scryfall.com/card/lea/161/lightning-bolt",
-            "name": "Lightning Bolt",
-            "preview": "https://cards.scryfall.io/normal/front/d/5/d573ef03-4730-45aa-93dd-e45ac1dbaf4a.jpg",
-            "py/object": "pauperformance_bot.entity.api.archetype.ArchetypeCard"
-        },
-        {
-            "link": "https://scryfall.com/card/dmu/139/molten-monstrosity",
-            "name": "Molten Monstrosity",
-            "preview": "https://cards.scryfall.io/normal/front/2/4/240957e5-ab0a-443f-92de-ae999b08c44f.jpg",
-            "py/object": "pauperformance_bot.entity.api.archetype.ArchetypeCard"
-        },
-        {
-            "link": "https://scryfall.com/card/lea/292/mountain",
-            "name": "Mountain",
-            "preview": "https://cards.scryfall.io/normal/front/e/a/eace2c85-976c-425e-9800-5a6ccbd91b56.jpg",
-            "py/object": "pauperformance_bot.entity.api.archetype.ArchetypeCard"
-        },
-        {
-            "link": "https://scryfall.com/card/nph/116/mutagenic-growth",
-            "name": "Mutagenic Growth",
-            "preview": "https://cards.scryfall.io/normal/front/a/f/af2d23da-70a1-49ba-91bf-c110cc4bbedc.jpg",
-            "py/object": "pauperformance_bot.entity.api.archetype.ArchetypeCard"
-        },
-        {
-            "link": "https://scryfall.com/card/woe/144/ratcatcher-trainee-pest-problem",
-            "name": "Ratcatcher Trainee",
-            "preview": "https://cards.scryfall.io/normal/front/7/f/7f4c0959-a107-4d61-9e51-256b2955f6ba.jpg",
-            "py/object": "pauperformance_bot.entity.api.archetype.ArchetypeCard"
-        },
-        {
-            "link": "https://scryfall.com/card/eld/137/rimrock-knight-boulder-rush",
-            "name": "Rimrock Knight",
-            "preview": "https://cards.scryfall.io/normal/front/a/3/a3d13d84-01e4-4429-93db-e5afff811527.jpg",
-            "py/object": "pauperformance_bot.entity.api.archetype.ArchetypeCard"
-        },
-        {
-            "link": "https://scryfall.com/card/soi/177/rush-of-adrenaline",
-            "name": "Rush of Adrenaline",
-            "preview": "https://cards.scryfall.io/normal/front/d/0/d0def54b-9f0a-4ab1-9df9-25506a06350c.jpg",
-            "py/object": "pauperformance_bot.entity.api.archetype.ArchetypeCard"
-        },
-        {
-            "link": "https://scryfall.com/card/jou/110/satyr-hoplite",
-            "name": "Satyr Hoplite",
-            "preview": "https://cards.scryfall.io/normal/front/b/8/b8754d66-facb-432e-a6c2-91430a6dec94.jpg",
-            "py/object": "pauperformance_bot.entity.api.archetype.ArchetypeCard"
-        },
-        {
-            "link": "https://scryfall.com/card/shm/107/smash-to-smithereens",
-            "name": "Smash to Smithereens",
-            "preview": "https://cards.scryfall.io/normal/front/7/e/7eda1524-44dd-4f70-ac21-bac51578860e.jpg",
-            "py/object": "pauperformance_bot.entity.api.archetype.ArchetypeCard"
-        }
-    ]
+    "typical_list": {
+        "decks": 3,
+        "ended_by_bans": [],
+        "era_end": null,
+        "era_start": null,
+        "first_date": "2023-12-16",
+        "last_date": "2024-04-20",
+        "later_decks": 0,
+        "main": [
+            {
+                "at_least": [
+                    1.0,
+                    1.0,
+                    1.0,
+                    1.0
+                ],
+                "average": 19.0,
+                "banned": false,
+                "link": "https://scryfall.com/card/lea/292/mountain",
+                "name": "Mountain",
+                "preview": "https://cards.scryfall.io/normal/front/e/a/eace2c85-976c-425e-9800-5a6ccbd91b56.jpg",
+                "py/object": "pauperformance_bot.entity.api.archetype.TypicalCard",
+                "type_line": "Basic Land \u2014 Mountain",
+                "typical": 19
+            },
+            {
+                "at_least": [
+                    1.0,
+                    1.0,
+                    1.0,
+                    1.0
+                ],
+                "average": 4.0,
+                "banned": false,
+                "link": "https://scryfall.com/card/ths/111/akroan-crusader",
+                "name": "Akroan Crusader",
+                "preview": "https://cards.scryfall.io/normal/front/a/4/a47c50d9-11ec-486b-a5ce-5a6b70858f30.jpg",
+                "py/object": "pauperformance_bot.entity.api.archetype.TypicalCard",
+                "type_line": "Creature \u2014 Human Soldier",
+                "typical": 4
+            },
+            {
+                "at_least": [
+                    1.0,
+                    1.0,
+                    1.0,
+                    1.0
+                ],
+                "average": 4.0,
+                "banned": false,
+                "link": "https://scryfall.com/card/vow/142/ancestral-anger",
+                "name": "Ancestral Anger",
+                "preview": "https://cards.scryfall.io/normal/front/5/d/5dee47ab-d603-4346-97f4-a25dc3f47765.jpg",
+                "py/object": "pauperformance_bot.entity.api.archetype.TypicalCard",
+                "type_line": "Sorcery",
+                "typical": 4
+            },
+            {
+                "at_least": [
+                    1.0,
+                    1.0,
+                    1.0,
+                    1.0
+                ],
+                "average": 4.0,
+                "banned": false,
+                "link": "https://scryfall.com/card/nph/2/apostles-blessing",
+                "name": "Apostle's Blessing",
+                "preview": "https://cards.scryfall.io/normal/front/9/f/9f7c3571-925d-486e-80dd-bac47aa48283.jpg",
+                "py/object": "pauperformance_bot.entity.api.archetype.TypicalCard",
+                "type_line": "Instant",
+                "typical": 4
+            },
+            {
+                "at_least": [
+                    1.0,
+                    1.0,
+                    1.0,
+                    1.0
+                ],
+                "average": 4.0,
+                "banned": false,
+                "link": "https://scryfall.com/card/plc/116/brute-force",
+                "name": "Brute Force",
+                "preview": "https://cards.scryfall.io/normal/front/8/2/82d43220-1e4e-4b61-9844-51c8bb5dde35.jpg",
+                "py/object": "pauperformance_bot.entity.api.archetype.TypicalCard",
+                "type_line": "Instant",
+                "typical": 4
+            },
+            {
+                "at_least": [
+                    1.0,
+                    1.0,
+                    1.0,
+                    1.0
+                ],
+                "average": 4.0,
+                "banned": false,
+                "link": "https://scryfall.com/card/ths/119/dragon-mantle",
+                "name": "Dragon Mantle",
+                "preview": "https://cards.scryfall.io/normal/front/d/9/d97b1080-9001-4751-b2f5-7f56d9f58dff.jpg",
+                "py/object": "pauperformance_bot.entity.api.archetype.TypicalCard",
+                "type_line": "Enchantment \u2014 Aura",
+                "typical": 4
+            },
+            {
+                "at_least": [
+                    1.0,
+                    1.0,
+                    1.0,
+                    1.0
+                ],
+                "average": 4.0,
+                "banned": false,
+                "link": "https://scryfall.com/card/nph/116/mutagenic-growth",
+                "name": "Mutagenic Growth",
+                "preview": "https://cards.scryfall.io/normal/front/a/f/af2d23da-70a1-49ba-91bf-c110cc4bbedc.jpg",
+                "py/object": "pauperformance_bot.entity.api.archetype.TypicalCard",
+                "type_line": "Instant",
+                "typical": 4
+            },
+            {
+                "at_least": [
+                    1.0,
+                    1.0,
+                    1.0,
+                    1.0
+                ],
+                "average": 4.0,
+                "banned": false,
+                "link": "https://scryfall.com/card/jou/110/satyr-hoplite",
+                "name": "Satyr Hoplite",
+                "preview": "https://cards.scryfall.io/normal/front/b/8/b8754d66-facb-432e-a6c2-91430a6dec94.jpg",
+                "py/object": "pauperformance_bot.entity.api.archetype.TypicalCard",
+                "type_line": "Creature \u2014 Satyr Soldier",
+                "typical": 4
+            },
+            {
+                "at_least": [
+                    1.0,
+                    1.0,
+                    1.0,
+                    0.0
+                ],
+                "average": 3.0,
+                "banned": false,
+                "link": "https://scryfall.com/card/lea/161/lightning-bolt",
+                "name": "Lightning Bolt",
+                "preview": "https://cards.scryfall.io/normal/front/d/5/d573ef03-4730-45aa-93dd-e45ac1dbaf4a.jpg",
+                "py/object": "pauperformance_bot.entity.api.archetype.TypicalCard",
+                "type_line": "Instant",
+                "typical": 3
+            },
+            {
+                "at_least": [
+                    1.0,
+                    1.0,
+                    1.0,
+                    0.333
+                ],
+                "average": 3.3,
+                "banned": false,
+                "link": "https://scryfall.com/card/dmu/139/molten-monstrosity",
+                "name": "Molten Monstrosity",
+                "preview": "https://cards.scryfall.io/normal/front/2/4/240957e5-ab0a-443f-92de-ae999b08c44f.jpg",
+                "py/object": "pauperformance_bot.entity.api.archetype.TypicalCard",
+                "type_line": "Creature \u2014 Hellion",
+                "typical": 3
+            },
+            {
+                "at_least": [
+                    0.667,
+                    0.667,
+                    0.667,
+                    0.0
+                ],
+                "average": 3.0,
+                "banned": false,
+                "link": "https://scryfall.com/card/jmp/22/lightning-visionary",
+                "name": "Lightning Visionary",
+                "preview": "https://cards.scryfall.io/normal/front/a/f/af648aaf-a8e0-4291-acf9-5f8533728f92.jpg",
+                "py/object": "pauperformance_bot.entity.api.archetype.TypicalCard",
+                "type_line": "Creature \u2014 Minotaur Shaman",
+                "typical": 3
+            },
+            {
+                "at_least": [
+                    1.0,
+                    1.0,
+                    0.0,
+                    0.0
+                ],
+                "average": 2.0,
+                "banned": false,
+                "link": "https://scryfall.com/card/eld/137/rimrock-knight-boulder-rush",
+                "name": "Rimrock Knight",
+                "preview": "https://cards.scryfall.io/normal/front/a/3/a3d13d84-01e4-4429-93db-e5afff811527.jpg",
+                "py/object": "pauperformance_bot.entity.api.archetype.TypicalCard",
+                "type_line": "Creature \u2014 Dwarf Knight // Instant \u2014 Adventure",
+                "typical": 2
+            },
+            {
+                "at_least": [
+                    1.0,
+                    1.0,
+                    0.0,
+                    0.0
+                ],
+                "average": 2.0,
+                "banned": false,
+                "link": "https://scryfall.com/card/soi/177/rush-of-adrenaline",
+                "name": "Rush of Adrenaline",
+                "preview": "https://cards.scryfall.io/normal/front/d/0/d0def54b-9f0a-4ab1-9df9-25506a06350c.jpg",
+                "py/object": "pauperformance_bot.entity.api.archetype.TypicalCard",
+                "type_line": "Instant",
+                "typical": 2
+            },
+            {
+                "at_least": [
+                    0.333,
+                    0.333,
+                    0.0,
+                    0.0
+                ],
+                "average": 2.0,
+                "banned": false,
+                "link": "https://scryfall.com/card/dmu/124/flowstone-infusion",
+                "name": "Flowstone Infusion",
+                "preview": "https://cards.scryfall.io/normal/front/b/5/b57c3674-9a31-4418-b306-e6b0a2514d8f.jpg",
+                "py/object": "pauperformance_bot.entity.api.archetype.TypicalCard",
+                "type_line": "Instant",
+                "typical": 0
+            }
+        ],
+        "metagames": [
+            {
+                "date": "2024-04-19",
+                "decks": 1,
+                "label": "otj",
+                "metagame": "122",
+                "name": "Outlaws of Thunder Junction",
+                "py/object": "pauperformance_bot.entity.api.archetype.MetagameRef"
+            },
+            {
+                "date": "2024-02-09",
+                "decks": 1,
+                "label": "mkm",
+                "metagame": "121",
+                "name": "Murders at Karlov Manor",
+                "py/object": "pauperformance_bot.entity.api.archetype.MetagameRef"
+            },
+            {
+                "date": "2023-12-04",
+                "decks": 1,
+                "label": "BNR",
+                "metagame": "119",
+                "name": "Banned & Restricted Announcement",
+                "py/object": "pauperformance_bot.entity.api.archetype.MetagameRef"
+            }
+        ],
+        "py/object": "pauperformance_bot.entity.api.archetype.TypicalList",
+        "side": [
+            {
+                "at_least": [
+                    1.0,
+                    1.0,
+                    0.0,
+                    0.0
+                ],
+                "average": 2.0,
+                "banned": false,
+                "link": "https://scryfall.com/card/shm/107/smash-to-smithereens",
+                "name": "Smash to Smithereens",
+                "preview": "https://cards.scryfall.io/normal/front/7/e/7eda1524-44dd-4f70-ac21-bac51578860e.jpg",
+                "py/object": "pauperformance_bot.entity.api.archetype.TypicalCard",
+                "type_line": "Instant",
+                "typical": 2
+            },
+            {
+                "at_least": [
+                    0.667,
+                    0.667,
+                    0.0,
+                    0.0
+                ],
+                "average": 2.0,
+                "banned": false,
+                "link": "https://scryfall.com/card/m11/121/act-of-treason",
+                "name": "Act of Treason",
+                "preview": "https://cards.scryfall.io/normal/front/6/a/6a64b7c8-d417-4162-8c27-5d3b16f2f381.jpg",
+                "py/object": "pauperformance_bot.entity.api.archetype.TypicalCard",
+                "type_line": "Sorcery",
+                "typical": 2
+            },
+            {
+                "at_least": [
+                    0.667,
+                    0.667,
+                    0.0,
+                    0.0
+                ],
+                "average": 2.0,
+                "banned": false,
+                "link": "https://scryfall.com/card/kld/111/chandras-pyrohelix",
+                "name": "Chandra's Pyrohelix",
+                "preview": "https://cards.scryfall.io/normal/front/0/5/05659715-3002-4bd0-919e-664814c1ca57.jpg",
+                "py/object": "pauperformance_bot.entity.api.archetype.TypicalCard",
+                "type_line": "Instant",
+                "typical": 2
+            },
+            {
+                "at_least": [
+                    0.667,
+                    0.667,
+                    0.0,
+                    0.0
+                ],
+                "average": 2.0,
+                "banned": false,
+                "link": "https://scryfall.com/card/dmu/124/flowstone-infusion",
+                "name": "Flowstone Infusion",
+                "preview": "https://cards.scryfall.io/normal/front/b/5/b57c3674-9a31-4418-b306-e6b0a2514d8f.jpg",
+                "py/object": "pauperformance_bot.entity.api.archetype.TypicalCard",
+                "type_line": "Instant",
+                "typical": 2
+            },
+            {
+                "at_least": [
+                    0.667,
+                    0.667,
+                    0.0,
+                    0.0
+                ],
+                "average": 2.0,
+                "banned": false,
+                "link": "https://scryfall.com/card/lea/169/red-elemental-blast",
+                "name": "Red Elemental Blast",
+                "preview": "https://cards.scryfall.io/normal/front/7/7/776ad9be-3309-4f1d-9f27-6219d9477662.jpg",
+                "py/object": "pauperformance_bot.entity.api.archetype.TypicalCard",
+                "type_line": "Instant",
+                "typical": 2
+            },
+            {
+                "at_least": [
+                    0.667,
+                    0.667,
+                    0.0,
+                    0.0
+                ],
+                "average": 2.0,
+                "banned": false,
+                "link": "https://scryfall.com/card/ala/218/relic-of-progenitus",
+                "name": "Relic of Progenitus",
+                "preview": "https://cards.scryfall.io/normal/front/9/0/90c41192-64ef-43aa-9af0-75f0d3f56688.jpg",
+                "py/object": "pauperformance_bot.entity.api.archetype.TypicalCard",
+                "type_line": "Artifact",
+                "typical": 2
+            },
+            {
+                "at_least": [
+                    0.667,
+                    0.667,
+                    0.0,
+                    0.0
+                ],
+                "average": 2.0,
+                "banned": false,
+                "link": "https://scryfall.com/card/lci/169/tectonic-hazard",
+                "name": "Tectonic Hazard",
+                "preview": "https://cards.scryfall.io/normal/front/5/2/5204c781-f568-4c7f-b3f7-ce4dd678689b.jpg",
+                "py/object": "pauperformance_bot.entity.api.archetype.TypicalCard",
+                "type_line": "Sorcery",
+                "typical": 2
+            },
+            {
+                "at_least": [
+                    1.0,
+                    0.0,
+                    0.0,
+                    0.0
+                ],
+                "average": 1.0,
+                "banned": false,
+                "link": "https://scryfall.com/card/woe/144/ratcatcher-trainee-pest-problem",
+                "name": "Ratcatcher Trainee",
+                "preview": "https://cards.scryfall.io/normal/front/7/f/7f4c0959-a107-4d61-9e51-256b2955f6ba.jpg",
+                "py/object": "pauperformance_bot.entity.api.archetype.TypicalCard",
+                "type_line": "Creature \u2014 Human Peasant // Instant \u2014 Adventure",
+                "typical": 1
+            },
+            {
+                "at_least": [
+                    0.333,
+                    0.333,
+                    0.0,
+                    0.0
+                ],
+                "average": 2.0,
+                "banned": false,
+                "link": "https://scryfall.com/card/znr/137/cleansing-wildfire",
+                "name": "Cleansing Wildfire",
+                "preview": "https://cards.scryfall.io/normal/front/4/9/492d77e5-acc6-41b8-8930-f39d69234919.jpg",
+                "py/object": "pauperformance_bot.entity.api.archetype.TypicalCard",
+                "type_line": "Sorcery",
+                "typical": 0
+            },
+            {
+                "at_least": [
+                    0.333,
+                    0.333,
+                    0.0,
+                    0.0
+                ],
+                "average": 2.0,
+                "banned": false,
+                "link": "https://scryfall.com/card/vow/155/end-the-festivities",
+                "name": "End the Festivities",
+                "preview": "https://cards.scryfall.io/normal/front/b/e/bec748e6-7245-4a71-aeee-cefed8346948.jpg",
+                "py/object": "pauperformance_bot.entity.api.archetype.TypicalCard",
+                "type_line": "Sorcery",
+                "typical": 0
+            },
+            {
+                "at_least": [
+                    0.333,
+                    0.333,
+                    0.0,
+                    0.0
+                ],
+                "average": 2.0,
+                "banned": false,
+                "link": "https://scryfall.com/card/jud/89/flaring-pain",
+                "name": "Flaring Pain",
+                "preview": "https://cards.scryfall.io/normal/front/e/e/eeb5c96a-1d16-459d-9968-ced9a8f1c520.jpg",
+                "py/object": "pauperformance_bot.entity.api.archetype.TypicalCard",
+                "type_line": "Instant",
+                "typical": 0
+            },
+            {
+                "at_least": [
+                    0.333,
+                    0.333,
+                    0.0,
+                    0.0
+                ],
+                "average": 2.0,
+                "banned": false,
+                "link": "https://scryfall.com/card/dmu/144/smash-to-dust",
+                "name": "Smash to Dust",
+                "preview": "https://cards.scryfall.io/normal/front/7/4/747881c7-3788-4dd6-b78d-b2a5ded20e14.jpg",
+                "py/object": "pauperformance_bot.entity.api.archetype.TypicalCard",
+                "type_line": "Sorcery",
+                "typical": 0
+            },
+            {
+                "at_least": [
+                    0.333,
+                    0.333,
+                    0.0,
+                    0.0
+                ],
+                "average": 2.0,
+                "banned": false,
+                "link": "https://scryfall.com/card/ths/145/titans-strength",
+                "name": "Titan's Strength",
+                "preview": "https://cards.scryfall.io/normal/front/3/d/3db6ee53-c5e6-4344-9f35-084cd8cc9cd3.jpg",
+                "py/object": "pauperformance_bot.entity.api.archetype.TypicalCard",
+                "type_line": "Instant",
+                "typical": 0
+            },
+            {
+                "at_least": [
+                    0.333,
+                    0.333,
+                    0.0,
+                    0.0
+                ],
+                "average": 2.0,
+                "banned": false,
+                "link": "https://scryfall.com/card/chr/109/tormods-crypt",
+                "name": "Tormod's Crypt",
+                "preview": "https://cards.scryfall.io/normal/front/5/5/55709270-74b2-4a3f-947d-29ac7c309b0f.jpg",
+                "py/object": "pauperformance_bot.entity.api.archetype.TypicalCard",
+                "type_line": "Artifact",
+                "typical": 0
+            }
+        ],
+        "started_by_bans": []
+    }
 }

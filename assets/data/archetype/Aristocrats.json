@@ -5,16 +5,39 @@
         "Golgari Sacrifice",
         "BG Sacrifice"
     ],
-    "description": "_Still missing. Please join us on [Discord](https://discord.gg/fYQbpjjkQ3) to contribute to the Academy._",
+    "description": "_Still missing. Coming soon._",
     "dominant_mana": [
         "B",
         "G"
     ],
     "family": "Sacrifice",
-    "frequent": [],
+    "first_appearance": {
+        "date": "2024-01-06",
+        "metagame": {
+            "date": "2023-12-04",
+            "decks": null,
+            "label": "BNR",
+            "metagame": "119",
+            "name": "Banned & Restricted Announcement",
+            "py/object": "pauperformance_bot.entity.api.archetype.MetagameRef"
+        },
+        "py/object": "pauperformance_bot.entity.api.archetype.Appearance"
+    },
     "game_type": [
         "Aggro"
     ],
+    "last_appearance": {
+        "date": "2024-02-24",
+        "metagame": {
+            "date": "2024-02-09",
+            "decks": null,
+            "label": "mkm",
+            "metagame": "121",
+            "name": "Murders at Karlov Manor",
+            "py/object": "pauperformance_bot.entity.api.archetype.MetagameRef"
+        },
+        "py/object": "pauperformance_bot.entity.api.archetype.Appearance"
+    },
     "must_have_cards": [],
     "must_not_have_cards": [],
     "name": "Aristocrats",
@@ -31,96 +54,533 @@
     "resource_sideboards": [],
     "resources": [],
     "resources_discord": [],
-    "staples": [
-        {
-            "link": "https://scryfall.com/card/stx/121/bayou-groff",
-            "name": "Bayou Groff",
-            "preview": "https://cards.scryfall.io/normal/front/4/a/4a82b032-b1ba-456c-abab-c0f7430b0587.jpg",
-            "py/object": "pauperformance_bot.entity.api.archetype.ArchetypeCard"
-        },
-        {
-            "link": "https://scryfall.com/card/2xm/78/bone-picker",
-            "name": "Bone Picker",
-            "preview": "https://cards.scryfall.io/normal/front/f/7/f7de3d27-f3e0-4aea-a737-6577de1bd1c5.jpg",
-            "py/object": "pauperformance_bot.entity.api.archetype.ArchetypeCard"
-        },
-        {
-            "link": "https://scryfall.com/card/2x2/139/brindle-shoat",
-            "name": "Brindle Shoat",
-            "preview": "https://cards.scryfall.io/normal/front/0/a/0a005933-e206-4b14-9a0f-755fae6c5a2a.jpg",
-            "py/object": "pauperformance_bot.entity.api.archetype.ArchetypeCard"
-        },
-        {
-            "link": "https://scryfall.com/card/2xm/79/cast-down",
-            "name": "Cast Down",
-            "preview": "https://cards.scryfall.io/normal/front/4/8/480fecdd-5978-47e6-9c25-7a04cdf616db.jpg",
-            "py/object": "pauperformance_bot.entity.api.archetype.ArchetypeCard"
-        },
-        {
-            "link": "https://scryfall.com/card/usg/132/duress",
-            "name": "Duress",
-            "preview": "https://cards.scryfall.io/normal/front/c/a/ca367f49-0f4a-4b7f-8104-851893fbcd8a.jpg",
-            "py/object": "pauperformance_bot.entity.api.archetype.ArchetypeCard"
-        },
-        {
-            "link": "https://scryfall.com/card/cmr/128/fleshbag-marauder",
-            "name": "Fleshbag Marauder",
-            "preview": "https://cards.scryfall.io/normal/front/4/0/4002b3a4-e00e-44ed-8989-d553e5d7d6c8.jpg",
-            "py/object": "pauperformance_bot.entity.api.archetype.ArchetypeCard"
-        },
-        {
-            "link": "https://scryfall.com/card/lea/294/forest",
-            "name": "Forest",
-            "preview": "https://cards.scryfall.io/normal/front/6/f/6f1c8cb0-38eb-408b-94e8-16db83999b3b.jpg",
-            "py/object": "pauperformance_bot.entity.api.archetype.ArchetypeCard"
-        },
-        {
-            "link": "https://scryfall.com/card/dmu/248/haunted-mire",
-            "name": "Haunted Mire",
-            "preview": "https://cards.scryfall.io/normal/front/1/6/16f5e958-56e6-4666-a534-24deba6f652d.jpg",
-            "py/object": "pauperformance_bot.entity.api.archetype.ArchetypeCard"
-        },
-        {
-            "link": "https://scryfall.com/card/ulg/110/rancor",
-            "name": "Rancor",
-            "preview": "https://cards.scryfall.io/normal/front/5/9/59e256c2-38df-4012-9308-ce17dd889e5f.jpg",
-            "py/object": "pauperformance_bot.entity.api.archetype.ArchetypeCard"
-        },
-        {
-            "link": "https://scryfall.com/card/lea/290/swamp",
-            "name": "Swamp",
-            "preview": "https://cards.scryfall.io/normal/front/6/1/6176936d-72e2-4205-8871-4c5a4f1cb2d8.jpg",
-            "py/object": "pauperformance_bot.entity.api.archetype.ArchetypeCard"
-        },
-        {
-            "link": "https://scryfall.com/card/dka/76/tragic-slip",
-            "name": "Tragic Slip",
-            "preview": "https://cards.scryfall.io/normal/front/0/9/09666671-601e-4fca-bdfb-fb288bf2672c.jpg",
-            "py/object": "pauperformance_bot.entity.api.archetype.ArchetypeCard"
-        },
-        {
-            "link": "https://scryfall.com/card/ltr/111/troll-of-khazad-d%C3%BBm",
-            "name": "Troll of Khazad-dum",
-            "preview": "https://cards.scryfall.io/normal/front/a/6/a6539e26-b63b-4725-9407-caaf451de084.jpg",
-            "py/object": "pauperformance_bot.entity.api.archetype.ArchetypeCard"
-        },
-        {
-            "link": "https://scryfall.com/card/ulg/72/unearth",
-            "name": "Unearth",
-            "preview": "https://cards.scryfall.io/normal/front/b/6/b6cb2549-e485-44d6-9d65-7605c568909e.jpg",
-            "py/object": "pauperformance_bot.entity.api.archetype.ArchetypeCard"
-        },
-        {
-            "link": "https://scryfall.com/card/m21/126/village-rites",
-            "name": "Village Rites",
-            "preview": "https://cards.scryfall.io/normal/front/9/c/9c0f60a6-b5c8-4704-8b61-94e8fc463e5d.jpg",
-            "py/object": "pauperformance_bot.entity.api.archetype.ArchetypeCard"
-        },
-        {
-            "link": "https://scryfall.com/card/dka/134/young-wolf",
-            "name": "Young Wolf",
-            "preview": "https://cards.scryfall.io/normal/front/0/c/0c39aa40-ef5f-40f1-a6dd-fbce91172c50.jpg",
-            "py/object": "pauperformance_bot.entity.api.archetype.ArchetypeCard"
-        }
-    ]
+    "typical_list": {
+        "decks": 2,
+        "ended_by_bans": [],
+        "era_end": null,
+        "era_start": null,
+        "first_date": "2024-01-06",
+        "last_date": "2024-02-24",
+        "later_decks": 0,
+        "main": [
+            {
+                "at_least": [
+                    1.0,
+                    1.0,
+                    1.0,
+                    1.0
+                ],
+                "average": 7.5,
+                "banned": false,
+                "link": "https://scryfall.com/card/lea/290/swamp",
+                "name": "Swamp",
+                "preview": "https://cards.scryfall.io/normal/front/6/1/6176936d-72e2-4205-8871-4c5a4f1cb2d8.jpg",
+                "py/object": "pauperformance_bot.entity.api.archetype.TypicalCard",
+                "type_line": "Basic Land \u2014 Swamp",
+                "typical": 6
+            },
+            {
+                "at_least": [
+                    1.0,
+                    1.0,
+                    1.0,
+                    1.0
+                ],
+                "average": 4.0,
+                "banned": false,
+                "link": "https://scryfall.com/card/stx/121/bayou-groff",
+                "name": "Bayou Groff",
+                "preview": "https://cards.scryfall.io/normal/front/4/a/4a82b032-b1ba-456c-abab-c0f7430b0587.jpg",
+                "py/object": "pauperformance_bot.entity.api.archetype.TypicalCard",
+                "type_line": "Creature \u2014 Plant Dog",
+                "typical": 4
+            },
+            {
+                "at_least": [
+                    1.0,
+                    1.0,
+                    1.0,
+                    1.0
+                ],
+                "average": 4.0,
+                "banned": false,
+                "link": "https://scryfall.com/card/2x2/139/brindle-shoat",
+                "name": "Brindle Shoat",
+                "preview": "https://cards.scryfall.io/normal/front/0/a/0a005933-e206-4b14-9a0f-755fae6c5a2a.jpg",
+                "py/object": "pauperformance_bot.entity.api.archetype.TypicalCard",
+                "type_line": "Creature \u2014 Boar",
+                "typical": 4
+            },
+            {
+                "at_least": [
+                    1.0,
+                    1.0,
+                    1.0,
+                    1.0
+                ],
+                "average": 5.5,
+                "banned": false,
+                "link": "https://scryfall.com/card/lea/294/forest",
+                "name": "Forest",
+                "preview": "https://cards.scryfall.io/normal/front/6/f/6f1c8cb0-38eb-408b-94e8-16db83999b3b.jpg",
+                "py/object": "pauperformance_bot.entity.api.archetype.TypicalCard",
+                "type_line": "Basic Land \u2014 Forest",
+                "typical": 4
+            },
+            {
+                "at_least": [
+                    1.0,
+                    1.0,
+                    1.0,
+                    1.0
+                ],
+                "average": 4.0,
+                "banned": false,
+                "link": "https://scryfall.com/card/m21/126/village-rites",
+                "name": "Village Rites",
+                "preview": "https://cards.scryfall.io/normal/front/9/c/9c0f60a6-b5c8-4704-8b61-94e8fc463e5d.jpg",
+                "py/object": "pauperformance_bot.entity.api.archetype.TypicalCard",
+                "type_line": "Instant",
+                "typical": 4
+            },
+            {
+                "at_least": [
+                    1.0,
+                    1.0,
+                    1.0,
+                    1.0
+                ],
+                "average": 4.0,
+                "banned": false,
+                "link": "https://scryfall.com/card/dka/134/young-wolf",
+                "name": "Young Wolf",
+                "preview": "https://cards.scryfall.io/normal/front/0/c/0c39aa40-ef5f-40f1-a6dd-fbce91172c50.jpg",
+                "py/object": "pauperformance_bot.entity.api.archetype.TypicalCard",
+                "type_line": "Creature \u2014 Wolf",
+                "typical": 4
+            },
+            {
+                "at_least": [
+                    1.0,
+                    1.0,
+                    0.5,
+                    0.0
+                ],
+                "average": 2.5,
+                "banned": false,
+                "link": "https://scryfall.com/card/2xm/78/bone-picker",
+                "name": "Bone Picker",
+                "preview": "https://cards.scryfall.io/normal/front/f/7/f7de3d27-f3e0-4aea-a737-6577de1bd1c5.jpg",
+                "py/object": "pauperformance_bot.entity.api.archetype.TypicalCard",
+                "type_line": "Creature \u2014 Bird",
+                "typical": 3
+            },
+            {
+                "at_least": [
+                    1.0,
+                    1.0,
+                    1.0,
+                    0.0
+                ],
+                "average": 3.0,
+                "banned": false,
+                "link": "https://scryfall.com/card/2xm/79/cast-down",
+                "name": "Cast Down",
+                "preview": "https://cards.scryfall.io/normal/front/4/8/480fecdd-5978-47e6-9c25-7a04cdf616db.jpg",
+                "py/object": "pauperformance_bot.entity.api.archetype.TypicalCard",
+                "type_line": "Instant",
+                "typical": 3
+            },
+            {
+                "at_least": [
+                    1.0,
+                    1.0,
+                    1.0,
+                    0.5
+                ],
+                "average": 3.5,
+                "banned": false,
+                "link": "https://scryfall.com/card/ulg/110/rancor",
+                "name": "Rancor",
+                "preview": "https://cards.scryfall.io/normal/front/5/9/59e256c2-38df-4012-9308-ce17dd889e5f.jpg",
+                "py/object": "pauperformance_bot.entity.api.archetype.TypicalCard",
+                "type_line": "Enchantment \u2014 Aura",
+                "typical": 3
+            },
+            {
+                "at_least": [
+                    0.5,
+                    0.5,
+                    0.5,
+                    0.5
+                ],
+                "average": 4.0,
+                "banned": false,
+                "link": "https://scryfall.com/card/bfz/163/blisterpod",
+                "name": "Blisterpod",
+                "preview": "https://cards.scryfall.io/normal/front/e/1/e16f1803-634a-41b0-ae21-484d6f914a0d.jpg",
+                "py/object": "pauperformance_bot.entity.api.archetype.TypicalCard",
+                "type_line": "Creature \u2014 Eldrazi Drone",
+                "typical": 3
+            },
+            {
+                "at_least": [
+                    0.5,
+                    0.5,
+                    0.5,
+                    0.5
+                ],
+                "average": 4.0,
+                "banned": false,
+                "link": "https://scryfall.com/card/scg/59/carrion-feeder",
+                "name": "Carrion Feeder",
+                "preview": "https://cards.scryfall.io/normal/front/8/8/88042031-64af-4f84-85d5-95992b43aa6c.jpg",
+                "py/object": "pauperformance_bot.entity.api.archetype.TypicalCard",
+                "type_line": "Creature \u2014 Zombie",
+                "typical": 3
+            },
+            {
+                "at_least": [
+                    0.5,
+                    0.5,
+                    0.5,
+                    0.5
+                ],
+                "average": 4.0,
+                "banned": false,
+                "link": "https://scryfall.com/card/lci/105/fanatical-offering",
+                "name": "Fanatical Offering",
+                "preview": "https://cards.scryfall.io/normal/front/d/8/d896dd52-b134-4b55-ab91-ccb05ecc50f4.jpg",
+                "py/object": "pauperformance_bot.entity.api.archetype.TypicalCard",
+                "type_line": "Instant",
+                "typical": 3
+            },
+            {
+                "at_least": [
+                    1.0,
+                    1.0,
+                    0.5,
+                    0.0
+                ],
+                "average": 2.5,
+                "banned": false,
+                "link": "https://scryfall.com/card/cmr/128/fleshbag-marauder",
+                "name": "Fleshbag Marauder",
+                "preview": "https://cards.scryfall.io/normal/front/4/0/4002b3a4-e00e-44ed-8989-d553e5d7d6c8.jpg",
+                "py/object": "pauperformance_bot.entity.api.archetype.TypicalCard",
+                "type_line": "Creature \u2014 Zombie Warrior",
+                "typical": 2
+            },
+            {
+                "at_least": [
+                    1.0,
+                    1.0,
+                    0.5,
+                    0.5
+                ],
+                "average": 3.0,
+                "banned": false,
+                "link": "https://scryfall.com/card/dmu/248/haunted-mire",
+                "name": "Haunted Mire",
+                "preview": "https://cards.scryfall.io/normal/front/1/6/16f5e958-56e6-4666-a534-24deba6f652d.jpg",
+                "py/object": "pauperformance_bot.entity.api.archetype.TypicalCard",
+                "type_line": "Land \u2014 Swamp Forest",
+                "typical": 2
+            },
+            {
+                "at_least": [
+                    1.0,
+                    1.0,
+                    0.5,
+                    0.0
+                ],
+                "average": 2.5,
+                "banned": false,
+                "link": "https://scryfall.com/card/ltr/111/troll-of-khazad-d%C3%BBm",
+                "name": "Troll of Khazad-dum",
+                "preview": "https://cards.scryfall.io/normal/front/a/6/a6539e26-b63b-4725-9407-caaf451de084.jpg",
+                "py/object": "pauperformance_bot.entity.api.archetype.TypicalCard",
+                "type_line": "Creature \u2014 Troll",
+                "typical": 2
+            },
+            {
+                "at_least": [
+                    0.5,
+                    0.5,
+                    0.5,
+                    0.0
+                ],
+                "average": 3.0,
+                "banned": false,
+                "link": "https://scryfall.com/card/mbs/107/flayer-husk",
+                "name": "Flayer Husk",
+                "preview": "https://cards.scryfall.io/normal/front/c/b/cbd47a02-5a6e-4daa-9877-f65c8639c569.jpg",
+                "py/object": "pauperformance_bot.entity.api.archetype.TypicalCard",
+                "type_line": "Artifact \u2014 Equipment",
+                "typical": 2
+            },
+            {
+                "at_least": [
+                    0.5,
+                    0.5,
+                    0.5,
+                    0.0
+                ],
+                "average": 3.0,
+                "banned": false,
+                "link": "https://scryfall.com/card/wwk/138/khalni-garden",
+                "name": "Khalni Garden",
+                "preview": "https://cards.scryfall.io/normal/front/1/c/1cc6a5e6-0b73-4488-8954-4b168ce7106d.jpg",
+                "py/object": "pauperformance_bot.entity.api.archetype.TypicalCard",
+                "type_line": "Land",
+                "typical": 2
+            },
+            {
+                "at_least": [
+                    0.5,
+                    0.5,
+                    0.5,
+                    0.5
+                ],
+                "average": 4.0,
+                "banned": false,
+                "link": "https://scryfall.com/card/afr/119/shambling-ghast",
+                "name": "Shambling Ghast",
+                "preview": "https://cards.scryfall.io/normal/front/d/9/d96198a7-dd19-4940-bf8f-23135011fc84.jpg",
+                "py/object": "pauperformance_bot.entity.api.archetype.TypicalCard",
+                "type_line": "Creature \u2014 Zombie",
+                "typical": 2
+            },
+            {
+                "at_least": [
+                    0.5,
+                    0.5,
+                    0.5,
+                    0.0
+                ],
+                "average": 3.0,
+                "banned": false,
+                "link": "https://scryfall.com/card/ulg/72/unearth",
+                "name": "Unearth",
+                "preview": "https://cards.scryfall.io/normal/front/b/6/b6cb2549-e485-44d6-9d65-7605c568909e.jpg",
+                "py/object": "pauperformance_bot.entity.api.archetype.TypicalCard",
+                "type_line": "Sorcery",
+                "typical": 2
+            },
+            {
+                "at_least": [
+                    1.0,
+                    0.0,
+                    0.0,
+                    0.0
+                ],
+                "average": 1.0,
+                "banned": false,
+                "link": "https://scryfall.com/card/dka/76/tragic-slip",
+                "name": "Tragic Slip",
+                "preview": "https://cards.scryfall.io/normal/front/0/9/09666671-601e-4fca-bdfb-fb288bf2672c.jpg",
+                "py/object": "pauperformance_bot.entity.api.archetype.TypicalCard",
+                "type_line": "Instant",
+                "typical": 1
+            },
+            {
+                "at_least": [
+                    0.5,
+                    0.0,
+                    0.0,
+                    0.0
+                ],
+                "average": 1.0,
+                "banned": false,
+                "link": "https://scryfall.com/card/ltr/169/generous-ent",
+                "name": "Generous Ent",
+                "preview": "https://cards.scryfall.io/normal/front/8/5/85d22d5d-3875-42ff-b51e-c6e21db201f5.jpg",
+                "py/object": "pauperformance_bot.entity.api.archetype.TypicalCard",
+                "type_line": "Creature \u2014 Treefolk",
+                "typical": 1
+            }
+        ],
+        "metagames": [
+            {
+                "date": "2024-02-09",
+                "decks": 1,
+                "label": "mkm",
+                "metagame": "121",
+                "name": "Murders at Karlov Manor",
+                "py/object": "pauperformance_bot.entity.api.archetype.MetagameRef"
+            },
+            {
+                "date": "2023-12-04",
+                "decks": 1,
+                "label": "BNR",
+                "metagame": "119",
+                "name": "Banned & Restricted Announcement",
+                "py/object": "pauperformance_bot.entity.api.archetype.MetagameRef"
+            }
+        ],
+        "py/object": "pauperformance_bot.entity.api.archetype.TypicalList",
+        "side": [
+            {
+                "at_least": [
+                    1.0,
+                    1.0,
+                    1.0,
+                    0.0
+                ],
+                "average": 3.0,
+                "banned": false,
+                "link": "https://scryfall.com/card/usg/132/duress",
+                "name": "Duress",
+                "preview": "https://cards.scryfall.io/normal/front/c/a/ca367f49-0f4a-4b7f-8104-851893fbcd8a.jpg",
+                "py/object": "pauperformance_bot.entity.api.archetype.TypicalCard",
+                "type_line": "Sorcery",
+                "typical": 3
+            },
+            {
+                "at_least": [
+                    0.5,
+                    0.5,
+                    0.5,
+                    0.5
+                ],
+                "average": 4.0,
+                "banned": false,
+                "link": "https://scryfall.com/card/mor/118/deglamer",
+                "name": "Deglamer",
+                "preview": "https://cards.scryfall.io/normal/front/9/8/985b43aa-58f0-42fc-9ef0-a7925727d58f.jpg",
+                "py/object": "pauperformance_bot.entity.api.archetype.TypicalCard",
+                "type_line": "Instant",
+                "typical": 2
+            },
+            {
+                "at_least": [
+                    0.5,
+                    0.5,
+                    0.5,
+                    0.0
+                ],
+                "average": 3.0,
+                "banned": false,
+                "link": "https://scryfall.com/card/shm/66/faerie-macabre",
+                "name": "Faerie Macabre",
+                "preview": "https://cards.scryfall.io/normal/front/e/a/ead8befa-27dd-4ec4-b317-1c231407e0ac.jpg",
+                "py/object": "pauperformance_bot.entity.api.archetype.TypicalCard",
+                "type_line": "Creature \u2014 Faerie Rogue",
+                "typical": 2
+            },
+            {
+                "at_least": [
+                    0.5,
+                    0.5,
+                    0.0,
+                    0.0
+                ],
+                "average": 2.0,
+                "banned": false,
+                "link": "https://scryfall.com/card/cmr/128/fleshbag-marauder",
+                "name": "Fleshbag Marauder",
+                "preview": "https://cards.scryfall.io/normal/front/4/0/4002b3a4-e00e-44ed-8989-d553e5d7d6c8.jpg",
+                "py/object": "pauperformance_bot.entity.api.archetype.TypicalCard",
+                "type_line": "Creature \u2014 Zombie Warrior",
+                "typical": 2
+            },
+            {
+                "at_least": [
+                    0.5,
+                    0.0,
+                    0.0,
+                    0.0
+                ],
+                "average": 1.0,
+                "banned": false,
+                "link": "https://scryfall.com/card/frf/72/gurmag-angler",
+                "name": "Gurmag Angler",
+                "preview": "https://cards.scryfall.io/normal/front/c/6/c60a8cf1-a8c7-4f45-bbd3-188fab2652f9.jpg",
+                "py/object": "pauperformance_bot.entity.api.archetype.TypicalCard",
+                "type_line": "Creature \u2014 Zombie Fish",
+                "typical": 1
+            },
+            {
+                "at_least": [
+                    0.5,
+                    0.5,
+                    0.5,
+                    0.0
+                ],
+                "average": 3.0,
+                "banned": false,
+                "link": "https://scryfall.com/card/khm/184/masked-vandal",
+                "name": "Masked Vandal",
+                "preview": "https://cards.scryfall.io/normal/front/f/0/f0a9c72a-e450-41e3-80e5-06f2f1171245.jpg",
+                "py/object": "pauperformance_bot.entity.api.archetype.TypicalCard",
+                "type_line": "Creature \u2014 Shapeshifter",
+                "typical": 1
+            },
+            {
+                "at_least": [
+                    0.5,
+                    0.5,
+                    0.5,
+                    0.0
+                ],
+                "average": 3.0,
+                "banned": false,
+                "link": "https://scryfall.com/card/exo/67/nausea",
+                "name": "Nausea",
+                "preview": "https://cards.scryfall.io/normal/front/a/1/a10531d8-fc99-4a2b-94b0-97a25521d725.jpg",
+                "py/object": "pauperformance_bot.entity.api.archetype.TypicalCard",
+                "type_line": "Sorcery",
+                "typical": 1
+            },
+            {
+                "at_least": [
+                    0.5,
+                    0.5,
+                    0.5,
+                    0.0
+                ],
+                "average": 3.0,
+                "banned": false,
+                "link": "https://scryfall.com/card/som/187/nihil-spellbomb",
+                "name": "Nihil Spellbomb",
+                "preview": "https://cards.scryfall.io/normal/front/6/0/603d217b-6375-46fc-992a-8dbd779da1e5.jpg",
+                "py/object": "pauperformance_bot.entity.api.archetype.TypicalCard",
+                "type_line": "Artifact",
+                "typical": 1
+            },
+            {
+                "at_least": [
+                    0.5,
+                    0.5,
+                    0.0,
+                    0.0
+                ],
+                "average": 2.0,
+                "banned": false,
+                "link": "https://scryfall.com/card/ulg/72/unearth",
+                "name": "Unearth",
+                "preview": "https://cards.scryfall.io/normal/front/b/6/b6cb2549-e485-44d6-9d65-7605c568909e.jpg",
+                "py/object": "pauperformance_bot.entity.api.archetype.TypicalCard",
+                "type_line": "Sorcery",
+                "typical": 1
+            },
+            {
+                "at_least": [
+                    0.5,
+                    0.5,
+                    0.5,
+                    0.0
+                ],
+                "average": 3.0,
+                "banned": false,
+                "link": "https://scryfall.com/card/iko/102/unexpected-fangs",
+                "name": "Unexpected Fangs",
+                "preview": "https://cards.scryfall.io/normal/front/a/a/aa6494ad-a35e-4b09-8623-7740f3c20b0b.jpg",
+                "py/object": "pauperformance_bot.entity.api.archetype.TypicalCard",
+                "type_line": "Instant",
+                "typical": 1
+            }
+        ],
+        "started_by_bans": []
+    }
 }
