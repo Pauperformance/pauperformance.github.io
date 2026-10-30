@@ -1,4 +1,4 @@
-import { useState, useEffect, useMemo, useDeferredValue, useLayoutEffect, useRef } from 'react'
+import { Fragment, useState, useEffect, useMemo, useDeferredValue, useLayoutEffect, useRef } from 'react'
 import { useWindowVirtualizer } from '@tanstack/react-virtual'
 import Layout from '../components/Layout'
 import CardLink from '../components/PoolCardLink'
@@ -6,7 +6,8 @@ import { useCardPreview } from '../components/CardPreview'
 import { useSearchShortcut, searchShortcutLabel } from '../utils/useSearchShortcut'
 import { formatDate } from '../utils/dates'
 import { metagameSlug } from '../utils/slugs'
-import { Link } from 'react-router-dom'
+import { Link, useSearchParams } from 'react-router-dom'
+import MetagameFlow from '../components/MetagameFlow'
 
 // Metagames: one per event that changed the Pauper card pool (sets introducing
 // new Pauper cards, B&R announcements), from Myr's metagame index. Codes below
@@ -156,31 +157,9 @@ function MetagameEntry({ metagame, searchQuery, poolUrls, open, onToggle, bindPr
   )
 }
 
-export default function MetagameIndex() {
-  const [metagames, setMetagames] = useState([])
-  const { bind: bindPreview, preview } = useCardPreview()
-  const [loading, setLoading] = useState(true)
-  const [error, setError] = useState(false)
+// metagames: newest first.
+function MetagameList({ metagames, poolUrls, bindPreview }) {
   const [search, setSearch] = useState('')
-
-  useEffect(() => {
-    fetch('/data/metagame_index.json')
-      .then(r => r.json())
-      .then(data => { setMetagames([...data].reverse()); setLoading(false) })
-      .catch(() => { setError(true); setLoading(false) })
-  }, [])
-
-  const launched = useMemo(() => metagames.filter(m => m.code >= 0).length, [metagames])
-  // the Scryfall URL of each card's printing in the set that introduced it
-  const poolUrls = useMemo(() => {
-    const urls = new Map()
-    for (const m of metagames) for (const s of m.sets) for (const c of s.cards) {
-      urls.set(c.name, c.url)
-      urls.set(c.name.split(' // ')[0], c.url)  // announcement names use the front face
-    }
-    return urls
-  }, [metagames])
-  const history = metagames.length - launched
   const searchRef = useSearchShortcut()
 
   // The input updates immediately; filtering and rendering lag behind it.
@@ -205,7 +184,7 @@ export default function MetagameIndex() {
   const [scrollMargin, setScrollMargin] = useState(0)
   useLayoutEffect(() => {
     if (listRef.current) setScrollMargin(listRef.current.getBoundingClientRect().top + window.scrollY)
-  }, [loading, shown.length])
+  }, [shown.length])
   const virtualizer = useWindowVirtualizer({
     count: shown.length,
     estimateSize: () => 96,
@@ -218,10 +197,109 @@ export default function MetagameIndex() {
   const paddingBottom = rows.length > 0 ? virtualizer.getTotalSize() - (rows[rows.length - 1].end - scrollMargin) : 0
 
   return (
+    <>
+      <div className="flex gap-3">
+        <div className="relative flex-1">
+          <input
+            ref={searchRef}
+            type="search"
+            placeholder={`Search for a card, set name, metagame or Scryfall code... (${searchShortcutLabel})`}
+            value={search}
+            onChange={e => setSearch(e.target.value)}
+            onKeyDown={e => { if (e.key === 'Enter') e.target.blur() }}
+            className="w-full bg-gray-900 border border-gray-600 rounded-lg px-4 py-2 pr-8 text-sm text-gray-100 placeholder-gray-500 focus:outline-none focus:border-amber-400 [&::-webkit-search-cancel-button]:hidden"
+          />
+          {search && (
+            <button onClick={() => setSearch('')} className="absolute right-2 top-1/2 -translate-y-1/2 text-gray-500 hover:text-gray-300 transition-colors" aria-label="Clear search">
+              <svg className="w-4 h-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round"><path d="M18 6 6 18M6 6l12 12"/></svg>
+            </button>
+          )}
+        </div>
+      </div>
+
+      {shown.length === 0 ? (
+        <p className="text-center text-gray-500 text-sm py-12">No results match your search.</p>
+      ) : (
+        <div ref={listRef} className="relative">
+          <div className="absolute left-3 top-2 bottom-2 w-px bg-gray-700" />
+          <div style={{ paddingTop, paddingBottom }}>
+            {rows.map(row => {
+              const m = shown[row.index]
+              return (
+                <div key={m.code} data-index={row.index} ref={virtualizer.measureElement} className="pb-6">
+                  <MetagameEntry
+                    metagame={m}
+                    searchQuery={query}
+                    poolUrls={poolUrls}
+                    open={!!query !== toggled.has(m.code)}
+                    onToggle={() => toggle(m.code)}
+                    bindPreview={bindPreview}
+                  />
+                </div>
+              )
+            })}
+          </div>
+        </div>
+      )}
+    </>
+  )
+}
+
+// The metagames as a flow through time (the default: scrolling moves the
+// timeline and updates the widgets), or as a searchable list (?view=list).
+export default function MetagameIndex() {
+  const [index, setIndex] = useState([])  // oldest first, as Myr exports it
+  const { bind: bindPreview, preview } = useCardPreview()
+  const [loading, setLoading] = useState(true)
+  const [error, setError] = useState(false)
+  const [params, setParams] = useSearchParams()
+  const view = params.get('view') === 'list' ? 'list' : 'flow'
+
+  useEffect(() => {
+    fetch('/data/metagame_index.json')
+      .then(r => r.json())
+      .then(data => { setIndex(data); setLoading(false) })
+      .catch(() => { setError(true); setLoading(false) })
+  }, [])
+
+  const metagames = useMemo(() => [...index].reverse(), [index])
+  const launched = useMemo(() => index.filter(m => m.code >= 0).length, [index])
+  // the Scryfall URL of each card's printing in the set that introduced it
+  const poolUrls = useMemo(() => {
+    const urls = new Map()
+    for (const m of index) for (const s of m.sets) for (const c of s.cards) {
+      urls.set(c.name, c.url)
+      urls.set(c.name.split(' // ')[0], c.url)  // announcement names use the front face
+    }
+    return urls
+  }, [index])
+  const history = index.length - launched
+
+  const switchTo = v => {
+    if (v === view) return
+    setParams(v === 'list' ? { view: 'list' } : {})
+    window.scrollTo({ top: 0 })
+  }
+
+  return (
     <Layout>
       <div className="space-y-6">
         <div>
-          <h1 className="text-2xl font-bold text-white">Metagame Index</h1>
+          <div className="flex items-center gap-4 flex-wrap">
+            <h1 className="text-2xl font-bold text-white">Metagame Index</h1>
+            {/* styled as the Relevant/All switch of the Sets Index */}
+            <div className="inline-flex rounded-xl border border-gray-600 overflow-hidden text-sm font-semibold shrink-0" role="tablist">
+              {['flow', 'list'].map((v, i) => (
+                <Fragment key={v}>
+                  {i > 0 && <div className="w-px bg-gray-600" />}
+                  <button role="tab" aria-selected={view === v} onClick={() => switchTo(v)}
+                    className={`px-4 py-2 capitalize transition-colors ${view === v ? 'bg-amber-400 text-gray-900' : 'text-gray-400 hover:text-gray-200'}`}>
+                    {v}
+                  </button>
+                </Fragment>
+              ))}
+            </div>
+          </div>
           <p className="mt-2 text-gray-400 text-sm leading-relaxed">
             A new metagame starts whenever the pool of Pauper cards changes: a set introducing new commons, or a
             banned and restricted announcement. Metagame <span className="text-white font-mono">000</span> is the
@@ -231,54 +309,14 @@ export default function MetagameIndex() {
           </p>
         </div>
 
-        <div className="flex gap-3">
-          <div className="relative flex-1">
-            <input
-              ref={searchRef}
-              type="search"
-              placeholder={`Search for a card, set name, metagame or Scryfall code... (${searchShortcutLabel})`}
-              value={search}
-              onChange={e => setSearch(e.target.value)}
-              onKeyDown={e => { if (e.key === 'Enter') e.target.blur() }}
-              className="w-full bg-gray-900 border border-gray-600 rounded-lg px-4 py-2 pr-8 text-sm text-gray-100 placeholder-gray-500 focus:outline-none focus:border-amber-400 [&::-webkit-search-cancel-button]:hidden"
-            />
-            {search && (
-              <button onClick={() => setSearch('')} className="absolute right-2 top-1/2 -translate-y-1/2 text-gray-500 hover:text-gray-300 transition-colors" aria-label="Clear search">
-                <svg className="w-4 h-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round"><path d="M18 6 6 18M6 6l12 12"/></svg>
-              </button>
-            )}
-          </div>
-        </div>
-
         {loading ? (
           <p className="text-gray-400 text-sm py-8 text-center">Loading...</p>
         ) : error ? (
           <p className="text-gray-400 text-sm py-8 text-center">The metagame index could not be loaded.</p>
+        ) : view === 'list' ? (
+          <MetagameList metagames={metagames} poolUrls={poolUrls} bindPreview={bindPreview} />
         ) : (
-          shown.length === 0 ? (
-            <p className="text-center text-gray-500 text-sm py-12">No results match your search.</p>
-          ) : (
-            <div ref={listRef} className="relative">
-              <div className="absolute left-3 top-2 bottom-2 w-px bg-gray-700" />
-              <div style={{ paddingTop, paddingBottom }}>
-                {rows.map(row => {
-                  const m = shown[row.index]
-                  return (
-                    <div key={m.code} data-index={row.index} ref={virtualizer.measureElement} className="pb-6">
-                      <MetagameEntry
-                        metagame={m}
-                        searchQuery={query}
-                        poolUrls={poolUrls}
-                        open={!!query !== toggled.has(m.code)}
-                        onToggle={() => toggle(m.code)}
-                        bindPreview={bindPreview}
-                      />
-                    </div>
-                  )
-                })}
-              </div>
-            </div>
-          )
+          <MetagameFlow index={index} poolUrls={poolUrls} bindPreview={bindPreview} />
         )}
       </div>
       {preview}
