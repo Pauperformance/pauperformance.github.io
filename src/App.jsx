@@ -1,12 +1,12 @@
 import { lazy, Suspense } from 'react'
-import { Routes, Route, Link } from 'react-router-dom'
+import { Routes, Route, Link, Navigate } from 'react-router-dom'
 import Layout from './components/Layout'
 
 const Home           = lazy(() => import('./pages/Home'))
 const ArchetypesIndex = lazy(() => import('./pages/ArchetypesIndex'))
 const ArchetypePage  = lazy(() => import('./pages/ArchetypePage'))
 const FamilyPage     = lazy(() => import('./pages/FamilyPage'))
-const FormatTimeline = lazy(() => import('./pages/FormatTimeline'))
+const Announcements  = lazy(() => import('./pages/Announcements'))
 const PauperPool     = lazy(() => import('./pages/PauperPool'))
 const MetagameIndex  = lazy(() => import('./pages/MetagameIndex'))
 const Creators       = lazy(() => import('./pages/Creators'))
@@ -19,7 +19,6 @@ const PlayerPage     = lazy(() => import('./pages/PlayerPage'))
 const BlindSpy       = lazy(() => import('./pages/BlindSpy'))
 const Diff            = lazy(() => import('./pages/Diff'))
 const FAQ            = lazy(() => import('./pages/FAQ'))
-const Contact        = lazy(() => import('./pages/Contact'))
 
 function NotFound() {
   return (
@@ -41,7 +40,8 @@ function App() {
         <Route path="/archetypes" element={<ArchetypesIndex />} />
         <Route path="/archetypes/:name" element={<ArchetypePage />} />
         <Route path="/families/:name" element={<FamilyPage />} />
-        <Route path="/timeline" element={<FormatTimeline />} />
+        <Route path="/announcements" element={<Announcements />} />
+        <Route path="/timeline" element={<Navigate to="/announcements" replace />} />
         <Route path="/sets" element={<PauperPool />} />
         <Route path="/metagames" element={<MetagameIndex />} />
         <Route path="/creators" element={<Creators />} />
@@ -54,7 +54,7 @@ function App() {
         <Route path="/blind-spy" element={<BlindSpy />} />
         <Route path="/diff" element={<Diff />} />
         <Route path="/faq" element={<FAQ />} />
-        <Route path="/contact" element={<Contact />} />
+        <Route path="/contact" element={<Navigate to="/" replace />} />
         <Route path="*" element={<NotFound />} />
       </Routes>
     </Suspense>
