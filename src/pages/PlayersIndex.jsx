@@ -2,6 +2,7 @@ import { useState, useEffect, useMemo, useRef } from 'react'
 import { useNavigate } from 'react-router-dom'
 import Layout from '../components/Layout'
 import { useSearchShortcut, searchShortcutLabel } from '../utils/useSearchShortcut'
+import { useEnterShortcut } from '../utils/useEnterShortcut'
 import { formatShortDate } from '../utils/dates'
 
 const PAGE_SIZE = 50
@@ -124,6 +125,11 @@ export default function PlayersIndex() {
 
   const totalPages = Math.ceil(sorted.length / PAGE_SIZE)
   const pagePlayers = sorted.slice(page * PAGE_SIZE, (page + 1) * PAGE_SIZE)
+
+  useEnterShortcut(() => {
+    if (pagePlayers.length > 0) navigate(`/players/${pagePlayers[0].slug}`)
+  }, searchRef)
+
   const paginationBar = (ref) => totalPages > 1 && (
     <div ref={ref} className="flex items-center justify-center gap-3 py-2">
       <button onClick={() => setPage(p => Math.max(0, p - 1))} disabled={page === 0}
