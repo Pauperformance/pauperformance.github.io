@@ -89,13 +89,14 @@ function CopiesCell({ share }) {
 }
 
 // A row of the typical list's table. No hover preview: the card images
-// beside the table have it.
-function TypicalCardRow({ card, cardPages }) {
+// beside the table have it. On touch devices a tap opens the preview sheet.
+function TypicalCardRow({ card, cardPages, bindPreview }) {
   const slug = cardLinkSlug(cardPages, card.name)
+  const handlers = bindPreview(card.name, { slug: slug || undefined, image: card.preview, hover: false })
   // Cards with no page (e.g. banned ones) are shown but not linked.
   const name = slug
-    ? <Link to={`/cards/${slug}`} className="truncate text-gray-200 hover:text-amber-400 transition-colors">{card.name}</Link>
-    : <span className="truncate text-gray-200">{card.name}</span>
+    ? <Link to={`/cards/${slug}`} {...handlers} className="truncate text-gray-200 hover:text-amber-400 transition-colors">{card.name}</Link>
+    : <span {...handlers} className="truncate text-gray-200">{card.name}</span>
   // basics (and the like) are played in any number: their average says more
   const anyNumber = BASIC_LAND.test(card.name) || card.average > 4
   return (
@@ -200,7 +201,7 @@ function TypicalBoard({ title, cards, grouped, cardPages, bindPreview }) {
   const [showOthers, setShowOthers] = useState(false)
   return (
     <div className="grid gap-4 lg:grid-cols-[minmax(0,30rem)_minmax(0,1fr)] items-start">
-      <TypicalTable title={title} cards={cards} cardPages={cardPages}
+      <TypicalTable title={title} cards={cards} cardPages={cardPages} bindPreview={bindPreview}
         showOthers={showOthers} onToggleOthers={() => setShowOthers(s => !s)} />
       <TypicalGallery title={title} cards={cards} grouped={grouped} showOthers={showOthers}
         cardPages={cardPages} bindPreview={bindPreview} />
@@ -208,11 +209,11 @@ function TypicalBoard({ title, cards, grouped, cardPages, bindPreview }) {
   )
 }
 
-function TypicalTable({ title, cards, cardPages, showOthers, onToggleOthers }) {
+function TypicalTable({ title, cards, cardPages, bindPreview, showOthers, onToggleOthers }) {
   const listed = cards.filter(c => c.typical > 0)
   const others = cards.filter(c => !c.typical)
   const total = listed.reduce((n, c) => n + c.typical, 0)
-  const row = card => <TypicalCardRow key={card.name} card={card} cardPages={cardPages} />
+  const row = card => <TypicalCardRow key={card.name} card={card} cardPages={cardPages} bindPreview={bindPreview} />
   return (
     <div className="border border-gray-700 rounded-xl overflow-hidden">
       <table className="w-full table-fixed text-sm bg-gray-900">
@@ -945,7 +946,7 @@ function ResourcesSection({ resources, discord, sideboards }) {
 export default function ArchetypePage() {
   const { name } = useParams()
   const navigate = useNavigate()
-  const { bind: bindPreview, preview } = useCardPreview()
+  const { bind: bindPreview, preview } = useCardPreview({ sheet: true })
   const [data, setData] = useState(null)
   const [notFound, setNotFound] = useState(false)
 
