@@ -115,7 +115,7 @@ for (const n of read('newspauper.json')) {
     if (n.family) link('families', nameToSlug(n.family), '/')
   }
   if (n.type === 'family') link('families', nameToSlug(n.name), '/')
-  if (n.type === 'timeline') for (const c of [...n.banned, ...n.unbanned]) card(c, '/')
+  if (n.type === 'announcement') for (const c of [...n.banned, ...n.unbanned]) card(c, '/')
 }
 
 // MetagameIndex

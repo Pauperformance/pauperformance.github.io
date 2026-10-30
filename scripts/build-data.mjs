@@ -477,10 +477,10 @@ const sets = setIndexRaw['py/reduce'][4]['py/tuple'].map(function(entry) {
 writeFileSync(join(outDir, 'sets.json'), JSON.stringify(sets))
 console.log('Built sets.json with ' + sets.length + ' entries (' + sets.filter(function(s) { return s.pauper_pool }).length + ' in Pauper pool).')
 
-// Copy format timeline as-is from source
-copyFileSync('assets/data/timeline.json', join(outDir, 'timeline.json'))
-const timeline = JSON.parse(readFileSync('assets/data/timeline.json', 'utf8'))
-console.log('Copied timeline.json with ' + timeline.length + ' entries.')
+// Copy announcements as-is from source
+copyFileSync('assets/data/announcements.json', join(outDir, 'announcements.json'))
+const announcements = JSON.parse(readFileSync('assets/data/announcements.json', 'utf8'))
+console.log('Copied announcements.json with ' + announcements.length + ' entries.')
 
 // Copy pauper pool from assets
 const pool = JSON.parse(readFileSync('assets/data/pauper_pool.json', 'utf8'))

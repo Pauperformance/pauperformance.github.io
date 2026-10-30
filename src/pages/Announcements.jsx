@@ -43,12 +43,12 @@ const mdComponents = {
   a: ({ href, children }) => <CardLink href={href}>{children}</CardLink>
 }
 
-export default function FormatTimeline() {
+export default function Announcements() {
   const [entries, setEntries] = useState([])
   const [loading, setLoading] = useState(true)
 
   useEffect(() => {
-    fetch('/data/timeline.json')
+    fetch('/data/announcements.json')
       .then(r => r.json())
       .then(data => { setEntries(data); setLoading(false) })
   }, [])
@@ -57,7 +57,7 @@ export default function FormatTimeline() {
     <Layout>
       <div className="space-y-6">
         <div>
-          <h1 className="text-2xl font-bold text-white">Format Timeline</h1>
+          <h1 className="text-2xl font-bold text-white">Announcements</h1>
           <p className="mt-2 text-gray-400 text-sm">The most important events in Pauper history.</p>
         </div>
 

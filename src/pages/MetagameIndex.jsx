@@ -167,7 +167,7 @@ export default function MetagameIndex() {
     const urls = new Map()
     for (const m of metagames) for (const s of m.sets) for (const c of s.cards) {
       urls.set(c.name, c.url)
-      urls.set(c.name.split(' // ')[0], c.url)  // timeline names use the front face
+      urls.set(c.name.split(' // ')[0], c.url)  // announcement names use the front face
     }
     return urls
   }, [metagames])

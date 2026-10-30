@@ -721,15 +721,15 @@ function useMetaView() {
 }
 
 
-// The news of the last two months, exported by Myr newest first: timeline
-// events, new metagames, and archetypes and families added to the Academy.
+// The news of the last two months, exported by Myr newest first:
+// announcements, new metagames, and archetypes and families added to the Academy.
 // Each kind of news: its name (the icon's tooltip) and icon (Lucide-style
 // stroke paths on a 24x24 grid).
 const NEWS_KINDS = {
-  // a clock turning back: the format's history
-  timeline: {
-    name: 'Timeline',
-    icon: <><path d="M3 12a9 9 0 1 0 9-9 9.75 9.75 0 0 0-6.74 2.74L3 8" /><path d="M3 3v5h5" /><path d="M12 7v5l4 2" /></>,
+  // a megaphone: an official announcement
+  announcement: {
+    name: 'Announcement',
+    icon: <><path d="m3 11 18-5v12L3 14v-3z" /><path d="M11.6 16.8a3 3 0 1 1-5.8-1.6" /></>,
   },
   // stacked layers: the card pool, one layer per metagame
   metagame: {
@@ -760,8 +760,8 @@ function NewsIcon({ kind }) {
 
 function newsTitle(entry) {
   switch (entry.type) {
-    case 'timeline':
-      return { to: '/timeline', text: entry.subtitle }
+    case 'announcement':
+      return { to: '/announcements', text: entry.subtitle }
     case 'metagame':
       return {
         to: '/metagames',
@@ -777,7 +777,7 @@ function newsTitle(entry) {
 }
 
 function NewsDetails({ entry, bindPreview }) {
-  if (entry.type === 'timeline') {
+  if (entry.type === 'announcement') {
     const cards = [
       ...entry.banned.map(name => ({ name, tone: 'banned' })),
       ...entry.unbanned.map(name => ({ name, tone: 'unbanned' })),
