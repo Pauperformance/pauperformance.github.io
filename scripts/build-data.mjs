@@ -1,5 +1,6 @@
 import { readFileSync, readdirSync, writeFileSync, unlinkSync, copyFileSync, mkdirSync, existsSync, statSync } from 'fs'
 import { join } from 'path'
+import { metagameSlug } from '../src/utils/slugs.js'
 
 const buildStart = Date.now()
 
@@ -745,6 +746,63 @@ const topDecks = metagameOut.slice(0, 16).map(entry => {
 })
 writeFileSync(join(outDir, 'top_decks.json'), JSON.stringify(topDecks))
 console.log(`Built top_decks.json with ${topDecks.length} entries.`)
+
+// The metagame pages: Myr's breakdown of each metagame (its export_metagames,
+// missing until its first export), with the metagame's sets and B&Rs from the
+// metagame index, and each archetype's mana, game type and image.
+const metagameDir = 'assets/data/metagame'
+const metagamesOutDir = join(outDir, 'metagames')
+mkdirSync(metagamesOutDir, { recursive: true })
+const indexEntries = existsSync('assets/data/metagame_index.json')
+  ? JSON.parse(readFileSync('assets/data/metagame_index.json', 'utf8'))
+  : []
+const indexBySlug = Object.fromEntries(indexEntries.map(m => [metagameSlug(m), m]))
+
+function slimMetagameRef(m) {
+  return m ? { metagame: m.metagame, label: m.label, name: m.name, date: m.date } : null
+}
+
+let metagamePages = 0
+for (const file of existsSync(metagameDir) ? readdirSync(metagameDir) : []) {
+  if (!file.endsWith('.json')) continue
+  const m = JSON.parse(readFileSync(join(metagameDir, file), 'utf8'))
+  const slug = metagameSlug(m.metagame)
+  const entry = indexBySlug[slug]
+  const archetypes = m.archetypes.map(a => {
+    const arch = archetypeMap[a.name]
+    const representative = arch && arch.representative_card
+    // the brews' mana and game types are all of them: nothing to show
+    const brew = a.name === 'Brew'
+    return {
+      name: a.name,
+      decks: a.decks,
+      tournaments: a.tournaments,
+      meta_share: a.meta_share,
+      previous_share: a.previous_share,
+      dominant_mana: brew ? [] : (arch && arch.dominant_mana) || [],
+      game_type: brew ? [] : (arch && arch.game_type) || [],
+      featured_image: (representative && representative.preview)
+        || (a.cards[0] && a.cards[0].preview) || null,
+      // play rate: the share of the archetype's decks playing the card
+      cards: a.cards.map(c => ({
+        name: c.name, link: c.link, preview: c.preview, banned: c.banned === true,
+        play_rate: c.at_least[0], average: c.average,
+      })),
+    }
+  })
+  writeFileSync(join(metagamesOutDir, slug + '.json'), JSON.stringify({
+    metagame: slimMetagameRef(m.metagame),
+    previous: slimMetagameRef(m.previous),
+    next: slimMetagameRef(m.next),
+    decks: m.decks,
+    tournaments: m.tournaments,
+    sets: entry ? entry.sets : [],
+    bans: entry ? entry.bans : [],
+    archetypes,
+  }))
+  metagamePages++
+}
+console.log('Built metagames/ with ' + metagamePages + ' metagames.')
 
 // Build global videos index
 var allVideos = []
