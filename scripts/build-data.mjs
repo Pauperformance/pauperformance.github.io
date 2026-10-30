@@ -762,12 +762,33 @@ function slimMetagameRef(m) {
   return m ? { metagame: m.metagame, label: m.label, name: m.name, date: m.date } : null
 }
 
+// The metagame flow on /metagames: each metagame's archetypes over
+// FLOW_MIN_SHARE (%), as [name, share, share in the previous metagame], the
+// others summed as one share, and the mana of every archetype shown, to colour
+// it the same in every metagame.
+const FLOW_MIN_SHARE = 2
+const flowMetagames = {}
+const flowMana = {}
+
 let metagamePages = 0
 for (const file of existsSync(metagameDir) ? readdirSync(metagameDir) : []) {
   if (!file.endsWith('.json')) continue
   const m = JSON.parse(readFileSync(join(metagameDir, file), 'utf8'))
   const slug = metagameSlug(m.metagame)
   const entry = indexBySlug[slug]
+  if (m.decks > 0) {
+    const shown = m.archetypes.filter(a => a.meta_share >= FLOW_MIN_SHARE)
+    for (const a of shown) {
+      const arch = archetypeMap[a.name]
+      flowMana[a.name] = a.name === 'Brew' ? [] : (arch && arch.dominant_mana) || []
+    }
+    flowMetagames[slug] = {
+      decks: m.decks,
+      shares: shown.map(a => [a.name, a.meta_share, a.previous_share]),
+      other: +m.archetypes.filter(a => a.meta_share < FLOW_MIN_SHARE)
+        .reduce((s, a) => s + a.meta_share, 0).toFixed(2),
+    }
+  }
   const archetypes = m.archetypes.map(a => {
     const arch = archetypeMap[a.name]
     const representative = arch && arch.representative_card
@@ -803,6 +824,8 @@ for (const file of existsSync(metagameDir) ? readdirSync(metagameDir) : []) {
   metagamePages++
 }
 console.log('Built metagames/ with ' + metagamePages + ' metagames.')
+writeFileSync(join(outDir, 'metagame_flow.json'), JSON.stringify({ mana: flowMana, metagames: flowMetagames }))
+console.log('Built metagame_flow.json with ' + Object.keys(flowMetagames).length + ' metagames.')
 
 // Build global videos index
 var allVideos = []
