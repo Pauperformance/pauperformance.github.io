@@ -2,6 +2,7 @@ import { useState, useEffect } from 'react'
 import { useParams, Link } from 'react-router-dom'
 import { nameToSlug } from '../utils/slugs'
 import Layout from '../components/Layout'
+import MtgoButtons from '../components/MtgoButtons'
 import { OracleText, useCardData } from '../components/CardPreview'
 import { cardLinkSlug, useCardPages } from '../utils/cardPages'
 import { formatDate } from '../utils/dates'
@@ -85,35 +86,6 @@ export default function DeckPage() {
   // the image of double-faced cards, listed by their front face only.
   const hoveredData = useCardData(hoveredCard)
   const hoveredImage = hoveredCard && (cardImages[hoveredCard] || (hoveredData && hoveredData.images[0]))
-  const [copied, setCopied] = useState(false)
-
-  function toMtgoText(decklist) {
-    const lines = (decklist.main || []).map(c => `${c.qty} ${c.name}`)
-    if (decklist.side && decklist.side.length) {
-      lines.push('')
-      decklist.side.forEach(c => lines.push(`${c.qty} ${c.name}`))
-    }
-    return lines.join('\n')
-  }
-
-  function handleDownload() {
-    const text = toMtgoText(deck.decklist)
-    const blob = new Blob([text], { type: 'text/plain' })
-    const url = URL.createObjectURL(blob)
-    const a = document.createElement('a')
-    a.href = url
-    a.download = `${id}.txt`
-    a.click()
-    URL.revokeObjectURL(url)
-  }
-
-  function handleCopy() {
-    navigator.clipboard.writeText(toMtgoText(deck.decklist)).then(() => {
-      setCopied(true)
-      setTimeout(() => setCopied(false), 2000)
-    })
-  }
-
   useEffect(() => {
     Promise.all([
       fetch('/data/card-images.json').then(r => r.json()),
@@ -207,16 +179,7 @@ export default function DeckPage() {
                       Compact View
                     </button>
                   </div>
-                  <button
-                    onClick={handleDownload}
-                    className="px-3 py-1.5 rounded-lg text-sm font-medium border border-gray-600 text-gray-400 hover:border-gray-400 hover:text-gray-200 transition-colors">
-                    ⤓ Download for MTGO
-                  </button>
-                  <button
-                    onClick={handleCopy}
-                    className="px-3 py-1.5 rounded-lg text-sm font-medium border border-gray-600 text-gray-400 hover:border-gray-400 hover:text-gray-200 transition-colors">
-                    {copied ? '✓ Copied!' : '⧉ Copy for MTGO'}
-                  </button>
+                  <MtgoButtons decklist={deck.decklist} fileName={`${id}.txt`} />
                   {/* Buy Deck button, hidden for now.
                   <a
                     href={`https://pauperformance.market/wizard?deck=https://pauperformance.com/decks/${id}`}
@@ -243,7 +206,9 @@ export default function DeckPage() {
                           className="w-full rounded-xl shadow-lg border border-gray-700"
                         />
                       ) : (
-                        <div className="w-full aspect-[5/7] rounded-xl border border-gray-800 bg-gray-900" />
+                        // no card hovered: the back of a card (Scryfall's standard back)
+                        <img src="/images/card-back.jpg" alt=""
+                          className="w-full rounded-xl shadow-lg border border-gray-700" />
                       )}
                     </div>
                     {hoveredCard && <OracleText card={hoveredData} className="w-56 xl:w-64 text-gray-200" />}
