@@ -1,6 +1,7 @@
 import { readFileSync, writeFileSync, mkdirSync } from 'fs'
 import { resolve, join } from 'path'
 import { fileURLToPath } from 'url'
+import { metagameSlug } from '../src/utils/slugs.js'
 
 const __dirname = fileURLToPath(new URL('.', import.meta.url))
 const root = resolve(__dirname, '..')
@@ -18,6 +19,7 @@ function nameToSlug(name) {
 
 const archetypes = JSON.parse(readFileSync(join(dataDir, 'archetypes.json'), 'utf-8'))
 const families = JSON.parse(readFileSync(join(dataDir, 'families.json'), 'utf-8'))
+const metagames = JSON.parse(readFileSync(join(dataDir, 'metagame_index.json'), 'utf-8'))
 
 const routes = [
   '/archetypes',
@@ -32,6 +34,7 @@ const routes = [
   '/faq',
   ...archetypes.map(a => `/archetypes/${nameToSlug(a.name)}`),
   ...families.map(f => `/families/${f.slug}`),
+  ...metagames.map(m => `/metagames/${metagameSlug(m)}`),
 ]
 
 const template = readFileSync(join(docsDir, 'index.html'), 'utf-8')
