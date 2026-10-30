@@ -1,0 +1,109 @@
+# This workflow updates the Academy metagame (the homepage chart) once a day
+# (at 05:43, off the top of the hour, when GitHub delays and drops many
+# scheduled runs): export the current MTGGoldfish Pauper metagame, classified
+# into Myr archetypes, rebuild the website and push everything to master.
+# It visits every MTGGoldfish archetype page, so it is kept out of the
+# 2-hourly myr-academy-update.
+
+name: myr-academy-metagame
+
+on:
+  schedule:
+    - cron: "43 5 * * *"
+  workflow_dispatch:
+
+concurrency:
+  group: myr-academy-metagame
+  cancel-in-progress: false
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    env:
+      DISCORD_BOT_TOKEN: ${{ secrets.DISCORD_BOT_TOKEN }}
+      DROPBOX_APP_KEY: ${{ secrets.DROPBOX_APP_KEY }}
+      DROPBOX_APP_SECRET: ${{ secrets.DROPBOX_APP_SECRET }}
+      DROPBOX_REFRESH_TOKEN: ${{ secrets.DROPBOX_REFRESH_TOKEN }}
+      MTGGOLDFISH_PAUPERFORMANCE_PASSWORD: ${{ secrets.MTGGOLDFISH_PAUPERFORMANCE_PASSWORD }}
+      MTGGOLDFISH_PAUPERFORMANCE_USERNAME: ${{ secrets.MTGGOLDFISH_PAUPERFORMANCE_USERNAME }}
+      TWITCH_APP_CLIENT_ID: ${{ secrets.TWITCH_APP_CLIENT_ID }}
+      TWITCH_APP_CLIENT_SECRET: ${{ secrets.TWITCH_APP_CLIENT_SECRET }}
+      YOUTUBE_API_KEY: ${{ secrets.YOUTUBE_API_KEY }}
+      # Myr reads ACADEMY_PATH at import time: every step needs it.
+      ACADEMY_PATH: ${{ github.workspace }}/academy
+    steps:
+
+    # pauperformance-bot is private: it is cloned with a read-only deploy key
+    # (public key on pauperformance-bot, private key in MYR_DEPLOY_KEY).
+    - name: Clone Myr repository
+      uses: actions/checkout@v4
+      with:
+        repository: 'Pauperformance/pauperformance-bot'
+        ref: 'master'
+        path: './myr'
+        ssh-key: ${{ secrets.MYR_DEPLOY_KEY }}
+        persist-credentials: false
+
+    - name: Clone Academy repository
+      uses: actions/checkout@v4
+      with:
+        ref: 'master'
+        path: './academy'
+
+    - name: Set up Python 3
+      uses: actions/setup-python@v5
+      with:
+        python-version: '3.11'
+
+    - name: Install Myr
+      run: |
+        python -m venv venv
+        source venv/bin/activate
+        python -m pip install --upgrade pip setuptools wheel
+        python -m pip install ./myr
+
+    # Run from the workspace root, so that Python imports the installed
+    # package rather than the source tree in ./myr.
+    - name: Export metagame
+      run: |
+        source venv/bin/activate
+        myr academy metagame
+
+    - name: Set up Node
+      uses: actions/setup-node@v4
+      with:
+        node-version: '22'
+        cache: 'npm'
+        cache-dependency-path: academy/package-lock.json
+
+    # The React site serves docs/, generated from the assets Myr just updated.
+    - name: Build website
+      working-directory: academy
+      run: |
+        npm ci
+        npm run build
+
+    - name: Push changes
+      working-directory: academy
+      run: |
+        git config --local user.email "ShadowTemplate@users.noreply.github.com"
+        git config --local user.name "Myr"
+        git add -A
+        git status --short
+        if git diff --cached --quiet; then
+          echo "Nothing to commit."
+        else
+          git commit -m "Myr metagame: $(date -u +'%Y-%m-%d, %H:%M:%S')"
+          # master may have moved meanwhile (e.g. a Myr update). On conflicts
+          # keep this run's side (in a rebase, "theirs" is the commit being
+          # replayed), then rebuild docs/ from the rebased sources, since this
+          # push does not trigger build-site.
+          base=$(git rev-parse HEAD~1)
+          git pull --rebase -X theirs
+          if [ "$(git rev-parse HEAD~1)" != "$base" ]; then
+            npm run build
+            git add -A docs
+            git diff --cached --quiet || git commit --amend --no-edit
+          fi
+          git push
+        fi
