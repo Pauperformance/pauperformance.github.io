@@ -21,7 +21,7 @@ const families = JSON.parse(readFileSync(join(dataDir, 'families.json'), 'utf-8'
 
 const routes = [
   '/archetypes',
-  '/timeline',
+  '/announcements',
   '/sets',
   '/metagames',
   '/creators',
@@ -30,7 +30,6 @@ const routes = [
   '/blind-spy',
   '/diff',
   '/faq',
-  '/contact',
   ...archetypes.map(a => `/archetypes/${nameToSlug(a.name)}`),
   ...families.map(f => `/families/${f.slug}`),
 ]
