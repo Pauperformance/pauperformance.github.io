@@ -10,14 +10,36 @@
         "R"
     ],
     "family": "Brew",
-    "first_appearance": null,
+    "first_appearance": {
+        "date": "2026-09-13",
+        "metagame": {
+            "date": "2026-09-02",
+            "decks": null,
+            "label": "slz",
+            "metagame": "147",
+            "name": "The Zeta Set",
+            "py/object": "pauperformance_bot.entity.api.archetype.MetagameRef"
+        },
+        "py/object": "pauperformance_bot.entity.api.archetype.Appearance"
+    },
     "game_type": [
         "Aggro",
         "Midrange",
         "Control",
         "Combo"
     ],
-    "last_appearance": null,
+    "last_appearance": {
+        "date": "2026-10-28",
+        "metagame": {
+            "date": "2026-10-02",
+            "decks": null,
+            "label": "fra",
+            "metagame": "149",
+            "name": "Reality Fracture",
+            "py/object": "pauperformance_bot.entity.api.archetype.MetagameRef"
+        },
+        "py/object": "pauperformance_bot.entity.api.archetype.Appearance"
+    },
     "must_have_cards": [],
     "must_not_have_cards": [
         "Nyxborn Hydra"
@@ -30,17 +52,636 @@
     "resources": [],
     "resources_discord": [],
     "typical_list": {
-        "decks": 0,
+        "decks": 5,
         "ended_by_bans": [],
         "era_end": null,
         "era_start": null,
-        "first_date": null,
-        "last_date": null,
+        "first_date": "2026-09-13",
+        "last_date": "2026-10-28",
         "later_decks": 0,
-        "main": [],
-        "metagames": [],
+        "main": [
+            {
+                "at_least": [
+                    1.0,
+                    1.0,
+                    1.0,
+                    0.8
+                ],
+                "average": 3.8,
+                "banned": false,
+                "link": "https://scryfall.com/card/mrd/278/ancient-den",
+                "name": "Ancient Den",
+                "preview": "https://cards.scryfall.io/normal/front/c/c/cc857fbd-8e0f-4bff-8f14-561c9925c484.jpg",
+                "py/object": "pauperformance_bot.entity.api.archetype.TypicalCard",
+                "type_line": "Artifact Land",
+                "typical": 4
+            },
+            {
+                "at_least": [
+                    1.0,
+                    1.0,
+                    1.0,
+                    1.0
+                ],
+                "average": 4.0,
+                "banned": false,
+                "link": "https://scryfall.com/card/slz/2/dispatch",
+                "name": "Dispatch",
+                "preview": "https://cards.scryfall.io/normal/front/c/e/ce4f9234-1304-44dd-9a20-64dfafb1fe4b.jpg",
+                "py/object": "pauperformance_bot.entity.api.archetype.TypicalCard",
+                "type_line": "Instant",
+                "typical": 4
+            },
+            {
+                "at_least": [
+                    1.0,
+                    1.0,
+                    1.0,
+                    0.8
+                ],
+                "average": 3.8,
+                "banned": false,
+                "link": "https://scryfall.com/card/neo/138/experimental-synthesizer",
+                "name": "Experimental Synthesizer",
+                "preview": "https://cards.scryfall.io/normal/front/c/4/c47931c9-685d-4b83-8299-bc347224b4e8.jpg",
+                "py/object": "pauperformance_bot.entity.api.archetype.TypicalCard",
+                "type_line": "Artifact",
+                "typical": 4
+            },
+            {
+                "at_least": [
+                    1.0,
+                    1.0,
+                    1.0,
+                    1.0
+                ],
+                "average": 4.0,
+                "banned": false,
+                "link": "https://scryfall.com/card/som/91/galvanic-blast",
+                "name": "Galvanic Blast",
+                "preview": "https://cards.scryfall.io/normal/front/f/5/f5881bbc-8600-464d-9dcd-5a7780918d1d.jpg",
+                "py/object": "pauperformance_bot.entity.api.archetype.TypicalCard",
+                "type_line": "Instant",
+                "typical": 4
+            },
+            {
+                "at_least": [
+                    1.0,
+                    1.0,
+                    1.0,
+                    1.0
+                ],
+                "average": 4.0,
+                "banned": false,
+                "link": "https://scryfall.com/card/hob/173/giants-boulder",
+                "name": "Giant's Boulder",
+                "preview": "https://cards.scryfall.io/normal/front/c/e/ce254758-c928-4b43-a952-13fac1845668.jpg",
+                "py/object": "pauperformance_bot.entity.api.archetype.TypicalCard",
+                "type_line": "Artifact",
+                "typical": 4
+            },
+            {
+                "at_least": [
+                    1.0,
+                    1.0,
+                    1.0,
+                    1.0
+                ],
+                "average": 4.0,
+                "banned": false,
+                "link": "https://scryfall.com/card/som/10/glint-hawk",
+                "name": "Glint Hawk",
+                "preview": "https://cards.scryfall.io/normal/front/2/8/284c4710-4183-4743-9c8b-515cc98cbbb8.jpg",
+                "py/object": "pauperformance_bot.entity.api.archetype.TypicalCard",
+                "type_line": "Creature \u2014 Bird",
+                "typical": 4
+            },
+            {
+                "at_least": [
+                    1.0,
+                    1.0,
+                    1.0,
+                    1.0
+                ],
+                "average": 4.0,
+                "banned": false,
+                "link": "https://scryfall.com/card/mrd/282/great-furnace",
+                "name": "Great Furnace",
+                "preview": "https://cards.scryfall.io/normal/front/2/8/2877281d-c85d-4f32-b40d-828b93c4ee8e.jpg",
+                "py/object": "pauperformance_bot.entity.api.archetype.TypicalCard",
+                "type_line": "Artifact Land",
+                "typical": 4
+            },
+            {
+                "at_least": [
+                    1.0,
+                    1.0,
+                    1.0,
+                    1.0
+                ],
+                "average": 4.0,
+                "banned": false,
+                "link": "https://scryfall.com/card/zen/23/kor-skyfisher",
+                "name": "Kor Skyfisher",
+                "preview": "https://cards.scryfall.io/normal/front/b/b/bb2e9465-f5ba-4c7b-9f03-d40dc8394acd.jpg",
+                "py/object": "pauperformance_bot.entity.api.archetype.TypicalCard",
+                "type_line": "Creature \u2014 Kor Soldier",
+                "typical": 4
+            },
+            {
+                "at_least": [
+                    1.0,
+                    1.0,
+                    1.0,
+                    1.0
+                ],
+                "average": 4.0,
+                "banned": false,
+                "link": "https://scryfall.com/card/mrd/54/thoughtcast",
+                "name": "Thoughtcast",
+                "preview": "https://cards.scryfall.io/normal/front/e/f/efb965a7-877a-4302-b507-25b0a9e32d9b.jpg",
+                "py/object": "pauperformance_bot.entity.api.archetype.TypicalCard",
+                "type_line": "Sorcery",
+                "typical": 4
+            },
+            {
+                "at_least": [
+                    0.8,
+                    0.8,
+                    0.8,
+                    0.8
+                ],
+                "average": 4.0,
+                "banned": false,
+                "link": "https://scryfall.com/card/mh3/105/refurbished-familiar",
+                "name": "Refurbished Familiar",
+                "preview": "https://cards.scryfall.io/normal/front/b/3/b338e078-629c-4cac-bd1d-e1f0a132728d.jpg",
+                "py/object": "pauperformance_bot.entity.api.archetype.TypicalCard",
+                "type_line": "Artifact Creature \u2014 Zombie Rat",
+                "typical": 4
+            },
+            {
+                "at_least": [
+                    1.0,
+                    1.0,
+                    1.0,
+                    0.2
+                ],
+                "average": 3.2,
+                "banned": false,
+                "link": "https://scryfall.com/card/eoe/52/cryogen-relic",
+                "name": "Cryogen Relic",
+                "preview": "https://cards.scryfall.io/normal/front/7/b/7bfb33b6-e2bf-498f-8c58-ae21a840cf75.jpg",
+                "py/object": "pauperformance_bot.entity.api.archetype.TypicalCard",
+                "type_line": "Artifact",
+                "typical": 3
+            },
+            {
+                "at_least": [
+                    1.0,
+                    1.0,
+                    1.0,
+                    0.0
+                ],
+                "average": 3.0,
+                "banned": false,
+                "link": "https://scryfall.com/card/mrd/283/seat-of-the-synod",
+                "name": "Seat of the Synod",
+                "preview": "https://cards.scryfall.io/normal/front/5/d/5da5587d-6b6c-4645-8cc9-2866d1e6911b.jpg",
+                "py/object": "pauperformance_bot.entity.api.archetype.TypicalCard",
+                "type_line": "Artifact Land",
+                "typical": 3
+            },
+            {
+                "at_least": [
+                    0.8,
+                    0.8,
+                    0.8,
+                    0.0
+                ],
+                "average": 3.0,
+                "banned": false,
+                "link": "https://scryfall.com/card/mrd/286/vault-of-whispers",
+                "name": "Vault of Whispers",
+                "preview": "https://cards.scryfall.io/normal/front/7/3/73866487-33f4-4f64-b100-2c4ddadcd74e.jpg",
+                "py/object": "pauperformance_bot.entity.api.archetype.TypicalCard",
+                "type_line": "Artifact Land",
+                "typical": 3
+            },
+            {
+                "at_least": [
+                    1.0,
+                    1.0,
+                    0.2,
+                    0.2
+                ],
+                "average": 2.4,
+                "banned": false,
+                "link": "https://scryfall.com/card/mh2/252/razortide-bridge",
+                "name": "Razortide Bridge",
+                "preview": "https://cards.scryfall.io/normal/front/e/7/e7ea7395-430e-4036-92c9-17a850ec2371.jpg",
+                "py/object": "pauperformance_bot.entity.api.archetype.TypicalCard",
+                "type_line": "Artifact Land",
+                "typical": 2
+            },
+            {
+                "at_least": [
+                    0.8,
+                    0.8,
+                    0.0,
+                    0.0
+                ],
+                "average": 2.0,
+                "banned": false,
+                "link": "https://scryfall.com/card/som/187/nihil-spellbomb",
+                "name": "Nihil Spellbomb",
+                "preview": "https://cards.scryfall.io/normal/front/6/0/603d217b-6375-46fc-992a-8dbd779da1e5.jpg",
+                "py/object": "pauperformance_bot.entity.api.archetype.TypicalCard",
+                "type_line": "Artifact",
+                "typical": 2
+            },
+            {
+                "at_least": [
+                    0.8,
+                    0.8,
+                    0.0,
+                    0.0
+                ],
+                "average": 2.0,
+                "banned": false,
+                "link": "https://scryfall.com/card/mh2/253/rustvale-bridge",
+                "name": "Rustvale Bridge",
+                "preview": "https://cards.scryfall.io/normal/front/2/2/2207467a-b82a-47ae-8867-15a859328fe9.jpg",
+                "py/object": "pauperformance_bot.entity.api.archetype.TypicalCard",
+                "type_line": "Artifact Land",
+                "typical": 2
+            },
+            {
+                "at_least": [
+                    1.0,
+                    0.0,
+                    0.0,
+                    0.0
+                ],
+                "average": 1.0,
+                "banned": false,
+                "link": "https://scryfall.com/card/cmr/191/makeshift-munitions",
+                "name": "Makeshift Munitions",
+                "preview": "https://cards.scryfall.io/normal/front/1/9/19d1ad9f-e217-49fb-8b27-025ca133b6c9.jpg",
+                "py/object": "pauperformance_bot.entity.api.archetype.TypicalCard",
+                "type_line": "Enchantment",
+                "typical": 1
+            },
+            {
+                "at_least": [
+                    1.0,
+                    0.2,
+                    0.2,
+                    0.2
+                ],
+                "average": 1.6,
+                "banned": false,
+                "link": "https://scryfall.com/card/mh2/255/silverbluff-bridge",
+                "name": "Silverbluff Bridge",
+                "preview": "https://cards.scryfall.io/normal/front/d/8/d80dc025-c2c4-48c2-8354-7d9ddb430eb9.jpg",
+                "py/object": "pauperformance_bot.entity.api.archetype.TypicalCard",
+                "type_line": "Artifact Land",
+                "typical": 1
+            },
+            {
+                "at_least": [
+                    0.8,
+                    0.0,
+                    0.0,
+                    0.0
+                ],
+                "average": 1.0,
+                "banned": false,
+                "link": "https://scryfall.com/card/slz/88/baleful-strix",
+                "name": "Baleful Strix",
+                "preview": "https://cards.scryfall.io/normal/front/d/f/df0cc01f-356e-4645-96d6-e730e2d23482.jpg",
+                "py/object": "pauperformance_bot.entity.api.archetype.TypicalCard",
+                "type_line": "Artifact Creature \u2014 Bird",
+                "typical": 1
+            },
+            {
+                "at_least": [
+                    0.8,
+                    0.0,
+                    0.0,
+                    0.0
+                ],
+                "average": 1.0,
+                "banned": false,
+                "link": "https://scryfall.com/card/vow/95/blood-fountain",
+                "name": "Blood Fountain",
+                "preview": "https://cards.scryfall.io/normal/front/d/d/dd03651e-ada0-41dc-8722-0eba476943e3.jpg",
+                "py/object": "pauperformance_bot.entity.api.archetype.TypicalCard",
+                "type_line": "Artifact",
+                "typical": 1
+            },
+            {
+                "at_least": [
+                    0.8,
+                    0.0,
+                    0.0,
+                    0.0
+                ],
+                "average": 1.0,
+                "banned": false,
+                "link": "https://scryfall.com/card/mh2/247/goldmire-bridge",
+                "name": "Goldmire Bridge",
+                "preview": "https://cards.scryfall.io/normal/front/d/b/dbe2a1fa-196f-497f-a15f-0b3b04da9cbb.jpg",
+                "py/object": "pauperformance_bot.entity.api.archetype.TypicalCard",
+                "type_line": "Artifact Land",
+                "typical": 1
+            },
+            {
+                "at_least": [
+                    0.2,
+                    0.2,
+                    0.2,
+                    0.2
+                ],
+                "average": 4.0,
+                "banned": false,
+                "link": "https://scryfall.com/card/mrd/211/myr-enforcer",
+                "name": "Myr Enforcer",
+                "preview": "https://cards.scryfall.io/normal/front/e/e/eeeef899-a8b5-4416-a208-3bd5a0c7177b.jpg",
+                "py/object": "pauperformance_bot.entity.api.archetype.TypicalCard",
+                "type_line": "Artifact Creature \u2014 Myr",
+                "typical": 0
+            },
+            {
+                "at_least": [
+                    0.2,
+                    0.0,
+                    0.0,
+                    0.0
+                ],
+                "average": 1.0,
+                "banned": false,
+                "link": "https://scryfall.com/card/rex/21/plains-plains",
+                "name": "Plains",
+                "preview": "https://cards.scryfall.io/normal/front/6/6/6620b5f4-b1e5-4d1b-bbf2-c6ad9c8284c5.jpg",
+                "py/object": "pauperformance_bot.entity.api.archetype.TypicalCard",
+                "type_line": "Basic Land \u2014 Plains // Basic Land \u2014 Plains",
+                "typical": 0
+            },
+            {
+                "at_least": [
+                    0.2,
+                    0.0,
+                    0.0,
+                    0.0
+                ],
+                "average": 1.0,
+                "banned": false,
+                "link": "https://scryfall.com/card/slz/115/soul-guide-lantern",
+                "name": "Soul-Guide Lantern",
+                "preview": "https://cards.scryfall.io/normal/front/a/1/a177be38-d854-4079-b863-a53c0c286254.jpg",
+                "py/object": "pauperformance_bot.entity.api.archetype.TypicalCard",
+                "type_line": "Artifact",
+                "typical": 0
+            },
+            {
+                "at_least": [
+                    0.2,
+                    0.2,
+                    0.2,
+                    0.2
+                ],
+                "average": 4.0,
+                "banned": false,
+                "link": "https://scryfall.com/card/tmc/113/utrom-monitor",
+                "name": "Utrom Monitor",
+                "preview": "https://cards.scryfall.io/normal/front/8/c/8ce6647c-343a-45e8-9b6e-0292ae01ec81.jpg",
+                "py/object": "pauperformance_bot.entity.api.archetype.TypicalCard",
+                "type_line": "Artifact Creature \u2014 Utrom Scientist",
+                "typical": 0
+            }
+        ],
+        "metagames": [
+            {
+                "date": "2026-10-02",
+                "decks": 1,
+                "label": "fra",
+                "metagame": "149",
+                "name": "Reality Fracture",
+                "py/object": "pauperformance_bot.entity.api.archetype.MetagameRef"
+            },
+            {
+                "date": "2026-09-23",
+                "decks": 3,
+                "label": "BNR",
+                "metagame": "148",
+                "name": "Banned & Restricted Announcement",
+                "py/object": "pauperformance_bot.entity.api.archetype.MetagameRef"
+            },
+            {
+                "date": "2026-09-02",
+                "decks": 1,
+                "label": "slz",
+                "metagame": "147",
+                "name": "The Zeta Set",
+                "py/object": "pauperformance_bot.entity.api.archetype.MetagameRef"
+            }
+        ],
         "py/object": "pauperformance_bot.entity.api.archetype.TypicalList",
-        "side": [],
+        "side": [
+            {
+                "at_least": [
+                    1.0,
+                    1.0,
+                    1.0,
+                    0.8
+                ],
+                "average": 3.8,
+                "banned": false,
+                "link": "https://scryfall.com/card/ice/72/hydroblast",
+                "name": "Hydroblast",
+                "preview": "https://cards.scryfall.io/normal/front/f/6/f62716f0-fde2-49ef-b8a4-c1b03f451194.jpg",
+                "py/object": "pauperformance_bot.entity.api.archetype.TypicalCard",
+                "type_line": "Instant",
+                "typical": 4
+            },
+            {
+                "at_least": [
+                    1.0,
+                    1.0,
+                    0.8,
+                    0.0
+                ],
+                "average": 2.8,
+                "banned": false,
+                "link": "https://scryfall.com/card/mrd/98/krark-clan-shaman",
+                "name": "Krark-Clan Shaman",
+                "preview": "https://cards.scryfall.io/normal/front/9/7/975f9ea8-af2c-456f-acd0-ffa9ea0d98c1.jpg",
+                "py/object": "pauperformance_bot.entity.api.archetype.TypicalCard",
+                "type_line": "Creature \u2014 Goblin Shaman",
+                "typical": 3
+            },
+            {
+                "at_least": [
+                    1.0,
+                    1.0,
+                    0.4,
+                    0.4
+                ],
+                "average": 2.8,
+                "banned": false,
+                "link": "https://scryfall.com/card/ice/213/pyroblast",
+                "name": "Pyroblast",
+                "preview": "https://cards.scryfall.io/normal/front/c/3/c342cac5-08ae-4428-9c2c-f6c5904e54d2.jpg",
+                "py/object": "pauperformance_bot.entity.api.archetype.TypicalCard",
+                "type_line": "Instant",
+                "typical": 2
+            },
+            {
+                "at_least": [
+                    0.8,
+                    0.4,
+                    0.0,
+                    0.0
+                ],
+                "average": 1.5,
+                "banned": false,
+                "link": "https://scryfall.com/card/mkm/84/extract-a-confession",
+                "name": "Extract a Confession",
+                "preview": "https://cards.scryfall.io/normal/front/2/5/256c8b6e-4031-458b-8eb9-bbfe58405a0c.jpg",
+                "py/object": "pauperformance_bot.entity.api.archetype.TypicalCard",
+                "type_line": "Sorcery",
+                "typical": 2
+            },
+            {
+                "at_least": [
+                    0.8,
+                    0.0,
+                    0.0,
+                    0.0
+                ],
+                "average": 1.0,
+                "banned": false,
+                "link": "https://scryfall.com/card/slz/69/vandalblast",
+                "name": "Vandalblast",
+                "preview": "https://cards.scryfall.io/normal/front/0/5/055396fd-8051-4fb4-8beb-a53abeb0ac10.jpg",
+                "py/object": "pauperformance_bot.entity.api.archetype.TypicalCard",
+                "type_line": "Sorcery",
+                "typical": 1
+            },
+            {
+                "at_least": [
+                    0.4,
+                    0.0,
+                    0.0,
+                    0.0
+                ],
+                "average": 1.0,
+                "banned": false,
+                "link": "https://scryfall.com/card/all/72a/gorilla-shaman",
+                "name": "Gorilla Shaman",
+                "preview": "https://cards.scryfall.io/normal/front/b/f/bf8b213e-31ca-4eb5-bf0b-515a0ad4fd31.jpg",
+                "py/object": "pauperformance_bot.entity.api.archetype.TypicalCard",
+                "type_line": "Creature \u2014 Ape Shaman",
+                "typical": 1
+            },
+            {
+                "at_least": [
+                    0.4,
+                    0.4,
+                    0.4,
+                    0.0
+                ],
+                "average": 3.0,
+                "banned": false,
+                "link": "https://scryfall.com/card/dom/225/navigators-compass",
+                "name": "Navigator's Compass",
+                "preview": "https://cards.scryfall.io/normal/front/6/a/6a283135-7a51-4cf7-82a6-7e50894e64a5.jpg",
+                "py/object": "pauperformance_bot.entity.api.archetype.TypicalCard",
+                "type_line": "Artifact",
+                "typical": 1
+            },
+            {
+                "at_least": [
+                    0.4,
+                    0.0,
+                    0.0,
+                    0.0
+                ],
+                "average": 1.0,
+                "banned": false,
+                "link": "https://scryfall.com/card/som/187/nihil-spellbomb",
+                "name": "Nihil Spellbomb",
+                "preview": "https://cards.scryfall.io/normal/front/6/0/603d217b-6375-46fc-992a-8dbd779da1e5.jpg",
+                "py/object": "pauperformance_bot.entity.api.archetype.TypicalCard",
+                "type_line": "Artifact",
+                "typical": 1
+            },
+            {
+                "at_least": [
+                    0.2,
+                    0.2,
+                    0.2,
+                    0.0
+                ],
+                "average": 3.0,
+                "banned": false,
+                "link": "https://scryfall.com/card/lea/49/blue-elemental-blast",
+                "name": "Blue Elemental Blast",
+                "preview": "https://cards.scryfall.io/normal/front/2/0/20d666ef-39bf-4fbf-8201-5f1056539da2.jpg",
+                "py/object": "pauperformance_bot.entity.api.archetype.TypicalCard",
+                "type_line": "Instant",
+                "typical": 0
+            },
+            {
+                "at_least": [
+                    0.2,
+                    0.2,
+                    0.0,
+                    0.0
+                ],
+                "average": 2.0,
+                "banned": false,
+                "link": "https://scryfall.com/card/cmm/374/campfire",
+                "name": "Campfire",
+                "preview": "https://cards.scryfall.io/normal/front/3/4/34b64d10-c012-4370-b475-755c4025a348.jpg",
+                "py/object": "pauperformance_bot.entity.api.archetype.TypicalCard",
+                "type_line": "Artifact",
+                "typical": 0
+            },
+            {
+                "at_least": [
+                    0.2,
+                    0.2,
+                    0.0,
+                    0.0
+                ],
+                "average": 2.0,
+                "banned": false,
+                "link": "https://scryfall.com/card/lea/169/red-elemental-blast",
+                "name": "Red Elemental Blast",
+                "preview": "https://cards.scryfall.io/normal/front/7/7/776ad9be-3309-4f1d-9f27-6219d9477662.jpg",
+                "py/object": "pauperformance_bot.entity.api.archetype.TypicalCard",
+                "type_line": "Instant",
+                "typical": 0
+            },
+            {
+                "at_least": [
+                    0.2,
+                    0.0,
+                    0.0,
+                    0.0
+                ],
+                "average": 1.0,
+                "banned": false,
+                "link": "https://scryfall.com/card/slz/115/soul-guide-lantern",
+                "name": "Soul-Guide Lantern",
+                "preview": "https://cards.scryfall.io/normal/front/a/1/a177be38-d854-4079-b863-a53c0c286254.jpg",
+                "py/object": "pauperformance_bot.entity.api.archetype.TypicalCard",
+                "type_line": "Artifact",
+                "typical": 0
+            }
+        ],
         "started_by_bans": []
     }
 }
