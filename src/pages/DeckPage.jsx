@@ -206,9 +206,8 @@ export default function DeckPage() {
                           className="w-full rounded-xl shadow-lg border border-gray-700"
                         />
                       ) : (
-                        // no card hovered: the back of a card (Scryfall's standard back)
-                        <img src="/images/card-back.jpg" alt=""
-                          className="w-full rounded-xl shadow-lg border border-gray-700" />
+                        // no card hovered: an empty card-sized box, keeping the place
+                        <div className="w-full aspect-[63/88] rounded-xl border border-gray-700" />
                       )}
                     </div>
                     {hoveredCard && <OracleText card={hoveredData} className="w-56 xl:w-64 text-gray-200" />}
