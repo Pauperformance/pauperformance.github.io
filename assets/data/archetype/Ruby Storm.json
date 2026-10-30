@@ -2,64 +2,38 @@
     "aliases": [
         "Turbo Goblins"
     ],
-    "description": "_Still missing. Please join us on [Discord](https://discord.gg/fYQbpjjkQ3) to contribute to the Academy._",
+    "description": "_Still missing. Coming soon._",
     "dominant_mana": [
         "R"
     ],
     "family": null,
-    "frequent": [
-        {
-            "link": "https://scryfall.com/card/tla/205/abandon-attachments",
-            "name": "Abandon Attachments",
-            "preview": "https://cards.scryfall.io/normal/front/7/4/74ca45a4-97ab-4255-9129-884e8b42b984.jpg",
-            "py/object": "pauperformance_bot.entity.api.archetype.ArchetypeCard"
+    "first_appearance": {
+        "date": "2025-12-11",
+        "metagame": {
+            "date": "2025-11-21",
+            "decks": null,
+            "label": "tla",
+            "metagame": "139",
+            "name": "Avatar: The Last Airbender",
+            "py/object": "pauperformance_bot.entity.api.archetype.MetagameRef"
         },
-        {
-            "link": "https://scryfall.com/card/tla/138/firebending-lesson",
-            "name": "Firebending Lesson",
-            "preview": "https://cards.scryfall.io/normal/front/f/a/fa940e68-010e-4b68-be8a-555d7068f7b4.jpg",
-            "py/object": "pauperformance_bot.entity.api.archetype.ArchetypeCard"
-        },
-        {
-            "link": "https://scryfall.com/card/gpt/158/gruul-turf",
-            "name": "Gruul Turf",
-            "preview": "https://cards.scryfall.io/normal/front/5/5/550b70e0-ebd5-49de-b62c-5224b8bf8e98.jpg",
-            "py/object": "pauperformance_bot.entity.api.archetype.ArchetypeCard"
-        },
-        {
-            "link": "https://scryfall.com/card/lea/292/mountain",
-            "name": "Mountain",
-            "preview": "https://cards.scryfall.io/normal/front/e/a/eace2c85-976c-425e-9800-5a6ccbd91b56.jpg",
-            "py/object": "pauperformance_bot.entity.api.archetype.ArchetypeCard"
-        },
-        {
-            "link": "https://scryfall.com/card/vow/174/reckless-impulse",
-            "name": "Reckless Impulse",
-            "preview": "https://cards.scryfall.io/normal/front/6/9/6943c07f-ab0d-4f5a-bbe9-c0a83dc98546.jpg",
-            "py/object": "pauperformance_bot.entity.api.archetype.ArchetypeCard"
-        },
-        {
-            "link": "https://scryfall.com/card/lea/169/red-elemental-blast",
-            "name": "Red Elemental Blast",
-            "preview": "https://cards.scryfall.io/normal/front/7/7/776ad9be-3309-4f1d-9f27-6219d9477662.jpg",
-            "py/object": "pauperformance_bot.entity.api.archetype.ArchetypeCard"
-        },
-        {
-            "link": "https://scryfall.com/card/tla/80/waterbending-lesson",
-            "name": "Waterbending Lesson",
-            "preview": "https://cards.scryfall.io/normal/front/4/f/4f81e3b5-a0a9-4764-8c2d-b499ce1740b4.jpg",
-            "py/object": "pauperformance_bot.entity.api.archetype.ArchetypeCard"
-        },
-        {
-            "link": "https://scryfall.com/card/mom/173/wrenns-resolve",
-            "name": "Wrenn's Resolve",
-            "preview": "https://cards.scryfall.io/normal/front/9/a/9a47999c-12d5-4e1a-a9c1-40a1757007f1.jpg",
-            "py/object": "pauperformance_bot.entity.api.archetype.ArchetypeCard"
-        }
-    ],
+        "py/object": "pauperformance_bot.entity.api.archetype.Appearance"
+    },
     "game_type": [
         "Combo"
     ],
+    "last_appearance": {
+        "date": "2026-10-29",
+        "metagame": {
+            "date": "2026-10-02",
+            "decks": null,
+            "label": "fra",
+            "metagame": "149",
+            "name": "Reality Fracture",
+            "py/object": "pauperformance_bot.entity.api.archetype.MetagameRef"
+        },
+        "py/object": "pauperformance_bot.entity.api.archetype.Appearance"
+    },
     "must_have_cards": [],
     "must_not_have_cards": [],
     "name": "Ruby Storm",
@@ -82,96 +56,621 @@
     ],
     "resources": [],
     "resources_discord": [],
-    "staples": [
-        {
-            "link": "https://scryfall.com/card/snc/102/big-score",
-            "name": "Big Score",
-            "preview": "https://cards.scryfall.io/normal/front/3/9/39d1578f-e2cf-4b93-8204-ed5434feb183.jpg",
-            "py/object": "pauperformance_bot.entity.api.archetype.ArchetypeCard"
-        },
-        {
-            "link": "https://scryfall.com/card/stx/102/first-day-of-class",
-            "name": "First Day of Class",
-            "preview": "https://cards.scryfall.io/normal/front/0/9/091eb13d-9318-4b12-9f94-6276b11981d1.jpg",
-            "py/object": "pauperformance_bot.entity.api.archetype.ArchetypeCard"
-        },
-        {
-            "link": "https://scryfall.com/card/jud/89/flaring-pain",
-            "name": "Flaring Pain",
-            "preview": "https://cards.scryfall.io/normal/front/e/e/eeb5c96a-1d16-459d-9968-ced9a8f1c520.jpg",
-            "py/object": "pauperformance_bot.entity.api.archetype.ArchetypeCard"
-        },
-        {
-            "link": "https://scryfall.com/card/inv/323/geothermal-crevice",
-            "name": "Geothermal Crevice",
-            "preview": "https://cards.scryfall.io/normal/front/e/7/e744b593-13fe-4967-b492-ac02f5815e57.jpg",
-            "py/object": "pauperformance_bot.entity.api.archetype.ArchetypeCard"
-        },
-        {
-            "link": "https://scryfall.com/card/mh3/124/glimpse-the-impossible",
-            "name": "Glimpse the Impossible",
-            "preview": "https://cards.scryfall.io/normal/front/1/3/133ad0dd-5b61-4c38-9264-0b0e75b95d95.jpg",
-            "py/object": "pauperformance_bot.entity.api.archetype.ArchetypeCard"
-        },
-        {
-            "link": "https://scryfall.com/card/mh2/200/goblin-anarchomancer",
-            "name": "Goblin Anarchomancer",
-            "preview": "https://cards.scryfall.io/normal/front/6/3/633a3423-501d-4b22-95a6-743233be521e.jpg",
-            "py/object": "pauperformance_bot.entity.api.archetype.ArchetypeCard"
-        },
-        {
-            "link": "https://scryfall.com/card/mmq/319/hickory-woodlot",
-            "name": "Hickory Woodlot",
-            "preview": "https://cards.scryfall.io/normal/front/a/f/af7aafb7-6870-4d09-a191-70786766c459.jpg",
-            "py/object": "pauperformance_bot.entity.api.archetype.ArchetypeCard"
-        },
-        {
-            "link": "https://scryfall.com/card/shm/211/manamorphose",
-            "name": "Manamorphose",
-            "preview": "https://cards.scryfall.io/normal/front/5/0/50283122-b8c4-4fb3-8eba-6252b72222f4.jpg",
-            "py/object": "pauperformance_bot.entity.api.archetype.ArchetypeCard"
-        },
-        {
-            "link": "https://scryfall.com/card/tla/187/origin-of-metalbending",
-            "name": "Origin of Metalbending",
-            "preview": "https://cards.scryfall.io/normal/front/2/5/25749f9a-260d-4bdc-bd28-429c12faa4a5.jpg",
-            "py/object": "pauperformance_bot.entity.api.archetype.ArchetypeCard"
-        },
-        {
-            "link": "https://scryfall.com/card/ice/213/pyroblast",
-            "name": "Pyroblast",
-            "preview": "https://cards.scryfall.io/normal/front/c/3/c342cac5-08ae-4428-9c2c-f6c5904e54d2.jpg",
-            "py/object": "pauperformance_bot.entity.api.archetype.ArchetypeCard"
-        },
-        {
-            "link": "https://scryfall.com/card/mmq/326/sandstone-needle",
-            "name": "Sandstone Needle",
-            "preview": "https://cards.scryfall.io/normal/front/8/2/82bc7c6b-2e3d-42d1-b2bb-b37b6f34d33b.jpg",
-            "py/object": "pauperformance_bot.entity.api.archetype.ArchetypeCard"
-        },
-        {
-            "link": "https://scryfall.com/card/mrd/104/seething-song",
-            "name": "Seething Song",
-            "preview": "https://cards.scryfall.io/normal/front/9/2/9213d580-7953-455f-abbe-99d3db2705cf.jpg",
-            "py/object": "pauperformance_bot.entity.api.archetype.ArchetypeCard"
-        },
-        {
-            "link": "https://scryfall.com/card/inr/170/seize-the-storm",
-            "name": "Seize the Storm",
-            "preview": "https://cards.scryfall.io/normal/front/4/5/45ec2af6-8397-429f-900f-846a5056f8e0.jpg",
-            "py/object": "pauperformance_bot.entity.api.archetype.ArchetypeCard"
-        },
-        {
-            "link": "https://scryfall.com/card/pls/95/thornscape-familiar",
-            "name": "Thornscape Familiar",
-            "preview": "https://cards.scryfall.io/normal/front/7/6/76c6e426-6165-4f8e-8766-de768ae13452.jpg",
-            "py/object": "pauperformance_bot.entity.api.archetype.ArchetypeCard"
-        },
-        {
-            "link": "https://scryfall.com/card/mh1/191/weather-the-storm",
-            "name": "Weather the Storm",
-            "preview": "https://cards.scryfall.io/normal/front/f/6/f6a9fa51-78c3-42e6-8c2e-39658f59ed87.jpg",
-            "py/object": "pauperformance_bot.entity.api.archetype.ArchetypeCard"
-        }
-    ]
+    "typical_list": {
+        "decks": 103,
+        "ended_by_bans": [],
+        "era_end": null,
+        "era_start": null,
+        "first_date": "2026-10-03",
+        "last_date": "2026-10-29",
+        "later_decks": 0,
+        "main": [
+            {
+                "at_least": [
+                    0.922,
+                    0.922,
+                    0.922,
+                    0.68
+                ],
+                "average": 4.4,
+                "banned": false,
+                "link": "https://scryfall.com/card/lea/292/mountain",
+                "name": "Mountain",
+                "preview": "https://cards.scryfall.io/normal/front/e/a/eace2c85-976c-425e-9800-5a6ccbd91b56.jpg",
+                "py/object": "pauperformance_bot.entity.api.archetype.TypicalCard",
+                "type_line": "Basic Land \u2014 Mountain",
+                "typical": 5
+            },
+            {
+                "at_least": [
+                    1.0,
+                    1.0,
+                    1.0,
+                    1.0
+                ],
+                "average": 4.0,
+                "banned": false,
+                "link": "https://scryfall.com/card/mh3/124/glimpse-the-impossible",
+                "name": "Glimpse the Impossible",
+                "preview": "https://cards.scryfall.io/normal/front/1/3/133ad0dd-5b61-4c38-9264-0b0e75b95d95.jpg",
+                "py/object": "pauperformance_bot.entity.api.archetype.TypicalCard",
+                "type_line": "Sorcery",
+                "typical": 4
+            },
+            {
+                "at_least": [
+                    1.0,
+                    1.0,
+                    1.0,
+                    1.0
+                ],
+                "average": 4.0,
+                "banned": false,
+                "link": "https://scryfall.com/card/mh2/200/goblin-anarchomancer",
+                "name": "Goblin Anarchomancer",
+                "preview": "https://cards.scryfall.io/normal/front/6/3/633a3423-501d-4b22-95a6-743233be521e.jpg",
+                "py/object": "pauperformance_bot.entity.api.archetype.TypicalCard",
+                "type_line": "Creature \u2014 Goblin Shaman",
+                "typical": 4
+            },
+            {
+                "at_least": [
+                    1.0,
+                    1.0,
+                    0.981,
+                    0.971
+                ],
+                "average": 4.0,
+                "banned": false,
+                "link": "https://scryfall.com/card/mmq/319/hickory-woodlot",
+                "name": "Hickory Woodlot",
+                "preview": "https://cards.scryfall.io/normal/front/a/f/af7aafb7-6870-4d09-a191-70786766c459.jpg",
+                "py/object": "pauperformance_bot.entity.api.archetype.TypicalCard",
+                "type_line": "Land",
+                "typical": 4
+            },
+            {
+                "at_least": [
+                    1.0,
+                    1.0,
+                    1.0,
+                    1.0
+                ],
+                "average": 4.0,
+                "banned": false,
+                "link": "https://scryfall.com/card/shm/211/manamorphose",
+                "name": "Manamorphose",
+                "preview": "https://cards.scryfall.io/normal/front/5/0/50283122-b8c4-4fb3-8eba-6252b72222f4.jpg",
+                "py/object": "pauperformance_bot.entity.api.archetype.TypicalCard",
+                "type_line": "Instant",
+                "typical": 4
+            },
+            {
+                "at_least": [
+                    1.0,
+                    1.0,
+                    1.0,
+                    1.0
+                ],
+                "average": 4.0,
+                "banned": false,
+                "link": "https://scryfall.com/card/mmq/326/sandstone-needle",
+                "name": "Sandstone Needle",
+                "preview": "https://cards.scryfall.io/normal/front/8/2/82bc7c6b-2e3d-42d1-b2bb-b37b6f34d33b.jpg",
+                "py/object": "pauperformance_bot.entity.api.archetype.TypicalCard",
+                "type_line": "Land",
+                "typical": 4
+            },
+            {
+                "at_least": [
+                    1.0,
+                    1.0,
+                    1.0,
+                    1.0
+                ],
+                "average": 4.0,
+                "banned": false,
+                "link": "https://scryfall.com/card/mrd/104/seething-song",
+                "name": "Seething Song",
+                "preview": "https://cards.scryfall.io/normal/front/9/2/9213d580-7953-455f-abbe-99d3db2705cf.jpg",
+                "py/object": "pauperformance_bot.entity.api.archetype.TypicalCard",
+                "type_line": "Instant",
+                "typical": 4
+            },
+            {
+                "at_least": [
+                    1.0,
+                    1.0,
+                    1.0,
+                    1.0
+                ],
+                "average": 4.0,
+                "banned": false,
+                "link": "https://scryfall.com/card/pls/95/thornscape-familiar",
+                "name": "Thornscape Familiar",
+                "preview": "https://cards.scryfall.io/normal/front/7/6/76c6e426-6165-4f8e-8766-de768ae13452.jpg",
+                "py/object": "pauperformance_bot.entity.api.archetype.TypicalCard",
+                "type_line": "Creature \u2014 Insect",
+                "typical": 4
+            },
+            {
+                "at_least": [
+                    0.961,
+                    0.961,
+                    0.893,
+                    0.874
+                ],
+                "average": 3.8,
+                "banned": false,
+                "link": "https://scryfall.com/card/inv/323/geothermal-crevice",
+                "name": "Geothermal Crevice",
+                "preview": "https://cards.scryfall.io/normal/front/e/7/e744b593-13fe-4967-b492-ac02f5815e57.jpg",
+                "py/object": "pauperformance_bot.entity.api.archetype.TypicalCard",
+                "type_line": "Land",
+                "typical": 4
+            },
+            {
+                "at_least": [
+                    0.951,
+                    0.951,
+                    0.874,
+                    0.689
+                ],
+                "average": 3.6,
+                "banned": false,
+                "link": "https://scryfall.com/card/mom/173/wrenns-resolve",
+                "name": "Wrenn's Resolve",
+                "preview": "https://cards.scryfall.io/normal/front/9/a/9a47999c-12d5-4e1a-a9c1-40a1757007f1.jpg",
+                "py/object": "pauperformance_bot.entity.api.archetype.TypicalCard",
+                "type_line": "Sorcery",
+                "typical": 4
+            },
+            {
+                "at_least": [
+                    0.816,
+                    0.816,
+                    0.777,
+                    0.728
+                ],
+                "average": 3.8,
+                "banned": false,
+                "link": "https://scryfall.com/card/fra/157/twinned-vision",
+                "name": "Twinned Vision",
+                "preview": "https://cards.scryfall.io/normal/front/5/5/55f85984-0137-4899-8993-bbc8c4794d33.jpg",
+                "py/object": "pauperformance_bot.entity.api.archetype.TypicalCard",
+                "type_line": "Instant",
+                "typical": 4
+            },
+            {
+                "at_least": [
+                    0.981,
+                    0.67,
+                    0.544,
+                    0.398
+                ],
+                "average": 2.6,
+                "banned": false,
+                "link": "https://scryfall.com/card/vow/174/reckless-impulse",
+                "name": "Reckless Impulse",
+                "preview": "https://cards.scryfall.io/normal/front/6/9/6943c07f-ab0d-4f5a-bbe9-c0a83dc98546.jpg",
+                "py/object": "pauperformance_bot.entity.api.archetype.TypicalCard",
+                "type_line": "Sorcery",
+                "typical": 3
+            },
+            {
+                "at_least": [
+                    0.932,
+                    0.932,
+                    0.922,
+                    0.524
+                ],
+                "average": 3.6,
+                "banned": false,
+                "link": "https://scryfall.com/card/chk/163/desperate-ritual",
+                "name": "Desperate Ritual",
+                "preview": "https://cards.scryfall.io/normal/front/c/8/c8bdb92a-7bdb-434b-8cc0-873969faf566.jpg",
+                "py/object": "pauperformance_bot.entity.api.archetype.TypicalCard",
+                "type_line": "Instant \u2014 Arcane",
+                "typical": 3
+            },
+            {
+                "at_least": [
+                    0.922,
+                    0.913,
+                    0.825,
+                    0.427
+                ],
+                "average": 3.3,
+                "banned": false,
+                "link": "https://scryfall.com/card/msc/684/crossover-collaboration",
+                "name": "Crossover Collaboration",
+                "preview": "https://cards.scryfall.io/normal/front/1/d/1d632bef-ee93-4690-9c6d-07f70d18572a.jpg",
+                "py/object": "pauperformance_bot.entity.api.archetype.TypicalCard",
+                "type_line": "Instant",
+                "typical": 3
+            },
+            {
+                "at_least": [
+                    1.0,
+                    1.0,
+                    0.32,
+                    0.019
+                ],
+                "average": 2.3,
+                "banned": false,
+                "link": "https://scryfall.com/card/stx/102/first-day-of-class",
+                "name": "First Day of Class",
+                "preview": "https://cards.scryfall.io/normal/front/0/9/091eb13d-9318-4b12-9f94-6276b11981d1.jpg",
+                "py/object": "pauperformance_bot.entity.api.archetype.TypicalCard",
+                "type_line": "Instant",
+                "typical": 2
+            },
+            {
+                "at_least": [
+                    1.0,
+                    1.0,
+                    0.01,
+                    0.0
+                ],
+                "average": 2.0,
+                "banned": false,
+                "link": "https://scryfall.com/card/inr/170/seize-the-storm",
+                "name": "Seize the Storm",
+                "preview": "https://cards.scryfall.io/normal/front/4/5/45ec2af6-8397-429f-900f-846a5056f8e0.jpg",
+                "py/object": "pauperformance_bot.entity.api.archetype.TypicalCard",
+                "type_line": "Sorcery",
+                "typical": 2
+            },
+            {
+                "at_least": [
+                    0.65,
+                    0.621,
+                    0.33,
+                    0.087
+                ],
+                "average": 2.6,
+                "banned": false,
+                "link": "https://scryfall.com/card/snc/102/big-score",
+                "name": "Big Score",
+                "preview": "https://cards.scryfall.io/normal/front/3/9/39d1578f-e2cf-4b93-8204-ed5434feb183.jpg",
+                "py/object": "pauperformance_bot.entity.api.archetype.TypicalCard",
+                "type_line": "Instant",
+                "typical": 2
+            },
+            {
+                "at_least": [
+                    0.291,
+                    0.214,
+                    0.0,
+                    0.0
+                ],
+                "average": 1.7,
+                "banned": false,
+                "link": "https://scryfall.com/card/inv/329/tinder-farm",
+                "name": "Tinder Farm",
+                "preview": "https://cards.scryfall.io/normal/front/9/8/989b5901-aeb0-4a48-8c53-3b0ec0e0deba.jpg",
+                "py/object": "pauperformance_bot.entity.api.archetype.TypicalCard",
+                "type_line": "Land",
+                "typical": 0
+            },
+            {
+                "at_least": [
+                    0.223,
+                    0.0,
+                    0.0,
+                    0.0
+                ],
+                "average": 1.0,
+                "banned": false,
+                "link": "https://scryfall.com/card/bro/127/bitter-reunion",
+                "name": "Bitter Reunion",
+                "preview": "https://cards.scryfall.io/normal/front/3/4/345a1c80-41d6-43b1-83ab-1aa56dd06b1b.jpg",
+                "py/object": "pauperformance_bot.entity.api.archetype.TypicalCard",
+                "type_line": "Enchantment",
+                "typical": 0
+            },
+            {
+                "at_least": [
+                    0.146,
+                    0.0,
+                    0.0,
+                    0.0
+                ],
+                "average": 1.0,
+                "banned": false,
+                "link": "https://scryfall.com/card/gpt/158/gruul-turf",
+                "name": "Gruul Turf",
+                "preview": "https://cards.scryfall.io/normal/front/5/5/550b70e0-ebd5-49de-b62c-5224b8bf8e98.jpg",
+                "py/object": "pauperformance_bot.entity.api.archetype.TypicalCard",
+                "type_line": "Land",
+                "typical": 0
+            },
+            {
+                "at_least": [
+                    0.136,
+                    0.117,
+                    0.068,
+                    0.0
+                ],
+                "average": 2.4,
+                "banned": false,
+                "link": "https://scryfall.com/card/mid/135/electric-revelation",
+                "name": "Electric Revelation",
+                "preview": "https://cards.scryfall.io/normal/front/2/0/20ff3289-00fb-4e91-b34f-6255e9de8e9e.jpg",
+                "py/object": "pauperformance_bot.entity.api.archetype.TypicalCard",
+                "type_line": "Instant",
+                "typical": 0
+            },
+            {
+                "at_least": [
+                    0.078,
+                    0.078,
+                    0.078,
+                    0.078
+                ],
+                "average": 5.0,
+                "banned": false,
+                "link": "https://scryfall.com/card/ice/379/snow-covered-mountain",
+                "name": "Snow-Covered Mountain",
+                "preview": "https://cards.scryfall.io/normal/front/c/c/ccd3afb3-5574-4f2d-adbe-969a428f1c63.jpg",
+                "py/object": "pauperformance_bot.entity.api.archetype.TypicalCard",
+                "type_line": "Basic Snow Land \u2014 Mountain",
+                "typical": 0
+            },
+            {
+                "at_least": [
+                    0.068,
+                    0.019,
+                    0.0,
+                    0.0
+                ],
+                "average": 1.3,
+                "banned": false,
+                "link": "https://scryfall.com/card/lea/294/forest",
+                "name": "Forest",
+                "preview": "https://cards.scryfall.io/normal/front/6/f/6f1c8cb0-38eb-408b-94e8-16db83999b3b.jpg",
+                "py/object": "pauperformance_bot.entity.api.archetype.TypicalCard",
+                "type_line": "Basic Land \u2014 Forest",
+                "typical": 0
+            },
+            {
+                "at_least": [
+                    0.058,
+                    0.058,
+                    0.039,
+                    0.029
+                ],
+                "average": 3.2,
+                "banned": false,
+                "link": "https://scryfall.com/card/tmp/294/lotus-petal",
+                "name": "Lotus Petal",
+                "preview": "https://cards.scryfall.io/normal/front/6/c/6c877da3-68fa-41d0-8a24-8c79fcd8ecc1.jpg",
+                "py/object": "pauperformance_bot.entity.api.archetype.TypicalCard",
+                "type_line": "Artifact",
+                "typical": 0
+            }
+        ],
+        "metagames": [
+            {
+                "date": "2026-10-02",
+                "decks": 103,
+                "label": "fra",
+                "metagame": "149",
+                "name": "Reality Fracture",
+                "py/object": "pauperformance_bot.entity.api.archetype.MetagameRef"
+            }
+        ],
+        "py/object": "pauperformance_bot.entity.api.archetype.TypicalList",
+        "side": [
+            {
+                "at_least": [
+                    0.961,
+                    0.951,
+                    0.922,
+                    0.825
+                ],
+                "average": 3.8,
+                "banned": false,
+                "link": "https://scryfall.com/card/ice/213/pyroblast",
+                "name": "Pyroblast",
+                "preview": "https://cards.scryfall.io/normal/front/c/3/c342cac5-08ae-4428-9c2c-f6c5904e54d2.jpg",
+                "py/object": "pauperformance_bot.entity.api.archetype.TypicalCard",
+                "type_line": "Instant",
+                "typical": 4
+            },
+            {
+                "at_least": [
+                    0.961,
+                    0.951,
+                    0.534,
+                    0.01
+                ],
+                "average": 2.6,
+                "banned": false,
+                "link": "https://scryfall.com/card/mh1/191/weather-the-storm",
+                "name": "Weather the Storm",
+                "preview": "https://cards.scryfall.io/normal/front/f/6/f6a9fa51-78c3-42e6-8c2e-39658f59ed87.jpg",
+                "py/object": "pauperformance_bot.entity.api.archetype.TypicalCard",
+                "type_line": "Instant",
+                "typical": 3
+            },
+            {
+                "at_least": [
+                    0.913,
+                    0.718,
+                    0.136,
+                    0.078
+                ],
+                "average": 2.0,
+                "banned": false,
+                "link": "https://scryfall.com/card/gpt/158/gruul-turf",
+                "name": "Gruul Turf",
+                "preview": "https://cards.scryfall.io/normal/front/5/5/550b70e0-ebd5-49de-b62c-5224b8bf8e98.jpg",
+                "py/object": "pauperformance_bot.entity.api.archetype.TypicalCard",
+                "type_line": "Land",
+                "typical": 2
+            },
+            {
+                "at_least": [
+                    0.835,
+                    0.612,
+                    0.369,
+                    0.165
+                ],
+                "average": 2.4,
+                "banned": false,
+                "link": "https://scryfall.com/card/lea/169/red-elemental-blast",
+                "name": "Red Elemental Blast",
+                "preview": "https://cards.scryfall.io/normal/front/7/7/776ad9be-3309-4f1d-9f27-6219d9477662.jpg",
+                "py/object": "pauperformance_bot.entity.api.archetype.TypicalCard",
+                "type_line": "Instant",
+                "typical": 2
+            },
+            {
+                "at_least": [
+                    0.981,
+                    0.029,
+                    0.0,
+                    0.0
+                ],
+                "average": 1.0,
+                "banned": false,
+                "link": "https://scryfall.com/card/tla/187/origin-of-metalbending",
+                "name": "Origin of Metalbending",
+                "preview": "https://cards.scryfall.io/normal/front/2/5/25749f9a-260d-4bdc-bd28-429c12faa4a5.jpg",
+                "py/object": "pauperformance_bot.entity.api.archetype.TypicalCard",
+                "type_line": "Instant \u2014 Lesson",
+                "typical": 1
+            },
+            {
+                "at_least": [
+                    0.874,
+                    0.068,
+                    0.0,
+                    0.0
+                ],
+                "average": 1.1,
+                "banned": false,
+                "link": "https://scryfall.com/card/tla/205/abandon-attachments",
+                "name": "Abandon Attachments",
+                "preview": "https://cards.scryfall.io/normal/front/7/4/74ca45a4-97ab-4255-9129-884e8b42b984.jpg",
+                "py/object": "pauperformance_bot.entity.api.archetype.TypicalCard",
+                "type_line": "Instant \u2014 Lesson",
+                "typical": 1
+            },
+            {
+                "at_least": [
+                    0.796,
+                    0.019,
+                    0.0,
+                    0.0
+                ],
+                "average": 1.0,
+                "banned": false,
+                "link": "https://scryfall.com/card/jud/89/flaring-pain",
+                "name": "Flaring Pain",
+                "preview": "https://cards.scryfall.io/normal/front/e/e/eeb5c96a-1d16-459d-9968-ced9a8f1c520.jpg",
+                "py/object": "pauperformance_bot.entity.api.archetype.TypicalCard",
+                "type_line": "Instant",
+                "typical": 1
+            },
+            {
+                "at_least": [
+                    0.709,
+                    0.0,
+                    0.0,
+                    0.0
+                ],
+                "average": 1.0,
+                "banned": false,
+                "link": "https://scryfall.com/card/tla/138/firebending-lesson",
+                "name": "Firebending Lesson",
+                "preview": "https://cards.scryfall.io/normal/front/f/a/fa940e68-010e-4b68-be8a-555d7068f7b4.jpg",
+                "py/object": "pauperformance_bot.entity.api.archetype.TypicalCard",
+                "type_line": "Instant \u2014 Lesson",
+                "typical": 1
+            },
+            {
+                "at_least": [
+                    0.417,
+                    0.0,
+                    0.0,
+                    0.0
+                ],
+                "average": 1.0,
+                "banned": false,
+                "link": "https://scryfall.com/card/tla/58/itll-quench-ya!",
+                "name": "It'll Quench Ya!",
+                "preview": "https://cards.scryfall.io/normal/front/4/7/47c25e41-f43c-4447-81b5-b9631448bd29.jpg",
+                "py/object": "pauperformance_bot.entity.api.archetype.TypicalCard",
+                "type_line": "Instant \u2014 Lesson",
+                "typical": 0
+            },
+            {
+                "at_least": [
+                    0.252,
+                    0.0,
+                    0.0,
+                    0.0
+                ],
+                "average": 1.0,
+                "banned": false,
+                "link": "https://scryfall.com/card/tla/80/waterbending-lesson",
+                "name": "Waterbending Lesson",
+                "preview": "https://cards.scryfall.io/normal/front/4/f/4f81e3b5-a0a9-4764-8c2d-b499ce1740b4.jpg",
+                "py/object": "pauperformance_bot.entity.api.archetype.TypicalCard",
+                "type_line": "Sorcery \u2014 Lesson",
+                "typical": 0
+            },
+            {
+                "at_least": [
+                    0.078,
+                    0.078,
+                    0.0,
+                    0.0
+                ],
+                "average": 2.0,
+                "banned": false,
+                "link": "https://scryfall.com/card/mm2/117/gut-shot",
+                "name": "Gut Shot",
+                "preview": "https://cards.scryfall.io/normal/front/4/6/461987da-8860-4a04-8f93-d182523ca311.jpg",
+                "py/object": "pauperformance_bot.entity.api.archetype.TypicalCard",
+                "type_line": "Instant",
+                "typical": 0
+            },
+            {
+                "at_least": [
+                    0.068,
+                    0.049,
+                    0.0,
+                    0.0
+                ],
+                "average": 1.7,
+                "banned": false,
+                "link": "https://scryfall.com/card/fra/98/bestial-incursion",
+                "name": "Bestial Incursion",
+                "preview": "https://cards.scryfall.io/normal/front/e/0/e0de5f66-f0df-4866-9f73-104ce50411b4.jpg",
+                "py/object": "pauperformance_bot.entity.api.archetype.TypicalCard",
+                "type_line": "Sorcery",
+                "typical": 0
+            },
+            {
+                "at_least": [
+                    0.068,
+                    0.019,
+                    0.0,
+                    0.0
+                ],
+                "average": 1.3,
+                "banned": false,
+                "link": "https://scryfall.com/card/tla/140/how-to-start-a-riot",
+                "name": "How to Start a Riot",
+                "preview": "https://cards.scryfall.io/normal/front/2/3/23b3bf1e-ea85-47f5-8473-4d16615f68d7.jpg",
+                "py/object": "pauperformance_bot.entity.api.archetype.TypicalCard",
+                "type_line": "Instant \u2014 Lesson",
+                "typical": 0
+            }
+        ],
+        "started_by_bans": []
+    }
 }

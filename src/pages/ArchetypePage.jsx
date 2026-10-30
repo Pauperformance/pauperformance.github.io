@@ -3,6 +3,8 @@ import { useParams, Link, useNavigate } from 'react-router-dom'
 import ReactMarkdown from 'react-markdown'
 import Layout from '../components/Layout'
 import { useCardPreview } from '../components/CardPreview'
+import { AppearanceRow, MetagameBadge } from '../components/Metagame'
+import MtgoButtons from '../components/MtgoButtons'
 import { cardLinkSlug, useCardPages } from '../utils/cardPages'
 import { nameToSlug, pilotToSlug } from '../utils/slugs'
 import { formatShortDate } from '../utils/dates'
@@ -30,27 +32,302 @@ function SectionHeader({ children }) {
   return <h2 className="text-lg font-semibold text-white mb-3 pt-4 border-t border-gray-700">{children}</h2>
 }
 
-function CardGallery({ cards, bindPreview }) {
-  const cardPages = useCardPages()
-  if (!cards?.length) return <p className="text-gray-500 text-sm">None listed.</p>
+// Scrolls to a section of the page, clear of the sticky header.
+function scrollToSection(id) {
+  const el = document.getElementById(id)
+  if (!el) return
+  const headerHeight = document.querySelector('header')?.offsetHeight ?? 64
+  window.scrollTo({ top: el.getBoundingClientRect().top + window.scrollY - headerHeight - 8, behavior: 'smooth' })
+}
+
+// The page's table of contents: sections: [{ id, label, count }].
+function TableOfContents({ sections }) {
   return (
-    <div className="flex flex-wrap gap-2">
-      {cards.map(card => {
-        const slug = cardLinkSlug(cardPages, card.name)
-        // Cards with no page (e.g. banned ones) are shown but not linked.
-        if (!slug) return (
-          <img key={card.name} src={card.preview} alt={card.name}
-            className="h-64 shrink-0 rounded-lg shadow border border-gray-700 object-cover" />
-        )
-        return (
-          <Link key={card.name} to={`/cards/${slug}`}
-            {...bindPreview(card.name, { showImage: false })}
-            className="group relative shrink-0">
-            <img src={card.preview} alt={card.name}
-              className="h-64 rounded-lg shadow border border-gray-700 group-hover:border-amber-400 transition-colors object-cover" />
-          </Link>
-        )
-      })}
+    <nav aria-label="On this page" className="bg-gray-800 border border-gray-700 rounded-xl p-4 md:w-60 shrink-0">
+      <p className="mb-2 text-xs font-semibold text-gray-400 uppercase tracking-wider">On this page</p>
+      <ul className="flex flex-wrap gap-x-4 gap-y-1.5 md:flex-col">
+        {sections.map(({ id, label, count }) => (
+          <li key={id}>
+            <a href={`#${id}`} onClick={e => { e.preventDefault(); scrollToSection(id) }}
+              className="text-sm text-gray-300 hover:text-amber-400 transition-colors">
+              {label}
+              {count != null && <span className="ml-1.5 text-xs text-gray-500 tabular-nums">{count.toLocaleString('en-US')}</span>}
+            </a>
+          </li>
+        ))}
+      </ul>
+    </nav>
+  )
+}
+
+// The typical list, computed by Myr from the archetype's recent decklists:
+// for each card, how many copies the aggregate list plays and the share of
+// decklists playing at least 1, 2, 3 and 4 copies.
+const BASIC_LAND = /^(Snow-Covered )?(Plains|Island|Swamp|Mountain|Forest|Wastes)$/
+const FEW_DECKS = 10
+const COPIES_HEADERS = ['1+', '2+', '3+', '4']
+
+function percent(share) {
+  return `${Math.round(share * 100)}%`
+}
+
+function joinNames(names) {
+  return names.length < 2 ? names.join('') : `${names.slice(0, -1).join(', ')} and ${names[names.length - 1]}`
+}
+
+function CopiesCell({ share }) {
+  return (
+    <td className="px-0.5 py-1">
+      <div className="relative h-6 rounded bg-gray-800 overflow-hidden">
+        <div className="absolute inset-y-0 left-0 bg-amber-400/25" style={{ width: percent(share) }} />
+        <span className={`relative flex h-full items-center justify-center text-xs tabular-nums ${share >= 0.5 ? 'text-gray-100' : 'text-gray-400'}`}>
+          {percent(share)}
+        </span>
+      </div>
+    </td>
+  )
+}
+
+// A row of the typical list's table. No hover preview: the card images
+// beside the table have it.
+function TypicalCardRow({ card, cardPages }) {
+  const slug = cardLinkSlug(cardPages, card.name)
+  // Cards with no page (e.g. banned ones) are shown but not linked.
+  const name = slug
+    ? <Link to={`/cards/${slug}`} className="truncate text-gray-200 hover:text-amber-400 transition-colors">{card.name}</Link>
+    : <span className="truncate text-gray-200">{card.name}</span>
+  // basics (and the like) are played in any number: their average says more
+  const anyNumber = BASIC_LAND.test(card.name) || card.average > 4
+  return (
+    <tr className="hover:bg-gray-800/60">
+      <td className="pl-3 pr-1 py-1 text-right tabular-nums font-semibold text-amber-400">{card.typical || '–'}</td>
+      <td className="px-2 py-1">
+        <div className="flex items-center gap-1.5 min-w-0">
+          {name}
+          {card.banned && (
+            <span className="shrink-0 px-1.5 rounded text-[10px] font-semibold uppercase tracking-wide bg-red-900/50 text-red-300 border border-red-800">Banned</span>
+          )}
+        </div>
+      </td>
+      {anyNumber
+        ? <td colSpan={4} className="pr-3 py-1 text-center text-xs text-gray-400 tabular-nums">{card.average} on average, in {percent(card.at_least[0])}</td>
+        : card.at_least.map((share, i) => <CopiesCell key={i} share={share} />)}
+    </tr>
+  )
+}
+
+// The groups of a visual decklist, by the card's (front face) type.
+const CARD_GROUPS = [
+  ['Creatures', t => t.includes('Creature')],
+  ['Lands', t => t.includes('Land')],
+  ['Spells', () => true],
+]
+
+function groupOf(card) {
+  const front = (card.type_line || '').split(' // ')[0]
+  return CARD_GROUPS.find(([, test]) => test(front))[0]
+}
+
+function TypicalCardImage({ card, cardPages, bindPreview }) {
+  const slug = cardLinkSlug(cardPages, card.name)
+  const img = (
+    <img src={card.preview} alt={card.name} loading="lazy"
+      className={`w-full aspect-[488/680] rounded-[4.75%/3.5%] border object-cover transition-colors ${card.banned ? 'border-red-700' : 'border-gray-700 group-hover:border-amber-400'}`} />
+  )
+  // the hover preview: the card's image (larger) and its Oracle text
+  const handlers = bindPreview(card.name, { slug: slug || undefined, image: card.preview })
+  return (
+    <div className="relative">
+      {/* Cards with no page (e.g. banned ones) are shown but not linked. */}
+      {slug
+        ? <Link to={`/cards/${slug}`} {...handlers} className="group block">{img}</Link>
+        : <span {...handlers} className="group block">{img}</span>}
+      {/* copies in the typical list; for the other options, how many decklists play it */}
+      {card.typical > 0
+        ? <span className="absolute left-1.5 bottom-1.5 min-w-6 px-1.5 py-0.5 rounded-md text-center text-xs font-bold tabular-nums bg-gray-900/90 text-amber-400 border border-gray-600">
+            {card.typical}
+          </span>
+        : <span title={`In ${percent(card.at_least[0])} of decklists`}
+            className="absolute left-1.5 bottom-1.5 px-1.5 py-0.5 rounded-md text-xs font-semibold tabular-nums bg-gray-900/90 text-gray-300 border border-gray-600">
+            {percent(card.at_least[0])}
+          </span>}
+      {card.banned && (
+        <span className="absolute right-1.5 bottom-1.5 px-1.5 py-0.5 rounded-md text-[10px] font-semibold uppercase bg-red-900/90 text-red-200 border border-red-800">Banned</span>
+      )}
+    </div>
+  )
+}
+
+// A board's cards as images: the typical list's, grouped by type (the
+// sideboard's aren't), then the other options while the table shows them.
+function TypicalGallery({ title, cards, grouped, showOthers, cardPages, bindPreview }) {
+  const listed = cards.filter(c => c.typical > 0)
+  const others = showOthers ? cards.filter(c => !c.typical) : []
+  // creatures, then spells, then lands, as decklists usually go
+  const groups = grouped
+    ? ['Creatures', 'Spells', 'Lands'].map(name => [name, listed.filter(c => groupOf(c) === name)])
+    : [[title, listed]]
+  const copies = group => group.reduce((n, c) => n + c.typical, 0)
+  return (
+    <div className="space-y-3">
+      {groups.filter(([, group]) => group.length).map(([name, group]) => (
+        <GalleryGroup key={name} name={name} count={copies(group)} cards={group} cardPages={cardPages} bindPreview={bindPreview} />
+      ))}
+      {others.length > 0 && (
+        <GalleryGroup name="Other options" count={`${others.length} card${others.length === 1 ? '' : 's'}`}
+          cards={others} cardPages={cardPages} bindPreview={bindPreview} />
+      )}
+    </div>
+  )
+}
+
+function GalleryGroup({ name, count, cards, cardPages, bindPreview }) {
+  return (
+    <div>
+      <p className="mb-1.5 text-xs font-semibold text-gray-400 uppercase tracking-wider">
+        {name} <span className="font-normal normal-case text-gray-500">({count})</span>
+      </p>
+      <div className="grid gap-2 grid-cols-[repeat(auto-fill,minmax(5.5rem,1fr))] sm:grid-cols-[repeat(auto-fill,minmax(7rem,1fr))]">
+        {cards.map(card => <TypicalCardImage key={card.name} card={card} cardPages={cardPages} bindPreview={bindPreview} />)}
+      </div>
+    </div>
+  )
+}
+
+// A board of the typical list: its table, and beside it (below on phones)
+// its cards as images. The table's toggle shows the other options in both.
+function TypicalBoard({ title, cards, grouped, cardPages, bindPreview }) {
+  const [showOthers, setShowOthers] = useState(false)
+  return (
+    <div className="grid gap-4 lg:grid-cols-[minmax(0,30rem)_minmax(0,1fr)] items-start">
+      <TypicalTable title={title} cards={cards} cardPages={cardPages}
+        showOthers={showOthers} onToggleOthers={() => setShowOthers(s => !s)} />
+      <TypicalGallery title={title} cards={cards} grouped={grouped} showOthers={showOthers}
+        cardPages={cardPages} bindPreview={bindPreview} />
+    </div>
+  )
+}
+
+function TypicalTable({ title, cards, cardPages, showOthers, onToggleOthers }) {
+  const listed = cards.filter(c => c.typical > 0)
+  const others = cards.filter(c => !c.typical)
+  const total = listed.reduce((n, c) => n + c.typical, 0)
+  const row = card => <TypicalCardRow key={card.name} card={card} cardPages={cardPages} />
+  return (
+    <div className="border border-gray-700 rounded-xl overflow-hidden">
+      <table className="w-full table-fixed text-sm bg-gray-900">
+        <colgroup>
+          <col className="w-9" />
+          <col />
+          {COPIES_HEADERS.map(h => <col key={h} className="w-11 sm:w-13" />)}
+        </colgroup>
+        <thead>
+          <tr className="bg-gray-800 border-b border-gray-700">
+            <th colSpan={2} className="text-left px-3 py-2 text-xs font-semibold text-gray-400 uppercase tracking-wider">
+              {title} <span className="font-normal text-gray-500">({total})</span>
+            </th>
+            {COPIES_HEADERS.map(h => (
+              <th key={h} className="py-2 text-center text-xs font-semibold text-gray-400">{h}</th>
+            ))}
+          </tr>
+        </thead>
+        <tbody className="divide-y divide-gray-700/50">
+          {listed.map(row)}
+          {showOthers && (
+            <tr>
+              <td colSpan={6} className="px-3 pt-3 pb-1 text-xs font-semibold text-gray-500 uppercase tracking-wider">Other options</td>
+            </tr>
+          )}
+          {showOthers && others.map(row)}
+        </tbody>
+      </table>
+      {others.length > 0 && (
+        <button onClick={onToggleOthers}
+          className="w-full px-3 py-2 text-xs text-gray-400 hover:text-amber-400 bg-gray-800 border-t border-gray-700 transition-colors select-none">
+          {showOthers ? 'Hide other options' : `Show ${others.length} other option${others.length === 1 ? '' : 's'}`}
+        </button>
+      )}
+    </div>
+  )
+}
+
+// A ban bounding the era the typical list comes from.
+function EraBan({ bans, metagame }) {
+  return (
+    <>
+      the ban of <span className="text-gray-200">{joinNames(bans)}</span>{' '}
+      ({formatShortDate(metagame.date)}, <MetagameBadge metagame={metagame} />)
+    </>
+  )
+}
+
+// The era the typical list comes from: between the bans of cards the
+// archetype was playing (see Myr's silver/typical_list.py).
+function EraDescription({ list }) {
+  const { era_start: start, era_end: end, started_by_bans: started, ended_by_bans: ended } = list
+  if (start && end) return <>From <EraBan bans={started} metagame={start} /> to <EraBan bans={ended} metagame={end} />.</>
+  if (start) return <>Since <EraBan bans={started} metagame={start} />.</>
+  if (end) return <>From the first decklist to <EraBan bans={ended} metagame={end} />.</>
+  return <>The whole history of the archetype: no ban hit the cards it played.</>
+}
+
+// The typical list as a decklist (its 60 and 15, without the other options),
+// for the MTGO buttons.
+function typicalDecklist(list) {
+  const board = cards => cards.filter(c => c.typical > 0).map(c => ({ qty: c.typical, name: c.name }))
+  return { main: board(list.main), side: board(list.side) }
+}
+
+function TypicalListSection({ name, list, bindPreview }) {
+  const cardPages = useCardPages()
+  if (!list?.decks) return <p className="text-gray-500 text-sm">No decklists recorded.</p>
+  const dates = list.first_date === list.last_date
+    ? `on ${formatShortDate(list.last_date)}`
+    : `between ${formatShortDate(list.first_date)} and ${formatShortDate(list.last_date)}`
+  return (
+    <div className="space-y-3">
+      <div className="bg-gray-800 border border-gray-700 rounded-xl p-4 space-y-2 text-sm text-gray-400">
+        <div className="flex gap-2">
+          <span className="w-24 shrink-0 text-gray-500">Era</span>
+          <p className="leading-relaxed"><EraDescription list={list} /></p>
+        </div>
+        <div className="flex gap-2">
+          <span className="w-24 shrink-0 text-gray-500">Metagames</span>
+          <div className="flex flex-wrap gap-1.5">
+            {list.metagames.map(m => <MetagameBadge key={m.metagame} metagame={m} count={m.decks} />)}
+          </div>
+        </div>
+        <div className="flex gap-2">
+          <span className="w-24 shrink-0 text-gray-500">Decklists</span>
+          <p>
+            <span className="text-gray-200">{list.decks} deck{list.decks === 1 ? '' : 's'}</span>, {dates}
+            {list.decks < FEW_DECKS && <span className="text-gray-500"> · too few for reliable numbers</span>}
+          </p>
+        </div>
+      </div>
+      {list.ended_by_bans.length > 0 && (
+        <p className="text-sm text-amber-200 bg-amber-900/20 border border-amber-800/50 rounded-lg px-3 py-2">
+          {list.later_decks === 0
+            ? <>{name} wasn't played after the ban of {joinNames(list.ended_by_bans)}</>
+            : <>{name} was hardly played after the ban of {joinNames(list.ended_by_bans)} (only{' '}
+                {list.later_decks} decklist{list.later_decks === 1 ? '' : 's'})</>}
+          : this is how it was played before.
+        </p>
+      )}
+      <div className="flex flex-wrap items-center justify-between gap-3">
+        <p className="text-sm text-gray-400">
+          Next to each card, the share of decklists playing at least 1, 2, 3 and 4 copies.
+        </p>
+        <div className="flex flex-wrap gap-2">
+          <MtgoButtons decklist={typicalDecklist(list)} fileName={`${nameToSlug(name)}_typical_list.txt`} />
+        </div>
+      </div>
+      <div className="space-y-6">
+        <TypicalBoard title="Maindeck" cards={list.main} grouped cardPages={cardPages} bindPreview={bindPreview} />
+        {list.side.length > 0 && (
+          <TypicalBoard title="Sideboard" cards={list.side} cardPages={cardPages} bindPreview={bindPreview} />
+        )}
+      </div>
     </div>
   )
 }
@@ -711,43 +988,62 @@ export default function ArchetypePage() {
     </Layout>
   )
 
+  const resourceCount = (data.resources?.length || 0) + (data.resources_discord?.length || 0)
+    + (data.resource_sideboards?.length || 0)
+  const sections = [
+    { id: 'typical-list', label: 'Typical list' },
+    { id: 'resources', label: 'Resources', count: resourceCount },
+    data.decks?.length > 0 && { id: 'reference-decks', label: 'Reference decks', count: data.decks.length },
+    { id: 'decks', label: 'Decks', count: data.intel_deck_count ?? null },
+    { id: 'videos', label: 'Videos', count: data.videos?.length || 0 },
+  ].filter(Boolean)
+
   return (
     <Layout>
       <div className="space-y-8">
-        {/* Header */}
-        <div>
+        {/* Header, with the table of contents beside it */}
+        <div className="flex flex-col gap-6 md:flex-row md:items-start md:justify-between">
+        <div className="min-w-0">
           <h1 className="text-3xl font-bold text-white">{data.name}</h1>
           <div className="mt-3 space-y-2">
             <div className="flex flex-wrap items-center gap-1.5">
-              <span className="w-14 shrink-0 text-sm text-gray-500">Color:</span>
+              <span className="w-24 shrink-0 text-sm text-gray-500">Color:</span>
               {MANA_ORDER.filter(m => data.dominant_mana.includes(m)).map(m => (
                 <ManaIcon key={m} color={m} />
               ))}
             </div>
             {data.aliases?.length > 0 && (
               <div className="flex flex-wrap items-center gap-1.5">
-                <span className="w-14 shrink-0 text-sm text-gray-500">Aliases:</span>
+                <span className="w-24 shrink-0 text-sm text-gray-500">Aliases:</span>
                 {data.aliases.map(alias => (
                   <span key={alias} className="px-2 py-0.5 rounded-full text-xs font-medium bg-gray-700 text-gray-300 border border-gray-600">{alias}</span>
                 ))}
               </div>
             )}
             <div className="flex flex-wrap items-center gap-1.5">
-              <span className="w-14 shrink-0 text-sm text-gray-500">Type:</span>
+              <span className="w-24 shrink-0 text-sm text-gray-500">Type:</span>
               {data.game_type.map(t => (
                 <span key={t} className="px-2 py-0.5 rounded-full text-xs font-medium bg-gray-700 text-gray-300 border border-gray-600">{t}</span>
               ))}
             </div>
             {data.family && (
               <div className="flex flex-wrap items-center gap-1.5">
-                <span className="w-14 shrink-0 text-sm text-gray-500">Family:</span>
+                <span className="w-24 shrink-0 text-sm text-gray-500">Family:</span>
                 <Link to={`/families/${nameToSlug(data.family)}`}
                   className="px-2 py-0.5 rounded-full text-xs font-medium bg-gray-700 text-amber-400 border border-gray-600 hover:border-amber-400 transition-colors">
                   {data.family}
                 </Link>
               </div>
             )}
+            {data.first_appearance && (
+              <AppearanceRow label="First played:" appearance={data.first_appearance} />
+            )}
+            {data.last_appearance && (
+              <AppearanceRow label="Last played:" appearance={data.last_appearance} />
+            )}
           </div>
+        </div>
+        <TableOfContents sections={sections} />
         </div>
 
         {/* Description */}
@@ -757,22 +1053,14 @@ export default function ArchetypePage() {
           </div>
         )}
 
-        {/* Staples */}
-        <section>
-          <SectionHeader>Staples</SectionHeader>
-          <CardGallery cards={data.staples} bindPreview={bindPreview} />
+        {/* Typical list */}
+        <section id="typical-list">
+          <SectionHeader>Typical list</SectionHeader>
+          <TypicalListSection name={data.name} list={data.typical_list} bindPreview={bindPreview} />
         </section>
 
-        {/* Frequent cards */}
-        {data.frequent?.length > 0 && (
-          <section>
-            <SectionHeader>Frequent cards</SectionHeader>
-            <CardGallery cards={data.frequent} bindPreview={bindPreview} />
-          </section>
-        )}
-
         {/* Resources */}
-        <section>
+        <section id="resources">
           <SectionHeader>Resources</SectionHeader>
           <ResourcesSection
             resources={data.resources}
@@ -783,20 +1071,20 @@ export default function ArchetypePage() {
 
         {/* Reference decks */}
         {data.decks?.length > 0 && (
-          <section>
+          <section id="reference-decks">
             <SectionHeader>Reference decks</SectionHeader>
             <DecksTable decks={data.decks} />
           </section>
         )}
 
         {/* Decklists */}
-        <section>
+        <section id="decks">
           <SectionHeader>Decks</SectionHeader>
           <IntelDecksSection name={name} />
         </section>
 
         {/* Videos */}
-        <section>
+        <section id="videos">
           <SectionHeader>Videos</SectionHeader>
           <VideosSection videos={data.videos} />
         </section>

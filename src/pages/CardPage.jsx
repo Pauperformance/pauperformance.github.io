@@ -2,7 +2,9 @@ import { useState, useEffect, useMemo, useRef } from 'react'
 import { useParams, Link, useNavigate } from 'react-router-dom'
 import Layout from '../components/Layout'
 import { RulesText } from '../components/CardPreview'
+import { AppearanceRow } from '../components/Metagame'
 import { fullCardSlug } from '../utils/cardPages'
+import { nameToSlug } from '../utils/slugs'
 import { formatShortDate } from '../utils/dates'
 
 const MANA_ICONS = new Set([
@@ -87,8 +89,53 @@ function MonthPicker({ label, value, onChange }) {
   )
 }
 
-function CardDecksSection({ slug }) {
+// The decklists playing the card (null while loading), from
+// /data/card-decks/<slug>.json.
+function useCardDecks(slug) {
   const [decks, setDecks] = useState(null)
+  useEffect(() => {
+    setDecks(null)
+    fetch(`/data/card-decks/${slug}.json`)
+      .then(r => r.ok ? r.json() : [])
+      .then(setDecks)
+      .catch(() => setDecks([]))
+  }, [slug])
+  return decks
+}
+
+// The archetypes playing the card, the most decklists first; the first few,
+// the others on demand.
+const PLAYED_IN_SHOWN = 8
+
+function PlayedIn({ decks }) {
+  const [showAll, setShowAll] = useState(false)
+  const counts = useMemo(() => {
+    const byArchetype = {}
+    for (const d of decks || []) if (d.archetype) byArchetype[d.archetype] = (byArchetype[d.archetype] || 0) + 1
+    return Object.entries(byArchetype).sort((a, b) => b[1] - a[1] || a[0].localeCompare(b[0]))
+  }, [decks])
+  if (!counts.length) return null
+  const shown = showAll ? counts : counts.slice(0, PLAYED_IN_SHOWN)
+  return (
+    <div className="flex flex-wrap items-center gap-1.5 text-sm">
+      <span className="w-24 shrink-0 text-gray-500">Played in:</span>
+      {shown.map(([name, count]) => (
+        <Link key={name} to={`/archetypes/${nameToSlug(name)}`} title={`${count.toLocaleString('en-US')} decklists`}
+          className="inline-flex items-center gap-1 px-2 py-0.5 rounded-full text-xs font-medium bg-gray-700 text-gray-300 border border-gray-600 hover:border-amber-400 hover:text-amber-400 transition-colors">
+          {name}
+          <span className="text-gray-500 tabular-nums">{count.toLocaleString('en-US')}</span>
+        </Link>
+      ))}
+      {counts.length > PLAYED_IN_SHOWN && (
+        <button onClick={() => setShowAll(s => !s)} className="text-xs text-gray-500 hover:text-amber-400 transition-colors">
+          {showAll ? 'Show fewer' : `+${counts.length - PLAYED_IN_SHOWN} more`}
+        </button>
+      )}
+    </div>
+  )
+}
+
+function CardDecksSection({ decks }) {
   const [page, setPage] = useState(0)
   const [activeArchetypes, setActiveArchetypes] = useState(new Set())
   const [filterTournament, setFilterTournament] = useState('')
@@ -100,12 +147,8 @@ function CardDecksSection({ slug }) {
   const dropdownRef = useRef(null)
   const navigate = useNavigate()
 
-  useEffect(() => {
-    fetch(`/data/card-decks/${slug}.json`)
-      .then(r => r.ok ? r.json() : [])
-      .then(d => { setDecks(d); setActiveArchetypes(new Set()) })
-      .catch(() => setDecks([]))
-  }, [slug])
+  // another card: its own archetype filter
+  useEffect(() => { setActiveArchetypes(new Set()) }, [decks])
 
   useEffect(() => {
     if (!dropdownOpen) return
@@ -289,6 +332,7 @@ export default function CardPage() {
   const [loading, setLoading] = useState(true)
   const [notFound, setNotFound] = useState(false)
   const navigate = useNavigate()
+  const decks = useCardDecks(slug)
 
   useEffect(() => {
     let cancelled = false
@@ -362,6 +406,17 @@ export default function CardPage() {
                     </a>
                   ) : null}
                   </div>
+                  {/* Links, under the card: as wide as the images (w-0 min-w-full),
+                      wrapping under narrow ones rather than widening the column */}
+                  <div className="w-0 min-w-full flex flex-wrap justify-between gap-x-4 gap-y-1 text-sm">
+                    {s?.scryfall_uri && (
+                      <a href={s.scryfall_uri} target="_blank" rel="noopener noreferrer"
+                        className="text-gray-400 hover:text-amber-400 transition-colors">
+                        View on Scryfall →
+                      </a>
+                    )}
+                    <Link to="/cards" className="text-gray-400 hover:text-amber-400 transition-colors">Cards Index →</Link>
+                  </div>
                 </div>
 
                 {/* Card details */}
@@ -402,20 +457,20 @@ export default function CardPage() {
                     </p>
                   )}
 
-                  {/* Scryfall link */}
-                  {s?.scryfall_uri && (
-                    <a href={s.scryfall_uri} target="_blank" rel="noopener noreferrer"
-                      className="text-xs text-gray-500 hover:text-amber-400 transition-colors w-fit">
-                      View on Scryfall →
-                    </a>
+                  {/* First and last decklists playing it */}
+                  {card.first_appearance && (
+                    <div className="space-y-2">
+                      <AppearanceRow label="First played:" appearance={card.first_appearance}
+                        note={card.first_on_record && '— our decklists start here: it may have been played earlier'} />
+                      <AppearanceRow label="Last played:" appearance={card.last_appearance} />
+                    </div>
                   )}
-
-                  <Link to="/cards" className="text-xs text-gray-500 hover:text-amber-400 transition-colors w-fit">Cards Index →</Link>
+                  <PlayedIn decks={decks} />
                 </div>
               </div>
 
               <section>
-                <CardDecksSection slug={slug} />
+                <CardDecksSection decks={decks} />
               </section>
             </>
           )

@@ -135,10 +135,11 @@ for (const c of read('creators.json')) {
 }
 for (const p of read('players.json')) link('players', p.slug, '/players')
 
-// ArchetypePage: card galleries, family, community decklists
+// ArchetypePage: typical list, family, community decklists
 eachFile('archetype-details', (a, slug) => {
   const source = `/archetypes/${slug}`
-  for (const c of (a.staples || []).concat(a.frequent || [])) card(c.name, source)
+  const typical = a.typical_list || {}
+  for (const c of (typical.main || []).concat(typical.side || [])) card(c.name, source)
   if (a.family) link('families', nameToSlug(a.family), source)
 })
 eachFile('intel-decks', (decks, slug) => {

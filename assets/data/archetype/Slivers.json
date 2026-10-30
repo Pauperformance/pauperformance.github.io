@@ -1,34 +1,38 @@
 {
     "aliases": [],
-    "description": "_Still missing. Please join us on [Discord](https://discord.gg/fYQbpjjkQ3) to contribute to the Academy._",
+    "description": "_Still missing. Coming soon._",
     "dominant_mana": [
         "W",
         "G"
     ],
     "family": null,
-    "frequent": [
-        {
-            "link": "https://scryfall.com/card/lea/294/forest",
-            "name": "Forest",
-            "preview": "https://cards.scryfall.io/normal/front/6/f/6f1c8cb0-38eb-408b-94e8-16db83999b3b.jpg",
-            "py/object": "pauperformance_bot.entity.api.archetype.ArchetypeCard"
+    "first_appearance": {
+        "date": "2012-01-28",
+        "metagame": {
+            "date": "2011-09-30",
+            "decks": null,
+            "label": "isd",
+            "metagame": "019",
+            "name": "Innistrad",
+            "py/object": "pauperformance_bot.entity.api.archetype.MetagameRef"
         },
-        {
-            "link": "https://scryfall.com/card/lea/286/plains",
-            "name": "Plains",
-            "preview": "https://cards.scryfall.io/normal/front/b/1/b1623d57-4729-4796-b3f7-f1837a05c6ed.jpg",
-            "py/object": "pauperformance_bot.entity.api.archetype.ArchetypeCard"
-        },
-        {
-            "link": "https://scryfall.com/card/fut/155/virulent-sliver",
-            "name": "Virulent Sliver",
-            "preview": "https://cards.scryfall.io/normal/front/6/6/66de9c95-e590-4b0d-a2d7-886d7a488a10.jpg",
-            "py/object": "pauperformance_bot.entity.api.archetype.ArchetypeCard"
-        }
-    ],
+        "py/object": "pauperformance_bot.entity.api.archetype.Appearance"
+    },
     "game_type": [
         "Aggro"
     ],
+    "last_appearance": {
+        "date": "2026-08-22",
+        "metagame": {
+            "date": "2026-08-14",
+            "decks": null,
+            "label": "hob",
+            "metagame": "146",
+            "name": "The Hobbit",
+            "py/object": "pauperformance_bot.entity.api.archetype.MetagameRef"
+        },
+        "py/object": "pauperformance_bot.entity.api.archetype.Appearance"
+    },
     "must_have_cards": [],
     "must_not_have_cards": [],
     "name": "Slivers",
@@ -54,36 +58,1013 @@
         }
     ],
     "resources_discord": [],
-    "staples": [
-        {
-            "link": "https://scryfall.com/card/tmp/238/muscle-sliver",
-            "name": "Muscle Sliver",
-            "preview": "https://cards.scryfall.io/normal/front/6/0/602a1e1f-4195-48c0-8290-562e7e0db6d8.jpg",
-            "py/object": "pauperformance_bot.entity.api.archetype.ArchetypeCard"
-        },
-        {
-            "link": "https://scryfall.com/card/lgn/19/plated-sliver",
-            "name": "Plated Sliver",
-            "preview": "https://cards.scryfall.io/normal/front/8/2/82846d31-4981-4ef1-85c3-703569146a84.jpg",
-            "py/object": "pauperformance_bot.entity.api.archetype.ArchetypeCard"
-        },
-        {
-            "link": "https://scryfall.com/card/m14/189/predatory-sliver",
-            "name": "Predatory Sliver",
-            "preview": "https://cards.scryfall.io/normal/front/a/2/a2e37de8-66a1-4afa-aa6f-1151f849dfa8.jpg",
-            "py/object": "pauperformance_bot.entity.api.archetype.ArchetypeCard"
-        },
-        {
-            "link": "https://scryfall.com/card/tsp/41/sidewinder-sliver",
-            "name": "Sidewinder Sliver",
-            "preview": "https://cards.scryfall.io/normal/front/b/0/b073b8f2-b42d-40f2-b5fb-e78ffb1733ea.jpg",
-            "py/object": "pauperformance_bot.entity.api.archetype.ArchetypeCard"
-        },
-        {
-            "link": "https://scryfall.com/card/plc/30/sinew-sliver",
-            "name": "Sinew Sliver",
-            "preview": "https://cards.scryfall.io/normal/front/6/c/6cd2ed50-cd9a-45d9-a59a-6279be1ab308.jpg",
-            "py/object": "pauperformance_bot.entity.api.archetype.ArchetypeCard"
-        }
-    ]
+    "typical_list": {
+        "decks": 42,
+        "ended_by_bans": [],
+        "era_end": null,
+        "era_start": null,
+        "first_date": "2024-01-14",
+        "last_date": "2026-08-22",
+        "later_decks": 0,
+        "main": [
+            {
+                "at_least": [
+                    0.952,
+                    0.952,
+                    0.952,
+                    0.952
+                ],
+                "average": 6.4,
+                "banned": false,
+                "link": "https://scryfall.com/card/lea/294/forest",
+                "name": "Forest",
+                "preview": "https://cards.scryfall.io/normal/front/6/f/6f1c8cb0-38eb-408b-94e8-16db83999b3b.jpg",
+                "py/object": "pauperformance_bot.entity.api.archetype.TypicalCard",
+                "type_line": "Basic Land \u2014 Forest",
+                "typical": 7
+            },
+            {
+                "at_least": [
+                    0.952,
+                    0.952,
+                    0.952,
+                    0.952
+                ],
+                "average": 6.4,
+                "banned": false,
+                "link": "https://scryfall.com/card/lea/286/plains",
+                "name": "Plains",
+                "preview": "https://cards.scryfall.io/normal/front/b/1/b1623d57-4729-4796-b3f7-f1837a05c6ed.jpg",
+                "py/object": "pauperformance_bot.entity.api.archetype.TypicalCard",
+                "type_line": "Basic Land \u2014 Plains",
+                "typical": 7
+            },
+            {
+                "at_least": [
+                    1.0,
+                    1.0,
+                    1.0,
+                    1.0
+                ],
+                "average": 4.0,
+                "banned": false,
+                "link": "https://scryfall.com/card/tmp/238/muscle-sliver",
+                "name": "Muscle Sliver",
+                "preview": "https://cards.scryfall.io/normal/front/6/0/602a1e1f-4195-48c0-8290-562e7e0db6d8.jpg",
+                "py/object": "pauperformance_bot.entity.api.archetype.TypicalCard",
+                "type_line": "Creature \u2014 Sliver",
+                "typical": 4
+            },
+            {
+                "at_least": [
+                    1.0,
+                    1.0,
+                    1.0,
+                    0.976
+                ],
+                "average": 4.0,
+                "banned": false,
+                "link": "https://scryfall.com/card/lgn/19/plated-sliver",
+                "name": "Plated Sliver",
+                "preview": "https://cards.scryfall.io/normal/front/8/2/82846d31-4981-4ef1-85c3-703569146a84.jpg",
+                "py/object": "pauperformance_bot.entity.api.archetype.TypicalCard",
+                "type_line": "Creature \u2014 Sliver",
+                "typical": 4
+            },
+            {
+                "at_least": [
+                    1.0,
+                    1.0,
+                    1.0,
+                    1.0
+                ],
+                "average": 4.0,
+                "banned": false,
+                "link": "https://scryfall.com/card/m14/189/predatory-sliver",
+                "name": "Predatory Sliver",
+                "preview": "https://cards.scryfall.io/normal/front/a/2/a2e37de8-66a1-4afa-aa6f-1151f849dfa8.jpg",
+                "py/object": "pauperformance_bot.entity.api.archetype.TypicalCard",
+                "type_line": "Creature \u2014 Sliver",
+                "typical": 4
+            },
+            {
+                "at_least": [
+                    1.0,
+                    1.0,
+                    1.0,
+                    1.0
+                ],
+                "average": 4.0,
+                "banned": false,
+                "link": "https://scryfall.com/card/tsp/41/sidewinder-sliver",
+                "name": "Sidewinder Sliver",
+                "preview": "https://cards.scryfall.io/normal/front/b/0/b073b8f2-b42d-40f2-b5fb-e78ffb1733ea.jpg",
+                "py/object": "pauperformance_bot.entity.api.archetype.TypicalCard",
+                "type_line": "Creature \u2014 Sliver",
+                "typical": 4
+            },
+            {
+                "at_least": [
+                    1.0,
+                    1.0,
+                    1.0,
+                    1.0
+                ],
+                "average": 4.0,
+                "banned": false,
+                "link": "https://scryfall.com/card/plc/30/sinew-sliver",
+                "name": "Sinew Sliver",
+                "preview": "https://cards.scryfall.io/normal/front/6/c/6cd2ed50-cd9a-45d9-a59a-6279be1ab308.jpg",
+                "py/object": "pauperformance_bot.entity.api.archetype.TypicalCard",
+                "type_line": "Creature \u2014 Sliver",
+                "typical": 4
+            },
+            {
+                "at_least": [
+                    0.976,
+                    0.976,
+                    0.976,
+                    0.738
+                ],
+                "average": 3.8,
+                "banned": false,
+                "link": "https://scryfall.com/card/tsp/196/gemhide-sliver",
+                "name": "Gemhide Sliver",
+                "preview": "https://cards.scryfall.io/normal/front/f/0/f09135b0-fd57-4205-aa74-c9869946c264.jpg",
+                "py/object": "pauperformance_bot.entity.api.archetype.TypicalCard",
+                "type_line": "Creature \u2014 Sliver",
+                "typical": 4
+            },
+            {
+                "at_least": [
+                    0.976,
+                    0.976,
+                    0.976,
+                    0.976
+                ],
+                "average": 4.0,
+                "banned": false,
+                "link": "https://scryfall.com/card/mh1/193/winding-way",
+                "name": "Winding Way",
+                "preview": "https://cards.scryfall.io/normal/front/4/e/4e5d9776-b6ce-4ad6-8acc-69115ba5de76.jpg",
+                "py/object": "pauperformance_bot.entity.api.archetype.TypicalCard",
+                "type_line": "Sorcery",
+                "typical": 4
+            },
+            {
+                "at_least": [
+                    0.857,
+                    0.833,
+                    0.643,
+                    0.429
+                ],
+                "average": 3.2,
+                "banned": false,
+                "link": "https://scryfall.com/card/ima/173/lead-the-stampede",
+                "name": "Lead the Stampede",
+                "preview": "https://cards.scryfall.io/normal/front/e/b/ebc160fd-e34f-46a1-9a38-5c51a49fe64e.jpg",
+                "py/object": "pauperformance_bot.entity.api.archetype.TypicalCard",
+                "type_line": "Sorcery",
+                "typical": 4
+            },
+            {
+                "at_least": [
+                    0.667,
+                    0.667,
+                    0.595,
+                    0.524
+                ],
+                "average": 3.7,
+                "banned": false,
+                "link": "https://scryfall.com/card/fut/155/virulent-sliver",
+                "name": "Virulent Sliver",
+                "preview": "https://cards.scryfall.io/normal/front/6/6/66de9c95-e590-4b0d-a2d7-886d7a488a10.jpg",
+                "py/object": "pauperformance_bot.entity.api.archetype.TypicalCard",
+                "type_line": "Creature \u2014 Sliver",
+                "typical": 4
+            },
+            {
+                "at_least": [
+                    0.81,
+                    0.786,
+                    0.143,
+                    0.024
+                ],
+                "average": 2.2,
+                "banned": false,
+                "link": "https://scryfall.com/card/m14/30/sentinel-sliver",
+                "name": "Sentinel Sliver",
+                "preview": "https://cards.scryfall.io/normal/front/7/4/74c28560-e6ac-4be9-a253-22c4613b0d90.jpg",
+                "py/object": "pauperformance_bot.entity.api.archetype.TypicalCard",
+                "type_line": "Creature \u2014 Sliver",
+                "typical": 2
+            },
+            {
+                "at_least": [
+                    0.786,
+                    0.762,
+                    0.214,
+                    0.119
+                ],
+                "average": 2.4,
+                "banned": false,
+                "link": "https://scryfall.com/card/lgn/102/hunter-sliver",
+                "name": "Hunter Sliver",
+                "preview": "https://cards.scryfall.io/normal/front/c/a/ca9aea1a-6f50-4f66-9f36-2e214dce41b4.jpg",
+                "py/object": "pauperformance_bot.entity.api.archetype.TypicalCard",
+                "type_line": "Creature \u2014 Sliver",
+                "typical": 2
+            },
+            {
+                "at_least": [
+                    0.69,
+                    0.643,
+                    0.262,
+                    0.214
+                ],
+                "average": 2.6,
+                "banned": false,
+                "link": "https://scryfall.com/card/jmp/34/thriving-grove",
+                "name": "Thriving Grove",
+                "preview": "https://cards.scryfall.io/normal/front/7/9/79cabbe0-1c44-4888-8ebc-25a4c3e2c5d7.jpg",
+                "py/object": "pauperformance_bot.entity.api.archetype.TypicalCard",
+                "type_line": "Land",
+                "typical": 2
+            },
+            {
+                "at_least": [
+                    0.524,
+                    0.476,
+                    0.238,
+                    0.0
+                ],
+                "average": 2.4,
+                "banned": false,
+                "link": "https://scryfall.com/card/jmp/35/thriving-heath",
+                "name": "Thriving Heath",
+                "preview": "https://cards.scryfall.io/normal/front/f/e/fe424eb3-7df8-4317-8776-6d960afbb90a.jpg",
+                "py/object": "pauperformance_bot.entity.api.archetype.TypicalCard",
+                "type_line": "Land",
+                "typical": 2
+            },
+            {
+                "at_least": [
+                    0.452,
+                    0.429,
+                    0.024,
+                    0.0
+                ],
+                "average": 2.0,
+                "banned": false,
+                "link": "https://scryfall.com/card/tmp/106/winged-sliver",
+                "name": "Winged Sliver",
+                "preview": "https://cards.scryfall.io/normal/front/0/3/03aa58b4-dbc2-414e-aa7a-f09360d59b3c.jpg",
+                "py/object": "pauperformance_bot.entity.api.archetype.TypicalCard",
+                "type_line": "Creature \u2014 Sliver",
+                "typical": 2
+            },
+            {
+                "at_least": [
+                    0.405,
+                    0.214,
+                    0.0,
+                    0.0
+                ],
+                "average": 1.5,
+                "banned": false,
+                "link": "https://scryfall.com/card/ogw/172/holdout-settlement",
+                "name": "Holdout Settlement",
+                "preview": "https://cards.scryfall.io/normal/front/c/f/cf08c317-6f2d-47e3-ab5b-8af73fd3e404.jpg",
+                "py/object": "pauperformance_bot.entity.api.archetype.TypicalCard",
+                "type_line": "Land",
+                "typical": 0
+            },
+            {
+                "at_least": [
+                    0.357,
+                    0.31,
+                    0.214,
+                    0.095
+                ],
+                "average": 2.7,
+                "banned": false,
+                "link": "https://scryfall.com/card/jud/5/benevolent-bodyguard",
+                "name": "Benevolent Bodyguard",
+                "preview": "https://cards.scryfall.io/normal/front/2/2/22492fb3-5ceb-4d5e-ba82-ae1a6a69c105.jpg",
+                "py/object": "pauperformance_bot.entity.api.archetype.TypicalCard",
+                "type_line": "Creature \u2014 Human Cleric",
+                "typical": 0
+            },
+            {
+                "at_least": [
+                    0.286,
+                    0.238,
+                    0.024,
+                    0.024
+                ],
+                "average": 2.0,
+                "banned": false,
+                "link": "https://scryfall.com/card/hou/184/survivors-encampment",
+                "name": "Survivors' Encampment",
+                "preview": "https://cards.scryfall.io/normal/front/c/7/c7b0404e-0f42-456b-91ce-f960195c4951.jpg",
+                "py/object": "pauperformance_bot.entity.api.archetype.TypicalCard",
+                "type_line": "Land \u2014 Desert",
+                "typical": 0
+            },
+            {
+                "at_least": [
+                    0.262,
+                    0.262,
+                    0.048,
+                    0.048
+                ],
+                "average": 2.4,
+                "banned": false,
+                "link": "https://scryfall.com/card/c16/56/ash-barrens",
+                "name": "Ash Barrens",
+                "preview": "https://cards.scryfall.io/normal/front/9/d/9d7ac112-bb20-4ea4-b797-5d21f6b7c121.jpg",
+                "py/object": "pauperformance_bot.entity.api.archetype.TypicalCard",
+                "type_line": "Land",
+                "typical": 0
+            },
+            {
+                "at_least": [
+                    0.238,
+                    0.19,
+                    0.0,
+                    0.0
+                ],
+                "average": 1.8,
+                "banned": false,
+                "link": "https://scryfall.com/card/lgn/136/quick-sliver",
+                "name": "Quick Sliver",
+                "preview": "https://cards.scryfall.io/normal/front/3/0/30a60b2d-aeeb-4dbf-bf1a-20a274fe323f.jpg",
+                "py/object": "pauperformance_bot.entity.api.archetype.TypicalCard",
+                "type_line": "Creature \u2014 Sliver",
+                "typical": 0
+            },
+            {
+                "at_least": [
+                    0.19,
+                    0.143,
+                    0.024,
+                    0.0
+                ],
+                "average": 1.9,
+                "banned": false,
+                "link": "https://scryfall.com/card/khm/184/masked-vandal",
+                "name": "Masked Vandal",
+                "preview": "https://cards.scryfall.io/normal/front/f/0/f0a9c72a-e450-41e3-80e5-06f2f1171245.jpg",
+                "py/object": "pauperformance_bot.entity.api.archetype.TypicalCard",
+                "type_line": "Creature \u2014 Shapeshifter",
+                "typical": 0
+            },
+            {
+                "at_least": [
+                    0.167,
+                    0.119,
+                    0.024,
+                    0.0
+                ],
+                "average": 1.9,
+                "banned": false,
+                "link": "https://scryfall.com/card/mh1/119/bladeback-sliver",
+                "name": "Bladeback Sliver",
+                "preview": "https://cards.scryfall.io/normal/front/7/0/7066c9ab-9420-46f9-a6c7-ce4d5273e2fa.jpg",
+                "py/object": "pauperformance_bot.entity.api.archetype.TypicalCard",
+                "type_line": "Creature \u2014 Sliver",
+                "typical": 0
+            },
+            {
+                "at_least": [
+                    0.167,
+                    0.095,
+                    0.024,
+                    0.0
+                ],
+                "average": 1.7,
+                "banned": false,
+                "link": "https://scryfall.com/card/tsp/219/spinneret-sliver",
+                "name": "Spinneret Sliver",
+                "preview": "https://cards.scryfall.io/normal/front/d/a/da698c63-f167-4129-a650-b50c080a24b5.jpg",
+                "py/object": "pauperformance_bot.entity.api.archetype.TypicalCard",
+                "type_line": "Creature \u2014 Sliver",
+                "typical": 0
+            },
+            {
+                "at_least": [
+                    0.119,
+                    0.024,
+                    0.0,
+                    0.0
+                ],
+                "average": 1.2,
+                "banned": false,
+                "link": "https://scryfall.com/card/tmp/182/heart-sliver",
+                "name": "Heart Sliver",
+                "preview": "https://cards.scryfall.io/normal/front/2/7/27a83ab6-0d15-49e4-90e3-b3a2a095c632.jpg",
+                "py/object": "pauperformance_bot.entity.api.archetype.TypicalCard",
+                "type_line": "Creature \u2014 Sliver",
+                "typical": 0
+            },
+            {
+                "at_least": [
+                    0.119,
+                    0.119,
+                    0.095,
+                    0.071
+                ],
+                "average": 3.4,
+                "banned": false,
+                "link": "https://scryfall.com/card/mh3/227/sheltering-landscape",
+                "name": "Sheltering Landscape",
+                "preview": "https://cards.scryfall.io/normal/front/0/f/0fe070f4-8877-4280-b8fd-869f3ac34ab6.jpg",
+                "py/object": "pauperformance_bot.entity.api.archetype.TypicalCard",
+                "type_line": "Land",
+                "typical": 0
+            },
+            {
+                "at_least": [
+                    0.071,
+                    0.071,
+                    0.048,
+                    0.048
+                ],
+                "average": 3.3,
+                "banned": false,
+                "link": "https://scryfall.com/card/ktk/231/blossoming-sands",
+                "name": "Blossoming Sands",
+                "preview": "https://cards.scryfall.io/normal/front/a/3/a32a1c0b-f6ea-475a-aa01-3618ea7d8647.jpg",
+                "py/object": "pauperformance_bot.entity.api.archetype.TypicalCard",
+                "type_line": "Land",
+                "typical": 0
+            },
+            {
+                "at_least": [
+                    0.071,
+                    0.0,
+                    0.0,
+                    0.0
+                ],
+                "average": 1.0,
+                "banned": false,
+                "link": "https://scryfall.com/card/roe/228/evolving-wilds",
+                "name": "Evolving Wilds",
+                "preview": "https://cards.scryfall.io/normal/front/b/c/bc7e0407-fea1-43ef-8580-82271e440bb3.jpg",
+                "py/object": "pauperformance_bot.entity.api.archetype.TypicalCard",
+                "type_line": "Land",
+                "typical": 0
+            },
+            {
+                "at_least": [
+                    0.071,
+                    0.0,
+                    0.0,
+                    0.0
+                ],
+                "average": 1.0,
+                "banned": false,
+                "link": "https://scryfall.com/card/lea/292/mountain",
+                "name": "Mountain",
+                "preview": "https://cards.scryfall.io/normal/front/e/a/eace2c85-976c-425e-9800-5a6ccbd91b56.jpg",
+                "py/object": "pauperformance_bot.entity.api.archetype.TypicalCard",
+                "type_line": "Basic Land \u2014 Mountain",
+                "typical": 0
+            },
+            {
+                "at_least": [
+                    0.071,
+                    0.024,
+                    0.0,
+                    0.0
+                ],
+                "average": 1.3,
+                "banned": false,
+                "link": "https://scryfall.com/card/jud/18/prismatic-strands",
+                "name": "Prismatic Strands",
+                "preview": "https://cards.scryfall.io/normal/front/3/4/3454ef42-2e0b-4ce4-945f-e4ec3e83c39d.jpg",
+                "py/object": "pauperformance_bot.entity.api.archetype.TypicalCard",
+                "type_line": "Instant",
+                "typical": 0
+            },
+            {
+                "at_least": [
+                    0.071,
+                    0.048,
+                    0.0,
+                    0.0
+                ],
+                "average": 1.7,
+                "banned": false,
+                "link": "https://scryfall.com/card/tmp/50/talon-sliver",
+                "name": "Talon Sliver",
+                "preview": "https://cards.scryfall.io/normal/front/f/1/f186c4b1-b7ec-46eb-a961-257411b401b0.jpg",
+                "py/object": "pauperformance_bot.entity.api.archetype.TypicalCard",
+                "type_line": "Creature \u2014 Sliver",
+                "typical": 0
+            },
+            {
+                "at_least": [
+                    0.071,
+                    0.0,
+                    0.0,
+                    0.0
+                ],
+                "average": 1.0,
+                "banned": false,
+                "link": "https://scryfall.com/card/tsp/183/two-headed-sliver",
+                "name": "Two-Headed Sliver",
+                "preview": "https://cards.scryfall.io/normal/front/2/f/2f89fb3b-0238-4d76-a46d-7d6fa4a74620.jpg",
+                "py/object": "pauperformance_bot.entity.api.archetype.TypicalCard",
+                "type_line": "Creature \u2014 Sliver",
+                "typical": 0
+            }
+        ],
+        "metagames": [
+            {
+                "date": "2026-08-14",
+                "decks": 1,
+                "label": "hob",
+                "metagame": "146",
+                "name": "The Hobbit",
+                "py/object": "pauperformance_bot.entity.api.archetype.MetagameRef"
+            },
+            {
+                "date": "2026-03-06",
+                "decks": 1,
+                "label": "tmt",
+                "metagame": "141",
+                "name": "Teenage Mutant Ninja Turtles",
+                "py/object": "pauperformance_bot.entity.api.archetype.MetagameRef"
+            },
+            {
+                "date": "2026-01-23",
+                "decks": 2,
+                "label": "ecl",
+                "metagame": "140",
+                "name": "Lorwyn Eclipsed",
+                "py/object": "pauperformance_bot.entity.api.archetype.MetagameRef"
+            },
+            {
+                "date": "2025-11-21",
+                "decks": 1,
+                "label": "tla",
+                "metagame": "139",
+                "name": "Avatar: The Last Airbender",
+                "py/object": "pauperformance_bot.entity.api.archetype.MetagameRef"
+            },
+            {
+                "date": "2025-11-10",
+                "decks": 1,
+                "label": "BNR",
+                "metagame": "138",
+                "name": "Banned & Restricted Announcement",
+                "py/object": "pauperformance_bot.entity.api.archetype.MetagameRef"
+            },
+            {
+                "date": "2025-09-26",
+                "decks": 1,
+                "label": "spe",
+                "metagame": "137",
+                "name": "Marvel's Spider-Man Eternal",
+                "py/object": "pauperformance_bot.entity.api.archetype.MetagameRef"
+            },
+            {
+                "date": "2025-08-01",
+                "decks": 3,
+                "label": "eoe",
+                "metagame": "135",
+                "name": "Edge of Eternities",
+                "py/object": "pauperformance_bot.entity.api.archetype.MetagameRef"
+            },
+            {
+                "date": "2025-06-13",
+                "decks": 8,
+                "label": "fin",
+                "metagame": "134",
+                "name": "Final Fantasy",
+                "py/object": "pauperformance_bot.entity.api.archetype.MetagameRef"
+            },
+            {
+                "date": "2025-04-11",
+                "decks": 5,
+                "label": "tdm",
+                "metagame": "133",
+                "name": "Tarkir: Dragonstorm",
+                "py/object": "pauperformance_bot.entity.api.archetype.MetagameRef"
+            },
+            {
+                "date": "2025-02-14",
+                "decks": 1,
+                "label": "dft",
+                "metagame": "131",
+                "name": "Aetherdrift",
+                "py/object": "pauperformance_bot.entity.api.archetype.MetagameRef"
+            },
+            {
+                "date": "2024-06-14",
+                "decks": 2,
+                "label": "mh3",
+                "metagame": "125",
+                "name": "Modern Horizons 3",
+                "py/object": "pauperformance_bot.entity.api.archetype.MetagameRef"
+            },
+            {
+                "date": "2024-05-13",
+                "decks": 3,
+                "label": "BNR",
+                "metagame": "123",
+                "name": "Banned & Restricted Announcement",
+                "py/object": "pauperformance_bot.entity.api.archetype.MetagameRef"
+            },
+            {
+                "date": "2024-02-09",
+                "decks": 9,
+                "label": "mkm",
+                "metagame": "121",
+                "name": "Murders at Karlov Manor",
+                "py/object": "pauperformance_bot.entity.api.archetype.MetagameRef"
+            },
+            {
+                "date": "2024-01-12",
+                "decks": 4,
+                "label": "rvr",
+                "metagame": "120",
+                "name": "Ravnica Remastered",
+                "py/object": "pauperformance_bot.entity.api.archetype.MetagameRef"
+            }
+        ],
+        "py/object": "pauperformance_bot.entity.api.archetype.TypicalList",
+        "side": [
+            {
+                "at_least": [
+                    0.643,
+                    0.595,
+                    0.143,
+                    0.0
+                ],
+                "average": 2.1,
+                "banned": false,
+                "link": "https://scryfall.com/card/jud/18/prismatic-strands",
+                "name": "Prismatic Strands",
+                "preview": "https://cards.scryfall.io/normal/front/3/4/3454ef42-2e0b-4ce4-945f-e4ec3e83c39d.jpg",
+                "py/object": "pauperformance_bot.entity.api.archetype.TypicalCard",
+                "type_line": "Instant",
+                "typical": 2
+            },
+            {
+                "at_least": [
+                    0.643,
+                    0.619,
+                    0.119,
+                    0.024
+                ],
+                "average": 2.2,
+                "banned": false,
+                "link": "https://scryfall.com/card/apc/18/standard-bearer",
+                "name": "Standard Bearer",
+                "preview": "https://cards.scryfall.io/normal/front/e/0/e0f8e16a-55f0-4147-a01a-dba7938f31c4.jpg",
+                "py/object": "pauperformance_bot.entity.api.archetype.TypicalCard",
+                "type_line": "Creature \u2014 Human Flagbearer",
+                "typical": 2
+            },
+            {
+                "at_least": [
+                    0.619,
+                    0.548,
+                    0.262,
+                    0.0
+                ],
+                "average": 2.3,
+                "banned": false,
+                "link": "https://scryfall.com/card/inv/11/crimson-acolyte",
+                "name": "Crimson Acolyte",
+                "preview": "https://cards.scryfall.io/normal/front/c/1/c1718028-3009-4bdd-9f6f-59c17edd1344.jpg",
+                "py/object": "pauperformance_bot.entity.api.archetype.TypicalCard",
+                "type_line": "Creature \u2014 Human Cleric",
+                "typical": 2
+            },
+            {
+                "at_least": [
+                    0.595,
+                    0.524,
+                    0.31,
+                    0.119
+                ],
+                "average": 2.6,
+                "banned": false,
+                "link": "https://scryfall.com/card/khm/184/masked-vandal",
+                "name": "Masked Vandal",
+                "preview": "https://cards.scryfall.io/normal/front/f/0/f0a9c72a-e450-41e3-80e5-06f2f1171245.jpg",
+                "py/object": "pauperformance_bot.entity.api.archetype.TypicalCard",
+                "type_line": "Creature \u2014 Shapeshifter",
+                "typical": 2
+            },
+            {
+                "at_least": [
+                    0.476,
+                    0.405,
+                    0.238,
+                    0.024
+                ],
+                "average": 2.4,
+                "banned": false,
+                "link": "https://scryfall.com/card/inv/22/obsidian-acolyte",
+                "name": "Obsidian Acolyte",
+                "preview": "https://cards.scryfall.io/normal/front/8/6/868efcee-bb13-4b6f-b81b-99408685e4c4.jpg",
+                "py/object": "pauperformance_bot.entity.api.archetype.TypicalCard",
+                "type_line": "Creature \u2014 Human Cleric",
+                "typical": 2
+            },
+            {
+                "at_least": [
+                    0.405,
+                    0.405,
+                    0.214,
+                    0.024
+                ],
+                "average": 2.6,
+                "banned": false,
+                "link": "https://scryfall.com/card/lgn/63/crypt-sliver",
+                "name": "Crypt Sliver",
+                "preview": "https://cards.scryfall.io/normal/front/5/0/507097eb-6b50-47ae-a545-df76b743b2bd.jpg",
+                "py/object": "pauperformance_bot.entity.api.archetype.TypicalCard",
+                "type_line": "Creature \u2014 Sliver",
+                "typical": 2
+            },
+            {
+                "at_least": [
+                    0.357,
+                    0.357,
+                    0.286,
+                    0.024
+                ],
+                "average": 2.9,
+                "banned": false,
+                "link": "https://scryfall.com/card/shm/66/faerie-macabre",
+                "name": "Faerie Macabre",
+                "preview": "https://cards.scryfall.io/normal/front/e/a/ead8befa-27dd-4ec4-b317-1c231407e0ac.jpg",
+                "py/object": "pauperformance_bot.entity.api.archetype.TypicalCard",
+                "type_line": "Creature \u2014 Faerie Rogue",
+                "typical": 2
+            },
+            {
+                "at_least": [
+                    0.333,
+                    0.333,
+                    0.262,
+                    0.024
+                ],
+                "average": 2.9,
+                "banned": false,
+                "link": "https://scryfall.com/card/mh3/45/thraben-charm",
+                "name": "Thraben Charm",
+                "preview": "https://cards.scryfall.io/normal/front/d/d/dd28a646-f38f-4cdf-948c-969cd979e5e6.jpg",
+                "py/object": "pauperformance_bot.entity.api.archetype.TypicalCard",
+                "type_line": "Instant",
+                "typical": 1
+            },
+            {
+                "at_least": [
+                    0.286,
+                    0.262,
+                    0.0,
+                    0.0
+                ],
+                "average": 1.9,
+                "banned": false,
+                "link": "https://scryfall.com/card/mh1/191/weather-the-storm",
+                "name": "Weather the Storm",
+                "preview": "https://cards.scryfall.io/normal/front/f/6/f6a9fa51-78c3-42e6-8c2e-39658f59ed87.jpg",
+                "py/object": "pauperformance_bot.entity.api.archetype.TypicalCard",
+                "type_line": "Instant",
+                "typical": 0
+            },
+            {
+                "at_least": [
+                    0.167,
+                    0.167,
+                    0.024,
+                    0.0
+                ],
+                "average": 2.1,
+                "banned": false,
+                "link": "https://scryfall.com/card/tsp/219/spinneret-sliver",
+                "name": "Spinneret Sliver",
+                "preview": "https://cards.scryfall.io/normal/front/d/a/da698c63-f167-4129-a650-b50c080a24b5.jpg",
+                "py/object": "pauperformance_bot.entity.api.archetype.TypicalCard",
+                "type_line": "Creature \u2014 Sliver",
+                "typical": 0
+            },
+            {
+                "at_least": [
+                    0.143,
+                    0.119,
+                    0.071,
+                    0.0
+                ],
+                "average": 2.3,
+                "banned": false,
+                "link": "https://scryfall.com/card/dst/4/hallow",
+                "name": "Hallow",
+                "preview": "https://cards.scryfall.io/normal/front/8/0/80fe80a0-cb3d-48bc-b67e-2e2253cfee14.jpg",
+                "py/object": "pauperformance_bot.entity.api.archetype.TypicalCard",
+                "type_line": "Instant",
+                "typical": 0
+            },
+            {
+                "at_least": [
+                    0.143,
+                    0.143,
+                    0.024,
+                    0.024
+                ],
+                "average": 2.3,
+                "banned": false,
+                "link": "https://scryfall.com/card/pls/8/honorable-scout",
+                "name": "Honorable Scout",
+                "preview": "https://cards.scryfall.io/normal/front/b/d/bd311758-0352-4b7d-a24f-7f3f2b5d7b0f.jpg",
+                "py/object": "pauperformance_bot.entity.api.archetype.TypicalCard",
+                "type_line": "Creature \u2014 Human Soldier Scout",
+                "typical": 0
+            },
+            {
+                "at_least": [
+                    0.119,
+                    0.071,
+                    0.0,
+                    0.0
+                ],
+                "average": 1.6,
+                "banned": false,
+                "link": "https://scryfall.com/card/rav/23/leave-no-trace",
+                "name": "Leave No Trace",
+                "preview": "https://cards.scryfall.io/normal/front/5/8/58466d46-7225-42ff-8471-6d489be32cf3.jpg",
+                "py/object": "pauperformance_bot.entity.api.archetype.TypicalCard",
+                "type_line": "Instant",
+                "typical": 0
+            },
+            {
+                "at_least": [
+                    0.095,
+                    0.048,
+                    0.0,
+                    0.0
+                ],
+                "average": 1.5,
+                "banned": false,
+                "link": "https://scryfall.com/card/jud/5/benevolent-bodyguard",
+                "name": "Benevolent Bodyguard",
+                "preview": "https://cards.scryfall.io/normal/front/2/2/22492fb3-5ceb-4d5e-ba82-ae1a6a69c105.jpg",
+                "py/object": "pauperformance_bot.entity.api.archetype.TypicalCard",
+                "type_line": "Creature \u2014 Human Cleric",
+                "typical": 0
+            },
+            {
+                "at_least": [
+                    0.095,
+                    0.095,
+                    0.0,
+                    0.0
+                ],
+                "average": 2.0,
+                "banned": false,
+                "link": "https://scryfall.com/card/plc/145/essence-warden",
+                "name": "Essence Warden",
+                "preview": "https://cards.scryfall.io/normal/front/d/a/da2a65d6-0887-4fe8-a6e6-909208fddd90.jpg",
+                "py/object": "pauperformance_bot.entity.api.archetype.TypicalCard",
+                "type_line": "Creature \u2014 Elf Shaman",
+                "typical": 0
+            },
+            {
+                "at_least": [
+                    0.095,
+                    0.071,
+                    0.0,
+                    0.0
+                ],
+                "average": 1.8,
+                "banned": false,
+                "link": "https://scryfall.com/card/arb/75/qasali-pridemage",
+                "name": "Qasali Pridemage",
+                "preview": "https://cards.scryfall.io/normal/front/7/5/75256550-bbe0-499d-909e-af10691749c2.jpg",
+                "py/object": "pauperformance_bot.entity.api.archetype.TypicalCard",
+                "type_line": "Creature \u2014 Cat Wizard",
+                "typical": 0
+            },
+            {
+                "at_least": [
+                    0.071,
+                    0.071,
+                    0.0,
+                    0.0
+                ],
+                "average": 2.0,
+                "banned": false,
+                "link": "https://scryfall.com/card/lea/193/fog",
+                "name": "Fog",
+                "preview": "https://cards.scryfall.io/normal/front/c/f/cfba606d-bb55-43ba-aa0c-299649958788.jpg",
+                "py/object": "pauperformance_bot.entity.api.archetype.TypicalCard",
+                "type_line": "Instant",
+                "typical": 0
+            },
+            {
+                "at_least": [
+                    0.071,
+                    0.071,
+                    0.048,
+                    0.024
+                ],
+                "average": 3.0,
+                "banned": false,
+                "link": "https://scryfall.com/card/zen/14/journey-to-nowhere",
+                "name": "Journey to Nowhere",
+                "preview": "https://cards.scryfall.io/normal/front/0/9/09cfe585-8a55-4b27-89e0-dfb6946fe1f3.jpg",
+                "py/object": "pauperformance_bot.entity.api.archetype.TypicalCard",
+                "type_line": "Enchantment",
+                "typical": 0
+            },
+            {
+                "at_least": [
+                    0.071,
+                    0.048,
+                    0.0,
+                    0.0
+                ],
+                "average": 1.7,
+                "banned": false,
+                "link": "https://scryfall.com/card/lgn/136/quick-sliver",
+                "name": "Quick Sliver",
+                "preview": "https://cards.scryfall.io/normal/front/3/0/30a60b2d-aeeb-4dbf-bf1a-20a274fe323f.jpg",
+                "py/object": "pauperformance_bot.entity.api.archetype.TypicalCard",
+                "type_line": "Creature \u2014 Sliver",
+                "typical": 0
+            },
+            {
+                "at_least": [
+                    0.071,
+                    0.0,
+                    0.0,
+                    0.0
+                ],
+                "average": 1.0,
+                "banned": false,
+                "link": "https://scryfall.com/card/ala/218/relic-of-progenitus",
+                "name": "Relic of Progenitus",
+                "preview": "https://cards.scryfall.io/normal/front/9/0/90c41192-64ef-43aa-9af0-75f0d3f56688.jpg",
+                "py/object": "pauperformance_bot.entity.api.archetype.TypicalCard",
+                "type_line": "Artifact",
+                "typical": 0
+            },
+            {
+                "at_least": [
+                    0.071,
+                    0.024,
+                    0.024,
+                    0.024
+                ],
+                "average": 2.0,
+                "banned": false,
+                "link": "https://scryfall.com/card/con/90/scattershot-archer",
+                "name": "Scattershot Archer",
+                "preview": "https://cards.scryfall.io/normal/front/d/7/d74d6cdb-a087-4b3d-bf25-509200ed6d93.jpg",
+                "py/object": "pauperformance_bot.entity.api.archetype.TypicalCard",
+                "type_line": "Creature \u2014 Elf Archer",
+                "typical": 0
+            },
+            {
+                "at_least": [
+                    0.071,
+                    0.0,
+                    0.0,
+                    0.0
+                ],
+                "average": 1.0,
+                "banned": false,
+                "link": "https://scryfall.com/card/lea/177/stone-rain",
+                "name": "Stone Rain",
+                "preview": "https://cards.scryfall.io/normal/front/5/7/57ff74cb-a2ed-4123-ac42-f72f9820049e.jpg",
+                "py/object": "pauperformance_bot.entity.api.archetype.TypicalCard",
+                "type_line": "Sorcery",
+                "typical": 0
+            },
+            {
+                "at_least": [
+                    0.071,
+                    0.0,
+                    0.0,
+                    0.0
+                ],
+                "average": 1.0,
+                "banned": false,
+                "link": "https://scryfall.com/card/fut/155/virulent-sliver",
+                "name": "Virulent Sliver",
+                "preview": "https://cards.scryfall.io/normal/front/6/6/66de9c95-e590-4b0d-a2d7-886d7a488a10.jpg",
+                "py/object": "pauperformance_bot.entity.api.archetype.TypicalCard",
+                "type_line": "Creature \u2014 Sliver",
+                "typical": 0
+            }
+        ],
+        "started_by_bans": []
+    }
 }

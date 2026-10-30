@@ -20,6 +20,11 @@ function pilotToSlug(name) {
 }
 
 // Returns true if outputPath does not exist or any existing inputPath is newer than it
+// A card name as decklists spell it: no accents, Æ as Ae.
+function withoutAccents(name) {
+  return name.normalize('NFD').replace(/[̀-ͯ]/g, '').replace(/Æ/g, 'Ae').replace(/æ/g, 'ae')
+}
+
 function needsRebuild(outputPath, inputPaths) {
   if (!existsSync(outputPath)) return true
   var outMtime = statSync(outputPath).mtimeMs
@@ -73,6 +78,44 @@ const index = archetypes.map(({ name, aliases, dominant_mana, game_type, family 
 writeFileSync(join(outDir, 'archetypes.json'), JSON.stringify(index))
 console.log(`Built archetypes.json with ${index.length} entries.`)
 
+// How the archetype's recent decklists play each card (see Myr's
+// silver/typical_list.py); null for archetypes exported before Myr made it.
+function typicalList(t) {
+  if (!t) return null
+  const cards = list => (list || []).map(({ name, link, preview, type_line, typical, at_least, average, banned }) => ({
+    name, link, preview, type_line: type_line || '', typical, at_least, average, banned: banned === true,
+  }))
+  return {
+    decks: t.decks,
+    first_date: t.first_date || null,
+    last_date: t.last_date || null,
+    metagames: (t.metagames || []).map(metagameRef),
+    era_start: metagameRef(t.era_start),
+    started_by_bans: t.started_by_bans || [],
+    era_end: metagameRef(t.era_end),
+    ended_by_bans: t.ended_by_bans || [],
+    later_decks: t.later_decks || 0,
+    main: cards(t.main),
+    side: cards(t.side),
+  }
+}
+
+// A metagame as Myr exports it: its p13m code, label (set code or BNR), name
+// (the set's, or the B&R's), start date and, where relevant, how many of the
+// archetype's decks it holds.
+function metagameRef(m) {
+  if (!m) return null
+  return {
+    metagame: m.metagame, label: m.label, name: m.name || m.label, date: m.date, decks: m.decks ?? null,
+  }
+}
+
+// The archetype's first or last classified deck.
+function appearance(a) {
+  if (!a) return null
+  return { date: a.date, metagame: metagameRef(a.metagame) }
+}
+
 // Write per-archetype detail files (incremental)
 let detailWritten = 0, detailSkipped = 0
 for (const archetype of archetypes) {
@@ -80,9 +123,10 @@ for (const archetype of archetypes) {
   const outputPath = join(detailsDir, `${nameToSlug(name)}.json`)
   const deckFolderPath = join(deckDir, name)
   const videoFolderPath = join(videoDir, name)
+  const intelFolderPath = join(intelDeckDir, name)
 
   // Check archetype JSON + folder mtimes (folder mtime changes on add/remove)
-  if (!needsRebuild(outputPath, [archetype._srcPath, deckFolderPath, videoFolderPath])) {
+  if (!needsRebuild(outputPath, [archetype._srcPath, deckFolderPath, videoFolderPath, intelFolderPath])) {
     detailSkipped++
     continue
   }
@@ -110,8 +154,9 @@ for (const archetype of archetypes) {
     game_type: archetype.game_type || [],
     family: archetype.family || null,
     description: archetype.description || null,
-    staples: (archetype.staples || []).map(({ name, link, preview }) => ({ name, link, preview })),
-    frequent: (archetype.frequent || []).map(({ name, link, preview }) => ({ name, link, preview })),
+    first_appearance: appearance(archetype.first_appearance),
+    last_appearance: appearance(archetype.last_appearance),
+    typical_list: typicalList(archetype.typical_list),
     must_have_cards: archetype.must_have_cards || [],
     must_not_have_cards: archetype.must_not_have_cards || [],
     resource_sideboards: (archetype.resource_sideboards || []).map(function(s) {
@@ -124,6 +169,10 @@ for (const archetype of archetypes) {
       name, link, language,
     })),
     decks,
+    // the decklists in the archetype's Decks section (its intel-decks list)
+    intel_deck_count: existsSync(intelFolderPath)
+      ? readdirSync(intelFolderPath).filter(f => f.endsWith('.json')).length
+      : 0,
     videos,
   }
 
@@ -202,7 +251,9 @@ var playersMap = {}
 
 // Cached decks whose deck-detail reads are deferred until we know if any deck changed
 var cachedDecks = []
-var anyDeckChanged = false
+// An empty card-decks folder (e.g. emptied to rebuild it) needs rebuilding as
+// if decks had changed.
+var anyDeckChanged = readdirSync(cardDecksDir).length === 0
 
 for (const archetype of archetypes) {
   const name = archetype.name
@@ -506,7 +557,14 @@ for (const f of cardFiles) {
 
   const cardDetailOutputPath = join(cardDetailsDir, slug + '.json')
   if (needsRebuild(cardDetailOutputPath, [cardInputPath])) {
-    writeFileSync(cardDetailOutputPath, JSON.stringify({ slug, name, archetypes, scryfall }))
+    writeFileSync(cardDetailOutputPath, JSON.stringify({
+      slug, name, archetypes, scryfall,
+      // the first and last decklists playing it (first_on_record: the first is
+      // among the oldest decklists on record, so it may have been played before)
+      first_appearance: appearance(raw.first_appearance),
+      last_appearance: appearance(raw.last_appearance),
+      first_on_record: raw.first_on_record === true,
+    }))
     cardDetailWritten++
   } else {
     cardDetailSkipped++
@@ -522,6 +580,15 @@ for (const f of cardFiles) {
   if (name.indexOf(' // ') !== -1) {
     var frontName2 = name.split(' // ')[0]
     if (!cardTypeMap[frontName2]) cardTypeMap[frontName2] = types
+  }
+  // Decklists (MTGGoldfish, MTGO) spell names without accents ("Troll of
+  // Khazad-dum" for "Troll of Khazad-dûm") and split cards with a slash
+  // ("Fire/Ice" for "Fire // Ice"): map those spellings too
+  var plainNames = [name, name.split(' // ')[0], name.replace(' // ', '/')].map(withoutAccents)
+  for (var pni = 0; pni < plainNames.length; pni++) {
+    var plain = plainNames[pni]
+    if (!cardTypeMap[plain]) cardTypeMap[plain] = types
+    if (!cardImageMap[plain]) cardImageMap[plain] = cardImageMap[name]
   }
 }
 writeFileSync(join(outDir, 'cards.json'), JSON.stringify(cardsIndex))
@@ -540,6 +607,12 @@ for (var ci2 = 0; ci2 < cardsIndex.length; ci2++) {
     var frontFaceName = ci2entry.name.split(' // ')[0]
     if (!cardNameToSlug[frontFaceName]) cardNameToSlug[frontFaceName] = ci2entry.slug
   }
+  // as decklists spell them: without accents, split cards with a slash
+  var spellings = [ci2entry.name, ci2entry.name.split(' // ')[0], ci2entry.name.replace(' // ', '/')]
+    .map(withoutAccents)
+  for (var spi = 0; spi < spellings.length; spi++) {
+    if (!cardNameToSlug[spellings[spi]]) cardNameToSlug[spellings[spi]] = ci2entry.slug
+  }
 }
 // Decklists name double-faced/adventure cards by their front face only: map
 // those names to the card's slug, to link them (src/utils/cardPages.js).
@@ -551,18 +624,29 @@ writeFileSync(join(outDir, 'card-front-face-slugs.json'), JSON.stringify(frontFa
 
 if (anyDeckChanged) {
   var cardDeckWritten = 0, cardDeckSkipped = 0
+  // A card page gathers the decks of every spelling of its card (e.g. "Fire/Ice"
+  // and "Fire // Ice"), each deck once.
+  var slugDecks = {}, dirtySlugs = {}
   var cardNames = Object.keys(cardDecksMap)
   for (var ci3 = 0; ci3 < cardNames.length; ci3++) {
     var cname = cardNames[ci3]
     var cslug = cardNameToSlug[cname]
     if (!cslug) continue
-    var cardDeckOutputPath = join(cardDecksDir, cslug + '.json')
+    if (!slugDecks[cslug]) slugDecks[cslug] = {}
+    for (var cdk = 0; cdk < cardDecksMap[cname].length; cdk++) {
+      slugDecks[cslug][cardDecksMap[cname][cdk].id] = cardDecksMap[cname][cdk]
+    }
+    if (dirtyCardNames[cname]) dirtySlugs[cslug] = true
+  }
+  var slugNames = Object.keys(slugDecks)
+  for (var csi = 0; csi < slugNames.length; csi++) {
+    var cardDeckOutputPath = join(cardDecksDir, slugNames[csi] + '.json')
     // Skip if card is clean (not in any changed deck) and file already exists
-    if (!dirtyCardNames[cname] && existsSync(cardDeckOutputPath)) {
+    if (!dirtySlugs[slugNames[csi]] && existsSync(cardDeckOutputPath)) {
       cardDeckSkipped++
       continue
     }
-    var sortedDecks = cardDecksMap[cname].slice().sort(function(a, b) {
+    var sortedDecks = Object.values(slugDecks[slugNames[csi]]).sort(function(a, b) {
       return (b.tournament_date || '').localeCompare(a.tournament_date || '')
     })
     writeFileSync(cardDeckOutputPath, JSON.stringify(sortedDecks))
@@ -632,42 +716,20 @@ console.log(`Copied metagame.json with ${metagameOut.length} archetypes.`)
 const archetypeMap = Object.fromEntries(
   archetypes.map(a => [a.name, a])
 )
-// Staples are listed alphabetically: rank them by how many of the archetype's
-// most recent decklists play them in the maindeck, so the homepage shows the
-// most played ones. Basic lands are left out. The archetype's image is its
+// The homepage's staples are the most played nonland cards of the
+// archetype's typical list (computed by Myr). The archetype's image is its
 // representative card, chosen by hand in Myr's archetype config, or the most
 // played staple when the archetype has none.
-const RECENT_DECKS = 100
-const BASIC_LAND = /^(Snow-Covered )?(Plains|Island|Swamp|Mountain|Forest|Wastes)$/
-// Decklists name double-faced cards by their front face only.
-function cardKey(name) {
-  return nameToSlug(name.split(' // ')[0])
-}
-function recentPlayCounts(archetypeName) {
-  const counts = {}
-  const listPath = join(intelDecksDir, nameToSlug(archetypeName) + '.json')
-  if (!existsSync(listPath)) return counts
-  // intel-decks lists are sorted newest first
-  JSON.parse(readFileSync(listPath, 'utf8')).slice(0, RECENT_DECKS).forEach(function(d) {
-    const detailPath = join(deckDetailsDir, d.id + '.json')
-    if (!existsSync(detailPath)) return
-    const deck = JSON.parse(readFileSync(detailPath, 'utf8'))
-    if (!deck.decklist) return
-    new Set(deck.decklist.main.map(function(c) { return cardKey(c.name) })).forEach(function(key) {
-      counts[key] = (counts[key] || 0) + 1
-    })
-  })
-  return counts
+function isLand(name) {
+  return (cardTypeMap[name] || []).includes('Land')
 }
 
 const topDecks = metagameOut.slice(0, 16).map(entry => {
   const arch = archetypeMap[entry.archetype_name]
-  const counts = recentPlayCounts(entry.archetype_name)
-  const played = name => counts[cardKey(name)] || 0
-  const staples = ((arch && arch.staples) || [])
-    .filter(s => s.preview && !BASIC_LAND.test(s.name))
-    // stable sort: equally played staples stay alphabetical
-    .sort((a, b) => played(b.name) - played(a.name))
+  const typical = arch && arch.typical_list
+  // the typical list comes most played first
+  const staples = ((typical && typical.main) || [])
+    .filter(c => c.typical > 0 && c.preview && !isLand(c.name))
     .slice(0, 5)
     .map(({ name, link, preview }) => ({ name, link, preview }))
   const representative = arch && arch.representative_card
