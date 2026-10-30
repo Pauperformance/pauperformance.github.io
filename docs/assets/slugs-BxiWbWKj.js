@@ -1,0 +1,1 @@
+function a(e){return e.normalize("NFD").replace(/[\u0300-\u036f]/g,"").toLowerCase().replace(/ \/\/ /g,"_").replace(/ /g,"_").replace(/[^a-z0-9_-]/g,"")}function r(e){return(e.metagame||e.p13m)+"."+e.label.toLowerCase()}function l(e){return e.replace(/ \/\/ /g,"_").replace(/ /g,"_").replace(/[^a-zA-Z0-9._~-]/g,"")}export{r as m,a as n,l as p};
