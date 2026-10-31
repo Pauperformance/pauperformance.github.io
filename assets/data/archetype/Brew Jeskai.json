@@ -28,13 +28,13 @@
         "Combo"
     ],
     "last_appearance": {
-        "date": "2024-04-29",
+        "date": "2024-07-02",
         "metagame": {
-            "date": "2024-04-19",
+            "date": "2024-06-14",
             "decks": null,
-            "label": "otj",
-            "metagame": "122",
-            "name": "Outlaws of Thunder Junction",
+            "label": "mh3",
+            "metagame": "125",
+            "name": "Modern Horizons 3",
             "py/object": "pauperformance_bot.entity.api.archetype.MetagameRef"
         },
         "py/object": "pauperformance_bot.entity.api.archetype.Appearance"
@@ -49,12 +49,12 @@
     "resources": [],
     "resources_discord": [],
     "typical_list": {
-        "decks": 4,
+        "decks": 5,
         "ended_by_bans": [],
         "era_end": null,
         "era_start": null,
         "first_date": "2023-12-16",
-        "last_date": "2024-04-29",
+        "last_date": "2024-07-02",
         "later_decks": 0,
         "main": [
             {
@@ -93,10 +93,10 @@
                 "at_least": [
                     1.0,
                     1.0,
-                    0.5,
-                    0.5
+                    0.6,
+                    0.6
                 ],
-                "average": 3.0,
+                "average": 3.2,
                 "banned": false,
                 "link": "https://scryfall.com/card/clb/359/sea-gate",
                 "name": "Sea Gate",
@@ -107,10 +107,10 @@
             },
             {
                 "at_least": [
-                    0.75,
-                    0.75,
-                    0.75,
-                    0.75
+                    0.8,
+                    0.8,
+                    0.8,
+                    0.8
                 ],
                 "average": 4.0,
                 "banned": false,
@@ -123,10 +123,10 @@
             },
             {
                 "at_least": [
-                    0.75,
-                    0.75,
-                    0.75,
-                    0.75
+                    0.8,
+                    0.8,
+                    0.8,
+                    0.8
                 ],
                 "average": 4.0,
                 "banned": false,
@@ -139,10 +139,10 @@
             },
             {
                 "at_least": [
-                    0.5,
-                    0.5,
-                    0.5,
-                    0.5
+                    0.6,
+                    0.6,
+                    0.6,
+                    0.6
                 ],
                 "average": 4.0,
                 "banned": false,
@@ -155,10 +155,10 @@
             },
             {
                 "at_least": [
-                    0.5,
-                    0.5,
-                    0.5,
-                    0.5
+                    0.6,
+                    0.6,
+                    0.6,
+                    0.6
                 ],
                 "average": 4.0,
                 "banned": false,
@@ -171,10 +171,10 @@
             },
             {
                 "at_least": [
-                    0.5,
-                    0.5,
-                    0.5,
-                    0.5
+                    0.6,
+                    0.6,
+                    0.6,
+                    0.6
                 ],
                 "average": 4.0,
                 "banned": false,
@@ -187,12 +187,12 @@
             },
             {
                 "at_least": [
-                    0.75,
-                    0.75,
-                    0.75,
-                    0.25
+                    0.8,
+                    0.8,
+                    0.8,
+                    0.2
                 ],
-                "average": 3.3,
+                "average": 3.2,
                 "banned": false,
                 "link": "https://scryfall.com/card/jud/18/prismatic-strands",
                 "name": "Prismatic Strands",
@@ -203,8 +203,8 @@
             },
             {
                 "at_least": [
-                    0.75,
-                    0.75,
+                    0.8,
+                    0.8,
                     0.0,
                     0.0
                 ],
@@ -219,12 +219,12 @@
             },
             {
                 "at_least": [
-                    0.75,
-                    0.75,
-                    0.25,
+                    0.8,
+                    0.8,
+                    0.2,
                     0.0
                 ],
-                "average": 2.3,
+                "average": 2.2,
                 "banned": false,
                 "link": "https://scryfall.com/card/zen/14/journey-to-nowhere",
                 "name": "Journey to Nowhere",
@@ -235,12 +235,12 @@
             },
             {
                 "at_least": [
-                    0.75,
-                    0.75,
-                    0.25,
-                    0.25
+                    0.8,
+                    0.8,
+                    0.2,
+                    0.2
                 ],
-                "average": 2.7,
+                "average": 2.5,
                 "banned": false,
                 "link": "https://scryfall.com/card/lea/161/lightning-bolt",
                 "name": "Lightning Bolt",
@@ -251,8 +251,8 @@
             },
             {
                 "at_least": [
-                    0.5,
-                    0.5,
+                    0.6,
+                    0.6,
                     0.0,
                     0.0
                 ],
@@ -267,10 +267,58 @@
             },
             {
                 "at_least": [
-                    0.5,
-                    0.5,
-                    0.25,
-                    0.25
+                    0.6,
+                    0.6,
+                    0.4,
+                    0.4
+                ],
+                "average": 3.3,
+                "banned": false,
+                "link": "https://scryfall.com/card/lrw/76/mulldrifter",
+                "name": "Mulldrifter",
+                "preview": "https://cards.scryfall.io/normal/front/a/9/a97cfefa-ade7-49f6-b2aa-1118b9db4935.jpg",
+                "py/object": "pauperformance_bot.entity.api.archetype.TypicalCard",
+                "type_line": "Creature \u2014 Elemental",
+                "typical": 2
+            },
+            {
+                "at_least": [
+                    0.4,
+                    0.4,
+                    0.0,
+                    0.0
+                ],
+                "average": 2.0,
+                "banned": false,
+                "link": "https://scryfall.com/card/m13/41/archaeomancer",
+                "name": "Archaeomancer",
+                "preview": "https://cards.scryfall.io/normal/front/7/3/73c6d1be-55ad-4ee4-b044-88438e9b78cc.jpg",
+                "py/object": "pauperformance_bot.entity.api.archetype.TypicalCard",
+                "type_line": "Creature \u2014 Human Wizard",
+                "typical": 2
+            },
+            {
+                "at_least": [
+                    0.4,
+                    0.4,
+                    0.0,
+                    0.0
+                ],
+                "average": 2.0,
+                "banned": false,
+                "link": "https://scryfall.com/card/ice/64/counterspell",
+                "name": "Counterspell",
+                "preview": "https://cards.scryfall.io/normal/front/a/e/aedbcbaa-40f0-485f-8427-778edc2d2ec0.jpg",
+                "py/object": "pauperformance_bot.entity.api.archetype.TypicalCard",
+                "type_line": "Instant",
+                "typical": 2
+            },
+            {
+                "at_least": [
+                    0.4,
+                    0.4,
+                    0.2,
+                    0.2
                 ],
                 "average": 3.0,
                 "banned": false,
@@ -283,28 +331,12 @@
             },
             {
                 "at_least": [
-                    0.5,
-                    0.5,
-                    0.25,
-                    0.25
+                    0.8,
+                    0.2,
+                    0.2,
+                    0.2
                 ],
-                "average": 3.0,
-                "banned": false,
-                "link": "https://scryfall.com/card/lrw/76/mulldrifter",
-                "name": "Mulldrifter",
-                "preview": "https://cards.scryfall.io/normal/front/a/9/a97cfefa-ade7-49f6-b2aa-1118b9db4935.jpg",
-                "py/object": "pauperformance_bot.entity.api.archetype.TypicalCard",
-                "type_line": "Creature \u2014 Elemental",
-                "typical": 2
-            },
-            {
-                "at_least": [
-                    0.75,
-                    0.25,
-                    0.25,
-                    0.25
-                ],
-                "average": 2.0,
+                "average": 1.8,
                 "banned": false,
                 "link": "https://scryfall.com/card/rtr/237/azorius-guildgate",
                 "name": "Azorius Guildgate",
@@ -315,12 +347,12 @@
             },
             {
                 "at_least": [
-                    0.75,
-                    0.25,
+                    0.8,
+                    0.2,
                     0.0,
                     0.0
                 ],
-                "average": 1.3,
+                "average": 1.2,
                 "banned": false,
                 "link": "https://scryfall.com/card/clb/354/heap-gate",
                 "name": "Heap Gate",
@@ -331,7 +363,7 @@
             },
             {
                 "at_least": [
-                    0.5,
+                    0.6,
                     0.0,
                     0.0,
                     0.0
@@ -347,7 +379,7 @@
             },
             {
                 "at_least": [
-                    0.5,
+                    0.6,
                     0.0,
                     0.0,
                     0.0
@@ -363,23 +395,23 @@
             },
             {
                 "at_least": [
-                    0.5,
+                    0.6,
                     0.0,
                     0.0,
                     0.0
                 ],
                 "average": 1.0,
                 "banned": false,
-                "link": "https://scryfall.com/card/lea/288/island",
+                "link": "https://scryfall.com/card/rex/22/island-island",
                 "name": "Island",
-                "preview": "https://cards.scryfall.io/normal/front/9/0/90a57c0e-fa61-45ef-955d-d296403967d5.jpg",
+                "preview": "https://cards.scryfall.io/normal/front/7/6/76c343f5-6955-4ba2-a435-36d55182d1dd.jpg",
                 "py/object": "pauperformance_bot.entity.api.archetype.TypicalCard",
-                "type_line": "Basic Land \u2014 Island",
+                "type_line": "Basic Land \u2014 Island // Basic Land \u2014 Island",
                 "typical": 1
             },
             {
                 "at_least": [
-                    0.5,
+                    0.6,
                     0.0,
                     0.0,
                     0.0
@@ -395,23 +427,23 @@
             },
             {
                 "at_least": [
-                    0.5,
-                    0.25,
+                    0.6,
+                    0.2,
                     0.0,
                     0.0
                 ],
-                "average": 1.5,
+                "average": 1.3,
                 "banned": false,
-                "link": "https://scryfall.com/card/lea/286/plains",
+                "link": "https://scryfall.com/card/rex/21/plains-plains",
                 "name": "Plains",
-                "preview": "https://cards.scryfall.io/normal/front/b/1/b1623d57-4729-4796-b3f7-f1837a05c6ed.jpg",
+                "preview": "https://cards.scryfall.io/normal/front/6/6/6620b5f4-b1e5-4d1b-bbf2-c6ad9c8284c5.jpg",
                 "py/object": "pauperformance_bot.entity.api.archetype.TypicalCard",
-                "type_line": "Basic Land \u2014 Plains",
+                "type_line": "Basic Land \u2014 Plains // Basic Land \u2014 Plains",
                 "typical": 1
             },
             {
                 "at_least": [
-                    0.5,
+                    0.6,
                     0.0,
                     0.0,
                     0.0
@@ -427,24 +459,24 @@
             },
             {
                 "at_least": [
-                    0.25,
-                    0.25,
+                    0.4,
+                    0.0,
                     0.0,
                     0.0
                 ],
-                "average": 2.0,
+                "average": 1.0,
                 "banned": false,
-                "link": "https://scryfall.com/card/m13/41/archaeomancer",
-                "name": "Archaeomancer",
-                "preview": "https://cards.scryfall.io/normal/front/7/3/73c6d1be-55ad-4ee4-b044-88438e9b78cc.jpg",
+                "link": "https://scryfall.com/card/dmu/17/destroy-evil",
+                "name": "Destroy Evil",
+                "preview": "https://cards.scryfall.io/normal/front/4/f/4f7862ef-2c8d-4d28-9e50-7cc41861f245.jpg",
                 "py/object": "pauperformance_bot.entity.api.archetype.TypicalCard",
-                "type_line": "Creature \u2014 Human Wizard",
+                "type_line": "Instant",
                 "typical": 1
             },
             {
                 "at_least": [
-                    0.25,
-                    0.25,
+                    0.2,
+                    0.2,
                     0.0,
                     0.0
                 ],
@@ -455,14 +487,14 @@
                 "preview": "https://cards.scryfall.io/normal/front/f/5/f58592f7-1df5-428d-9dde-e6acd9a5d1d5.jpg",
                 "py/object": "pauperformance_bot.entity.api.archetype.TypicalCard",
                 "type_line": "Creature \u2014 Human Shaman",
-                "typical": 1
+                "typical": 0
             },
             {
                 "at_least": [
-                    0.25,
-                    0.25,
-                    0.25,
-                    0.25
+                    0.2,
+                    0.2,
+                    0.2,
+                    0.2
                 ],
                 "average": 4.0,
                 "banned": false,
@@ -471,14 +503,14 @@
                 "preview": "https://cards.scryfall.io/normal/front/9/0/90301f8c-f7af-4179-8faf-9901931bba8d.jpg",
                 "py/object": "pauperformance_bot.entity.api.archetype.TypicalCard",
                 "type_line": "Sorcery",
-                "typical": 1
+                "typical": 0
             },
             {
                 "at_least": [
-                    0.25,
-                    0.25,
-                    0.25,
-                    0.25
+                    0.2,
+                    0.2,
+                    0.2,
+                    0.2
                 ],
                 "average": 4.0,
                 "banned": false,
@@ -487,14 +519,14 @@
                 "preview": "https://cards.scryfall.io/normal/front/8/d/8d42d7aa-7f53-4cfc-842a-086aab2448d1.jpg",
                 "py/object": "pauperformance_bot.entity.api.archetype.TypicalCard",
                 "type_line": "Instant",
-                "typical": 1
+                "typical": 0
             },
             {
                 "at_least": [
-                    0.25,
-                    0.25,
-                    0.25,
-                    0.25
+                    0.2,
+                    0.2,
+                    0.2,
+                    0.2
                 ],
                 "average": 4.0,
                 "banned": false,
@@ -503,30 +535,14 @@
                 "preview": "https://cards.scryfall.io/normal/front/d/e/dea15b53-2940-40e7-8d48-8ec11341da83.jpg",
                 "py/object": "pauperformance_bot.entity.api.archetype.TypicalCard",
                 "type_line": "Sorcery",
-                "typical": 1
-            },
-            {
-                "at_least": [
-                    0.25,
-                    0.25,
-                    0.0,
-                    0.0
-                ],
-                "average": 2.0,
-                "banned": false,
-                "link": "https://scryfall.com/card/ice/64/counterspell",
-                "name": "Counterspell",
-                "preview": "https://cards.scryfall.io/normal/front/a/e/aedbcbaa-40f0-485f-8427-778edc2d2ec0.jpg",
-                "py/object": "pauperformance_bot.entity.api.archetype.TypicalCard",
-                "type_line": "Instant",
                 "typical": 0
             },
             {
                 "at_least": [
-                    0.25,
-                    0.25,
-                    0.25,
-                    0.25
+                    0.2,
+                    0.2,
+                    0.2,
+                    0.2
                 ],
                 "average": 4.0,
                 "banned": false,
@@ -539,26 +555,10 @@
             },
             {
                 "at_least": [
-                    0.25,
-                    0.0,
-                    0.0,
-                    0.0
-                ],
-                "average": 1.0,
-                "banned": false,
-                "link": "https://scryfall.com/card/dmu/17/destroy-evil",
-                "name": "Destroy Evil",
-                "preview": "https://cards.scryfall.io/normal/front/4/f/4f7862ef-2c8d-4d28-9e50-7cc41861f245.jpg",
-                "py/object": "pauperformance_bot.entity.api.archetype.TypicalCard",
-                "type_line": "Instant",
-                "typical": 0
-            },
-            {
-                "at_least": [
-                    0.25,
-                    0.25,
-                    0.25,
-                    0.25
+                    0.2,
+                    0.2,
+                    0.2,
+                    0.2
                 ],
                 "average": 4.0,
                 "banned": false,
@@ -571,10 +571,10 @@
             },
             {
                 "at_least": [
-                    0.25,
-                    0.25,
-                    0.25,
-                    0.25
+                    0.2,
+                    0.2,
+                    0.2,
+                    0.2
                 ],
                 "average": 4.0,
                 "banned": false,
@@ -587,10 +587,10 @@
             },
             {
                 "at_least": [
-                    0.25,
-                    0.25,
-                    0.25,
-                    0.25
+                    0.2,
+                    0.2,
+                    0.2,
+                    0.2
                 ],
                 "average": 4.0,
                 "banned": false,
@@ -603,10 +603,10 @@
             },
             {
                 "at_least": [
-                    0.25,
-                    0.25,
-                    0.25,
-                    0.25
+                    0.2,
+                    0.2,
+                    0.2,
+                    0.2
                 ],
                 "average": 4.0,
                 "banned": false,
@@ -619,10 +619,10 @@
             },
             {
                 "at_least": [
-                    0.25,
-                    0.25,
-                    0.25,
-                    0.25
+                    0.2,
+                    0.2,
+                    0.2,
+                    0.2
                 ],
                 "average": 4.0,
                 "banned": false,
@@ -635,9 +635,9 @@
             },
             {
                 "at_least": [
-                    0.25,
-                    0.25,
-                    0.25,
+                    0.2,
+                    0.2,
+                    0.2,
                     0.0
                 ],
                 "average": 3.0,
@@ -651,10 +651,10 @@
             },
             {
                 "at_least": [
-                    0.25,
-                    0.25,
-                    0.25,
-                    0.25
+                    0.2,
+                    0.2,
+                    0.2,
+                    0.2
                 ],
                 "average": 4.0,
                 "banned": false,
@@ -667,10 +667,10 @@
             },
             {
                 "at_least": [
-                    0.25,
-                    0.25,
-                    0.25,
-                    0.25
+                    0.2,
+                    0.2,
+                    0.2,
+                    0.2
                 ],
                 "average": 4.0,
                 "banned": false,
@@ -683,24 +683,24 @@
             },
             {
                 "at_least": [
-                    0.25,
+                    0.2,
                     0.0,
                     0.0,
                     0.0
                 ],
                 "average": 1.0,
                 "banned": false,
-                "link": "https://scryfall.com/card/lea/292/mountain",
+                "link": "https://scryfall.com/card/rex/24/mountain-mountain",
                 "name": "Mountain",
-                "preview": "https://cards.scryfall.io/normal/front/e/a/eace2c85-976c-425e-9800-5a6ccbd91b56.jpg",
+                "preview": "https://cards.scryfall.io/normal/front/a/a/aae84079-b65b-4132-86fb-e82503bb6c7b.jpg",
                 "py/object": "pauperformance_bot.entity.api.archetype.TypicalCard",
-                "type_line": "Basic Land \u2014 Mountain",
+                "type_line": "Basic Land \u2014 Mountain // Basic Land \u2014 Mountain",
                 "typical": 0
             },
             {
                 "at_least": [
-                    0.25,
-                    0.25,
+                    0.2,
+                    0.2,
                     0.0,
                     0.0
                 ],
@@ -715,10 +715,10 @@
             },
             {
                 "at_least": [
-                    0.25,
-                    0.25,
-                    0.25,
-                    0.25
+                    0.2,
+                    0.2,
+                    0.2,
+                    0.2
                 ],
                 "average": 4.0,
                 "banned": false,
@@ -731,10 +731,10 @@
             },
             {
                 "at_least": [
-                    0.25,
-                    0.25,
-                    0.25,
-                    0.25
+                    0.2,
+                    0.2,
+                    0.2,
+                    0.2
                 ],
                 "average": 4.0,
                 "banned": false,
@@ -747,7 +747,7 @@
             },
             {
                 "at_least": [
-                    0.25,
+                    0.2,
                     0.0,
                     0.0,
                     0.0
@@ -763,10 +763,10 @@
             },
             {
                 "at_least": [
-                    0.25,
-                    0.25,
-                    0.25,
-                    0.25
+                    0.2,
+                    0.2,
+                    0.2,
+                    0.2
                 ],
                 "average": 4.0,
                 "banned": false,
@@ -779,10 +779,10 @@
             },
             {
                 "at_least": [
-                    0.25,
-                    0.25,
-                    0.25,
-                    0.25
+                    0.2,
+                    0.2,
+                    0.2,
+                    0.2
                 ],
                 "average": 4.0,
                 "banned": false,
@@ -795,10 +795,10 @@
             },
             {
                 "at_least": [
-                    0.25,
-                    0.25,
-                    0.25,
-                    0.25
+                    0.2,
+                    0.2,
+                    0.2,
+                    0.2
                 ],
                 "average": 4.0,
                 "banned": false,
@@ -811,6 +811,14 @@
             }
         ],
         "metagames": [
+            {
+                "date": "2024-06-14",
+                "decks": 1,
+                "label": "mh3",
+                "metagame": "125",
+                "name": "Modern Horizons 3",
+                "py/object": "pauperformance_bot.entity.api.archetype.MetagameRef"
+            },
             {
                 "date": "2024-04-19",
                 "decks": 1,
@@ -840,12 +848,12 @@
         "side": [
             {
                 "at_least": [
-                    0.5,
-                    0.5,
-                    0.5,
-                    0.25
+                    0.6,
+                    0.6,
+                    0.6,
+                    0.2
                 ],
-                "average": 3.5,
+                "average": 3.3,
                 "banned": false,
                 "link": "https://scryfall.com/card/lea/169/red-elemental-blast",
                 "name": "Red Elemental Blast",
@@ -856,12 +864,12 @@
             },
             {
                 "at_least": [
-                    0.75,
-                    0.75,
-                    0.25,
+                    0.8,
+                    0.8,
+                    0.2,
                     0.0
                 ],
-                "average": 2.3,
+                "average": 2.2,
                 "banned": false,
                 "link": "https://scryfall.com/card/drk/5/dust-to-dust",
                 "name": "Dust to Dust",
@@ -872,8 +880,8 @@
             },
             {
                 "at_least": [
-                    0.5,
-                    0.5,
+                    0.6,
+                    0.6,
                     0.0,
                     0.0
                 ],
@@ -888,8 +896,8 @@
             },
             {
                 "at_least": [
-                    0.5,
-                    0.5,
+                    0.6,
+                    0.6,
                     0.0,
                     0.0
                 ],
@@ -904,39 +912,7 @@
             },
             {
                 "at_least": [
-                    0.5,
-                    0.25,
-                    0.25,
-                    0.25
-                ],
-                "average": 2.5,
-                "banned": false,
-                "link": "https://scryfall.com/card/jud/18/prismatic-strands",
-                "name": "Prismatic Strands",
-                "preview": "https://cards.scryfall.io/normal/front/3/4/3454ef42-2e0b-4ce4-945f-e4ec3e83c39d.jpg",
-                "py/object": "pauperformance_bot.entity.api.archetype.TypicalCard",
-                "type_line": "Instant",
-                "typical": 1
-            },
-            {
-                "at_least": [
-                    0.25,
-                    0.25,
-                    0.25,
-                    0.25
-                ],
-                "average": 4.0,
-                "banned": false,
-                "link": "https://scryfall.com/card/lea/49/blue-elemental-blast",
-                "name": "Blue Elemental Blast",
-                "preview": "https://cards.scryfall.io/normal/front/2/0/20d666ef-39bf-4fbf-8201-5f1056539da2.jpg",
-                "py/object": "pauperformance_bot.entity.api.archetype.TypicalCard",
-                "type_line": "Instant",
-                "typical": 1
-            },
-            {
-                "at_least": [
-                    0.25,
+                    0.4,
                     0.0,
                     0.0,
                     0.0
@@ -952,24 +928,8 @@
             },
             {
                 "at_least": [
-                    0.25,
-                    0.25,
-                    0.25,
-                    0.25
-                ],
-                "average": 4.0,
-                "banned": false,
-                "link": "https://scryfall.com/card/ice/64/counterspell",
-                "name": "Counterspell",
-                "preview": "https://cards.scryfall.io/normal/front/a/e/aedbcbaa-40f0-485f-8427-778edc2d2ec0.jpg",
-                "py/object": "pauperformance_bot.entity.api.archetype.TypicalCard",
-                "type_line": "Instant",
-                "typical": 1
-            },
-            {
-                "at_least": [
-                    0.25,
-                    0.25,
+                    0.4,
+                    0.4,
                     0.0,
                     0.0
                 ],
@@ -984,7 +944,103 @@
             },
             {
                 "at_least": [
-                    0.25,
+                    0.4,
+                    0.0,
+                    0.0,
+                    0.0
+                ],
+                "average": 1.0,
+                "banned": false,
+                "link": "https://scryfall.com/card/lrw/180/ingot-chewer",
+                "name": "Ingot Chewer",
+                "preview": "https://cards.scryfall.io/normal/front/9/c/9ceb9ae9-d153-446f-8835-1c53672fc9ca.jpg",
+                "py/object": "pauperformance_bot.entity.api.archetype.TypicalCard",
+                "type_line": "Creature \u2014 Elemental",
+                "typical": 1
+            },
+            {
+                "at_least": [
+                    0.4,
+                    0.2,
+                    0.2,
+                    0.2
+                ],
+                "average": 2.5,
+                "banned": false,
+                "link": "https://scryfall.com/card/jud/18/prismatic-strands",
+                "name": "Prismatic Strands",
+                "preview": "https://cards.scryfall.io/normal/front/3/4/3454ef42-2e0b-4ce4-945f-e4ec3e83c39d.jpg",
+                "py/object": "pauperformance_bot.entity.api.archetype.TypicalCard",
+                "type_line": "Instant",
+                "typical": 1
+            },
+            {
+                "at_least": [
+                    0.4,
+                    0.0,
+                    0.0,
+                    0.0
+                ],
+                "average": 1.0,
+                "banned": false,
+                "link": "https://scryfall.com/card/apc/18/standard-bearer",
+                "name": "Standard Bearer",
+                "preview": "https://cards.scryfall.io/normal/front/e/0/e0f8e16a-55f0-4147-a01a-dba7938f31c4.jpg",
+                "py/object": "pauperformance_bot.entity.api.archetype.TypicalCard",
+                "type_line": "Creature \u2014 Human Flagbearer",
+                "typical": 1
+            },
+            {
+                "at_least": [
+                    0.4,
+                    0.0,
+                    0.0,
+                    0.0
+                ],
+                "average": 1.0,
+                "banned": false,
+                "link": "https://scryfall.com/card/m12/37/stonehorn-dignitary",
+                "name": "Stonehorn Dignitary",
+                "preview": "https://cards.scryfall.io/normal/front/c/3/c3797f7f-489d-4735-af56-6359e0fa0a6b.jpg",
+                "py/object": "pauperformance_bot.entity.api.archetype.TypicalCard",
+                "type_line": "Creature \u2014 Rhino Soldier",
+                "typical": 1
+            },
+            {
+                "at_least": [
+                    0.2,
+                    0.2,
+                    0.2,
+                    0.2
+                ],
+                "average": 4.0,
+                "banned": false,
+                "link": "https://scryfall.com/card/lea/49/blue-elemental-blast",
+                "name": "Blue Elemental Blast",
+                "preview": "https://cards.scryfall.io/normal/front/2/0/20d666ef-39bf-4fbf-8201-5f1056539da2.jpg",
+                "py/object": "pauperformance_bot.entity.api.archetype.TypicalCard",
+                "type_line": "Instant",
+                "typical": 0
+            },
+            {
+                "at_least": [
+                    0.2,
+                    0.2,
+                    0.2,
+                    0.2
+                ],
+                "average": 4.0,
+                "banned": false,
+                "link": "https://scryfall.com/card/ice/64/counterspell",
+                "name": "Counterspell",
+                "preview": "https://cards.scryfall.io/normal/front/a/e/aedbcbaa-40f0-485f-8427-778edc2d2ec0.jpg",
+                "py/object": "pauperformance_bot.entity.api.archetype.TypicalCard",
+                "type_line": "Instant",
+                "typical": 0
+            },
+            {
+                "at_least": [
+                    0.2,
                     0.0,
                     0.0,
                     0.0
@@ -996,11 +1052,11 @@
                 "preview": "https://cards.scryfall.io/normal/front/5/e/5ed81ee8-d5e4-4127-876e-9bff81f9c726.jpg",
                 "py/object": "pauperformance_bot.entity.api.archetype.TypicalCard",
                 "type_line": "Instant",
-                "typical": 1
+                "typical": 0
             },
             {
                 "at_least": [
-                    0.25,
+                    0.2,
                     0.0,
                     0.0,
                     0.0
@@ -1016,23 +1072,7 @@
             },
             {
                 "at_least": [
-                    0.25,
-                    0.0,
-                    0.0,
-                    0.0
-                ],
-                "average": 1.0,
-                "banned": false,
-                "link": "https://scryfall.com/card/lrw/180/ingot-chewer",
-                "name": "Ingot Chewer",
-                "preview": "https://cards.scryfall.io/normal/front/9/c/9ceb9ae9-d153-446f-8835-1c53672fc9ca.jpg",
-                "py/object": "pauperformance_bot.entity.api.archetype.TypicalCard",
-                "type_line": "Creature \u2014 Elemental",
-                "typical": 0
-            },
-            {
-                "at_least": [
-                    0.25,
+                    0.2,
                     0.0,
                     0.0,
                     0.0
@@ -1048,10 +1088,10 @@
             },
             {
                 "at_least": [
-                    0.25,
-                    0.25,
-                    0.25,
-                    0.25
+                    0.2,
+                    0.2,
+                    0.2,
+                    0.2
                 ],
                 "average": 4.0,
                 "banned": false,
@@ -1064,8 +1104,8 @@
             },
             {
                 "at_least": [
-                    0.25,
-                    0.25,
+                    0.2,
+                    0.2,
                     0.0,
                     0.0
                 ],
@@ -1080,8 +1120,8 @@
             },
             {
                 "at_least": [
-                    0.25,
-                    0.25,
+                    0.2,
+                    0.2,
                     0.0,
                     0.0
                 ],
@@ -1096,10 +1136,10 @@
             },
             {
                 "at_least": [
-                    0.25,
-                    0.25,
-                    0.25,
-                    0.25
+                    0.2,
+                    0.2,
+                    0.2,
+                    0.2
                 ],
                 "average": 4.0,
                 "banned": false,
@@ -1112,10 +1152,10 @@
             },
             {
                 "at_least": [
-                    0.25,
-                    0.25,
-                    0.25,
-                    0.25
+                    0.2,
+                    0.2,
+                    0.2,
+                    0.2
                 ],
                 "average": 4.0,
                 "banned": false,
@@ -1124,38 +1164,6 @@
                 "preview": "https://cards.scryfall.io/normal/front/c/b/cb3d3901-e4a6-45ab-a7b5-c65d91e1875e.jpg",
                 "py/object": "pauperformance_bot.entity.api.archetype.TypicalCard",
                 "type_line": "Instant",
-                "typical": 0
-            },
-            {
-                "at_least": [
-                    0.25,
-                    0.0,
-                    0.0,
-                    0.0
-                ],
-                "average": 1.0,
-                "banned": false,
-                "link": "https://scryfall.com/card/apc/18/standard-bearer",
-                "name": "Standard Bearer",
-                "preview": "https://cards.scryfall.io/normal/front/e/0/e0f8e16a-55f0-4147-a01a-dba7938f31c4.jpg",
-                "py/object": "pauperformance_bot.entity.api.archetype.TypicalCard",
-                "type_line": "Creature \u2014 Human Flagbearer",
-                "typical": 0
-            },
-            {
-                "at_least": [
-                    0.25,
-                    0.0,
-                    0.0,
-                    0.0
-                ],
-                "average": 1.0,
-                "banned": false,
-                "link": "https://scryfall.com/card/m12/37/stonehorn-dignitary",
-                "name": "Stonehorn Dignitary",
-                "preview": "https://cards.scryfall.io/normal/front/c/3/c3797f7f-489d-4735-af56-6359e0fa0a6b.jpg",
-                "py/object": "pauperformance_bot.entity.api.archetype.TypicalCard",
-                "type_line": "Creature \u2014 Rhino Soldier",
                 "typical": 0
             }
         ],
