@@ -4,6 +4,7 @@ import Layout from '../components/Layout'
 import { nameToSlug, metagameSlug } from '../utils/slugs'
 import { cardLinkSlug, useCardPages } from '../utils/cardPages'
 import { formatShortDate } from '../utils/dates'
+import { easeInOut, scrollGently } from '../utils/scroll'
 import { useCardPreview } from '../components/CardPreview'
 import CardLink from '../components/PoolCardLink'
 import MetaPie from '../components/MetaPie'
@@ -183,8 +184,6 @@ const HEADDRESS = { left: 300 / 1407, width: 850 / 1407 }
 const HEADDRESS_Z = 30
 
 const wrap = (i) => ((i % GLYPHS) + GLYPHS) % GLYPHS
-
-const easeInOut = (t) => (t < 0.5 ? 4 * t * t * t : 1 - Math.pow(-2 * t + 2, 3) / 2)
 
 // The hint wiggle: how far the ring rocks (in glyphs), how many full
 // right-left swings, and how long it lasts (ms)
@@ -559,33 +558,6 @@ function MetagameSection() {
         listClassName="grid grid-cols-2 sm:grid-cols-[none] sm:grid-flow-col sm:grid-rows-23 min-[900px]:grid-rows-16 lg:grid-rows-12 gap-x-4 gap-y-1.5" />
     </section>
   )
-}
-
-// A slower, eased scroll than the browser's own smooth scroll: 0.7s for a
-// short way, up to 1.4s for a long one. Scrolling or touching the page while
-// it runs hands control back to the reader.
-function scrollGently(to) {
-  const from = window.scrollY
-  const distance = to - from
-  if (Math.abs(distance) < 1) return
-  if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) return window.scrollTo(0, to)
-  const duration = Math.min(1400, 700 + Math.abs(distance) / 3)
-  const start = performance.now()
-  let frame
-  const stop = () => {
-    cancelAnimationFrame(frame)
-    window.removeEventListener('wheel', stop)
-    window.removeEventListener('touchstart', stop)
-  }
-  window.addEventListener('wheel', stop, { passive: true })
-  window.addEventListener('touchstart', stop, { passive: true })
-  const step = (now) => {
-    const t = Math.min((now - start) / duration, 1)
-    window.scrollTo(0, from + distance * easeInOut(t))
-    if (t < 1) frame = requestAnimationFrame(step)
-    else stop()
-  }
-  frame = requestAnimationFrame(step)
 }
 
 // How the top archetypes are shown: the Brainstorm glyph ring (default) or
