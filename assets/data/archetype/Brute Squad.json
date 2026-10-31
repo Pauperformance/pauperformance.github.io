@@ -22,13 +22,13 @@
         "Aggro"
     ],
     "last_appearance": {
-        "date": "2021-09-06",
+        "date": "2024-11-30",
         "metagame": {
-            "date": "2021-07-23",
+            "date": "2024-11-15",
             "decks": null,
-            "label": "afr",
-            "metagame": "096",
-            "name": "Adventures in the Forgotten Realms",
+            "label": "fdn",
+            "metagame": "129",
+            "name": "Foundations",
             "py/object": "pauperformance_bot.entity.api.archetype.MetagameRef"
         },
         "py/object": "pauperformance_bot.entity.api.archetype.Appearance"
@@ -61,7 +61,7 @@
     ],
     "resources_discord": [],
     "typical_list": {
-        "decks": 8,
+        "decks": 9,
         "ended_by_bans": [],
         "era_end": null,
         "era_start": {
@@ -73,7 +73,7 @@
             "py/object": "pauperformance_bot.entity.api.archetype.MetagameRef"
         },
         "first_date": "2021-03-29",
-        "last_date": "2021-09-06",
+        "last_date": "2024-11-30",
         "later_decks": 0,
         "main": [
             {
@@ -81,7 +81,7 @@
                     1.0,
                     1.0,
                     1.0,
-                    0.875
+                    0.889
                 ],
                 "average": 3.9,
                 "banned": false,
@@ -122,22 +122,6 @@
                 "preview": "https://cards.scryfall.io/normal/front/e/2/e274a8b3-2d92-43d9-a436-d3f6f619ca95.jpg",
                 "py/object": "pauperformance_bot.entity.api.archetype.TypicalCard",
                 "type_line": "Creature \u2014 Human Soldier",
-                "typical": 4
-            },
-            {
-                "at_least": [
-                    1.0,
-                    1.0,
-                    1.0,
-                    0.625
-                ],
-                "average": 3.6,
-                "banned": false,
-                "link": "https://scryfall.com/card/mbs/107/flayer-husk",
-                "name": "Flayer Husk",
-                "preview": "https://cards.scryfall.io/normal/front/c/b/cbd47a02-5a6e-4daa-9877-f65c8639c569.jpg",
-                "py/object": "pauperformance_bot.entity.api.archetype.TypicalCard",
-                "type_line": "Artifact \u2014 Equipment",
                 "typical": 4
             },
             {
@@ -193,7 +177,7 @@
                     1.0,
                     1.0,
                     1.0,
-                    0.875
+                    0.889
                 ],
                 "average": 3.9,
                 "banned": false,
@@ -209,9 +193,9 @@
                     1.0,
                     1.0,
                     1.0,
-                    0.875
+                    0.778
                 ],
-                "average": 3.9,
+                "average": 3.8,
                 "banned": false,
                 "link": "https://scryfall.com/card/mrd/283/seat-of-the-synod",
                 "name": "Seat of the Synod",
@@ -225,9 +209,9 @@
                     1.0,
                     1.0,
                     1.0,
-                    0.625
+                    0.667
                 ],
-                "average": 3.6,
+                "average": 3.7,
                 "banned": false,
                 "link": "https://scryfall.com/card/lrw/261/springleaf-drum",
                 "name": "Springleaf Drum",
@@ -273,9 +257,9 @@
                     1.0,
                     1.0,
                     1.0,
-                    1.0
+                    0.889
                 ],
-                "average": 4.0,
+                "average": 3.9,
                 "banned": false,
                 "link": "https://scryfall.com/card/mrd/264/tooth-of-chiss-goria",
                 "name": "Tooth of Chiss-Goria",
@@ -286,8 +270,56 @@
             },
             {
                 "at_least": [
-                    0.75,
-                    0.75,
+                    1.0,
+                    1.0,
+                    1.0,
+                    0.556
+                ],
+                "average": 3.6,
+                "banned": false,
+                "link": "https://scryfall.com/card/mbs/107/flayer-husk",
+                "name": "Flayer Husk",
+                "preview": "https://cards.scryfall.io/normal/front/c/b/cbd47a02-5a6e-4daa-9877-f65c8639c569.jpg",
+                "py/object": "pauperformance_bot.entity.api.archetype.TypicalCard",
+                "type_line": "Artifact \u2014 Equipment",
+                "typical": 3
+            },
+            {
+                "at_least": [
+                    0.556,
+                    0.556,
+                    0.556,
+                    0.444
+                ],
+                "average": 3.8,
+                "banned": false,
+                "link": "https://scryfall.com/card/ogw/172/holdout-settlement",
+                "name": "Holdout Settlement",
+                "preview": "https://cards.scryfall.io/normal/front/c/f/cf08c317-6f2d-47e3-ab5b-8af73fd3e404.jpg",
+                "py/object": "pauperformance_bot.entity.api.archetype.TypicalCard",
+                "type_line": "Land",
+                "typical": 3
+            },
+            {
+                "at_least": [
+                    0.778,
+                    0.556,
+                    0.444,
+                    0.222
+                ],
+                "average": 2.6,
+                "banned": false,
+                "link": "https://scryfall.com/card/hou/184/survivors-encampment",
+                "name": "Survivors' Encampment",
+                "preview": "https://cards.scryfall.io/normal/front/c/7/c7b0404e-0f42-456b-91ce-f960195c4951.jpg",
+                "py/object": "pauperformance_bot.entity.api.archetype.TypicalCard",
+                "type_line": "Land \u2014 Desert",
+                "typical": 2
+            },
+            {
+                "at_least": [
+                    0.667,
+                    0.667,
                     0.0,
                     0.0
                 ],
@@ -302,39 +334,7 @@
             },
             {
                 "at_least": [
-                    0.75,
-                    0.5,
-                    0.5,
-                    0.25
-                ],
-                "average": 2.7,
-                "banned": false,
-                "link": "https://scryfall.com/card/hou/184/survivors-encampment",
-                "name": "Survivors' Encampment",
-                "preview": "https://cards.scryfall.io/normal/front/c/7/c7b0404e-0f42-456b-91ce-f960195c4951.jpg",
-                "py/object": "pauperformance_bot.entity.api.archetype.TypicalCard",
-                "type_line": "Land \u2014 Desert",
-                "typical": 2
-            },
-            {
-                "at_least": [
-                    0.5,
-                    0.5,
-                    0.5,
-                    0.5
-                ],
-                "average": 4.0,
-                "banned": false,
-                "link": "https://scryfall.com/card/ogw/172/holdout-settlement",
-                "name": "Holdout Settlement",
-                "preview": "https://cards.scryfall.io/normal/front/c/f/cf08c317-6f2d-47e3-ab5b-8af73fd3e404.jpg",
-                "py/object": "pauperformance_bot.entity.api.archetype.TypicalCard",
-                "type_line": "Land",
-                "typical": 2
-            },
-            {
-                "at_least": [
-                    0.75,
+                    0.667,
                     0.0,
                     0.0,
                     0.0
@@ -350,9 +350,9 @@
             },
             {
                 "at_least": [
-                    0.625,
-                    0.375,
-                    0.125,
+                    0.556,
+                    0.333,
+                    0.111,
                     0.0
                 ],
                 "average": 1.8,
@@ -366,7 +366,7 @@
             },
             {
                 "at_least": [
-                    0.375,
+                    0.444,
                     0.0,
                     0.0,
                     0.0
@@ -382,10 +382,10 @@
             },
             {
                 "at_least": [
-                    0.375,
-                    0.25,
-                    0.125,
-                    0.125
+                    0.333,
+                    0.222,
+                    0.111,
+                    0.111
                 ],
                 "average": 2.3,
                 "banned": false,
@@ -398,7 +398,7 @@
             },
             {
                 "at_least": [
-                    0.25,
+                    0.222,
                     0.0,
                     0.0,
                     0.0
@@ -414,7 +414,23 @@
             },
             {
                 "at_least": [
-                    0.125,
+                    0.111,
+                    0.111,
+                    0.0,
+                    0.0
+                ],
+                "average": 2.0,
+                "banned": false,
+                "link": "https://scryfall.com/card/mrd/146/bonesplitter",
+                "name": "Bonesplitter",
+                "preview": "https://cards.scryfall.io/normal/front/4/6/465a7990-c9f9-4716-a833-fd41458b9cee.jpg",
+                "py/object": "pauperformance_bot.entity.api.archetype.TypicalCard",
+                "type_line": "Artifact \u2014 Equipment",
+                "typical": 0
+            },
+            {
+                "at_least": [
+                    0.111,
                     0.0,
                     0.0,
                     0.0
@@ -430,8 +446,8 @@
             },
             {
                 "at_least": [
-                    0.125,
-                    0.125,
+                    0.111,
+                    0.111,
                     0.0,
                     0.0
                 ],
@@ -443,9 +459,33 @@
                 "py/object": "pauperformance_bot.entity.api.archetype.TypicalCard",
                 "type_line": "Instant",
                 "typical": 0
+            },
+            {
+                "at_least": [
+                    0.111,
+                    0.111,
+                    0.111,
+                    0.0
+                ],
+                "average": 3.0,
+                "banned": false,
+                "link": "https://scryfall.com/card/mh3/45/thraben-charm",
+                "name": "Thraben Charm",
+                "preview": "https://cards.scryfall.io/normal/front/d/d/dd28a646-f38f-4cdf-948c-969cd979e5e6.jpg",
+                "py/object": "pauperformance_bot.entity.api.archetype.TypicalCard",
+                "type_line": "Instant",
+                "typical": 0
             }
         ],
         "metagames": [
+            {
+                "date": "2024-11-15",
+                "decks": 1,
+                "label": "fdn",
+                "metagame": "129",
+                "name": "Foundations",
+                "py/object": "pauperformance_bot.entity.api.archetype.MetagameRef"
+            },
             {
                 "date": "2021-07-23",
                 "decks": 3,
@@ -483,9 +523,9 @@
         "side": [
             {
                 "at_least": [
-                    1.0,
-                    1.0,
-                    0.5,
+                    0.889,
+                    0.889,
+                    0.444,
                     0.0
                 ],
                 "average": 2.5,
@@ -499,8 +539,8 @@
             },
             {
                 "at_least": [
-                    1.0,
-                    0.75,
+                    0.889,
+                    0.667,
                     0.0,
                     0.0
                 ],
@@ -515,9 +555,25 @@
             },
             {
                 "at_least": [
-                    0.875,
-                    0.75,
-                    0.375,
+                    0.889,
+                    0.667,
+                    0.0,
+                    0.0
+                ],
+                "average": 1.8,
+                "banned": false,
+                "link": "https://scryfall.com/card/apc/18/standard-bearer",
+                "name": "Standard Bearer",
+                "preview": "https://cards.scryfall.io/normal/front/e/0/e0f8e16a-55f0-4147-a01a-dba7938f31c4.jpg",
+                "py/object": "pauperformance_bot.entity.api.archetype.TypicalCard",
+                "type_line": "Creature \u2014 Human Flagbearer",
+                "typical": 2
+            },
+            {
+                "at_least": [
+                    0.778,
+                    0.667,
+                    0.333,
                     0.0
                 ],
                 "average": 2.3,
@@ -531,24 +587,8 @@
             },
             {
                 "at_least": [
-                    0.875,
-                    0.625,
-                    0.0,
-                    0.0
-                ],
-                "average": 1.7,
-                "banned": false,
-                "link": "https://scryfall.com/card/apc/18/standard-bearer",
-                "name": "Standard Bearer",
-                "preview": "https://cards.scryfall.io/normal/front/e/0/e0f8e16a-55f0-4147-a01a-dba7938f31c4.jpg",
-                "py/object": "pauperformance_bot.entity.api.archetype.TypicalCard",
-                "type_line": "Creature \u2014 Human Flagbearer",
-                "typical": 2
-            },
-            {
-                "at_least": [
-                    0.625,
-                    0.5,
+                    0.556,
+                    0.444,
                     0.0,
                     0.0
                 ],
@@ -563,8 +603,8 @@
             },
             {
                 "at_least": [
-                    0.75,
-                    0.125,
+                    0.667,
+                    0.111,
                     0.0,
                     0.0
                 ],
@@ -579,8 +619,8 @@
             },
             {
                 "at_least": [
-                    0.625,
-                    0.25,
+                    0.556,
+                    0.222,
                     0.0,
                     0.0
                 ],
@@ -595,8 +635,8 @@
             },
             {
                 "at_least": [
-                    0.5,
-                    0.125,
+                    0.444,
+                    0.111,
                     0.0,
                     0.0
                 ],
@@ -611,8 +651,24 @@
             },
             {
                 "at_least": [
-                    0.375,
-                    0.375,
+                    0.444,
+                    0.333,
+                    0.111,
+                    0.0
+                ],
+                "average": 2.0,
+                "banned": false,
+                "link": "https://scryfall.com/card/mrd/98/krark-clan-shaman",
+                "name": "Krark-Clan Shaman",
+                "preview": "https://cards.scryfall.io/normal/front/9/7/975f9ea8-af2c-456f-acd0-ffa9ea0d98c1.jpg",
+                "py/object": "pauperformance_bot.entity.api.archetype.TypicalCard",
+                "type_line": "Creature \u2014 Goblin Shaman",
+                "typical": 1
+            },
+            {
+                "at_least": [
+                    0.333,
+                    0.333,
                     0.0,
                     0.0
                 ],
@@ -623,43 +679,11 @@
                 "preview": "https://cards.scryfall.io/normal/front/e/a/ead8befa-27dd-4ec4-b317-1c231407e0ac.jpg",
                 "py/object": "pauperformance_bot.entity.api.archetype.TypicalCard",
                 "type_line": "Creature \u2014 Faerie Rogue",
-                "typical": 1
-            },
-            {
-                "at_least": [
-                    0.375,
-                    0.25,
-                    0.0,
-                    0.0
-                ],
-                "average": 1.7,
-                "banned": false,
-                "link": "https://scryfall.com/card/mrd/98/krark-clan-shaman",
-                "name": "Krark-Clan Shaman",
-                "preview": "https://cards.scryfall.io/normal/front/9/7/975f9ea8-af2c-456f-acd0-ffa9ea0d98c1.jpg",
-                "py/object": "pauperformance_bot.entity.api.archetype.TypicalCard",
-                "type_line": "Creature \u2014 Goblin Shaman",
                 "typical": 0
             },
             {
                 "at_least": [
-                    0.375,
-                    0.0,
-                    0.0,
-                    0.0
-                ],
-                "average": 1.0,
-                "banned": false,
-                "link": "https://scryfall.com/card/jud/18/prismatic-strands",
-                "name": "Prismatic Strands",
-                "preview": "https://cards.scryfall.io/normal/front/3/4/3454ef42-2e0b-4ce4-945f-e4ec3e83c39d.jpg",
-                "py/object": "pauperformance_bot.entity.api.archetype.TypicalCard",
-                "type_line": "Instant",
-                "typical": 0
-            },
-            {
-                "at_least": [
-                    0.25,
+                    0.333,
                     0.0,
                     0.0,
                     0.0
@@ -675,7 +699,39 @@
             },
             {
                 "at_least": [
-                    0.25,
+                    0.333,
+                    0.0,
+                    0.0,
+                    0.0
+                ],
+                "average": 1.0,
+                "banned": false,
+                "link": "https://scryfall.com/card/jud/18/prismatic-strands",
+                "name": "Prismatic Strands",
+                "preview": "https://cards.scryfall.io/normal/front/3/4/3454ef42-2e0b-4ce4-945f-e4ec3e83c39d.jpg",
+                "py/object": "pauperformance_bot.entity.api.archetype.TypicalCard",
+                "type_line": "Instant",
+                "typical": 0
+            },
+            {
+                "at_least": [
+                    0.222,
+                    0.111,
+                    0.111,
+                    0.0
+                ],
+                "average": 2.0,
+                "banned": false,
+                "link": "https://scryfall.com/card/aer/39/metallic-rebuke",
+                "name": "Metallic Rebuke",
+                "preview": "https://cards.scryfall.io/normal/front/f/7/f712ac26-dca4-459b-84c1-010597007f60.jpg",
+                "py/object": "pauperformance_bot.entity.api.archetype.TypicalCard",
+                "type_line": "Instant",
+                "typical": 0
+            },
+            {
+                "at_least": [
+                    0.222,
                     0.0,
                     0.0,
                     0.0
@@ -691,8 +747,8 @@
             },
             {
                 "at_least": [
-                    0.25,
-                    0.125,
+                    0.222,
+                    0.111,
                     0.0,
                     0.0
                 ],
@@ -707,8 +763,8 @@
             },
             {
                 "at_least": [
-                    0.125,
-                    0.125,
+                    0.111,
+                    0.111,
                     0.0,
                     0.0
                 ],
@@ -723,8 +779,8 @@
             },
             {
                 "at_least": [
-                    0.125,
-                    0.125,
+                    0.111,
+                    0.111,
                     0.0,
                     0.0
                 ],
@@ -739,7 +795,7 @@
             },
             {
                 "at_least": [
-                    0.125,
+                    0.111,
                     0.0,
                     0.0,
                     0.0
@@ -755,7 +811,23 @@
             },
             {
                 "at_least": [
-                    0.125,
+                    0.111,
+                    0.111,
+                    0.111,
+                    0.0
+                ],
+                "average": 3.0,
+                "banned": false,
+                "link": "https://scryfall.com/card/ice/72/hydroblast",
+                "name": "Hydroblast",
+                "preview": "https://cards.scryfall.io/normal/front/f/6/f62716f0-fde2-49ef-b8a4-c1b03f451194.jpg",
+                "py/object": "pauperformance_bot.entity.api.archetype.TypicalCard",
+                "type_line": "Instant",
+                "typical": 0
+            },
+            {
+                "at_least": [
+                    0.111,
                     0.0,
                     0.0,
                     0.0
@@ -771,24 +843,8 @@
             },
             {
                 "at_least": [
-                    0.125,
-                    0.0,
-                    0.0,
-                    0.0
-                ],
-                "average": 1.0,
-                "banned": false,
-                "link": "https://scryfall.com/card/aer/39/metallic-rebuke",
-                "name": "Metallic Rebuke",
-                "preview": "https://cards.scryfall.io/normal/front/f/7/f712ac26-dca4-459b-84c1-010597007f60.jpg",
-                "py/object": "pauperformance_bot.entity.api.archetype.TypicalCard",
-                "type_line": "Instant",
-                "typical": 0
-            },
-            {
-                "at_least": [
-                    0.125,
-                    0.125,
+                    0.111,
+                    0.111,
                     0.0,
                     0.0
                 ],
@@ -797,6 +853,38 @@
                 "link": "https://scryfall.com/card/lea/169/red-elemental-blast",
                 "name": "Red Elemental Blast",
                 "preview": "https://cards.scryfall.io/normal/front/7/7/776ad9be-3309-4f1d-9f27-6219d9477662.jpg",
+                "py/object": "pauperformance_bot.entity.api.archetype.TypicalCard",
+                "type_line": "Instant",
+                "typical": 0
+            },
+            {
+                "at_least": [
+                    0.111,
+                    0.0,
+                    0.0,
+                    0.0
+                ],
+                "average": 1.0,
+                "banned": false,
+                "link": "https://scryfall.com/card/mh3/45/thraben-charm",
+                "name": "Thraben Charm",
+                "preview": "https://cards.scryfall.io/normal/front/d/d/dd28a646-f38f-4cdf-948c-969cd979e5e6.jpg",
+                "py/object": "pauperformance_bot.entity.api.archetype.TypicalCard",
+                "type_line": "Instant",
+                "typical": 0
+            },
+            {
+                "at_least": [
+                    0.111,
+                    0.111,
+                    0.0,
+                    0.0
+                ],
+                "average": 2.0,
+                "banned": false,
+                "link": "https://scryfall.com/card/mkm/107/toxin-analysis",
+                "name": "Toxin Analysis",
+                "preview": "https://cards.scryfall.io/normal/front/0/e/0eda1aff-c1f4-4171-a800-605396cc8168.jpg",
                 "py/object": "pauperformance_bot.entity.api.archetype.TypicalCard",
                 "type_line": "Instant",
                 "typical": 0
