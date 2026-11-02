@@ -83,10 +83,10 @@
                     "typical": 4
                 }
             ],
-            "decks": 391,
+            "decks": 394,
             "meta_share": 12.84,
             "name": "MonoR Madness",
-            "previous_share": 11.12,
+            "previous_share": 11.07,
             "py/object": "pauperformance_bot.entity.api.metagame.ArchetypeShare",
             "tournaments": 117
         },
@@ -174,9 +174,9 @@
                 }
             ],
             "decks": 258,
-            "meta_share": 8.47,
+            "meta_share": 8.41,
             "name": "Affinity",
-            "previous_share": 6.57,
+            "previous_share": 6.53,
             "py/object": "pauperformance_bot.entity.api.metagame.ArchetypeShare",
             "tournaments": 109
         },
@@ -264,9 +264,9 @@
                 }
             ],
             "decks": 241,
-            "meta_share": 7.91,
+            "meta_share": 7.86,
             "name": "MonoU Terror",
-            "previous_share": 8.22,
+            "previous_share": 8.18,
             "py/object": "pauperformance_bot.entity.api.metagame.ArchetypeShare",
             "tournaments": 98
         },
@@ -354,9 +354,9 @@
                 }
             ],
             "decks": 203,
-            "meta_share": 6.67,
+            "meta_share": 6.62,
             "name": "MonoR Rally",
-            "previous_share": 4.91,
+            "previous_share": 4.89,
             "py/object": "pauperformance_bot.entity.api.metagame.ArchetypeShare",
             "tournaments": 93
         },
@@ -444,9 +444,9 @@
                 }
             ],
             "decks": 159,
-            "meta_share": 5.22,
+            "meta_share": 5.18,
             "name": "Dimir Faeries",
-            "previous_share": 3.37,
+            "previous_share": 3.35,
             "py/object": "pauperformance_bot.entity.api.metagame.ArchetypeShare",
             "tournaments": 81
         },
@@ -534,9 +534,9 @@
                 }
             ],
             "decks": 159,
-            "meta_share": 5.22,
+            "meta_share": 5.18,
             "name": "Jund Wildfire",
-            "previous_share": 7.57,
+            "previous_share": 7.53,
             "py/object": "pauperformance_bot.entity.api.metagame.ArchetypeShare",
             "tournaments": 86
         },
@@ -624,11 +624,101 @@
                 }
             ],
             "decks": 148,
-            "meta_share": 4.86,
+            "meta_share": 4.82,
             "name": "Elves",
-            "previous_share": 4.32,
+            "previous_share": 4.3,
             "py/object": "pauperformance_bot.entity.api.metagame.ArchetypeShare",
             "tournaments": 81
+        },
+        {
+            "cards": [
+                {
+                    "at_least": [
+                        1.0,
+                        1.0,
+                        1.0,
+                        1.0
+                    ],
+                    "average": 4.0,
+                    "banned": false,
+                    "link": "https://scryfall.com/card/2xm/79/cast-down",
+                    "name": "Cast Down",
+                    "preview": "https://cards.scryfall.io/normal/front/4/8/480fecdd-5978-47e6-9c25-7a04cdf616db.jpg",
+                    "py/object": "pauperformance_bot.entity.api.archetype.TypicalCard",
+                    "type_line": "Instant",
+                    "typical": 4
+                },
+                {
+                    "at_least": [
+                        1.0,
+                        1.0,
+                        0.981,
+                        0.692
+                    ],
+                    "average": 3.7,
+                    "banned": false,
+                    "link": "https://scryfall.com/card/mh1/86/defile",
+                    "name": "Defile",
+                    "preview": "https://cards.scryfall.io/normal/front/5/b/5bcb4398-edd1-41a7-a496-b12bce22ceb6.jpg",
+                    "py/object": "pauperformance_bot.entity.api.archetype.TypicalCard",
+                    "type_line": "Instant",
+                    "typical": 4
+                },
+                {
+                    "at_least": [
+                        1.0,
+                        1.0,
+                        1.0,
+                        0.981
+                    ],
+                    "average": 4.0,
+                    "banned": false,
+                    "link": "https://scryfall.com/card/lci/105/fanatical-offering",
+                    "name": "Fanatical Offering",
+                    "preview": "https://cards.scryfall.io/normal/front/d/8/d896dd52-b134-4b55-ab91-ccb05ecc50f4.jpg",
+                    "py/object": "pauperformance_bot.entity.api.archetype.TypicalCard",
+                    "type_line": "Instant",
+                    "typical": 4
+                },
+                {
+                    "at_least": [
+                        1.0,
+                        1.0,
+                        0.99,
+                        0.875
+                    ],
+                    "average": 3.9,
+                    "banned": false,
+                    "link": "https://scryfall.com/card/mbs/110/ichor-wellspring",
+                    "name": "Ichor Wellspring",
+                    "preview": "https://cards.scryfall.io/normal/front/2/d/2d1ea522-a0f6-45a8-8985-6fcca95d60cc.jpg",
+                    "py/object": "pauperformance_bot.entity.api.archetype.TypicalCard",
+                    "type_line": "Artifact",
+                    "typical": 4
+                },
+                {
+                    "at_least": [
+                        1.0,
+                        1.0,
+                        0.683,
+                        0.038
+                    ],
+                    "average": 2.7,
+                    "banned": false,
+                    "link": "https://scryfall.com/card/vis/55/crypt-rats",
+                    "name": "Crypt Rats",
+                    "preview": "https://cards.scryfall.io/normal/front/7/3/736455f6-c1b3-4a5a-a91f-a0cd3986ed53.jpg",
+                    "py/object": "pauperformance_bot.entity.api.archetype.TypicalCard",
+                    "type_line": "Creature \u2014 Rat",
+                    "typical": 3
+                }
+            ],
+            "decks": 104,
+            "meta_share": 3.39,
+            "name": "Golgari Gardens",
+            "previous_share": 3.94,
+            "py/object": "pauperformance_bot.entity.api.metagame.ArchetypeShare",
+            "tournaments": 63
         },
         {
             "cards": [
@@ -714,9 +804,9 @@
                 }
             ],
             "decks": 102,
-            "meta_share": 3.35,
+            "meta_share": 3.32,
             "name": "White Weenie",
-            "previous_share": 3.25,
+            "previous_share": 3.24,
             "py/object": "pauperformance_bot.entity.api.metagame.ArchetypeShare",
             "tournaments": 69
         },
@@ -804,9 +894,9 @@
                 }
             ],
             "decks": 99,
-            "meta_share": 3.25,
+            "meta_share": 3.23,
             "name": "Dimir Terror",
-            "previous_share": 4.73,
+            "previous_share": 4.71,
             "py/object": "pauperformance_bot.entity.api.metagame.ArchetypeShare",
             "tournaments": 63
         },
@@ -894,9 +984,9 @@
                 }
             ],
             "decks": 99,
-            "meta_share": 3.25,
+            "meta_share": 3.23,
             "name": "Rakdos Burn",
-            "previous_share": 2.9,
+            "previous_share": 2.88,
             "py/object": "pauperformance_bot.entity.api.metagame.ArchetypeShare",
             "tournaments": 65
         },
@@ -984,9 +1074,9 @@
                 }
             ],
             "decks": 98,
-            "meta_share": 3.22,
+            "meta_share": 3.19,
             "name": "Spy Walls",
-            "previous_share": 3.14,
+            "previous_share": 3.12,
             "py/object": "pauperformance_bot.entity.api.metagame.ArchetypeShare",
             "tournaments": 68
         },
@@ -1074,9 +1164,9 @@
                 }
             ],
             "decks": 93,
-            "meta_share": 3.05,
+            "meta_share": 3.03,
             "name": "Jeskai Ephemerate",
-            "previous_share": 2.07,
+            "previous_share": 2.06,
             "py/object": "pauperformance_bot.entity.api.metagame.ArchetypeShare",
             "tournaments": 62
         },
@@ -1164,101 +1254,11 @@
                 }
             ],
             "decks": 88,
-            "meta_share": 2.89,
+            "meta_share": 2.87,
             "name": "Gruul Ponza",
-            "previous_share": 3.08,
+            "previous_share": 3.06,
             "py/object": "pauperformance_bot.entity.api.metagame.ArchetypeShare",
             "tournaments": 55
-        },
-        {
-            "cards": [
-                {
-                    "at_least": [
-                        1.0,
-                        1.0,
-                        1.0,
-                        1.0
-                    ],
-                    "average": 4.0,
-                    "banned": false,
-                    "link": "https://scryfall.com/card/2xm/79/cast-down",
-                    "name": "Cast Down",
-                    "preview": "https://cards.scryfall.io/normal/front/4/8/480fecdd-5978-47e6-9c25-7a04cdf616db.jpg",
-                    "py/object": "pauperformance_bot.entity.api.archetype.TypicalCard",
-                    "type_line": "Instant",
-                    "typical": 4
-                },
-                {
-                    "at_least": [
-                        1.0,
-                        1.0,
-                        0.976,
-                        0.75
-                    ],
-                    "average": 3.7,
-                    "banned": false,
-                    "link": "https://scryfall.com/card/mh1/86/defile",
-                    "name": "Defile",
-                    "preview": "https://cards.scryfall.io/normal/front/5/b/5bcb4398-edd1-41a7-a496-b12bce22ceb6.jpg",
-                    "py/object": "pauperformance_bot.entity.api.archetype.TypicalCard",
-                    "type_line": "Instant",
-                    "typical": 4
-                },
-                {
-                    "at_least": [
-                        1.0,
-                        1.0,
-                        1.0,
-                        0.976
-                    ],
-                    "average": 4.0,
-                    "banned": false,
-                    "link": "https://scryfall.com/card/lci/105/fanatical-offering",
-                    "name": "Fanatical Offering",
-                    "preview": "https://cards.scryfall.io/normal/front/d/8/d896dd52-b134-4b55-ab91-ccb05ecc50f4.jpg",
-                    "py/object": "pauperformance_bot.entity.api.archetype.TypicalCard",
-                    "type_line": "Instant",
-                    "typical": 4
-                },
-                {
-                    "at_least": [
-                        1.0,
-                        1.0,
-                        0.988,
-                        0.881
-                    ],
-                    "average": 3.9,
-                    "banned": false,
-                    "link": "https://scryfall.com/card/mbs/110/ichor-wellspring",
-                    "name": "Ichor Wellspring",
-                    "preview": "https://cards.scryfall.io/normal/front/2/d/2d1ea522-a0f6-45a8-8985-6fcca95d60cc.jpg",
-                    "py/object": "pauperformance_bot.entity.api.archetype.TypicalCard",
-                    "type_line": "Artifact",
-                    "typical": 4
-                },
-                {
-                    "at_least": [
-                        1.0,
-                        1.0,
-                        0.81,
-                        0.024
-                    ],
-                    "average": 2.8,
-                    "banned": false,
-                    "link": "https://scryfall.com/card/vis/55/crypt-rats",
-                    "name": "Crypt Rats",
-                    "preview": "https://cards.scryfall.io/normal/front/7/3/736455f6-c1b3-4a5a-a91f-a0cd3986ed53.jpg",
-                    "py/object": "pauperformance_bot.entity.api.archetype.TypicalCard",
-                    "type_line": "Creature \u2014 Rat",
-                    "typical": 3
-                }
-            ],
-            "decks": 84,
-            "meta_share": 2.76,
-            "name": "Golgari Gardens",
-            "previous_share": 3.43,
-            "py/object": "pauperformance_bot.entity.api.metagame.ArchetypeShare",
-            "tournaments": 51
         },
         {
             "cards": [
@@ -1344,9 +1344,9 @@
                 }
             ],
             "decks": 72,
-            "meta_share": 2.36,
+            "meta_share": 2.35,
             "name": "MonoU Faeries",
-            "previous_share": 2.07,
+            "previous_share": 2.06,
             "py/object": "pauperformance_bot.entity.api.metagame.ArchetypeShare",
             "tournaments": 56
         },
@@ -1434,9 +1434,9 @@
                 }
             ],
             "decks": 60,
-            "meta_share": 1.97,
+            "meta_share": 1.96,
             "name": "Flicker Tron",
-            "previous_share": 0.89,
+            "previous_share": 0.88,
             "py/object": "pauperformance_bot.entity.api.metagame.ArchetypeShare",
             "tournaments": 46
         },
@@ -1524,9 +1524,9 @@
                 }
             ],
             "decks": 54,
-            "meta_share": 1.77,
+            "meta_share": 1.76,
             "name": "Ruby Storm",
-            "previous_share": 1.72,
+            "previous_share": 1.71,
             "py/object": "pauperformance_bot.entity.api.metagame.ArchetypeShare",
             "tournaments": 43
         },
@@ -1614,9 +1614,9 @@
                 }
             ],
             "decks": 53,
-            "meta_share": 1.74,
+            "meta_share": 1.73,
             "name": "Familiars",
-            "previous_share": 2.13,
+            "previous_share": 2.12,
             "py/object": "pauperformance_bot.entity.api.metagame.ArchetypeShare",
             "tournaments": 36
         },
@@ -1704,7 +1704,7 @@
                 }
             ],
             "decks": 40,
-            "meta_share": 1.31,
+            "meta_share": 1.3,
             "name": "Infect",
             "previous_share": 0.12,
             "py/object": "pauperformance_bot.entity.api.metagame.ArchetypeShare",
@@ -1794,9 +1794,9 @@
                 }
             ],
             "decks": 39,
-            "meta_share": 1.28,
+            "meta_share": 1.27,
             "name": "Boros Tribe",
-            "previous_share": 2.25,
+            "previous_share": 2.24,
             "py/object": "pauperformance_bot.entity.api.metagame.ArchetypeShare",
             "tournaments": 29
         },
@@ -1884,9 +1884,9 @@
                 }
             ],
             "decks": 37,
-            "meta_share": 1.22,
+            "meta_share": 1.21,
             "name": "Golgari Food Pestilence",
-            "previous_share": 2.49,
+            "previous_share": 2.47,
             "py/object": "pauperformance_bot.entity.api.metagame.ArchetypeShare",
             "tournaments": 31
         },
@@ -1974,9 +1974,9 @@
                 }
             ],
             "decks": 37,
-            "meta_share": 1.22,
+            "meta_share": 1.21,
             "name": "Gruul Ramp",
-            "previous_share": 1.78,
+            "previous_share": 1.77,
             "py/object": "pauperformance_bot.entity.api.metagame.ArchetypeShare",
             "tournaments": 32
         },
@@ -2064,9 +2064,9 @@
                 }
             ],
             "decks": 36,
-            "meta_share": 1.18,
+            "meta_share": 1.17,
             "name": "Turbofog",
-            "previous_share": 1.07,
+            "previous_share": 1.06,
             "py/object": "pauperformance_bot.entity.api.metagame.ArchetypeShare",
             "tournaments": 32
         },
@@ -2154,7 +2154,7 @@
                 }
             ],
             "decks": 35,
-            "meta_share": 1.15,
+            "meta_share": 1.14,
             "name": "Naya Skybow",
             "previous_share": 0.0,
             "py/object": "pauperformance_bot.entity.api.metagame.ArchetypeShare",
@@ -2334,9 +2334,9 @@
                 }
             ],
             "decks": 31,
-            "meta_share": 1.02,
+            "meta_share": 1.01,
             "name": "Azorius Gates",
-            "previous_share": 1.66,
+            "previous_share": 1.65,
             "py/object": "pauperformance_bot.entity.api.metagame.ArchetypeShare",
             "tournaments": 29
         },
@@ -2426,7 +2426,7 @@
             "decks": 29,
             "meta_share": 0.95,
             "name": "MonoG Tron",
-            "previous_share": 1.36,
+            "previous_share": 1.35,
             "py/object": "pauperformance_bot.entity.api.metagame.ArchetypeShare",
             "tournaments": 24
         },
@@ -2514,7 +2514,7 @@
                 }
             ],
             "decks": 24,
-            "meta_share": 0.79,
+            "meta_share": 0.78,
             "name": "Bogles",
             "previous_share": 0.59,
             "py/object": "pauperformance_bot.entity.api.metagame.ArchetypeShare",
@@ -2694,9 +2694,9 @@
                 }
             ],
             "decks": 21,
-            "meta_share": 0.69,
+            "meta_share": 0.68,
             "name": "Orzhov Blade",
-            "previous_share": 1.36,
+            "previous_share": 1.35,
             "py/object": "pauperformance_bot.entity.api.metagame.ArchetypeShare",
             "tournaments": 20
         },
@@ -2786,7 +2786,7 @@
             "decks": 19,
             "meta_share": 0.62,
             "name": "Walls",
-            "previous_share": 1.42,
+            "previous_share": 1.41,
             "py/object": "pauperformance_bot.entity.api.metagame.ArchetypeShare",
             "tournaments": 18
         },
@@ -2874,9 +2874,9 @@
                 }
             ],
             "decks": 17,
-            "meta_share": 0.56,
+            "meta_share": 0.55,
             "name": "Naya Gates",
-            "previous_share": 0.83,
+            "previous_share": 0.82,
             "py/object": "pauperformance_bot.entity.api.metagame.ArchetypeShare",
             "tournaments": 14
         },
@@ -2964,7 +2964,7 @@
                 }
             ],
             "decks": 16,
-            "meta_share": 0.53,
+            "meta_share": 0.52,
             "name": "Poison Storm",
             "previous_share": 0.41,
             "py/object": "pauperformance_bot.entity.api.metagame.ArchetypeShare",
@@ -3056,7 +3056,7 @@
             "decks": 14,
             "meta_share": 0.46,
             "name": "Cycling Storm",
-            "previous_share": 0.89,
+            "previous_share": 0.88,
             "py/object": "pauperformance_bot.entity.api.metagame.ArchetypeShare",
             "tournaments": 13
         },
@@ -3324,9 +3324,9 @@
                 }
             ],
             "decks": 13,
-            "meta_share": 0.43,
+            "meta_share": 0.42,
             "name": "Burn",
-            "previous_share": 2.37,
+            "previous_share": 2.35,
             "py/object": "pauperformance_bot.entity.api.metagame.ArchetypeShare",
             "tournaments": 12
         },
@@ -3506,7 +3506,7 @@
             "decks": 10,
             "meta_share": 0.33,
             "name": "Dimir Control",
-            "previous_share": 0.36,
+            "previous_share": 0.35,
             "py/object": "pauperformance_bot.entity.api.metagame.ArchetypeShare",
             "tournaments": 9
         },
@@ -4685,7 +4685,7 @@
             "decks": 2,
             "meta_share": 0.07,
             "name": "Pizza Combo",
-            "previous_share": 0.36,
+            "previous_share": 0.35,
             "py/object": "pauperformance_bot.entity.api.metagame.ArchetypeShare",
             "tournaments": 2
         },
@@ -5230,10 +5230,10 @@
             "tournaments": 1
         }
     ],
-    "decks": 3045,
+    "decks": 3068,
     "metagame": {
         "date": "2026-05-18",
-        "decks": 3045,
+        "decks": 3068,
         "label": "BNR",
         "metagame": "143",
         "name": "Banned & Restricted Announcement",
