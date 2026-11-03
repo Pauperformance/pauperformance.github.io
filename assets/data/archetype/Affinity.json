@@ -26,7 +26,7 @@
         "Combo"
     ],
     "last_appearance": {
-        "date": "2026-11-01",
+        "date": "2026-11-02",
         "metagame": {
             "date": "2026-10-02",
             "decks": null,
@@ -76,7 +76,7 @@
     ],
     "resources_discord": [],
     "typical_list": {
-        "decks": 127,
+        "decks": 133,
         "ended_by_bans": [],
         "era_end": null,
         "era_start": {
@@ -88,14 +88,14 @@
             "py/object": "pauperformance_bot.entity.api.archetype.MetagameRef"
         },
         "first_date": "2026-10-02",
-        "last_date": "2026-11-01",
+        "last_date": "2026-11-02",
         "later_decks": 0,
         "main": [
             {
                 "at_least": [
                     1.0,
-                    0.937,
-                    0.921,
+                    0.94,
+                    0.925,
                     0.827
                 ],
                 "average": 3.7,
@@ -128,7 +128,7 @@
                     1.0,
                     1.0,
                     1.0,
-                    0.961
+                    0.962
                 ],
                 "average": 4.0,
                 "banned": false,
@@ -137,22 +137,6 @@
                 "preview": "https://cards.scryfall.io/normal/front/9/f/9f36a6e2-3e51-4a30-a225-10cfe6650b9d.jpg",
                 "py/object": "pauperformance_bot.entity.api.archetype.TypicalCard",
                 "type_line": "Artifact Land",
-                "typical": 4
-            },
-            {
-                "at_least": [
-                    1.0,
-                    1.0,
-                    1.0,
-                    0.984
-                ],
-                "average": 4.0,
-                "banned": false,
-                "link": "https://scryfall.com/card/neo/120/reckoners-bargain",
-                "name": "Reckoner's Bargain",
-                "preview": "https://cards.scryfall.io/normal/front/6/3/6338942d-d650-4571-8ec6-4d658792c53e.jpg",
-                "py/object": "pauperformance_bot.entity.api.archetype.TypicalCard",
-                "type_line": "Instant",
                 "typical": 4
             },
             {
@@ -192,7 +176,7 @@
                     1.0,
                     1.0,
                     1.0,
-                    0.835
+                    0.842
                 ],
                 "average": 3.8,
                 "banned": false,
@@ -208,7 +192,23 @@
                     0.992,
                     0.992,
                     0.992,
-                    0.984
+                    0.977
+                ],
+                "average": 4.0,
+                "banned": false,
+                "link": "https://scryfall.com/card/neo/120/reckoners-bargain",
+                "name": "Reckoner's Bargain",
+                "preview": "https://cards.scryfall.io/normal/front/6/3/6338942d-d650-4571-8ec6-4d658792c53e.jpg",
+                "py/object": "pauperformance_bot.entity.api.archetype.TypicalCard",
+                "type_line": "Instant",
+                "typical": 4
+            },
+            {
+                "at_least": [
+                    0.985,
+                    0.985,
+                    0.985,
+                    0.977
                 ],
                 "average": 4.0,
                 "banned": false,
@@ -221,10 +221,10 @@
             },
             {
                 "at_least": [
-                    0.906,
-                    0.906,
-                    0.874,
-                    0.827
+                    0.91,
+                    0.91,
+                    0.88,
+                    0.835
                 ],
                 "average": 3.9,
                 "banned": false,
@@ -239,8 +239,8 @@
                 "at_least": [
                     1.0,
                     1.0,
-                    0.496,
-                    0.197
+                    0.511,
+                    0.195
                 ],
                 "average": 2.7,
                 "banned": false,
@@ -253,10 +253,10 @@
             },
             {
                 "at_least": [
-                    0.969,
-                    0.969,
-                    0.937,
-                    0.339
+                    0.962,
+                    0.962,
+                    0.932,
+                    0.353
                 ],
                 "average": 3.3,
                 "banned": false,
@@ -269,10 +269,10 @@
             },
             {
                 "at_least": [
-                    0.866,
-                    0.866,
-                    0.654,
-                    0.024
+                    0.835,
+                    0.835,
+                    0.632,
+                    0.023
                 ],
                 "average": 2.8,
                 "banned": false,
@@ -286,9 +286,9 @@
             {
                 "at_least": [
                     1.0,
-                    0.976,
-                    0.134,
-                    0.024
+                    0.97,
+                    0.128,
+                    0.023
                 ],
                 "average": 2.1,
                 "banned": false,
@@ -302,27 +302,11 @@
             {
                 "at_least": [
                     0.992,
-                    0.937,
-                    0.252,
-                    0.079
+                    0.85,
+                    0.165,
+                    0.053
                 ],
-                "average": 2.3,
-                "banned": false,
-                "link": "https://scryfall.com/card/mrd/282/great-furnace",
-                "name": "Great Furnace",
-                "preview": "https://cards.scryfall.io/normal/front/2/8/2877281d-c85d-4f32-b40d-828b93c4ee8e.jpg",
-                "py/object": "pauperformance_bot.entity.api.archetype.TypicalCard",
-                "type_line": "Artifact Land",
-                "typical": 2
-            },
-            {
-                "at_least": [
-                    0.992,
-                    0.843,
-                    0.134,
-                    0.024
-                ],
-                "average": 2.0,
+                "average": 2.1,
                 "banned": false,
                 "link": "https://scryfall.com/card/mh2/255/silverbluff-bridge",
                 "name": "Silverbluff Bridge",
@@ -333,10 +317,26 @@
             },
             {
                 "at_least": [
-                    0.984,
-                    0.961,
+                    0.985,
+                    0.902,
+                    0.241,
+                    0.075
+                ],
+                "average": 2.2,
+                "banned": false,
+                "link": "https://scryfall.com/card/mrd/282/great-furnace",
+                "name": "Great Furnace",
+                "preview": "https://cards.scryfall.io/normal/front/2/8/2877281d-c85d-4f32-b40d-828b93c4ee8e.jpg",
+                "py/object": "pauperformance_bot.entity.api.archetype.TypicalCard",
+                "type_line": "Artifact Land",
+                "typical": 2
+            },
+            {
+                "at_least": [
+                    0.985,
+                    0.962,
                     0.165,
-                    0.071
+                    0.068
                 ],
                 "average": 2.2,
                 "banned": false,
@@ -349,9 +349,9 @@
             },
             {
                 "at_least": [
-                    0.756,
-                    0.701,
-                    0.063,
+                    0.729,
+                    0.677,
+                    0.06,
                     0.0
                 ],
                 "average": 2.0,
@@ -365,10 +365,10 @@
             },
             {
                 "at_least": [
-                    0.709,
-                    0.669,
-                    0.441,
-                    0.0
+                    0.692,
+                    0.654,
+                    0.436,
+                    0.008
                 ],
                 "average": 2.6,
                 "banned": false,
@@ -381,7 +381,7 @@
             },
             {
                 "at_least": [
-                    0.969,
+                    0.94,
                     0.0,
                     0.0,
                     0.0
@@ -397,8 +397,8 @@
             },
             {
                 "at_least": [
-                    0.551,
-                    0.039,
+                    0.534,
+                    0.038,
                     0.0,
                     0.0
                 ],
@@ -413,26 +413,42 @@
             },
             {
                 "at_least": [
-                    0.472,
+                    0.459,
                     0.0,
                     0.0,
                     0.0
                 ],
                 "average": 1.0,
                 "banned": false,
-                "link": "https://scryfall.com/card/rex/24/mountain-mountain",
+                "link": "https://scryfall.com/card/lea/292/mountain",
                 "name": "Mountain",
-                "preview": "https://cards.scryfall.io/normal/front/a/a/aae84079-b65b-4132-86fb-e82503bb6c7b.jpg",
+                "preview": "https://cards.scryfall.io/normal/front/e/a/eace2c85-976c-425e-9800-5a6ccbd91b56.jpg",
                 "py/object": "pauperformance_bot.entity.api.archetype.TypicalCard",
-                "type_line": "Basic Land \u2014 Mountain // Basic Land \u2014 Mountain",
+                "type_line": "Basic Land \u2014 Mountain",
                 "typical": 1
             },
             {
                 "at_least": [
-                    0.181,
                     0.173,
-                    0.126,
-                    0.063
+                    0.143,
+                    0.12,
+                    0.12
+                ],
+                "average": 3.2,
+                "banned": false,
+                "link": "https://scryfall.com/card/eoe/52/cryogen-relic",
+                "name": "Cryogen Relic",
+                "preview": "https://cards.scryfall.io/normal/front/7/b/7bfb33b6-e2bf-498f-8c58-ae21a840cf75.jpg",
+                "py/object": "pauperformance_bot.entity.api.archetype.TypicalCard",
+                "type_line": "Artifact",
+                "typical": 0
+            },
+            {
+                "at_least": [
+                    0.173,
+                    0.165,
+                    0.12,
+                    0.06
                 ],
                 "average": 3.0,
                 "banned": false,
@@ -446,27 +462,11 @@
             {
                 "at_least": [
                     0.173,
-                    0.165,
-                    0.031,
-                    0.0
-                ],
-                "average": 2.1,
-                "banned": false,
-                "link": "https://scryfall.com/card/2xm/79/cast-down",
-                "name": "Cast Down",
-                "preview": "https://cards.scryfall.io/normal/front/4/8/480fecdd-5978-47e6-9c25-7a04cdf616db.jpg",
-                "py/object": "pauperformance_bot.entity.api.archetype.TypicalCard",
-                "type_line": "Instant",
-                "typical": 0
-            },
-            {
-                "at_least": [
-                    0.173,
-                    0.134,
+                    0.128,
                     0.0,
                     0.0
                 ],
-                "average": 1.8,
+                "average": 1.7,
                 "banned": false,
                 "link": "https://scryfall.com/card/clb/80/kenku-artificer",
                 "name": "Kenku Artificer",
@@ -484,37 +484,53 @@
                 ],
                 "average": 1.0,
                 "banned": false,
-                "link": "https://scryfall.com/card/rex/23/swamp-swamp",
+                "link": "https://scryfall.com/card/lea/290/swamp",
                 "name": "Swamp",
-                "preview": "https://cards.scryfall.io/normal/front/8/4/843b35ec-7b59-4a22-8fee-2e876a02306b.jpg",
+                "preview": "https://cards.scryfall.io/normal/front/6/1/6176936d-72e2-4205-8871-4c5a4f1cb2d8.jpg",
                 "py/object": "pauperformance_bot.entity.api.archetype.TypicalCard",
-                "type_line": "Basic Land \u2014 Swamp // Basic Land \u2014 Swamp",
+                "type_line": "Basic Land \u2014 Swamp",
                 "typical": 0
             },
             {
                 "at_least": [
-                    0.15,
-                    0.118,
-                    0.094,
-                    0.094
+                    0.165,
+                    0.158,
+                    0.03,
+                    0.0
                 ],
-                "average": 3.1,
+                "average": 2.1,
                 "banned": false,
-                "link": "https://scryfall.com/card/eoe/52/cryogen-relic",
-                "name": "Cryogen Relic",
-                "preview": "https://cards.scryfall.io/normal/front/7/b/7bfb33b6-e2bf-498f-8c58-ae21a840cf75.jpg",
+                "link": "https://scryfall.com/card/2xm/79/cast-down",
+                "name": "Cast Down",
+                "preview": "https://cards.scryfall.io/normal/front/4/8/480fecdd-5978-47e6-9c25-7a04cdf616db.jpg",
                 "py/object": "pauperformance_bot.entity.api.archetype.TypicalCard",
-                "type_line": "Artifact",
+                "type_line": "Instant",
                 "typical": 0
             },
             {
                 "at_least": [
-                    0.102,
-                    0.094,
-                    0.063,
-                    0.024
+                    0.12,
+                    0.06,
+                    0.038,
+                    0.008
                 ],
-                "average": 2.8,
+                "average": 1.9,
+                "banned": false,
+                "link": "https://scryfall.com/card/lci/105/fanatical-offering",
+                "name": "Fanatical Offering",
+                "preview": "https://cards.scryfall.io/normal/front/d/8/d896dd52-b134-4b55-ab91-ccb05ecc50f4.jpg",
+                "py/object": "pauperformance_bot.entity.api.archetype.TypicalCard",
+                "type_line": "Instant",
+                "typical": 0
+            },
+            {
+                "at_least": [
+                    0.105,
+                    0.098,
+                    0.068,
+                    0.03
+                ],
+                "average": 2.9,
                 "banned": false,
                 "link": "https://scryfall.com/card/slz/88/baleful-strix",
                 "name": "Baleful Strix",
@@ -525,7 +541,7 @@
             },
             {
                 "at_least": [
-                    0.102,
+                    0.098,
                     0.0,
                     0.0,
                     0.0
@@ -538,28 +554,12 @@
                 "py/object": "pauperformance_bot.entity.api.archetype.TypicalCard",
                 "type_line": "Instant",
                 "typical": 0
-            },
-            {
-                "at_least": [
-                    0.087,
-                    0.024,
-                    0.0,
-                    0.0
-                ],
-                "average": 1.3,
-                "banned": false,
-                "link": "https://scryfall.com/card/lci/105/fanatical-offering",
-                "name": "Fanatical Offering",
-                "preview": "https://cards.scryfall.io/normal/front/d/8/d896dd52-b134-4b55-ab91-ccb05ecc50f4.jpg",
-                "py/object": "pauperformance_bot.entity.api.archetype.TypicalCard",
-                "type_line": "Instant",
-                "typical": 0
             }
         ],
         "metagames": [
             {
                 "date": "2026-10-02",
-                "decks": 127,
+                "decks": 133,
                 "label": "fra",
                 "metagame": "149",
                 "name": "Reality Fracture",
@@ -570,10 +570,10 @@
         "side": [
             {
                 "at_least": [
-                    0.803,
-                    0.787,
-                    0.78,
-                    0.622
+                    0.774,
+                    0.759,
+                    0.752,
+                    0.602
                 ],
                 "average": 3.7,
                 "banned": false,
@@ -586,10 +586,10 @@
             },
             {
                 "at_least": [
-                    0.732,
-                    0.732,
-                    0.677,
-                    0.638
+                    0.714,
+                    0.714,
+                    0.662,
+                    0.617
                 ],
                 "average": 3.8,
                 "banned": false,
@@ -602,9 +602,9 @@
             },
             {
                 "at_least": [
-                    0.795,
-                    0.764,
-                    0.071,
+                    0.767,
+                    0.737,
+                    0.068,
                     0.0
                 ],
                 "average": 2.0,
@@ -618,10 +618,10 @@
             },
             {
                 "at_least": [
-                    0.748,
-                    0.693,
-                    0.268,
-                    0.165
+                    0.729,
+                    0.677,
+                    0.263,
+                    0.158
                 ],
                 "average": 2.5,
                 "banned": false,
@@ -634,9 +634,9 @@
             },
             {
                 "at_least": [
-                    0.701,
-                    0.071,
-                    0.055,
+                    0.677,
+                    0.068,
+                    0.053,
                     0.008
                 ],
                 "average": 1.2,
@@ -650,12 +650,12 @@
             },
             {
                 "at_least": [
-                    0.638,
-                    0.228,
-                    0.197,
-                    0.118
+                    0.654,
+                    0.256,
+                    0.226,
+                    0.143
                 ],
-                "average": 1.9,
+                "average": 2.0,
                 "banned": false,
                 "link": "https://scryfall.com/card/lea/169/red-elemental-blast",
                 "name": "Red Elemental Blast",
@@ -666,8 +666,8 @@
             },
             {
                 "at_least": [
-                    0.543,
-                    0.016,
+                    0.526,
+                    0.015,
                     0.008,
                     0.0
                 ],
@@ -682,9 +682,9 @@
             },
             {
                 "at_least": [
-                    0.378,
-                    0.339,
-                    0.087,
+                    0.361,
+                    0.323,
+                    0.083,
                     0.0
                 ],
                 "average": 2.1,
@@ -698,8 +698,8 @@
             },
             {
                 "at_least": [
-                    0.252,
-                    0.11,
+                    0.241,
+                    0.105,
                     0.0,
                     0.0
                 ],
@@ -714,8 +714,8 @@
             },
             {
                 "at_least": [
-                    0.22,
-                    0.024,
+                    0.241,
+                    0.023,
                     0.0,
                     0.0
                 ],
@@ -730,8 +730,8 @@
             },
             {
                 "at_least": [
-                    0.213,
-                    0.079,
+                    0.203,
+                    0.075,
                     0.0,
                     0.0
                 ],
@@ -746,8 +746,8 @@
             },
             {
                 "at_least": [
-                    0.15,
-                    0.126,
+                    0.143,
+                    0.12,
                     0.0,
                     0.0
                 ],
@@ -762,28 +762,12 @@
             },
             {
                 "at_least": [
-                    0.126,
-                    0.11,
-                    0.063,
-                    0.039
-                ],
-                "average": 2.7,
-                "banned": false,
-                "link": "https://scryfall.com/card/usg/132/duress",
-                "name": "Duress",
-                "preview": "https://cards.scryfall.io/normal/front/c/a/ca367f49-0f4a-4b7f-8104-851893fbcd8a.jpg",
-                "py/object": "pauperformance_bot.entity.api.archetype.TypicalCard",
-                "type_line": "Sorcery",
-                "typical": 0
-            },
-            {
-                "at_least": [
-                    0.11,
-                    0.063,
-                    0.016,
+                    0.135,
+                    0.09,
+                    0.015,
                     0.0
                 ],
-                "average": 1.7,
+                "average": 1.8,
                 "banned": false,
                 "link": "https://scryfall.com/card/ltr/118/cast-into-the-fire",
                 "name": "Cast into the Fire",
@@ -794,7 +778,39 @@
             },
             {
                 "at_least": [
-                    0.087,
+                    0.128,
+                    0.113,
+                    0.068,
+                    0.045
+                ],
+                "average": 2.8,
+                "banned": false,
+                "link": "https://scryfall.com/card/usg/132/duress",
+                "name": "Duress",
+                "preview": "https://cards.scryfall.io/normal/front/c/a/ca367f49-0f4a-4b7f-8104-851893fbcd8a.jpg",
+                "py/object": "pauperformance_bot.entity.api.archetype.TypicalCard",
+                "type_line": "Sorcery",
+                "typical": 0
+            },
+            {
+                "at_least": [
+                    0.105,
+                    0.068,
+                    0.03,
+                    0.0
+                ],
+                "average": 1.9,
+                "banned": false,
+                "link": "https://scryfall.com/card/mor/43/negate",
+                "name": "Negate",
+                "preview": "https://cards.scryfall.io/normal/front/5/a/5a501252-e722-4ebf-bcf7-f53a42745fa7.jpg",
+                "py/object": "pauperformance_bot.entity.api.archetype.TypicalCard",
+                "type_line": "Instant",
+                "typical": 0
+            },
+            {
+                "at_least": [
+                    0.083,
                     0.008,
                     0.0,
                     0.0
@@ -810,16 +826,16 @@
             },
             {
                 "at_least": [
-                    0.079,
-                    0.039,
+                    0.053,
+                    0.053,
                     0.0,
                     0.0
                 ],
-                "average": 1.5,
+                "average": 2.0,
                 "banned": false,
-                "link": "https://scryfall.com/card/mor/43/negate",
-                "name": "Negate",
-                "preview": "https://cards.scryfall.io/normal/front/5/a/5a501252-e722-4ebf-bcf7-f53a42745fa7.jpg",
+                "link": "https://scryfall.com/card/2xm/79/cast-down",
+                "name": "Cast Down",
+                "preview": "https://cards.scryfall.io/normal/front/4/8/480fecdd-5978-47e6-9c25-7a04cdf616db.jpg",
                 "py/object": "pauperformance_bot.entity.api.archetype.TypicalCard",
                 "type_line": "Instant",
                 "typical": 0

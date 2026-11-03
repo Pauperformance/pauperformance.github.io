@@ -22,13 +22,13 @@
         "Aggro"
     ],
     "last_appearance": {
-        "date": "2026-08-22",
+        "date": "2026-10-30",
         "metagame": {
-            "date": "2026-08-14",
+            "date": "2026-10-02",
             "decks": null,
-            "label": "hob",
-            "metagame": "146",
-            "name": "The Hobbit",
+            "label": "fra",
+            "metagame": "149",
+            "name": "Reality Fracture",
             "py/object": "pauperformance_bot.entity.api.archetype.MetagameRef"
         },
         "py/object": "pauperformance_bot.entity.api.archetype.Appearance"
@@ -59,44 +59,44 @@
     ],
     "resources_discord": [],
     "typical_list": {
-        "decks": 45,
+        "decks": 46,
         "ended_by_bans": [],
         "era_end": null,
         "era_start": null,
         "first_date": "2024-02-14",
-        "last_date": "2026-08-22",
+        "last_date": "2026-10-30",
         "later_decks": 0,
         "main": [
             {
                 "at_least": [
-                    0.956,
-                    0.956,
-                    0.956,
-                    0.956
+                    0.957,
+                    0.957,
+                    0.957,
+                    0.957
                 ],
                 "average": 6.4,
                 "banned": false,
-                "link": "https://scryfall.com/card/rex/21/plains-plains",
+                "link": "https://scryfall.com/card/lea/286/plains",
                 "name": "Plains",
-                "preview": "https://cards.scryfall.io/normal/front/6/6/6620b5f4-b1e5-4d1b-bbf2-c6ad9c8284c5.jpg",
+                "preview": "https://cards.scryfall.io/normal/front/b/1/b1623d57-4729-4796-b3f7-f1837a05c6ed.jpg",
                 "py/object": "pauperformance_bot.entity.api.archetype.TypicalCard",
-                "type_line": "Basic Land \u2014 Plains // Basic Land \u2014 Plains",
+                "type_line": "Basic Land \u2014 Plains",
                 "typical": 7
             },
             {
                 "at_least": [
-                    0.956,
-                    0.956,
-                    0.956,
-                    0.956
+                    0.957,
+                    0.957,
+                    0.957,
+                    0.957
                 ],
                 "average": 6.3,
                 "banned": false,
-                "link": "https://scryfall.com/card/rex/25/forest-forest",
+                "link": "https://scryfall.com/card/lea/294/forest",
                 "name": "Forest",
-                "preview": "https://cards.scryfall.io/normal/front/7/e/7e703632-5ed0-4509-a12b-594269f865f1.jpg",
+                "preview": "https://cards.scryfall.io/normal/front/6/f/6f1c8cb0-38eb-408b-94e8-16db83999b3b.jpg",
                 "py/object": "pauperformance_bot.entity.api.archetype.TypicalCard",
-                "type_line": "Basic Land \u2014 Forest // Basic Land \u2014 Forest",
+                "type_line": "Basic Land \u2014 Forest",
                 "typical": 6
             },
             {
@@ -111,22 +111,6 @@
                 "link": "https://scryfall.com/card/tmp/238/muscle-sliver",
                 "name": "Muscle Sliver",
                 "preview": "https://cards.scryfall.io/normal/front/6/0/602a1e1f-4195-48c0-8290-562e7e0db6d8.jpg",
-                "py/object": "pauperformance_bot.entity.api.archetype.TypicalCard",
-                "type_line": "Creature \u2014 Sliver",
-                "typical": 4
-            },
-            {
-                "at_least": [
-                    1.0,
-                    1.0,
-                    1.0,
-                    0.956
-                ],
-                "average": 4.0,
-                "banned": false,
-                "link": "https://scryfall.com/card/lgn/19/plated-sliver",
-                "name": "Plated Sliver",
-                "preview": "https://cards.scryfall.io/normal/front/8/2/82846d31-4981-4ef1-85c3-703569146a84.jpg",
                 "py/object": "pauperformance_bot.entity.api.archetype.TypicalCard",
                 "type_line": "Creature \u2014 Sliver",
                 "typical": 4
@@ -184,13 +168,29 @@
                     0.978,
                     0.978,
                     0.978,
-                    0.689
+                    0.696
                 ],
                 "average": 3.7,
                 "banned": false,
                 "link": "https://scryfall.com/card/tsp/196/gemhide-sliver",
                 "name": "Gemhide Sliver",
                 "preview": "https://cards.scryfall.io/normal/front/f/0/f09135b0-fd57-4205-aa74-c9869946c264.jpg",
+                "py/object": "pauperformance_bot.entity.api.archetype.TypicalCard",
+                "type_line": "Creature \u2014 Sliver",
+                "typical": 4
+            },
+            {
+                "at_least": [
+                    0.978,
+                    0.978,
+                    0.978,
+                    0.935
+                ],
+                "average": 4.0,
+                "banned": false,
+                "link": "https://scryfall.com/card/lgn/19/plated-sliver",
+                "name": "Plated Sliver",
+                "preview": "https://cards.scryfall.io/normal/front/8/2/82846d31-4981-4ef1-85c3-703569146a84.jpg",
                 "py/object": "pauperformance_bot.entity.api.archetype.TypicalCard",
                 "type_line": "Creature \u2014 Sliver",
                 "typical": 4
@@ -213,10 +213,10 @@
             },
             {
                 "at_least": [
-                    0.6,
-                    0.6,
-                    0.511,
-                    0.467
+                    0.587,
+                    0.587,
+                    0.5,
+                    0.457
                 ],
                 "average": 3.6,
                 "banned": false,
@@ -229,10 +229,10 @@
             },
             {
                 "at_least": [
-                    0.867,
-                    0.844,
-                    0.578,
-                    0.378
+                    0.87,
+                    0.848,
+                    0.587,
+                    0.37
                 ],
                 "average": 3.1,
                 "banned": false,
@@ -245,10 +245,10 @@
             },
             {
                 "at_least": [
-                    0.822,
-                    0.8,
-                    0.2,
-                    0.178
+                    0.826,
+                    0.804,
+                    0.196,
+                    0.174
                 ],
                 "average": 2.4,
                 "banned": false,
@@ -261,10 +261,10 @@
             },
             {
                 "at_least": [
-                    0.822,
-                    0.778,
-                    0.156,
-                    0.044
+                    0.804,
+                    0.761,
+                    0.152,
+                    0.043
                 ],
                 "average": 2.2,
                 "banned": false,
@@ -277,10 +277,10 @@
             },
             {
                 "at_least": [
-                    0.733,
-                    0.689,
-                    0.333,
-                    0.289
+                    0.717,
+                    0.674,
+                    0.326,
+                    0.283
                 ],
                 "average": 2.8,
                 "banned": false,
@@ -293,8 +293,24 @@
             },
             {
                 "at_least": [
-                    0.489,
-                    0.467,
+                    0.478,
+                    0.435,
+                    0.152,
+                    0.0
+                ],
+                "average": 2.2,
+                "banned": false,
+                "link": "https://scryfall.com/card/jmp/35/thriving-heath",
+                "name": "Thriving Heath",
+                "preview": "https://cards.scryfall.io/normal/front/f/e/fe424eb3-7df8-4317-8776-6d960afbb90a.jpg",
+                "py/object": "pauperformance_bot.entity.api.archetype.TypicalCard",
+                "type_line": "Land",
+                "typical": 2
+            },
+            {
+                "at_least": [
+                    0.478,
+                    0.457,
                     0.022,
                     0.0
                 ],
@@ -309,24 +325,24 @@
             },
             {
                 "at_least": [
-                    0.467,
-                    0.422,
-                    0.156,
-                    0.0
+                    0.435,
+                    0.391,
+                    0.304,
+                    0.174
                 ],
-                "average": 2.2,
+                "average": 3.0,
                 "banned": false,
-                "link": "https://scryfall.com/card/jmp/35/thriving-heath",
-                "name": "Thriving Heath",
-                "preview": "https://cards.scryfall.io/normal/front/f/e/fe424eb3-7df8-4317-8776-6d960afbb90a.jpg",
+                "link": "https://scryfall.com/card/jud/5/benevolent-bodyguard",
+                "name": "Benevolent Bodyguard",
+                "preview": "https://cards.scryfall.io/normal/front/2/2/22492fb3-5ceb-4d5e-ba82-ae1a6a69c105.jpg",
                 "py/object": "pauperformance_bot.entity.api.archetype.TypicalCard",
-                "type_line": "Land",
-                "typical": 2
+                "type_line": "Creature \u2014 Human Cleric",
+                "typical": 1
             },
             {
                 "at_least": [
-                    0.444,
-                    0.289,
+                    0.435,
+                    0.283,
                     0.022,
                     0.0
                 ],
@@ -341,24 +357,8 @@
             },
             {
                 "at_least": [
-                    0.422,
-                    0.378,
-                    0.289,
-                    0.178
-                ],
-                "average": 3.0,
-                "banned": false,
-                "link": "https://scryfall.com/card/jud/5/benevolent-bodyguard",
-                "name": "Benevolent Bodyguard",
-                "preview": "https://cards.scryfall.io/normal/front/2/2/22492fb3-5ceb-4d5e-ba82-ae1a6a69c105.jpg",
-                "py/object": "pauperformance_bot.entity.api.archetype.TypicalCard",
-                "type_line": "Creature \u2014 Human Cleric",
-                "typical": 1
-            },
-            {
-                "at_least": [
-                    0.311,
-                    0.244,
+                    0.304,
+                    0.239,
                     0.0,
                     0.0
                 ],
@@ -373,10 +373,10 @@
             },
             {
                 "at_least": [
-                    0.289,
-                    0.289,
-                    0.044,
-                    0.044
+                    0.283,
+                    0.283,
+                    0.043,
+                    0.043
                 ],
                 "average": 2.3,
                 "banned": false,
@@ -389,8 +389,8 @@
             },
             {
                 "at_least": [
-                    0.267,
-                    0.222,
+                    0.261,
+                    0.217,
                     0.022,
                     0.022
                 ],
@@ -405,8 +405,24 @@
             },
             {
                 "at_least": [
-                    0.178,
-                    0.111,
+                    0.196,
+                    0.152,
+                    0.043,
+                    0.0
+                ],
+                "average": 2.0,
+                "banned": false,
+                "link": "https://scryfall.com/card/khm/184/masked-vandal",
+                "name": "Masked Vandal",
+                "preview": "https://cards.scryfall.io/normal/front/f/0/f0a9c72a-e450-41e3-80e5-06f2f1171245.jpg",
+                "py/object": "pauperformance_bot.entity.api.archetype.TypicalCard",
+                "type_line": "Creature \u2014 Shapeshifter",
+                "typical": 0
+            },
+            {
+                "at_least": [
+                    0.174,
+                    0.109,
                     0.022,
                     0.0
                 ],
@@ -421,24 +437,24 @@
             },
             {
                 "at_least": [
-                    0.178,
-                    0.133,
-                    0.022,
+                    0.13,
+                    0.043,
+                    0.0,
                     0.0
                 ],
-                "average": 1.9,
+                "average": 1.3,
                 "banned": false,
-                "link": "https://scryfall.com/card/khm/184/masked-vandal",
-                "name": "Masked Vandal",
-                "preview": "https://cards.scryfall.io/normal/front/f/0/f0a9c72a-e450-41e3-80e5-06f2f1171245.jpg",
+                "link": "https://scryfall.com/card/tmp/182/heart-sliver",
+                "name": "Heart Sliver",
+                "preview": "https://cards.scryfall.io/normal/front/2/7/27a83ab6-0d15-49e4-90e3-b3a2a095c632.jpg",
                 "py/object": "pauperformance_bot.entity.api.archetype.TypicalCard",
-                "type_line": "Creature \u2014 Shapeshifter",
+                "type_line": "Creature \u2014 Sliver",
                 "typical": 0
             },
             {
                 "at_least": [
-                    0.133,
-                    0.089,
+                    0.13,
+                    0.087,
                     0.022,
                     0.0
                 ],
@@ -453,26 +469,10 @@
             },
             {
                 "at_least": [
-                    0.111,
-                    0.022,
-                    0.0,
-                    0.0
-                ],
-                "average": 1.2,
-                "banned": false,
-                "link": "https://scryfall.com/card/tmp/182/heart-sliver",
-                "name": "Heart Sliver",
-                "preview": "https://cards.scryfall.io/normal/front/2/7/27a83ab6-0d15-49e4-90e3-b3a2a095c632.jpg",
-                "py/object": "pauperformance_bot.entity.api.archetype.TypicalCard",
-                "type_line": "Creature \u2014 Sliver",
-                "typical": 0
-            },
-            {
-                "at_least": [
-                    0.111,
-                    0.111,
-                    0.089,
-                    0.067
+                    0.109,
+                    0.109,
+                    0.087,
+                    0.065
                 ],
                 "average": 3.4,
                 "banned": false,
@@ -485,8 +485,24 @@
             },
             {
                 "at_least": [
-                    0.089,
-                    0.044,
+                    0.087,
+                    0.022,
+                    0.0,
+                    0.0
+                ],
+                "average": 1.2,
+                "banned": false,
+                "link": "https://scryfall.com/card/lea/292/mountain",
+                "name": "Mountain",
+                "preview": "https://cards.scryfall.io/normal/front/e/a/eace2c85-976c-425e-9800-5a6ccbd91b56.jpg",
+                "py/object": "pauperformance_bot.entity.api.archetype.TypicalCard",
+                "type_line": "Basic Land \u2014 Mountain",
+                "typical": 0
+            },
+            {
+                "at_least": [
+                    0.087,
+                    0.043,
                     0.0,
                     0.0
                 ],
@@ -501,7 +517,7 @@
             },
             {
                 "at_least": [
-                    0.067,
+                    0.065,
                     0.0,
                     0.0,
                     0.0
@@ -517,23 +533,23 @@
             },
             {
                 "at_least": [
-                    0.067,
-                    0.0,
-                    0.0,
-                    0.0
+                    0.065,
+                    0.065,
+                    0.022,
+                    0.022
                 ],
-                "average": 1.0,
+                "average": 2.7,
                 "banned": false,
-                "link": "https://scryfall.com/card/rex/24/mountain-mountain",
-                "name": "Mountain",
-                "preview": "https://cards.scryfall.io/normal/front/a/a/aae84079-b65b-4132-86fb-e82503bb6c7b.jpg",
+                "link": "https://scryfall.com/card/clb/356/manor-gate",
+                "name": "Manor Gate",
+                "preview": "https://cards.scryfall.io/normal/front/7/9/793d4978-9e00-453d-8dc2-6d51ad6c26b7.jpg",
                 "py/object": "pauperformance_bot.entity.api.archetype.TypicalCard",
-                "type_line": "Basic Land \u2014 Mountain // Basic Land \u2014 Mountain",
+                "type_line": "Land \u2014 Gate",
                 "typical": 0
             },
             {
                 "at_least": [
-                    0.067,
+                    0.065,
                     0.0,
                     0.0,
                     0.0
@@ -549,6 +565,14 @@
             }
         ],
         "metagames": [
+            {
+                "date": "2026-10-02",
+                "decks": 1,
+                "label": "fra",
+                "metagame": "149",
+                "name": "Reality Fracture",
+                "py/object": "pauperformance_bot.entity.api.archetype.MetagameRef"
+            },
             {
                 "date": "2026-08-14",
                 "decks": 1,
@@ -682,9 +706,9 @@
         "side": [
             {
                 "at_least": [
-                    0.689,
-                    0.667,
-                    0.133,
+                    0.674,
+                    0.652,
+                    0.13,
                     0.022
                 ],
                 "average": 2.2,
@@ -698,9 +722,9 @@
             },
             {
                 "at_least": [
-                    0.667,
-                    0.6,
-                    0.267,
+                    0.652,
+                    0.587,
+                    0.261,
                     0.0
                 ],
                 "average": 2.3,
@@ -714,10 +738,10 @@
             },
             {
                 "at_least": [
-                    0.622,
-                    0.556,
-                    0.267,
-                    0.111
+                    0.609,
+                    0.543,
+                    0.261,
+                    0.109
                 ],
                 "average": 2.5,
                 "banned": false,
@@ -730,9 +754,9 @@
             },
             {
                 "at_least": [
-                    0.578,
-                    0.556,
-                    0.133,
+                    0.565,
+                    0.543,
+                    0.13,
                     0.0
                 ],
                 "average": 2.2,
@@ -746,9 +770,9 @@
             },
             {
                 "at_least": [
-                    0.467,
-                    0.4,
-                    0.222,
+                    0.457,
+                    0.391,
+                    0.217,
                     0.022
                 ],
                 "average": 2.4,
@@ -762,9 +786,9 @@
             },
             {
                 "at_least": [
-                    0.422,
-                    0.422,
-                    0.2,
+                    0.413,
+                    0.413,
+                    0.196,
                     0.022
                 ],
                 "average": 2.5,
@@ -778,9 +802,9 @@
             },
             {
                 "at_least": [
-                    0.4,
-                    0.4,
-                    0.311,
+                    0.391,
+                    0.391,
+                    0.304,
                     0.022
                 ],
                 "average": 2.8,
@@ -794,9 +818,9 @@
             },
             {
                 "at_least": [
-                    0.311,
-                    0.311,
-                    0.244,
+                    0.304,
+                    0.304,
+                    0.239,
                     0.022
                 ],
                 "average": 2.9,
@@ -810,8 +834,8 @@
             },
             {
                 "at_least": [
-                    0.244,
-                    0.244,
+                    0.239,
+                    0.239,
                     0.0,
                     0.0
                 ],
@@ -826,8 +850,8 @@
             },
             {
                 "at_least": [
-                    0.2,
-                    0.156,
+                    0.196,
+                    0.152,
                     0.022,
                     0.0
                 ],
@@ -842,8 +866,8 @@
             },
             {
                 "at_least": [
-                    0.156,
-                    0.133,
+                    0.152,
+                    0.13,
                     0.0,
                     0.0
                 ],
@@ -858,9 +882,9 @@
             },
             {
                 "at_least": [
-                    0.111,
-                    0.089,
-                    0.067,
+                    0.109,
+                    0.087,
+                    0.065,
                     0.0
                 ],
                 "average": 2.4,
@@ -874,8 +898,8 @@
             },
             {
                 "at_least": [
-                    0.111,
-                    0.067,
+                    0.109,
+                    0.065,
                     0.0,
                     0.0
                 ],
@@ -890,8 +914,8 @@
             },
             {
                 "at_least": [
-                    0.111,
-                    0.067,
+                    0.109,
+                    0.065,
                     0.0,
                     0.0
                 ],
@@ -906,7 +930,23 @@
             },
             {
                 "at_least": [
-                    0.089,
+                    0.087,
+                    0.087,
+                    0.022,
+                    0.0
+                ],
+                "average": 2.2,
+                "banned": false,
+                "link": "https://scryfall.com/card/lea/193/fog",
+                "name": "Fog",
+                "preview": "https://cards.scryfall.io/normal/front/c/f/cfba606d-bb55-43ba-aa0c-299649958788.jpg",
+                "py/object": "pauperformance_bot.entity.api.archetype.TypicalCard",
+                "type_line": "Instant",
+                "typical": 0
+            },
+            {
+                "at_least": [
+                    0.087,
                     0.022,
                     0.0,
                     0.0
@@ -922,8 +962,8 @@
             },
             {
                 "at_least": [
-                    0.067,
-                    0.067,
+                    0.065,
+                    0.065,
                     0.022,
                     0.022
                 ],
@@ -938,8 +978,8 @@
             },
             {
                 "at_least": [
-                    0.067,
-                    0.044,
+                    0.065,
+                    0.043,
                     0.0,
                     0.0
                 ],
@@ -954,8 +994,8 @@
             },
             {
                 "at_least": [
-                    0.067,
-                    0.044,
+                    0.065,
+                    0.043,
                     0.0,
                     0.0
                 ],
@@ -970,7 +1010,7 @@
             },
             {
                 "at_least": [
-                    0.067,
+                    0.065,
                     0.0,
                     0.0,
                     0.0
@@ -986,24 +1026,8 @@
             },
             {
                 "at_least": [
-                    0.067,
-                    0.067,
-                    0.0,
-                    0.0
-                ],
-                "average": 2.0,
-                "banned": false,
-                "link": "https://scryfall.com/card/lea/193/fog",
-                "name": "Fog",
-                "preview": "https://cards.scryfall.io/normal/front/c/f/cfba606d-bb55-43ba-aa0c-299649958788.jpg",
-                "py/object": "pauperformance_bot.entity.api.archetype.TypicalCard",
-                "type_line": "Instant",
-                "typical": 0
-            },
-            {
-                "at_least": [
-                    0.067,
-                    0.067,
+                    0.065,
+                    0.065,
                     0.022,
                     0.022
                 ],
@@ -1018,8 +1042,8 @@
             },
             {
                 "at_least": [
-                    0.067,
-                    0.044,
+                    0.065,
+                    0.043,
                     0.0,
                     0.0
                 ],
@@ -1034,7 +1058,7 @@
             },
             {
                 "at_least": [
-                    0.067,
+                    0.065,
                     0.0,
                     0.0,
                     0.0
@@ -1050,7 +1074,23 @@
             },
             {
                 "at_least": [
-                    0.067,
+                    0.065,
+                    0.043,
+                    0.0,
+                    0.0
+                ],
+                "average": 1.7,
+                "banned": false,
+                "link": "https://scryfall.com/card/chr/109/tormods-crypt",
+                "name": "Tormod's Crypt",
+                "preview": "https://cards.scryfall.io/normal/front/5/5/55709270-74b2-4a3f-947d-29ac7c309b0f.jpg",
+                "py/object": "pauperformance_bot.entity.api.archetype.TypicalCard",
+                "type_line": "Artifact",
+                "typical": 0
+            },
+            {
+                "at_least": [
+                    0.065,
                     0.0,
                     0.0,
                     0.0
