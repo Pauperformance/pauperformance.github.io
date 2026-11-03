@@ -250,6 +250,8 @@ const dirtyCardNames = {}
 
 let intelDeckCount = 0
 let deckDetailWritten = 0, deckDetailSkipped = 0
+// YYYY-MM-DD of the most recent tournament among the classified decks
+let lastDecksUpdate = ''
 var playersMap = {}
 
 // Cached decks whose deck-detail reads are deferred until we know if any deck changed
@@ -282,6 +284,7 @@ for (const archetype of archetypes) {
         tournament_name: d.tournament_name || null,
         tournament_date: d.tournament_date || null,
       }
+      if (d.tournament_date && d.tournament_date > lastDecksUpdate) lastDecksUpdate = d.tournament_date
 
       if (!needsRebuild(outputPath, [inputPath, txtPath])) {
         // Cache hit: defer deck-detail read until we know if cardDecksMap is needed
@@ -1009,9 +1012,19 @@ allVideos.sort(function(a, b) { return (b.date || '').localeCompare(a.date || ''
 writeFileSync(join(outDir, 'videos.json'), JSON.stringify(allVideos))
 console.log('Built videos.json with ' + allVideos.length + ' entries.')
 
-// Write aggregate stats used by the home page counters
-writeFileSync(join(outDir, 'stats.json'), JSON.stringify({ classifiedDecks: deckDetailWritten + deckDetailSkipped, videos: allVideos.length }))
-console.log('Built stats.json (classifiedDecks: ' + (deckDetailWritten + deckDetailSkipped) + ', videos: ' + allVideos.length + ').')
+// Write aggregate stats used by the home page counters and footer.
+// lastMetagameUpdate: when the MTGGoldfish meta behind the chart was downloaded
+// (set by Myr; missing in older metagame.json files).
+// lastDecksUpdate: the most recent tournament among the classified decks.
+const stats = {
+  classifiedDecks: deckDetailWritten + deckDetailSkipped,
+  videos: allVideos.length,
+  lastMetagameUpdate: metagame.date || null,
+  lastDecksUpdate: lastDecksUpdate || null,
+}
+writeFileSync(join(outDir, 'stats.json'), JSON.stringify(stats))
+console.log('Built stats.json (classifiedDecks: ' + stats.classifiedDecks + ', videos: ' + stats.videos +
+  ', lastMetagameUpdate: ' + stats.lastMetagameUpdate + ', lastDecksUpdate: ' + stats.lastDecksUpdate + ').')
 
 // Build alias → canonical slug redirect map
 const aliasMap = {}

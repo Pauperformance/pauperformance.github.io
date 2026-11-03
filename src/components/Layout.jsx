@@ -1,5 +1,6 @@
 import { useState, useEffect } from 'react'
 import { Link, useLocation } from 'react-router-dom'
+import { formatShortDate } from '../utils/dates'
 
 const NAV_ITEMS = [
   { to: '/', label: 'Home' },
@@ -81,6 +82,25 @@ const CONTACTS = [
   },
 ]
 
+// On the home page only: when the metagame chart and the classified decks were
+// last refreshed (from stats.json, built by build-data.mjs). A date that is
+// missing is left out.
+function DataFreshness() {
+  const [stats, setStats] = useState(null)
+
+  useEffect(() => {
+    fetch('/data/stats.json').then(r => r.json()).then(setStats).catch(() => setStats(null))
+  }, [])
+
+  if (!stats) return null
+  const parts = [
+    stats.lastMetagameUpdate && `Last metagame update: ${formatShortDate(stats.lastMetagameUpdate)}.`,
+    stats.lastDecksUpdate && `Last decks update: ${formatShortDate(stats.lastDecksUpdate)}.`,
+  ].filter(Boolean)
+  if (!parts.length) return null
+  return <span className="text-xs text-gray-500 text-center">{parts.join(' ')}</span>
+}
+
 export default function Layout({ children }) {
   const { pathname } = useLocation()
   const [menuOpen, setMenuOpen] = useState(false)
@@ -154,6 +174,7 @@ export default function Layout({ children }) {
             ))}
           </div>
           <span>Pauperformance Academy</span>
+          {pathname === '/' && <DataFreshness />}
         </div>
       </footer>
     </div>
