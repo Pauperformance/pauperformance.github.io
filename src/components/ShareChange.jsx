@@ -1,9 +1,11 @@
 // How the archetype's share moved since the previous metagame: nothing when
 // that one has no decks, "New" when the archetype wasn't played there.
-export default function ShareChange({ share, previous }) {
+export default function ShareChange({ share, previous, debut }) {
   if (previous == null) return null
   if (previous === 0) {
-    return <span className="text-xs font-medium text-amber-300" title="Not played in the previous metagame">New</span>
+    return debut
+      ? <span className="text-xs font-medium text-amber-300" title="Played for the first time">New</span>
+      : <span className="text-xs font-medium text-sky-300" title="Not played in the previous metagame, but in earlier ones">Comeback</span>
   }
   const change = share - previous
   const title = `${previous.toFixed(1)}% in the previous metagame`

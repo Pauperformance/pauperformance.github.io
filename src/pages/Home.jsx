@@ -146,7 +146,7 @@ function TopDecksSection() {
 
   return (
     <section>
-      <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 xl:grid-cols-7 2xl:grid-cols-8 gap-3">
+      <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-3">
         {decks.map(deck => (
           <div key={deck.archetype_name} className="bg-gray-800 border border-gray-700 rounded-xl overflow-hidden hover:border-amber-400/50 transition-all group">
             <Link to={`/archetypes/${nameToSlug(deck.archetype_name)}`} className="block">
@@ -584,7 +584,9 @@ function MetagameSection() {
     <section>
       <h2 className="text-xl font-semibold text-white mb-4">Bake into a Pie</h2>
       <MetaPie shares={data}
-        listClassName="grid grid-cols-2 sm:grid-cols-[none] sm:grid-flow-col sm:grid-rows-23 min-[900px]:grid-rows-16 lg:grid-rows-12 gap-x-4 gap-y-1.5" />
+        listClassName="grid grid-cols-2 sm:grid-cols-[none] sm:grid-flow-col sm:grid-rows-23 min-[900px]:grid-rows-16 lg:grid-rows-[repeat(var(--pie-rows),minmax(0,1fr))] gap-x-4 gap-y-1.5"
+        // at most 5 columns on wide screens
+        listStyle={{ '--pie-rows': Math.max(12, Math.ceil(data.length / 5)) }} />
     </section>
   )
 }
