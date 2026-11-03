@@ -11,19 +11,19 @@ const MARGIN = { top: 12, right: 12, bottom: 28, left: 40 }
 
 // The metagames the series refer to (see card-popularity-metagames.json in
 // scripts/build-data.mjs), fetched once for every card page.
-let metagamesPromise = null
-function useMetagames() {
+const metagamesPromises = {}
+export function useMetagames(url) {
   const [metagames, setMetagames] = useState(null)
   useEffect(() => {
-    if (!metagamesPromise) {
-      metagamesPromise = fetch('/data/card-popularity-metagames.json')
+    if (!metagamesPromises[url]) {
+      metagamesPromises[url] = fetch(url)
         .then(r => r.ok ? r.json() : [])
         .catch(() => [])
     }
     let cancelled = false
-    metagamesPromise.then(m => { if (!cancelled) setMetagames(m) })
+    metagamesPromises[url].then(m => { if (!cancelled) setMetagames(m) })
     return () => { cancelled = true }
-  }, [])
+  }, [url])
   return metagames
 }
 
@@ -69,8 +69,14 @@ export function PopularityTrend({ share, previous }) {
 }
 
 // series: [metagame slug, decks playing the card, rank (null if not played)]
-export default function CardPopularityChart({ series }) {
-  const metagames = useMetagames()
+// The archetype pages use it too (with their own metagames and wording).
+export default function CardPopularityChart({
+  series,
+  metagamesUrl = '/data/card-popularity-metagames.json',
+  subject = 'card',
+  caption = 'Popularity of card in tournaments since it became Pauper legal. Hover a metagame for its rank; click to open it.',
+}) {
+  const metagames = useMetagames(metagamesUrl)
   const containerRef = useRef(null)
   const [hovered, setHovered] = useState(null)
   const navigate = useNavigate()
@@ -155,7 +161,7 @@ export default function CardPopularityChart({ series }) {
         {width > 0 && (
           <svg width={width} height={HEIGHT} className="block touch-pan-y cursor-pointer"
             role="img"
-            aria-label={`Share of tournament decks playing the card, by metagame, from ${points[0].metagame.name} to ${points[points.length - 1].metagame.name}`}
+            aria-label={`Share of tournament decks playing the ${subject}, by metagame, from ${points[0].metagame.name} to ${points[points.length - 1].metagame.name}`}
             onPointerMove={onPointerMove} onPointerDown={onPointerMove}
             onPointerLeave={() => setHovered(null)}
             onClick={() => navigate(`/metagames/${active.metagame.slug}`)}>
@@ -183,7 +189,7 @@ export default function CardPopularityChart({ series }) {
         )}
       </div>
       <p className="text-xs text-gray-500">
-        Popularity of card in tournaments since it became Pauper legal. Hover a metagame for its rank; click to open it.
+        {caption}
       </p>
     </div>
   )

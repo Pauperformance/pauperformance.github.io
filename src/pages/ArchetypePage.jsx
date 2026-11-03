@@ -4,11 +4,13 @@ import ReactMarkdown from 'react-markdown'
 import Layout from '../components/Layout'
 import { useCardPreview } from '../components/CardPreview'
 import { AppearanceRow, MetagameBadge } from '../components/Metagame'
+import CardPopularityChart, { PopularityTrend, useMetagames } from '../components/CardPopularityChart'
 import MtgoButtons from '../components/MtgoButtons'
 import { cardLinkSlug, useCardPages } from '../utils/cardPages'
 import { nameToSlug, pilotToSlug } from '../utils/slugs'
 import { formatShortDate } from '../utils/dates'
 
+const POPULARITY_METAGAMES = '/data/archetype-popularity-metagames.json'
 const MANA_ORDER = ['W', 'U', 'B', 'R', 'G', 'C']
 const LANG_FLAG = {
   en: '🇬🇧', eng: '🇬🇧', 'en-US': '🇬🇧', 'en-GB': '🇬🇧',
@@ -25,6 +27,39 @@ function ManaIcon({ color }) {
   return (
     <img src={`/images/mana/${color}.png`} alt={color}
       className="w-5 h-5 inline-block" />
+  )
+}
+
+function Rank({ rank }) {
+  return <span className="font-semibold text-amber-400 tabular-nums">#{rank.toLocaleString('en-US')}</span>
+}
+
+// The archetype's popularity rank over all the tournament decks, then in the
+// latest metagame (a link to the chart) with its share and trend.
+function PopularityRow({ popularity, metagames }) {
+  const { all_time_rank: allTime, series } = popularity
+  const last = series[series.length - 1]
+  const bySlug = Object.fromEntries((metagames || []).map(m => [m.slug, m]))
+  const current = bySlug[last[0]]
+  if (!current) return null
+  const share = m => +(100 * m[1] / bySlug[m[0]].decks).toFixed(2)
+  const previous = series.length > 1 && bySlug[series[series.length - 2][0]] ? share(series[series.length - 2]) : 0
+  const metagame = { metagame: current.slug.split('.')[0], label: current.label, date: current.date, name: current.name }
+  return (
+    <div className="flex items-baseline gap-x-1.5 text-sm text-gray-300">
+      <span className="w-24 shrink-0 text-gray-500">Popularity:</span>
+      <div className="flex min-w-0 flex-wrap items-center gap-x-1.5 gap-y-1">
+        <Rank rank={allTime} /><span className="text-gray-400">all time</span>
+        <span className="text-gray-600">·</span>
+        {last[2] != null
+          ? <a href="#popularity" className="hover:underline"><Rank rank={last[2]} /></a>
+          : <span className="text-gray-500">Not played</span>}
+        <span className="text-gray-400">in</span>
+        <MetagameBadge metagame={metagame} />
+        <span className="tabular-nums">{share(last).toFixed(1)}% of decks</span>
+        <PopularityTrend share={share(last)} previous={previous} />
+      </div>
+    </div>
   )
 }
 
@@ -949,6 +984,19 @@ export default function ArchetypePage() {
   const { bind: bindPreview, preview } = useCardPreview({ sheet: true })
   const [data, setData] = useState(null)
   const [notFound, setNotFound] = useState(false)
+  const [popularity, setPopularity] = useState(null)
+  const popularityMetagames = useMetagames(POPULARITY_METAGAMES)
+
+  // the archetype's share of each metagame (missing for the never-played ones)
+  useEffect(() => {
+    let cancelled = false
+    setPopularity(null)
+    fetch(`/data/archetype-popularity/${name}.json`)
+      .then(r => r.ok ? r.json() : null)
+      .then(d => { if (!cancelled) setPopularity(d?.series?.length ? d : null) })
+      .catch(() => {})
+    return () => { cancelled = true }
+  }, [name])
 
   useEffect(() => {
     let cancelled = false
@@ -992,6 +1040,7 @@ export default function ArchetypePage() {
   const resourceCount = (data.resources?.length || 0) + (data.resources_discord?.length || 0)
     + (data.resource_sideboards?.length || 0)
   const sections = [
+    popularity && { id: 'popularity', label: 'Popularity' },
     { id: 'typical-list', label: 'Typical list' },
     { id: 'resources', label: 'Resources', count: resourceCount },
     data.decks?.length > 0 && { id: 'reference-decks', label: 'Reference decks', count: data.decks.length },
@@ -1036,6 +1085,7 @@ export default function ArchetypePage() {
                 </Link>
               </div>
             )}
+            {popularity && <PopularityRow popularity={popularity} metagames={popularityMetagames} />}
             {data.first_appearance && (
               <AppearanceRow label="First played:" appearance={data.first_appearance} />
             )}
@@ -1052,6 +1102,16 @@ export default function ArchetypePage() {
           <div className="bg-gray-800 border border-gray-700 rounded-xl p-5 prose prose-invert prose-sm max-w-none">
             <ReactMarkdown components={{ a: ({ node, ...props }) => <a {...props} className="text-amber-400 hover:underline" target="_blank" rel="noreferrer" /> }}>{data.description}</ReactMarkdown>
           </div>
+        )}
+
+        {/* Popularity over the metagames */}
+        {popularity && (
+          <section id="popularity">
+            <SectionHeader>Popularity</SectionHeader>
+            <CardPopularityChart series={popularity.series}
+              metagamesUrl={POPULARITY_METAGAMES} subject="archetype"
+              caption="Share of the tournament decks in each metagame since the archetype first appeared. Hover a metagame for its rank; click to open it." />
+          </section>
         )}
 
         {/* Typical list */}
