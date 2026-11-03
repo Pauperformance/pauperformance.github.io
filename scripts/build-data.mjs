@@ -1012,19 +1012,34 @@ allVideos.sort(function(a, b) { return (b.date || '').localeCompare(a.date || ''
 writeFileSync(join(outDir, 'videos.json'), JSON.stringify(allVideos))
 console.log('Built videos.json with ' + allVideos.length + ' entries.')
 
+// When the newest tournament was downloaded (UTC, ISO 8601). Myr stores it as
+// "fetched_at" in each tournament file; older files have none.
+const tournamentDir = 'assets/data/tournament/mtggoldfish'
+let lastDecksFetchedAt = ''
+for (const f of readdirSync(tournamentDir)) {
+  if (!f.endsWith('.json')) continue
+  const fetchedAt = JSON.parse(readFileSync(join(tournamentDir, f), 'utf8')).fetched_at
+  if (fetchedAt && fetchedAt > lastDecksFetchedAt) lastDecksFetchedAt = fetchedAt
+}
+
 // Write aggregate stats used by the home page counters and footer.
-// lastMetagameUpdate: when the MTGGoldfish meta behind the chart was downloaded
-// (set by Myr; missing in older metagame.json files).
+// lastMetagameUpdate / lastMetagameFetchedAt: the day, and the time (UTC, ISO
+// 8601), the MTGGoldfish meta behind the chart was downloaded (set by Myr;
+// missing in older metagame.json files).
 // lastDecksUpdate: the most recent tournament among the classified decks.
+// lastDecksFetchedAt: when the newest tournament was downloaded.
 const stats = {
   classifiedDecks: deckDetailWritten + deckDetailSkipped,
   videos: allVideos.length,
   lastMetagameUpdate: metagame.date || null,
+  lastMetagameFetchedAt: metagame.fetched_at || null,
   lastDecksUpdate: lastDecksUpdate || null,
+  lastDecksFetchedAt: lastDecksFetchedAt || null,
 }
 writeFileSync(join(outDir, 'stats.json'), JSON.stringify(stats))
 console.log('Built stats.json (classifiedDecks: ' + stats.classifiedDecks + ', videos: ' + stats.videos +
-  ', lastMetagameUpdate: ' + stats.lastMetagameUpdate + ', lastDecksUpdate: ' + stats.lastDecksUpdate + ').')
+  ', lastMetagameUpdate: ' + stats.lastMetagameUpdate + ' (' + stats.lastMetagameFetchedAt + ')' +
+  ', lastDecksUpdate: ' + stats.lastDecksUpdate + ' (' + stats.lastDecksFetchedAt + ')).')
 
 // Build alias → canonical slug redirect map
 const aliasMap = {}
