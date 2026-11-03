@@ -980,13 +980,31 @@ const FLOW_MIN_SHARE = 2
 const flowMetagames = {}
 const flowMana = {}
 
+// The archetypes' popularity chart: each metagame with decks, oldest first, in
+// archetype-popularity-metagames.json, and for each archetype
+// archetype-popularity/<slug>.json, its all-time rank and its series: [metagame
+// slug, decks, rank] in every metagame from its first to the last one (rank
+// null where not played).
+const archetypePopularityDir = join(outDir, 'archetype-popularity')
+mkdirSync(archetypePopularityDir, { recursive: true })
+const archetypePopularityMetagames = []
+const archetypePlayed = {}
+
 let metagamePages = 0
-for (const file of existsSync(metagameDir) ? readdirSync(metagameDir) : []) {
-  if (!file.endsWith('.json')) continue
-  const m = JSON.parse(readFileSync(join(metagameDir, file), 'utf8'))
+const metagameFiles = (existsSync(metagameDir) ? readdirSync(metagameDir) : [])
+  .filter(f => f.endsWith('.json'))
+  .map(f => JSON.parse(readFileSync(join(metagameDir, f), 'utf8')))
+  .sort((a, b) => a.metagame.date.localeCompare(b.metagame.date))
+for (const m of metagameFiles) {
   const slug = metagameSlug(m.metagame)
   const entry = indexBySlug[slug]
   if (m.decks > 0) {
+    archetypePopularityMetagames.push({
+      slug, label: m.metagame.label, date: m.metagame.date, decks: m.decks, name: m.metagame.name,
+    })
+    m.archetypes.slice().sort((a, b) => b.decks - a.decks).forEach((a, i) => {
+      (archetypePlayed[a.name] ||= {})[slug] = [a.decks, i + 1]
+    })
     const shown = m.archetypes.filter(a => a.meta_share >= FLOW_MIN_SHARE)
     for (const a of shown) {
       const arch = archetypeMap[a.name]
@@ -1034,6 +1052,22 @@ for (const file of existsSync(metagameDir) ? readdirSync(metagameDir) : []) {
   metagamePages++
 }
 console.log('Built metagames/ with ' + metagamePages + ' metagames.')
+writeFileSync(join(outDir, 'archetype-popularity-metagames.json'), JSON.stringify(archetypePopularityMetagames))
+// all-time rank: by the decks over all the metagames
+const allTimeDecks = Object.fromEntries(Object.entries(archetypePlayed)
+  .map(([name, played]) => [name, Object.values(played).reduce((s, p) => s + p[0], 0)]))
+const allTimeRank = {}
+Object.keys(allTimeDecks).sort((a, b) => allTimeDecks[b] - allTimeDecks[a])
+  .forEach((name, i) => { allTimeRank[name] = i + 1 })
+for (const [name, played] of Object.entries(archetypePlayed)) {
+  const start = archetypePopularityMetagames.findIndex(mg => played[mg.slug])
+  const series = archetypePopularityMetagames.slice(start).map(mg => {
+    const p = played[mg.slug]
+    return p ? [mg.slug, p[0], p[1]] : [mg.slug, 0, null]
+  })
+  writeFileSync(join(archetypePopularityDir, nameToSlug(name) + '.json'), JSON.stringify({ all_time_rank: allTimeRank[name], series }))
+}
+console.log('Built archetype-popularity/ with ' + Object.keys(archetypePlayed).length + ' archetypes.')
 writeFileSync(join(outDir, 'metagame_flow.json'), JSON.stringify({ mana: flowMana, metagames: flowMetagames }))
 console.log('Built metagame_flow.json with ' + Object.keys(flowMetagames).length + ' metagames.')
 
