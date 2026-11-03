@@ -1112,8 +1112,10 @@ for (const f of readdirSync(tournamentDir)) {
 // missing in older metagame.json files).
 // lastDecksUpdate: the most recent tournament among the classified decks.
 // lastDecksFetchedAt: when the newest tournament was downloaded.
+// classifiedDecks: the decks of an archetype. The deck-details also hold the
+// unclassified tournament decks (see above): they are not counted here.
 const stats = {
-  classifiedDecks: deckDetailWritten + deckDetailSkipped,
+  classifiedDecks: deckDetailWritten + deckDetailSkipped - unclassifiedCount,
   videos: allVideos.length,
   lastMetagameUpdate: metagame.date || null,
   lastMetagameFetchedAt: metagame.fetched_at || null,
