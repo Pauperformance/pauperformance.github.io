@@ -2,7 +2,8 @@ import { useState, useEffect, useMemo, useRef } from 'react'
 import { useParams, Link, useNavigate } from 'react-router-dom'
 import Layout from '../components/Layout'
 import { RulesText } from '../components/CardPreview'
-import { AppearanceRow } from '../components/Metagame'
+import { AppearanceRow, MetagameBadge } from '../components/Metagame'
+import CardPopularityChart, { PopularityTrend } from '../components/CardPopularityChart'
 import { fullCardSlug } from '../utils/cardPages'
 import { nameToSlug } from '../utils/slugs'
 import { formatShortDate } from '../utils/dates'
@@ -52,6 +53,51 @@ function FaceDetails({ face }) {
       {face.flavor_text && (
         <p className="text-xs text-gray-400 italic leading-relaxed">{face.flavor_text}</p>
       )}
+    </div>
+  )
+}
+
+// Beside the card's name, if it's banned today.
+function BannedBadge({ card }) {
+  if (!card.banned) return null
+  return (
+    <span title="Banned in Pauper"
+      className="px-2 py-0.5 rounded-md text-xs font-semibold uppercase tracking-wide bg-red-900/50 text-red-300 border border-red-800">
+      Banned
+    </span>
+  )
+}
+
+// the label column of the card's rows (first and last played, popularity,
+// played in): wide enough for "First played:"
+const LABEL_WIDTH = 'w-20'
+
+function Rank({ rank }) {
+  return <span className="font-semibold text-amber-400 tabular-nums">#{rank.toLocaleString('en-US')}</span>
+}
+
+// The card's popularity rank over all the tournament decks, then in the
+// current metagame (as on /cards; a link to its popularity chart) with its
+// trend: both from Myr.
+function PopularityRow({ card }) {
+  const allTime = card.popularity_all_time_rank, current = card.popularity_rank
+  if (allTime == null && current == null) return null
+  return (
+    <div className="flex items-baseline gap-x-1.5 text-sm text-gray-300">
+      <span className={`${LABEL_WIDTH} shrink-0 text-gray-500`}>Popularity:</span>
+      <div className="flex min-w-0 flex-wrap items-center gap-x-1.5 gap-y-1">
+        {allTime != null && <><Rank rank={allTime} /><span className="text-gray-400">all time</span></>}
+        {allTime != null && current != null && <span className="text-gray-600">·</span>}
+        {current != null && (
+          <>
+            {card.popularity ? <a href="#popularity" className="hover:underline"><Rank rank={current} /></a> : <Rank rank={current} />}
+            <span className="text-gray-400">in</span>
+            {card.popularity_metagame && <MetagameBadge metagame={card.popularity_metagame} />}
+            <PopularityTrend share={card.popularity_share} previous={card.popularity_previous_share} />
+            {!card.popularity_decks && <span className="text-gray-500">(not played)</span>}
+          </>
+        )}
+      </div>
     </div>
   )
 }
@@ -118,7 +164,7 @@ function PlayedIn({ decks }) {
   const shown = showAll ? counts : counts.slice(0, PLAYED_IN_SHOWN)
   return (
     <div className="flex items-baseline gap-1.5 text-sm">
-      <span className="w-20 shrink-0 text-gray-500">Played in:</span>
+      <span className={`${LABEL_WIDTH} shrink-0 text-gray-500`}>Played in:</span>
       {/* the badges wrap in their own column, under the first one */}
       <div className="flex min-w-0 flex-wrap items-center gap-1.5">
         {shown.map(([name, count]) => (
@@ -383,6 +429,7 @@ export default function CardPage() {
               <div className="md:hidden flex items-center gap-3 flex-wrap mb-2">
                 <h1 className="text-2xl font-bold text-gray-100">{card.name}</h1>
                 {!isMultiFace && s?.mana_cost && <ManaCost cost={s.mana_cost} />}
+                <BannedBadge card={card} />
               </div>
               <div className="flex flex-col md:flex-row gap-8 mb-10">
                 {/* Images; on phones as wide as the images, not the page, so
@@ -428,7 +475,10 @@ export default function CardPage() {
                 <div className="flex flex-col gap-5 min-w-0">
                   {isMultiFace ? (
                     <>
-                      <h1 className="hidden md:block text-2xl font-bold text-gray-100">{card.name}</h1>
+                      <div className="hidden md:flex items-center gap-3 flex-wrap">
+                        <h1 className="text-2xl font-bold text-gray-100">{card.name}</h1>
+                        <BannedBadge card={card} />
+                      </div>
                       {faces.map((face, i) => (
                         <div key={i}>
                           {i > 0 && <div className="border-t border-gray-700 mb-5" />}
@@ -441,6 +491,7 @@ export default function CardPage() {
                       <div className="hidden md:flex items-center gap-3 flex-wrap">
                         <h1 className="text-2xl font-bold text-gray-100">{card.name}</h1>
                         {s?.mana_cost && <ManaCost cost={s.mana_cost} />}
+                        <BannedBadge card={card} />
                       </div>
                       {s?.type_line && <span className="text-gray-300 text-sm">{s.type_line}</span>}
                       {s?.oracle_text && (
@@ -462,17 +513,28 @@ export default function CardPage() {
                     </p>
                   )}
 
-                  {/* First and last decklists playing it */}
-                  {card.first_appearance && (
-                    <div className="space-y-2">
-                      <AppearanceRow label="First played:" appearance={card.first_appearance} labelWidth="w-20"
-                        note={card.first_on_record && '— our decklists start here: it may have been played earlier'} />
-                      <AppearanceRow label="Last played:" appearance={card.last_appearance} labelWidth="w-20" />
-                    </div>
-                  )}
-                  <PlayedIn decks={decks} />
+                  {/* First and last decklists playing it, its popularity and
+                      archetypes: rows as close as each other */}
+                  <div className="space-y-2">
+                    {card.first_appearance && (
+                      <>
+                        <AppearanceRow label="First played:" appearance={card.first_appearance} labelWidth={LABEL_WIDTH}
+                          note={card.first_on_record && '— our decklists start here: it may have been played earlier'} />
+                        <AppearanceRow label="Last played:" appearance={card.last_appearance} labelWidth={LABEL_WIDTH} />
+                      </>
+                    )}
+                    <PopularityRow card={card} />
+                    <PlayedIn decks={decks} />
+                  </div>
                 </div>
               </div>
+
+              {card.popularity && (
+                <section id="popularity" className="mb-10 scroll-mt-24">
+                  <h2 className="text-lg font-semibold text-white mb-3 pb-2 border-b border-gray-700">Popularity</h2>
+                  <CardPopularityChart series={card.popularity} />
+                </section>
+              )}
 
               <section>
                 <CardDecksSection decks={decks} />
