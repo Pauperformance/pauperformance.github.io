@@ -22,7 +22,7 @@
         "Combo"
     ],
     "last_appearance": {
-        "date": "2026-10-26",
+        "date": "2026-11-03",
         "metagame": {
             "date": "2026-10-02",
             "decks": null,
@@ -51,12 +51,12 @@
     "resources": [],
     "resources_discord": [],
     "typical_list": {
-        "decks": 6,
+        "decks": 7,
         "ended_by_bans": [],
         "era_end": null,
         "era_start": null,
         "first_date": "2026-07-02",
-        "last_date": "2026-10-26",
+        "last_date": "2026-11-03",
         "later_decks": 0,
         "main": [
             {
@@ -144,9 +144,25 @@
                     1.0,
                     1.0,
                     1.0,
-                    1.0
+                    0.571
                 ],
-                "average": 4.0,
+                "average": 3.6,
+                "banned": false,
+                "link": "https://scryfall.com/card/wwk/138/khalni-garden",
+                "name": "Khalni Garden",
+                "preview": "https://cards.scryfall.io/normal/front/1/c/1cc6a5e6-0b73-4488-8954-4b168ce7106d.jpg",
+                "py/object": "pauperformance_bot.entity.api.archetype.TypicalCard",
+                "type_line": "Land",
+                "typical": 4
+            },
+            {
+                "at_least": [
+                    1.0,
+                    1.0,
+                    1.0,
+                    0.857
+                ],
+                "average": 3.9,
                 "banned": false,
                 "link": "https://scryfall.com/card/ltr/243/lembas",
                 "name": "Lembas",
@@ -192,9 +208,9 @@
                     1.0,
                     1.0,
                     1.0,
-                    1.0
+                    0.857
                 ],
-                "average": 4.0,
+                "average": 3.9,
                 "banned": false,
                 "link": "https://scryfall.com/card/avr/192/sheltering-word",
                 "name": "Sheltering Word",
@@ -224,9 +240,9 @@
                     1.0,
                     1.0,
                     1.0,
-                    0.167
+                    0.143
                 ],
-                "average": 3.2,
+                "average": 3.1,
                 "banned": false,
                 "link": "https://scryfall.com/card/clb/349/citadel-gate",
                 "name": "Citadel Gate",
@@ -239,42 +255,10 @@
                 "at_least": [
                     1.0,
                     1.0,
-                    1.0,
-                    0.5
-                ],
-                "average": 3.5,
-                "banned": false,
-                "link": "https://scryfall.com/card/wwk/138/khalni-garden",
-                "name": "Khalni Garden",
-                "preview": "https://cards.scryfall.io/normal/front/1/c/1cc6a5e6-0b73-4488-8954-4b168ce7106d.jpg",
-                "py/object": "pauperformance_bot.entity.api.archetype.TypicalCard",
-                "type_line": "Land",
-                "typical": 3
-            },
-            {
-                "at_least": [
-                    1.0,
-                    1.0,
-                    0.5,
-                    0.5
-                ],
-                "average": 3.0,
-                "banned": false,
-                "link": "https://scryfall.com/card/som/187/nihil-spellbomb",
-                "name": "Nihil Spellbomb",
-                "preview": "https://cards.scryfall.io/normal/front/6/0/603d217b-6375-46fc-992a-8dbd779da1e5.jpg",
-                "py/object": "pauperformance_bot.entity.api.archetype.TypicalCard",
-                "type_line": "Artifact",
-                "typical": 3
-            },
-            {
-                "at_least": [
-                    1.0,
-                    1.0,
-                    0.833,
+                    0.857,
                     0.0
                 ],
-                "average": 2.8,
+                "average": 2.9,
                 "banned": false,
                 "link": "https://scryfall.com/card/lea/290/swamp",
                 "name": "Swamp",
@@ -282,6 +266,22 @@
                 "py/object": "pauperformance_bot.entity.api.archetype.TypicalCard",
                 "type_line": "Basic Land \u2014 Swamp",
                 "typical": 3
+            },
+            {
+                "at_least": [
+                    1.0,
+                    1.0,
+                    0.429,
+                    0.429
+                ],
+                "average": 2.9,
+                "banned": false,
+                "link": "https://scryfall.com/card/som/187/nihil-spellbomb",
+                "name": "Nihil Spellbomb",
+                "preview": "https://cards.scryfall.io/normal/front/6/0/603d217b-6375-46fc-992a-8dbd779da1e5.jpg",
+                "py/object": "pauperformance_bot.entity.api.archetype.TypicalCard",
+                "type_line": "Artifact",
+                "typical": 2
             },
             {
                 "at_least": [
@@ -381,7 +381,7 @@
             },
             {
                 "at_least": [
-                    0.5,
+                    0.571,
                     0.0,
                     0.0,
                     0.0
@@ -394,12 +394,44 @@
                 "py/object": "pauperformance_bot.entity.api.archetype.TypicalCard",
                 "type_line": "Sorcery",
                 "typical": 1
+            },
+            {
+                "at_least": [
+                    0.143,
+                    0.0,
+                    0.0,
+                    0.0
+                ],
+                "average": 1.0,
+                "banned": false,
+                "link": "https://scryfall.com/card/leg/123/transmutation",
+                "name": "Transmutation",
+                "preview": "https://cards.scryfall.io/normal/front/3/2/329f7eb2-eadf-46ec-aed4-63152051f3c1.jpg",
+                "py/object": "pauperformance_bot.entity.api.archetype.TypicalCard",
+                "type_line": "Instant",
+                "typical": 0
+            },
+            {
+                "at_least": [
+                    0.143,
+                    0.0,
+                    0.0,
+                    0.0
+                ],
+                "average": 1.0,
+                "banned": false,
+                "link": "https://scryfall.com/card/vow/260/wedding-invitation",
+                "name": "Wedding Invitation",
+                "preview": "https://cards.scryfall.io/normal/front/d/d/ddc22ff6-4081-47ce-bc8a-e063f5f4d044.jpg",
+                "py/object": "pauperformance_bot.entity.api.archetype.TypicalCard",
+                "type_line": "Artifact",
+                "typical": 0
             }
         ],
         "metagames": [
             {
                 "date": "2026-10-02",
-                "decks": 3,
+                "decks": 4,
                 "label": "fra",
                 "metagame": "149",
                 "name": "Reality Fracture",
@@ -450,10 +482,10 @@
             },
             {
                 "at_least": [
-                    0.5,
-                    0.5,
-                    0.5,
-                    0.5
+                    0.571,
+                    0.571,
+                    0.571,
+                    0.571
                 ],
                 "average": 4.0,
                 "banned": false,
@@ -462,43 +494,27 @@
                 "preview": "https://cards.scryfall.io/normal/front/9/f/9f7c3571-925d-486e-80dd-bac47aa48283.jpg",
                 "py/object": "pauperformance_bot.entity.api.archetype.TypicalCard",
                 "type_line": "Instant",
-                "typical": 2
+                "typical": 4
             },
             {
                 "at_least": [
-                    0.5,
-                    0.5,
-                    0.5,
+                    0.571,
+                    0.571,
+                    0.0,
                     0.0
                 ],
-                "average": 3.0,
+                "average": 2.0,
                 "banned": false,
-                "link": "https://scryfall.com/card/m15/11/ephemeral-shields",
-                "name": "Ephemeral Shields",
-                "preview": "https://cards.scryfall.io/normal/front/0/4/04f9c2cc-2516-43d5-a7dc-27509f402077.jpg",
+                "link": "https://scryfall.com/card/som/187/nihil-spellbomb",
+                "name": "Nihil Spellbomb",
+                "preview": "https://cards.scryfall.io/normal/front/6/0/603d217b-6375-46fc-992a-8dbd779da1e5.jpg",
                 "py/object": "pauperformance_bot.entity.api.archetype.TypicalCard",
-                "type_line": "Instant",
+                "type_line": "Artifact",
                 "typical": 2
             },
             {
                 "at_least": [
-                    0.5,
-                    0.5,
-                    0.5,
-                    0.5
-                ],
-                "average": 4.0,
-                "banned": false,
-                "link": "https://scryfall.com/card/shm/66/faerie-macabre",
-                "name": "Faerie Macabre",
-                "preview": "https://cards.scryfall.io/normal/front/e/a/ead8befa-27dd-4ec4-b317-1c231407e0ac.jpg",
-                "py/object": "pauperformance_bot.entity.api.archetype.TypicalCard",
-                "type_line": "Creature \u2014 Faerie Rogue",
-                "typical": 1
-            },
-            {
-                "at_least": [
-                    0.5,
+                    0.571,
                     0.0,
                     0.0,
                     0.0
@@ -514,19 +530,35 @@
             },
             {
                 "at_least": [
-                    0.5,
-                    0.5,
-                    0.0,
+                    0.429,
+                    0.429,
+                    0.429,
                     0.0
                 ],
-                "average": 2.0,
+                "average": 3.0,
                 "banned": false,
-                "link": "https://scryfall.com/card/som/187/nihil-spellbomb",
-                "name": "Nihil Spellbomb",
-                "preview": "https://cards.scryfall.io/normal/front/6/0/603d217b-6375-46fc-992a-8dbd779da1e5.jpg",
+                "link": "https://scryfall.com/card/m15/11/ephemeral-shields",
+                "name": "Ephemeral Shields",
+                "preview": "https://cards.scryfall.io/normal/front/0/4/04f9c2cc-2516-43d5-a7dc-27509f402077.jpg",
                 "py/object": "pauperformance_bot.entity.api.archetype.TypicalCard",
-                "type_line": "Artifact",
-                "typical": 1
+                "type_line": "Instant",
+                "typical": 0
+            },
+            {
+                "at_least": [
+                    0.429,
+                    0.429,
+                    0.429,
+                    0.429
+                ],
+                "average": 4.0,
+                "banned": false,
+                "link": "https://scryfall.com/card/shm/66/faerie-macabre",
+                "name": "Faerie Macabre",
+                "preview": "https://cards.scryfall.io/normal/front/e/a/ead8befa-27dd-4ec4-b317-1c231407e0ac.jpg",
+                "py/object": "pauperformance_bot.entity.api.archetype.TypicalCard",
+                "type_line": "Creature \u2014 Faerie Rogue",
+                "typical": 0
             }
         ],
         "started_by_bans": []
