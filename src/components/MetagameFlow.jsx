@@ -184,6 +184,7 @@ function Bars({ rows, scale, changes, slug, hovered, onHover }) {
       {rows.map(r => {
         const change = changes.get(r.name)
         const entered = change && change.previous === 0
+        const debut = entered && change.debut
         return (
           <div key={r.name}
             className="absolute inset-x-0 flex items-center gap-2 transition-[top] duration-300 ease-out motion-reduce:transition-none"
@@ -202,15 +203,17 @@ function Bars({ rows, scale, changes, slug, hovered, onHover }) {
               <div className="h-full rounded-full" style={{ width: `${Math.min(100, (r.value / scale) * 100)}%`, background: cssFill(r.colors) }} />
             </div>
             <span className="ml-auto sm:ml-0 w-11 shrink-0 text-right text-xs text-gray-400 font-mono">{r.value.toFixed(1)}%</span>
-            <span className="w-16 shrink-0 text-right">
+            <span className="w-20 shrink-0 whitespace-nowrap text-right">
               {change && (
                 <span key={slug} className="flow-event-in inline-block">
                   {entered ? (
-                    <span className="px-1.5 py-px rounded-full border border-amber-300/60 bg-amber-300/10 text-[11px] font-medium text-amber-300"
-                      title="Not played in the previous metagame">
-                      New
+                    <span className={`px-1.5 py-px rounded-full border text-[11px] font-medium ${debut
+                        ? 'border-amber-300/60 bg-amber-300/10 text-amber-300'
+                        : 'border-sky-300/60 bg-sky-300/10 text-sky-300'}`}
+                      title={debut ? 'Played for the first time' : 'Not played in the previous metagame, but in earlier ones'}>
+                      {debut ? 'New' : 'Comeback'}
                     </span>
-                  ) : <ShareChange share={change.share} previous={change.previous} />}
+                  ) : <ShareChange share={change.share} previous={change.previous} debut={change.debut} />}
                 </span>
               )}
             </span>
@@ -470,7 +473,7 @@ export default function MetagameFlow({ index, poolUrls, bindPreview }) {
   }
   const barRows = other > 0.05 ? [...rows, { name: 'Other', value: other, colors: [OTHER_COLOR] }] : rows
   // the metagame's own changes, held while it blends into the next one
-  const changes = new Map(step.data ? step.data.shares.map(([n, share, previous]) => [n, { share, previous }]) : [])
+  const changes = new Map(step.data ? step.data.shares.map(([n, share, previous, debut]) => [n, { share, previous, debut }]) : [])
   const m = step.m
 
   return (
