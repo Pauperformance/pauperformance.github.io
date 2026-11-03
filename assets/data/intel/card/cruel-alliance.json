@@ -1,10 +1,36 @@
 {
     "archetypes": {
-        "py/set": []
+        "py/set": [
+            "Affinity"
+        ]
     },
-    "first_appearance": null,
+    "decks": 4,
+    "first_appearance": {
+        "date": "2026-07-15",
+        "metagame": {
+            "date": "2026-06-29",
+            "decks": null,
+            "label": "BNR",
+            "metagame": "145",
+            "name": "Banned & Restricted Announcement",
+            "py/object": "pauperformance_bot.entity.api.archetype.MetagameRef"
+        },
+        "py/object": "pauperformance_bot.entity.api.archetype.Appearance"
+    },
     "first_on_record": false,
-    "last_appearance": null,
+    "last_appearance": {
+        "date": "2026-08-15",
+        "metagame": {
+            "date": "2026-08-14",
+            "decks": null,
+            "label": "hob",
+            "metagame": "146",
+            "name": "The Hobbit",
+            "py/object": "pauperformance_bot.entity.api.archetype.MetagameRef"
+        },
+        "py/object": "pauperformance_bot.entity.api.archetype.Appearance"
+    },
+    "popularity_rank": 2987,
     "scryfall": {
         "arena_id": 104987,
         "artist": "Vilhelmas Banys",
