@@ -14,9 +14,6 @@ on:
       # once myr-academy-update has classified them (and rebuilt docs/)
       - 'assets/data/deck/mtggoldfish_tournament/**'
       - 'assets/data/tournament/mtggoldfish/**'
-      # the MTGGoldfish meta pushed by razor: myr-academy-metagame classifies
-      # it and rebuilds docs/
-      - 'assets/data/intel/mtggoldfish_meta.json'
   workflow_dispatch:
 
 permissions:
