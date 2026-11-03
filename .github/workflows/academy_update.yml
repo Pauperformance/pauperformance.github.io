@@ -1,9 +1,9 @@
-# This workflow updates the Academy every 20 minutes (off the top of the
+# This workflow updates the Academy every 30 minutes (off the top of the
 # hour, when GitHub delays and drops many scheduled runs): scrape videos,
 # classify tournaments and videos, export the Academy data, rebuild the
 # website and push everything to master.
-# A run takes longer than 20 minutes: the concurrency group below keeps at
-# most one run pending behind the running one, so runs go back to back.
+# A run that takes longer than 30 minutes makes the next one wait: the
+# concurrency group below keeps at most one run pending behind it.
 #
 # MTGGoldfish tournaments are NOT scraped here: MTGGoldfish answers 403 to
 # GitHub-hosted runners. razor scrapes them (cron, ~/myr-scraper/scrape.sh)
@@ -14,7 +14,7 @@ name: myr-academy-update
 
 on:
   schedule:
-    - cron: "7,27,47 * * * *"
+    - cron: "7,37 * * * *"
   workflow_dispatch:
 
 # Never run two updates at once: they would push conflicting commits and
