@@ -132,9 +132,12 @@ export default function CardPopularityChart({ series }) {
     <div className="bg-gray-800 border border-gray-700 rounded-xl p-4 space-y-3">
       {/* the hovered metagame, or the current one */}
       <div className="flex flex-wrap items-baseline justify-between gap-x-4 gap-y-1 text-sm">
-        <span className="text-gray-300">
-          <span className="font-semibold text-gray-100">{active.metagame.name}</span>
-          <span className="text-gray-500"> · {formatShortDate(active.metagame.date)}</span>
+        {/* Phones: the name on one line (cut if long) and the date always on
+            the next, so the widget keeps its height while a finger scrubs
+            across metagames */}
+        <span className="text-gray-300 w-full sm:w-auto min-w-0">
+          <span className="block sm:inline truncate font-semibold text-gray-100">{active.metagame.name}</span>
+          <span className="block sm:inline text-gray-500"><span className="hidden sm:inline"> · </span>{formatShortDate(active.metagame.date)}</span>
         </span>
         <span className="inline-flex items-baseline gap-2 text-gray-400 tabular-nums">
           {activeIndex > 0 && <PopularityTrend share={active.share} previous={points[activeIndex - 1].share} />}
