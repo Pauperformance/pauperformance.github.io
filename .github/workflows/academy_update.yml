@@ -7,7 +7,8 @@
 #
 # MTGGoldfish tournaments are NOT scraped here: MTGGoldfish answers 403 to
 # GitHub-hosted runners. razor scrapes them (cron, ~/myr-scraper/scrape.sh)
-# and pushes the decks to master, where the next run classifies them.
+# and pushes the decks to master, where the next run classifies them (the
+# metagame chart works the same way: see myr-academy-metagame).
 
 name: myr-academy-update
 
