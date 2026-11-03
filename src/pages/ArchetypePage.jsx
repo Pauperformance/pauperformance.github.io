@@ -985,6 +985,7 @@ export default function ArchetypePage() {
   const [data, setData] = useState(null)
   const [notFound, setNotFound] = useState(false)
   const [popularity, setPopularity] = useState(null)
+  const cardPages = useCardPages()
   const popularityMetagames = useMetagames(POPULARITY_METAGAMES)
 
   // the archetype's share of each metagame (missing for the never-played ones)
@@ -1053,6 +1054,19 @@ export default function ArchetypePage() {
       <div className="space-y-8">
         {/* Header, with the table of contents beside it */}
         <div className="flex flex-col gap-6 md:flex-row md:items-start md:justify-between">
+        <div className="flex items-start gap-5 min-w-0">
+        {/* The representative card, top left */}
+        {data.representative_card?.preview && (() => {
+          const card = data.representative_card
+          const slug = cardLinkSlug(cardPages, card.name)
+          const img = (
+            <img src={card.preview} alt={card.name}
+              className="w-36 sm:w-44 shrink-0 aspect-[488/680] rounded-[4.75%/3.5%] border border-gray-700 group-hover:border-amber-400 transition-colors object-cover" />
+          )
+          return slug
+            ? <Link to={`/cards/${slug}`} title={card.name} className="group block shrink-0">{img}</Link>
+            : <span title={card.name} className="group block shrink-0">{img}</span>
+        })()}
         <div className="min-w-0">
           <h1 className="text-3xl font-bold text-white">{data.name}</h1>
           <div className="mt-3 space-y-2">
@@ -1093,6 +1107,7 @@ export default function ArchetypePage() {
               <AppearanceRow label="Last played:" appearance={data.last_appearance} />
             )}
           </div>
+        </div>
         </div>
         <TableOfContents sections={sections} />
         </div>

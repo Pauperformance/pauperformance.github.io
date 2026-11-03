@@ -157,6 +157,9 @@ for (const archetype of archetypes) {
     game_type: archetype.game_type || [],
     family: archetype.family || null,
     description: archetype.description || null,
+    representative_card: archetype.representative_card
+      ? { name: archetype.representative_card.name, preview: archetype.representative_card.preview }
+      : null,
     first_appearance: appearance(archetype.first_appearance),
     last_appearance: appearance(archetype.last_appearance),
     typical_list: typicalList(archetype.typical_list),
