@@ -1,4 +1,4 @@
-import { useState, useEffect, useRef } from 'react'
+import { useState, useEffect, useLayoutEffect, useRef } from 'react'
 import { Link } from 'react-router-dom'
 import Layout from '../components/Layout'
 import { nameToSlug, metagameSlug } from '../utils/slugs'
@@ -104,6 +104,35 @@ function StapleLink({ card, cardPages, bindPreview }) {
     : <span {...handlers} className={cls}>{card.name}</span>
 }
 
+// The staples chips, wrapped over at most two rows: the chips that would start
+// a third row are hidden (so also out of reach of the keyboard and the
+// pointer). Measured, so it follows the width of the device.
+const STAPLE_ROWS = 2
+function StapleRows({ children }) {
+  const ref = useRef(null)
+
+  useLayoutEffect(() => {
+    const el = ref.current
+    if (!el) return
+    const fit = () => {
+      let row = 0
+      let top = null
+      for (const chip of el.children) {
+        chip.style.visibility = ''
+        if (top === null || chip.offsetTop > top) { row += 1; top = chip.offsetTop }
+        if (row > STAPLE_ROWS) chip.style.visibility = 'hidden'
+      }
+    }
+    fit()
+    const observer = new ResizeObserver(fit)
+    observer.observe(el)
+    document.fonts?.ready.then(fit)
+    return () => observer.disconnect()
+  }, [children])
+
+  return <div ref={ref} className="flex flex-wrap content-start gap-1 overflow-hidden h-12">{children}</div>
+}
+
 function TopDecksSection() {
   const [decks, setDecks] = useState([])
   const cardPages = useCardPages()
@@ -147,7 +176,7 @@ function TopDecksSection() {
             </Link>
             {deck.staples.length > 0 && (
               <div className="px-2.5 pb-2.5 flex flex-col gap-1 items-start">
-                {deck.staples.map(card => (
+                {deck.staples.slice(0, 5).map(card => (
                   <StapleLink key={card.name} card={card} cardPages={cardPages} bindPreview={bindPreview} />
                 ))}
               </div>
@@ -528,12 +557,12 @@ function BrainstormSection() {
           <div className="flex items-center gap-2">
             <span className="text-lg text-amber-400 font-mono">Meta: {deck.meta_share.toFixed(1)}%</span>
           </div>
-          {/* staples come most played first; room for two rows on phones, one otherwise */}
-          <div className="flex flex-wrap content-start gap-1 overflow-hidden h-12 sm:h-[22px]">
-            {deck.staples.slice(0, 3).map(card => (
+          {/* staples come most played first; as many as fit in two rows */}
+          <StapleRows key={deck.archetype_name}>
+            {deck.staples.map(card => (
               <StapleLink key={card.name} card={card} cardPages={cardPages} bindPreview={bindPreview} />
             ))}
-          </div>
+          </StapleRows>
         </div>
       </>
     )

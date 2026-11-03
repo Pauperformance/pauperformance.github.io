@@ -91,7 +91,7 @@ export default function MetaPie({ shares, minListedShare = 0, listClassName }) {
       <span className="w-2.5 h-2.5 rounded-full shrink-0" style={{ background: color }} />
       {label}
       <div className="hidden 2xl:flex items-center gap-2 shrink-0">
-        <div className="w-12 h-1.5 bg-gray-700 rounded-full overflow-hidden">
+        <div className="w-10 h-1.5 bg-gray-700 rounded-full overflow-hidden">
           <div
             className="h-full rounded-full"
             style={{ width: `${(pct / maxShare) * 100}%`, background: color }}
@@ -121,7 +121,8 @@ export default function MetaPie({ shares, minListedShare = 0, listClassName }) {
             i < SHOWN_SLICES ? CHART_COLORS[i] : OTHER_COLOR,
             <Link
               to={`/archetypes/${nameToSlug(entry.archetype_name)}`}
-              className="text-sm text-gray-300 hover:text-amber-400 transition-colors flex-1"
+              title={entry.archetype_name}
+              className="text-sm text-gray-300 hover:text-amber-400 transition-colors flex-1 min-w-0 truncate"
             >
               {entry.archetype_name}
             </Link>,

@@ -1,10 +1,10 @@
 import { Fragment, useState, useEffect, useMemo, useDeferredValue, useLayoutEffect, useRef } from 'react'
 import { useWindowVirtualizer } from '@tanstack/react-virtual'
 import Layout from '../components/Layout'
-import CardLink from '../components/PoolCardLink'
+import CardLink, { playTier, PLAYED_DECKS } from '../components/PoolCardLink'
 import { useCardPreview } from '../components/CardPreview'
 import { useSearchShortcut, searchShortcutLabel } from '../utils/useSearchShortcut'
-import { formatDate } from '../utils/dates'
+import { formatDate, daysBetween } from '../utils/dates'
 import { metagameSlug } from '../utils/slugs'
 import { Link, useSearchParams } from 'react-router-dom'
 import MetagameFlow from '../components/MetagameFlow'
@@ -50,7 +50,8 @@ function BanCard({ name, poolUrls, tone, highlighted, bindPreview }) {
   return <CardLink card={{ name, url: poolUrls.get(name) }} tone={tone} highlighted={highlighted} bindPreview={bindPreview} />
 }
 
-function MetagameEntry({ metagame, searchQuery, poolUrls, open, onToggle, bindPreview }) {
+// days: how long the metagame lasted (none for the current one)
+function MetagameEntry({ metagame, days, searchQuery, poolUrls, open, onToggle, bindPreview }) {
   const [hovered, setHovered] = useState(false)
   const q = searchQuery.toLowerCase()
   const textMatch = !!q && matchesText(metagame, q)
@@ -71,6 +72,10 @@ function MetagameEntry({ metagame, searchQuery, poolUrls, open, onToggle, bindPr
   const banned = metagame.bans.reduce((sum, b) => sum + b.banned.length, 0)
   const unbanned = metagame.bans.reduce((sum, b) => sum + b.unbanned.length, 0)
   const highlight = !!q && !textMatch
+  // staples and played cards among the new ones (see PoolCardLink's playTier)
+  const played = useMemo(
+    () => metagame.sets.reduce((sum, s) => sum + s.cards.filter(c => playTier(c.decks) !== 'unplayed').length, 0),
+    [metagame.sets])
 
   return (
     <div className="relative pl-10">
@@ -91,7 +96,9 @@ function MetagameEntry({ metagame, searchQuery, poolUrls, open, onToggle, bindPr
             <span className="text-sm text-gray-500 ml-auto min-w-0 flex flex-wrap items-center gap-x-3 gap-y-1">
               {metagame.sets.length > 0 && <span>Scryfall: <span className="text-amber-400 font-mono">{orderedSets(metagame).map(s => s.scryfall_code).join(', ')}</span></span>}
               <span>Pauperformance: <span className="text-amber-400 font-mono">{metagame.p13m}.{metagame.label}</span></span>
+              {days != null && <span>Days: <span className="text-amber-400 font-mono">{days.toLocaleString('en-US')}</span></span>}
               {metagame.sets.length > 0 && <span>New Cards: <span className="text-amber-400 font-mono">{newCards(metagame)}</span></span>}
+              {metagame.sets.length > 0 && <span title={`New cards in at least ${PLAYED_DECKS} decklists`}>Played: <span className="text-sky-300 font-mono">{played}</span></span>}
               {banned > 0 && <span>Banned: <span className="text-amber-400 font-mono">{banned}</span></span>}
               {unbanned > 0 && <span>Unbanned: <span className="text-amber-400 font-mono">{unbanned}</span></span>}
               <span className="text-gray-600">{open ? '▲' : '▼'}</span>
@@ -162,6 +169,16 @@ function MetagameList({ metagames, poolUrls, bindPreview }) {
   const [search, setSearch] = useState('')
   const searchRef = useSearchShortcut()
 
+  // How long each past metagame lasted: until the next one (the one before it
+  // in this newest-first list) began.
+  const daysByCode = useMemo(() => {
+    const days = new Map()
+    for (let i = 1; i < metagames.length; i++) {
+      days.set(metagames[i].code, daysBetween(metagames[i].date, metagames[i - 1].date))
+    }
+    return days
+  }, [metagames])
+
   // The input updates immediately; filtering and rendering lag behind it.
   const query = useDeferredValue(search.trim().length >= 2 ? search.trim() : '')
   const shown = useMemo(() => {
@@ -229,6 +246,7 @@ function MetagameList({ metagames, poolUrls, bindPreview }) {
                 <div key={m.code} data-index={row.index} ref={virtualizer.measureElement} className="pb-6">
                   <MetagameEntry
                     metagame={m}
+                    days={daysByCode.get(m.code)}
                     searchQuery={query}
                     poolUrls={poolUrls}
                     open={!!query !== toggled.has(m.code)}
@@ -256,9 +274,27 @@ export default function MetagameIndex() {
   const view = params.get('view') === 'list' ? 'list' : 'flow'
 
   useEffect(() => {
-    fetch('/data/metagame_index.json')
-      .then(r => r.json())
-      .then(data => { setIndex(data); setLoading(false) })
+    // each new card also gets the decklists playing it and whether it is banned
+    // today, from the Sets page's data (without them the chips are plain)
+    Promise.all([
+      fetch('/data/metagame_index.json').then(r => r.json()),
+      fetch('/data/pauper_pool.json').then(r => r.json()).catch(() => []),
+    ])
+      .then(([data, pool]) => {
+        const usage = new Map()
+        for (const set of pool) for (const c of set.cards) usage.set(c.name, c)
+        setIndex(data.map(m => ({
+          ...m,
+          sets: m.sets.map(s => ({
+            ...s,
+            cards: s.cards.map(c => {
+              const u = usage.get(c.name)
+              return u ? { ...c, decks: u.decks, banned: u.banned } : c
+            }),
+          })),
+        })))
+        setLoading(false)
+      })
       .catch(() => { setError(true); setLoading(false) })
   }, [])
 
@@ -307,6 +343,14 @@ export default function MetagameIndex() {
             Currently <span className="text-white font-medium">{launched}</span> metagames since the launch, and{' '}
             <span className="text-white font-medium">{history}</span> before it.
           </p>
+          {view === 'list' && (
+            <p className="mt-2 text-xs flex flex-wrap items-center gap-2">
+              <span className="px-2 py-0.5 rounded-md border bg-gray-900 border-sky-400/60 text-white font-semibold">Staple</span>
+              <span className="px-2 py-0.5 rounded-md border bg-gray-900 border-sky-800/80 text-gray-200">Played</span>
+              <span className="px-2 py-0.5 rounded-md border bg-gray-900 border-gray-800 text-gray-500">Unplayed</span>
+              <span className="px-2 py-0.5 rounded-md border bg-gray-900 border-red-900/60 text-gray-300">Banned</span>
+            </p>
+          )}
         </div>
 
         {loading ? (

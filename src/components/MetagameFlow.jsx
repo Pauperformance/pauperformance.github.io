@@ -2,7 +2,7 @@ import { useState, useEffect, useLayoutEffect, useMemo, useRef, useCallback } fr
 import { Link, useSearchParams } from 'react-router-dom'
 import CardLink from './PoolCardLink'
 import ShareChange from './ShareChange'
-import { formatDate, formatShortDate } from '../utils/dates'
+import { formatDate, formatShortDate, daysBetween, formatDays } from '../utils/dates'
 import { metagameSlug, nameToSlug } from '../utils/slugs'
 import { scrollGently } from '../utils/scroll'
 
@@ -482,7 +482,11 @@ export default function MetagameFlow({ index, poolUrls, bindPreview }) {
           <div className={`bg-gray-800 border border-gray-700 rounded-xl p-4 sm:p-5 shrink-0 flex flex-col sm:h-52 ${eventsOpen ? 'h-84' : ''}`}>
             <div className="flex items-start gap-3 flex-wrap">
               <div className="min-w-[12rem] flex-1">
-                <p className="text-amber-400 font-semibold">{formatDate(m.date)}</p>
+                <p className="text-amber-400 font-semibold">
+                  {formatDate(m.date)}
+                  {/* how long it lasted, until the next metagame began: not on phones */}
+                  {current > 0 && <span className="hidden sm:inline"> ({formatDays(daysBetween(m.date, steps[current - 1].m.date))})</span>}
+                </p>
                 <p className="text-white font-medium truncate" title={metagameTitle(m)}>{metagameTitle(m)}</p>
               </div>
               <div className="flex gap-2 shrink-0">

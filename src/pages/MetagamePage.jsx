@@ -7,7 +7,7 @@ import ShareChange from '../components/ShareChange'
 import { useCardPreview } from '../components/CardPreview'
 import { useCardPages, cardLinkSlug } from '../utils/cardPages'
 import { nameToSlug, metagameSlug } from '../utils/slugs'
-import { formatDate } from '../utils/dates'
+import { formatDate, daysBetween, todayIso } from '../utils/dates'
 
 // A metagame: the archetypes its classified decks played (Myr's
 // export_metagames), from /data/metagames/<p13m>.<label>.json.
@@ -58,7 +58,7 @@ function Stat({ value, label, onToggle, open }) {
 // five or six, three per row below)
 const STAT_COLUMNS = {
   1: 'grid-cols-1', 2: 'grid-cols-2', 3: 'grid-cols-3', 4: 'grid-cols-2 sm:grid-cols-4',
-  5: 'grid-cols-3 lg:grid-cols-5', 6: 'grid-cols-3 lg:grid-cols-6',
+  5: 'grid-cols-3 lg:grid-cols-5', 6: 'grid-cols-3 lg:grid-cols-6', 7: 'grid-cols-3 lg:grid-cols-7',
 }
 
 // The cards of some of the metagame's events (its sets, or its B&Rs), under
@@ -106,6 +106,8 @@ function Counters({ metagame, bindPreview }) {
       { key: 'tournaments', label: 'Tournaments', value: metagame.tournaments },
       { key: 'archetypes', label: 'Archetypes', value: metagame.archetypes.length },
     ] : []),
+    // how long it lasted, until the next metagame began (so far, for the current one)
+    { key: 'days', label: 'Days', value: daysBetween(metagame.metagame.date, metagame.next ? metagame.next.date : todayIso()) },
   ]
   // B&Rs changing which cards are legal without banning or unbanning any
   const otherBans = metagame.bans.filter(b => !b.banned.length && !b.unbanned.length)
