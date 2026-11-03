@@ -47,6 +47,8 @@ const intelDecksDir = join(outDir, 'intel-decks')
 const deckDetailsDir = join(outDir, 'deck-details')
 const cardDecksDir = join(outDir, 'card-decks')
 const playerDecksDir = join(outDir, 'player-decks')
+// How many decklists play each card, by card slug: built with card-decks.
+const cardDeckCountsPath = join(outDir, 'card-deck-counts.json')
 
 mkdirSync(outDir, { recursive: true })
 mkdirSync(detailsDir, { recursive: true })
@@ -252,9 +254,9 @@ var playersMap = {}
 
 // Cached decks whose deck-detail reads are deferred until we know if any deck changed
 var cachedDecks = []
-// An empty card-decks folder (e.g. emptied to rebuild it) needs rebuilding as
-// if decks had changed.
-var anyDeckChanged = readdirSync(cardDecksDir).length === 0
+// An empty card-decks folder (e.g. emptied to rebuild it), or no deck counts,
+// need rebuilding as if decks had changed.
+var anyDeckChanged = readdirSync(cardDecksDir).length === 0 || !existsSync(cardDeckCountsPath)
 
 for (const archetype of archetypes) {
   const name = archetype.name
@@ -483,11 +485,6 @@ copyFileSync('assets/data/announcements.json', join(outDir, 'announcements.json'
 const announcements = JSON.parse(readFileSync('assets/data/announcements.json', 'utf8'))
 console.log('Copied announcements.json with ' + announcements.length + ' entries.')
 
-// Copy pauper pool from assets
-const pool = JSON.parse(readFileSync('assets/data/pauper_pool.json', 'utf8'))
-const totalCards = pool.reduce(function(sum, s) { return sum + s.cards.length }, 0)
-writeFileSync(join(outDir, 'pauper_pool.json'), JSON.stringify(pool))
-console.log('Built pauper_pool.json with ' + pool.length + ' sets and ' + totalCards + ' cards.')
 
 // Metagame index, exported by Myr (missing until its first export)
 if (existsSync('assets/data/metagame_index.json')) {
@@ -654,6 +651,11 @@ if (anyDeckChanged) {
     cardDeckWritten++
   }
   console.log('Built card-decks: ' + cardDeckWritten + ' updated, ' + cardDeckSkipped + ' unchanged.')
+  var cardDeckCounts = {}
+  for (var cci = 0; cci < slugNames.length; cci++) {
+    cardDeckCounts[slugNames[cci]] = Object.keys(slugDecks[slugNames[cci]]).length
+  }
+  writeFileSync(cardDeckCountsPath, JSON.stringify(cardDeckCounts))
 
   var archetypeCardMap = {}
   var cardNamesAll = Object.keys(cardDecksMap)
@@ -679,6 +681,22 @@ if (anyDeckChanged) {
   console.log('card-decks: all unchanged.')
   console.log('archetype-card-slugs: unchanged.')
 }
+
+// Pauper pool from assets, each card with the number of decklists playing it
+// (decks), so the Sets page tells played cards from unplayed ones.
+const deckCounts = JSON.parse(readFileSync(cardDeckCountsPath, 'utf8'))
+const pool = JSON.parse(readFileSync('assets/data/pauper_pool.json', 'utf8'))
+let totalCards = 0, playedCards = 0
+for (const set of pool) {
+  for (const c of set.cards) {
+    const slug = cardNameToSlug[c.name] || cardNameToSlug[withoutAccents(c.name)]
+    c.decks = (slug && deckCounts[slug]) || 0
+    totalCards++
+    if (c.decks > 0) playedCards++
+  }
+}
+writeFileSync(join(outDir, 'pauper_pool.json'), JSON.stringify(pool))
+console.log('Built pauper_pool.json with ' + pool.length + ' sets and ' + totalCards + ' cards (' + playedCards + ' in decklists).')
 
 // Build creators index
 const creatorDir = 'assets/data/creator'
