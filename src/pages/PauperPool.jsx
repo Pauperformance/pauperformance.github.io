@@ -1,7 +1,7 @@
 import { useState, useEffect, useMemo, useDeferredValue, useLayoutEffect, useRef } from 'react'
 import { useWindowVirtualizer } from '@tanstack/react-virtual'
 import Layout from '../components/Layout'
-import CardLink from '../components/PoolCardLink'
+import CardLink, { playTier, PLAYED_DECKS } from '../components/PoolCardLink'
 import { useCardPreview } from '../components/CardPreview'
 import { useSearchShortcut, searchShortcutLabel } from '../utils/useSearchShortcut'
 import { formatDate } from '../utils/dates'
@@ -14,6 +14,8 @@ function setNameMatches(set, q) {
 function SetEntry({ set, searchQuery, open, onToggle, bindPreview }) {
   const [hovered, setHovered] = useState(false)
   const hasCards = set.cards.length > 0
+  // staples and played cards (see PoolCardLink's playTier)
+  const playedCount = useMemo(() => set.cards.filter(c => playTier(c.decks) !== 'unplayed').length, [set.cards])
   const q = searchQuery.toLowerCase()
   const setNameMatch = !!q && setNameMatches(set, q)
 
@@ -44,6 +46,7 @@ function SetEntry({ set, searchQuery, open, onToggle, bindPreview }) {
             <span>Scryfall: <span className="text-amber-400 font-mono">{set.scryfall}</span></span>
             <span>Pauperformance: <span className="text-amber-400 font-mono">#{set.code}</span></span>
             <span>New Cards: <span className="text-amber-400 font-mono">{set.cards.length}</span></span>
+            {hasCards && <span title={`Cards in at least ${PLAYED_DECKS} decklists`}>Played: <span className="text-sky-300 font-mono">{playedCount}</span></span>}
             {hasCards && <span className="text-gray-600">{open ? '▲' : '▼'}</span>}
           </span>
         </button>
@@ -149,6 +152,12 @@ export default function PauperPool() {
             Currently <span className="text-white font-medium">{totalCards.toLocaleString()}</span> cards across{' '}
             <span className="text-white font-medium">{totalRelevantSets}</span> sets.
             Hover over any card to preview it.
+          </p>
+          <p className="mt-2 text-xs flex flex-wrap items-center gap-2">
+            <span className="px-2 py-0.5 rounded-md border bg-gray-900 border-sky-400/60 text-white font-semibold">Staple</span>
+            <span className="px-2 py-0.5 rounded-md border bg-gray-900 border-sky-800/80 text-gray-200">Played</span>
+            <span className="px-2 py-0.5 rounded-md border bg-gray-900 border-gray-800 text-gray-500">Unplayed</span>
+            <span className="px-2 py-0.5 rounded-md border bg-gray-900 border-red-900/60 text-gray-300">Banned</span>
           </p>
         </div>
 
