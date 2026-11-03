@@ -1,6 +1,6 @@
 import { useState, useEffect } from 'react'
 import { Link, useLocation } from 'react-router-dom'
-import { formatShortDate } from '../utils/dates'
+import { formatDateTime, formatShortDate } from '../utils/dates'
 
 const NAV_ITEMS = [
   { to: '/', label: 'Home' },
@@ -82,8 +82,15 @@ const CONTACTS = [
   },
 ]
 
-// On the home page only: when the metagame chart and the classified decks were
-// last refreshed (from stats.json, built by build-data.mjs). A date that is
+function when(fetchedAt, date, label) {
+  if (fetchedAt) return `${label}: ${formatDateTime(fetchedAt)}.`
+  if (date) return `${label}: ${formatShortDate(date)}.`
+  return null
+}
+
+// On the home page only: when the metagame chart and the decks were last
+// refreshed (from stats.json, built by build-data.mjs), with the time when
+// Myr recorded when they were fetched, else the date alone. Whatever is
 // missing is left out.
 function DataFreshness() {
   const [stats, setStats] = useState(null)
@@ -94,8 +101,8 @@ function DataFreshness() {
 
   if (!stats) return null
   const parts = [
-    stats.lastMetagameUpdate && `Last metagame update: ${formatShortDate(stats.lastMetagameUpdate)}.`,
-    stats.lastDecksUpdate && `Last decks update: ${formatShortDate(stats.lastDecksUpdate)}.`,
+    when(stats.lastMetagameFetchedAt, stats.lastMetagameUpdate, 'Last metagame update'),
+    when(stats.lastDecksFetchedAt, stats.lastDecksUpdate, 'Last decks update'),
   ].filter(Boolean)
   if (!parts.length) return null
   return <span className="text-xs text-gray-500 text-center">{parts.join(' ')}</span>

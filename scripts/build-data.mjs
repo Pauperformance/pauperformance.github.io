@@ -357,6 +357,55 @@ for (const archetype of archetypes) {
   }
 }
 
+// Tournament decks no archetype claims (yet): they still count in the card
+// popularity, so their decklists go in the deck-details and the card-decks too,
+// with no archetype. Not in the archetype, player or intel files.
+const tournamentMetaDir = 'assets/data/tournament/mtggoldfish/deck'
+var unclassifiedCount = 0
+if (existsSync(tournamentMetaDir)) {
+  var tmFiles = readdirSync(tournamentMetaDir).filter(function(f) { return f.endsWith('.json') })
+  for (var ui = 0; ui < tmFiles.length; ui++) {
+    var uid = tmFiles[ui].slice(0, -5)
+    if (activeDeckIds.has(uid)) continue
+    var utxtPath = join(tournamentDeckDir, uid + '.txt')
+    if (!existsSync(utxtPath)) continue
+    var uinput = join(tournamentMetaDir, tmFiles[ui])
+    var uoutput = join(deckDetailsDir, uid + '.json')
+    var ud = JSON.parse(readFileSync(uinput, 'utf8'))
+    activeDeckIds.add(uid)
+    unclassifiedCount++
+    var umeta = {
+      id: uid, archetype: null, pilot: ud.pilot || null, place: ud.place || null,
+      tournament_name: ud.tournament_name || null, tournament_date: ud.tournament_date || null,
+    }
+    var udecklist = null
+    if (!needsRebuild(uoutput, [uinput, utxtPath])) {
+      cachedDecks.push({ outputPath: uoutput, meta: umeta })
+      deckDetailSkipped++
+      continue
+    }
+    udecklist = parseDecklist(readFileSync(utxtPath, 'utf8'))
+    writeFileSync(uoutput, JSON.stringify({
+      id: uid, archetype: null, url: ud.url, pilot: umeta.pilot, place: umeta.place,
+      tournament_name: umeta.tournament_name, tournament_date: umeta.tournament_date,
+      mtgo_price: ud.mtgo_price || null, tabletop_price: ud.tabletop_price || null, decklist: udecklist,
+    }))
+    deckDetailWritten++
+    anyDeckChanged = true
+    var useen = {}
+    var ucards = udecklist.main.concat(udecklist.side)
+    for (var uci = 0; uci < ucards.length; uci++) {
+      var un = ucards[uci].name
+      dirtyCardNames[un] = true
+      if (useen[un]) continue
+      useen[un] = true
+      if (!cardDecksMap[un]) cardDecksMap[un] = []
+      cardDecksMap[un].push(umeta)
+    }
+  }
+  console.log('Unclassified tournament decks with a decklist: ' + unclassifiedCount + '.')
+}
+
 // Handle deleted decks: remove stale deck-detail files, mark their cards dirty
 var deletedCount = 0
 existingDeckDetailIds.forEach(function(id) {
@@ -808,6 +857,7 @@ if (anyDeckChanged) {
     var acDecks = cardDecksMap[acName]
     for (var adi = 0; adi < acDecks.length; adi++) {
       var acArch = acDecks[adi].archetype
+      if (!acArch) continue
       if (!archetypeCardMap[acArch]) archetypeCardMap[acArch] = {}
       archetypeCardMap[acArch][acSlug] = true
     }
@@ -1012,19 +1062,34 @@ allVideos.sort(function(a, b) { return (b.date || '').localeCompare(a.date || ''
 writeFileSync(join(outDir, 'videos.json'), JSON.stringify(allVideos))
 console.log('Built videos.json with ' + allVideos.length + ' entries.')
 
+// When the newest tournament was downloaded (UTC, ISO 8601). Myr stores it as
+// "fetched_at" in each tournament file; older files have none.
+const tournamentDir = 'assets/data/tournament/mtggoldfish'
+let lastDecksFetchedAt = ''
+for (const f of readdirSync(tournamentDir)) {
+  if (!f.endsWith('.json')) continue
+  const fetchedAt = JSON.parse(readFileSync(join(tournamentDir, f), 'utf8')).fetched_at
+  if (fetchedAt && fetchedAt > lastDecksFetchedAt) lastDecksFetchedAt = fetchedAt
+}
+
 // Write aggregate stats used by the home page counters and footer.
-// lastMetagameUpdate: when the MTGGoldfish meta behind the chart was downloaded
-// (set by Myr; missing in older metagame.json files).
+// lastMetagameUpdate / lastMetagameFetchedAt: the day, and the time (UTC, ISO
+// 8601), the MTGGoldfish meta behind the chart was downloaded (set by Myr;
+// missing in older metagame.json files).
 // lastDecksUpdate: the most recent tournament among the classified decks.
+// lastDecksFetchedAt: when the newest tournament was downloaded.
 const stats = {
   classifiedDecks: deckDetailWritten + deckDetailSkipped,
   videos: allVideos.length,
   lastMetagameUpdate: metagame.date || null,
+  lastMetagameFetchedAt: metagame.fetched_at || null,
   lastDecksUpdate: lastDecksUpdate || null,
+  lastDecksFetchedAt: lastDecksFetchedAt || null,
 }
 writeFileSync(join(outDir, 'stats.json'), JSON.stringify(stats))
 console.log('Built stats.json (classifiedDecks: ' + stats.classifiedDecks + ', videos: ' + stats.videos +
-  ', lastMetagameUpdate: ' + stats.lastMetagameUpdate + ', lastDecksUpdate: ' + stats.lastDecksUpdate + ').')
+  ', lastMetagameUpdate: ' + stats.lastMetagameUpdate + ' (' + stats.lastMetagameFetchedAt + ')' +
+  ', lastDecksUpdate: ' + stats.lastDecksUpdate + ' (' + stats.lastDecksFetchedAt + ')).')
 
 // Build alias → canonical slug redirect map
 const aliasMap = {}
