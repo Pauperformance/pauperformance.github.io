@@ -1,15 +1,18 @@
-# This workflow updates the Academy metagame (the homepage chart) once a day
-# (at 05:43, off the top of the hour, when GitHub delays and drops many
-# scheduled runs): export the current MTGGoldfish Pauper metagame, classified
-# into Myr archetypes, rebuild the website and push everything to master.
-# It visits every MTGGoldfish archetype page, so it is kept out of the
-# 2-hourly myr-academy-update.
+# This workflow updates the Academy metagame (the homepage chart): classify
+# the MTGGoldfish Pauper metagame into Myr archetypes, rebuild the website and
+# push everything to master.
+# MTGGoldfish answers 403 to GitHub-hosted runners, so this workflow doesn't
+# contact it: razor downloads the meta once a day (cron,
+# ~/myr-scraper/scrape.sh metagame) and pushes it as
+# assets/data/intel/mtggoldfish_meta.json, and that push starts this run.
 
 name: myr-academy-metagame
 
 on:
-  schedule:
-    - cron: "43 5 * * *"
+  push:
+    branches: [ master ]
+    paths:
+      - 'assets/data/intel/mtggoldfish_meta.json'
   workflow_dispatch:
 
 concurrency:
