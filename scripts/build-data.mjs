@@ -506,6 +506,87 @@ if (existsSync('assets/data/newspauper.json')) {
   console.log('No Newspauper yet: built an empty newspauper.json.')
 }
 
+// Card popularity: Myr's ranking of the cards played in each metagame's
+// MTGGoldfish tournament decks (its export_card_popularity, missing until its
+// first export), as assets/data/card_popularity/<metagame>.json, each listing
+// only the cards played there: { name, decks, rank }, rank 1 the most played.
+const cardPopularityDir = 'assets/data/card_popularity'
+// the metagames, oldest first
+const popularityMetagames = (existsSync('assets/data/metagame_index.json')
+  ? JSON.parse(readFileSync('assets/data/metagame_index.json', 'utf8'))
+  : []).slice().sort(function(a, b) { return a.date < b.date ? -1 : a.date > b.date ? 1 : 0 })
+// { metagame slug: { card name: [decks, rank] } }, and the decks of each
+const popularityByMetagame = {}
+const popularityDecks = {}
+for (const file of existsSync(cardPopularityDir) ? readdirSync(cardPopularityDir) : []) {
+  if (!file.endsWith('.json')) continue
+  const p = JSON.parse(readFileSync(join(cardPopularityDir, file), 'utf8'))
+  const ranks = {}
+  for (const c of p.cards) ranks[c.name] = [c.decks, c.rank]
+  popularityByMetagame[metagameSlug(p.metagame)] = ranks
+  popularityDecks[metagameSlug(p.metagame)] = p.decks
+}
+// the metagame each card became Pauper legal in: the first whose sets bring it
+const legalSince = {}
+popularityMetagames.forEach(function(m, i) {
+  for (const set of m.sets || []) {
+    for (const c of set.cards || []) if (!(c.name in legalSince)) legalSince[c.name] = i
+  }
+})
+// The card's popularity in each metagame from the one it became legal in to
+// the current one, skipping the metagames without decks (before the decklists
+// on record): [metagame slug, decks playing it, rank], rank null if not
+// played. null without popularity data. Earlier decks playing it are misdated
+// (e.g. a 2012 list with Thermo-Alchemist, printed in 2016): ignored. The
+// first metagame playing it only for the cards no set brings.
+function cardPopularitySeries(name) {
+  var start = legalSince[name]
+  for (var i = 0; i < popularityMetagames.length && start === undefined; i++) {
+    var played = popularityByMetagame[metagameSlug(popularityMetagames[i])]
+    if (played && played[name]) { start = i; break }
+  }
+  if (start === undefined) return null
+  var series = []
+  for (var j = start; j < popularityMetagames.length; j++) {
+    var slug = metagameSlug(popularityMetagames[j])
+    if (!popularityDecks[slug]) continue
+    var entry = popularityByMetagame[slug][name]
+    series.push([slug, entry ? entry[0] : 0, entry ? entry[1] : null])
+  }
+  return series.length ? series : null
+}
+// the metagames the series refer to, oldest first, for the card pages' chart
+// (the last one is the metagame of the popularity column of /cards)
+const popularityMetagameRefs = popularityMetagames
+  .filter(function(m) { return popularityDecks[metagameSlug(m)] })
+  .map(function(m) {
+    var sets = m.sets || [], bans = m.bans || []
+    var set = sets.find(function(s) { return s.scryfall_code === m.label }) || sets[0]
+    return {
+      slug: metagameSlug(m), label: m.label, date: m.date, decks: popularityDecks[metagameSlug(m)],
+      name: set ? set.name : (bans[0] ? bans[0].subtitle : m.label),
+    }
+  })
+writeFileSync(join(outDir, 'card-popularity-metagames.json'), JSON.stringify(popularityMetagameRefs))
+// the latest metagame with decks: the popularity column of /cards
+const latestPopularity = popularityMetagameRefs[popularityMetagameRefs.length - 1] || null
+
+// The cards banned today, by name: flagged in Myr's Pauper pool (from the
+// announcements).
+const bannedCards = new Set()
+for (const set of existsSync('assets/data/pauper_pool.json')
+  ? JSON.parse(readFileSync('assets/data/pauper_pool.json', 'utf8')) : []) {
+  for (const c of set.cards) if (c.banned) bannedCards.add(c.name)
+}
+
+// Writes the file only if its content changed, so that unchanged files keep
+// their date.
+function writeIfChanged(path, content) {
+  if (existsSync(path) && readFileSync(path, 'utf8') === content) return false
+  writeFileSync(path, content)
+  return true
+}
+
 // Build cards index + per-card detail files (incremental)
 const cardIntelDir = 'assets/data/intel/card'
 const cardDetailsDir = join(outDir, 'card-details')
@@ -516,6 +597,9 @@ const cardsIndex = []
 const cardImageMap = {}
 const cardTypeMap = {}
 let cardDetailWritten = 0, cardDetailSkipped = 0
+// the card-details files to write once the popularity ranks are known (they
+// need every card): each card's index entry and intel file
+const cardDetailInputs = []
 
 for (const f of cardFiles) {
   const cardInputPath = join(cardIntelDir, f)
@@ -551,22 +635,9 @@ for (const f of cardFiles) {
   }
   var types = Object.keys(typeSet)
   var cmc = (scryfall && scryfall.cmc !== undefined) ? scryfall.cmc : null
-  cardsIndex.push({ slug, name, archetypeCount: archetypes.length, colors: colors, types: types, cmc: cmc })
-
-  const cardDetailOutputPath = join(cardDetailsDir, slug + '.json')
-  if (needsRebuild(cardDetailOutputPath, [cardInputPath])) {
-    writeFileSync(cardDetailOutputPath, JSON.stringify({
-      slug, name, archetypes, scryfall,
-      // the first and last decklists playing it (first_on_record: the first is
-      // among the oldest decklists on record, so it may have been played before)
-      first_appearance: appearance(raw.first_appearance),
-      last_appearance: appearance(raw.last_appearance),
-      first_on_record: raw.first_on_record === true,
-    }))
-    cardDetailWritten++
-  } else {
-    cardDetailSkipped++
-  }
+  const cardEntry = { slug, name, archetypeCount: archetypes.length, colors: colors, types: types, cmc: cmc }
+  cardsIndex.push(cardEntry)
+  cardDetailInputs.push({ entry: cardEntry, path: cardInputPath })
 
   cardImageMap[name] = scryfall
     ? (scryfall.image_uris && scryfall.image_uris.normal)
@@ -587,6 +658,74 @@ for (const f of cardFiles) {
     var plain = plainNames[pni]
     if (!cardTypeMap[plain]) cardTypeMap[plain] = types
     if (!cardImageMap[plain]) cardImageMap[plain] = cardImageMap[name]
+  }
+}
+// The popularity column: each card's rank in the latest metagame, the cards
+// not played there after the others, alphabetically, so that each card has
+// its own rank. null without popularity data.
+if (latestPopularity) {
+  var latestRanks = popularityByMetagame[latestPopularity.slug]
+  var plainName = function(c) { return withoutAccents(c.name).toLowerCase() }
+  cardsIndex.slice().sort(function(a, b) {
+    var ra = latestRanks[a.name] ? latestRanks[a.name][1] : Infinity
+    var rb = latestRanks[b.name] ? latestRanks[b.name][1] : Infinity
+    if (ra !== rb) return ra - rb
+    var na = plainName(a), nb = plainName(b)
+    return na < nb ? -1 : na > nb ? 1 : a.name < b.name ? -1 : a.name > b.name ? 1 : 0
+  }).forEach(function(c, i) {
+    c.popularity = i + 1
+    // the decks playing it there: 0 for the cards ranked alphabetically
+    c.popularityDecks = latestRanks[c.name] ? latestRanks[c.name][0] : 0
+  })
+}
+for (var pci = 0; pci < cardsIndex.length; pci++) {
+  if (cardsIndex[pci].popularity === undefined) {
+    cardsIndex[pci].popularity = null
+    cardsIndex[pci].popularityDecks = null
+  }
+}
+// The card pages, with the same rank: the intel files read again, rather than
+// every card's Scryfall data kept in memory.
+for (const { entry, path } of cardDetailInputs) {
+  const raw = JSON.parse(readFileSync(path, 'utf8'))
+  const series = cardPopularitySeries(entry.name)
+  const shareIn = function(point) { return +(100 * point[1] / popularityDecks[point[0]]).toFixed(2) }
+  // the share of the current metagame's tournament decks playing it, and of
+  // the previous one's (null if it wasn't legal there), for its trend
+  const latest = series && latestPopularity && series[series.length - 1][0] === latestPopularity.slug
+    ? series[series.length - 1] : null
+  const previous = latest && series.length > 1 ? series[series.length - 2] : null
+  // compared with the file written, not by date: the popularity changes with
+  // every new decklist, the intel file doesn't
+  if (writeIfChanged(join(cardDetailsDir, entry.slug + '.json'), JSON.stringify({
+    slug: entry.slug, name: entry.name,
+    banned: bannedCards.has(entry.name),
+    archetypes: (raw.archetypes && raw.archetypes['py/set']) || [],
+    scryfall: raw.scryfall || null,
+    // the first and last decklists playing it (first_on_record: the first is
+    // among the oldest decklists on record, so it may have been played before)
+    first_appearance: appearance(raw.first_appearance),
+    last_appearance: appearance(raw.last_appearance),
+    first_on_record: raw.first_on_record === true,
+    // its rank and decks in the current metagame, as on /cards
+    popularity_rank: entry.popularity,
+    popularity_decks: entry.popularityDecks,
+    popularity_share: latest ? shareIn(latest) : null,
+    popularity_previous_share: previous ? shareIn(previous) : null,
+    // the current metagame, as Myr refers to metagames (see MetagameBadge)
+    popularity_metagame: latestPopularity && entry.popularity != null ? {
+      metagame: latestPopularity.slug.split('.')[0], label: latestPopularity.label,
+      date: latestPopularity.date, name: latestPopularity.name,
+    } : null,
+    // its rank over all the tournament decks, from Myr's intel file (null
+    // until its export writes it)
+    popularity_all_time_rank: raw.popularity_rank ?? null,
+    // see cardPopularitySeries and card-popularity-metagames.json
+    popularity: series,
+  }))) {
+    cardDetailWritten++
+  } else {
+    cardDetailSkipped++
   }
 }
 writeFileSync(join(outDir, 'cards.json'), JSON.stringify(cardsIndex))

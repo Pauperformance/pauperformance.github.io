@@ -9,6 +9,14 @@ const MANA_ORDER = ['W', 'U', 'B', 'R', 'G', 'C']
 const MANA_LABELS = { W: 'White', U: 'Blue', B: 'Black', R: 'Red', G: 'Green', C: 'Colorless' }
 const CARD_TYPES = ['Creature', 'Instant', 'Sorcery', 'Enchantment', 'Artifact', 'Land', 'Sticker']
 const CMC_VALUES = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
+// the popularity filter: the cards ranked up to N in the current metagame, or
+// those played there at all
+const POPULARITY_FILTERS = [
+  ...[10, 50, 100, 250, 500, 1000].map(n => ({
+    key: `top${n}`, label: `Top ${n.toLocaleString('en-US')}`, test: c => c.popularity != null && c.popularity <= n,
+  })),
+  { key: 'played', label: 'Played', test: c => c.popularityDecks > 0 },
+]
 const PAGE_SIZE = 50
 
 function ManaIcon({ color, size = 'w-6 h-6' }) {
@@ -22,13 +30,14 @@ function ManaIcon({ color, size = 'w-6 h-6' }) {
   )
 }
 
-function SortHeader({ col, label, sortCol, sortDir, onSort, align = 'left', extraClass = '' }) {
+function SortHeader({ col, label, sortCol, sortDir, onSort, align = 'left', extraClass = '', title }) {
   const active = sortCol === col
   const indicator = active ? (sortDir === 'asc' ? '↑' : '↓') : '↕'
   const alignClass = align === 'right' ? 'text-right' : 'text-left'
   return (
     <th
       onClick={() => onSort(col)}
+      title={title}
       className={`px-4 py-3 text-xs font-semibold uppercase tracking-wider cursor-pointer select-none group ${alignClass} ${extraClass}`}>
       <span className={`inline-flex items-center gap-1 transition-colors ${active ? 'text-amber-400' : 'text-gray-400 group-hover:text-gray-200'}`}>
         {label}
@@ -74,12 +83,16 @@ function AndOrToggle({ value, onChange }) {
 export default function CardsIndex() {
   const [cards, setCards] = useState([])
   const [archetypeCardSlugs, setArchetypeCardSlugs] = useState({})
+  // the metagame of the popularity column (null without popularity data)
+  const [popularityMetagame, setPopularityMetagame] = useState(null)
   const [loading, setLoading] = useState(true)
   const [search, setSearch] = useState('')
   const searchRef = useSearchShortcut()
   const [activeMana, setActiveMana] = useState(new Set())
   const [activeTypes, setActiveTypes] = useState(new Set())
   const [activeCmc, setActiveCmc] = useState(new Set())
+  // the key of the popularity filter, or null
+  const [activePopularity, setActivePopularity] = useState(null)
   const [activeArchetypes, setActiveArchetypes] = useState(new Set())
   const [manaMode, setManaMode] = useState('or')
   const [typeMode, setTypeMode] = useState('or')
@@ -111,9 +124,11 @@ export default function CardsIndex() {
     Promise.all([
       fetch('/data/cards.json').then(r => r.json()),
       fetch('/data/archetype-card-slugs.json').then(r => r.json()),
-    ]).then(([cardData, archData]) => {
+      fetch('/data/card-popularity-metagames.json').then(r => r.ok ? r.json() : []).catch(() => []),
+    ]).then(([cardData, archData, popularityMetagames]) => {
       setCards(cardData)
       setArchetypeCardSlugs(archData)
+      setPopularityMetagame(popularityMetagames[popularityMetagames.length - 1] || null)
       setLoading(false)
     })
   }, [])
@@ -148,6 +163,10 @@ export default function CardsIndex() {
     setActiveCmc(prev => prev.has(v) ? new Set() : new Set([v]))
   }
 
+  function togglePopularity(key) {
+    setActivePopularity(prev => prev === key ? null : key)
+  }
+
   function toggleArchetype(a) {
     setActiveArchetypes(prev => {
       const next = new Set(prev)
@@ -155,6 +174,10 @@ export default function CardsIndex() {
       return next
     })
   }
+
+  const popularityTest = activePopularity
+    ? POPULARITY_FILTERS.find(f => f.key === activePopularity).test
+    : null
 
   const slugsPassingPreArchetypeFilters = useMemo(() => {
     const q = search.trim().toLowerCase()
@@ -178,10 +201,11 @@ export default function CardsIndex() {
       if (activeCmc.size > 0) {
         if (![...activeCmc].some(v => c.cmc === v)) return
       }
+      if (popularityTest && !popularityTest(c)) return
       slugs.add(c.slug)
     })
     return slugs
-  }, [cards, search, activeMana, activeTypes, activeCmc, manaMode, typeMode])
+  }, [cards, search, activeMana, activeTypes, activeCmc, popularityTest, manaMode, typeMode])
 
   const visibleArchetypes = useMemo(() => {
     return Object.keys(archetypeCardSlugs).sort().filter(a =>
@@ -211,10 +235,11 @@ export default function CardsIndex() {
       if (activeCmc.size > 0) {
         if (![...activeCmc].some(v => c.cmc === v)) return false
       }
+      if (popularityTest && !popularityTest(c)) return false
       if (allowedSlugs !== null && !allowedSlugs.has(c.slug)) return false
       return true
     })
-  }, [cards, search, activeMana, activeTypes, activeCmc, allowedSlugs, manaMode, typeMode])
+  }, [cards, search, activeMana, activeTypes, activeCmc, popularityTest, allowedSlugs, manaMode, typeMode])
 
   useEffect(() => {
     if (pageInitRef.current) { pageInitRef.current = false; return }
@@ -248,6 +273,10 @@ export default function CardsIndex() {
         av = a.cmc ?? -1; bv = b.cmc ?? -1
       } else if (sortCol === 'archetypes') {
         av = a.archetypeCount; bv = b.archetypeCount
+      } else if (sortCol === 'popularity') {
+        // cards without a rank last, either way
+        if ((a.popularity == null) !== (b.popularity == null)) return a.popularity == null ? 1 : -1
+        av = a.popularity ?? 0; bv = b.popularity ?? 0
       }
       if (av < bv) return sortDir === 'asc' ? -1 : 1
       if (av > bv) return sortDir === 'asc' ? 1 : -1
@@ -328,6 +357,17 @@ export default function CardsIndex() {
               <FilterButton key={v} active={activeCmc.has(v)} onClick={() => toggleCmc(v)}>{v}</FilterButton>
             ))}
           </div>
+          {popularityMetagame && (
+            <div className="flex flex-wrap gap-2 items-center">
+              <span className="text-sm text-gray-500 shrink-0"
+                title={`By the tournament decks playing it in the current metagame (${popularityMetagame.name})`}>
+                Popularity:
+              </span>
+              {POPULARITY_FILTERS.map(f => (
+                <FilterButton key={f.key} active={activePopularity === f.key} onClick={() => togglePopularity(f.key)}>{f.label}</FilterButton>
+              ))}
+            </div>
+          )}
           <div className="flex flex-col gap-2">
             <div className="flex items-center gap-2">
               <span className="text-sm text-gray-500 shrink-0">Archetype:</span>
@@ -389,7 +429,14 @@ export default function CardsIndex() {
           <p className="text-gray-500 text-sm">Loading…</p>
         ) : (
           <>
-            <p className="text-xs text-gray-500">{filtered.length} card{filtered.length !== 1 ? 's' : ''}</p>
+            <p className="text-xs text-gray-500">
+              {filtered.length} card{filtered.length !== 1 ? 's' : ''}
+              {popularityMetagame && (
+                <> · Popularity: rank by the tournament decks playing it in the current metagame,{' '}
+                  <Link to={`/metagames/${popularityMetagame.slug}`} className="text-gray-400 hover:text-amber-400 transition-colors">{popularityMetagame.name}</Link>
+                </>
+              )}
+            </p>
             {filtered.length === 0 ? (
               <p className="text-gray-500 text-sm">No cards found.</p>
             ) : (
@@ -403,6 +450,10 @@ export default function CardsIndex() {
                         <SortHeader col="colors"     label="Colors"     sortCol={sortCol} sortDir={sortDir} onSort={handleSort} />
                         <SortHeader col="type"       label="Type"       sortCol={sortCol} sortDir={sortDir} onSort={handleSort} extraClass="hidden sm:table-cell" />
                         <SortHeader col="cmc"        label="CMC"        sortCol={sortCol} sortDir={sortDir} onSort={handleSort} align="right" extraClass="hidden sm:table-cell" />
+                        {popularityMetagame && (
+                          <SortHeader col="popularity" label="Popularity" sortCol={sortCol} sortDir={sortDir} onSort={handleSort} align="right"
+                            title={`Rank by the tournament decks playing it in the current metagame (${popularityMetagame.name}): #1 is the most played`} />
+                        )}
                         <SortHeader col="archetypes" label="Archetypes" sortCol={sortCol} sortDir={sortDir} onSort={handleSort} align="right" />
                       </tr>
                     </thead>
@@ -427,6 +478,11 @@ export default function CardsIndex() {
                           </td>
                           <td className="px-4 py-2.5 text-gray-400 hidden sm:table-cell">{(c.types || []).join(', ')}</td>
                           <td className="px-4 py-2.5 text-right text-gray-400 hidden sm:table-cell">{c.cmc ?? '—'}</td>
+                          {popularityMetagame && (
+                            <td className="px-4 py-2.5 text-right text-gray-400 tabular-nums">
+                              {c.popularity != null ? `#${c.popularity.toLocaleString('en-US')}` : '—'}
+                            </td>
+                          )}
                           <td className="px-4 py-2.5 text-right text-gray-400">{c.archetypeCount}</td>
                         </tr>
                       ))}
