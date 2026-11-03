@@ -891,7 +891,7 @@ const topDecks = metagameOut.slice(0, 16).map(entry => {
   // the typical list comes most played first
   const staples = ((typical && typical.main) || [])
     .filter(c => c.typical > 0 && c.preview && !isLand(c.name))
-    .slice(0, 5)
+    .slice(0, 10)
     .map(({ name, link, preview }) => ({ name, link, preview }))
   const representative = arch && arch.representative_card
   return {

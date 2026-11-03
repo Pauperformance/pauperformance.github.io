@@ -23,3 +23,25 @@ export function formatDate(iso, { short = false } = {}) {
 export function formatShortDate(iso) {
   return formatDate(iso, { short: true })
 }
+
+// The days from one date to another (YYYY-MM-DD each), e.g. how long a
+// metagame lasted until the next one began. Counted on UTC midnights, so
+// daylight saving doesn't make a day 23 or 25 hours.
+export function daysBetween(from, to) {
+  const utc = iso => {
+    const [y, m, d] = iso.split('-').map(Number)
+    return Date.UTC(y, m - 1, d)
+  }
+  return Math.round((utc(to) - utc(from)) / 86400000)
+}
+
+// Today as YYYY-MM-DD, in the viewer's time zone.
+export function todayIso() {
+  const now = new Date()
+  const pad = n => String(n).padStart(2, '0')
+  return `${now.getFullYear()}-${pad(now.getMonth() + 1)}-${pad(now.getDate())}`
+}
+
+export function formatDays(days) {
+  return `${days.toLocaleString('en-US')} ${days === 1 ? 'day' : 'days'}`
+}
