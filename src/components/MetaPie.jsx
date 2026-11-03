@@ -70,8 +70,8 @@ function DonutChart({ data, activeIndex, onSliceEnter, onSliceLeave }) {
 // The donut of the most played archetypes (the rest as Other) beside the list
 // of archetypes and their shares. shares: [{ archetype_name, meta_share }],
 // most played first. Archetypes under minListedShare (%) are listed as one
-// Other row. listClassName: the list's grid, sized to its length.
-export default function MetaPie({ shares, minListedShare = 0, listClassName }) {
+// Other row. listClassName, listStyle: the list's grid, sized to its length.
+export default function MetaPie({ shares, minListedShare = 0, listClassName, listStyle }) {
   const [activeIndex, setActiveIndex] = useState(undefined)
 
   const top = shares.slice(0, SHOWN_SLICES)
@@ -115,7 +115,7 @@ export default function MetaPie({ shares, minListedShare = 0, listClassName }) {
           />
         </div>
 
-        <div className={`flex-1 min-w-0 ${listClassName}`}>
+        <div className={`flex-1 min-w-0 ${listClassName}`} style={listStyle}>
           {listed.map((entry, i) => row(
             entry.archetype_name,
             i < SHOWN_SLICES ? CHART_COLORS[i] : OTHER_COLOR,

@@ -194,7 +194,7 @@ function ArchetypeCard({ archetype, rank, cardPages, bindPreview }) {
           <span>
             {archetype.decks} deck{archetype.decks === 1 ? '' : 's'} · {archetype.tournaments} tournament{archetype.tournaments === 1 ? '' : 's'}
           </span>
-          <span className="ml-auto"><ShareChange share={archetype.meta_share} previous={archetype.previous_share} /></span>
+          <span className="ml-auto"><ShareChange share={archetype.meta_share} previous={archetype.previous_share} debut={archetype.debut} /></span>
         </div>
         <div className="border-t border-gray-700 pt-2 space-y-1">
           {archetype.cards.length > 0
@@ -219,7 +219,7 @@ function SmallArchetypes({ archetypes }) {
               </td>
               <td className="px-4 py-1.5 text-right text-xs text-gray-500 tabular-nums whitespace-nowrap">{a.decks} deck{a.decks === 1 ? '' : 's'}</td>
               <td className="px-4 py-1.5 text-right text-xs text-gray-400 tabular-nums whitespace-nowrap w-16">{a.meta_share.toFixed(1)}%</td>
-              <td className="px-4 py-1.5 text-right whitespace-nowrap w-20"><ShareChange share={a.meta_share} previous={a.previous_share} /></td>
+              <td className="px-4 py-1.5 text-right whitespace-nowrap w-20"><ShareChange share={a.meta_share} previous={a.previous_share} debut={a.debut} /></td>
             </tr>
           ))}
         </tbody>

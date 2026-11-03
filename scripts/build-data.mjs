@@ -993,7 +993,7 @@ function slimMetagameRef(m) {
 }
 
 // The metagame flow on /metagames: each metagame's archetypes over
-// FLOW_MIN_SHARE (%), as [name, share, share in the previous metagame], the
+// FLOW_MIN_SHARE (%), as [name, share, share in the previous metagame, first metagame played], the
 // others summed as one share, and the mana of every archetype shown, to colour
 // it the same in every metagame.
 const FLOW_MIN_SHARE = 2
@@ -1011,6 +1011,9 @@ const archetypePopularityMetagames = []
 const archetypePlayed = {}
 
 let metagamePages = 0
+// the archetypes played in an earlier metagame: one at 0% before and played now
+// is "New" the first time, "Comeback" after that
+const seenArchetypes = new Set()
 const metagameFiles = (existsSync(metagameDir) ? readdirSync(metagameDir) : [])
   .filter(f => f.endsWith('.json'))
   .map(f => JSON.parse(readFileSync(join(metagameDir, f), 'utf8')))
@@ -1025,6 +1028,8 @@ for (const m of metagameFiles) {
     m.archetypes.slice().sort((a, b) => b.decks - a.decks).forEach((a, i) => {
       (archetypePlayed[a.name] ||= {})[slug] = [a.decks, i + 1]
     })
+    for (const a of m.archetypes) a.debut = !seenArchetypes.has(a.name)
+    for (const a of m.archetypes) seenArchetypes.add(a.name)
     const shown = m.archetypes.filter(a => a.meta_share >= FLOW_MIN_SHARE)
     for (const a of shown) {
       const arch = archetypeMap[a.name]
@@ -1032,7 +1037,7 @@ for (const m of metagameFiles) {
     }
     flowMetagames[slug] = {
       decks: m.decks,
-      shares: shown.map(a => [a.name, a.meta_share, a.previous_share]),
+      shares: shown.map(a => [a.name, a.meta_share, a.previous_share, a.debut]),
       other: +m.archetypes.filter(a => a.meta_share < FLOW_MIN_SHARE)
         .reduce((s, a) => s + a.meta_share, 0).toFixed(2),
     }
@@ -1048,6 +1053,7 @@ for (const m of metagameFiles) {
       tournaments: a.tournaments,
       meta_share: a.meta_share,
       previous_share: a.previous_share,
+      debut: a.debut === true,
       dominant_mana: brew ? [] : (arch && arch.dominant_mana) || [],
       game_type: brew ? [] : (arch && arch.game_type) || [],
       featured_image: (representative && representative.preview)
