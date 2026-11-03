@@ -88,10 +88,9 @@ function when(fetchedAt, date, label) {
   return null
 }
 
-// On the home page only: when the metagame chart and the decks were last
-// refreshed (from stats.json, built by build-data.mjs), with the time when
-// Myr recorded when they were fetched, else the date alone. Whatever is
-// missing is left out.
+// On the home page only: when the decks were last refreshed (from
+// stats.json, built by build-data.mjs), with the time when Myr recorded when
+// they were fetched, else the date alone. Whatever is missing is left out.
 function DataFreshness() {
   const [stats, setStats] = useState(null)
 
@@ -101,7 +100,6 @@ function DataFreshness() {
 
   if (!stats) return null
   const parts = [
-    when(stats.lastMetagameFetchedAt, stats.lastMetagameUpdate, 'Last metagame update'),
     when(stats.lastDecksFetchedAt, stats.lastDecksUpdate, 'Last decks update'),
   ].filter(Boolean)
   if (!parts.length) return null

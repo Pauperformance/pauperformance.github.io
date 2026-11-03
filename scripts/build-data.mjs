@@ -917,11 +917,28 @@ const creators = readdirSync(creatorDir)
 writeFileSync(join(outDir, 'creators.json'), JSON.stringify(creators))
 console.log('Built creators.json with ' + creators.length + ' entries.')
 
-// Copy metagame data as-is (no transformation)
-copyFileSync('assets/data/intel/metagame.json', join(outDir, 'metagame.json'))
-const metagame = JSON.parse(readFileSync('assets/data/intel/metagame.json', 'utf8'))
-const metagameOut = metagame.meta_shares.slice().sort((a, b) => b.meta_share - a.meta_share)
-console.log(`Copied metagame.json with ${metagameOut.length} archetypes.`)
+// The current metagame (the homepage chart, the archetypes' meta share): the
+// latest metagame with decks in Myr's breakdowns (assets/data/metagame/), as
+// { metagame: {metagame, label, name, date}, decks, meta_shares: [{archetype_name,
+// meta_share}] } with the shares in %, as the brews summed as "Brew".
+const breakdownDir = 'assets/data/metagame'
+const breakdowns = (existsSync(breakdownDir) ? readdirSync(breakdownDir) : [])
+  .filter(f => f.endsWith('.json'))
+  .map(f => JSON.parse(readFileSync(join(breakdownDir, f), 'utf8')))
+  .filter(m => m.decks > 0)
+  .sort((a, b) => a.metagame.date.localeCompare(b.metagame.date))
+const currentBreakdown = breakdowns[breakdowns.length - 1]
+if (!currentBreakdown) throw new Error(`No metagame with decks in ${breakdownDir}: run \`myr academy update\` first.`)
+const metagame = {
+  metagame: metagameRef(currentBreakdown.metagame),
+  decks: currentBreakdown.decks,
+  meta_shares: currentBreakdown.archetypes
+    .map(a => ({ archetype_name: a.name, meta_share: a.meta_share }))
+    .sort((a, b) => b.meta_share - a.meta_share),
+}
+writeFileSync(join(outDir, 'metagame.json'), JSON.stringify(metagame))
+const metagameOut = metagame.meta_shares
+console.log(`Built metagame.json: metagame ${metagameSlug(currentBreakdown.metagame)} with ${metagameOut.length} archetypes.`)
 
 // Build top decks (top 15 metagame archetypes enriched with archetype detail)
 const archetypeMap = Object.fromEntries(
@@ -1107,9 +1124,6 @@ for (const f of readdirSync(tournamentDir)) {
 }
 
 // Write aggregate stats used by the home page counters and footer.
-// lastMetagameUpdate / lastMetagameFetchedAt: the day, and the time (UTC, ISO
-// 8601), the MTGGoldfish meta behind the chart was downloaded (set by Myr;
-// missing in older metagame.json files).
 // lastDecksUpdate: the most recent tournament among the classified decks.
 // lastDecksFetchedAt: when the newest tournament was downloaded.
 // classifiedDecks: the decks of an archetype. The deck-details also hold the
@@ -1117,14 +1131,11 @@ for (const f of readdirSync(tournamentDir)) {
 const stats = {
   classifiedDecks: deckDetailWritten + deckDetailSkipped - unclassifiedCount,
   videos: allVideos.length,
-  lastMetagameUpdate: metagame.date || null,
-  lastMetagameFetchedAt: metagame.fetched_at || null,
   lastDecksUpdate: lastDecksUpdate || null,
   lastDecksFetchedAt: lastDecksFetchedAt || null,
 }
 writeFileSync(join(outDir, 'stats.json'), JSON.stringify(stats))
 console.log('Built stats.json (classifiedDecks: ' + stats.classifiedDecks + ', videos: ' + stats.videos +
-  ', lastMetagameUpdate: ' + stats.lastMetagameUpdate + ' (' + stats.lastMetagameFetchedAt + ')' +
   ', lastDecksUpdate: ' + stats.lastDecksUpdate + ' (' + stats.lastDecksFetchedAt + ')).')
 
 // Build alias → canonical slug redirect map
