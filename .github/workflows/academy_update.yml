@@ -1,13 +1,19 @@
-# This workflow updates the Academy every 2 hours (at minute 17, off the
-# top of the hour, when GitHub delays and drops many scheduled runs):
-# scrape tournaments and videos, classify them, export the Academy data,
-# rebuild the website and push everything to master.
+# This workflow updates the Academy every 15 minutes (off the top of the
+# hour, when GitHub delays and drops many scheduled runs): scrape videos,
+# classify tournaments and videos, export the Academy data, rebuild the
+# website and push everything to master.
+# A run takes longer than 15 minutes: the concurrency group below keeps at
+# most one run pending behind the running one, so runs go back to back.
+#
+# MTGGoldfish tournaments are NOT scraped here: MTGGoldfish answers 403 to
+# GitHub-hosted runners. razor scrapes them (cron, ~/myr-scraper/scrape.sh)
+# and pushes the decks to master, where the next run classifies them.
 
 name: myr-academy-update
 
 on:
   schedule:
-    - cron: "17 */2 * * *"
+    - cron: "7,22,37,52 * * * *"
   workflow_dispatch:
 
 # Never run two updates at once: they would push conflicting commits and
@@ -69,10 +75,12 @@ jobs:
 
     # The tasks below run from the workspace root, so that Python imports
     # the installed package rather than the source tree in ./myr.
-    - name: Scrape tournaments (sync scraper)
+    # Sideboard guides come from a Google Sheet and are read by
+    # "academy update" below. MTGGoldfish is scraped by razor (see top).
+    - name: Update sideboard guides (sync scraper)
       run: |
         source venv/bin/activate
-        python -m pauperformance_bot.task.sync_scraper
+        python -m pauperformance_bot.task.sync_scraper sideboards
 
     - name: Scrape videos (async scraper)
       run: |
