@@ -1013,7 +1013,53 @@ mkdirSync(metagamesOutDir, { recursive: true })
 const indexEntries = existsSync('assets/data/metagame_index.json')
   ? JSON.parse(readFileSync('assets/data/metagame_index.json', 'utf8'))
   : []
+// the Pauper pool's cards by name, with their decks (built above)
+const poolCards = {}
+for (const set of pool) for (const c of set.cards) poolCards[c.name] = c
 const indexBySlug = Object.fromEntries(indexEntries.map(m => [metagameSlug(m), m]))
+
+// The cards whose presence in the decks (% of the metagame's decks playing
+// them) changed the most since the previous metagame, TOP_MOVERS up and
+// TOP_MOVERS down: not the most played, the ones that gained or lost the most
+// adoption. Basic lands are left out (their counts follow the mana bases).
+// { up, down }, each card { name, share, previous_share, image }. Without a
+// previous metagame to compare with (none, or none with decks: decided from the
+// card popularity data, so it holds if decklists of earlier metagames are ever
+// added), the most played cards instead: { top }, each { name, share, image }.
+// null where the metagame has no decks.
+const TOP_MOVERS = 10
+const BASIC_LAND = /^(Snow-Covered )?(Plains|Island|Swamp|Mountain|Forest|Wastes)$/
+function cardMovers(metagame, previous) {
+  if (!metagame) return null
+  const now = popularityByMetagame[metagameSlug(metagame)]
+  const decksNow = popularityDecks[metagameSlug(metagame)]
+  if (!now || !decksNow) return null
+  const round = x => Math.round(x * 100) / 100
+  const before = previous && popularityByMetagame[metagameSlug(previous)]
+  const decksBefore = previous && popularityDecks[metagameSlug(previous)]
+  if (!before || !decksBefore) {
+    const top = Object.entries(now)
+      .filter(([name]) => !BASIC_LAND.test(name))
+      .sort((a, b) => b[1][0] - a[1][0] || a[0].localeCompare(b[0]))
+      .slice(0, TOP_MOVERS)
+      .map(([name, [decks]]) => ({ name, share: round(decks / decksNow * 100), image: cardImageMap[name] || null }))
+    return top.length ? { top } : null
+  }
+  const changes = []
+  for (const name of new Set([...Object.keys(now), ...Object.keys(before)])) {
+    if (BASIC_LAND.test(name)) continue
+    const share = now[name] ? now[name][0] / decksNow * 100 : 0
+    const previousShare = before[name] ? before[name][0] / decksBefore * 100 : 0
+    changes.push({ name, share: round(share), previous_share: round(previousShare), change: share - previousShare })
+  }
+  // the card's image as the rest of the site shows it (see card-images.json), if it has one
+  const strip = ({ change, ...c }) => ({ ...c, image: cardImageMap[c.name] || null })
+  changes.sort((a, b) => b.change - a.change || a.name.localeCompare(b.name))
+  return {
+    up: changes.slice(0, TOP_MOVERS).filter(c => c.change > 0).map(strip),
+    down: changes.slice(-TOP_MOVERS).reverse().filter(c => c.change < 0).map(strip),
+  }
+}
 
 function slimMetagameRef(m) {
   return m ? { metagame: m.metagame, label: m.label, name: m.name, date: m.date } : null
@@ -1098,9 +1144,18 @@ for (const m of metagameFiles) {
     next: slimMetagameRef(m.next),
     decks: m.decks,
     tournaments: m.tournaments,
-    sets: entry ? entry.sets : [],
+    // the cards the sets brought, with the decklists playing them (as on the
+    // Sets page) and whether they're banned today, to tell staples from unplayed
+    sets: entry ? entry.sets.map(s => ({
+      ...s,
+      cards: s.cards.map(c => {
+        const played = poolCards[c.name]
+        return played ? { ...c, decks: played.decks, banned: played.banned } : c
+      }),
+    })) : [],
     bans: entry ? entry.bans : [],
     archetypes,
+    card_movers: cardMovers(m.metagame, m.previous),
   }))
   metagamePages++
 }
