@@ -136,6 +136,15 @@ function Counters({ metagame, bindPreview }) {
       ))}
       {list && (
         <div className="mt-5 pt-5 border-t border-gray-700 space-y-4">
+          {/* the new cards are styled by how much they have been played, as on the Sets page */}
+          {open === 'new' && (
+            <p className="text-xs flex flex-wrap items-center gap-2">
+              <span className="px-2 py-0.5 rounded-md border bg-gray-900 border-sky-400/60 text-white font-semibold">Staple</span>
+              <span className="px-2 py-0.5 rounded-md border bg-gray-900 border-sky-800/80 text-gray-200">Played</span>
+              <span className="px-2 py-0.5 rounded-md border bg-gray-900 border-gray-800 text-gray-500">Unplayed</span>
+              <span className="px-2 py-0.5 rounded-md border bg-gray-900 border-red-900/60 text-gray-300">Banned</span>
+            </p>
+          )}
           <EventCards events={list.events(metagame)} cards={list.cards} name={list.name} tone={list.tone} bindPreview={bindPreview} />
         </div>
       )}
@@ -202,6 +211,69 @@ function ArchetypeCard({ archetype, rank, cardPages, bindPreview }) {
             : <p className="text-xs text-gray-500">Decks that fit no archetype, all brewed differently.</p>}
         </div>
       </div>
+    </div>
+  )
+}
+
+// One card of the movers, boxed like the archetypes: its art, its presence in
+// the decks, and how it moved.
+function CardMover({ card, cardPages, bindPreview }) {
+  const slug = cardLinkSlug(cardPages, card.name)
+  // the card's image as the rest of the site shows it; Scryfall's, by name, for
+  // a card without one
+  const image = card.image
+    || `https://api.scryfall.com/cards/named?exact=${encodeURIComponent(card.name)}&format=image&version=normal`
+  const handlers = bindPreview(card.name, { slug: slug || undefined, image })
+  // without previous_share (no metagame to compare with) the card is only played
+  const compared = card.previous_share !== undefined
+  const change = compared ? card.share - card.previous_share : 0
+  const up = change > 0
+  const title = compared
+    ? `In ${card.share.toFixed(1)}% of the decks, ${card.previous_share.toFixed(1)}% in the previous metagame`
+    : `In ${card.share.toFixed(1)}% of the decks`
+  const art = (
+    <>
+      <img src={image.replace('/normal/', '/art_crop/').replace('version=normal', 'version=art_crop')} alt={card.name} loading="lazy"
+        className="absolute inset-0 w-full h-full object-cover group-hover:scale-110 transition-transform duration-300" />
+      <span title={title}
+        className={`absolute top-2 right-2 rounded-md bg-gray-900/85 px-2 py-0.5 text-sm font-bold tabular-nums ${!compared ? 'text-amber-400' : up ? 'text-emerald-400' : 'text-rose-400'}`}>
+        {compared ? `${up ? '▲' : '▼'} ${Math.abs(change).toFixed(1)}%` : `${card.share.toFixed(1)}%`}
+      </span>
+    </>
+  )
+  const artClass = 'relative block aspect-[3/2] bg-gray-900 overflow-hidden'
+  return (
+    <div className="bg-gray-800 border border-gray-700 rounded-xl overflow-hidden flex flex-col hover:border-amber-400/50 transition-colors group">
+      {slug
+        ? <Link to={`/cards/${slug}`} {...handlers} className={artClass}>{art}</Link>
+        : <span {...handlers} className={artClass}>{art}</span>}
+      <div className="p-3 flex flex-col gap-1">
+        {slug
+          ? <Link to={`/cards/${slug}`} {...handlers} className="truncate font-semibold text-white hover:text-amber-400 transition-colors">{card.name}</Link>
+          : <span {...handlers} className="truncate font-semibold text-white">{card.name}</span>}
+        <span className="text-xs text-gray-400 tabular-nums" title={title}>
+          {compared ? `${card.previous_share.toFixed(1)}% → ${card.share.toFixed(1)}%` : `${card.share.toFixed(1)}%`} of the decks
+        </span>
+      </div>
+    </div>
+  )
+}
+
+// The cards that gained and lost the most presence in the decks since the
+// previous metagame (not the most played ones).
+function CardMovers({ movers, cardPages, bindPreview }) {
+  const groups = (movers.top ? [[null, movers.top]] : [['Rising', movers.up], ['Falling', movers.down]])
+    .filter(([, cards]) => cards.length > 0)
+  return (
+    <div className="space-y-6">
+      {groups.map(([title, cards]) => (
+        <div key={title}>
+          {title && <h3 className="text-xs uppercase tracking-widest text-gray-400 mb-3">{title}</h3>}
+          <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-3">
+            {cards.map(c => <CardMover key={c.name} card={c} cardPages={cardPages} bindPreview={bindPreview} />)}
+          </div>
+        </div>
+      ))}
     </div>
   )
 }
@@ -305,6 +377,44 @@ export default function MetagamePage() {
                     minListedShare={MIN_SHARE}
                     listClassName="grid grid-cols-2 lg:grid-cols-3 gap-x-4 gap-y-1.5 content-start" />
                 </section>
+
+                {metagame.card_movers && (metagame.card_movers.top || metagame.card_movers.up.length > 0 || metagame.card_movers.down.length > 0) && (
+                  <section>
+                    <h2 className="text-xl font-semibold text-white mb-1">
+                      {metagame.card_movers.top ? 'Top Cards' : 'Top Movers'}
+                    </h2>
+                    <p className="text-sm text-gray-400 mb-4">
+                      {metagame.card_movers.top ? (
+                        // no previous metagame with decks to compare with
+                        <>
+                          Most popular cards for this metagame. Popularity changes cannot be computed due to lack of
+                          decks from the previous metagame
+                          {metagame.previous && (
+                            <>
+                              {' '}(<Link to={`/metagames/${metagameSlug(metagame.previous)}`}
+                                className="text-amber-400 hover:text-amber-300 transition-colors">
+                                <span className="font-mono">{metagame.previous.metagame}.{metagame.previous.label}</span>, {metagame.previous.name}
+                              </Link>)
+                            </>
+                          )}.
+                        </>
+                      ) : (
+                        <>
+                          Cards that have changed the most their popularity since the previous metagame
+                          {metagame.previous && (
+                            <>
+                              {' '}(<Link to={`/metagames/${metagameSlug(metagame.previous)}`}
+                                className="text-amber-400 hover:text-amber-300 transition-colors">
+                                <span className="font-mono">{metagame.previous.metagame}.{metagame.previous.label}</span>, {metagame.previous.name}
+                              </Link>)
+                            </>
+                          )}.
+                        </>
+                      )}
+                    </p>
+                    <CardMovers movers={metagame.card_movers} cardPages={cardPages} bindPreview={bindPreview} />
+                  </section>
+                )}
 
                 <section>
                   <h2 className="text-xl font-semibold text-white mb-1">Archetypes</h2>
