@@ -42,6 +42,17 @@ export function todayIso() {
   return `${now.getFullYear()}-${pad(now.getMonth() + 1)}-${pad(now.getDate())}`
 }
 
+// The year of the oldest item, its date (YYYY-MM-DD) in the given field: where
+// the year options of a date filter start. Undefined when no item has a date.
+export function firstYearOf(items, field) {
+  let first
+  for (const item of items || []) {
+    const year = Number((item[field] || '').slice(0, 4))
+    if (year && (first === undefined || year < first)) first = year
+  }
+  return first
+}
+
 export function formatDays(days) {
   return `${days.toLocaleString('en-US')} ${days === 1 ? 'day' : 'days'}`
 }

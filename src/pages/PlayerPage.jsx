@@ -2,7 +2,7 @@ import { useState, useEffect, useMemo, useRef } from 'react'
 import { useParams, Link } from 'react-router-dom'
 import Layout from '../components/Layout'
 import { nameToSlug } from '../utils/slugs'
-import { formatDate, formatShortDate } from '../utils/dates'
+import { firstYearOf, formatDate, formatShortDate } from '../utils/dates'
 
 const LANG_FLAG = {
   en: '🇬🇧', eng: '🇬🇧', 'en-US': '🇬🇧', 'en-GB': '🇬🇧',
@@ -20,11 +20,13 @@ const SELECT_CLS = 'bg-gray-800 border border-gray-600 rounded-lg px-2 py-1.5 te
 const PAGE_SIZE = 20
 const VIDEO_PAGE_SIZE = 50
 
-function MonthPicker({ label, value, onChange }) {
+function MonthPicker({ label, value, onChange, firstYear }) {
   const [year, setYear] = useState(value ? value.split('-')[0] : '')
   const [month, setMonth] = useState(value ? value.split('-')[1] : '')
   const currentYear = new Date().getFullYear()
-  const years = Array.from({ length: currentYear - 2018 }, (_, i) => String(2019 + i))
+  // from the oldest entry of the table (firstYearOf), this year until it loads
+  const fromYear = firstYear ?? currentYear
+  const years = Array.from({ length: currentYear - fromYear + 1 }, (_, i) => String(fromYear + i))
 
   useEffect(() => {
     setYear(value ? value.split('-')[0] : '')
@@ -198,6 +200,8 @@ export default function PlayerPage() {
       return true
     })
   }, [player, filterTournament, filterDateFrom, filterDateTo, activeArchetypes])
+
+  const firstYear = useMemo(() => firstYearOf(player?.decks, 'tournament_date'), [player])
 
   useEffect(() => { setPage(0) }, [filtered])
 
@@ -429,8 +433,8 @@ export default function PlayerPage() {
               </div>
 
               <div className="flex flex-wrap items-center gap-4">
-                <MonthPicker label="From:" value={filterDateFrom} onChange={v => { setFilterDateFrom(v); setPage(0) }} />
-                <MonthPicker label="To:" value={filterDateTo} onChange={v => { setFilterDateTo(v); setPage(0) }} />
+                <MonthPicker label="From:" value={filterDateFrom} onChange={v => { setFilterDateFrom(v); setPage(0) }} firstYear={firstYear} />
+                <MonthPicker label="To:" value={filterDateTo} onChange={v => { setFilterDateTo(v); setPage(0) }} firstYear={firstYear} />
                 {(filterDateFrom || filterDateTo) && (
                   <button onClick={() => { setFilterDateFrom(''); setFilterDateTo(''); setPage(0) }}
                     className="px-2.5 py-1 rounded-lg text-xs font-semibold border border-gray-600 text-gray-400 hover:border-gray-400 hover:text-gray-200 transition-colors">

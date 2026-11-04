@@ -7,13 +7,13 @@
     ],
     "family": "Storm",
     "first_appearance": {
-        "date": "2011-01-07",
+        "date": "2009-12-11",
         "metagame": {
-            "date": "2010-10-01",
+            "date": "2009-10-02",
             "decks": null,
-            "label": "som",
-            "metagame": "012",
-            "name": "Scars of Mirrodin",
+            "label": "zen",
+            "metagame": "006",
+            "name": "Zendikar",
             "py/object": "pauperformance_bot.entity.api.archetype.MetagameRef"
         },
         "py/object": "pauperformance_bot.entity.api.archetype.Appearance"
@@ -69,7 +69,844 @@
             ]
         },
         "by_metagame": {
-            "012": {
+            "006": {
+                "main": {
+                    "Ancient Spring": [
+                        12,
+                        12,
+                        12,
+                        12
+                    ],
+                    "Cabal Ritual": [
+                        12,
+                        12,
+                        12,
+                        12
+                    ],
+                    "Chromatic Sphere": [
+                        12,
+                        12,
+                        11,
+                        9
+                    ],
+                    "Chromatic Star": [
+                        12,
+                        12,
+                        11,
+                        10
+                    ],
+                    "Compulsive Research": [
+                        2
+                    ],
+                    "Dark Ritual": [
+                        12,
+                        12,
+                        12,
+                        12
+                    ],
+                    "Empty the Warrens": [
+                        12,
+                        12,
+                        12,
+                        6
+                    ],
+                    "Geothermal Crevice": [
+                        2,
+                        1
+                    ],
+                    "Goblin Bushwhacker": [
+                        1
+                    ],
+                    "Grapeshot": [
+                        12,
+                        12,
+                        12,
+                        12
+                    ],
+                    "Ideas Unbound": [
+                        12,
+                        12,
+                        12,
+                        12
+                    ],
+                    "Irrigation Ditch": [
+                        11,
+                        11,
+                        11,
+                        11
+                    ],
+                    "Island": [
+                        4,
+                        1
+                    ],
+                    "Lotus Petal": [
+                        12,
+                        12,
+                        12,
+                        12
+                    ],
+                    "Manamorphose": [
+                        12,
+                        12,
+                        12,
+                        12
+                    ],
+                    "Ponder": [
+                        12,
+                        12,
+                        12,
+                        12
+                    ],
+                    "Rite of Flame": [
+                        12,
+                        12,
+                        12,
+                        12
+                    ],
+                    "Seething Song": [
+                        3
+                    ],
+                    "Sign in Blood": [
+                        12,
+                        12,
+                        12,
+                        12
+                    ],
+                    "Sulfur Vent": [
+                        12,
+                        12,
+                        12,
+                        12
+                    ],
+                    "Swamp": [
+                        1,
+                        1,
+                        1
+                    ]
+                },
+                "side": {
+                    "Compulsive Research": [
+                        4,
+                        4,
+                        3
+                    ],
+                    "Deep Analysis": [
+                        7,
+                        7,
+                        6,
+                        2
+                    ],
+                    "Disfigure": [
+                        3,
+                        3,
+                        1,
+                        1
+                    ],
+                    "Doom Blade": [
+                        1,
+                        1,
+                        1
+                    ],
+                    "Duress": [
+                        11,
+                        11,
+                        6,
+                        4
+                    ],
+                    "Early Frost": [
+                        2,
+                        2,
+                        2
+                    ],
+                    "Echoing Decay": [
+                        1,
+                        1,
+                        1
+                    ],
+                    "Echoing Truth": [
+                        2,
+                        2
+                    ],
+                    "Empty the Warrens": [
+                        6
+                    ],
+                    "Flaring Pain": [
+                        4,
+                        3
+                    ],
+                    "Goblin Bushwhacker": [
+                        10,
+                        10,
+                        10,
+                        4
+                    ],
+                    "Holy Day": [
+                        2,
+                        2
+                    ],
+                    "Mob Justice": [
+                        1
+                    ],
+                    "Pyroblast": [
+                        1,
+                        1,
+                        1,
+                        1
+                    ],
+                    "Seething Song": [
+                        5,
+                        4
+                    ],
+                    "Shred Memory": [
+                        3,
+                        3,
+                        1
+                    ],
+                    "Spell Pierce": [
+                        1,
+                        1,
+                        1,
+                        1
+                    ]
+                }
+            },
+            "007": {
+                "main": {
+                    "Ancient Spring": [
+                        4,
+                        4,
+                        4,
+                        3
+                    ],
+                    "Cabal Ritual": [
+                        4,
+                        4,
+                        4,
+                        4
+                    ],
+                    "Chromatic Sphere": [
+                        4,
+                        4,
+                        4,
+                        3
+                    ],
+                    "Chromatic Star": [
+                        4,
+                        4,
+                        4,
+                        4
+                    ],
+                    "Compulsive Research": [
+                        1
+                    ],
+                    "Dark Ritual": [
+                        4,
+                        4,
+                        4,
+                        4
+                    ],
+                    "Empty the Warrens": [
+                        4,
+                        4,
+                        4,
+                        4
+                    ],
+                    "Geothermal Crevice": [
+                        2,
+                        2,
+                        1
+                    ],
+                    "Grapeshot": [
+                        4,
+                        4,
+                        4,
+                        4
+                    ],
+                    "Ideas Unbound": [
+                        4,
+                        4,
+                        4,
+                        3
+                    ],
+                    "Irrigation Ditch": [
+                        4,
+                        4,
+                        2,
+                        2
+                    ],
+                    "Lotus Petal": [
+                        4,
+                        4,
+                        4,
+                        4
+                    ],
+                    "Manamorphose": [
+                        4,
+                        4,
+                        4,
+                        4
+                    ],
+                    "Ponder": [
+                        4,
+                        4,
+                        4,
+                        4
+                    ],
+                    "Reclaim": [
+                        1
+                    ],
+                    "Rite of Flame": [
+                        4,
+                        4,
+                        4,
+                        4
+                    ],
+                    "Sign in Blood": [
+                        4,
+                        4,
+                        4,
+                        4
+                    ],
+                    "Sulfur Vent": [
+                        4,
+                        4,
+                        4,
+                        4
+                    ]
+                },
+                "side": {
+                    "Compulsive Research": [
+                        3,
+                        3,
+                        2,
+                        1
+                    ],
+                    "Deep Analysis": [
+                        1,
+                        1
+                    ],
+                    "Dimir Aqueduct": [
+                        2,
+                        2
+                    ],
+                    "Duress": [
+                        4,
+                        4,
+                        4,
+                        4
+                    ],
+                    "Echoing Decay": [
+                        2
+                    ],
+                    "Flaring Pain": [
+                        1
+                    ],
+                    "Goblin Bushwhacker": [
+                        3,
+                        3,
+                        2,
+                        2
+                    ],
+                    "Irrigation Ditch": [
+                        1
+                    ],
+                    "Martyr of Ashes": [
+                        1,
+                        1,
+                        1,
+                        1
+                    ],
+                    "Reclaim": [
+                        1
+                    ],
+                    "Shred Memory": [
+                        3,
+                        3,
+                        1,
+                        1
+                    ],
+                    "Snow-Covered Island": [
+                        1,
+                        1
+                    ]
+                }
+            },
+            "008": {
+                "main": {
+                    "Ancient Spring": [
+                        3,
+                        3,
+                        3,
+                        1
+                    ],
+                    "Cabal Ritual": [
+                        3,
+                        3,
+                        3,
+                        3
+                    ],
+                    "Chromatic Sphere": [
+                        3,
+                        3,
+                        3,
+                        1
+                    ],
+                    "Chromatic Star": [
+                        3,
+                        3,
+                        3,
+                        3
+                    ],
+                    "Compulsive Research": [
+                        2
+                    ],
+                    "Dark Ritual": [
+                        3,
+                        3,
+                        3,
+                        3
+                    ],
+                    "Empty the Warrens": [
+                        3,
+                        3,
+                        3,
+                        3
+                    ],
+                    "Geothermal Crevice": [
+                        2,
+                        2,
+                        2
+                    ],
+                    "Grapeshot": [
+                        3,
+                        3,
+                        3,
+                        3
+                    ],
+                    "Ideas Unbound": [
+                        3,
+                        3,
+                        3,
+                        1
+                    ],
+                    "Irrigation Ditch": [
+                        3,
+                        3,
+                        1,
+                        1
+                    ],
+                    "Lotus Petal": [
+                        3,
+                        3,
+                        3,
+                        3
+                    ],
+                    "Manamorphose": [
+                        3,
+                        3,
+                        3,
+                        3
+                    ],
+                    "Ponder": [
+                        3,
+                        3,
+                        3,
+                        3
+                    ],
+                    "Reclaim": [
+                        2
+                    ],
+                    "Rite of Flame": [
+                        3,
+                        3,
+                        3,
+                        3
+                    ],
+                    "Sign in Blood": [
+                        3,
+                        3,
+                        3,
+                        3
+                    ],
+                    "Sulfur Vent": [
+                        3,
+                        3,
+                        3,
+                        3
+                    ]
+                },
+                "side": {
+                    "Deep Analysis": [
+                        3,
+                        3,
+                        1,
+                        1
+                    ],
+                    "Dimir Aqueduct": [
+                        2,
+                        2
+                    ],
+                    "Disfigure": [
+                        1,
+                        1
+                    ],
+                    "Duress": [
+                        3,
+                        3,
+                        2,
+                        1
+                    ],
+                    "Flaring Pain": [
+                        2
+                    ],
+                    "Goblin Bushwhacker": [
+                        3,
+                        3,
+                        1
+                    ],
+                    "Holy Day": [
+                        1,
+                        1
+                    ],
+                    "Izzet Boilerworks": [
+                        2
+                    ],
+                    "Moment's Peace": [
+                        1
+                    ],
+                    "Shred Memory": [
+                        2,
+                        2
+                    ],
+                    "Temporal Fissure": [
+                        2,
+                        2
+                    ]
+                }
+            },
+            "009": {
+                "main": {
+                    "Ancient Spring": [
+                        2,
+                        2,
+                        2,
+                        1
+                    ],
+                    "Brainstorm": [
+                        1
+                    ],
+                    "Cabal Ritual": [
+                        2,
+                        2,
+                        2,
+                        2
+                    ],
+                    "Chromatic Sphere": [
+                        2,
+                        2,
+                        2,
+                        1
+                    ],
+                    "Chromatic Star": [
+                        2,
+                        2,
+                        2,
+                        2
+                    ],
+                    "Compulsive Research": [
+                        1
+                    ],
+                    "Dark Ritual": [
+                        2,
+                        2,
+                        2,
+                        2
+                    ],
+                    "Empty the Warrens": [
+                        2,
+                        2,
+                        2,
+                        1
+                    ],
+                    "Geothermal Crevice": [
+                        1,
+                        1,
+                        1
+                    ],
+                    "Grapeshot": [
+                        2,
+                        2,
+                        2,
+                        2
+                    ],
+                    "Ideas Unbound": [
+                        2,
+                        2,
+                        2,
+                        1
+                    ],
+                    "Irrigation Ditch": [
+                        2,
+                        2,
+                        1,
+                        1
+                    ],
+                    "Lotus Petal": [
+                        2,
+                        2,
+                        2,
+                        2
+                    ],
+                    "Manamorphose": [
+                        2,
+                        2,
+                        2,
+                        2
+                    ],
+                    "Ponder": [
+                        2,
+                        2,
+                        2,
+                        2
+                    ],
+                    "Reclaim": [
+                        1
+                    ],
+                    "Rite of Flame": [
+                        2,
+                        2,
+                        2,
+                        2
+                    ],
+                    "Sign in Blood": [
+                        2,
+                        2,
+                        2,
+                        2
+                    ],
+                    "Sulfur Vent": [
+                        2,
+                        2,
+                        2,
+                        2
+                    ]
+                },
+                "side": {
+                    "Compulsive Research": [
+                        1,
+                        1,
+                        1,
+                        1
+                    ],
+                    "Deep Analysis": [
+                        2,
+                        2,
+                        1,
+                        1
+                    ],
+                    "Dimir Aqueduct": [
+                        1,
+                        1
+                    ],
+                    "Duress": [
+                        1,
+                        1
+                    ],
+                    "Echoing Decay": [
+                        2
+                    ],
+                    "Empty the Warrens": [
+                        1
+                    ],
+                    "Flaring Pain": [
+                        2
+                    ],
+                    "Goblin Bushwhacker": [
+                        1,
+                        1
+                    ],
+                    "Izzet Boilerworks": [
+                        1
+                    ],
+                    "Seething Song": [
+                        1,
+                        1,
+                        1
+                    ],
+                    "Shred Memory": [
+                        2,
+                        1
+                    ],
+                    "Temporal Fissure": [
+                        1,
+                        1
+                    ]
+                }
+            },
+            "010": {
+                "main": {
+                    "Ancient Spring": [
+                        3,
+                        3,
+                        3,
+                        2
+                    ],
+                    "Cabal Ritual": [
+                        3,
+                        3,
+                        3,
+                        3
+                    ],
+                    "Chromatic Sphere": [
+                        3,
+                        3,
+                        3,
+                        2
+                    ],
+                    "Chromatic Star": [
+                        3,
+                        3,
+                        3,
+                        3
+                    ],
+                    "Compulsive Research": [
+                        3,
+                        1
+                    ],
+                    "Dark Ritual": [
+                        3,
+                        3,
+                        3,
+                        3
+                    ],
+                    "Empty the Warrens": [
+                        3,
+                        2,
+                        2,
+                        2
+                    ],
+                    "Geothermal Crevice": [
+                        1,
+                        1,
+                        1
+                    ],
+                    "Grapeshot": [
+                        3,
+                        3,
+                        3,
+                        3
+                    ],
+                    "Ideas Unbound": [
+                        3,
+                        3,
+                        3,
+                        1
+                    ],
+                    "Irrigation Ditch": [
+                        3,
+                        3,
+                        2,
+                        2
+                    ],
+                    "Lotus Petal": [
+                        3,
+                        3,
+                        3,
+                        3
+                    ],
+                    "Manamorphose": [
+                        3,
+                        3,
+                        3,
+                        3
+                    ],
+                    "Ponder": [
+                        3,
+                        3,
+                        3,
+                        3
+                    ],
+                    "Reclaim": [
+                        1
+                    ],
+                    "Rite of Flame": [
+                        3,
+                        3,
+                        3,
+                        3
+                    ],
+                    "Shred Memory": [
+                        1
+                    ],
+                    "Sign in Blood": [
+                        3,
+                        3,
+                        3,
+                        3
+                    ],
+                    "Sulfur Vent": [
+                        3,
+                        3,
+                        3,
+                        3
+                    ]
+                },
+                "side": {
+                    "Deep Analysis": [
+                        3,
+                        3,
+                        2,
+                        1
+                    ],
+                    "Dimir Aqueduct": [
+                        2,
+                        2
+                    ],
+                    "Dispel": [
+                        1,
+                        1,
+                        1,
+                        1
+                    ],
+                    "Duress": [
+                        3,
+                        3,
+                        3,
+                        1
+                    ],
+                    "Echoing Decay": [
+                        1
+                    ],
+                    "Echoing Truth": [
+                        1,
+                        1,
+                        1
+                    ],
+                    "Flaring Pain": [
+                        2
+                    ],
+                    "Goblin Bushwhacker": [
+                        1,
+                        1
+                    ],
+                    "Izzet Boilerworks": [
+                        2
+                    ],
+                    "Pyroblast": [
+                        1,
+                        1
+                    ],
+                    "Shred Memory": [
+                        2,
+                        2
+                    ],
+                    "Temporal Fissure": [
+                        1,
+                        1
+                    ]
+                }
+            },
+            "011": {
                 "main": {
                     "Ancient Spring": [
                         2,
@@ -87,12 +924,15 @@
                         2,
                         2,
                         2,
-                        2
+                        1
                     ],
                     "Chromatic Star": [
                         2,
                         2,
                         2,
+                        1
+                    ],
+                    "Compulsive Research": [
                         1
                     ],
                     "Dark Ritual": [
@@ -105,9 +945,16 @@
                         2,
                         2,
                         2,
-                        1
+                        2
                     ],
                     "Geothermal Crevice": [
+                        2,
+                        2,
+                        1,
+                        1
+                    ],
+                    "Goblin Bushwhacker": [
+                        2,
                         1
                     ],
                     "Grapeshot": [
@@ -119,20 +966,20 @@
                     "Ideas Unbound": [
                         2,
                         2,
-                        2,
-                        2
+                        1
                     ],
                     "Irrigation Ditch": [
-                        2,
-                        2,
-                        2,
+                        1,
+                        1
+                    ],
+                    "Island": [
                         1
                     ],
                     "Lotus Petal": [
                         2,
                         2,
                         2,
-                        2
+                        1
                     ],
                     "Manamorphose": [
                         2,
@@ -140,10 +987,16 @@
                         2,
                         2
                     ],
+                    "Ponder": [
+                        2,
+                        2,
+                        2,
+                        2
+                    ],
                     "Preordain": [
-                        2,
-                        2,
-                        2,
+                        1,
+                        1,
+                        1,
                         1
                     ],
                     "Rite of Flame": [
@@ -152,22 +1005,24 @@
                         2,
                         2
                     ],
-                    "Shred Memory": [
+                    "Seething Song": [
+                        1
+                    ],
+                    "Sign in Blood": [
+                        1,
                         1,
                         1,
                         1
                     ],
-                    "Sign in Blood": [
-                        2,
-                        2,
-                        2,
-                        2
-                    ],
                     "Sulfur Vent": [
                         2,
                         2,
-                        2,
-                        2
+                        1,
+                        1
+                    ],
+                    "Tinder Farm": [
+                        1,
+                        1
                     ]
                 },
                 "side": {
@@ -183,27 +1038,215 @@
                         2,
                         1
                     ],
+                    "Early Frost": [
+                        1,
+                        1
+                    ],
                     "Echoing Decay": [
                         1
                     ],
                     "Echoing Truth": [
-                        2
-                    ],
-                    "Flaring Pain": [
-                        2,
+                        1,
                         1
                     ],
-                    "Geothermal Crevice": [
-                        2,
-                        1,
+                    "Flaring Pain": [
                         1
                     ],
                     "Goblin Bushwhacker": [
+                        1
+                    ],
+                    "Ideas Unbound": [
+                        1
+                    ],
+                    "Island": [
+                        1
+                    ],
+                    "Mana Leak": [
                         1,
+                        1,
+                        1,
+                        1
+                    ],
+                    "Reclaim": [
+                        1,
+                        1
+                    ],
+                    "Seething Song": [
+                        1
+                    ],
+                    "Shred Memory": [
+                        1,
+                        1
+                    ],
+                    "Temporal Fissure": [
+                        1
+                    ]
+                }
+            },
+            "012": {
+                "main": {
+                    "Ancient Spring": [
+                        4,
+                        4,
+                        4,
+                        4
+                    ],
+                    "Cabal Ritual": [
+                        4,
+                        4,
+                        4,
+                        4
+                    ],
+                    "Chromatic Sphere": [
+                        4,
+                        4,
+                        3,
+                        3
+                    ],
+                    "Chromatic Star": [
+                        4,
+                        4,
+                        4,
+                        3
+                    ],
+                    "Dark Ritual": [
+                        4,
+                        4,
+                        4,
+                        4
+                    ],
+                    "Dimir Aqueduct": [
+                        1,
+                        1
+                    ],
+                    "Empty the Warrens": [
+                        4,
+                        4,
+                        3,
+                        2
+                    ],
+                    "Geothermal Crevice": [
+                        3,
+                        2
+                    ],
+                    "Grapeshot": [
+                        4,
+                        4,
+                        4,
+                        4
+                    ],
+                    "Ideas Unbound": [
+                        4,
+                        4,
+                        3,
+                        3
+                    ],
+                    "Irrigation Ditch": [
+                        4,
+                        4,
+                        2,
+                        1
+                    ],
+                    "Lotus Petal": [
+                        4,
+                        4,
+                        4,
+                        4
+                    ],
+                    "Manamorphose": [
+                        4,
+                        4,
+                        4,
+                        4
+                    ],
+                    "Ponder": [
+                        2,
+                        2,
+                        2,
+                        2
+                    ],
+                    "Preordain": [
+                        3,
+                        3,
+                        2,
+                        1
+                    ],
+                    "Rite of Flame": [
+                        4,
+                        4,
+                        4,
+                        4
+                    ],
+                    "Shred Memory": [
+                        2,
+                        2,
+                        1
+                    ],
+                    "Sign in Blood": [
+                        4,
+                        4,
+                        4,
+                        4
+                    ],
+                    "Sulfur Vent": [
+                        4,
+                        4,
+                        4,
+                        4
+                    ]
+                },
+                "side": {
+                    "Brainstorm": [
+                        1,
+                        1
+                    ],
+                    "Deep Analysis": [
+                        2,
+                        2,
+                        2,
+                        2
+                    ],
+                    "Dimir Aqueduct": [
+                        1
+                    ],
+                    "Duress": [
+                        4,
+                        4,
+                        3,
+                        2
+                    ],
+                    "Echoing Decay": [
+                        2
+                    ],
+                    "Echoing Truth": [
+                        3
+                    ],
+                    "Empty the Warrens": [
+                        1
+                    ],
+                    "Flaring Pain": [
+                        4,
+                        1
+                    ],
+                    "Geothermal Crevice": [
+                        3,
+                        2,
+                        1
+                    ],
+                    "Goblin Bushwhacker": [
+                        2,
+                        2,
+                        1
+                    ],
+                    "Izzet Boilerworks": [
+                        1
+                    ],
+                    "Preordain": [
                         1,
                         1
                     ],
                     "Pyroblast": [
+                        2,
                         1
                     ],
                     "Seething Song": [
@@ -211,9 +1254,9 @@
                         1
                     ],
                     "Shred Memory": [
-                        1,
-                        1,
-                        1
+                        2,
+                        2,
+                        2
                     ]
                 }
             },
@@ -9659,8 +10702,56 @@
         "started_by_bans": [],
         "timeline": [
             {
-                "date": "2010-10-01",
+                "date": "2009-10-02",
+                "decks": 12,
+                "label": "zen",
+                "metagame": "006",
+                "name": "Zendikar",
+                "py/object": "pauperformance_bot.entity.api.archetype.MetagameRef"
+            },
+            {
+                "date": "2010-02-05",
+                "decks": 4,
+                "label": "wwk",
+                "metagame": "007",
+                "name": "Worldwake",
+                "py/object": "pauperformance_bot.entity.api.archetype.MetagameRef"
+            },
+            {
+                "date": "2010-04-23",
+                "decks": 3,
+                "label": "roe",
+                "metagame": "008",
+                "name": "Rise of the Eldrazi",
+                "py/object": "pauperformance_bot.entity.api.archetype.MetagameRef"
+            },
+            {
+                "date": "2010-06-18",
                 "decks": 2,
+                "label": "arc",
+                "metagame": "009",
+                "name": "Archenemy",
+                "py/object": "pauperformance_bot.entity.api.archetype.MetagameRef"
+            },
+            {
+                "date": "2010-07-16",
+                "decks": 3,
+                "label": "m11",
+                "metagame": "010",
+                "name": "Magic 2011",
+                "py/object": "pauperformance_bot.entity.api.archetype.MetagameRef"
+            },
+            {
+                "date": "2010-09-03",
+                "decks": 2,
+                "label": "ddf",
+                "metagame": "011",
+                "name": "Duel Decks: Elspeth vs. Tezzeret",
+                "py/object": "pauperformance_bot.entity.api.archetype.MetagameRef"
+            },
+            {
+                "date": "2010-10-01",
+                "decks": 4,
                 "label": "som",
                 "metagame": "012",
                 "name": "Scars of Mirrodin",

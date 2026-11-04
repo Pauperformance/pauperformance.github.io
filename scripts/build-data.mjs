@@ -267,7 +267,21 @@ function parseDecklist(txt) {
   return { main: main, side: side }
 }
 
-const tournamentDeckDir = 'assets/data/deck/mtggoldfish_tournament'
+// The tournament deck sources: deck lists (<id>.txt) and their metadata
+// (<id>.json). MTGGoldfish, and the older Pauper events of the Wayback Machine
+// (ids <mtgo_id>-<n>): ids don't collide across sources.
+const tournamentDeckSources = [
+  { decks: 'assets/data/deck/mtggoldfish_tournament', meta: 'assets/data/tournament/mtggoldfish/deck' },
+  { decks: 'assets/data/deck/waybackmachine_tournament', meta: 'assets/data/tournament/waybackmachine/deck' },
+]
+// the deck list of a tournament deck id, from the source holding it
+function tournamentDeckTxtPath(id) {
+  for (var si = 0; si < tournamentDeckSources.length; si++) {
+    var p = join(tournamentDeckSources[si].decks, id + '.txt')
+    if (existsSync(p)) return p
+  }
+  return join(tournamentDeckSources[0].decks, id + '.txt')
+}
 const cardDecksMap = {}
 
 // Snapshot existing deck-detail IDs to detect deletions
@@ -300,7 +314,7 @@ for (const archetype of archetypes) {
       const id = f.slice(0, -5)
       const inputPath = join(folder, f)
       const outputPath = join(deckDetailsDir, id + '.json')
-      const txtPath = join(tournamentDeckDir, id + '.txt')
+      const txtPath = tournamentDeckTxtPath(id)
 
       activeDeckIds.add(id)
 
@@ -390,14 +404,15 @@ for (const archetype of archetypes) {
 // Tournament decks no archetype claims (yet): they still count in the card
 // popularity, so their decklists go in the deck-details and the card-decks too,
 // with no archetype. Not in the archetype, player or intel files.
-const tournamentMetaDir = 'assets/data/tournament/mtggoldfish/deck'
 var unclassifiedCount = 0
-if (existsSync(tournamentMetaDir)) {
+for (const source of tournamentDeckSources) {
+  const tournamentMetaDir = source.meta
+  if (!existsSync(tournamentMetaDir)) continue
   var tmFiles = readdirSync(tournamentMetaDir).filter(function(f) { return f.endsWith('.json') })
   for (var ui = 0; ui < tmFiles.length; ui++) {
     var uid = tmFiles[ui].slice(0, -5)
     if (activeDeckIds.has(uid)) continue
-    var utxtPath = join(tournamentDeckDir, uid + '.txt')
+    var utxtPath = join(source.decks, uid + '.txt')
     if (!existsSync(utxtPath)) continue
     var uinput = join(tournamentMetaDir, tmFiles[ui])
     var uoutput = join(deckDetailsDir, uid + '.json')
@@ -433,8 +448,8 @@ if (existsSync(tournamentMetaDir)) {
       cardDecksMap[un].push(umeta)
     }
   }
-  console.log('Unclassified tournament decks with a decklist: ' + unclassifiedCount + '.')
 }
+console.log('Unclassified tournament decks with a decklist: ' + unclassifiedCount + '.')
 
 // Handle deleted decks: remove stale deck-detail files, mark their cards dirty
 var deletedCount = 0
@@ -589,7 +604,7 @@ if (existsSync('assets/data/newspauper.json')) {
 }
 
 // Card popularity: Myr's ranking of the cards played in each metagame's
-// MTGGoldfish tournament decks (its export_card_popularity, missing until its
+// tournament decks (its export_card_popularity, missing until its
 // first export), as assets/data/card_popularity/<metagame>.json, each listing
 // only the cards played there: { name, decks, rank }, rank 1 the most played.
 const cardPopularityDir = 'assets/data/card_popularity'
