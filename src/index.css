@@ -21,22 +21,6 @@
   --color-amber-200: #f0c57a;
 }
 
-.card-image-clip {
-  clip-path: inset(30px 15px 20px 15px);
-}
-
-@media (max-width: 800px) {
-  .card-image-clip {
-    clip-path: inset(40px 15px 20px 15px);
-  }
-}
-
-@media (min-width: 801px) and (max-width: 1280px) {
-  .card-image-clip {
-    clip-path: inset(35px 15px 20px 15px);
-  }
-}
-
 /* Brainstorm glyph ring (pages/Home.jsx): the glyph at rest in front flares
    and keeps glowing, and light spreads out under its archetype card */
 @keyframes glyph-select {
@@ -122,3 +106,4 @@
     animation: none;
   }
 }
+

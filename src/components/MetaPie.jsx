@@ -3,12 +3,19 @@ import { createPortal } from 'react-dom'
 import { Link } from 'react-router-dom'
 import { nameToSlug } from '../utils/slugs'
 
-const CHART_COLORS = [
+// The slices' colours, by rank: 8 warm ones, then the same 8 again and again,
+// each time with more white
+function mix(hex, to, amount) {
+  const c = [1, 3, 5].map(i => parseInt(hex.slice(i, i + 2), 16))
+  return '#' + c.map(v => Math.round(v + (to - v) * amount).toString(16).padStart(2, '0')).join('')
+}
+const BASE_COLORS = [
   '#ff6a39', '#e6a65d', '#956c58', '#ff9e78', '#c87340',
-  '#d4855a', '#ffb899', '#7a4a46', '#b07060',
+  '#d4855a', '#ffb899', '#7a4a46',
 ]
+export const CHART_COLORS = [0, 0.18, 0.36, 0.54].flatMap(white => BASE_COLORS.map(c => white ? mix(c, 255, white) : c))
 const OTHER_COLOR = '#3d2a2b'
-const SHOWN_SLICES = 8
+const SHOWN_SLICES = CHART_COLORS.length
 
 function DonutChart({ data, activeIndex, onSliceEnter, onSliceLeave }) {
   const [tooltip, setTooltip] = useState(null)
@@ -70,22 +77,24 @@ function DonutChart({ data, activeIndex, onSliceEnter, onSliceLeave }) {
 // The donut of the most played archetypes (the rest as Other) beside the list
 // of archetypes and their shares. shares: [{ archetype_name, meta_share }],
 // most played first. Archetypes under minListedShare (%) are listed as one
-// Other row. listClassName, listStyle: the list's grid, sized to its length.
-export default function MetaPie({ shares, minListedShare = 0, listClassName, listStyle }) {
+// Other row. listClassName, listStyle: the list's grid, sized to its length;
+// rowClassName: each row's.
+export default function MetaPie({ shares, minListedShare = 0, listClassName, listStyle, rowClassName = '' }) {
   const [activeIndex, setActiveIndex] = useState(undefined)
 
-  const top = shares.slice(0, SHOWN_SLICES)
-  const otherShare = shares.slice(SHOWN_SLICES).reduce((s, d) => s + d.meta_share, 0)
+  // the archetypes under minListedShare are Other in the donut too
+  const listed = shares.filter(d => d.meta_share >= minListedShare)
+  const unlisted = shares.slice(listed.length)
+  const top = listed.slice(0, SHOWN_SLICES)
+  const otherShare = shares.slice(top.length).reduce((s, d) => s + d.meta_share, 0)
   const chartData = [
     ...top.map((d, i) => ({ name: d.archetype_name, value: +d.meta_share.toFixed(1), color: CHART_COLORS[i] })),
     ...(otherShare > 0 ? [{ name: 'Other', value: +otherShare.toFixed(1), color: OTHER_COLOR }] : []),
   ]
-  const listed = shares.filter(d => d.meta_share >= minListedShare)
-  const unlisted = shares.slice(listed.length)
   const maxShare = shares[0].meta_share
 
   const row = (key, color, label, pct, onEnter) => (
-    <div key={key} className="flex items-center gap-2 group min-w-0"
+    <div key={key} className={`flex items-center gap-2 group min-w-0 ${rowClassName}`}
       onMouseEnter={onEnter}
       onMouseLeave={() => setActiveIndex(undefined)}>
       <span className="w-2.5 h-2.5 rounded-full shrink-0" style={{ background: color }} />
@@ -106,7 +115,7 @@ export default function MetaPie({ shares, minListedShare = 0, listClassName, lis
   return (
     <div className="bg-gray-800 border border-gray-700 rounded-xl p-5">
       <div className="flex flex-col sm:flex-row gap-6 items-start">
-        <div className="w-full sm:w-56 shrink-0 h-56">
+        <div className="w-full sm:w-56 shrink-0 h-56 sm:-mt-3">
           <DonutChart
             data={chartData}
             activeIndex={activeIndex}
@@ -133,7 +142,9 @@ export default function MetaPie({ shares, minListedShare = 0, listClassName, lis
             'other',
             OTHER_COLOR,
             <span className="text-sm text-gray-500 flex-1">
-              Other ({unlisted.length} archetype{unlisted.length === 1 ? '' : 's'})
+              {minListedShare > 0
+                ? `Other (under ${minListedShare}%)`
+                : `Other (${unlisted.length} archetype${unlisted.length === 1 ? '' : 's'})`}
             </span>,
             +unlisted.reduce((s, d) => s + d.meta_share, 0).toFixed(1),
             () => setActiveIndex(SHOWN_SLICES),

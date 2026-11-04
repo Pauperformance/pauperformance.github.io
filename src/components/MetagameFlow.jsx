@@ -2,6 +2,7 @@ import { useState, useEffect, useLayoutEffect, useMemo, useRef, useCallback } fr
 import { Link, useSearchParams } from 'react-router-dom'
 import CardLink from './PoolCardLink'
 import ShareChange from './ShareChange'
+import { CHART_COLORS } from './MetaPie'
 import { formatDate, formatShortDate, daysBetween, formatDays } from '../utils/dates'
 import { metagameSlug, nameToSlug } from '../utils/slugs'
 import { scrollGently } from '../utils/scroll'
@@ -20,41 +21,21 @@ const HOLD = 0.6
 const ROW_PX = 26          // a row of the bars
 const MAX_PHONE_ROW_PX = 40 // ... and as tall as it gets on phones, where the rows fill the screen
 const MIN_ROW_PX = 20      // ... as short as it gets, to leave room for the movers
-const MAX_LISTED = 16      // archetypes listed by the bars (the rest are in Other); the pie shows them all
+const MAX_LISTED = 16      // archetypes listed by the bars (the rest are in Other) (the pie too)
 const MOVERS_MIN_PX = 176  // the least height of the movers
 
-const MANA_ORDER = ['W', 'U', 'B', 'R', 'G', 'C']
-// [hue, saturation, lightness] of each mana, readable on the dark background
-const MANA_HSL = {
-  W: [45, 45, 80], U: [207, 60, 55], B: [285, 12, 52],
-  R: [12, 72, 54], G: [140, 42, 44], C: [30, 10, 64],
-}
-const BREW_COLOR = '#7a5e58'
+// Bake into a Pie's colours, by rank: the most played archetype takes the
+// first, and so on, up to the 16 the bars list; the archetypes the bars leave
+// to Other take Other's colour in the pie too
+const FLOW_COLORS = CHART_COLORS
+// (an alternative, with other hues: '#f5d08a', '#b5442e', '#d9b8a0', '#c9a24a',
+// '#e8806a', '#8c5a3c', '#ffcf99', '#9c4a52', '#d97a3f' after Bake into a Pie's 9)
 const OTHER_COLOR = '#3d2a2b'
 
 function hash(s) {
   let h = 0
   for (let i = 0; i < s.length; i++) h = (h * 31 + s.charCodeAt(i)) | 0
   return Math.abs(h)
-}
-
-// The archetype's colours, one per mana: shaded by its name, so that two
-// archetypes of the same mana tell apart.
-function archetypeColors(name, mana) {
-  if (!mana.length) return [BREW_COLOR]
-  const shift = (hash(name) % 5 - 2) * 5
-  return MANA_ORDER.filter(c => mana.includes(c)).map(c => {
-    const [h, s, l] = MANA_HSL[c]
-    return `hsl(${h} ${s}% ${l + shift}%)`
-  })
-}
-
-// Slices keep their place from one metagame to the next: mono-coloured first
-// (white to green, then colourless), then by number of colours, Brew last.
-function sliceOrder(name, mana) {
-  if (!mana.length) return 'z'
-  const colors = mana.map(c => MANA_ORDER.indexOf(c)).sort().join('')
-  return `${mana.length}-${colors}-${name}`
 }
 
 function cssFill(colors) {
@@ -300,11 +281,37 @@ function MoverTile({ card, cardPages, bindPreview }) {
     : <span {...handlers} title={title} className={className}>{content}</span>
 }
 
+// The same card as a line of text, for the screens too narrow for the artwork:
+// its name and how it moved (or how much it is played).
+function MoverRow({ card, cardPages, bindPreview }) {
+  const slug = cardLinkSlug(cardPages, card.name)
+  const image = card.image
+    || `https://api.scryfall.com/cards/named?exact=${encodeURIComponent(card.name)}&format=image&version=normal`
+  const handlers = bindPreview(card.name, { slug: slug || undefined, image })
+  const compared = card.previous_share !== undefined
+  const change = compared ? card.share - card.previous_share : 0
+  const title = compared
+    ? `${card.name}: in ${card.share.toFixed(1)}% of the decks, ${card.previous_share.toFixed(1)}% in the previous metagame`
+    : `${card.name}: in ${card.share.toFixed(1)}% of the decks`
+  const content = (
+    <>
+      <span className="truncate min-w-0 flex-1 text-gray-300 group-hover:text-amber-400 transition-colors">{card.name}</span>
+      <span className={`shrink-0 font-mono tabular-nums ${!compared ? 'text-amber-400' : change > 0 ? 'text-emerald-400' : 'text-rose-400'}`}>
+        {compared ? `${change > 0 ? '▲' : '▼'} ${Math.abs(change).toFixed(1)}%` : `${card.share.toFixed(1)}%`}
+      </span>
+    </>
+  )
+  const className = 'group flex items-baseline gap-2 min-w-0 text-[13px] leading-5'
+  return slug
+    ? <Link to={`/cards/${slug}`} {...handlers} title={title} className={className}>{content}</Link>
+    : <span {...handlers} title={title} className={className}>{content}</span>
+}
+
 // The metagame's top movers (or, without a previous metagame with decks, its
 // top cards): the cards that gained and lost the most presence in the decks,
 // the rising and the falling side by side, filling the room they have: the
 // tiles grow with it.
-function Movers({ movers, bindPreview }) {
+function Movers({ movers, bindPreview, compact }) {
   const cardPages = useCardPages()
   const groups = movers.top
     ? [['Top Cards', movers.top]]
@@ -314,8 +321,12 @@ function Movers({ movers, bindPreview }) {
       {groups.filter(([, cards]) => cards.length > 0).map(([title, cards]) => (
         <div key={title} className="min-w-0 min-h-0 flex flex-col">
           <p className="text-xs uppercase tracking-widest text-gray-400 mb-1.5">{title}</p>
-          <div className={`flex-1 min-h-0 grid gap-2 ${movers.top ? 'grid-cols-10 grid-rows-1' : 'grid-cols-5 grid-rows-2'}`}>
-            {cards.map(c => <MoverTile key={c.name} card={c} cardPages={cardPages} bindPreview={bindPreview} />)}
+          <div className={compact
+            ? 'grid grid-cols-2 grid-rows-5 grid-flow-col gap-x-4 gap-y-0.5 content-start'
+            : `flex-1 min-h-0 grid gap-2 ${movers.top ? 'grid-cols-10 grid-rows-1' : 'grid-cols-5 grid-rows-2'}`}>
+            {cards.map(c => compact
+              ? <MoverRow key={c.name} card={c} cardPages={cardPages} bindPreview={bindPreview} />
+              : <MoverTile key={c.name} card={c} cardPages={cardPages} bindPreview={bindPreview} />)}
           </div>
         </div>
       ))}
@@ -439,15 +450,6 @@ export default function MetagameFlow({ index, poolUrls, bindPreview }) {
   // the oldest metagame with decks
   const firstData = steps.findLastIndex(s => s.data)
 
-  // every archetype's colours and place in the donut
-  const archetypes = useMemo(() => {
-    const byName = new Map()
-    if (!flow) return byName
-    const names = Object.keys(flow.mana).sort((a, b) =>
-      sliceOrder(a, flow.mana[a]).localeCompare(sliceOrder(b, flow.mana[b])))
-    names.forEach((name, i) => byName.set(name, { order: i, colors: archetypeColors(name, flow.mana[name]) }))
-    return byName
-  }, [flow])
   // the bars share one scale through time: the largest share of an archetype
   const scale = useMemo(() => Math.max(1, ...steps.filter(s => s.data).flatMap(s =>
     s.data.shares.map(([, v]) => v))), [steps])
@@ -562,9 +564,11 @@ export default function MetagameFlow({ index, poolUrls, bindPreview }) {
     observer.observe(fitEl)
     return () => observer.disconnect()
   }, [fitEl])
-  // desktops only: smaller screens have room for the pie or the bars alone
+  // desktops only: smaller screens have room for the pie or the bars alone;
+  // below 1280px the movers are lines of text, without the artwork
+  const desktop = useMediaQuery('(min-width: 1024px)')
   const wide = useMediaQuery('(min-width: 1280px)')
-  const movers = useCardMovers(step ? step.slug : null, wide && !!(step && step.data))
+  const movers = useCardMovers(step ? step.slug : null, desktop && !!(step && step.data))
   // phones only: the events take the room of the bars, so they open on demand
   // (and stay open while scrolling)
   const [eventsOpen, setEventsOpen] = useState(false)
@@ -583,12 +587,12 @@ export default function MetagameFlow({ index, poolUrls, bindPreview }) {
     if (g) for (const [n, v] of following.data.shares) values.set(n, (values.get(n) || 0) + g * v)
     other = (1 - g) * shown.other + (g ? g * following.data.other : 0)
     rows = [...values].filter(([, v]) => v > 0.05)
-      .map(([name, value]) => ({ name, value, ...archetypes.get(name) }))
-      .sort((a, b) => a.order - b.order)
+      .map(([name, value]) => ({ name, value }))
   }
-  // the bars list the MAX_LISTED most played archetypes; the pie shows them all,
-  // and the bars' Other has the rest (hovering one the bars don't list lights Other)
+  // the bars and the pie share the MAX_LISTED most played archetypes, and
+  // their Other has the rest (hovering one the bars don't list lights Other)
   const mostPlayed = [...rows].sort((a, b) => b.value - a.value)
+    .map((r, i) => ({ ...r, colors: [FLOW_COLORS[i % FLOW_COLORS.length]] }))
   const listed = mostPlayed.slice(0, MAX_LISTED)
   const extra = mostPlayed.slice(MAX_LISTED)
   const extraNames = new Set(extra.map(r => r.name))
@@ -598,7 +602,7 @@ export default function MetagameFlow({ index, poolUrls, bindPreview }) {
   // the bars take the same height in every metagame, so that what is under them
   // stays in place: with the movers, as short as needs be to leave them room
   // (the stage less its padding, the metagame's card (sm:h-48) and the gaps)
-  const rowPx = wide
+  const rowPx = desktop
     ? Math.max(MIN_ROW_PX, Math.min(ROW_PX, Math.floor((stageHeight - 32 - 192 - 32 - MOVERS_MIN_PX) / (MAX_LISTED + 1))))
     : phone && fitHeight
       // the rows fill the screen: MAX_LISTED archetypes and Other
@@ -652,7 +656,7 @@ export default function MetagameFlow({ index, poolUrls, bindPreview }) {
               <div ref={setFitEl} className={`${movers ? 'shrink-0' : 'flex-1'} min-h-0 flex flex-col lg:flex-row gap-4 lg:gap-6`}>
                 {/* no room for it on phones: the bars tell the same */}
                 <div className="hidden sm:block shrink-0 sm:w-56 sm:h-56 lg:w-72 lg:h-72 xl:w-80 xl:h-80 mx-auto lg:mx-0">
-                  <Donut slices={rows} other={other} otherTotal={otherTotal} extra={extraNames} hovered={hovered} onHover={setHovered}
+                  <Donut slices={listed} other={otherTotal} otherTotal={otherTotal} extra={extraNames} hovered={hovered} onHover={setHovered}
                     center={{ value: step.data.decks.toLocaleString(), label: 'decks' }} />
                 </div>
                 <div className="flex-1 min-w-0 min-h-0 overflow-hidden">
@@ -663,7 +667,7 @@ export default function MetagameFlow({ index, poolUrls, bindPreview }) {
               {/* desktops: in the room under the pie and the bars */}
               {movers && (
                 <div className="flex-1 min-h-0 overflow-y-auto flex flex-col">
-                  <Movers movers={movers} bindPreview={bindPreview} />
+                  <Movers movers={movers} bindPreview={bindPreview} compact={!wide} />
                 </div>
               )}
             </div>
@@ -682,7 +686,7 @@ export default function MetagameFlow({ index, poolUrls, bindPreview }) {
           )}
         </div>
 
-        <div className="w-24 sm:w-32 lg:w-72 xl:w-80 shrink-0">
+        <div className="w-24 sm:w-32 lg:w-52 shrink-0">
           <Timeline steps={steps} position={position} current={current} onPick={i => scrollToStep(i)} />
         </div>
       </div>

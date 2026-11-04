@@ -378,6 +378,39 @@ export default function MetagamePage() {
                     listClassName="grid grid-cols-2 lg:grid-cols-3 gap-x-4 gap-y-1.5 content-start" />
                 </section>
 
+                <section>
+                  <h2 className="text-xl font-semibold text-white mb-1">Archetypes</h2>
+                  <p className="text-sm text-gray-400 mb-4">
+                    Archetypes with at least {MIN_SHARE}% of the decks, with popularity change since the previous
+                    metagame{metagame.previous && (
+                      <>
+                        {' '}(<Link to={`/metagames/${metagameSlug(metagame.previous)}`}
+                          className="text-amber-400 hover:text-amber-300 transition-colors">
+                          <span className="font-mono">{metagame.previous.metagame}.{metagame.previous.label}</span>, {metagame.previous.name}
+                        </Link>)
+                      </>
+                    )}.
+                  </p>
+                  <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 2xl:grid-cols-5 gap-3">
+                    {shown.map((a, i) => (
+                      <ArchetypeCard key={a.name} archetype={a} rank={i + 1} cardPages={cardPages} bindPreview={bindPreview} />
+                    ))}
+                  </div>
+                  {small.length > 0 && (
+                    <div className="mt-4 space-y-3">
+                      <div className="flex justify-center">
+                        <button onClick={() => setShowSmall(s => !s)}
+                          className="px-4 py-2 rounded-lg border border-gray-700 bg-gray-800 text-sm text-gray-300 hover:border-amber-400/50 hover:text-amber-400 transition-colors">
+                          {showSmall
+                            ? 'Hide the smaller archetypes'
+                            : `Show ${small.length} archetype${small.length === 1 ? '' : 's'} under ${MIN_SHARE}%`}
+                        </button>
+                      </div>
+                      {showSmall && <SmallArchetypes archetypes={small} />}
+                    </div>
+                  )}
+                </section>
+
                 {metagame.card_movers && (metagame.card_movers.top || metagame.card_movers.up.length > 0 || metagame.card_movers.down.length > 0) && (
                   <section>
                     <h2 className="text-xl font-semibold text-white mb-1">
@@ -415,39 +448,6 @@ export default function MetagamePage() {
                     <CardMovers movers={metagame.card_movers} cardPages={cardPages} bindPreview={bindPreview} />
                   </section>
                 )}
-
-                <section>
-                  <h2 className="text-xl font-semibold text-white mb-1">Archetypes</h2>
-                  <p className="text-sm text-gray-400 mb-4">
-                    Archetypes with at least {MIN_SHARE}% of the decks, with popularity change since the previous
-                    metagame{metagame.previous && (
-                      <>
-                        {' '}(<Link to={`/metagames/${metagameSlug(metagame.previous)}`}
-                          className="text-amber-400 hover:text-amber-300 transition-colors">
-                          <span className="font-mono">{metagame.previous.metagame}.{metagame.previous.label}</span>, {metagame.previous.name}
-                        </Link>)
-                      </>
-                    )}.
-                  </p>
-                  <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 2xl:grid-cols-5 gap-3">
-                    {shown.map((a, i) => (
-                      <ArchetypeCard key={a.name} archetype={a} rank={i + 1} cardPages={cardPages} bindPreview={bindPreview} />
-                    ))}
-                  </div>
-                  {small.length > 0 && (
-                    <div className="mt-4 space-y-3">
-                      <div className="flex justify-center">
-                        <button onClick={() => setShowSmall(s => !s)}
-                          className="px-4 py-2 rounded-lg border border-gray-700 bg-gray-800 text-sm text-gray-300 hover:border-amber-400/50 hover:text-amber-400 transition-colors">
-                          {showSmall
-                            ? 'Hide the smaller archetypes'
-                            : `Show ${small.length} archetype${small.length === 1 ? '' : 's'} under ${MIN_SHARE}%`}
-                        </button>
-                      </div>
-                      {showSmall && <SmallArchetypes archetypes={small} />}
-                    </div>
-                  )}
-                </section>
               </>
             )}
           </>
