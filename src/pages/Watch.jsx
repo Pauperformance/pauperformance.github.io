@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom'
 import Layout from '../components/Layout'
 import { useSearchShortcut, searchShortcutLabel } from '../utils/useSearchShortcut'
 import { nameToSlug } from '../utils/slugs'
-import { formatShortDate } from '../utils/dates'
+import { firstYearOf, formatShortDate } from '../utils/dates'
 import { LANG_FLAG, LANG_CANONICAL, LANG_NAME } from '../utils/languages'
 import VideoCard from '../components/VideoCard'
 
@@ -27,11 +27,13 @@ function FilterButton({ active, onClick, children }) {
   )
 }
 
-function MonthPicker({ label, value, onChange, labelClass = 'w-16' }) {
+function MonthPicker({ label, value, onChange, labelClass = 'w-16', firstYear }) {
   const [year, setYear] = useState(value ? value.split('-')[0] : '')
   const [month, setMonth] = useState(value ? value.split('-')[1] : '')
   const currentYear = new Date().getFullYear()
-  const years = Array.from({ length: currentYear - 2018 }, (_, i) => String(2019 + i))
+  // from the oldest entry of the table (firstYearOf), this year until it loads
+  const fromYear = firstYear ?? currentYear
+  const years = Array.from({ length: currentYear - fromYear + 1 }, (_, i) => String(fromYear + i))
 
   useEffect(() => {
     setYear(value ? value.split('-')[0] : '')
@@ -168,6 +170,8 @@ export default function Watch() {
       return true
     })
   }, [videos, search, activeCreators, activeLanguages, activeArchetypes, activeType, filterDateFrom, filterDateTo])
+
+  const firstYear = useMemo(() => firstYearOf(videos, 'date'), [videos])
 
   // Reset paging whenever filters change
   useEffect(() => {
@@ -384,8 +388,8 @@ export default function Watch() {
             )}
           </div>
           <div ref={dateRowRef} className="flex flex-wrap items-center gap-4">
-            <MonthPicker label="From:" value={filterDateFrom} onChange={v => setFilterDateFrom(v)} />
-            <MonthPicker label="To:" value={filterDateTo} onChange={v => setFilterDateTo(v)} labelClass={toWrapped ? 'w-16' : ''} />
+            <MonthPicker label="From:" value={filterDateFrom} onChange={v => setFilterDateFrom(v)} firstYear={firstYear} />
+            <MonthPicker label="To:" value={filterDateTo} onChange={v => setFilterDateTo(v)} labelClass={toWrapped ? 'w-16' : ''} firstYear={firstYear} />
             <div className="flex gap-1.5 flex-wrap">
               {[{ label: 'Last week', days: 7 }, { label: 'Last month', days: 30 }, { label: 'Last year', days: 365 }].map(({ label, days }) => (
                 <button key={label} onClick={() => applyRange(days)}

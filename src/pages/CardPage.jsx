@@ -6,7 +6,7 @@ import { AppearanceRow, MetagameBadge } from '../components/Metagame'
 import CardPopularityChart, { PopularityTrend } from '../components/CardPopularityChart'
 import { fullCardSlug } from '../utils/cardPages'
 import { nameToSlug } from '../utils/slugs'
-import { formatShortDate } from '../utils/dates'
+import { firstYearOf, formatShortDate } from '../utils/dates'
 
 const MANA_ICONS = new Set([
   'W', 'U', 'B', 'R', 'G', 'C',
@@ -106,11 +106,13 @@ const PAGE_SIZE = 20
 const MONTHS = ['Jan','Feb','Mar','Apr','May','Jun','Jul','Aug','Sep','Oct','Nov','Dec']
 const SELECT_CLS = 'bg-gray-800 border border-gray-600 rounded-lg px-2 py-1.5 text-sm text-gray-100 focus:outline-none focus:border-amber-400 [color-scheme:dark]'
 
-function MonthPicker({ label, value, onChange }) {
+function MonthPicker({ label, value, onChange, firstYear }) {
   const [year, setYear] = useState(value ? value.split('-')[0] : '')
   const [month, setMonth] = useState(value ? value.split('-')[1] : '')
   const currentYear = new Date().getFullYear()
-  const years = Array.from({ length: currentYear - 2018 }, (_, i) => String(2019 + i))
+  // from the oldest entry of the table (firstYearOf), this year until it loads
+  const fromYear = firstYear ?? currentYear
+  const years = Array.from({ length: currentYear - fromYear + 1 }, (_, i) => String(fromYear + i))
 
   useEffect(() => {
     setYear(value ? value.split('-')[0] : '')
@@ -241,6 +243,8 @@ function CardDecksSection({ decks }) {
     })
   }, [decks, activeArchetypes, filterTournament, filterPilot, filterDateFrom, filterDateTo])
 
+  const firstYear = useMemo(() => firstYearOf(decks, 'tournament_date'), [decks])
+
   if (!decks) return <p className="text-gray-500 text-sm">Loading decklists…</p>
   if (!decks.length) return <p className="text-gray-500 text-sm">No decklists recorded.</p>
 
@@ -259,8 +263,8 @@ function CardDecksSection({ decks }) {
           type="text" placeholder="Search pilots…" value={filterPilot} onChange={setFilter(setFilterPilot)}
           className="w-full bg-gray-900 border border-gray-600 rounded-lg px-4 py-2 text-sm text-gray-100 placeholder-gray-500 focus:outline-none focus:border-amber-400" />
         <div className="flex flex-wrap gap-4 items-center">
-          <MonthPicker label="From" value={filterDateFrom} onChange={v => { setFilterDateFrom(v); setPage(0) }} />
-          <MonthPicker label="To" value={filterDateTo} onChange={v => { setFilterDateTo(v); setPage(0) }} />
+          <MonthPicker label="From" value={filterDateFrom} onChange={v => { setFilterDateFrom(v); setPage(0) }} firstYear={firstYear} />
+          <MonthPicker label="To" value={filterDateTo} onChange={v => { setFilterDateTo(v); setPage(0) }} firstYear={firstYear} />
           <div className="flex gap-1.5">
             {[['Last week', 7], ['Last month', 30], ['Last year', 365]].map(([label, days]) => (
               <button key={label} onClick={() => applyRange(days)}

@@ -158,7 +158,8 @@ export default function DeckPage() {
                 <p className="text-base text-gray-500 mb-0.5">Source</p>
                 <a href={deck.url} target="_blank" rel="noopener noreferrer"
                   className="text-amber-400 hover:text-amber-300">
-                  MTGGoldfish →
+                  {/* the older decks link Wizards' results page on the Wayback Machine */}
+                  {deck.url?.startsWith('https://web.archive.org/') ? 'Wayback Machine →' : 'MTGGoldfish →'}
                 </a>
               </div>
             </div>
