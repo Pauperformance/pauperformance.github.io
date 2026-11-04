@@ -338,7 +338,8 @@ function Movers({ movers, bindPreview, compact }) {
 function Events({ metagame, poolUrls, bindPreview }) {
   return (
     <div key={metagameSlug(metagame)} className="space-y-2">
-      {metagame.sets.map(s => (
+      {/* the main set (the biggest) first, its supplementary sets after */}
+      {[...metagame.sets].sort((a, b) => b.cards.length - a.cards.length).map(s => (
         <div key={s.scryfall_code} className="flow-event-in text-sm text-gray-300">
           <span className="text-xs uppercase tracking-wide text-gray-500 mr-2">New set</span>
           {s.name} <span className="text-gray-500">· {s.cards.length} new card{s.cards.length === 1 ? '' : 's'}</span>
