@@ -6,13 +6,13 @@
     ],
     "family": "Faeries",
     "first_appearance": {
-        "date": "2011-01-07",
+        "date": "2010-06-11",
         "metagame": {
-            "date": "2010-10-01",
+            "date": "2010-04-23",
             "decks": null,
-            "label": "som",
-            "metagame": "012",
-            "name": "Scars of Mirrodin",
+            "label": "roe",
+            "metagame": "008",
+            "name": "Rise of the Eldrazi",
             "py/object": "pauperformance_bot.entity.api.archetype.MetagameRef"
         },
         "py/object": "pauperformance_bot.entity.api.archetype.Appearance"
@@ -98,129 +98,357 @@
             ]
         },
         "by_metagame": {
-            "012": {
+            "008": {
                 "main": {
-                    "Counterspell": [
-                        4,
-                        4,
-                        4,
-                        4
+                    "A?ther Spellbomb": [
+                        1
                     ],
-                    "Deep Analysis": [
+                    "Brainstorm": [
+                        1,
                         1,
                         1
                     ],
-                    "Deprive": [
-                        1,
-                        1
-                    ],
-                    "Dispel": [
-                        1
-                    ],
-                    "Exclude": [
+                    "Condescend": [
                         2,
                         2,
-                        1,
-                        1
-                    ],
-                    "Force Spike": [
-                        3,
-                        3,
                         2,
                         2
                     ],
-                    "Halimar Depths": [
+                    "Counterspell": [
+                        3,
+                        3,
+                        3,
+                        3
+                    ],
+                    "Dispel": [
+                        1,
+                        1
+                    ],
+                    "Echoing Truth": [
+                        3,
+                        3,
+                        1,
+                        1
+                    ],
+                    "Errant Ephemeron": [
+                        1,
+                        1
+                    ],
+                    "Exclude": [
+                        1
+                    ],
+                    "Fathom Seer": [
+                        1,
                         1
                     ],
                     "Island": [
-                        4,
-                        4,
-                        4,
-                        4,
-                        4,
-                        4,
-                        4,
-                        4,
-                        4,
-                        4,
-                        4,
-                        4,
-                        4,
-                        4,
-                        4,
-                        4,
-                        4,
-                        4
+                        3,
+                        3,
+                        3,
+                        3,
+                        3,
+                        3,
+                        3,
+                        3,
+                        3,
+                        3,
+                        3,
+                        3,
+                        3,
+                        3,
+                        3,
+                        3,
+                        3,
+                        2,
+                        1,
+                        1
                     ],
                     "Mana Leak": [
-                        2,
-                        2,
                         1,
                         1
                     ],
                     "Mulldrifter": [
-                        3,
-                        3
+                        1,
+                        1,
+                        1
                     ],
                     "Ninja of the Deep Hours": [
-                        4,
-                        4,
+                        3,
+                        3,
                         3,
                         2
+                    ],
+                    "Oona's Grace": [
+                        1
                     ],
                     "Pestermite": [
-                        4,
-                        4,
-                        4,
-                        4
-                    ],
-                    "Piracy Charm": [
-                        3,
-                        3,
-                        2,
-                        2
-                    ],
-                    "Preordain": [
                         3,
                         3,
                         3,
                         3
                     ],
-                    "Prohibit": [
+                    "Ponder": [
+                        1,
+                        1,
+                        1
+                    ],
+                    "Quicksand": [
+                        3,
+                        3,
+                        3,
+                        3
+                    ],
+                    "Relic of Progenitus": [
+                        1
+                    ],
+                    "Remove Soul": [
+                        1
+                    ],
+                    "Repeal": [
+                        1,
+                        1
+                    ],
+                    "Seat of the Synod": [
+                        1
+                    ],
+                    "Spellstutter Sprite": [
+                        3,
+                        3,
+                        3,
+                        3
+                    ],
+                    "Spire Golem": [
+                        3,
+                        3,
+                        3,
+                        3
+                    ],
+                    "Think Twice": [
+                        2,
+                        2,
+                        2,
+                        2
+                    ],
+                    "Trinket Mage": [
+                        1,
+                        1
+                    ],
+                    "Zephyr Sprite": [
+                        1,
+                        1,
+                        1
+                    ]
+                },
+                "side": {
+                    "Deep Analysis": [
+                        1
+                    ],
+                    "Dispel": [
                         3,
                         3,
                         2,
                         2
                     ],
-                    "Quicksand": [
-                        4,
-                        4,
-                        4,
-                        4
-                    ],
-                    "Rewind": [
+                    "Errant Ephemeron": [
                         1,
+                        1
+                    ],
+                    "Fathom Seer": [
+                        1,
+                        1
+                    ],
+                    "Hydroblast": [
+                        3,
+                        3,
+                        3,
+                        3
+                    ],
+                    "Mana Leak": [
+                        1
+                    ],
+                    "Mulldrifter": [
+                        3,
+                        2
+                    ],
+                    "Oona's Gatewarden": [
+                        2,
+                        2,
+                        1,
+                        1
+                    ],
+                    "Relic of Progenitus": [
+                        1
+                    ],
+                    "Repeal": [
                         1,
                         1
                     ],
                     "Serrated Arrows": [
                         1,
+                        1,
+                        1
+                    ]
+                }
+            },
+            "009": {
+                "main": {
+                    "Brainstorm": [
+                        1,
+                        1,
                         1
                     ],
-                    "Spellstutter Sprite": [
-                        4,
-                        4,
-                        4,
+                    "Condescend": [
+                        9,
+                        9,
+                        9,
+                        8
+                    ],
+                    "Counterspell": [
+                        10,
+                        10,
+                        10,
+                        10
+                    ],
+                    "Deep Analysis": [
+                        2
+                    ],
+                    "Dispel": [
+                        6,
+                        6
+                    ],
+                    "Echoing Truth": [
+                        9,
+                        9,
+                        6,
+                        1
+                    ],
+                    "Errant Ephemeron": [
+                        6,
+                        6
+                    ],
+                    "Exclude": [
+                        6,
+                        2,
+                        1,
+                        1
+                    ],
+                    "Inspiration": [
+                        1,
+                        1,
+                        1
+                    ],
+                    "Island": [
+                        10,
+                        10,
+                        10,
+                        10,
+                        10,
+                        10,
+                        10,
+                        10,
+                        10,
+                        10,
+                        10,
+                        10,
+                        10,
+                        10,
+                        10,
+                        10,
+                        10,
+                        9,
+                        8,
+                        2,
+                        1
+                    ],
+                    "Lonely Sandbar": [
+                        1,
+                        1,
+                        1
+                    ],
+                    "Mana Leak": [
+                        1,
+                        1
+                    ],
+                    "Mulldrifter": [
+                        5,
+                        3,
+                        1
+                    ],
+                    "Ninja of the Deep Hours": [
+                        9,
+                        9,
+                        9,
+                        3
+                    ],
+                    "Oona's Grace": [
+                        5
+                    ],
+                    "Pestermite": [
+                        10,
+                        10,
+                        10,
+                        9
+                    ],
+                    "Ponder": [
+                        1,
+                        1,
+                        1
+                    ],
+                    "Quicksand": [
+                        10,
+                        10,
+                        9,
+                        9
+                    ],
+                    "Remove Soul": [
                         4
+                    ],
+                    "Repeal": [
+                        1,
+                        1
+                    ],
+                    "Repulse": [
+                        1,
+                        1,
+                        1,
+                        1
+                    ],
+                    "Rune Snag": [
+                        1,
+                        1,
+                        1,
+                        1
+                    ],
+                    "Sentinels of Glen Elendra": [
+                        2
+                    ],
+                    "Serrated Arrows": [
+                        2
+                    ],
+                    "Spellstutter Sprite": [
+                        10,
+                        10,
+                        10,
+                        10
                     ],
                     "Spire Golem": [
-                        4,
-                        4,
-                        4,
-                        4
+                        10,
+                        10,
+                        10,
+                        10
                     ],
                     "Think Twice": [
+                        9,
+                        9,
+                        9,
+                        8
+                    ],
+                    "Traumatic Visions": [
                         1,
+                        1,
+                        1
+                    ],
+                    "Zephyr Sprite": [
                         1,
                         1,
                         1
@@ -228,57 +456,745 @@
                 },
                 "side": {
                     "Annul": [
-                        1,
-                        1
-                    ],
-                    "Curse of Chains": [
-                        1,
-                        1,
-                        1,
-                        1
+                        2,
+                        2,
+                        2
                     ],
                     "Deep Analysis": [
-                        1,
-                        1
+                        5
                     ],
                     "Dispel": [
-                        4,
-                        4,
+                        9,
+                        7,
+                        3,
                         2
                     ],
                     "Echoing Truth": [
                         3,
-                        2
-                    ],
-                    "Halimar Wavewatch": [
                         1,
                         1,
                         1
                     ],
-                    "Hindering Touch": [
+                    "Errant Ephemeron": [
+                        2,
+                        2
+                    ],
+                    "Exclude": [
+                        1
+                    ],
+                    "Faerie Trickery": [
+                        1,
+                        1,
+                        1
+                    ],
+                    "Fathom Seer": [
+                        1,
+                        1,
+                        1
+                    ],
+                    "Hydroblast": [
+                        10,
+                        10,
+                        10,
+                        9
+                    ],
+                    "Into the Roil": [
+                        1
+                    ],
+                    "Mulldrifter": [
+                        8,
+                        7,
+                        2
+                    ],
+                    "Oona's Gatewarden": [
+                        7,
+                        7,
+                        4,
+                        4
+                    ],
+                    "Pestermite": [
+                        1
+                    ],
+                    "Relic of Progenitus": [
+                        2
+                    ],
+                    "Repeal": [
+                        1,
+                        1
+                    ],
+                    "Sea Sprite": [
+                        1,
+                        1,
+                        1,
+                        1
+                    ],
+                    "Serrated Arrows": [
+                        5,
+                        5,
+                        3
+                    ]
+                }
+            },
+            "010": {
+                "main": {
+                    "Boomerang": [
+                        1,
+                        1
+                    ],
+                    "Condescend": [
+                        14,
+                        14,
+                        14,
+                        14
+                    ],
+                    "Counterspell": [
+                        14,
+                        14,
+                        14,
+                        14
+                    ],
+                    "Dispel": [
+                        14,
+                        14
+                    ],
+                    "Echoing Truth": [
+                        13,
+                        13,
+                        11
+                    ],
+                    "Errant Ephemeron": [
+                        1,
+                        1
+                    ],
+                    "Essence Scatter": [
+                        1
+                    ],
+                    "Exclude": [
+                        10,
+                        1
+                    ],
+                    "Island": [
+                        14,
+                        14,
+                        14,
+                        14,
+                        14,
+                        14,
+                        14,
+                        14,
+                        14,
+                        14,
+                        14,
+                        14,
+                        14,
+                        14,
+                        14,
+                        14,
+                        14,
+                        9,
+                        4
+                    ],
+                    "Mulldrifter": [
+                        13
+                    ],
+                    "Ninja of the Deep Hours": [
+                        14,
+                        14,
+                        14
+                    ],
+                    "Oona's Grace": [
+                        1
+                    ],
+                    "Pestermite": [
+                        14,
+                        14,
+                        14,
+                        14
+                    ],
+                    "Quicksand": [
+                        14,
+                        14,
+                        14,
+                        14
+                    ],
+                    "Remove Soul": [
+                        5,
+                        3
+                    ],
+                    "Repeal": [
+                        11,
+                        7
+                    ],
+                    "Rewind": [
+                        1
+                    ],
+                    "Sentinels of Glen Elendra": [
+                        13,
+                        7
+                    ],
+                    "Serrated Arrows": [
+                        13,
+                        7
+                    ],
+                    "Spellstutter Sprite": [
+                        14,
+                        14,
+                        14,
+                        14
+                    ],
+                    "Spire Golem": [
+                        14,
+                        14,
+                        14,
+                        14
+                    ],
+                    "Think Twice": [
+                        14,
+                        14,
+                        14,
+                        7
+                    ]
+                },
+                "side": {
+                    "Boomerang": [
+                        3,
                         3,
                         2
                     ],
+                    "Deep Analysis": [
+                        12,
+                        1
+                    ],
+                    "Dispel": [
+                        14,
+                        10
+                    ],
+                    "Echoing Truth": [
+                        2
+                    ],
+                    "Halimar Wavewatch": [
+                        8,
+                        7,
+                        1,
+                        1
+                    ],
                     "Hydroblast": [
+                        14,
+                        14,
+                        14,
+                        11
+                    ],
+                    "Island": [
+                        1,
+                        1
+                    ],
+                    "Mulldrifter": [
+                        14,
+                        14,
+                        9
+                    ],
+                    "Oona's Gatewarden": [
+                        6,
+                        6,
+                        3
+                    ],
+                    "Oona's Grace": [
+                        2
+                    ],
+                    "Relic of Progenitus": [
+                        3,
+                        1,
+                        1
+                    ],
+                    "Repeal": [
+                        1
+                    ],
+                    "Sea Sprite": [
+                        1,
+                        1,
+                        1,
+                        1
+                    ],
+                    "Serrated Arrows": [
+                        14,
+                        12,
+                        1
+                    ]
+                }
+            },
+            "011": {
+                "main": {
+                    "Boomerang": [
+                        5,
                         4,
-                        4,
+                        1
+                    ],
+                    "Condescend": [
+                        3,
+                        2,
+                        2,
+                        2
+                    ],
+                    "Counterspell": [
+                        5,
+                        5,
+                        5,
+                        5
+                    ],
+                    "Dispel": [
+                        5,
+                        4
+                    ],
+                    "Echoing Truth": [
+                        2
+                    ],
+                    "Exclude": [
+                        3
+                    ],
+                    "Force Spike": [
+                        1
+                    ],
+                    "Island": [
+                        5,
+                        5,
+                        5,
+                        5,
+                        5,
+                        5,
+                        5,
+                        5,
+                        5,
+                        5,
+                        5,
+                        5,
+                        5,
+                        5,
+                        5,
+                        5,
+                        5,
+                        5,
+                        1,
+                        1,
+                        1
+                    ],
+                    "Mulldrifter": [
+                        5,
+                        1,
+                        1,
+                        1
+                    ],
+                    "Ninja of the Deep Hours": [
+                        5,
+                        5,
+                        5,
+                        1
+                    ],
+                    "Pestermite": [
+                        5,
+                        5,
+                        5,
+                        5
+                    ],
+                    "Prohibit": [
+                        3,
+                        3,
+                        3,
+                        2
+                    ],
+                    "Quicksand": [
+                        5,
+                        5,
+                        5,
+                        5
+                    ],
+                    "Repeal": [
+                        2,
+                        2
+                    ],
+                    "Sentinels of Glen Elendra": [
                         4,
                         4
+                    ],
+                    "Serrated Arrows": [
+                        5,
+                        5
+                    ],
+                    "Spellstutter Sprite": [
+                        5,
+                        5,
+                        5,
+                        5
+                    ],
+                    "Spire Golem": [
+                        5,
+                        5,
+                        5,
+                        5
+                    ],
+                    "Think Twice": [
+                        5,
+                        5,
+                        4,
+                        2
+                    ]
+                },
+                "side": {
+                    "Boomerang": [
+                        2,
+                        2,
+                        1
+                    ],
+                    "Deep Analysis": [
+                        3
+                    ],
+                    "Dispel": [
+                        5,
+                        5,
+                        1
+                    ],
+                    "Echoing Truth": [
+                        3,
+                        3,
+                        3
+                    ],
+                    "Faerie Trickery": [
+                        1,
+                        1
+                    ],
+                    "Foresee": [
+                        1,
+                        1
+                    ],
+                    "Halimar Wavewatch": [
+                        4,
+                        4,
+                        1
+                    ],
+                    "Hydroblast": [
+                        5,
+                        5,
+                        5,
+                        1
+                    ],
+                    "Mulldrifter": [
+                        3,
+                        3
+                    ],
+                    "Oona's Grace": [
+                        3
+                    ],
+                    "Serrated Arrows": [
+                        5,
+                        4
+                    ]
+                }
+            },
+            "012": {
+                "main": {
+                    "Boomerang": [
+                        5,
+                        5,
+                        1,
+                        1
+                    ],
+                    "Capsize": [
+                        4,
+                        4
+                    ],
+                    "Condescend": [
+                        2,
+                        2,
+                        2,
+                        2
+                    ],
+                    "Counterspell": [
+                        18,
+                        18,
+                        18,
+                        18
+                    ],
+                    "Curse of Chains": [
+                        1
+                    ],
+                    "Deep Analysis": [
+                        2,
+                        1
+                    ],
+                    "Deprive": [
+                        2,
+                        2,
+                        1,
+                        1
+                    ],
+                    "Dispel": [
+                        5,
+                        4
+                    ],
+                    "Errant Ephemeron": [
+                        2,
+                        1,
+                        1,
+                        1
+                    ],
+                    "Exclude": [
+                        13,
+                        12,
+                        5,
+                        3
+                    ],
+                    "Force Spike": [
+                        4,
+                        4,
+                        3,
+                        3
+                    ],
+                    "Halimar Depths": [
+                        1
+                    ],
+                    "Island": [
+                        18,
+                        18,
+                        18,
+                        18,
+                        18,
+                        18,
+                        18,
+                        18,
+                        18,
+                        18,
+                        18,
+                        18,
+                        18,
+                        18,
+                        18,
+                        18,
+                        18,
+                        18,
+                        9,
+                        8,
+                        3,
+                        2
+                    ],
+                    "Logic Knot": [
+                        1
+                    ],
+                    "Mana Leak": [
+                        4,
+                        4,
+                        2,
+                        1
+                    ],
+                    "Miscalculation": [
+                        3,
+                        3,
+                        1,
+                        1
+                    ],
+                    "Mulldrifter": [
+                        7,
+                        6,
+                        2
+                    ],
+                    "Ninja of the Deep Hours": [
+                        13,
+                        13,
+                        12,
+                        5
                     ],
                     "Oona's Gatewarden": [
                         1,
                         1
                     ],
-                    "Sea Sprite": [
+                    "Oona's Grace": [
+                        5,
+                        5
+                    ],
+                    "Pestermite": [
+                        13,
+                        13,
+                        13,
+                        13
+                    ],
+                    "Piracy Charm": [
+                        11,
+                        11,
+                        10,
+                        10
+                    ],
+                    "Preordain": [
+                        4,
+                        4,
+                        4,
+                        4
+                    ],
+                    "Prohibit": [
+                        9,
+                        9,
+                        8,
+                        8
+                    ],
+                    "Quicksand": [
+                        18,
+                        18,
+                        18,
+                        18
+                    ],
+                    "Repeal": [
+                        1,
+                        1
+                    ],
+                    "Repulse": [
+                        2,
+                        2
+                    ],
+                    "Rewind": [
+                        3,
+                        3,
+                        3
+                    ],
+                    "Sea Gate Oracle": [
+                        5,
+                        5,
+                        5,
+                        5
+                    ],
+                    "Sentinels of Glen Elendra": [
+                        8,
+                        8,
+                        1,
+                        1
+                    ],
+                    "Serrated Arrows": [
+                        4,
+                        4
+                    ],
+                    "Spellstutter Sprite": [
+                        18,
+                        18,
+                        18,
+                        18
+                    ],
+                    "Spire Golem": [
+                        18,
+                        18,
+                        17,
+                        17
+                    ],
+                    "Spreading Seas": [
                         2,
                         2,
                         2,
                         2
                     ],
-                    "Weatherseed Faeries": [
+                    "Think Twice": [
+                        12,
+                        12,
+                        11,
+                        10
+                    ]
+                },
+                "side": {
+                    "Annul": [
+                        5,
+                        5,
+                        4,
+                        4
+                    ],
+                    "Boomerang": [
+                        3,
+                        3
+                    ],
+                    "Curse of Chains": [
+                        2,
                         1,
                         1,
                         1
+                    ],
+                    "Deep Analysis": [
+                        3,
+                        3
+                    ],
+                    "Dispel": [
+                        12,
+                        11,
+                        6,
+                        3
+                    ],
+                    "Echoing Truth": [
+                        6,
+                        3
+                    ],
+                    "Errant Ephemeron": [
+                        3,
+                        2,
+                        2,
+                        2
+                    ],
+                    "Exclude": [
+                        5,
+                        5
+                    ],
+                    "Faerie Trickery": [
+                        3,
+                        3,
+                        3,
+                        3
+                    ],
+                    "Halimar Wavewatch": [
+                        4,
+                        3,
+                        1
+                    ],
+                    "Hindering Touch": [
+                        4,
+                        3
+                    ],
+                    "Hydroblast": [
+                        18,
+                        18,
+                        18,
+                        17
+                    ],
+                    "Mulldrifter": [
+                        4,
+                        4,
+                        2,
+                        1
+                    ],
+                    "Negate": [
+                        3,
+                        3,
+                        2
+                    ],
+                    "Oona's Gatewarden": [
+                        3,
+                        3
+                    ],
+                    "Repeal": [
+                        3,
+                        3,
+                        1
+                    ],
+                    "Repulse": [
+                        2
+                    ],
+                    "Sea Sprite": [
+                        4,
+                        4,
+                        4,
+                        4
+                    ],
+                    "Serrated Arrows": [
+                        5,
+                        3,
+                        1,
+                        1
+                    ],
+                    "Weatherseed Faeries": [
+                        5,
+                        5,
+                        5,
+                        2
                     ]
                 }
             },
@@ -44989,6 +45905,12 @@
                 "preview": "https://cards.scryfall.io/normal/front/7/0/70e64028-ae96-4950-aa6c-9d347409fad3.jpg",
                 "type_line": "Instant"
             },
+            "Foresee": {
+                "banned": false,
+                "link": "https://scryfall.com/card/fut/36/foresee",
+                "preview": "https://cards.scryfall.io/normal/front/c/0/c0bd95b5-1e90-41c5-8a9f-f3009f3f504a.jpg",
+                "type_line": "Sorcery"
+            },
             "Frantic Inventory": {
                 "banned": false,
                 "link": "https://scryfall.com/card/m21/50/frantic-inventory",
@@ -45233,6 +46155,12 @@
                 "banned": false,
                 "link": "https://scryfall.com/card/eve/103/inside-out",
                 "preview": "https://cards.scryfall.io/normal/front/a/5/a51180ee-8677-4d5a-9685-3861c67a1d1f.jpg",
+                "type_line": "Instant"
+            },
+            "Inspiration": {
+                "banned": false,
+                "link": "https://scryfall.com/card/vis/35/inspiration",
+                "preview": "https://cards.scryfall.io/normal/front/5/2/5247d0b0-660e-4f27-8e76-62effbe12221.jpg",
                 "type_line": "Instant"
             },
             "Intervene": {
@@ -46453,6 +47381,12 @@
                 "preview": "https://cards.scryfall.io/normal/front/e/9/e98f5890-a494-4609-acae-f9e9bacd991d.jpg",
                 "type_line": "Sorcery"
             },
+            "Traumatic Visions": {
+                "banned": false,
+                "link": "https://scryfall.com/card/con/36/traumatic-visions",
+                "preview": "https://cards.scryfall.io/normal/front/f/1/f1e8b03d-9265-4699-b626-5efa73292d43.jpg",
+                "type_line": "Instant"
+            },
             "Treasure Cruise": {
                 "banned": true,
                 "link": "https://scryfall.com/card/ktk/59/treasure-cruise",
@@ -47286,8 +48220,40 @@
         ],
         "timeline": [
             {
+                "date": "2010-04-23",
+                "decks": 3,
+                "label": "roe",
+                "metagame": "008",
+                "name": "Rise of the Eldrazi",
+                "py/object": "pauperformance_bot.entity.api.archetype.MetagameRef"
+            },
+            {
+                "date": "2010-06-18",
+                "decks": 10,
+                "label": "arc",
+                "metagame": "009",
+                "name": "Archenemy",
+                "py/object": "pauperformance_bot.entity.api.archetype.MetagameRef"
+            },
+            {
+                "date": "2010-07-16",
+                "decks": 14,
+                "label": "m11",
+                "metagame": "010",
+                "name": "Magic 2011",
+                "py/object": "pauperformance_bot.entity.api.archetype.MetagameRef"
+            },
+            {
+                "date": "2010-09-03",
+                "decks": 5,
+                "label": "ddf",
+                "metagame": "011",
+                "name": "Duel Decks: Elspeth vs. Tezzeret",
+                "py/object": "pauperformance_bot.entity.api.archetype.MetagameRef"
+            },
+            {
                 "date": "2010-10-01",
-                "decks": 4,
+                "decks": 18,
                 "label": "som",
                 "metagame": "012",
                 "name": "Scars of Mirrodin",

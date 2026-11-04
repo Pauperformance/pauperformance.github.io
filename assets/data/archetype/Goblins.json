@@ -6,13 +6,13 @@
     ],
     "family": null,
     "first_appearance": {
-        "date": "2011-01-07",
+        "date": "2009-11-01",
         "metagame": {
-            "date": "2010-10-01",
+            "date": "2009-10-02",
             "decks": null,
-            "label": "som",
-            "metagame": "012",
-            "name": "Scars of Mirrodin",
+            "label": "zen",
+            "metagame": "006",
+            "name": "Zendikar",
             "py/object": "pauperformance_bot.entity.api.archetype.MetagameRef"
         },
         "py/object": "pauperformance_bot.entity.api.archetype.Appearance"
@@ -55,35 +55,576 @@
             ]
         },
         "by_metagame": {
-            "012": {
+            "006": {
                 "main": {
+                    "Akki Avalanchers": [
+                        1,
+                        1,
+                        1,
+                        1
+                    ],
+                    "Burst Lightning": [
+                        1,
+                        1,
+                        1,
+                        1
+                    ],
                     "Chain Lightning": [
-                        5,
-                        5,
-                        5,
-                        5
+                        6,
+                        6,
+                        6,
+                        6
                     ],
                     "Dragon Fodder": [
-                        3,
-                        3
+                        2,
+                        2,
+                        2,
+                        2
                     ],
                     "Fireblast": [
                         1,
                         1
                     ],
-                    "Flame Slash": [
+                    "Firebolt": [
+                        1,
+                        1,
                         1,
                         1
                     ],
-                    "Forgotten Cave": [
+                    "Giantbaiting": [
+                        1,
+                        1,
                         1,
                         1
                     ],
-                    "Goblin Arsonist": [
+                    "Goblin Bushwhacker": [
+                        11,
+                        11,
+                        11,
+                        11
+                    ],
+                    "Goblin Cohort": [
+                        11,
+                        11,
+                        10,
+                        10
+                    ],
+                    "Goblin Sledder": [
+                        11,
+                        11,
+                        11,
+                        11
+                    ],
+                    "Goblin War Strike": [
+                        2,
+                        2
+                    ],
+                    "Hissing Iguanar": [
+                        1,
+                        1,
+                        1
+                    ],
+                    "Intimidator Initiate": [
+                        2,
+                        2,
+                        2,
+                        1
+                    ],
+                    "Jackal Familiar": [
+                        5,
+                        5,
+                        5,
+                        1
+                    ],
+                    "Lightning Bolt": [
+                        10,
+                        10,
+                        10,
+                        10
+                    ],
+                    "Mogg Conscripts": [
+                        11,
+                        11,
+                        10,
+                        10
+                    ],
+                    "Mogg Fanatic": [
+                        5,
+                        5,
+                        5,
+                        4
+                    ],
+                    "Mogg Flunkies": [
+                        9,
+                        9,
+                        9,
+                        5
+                    ],
+                    "Mogg Raider": [
+                        11,
+                        11,
+                        11,
+                        11
+                    ],
+                    "Mogg War Marshal": [
+                        10,
+                        10,
+                        10,
+                        10
+                    ],
+                    "Mountain": [
+                        8,
+                        8,
+                        8,
+                        8,
+                        8,
+                        8,
+                        8,
+                        8,
+                        8,
+                        8,
+                        8,
+                        8,
+                        8,
+                        8,
+                        7,
+                        7,
+                        5,
+                        4
+                    ],
+                    "Mudbrawler Cohort": [
+                        2,
+                        2,
+                        2,
+                        2
+                    ],
+                    "Snow-Covered Mountain": [
+                        3,
+                        3,
+                        3,
+                        3,
+                        3,
+                        3,
+                        3,
+                        3,
+                        3,
+                        3,
+                        3,
+                        3,
+                        3,
+                        3,
+                        3,
+                        3,
+                        3,
+                        1
+                    ],
+                    "Sparksmith": [
+                        8,
+                        8,
+                        8,
+                        6
+                    ],
+                    "Teetering Peaks": [
+                        3,
+                        3,
+                        1,
+                        1
+                    ]
+                },
+                "side": {
+                    "Bloodfire Dwarf": [
+                        1,
+                        1,
+                        1,
+                        1
+                    ],
+                    "Crown of Fury": [
+                        1,
+                        1,
+                        1
+                    ],
+                    "Drooling Ogre": [
+                        1,
+                        1,
+                        1
+                    ],
+                    "Electrostatic Bolt": [
+                        2,
+                        2,
+                        1,
+                        1
+                    ],
+                    "Flame Jab": [
+                        7,
+                        6,
+                        5,
+                        4
+                    ],
+                    "Flaring Pain": [
+                        4,
+                        2,
+                        1
+                    ],
+                    "Gorilla Shaman": [
+                        7,
+                        7,
+                        7,
+                        6
+                    ],
+                    "Lightning Bolt": [
+                        1,
+                        1,
+                        1,
+                        1
+                    ],
+                    "Martyr of Ashes": [
                         3,
                         3,
                         2,
                         2
+                    ],
+                    "Molten Rain": [
+                        3,
+                        3,
+                        3,
+                        1
+                    ],
+                    "Pyrite Spellbomb": [
+                        1,
+                        1,
+                        1
+                    ],
+                    "Pyroblast": [
+                        10,
+                        10,
+                        10,
+                        10
+                    ],
+                    "Rites of Initiation": [
+                        2,
+                        2
+                    ],
+                    "Seismic Shudder": [
+                        1,
+                        1,
+                        1,
+                        1
+                    ],
+                    "Shatter": [
+                        1,
+                        1,
+                        1,
+                        1
+                    ],
+                    "Smash to Smithereens": [
+                        1,
+                        1,
+                        1,
+                        1
+                    ],
+                    "Sparksmith": [
+                        2,
+                        2,
+                        2,
+                        1
+                    ],
+                    "Teetering Peaks": [
+                        1
+                    ],
+                    "Vulshok Sorcerer": [
+                        1,
+                        1
+                    ]
+                }
+            },
+            "007": {
+                "main": {
+                    "Chain Lightning": [
+                        12,
+                        12,
+                        10,
+                        10
+                    ],
+                    "Dragon Fodder": [
+                        3,
+                        3,
+                        3,
+                        3
+                    ],
+                    "Fireblast": [
+                        5,
+                        4,
+                        3,
+                        2
+                    ],
+                    "Goblin Bushwhacker": [
+                        14,
+                        14,
+                        14,
+                        14
+                    ],
+                    "Goblin Cohort": [
+                        12,
+                        12,
+                        12,
+                        12
+                    ],
+                    "Goblin Sledder": [
+                        14,
+                        14,
+                        14,
+                        13
+                    ],
+                    "Goblin War Strike": [
+                        5
+                    ],
+                    "Hissing Iguanar": [
+                        1,
+                        1,
+                        1
+                    ],
+                    "Incinerate": [
+                        1,
+                        1
+                    ],
+                    "Intimidator Initiate": [
+                        1,
+                        1,
+                        1
+                    ],
+                    "Jackal Familiar": [
+                        11,
+                        11,
+                        11,
+                        5
+                    ],
+                    "Keldon Marauders": [
+                        1,
+                        1,
+                        1
+                    ],
+                    "Lightning Bolt": [
+                        13,
+                        13,
+                        13,
+                        13
+                    ],
+                    "Mogg Conscripts": [
+                        12,
+                        12,
+                        12,
+                        12
+                    ],
+                    "Mogg Fanatic": [
+                        4,
+                        3,
+                        2,
+                        2
+                    ],
+                    "Mogg Flunkies": [
+                        12,
+                        12,
+                        12,
+                        11
+                    ],
+                    "Mogg Raider": [
+                        14,
+                        14,
+                        14,
+                        14
+                    ],
+                    "Mogg War Marshal": [
+                        14,
+                        14,
+                        14,
+                        14
+                    ],
+                    "Mountain": [
+                        12,
+                        12,
+                        12,
+                        12,
+                        12,
+                        12,
+                        12,
+                        12,
+                        12,
+                        12,
+                        12,
+                        12,
+                        12,
+                        12,
+                        12,
+                        12,
+                        10,
+                        7
+                    ],
+                    "Mudbrawler Cohort": [
+                        2,
+                        2,
+                        2,
+                        2
+                    ],
+                    "Searing Blaze": [
+                        1,
+                        1
+                    ],
+                    "Snow-Covered Mountain": [
+                        2,
+                        2,
+                        2,
+                        2,
+                        2,
+                        2,
+                        2,
+                        2,
+                        2,
+                        2,
+                        2,
+                        2,
+                        2,
+                        2,
+                        2,
+                        2,
+                        2
+                    ],
+                    "Sparksmith": [
+                        9,
+                        9,
+                        8,
+                        3
+                    ],
+                    "Teetering Peaks": [
+                        4,
+                        1
+                    ]
+                },
+                "side": {
+                    "Death Spark": [
+                        2,
+                        2,
+                        1,
+                        1
+                    ],
+                    "Dragon Fodder": [
+                        1,
+                        1,
+                        1,
+                        1
+                    ],
+                    "Electrostatic Bolt": [
+                        2,
+                        2,
+                        2,
+                        1
+                    ],
+                    "Flame Jab": [
+                        12,
+                        9,
+                        4,
+                        2
+                    ],
+                    "Flaring Pain": [
+                        3,
+                        3,
+                        3,
+                        1
+                    ],
+                    "Flash of Defiance": [
+                        1,
+                        1,
+                        1
+                    ],
+                    "Goblin War Strike": [
+                        3
+                    ],
+                    "Gorilla Shaman": [
+                        12,
+                        11,
+                        7,
+                        7
+                    ],
+                    "Lightning Bolt": [
+                        1,
+                        1,
+                        1
+                    ],
+                    "Martyr of Ashes": [
+                        7,
+                        6,
+                        3,
+                        1
+                    ],
+                    "Mogg Flunkies": [
+                        1,
+                        1,
+                        1,
+                        1
+                    ],
+                    "Pyroblast": [
+                        14,
+                        14,
+                        14,
+                        14
+                    ],
+                    "Rites of Initiation": [
+                        1,
+                        1
+                    ],
+                    "Seismic Shudder": [
+                        2,
+                        2,
+                        1,
+                        1
+                    ],
+                    "Smash to Smithereens": [
+                        4,
+                        4,
+                        3,
+                        2
+                    ],
+                    "Sparksmith": [
+                        5,
+                        1
+                    ],
+                    "Vulshok Sorcerer": [
+                        2,
+                        2,
+                        1,
+                        1
+                    ]
+                }
+            },
+            "008": {
+                "main": {
+                    "Chain Lightning": [
+                        8,
+                        8,
+                        8,
+                        5
+                    ],
+                    "Death Spark": [
+                        2
+                    ],
+                    "Dragon Fodder": [
+                        4,
+                        4,
+                        1,
+                        1
+                    ],
+                    "Fireblast": [
+                        1,
+                        1
+                    ],
+                    "Firebolt": [
+                        1,
+                        1
+                    ],
+                    "Giantbaiting": [
+                        1,
+                        1,
+                        1,
+                        1
                     ],
                     "Goblin Bushwhacker": [
                         8,
@@ -94,13 +635,8 @@
                     "Goblin Cohort": [
                         8,
                         8,
-                        8,
-                        8
-                    ],
-                    "Goblin Matron": [
-                        1,
-                        1,
-                        1
+                        7,
+                        7
                     ],
                     "Goblin Sledder": [
                         8,
@@ -108,39 +644,34 @@
                         8,
                         8
                     ],
-                    "Intimidator Initiate": [
-                        2,
-                        2
-                    ],
                     "Jackal Familiar": [
                         7,
                         7,
-                        6,
                         5
                     ],
                     "Lightning Bolt": [
                         8,
                         8,
                         8,
-                        5
+                        8
                     ],
                     "Mogg Conscripts": [
                         8,
                         8,
-                        8,
-                        8
+                        7,
+                        7
                     ],
                     "Mogg Flunkies": [
                         8,
                         8,
                         8,
-                        5
+                        7
                     ],
                     "Mogg Raider": [
-                        7,
-                        7,
-                        7,
-                        7
+                        8,
+                        8,
+                        8,
+                        8
                     ],
                     "Mogg War Marshal": [
                         8,
@@ -164,83 +695,872 @@
                         8,
                         8,
                         8,
-                        8,
+                        7,
                         6,
-                        1
-                    ],
-                    "Raze": [
-                        1,
-                        1,
-                        1,
                         1
                     ],
                     "Sparksmith": [
-                        6,
-                        6,
-                        5,
-                        4
+                        7,
+                        7,
+                        7,
+                        2
+                    ],
+                    "Teetering Peaks": [
+                        2,
+                        1,
+                        1
                     ]
                 },
                 "side": {
                     "Death Spark": [
+                        2,
+                        1,
+                        1
+                    ],
+                    "Dragon Fodder": [
+                        1,
+                        1,
+                        1
+                    ],
+                    "Fire at Will": [
+                        1,
+                        1,
+                        1,
+                        1
+                    ],
+                    "Flame Jab": [
+                        5,
+                        3
+                    ],
+                    "Flaring Pain": [
+                        1,
+                        1,
+                        1
+                    ],
+                    "Gorilla Shaman": [
+                        6,
+                        6,
+                        3,
+                        3
+                    ],
+                    "Martyr of Ashes": [
+                        6,
+                        6
+                    ],
+                    "Mob Justice": [
+                        1,
+                        1,
+                        1
+                    ],
+                    "Pyroblast": [
+                        7,
+                        7,
+                        7,
+                        6
+                    ],
+                    "Seismic Shudder": [
+                        7,
+                        7,
+                        5,
+                        1
+                    ],
+                    "Serrated Arrows": [
+                        1,
+                        1,
+                        1
+                    ],
+                    "Smash to Smithereens": [
                         4,
+                        4,
+                        3,
+                        1
+                    ],
+                    "Sparksmith": [
+                        1,
+                        1,
+                        1
+                    ]
+                }
+            },
+            "009": {
+                "main": {
+                    "Chain Lightning": [
+                        6,
+                        6,
+                        6,
+                        6
+                    ],
+                    "Death Spark": [
+                        2
+                    ],
+                    "Fireblast": [
+                        1,
+                        1,
+                        1,
+                        1
+                    ],
+                    "Firebolt": [
+                        1
+                    ],
+                    "Goblin Arsonist": [
+                        1,
+                        1,
+                        1,
+                        1
+                    ],
+                    "Goblin Bushwhacker": [
+                        6,
+                        6,
+                        6,
+                        6
+                    ],
+                    "Goblin Cohort": [
+                        6,
+                        6,
+                        6,
+                        5
+                    ],
+                    "Goblin Sledder": [
+                        6,
+                        6,
+                        6,
+                        6
+                    ],
+                    "Jackal Familiar": [
+                        5,
+                        5,
+                        3,
+                        2
+                    ],
+                    "Lightning Bolt": [
+                        6,
+                        6,
+                        6,
+                        6
+                    ],
+                    "Mogg Conscripts": [
+                        6,
+                        6,
+                        6,
+                        5
+                    ],
+                    "Mogg Flunkies": [
+                        5,
+                        5,
+                        5,
+                        5
+                    ],
+                    "Mogg Raider": [
+                        6,
+                        6,
+                        6,
+                        5
+                    ],
+                    "Mogg War Marshal": [
+                        6,
+                        6,
+                        6,
+                        6
+                    ],
+                    "Mountain": [
+                        6,
+                        6,
+                        6,
+                        6,
+                        6,
+                        6,
+                        6,
+                        6,
+                        6,
+                        6,
+                        6,
+                        6,
+                        6,
+                        6,
+                        6,
+                        6,
+                        3
+                    ],
+                    "Sparksmith": [
+                        6,
+                        6,
+                        6,
+                        6
+                    ],
+                    "Teetering Peaks": [
+                        2
+                    ]
+                },
+                "side": {
+                    "Death Spark": [
+                        5,
+                        5,
+                        4,
+                        2
+                    ],
+                    "Electrostatic Bolt": [
+                        2,
+                        2,
+                        2
+                    ],
+                    "Flame Jab": [
+                        2,
+                        1,
+                        1
+                    ],
+                    "Flame Slash": [
+                        1,
+                        1,
+                        1
+                    ],
+                    "Flaring Pain": [
+                        2,
+                        2
+                    ],
+                    "Gorilla Shaman": [
+                        2,
+                        2,
+                        1
+                    ],
+                    "Martyr of Ashes": [
+                        3,
+                        3,
+                        3,
+                        3
+                    ],
+                    "Pyroblast": [
+                        6,
+                        6,
+                        6,
+                        5
+                    ],
+                    "Seismic Shudder": [
+                        2,
+                        2,
+                        1,
+                        1
+                    ],
+                    "Smash to Smithereens": [
+                        3,
+                        3,
+                        3,
+                        2
+                    ]
+                }
+            },
+            "010": {
+                "main": {
+                    "Chain Lightning": [
+                        11,
+                        11,
+                        11,
+                        11
+                    ],
+                    "Death Spark": [
+                        2
+                    ],
+                    "Fireblast": [
+                        5,
+                        5,
+                        4,
+                        3
+                    ],
+                    "Goblin Arsonist": [
+                        3,
+                        3,
+                        3,
+                        3
+                    ],
+                    "Goblin Bushwhacker": [
+                        11,
+                        11,
+                        11,
+                        11
+                    ],
+                    "Goblin Cohort": [
+                        11,
+                        11,
+                        11,
+                        10
+                    ],
+                    "Goblin Sledder": [
+                        10,
+                        10,
+                        10,
+                        10
+                    ],
+                    "Jackal Familiar": [
+                        7,
+                        7,
+                        6,
+                        6
+                    ],
+                    "Lightning Bolt": [
+                        11,
+                        11,
+                        11,
+                        11
+                    ],
+                    "Mogg Conscripts": [
+                        11,
+                        11,
+                        11,
+                        10
+                    ],
+                    "Mogg Fanatic": [
+                        2,
+                        1,
+                        1,
+                        1
+                    ],
+                    "Mogg Flunkies": [
+                        8,
+                        8,
+                        8,
+                        4
+                    ],
+                    "Mogg Raider": [
+                        10,
+                        10,
+                        10,
+                        7
+                    ],
+                    "Mogg War Marshal": [
+                        11,
+                        11,
+                        11,
+                        11
+                    ],
+                    "Mountain": [
+                        11,
+                        11,
+                        11,
+                        11,
+                        11,
+                        11,
+                        11,
+                        11,
+                        11,
+                        11,
+                        11,
+                        11,
+                        11,
+                        11,
+                        11,
+                        11,
+                        9,
+                        1
+                    ],
+                    "Mudbrawler Cohort": [
+                        1,
+                        1
+                    ],
+                    "Sparksmith": [
+                        11,
+                        11,
+                        10,
+                        10
+                    ],
+                    "Teetering Peaks": [
+                        1
+                    ]
+                },
+                "side": {
+                    "Arc Lightning": [
+                        1,
+                        1
+                    ],
+                    "Burst Lightning": [
+                        1,
+                        1,
+                        1
+                    ],
+                    "Death Spark": [
+                        4,
+                        3,
+                        3,
+                        2
+                    ],
+                    "Electrostatic Bolt": [
+                        1,
+                        1,
+                        1
+                    ],
+                    "Flame Jab": [
+                        7,
+                        7,
+                        7,
+                        2
+                    ],
+                    "Flame Slash": [
+                        3,
+                        3,
+                        1
+                    ],
+                    "Flaring Pain": [
+                        5,
+                        5,
+                        1
+                    ],
+                    "Goblin War Strike": [
+                        1,
+                        1
+                    ],
+                    "Gorilla Shaman": [
+                        2,
+                        2,
+                        1
+                    ],
+                    "Lightning Axe": [
+                        1
+                    ],
+                    "Martyr of Ashes": [
+                        2,
+                        2,
+                        2,
+                        2
+                    ],
+                    "Molten Rain": [
+                        2,
+                        2,
+                        1
+                    ],
+                    "Pyroblast": [
+                        10,
+                        10,
+                        10,
+                        9
+                    ],
+                    "Raze": [
+                        2,
+                        2
+                    ],
+                    "Relic of Progenitus": [
+                        1,
+                        1
+                    ],
+                    "Seismic Shudder": [
+                        5,
+                        5,
                         4,
                         4
+                    ],
+                    "Smash to Smithereens": [
+                        6,
+                        6,
+                        5,
+                        3
+                    ]
+                }
+            },
+            "011": {
+                "main": {
+                    "Chain Lightning": [
+                        5,
+                        5,
+                        5,
+                        5
+                    ],
+                    "Fireblast": [
+                        3,
+                        3
+                    ],
+                    "Forgotten Cave": [
+                        3
+                    ],
+                    "Goblin Arsonist": [
+                        3,
+                        3,
+                        3,
+                        2
+                    ],
+                    "Goblin Bushwhacker": [
+                        5,
+                        5,
+                        5,
+                        5
+                    ],
+                    "Goblin Cohort": [
+                        5,
+                        5,
+                        5,
+                        5
+                    ],
+                    "Goblin Sledder": [
+                        5,
+                        5,
+                        5,
+                        5
+                    ],
+                    "Intimidator Initiate": [
+                        1,
+                        1
+                    ],
+                    "Jackal Familiar": [
+                        2,
+                        2,
+                        2,
+                        2
+                    ],
+                    "Lightning Bolt": [
+                        5,
+                        5,
+                        5,
+                        5
+                    ],
+                    "Mogg Conscripts": [
+                        5,
+                        5,
+                        5,
+                        5
+                    ],
+                    "Mogg Flunkies": [
+                        3,
+                        3,
+                        3,
+                        1
+                    ],
+                    "Mogg Raider": [
+                        5,
+                        5,
+                        5,
+                        5
+                    ],
+                    "Mogg War Marshal": [
+                        5,
+                        5,
+                        5,
+                        5
+                    ],
+                    "Mountain": [
+                        5,
+                        5,
+                        5,
+                        5,
+                        5,
+                        5,
+                        5,
+                        5,
+                        5,
+                        5,
+                        5,
+                        5,
+                        5,
+                        5,
+                        5,
+                        5,
+                        4
+                    ],
+                    "Sparksmith": [
+                        5,
+                        5,
+                        3,
+                        3
+                    ]
+                },
+                "side": {
+                    "Arc Lightning": [
+                        1,
+                        1
+                    ],
+                    "Death Spark": [
+                        3,
+                        3,
+                        3
                     ],
                     "Flame Jab": [
                         2,
                         2,
                         2
                     ],
-                    "Flame Slash": [
-                        4,
-                        4,
-                        4,
-                        4
-                    ],
-                    "Flaring Pain": [
+                    "Goblin Vandal": [
                         1,
-                        1
-                    ],
-                    "Gorilla Shaman": [
-                        3,
-                        3,
-                        3,
-                        3
-                    ],
-                    "Martyr of Ashes": [
-                        2,
                         1,
                         1,
                         1
                     ],
-                    "Molten Rain": [
-                        2,
+                    "Keeper of Kookus": [
                         1,
                         1,
                         1
                     ],
                     "Pyroblast": [
-                        8,
-                        8,
-                        8,
-                        8
+                        5,
+                        5,
+                        5,
+                        5
                     ],
                     "Raze": [
-                        1,
-                        1,
-                        1
+                        2,
+                        2,
+                        2,
+                        2
                     ],
                     "Seismic Shudder": [
+                        2,
                         2,
                         2,
                         2
                     ],
                     "Smash to Smithereens": [
+                        3,
+                        3,
+                        3,
+                        3
+                    ],
+                    "Sparksmith": [
+                        2,
+                        1
+                    ]
+                }
+            },
+            "012": {
+                "main": {
+                    "Chain Lightning": [
+                        22,
+                        22,
+                        22,
+                        21
+                    ],
+                    "Death Spark": [
+                        1,
+                        1,
+                        1
+                    ],
+                    "Dragon Fodder": [
+                        7,
+                        7
+                    ],
+                    "Fireblast": [
                         6,
-                        6,
-                        5,
+                        4,
+                        1
+                    ],
+                    "Flame Slash": [
+                        2,
+                        2
+                    ],
+                    "Forgotten Cave": [
+                        1,
+                        1
+                    ],
+                    "Goblin Arsonist": [
+                        14,
+                        14,
+                        11,
+                        11
+                    ],
+                    "Goblin Bushwhacker": [
+                        31,
+                        31,
+                        31,
+                        31
+                    ],
+                    "Goblin Cohort": [
+                        31,
+                        31,
+                        31,
+                        31
+                    ],
+                    "Goblin Matron": [
+                        4,
+                        4,
                         4
+                    ],
+                    "Goblin Sledder": [
+                        31,
+                        31,
+                        31,
+                        31
+                    ],
+                    "Goblin War Strike": [
+                        1,
+                        1
+                    ],
+                    "Intimidator Initiate": [
+                        7,
+                        7
+                    ],
+                    "Jackal Familiar": [
+                        22,
+                        21,
+                        18,
+                        16
+                    ],
+                    "Lightning Bolt": [
+                        31,
+                        31,
+                        30,
+                        22
+                    ],
+                    "Mogg Conscripts": [
+                        31,
+                        31,
+                        31,
+                        31
+                    ],
+                    "Mogg Fanatic": [
+                        4,
+                        2,
+                        1,
+                        1
+                    ],
+                    "Mogg Flunkies": [
+                        31,
+                        31,
+                        31,
+                        23
+                    ],
+                    "Mogg Raider": [
+                        27,
+                        27,
+                        27,
+                        25
+                    ],
+                    "Mogg War Marshal": [
+                        31,
+                        31,
+                        31,
+                        31
+                    ],
+                    "Mountain": [
+                        31,
+                        31,
+                        31,
+                        31,
+                        31,
+                        31,
+                        31,
+                        31,
+                        31,
+                        31,
+                        31,
+                        31,
+                        31,
+                        31,
+                        30,
+                        28,
+                        26,
+                        4
+                    ],
+                    "Raze": [
+                        2,
+                        2,
+                        2,
+                        2
+                    ],
+                    "Song of Blood": [
+                        1
+                    ],
+                    "Sparksmith": [
+                        25,
+                        25,
+                        20,
+                        16
+                    ],
+                    "Staggershock": [
+                        1
+                    ],
+                    "Teetering Peaks": [
+                        1,
+                        1
+                    ]
+                },
+                "side": {
+                    "Arc Lightning": [
+                        2,
+                        2
+                    ],
+                    "Death Spark": [
+                        19,
+                        15,
+                        12,
+                        2
+                    ],
+                    "Echoing Ruin": [
+                        3,
+                        3,
+                        3,
+                        1
+                    ],
+                    "Fireblast": [
+                        1
+                    ],
+                    "Flame Jab": [
+                        10,
+                        6,
+                        6
+                    ],
+                    "Flame Slash": [
+                        15,
+                        15,
+                        15,
+                        13
+                    ],
+                    "Flaring Pain": [
+                        4,
+                        4,
+                        2
+                    ],
+                    "Goblin Vandal": [
+                        1,
+                        1,
+                        1,
+                        1
+                    ],
+                    "Goblin War Strike": [
+                        1
+                    ],
+                    "Gorilla Shaman": [
+                        15,
+                        15,
+                        13,
+                        12
+                    ],
+                    "Lightning Bolt": [
+                        5,
+                        1
+                    ],
+                    "Martyr of Ashes": [
+                        4,
+                        2,
+                        2,
+                        2
+                    ],
+                    "Molten Rain": [
+                        4,
+                        2,
+                        2,
+                        2
+                    ],
+                    "Pyroblast": [
+                        28,
+                        28,
+                        28,
+                        27
+                    ],
+                    "Raze": [
+                        4,
+                        4,
+                        4,
+                        3
+                    ],
+                    "Seismic Shudder": [
+                        10,
+                        10,
+                        9,
+                        5
+                    ],
+                    "Smash to Smithereens": [
+                        17,
+                        17,
+                        14,
+                        12
+                    ],
+                    "Sparksmith": [
+                        3,
+                        2,
+                        1
                     ]
                 }
             },
@@ -22889,6 +24209,12 @@
                 "preview": "https://cards.scryfall.io/normal/front/c/9/c90fdccf-30a6-40ee-9b35-83a6ee5c0681.jpg",
                 "type_line": "Creature \u2014 Ogre Pirate"
             },
+            "Crown of Fury": {
+                "banned": false,
+                "link": "https://scryfall.com/card/ons/196/crown-of-fury",
+                "preview": "https://cards.scryfall.io/normal/front/6/c/6caae974-f531-469d-8c6a-2077c4f3294a.jpg",
+                "type_line": "Enchantment \u2014 Aura"
+            },
             "Crush": {
                 "banned": false,
                 "link": "https://scryfall.com/card/mbs/61/crush",
@@ -22942,6 +24268,12 @@
                 "link": "https://scryfall.com/card/ala/97/dragon-fodder",
                 "preview": "https://cards.scryfall.io/normal/front/9/e/9eab4120-e7d8-4132-a304-30b88e3175e2.jpg",
                 "type_line": "Sorcery"
+            },
+            "Drooling Ogre": {
+                "banned": false,
+                "link": "https://scryfall.com/card/dst/58/drooling-ogre",
+                "preview": "https://cards.scryfall.io/normal/front/2/0/2036745a-09ea-476f-ace6-1d06b8502f83.jpg",
+                "type_line": "Creature \u2014 Ogre"
             },
             "Dual Shot": {
                 "banned": false,
@@ -23037,6 +24369,12 @@
                 "banned": false,
                 "link": "https://scryfall.com/card/tor/97/fiery-temper",
                 "preview": "https://cards.scryfall.io/normal/front/9/1/918e46b7-cbca-4acf-8e83-94b5fcadcc49.jpg",
+                "type_line": "Instant"
+            },
+            "Fire at Will": {
+                "banned": false,
+                "link": "https://scryfall.com/card/eve/140/fire-at-will",
+                "preview": "https://cards.scryfall.io/normal/front/5/3/53617fbc-a6e9-4f06-8c4b-4699325cdcac.jpg",
                 "type_line": "Instant"
             },
             "Fireblast": {
@@ -25452,8 +26790,56 @@
         ],
         "timeline": [
             {
-                "date": "2010-10-01",
+                "date": "2009-10-02",
+                "decks": 11,
+                "label": "zen",
+                "metagame": "006",
+                "name": "Zendikar",
+                "py/object": "pauperformance_bot.entity.api.archetype.MetagameRef"
+            },
+            {
+                "date": "2010-02-05",
+                "decks": 14,
+                "label": "wwk",
+                "metagame": "007",
+                "name": "Worldwake",
+                "py/object": "pauperformance_bot.entity.api.archetype.MetagameRef"
+            },
+            {
+                "date": "2010-04-23",
                 "decks": 8,
+                "label": "roe",
+                "metagame": "008",
+                "name": "Rise of the Eldrazi",
+                "py/object": "pauperformance_bot.entity.api.archetype.MetagameRef"
+            },
+            {
+                "date": "2010-06-18",
+                "decks": 6,
+                "label": "arc",
+                "metagame": "009",
+                "name": "Archenemy",
+                "py/object": "pauperformance_bot.entity.api.archetype.MetagameRef"
+            },
+            {
+                "date": "2010-07-16",
+                "decks": 11,
+                "label": "m11",
+                "metagame": "010",
+                "name": "Magic 2011",
+                "py/object": "pauperformance_bot.entity.api.archetype.MetagameRef"
+            },
+            {
+                "date": "2010-09-03",
+                "decks": 5,
+                "label": "ddf",
+                "metagame": "011",
+                "name": "Duel Decks: Elspeth vs. Tezzeret",
+                "py/object": "pauperformance_bot.entity.api.archetype.MetagameRef"
+            },
+            {
+                "date": "2010-10-01",
+                "decks": 31,
                 "label": "som",
                 "metagame": "012",
                 "name": "Scars of Mirrodin",
