@@ -646,7 +646,7 @@ export default function MetagameFlow({ index, poolUrls, bindPreview }) {
               <span className="truncate">{eventsSummary(m)}</span>
               <span className="text-gray-600">{eventsOpen ? '▲' : '▼'}</span>
             </button>
-            <div className={`${eventsOpen ? 'block mt-3' : 'hidden'} sm:block sm:mt-2 sm:pt-2 sm:border-t border-gray-700 pb-2 flex-1 min-h-0 overflow-y-auto`}>
+            <div className={`${eventsOpen ? 'block mt-3' : 'hidden'} sm:block sm:mt-2 sm:pt-2 sm:border-t border-gray-700 pb-2 flex-1 min-h-0 overflow-y-auto no-scrollbar`}>
               <Events metagame={m} poolUrls={poolUrls} bindPreview={bindPreview} />
             </div>
           </div>
@@ -666,7 +666,7 @@ export default function MetagameFlow({ index, poolUrls, bindPreview }) {
               </div>
               {/* desktops: in the room under the pie and the bars */}
               {movers && (
-                <div className="flex-1 min-h-0 overflow-y-auto flex flex-col">
+                <div className="flex-1 min-h-0 overflow-y-auto no-scrollbar flex flex-col">
                   <Movers movers={movers} bindPreview={bindPreview} compact={!wide} />
                 </div>
               )}
