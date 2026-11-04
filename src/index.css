@@ -107,3 +107,7 @@
   }
 }
 
+
+/* Scrollable, but without a visible scrollbar */
+.no-scrollbar { scrollbar-width: none; }
+.no-scrollbar::-webkit-scrollbar { display: none; }
