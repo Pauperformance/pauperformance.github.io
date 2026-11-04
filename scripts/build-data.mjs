@@ -1,6 +1,8 @@
 import { readFileSync, readdirSync, writeFileSync, unlinkSync, copyFileSync, mkdirSync, existsSync, statSync } from 'fs'
 import { join } from 'path'
 import { metagameSlug } from '../src/utils/slugs.js'
+import { computeTypicalList } from '../src/utils/typicalList.js'
+import { buildArchetypeMap } from './archetype-map.mjs'
 
 const buildStart = Date.now()
 
@@ -1257,5 +1259,47 @@ for (const archetype of archetypes) {
 }
 writeFileSync(join(outDir, 'archetype-alias-map.json'), JSON.stringify(aliasMap))
 console.log(`Built archetype-alias-map.json with ${Object.keys(aliasMap).length} alias redirects.`)
+
+// One compact maindeck per archetype, for the archetype map (similarity between
+// archetypes): its latest typical list, from the latest metagame it was played
+// in, extended back through the earlier metagames of its current era until at
+// least MAP_MIN_DECKS decks back the list (a single deck is too noisy).
+// Archetypes with no classified decks are left out.
+const MAP_MIN_DECKS = 20
+const archetypeLists = {}
+for (const archetype of archetypes) {
+  const t = archetype.typical_list
+  const run = (t && t.metagames) || []
+  if (!run.length || !t.by_metagame || !Object.keys(t.by_metagame).length) continue
+  let from = run.length - 1
+  let decks = run[from].decks || 0
+  while (from > 0 && decks < MAP_MIN_DECKS) decks += run[--from].decks || 0
+  const list = computeTypicalList(run, { by_metagame: t.by_metagame, cards: t.cards }, from, run.length - 1)
+  const main = {}
+  const lands = []
+  const banned = []
+  for (const c of list.main) {
+    if (!c.typical) continue
+    main[c.name] = c.typical
+    if ((c.type_line || '').includes('Land')) lands.push(c.name)
+    if (c.banned) banned.push(c.name)
+  }
+  archetypeLists[nameToSlug(archetype.name)] = {
+    name: archetype.name,
+    game_type: archetype.game_type || [],
+    dominant_mana: archetype.dominant_mana || [],
+    decks: list.decks,
+    metagames: run.slice(from).map(m => m.metagame),
+    first_date: run[from].date,
+    last_date: t.last_date || null,
+    main,
+    lands,
+    banned, // the cards of the list that are banned now
+  }
+}
+writeFileSync(join(outDir, 'archetype-lists.json'), JSON.stringify(archetypeLists))
+console.log(`Built archetype-lists.json with ${Object.keys(archetypeLists).length} typical lists.`)
+writeFileSync(join(outDir, 'archetype-map.json'), JSON.stringify(buildArchetypeMap(archetypeLists)))
+console.log('Built archetype-map.json.')
 
 console.log(`Build completed in ${((Date.now() - buildStart) / 1000).toFixed(1)}s`)
