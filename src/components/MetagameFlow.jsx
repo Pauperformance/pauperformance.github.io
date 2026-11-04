@@ -5,6 +5,7 @@ import ShareChange from './ShareChange'
 import { formatDate, formatShortDate, daysBetween, formatDays } from '../utils/dates'
 import { metagameSlug, nameToSlug } from '../utils/slugs'
 import { scrollGently } from '../utils/scroll'
+import { useCardPages, cardLinkSlug } from '../utils/cardPages'
 
 // The metagames as time flowing: the page scrolls through them, newest first,
 // back in time, while the timeline and the widgets stay on screen. Each
@@ -16,7 +17,11 @@ const STEP_PX = 120        // scroll per metagame with decks
 const EMPTY_WEIGHT = 0.25  // the step of a metagame without decks, in steps
 const TIMELINE_PX = 84     // timeline per step
 const HOLD = 0.6
-const ROW_PX = 30          // a row of the bars
+const ROW_PX = 26          // a row of the bars
+const MAX_PHONE_ROW_PX = 40 // ... and as tall as it gets on phones, where the rows fill the screen
+const MIN_ROW_PX = 20      // ... as short as it gets, to leave room for the movers
+const MAX_LISTED = 16      // archetypes listed by the bars (the rest are in Other); the pie shows them all
+const MOVERS_MIN_PX = 176  // the least height of the movers
 
 const MANA_ORDER = ['W', 'U', 'B', 'R', 'G', 'C']
 // [hue, saturation, lightness] of each mana, readable on the dark background
@@ -124,7 +129,10 @@ function useViewportHeight() {
   return height
 }
 
-function Donut({ slices, other, center, hovered, onHover }) {
+// slices: the archetypes (all those over the threshold, listed or not); other:
+// the rest, otherTotal: the rest and the archetypes not listed (what the bars
+// call Other, so hovering Other lights them all); extra: those not listed.
+function Donut({ slices, other, otherTotal, extra, center, hovered, onHover }) {
   const SIZE = 220, cx = 110, cy = 110, innerR = 62, outerR = 102
   const all = [...slices, ...(other > 0.05 ? [{ name: 'Other', value: other, colors: [OTHER_COLOR] }] : [])]
   const total = all.reduce((s, d) => s + d.value, 0)
@@ -143,6 +151,8 @@ function Donut({ slices, other, center, hovered, onHover }) {
     return { ...d, d: `M${ox1},${oy1}A${outerR},${outerR},0,${lg},1,${ox2},${oy2}L${ix2},${iy2}A${innerR},${innerR},0,${lg},0,${ix1},${iy1}Z` }
   })
   const active = hovered && all.find(d => d.name === hovered)
+  const activeValue = active && (active.name === 'Other' ? otherTotal : active.value)
+  const lit = hovered === 'Other' ? new Set(['Other', ...extra]) : hovered ? new Set([hovered]) : null
 
   return (
     <svg viewBox={`0 0 ${SIZE} ${SIZE}`} className="w-full h-full" role="img"
@@ -158,11 +168,11 @@ function Donut({ slices, other, center, hovered, onHover }) {
         <path key={p.name} d={p.d}
           fill={p.colors.length > 1 ? `url(#flow-${hash(p.name)})` : p.colors[0]}
           stroke="var(--color-gray-800)" strokeWidth="1.5"
-          opacity={hovered && hovered !== p.name ? 0.35 : 1}
+          opacity={lit && !lit.has(p.name) ? 0.35 : 1}
           onMouseEnter={() => onHover(p.name)} onMouseLeave={() => onHover(null)} />
       ))}
       <text x={cx} y={cy - 4} textAnchor="middle" className="fill-white text-[15px] font-semibold">
-        {active ? `${active.value.toFixed(1)}%` : center.value}
+        {active ? `${activeValue.toFixed(1)}%` : center.value}
       </text>
       <text x={cx} y={cy + 14} textAnchor="middle" className="fill-gray-400 text-[10px]">
         {active ? (active.name.length > 18 ? active.name.slice(0, 17) + '…' : active.name) : center.label}
@@ -176,11 +186,11 @@ function Donut({ slices, other, center, hovered, onHover }) {
 // changes: the metagame's archetypes, by name, with their share and their
 // share in the previous metagame; shown, with the new archetypes, as each
 // metagame starts (slug).
-function Bars({ rows, scale, changes, slug, hovered, onHover }) {
+function Bars({ rows, rowPx, otherLabel, scale, changes, slug, hovered, onHover }) {
   const ranked = [...rows].sort((a, b) => (a.name === 'Other') - (b.name === 'Other') || b.value - a.value)
   const rank = new Map(ranked.map((r, i) => [r.name, i]))
   return (
-    <div className="relative" style={{ height: rows.length * ROW_PX }}>
+    <div className="relative" style={{ height: (MAX_LISTED + 1) * rowPx }}>
       {rows.map(r => {
         const change = changes.get(r.name)
         const entered = change && change.previous === 0
@@ -188,13 +198,13 @@ function Bars({ rows, scale, changes, slug, hovered, onHover }) {
         return (
           <div key={r.name}
             className="absolute inset-x-0 flex items-center gap-2 transition-[top] duration-300 ease-out motion-reduce:transition-none"
-            style={{ top: rank.get(r.name) * ROW_PX, height: ROW_PX, opacity: hovered && hovered !== r.name ? 0.4 : 1 }}
+            style={{ top: rank.get(r.name) * rowPx, height: rowPx, opacity: hovered && hovered !== r.name ? 0.4 : 1 }}
             onMouseEnter={() => onHover(r.name)} onMouseLeave={() => onHover(null)}>
             {r.name === 'Other' ? (
-              <span className="flex-1 min-w-0 sm:flex-none sm:w-48 shrink-0 truncate text-sm text-gray-500">Other (under 2%)</span>
+              <span className="flex-1 min-w-0 sm:flex-none sm:w-48 shrink-0 truncate text-sm max-sm:text-base text-gray-500">{otherLabel}</span>
             ) : (
               <Link to={`/archetypes/${nameToSlug(r.name)}`}
-                className={`flex-1 min-w-0 sm:flex-none sm:w-48 shrink-0 truncate text-sm hover:text-amber-400 transition-colors ${entered ? 'text-amber-200' : 'text-gray-300'}`}>
+                className={`flex-1 min-w-0 sm:flex-none sm:w-48 shrink-0 truncate text-sm max-sm:text-base hover:text-amber-400 transition-colors ${entered ? 'text-amber-200' : 'text-gray-300'}`}>
                 {r.name}
               </Link>
             )}
@@ -202,12 +212,12 @@ function Bars({ rows, scale, changes, slug, hovered, onHover }) {
             <div className="absolute inset-x-0 bottom-0 h-1 sm:static sm:flex-1 sm:h-2.5 bg-gray-900 rounded-full overflow-hidden">
               <div className="h-full rounded-full" style={{ width: `${Math.min(100, (r.value / scale) * 100)}%`, background: cssFill(r.colors) }} />
             </div>
-            <span className="ml-auto sm:ml-0 w-11 shrink-0 text-right text-xs text-gray-400 font-mono">{r.value.toFixed(1)}%</span>
-            <span className="w-20 shrink-0 whitespace-nowrap text-right">
+            <span className="ml-auto sm:ml-0 w-11 max-sm:w-12 shrink-0 text-right text-xs max-sm:text-sm text-gray-400 font-mono">{r.value.toFixed(1)}%</span>
+            <span className="w-20 max-sm:w-16 shrink-0 whitespace-nowrap text-right max-sm:[&_.tabular-nums]:!text-sm">
               {change && (
                 <span key={slug} className="flow-event-in inline-block">
                   {entered ? (
-                    <span className={`px-1.5 py-px rounded-full border text-[11px] font-medium ${debut
+                    <span className={`px-1.5 max-sm:px-1 py-px rounded-full border text-[11px] font-medium ${debut
                         ? 'border-amber-300/60 bg-amber-300/10 text-amber-300'
                         : 'border-sky-300/60 bg-sky-300/10 text-sky-300'}`}
                       title={debut ? 'Played for the first time' : 'Not played in the previous metagame, but in earlier ones'}>
@@ -220,6 +230,95 @@ function Bars({ rows, scale, changes, slug, hovered, onHover }) {
           </div>
         )
       })}
+    </div>
+  )
+}
+
+// Whether the viewport matches a media query.
+function useMediaQuery(query) {
+  const [matches, setMatches] = useState(() => window.matchMedia(query).matches)
+  useEffect(() => {
+    const list = window.matchMedia(query)
+    const onChange = () => setMatches(list.matches)
+    onChange()
+    list.addEventListener('change', onChange)
+    return () => list.removeEventListener('change', onChange)
+  }, [query])
+  return matches
+}
+
+// The metagames' cards on the move (card_movers of each metagame's page data),
+// fetched as the timeline reaches them: undefined while loading, null if the
+// metagame has none (or `enabled` is off).
+const moversCache = new Map()
+function useCardMovers(slug, enabled) {
+  const [loaded, setLoaded] = useState({ slug: null, movers: undefined })
+  useEffect(() => {
+    if (!enabled || !slug) return
+    let alive = true
+    if (!moversCache.has(slug)) {
+      moversCache.set(slug, fetch(`/data/metagames/${slug}.json`)
+        .then(r => r.ok ? r.json() : null)
+        .then(d => (d && d.card_movers) || null)
+        .catch(() => { moversCache.delete(slug); return null }))
+    }
+    moversCache.get(slug).then(movers => { if (alive) setLoaded({ slug, movers }) })
+    return () => { alive = false }
+  }, [slug, enabled])
+  return enabled && loaded.slug === slug ? loaded.movers : undefined
+}
+
+// A card of the movers, as a tile filling its cell of the grid: its artwork, as
+// on the metagame's page, with how it moved (or, with no previous metagame to
+// compare with, how much it is played), and its name.
+function MoverTile({ card, cardPages, bindPreview }) {
+  const slug = cardLinkSlug(cardPages, card.name)
+  const image = card.image
+    || `https://api.scryfall.com/cards/named?exact=${encodeURIComponent(card.name)}&format=image&version=normal`
+  const handlers = bindPreview(card.name, { slug: slug || undefined, image })
+  const compared = card.previous_share !== undefined
+  const change = compared ? card.share - card.previous_share : 0
+  const title = compared
+    ? `${card.name}: in ${card.share.toFixed(1)}% of the decks, ${card.previous_share.toFixed(1)}% in the previous metagame`
+    : `${card.name}: in ${card.share.toFixed(1)}% of the decks`
+  const src = image.replace('/normal/', '/art_crop/').replace('version=normal', 'version=art_crop')
+  const content = (
+    <>
+      <span className="relative block flex-1 min-h-[2.5rem] overflow-hidden bg-gray-900">
+        <img src={src} alt={card.name} loading="lazy"
+          className="absolute inset-0 w-full h-full object-cover group-hover:scale-110 transition-transform duration-300" />
+        <span className={`absolute top-1 right-1 rounded bg-gray-900/85 px-1.5 py-px text-xs font-bold tabular-nums ${!compared ? 'text-amber-400' : change > 0 ? 'text-emerald-400' : 'text-rose-400'}`}>
+          {compared ? `${change > 0 ? '▲' : '▼'} ${Math.abs(change).toFixed(1)}%` : `${card.share.toFixed(1)}%`}
+        </span>
+      </span>
+      <span className="block truncate px-2 py-1 text-xs text-gray-300 group-hover:text-amber-400 transition-colors">{card.name}</span>
+    </>
+  )
+  const className = 'group flex flex-col min-w-0 min-h-0 rounded-lg overflow-hidden bg-gray-800 border border-gray-700 hover:border-amber-400/50 transition-colors'
+  return slug
+    ? <Link to={`/cards/${slug}`} {...handlers} title={title} className={className}>{content}</Link>
+    : <span {...handlers} title={title} className={className}>{content}</span>
+}
+
+// The metagame's top movers (or, without a previous metagame with decks, its
+// top cards): the cards that gained and lost the most presence in the decks,
+// the rising and the falling side by side, filling the room they have: the
+// tiles grow with it.
+function Movers({ movers, bindPreview }) {
+  const cardPages = useCardPages()
+  const groups = movers.top
+    ? [['Top Cards', movers.top]]
+    : [['Top Movers · Rising', movers.up], ['Top Movers · Falling', movers.down]]
+  return (
+    <div className={`flex-1 min-h-[11rem] grid gap-x-6 ${movers.top ? 'grid-cols-1' : 'grid-cols-2'}`}>
+      {groups.filter(([, cards]) => cards.length > 0).map(([title, cards]) => (
+        <div key={title} className="min-w-0 min-h-0 flex flex-col">
+          <p className="text-xs uppercase tracking-widest text-gray-400 mb-1.5">{title}</p>
+          <div className={`flex-1 min-h-0 grid gap-2 ${movers.top ? 'grid-cols-10 grid-rows-1' : 'grid-cols-5 grid-rows-2'}`}>
+            {cards.map(c => <MoverTile key={c.name} card={c} cardPages={cardPages} bindPreview={bindPreview} />)}
+          </div>
+        </div>
+      ))}
     </div>
   )
 }
@@ -450,6 +549,22 @@ export default function MetagameFlow({ index, poolUrls, bindPreview }) {
   }, [steps, headerHeight, scrollToStep])
 
   const [hovered, setHovered] = useState(null)
+  // phones: the height left for the pie and the bars (the bars) under the metagame's card
+  // (the rows take it all: see rowPx)
+  const phone = !useMediaQuery('(min-width: 640px)')
+  const [fitEl, setFitEl] = useState(null)
+  const [fitHeight, setFitHeight] = useState(0)
+  useEffect(() => {
+    if (!fitEl) return
+    const measure = () => setFitHeight(fitEl.clientHeight)
+    measure()
+    const observer = new ResizeObserver(measure)
+    observer.observe(fitEl)
+    return () => observer.disconnect()
+  }, [fitEl])
+  // desktops only: smaller screens have room for the pie or the bars alone
+  const wide = useMediaQuery('(min-width: 1280px)')
+  const movers = useCardMovers(step ? step.slug : null, wide && !!(step && step.data))
   // phones only: the events take the room of the bars, so they open on demand
   // (and stay open while scrolling)
   const [eventsOpen, setEventsOpen] = useState(false)
@@ -471,7 +586,24 @@ export default function MetagameFlow({ index, poolUrls, bindPreview }) {
       .map(([name, value]) => ({ name, value, ...archetypes.get(name) }))
       .sort((a, b) => a.order - b.order)
   }
-  const barRows = other > 0.05 ? [...rows, { name: 'Other', value: other, colors: [OTHER_COLOR] }] : rows
+  // the bars list the MAX_LISTED most played archetypes; the pie shows them all,
+  // and the bars' Other has the rest (hovering one the bars don't list lights Other)
+  const mostPlayed = [...rows].sort((a, b) => b.value - a.value)
+  const listed = mostPlayed.slice(0, MAX_LISTED)
+  const extra = mostPlayed.slice(MAX_LISTED)
+  const extraNames = new Set(extra.map(r => r.name))
+  const otherTotal = other + extra.reduce((sum, r) => sum + r.value, 0)
+  const barRows = otherTotal > 0.05 ? [...listed, { name: 'Other', value: otherTotal, colors: [OTHER_COLOR] }] : listed
+  const barHovered = hovered && extraNames.has(hovered) ? 'Other' : hovered
+  // the bars take the same height in every metagame, so that what is under them
+  // stays in place: with the movers, as short as needs be to leave them room
+  // (the stage less its padding, the metagame's card (sm:h-48) and the gaps)
+  const rowPx = wide
+    ? Math.max(MIN_ROW_PX, Math.min(ROW_PX, Math.floor((stageHeight - 32 - 192 - 32 - MOVERS_MIN_PX) / (MAX_LISTED + 1))))
+    : phone && fitHeight
+      // the rows fill the screen: MAX_LISTED archetypes and Other
+      ? Math.max(ROW_PX, Math.min(MAX_PHONE_ROW_PX, Math.floor(fitHeight / (MAX_LISTED + 1))))
+      : ROW_PX
   // the metagame's own changes, held while it blends into the next one
   const changes = new Map(step.data ? step.data.shares.map(([n, share, previous, debut]) => [n, { share, previous, debut }]) : [])
   const m = step.m
@@ -482,7 +614,7 @@ export default function MetagameFlow({ index, poolUrls, bindPreview }) {
         <div className="flex-1 min-w-0 flex flex-col gap-4 overflow-hidden">
           {/* one height for every metagame, so that the pie and the bars stay in place: long B&Rs scroll inside
               (on phones, with the events closed, the header alone, the same for all) */}
-          <div className={`bg-gray-800 border border-gray-700 rounded-xl p-4 sm:p-5 shrink-0 flex flex-col sm:h-52 ${eventsOpen ? 'h-84' : ''}`}>
+          <div className={`bg-gray-800 border border-gray-700 rounded-xl p-4 shrink-0 flex flex-col sm:h-48 ${eventsOpen ? 'h-84' : ''}`}>
             <div className="flex items-start gap-3 flex-wrap">
               <div className="min-w-[12rem] flex-1">
                 <p className="text-amber-400 font-semibold">
@@ -510,21 +642,30 @@ export default function MetagameFlow({ index, poolUrls, bindPreview }) {
               <span className="truncate">{eventsSummary(m)}</span>
               <span className="text-gray-600">{eventsOpen ? '▲' : '▼'}</span>
             </button>
-            <div className={`${eventsOpen ? 'block mt-3' : 'hidden'} sm:block sm:mt-3 sm:pt-3 sm:border-t border-gray-700 pb-2 flex-1 min-h-0 overflow-y-auto`}>
+            <div className={`${eventsOpen ? 'block mt-3' : 'hidden'} sm:block sm:mt-2 sm:pt-2 sm:border-t border-gray-700 pb-2 flex-1 min-h-0 overflow-y-auto`}>
               <Events metagame={m} poolUrls={poolUrls} bindPreview={bindPreview} />
             </div>
           </div>
 
           {step.data ? (
-            <div className="flex-1 min-h-0 flex flex-col lg:flex-row gap-4 lg:gap-6">
-              {/* no room for it on phones: the bars tell the same */}
-              <div className="hidden sm:block shrink-0 sm:w-56 sm:h-56 lg:w-72 lg:h-72 xl:w-80 xl:h-80 mx-auto lg:mx-0">
-                <Donut slices={rows} other={other} hovered={hovered} onHover={setHovered}
-                  center={{ value: step.data.decks.toLocaleString(), label: 'decks' }} />
+            <div className="flex-1 min-h-0 flex flex-col gap-4 lg:gap-6">
+              <div ref={setFitEl} className={`${movers ? 'shrink-0' : 'flex-1'} min-h-0 flex flex-col lg:flex-row gap-4 lg:gap-6`}>
+                {/* no room for it on phones: the bars tell the same */}
+                <div className="hidden sm:block shrink-0 sm:w-56 sm:h-56 lg:w-72 lg:h-72 xl:w-80 xl:h-80 mx-auto lg:mx-0">
+                  <Donut slices={rows} other={other} otherTotal={otherTotal} extra={extraNames} hovered={hovered} onHover={setHovered}
+                    center={{ value: step.data.decks.toLocaleString(), label: 'decks' }} />
+                </div>
+                <div className="flex-1 min-w-0 min-h-0 overflow-hidden">
+                  <Bars rows={barRows} rowPx={rowPx} otherLabel={extra.length ? 'Other' : 'Other (under 2%)'} scale={scale}
+                    changes={changes} slug={step.slug} hovered={barHovered} onHover={setHovered} />
+                </div>
               </div>
-              <div className="flex-1 min-w-0 min-h-0 overflow-hidden">
-                <Bars rows={barRows} scale={scale} changes={changes} slug={step.slug} hovered={hovered} onHover={setHovered} />
-              </div>
+              {/* desktops: in the room under the pie and the bars */}
+              {movers && (
+                <div className="flex-1 min-h-0 overflow-y-auto flex flex-col">
+                  <Movers movers={movers} bindPreview={bindPreview} />
+                </div>
+              )}
             </div>
           ) : (
             <div className="flex-1 flex flex-col items-center justify-center text-center gap-2 text-sm text-gray-500 px-4">
