@@ -106,7 +106,9 @@ function DataFreshness() {
   return <span className="text-xs text-gray-500 text-center">{parts.join(' ')}</span>
 }
 
-export default function Layout({ children }) {
+export default function Layout({ children, wide = false }) {
+  // wide pages (the metagame flow) go beyond the usual 2xl width
+  const maxW = wide ? 'max-w-[1920px]' : 'max-w-screen-2xl'
   const { pathname } = useLocation()
   const [menuOpen, setMenuOpen] = useState(false)
 
@@ -115,17 +117,17 @@ export default function Layout({ children }) {
   return (
     <div className="min-h-screen bg-gray-900 text-gray-100">
       <header className="border-b border-gray-700 bg-gray-950 sticky top-0 z-10">
-        <div className="max-w-screen-2xl mx-auto px-4 py-4 flex items-center gap-8">
+        <div className={`${maxW} mx-auto px-4 py-4 flex items-center gap-4 xl:gap-8`}>
           <Link to="/" className="shrink-0">
             <div className="text-xl font-bold tracking-tight text-white">
               Pauperformance <span className="text-amber-400">Academy</span>
             </div>
             <div className="text-xs text-gray-500 tracking-wide mt-0.5">A common journey to optimal Pauper</div>
           </Link>
-          <nav className="hidden lg:flex justify-center gap-1 flex-1">
+          <nav className="hidden lg:flex justify-center xl:gap-1 flex-1">
             {NAV_ITEMS.map(({ to, label }) => (
               <Link key={to} to={to}
-                className={`px-3 py-1.5 rounded-md text-sm font-medium transition-colors ${
+                className={`px-2 xl:px-3 py-1.5 rounded-md text-sm font-medium transition-colors ${
                   pathname === to
                     ? 'bg-amber-400/10 text-amber-400'
                     : 'text-gray-400 hover:text-white hover:bg-gray-800'
@@ -161,7 +163,7 @@ export default function Layout({ children }) {
         )}
       </header>
 
-      <main className="max-w-screen-2xl mx-auto px-4 pt-5 pb-10">
+      <main className={`${maxW} mx-auto px-4 pt-5 pb-10`}>
         {children}
       </main>
 

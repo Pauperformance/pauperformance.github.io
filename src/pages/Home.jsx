@@ -150,11 +150,12 @@ function TopDecksSection() {
         {decks.map(deck => (
           <div key={deck.archetype_name} className="bg-gray-800 border border-gray-700 rounded-xl overflow-hidden hover:border-amber-400/50 transition-all group">
             <Link to={`/archetypes/${nameToSlug(deck.archetype_name)}`} className="block">
-              <div className="card-image-clip aspect-[5/4] bg-gray-900 overflow-hidden mt-[-20px] mb-[-20px] mx-[-5px]">
+              {/* as on the metagame's page: Scryfall's art crop (the artwork without its frame), up to the box's border */}
+              <div className="relative aspect-[2/1] bg-gray-900 overflow-hidden">
                 {deck.featured_image
-                  ? <img src={deck.featured_image} alt={deck.archetype_name} loading="lazy"
-                      className="w-full h-full object-cover object-top scale-110 group-hover:scale-125 transition-transform duration-300" />
-                  : <div className="w-full h-full flex items-center justify-center text-gray-600 text-xs">No image</div>
+                  ? <img src={deck.featured_image.replace('/normal/', '/art_crop/')} alt={deck.archetype_name} loading="lazy"
+                      className="absolute inset-0 w-full h-full object-cover group-hover:scale-110 transition-transform duration-300" />
+                  : <div className="absolute inset-0 flex items-center justify-center text-gray-600 text-xs">No image</div>
                 }
               </div>
               <div className="p-2.5 space-y-2">
@@ -583,10 +584,10 @@ function MetagameSection() {
   return (
     <section>
       <h2 className="text-xl font-semibold text-white mb-4">Bake into a Pie</h2>
-      <MetaPie shares={data}
-        listClassName="grid grid-cols-2 sm:grid-cols-[none] sm:grid-flow-col sm:grid-rows-23 min-[900px]:grid-rows-16 lg:grid-rows-[repeat(var(--pie-rows),minmax(0,1fr))] gap-x-4 gap-y-1.5"
-        // at most 5 columns on wide screens
-        listStyle={{ '--pie-rows': Math.max(12, Math.ceil(data.length / 5)) }} />
+      {/* the list in columns, filled evenly */}
+      <MetaPie shares={data} minListedShare={1}
+        listClassName="columns-2 lg:columns-3 2xl:columns-4 gap-x-4"
+        rowClassName="break-inside-avoid mb-1.5" />
     </section>
   )
 }
