@@ -21,10 +21,11 @@ const MAX_ZOOM = 8
 const MANA_COLORS = { W: '#f8e7b9', U: '#0e68ab', B: '#000000', R: '#d3202a', G: '#00733e', C: '#cbc2bf' } // the colors of the mana symbols
 const MANA_ORDER = ['W', 'U', 'B', 'R', 'G', 'C']
 const MANY_COLORS = '#d4af37' // four colors or more
-const SHAPES = { Aggro: 'triangle', Midrange: 'diamond', Control: 'square', Tempo: 'hourglass', Combo: 'circle', Several: 'star' }
+const SHAPES = { Aggro: 'triangle', Midrange: 'diamond', Control: 'square', Tempo: 'hourglass', Combo: 'circle', Mixed: 'star' }
 
-const isCombo = a => a.game_type.includes('Combo')
-const shapeOf = a => SHAPES[isCombo(a) ? 'Combo' : a.game_type.length === 1 ? a.game_type[0] : 'Several'] || 'circle'
+// one type: its shape; any combination of types: the star
+const typeOf = a => (a.game_type.length === 1 ? a.game_type[0] : 'Mixed')
+const shapeOf = a => SHAPES[typeOf(a)] || 'circle'
 const manaOf = a => {
   const colors = MANA_ORDER.filter(m => (a.dominant_mana || []).includes(m))
   return colors.length ? colors : ['C']
@@ -41,10 +42,18 @@ const OUTLINES = {
   hourglass: [[-0.8, -0.95], [0.8, -0.95], [0.1, 0], [0.8, 0.95], [-0.8, 0.95], [-0.1, 0]],
   diamond: ngon(4, 1.3, 0),
   star: Array.from({ length: 10 }, (_, i) => {
-    const radius = i % 2 ? 0.6 : 1.4, angle = -Math.PI / 2 + Math.PI * i / 5
+    const radius = i % 2 ? 0.74 : 1.4, angle = -Math.PI / 2 + Math.PI * i / 5
     return [radius * Math.cos(angle), radius * Math.sin(angle)]
   }),
   circle: ngon(64, 1),
+}
+
+// The size and centre of the outline of a shape, for a radius of 1
+function outlineBox(kind) {
+  const poly = OUTLINES[kind]
+  const xs = poly.map(p => p[0]), ys = poly.map(p => p[1])
+  const [x0, x1, y0, y1] = [Math.min(...xs), Math.max(...xs), Math.min(...ys), Math.max(...ys)]
+  return { height: y1 - y0, midX: (x0 + x1) / 2, midY: (y0 + y1) / 2 }
 }
 
 function inside(pt, poly) {
@@ -122,9 +131,10 @@ function clampView(v) {
 export default function ArchetypeMap({ archetypes, visible, metaMap, filtering }) {
   const navigate = useNavigate()
   const [map, setMap] = useState(null)
-  const [layout, setLayout] = useState('free')
   // only the archetypes whose typical list has no banned card, the map drawn again without the others
-  const [legalOnly, setLegalOnly] = useState(false)
+  const [legalOnly, setLegalOnly] = useState(true)
+  // the types shown: those of the legend that are ticked
+  const [types, setTypes] = useState(() => new Set(Object.keys(SHAPES)))
   const [hovered, setHovered] = useState(null)
   const drag = useRef(null)
   const justDragged = useRef(false)
@@ -132,8 +142,6 @@ export default function ArchetypeMap({ archetypes, visible, metaMap, filtering }
   // and, once zoomed, a drag moves the map.
   const [view, setView] = useState({ k: 1, x: 0, y: 0 })
   const svgRef = useRef(null)
-
-  useEffect(() => { setView({ k: 1, x: 0, y: 0 }) }, [layout])
 
   // the wheel needs a listener that can stop the page from scrolling
   useEffect(() => {
@@ -163,10 +171,10 @@ export default function ArchetypeMap({ archetypes, visible, metaMap, filtering }
     if (!map) return []
     return archetypes
       .map(a => ({ a, p: map.points[nameToSlug(a.name)] }))
-      .filter(x => x.p && (!legalOnly || x.p.legal))
+      .filter(x => x.p && (!legalOnly || x.p.legal) && types.has(typeOf(x.a)))
       .map(({ a, p }) => {
         const r = 4 + Math.sqrt(metaMap[a.name] || 0) * 3.2
-        const [x, y] = (legalOnly ? p.legal : p)[layout]
+        const [x, y] = (legalOnly ? p.legal : p).corners
         return {
           a,
           px: (PAD + x * (W - 2 * PAD) - W / 2) * view.k + W / 2 + view.x,
@@ -174,7 +182,7 @@ export default function ArchetypeMap({ archetypes, visible, metaMap, filtering }
           r: r * Math.sqrt(view.k), // the points grow less than the map, so they space out
         }
       })
-  }, [map, archetypes, layout, metaMap, view, legalOnly])
+  }, [map, archetypes, metaMap, view, legalOnly, types])
 
   // the fills of the color combinations in use: stripes of each color (hard stops)
   const manaFills = useMemo(() => {
@@ -228,39 +236,27 @@ export default function ArchetypeMap({ archetypes, visible, metaMap, filtering }
     <div className="bg-gray-800 border border-gray-700 rounded-xl p-4 space-y-3">
       <div className="flex flex-wrap items-center justify-between gap-2">
         <div>
-          <h2 className="text-sm font-semibold text-gray-200">Archetype map</h2>
-          <p className="text-xs text-gray-500">
-            {layout === 'corners'
-              ? 'The closer to a corner, the more the list looks like that type. '
-              : 'Archetypes with similar typical lists are close. '}
-            Scroll to zoom{view.k > 1 ? ', drag to move' : ''}.
-            Bigger means more played. Click a point to open it.
+          <h2 className="text-xl font-bold text-white">Interactive map</h2>
+          <p className="text-sm text-gray-500">
+            Archetypes with similar lists are close. Bigger means more played. Scroll to zoom, click a point to open it.
           </p>
         </div>
         <div className="flex items-center gap-2">
-        {view.k > 1 && (
-          <button onClick={() => setView({ k: 1, x: 0, y: 0 })}
-            className="px-3 py-1 rounded-lg border border-gray-600 text-xs font-semibold text-gray-400 hover:text-gray-200 transition-colors">
-            Reset zoom
-          </button>
-        )}
-        <button onClick={() => setLegalOnly(v => !v)} aria-pressed={legalOnly}
-          title="Hide the archetypes that play banned cards, and draw the map again without them"
-          className={`px-3 py-1 rounded-full text-xs font-semibold transition-colors border ${
-            legalOnly
-              ? 'bg-amber-400 text-gray-900 border-amber-400'
-              : 'bg-transparent text-gray-400 border-gray-600 hover:border-gray-400 hover:text-gray-200'
-          }`}>
-          Legal only
-        </button>
-        <div className="inline-flex rounded-lg border border-gray-600 overflow-hidden text-xs font-semibold shrink-0">
-          {[['free', 'Similarity'], ['corners', 'Game types']].map(([id, label], i) => (
-            <button key={id} onClick={() => setLayout(id)}
-              className={`px-3 py-1 transition-colors ${i ? 'border-l border-gray-600' : ''} ${layout === id ? 'bg-amber-400 text-gray-900' : 'text-gray-400 hover:text-gray-200'}`}>
-              {label}
+          {view.k > 1 && (
+            <button onClick={() => setView({ k: 1, x: 0, y: 0 })}
+              className="px-3 py-1 rounded-lg border border-gray-600 text-xs font-semibold text-gray-400 hover:text-gray-200 transition-colors">
+              Reset zoom
             </button>
-          ))}
-        </div>
+          )}
+          <button onClick={() => setLegalOnly(v => !v)} aria-pressed={legalOnly}
+            title="Hide the archetypes that play banned cards, and draw the map again without them"
+            className={`px-3 py-1 rounded-full text-xs font-semibold transition-colors border ${
+              legalOnly
+                ? 'bg-amber-400 text-gray-900 border-amber-400'
+                : 'bg-transparent text-gray-400 border-gray-600 hover:border-gray-400 hover:text-gray-200'
+            }`}>
+            Legal only
+          </button>
         </div>
       </div>
 
@@ -280,16 +276,12 @@ export default function ArchetypeMap({ archetypes, visible, metaMap, filtering }
               </linearGradient>
             ))}
           </defs>
-        {layout === 'corners' && (
-          <>
-            <line x1={W / 2 + view.x} y1={PAD / 2} x2={W / 2 + view.x} y2={H - PAD / 2} className="stroke-amber-400" strokeOpacity="0.45" strokeDasharray="4 6" />
-            <line x1={PAD / 2} y1={H / 2 + view.y} x2={W - PAD / 2} y2={H / 2 + view.y} className="stroke-amber-400" strokeOpacity="0.45" strokeDasharray="4 6" />
-            {Object.entries(CORNER_LABELS).map(([t, c]) => (
-              <text key={t} x={c.x ? W - 14 : 14} y={c.y ? H - 14 : 28} textAnchor={c.anchor}
-                className="fill-amber-400" fontSize="22" fontWeight="700">{t}</text>
-            ))}
-          </>
-        )}
+        <line x1={W / 2 + view.x} y1={PAD / 2} x2={W / 2 + view.x} y2={H - PAD / 2} className="stroke-amber-400" strokeOpacity="0.45" strokeDasharray="4 6" />
+        <line x1={PAD / 2} y1={H / 2 + view.y} x2={W - PAD / 2} y2={H / 2 + view.y} className="stroke-amber-400" strokeOpacity="0.45" strokeDasharray="4 6" />
+        {Object.entries(CORNER_LABELS).map(([t, c]) => (
+          <text key={t} x={c.x ? W - 14 : 14} y={c.y ? H - 14 : 28} textAnchor={c.anchor}
+            className="fill-amber-400" fontSize="22" fontWeight="700">{t}</text>
+        ))}
         {ordered.map(({ a, px, py, r }) => {
           const on = !filtering || visible.has(a.name)
           const key = manaKey(a)
@@ -312,18 +304,31 @@ export default function ArchetypeMap({ archetypes, visible, metaMap, filtering }
           ))}
       </svg>
 
-      <div className="space-y-1.5 text-xs text-gray-400">
-        <div className="flex flex-wrap gap-x-4 gap-y-1">
-          <span className="text-gray-500">Type:</span>
-          {Object.entries(SHAPES).map(([type, kind]) => (
-            <span key={type} className="inline-flex items-center gap-1.5">
-              <svg width="14" height="14" viewBox="-7 -7 14 14" className="overflow-visible">
-                <Shape kind={kind} cx={0} cy={0} r={5} fill="#c4a999" fillOpacity="0.9" />
-              </svg>
-              {type === 'Several' ? 'Several types' : type}
-            </span>
-          ))}
-        </div>
+      <div className="flex flex-wrap items-center gap-x-5 gap-y-2 pl-4 text-sm text-gray-400">
+        {Object.entries(SHAPES).map(([type, kind]) => (
+          <label key={type} className="inline-flex items-center gap-2 cursor-pointer select-none hover:text-gray-200">
+            <input type="checkbox" checked={types.has(type)} className="accent-amber-400 w-4 h-4 cursor-pointer"
+              onChange={() => setTypes(prev => {
+                const next = new Set(prev)
+                next.has(type) ? next.delete(type) : next.add(type)
+                return next
+              })} />
+            {/* every symbol 12 high, whatever its shape, and centred */}
+            <svg width="14" height="14" viewBox="-7 -7 14 14" className="overflow-visible">
+              {(() => {
+                const { height, midX, midY } = outlineBox(kind)
+                const r = 12 / height
+                return <Shape kind={kind} cx={-midX * r} cy={-midY * r} r={r} fill="#c4a999" fillOpacity="0.9" />
+              })()}
+            </svg>
+            {type}
+          </label>
+        ))}
+        {types.size < Object.keys(SHAPES).length && (
+          <button onClick={() => setTypes(new Set(Object.keys(SHAPES)))} className="text-xs font-semibold text-amber-400 hover:underline">
+            Select all
+          </button>
+        )}
       </div>
     </div>
   )
