@@ -88,8 +88,8 @@ function MetagameEntry({ metagame, days, searchQuery, poolUrls, open, onToggle, 
         onMouseEnter={() => setHovered(true)}
         onMouseLeave={() => setHovered(false)}>
         {/* the metagame's page: beside the toggle, as a link can't sit in a button */}
-        <div className="flex items-start gap-3">
-          <button onClick={onToggle} className="flex-1 min-w-0 text-left flex items-center gap-3 flex-wrap">
+        <div className="flex items-start gap-3 cursor-pointer" onClick={onToggle}>
+          <button className="flex-1 min-w-0 text-left flex items-center gap-3 flex-wrap">
             <span className="text-amber-400 font-semibold text-base">{formatDate(metagame.date)}</span>
             <span className={`font-medium transition-colors ${hovered ? 'text-amber-300' : 'text-white'}`}>{metagameTitle(metagame)}</span>
             {/* wraps on narrow screens rather than running off the box */}
@@ -104,7 +104,7 @@ function MetagameEntry({ metagame, days, searchQuery, poolUrls, open, onToggle, 
               <span className="text-gray-600">{open ? '▲' : '▼'}</span>
             </span>
           </button>
-          <Link to={`/metagames/${metagameSlug(metagame)}`} title="The archetypes played in this metagame"
+          <Link to={`/metagames/${metagameSlug(metagame)}`} onClick={e => e.stopPropagation()} title="The archetypes played in this metagame"
             className="shrink-0 px-2.5 py-1 rounded-md border border-gray-700 bg-gray-900 text-xs text-gray-300 hover:border-amber-400/50 hover:text-amber-400 transition-colors">
             Metagame →
           </Link>
