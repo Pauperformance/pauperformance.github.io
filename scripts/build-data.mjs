@@ -43,6 +43,9 @@ const videoDir = 'assets/data/video'
 const familyMdDir = 'families'
 const outDir = 'public/data'
 const detailsDir = join(outDir, 'archetype-details')
+// The counts behind each archetype's typical list for any run of metagames,
+// by archetype slug: fetched when the visitor changes the range.
+const typicalCountsDir = join(outDir, 'archetype-typical')
 const intelDecksDir = join(outDir, 'intel-decks')
 const deckDetailsDir = join(outDir, 'deck-details')
 const cardDecksDir = join(outDir, 'card-decks')
@@ -52,6 +55,7 @@ const cardDeckCountsPath = join(outDir, 'card-deck-counts.json')
 
 mkdirSync(outDir, { recursive: true })
 mkdirSync(detailsDir, { recursive: true })
+mkdirSync(typicalCountsDir, { recursive: true })
 mkdirSync(intelDecksDir, { recursive: true })
 mkdirSync(deckDetailsDir, { recursive: true })
 mkdirSync(cardDecksDir, { recursive: true })
@@ -98,9 +102,28 @@ function typicalList(t) {
     era_end: metagameRef(t.era_end),
     ended_by_bans: t.ended_by_bans || [],
     later_decks: t.later_decks || 0,
+    // the archetype's metagames (oldest first) and the bans of cards it
+    // played (and the unbans of cards it plays), for the range slider; the counts are in typicalCounts()
+    timeline: (t.timeline || []).map(metagameRef),
+    bans: t.bans || {},
+    unbans: t.unbans || {},
     main: cards(t.main),
     side: cards(t.side),
   }
+}
+
+// What the browser needs to compute the typical list of any run of metagames
+// (see src/utils/typicalList.js): the copies counts of each metagame and the
+// cards' info. null for archetypes exported before Myr made them.
+function typicalCounts(t) {
+  if (!t || !t.by_metagame || !Object.keys(t.by_metagame).length) return null
+  const cards = {}
+  for (const [name, { link, preview, type_line, banned }] of Object.entries(t.cards || {})) {
+    cards[name] = { link, preview, type_line: type_line || '', banned: banned === true }
+  }
+  const byMetagame = {}
+  for (const [code, { main, side }] of Object.entries(t.by_metagame)) byMetagame[code] = { main, side }
+  return { by_metagame: byMetagame, cards }
 }
 
 // A metagame as Myr exports it: its p13m code, label (set code or BNR), name
@@ -145,8 +168,8 @@ for (const archetype of archetypes) {
   // Load videos
   const videos = readJsonDir(videoFolderPath)
     .sort((a, b) => b.date.localeCompare(a.date))
-    .map(({ name: title, link, language, date, creator_name, deck_name, video_id, is_short }) => ({
-      title, link, language, date, creator_name, deck_name: deck_name || null,
+    .map(({ name: title, link, language, date, creator_name, deck_name, deck_url, video_id, is_short }) => ({
+      title, link, language, date, creator_name, deck_name: deck_name || null, deck_url: deck_url || null,
       video_id: video_id || null, is_short: is_short === true,
     }))
 
@@ -183,6 +206,10 @@ for (const archetype of archetypes) {
   }
 
   writeFileSync(outputPath, JSON.stringify(detail))
+  const counts = typicalCounts(archetype.typical_list)
+  const countsPath = join(typicalCountsDir, `${nameToSlug(name)}.json`)
+  if (counts) writeFileSync(countsPath, JSON.stringify(counts))
+  else if (existsSync(countsPath)) unlinkSync(countsPath)
   detailWritten++
 }
 
