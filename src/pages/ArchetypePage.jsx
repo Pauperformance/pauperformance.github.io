@@ -6,23 +6,16 @@ import { useCardPreview } from '../components/CardPreview'
 import { AppearanceRow, MetagameBadge } from '../components/Metagame'
 import CardPopularityChart, { PopularityTrend, useMetagames } from '../components/CardPopularityChart'
 import MtgoButtons from '../components/MtgoButtons'
+import MetagameRangeSlider from '../components/MetagameRangeSlider'
+import { bansCrossed, computeTypicalList } from '../utils/typicalList'
 import { cardLinkSlug, useCardPages } from '../utils/cardPages'
 import { nameToSlug, pilotToSlug } from '../utils/slugs'
 import { formatShortDate } from '../utils/dates'
+import { LANG_FLAG, LANG_CANONICAL, LANG_NAME } from '../utils/languages'
+import VideoCard from '../components/VideoCard'
 
 const POPULARITY_METAGAMES = '/data/archetype-popularity-metagames.json'
 const MANA_ORDER = ['W', 'U', 'B', 'R', 'G', 'C']
-const LANG_FLAG = {
-  en: '🇬🇧', eng: '🇬🇧', 'en-US': '🇬🇧', 'en-GB': '🇬🇧',
-  it: '🇮🇹', ita: '🇮🇹', IT: '🇮🇹',
-  pt: '🇵🇹', 'pt-BR': '🇵🇹', 'pt-PT': '🇵🇹',
-  de: '🇩🇪',
-  es: '🇪🇸', 'es-419': '🇪🇸',
-  fr: '🇫🇷',
-  hi: '🇮🇳',
-  pl: '🇵🇱',
-}
-
 function ManaIcon({ color }) {
   return (
     <img src={`/images/mana/${color}.png`} alt={color}
@@ -314,34 +307,148 @@ function typicalDecklist(list) {
   return { main: board(list.main), side: board(list.side) }
 }
 
-function TypicalListSection({ name, list, bindPreview }) {
+// The counts behind the typical list of any run of metagames, fetched once
+// load() is called (a visitor choosing a range): null until then.
+function useTypicalCounts(name) {
+  const [counts, setCounts] = useState(null)
+  const [wanted, setWanted] = useState(false)
+  useEffect(() => {
+    if (!wanted) return
+    let cancelled = false
+    fetch(`/data/archetype-typical/${nameToSlug(name)}.json`)
+      .then(r => r.json())
+      .then(c => { if (!cancelled) setCounts(c) })
+      .catch(() => {})
+    return () => { cancelled = true }
+  }, [name, wanted])
+  return [counts, () => setWanted(true)]
+}
+
+// The indexes in the timeline of the first and last metagames the
+// precomputed list covers.
+function defaultRange(list) {
+  const codes = new Set(list.metagames.map(m => m.metagame))
+  const indexes = list.timeline.flatMap((m, i) => (codes.has(m.metagame) ? [i] : []))
+  return [Math.min(...indexes), Math.max(...indexes)]
+}
+
+// One end of the range the visitor chose: its metagame, name and start date
+// (today: the metagame in progress, which the range runs up to).
+function RangeEnd({ label, metagame, today }) {
+  return (
+    <div className="flex gap-2">
+      <span className="w-24 shrink-0 text-gray-500">{label}</span>
+      <div className="flex min-w-0 flex-wrap items-center gap-x-1.5 gap-y-1">
+        <MetagameBadge metagame={metagame} />
+        <span>{today ? 'today' : formatShortDate(metagame.date)}</span>
+        <span className="basis-full sm:basis-auto text-gray-500">({metagame.name})</span>
+      </div>
+    </div>
+  )
+}
+
+function TypicalListSection({ name, list, currentMetagame, bindPreview }) {
   const cardPages = useCardPages()
+  const [counts, loadCounts] = useTypicalCounts(name)
+  const timeline = list?.timeline || []
+  const bans = list?.bans || {}
+  const unbans = list?.unbans || {}
+  // no range to choose for archetypes exported before Myr made the counts
+  const canChoose = Boolean(list?.decks) && timeline.length > 1
+  const initial = useMemo(() => (canChoose ? defaultRange(list) : null), [list, canChoose])
+  const [range, setRange] = useState(initial)
+  const custom = canChoose && (range[0] !== initial[0] || range[1] !== initial[1])
+  const computed = useMemo(
+    () => (custom && counts ? computeTypicalList(timeline, counts, range[0], range[1]) : null),
+    [custom, counts, timeline, range],
+  )
   if (!list?.decks) return <p className="text-gray-500 text-sm">No decklists recorded.</p>
+  const crossed = canChoose ? bansCrossed(timeline, bans, range[0], range[1]) : []
+  const unbansCrossed = canChoose ? bansCrossed(timeline, unbans, range[0], range[1]) : []
+  // the list shown: the precomputed one, or the visitor's range (the
+  // precomputed one dimmed until the counts are loaded)
+  const shown = computed ? { ...list, ...computed } : list
+  const loading = custom && !computed
+  // the decks of the range are in the timeline: no need to wait for the counts
+  const metagames = canChoose ? range[1] - range[0] + 1 : list.metagames.length
+  const decks = canChoose
+    ? timeline.slice(range[0], range[1] + 1).reduce((n, m) => n + (m.decks || 0), 0)
+    : list.decks
   const dates = list.first_date === list.last_date
     ? `on ${formatShortDate(list.last_date)}`
     : `between ${formatShortDate(list.first_date)} and ${formatShortDate(list.last_date)}`
+  const fileSuffix = custom ? `_${timeline[range[0]].metagame}-${timeline[range[1]].metagame}` : ''
   return (
     <div className="space-y-3">
-      <div className="bg-gray-800 border border-gray-700 rounded-xl p-4 space-y-2 text-sm text-gray-400">
-        <div className="flex gap-2">
-          <span className="w-24 shrink-0 text-gray-500">Era</span>
-          <p className="leading-relaxed"><EraDescription list={list} /></p>
-        </div>
-        <div className="flex gap-2">
-          <span className="w-24 shrink-0 text-gray-500">Metagames</span>
-          <div className="flex flex-wrap gap-1.5">
-            {list.metagames.map(m => <MetagameBadge key={m.metagame} metagame={m} count={m.decks} />)}
+      <div className="bg-gray-800 border border-gray-700 rounded-xl p-4 space-y-3 text-sm text-gray-400">
+        {canChoose && (
+        <div className="space-y-2">
+          <div className="flex flex-wrap items-center justify-between gap-2">
+            <p className="text-sm text-gray-400">
+              Drag the handles to choose the metagames the list is computed from.
+            </p>
+            {custom && (
+              <button onClick={() => setRange(initial)}
+                className="px-2.5 py-1 rounded-lg text-xs font-medium border border-gray-600 text-gray-400 hover:border-gray-400 hover:text-gray-200 transition-colors">
+                Reset range
+              </button>
+            )}
           </div>
-        </div>
-        <div className="flex gap-2">
-          <span className="w-24 shrink-0 text-gray-500">Decklists</span>
-          <p>
-            <span className="text-gray-200">{list.decks} deck{list.decks === 1 ? '' : 's'}</span>, {dates}
-            {list.decks < FEW_DECKS && <span className="text-gray-500"> · too few for reliable numbers</span>}
+          <MetagameRangeSlider timeline={timeline} bans={bans} unbans={unbans} value={range} onChange={setRange} onInteract={loadCounts} />
+          <p className="text-sm text-gray-500">
+            <span className="text-red-400">Red lines</span>: relevant ban events.{' '}
+            <br className="sm:hidden" />
+            <span className="text-green-400">Green lines</span>: relevant unban events.
           </p>
         </div>
+        )}
+        <div className={`space-y-2 ${canChoose ? 'border-t border-gray-700 pt-3' : ''}`}>
+        {canChoose ? (
+          <>
+            <RangeEnd label="From" metagame={timeline[range[0]]} />
+            <RangeEnd label="To" metagame={timeline[range[1]]} today={timeline[range[1]].metagame === currentMetagame} />
+          </>
+        ) : (
+          <>
+            <div className="flex gap-2">
+              <span className="w-24 shrink-0 text-gray-500">Era</span>
+              <p className="leading-relaxed"><EraDescription list={list} /></p>
+            </div>
+            <div className="flex gap-2">
+              <span className="w-24 shrink-0 text-gray-500">Metagames</span>
+              <div className="flex flex-wrap gap-1.5">
+                {list.metagames.map(m => <MetagameBadge key={m.metagame} metagame={m} count={m.decks} />)}
+              </div>
+            </div>
+          </>
+        )}
+        <div className="flex gap-2">
+          <span className="w-24 shrink-0 text-gray-500">{canChoose ? 'Data' : 'Decklists'}</span>
+          <p>
+            {canChoose && <><span className="text-gray-200">{metagames} metagame{metagames === 1 ? '' : 's'}</span>, </>}
+            <span className="text-gray-200">{decks} deck{decks === 1 ? '' : 's'}</span>
+            {!canChoose && <>, {dates}</>}
+            {decks < FEW_DECKS && <span className="text-amber-300"> · too few for reliable numbers</span>}
+            {loading && <span className="text-gray-500"> · computing the list…</span>}
+          </p>
+        </div>
+        </div>
       </div>
-      {list.ended_by_bans.length > 0 && (
+      {crossed.map(({ metagame, cards }) => (
+        <p key={metagame.metagame} className="text-sm text-red-200 bg-red-900/20 border border-red-800/50 rounded-lg px-3 py-2">
+          This range crosses the ban of <span className="font-medium">{joinNames(cards)}</span>{' '}
+          ({formatShortDate(metagame.date)}, <MetagameBadge metagame={metagame} />): it mixes the decklists played
+          with the card and those played without it. Narrow the range to stay on one side.
+        </p>
+      ))}
+      {unbansCrossed.map(({ metagame, cards }) => (
+        <p key={metagame.metagame} className="text-sm text-green-200 bg-green-900/20 border border-green-800/50 rounded-lg px-3 py-2">
+          This range crosses the unban of <span className="font-medium">{joinNames(cards)}</span>{' '}
+          ({formatShortDate(metagame.date)}, <MetagameBadge metagame={metagame} />): it mixes the decklists played
+          with the card and those played without it. Narrow the range to stay on one side.
+        </p>
+      ))}
+      {!custom && list.ended_by_bans.length > 0 && (
         <p className="text-sm text-amber-200 bg-amber-900/20 border border-amber-800/50 rounded-lg px-3 py-2">
           {list.later_decks === 0
             ? <>{name} wasn't played after the ban of {joinNames(list.ended_by_bans)}</>
@@ -350,20 +457,26 @@ function TypicalListSection({ name, list, bindPreview }) {
           : this is how it was played before.
         </p>
       )}
-      <div className="flex flex-wrap items-center justify-between gap-3">
-        <p className="text-sm text-gray-400">
-          Next to each card, the share of decklists playing at least 1, 2, 3 and 4 copies.
-        </p>
-        <div className="flex flex-wrap gap-2">
-          <MtgoButtons decklist={typicalDecklist(list)} fileName={`${nameToSlug(name)}_typical_list.txt`} />
-        </div>
-      </div>
-      <div className="space-y-6">
-        <TypicalBoard title="Maindeck" cards={list.main} grouped cardPages={cardPages} bindPreview={bindPreview} />
-        {list.side.length > 0 && (
-          <TypicalBoard title="Sideboard" cards={list.side} cardPages={cardPages} bindPreview={bindPreview} />
-        )}
-      </div>
+      {decks === 0 && !loading ? (
+        <p className="text-gray-500 text-sm">No decklists in this range.</p>
+      ) : (
+        <>
+          <div className="flex flex-wrap items-center justify-between gap-3">
+            <p className="text-sm text-gray-400">
+              Next to each card, the % of decks playing at least <i>n</i> copies.
+            </p>
+            <div className="flex flex-wrap gap-2">
+              <MtgoButtons decklist={typicalDecklist(shown)} fileName={`${nameToSlug(name)}_typical_list${fileSuffix}.txt`} />
+            </div>
+          </div>
+          <div className={`space-y-6 transition-opacity ${loading ? 'opacity-40 pointer-events-none' : ''}`}>
+            <TypicalBoard title="Maindeck" cards={shown.main} grouped cardPages={cardPages} bindPreview={bindPreview} />
+            {shown.side.length > 0 && (
+              <TypicalBoard title="Sideboard" cards={shown.side} cardPages={cardPages} bindPreview={bindPreview} />
+            )}
+          </div>
+        </>
+      )}
     </div>
   )
 }
@@ -422,61 +535,6 @@ function DeckRows({ decks }) {
           ))}
         </tbody>
       </table>
-    </div>
-  )
-}
-
-function VideoCard({ v }) {
-  const [playing, setPlaying] = useState(false)
-  const containerRef = useRef(null)
-
-  function handlePlay() {
-    setPlaying(true)
-    if (containerRef.current && containerRef.current.requestFullscreen) {
-      containerRef.current.requestFullscreen().catch(() => {})
-    }
-  }
-
-  return (
-    <div className="group bg-gray-800 border border-gray-700 rounded-xl overflow-hidden hover:border-amber-400/50 transition-all flex flex-col">
-      <div ref={containerRef} className="relative aspect-video bg-gray-900 overflow-hidden">
-        {playing ? (
-          <iframe
-            src={`https://www.youtube.com/embed/${v.video_id}?autoplay=1`}
-            title={v.title}
-            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-            allowFullScreen
-            className="w-full h-full"
-          />
-        ) : (
-          <button onClick={handlePlay} className="relative w-full h-full block">
-            <img
-              src={`https://img.youtube.com/vi/${v.video_id}/hqdefault.jpg`}
-              alt={v.title}
-              loading="lazy"
-              className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
-            />
-            <div className="absolute inset-0 flex items-center justify-center">
-              <div className="w-14 h-14 rounded-full bg-black/60 flex items-center justify-center group-hover:bg-amber-400/90 transition-colors">
-                <svg className="w-9 h-9 text-white fill-current translate-x-0.5" viewBox="0 0 24 24">
-                  <path d="M5 4.623V19.38a1.5 1.5 0 002.26 1.29L22 12 7.26 3.33A1.5 1.5 0 005 4.623Z" />
-                </svg>
-              </div>
-            </div>
-          </button>
-        )}
-      </div>
-      <div className="p-3 flex flex-col gap-1.5 flex-1">
-        <a href={v.link} target="_blank" rel="noreferrer"
-          className="text-sm font-medium text-gray-200 hover:text-amber-400 transition-colors line-clamp-2 leading-snug">
-          {v.title}
-        </a>
-        <p className="text-xs text-gray-400">{v.creator_name}</p>
-        <div className="mt-auto pt-1.5 flex items-center justify-between gap-2">
-          <span className="text-base leading-none shrink-0">{LANG_FLAG[v.language] ?? v.language}</span>
-          <span className="text-xs text-gray-500 shrink-0">{formatShortDate(v.date)}</span>
-        </div>
-      </div>
     </div>
   )
 }
@@ -661,7 +719,7 @@ function VideosSection({ videos: allVideos }) {
           <>
             {viewMode === 'paginated' && totalPages > 1 && paginationBar(paginationRef)}
             <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
-              {visibleVideos.map(v => <VideoCard key={v.video_id || v.link} v={v} />)}
+              {visibleVideos.map(v => <VideoCard showArchetype={false} key={v.video_id || v.link} v={v} />)}
             </div>
             {viewMode === 'paginated' && totalPages > 1 && paginationBar(null)}
             {viewMode === 'infinite' && visibleCount < filtered.length && (
@@ -674,26 +732,7 @@ function VideosSection({ videos: allVideos }) {
   )
 }
 
-const LANG_CANONICAL = {
-  en: 'en', eng: 'en', 'en-US': 'en', 'en-GB': 'en',
-  it: 'it', ita: 'it', IT: 'it',
-  pt: 'pt', 'pt-BR': 'pt', 'pt-PT': 'pt',
-  de: 'de',
-  es: 'es', 'es-419': 'es',
-  fr: 'fr',
-  hi: 'hi',
-  pl: 'pl',
-}
-const LANG_DISPLAY = {
-  en: '🇬🇧 English',
-  it: '🇮🇹 Italian',
-  pt: '🇵🇹 Portuguese',
-  de: '🇩🇪 German',
-  es: '🇪🇸 Spanish',
-  fr: '🇫🇷 French',
-  hi: '🇮🇳 Hindi',
-  pl: '🇵🇱 Polish',
-}
+const LANG_DISPLAY = Object.fromEntries(Object.entries(LANG_NAME).map(([l, name]) => [l, `${LANG_FLAG[l]} ${name}`]))
 
 const DECKS_PAGE_SIZE = 20
 const VIDEOS_PAGE_SIZE = 50
@@ -1061,11 +1100,11 @@ export default function ArchetypePage() {
           const slug = cardLinkSlug(cardPages, card.name)
           const img = (
             <img src={card.preview} alt={card.name}
-              className="w-36 sm:w-44 shrink-0 aspect-[488/680] rounded-[4.75%/3.5%] border border-gray-700 group-hover:border-amber-400 transition-colors object-cover" />
+              className="w-44 shrink-0 aspect-[488/680] rounded-[4.75%/3.5%] border border-gray-700 group-hover:border-amber-400 transition-colors object-cover" />
           )
           return slug
-            ? <Link to={`/cards/${slug}`} title={card.name} className="group block shrink-0">{img}</Link>
-            : <span title={card.name} className="group block shrink-0">{img}</span>
+            ? <Link to={`/cards/${slug}`} title={card.name} className="group hidden sm:block shrink-0">{img}</Link>
+            : <span title={card.name} className="group hidden sm:block shrink-0">{img}</span>
         })()}
         <div className="min-w-0">
           <h1 className="text-3xl font-bold text-white">{data.name}</h1>
@@ -1132,7 +1171,8 @@ export default function ArchetypePage() {
         {/* Typical list */}
         <section id="typical-list">
           <SectionHeader>Typical list</SectionHeader>
-          <TypicalListSection name={data.name} list={data.typical_list} bindPreview={bindPreview} />
+          <TypicalListSection key={data.name} name={data.name} list={data.typical_list} bindPreview={bindPreview}
+            currentMetagame={popularityMetagames?.at(-1)?.slug.split('.')[0]} />
         </section>
 
         {/* Resources */}
