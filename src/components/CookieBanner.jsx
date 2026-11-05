@@ -28,7 +28,7 @@ export default function CookieBanner() {
       className="fixed inset-x-3 bottom-3 z-50 mx-auto max-w-xl rounded-lg border border-gray-600 bg-gray-800 p-4 shadow-2xl"
     >
       <p className="text-sm text-gray-200">
-        We use Google Analytics cookies to count visits and see which pages are useful.
+        We use cookies to count visits and see which pages are useful.
         They are only set if you accept.
       </p>
       <div className="mt-3 flex justify-end gap-2">
