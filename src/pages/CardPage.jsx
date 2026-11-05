@@ -2,41 +2,13 @@ import { useState, useEffect, useMemo, useRef } from 'react'
 import { useParams, Link, useNavigate } from 'react-router-dom'
 import Layout from '../components/Layout'
 import { RulesText } from '../components/CardPreview'
+import ManaCost from '../components/ManaCost'
 import { AppearanceRow, MetagameBadge } from '../components/Metagame'
 import CardPopularityChart, { PopularityTrend } from '../components/CardPopularityChart'
 import { fullCardSlug } from '../utils/cardPages'
 import { nameToSlug } from '../utils/slugs'
 import { firstYearOf, formatShortDate } from '../utils/dates'
 
-const MANA_ICONS = new Set([
-  'W', 'U', 'B', 'R', 'G', 'C',
-  'WU', 'WB', 'BR', 'BG', 'UB', 'UR', 'RG', 'RW', 'GW', 'GU',
-  'GUP', 'GWP',
-  'CW', 'CU', 'CB', 'CR', 'CG',
-  '2W', '2U', '2B', '2R', '2G',
-  'WP', 'UP', 'BP', 'RP', 'GP',
-  'X', '0', '1', '2', '3', '4', '5', '6', '7', '8', '9',
-  '10', '11', '12', '13', '14', '15', '16',
-])
-
-function ManaCost({ cost }) {
-  if (!cost) return null
-  const tokens = [...cost.matchAll(/\{([^}]+)\}/g)].map(m => m[1])
-  if (!tokens.length) return null
-  return (
-    <span className="inline-flex items-center gap-0.5">
-      {tokens.map((t, i) => {
-        const key = t.replace('/', '')
-        if (MANA_ICONS.has(key)) return <img key={i} src={`/images/mana/${key}.png`} alt={t} className="w-5 h-5 inline-block" />
-        return (
-          <span key={i} className="inline-flex items-center justify-center w-5 h-5 rounded-full bg-gray-600 text-gray-200 text-xs font-bold leading-none">
-            {t}
-          </span>
-        )
-      })}
-    </span>
-  )
-}
 
 function FaceDetails({ face }) {
   return (
