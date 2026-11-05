@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-QC7LTFPX83"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      // Consent Mode v2: no analytics cookies until the visitor accepts (see CookieBanner.jsx)
+      var consent = 'denied';
+      try { if (localStorage.getItem('cookie-consent') === 'granted') consent = 'granted'; } catch (e) {}
+      gtag('consent', 'default', {
+        analytics_storage: consent,
+        ad_storage: 'denied',
+        ad_user_data: 'denied',
+        ad_personalization: 'denied',
+      });
+      gtag('js', new Date());
+
+      gtag('config', 'G-QC7LTFPX83');
+    </script>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/favicon-face.svg" />
+    <link rel="icon" type="image/x-icon" href="/favicon.ico" />
+    <link rel="icon" type="image/png" sizes="256x256" href="/favicon-256.png" />
+    <link rel="apple-touch-icon" sizes="256x256" href="/favicon-256.png" />
+    <link rel="manifest" href="/manifest.json" />
+    <meta name="theme-color" content="#0e0a0a" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="color-scheme" content="dark" />
+    <title>Pauperformance Academy</title>
+    <!-- Paint the app background before the bundle loads, to avoid a white flash -->
+    <style>html, body { background-color: #1a1213; color: #f5ece8; margin: 0; }</style>
+    <script type="module" crossorigin src="/assets/index-C7eJ5X0q.js"></script>
+    <link rel="stylesheet" crossorigin href="/assets/index-0RKwcQmi.css">
+  </head>
+  <body>
+    <div id="root"></div>
+  </body>
+</html>
