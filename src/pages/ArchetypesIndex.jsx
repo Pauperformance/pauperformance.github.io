@@ -2,6 +2,7 @@ import { useState, useEffect, useMemo } from 'react'
 import { Link, useNavigate } from 'react-router-dom'
 import { nameToSlug } from '../utils/slugs'
 import Layout from '../components/Layout'
+import ArchetypeMap from '../components/ArchetypeMap'
 import { useSearchShortcut, searchShortcutLabel } from '../utils/useSearchShortcut'
 import { useEnterShortcut } from '../utils/useEnterShortcut'
 
@@ -145,6 +146,8 @@ export default function ArchetypesIndex() {
     })
   }, [archetypes, search, activeTypes, activeMana, manaMode, typeMode, activeMetaRange, metaMap])
 
+  const visibleNames = useMemo(() => new Set(filtered.map(a => a.name)), [filtered])
+
   function handleSort(col) {
     if (sortCol === col) {
       setSortDir(d => d === 'asc' ? 'desc' : 'asc')
@@ -190,6 +193,15 @@ export default function ArchetypesIndex() {
             A curated list of the most important Pauper archetypes. Some may no longer be present in the meta due to bans.
           </p>
         </div>
+
+        {!loading && (
+          <ArchetypeMap
+            archetypes={archetypes}
+            visible={visibleNames}
+            metaMap={metaMap}
+            filtering={filtered.length !== archetypes.length}
+          />
+        )}
 
         {/* Filters */}
         <div className="bg-gray-800 border border-gray-700 rounded-xl p-4 space-y-3">
