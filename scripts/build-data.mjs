@@ -695,6 +695,7 @@ const cardFiles = readdirSync(cardIntelDir).filter(function(f) { return f.endsWi
 const cardsIndex = []
 const cardImageMap = {}
 const cardTypeMap = {}
+const cardCmcMap = {}
 let cardDetailWritten = 0, cardDetailSkipped = 0
 // the card-details files to write once the popularity ranks are known (they
 // need every card): each card's index entry and intel file
@@ -756,6 +757,7 @@ for (const f of cardFiles) {
   for (var pni = 0; pni < plainNames.length; pni++) {
     var plain = plainNames[pni]
     if (!cardTypeMap[plain]) cardTypeMap[plain] = types
+    if (cmc !== null && cardCmcMap[plain] === undefined) cardCmcMap[plain] = cmc
     if (!cardImageMap[plain]) cardImageMap[plain] = cardImageMap[name]
   }
 }
@@ -832,6 +834,8 @@ writeFileSync(join(outDir, 'cards.json'), JSON.stringify(cardsIndex))
 writeFileSync(join(outDir, 'card-slugs.json'), JSON.stringify(cardsIndex.map(function(c) { return c.slug })))
 writeFileSync(join(outDir, 'card-images.json'), JSON.stringify(cardImageMap))
 writeFileSync(join(outDir, 'card-types.json'), JSON.stringify(cardTypeMap))
+// mana values, for the mana curves of decks and archetypes
+writeFileSync(join(outDir, 'card-cmc.json'), JSON.stringify(cardCmcMap))
 console.log('Built cards.json with ' + cardsIndex.length + ' entries. Card-details: ' + cardDetailWritten + ' written, ' + cardDetailSkipped + ' unchanged.')
 
 // Build card-decks + archetype-card-slugs — only needed when decks changed
