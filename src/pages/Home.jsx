@@ -147,7 +147,7 @@ function TopDecksSection() {
   return (
     <section>
       <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-3">
-        {decks.map(deck => (
+        {decks.map((deck, i) => (
           <div key={deck.archetype_name} className="bg-gray-800 border border-gray-700 rounded-xl overflow-hidden hover:border-amber-400/50 transition-all group">
             <Link to={`/archetypes/${nameToSlug(deck.archetype_name)}`} className="block">
               {/* as on the metagame's page: Scryfall's art crop (the artwork without its frame), up to the box's border */}
@@ -157,6 +157,15 @@ function TopDecksSection() {
                       className="absolute inset-0 w-full h-full object-cover group-hover:scale-110 transition-transform duration-300" />
                   : <div className="absolute inset-0 flex items-center justify-center text-gray-600 text-xs">No image</div>
                 }
+                {/* as on the metagame's page: the rank at the top left, the types at the top right */}
+                <span className="absolute top-1.5 left-1.5 rounded-md bg-gray-900/85 px-1.5 py-0.5 text-xs font-bold font-mono text-gray-200">#{i + 1}</span>
+                {deck.game_type.length > 0 && (
+                  <div className="absolute top-1.5 right-1.5 flex gap-1">
+                    {deck.game_type.map(g => (
+                      <span key={g} className="text-[10px] text-gray-100 bg-gray-900/85 rounded-md px-1.5 py-0.5 leading-none">{g}</span>
+                    ))}
+                  </div>
+                )}
               </div>
               <div className="p-2.5 space-y-2">
                 <div className="flex items-start justify-between gap-1">
@@ -166,11 +175,6 @@ function TopDecksSection() {
                       <img key={m} src={`/images/mana/${m}.png`} alt={m} className="w-3.5 h-3.5" />
                     ))}
                   </div>
-                </div>
-                <div className="-ml-[2px] mt-0.5 flex items-center gap-1 flex-wrap">
-                  {deck.game_type.map(g => (
-                    <span key={g} className="text-[10px] text-gray-400 bg-gray-700 rounded px-1 py-0.5 leading-none">{g}</span>
-                  ))}
                 </div>
                 <span className="text-xs text-amber-400 font-mono">Meta: {deck.meta_share.toFixed(1)}%</span>
               </div>

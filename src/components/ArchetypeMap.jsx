@@ -14,8 +14,8 @@ const CORNER_LABELS = {
   Midrange: { x: 0, y: 1, anchor: 'start' },
 }
 const LABELED = 14 // how many archetypes are named at most, times the zoom squared
-const LABEL_SIZE = 12
-const MAX_ZOOM = 8
+const LABEL_SIZE = 12 // in pixels on the screen
+const MAX_ZOOM = 12
 const ZOOM_STEP = 1.6 // for each press of the buttons
 
 // Each archetype is colored by its mana and shaped by its game type
@@ -98,7 +98,7 @@ function Shape({ kind, cx, cy, r, ...props }) {
 // the right or to the left): where it covers no other name nor point, or else
 // where it covers no other name. The ones that would not fit are left out.
 // order: the points to name; all: every point drawn. [{ a, x, y, anchor }]
-function placeLabels(order, all, cap, width, height) {
+function placeLabels(order, all, cap, width, height, LABEL_SIZE) {
   const placed = []
   const taken = []
   const clash = (a, b) => a.x0 < b.x1 && a.x1 > b.x0 && a.y0 < b.y1 && a.y1 > b.y0
@@ -153,6 +153,10 @@ export default function ArchetypeMap({ archetypes, visible, metaMap, filtering }
   // and the buttons zoom and, once zoomed, a drag moves the map.
   const [view, setView] = useState({ k: 1, x: 0, y: 0 })
   const svgRef = useRef(null)
+  // the width of the map on the screen: on a phone the 1000 units shrink a lot, so the
+  // text is sized in screen pixels, not in map units, to stay readable
+  const [screenWidth, setScreenWidth] = useState(W)
+  const labelSize = LABEL_SIZE * Math.max(1, W / screenWidth)
 
   // the wheel needs a listener that can stop the page from scrolling
   useEffect(() => {
@@ -165,7 +169,11 @@ export default function ArchetypeMap({ archetypes, visible, metaMap, filtering }
       setView(v => zoomedView(v, Math.exp(-e.deltaY * 0.0015), sx, sy))
     }
     svg.addEventListener('wheel', onWheel, { passive: false })
-    return () => svg.removeEventListener('wheel', onWheel)
+    const measure = () => setScreenWidth(svg.getBoundingClientRect().width || W)
+    measure()
+    const observer = new ResizeObserver(measure)
+    observer.observe(svg)
+    return () => { svg.removeEventListener('wheel', onWheel); observer.disconnect() }
   }, [map])
 
   useEffect(() => {
@@ -205,8 +213,8 @@ export default function ArchetypeMap({ archetypes, visible, metaMap, filtering }
   const labels = useMemo(() => {
     const byName = new Map(points.map(p => [p.a.name, p]))
     const order = byPlay.map(n => byName.get(n)).filter(p => p && (!filtering || visible.has(p.a.name)))
-    return placeLabels(order, points, Math.round(LABELED * view.k * view.k) * (filtering ? 3 : 1), W, H)
-  }, [points, byPlay, filtering, visible, view.k])
+    return placeLabels(order, points, Math.round(LABELED * view.k * view.k) * (filtering ? 3 : 1), W, H, labelSize)
+  }, [points, byPlay, filtering, visible, view.k, labelSize])
 
   if (map === false) return null
   if (!map) return <div className="h-64 bg-gray-800 border border-gray-700 rounded-xl" />
@@ -339,8 +347,8 @@ export default function ArchetypeMap({ archetypes, visible, metaMap, filtering }
         })}
         {(hovered ? points.filter(p => p.a.name === hovered).map(({ a, px, py, r }) => ({ a, x: px, y: py - r - 5, anchor: 'middle' })) : labels)
           .map(({ a, x, y, anchor }) => (
-            <text key={a.name} x={x} y={y} textAnchor={anchor} fontSize={hovered === a.name ? 15 : LABEL_SIZE}
-              fontWeight={hovered === a.name ? 700 : 400} className="fill-gray-100 stroke-gray-900" strokeWidth="3" paintOrder="stroke"
+            <text key={a.name} x={x} y={y} textAnchor={anchor} fontSize={hovered === a.name ? labelSize * 1.25 : labelSize}
+              fontWeight={hovered === a.name ? 700 : 400} className="fill-gray-100 stroke-gray-900" strokeWidth={3 * labelSize / LABEL_SIZE} paintOrder="stroke"
               pointerEvents="none">{a.name}</text>
           ))}
       </svg>
