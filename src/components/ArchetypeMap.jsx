@@ -13,6 +13,7 @@ const CORNER_LABELS = {
   Control: { x: 1, y: 1, anchor: 'end' },
   Midrange: { x: 0, y: 1, anchor: 'start' },
 }
+const CORNER_SIZE = 22 // map units
 const LABELED = 14 // how many archetypes are named at most, times the zoom squared
 const LABEL_SIZE = 12 // in pixels on the screen
 const MAX_ZOOM = 12
@@ -157,6 +158,8 @@ export default function ArchetypeMap({ archetypes, visible, metaMap, filtering }
   // text is sized in screen pixels, not in map units, to stay readable
   const [screenWidth, setScreenWidth] = useState(W)
   const labelSize = LABEL_SIZE * Math.max(1, W / screenWidth)
+  // the four corner names: about 14px on a phone, 22 map units wherever the map is big
+  const cornerSize = CORNER_SIZE * Math.max(1, W / screenWidth * 0.65)
 
   // the wheel needs a listener that can stop the page from scrolling
   useEffect(() => {
@@ -328,8 +331,8 @@ export default function ArchetypeMap({ archetypes, visible, metaMap, filtering }
         <line x1={W / 2 + view.x} y1={PAD / 2} x2={W / 2 + view.x} y2={H - PAD / 2} className="stroke-amber-400" strokeOpacity="0.45" strokeDasharray="4 6" />
         <line x1={PAD / 2} y1={H / 2 + view.y} x2={W - PAD / 2} y2={H / 2 + view.y} className="stroke-amber-400" strokeOpacity="0.45" strokeDasharray="4 6" />
         {Object.entries(CORNER_LABELS).map(([t, c]) => (
-          <text key={t} x={c.x ? W - 14 : 14} y={c.y ? H - 14 : 28} textAnchor={c.anchor}
-            className="fill-amber-400" fontSize="22" fontWeight="700">{t}</text>
+          <text key={t} x={c.x ? W - 14 : 14} y={c.y ? H - 14 : cornerSize + 6} textAnchor={c.anchor}
+            className="fill-amber-400" fontSize={cornerSize} fontWeight="700">{t}</text>
         ))}
         {ordered.map(({ a, px, py, r }) => {
           const on = !filtering || visible.has(a.name)
