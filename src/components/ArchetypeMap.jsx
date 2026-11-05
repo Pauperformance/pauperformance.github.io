@@ -16,6 +16,7 @@ const CORNER_LABELS = {
 const LABELED = 14 // how many archetypes are named at most, times the zoom squared
 const LABEL_SIZE = 12
 const MAX_ZOOM = 8
+const ZOOM_STEP = 1.6 // for each press of the buttons
 
 // Each archetype is colored by its mana and shaped by its game type
 const MANA_COLORS = { W: '#f8e7b9', U: '#0e68ab', B: '#000000', R: '#d3202a', G: '#00733e', C: '#cbc2bf' } // the colors of the mana symbols
@@ -128,6 +129,15 @@ function clampView(v) {
   return { k: v.k, x: Math.max(-maxX, Math.min(maxX, v.x)), y: Math.max(-maxY, Math.min(maxY, v.y)) }
 }
 
+// The view zoomed in by a factor (out if below 1), keeping the point (sx, sy) of the
+// map where it is
+function zoomedView(v, factor, sx, sy) {
+  const k = Math.min(MAX_ZOOM, Math.max(1, v.k * factor))
+  if (k === v.k) return v
+  const ratio = k / v.k
+  return clampView({ k, x: sx - W / 2 - (sx - W / 2 - v.x) * ratio, y: sy - H / 2 - (sy - H / 2 - v.y) * ratio })
+}
+
 export default function ArchetypeMap({ archetypes, visible, metaMap, filtering }) {
   const navigate = useNavigate()
   const [map, setMap] = useState(null)
@@ -137,9 +147,10 @@ export default function ArchetypeMap({ archetypes, visible, metaMap, filtering }
   const [types, setTypes] = useState(() => new Set(Object.keys(SHAPES)))
   const [hovered, setHovered] = useState(null)
   const drag = useRef(null)
+  const pointers = useRef(new Map()) // the fingers (or the mouse) down on the map
   const justDragged = useRef(false)
-  // zoom: k times closer, around the centre, then moved by (x, y). The wheel zooms
-  // and, once zoomed, a drag moves the map.
+  // zoom: k times closer, around the centre, then moved by (x, y). The wheel, a pinch
+  // and the buttons zoom and, once zoomed, a drag moves the map.
   const [view, setView] = useState({ k: 1, x: 0, y: 0 })
   const svgRef = useRef(null)
 
@@ -151,13 +162,7 @@ export default function ArchetypeMap({ archetypes, visible, metaMap, filtering }
       e.preventDefault()
       const box = svg.getBoundingClientRect()
       const sx = (e.clientX - box.left) / box.width * W, sy = (e.clientY - box.top) / box.height * H
-      setView(v => {
-        const k = Math.min(MAX_ZOOM, Math.max(1, v.k * Math.exp(-e.deltaY * 0.0015)))
-        if (k === v.k) return v
-        // keep the point under the cursor where it is
-        const ratio = k / v.k
-        return clampView({ k, x: sx - W / 2 - (sx - W / 2 - v.x) * ratio, y: sy - H / 2 - (sy - H / 2 - v.y) * ratio })
-      })
+      setView(v => zoomedView(v, Math.exp(-e.deltaY * 0.0015), sx, sy))
     }
     svg.addEventListener('wheel', onWheel, { passive: false })
     return () => svg.removeEventListener('wheel', onWheel)
@@ -209,22 +214,48 @@ export default function ArchetypeMap({ archetypes, visible, metaMap, filtering }
   // drawn in this order: dimmed first
   const ordered = [...points].sort((p, q) => (visible.has(p.a.name) ? 1 : 0) - (visible.has(q.a.name) ? 1 : 0))
 
+  // a drag moves the zoomed map; two fingers pinch it
   function startDrag(e) {
-    if (view.k === 1) return
-    drag.current = { x: e.clientX, y: e.clientY, moved: false }
+    pointers.current.set(e.pointerId, { x: e.clientX, y: e.clientY })
+    if (pointers.current.size === 2) {
+      const [a, b] = [...pointers.current.values()]
+      drag.current = { pinch: true, moved: false, dist: Math.hypot(a.x - b.x, a.y - b.y), mx: (a.x + b.x) / 2, my: (a.y + b.y) / 2 }
+    } else if (pointers.current.size === 1 && view.k > 1) {
+      drag.current = { x: e.clientX, y: e.clientY, moved: false }
+    }
   }
   function moveDrag(e) {
+    const finger = pointers.current.get(e.pointerId)
     const d = drag.current
-    if (!d) return
+    if (!finger || !d) return
+    finger.x = e.clientX; finger.y = e.clientY
+    const box = svgRef.current.getBoundingClientRect()
+    const unit = W / box.width // pixels on screen to map units
+    if (d.pinch) {
+      if (pointers.current.size < 2) return
+      const [a, b] = [...pointers.current.values()]
+      const dist = Math.hypot(a.x - b.x, a.y - b.y), mx = (a.x + b.x) / 2, my = (a.y + b.y) / 2
+      if (!dist || !d.dist) return
+      // the zoom is the change of the distance between the fingers, around the middle
+      // between them, and the map follows the middle as it moves (read before d changes)
+      const factor = dist / d.dist, dx = (mx - d.mx) * unit, dy = (my - d.my) * unit
+      const sx = (mx - box.left) * unit, sy = (my - box.top) * unit
+      d.dist = dist; d.mx = mx; d.my = my; d.moved = true
+      setView(v => {
+        const zoomed = zoomedView(v, factor, sx, sy)
+        return clampView({ ...zoomed, x: zoomed.x + dx, y: zoomed.y + dy })
+      })
+      return
+    }
     const dx = e.clientX - d.x, dy = e.clientY - d.y
     if (!d.moved && Math.hypot(dx, dy) < 4) return
     d.moved = true
     d.x = e.clientX; d.y = e.clientY
-    const unit = W / svgRef.current.getBoundingClientRect().width // pixels on screen to map units
     setView(v => clampView({ ...v, x: v.x + dx * unit, y: v.y + dy * unit }))
   }
-  function endDrag() {
-    // the click that ends a drag must not open an archetype
+  function endDrag(e) {
+    pointers.current.delete(e.pointerId)
+    // the click that ends a drag or a pinch must not open an archetype
     if (drag.current?.moved) {
       justDragged.current = true
       setTimeout(() => { justDragged.current = false }, 0)
@@ -241,16 +272,26 @@ export default function ArchetypeMap({ archetypes, visible, metaMap, filtering }
             Archetypes with similar lists are close. Bigger means more played. Scroll to zoom, click a point to open it.
           </p>
         </div>
-        <div className="flex items-center gap-2">
-          {view.k > 1 && (
-            <button onClick={() => setView({ k: 1, x: 0, y: 0 })}
-              className="px-3 py-1 rounded-lg border border-gray-600 text-xs font-semibold text-gray-400 hover:text-gray-200 transition-colors">
-              Reset zoom
+        {/* full width on a phone, where it goes under the title, so that Legal only can sit at the right */}
+        <div className="flex items-center gap-2 w-full sm:w-auto">
+          <div className="inline-flex rounded-lg border border-gray-600 overflow-hidden text-base font-semibold leading-none">
+            <button onClick={() => setView(v => zoomedView(v, 1 / ZOOM_STEP, W / 2, H / 2))} disabled={view.k <= 1} aria-label="Zoom out"
+              className="w-9 h-8 text-gray-400 hover:text-gray-200 disabled:opacity-30 disabled:hover:text-gray-400 transition-colors">
+              −
             </button>
-          )}
+            <button onClick={() => setView(v => zoomedView(v, ZOOM_STEP, W / 2, H / 2))} disabled={view.k >= MAX_ZOOM} aria-label="Zoom in"
+              className="w-9 h-8 border-l border-gray-600 text-gray-400 hover:text-gray-200 disabled:opacity-30 disabled:hover:text-gray-400 transition-colors">
+              +
+            </button>
+          </div>
+          {/* always there, so that the buttons do not move when the map is zoomed */}
+          <button onClick={() => setView({ k: 1, x: 0, y: 0 })} disabled={view.k <= 1}
+            className="px-3 py-1 rounded-lg border border-gray-600 text-xs font-semibold text-gray-400 hover:text-gray-200 disabled:opacity-30 disabled:hover:text-gray-400 transition-colors">
+            Reset zoom
+          </button>
           <button onClick={() => setLegalOnly(v => !v)} aria-pressed={legalOnly}
             title="Hide the archetypes that play banned cards, and draw the map again without them"
-            className={`px-3 py-1 rounded-full text-xs font-semibold transition-colors border ${
+            className={`ml-auto sm:ml-0 px-3 py-1 rounded-full text-xs font-semibold transition-colors border ${
               legalOnly
                 ? 'bg-amber-400 text-gray-900 border-amber-400'
                 : 'bg-transparent text-gray-400 border-gray-600 hover:border-gray-400 hover:text-gray-200'
@@ -261,7 +302,7 @@ export default function ArchetypeMap({ archetypes, visible, metaMap, filtering }
       </div>
 
       <svg ref={svgRef} viewBox={`0 0 ${W} ${H}`} className="w-full h-auto bg-gray-900 rounded-lg select-none" role="img" aria-label="Map of the archetypes"
-        style={view.k > 1 ? { touchAction: 'none', cursor: 'grab' } : undefined}
+        style={view.k > 1 ? { touchAction: 'none', cursor: 'grab' } : { touchAction: 'pan-y' }}
         onPointerDown={startDrag} onPointerMove={moveDrag} onPointerUp={endDrag} onPointerCancel={endDrag} onPointerLeave={endDrag}>
         <defs>
             {manaFills.map(([key, [kind, colors]]) => (
@@ -324,11 +365,15 @@ export default function ArchetypeMap({ archetypes, visible, metaMap, filtering }
             {type}
           </label>
         ))}
-        {types.size < Object.keys(SHAPES).length && (
-          <button onClick={() => setTypes(new Set(Object.keys(SHAPES)))} className="text-xs font-semibold text-amber-400 hover:underline">
-            Select all
-          </button>
-        )}
+        {(() => {
+          const allTicked = types.size === Object.keys(SHAPES).length
+          return (
+            <button onClick={() => setTypes(allTicked ? new Set() : new Set(Object.keys(SHAPES)))}
+              className="text-xs font-semibold text-amber-400 hover:underline">
+              {allTicked ? 'Deselect all' : 'Select all'}
+            </button>
+          )
+        })()}
       </div>
     </div>
   )
