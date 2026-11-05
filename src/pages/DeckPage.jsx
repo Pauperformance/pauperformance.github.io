@@ -3,6 +3,7 @@ import { useParams, Link } from 'react-router-dom'
 import { nameToSlug } from '../utils/slugs'
 import Layout from '../components/Layout'
 import MtgoButtons from '../components/MtgoButtons'
+import ManaCurve from '../components/ManaCurve'
 import { OracleText, useCardData } from '../components/CardPreview'
 import { cardLinkSlug, useCardPages } from '../utils/cardPages'
 import { formatDate } from '../utils/dates'
@@ -214,6 +215,7 @@ export default function DeckPage() {
                     {hoveredCard && <OracleText card={hoveredData} className="w-56 xl:w-64 text-gray-200" />}
                   </div>
                 </div>
+                <ManaCurve cards={deck.decklist.main} />
               </>
             ) : (
               <p className="text-gray-500 text-sm">Decklist not available.</p>
