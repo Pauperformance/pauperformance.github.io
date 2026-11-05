@@ -696,6 +696,8 @@ const cardsIndex = []
 const cardImageMap = {}
 const cardTypeMap = {}
 const cardCmcMap = {}
+const cardColorMap = {}
+const cardManaCostMap = {}
 let cardDetailWritten = 0, cardDetailSkipped = 0
 // the card-details files to write once the popularity ranks are known (they
 // need every card): each card's index entry and intel file
@@ -735,6 +737,13 @@ for (const f of cardFiles) {
   }
   var types = Object.keys(typeSet)
   var cmc = (scryfall && scryfall.cmc !== undefined) ? scryfall.cmc : null
+  // the cost of a card with faces: both halves' for a split card, else the front face's
+  var manaCost = (scryfall && scryfall.mana_cost) || ''
+  if (scryfall && scryfall.layout !== 'split') manaCost = manaCost.split(' // ')[0]
+  if (!manaCost && scryfall && scryfall.card_faces) {
+    var faceCosts = scryfall.card_faces.map(function(f) { return f.mana_cost || '' }).filter(Boolean)
+    manaCost = scryfall.layout === 'split' ? faceCosts.join(' // ') : (faceCosts[0] || '')
+  }
   const cardEntry = { slug, name, archetypeCount: archetypes.length, colors: colors, types: types, cmc: cmc }
   cardsIndex.push(cardEntry)
   cardDetailInputs.push({ entry: cardEntry, path: cardInputPath })
@@ -758,6 +767,8 @@ for (const f of cardFiles) {
     var plain = plainNames[pni]
     if (!cardTypeMap[plain]) cardTypeMap[plain] = types
     if (cmc !== null && cardCmcMap[plain] === undefined) cardCmcMap[plain] = cmc
+    if (cardColorMap[plain] === undefined) cardColorMap[plain] = colors
+    if (manaCost && cardManaCostMap[plain] === undefined) cardManaCostMap[plain] = manaCost
     if (!cardImageMap[plain]) cardImageMap[plain] = cardImageMap[name]
   }
 }
@@ -836,6 +847,10 @@ writeFileSync(join(outDir, 'card-images.json'), JSON.stringify(cardImageMap))
 writeFileSync(join(outDir, 'card-types.json'), JSON.stringify(cardTypeMap))
 // mana values, for the mana curves of decks and archetypes
 writeFileSync(join(outDir, 'card-cmc.json'), JSON.stringify(cardCmcMap))
+// mana costs, for the decklists
+writeFileSync(join(outDir, 'card-mana-costs.json'), JSON.stringify(cardManaCostMap))
+// colors, for the colors pie of decks
+writeFileSync(join(outDir, 'card-colors.json'), JSON.stringify(cardColorMap))
 console.log('Built cards.json with ' + cardsIndex.length + ' entries. Card-details: ' + cardDetailWritten + ' written, ' + cardDetailSkipped + ' unchanged.')
 
 // Build card-decks + archetype-card-slugs — only needed when decks changed
