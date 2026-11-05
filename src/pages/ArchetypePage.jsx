@@ -8,6 +8,7 @@ import CardPopularityChart, { PopularityTrend, useMetagames } from '../component
 import MtgoButtons from '../components/MtgoButtons'
 import MetagameRangeSlider from '../components/MetagameRangeSlider'
 import ManaCurve from '../components/ManaCurve'
+import { ColorsPie, CardTypesRadar } from '../components/DeckStats'
 import { bansCrossed, computeTypicalList } from '../utils/typicalList'
 import { cardLinkSlug, useCardPages } from '../utils/cardPages'
 import { nameToSlug, pilotToSlug } from '../utils/slugs'
@@ -350,6 +351,10 @@ function RangeEnd({ label, metagame, today }) {
 
 function TypicalListSection({ name, list, currentMetagame, bindPreview }) {
   const cardPages = useCardPages()
+  const [cardTypes, setCardTypes] = useState({})
+  useEffect(() => {
+    fetch('/data/card-types.json').then(r => r.json()).then(setCardTypes).catch(() => {})
+  }, [])
   const [counts, loadCounts] = useTypicalCounts(name)
   const timeline = list?.timeline || []
   const bans = list?.bans || {}
@@ -475,7 +480,12 @@ function TypicalListSection({ name, list, currentMetagame, bindPreview }) {
             {shown.side.length > 0 && (
               <TypicalBoard title="Sideboard" cards={shown.side} cardPages={cardPages} bindPreview={bindPreview} />
             )}
-            <ManaCurve cards={typicalDecklist(shown).main} />
+            {/* the stats of the maindeck, side by side after the decklist */}
+            <div className="flex flex-wrap justify-center gap-x-12 gap-y-8 items-start">
+              <ColorsPie cards={typicalDecklist(shown).main} cardTypes={cardTypes} />
+              <ManaCurve cards={typicalDecklist(shown).main} centered />
+              <CardTypesRadar cards={typicalDecklist(shown).main} cardTypes={cardTypes} />
+            </div>
           </div>
         </>
       )}
