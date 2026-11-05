@@ -1,6 +1,7 @@
 import { lazy, Suspense } from 'react'
 import { Routes, Route, Link, Navigate } from 'react-router-dom'
 import Layout from './components/Layout'
+import CookieBanner from './components/CookieBanner'
 
 const Home           = lazy(() => import('./pages/Home'))
 const ArchetypesIndex = lazy(() => import('./pages/ArchetypesIndex'))
@@ -35,6 +36,7 @@ function NotFound() {
 
 function App() {
   return (
+    <>
     <Suspense fallback={null}>
       <Routes>
         <Route path="/" element={<Home />} />
@@ -60,6 +62,8 @@ function App() {
         <Route path="*" element={<NotFound />} />
       </Routes>
     </Suspense>
+    <CookieBanner />
+    </>
   )
 }
 
