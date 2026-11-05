@@ -141,9 +141,9 @@ export default function MetaPie({ shares, minListedShare = 0, listClassName, lis
           {unlisted.length > 0 && row(
             'other',
             OTHER_COLOR,
-            <span className="text-sm text-gray-500 flex-1">
+            <span className="text-sm text-gray-500 flex-1 whitespace-nowrap">
               {minListedShare > 0
-                ? `Other (under ${minListedShare}%)`
+                ? `Other (< ${minListedShare}%)`
                 : `Other (${unlisted.length} archetype${unlisted.length === 1 ? '' : 's'})`}
             </span>,
             +unlisted.reduce((s, d) => s + d.meta_share, 0).toFixed(1),

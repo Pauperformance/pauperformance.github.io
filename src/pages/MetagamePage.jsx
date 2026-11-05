@@ -352,7 +352,9 @@ export default function MetagamePage() {
                 <h1 className="text-2xl font-bold text-white">{metagameTitle(metagame)}</h1>
                 <p className="mt-2 text-sm text-gray-400">
                   Metagame <span className="text-amber-400 font-mono">{metagame.metagame.metagame}.{metagame.metagame.label}</span>
-                  {' · '}
+                  {/* phones: the dates go on a line of their own, without the dot */}
+                  <span className="hidden sm:inline"> · </span>
+                  <br className="sm:hidden" />
                   {metagame.next
                     ? <>From {formatDate(metagame.metagame.date)} to {formatDate(metagame.next.date)}</>
                     : <>Since {formatDate(metagame.metagame.date)}: the current metagame</>}
