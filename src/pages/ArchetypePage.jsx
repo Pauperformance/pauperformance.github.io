@@ -7,6 +7,7 @@ import { AppearanceRow, MetagameBadge } from '../components/Metagame'
 import CardPopularityChart, { PopularityTrend, useMetagames } from '../components/CardPopularityChart'
 import MtgoButtons from '../components/MtgoButtons'
 import MetagameRangeSlider from '../components/MetagameRangeSlider'
+import ManaCurve from '../components/ManaCurve'
 import { bansCrossed, computeTypicalList } from '../utils/typicalList'
 import { cardLinkSlug, useCardPages } from '../utils/cardPages'
 import { nameToSlug, pilotToSlug } from '../utils/slugs'
@@ -474,6 +475,7 @@ function TypicalListSection({ name, list, currentMetagame, bindPreview }) {
             {shown.side.length > 0 && (
               <TypicalBoard title="Sideboard" cards={shown.side} cardPages={cardPages} bindPreview={bindPreview} />
             )}
+            <ManaCurve cards={typicalDecklist(shown).main} />
           </div>
         </>
       )}
