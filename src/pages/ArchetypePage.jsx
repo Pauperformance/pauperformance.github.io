@@ -722,7 +722,13 @@ function IntelDecksSection({ name }) {
   )
 }
 
-function ResourcesSection({ resources, discord, sideboards }) {
+const isOwnEntry = r => /pauperformance/i.test(r.author || '')
+// our own entries always come first (stable sort keeps the rest in order)
+const ownFirst = list => [...(list || [])].sort((a, b) => isOwnEntry(b) - isOwnEntry(a))
+
+function ResourcesSection({ resources: rawResources, discord, sideboards: rawSideboards }) {
+  const resources = ownFirst(rawResources)
+  const sideboards = ownFirst(rawSideboards)
   const hasAny = resources?.length || discord?.length || sideboards?.length
 
   if (!hasAny) return <p className="text-gray-500 text-sm">No resources listed.</p>
@@ -744,7 +750,7 @@ function ResourcesSection({ resources, discord, sideboards }) {
                 <tr key={s.link} className="bg-gray-900 hover:bg-gray-800 transition-colors">
                   <td className="px-4 py-2.5">
                     <a href={s.link} target="_blank" rel="noreferrer"
-                      className="text-amber-400 hover:underline font-medium">{s.author || 'Guide'}</a>
+                      className="text-amber-400 hover:underline font-medium">{isOwnEntry(s) && '⭐ '}{s.author || 'Guide'}</a>
                   </td>
                   <td className="px-4 py-2.5 text-gray-400 hidden sm:table-cell">{s.price || '—'}</td>
                   <td className="px-4 py-2.5 text-gray-500 hidden md:table-cell">{s.notes || '—'}</td>
@@ -777,7 +783,7 @@ function ResourcesSection({ resources, discord, sideboards }) {
                   <td className="px-4 py-2.5 text-base">{LANG_FLAG[r.language] ?? r.language}</td>
                   <td className="px-4 py-2.5">
                     <a href={r.link} target="_blank" rel="noreferrer"
-                      className="text-amber-400 hover:underline">{r.name}</a>
+                      className="text-amber-400 hover:underline">{isOwnEntry(r) && '⭐ '}{r.name}</a>
                   </td>
                   <td className="px-4 py-2.5 text-gray-400 hidden sm:table-cell">{r.author}</td>
                   <td className="px-4 py-2.5 text-gray-500 hidden sm:table-cell">{formatShortDate(r.date)}</td>
