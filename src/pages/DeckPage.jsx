@@ -1,4 +1,4 @@
-import { useState, useEffect } from 'react'
+import { Fragment, useRef, useState, useEffect } from 'react'
 import { useParams, Link } from 'react-router-dom'
 import { nameToSlug } from '../utils/slugs'
 import Layout from '../components/Layout'
@@ -101,6 +101,87 @@ function CardName({ c, onHover, cardPages, versus, metagameCode, manaCost, bindP
   )
 }
 
+// The cards split by type, in display order: [[type, cards], ...].
+function groupCards(cards, cardTypes) {
+  const groups = {}
+  cards.forEach(c => {
+    const types = cardTypes[c.name] || []
+    const key = TYPE_PRIORITY.find(t => types.includes(t)) || 'Other'
+    if (!groups[key]) groups[key] = []
+    groups[key].push(c)
+  })
+  return TYPE_ORDER.filter(t => groups[t]).map(t => [t, groups[t]])
+}
+
+function CardTile({ c, cardPages, bindPreview, image }) {
+  const slug = cardLinkSlug(cardPages, c.name)
+  // the card's Oracle text pops up beside it on hover (its image is already there)
+  const bound = bindPreview(c.name, { slug: slug || undefined, image, showImage: false })
+  const picture = image
+    ? <img src={image} alt={c.name} loading="lazy" className="w-full aspect-[63/88] rounded-xl bg-gray-800 object-cover shadow-lg border border-gray-700" />
+    : <div className="w-full aspect-[63/88] rounded-xl bg-gray-800 border border-gray-700 p-2 text-xs text-gray-300">{c.name}</div>
+  const content = (
+    <>
+      {picture}
+      <span className="absolute bottom-1 left-1 min-w-6 px-1.5 py-0.5 rounded-full bg-gray-900/90 border border-gray-600 text-center text-xs font-bold text-white">
+        {c.qty}×
+      </span>
+    </>
+  )
+  // same size as the cards of the sample hand
+  const cls = 'relative block w-[calc((100%-1rem)/3)] sm:w-36 lg:w-48 hover:brightness-110 transition'
+  return slug
+    ? <Link to={`/cards/${slug}`} className={cls} {...bound}>{content}</Link>
+    : <div className={cls} {...bound}>{content}</div>
+}
+
+function VisualList({ cards, label, cardImages, cardTypes, groupByType, cardPages, bindPreview }) {
+  if (!cards || !cards.length) return null
+  const total = cards.reduce((sum, c) => sum + c.qty, 0)
+  const grid = list => (
+    <div className="flex flex-wrap gap-2">
+      {list.map((c, i) => <CardTile key={i} c={c} cardPages={cardPages} bindPreview={bindPreview} image={cardImages[c.name]} />)}
+    </div>
+  )
+  return (
+    <div>
+      <h3 className="text-xs font-semibold text-gray-500 uppercase tracking-wider mb-2">
+        {label} <span className="text-gray-600">({total})</span>
+      </h3>
+      {groupByType ? groupCards(cards, cardTypes).map(([t, list]) => (
+        <div key={t}>
+          <p className="text-xs text-gray-600 uppercase tracking-wider mt-3 mb-1">
+            {t}s <span className="text-gray-700">({list.reduce((sum, c) => sum + c.qty, 0)})</span>
+          </p>
+          {grid(list)}
+        </div>
+      )) : grid(cards)}
+    </div>
+  )
+}
+
+// The cards sorted by mana value, then by name; the alphabetical order is the deck's own.
+function sortCards(cards, sort, cmc) {
+  if (!cards || sort !== 'cmc') return cards
+  return [...cards].sort((a, b) => (cmc[a.name] ?? 0) - (cmc[b.name] ?? 0) || a.name.localeCompare(b.name))
+}
+
+function Toggle({ options, value, onChange }) {
+  return (
+    <div className="inline-flex rounded-lg border border-gray-600 overflow-hidden text-sm font-medium">
+      {options.map(([v, text], i) => (
+        <Fragment key={String(v)}>
+          {i > 0 && <div className="w-px bg-gray-600" />}
+          <button onClick={() => onChange(v)}
+            className={`px-3 py-1.5 transition-colors ${value === v ? 'bg-amber-400 text-gray-900' : 'text-gray-400 hover:text-gray-200'}`}>
+            {text}
+          </button>
+        </Fragment>
+      ))}
+    </div>
+  )
+}
+
 function DeckList({ cards, label, onHover, bindPreview, cardImages, cardTypes, groupByType, cardPages, versus, metagameCode, manaCosts }) {
   if (!cards || !cards.length) return null
   const total = cards.reduce((sum, c) => sum + c.qty, 0)
@@ -155,6 +236,23 @@ export default function DeckPage() {
   const [manaCosts, setManaCosts] = useState({})
   const [hoveredCard, setHoveredCard] = useState(null)
   const [groupByType, setGroupByType] = useState(true)
+  const [visual, setVisual] = useState(false)
+  const [sort, setSort] = useState('name')
+  const [cmc, setCmc] = useState({})
+  // Width of the lists and of the hover panel beside them in the text view:
+  // the visual view (which has no panel) takes both on desktop, so the
+  // charts beside them don't move.
+  const listsRef = useRef(null)
+  const panelRef = useRef(null)
+  const [listsWidth, setListsWidth] = useState(null)
+  const changeVisual = v => {
+    if (v && listsRef.current) {
+      const panel = panelRef.current ? panelRef.current.offsetWidth : 0
+      // 2rem: the gap between the lists and the panel
+      setListsWidth(listsRef.current.offsetWidth + (panel ? panel + 32 : 0))
+    }
+    setVisual(v)
+  }
   const cardPages = useCardPages()
   const { bind: bindPreview, preview } = useCardPreview({ sheet: true })
   // Oracle text of the hovered card, shown next to its image; also supplies
@@ -168,7 +266,9 @@ export default function DeckPage() {
       fetch('/data/card-images.json').then(r => r.json()),
       fetch('/data/card-types.json').then(r => r.json()),
       fetch('/data/card-mana-costs.json').then(r => r.json()),
-    ]).then(([images, types, costs]) => {
+      fetch('/data/card-cmc.json').then(r => r.json()),
+    ]).then(([images, types, costs, values]) => {
+      setCmc(values)
       setCardImages(images)
       setCardTypes(types)
       setManaCosts(costs)
@@ -256,19 +356,9 @@ export default function DeckPage() {
             {deck.decklist ? (
               <>
                 <div className="flex flex-wrap gap-2">
-                  <div className="inline-flex rounded-lg border border-gray-600 overflow-hidden text-sm font-medium">
-                    <button
-                      onClick={() => setGroupByType(true)}
-                      className={`px-3 py-1.5 transition-colors ${groupByType ? 'bg-amber-400 text-gray-900' : 'text-gray-400 hover:text-gray-200'}`}>
-                      Group by type
-                    </button>
-                    <div className="w-px bg-gray-600" />
-                    <button
-                      onClick={() => setGroupByType(false)}
-                      className={`px-3 py-1.5 transition-colors ${!groupByType ? 'bg-amber-400 text-gray-900' : 'text-gray-400 hover:text-gray-200'}`}>
-                      Compact View
-                    </button>
-                  </div>
+                  <Toggle value={visual} onChange={changeVisual} options={[[false, 'Text'], [true, 'Visual']]} />
+                  <Toggle value={groupByType} onChange={setGroupByType} options={[[true, 'Grouped'], [false, 'Ungrouped']]} />
+                  <Toggle value={sort} onChange={setSort} options={[['name', 'A–Z'], ['cmc', 'Mana value']]} />
                   <MtgoButtons decklist={deck.decklist} fileName={`${id}.txt`} />
                   {/* Buy Deck button, hidden for now.
                   <a
@@ -282,16 +372,26 @@ export default function DeckPage() {
                 </div>
                 {/* The charts are the last column: on screens too narrow for it they wrap under the decklist. */}
                 <div className="flex flex-wrap gap-x-8 gap-y-8 items-start">
-                  <div className="space-y-4">
-                    <div className="flex flex-col items-start sm:flex-row gap-8">
-                      <DeckList cards={deck.decklist.main} label="Maindeck" onHover={setHoveredCard} bindPreview={bindPreview} cardImages={cardImages}
-                        cardTypes={cardTypes} groupByType={groupByType} cardPages={cardPages} manaCosts={manaCosts}
-                        versus={versusOf(typical, 'main')} metagameCode={deckMetagame?.metagame?.metagame} />
-                      <DeckList cards={deck.decklist.side} label="Sideboard" onHover={setHoveredCard} bindPreview={bindPreview} cardImages={cardImages}
-                        cardTypes={cardTypes} groupByType={groupByType} cardPages={cardPages} manaCosts={manaCosts}
-                        versus={versusOf(typical, 'side')} metagameCode={deckMetagame?.metagame?.metagame} />
-                    </div>
-                    {typical && (
+                  <div ref={listsRef} className={`space-y-4 ${visual && listsWidth ? 'lg:w-[var(--lists-width)] lg:shrink-0' : ''}`}
+                    style={visual && listsWidth ? { '--lists-width': `${listsWidth}px` } : undefined}>
+                    {visual ? (
+                      <div className="space-y-6">
+                        <VisualList cards={sortCards(deck.decklist.main, sort, cmc)} label="Maindeck" cardImages={cardImages} cardTypes={cardTypes}
+                          groupByType={groupByType} cardPages={cardPages} bindPreview={bindPreview} />
+                        <VisualList cards={sortCards(deck.decklist.side, sort, cmc)} label="Sideboard" cardImages={cardImages} cardTypes={cardTypes}
+                          groupByType={groupByType} cardPages={cardPages} bindPreview={bindPreview} />
+                      </div>
+                    ) : (
+                      <div className="flex flex-col items-start sm:flex-row gap-8">
+                        <DeckList cards={sortCards(deck.decklist.main, sort, cmc)} label="Maindeck" onHover={setHoveredCard} bindPreview={bindPreview} cardImages={cardImages}
+                          cardTypes={cardTypes} groupByType={groupByType} cardPages={cardPages} manaCosts={manaCosts}
+                          versus={versusOf(typical, 'main')} metagameCode={deckMetagame?.metagame?.metagame} />
+                        <DeckList cards={sortCards(deck.decklist.side, sort, cmc)} label="Sideboard" onHover={setHoveredCard} bindPreview={bindPreview} cardImages={cardImages}
+                          cardTypes={cardTypes} groupByType={groupByType} cardPages={cardPages} manaCosts={manaCosts}
+                          versus={versusOf(typical, 'side')} metagameCode={deckMetagame?.metagame?.metagame} />
+                      </div>
+                    )}
+                    {typical && !visual && (
                       <p className="text-sm text-gray-500">
                         <span className="text-green-400">▲</span> above or <span className="text-red-400">▼</span> below
                         the quantity in the typical {deck.archetype} list of the metagame.
@@ -299,21 +399,23 @@ export default function DeckPage() {
                     )}
                   </div>
                   {/* xl: the width of the image and the Oracle text, so the charts don't move when a card is hovered */}
-                  <div className="hidden lg:flex flex-col xl:flex-row gap-4 items-start shrink-0 sticky top-8 xl:w-[496px]">
-                    <div className="w-56 shrink-0">
-                      {hoveredImage ? (
-                        <img
-                          src={hoveredImage}
-                          alt={hoveredCard}
-                          className="w-full rounded-xl shadow-lg border border-gray-700"
-                        />
-                      ) : (
-                        // no card hovered: an empty card-sized box, keeping the place
-                        <div className="w-full aspect-[63/88] rounded-xl border border-gray-700" />
-                      )}
+                  {!visual && (
+                    <div ref={panelRef} className="hidden lg:flex flex-col xl:flex-row gap-4 items-start shrink-0 sticky top-8 xl:w-[496px]">
+                      <div className="w-56 shrink-0">
+                        {hoveredImage ? (
+                          <img
+                            src={hoveredImage}
+                            alt={hoveredCard}
+                            className="w-full rounded-xl shadow-lg border border-gray-700"
+                          />
+                        ) : (
+                          // no card hovered: an empty card-sized box, keeping the place
+                          <div className="w-full aspect-[63/88] rounded-xl border border-gray-700" />
+                        )}
+                      </div>
+                      {hoveredCard && <OracleText card={hoveredData} className="w-56 xl:w-64 text-gray-200" />}
                     </div>
-                    {hoveredCard && <OracleText card={hoveredData} className="w-56 xl:w-64 text-gray-200" />}
-                  </div>
+                  )}
                   <div className="flex flex-wrap justify-center w-full 2xl:w-auto 2xl:flex-col 2xl:justify-start gap-x-12 gap-y-8 items-start 2xl:items-center">
                     <ColorsPie cards={deck.decklist.main} cardTypes={cardTypes} />
                     <ManaCurve cards={deck.decklist.main} centered />

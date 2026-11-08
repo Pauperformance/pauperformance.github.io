@@ -371,8 +371,9 @@ export function useCardPreview({ sheet = false } = {}) {
   const openTimer = useRef(null)
   const closeTimer = useRef(null)
   const shownRef = useRef(false)
-  const [hoverCapable] = useState(() =>
-    typeof window !== 'undefined' && window.matchMedia('(hover: hover) and (pointer: fine)').matches)
+  // Checked when it matters, not once: the device can change (e.g. a
+  // browser's touch emulation switched on after the page loaded).
+  const canHover = () => typeof window !== 'undefined' && window.matchMedia('(hover: hover) and (pointer: fine)').matches
 
   shownRef.current = target !== null
 
@@ -411,12 +412,15 @@ export function useCardPreview({ sheet = false } = {}) {
 
   const closeSheet = useCallback(() => setSheetTarget(null), [])
 
-  const bind = useCallback((name, { slug, showImage = true, image, hover = true } = {}) => hoverCapable ? (hover ? {
-    onMouseEnter: e => show({ el: e.currentTarget, name, slug, showImage, image }),
-    onMouseLeave: hide,
-  } : {}) : sheet ? {
-    onClick: e => { e.preventDefault(); setSheetTarget({ name, slug, image }) },
-  } : {}, [hoverCapable, sheet, show, hide])
+  const bind = useCallback((name, { slug, showImage = true, image, hover = true } = {}) => ({
+    onMouseEnter: hover ? e => { if (canHover()) show({ el: e.currentTarget, name, slug, showImage, image }) } : undefined,
+    onMouseLeave: hover ? hide : undefined,
+    onClick: sheet ? e => {
+      if (canHover()) return
+      e.preventDefault()
+      setSheetTarget({ name, slug, image })
+    } : undefined,
+  }), [sheet, show, hide])
 
   const preview = <>
     {target && <PreviewPanel target={target} />}
