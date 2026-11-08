@@ -7,7 +7,7 @@ import ManaCurve from '../components/ManaCurve'
 import ManaCost from '../components/ManaCost'
 import { ColorsPie, CardTypesRadar, SampleHand } from '../components/DeckStats'
 import VideosSection from '../components/VideosSection'
-import { OracleText, useCardData } from '../components/CardPreview'
+import { OracleText, useCardData, useCardPreview } from '../components/CardPreview'
 import { cardLinkSlug, useCardPages } from '../utils/cardPages'
 import { MetagameBadge } from '../components/Metagame'
 import { computeTypicalList } from '../utils/typicalList'
@@ -75,9 +75,11 @@ function versusOf(typical, board) {
   }
 }
 
-function CardName({ c, onHover, cardPages, versus, metagameCode, manaCost }) {
+function CardName({ c, onHover, cardPages, versus, metagameCode, manaCost, bindPreview, image }) {
   const slug = cardLinkSlug(cardPages, c.name)
-  const hover = { onMouseEnter: () => onHover(c.name), onMouseLeave: () => onHover(null) }
+  // on touch devices a tap opens the preview sheet (the hover panel is desktop only)
+  const tap = bindPreview(c.name, { slug: slug || undefined, image, hover: false })
+  const hover = { ...tap, onMouseEnter: () => onHover(c.name), onMouseLeave: () => onHover(null) }
   return (
     <li className="flex items-baseline gap-2">
       <span className="w-3 text-center shrink-0 text-xs" title={versus.title(c, metagameCode)}>
@@ -99,7 +101,7 @@ function CardName({ c, onHover, cardPages, versus, metagameCode, manaCost }) {
   )
 }
 
-function DeckList({ cards, label, onHover, cardTypes, groupByType, cardPages, versus, metagameCode, manaCosts }) {
+function DeckList({ cards, label, onHover, bindPreview, cardImages, cardTypes, groupByType, cardPages, versus, metagameCode, manaCosts }) {
   if (!cards || !cards.length) return null
   const total = cards.reduce((sum, c) => sum + c.qty, 0)
 
@@ -120,7 +122,7 @@ function DeckList({ cards, label, onHover, cardTypes, groupByType, cardPages, ve
             {t}s <span className="text-gray-700">({groupTotal})</span>
           </p>
           <ul className="space-y-0.5">
-            {groups[t].map((c, i) => <CardName key={i} c={c} onHover={onHover} cardPages={cardPages} versus={versus} metagameCode={metagameCode} manaCost={manaCosts[c.name]} />)}
+            {groups[t].map((c, i) => <CardName key={i} c={c} onHover={onHover} cardPages={cardPages} versus={versus} metagameCode={metagameCode} manaCost={manaCosts[c.name]} bindPreview={bindPreview} image={cardImages[c.name]} />)}
           </ul>
         </div>
       )
@@ -128,7 +130,7 @@ function DeckList({ cards, label, onHover, cardTypes, groupByType, cardPages, ve
   } else {
     content = (
       <ul className="space-y-0.5">
-        {cards.map((c, i) => <CardName key={i} c={c} onHover={onHover} cardPages={cardPages} versus={versus} metagameCode={metagameCode} manaCost={manaCosts[c.name]} />)}
+        {cards.map((c, i) => <CardName key={i} c={c} onHover={onHover} cardPages={cardPages} versus={versus} metagameCode={metagameCode} manaCost={manaCosts[c.name]} bindPreview={bindPreview} image={cardImages[c.name]} />)}
       </ul>
     )
   }
@@ -154,6 +156,7 @@ export default function DeckPage() {
   const [hoveredCard, setHoveredCard] = useState(null)
   const [groupByType, setGroupByType] = useState(true)
   const cardPages = useCardPages()
+  const { bind: bindPreview, preview } = useCardPreview({ sheet: true })
   // Oracle text of the hovered card, shown next to its image; also supplies
   // the image of double-faced cards, listed by their front face only.
   const hoveredData = useCardData(hoveredCard)
@@ -184,6 +187,7 @@ export default function DeckPage() {
 
   return (
     <Layout>
+      {preview}
       <div className="space-y-6">
         {loading && <p className="text-gray-500 text-sm">Loading…</p>}
 
@@ -280,10 +284,10 @@ export default function DeckPage() {
                 <div className="flex flex-wrap gap-x-8 gap-y-8 items-start">
                   <div className="space-y-4">
                     <div className="flex flex-col items-start sm:flex-row gap-8">
-                      <DeckList cards={deck.decklist.main} label="Maindeck" onHover={setHoveredCard}
+                      <DeckList cards={deck.decklist.main} label="Maindeck" onHover={setHoveredCard} bindPreview={bindPreview} cardImages={cardImages}
                         cardTypes={cardTypes} groupByType={groupByType} cardPages={cardPages} manaCosts={manaCosts}
                         versus={versusOf(typical, 'main')} metagameCode={deckMetagame?.metagame?.metagame} />
-                      <DeckList cards={deck.decklist.side} label="Sideboard" onHover={setHoveredCard}
+                      <DeckList cards={deck.decklist.side} label="Sideboard" onHover={setHoveredCard} bindPreview={bindPreview} cardImages={cardImages}
                         cardTypes={cardTypes} groupByType={groupByType} cardPages={cardPages} manaCosts={manaCosts}
                         versus={versusOf(typical, 'side')} metagameCode={deckMetagame?.metagame?.metagame} />
                     </div>
