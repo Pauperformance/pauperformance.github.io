@@ -58,7 +58,10 @@ function comparison(typical, board, c) {
   return Math.sign(c.qty - (typical[board].get(c.name) || 0))
 }
 
-const TYPE_ORDER = ['Creature', 'Instant', 'Sorcery', 'Enchantment', 'Artifact', 'Land', 'Sticker', 'Other']
+// A card type's plural, as a group heading: Sorcery -> Sorceries
+const pluralType = t => (t.endsWith('y') ? `${t.slice(0, -1)}ies` : `${t}s`)
+
+const TYPE_ORDER =['Creature', 'Instant', 'Sorcery', 'Enchantment', 'Artifact', 'Land', 'Sticker', 'Other']
 const TYPE_PRIORITY = ['Land', 'Creature', 'Instant', 'Sorcery', 'Enchantment', 'Artifact', 'Sticker']
 
 // What a board's cards are compared with: diff(card) is 1 above the typical
@@ -135,7 +138,7 @@ function CardTile({ c, cardPages, bindPreview, image }) {
     : <div className={cls} {...bound}>{content}</div>
 }
 
-function VisualList({ cards, label, cardImages, cardTypes, groupByType, cardPages, bindPreview }) {
+export function VisualList({ cards, label, cardImages, cardTypes, groupByType, cardPages, bindPreview }) {
   if (!cards || !cards.length) return null
   const total = cards.reduce((sum, c) => sum + c.qty, 0)
   const grid = list => (
@@ -151,7 +154,7 @@ function VisualList({ cards, label, cardImages, cardTypes, groupByType, cardPage
       {groupByType ? groupCards(cards, cardTypes).map(([t, list]) => (
         <div key={t}>
           <p className="text-xs text-gray-600 uppercase tracking-wider mt-3 mb-1">
-            {t}s <span className="text-gray-700">({list.reduce((sum, c) => sum + c.qty, 0)})</span>
+            {pluralType(t)} <span className="text-gray-700">({list.reduce((sum, c) => sum + c.qty, 0)})</span>
           </p>
           {grid(list)}
         </div>
@@ -161,12 +164,12 @@ function VisualList({ cards, label, cardImages, cardTypes, groupByType, cardPage
 }
 
 // The cards sorted by mana value, then by name; the alphabetical order is the deck's own.
-function sortCards(cards, sort, cmc) {
+export function sortCards(cards, sort, cmc) {
   if (!cards || sort !== 'cmc') return cards
   return [...cards].sort((a, b) => (cmc[a.name] ?? 0) - (cmc[b.name] ?? 0) || a.name.localeCompare(b.name))
 }
 
-function Toggle({ options, value, onChange }) {
+export function Toggle({ options, value, onChange }) {
   return (
     <div className="inline-flex rounded-lg border border-gray-600 overflow-hidden text-sm font-medium">
       {options.map(([v, text], i) => (
@@ -182,7 +185,10 @@ function Toggle({ options, value, onChange }) {
   )
 }
 
-function DeckList({ cards, label, onHover, bindPreview, cardImages, cardTypes, groupByType, cardPages, versus, metagameCode, manaCosts }) {
+// What a decklist is compared with when there is nothing to compare it to.
+export const NO_VERSUS = { diff: () => 0, title: () => undefined }
+
+export function DeckList({ cards, label, onHover, bindPreview, cardImages, cardTypes, groupByType, cardPages, versus, metagameCode, manaCosts }) {
   if (!cards || !cards.length) return null
   const total = cards.reduce((sum, c) => sum + c.qty, 0)
 
@@ -200,7 +206,7 @@ function DeckList({ cards, label, onHover, bindPreview, cardImages, cardTypes, g
       return (
         <div key={t}>
           <p className="text-xs text-gray-600 uppercase tracking-wider mt-3 mb-1">
-            {t}s <span className="text-gray-700">({groupTotal})</span>
+            {pluralType(t)} <span className="text-gray-700">({groupTotal})</span>
           </p>
           <ul className="space-y-0.5">
             {groups[t].map((c, i) => <CardName key={i} c={c} onHover={onHover} cardPages={cardPages} versus={versus} metagameCode={metagameCode} manaCost={manaCosts[c.name]} bindPreview={bindPreview} image={cardImages[c.name]} />)}
@@ -285,6 +291,44 @@ export default function DeckPage() {
       .catch(() => { setNotFound(true); setLoading(false) })
   }, [id])
 
+  // Pilot, result and source: above the decklist, in its column.
+  const factsRow = deck && (
+    <div className="flex flex-wrap gap-4">
+      <div>
+        <p className="text-base text-gray-500 mb-0.5">Pilot</p>
+        <p className="font-medium text-gray-200">{deck.pilot || 'Anonymous'}</p>
+      </div>
+      {deck.place && (
+        <div>
+          <p className="text-base text-gray-500 mb-0.5">Result</p>
+          <p className="font-medium text-gray-200">{deck.place}</p>
+        </div>
+      )}
+      {/* Prices, hidden for now.
+      {deck.mtgo_price && (
+        <div>
+          <p className="text-base text-gray-500 mb-0.5">MTGO</p>
+          <p className="font-medium text-gray-200">{deck.mtgo_price} tix</p>
+        </div>
+      )}
+      {deck.tabletop_price && (
+        <div>
+          <p className="text-base text-gray-500 mb-0.5">Paper</p>
+          <p className="font-medium text-gray-200">${deck.tabletop_price}</p>
+        </div>
+      )}
+      */}
+      <div>
+        <p className="text-base text-gray-500 mb-0.5">Source</p>
+        <a href={deck.url} target="_blank" rel="noopener noreferrer"
+          className="text-amber-400 hover:text-amber-300">
+          {/* the older decks link Wizards' results page on the Wayback Machine */}
+          {deck.url?.startsWith('https://web.archive.org/') ? 'Wayback Machine →' : 'MTGGoldfish →'}
+        </a>
+      </div>
+    </div>
+  )
+
   return (
     <Layout>
       {preview}
@@ -318,43 +362,12 @@ export default function DeckPage() {
               )}
             </div>
 
-            <div className="flex flex-wrap gap-4">
-              <div>
-                <p className="text-base text-gray-500 mb-0.5">Pilot</p>
-                <p className="font-medium text-gray-200">{deck.pilot || 'Anonymous'}</p>
-              </div>
-              {deck.place && (
-                <div>
-                  <p className="text-base text-gray-500 mb-0.5">Result</p>
-                  <p className="font-medium text-gray-200">{deck.place}</p>
-                </div>
-              )}
-              {/* Prices, hidden for now.
-              {deck.mtgo_price && (
-                <div>
-                  <p className="text-base text-gray-500 mb-0.5">MTGO</p>
-                  <p className="font-medium text-gray-200">{deck.mtgo_price} tix</p>
-                </div>
-              )}
-              {deck.tabletop_price && (
-                <div>
-                  <p className="text-base text-gray-500 mb-0.5">Paper</p>
-                  <p className="font-medium text-gray-200">${deck.tabletop_price}</p>
-                </div>
-              )}
-              */}
-              <div>
-                <p className="text-base text-gray-500 mb-0.5">Source</p>
-                <a href={deck.url} target="_blank" rel="noopener noreferrer"
-                  className="text-amber-400 hover:text-amber-300">
-                  {/* the older decks link Wizards' results page on the Wayback Machine */}
-                  {deck.url?.startsWith('https://web.archive.org/') ? 'Wayback Machine →' : 'MTGGoldfish →'}
-                </a>
-              </div>
-            </div>
-
             {deck.decklist ? (
               <>
+                {/* The charts are the last column, starting at the height of the Pilot label: on screens too narrow for it they wrap under the left column. */}
+                <div className="flex flex-wrap gap-x-8 gap-y-8 2xl:flex-nowrap items-start">
+                <div className="space-y-6 min-w-0">
+                {factsRow}
                 <div className="flex flex-wrap gap-2">
                   <Toggle value={visual} onChange={changeVisual} options={[[false, 'Text'], [true, 'Visual']]} />
                   <Toggle value={groupByType} onChange={setGroupByType} options={[[true, 'Grouped'], [false, 'Ungrouped']]} />
@@ -370,7 +383,6 @@ export default function DeckPage() {
                   </a>
                   */}
                 </div>
-                {/* The charts are the last column: on screens too narrow for it they wrap under the decklist. */}
                 <div className="flex flex-wrap gap-x-8 gap-y-8 items-start">
                   <div ref={listsRef} className={`space-y-4 ${visual && listsWidth ? 'lg:w-[var(--lists-width)] lg:shrink-0' : ''}`}
                     style={visual && listsWidth ? { '--lists-width': `${listsWidth}px` } : undefined}>
@@ -416,6 +428,8 @@ export default function DeckPage() {
                       {hoveredCard && <OracleText card={hoveredData} className="w-56 xl:w-64 text-gray-200" />}
                     </div>
                   )}
+                </div>
+                </div>
                   <div className="flex flex-wrap justify-center w-full 2xl:w-auto 2xl:flex-col 2xl:justify-start gap-x-12 gap-y-8 items-start 2xl:items-center">
                     <ColorsPie cards={deck.decklist.main} cardTypes={cardTypes} />
                     <ManaCurve cards={deck.decklist.main} centered />
@@ -425,7 +439,10 @@ export default function DeckPage() {
                 <SampleHand cards={deck.decklist.main} images={cardImages} />
               </>
             ) : (
-              <p className="text-gray-500 text-sm">Decklist not available.</p>
+              <>
+                {factsRow}
+                <p className="text-gray-500 text-sm">Decklist not available.</p>
+              </>
             )}
 
             {/* The videos of the archetype, as on its page. */}

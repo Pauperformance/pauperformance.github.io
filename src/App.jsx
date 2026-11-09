@@ -16,6 +16,8 @@ const CardsIndex     = lazy(() => import('./pages/CardsIndex'))
 const CardPage       = lazy(() => import('./pages/CardPage'))
 const DeckPage       = lazy(() => import('./pages/DeckPage'))
 const Watch          = lazy(() => import('./pages/Watch'))
+const TournamentsIndex = lazy(() => import('./pages/TournamentsIndex'))
+const TournamentPage = lazy(() => import('./pages/TournamentPage'))
 const PlayersIndex   = lazy(() => import('./pages/PlayersIndex'))
 const PlayerPage     = lazy(() => import('./pages/PlayerPage'))
 const BlindSpy       = lazy(() => import('./pages/BlindSpy'))
@@ -53,6 +55,8 @@ function App() {
         <Route path="/cards/:slug" element={<CardPage />} />
         <Route path="/decks/:id" element={<DeckPage />} />
         <Route path="/watch" element={<Watch />} />
+        <Route path="/tournaments" element={<TournamentsIndex />} />
+        <Route path="/tournaments/:id" element={<TournamentPage />} />
         <Route path="/players" element={<PlayersIndex />} />
         <Route path="/players/:slug" element={<PlayerPage />} />
         <Route path="/blind-spy" element={<BlindSpy />} />

@@ -89,6 +89,29 @@
   animation: card-sheet-backdrop-in 250ms ease-out;
 }
 
+/* The decklist swapped in by the Swap view of a tournament (components/TournamentDecks.jsx) */
+@keyframes swap-from-right {
+  from { opacity: 0; transform: translateX(40px); }
+}
+
+@keyframes swap-from-left {
+  from { opacity: 0; transform: translateX(-40px); }
+}
+
+.swap-from-right {
+  animation: swap-from-right 200ms ease-out;
+}
+
+.swap-from-left {
+  animation: swap-from-left 200ms ease-out;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .swap-from-right, .swap-from-left {
+    animation: none;
+  }
+}
+
 /* A metagame's sets and B&Rs appearing in the metagame flow (components/MetagameFlow.jsx) */
 @keyframes flow-event-in {
   from {

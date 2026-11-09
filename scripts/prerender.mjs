@@ -29,6 +29,7 @@ const routes = [
   '/creators',
   '/cards',
   '/watch',
+  '/tournaments',
   '/blind-spy',
   '/diff',
   '/faq',
