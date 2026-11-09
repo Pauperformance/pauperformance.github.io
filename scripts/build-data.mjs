@@ -299,6 +299,9 @@ let deckDetailWritten = 0, deckDetailSkipped = 0
 // YYYY-MM-DD of the most recent tournament among the classified decks
 let lastDecksUpdate = ''
 var playersMap = {}
+// Archetype (null if unclassified), pilot and place of every tournament deck by
+// id, for the tournament pages.
+const deckInfoById = {}
 
 // Cached decks whose deck-detail reads are deferred until we know if any deck changed
 var cachedDecks = []
@@ -331,6 +334,7 @@ for (const archetype of archetypes) {
         tournament_date: d.tournament_date || null,
       }
       if (d.tournament_date && d.tournament_date > lastDecksUpdate) lastDecksUpdate = d.tournament_date
+      deckInfoById[id] = { archetype: name, pilot: deckMeta.pilot, place: deckMeta.place }
 
       if (!needsRebuild(outputPath, [inputPath, txtPath])) {
         // Cache hit: defer deck-detail read until we know if cardDecksMap is needed
@@ -425,6 +429,7 @@ for (const source of tournamentDeckSources) {
       id: uid, archetype: null, pilot: ud.pilot || null, place: ud.place || null,
       tournament_name: ud.tournament_name || null, tournament_date: ud.tournament_date || null,
     }
+    deckInfoById[uid] = { archetype: null, pilot: umeta.pilot, place: umeta.place }
     var udecklist = null
     if (!needsRebuild(uoutput, [uinput, utxtPath])) {
       cachedDecks.push({ outputPath: uoutput, meta: umeta })
@@ -1239,6 +1244,50 @@ readdirSync(videoDir).forEach(function(archetypeName) {
 allVideos.sort(function(a, b) { return (b.date || '').localeCompare(a.date || '') })
 writeFileSync(join(outDir, 'videos.json'), JSON.stringify(allVideos))
 console.log('Built videos.json with ' + allVideos.length + ' entries.')
+
+// Every tournament, for the /tournaments page: [id, source, date, name, decks,
+// url]. "decks" is how many decks the source lists for the event (usually the
+// top finishers, not every entrant). Ids don't collide across sources.
+const tournamentSources = [
+  { source: 'mtggoldfish', dir: 'assets/data/tournament/mtggoldfish' },
+  { source: 'waybackmachine', dir: 'assets/data/tournament/waybackmachine' },
+]
+const tournamentRows = []
+// One file per tournament, for its page: its decks (in the source's order,
+// i.e. by place) with their archetype, and the metagame it was played in (the
+// latest one starting on or before it).
+const tournamentDetailsDir = join(outDir, 'tournament-details')
+mkdirSync(tournamentDetailsDir, { recursive: true })
+const metagameStarts = (existsSync('assets/data/metagame_index.json')
+  ? JSON.parse(readFileSync('assets/data/metagame_index.json', 'utf8')) : [])
+  .map(m => ({ metagame: m.p13m, label: m.label, name: m.name || m.label, date: m.date }))
+  .sort((a, b) => a.date.localeCompare(b.date))
+const keptTournamentFiles = new Set()
+for (const { source, dir } of tournamentSources) {
+  if (!existsSync(dir)) continue
+  for (const f of readdirSync(dir)) {
+    if (!f.endsWith('.json')) continue
+    const id = f.slice(0, -5)
+    const t = JSON.parse(readFileSync(join(dir, f), 'utf8'))
+    const name = (t.name || '').trim()
+    tournamentRows.push([id, source, t.date, name, (t.deck_ids || []).length, t.url])
+    let metagame = null
+    for (const m of metagameStarts) if (m.date <= t.date) metagame = m
+    const decks = (t.deck_ids || []).map(deckId => {
+      const info = deckInfoById[deckId] || {}
+      return { id: deckId, archetype: info.archetype || null, pilot: info.pilot || null, place: info.place || null }
+    })
+    writeFileSync(join(tournamentDetailsDir, id + '.json'),
+      JSON.stringify({ id, source, name, date: t.date, url: t.url, metagame, decks }))
+    keptTournamentFiles.add(id + '.json')
+  }
+}
+for (const f of readdirSync(tournamentDetailsDir)) {
+  if (!keptTournamentFiles.has(f)) unlinkSync(join(tournamentDetailsDir, f))
+}
+tournamentRows.sort((a, b) => b[2].localeCompare(a[2]) || a[0].localeCompare(b[0]))
+writeFileSync(join(outDir, 'tournaments.json'), JSON.stringify(tournamentRows))
+console.log('Built tournaments.json with ' + tournamentRows.length + ' entries.')
 
 // When the newest tournament was downloaded (UTC, ISO 8601). Myr stores it as
 // "fetched_at" in each tournament file; older files have none.
