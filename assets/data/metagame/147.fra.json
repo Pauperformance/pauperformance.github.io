@@ -174,7 +174,7 @@
                 }
             ],
             "decks": 288,
-            "meta_share": 7.76,
+            "meta_share": 7.75,
             "name": "MonoU Terror",
             "previous_share": 6.47,
             "py/object": "pauperformance_bot.entity.api.metagame.ArchetypeShare",
@@ -354,7 +354,7 @@
                 }
             ],
             "decks": 223,
-            "meta_share": 6.01,
+            "meta_share": 6.0,
             "name": "Dimir Faeries",
             "previous_share": 5.07,
             "py/object": "pauperformance_bot.entity.api.metagame.ArchetypeShare",
@@ -624,7 +624,7 @@
                 }
             ],
             "decks": 161,
-            "meta_share": 4.34,
+            "meta_share": 4.33,
             "name": "MonoR Rally",
             "previous_share": 3.56,
             "py/object": "pauperformance_bot.entity.api.metagame.ArchetypeShare",
@@ -894,7 +894,7 @@
                 }
             ],
             "decks": 148,
-            "meta_share": 3.99,
+            "meta_share": 3.98,
             "name": "Affinity",
             "previous_share": 3.99,
             "py/object": "pauperformance_bot.entity.api.metagame.ArchetypeShare",
@@ -984,7 +984,7 @@
                 }
             ],
             "decks": 148,
-            "meta_share": 3.99,
+            "meta_share": 3.98,
             "name": "Ruby Storm",
             "previous_share": 1.19,
             "py/object": "pauperformance_bot.entity.api.metagame.ArchetypeShare",
@@ -1731,22 +1731,6 @@
                 {
                     "at_least": [
                         1.0,
-                        0.962,
-                        0.865,
-                        0.538
-                    ],
-                    "average": 3.4,
-                    "banned": false,
-                    "link": "https://scryfall.com/card/vma/237/tangle",
-                    "name": "Tangle",
-                    "preview": "https://cards.scryfall.io/normal/front/6/3/635ca3c1-d544-44fc-a178-3bfe4fe69551.jpg",
-                    "py/object": "pauperformance_bot.entity.api.archetype.TypicalCard",
-                    "type_line": "Instant",
-                    "typical": 4
-                },
-                {
-                    "at_least": [
-                        1.0,
                         0.981,
                         0.981,
                         0.981
@@ -1765,7 +1749,7 @@
                         0.981,
                         0.981,
                         0.981,
-                        0.615
+                        0.623
                     ],
                     "average": 3.6,
                     "banned": false,
@@ -1780,8 +1764,8 @@
                     "at_least": [
                         0.981,
                         0.981,
-                        0.923,
-                        0.769
+                        0.925,
+                        0.774
                     ],
                     "average": 3.7,
                     "banned": false,
@@ -1791,14 +1775,30 @@
                     "py/object": "pauperformance_bot.entity.api.archetype.TypicalCard",
                     "type_line": "Instant",
                     "typical": 4
+                },
+                {
+                    "at_least": [
+                        0.981,
+                        0.981,
+                        0.981,
+                        0.962
+                    ],
+                    "average": 4.0,
+                    "banned": false,
+                    "link": "https://scryfall.com/card/ltr/60/l%C3%B3rien-revealed",
+                    "name": "Lorien Revealed",
+                    "preview": "https://cards.scryfall.io/normal/front/0/c/0ce44270-a684-4489-9077-521456e6dfaa.jpg",
+                    "py/object": "pauperformance_bot.entity.api.archetype.TypicalCard",
+                    "type_line": "Sorcery",
+                    "typical": 4
                 }
             ],
-            "decks": 52,
-            "meta_share": 1.4,
+            "decks": 53,
+            "meta_share": 1.43,
             "name": "Turbofog",
             "previous_share": 0.22,
             "py/object": "pauperformance_bot.entity.api.metagame.ArchetypeShare",
-            "tournaments": 47
+            "tournaments": 48
         },
         {
             "cards": [
@@ -6040,10 +6040,10 @@
             "tournaments": 1
         }
     ],
-    "decks": 3713,
+    "decks": 3714,
     "metagame": {
         "date": "2026-10-02",
-        "decks": 3713,
+        "decks": 3714,
         "label": "fra",
         "metagame": "147",
         "name": "Reality Fracture",
@@ -6059,5 +6059,5 @@
         "py/object": "pauperformance_bot.entity.api.archetype.MetagameRef"
     },
     "py/object": "pauperformance_bot.entity.api.metagame.MetagameBreakdown",
-    "tournaments": 179
+    "tournaments": 180
 }
