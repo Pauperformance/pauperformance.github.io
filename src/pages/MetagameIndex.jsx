@@ -318,7 +318,7 @@ export default function MetagameIndex() {
   }
 
   return (
-    <Layout wide>
+    <Layout>
       <div className="space-y-6">
         <div>
           <div className="flex items-center gap-4 flex-wrap">

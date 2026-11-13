@@ -1,5 +1,5 @@
 import { Fragment, useRef, useState, useEffect } from 'react'
-import { useParams, Link } from 'react-router-dom'
+import { useParams, Link, useNavigate } from 'react-router-dom'
 import { nameToSlug } from '../utils/slugs'
 import Layout from '../components/Layout'
 import MtgoButtons from '../components/MtgoButtons'
@@ -12,6 +12,7 @@ import { cardLinkSlug, useCardPages } from '../utils/cardPages'
 import { MetagameBadge } from '../components/Metagame'
 import { computeTypicalList } from '../utils/typicalList'
 import { formatDate } from '../utils/dates'
+import { sourceLabel, sourceOfUrl } from '../utils/sources'
 
 // fewer decks than this in the metagame make for a noisy typical list: no arrows
 const MIN_DECKS_FOR_COMPARISON = 3
@@ -21,7 +22,7 @@ const MIN_DECKS_FOR_COMPARISON = 3
 // archetype's videos. The archetype's timeline lists every metagame since its
 // first deck: metagame is null for a deck older than that. null until loaded,
 // or for decks with no archetype.
-function useDeckMetagame(deck) {
+export function useDeckMetagame(deck) {
   const [state, setState] = useState(null)
   useEffect(() => {
     setState(null)
@@ -66,7 +67,7 @@ const TYPE_PRIORITY = ['Land', 'Creature', 'Instant', 'Sorcery', 'Enchantment', 
 
 // What a board's cards are compared with: diff(card) is 1 above the typical
 // list, -1 below, 0 otherwise; title(card) explains the arrow.
-function versusOf(typical, board) {
+export function versusOf(typical, board) {
   return {
     diff: c => comparison(typical, board, c),
     title: (c, code) => {
@@ -234,6 +235,7 @@ export function DeckList({ cards, label, onHover, bindPreview, cardImages, cardT
 
 export default function DeckPage() {
   const { id } = useParams()
+  const navigate = useNavigate()
   const [deck, setDeck] = useState(null)
   const [loading, setLoading] = useState(true)
   const [notFound, setNotFound] = useState(false)
@@ -287,9 +289,13 @@ export default function DeckPage() {
     setDeck(null)
     fetch(`/data/deck-details/${id}.json`)
       .then(r => { if (!r.ok) throw new Error(); return r.json() })
-      .then(data => { setDeck(data); setLoading(false) })
+      .then(data => {
+        // another copy of a deck the Academy counts once: its page is the counted one
+        if (data.duplicate_of) { navigate(`/decks/${data.duplicate_of}`, { replace: true }); return }
+        setDeck(data); setLoading(false)
+      })
       .catch(() => { setNotFound(true); setLoading(false) })
-  }, [id])
+  }, [id, navigate])
 
   // Pilot, result and source: above the decklist, in its column.
   const factsRow = deck && (
@@ -319,12 +325,23 @@ export default function DeckPage() {
       )}
       */}
       <div>
-        <p className="text-base text-gray-500 mb-0.5">Source</p>
-        <a href={deck.url} target="_blank" rel="noopener noreferrer"
-          className="text-amber-400 hover:text-amber-300">
-          {/* the older decks link Wizards' results page on the Wayback Machine */}
-          {deck.url?.startsWith('https://web.archive.org/') ? 'Wayback Machine →' : 'MTGGoldfish →'}
-        </a>
+        {/* a deck several sources have links each of them */}
+        {(() => {
+          const sources = deck.sources || [{ source: sourceOfUrl(deck.url), url: deck.url }]
+          return (
+            <>
+              <p className="text-base text-gray-500 mb-0.5">{sources.length > 1 ? 'Sources' : 'Source'}</p>
+              <p className="font-medium flex flex-wrap gap-x-4">
+                {sources.map(s => (
+                  <a key={s.source} href={s.url} target="_blank" rel="noopener noreferrer"
+                    className="text-amber-400 hover:text-amber-300">
+                    {sourceLabel(s.source)} →
+                  </a>
+                ))}
+              </p>
+            </>
+          )
+        })()}
       </div>
     </div>
   )
@@ -351,7 +368,10 @@ export default function DeckPage() {
                   : deck.pilot || 'Anonymous'}
               </h1>
               <p className="mt-2 text-gray-400">
-                Played on {formatDate(deck.tournament_date)} @ {deck.tournament_name}
+                Played on {formatDate(deck.tournament_date)} @{' '}
+                {deck.tournament
+                  ? <Link to={`/tournaments/${deck.tournament}`} className="text-amber-400 hover:text-amber-300">{deck.tournament_name}</Link>
+                  : deck.tournament_name}
               </p>
               {deckMetagame?.metagame && (
                 <p className="mt-1 flex flex-wrap items-center gap-x-2 gap-y-1 text-gray-400">

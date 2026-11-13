@@ -107,9 +107,10 @@ function DataFreshness() {
   return <span className="text-xs text-gray-500 text-center">{parts.join(' ')}</span>
 }
 
-export default function Layout({ children, wide = false }) {
-  // wide pages (the metagame flow) go beyond the usual 2xl width
-  const maxW = wide ? 'max-w-[1920px]' : 'max-w-screen-2xl'
+export default function Layout({ children }) {
+  // The header and every page share one width, so the menu doesn't move from
+  // page to page: wide screens use up to 1920px.
+  const maxW = 'max-w-[1920px]'
   const { pathname } = useLocation()
   const [menuOpen, setMenuOpen] = useState(false)
 
@@ -169,7 +170,7 @@ export default function Layout({ children, wide = false }) {
       </main>
 
       <footer className="border-t border-gray-700 mt-16">
-        <div className="max-w-screen-2xl mx-auto px-4 py-8 flex flex-col items-center gap-4 text-sm text-gray-500">
+        <div className="max-w-[1920px] mx-auto px-4 py-8 flex flex-col items-center gap-4 text-sm text-gray-500">
           <div className="flex flex-wrap justify-center gap-x-6 gap-y-2">
             {CONTACTS.filter(c => !c.hidden).map(({ href, label, icon }) => (
               <a key={label} href={href} target={href.startsWith('mailto') ? undefined : '_blank'} rel="noreferrer"

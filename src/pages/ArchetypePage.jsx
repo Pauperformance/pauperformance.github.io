@@ -6,6 +6,8 @@ import { useCardPreview } from '../components/CardPreview'
 import { AppearanceRow, MetagameBadge } from '../components/Metagame'
 import CardPopularityChart, { PopularityTrend, useMetagames } from '../components/CardPopularityChart'
 import MtgoButtons from '../components/MtgoButtons'
+import TournamentDecks, { useIsDesktop } from '../components/TournamentDecks'
+import { displayPlace } from '../utils/places'
 import MetagameRangeSlider from '../components/MetagameRangeSlider'
 import ManaCurve from '../components/ManaCurve'
 import { ColorsPie, CardTypesRadar } from '../components/DeckStats'
@@ -562,6 +564,7 @@ function IntelDecksSection({ name }) {
   const [filterDateFrom, setFilterDateFrom] = useState('')
   const [filterDateTo, setFilterDateTo] = useState('')
   const [filterPilot, setFilterPilot] = useState('')
+  const isDesktop = useIsDesktop()
 
   useEffect(() => {
     fetch(`/data/intel-decks/${name}.json`)
@@ -607,8 +610,18 @@ function IntelDecksSection({ name }) {
   if (!decks) return <p className="text-gray-500 text-sm">Loading decklists…</p>
   if (!decks.length) return <p className="text-gray-500 text-sm">No decklists recorded.</p>
 
-  const totalPages = Math.ceil(filtered.length / DECKS_PAGE_SIZE)
-  const page_decks = filtered.slice(page * DECKS_PAGE_SIZE, (page + 1) * DECKS_PAGE_SIZE)
+  // Desktop: the decks a page at a time, in a list beside the decklist. Phones
+  // swipe from deck to deck, through all of them, so there are no pages.
+  const totalPages = isDesktop ? Math.ceil(filtered.length / DECKS_PAGE_SIZE) : 1
+  const page_decks = isDesktop ? filtered.slice(page * DECKS_PAGE_SIZE, (page + 1) * DECKS_PAGE_SIZE) : filtered
+  const browsed = page_decks.map(d => ({
+    id: d.id,
+    pilot: d.pilot,
+    archetype: name,
+    place: displayPlace(d.place),
+    lead: formatShortDate(d.tournament_date),
+    detail: d.tournament_name,
+  }))
 
   return (
     <div className="space-y-3">
@@ -670,41 +683,11 @@ function IntelDecksSection({ name }) {
           </button>
         </div>
       )}
-      <div className="border border-gray-700 rounded-xl overflow-hidden">
-        <table className="w-full text-base bg-gray-900">
-          <thead>
-            <tr className="bg-gray-800 border-b border-gray-700">
-              <th className="text-left px-4 py-2 text-xs font-semibold text-gray-400 uppercase tracking-wider">Tournament</th>
-              <th className="text-left px-4 py-2 text-xs font-semibold text-gray-400 uppercase tracking-wider hidden md:table-cell">Pilot</th>
-              <th className="text-left px-4 py-2 text-xs font-semibold text-gray-400 uppercase tracking-wider hidden sm:table-cell">Deck Date</th>
-              <th className="text-left px-4 py-2 text-xs font-semibold text-gray-400 uppercase tracking-wider hidden md:table-cell">Result</th>
-              <th className="text-left px-4 py-2 text-xs font-semibold text-gray-400 uppercase tracking-wider">Link</th>
-            </tr>
-          </thead>
-          <tbody className="divide-y divide-gray-700/50 bg-gray-900">
-            {page_decks.length === 0 && (
-              <tr><td colSpan="5" className="px-4 py-8 text-center text-gray-500 text-sm">No decklists match your filters.</td></tr>
-            )}
-            {page_decks.map((deck) => (
-              <tr key={deck.id} className="bg-gray-900 hover:bg-gray-800 transition-colors cursor-pointer"
-                onAuxClick={(e) => { if (e.button === 1) window.open(`/decks/${deck.id}`, '_blank') }}>
-                <td className="px-4 py-2.5 text-gray-300">{deck.tournament_name}</td>
-                <td className="px-4 py-2.5 hidden md:table-cell">
-                  {deck.pilot
-                    ? <Link to={`/players/${pilotToSlug(deck.pilot)}`} className="text-gray-400 hover:text-amber-400 transition-colors">{deck.pilot}</Link>
-                    : <span className="text-gray-600">Anonymous</span>}
-                </td>
-                <td className="px-4 py-2.5 text-gray-500 hidden sm:table-cell">{formatShortDate(deck.tournament_date)}</td>
-                <td className="px-4 py-2.5 text-gray-400 hidden md:table-cell">{deck.place}</td>
-                <td className="px-4 py-2.5">
-                  <Link to={`/decks/${deck.id}`}
-                    className="text-amber-400 hover:underline text-xs">View →</Link>
-                </td>
-              </tr>
-            ))}
-          </tbody>
-        </table>
-      </div>
+      {browsed.length === 0 ? (
+        <p className="px-4 py-8 text-center text-gray-500 text-sm">No decklists match your filters.</p>
+      ) : (
+        <TournamentDecks key={`${page}:${browsed[0].id}:${browsed.length}`} decks={browsed} showArchetype={false} />
+      )}
       {totalPages > 1 && (
         <div className="flex items-center justify-center gap-3">
           <button onClick={() => setPage(p => Math.max(0, p - 1))} disabled={page === 0}

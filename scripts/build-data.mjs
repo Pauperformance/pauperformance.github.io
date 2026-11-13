@@ -271,9 +271,10 @@ function parseDecklist(txt) {
 
 // The tournament deck sources: deck lists (<id>.txt) and their metadata
 // (<id>.json). MTGGoldfish, and the older Pauper events of the Wayback Machine
-// (ids <mtgo_id>-<n>): ids don't collide across sources.
+// (ids <mtgo_id>-<n>) and MTGTop8 (ids mt8-<n>): ids don't collide across sources.
 const tournamentDeckSources = [
   { decks: 'assets/data/deck/mtggoldfish_tournament', meta: 'assets/data/tournament/mtggoldfish/deck' },
+  { decks: 'assets/data/deck/mtgtop8_tournament', meta: 'assets/data/tournament/mtgtop8/deck' },
   { decks: 'assets/data/deck/waybackmachine_tournament', meta: 'assets/data/tournament/waybackmachine/deck' },
 ]
 // the deck list of a tournament deck id, from the source holding it
@@ -284,6 +285,40 @@ function tournamentDeckTxtPath(id) {
   }
   return join(tournamentDeckSources[0].decks, id + '.txt')
 }
+
+// The tournaments of all the sources, put together (`myr academy reconcile`):
+// one per real event, whichever sources have it. Only the decks it says are
+// counted exist for the site: the decks of noise tournaments (too few decks)
+// are nowhere, and a deck several sources have counts once, as its primary copy.
+const reconciledDir = 'assets/data/tournament/reconciled'
+if (!existsSync(join(reconciledDir, 'decks.json'))) {
+  throw new Error(reconciledDir + '/decks.json not found: run `myr academy reconcile` first')
+}
+// {deck id: [merged tournament id, 1 if counted]}
+const reconciledDecks = JSON.parse(readFileSync(join(reconciledDir, 'decks.json'), 'utf8'))
+const isCounted = id => !!reconciledDecks[id] && reconciledDecks[id][1] === 1
+const reconciledTournaments = readdirSync(reconciledDir)
+  .filter(f => f.endsWith('.json') && f !== 'index.json' && f !== 'decks.json')
+  .map(f => JSON.parse(readFileSync(join(reconciledDir, f), 'utf8')))
+// The counted copy of each deck that is another copy of the same deck: its page
+// leads to the counted one.
+const countedCopyOf = {}
+// Where each counted deck that several sources have is, for its page to link them all.
+const sourcesOf = {}
+for (const t of reconciledTournaments) {
+  for (const d of t.decks) {
+    const primary = d.decks[d.primary].id
+    if (Object.keys(d.decks).length > 1) {
+      sourcesOf[primary] = Object.entries(d.decks).map(([source, c]) => ({ source, url: c.url }))
+    }
+    for (const copy of Object.values(d.decks)) if (copy.id !== primary) countedCopyOf[copy.id] = primary
+  }
+}
+// Bumped when the deck-details get a new field: they are all written again once.
+const DECK_DETAILS_VERSION = '3'
+const deckDetailsVersionPath = join(outDir, 'deck-details-version')
+const deckDetailsOutdated = !existsSync(deckDetailsVersionPath) ||
+  readFileSync(deckDetailsVersionPath, 'utf8').trim() !== DECK_DETAILS_VERSION
 const cardDecksMap = {}
 
 // Snapshot existing deck-detail IDs to detect deletions
@@ -314,7 +349,7 @@ for (const archetype of archetypes) {
   const folder = join(intelDeckDir, name)
   if (!existsSync(folder)) continue
   const decks = readdirSync(folder)
-    .filter(function(f) { return f.endsWith('.json') })
+    .filter(function(f) { return f.endsWith('.json') && isCounted(f.slice(0, -5)) })
     .map(function(f) {
       const id = f.slice(0, -5)
       const inputPath = join(folder, f)
@@ -336,7 +371,7 @@ for (const archetype of archetypes) {
       if (d.tournament_date && d.tournament_date > lastDecksUpdate) lastDecksUpdate = d.tournament_date
       deckInfoById[id] = { archetype: name, pilot: deckMeta.pilot, place: deckMeta.place }
 
-      if (!needsRebuild(outputPath, [inputPath, txtPath])) {
+      if (!deckDetailsOutdated && !needsRebuild(outputPath, [inputPath, txtPath])) {
         // Cache hit: defer deck-detail read until we know if cardDecksMap is needed
         cachedDecks.push({ outputPath: outputPath, meta: deckMeta })
         deckDetailSkipped++
@@ -354,6 +389,8 @@ for (const archetype of archetypes) {
           place: d.place || null,
           tournament_name: d.tournament_name || null,
           tournament_date: d.tournament_date || null,
+          tournament: reconciledDecks[id][0],
+          sources: sourcesOf[id] || null,
           mtgo_price: d.mtgo_price || null,
           tabletop_price: d.tabletop_price || null,
           decklist: decklist,
@@ -417,7 +454,7 @@ for (const source of tournamentDeckSources) {
   var tmFiles = readdirSync(tournamentMetaDir).filter(function(f) { return f.endsWith('.json') })
   for (var ui = 0; ui < tmFiles.length; ui++) {
     var uid = tmFiles[ui].slice(0, -5)
-    if (activeDeckIds.has(uid)) continue
+    if (activeDeckIds.has(uid) || !isCounted(uid)) continue
     var utxtPath = join(source.decks, uid + '.txt')
     if (!existsSync(utxtPath)) continue
     var uinput = join(tournamentMetaDir, tmFiles[ui])
@@ -431,7 +468,7 @@ for (const source of tournamentDeckSources) {
     }
     deckInfoById[uid] = { archetype: null, pilot: umeta.pilot, place: umeta.place }
     var udecklist = null
-    if (!needsRebuild(uoutput, [uinput, utxtPath])) {
+    if (!deckDetailsOutdated && !needsRebuild(uoutput, [uinput, utxtPath])) {
       cachedDecks.push({ outputPath: uoutput, meta: umeta })
       deckDetailSkipped++
       continue
@@ -440,6 +477,8 @@ for (const source of tournamentDeckSources) {
     writeFileSync(uoutput, JSON.stringify({
       id: uid, archetype: null, url: ud.url, pilot: umeta.pilot, place: umeta.place,
       tournament_name: umeta.tournament_name, tournament_date: umeta.tournament_date,
+      tournament: reconciledDecks[uid][0],
+      sources: sourcesOf[uid] || null,
       mtgo_price: ud.mtgo_price || null, tabletop_price: ud.tabletop_price || null, decklist: udecklist,
     }))
     deckDetailWritten++
@@ -457,6 +496,29 @@ for (const source of tournamentDeckSources) {
   }
 }
 console.log('Unclassified tournament decks with a decklist: ' + unclassifiedCount + '.')
+
+// The other copies of a counted deck keep a page, leading to the counted one.
+var copyStubs = 0
+Object.keys(countedCopyOf).forEach(function(copy) {
+  var copyPath = join(deckDetailsDir, copy + '.json')
+  var stub = JSON.stringify({ id: copy, duplicate_of: countedCopyOf[copy], tournament: reconciledDecks[copy][0] })
+  activeDeckIds.add(copy)
+  if (existsSync(copyPath)) {
+    var before = readFileSync(copyPath, 'utf8')
+    if (before === stub) return
+    // it was a deck of its own: its cards no longer have it
+    try {
+      var beforeDeck = JSON.parse(before)
+      if (beforeDeck.decklist) {
+        beforeDeck.decklist.main.concat(beforeDeck.decklist.side).forEach(function(c) { dirtyCardNames[c.name] = true })
+        anyDeckChanged = true
+      }
+    } catch (e) {}
+  }
+  writeFileSync(copyPath, stub)
+  copyStubs++
+})
+console.log('Deck pages leading to the counted copy: ' + Object.keys(countedCopyOf).length + ' (' + copyStubs + ' written).')
 
 // Handle deleted decks: remove stale deck-detail files, mark their cards dirty
 var deletedCount = 0
@@ -497,6 +559,7 @@ if (anyDeckChanged) {
   }
 }
 
+writeFileSync(deckDetailsVersionPath, DECK_DETAILS_VERSION)
 var deletedMsg = deletedCount ? ', removed ' + deletedCount + ' deleted' : ''
 console.log('Built intel-decks for ' + intelDeckCount + ' archetypes. Deck-details: ' + deckDetailWritten + ' written, ' + deckDetailSkipped + ' cached' + deletedMsg + '.')
 
@@ -912,7 +975,13 @@ if (anyDeckChanged) {
     writeFileSync(cardDeckOutputPath, JSON.stringify(sortedDecks))
     cardDeckWritten++
   }
-  console.log('Built card-decks: ' + cardDeckWritten + ' updated, ' + cardDeckSkipped + ' unchanged.')
+  // a card only played by decks that no longer count has no deck file any more
+  var cardDecksWanted = new Set(slugNames)
+  var cardDecksRemoved = 0
+  readdirSync(cardDecksDir).forEach(function(f) {
+    if (f.endsWith('.json') && !cardDecksWanted.has(f.slice(0, -5))) { unlinkSync(join(cardDecksDir, f)); cardDecksRemoved++ }
+  })
+  console.log('Built card-decks: ' + cardDeckWritten + ' updated, ' + cardDeckSkipped + ' unchanged, ' + cardDecksRemoved + ' removed.')
   var cardDeckCounts = {}
   for (var cci = 0; cci < slugNames.length; cci++) {
     cardDeckCounts[slugNames[cci]] = Object.keys(slugDecks[slugNames[cci]]).length
@@ -1245,16 +1314,14 @@ allVideos.sort(function(a, b) { return (b.date || '').localeCompare(a.date || ''
 writeFileSync(join(outDir, 'videos.json'), JSON.stringify(allVideos))
 console.log('Built videos.json with ' + allVideos.length + ' entries.')
 
-// Every tournament, for the /tournaments page: [id, source, date, name, decks,
-// url]. "decks" is how many decks the source lists for the event (usually the
-// top finishers, not every entrant). Ids don't collide across sources.
-const tournamentSources = [
-  { source: 'mtggoldfish', dir: 'assets/data/tournament/mtggoldfish' },
-  { source: 'waybackmachine', dir: 'assets/data/tournament/waybackmachine' },
-]
+// Every tournament, for the /tournaments page: [id, date, name, decks, sources,
+// notes]. The tournaments of all sources are put together (see above): "decks"
+// is how many different decks the sources list for the event (usually the top
+// finishers, not every entrant), "sources" the sources that have it and "notes"
+// how many differences between them the page tells.
 const tournamentRows = []
-// One file per tournament, for its page: its decks (in the source's order,
-// i.e. by place) with their archetype, and the metagame it was played in (the
+// One file per tournament, for its page: its decks in finishing order, each
+// with its copies in the sources, and the metagame it was played in (the
 // latest one starting on or before it).
 const tournamentDetailsDir = join(outDir, 'tournament-details')
 mkdirSync(tournamentDetailsDir, { recursive: true })
@@ -1262,30 +1329,49 @@ const metagameStarts = (existsSync('assets/data/metagame_index.json')
   ? JSON.parse(readFileSync('assets/data/metagame_index.json', 'utf8')) : [])
   .map(m => ({ metagame: m.p13m, label: m.label, name: m.name || m.label, date: m.date }))
   .sort((a, b) => a.date.localeCompare(b.date))
+// A place as the page shows it: MTGTop8's plain numbers as ordinals, like the others.
+function displayPlace(place) {
+  if (!place) return null
+  if (!/^\d+$/.test(place)) return place
+  const n = parseInt(place)
+  const suffix = n % 100 >= 11 && n % 100 <= 13 ? 'th' : ({ 1: 'st', 2: 'nd', 3: 'rd' }[n % 10] || 'th')
+  return n + suffix
+}
 const keptTournamentFiles = new Set()
-for (const { source, dir } of tournamentSources) {
-  if (!existsSync(dir)) continue
-  for (const f of readdirSync(dir)) {
-    if (!f.endsWith('.json')) continue
-    const id = f.slice(0, -5)
-    const t = JSON.parse(readFileSync(join(dir, f), 'utf8'))
-    const name = (t.name || '').trim()
-    tournamentRows.push([id, source, t.date, name, (t.deck_ids || []).length, t.url])
-    let metagame = null
-    for (const m of metagameStarts) if (m.date <= t.date) metagame = m
-    const decks = (t.deck_ids || []).map(deckId => {
-      const info = deckInfoById[deckId] || {}
-      return { id: deckId, archetype: info.archetype || null, pilot: info.pilot || null, place: info.place || null }
-    })
-    writeFileSync(join(tournamentDetailsDir, id + '.json'),
-      JSON.stringify({ id, source, name, date: t.date, url: t.url, metagame, decks }))
-    keptTournamentFiles.add(id + '.json')
-  }
+for (const t of reconciledTournaments) {
+  const name = (t.sources[0].name || '').trim()
+  tournamentRows.push([t.id, t.date, name, t.decks.length, t.sources.map(s => s.source), t.discrepancies.length])
+  let metagame = null
+  for (const m of metagameStarts) if (m.date <= t.date) metagame = m
+  const decks = t.decks.map(d => {
+    const primary = d.decks[d.primary]
+    const copies = Object.entries(d.decks)
+    // the archetype of the copy that has one (the counted copy is the one that is classified)
+    const classified = [primary].concat(copies.map(c => c[1])).map(c => deckInfoById[c.id]).find(i => i && i.archetype)
+    const placeCopy = d.place_source ? d.decks[d.place_source] : primary
+    return {
+      id: primary.id,
+      archetype: classified ? classified.archetype : null,
+      pilot: primary.pilot || null,
+      place: displayPlace(placeCopy.place),
+      match: d.match,
+      place_conflict: d.place_conflict,
+      inconsistent: d.inconsistent,
+      copies: copies.map(([source, c]) => ({
+        source, id: c.id, pilot: c.pilot || null, place: displayPlace(c.place), name: c.archetype || null, url: c.url,
+        counted: source === d.primary,
+      })),
+      differences: d.differences,
+    }
+  })
+  writeFileSync(join(tournamentDetailsDir, t.id + '.json'),
+    JSON.stringify({ id: t.id, name, date: t.date, metagame, ranked: t.ranked, sources: t.sources, discrepancies: t.discrepancies, decks }))
+  keptTournamentFiles.add(t.id + '.json')
 }
 for (const f of readdirSync(tournamentDetailsDir)) {
   if (!keptTournamentFiles.has(f)) unlinkSync(join(tournamentDetailsDir, f))
 }
-tournamentRows.sort((a, b) => b[2].localeCompare(a[2]) || a[0].localeCompare(b[0]))
+tournamentRows.sort((a, b) => b[1].localeCompare(a[1]) || a[0].localeCompare(b[0]))
 writeFileSync(join(outDir, 'tournaments.json'), JSON.stringify(tournamentRows))
 console.log('Built tournaments.json with ' + tournamentRows.length + ' entries.')
 
