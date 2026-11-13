@@ -91,19 +91,19 @@
 
 /* The decklist swapped in by the Swap view of a tournament (components/TournamentDecks.jsx) */
 @keyframes swap-from-right {
-  from { opacity: 0; transform: translateX(40px); }
+  from { opacity: 0; transform: translateX(28px); }
 }
 
 @keyframes swap-from-left {
-  from { opacity: 0; transform: translateX(-40px); }
+  from { opacity: 0; transform: translateX(-28px); }
 }
 
 .swap-from-right {
-  animation: swap-from-right 200ms ease-out;
+  animation: swap-from-right 140ms ease-out;
 }
 
 .swap-from-left {
-  animation: swap-from-left 200ms ease-out;
+  animation: swap-from-left 140ms ease-out;
 }
 
 @media (prefers-reduced-motion: reduce) {
