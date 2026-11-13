@@ -24,13 +24,13 @@
         "Midrange"
     ],
     "last_appearance": {
-        "date": "2021-09-08",
+        "date": "2021-11-11",
         "metagame": {
-            "date": "2021-09-08",
+            "date": "2021-09-24",
             "decks": null,
-            "label": "BNR",
-            "metagame": "096",
-            "name": "Banned & Restricted Announcement",
+            "label": "mid",
+            "metagame": "097",
+            "name": "Innistrad: Midnight Hunt",
             "py/object": "pauperformance_bot.entity.api.archetype.MetagameRef"
         },
         "py/object": "pauperformance_bot.entity.api.archetype.Appearance"
@@ -210,6 +210,153 @@
                         1
                     ]
                 }
+            },
+            "097": {
+                "main": {
+                    "Abrade": [
+                        1
+                    ],
+                    "Ash Barrens": [
+                        1,
+                        1,
+                        1
+                    ],
+                    "Bloodfell Caves": [
+                        1,
+                        1,
+                        1,
+                        1
+                    ],
+                    "Bojuka Bog": [
+                        1,
+                        1
+                    ],
+                    "Cabal Initiate": [
+                        1,
+                        1,
+                        1
+                    ],
+                    "Chainer's Edict": [
+                        1
+                    ],
+                    "Cram Session": [
+                        1
+                    ],
+                    "Crimson Fleet Commodore": [
+                        1,
+                        1,
+                        1
+                    ],
+                    "Dark Withering": [
+                        1,
+                        1,
+                        1
+                    ],
+                    "Faithless Looting": [
+                        1,
+                        1,
+                        1,
+                        1
+                    ],
+                    "Fiery Cannonade": [
+                        1
+                    ],
+                    "Fiery Temper": [
+                        1,
+                        1
+                    ],
+                    "Grave Scrabbler": [
+                        1,
+                        1,
+                        1,
+                        1
+                    ],
+                    "Gray Merchant of Asphodel": [
+                        1,
+                        1
+                    ],
+                    "Kitchen Imp": [
+                        1,
+                        1,
+                        1,
+                        1
+                    ],
+                    "Lightning Axe": [
+                        1,
+                        1
+                    ],
+                    "Macabre Waltz": [
+                        1
+                    ],
+                    "Merchant of the Vale": [
+                        1,
+                        1,
+                        1,
+                        1
+                    ],
+                    "Rakdos Carnarium": [
+                        1,
+                        1,
+                        1,
+                        1
+                    ],
+                    "Revolutionist": [
+                        1,
+                        1
+                    ],
+                    "Snow-Covered Mountain": [
+                        1,
+                        1,
+                        1,
+                        1
+                    ],
+                    "Snow-Covered Swamp": [
+                        1,
+                        1,
+                        1,
+                        1,
+                        1
+                    ]
+                },
+                "side": {
+                    "Chainer's Edict": [
+                        1
+                    ],
+                    "Divest": [
+                        1
+                    ],
+                    "Duress": [
+                        1,
+                        1
+                    ],
+                    "Electrickery": [
+                        1
+                    ],
+                    "Environmental Sciences": [
+                        1
+                    ],
+                    "Faerie Macabre": [
+                        1,
+                        1
+                    ],
+                    "Feed the Swarm": [
+                        1
+                    ],
+                    "Fiery Cannonade": [
+                        1,
+                        1
+                    ],
+                    "Gorilla Shaman": [
+                        1
+                    ],
+                    "Red Elemental Blast": [
+                        1,
+                        1
+                    ],
+                    "Unexpected Fangs": [
+                        1
+                    ]
+                }
             }
         },
         "cards": {
@@ -309,6 +456,12 @@
                 "preview": "https://cards.scryfall.io/normal/front/a/1/a1b0da17-d595-441d-811c-a2d28d2bb232.jpg",
                 "type_line": "Sorcery"
             },
+            "Feed the Swarm": {
+                "banned": false,
+                "link": "https://scryfall.com/card/znr/102/feed-the-swarm",
+                "preview": "https://cards.scryfall.io/normal/front/f/6/f6b2eba7-862a-4efd-9f65-065fb2070855.jpg",
+                "type_line": "Sorcery"
+            },
             "Fiery Cannonade": {
                 "banned": false,
                 "link": "https://scryfall.com/card/cmr/178/fiery-cannonade",
@@ -327,10 +480,22 @@
                 "preview": "https://cards.scryfall.io/normal/front/9/f/9fa10a18-5059-46ab-9983-0ea78b507331.jpg",
                 "type_line": "Creature \u2014 Goblin Wizard"
             },
+            "Gorilla Shaman": {
+                "banned": false,
+                "link": "https://scryfall.com/card/all/72a/gorilla-shaman",
+                "preview": "https://cards.scryfall.io/normal/front/b/f/bf8b213e-31ca-4eb5-bf0b-515a0ad4fd31.jpg",
+                "type_line": "Creature \u2014 Ape Shaman"
+            },
             "Grave Scrabbler": {
                 "banned": false,
                 "link": "https://scryfall.com/card/fut/86/grave-scrabbler",
                 "preview": "https://cards.scryfall.io/normal/front/0/f/0f0a08a8-bbb9-4816-b03c-af4d729fce45.jpg",
+                "type_line": "Creature \u2014 Zombie"
+            },
+            "Gray Merchant of Asphodel": {
+                "banned": false,
+                "link": "https://scryfall.com/card/ths/89/gray-merchant-of-asphodel",
+                "preview": "https://cards.scryfall.io/normal/front/b/0/b06078ce-f534-4e16-9a70-d51620a33eb2.jpg",
                 "type_line": "Creature \u2014 Zombie"
             },
             "Immersturm Raider": {
@@ -412,12 +577,12 @@
                 "type_line": "Instant"
             }
         },
-        "decks": 1,
+        "decks": 2,
         "ended_by_bans": [],
         "era_end": null,
         "era_start": null,
         "first_date": "2021-09-08",
-        "last_date": "2021-09-08",
+        "last_date": "2021-11-11",
         "later_decks": 0,
         "main": [
             {
@@ -616,32 +781,16 @@
                 "at_least": [
                     1.0,
                     1.0,
-                    0.0,
+                    0.5,
                     0.0
                 ],
-                "average": 2.0,
+                "average": 2.5,
                 "banned": false,
                 "link": "https://scryfall.com/card/mh2/78/cabal-initiate",
                 "name": "Cabal Initiate",
                 "preview": "https://cards.scryfall.io/normal/front/b/2/b279a03f-85ab-43f2-b5ca-1bc10563e5ad.jpg",
                 "py/object": "pauperformance_bot.entity.api.archetype.TypicalCard",
                 "type_line": "Creature \u2014 Human Warlock",
-                "typical": 2
-            },
-            {
-                "at_least": [
-                    1.0,
-                    1.0,
-                    0.0,
-                    0.0
-                ],
-                "average": 2.0,
-                "banned": false,
-                "link": "https://scryfall.com/card/stx/170/cram-session",
-                "name": "Cram Session",
-                "preview": "https://cards.scryfall.io/normal/front/c/5/c59a249f-35ed-447a-845b-32ba5a53124e.jpg",
-                "py/object": "pauperformance_bot.entity.api.archetype.TypicalCard",
-                "type_line": "Sorcery",
                 "typical": 2
             },
             {
@@ -711,17 +860,17 @@
             {
                 "at_least": [
                     1.0,
-                    0.0,
+                    0.5,
                     0.0,
                     0.0
                 ],
-                "average": 1.0,
+                "average": 1.5,
                 "banned": false,
-                "link": "https://scryfall.com/card/vis/55/crypt-rats",
-                "name": "Crypt Rats",
-                "preview": "https://cards.scryfall.io/normal/front/7/3/736455f6-c1b3-4a5a-a91f-a0cd3986ed53.jpg",
+                "link": "https://scryfall.com/card/stx/170/cram-session",
+                "name": "Cram Session",
+                "preview": "https://cards.scryfall.io/normal/front/c/5/c59a249f-35ed-447a-845b-32ba5a53124e.jpg",
                 "py/object": "pauperformance_bot.entity.api.archetype.TypicalCard",
-                "type_line": "Creature \u2014 Rat",
+                "type_line": "Sorcery",
                 "typical": 1
             },
             {
@@ -749,6 +898,54 @@
                 ],
                 "average": 1.0,
                 "banned": false,
+                "link": "https://scryfall.com/card/dis/47/macabre-waltz",
+                "name": "Macabre Waltz",
+                "preview": "https://cards.scryfall.io/normal/front/d/9/d9cd7bc3-73ba-4364-84b2-9954648cd8a9.jpg",
+                "py/object": "pauperformance_bot.entity.api.archetype.TypicalCard",
+                "type_line": "Sorcery",
+                "typical": 1
+            },
+            {
+                "at_least": [
+                    0.5,
+                    0.0,
+                    0.0,
+                    0.0
+                ],
+                "average": 1.0,
+                "banned": false,
+                "link": "https://scryfall.com/card/2xm/114/abrade",
+                "name": "Abrade",
+                "preview": "https://cards.scryfall.io/normal/front/2/4/24da9431-7e52-44f5-bc18-2f2d8a4ca81e.jpg",
+                "py/object": "pauperformance_bot.entity.api.archetype.TypicalCard",
+                "type_line": "Instant",
+                "typical": 1
+            },
+            {
+                "at_least": [
+                    0.5,
+                    0.0,
+                    0.0,
+                    0.0
+                ],
+                "average": 1.0,
+                "banned": false,
+                "link": "https://scryfall.com/card/vis/55/crypt-rats",
+                "name": "Crypt Rats",
+                "preview": "https://cards.scryfall.io/normal/front/7/3/736455f6-c1b3-4a5a-a91f-a0cd3986ed53.jpg",
+                "py/object": "pauperformance_bot.entity.api.archetype.TypicalCard",
+                "type_line": "Creature \u2014 Rat",
+                "typical": 1
+            },
+            {
+                "at_least": [
+                    0.5,
+                    0.0,
+                    0.0,
+                    0.0
+                ],
+                "average": 1.0,
+                "banned": false,
                 "link": "https://scryfall.com/card/znr/140/fissure-wizard",
                 "name": "Fissure Wizard",
                 "preview": "https://cards.scryfall.io/normal/front/9/f/9fa10a18-5059-46ab-9983-0ea78b507331.jpg",
@@ -758,7 +955,23 @@
             },
             {
                 "at_least": [
-                    1.0,
+                    0.5,
+                    0.5,
+                    0.0,
+                    0.0
+                ],
+                "average": 2.0,
+                "banned": false,
+                "link": "https://scryfall.com/card/ths/89/gray-merchant-of-asphodel",
+                "name": "Gray Merchant of Asphodel",
+                "preview": "https://cards.scryfall.io/normal/front/b/0/b06078ce-f534-4e16-9a70-d51620a33eb2.jpg",
+                "py/object": "pauperformance_bot.entity.api.archetype.TypicalCard",
+                "type_line": "Creature \u2014 Zombie",
+                "typical": 1
+            },
+            {
+                "at_least": [
+                    0.5,
                     0.0,
                     0.0,
                     0.0
@@ -770,26 +983,18 @@
                 "preview": "https://cards.scryfall.io/normal/front/7/7/77da4de2-4d34-40e5-8fc0-850aef05356b.jpg",
                 "py/object": "pauperformance_bot.entity.api.archetype.TypicalCard",
                 "type_line": "Creature \u2014 Demon Berserker",
-                "typical": 1
-            },
-            {
-                "at_least": [
-                    1.0,
-                    0.0,
-                    0.0,
-                    0.0
-                ],
-                "average": 1.0,
-                "banned": false,
-                "link": "https://scryfall.com/card/dis/47/macabre-waltz",
-                "name": "Macabre Waltz",
-                "preview": "https://cards.scryfall.io/normal/front/d/9/d9cd7bc3-73ba-4364-84b2-9954648cd8a9.jpg",
-                "py/object": "pauperformance_bot.entity.api.archetype.TypicalCard",
-                "type_line": "Sorcery",
-                "typical": 1
+                "typical": 0
             }
         ],
         "metagames": [
+            {
+                "date": "2021-09-24",
+                "decks": 1,
+                "label": "mid",
+                "metagame": "097",
+                "name": "Innistrad: Midnight Hunt",
+                "py/object": "pauperformance_bot.entity.api.archetype.MetagameRef"
+            },
             {
                 "date": "2021-09-08",
                 "decks": 1,
@@ -801,22 +1006,6 @@
         ],
         "py/object": "pauperformance_bot.entity.api.archetype.TypicalList",
         "side": [
-            {
-                "at_least": [
-                    1.0,
-                    1.0,
-                    0.0,
-                    0.0
-                ],
-                "average": 2.0,
-                "banned": false,
-                "link": "https://scryfall.com/card/2xm/114/abrade",
-                "name": "Abrade",
-                "preview": "https://cards.scryfall.io/normal/front/2/4/24da9431-7e52-44f5-bc18-2f2d8a4ca81e.jpg",
-                "py/object": "pauperformance_bot.entity.api.archetype.TypicalCard",
-                "type_line": "Instant",
-                "typical": 2
-            },
             {
                 "at_least": [
                     1.0,
@@ -916,11 +1105,11 @@
             {
                 "at_least": [
                     1.0,
-                    0.0,
+                    0.5,
                     0.0,
                     0.0
                 ],
-                "average": 1.0,
+                "average": 1.5,
                 "banned": false,
                 "link": "https://scryfall.com/card/cmr/178/fiery-cannonade",
                 "name": "Fiery Cannonade",
@@ -938,16 +1127,96 @@
                 ],
                 "average": 1.0,
                 "banned": false,
-                "link": "https://scryfall.com/card/eve/41/ravens-crime",
-                "name": "Raven's Crime",
-                "preview": "https://cards.scryfall.io/normal/front/7/c/7ced5797-5de0-43ca-9dc9-e48912333a70.jpg",
+                "link": "https://scryfall.com/card/iko/102/unexpected-fangs",
+                "name": "Unexpected Fangs",
+                "preview": "https://cards.scryfall.io/normal/front/a/a/aa6494ad-a35e-4b09-8623-7740f3c20b0b.jpg",
+                "py/object": "pauperformance_bot.entity.api.archetype.TypicalCard",
+                "type_line": "Instant",
+                "typical": 1
+            },
+            {
+                "at_least": [
+                    0.5,
+                    0.5,
+                    0.0,
+                    0.0
+                ],
+                "average": 2.0,
+                "banned": false,
+                "link": "https://scryfall.com/card/2xm/114/abrade",
+                "name": "Abrade",
+                "preview": "https://cards.scryfall.io/normal/front/2/4/24da9431-7e52-44f5-bc18-2f2d8a4ca81e.jpg",
+                "py/object": "pauperformance_bot.entity.api.archetype.TypicalCard",
+                "type_line": "Instant",
+                "typical": 1
+            },
+            {
+                "at_least": [
+                    0.5,
+                    0.0,
+                    0.0,
+                    0.0
+                ],
+                "average": 1.0,
+                "banned": false,
+                "link": "https://scryfall.com/card/vma/108/chainers-edict",
+                "name": "Chainer's Edict",
+                "preview": "https://cards.scryfall.io/normal/front/9/6/9659cf39-5ca8-4c56-9f15-2a7201cf32f1.jpg",
                 "py/object": "pauperformance_bot.entity.api.archetype.TypicalCard",
                 "type_line": "Sorcery",
                 "typical": 1
             },
             {
                 "at_least": [
-                    1.0,
+                    0.5,
+                    0.0,
+                    0.0,
+                    0.0
+                ],
+                "average": 1.0,
+                "banned": false,
+                "link": "https://scryfall.com/card/znr/102/feed-the-swarm",
+                "name": "Feed the Swarm",
+                "preview": "https://cards.scryfall.io/normal/front/f/6/f6b2eba7-862a-4efd-9f65-065fb2070855.jpg",
+                "py/object": "pauperformance_bot.entity.api.archetype.TypicalCard",
+                "type_line": "Sorcery",
+                "typical": 1
+            },
+            {
+                "at_least": [
+                    0.5,
+                    0.0,
+                    0.0,
+                    0.0
+                ],
+                "average": 1.0,
+                "banned": false,
+                "link": "https://scryfall.com/card/all/72a/gorilla-shaman",
+                "name": "Gorilla Shaman",
+                "preview": "https://cards.scryfall.io/normal/front/b/f/bf8b213e-31ca-4eb5-bf0b-515a0ad4fd31.jpg",
+                "py/object": "pauperformance_bot.entity.api.archetype.TypicalCard",
+                "type_line": "Creature \u2014 Ape Shaman",
+                "typical": 1
+            },
+            {
+                "at_least": [
+                    0.5,
+                    0.0,
+                    0.0,
+                    0.0
+                ],
+                "average": 1.0,
+                "banned": false,
+                "link": "https://scryfall.com/card/eve/41/ravens-crime",
+                "name": "Raven's Crime",
+                "preview": "https://cards.scryfall.io/normal/front/7/c/7ced5797-5de0-43ca-9dc9-e48912333a70.jpg",
+                "py/object": "pauperformance_bot.entity.api.archetype.TypicalCard",
+                "type_line": "Sorcery",
+                "typical": 0
+            },
+            {
+                "at_least": [
+                    0.5,
                     0.0,
                     0.0,
                     0.0
@@ -959,23 +1228,7 @@
                 "preview": "https://cards.scryfall.io/normal/front/4/d/4d757ec3-c15f-4d6e-8e18-36ebae985448.jpg",
                 "py/object": "pauperformance_bot.entity.api.archetype.TypicalCard",
                 "type_line": "Sorcery",
-                "typical": 1
-            },
-            {
-                "at_least": [
-                    1.0,
-                    0.0,
-                    0.0,
-                    0.0
-                ],
-                "average": 1.0,
-                "banned": false,
-                "link": "https://scryfall.com/card/iko/102/unexpected-fangs",
-                "name": "Unexpected Fangs",
-                "preview": "https://cards.scryfall.io/normal/front/a/a/aa6494ad-a35e-4b09-8623-7740f3c20b0b.jpg",
-                "py/object": "pauperformance_bot.entity.api.archetype.TypicalCard",
-                "type_line": "Instant",
-                "typical": 1
+                "typical": 0
             }
         ],
         "started_by_bans": [],
@@ -986,6 +1239,14 @@
                 "label": "BNR",
                 "metagame": "096",
                 "name": "Banned & Restricted Announcement",
+                "py/object": "pauperformance_bot.entity.api.archetype.MetagameRef"
+            },
+            {
+                "date": "2021-09-24",
+                "decks": 1,
+                "label": "mid",
+                "metagame": "097",
+                "name": "Innistrad: Midnight Hunt",
                 "py/object": "pauperformance_bot.entity.api.archetype.MetagameRef"
             }
         ],

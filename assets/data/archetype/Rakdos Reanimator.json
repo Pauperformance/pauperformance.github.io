@@ -25,13 +25,13 @@
         "Combo"
     ],
     "last_appearance": {
-        "date": "2021-05-05",
+        "date": "2021-09-18",
         "metagame": {
-            "date": "2021-04-23",
+            "date": "2021-09-08",
             "decks": null,
-            "label": "stx",
-            "metagame": "093",
-            "name": "Strixhaven: School of Mages",
+            "label": "BNR",
+            "metagame": "096",
+            "name": "Banned & Restricted Announcement",
             "py/object": "pauperformance_bot.entity.api.archetype.MetagameRef"
         },
         "py/object": "pauperformance_bot.entity.api.archetype.Appearance"
@@ -189,6 +189,145 @@
                         1
                     ]
                 }
+            },
+            "094": {
+                "main": {},
+                "side": {}
+            },
+            "095": {
+                "main": {},
+                "side": {}
+            },
+            "096": {
+                "main": {
+                    "Bloodfell Caves": [
+                        1,
+                        1,
+                        1,
+                        1
+                    ],
+                    "Bojuka Bog": [
+                        1,
+                        1
+                    ],
+                    "Cathartic Reunion": [
+                        1,
+                        1
+                    ],
+                    "Dragon Breath": [
+                        1,
+                        1,
+                        1,
+                        1
+                    ],
+                    "Duress": [
+                        1,
+                        1,
+                        1
+                    ],
+                    "Eldrazi Devastator": [
+                        1,
+                        1
+                    ],
+                    "Exhume": [
+                        1,
+                        1,
+                        1,
+                        1
+                    ],
+                    "Faithless Looting": [
+                        1,
+                        1,
+                        1,
+                        1
+                    ],
+                    "Gurmag Angler": [
+                        1,
+                        1,
+                        1,
+                        1
+                    ],
+                    "Lightning Axe": [
+                        1,
+                        1
+                    ],
+                    "Merchant of the Vale": [
+                        1,
+                        1,
+                        1
+                    ],
+                    "Mountain": [
+                        1,
+                        1,
+                        1,
+                        1,
+                        1,
+                        1,
+                        1
+                    ],
+                    "Rakdos Carnarium": [
+                        1,
+                        1,
+                        1
+                    ],
+                    "Ransack the Lab": [
+                        1,
+                        1,
+                        1
+                    ],
+                    "Stinkweed Imp": [
+                        1,
+                        1,
+                        1,
+                        1
+                    ],
+                    "Swamp": [
+                        1,
+                        1,
+                        1,
+                        1,
+                        1
+                    ],
+                    "Ulamog's Crusher": [
+                        1,
+                        1,
+                        1,
+                        1
+                    ]
+                },
+                "side": {
+                    "Distress": [
+                        1,
+                        1
+                    ],
+                    "Duress": [
+                        1
+                    ],
+                    "Electrickery": [
+                        1,
+                        1
+                    ],
+                    "Grim Harvest": [
+                        1
+                    ],
+                    "Pillage": [
+                        1,
+                        1
+                    ],
+                    "Pyroblast": [
+                        1,
+                        1
+                    ],
+                    "Red Elemental Blast": [
+                        1,
+                        1,
+                        1,
+                        1
+                    ],
+                    "Shenanigans": [
+                        1
+                    ]
+                }
             }
         },
         "cards": {
@@ -222,11 +361,35 @@
                 "preview": "https://cards.scryfall.io/normal/front/9/6/9659cf39-5ca8-4c56-9f15-2a7201cf32f1.jpg",
                 "type_line": "Sorcery"
             },
+            "Distress": {
+                "banned": false,
+                "link": "https://scryfall.com/card/chk/111/distress",
+                "preview": "https://cards.scryfall.io/normal/front/8/1/8130a902-3a03-4473-a64f-84cf3590f4c6.jpg",
+                "type_line": "Sorcery"
+            },
             "Dragon Breath": {
                 "banned": false,
                 "link": "https://scryfall.com/card/scg/86/dragon-breath",
                 "preview": "https://cards.scryfall.io/normal/front/1/8/1832aaed-e164-4f78-9bc9-ec6c015835f5.jpg",
                 "type_line": "Enchantment \u2014 Aura"
+            },
+            "Duress": {
+                "banned": false,
+                "link": "https://scryfall.com/card/usg/132/duress",
+                "preview": "https://cards.scryfall.io/normal/front/c/a/ca367f49-0f4a-4b7f-8104-851893fbcd8a.jpg",
+                "type_line": "Sorcery"
+            },
+            "Eldrazi Devastator": {
+                "banned": false,
+                "link": "https://scryfall.com/card/bfz/7/eldrazi-devastator",
+                "preview": "https://cards.scryfall.io/normal/front/0/4/04b13e32-01b9-4a86-a3df-ca8b784c6a6c.jpg",
+                "type_line": "Creature \u2014 Eldrazi"
+            },
+            "Electrickery": {
+                "banned": false,
+                "link": "https://scryfall.com/card/rtr/93/electrickery",
+                "preview": "https://cards.scryfall.io/normal/front/5/e/5ed81ee8-d5e4-4127-876e-9bff81f9c726.jpg",
+                "type_line": "Instant"
             },
             "Exhume": {
                 "banned": false,
@@ -251,6 +414,12 @@
                 "link": "https://scryfall.com/card/mh1/91/first-sphere-gargantua",
                 "preview": "https://cards.scryfall.io/normal/front/a/5/a59f4e5c-fdc7-485f-aadb-2a71b3701dcc.jpg",
                 "type_line": "Creature \u2014 Phyrexian Horror"
+            },
+            "Grim Harvest": {
+                "banned": false,
+                "link": "https://scryfall.com/card/csp/58/grim-harvest",
+                "preview": "https://cards.scryfall.io/normal/front/b/d/bdb1972f-2ef7-4fe2-8c8e-ab07f48a3176.jpg",
+                "type_line": "Instant"
             },
             "Gurmag Angler": {
                 "banned": false,
@@ -282,6 +451,12 @@
                 "preview": "https://cards.scryfall.io/normal/front/e/a/eace2c85-976c-425e-9800-5a6ccbd91b56.jpg",
                 "type_line": "Basic Land \u2014 Mountain"
             },
+            "Pillage": {
+                "banned": false,
+                "link": "https://scryfall.com/card/a25/144/pillage",
+                "preview": "https://cards.scryfall.io/normal/front/d/e/ded44c07-ef04-4c2d-9b8d-5474de9d2ec3.jpg",
+                "type_line": "Sorcery"
+            },
             "Pyroblast": {
                 "banned": false,
                 "link": "https://scryfall.com/card/ice/213/pyroblast",
@@ -293,6 +468,12 @@
                 "link": "https://scryfall.com/card/dis/178/rakdos-carnarium",
                 "preview": "https://cards.scryfall.io/normal/front/3/4/34f146f3-6541-4d2a-96e3-a3cd680c0a1e.jpg",
                 "type_line": "Land"
+            },
+            "Ransack the Lab": {
+                "banned": false,
+                "link": "https://scryfall.com/card/mh1/103/ransack-the-lab",
+                "preview": "https://cards.scryfall.io/normal/front/b/5/b547513d-8b69-41cd-84c9-4b08b6426f1d.jpg",
+                "type_line": "Sorcery"
             },
             "Red Elemental Blast": {
                 "banned": false,
@@ -349,12 +530,12 @@
                 "type_line": "Instant"
             }
         },
-        "decks": 1,
+        "decks": 2,
         "ended_by_bans": [],
         "era_end": null,
         "era_start": null,
         "first_date": "2021-05-05",
-        "last_date": "2021-05-05",
+        "last_date": "2021-09-18",
         "later_decks": 0,
         "main": [
             {
@@ -446,22 +627,6 @@
                 ],
                 "average": 4.0,
                 "banned": false,
-                "link": "https://scryfall.com/card/eld/131/merchant-of-the-vale-haggle",
-                "name": "Merchant of the Vale",
-                "preview": "https://cards.scryfall.io/normal/front/0/b/0b4399b6-e67f-40d8-8676-f5db7e04a6c9.jpg",
-                "py/object": "pauperformance_bot.entity.api.archetype.TypicalCard",
-                "type_line": "Creature \u2014 Human Peasant // Instant \u2014 Adventure",
-                "typical": 4
-            },
-            {
-                "at_least": [
-                    1.0,
-                    1.0,
-                    1.0,
-                    1.0
-                ],
-                "average": 4.0,
-                "banned": false,
                 "link": "https://scryfall.com/card/rav/107/stinkweed-imp",
                 "name": "Stinkweed Imp",
                 "preview": "https://cards.scryfall.io/normal/front/6/2/628903a0-6695-4643-80f3-9a6efc4d6a27.jpg",
@@ -490,9 +655,9 @@
                     1.0,
                     1.0,
                     1.0,
-                    0.0
+                    0.5
                 ],
-                "average": 3.0,
+                "average": 3.5,
                 "banned": false,
                 "link": "https://scryfall.com/card/ktk/229/bloodfell-caves",
                 "name": "Bloodfell Caves",
@@ -506,15 +671,15 @@
                     1.0,
                     1.0,
                     1.0,
-                    0.0
+                    0.5
                 ],
-                "average": 3.0,
+                "average": 3.5,
                 "banned": false,
-                "link": "https://scryfall.com/card/kld/109/cathartic-reunion",
-                "name": "Cathartic Reunion",
-                "preview": "https://cards.scryfall.io/normal/front/c/6/c68a6226-6dd7-4e1a-9e8a-124eef2caa13.jpg",
+                "link": "https://scryfall.com/card/frf/72/gurmag-angler",
+                "name": "Gurmag Angler",
+                "preview": "https://cards.scryfall.io/normal/front/c/6/c60a8cf1-a8c7-4f45-bbd3-188fab2652f9.jpg",
                 "py/object": "pauperformance_bot.entity.api.archetype.TypicalCard",
-                "type_line": "Sorcery",
+                "type_line": "Creature \u2014 Zombie Fish",
                 "typical": 3
             },
             {
@@ -522,15 +687,15 @@
                     1.0,
                     1.0,
                     1.0,
-                    0.0
+                    0.5
                 ],
-                "average": 3.0,
+                "average": 3.5,
                 "banned": false,
-                "link": "https://scryfall.com/card/frf/72/gurmag-angler",
-                "name": "Gurmag Angler",
-                "preview": "https://cards.scryfall.io/normal/front/c/6/c60a8cf1-a8c7-4f45-bbd3-188fab2652f9.jpg",
+                "link": "https://scryfall.com/card/eld/131/merchant-of-the-vale-haggle",
+                "name": "Merchant of the Vale",
+                "preview": "https://cards.scryfall.io/normal/front/0/b/0b4399b6-e67f-40d8-8676-f5db7e04a6c9.jpg",
                 "py/object": "pauperformance_bot.entity.api.archetype.TypicalCard",
-                "type_line": "Creature \u2014 Zombie Fish",
+                "type_line": "Creature \u2014 Human Peasant // Instant \u2014 Adventure",
                 "typical": 3
             },
             {
@@ -553,22 +718,6 @@
                 "at_least": [
                     1.0,
                     1.0,
-                    1.0,
-                    0.0
-                ],
-                "average": 3.0,
-                "banned": false,
-                "link": "https://scryfall.com/card/rav/105/shred-memory",
-                "name": "Shred Memory",
-                "preview": "https://cards.scryfall.io/normal/front/e/3/e38192e5-814f-4269-bae8-13867a73e7fa.jpg",
-                "py/object": "pauperformance_bot.entity.api.archetype.TypicalCard",
-                "type_line": "Instant",
-                "typical": 3
-            },
-            {
-                "at_least": [
-                    1.0,
-                    1.0,
                     0.0,
                     0.0
                 ],
@@ -579,6 +728,22 @@
                 "preview": "https://cards.scryfall.io/normal/front/5/2/529c38b3-7397-4dac-9859-acd9cd451c32.jpg",
                 "py/object": "pauperformance_bot.entity.api.archetype.TypicalCard",
                 "type_line": "Land",
+                "typical": 2
+            },
+            {
+                "at_least": [
+                    1.0,
+                    1.0,
+                    0.5,
+                    0.0
+                ],
+                "average": 2.5,
+                "banned": false,
+                "link": "https://scryfall.com/card/kld/109/cathartic-reunion",
+                "name": "Cathartic Reunion",
+                "preview": "https://cards.scryfall.io/normal/front/c/6/c68a6226-6dd7-4e1a-9e8a-124eef2caa13.jpg",
+                "py/object": "pauperformance_bot.entity.api.archetype.TypicalCard",
+                "type_line": "Sorcery",
                 "typical": 2
             },
             {
@@ -599,7 +764,23 @@
             },
             {
                 "at_least": [
-                    1.0,
+                    0.5,
+                    0.5,
+                    0.5,
+                    0.0
+                ],
+                "average": 3.0,
+                "banned": false,
+                "link": "https://scryfall.com/card/usg/132/duress",
+                "name": "Duress",
+                "preview": "https://cards.scryfall.io/normal/front/c/a/ca367f49-0f4a-4b7f-8104-851893fbcd8a.jpg",
+                "py/object": "pauperformance_bot.entity.api.archetype.TypicalCard",
+                "type_line": "Sorcery",
+                "typical": 2
+            },
+            {
+                "at_least": [
+                    0.5,
                     0.0,
                     0.0,
                     0.0
@@ -615,7 +796,7 @@
             },
             {
                 "at_least": [
-                    1.0,
+                    0.5,
                     0.0,
                     0.0,
                     0.0
@@ -631,7 +812,23 @@
             },
             {
                 "at_least": [
-                    1.0,
+                    0.5,
+                    0.5,
+                    0.0,
+                    0.0
+                ],
+                "average": 2.0,
+                "banned": false,
+                "link": "https://scryfall.com/card/bfz/7/eldrazi-devastator",
+                "name": "Eldrazi Devastator",
+                "preview": "https://cards.scryfall.io/normal/front/0/4/04b13e32-01b9-4a86-a3df-ca8b784c6a6c.jpg",
+                "py/object": "pauperformance_bot.entity.api.archetype.TypicalCard",
+                "type_line": "Creature \u2014 Eldrazi",
+                "typical": 1
+            },
+            {
+                "at_least": [
+                    0.5,
                     0.0,
                     0.0,
                     0.0
@@ -647,7 +844,39 @@
             },
             {
                 "at_least": [
-                    1.0,
+                    0.5,
+                    0.5,
+                    0.5,
+                    0.0
+                ],
+                "average": 3.0,
+                "banned": false,
+                "link": "https://scryfall.com/card/mh1/103/ransack-the-lab",
+                "name": "Ransack the Lab",
+                "preview": "https://cards.scryfall.io/normal/front/b/5/b547513d-8b69-41cd-84c9-4b08b6426f1d.jpg",
+                "py/object": "pauperformance_bot.entity.api.archetype.TypicalCard",
+                "type_line": "Sorcery",
+                "typical": 1
+            },
+            {
+                "at_least": [
+                    0.5,
+                    0.5,
+                    0.5,
+                    0.0
+                ],
+                "average": 3.0,
+                "banned": false,
+                "link": "https://scryfall.com/card/rav/105/shred-memory",
+                "name": "Shred Memory",
+                "preview": "https://cards.scryfall.io/normal/front/e/3/e38192e5-814f-4269-bae8-13867a73e7fa.jpg",
+                "py/object": "pauperformance_bot.entity.api.archetype.TypicalCard",
+                "type_line": "Instant",
+                "typical": 1
+            },
+            {
+                "at_least": [
+                    0.5,
                     0.0,
                     0.0,
                     0.0
@@ -663,7 +892,7 @@
             },
             {
                 "at_least": [
-                    1.0,
+                    0.5,
                     0.0,
                     0.0,
                     0.0
@@ -680,6 +909,14 @@
         ],
         "metagames": [
             {
+                "date": "2021-09-08",
+                "decks": 1,
+                "label": "BNR",
+                "metagame": "096",
+                "name": "Banned & Restricted Announcement",
+                "py/object": "pauperformance_bot.entity.api.archetype.MetagameRef"
+            },
+            {
                 "date": "2021-04-23",
                 "decks": 1,
                 "label": "stx",
@@ -690,70 +927,6 @@
         ],
         "py/object": "pauperformance_bot.entity.api.archetype.TypicalList",
         "side": [
-            {
-                "at_least": [
-                    1.0,
-                    1.0,
-                    1.0,
-                    0.0
-                ],
-                "average": 3.0,
-                "banned": false,
-                "link": "https://scryfall.com/card/mh1/91/first-sphere-gargantua",
-                "name": "First-Sphere Gargantua",
-                "preview": "https://cards.scryfall.io/normal/front/a/5/a59f4e5c-fdc7-485f-aadb-2a71b3701dcc.jpg",
-                "py/object": "pauperformance_bot.entity.api.archetype.TypicalCard",
-                "type_line": "Creature \u2014 Phyrexian Horror",
-                "typical": 3
-            },
-            {
-                "at_least": [
-                    1.0,
-                    1.0,
-                    1.0,
-                    0.0
-                ],
-                "average": 3.0,
-                "banned": false,
-                "link": "https://scryfall.com/card/mh1/146/shenanigans",
-                "name": "Shenanigans",
-                "preview": "https://cards.scryfall.io/normal/front/5/8/580c6fe2-ab43-491e-a1b2-d076a5c2a74e.jpg",
-                "py/object": "pauperformance_bot.entity.api.archetype.TypicalCard",
-                "type_line": "Sorcery",
-                "typical": 3
-            },
-            {
-                "at_least": [
-                    1.0,
-                    1.0,
-                    0.0,
-                    0.0
-                ],
-                "average": 2.0,
-                "banned": false,
-                "link": "https://scryfall.com/card/vma/108/chainers-edict",
-                "name": "Chainer's Edict",
-                "preview": "https://cards.scryfall.io/normal/front/9/6/9659cf39-5ca8-4c56-9f15-2a7201cf32f1.jpg",
-                "py/object": "pauperformance_bot.entity.api.archetype.TypicalCard",
-                "type_line": "Sorcery",
-                "typical": 2
-            },
-            {
-                "at_least": [
-                    1.0,
-                    1.0,
-                    0.0,
-                    0.0
-                ],
-                "average": 2.0,
-                "banned": false,
-                "link": "https://scryfall.com/card/cmr/178/fiery-cannonade",
-                "name": "Fiery Cannonade",
-                "preview": "https://cards.scryfall.io/normal/front/3/9/396f1cdf-712b-4518-a0e8-0039303dccdc.jpg",
-                "py/object": "pauperformance_bot.entity.api.archetype.TypicalCard",
-                "type_line": "Instant",
-                "typical": 2
-            },
             {
                 "at_least": [
                     1.0,
@@ -772,8 +945,168 @@
             },
             {
                 "at_least": [
+                    0.5,
+                    0.5,
+                    0.0,
+                    0.0
+                ],
+                "average": 2.0,
+                "banned": false,
+                "link": "https://scryfall.com/card/vma/108/chainers-edict",
+                "name": "Chainer's Edict",
+                "preview": "https://cards.scryfall.io/normal/front/9/6/9659cf39-5ca8-4c56-9f15-2a7201cf32f1.jpg",
+                "py/object": "pauperformance_bot.entity.api.archetype.TypicalCard",
+                "type_line": "Sorcery",
+                "typical": 2
+            },
+            {
+                "at_least": [
+                    0.5,
+                    0.5,
+                    0.0,
+                    0.0
+                ],
+                "average": 2.0,
+                "banned": false,
+                "link": "https://scryfall.com/card/chk/111/distress",
+                "name": "Distress",
+                "preview": "https://cards.scryfall.io/normal/front/8/1/8130a902-3a03-4473-a64f-84cf3590f4c6.jpg",
+                "py/object": "pauperformance_bot.entity.api.archetype.TypicalCard",
+                "type_line": "Sorcery",
+                "typical": 2
+            },
+            {
+                "at_least": [
                     1.0,
+                    0.5,
+                    0.5,
+                    0.5
+                ],
+                "average": 2.5,
+                "banned": false,
+                "link": "https://scryfall.com/card/lea/169/red-elemental-blast",
+                "name": "Red Elemental Blast",
+                "preview": "https://cards.scryfall.io/normal/front/7/7/776ad9be-3309-4f1d-9f27-6219d9477662.jpg",
+                "py/object": "pauperformance_bot.entity.api.archetype.TypicalCard",
+                "type_line": "Instant",
+                "typical": 1
+            },
+            {
+                "at_least": [
                     1.0,
+                    0.5,
+                    0.5,
+                    0.0
+                ],
+                "average": 2.0,
+                "banned": false,
+                "link": "https://scryfall.com/card/mh1/146/shenanigans",
+                "name": "Shenanigans",
+                "preview": "https://cards.scryfall.io/normal/front/5/8/580c6fe2-ab43-491e-a1b2-d076a5c2a74e.jpg",
+                "py/object": "pauperformance_bot.entity.api.archetype.TypicalCard",
+                "type_line": "Sorcery",
+                "typical": 1
+            },
+            {
+                "at_least": [
+                    0.5,
+                    0.0,
+                    0.0,
+                    0.0
+                ],
+                "average": 1.0,
+                "banned": false,
+                "link": "https://scryfall.com/card/usg/132/duress",
+                "name": "Duress",
+                "preview": "https://cards.scryfall.io/normal/front/c/a/ca367f49-0f4a-4b7f-8104-851893fbcd8a.jpg",
+                "py/object": "pauperformance_bot.entity.api.archetype.TypicalCard",
+                "type_line": "Sorcery",
+                "typical": 1
+            },
+            {
+                "at_least": [
+                    0.5,
+                    0.5,
+                    0.0,
+                    0.0
+                ],
+                "average": 2.0,
+                "banned": false,
+                "link": "https://scryfall.com/card/rtr/93/electrickery",
+                "name": "Electrickery",
+                "preview": "https://cards.scryfall.io/normal/front/5/e/5ed81ee8-d5e4-4127-876e-9bff81f9c726.jpg",
+                "py/object": "pauperformance_bot.entity.api.archetype.TypicalCard",
+                "type_line": "Instant",
+                "typical": 1
+            },
+            {
+                "at_least": [
+                    0.5,
+                    0.5,
+                    0.0,
+                    0.0
+                ],
+                "average": 2.0,
+                "banned": false,
+                "link": "https://scryfall.com/card/cmr/178/fiery-cannonade",
+                "name": "Fiery Cannonade",
+                "preview": "https://cards.scryfall.io/normal/front/3/9/396f1cdf-712b-4518-a0e8-0039303dccdc.jpg",
+                "py/object": "pauperformance_bot.entity.api.archetype.TypicalCard",
+                "type_line": "Instant",
+                "typical": 1
+            },
+            {
+                "at_least": [
+                    0.5,
+                    0.5,
+                    0.5,
+                    0.0
+                ],
+                "average": 3.0,
+                "banned": false,
+                "link": "https://scryfall.com/card/mh1/91/first-sphere-gargantua",
+                "name": "First-Sphere Gargantua",
+                "preview": "https://cards.scryfall.io/normal/front/a/5/a59f4e5c-fdc7-485f-aadb-2a71b3701dcc.jpg",
+                "py/object": "pauperformance_bot.entity.api.archetype.TypicalCard",
+                "type_line": "Creature \u2014 Phyrexian Horror",
+                "typical": 1
+            },
+            {
+                "at_least": [
+                    0.5,
+                    0.0,
+                    0.0,
+                    0.0
+                ],
+                "average": 1.0,
+                "banned": false,
+                "link": "https://scryfall.com/card/csp/58/grim-harvest",
+                "name": "Grim Harvest",
+                "preview": "https://cards.scryfall.io/normal/front/b/d/bdb1972f-2ef7-4fe2-8c8e-ab07f48a3176.jpg",
+                "py/object": "pauperformance_bot.entity.api.archetype.TypicalCard",
+                "type_line": "Instant",
+                "typical": 1
+            },
+            {
+                "at_least": [
+                    0.5,
+                    0.5,
+                    0.0,
+                    0.0
+                ],
+                "average": 2.0,
+                "banned": false,
+                "link": "https://scryfall.com/card/a25/144/pillage",
+                "name": "Pillage",
+                "preview": "https://cards.scryfall.io/normal/front/d/e/ded44c07-ef04-4c2d-9b8d-5474de9d2ec3.jpg",
+                "py/object": "pauperformance_bot.entity.api.archetype.TypicalCard",
+                "type_line": "Sorcery",
+                "typical": 1
+            },
+            {
+                "at_least": [
+                    0.5,
+                    0.5,
                     0.0,
                     0.0
                 ],
@@ -782,22 +1115,6 @@
                 "link": "https://scryfall.com/card/iko/102/unexpected-fangs",
                 "name": "Unexpected Fangs",
                 "preview": "https://cards.scryfall.io/normal/front/a/a/aa6494ad-a35e-4b09-8623-7740f3c20b0b.jpg",
-                "py/object": "pauperformance_bot.entity.api.archetype.TypicalCard",
-                "type_line": "Instant",
-                "typical": 2
-            },
-            {
-                "at_least": [
-                    1.0,
-                    0.0,
-                    0.0,
-                    0.0
-                ],
-                "average": 1.0,
-                "banned": false,
-                "link": "https://scryfall.com/card/lea/169/red-elemental-blast",
-                "name": "Red Elemental Blast",
-                "preview": "https://cards.scryfall.io/normal/front/7/7/776ad9be-3309-4f1d-9f27-6219d9477662.jpg",
                 "py/object": "pauperformance_bot.entity.api.archetype.TypicalCard",
                 "type_line": "Instant",
                 "typical": 1
@@ -811,6 +1128,30 @@
                 "label": "stx",
                 "metagame": "093",
                 "name": "Strixhaven: School of Mages",
+                "py/object": "pauperformance_bot.entity.api.archetype.MetagameRef"
+            },
+            {
+                "date": "2021-06-18",
+                "decks": 0,
+                "label": "mh2",
+                "metagame": "094",
+                "name": "Modern Horizons 2",
+                "py/object": "pauperformance_bot.entity.api.archetype.MetagameRef"
+            },
+            {
+                "date": "2021-07-23",
+                "decks": 0,
+                "label": "afr",
+                "metagame": "095",
+                "name": "Adventures in the Forgotten Realms",
+                "py/object": "pauperformance_bot.entity.api.archetype.MetagameRef"
+            },
+            {
+                "date": "2021-09-08",
+                "decks": 1,
+                "label": "BNR",
+                "metagame": "096",
+                "name": "Banned & Restricted Announcement",
                 "py/object": "pauperformance_bot.entity.api.archetype.MetagameRef"
             }
         ],
