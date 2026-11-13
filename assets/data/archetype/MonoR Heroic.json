@@ -21,13 +21,13 @@
         "Aggro"
     ],
     "last_appearance": {
-        "date": "2024-04-20",
+        "date": "2024-07-16",
         "metagame": {
-            "date": "2024-04-19",
+            "date": "2024-07-05",
             "decks": null,
-            "label": "otj",
-            "metagame": "121",
-            "name": "Outlaws of Thunder Junction",
+            "label": "acr",
+            "metagame": "125",
+            "name": "Assassin's Creed",
             "py/object": "pauperformance_bot.entity.api.archetype.MetagameRef"
         },
         "py/object": "pauperformance_bot.entity.api.archetype.Appearance"
@@ -421,6 +421,141 @@
                         1
                     ]
                 }
+            },
+            "122": {
+                "main": {},
+                "side": {}
+            },
+            "123": {
+                "main": {},
+                "side": {}
+            },
+            "124": {
+                "main": {},
+                "side": {}
+            },
+            "125": {
+                "main": {
+                    "Akroan Crusader": [
+                        1,
+                        1,
+                        1,
+                        1
+                    ],
+                    "Ancestral Anger": [
+                        1,
+                        1,
+                        1,
+                        1
+                    ],
+                    "Apostle's Blessing": [
+                        1,
+                        1,
+                        1,
+                        1
+                    ],
+                    "Brute Force": [
+                        1,
+                        1,
+                        1,
+                        1
+                    ],
+                    "Dragon Mantle": [
+                        1,
+                        1,
+                        1,
+                        1
+                    ],
+                    "Lightning Bolt": [
+                        1,
+                        1,
+                        1,
+                        1
+                    ],
+                    "Lightning Visionary": [
+                        1,
+                        1,
+                        1
+                    ],
+                    "Molten Monstrosity": [
+                        1,
+                        1,
+                        1
+                    ],
+                    "Mountain": [
+                        1,
+                        1,
+                        1,
+                        1,
+                        1,
+                        1,
+                        1,
+                        1,
+                        1,
+                        1,
+                        1,
+                        1,
+                        1,
+                        1,
+                        1,
+                        1,
+                        1,
+                        1
+                    ],
+                    "Mutagenic Growth": [
+                        1,
+                        1,
+                        1,
+                        1
+                    ],
+                    "Rimrock Knight": [
+                        1,
+                        1
+                    ],
+                    "Rush of Adrenaline": [
+                        1,
+                        1
+                    ],
+                    "Satyr Hoplite": [
+                        1,
+                        1,
+                        1,
+                        1
+                    ]
+                },
+                "side": {
+                    "Act of Treason": [
+                        1,
+                        1
+                    ],
+                    "Flaring Pain": [
+                        1,
+                        1
+                    ],
+                    "Flowstone Infusion": [
+                        1,
+                        1
+                    ],
+                    "Ratcatcher Trainee": [
+                        1
+                    ],
+                    "Red Elemental Blast": [
+                        1,
+                        1
+                    ],
+                    "Relic of Progenitus": [
+                        1,
+                        1
+                    ],
+                    "Smash to Smithereens": [
+                        1,
+                        1
+                    ],
+                    "Tectonic Hazard": [
+                        1,
+                        1
+                    ]
+                }
             }
         },
         "cards": {
@@ -587,12 +722,12 @@
                 "type_line": "Artifact"
             }
         },
-        "decks": 3,
+        "decks": 4,
         "ended_by_bans": [],
         "era_end": null,
         "era_start": null,
         "first_date": "2023-12-16",
-        "last_date": "2024-04-20",
+        "last_date": "2024-07-16",
         "later_decks": 0,
         "main": [
             {
@@ -602,7 +737,7 @@
                     1.0,
                     1.0
                 ],
-                "average": 19.0,
+                "average": 18.8,
                 "banned": false,
                 "link": "https://scryfall.com/card/lea/292/mountain",
                 "name": "Mountain",
@@ -728,9 +863,9 @@
                     1.0,
                     1.0,
                     1.0,
-                    0.0
+                    0.25
                 ],
-                "average": 3.0,
+                "average": 3.2,
                 "banned": false,
                 "link": "https://scryfall.com/card/lea/161/lightning-bolt",
                 "name": "Lightning Bolt",
@@ -744,9 +879,9 @@
                     1.0,
                     1.0,
                     1.0,
-                    0.333
+                    0.25
                 ],
-                "average": 3.3,
+                "average": 3.2,
                 "banned": false,
                 "link": "https://scryfall.com/card/dmu/139/molten-monstrosity",
                 "name": "Molten Monstrosity",
@@ -757,9 +892,9 @@
             },
             {
                 "at_least": [
-                    0.667,
-                    0.667,
-                    0.667,
+                    0.75,
+                    0.75,
+                    0.75,
                     0.0
                 ],
                 "average": 3.0,
@@ -805,8 +940,8 @@
             },
             {
                 "at_least": [
-                    0.333,
-                    0.333,
+                    0.25,
+                    0.25,
                     0.0,
                     0.0
                 ],
@@ -821,6 +956,14 @@
             }
         ],
         "metagames": [
+            {
+                "date": "2024-07-05",
+                "decks": 1,
+                "label": "acr",
+                "metagame": "125",
+                "name": "Assassin's Creed",
+                "py/object": "pauperformance_bot.entity.api.archetype.MetagameRef"
+            },
             {
                 "date": "2024-04-19",
                 "decks": 1,
@@ -866,8 +1009,8 @@
             },
             {
                 "at_least": [
-                    0.667,
-                    0.667,
+                    0.75,
+                    0.75,
                     0.0,
                     0.0
                 ],
@@ -882,24 +1025,8 @@
             },
             {
                 "at_least": [
-                    0.667,
-                    0.667,
-                    0.0,
-                    0.0
-                ],
-                "average": 2.0,
-                "banned": false,
-                "link": "https://scryfall.com/card/kld/111/chandras-pyrohelix",
-                "name": "Chandra's Pyrohelix",
-                "preview": "https://cards.scryfall.io/normal/front/0/5/05659715-3002-4bd0-919e-664814c1ca57.jpg",
-                "py/object": "pauperformance_bot.entity.api.archetype.TypicalCard",
-                "type_line": "Instant",
-                "typical": 2
-            },
-            {
-                "at_least": [
-                    0.667,
-                    0.667,
+                    0.75,
+                    0.75,
                     0.0,
                     0.0
                 ],
@@ -914,8 +1041,8 @@
             },
             {
                 "at_least": [
-                    0.667,
-                    0.667,
+                    0.75,
+                    0.75,
                     0.0,
                     0.0
                 ],
@@ -930,8 +1057,8 @@
             },
             {
                 "at_least": [
-                    0.667,
-                    0.667,
+                    0.75,
+                    0.75,
                     0.0,
                     0.0
                 ],
@@ -946,8 +1073,8 @@
             },
             {
                 "at_least": [
-                    0.667,
-                    0.667,
+                    0.75,
+                    0.75,
                     0.0,
                     0.0
                 ],
@@ -978,8 +1105,40 @@
             },
             {
                 "at_least": [
-                    0.333,
-                    0.333,
+                    0.5,
+                    0.5,
+                    0.0,
+                    0.0
+                ],
+                "average": 2.0,
+                "banned": false,
+                "link": "https://scryfall.com/card/kld/111/chandras-pyrohelix",
+                "name": "Chandra's Pyrohelix",
+                "preview": "https://cards.scryfall.io/normal/front/0/5/05659715-3002-4bd0-919e-664814c1ca57.jpg",
+                "py/object": "pauperformance_bot.entity.api.archetype.TypicalCard",
+                "type_line": "Instant",
+                "typical": 1
+            },
+            {
+                "at_least": [
+                    0.5,
+                    0.5,
+                    0.0,
+                    0.0
+                ],
+                "average": 2.0,
+                "banned": false,
+                "link": "https://scryfall.com/card/jud/89/flaring-pain",
+                "name": "Flaring Pain",
+                "preview": "https://cards.scryfall.io/normal/front/e/e/eeb5c96a-1d16-459d-9968-ced9a8f1c520.jpg",
+                "py/object": "pauperformance_bot.entity.api.archetype.TypicalCard",
+                "type_line": "Instant",
+                "typical": 1
+            },
+            {
+                "at_least": [
+                    0.25,
+                    0.25,
                     0.0,
                     0.0
                 ],
@@ -994,8 +1153,8 @@
             },
             {
                 "at_least": [
-                    0.333,
-                    0.333,
+                    0.25,
+                    0.25,
                     0.0,
                     0.0
                 ],
@@ -1010,24 +1169,8 @@
             },
             {
                 "at_least": [
-                    0.333,
-                    0.333,
-                    0.0,
-                    0.0
-                ],
-                "average": 2.0,
-                "banned": false,
-                "link": "https://scryfall.com/card/jud/89/flaring-pain",
-                "name": "Flaring Pain",
-                "preview": "https://cards.scryfall.io/normal/front/e/e/eeb5c96a-1d16-459d-9968-ced9a8f1c520.jpg",
-                "py/object": "pauperformance_bot.entity.api.archetype.TypicalCard",
-                "type_line": "Instant",
-                "typical": 0
-            },
-            {
-                "at_least": [
-                    0.333,
-                    0.333,
+                    0.25,
+                    0.25,
                     0.0,
                     0.0
                 ],
@@ -1042,8 +1185,8 @@
             },
             {
                 "at_least": [
-                    0.333,
-                    0.333,
+                    0.25,
+                    0.25,
                     0.0,
                     0.0
                 ],
@@ -1058,8 +1201,8 @@
             },
             {
                 "at_least": [
-                    0.333,
-                    0.333,
+                    0.25,
+                    0.25,
                     0.0,
                     0.0
                 ],
@@ -1105,6 +1248,38 @@
                 "label": "otj",
                 "metagame": "121",
                 "name": "Outlaws of Thunder Junction",
+                "py/object": "pauperformance_bot.entity.api.archetype.MetagameRef"
+            },
+            {
+                "date": "2024-05-13",
+                "decks": 0,
+                "label": "BNR",
+                "metagame": "122",
+                "name": "Banned & Restricted Announcement",
+                "py/object": "pauperformance_bot.entity.api.archetype.MetagameRef"
+            },
+            {
+                "date": "2024-06-06",
+                "decks": 0,
+                "label": "BNR",
+                "metagame": "123",
+                "name": "Banned & Restricted Announcement",
+                "py/object": "pauperformance_bot.entity.api.archetype.MetagameRef"
+            },
+            {
+                "date": "2024-06-14",
+                "decks": 0,
+                "label": "mh3",
+                "metagame": "124",
+                "name": "Modern Horizons 3",
+                "py/object": "pauperformance_bot.entity.api.archetype.MetagameRef"
+            },
+            {
+                "date": "2024-07-05",
+                "decks": 1,
+                "label": "acr",
+                "metagame": "125",
+                "name": "Assassin's Creed",
                 "py/object": "pauperformance_bot.entity.api.archetype.MetagameRef"
             }
         ],

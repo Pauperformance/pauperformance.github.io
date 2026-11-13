@@ -373,8 +373,135 @@
                 }
             },
             "094": {
-                "main": {},
-                "side": {}
+                "main": {
+                    "Ash Barrens": [
+                        1,
+                        1,
+                        1,
+                        1
+                    ],
+                    "Brainstorm": [
+                        1,
+                        1,
+                        1,
+                        1
+                    ],
+                    "Dawn's Reflection": [
+                        1,
+                        1,
+                        1
+                    ],
+                    "Deep Analysis": [
+                        1,
+                        1
+                    ],
+                    "Dream's Grip": [
+                        1,
+                        1,
+                        1
+                    ],
+                    "Evolving Wilds": [
+                        1
+                    ],
+                    "Forest": [
+                        1
+                    ],
+                    "Ideas Unbound": [
+                        1,
+                        1,
+                        1,
+                        1
+                    ],
+                    "Island": [
+                        1,
+                        1,
+                        1,
+                        1
+                    ],
+                    "Izzet Boilerworks": [
+                        1,
+                        1
+                    ],
+                    "Market Festival": [
+                        1,
+                        1,
+                        1,
+                        1
+                    ],
+                    "Merchant Scroll": [
+                        1
+                    ],
+                    "Muddle the Mixture": [
+                        1,
+                        1,
+                        1,
+                        1
+                    ],
+                    "Peer Through Depths": [
+                        1,
+                        1,
+                        1,
+                        1
+                    ],
+                    "Ponder": [
+                        1,
+                        1,
+                        1,
+                        1
+                    ],
+                    "Psychic Puppetry": [
+                        1,
+                        1,
+                        1
+                    ],
+                    "Simic Growth Chamber": [
+                        1,
+                        1,
+                        1,
+                        1
+                    ],
+                    "Snap": [
+                        1,
+                        1,
+                        1
+                    ],
+                    "Stream of Thought": [
+                        1,
+                        1,
+                        1
+                    ],
+                    "Terramorphic Expanse": [
+                        1,
+                        1
+                    ]
+                },
+                "side": {
+                    "Counterspell": [
+                        1,
+                        1,
+                        1
+                    ],
+                    "Gigadrowse": [
+                        1,
+                        1,
+                        1
+                    ],
+                    "Hydroblast": [
+                        1,
+                        1,
+                        1,
+                        1
+                    ],
+                    "Moment's Peace": [
+                        1,
+                        1,
+                        1
+                    ],
+                    "Weather the Storm": [
+                        1,
+                        1
+                    ]
+                }
             },
             "095": {
                 "main": {},
@@ -752,7 +879,7 @@
                 "type_line": "Instant"
             }
         },
-        "decks": 8,
+        "decks": 9,
         "ended_by_bans": [],
         "era_end": null,
         "era_start": null,
@@ -764,8 +891,8 @@
                 "at_least": [
                     1.0,
                     1.0,
-                    0.875,
-                    0.875
+                    0.889,
+                    0.889
                 ],
                 "average": 3.8,
                 "banned": false,
@@ -781,7 +908,7 @@
                     1.0,
                     1.0,
                     1.0,
-                    0.875
+                    0.889
                 ],
                 "average": 3.9,
                 "banned": false,
@@ -812,6 +939,22 @@
                 "at_least": [
                     1.0,
                     1.0,
+                    0.778,
+                    0.556
+                ],
+                "average": 3.3,
+                "banned": false,
+                "link": "https://scryfall.com/card/jou/130/market-festival",
+                "name": "Market Festival",
+                "preview": "https://cards.scryfall.io/normal/front/c/3/c3a70329-ecae-4647-b912-75d936a6c8c5.jpg",
+                "py/object": "pauperformance_bot.entity.api.archetype.TypicalCard",
+                "type_line": "Enchantment \u2014 Aura",
+                "typical": 4
+            },
+            {
+                "at_least": [
+                    1.0,
+                    1.0,
                     1.0,
                     1.0
                 ],
@@ -826,12 +969,12 @@
             },
             {
                 "at_least": [
-                    0.875,
-                    0.875,
-                    0.75,
-                    0.75
+                    0.889,
+                    0.889,
+                    0.778,
+                    0.778
                 ],
-                "average": 3.7,
+                "average": 3.8,
                 "banned": false,
                 "link": "https://scryfall.com/card/rav/60/muddle-the-mixture",
                 "name": "Muddle the Mixture",
@@ -842,10 +985,10 @@
             },
             {
                 "at_least": [
-                    0.875,
-                    0.875,
-                    0.875,
-                    0.875
+                    0.889,
+                    0.889,
+                    0.889,
+                    0.889
                 ],
                 "average": 4.0,
                 "banned": false,
@@ -858,10 +1001,10 @@
             },
             {
                 "at_least": [
-                    0.75,
-                    0.75,
-                    0.75,
-                    0.75
+                    0.778,
+                    0.778,
+                    0.778,
+                    0.778
                 ],
                 "average": 4.0,
                 "banned": false,
@@ -876,8 +1019,8 @@
                 "at_least": [
                     1.0,
                     1.0,
-                    0.75,
-                    0.125
+                    0.778,
+                    0.111
                 ],
                 "average": 2.9,
                 "banned": false,
@@ -892,26 +1035,10 @@
                 "at_least": [
                     1.0,
                     1.0,
-                    0.75,
-                    0.5
+                    1.0,
+                    0.444
                 ],
-                "average": 3.2,
-                "banned": false,
-                "link": "https://scryfall.com/card/jou/130/market-festival",
-                "name": "Market Festival",
-                "preview": "https://cards.scryfall.io/normal/front/c/3/c3a70329-ecae-4647-b912-75d936a6c8c5.jpg",
-                "py/object": "pauperformance_bot.entity.api.archetype.TypicalCard",
-                "type_line": "Enchantment \u2014 Aura",
-                "typical": 3
-            },
-            {
-                "at_least": [
-                    1.0,
-                    1.0,
-                    1.0,
-                    0.5
-                ],
-                "average": 3.5,
+                "average": 3.4,
                 "banned": false,
                 "link": "https://scryfall.com/card/chk/80/psychic-puppetry",
                 "name": "Psychic Puppetry",
@@ -939,8 +1066,8 @@
             {
                 "at_least": [
                     1.0,
-                    0.875,
-                    0.875,
+                    0.889,
+                    0.889,
                     0.0
                 ],
                 "average": 2.8,
@@ -954,12 +1081,12 @@
             },
             {
                 "at_least": [
-                    0.875,
-                    0.875,
-                    0.625,
+                    0.889,
+                    0.889,
+                    0.556,
                     0.0
                 ],
-                "average": 2.7,
+                "average": 2.6,
                 "banned": false,
                 "link": "https://scryfall.com/card/tor/36/deep-analysis",
                 "name": "Deep Analysis",
@@ -970,9 +1097,9 @@
             },
             {
                 "at_least": [
-                    0.625,
-                    0.625,
-                    0.625,
+                    0.667,
+                    0.667,
+                    0.667,
                     0.0
                 ],
                 "average": 3.0,
@@ -986,12 +1113,12 @@
             },
             {
                 "at_least": [
-                    0.625,
-                    0.625,
-                    0.625,
-                    0.125
+                    0.667,
+                    0.667,
+                    0.556,
+                    0.111
                 ],
-                "average": 3.2,
+                "average": 3.0,
                 "banned": false,
                 "link": "https://scryfall.com/card/tsp/279/terramorphic-expanse",
                 "name": "Terramorphic Expanse",
@@ -1002,12 +1129,12 @@
             },
             {
                 "at_least": [
-                    0.5,
-                    0.5,
-                    0.5,
-                    0.375
+                    0.556,
+                    0.556,
+                    0.556,
+                    0.444
                 ],
-                "average": 6.0,
+                "average": 5.6,
                 "banned": false,
                 "link": "https://scryfall.com/card/lea/288/island",
                 "name": "Island",
@@ -1018,42 +1145,10 @@
             },
             {
                 "at_least": [
-                    0.5,
-                    0.5,
-                    0.0,
-                    0.0
-                ],
-                "average": 2.0,
-                "banned": false,
-                "link": "https://scryfall.com/card/dis/170/azorius-chancery",
-                "name": "Azorius Chancery",
-                "preview": "https://cards.scryfall.io/normal/front/e/5/e58365d2-e4db-444b-b1a9-795668ad3038.jpg",
-                "py/object": "pauperformance_bot.entity.api.archetype.TypicalCard",
-                "type_line": "Land",
-                "typical": 2
-            },
-            {
-                "at_least": [
-                    0.5,
-                    0.5,
-                    0.5,
-                    0.5
-                ],
-                "average": 4.0,
-                "banned": false,
-                "link": "https://scryfall.com/card/ice/371/snow-covered-island",
-                "name": "Snow-Covered Island",
-                "preview": "https://cards.scryfall.io/normal/front/a/d/ad8b77cf-b53e-4da3-9c27-3851b7b25a98.jpg",
-                "py/object": "pauperformance_bot.entity.api.archetype.TypicalCard",
-                "type_line": "Basic Snow Land \u2014 Island",
-                "typical": 2
-            },
-            {
-                "at_least": [
                     1.0,
-                    0.25,
-                    0.25,
-                    0.125
+                    0.222,
+                    0.222,
+                    0.111
                 ],
                 "average": 1.6,
                 "banned": false,
@@ -1066,56 +1161,56 @@
             },
             {
                 "at_least": [
-                    0.375,
-                    0.375,
-                    0.25,
-                    0.25
+                    0.444,
+                    0.444,
+                    0.0,
+                    0.0
                 ],
-                "average": 3.3,
+                "average": 2.0,
+                "banned": false,
+                "link": "https://scryfall.com/card/dis/170/azorius-chancery",
+                "name": "Azorius Chancery",
+                "preview": "https://cards.scryfall.io/normal/front/e/5/e58365d2-e4db-444b-b1a9-795668ad3038.jpg",
+                "py/object": "pauperformance_bot.entity.api.archetype.TypicalCard",
+                "type_line": "Land",
+                "typical": 1
+            },
+            {
+                "at_least": [
+                    0.444,
+                    0.333,
+                    0.222,
+                    0.222
+                ],
+                "average": 2.8,
                 "banned": false,
                 "link": "https://scryfall.com/card/roe/228/evolving-wilds",
                 "name": "Evolving Wilds",
                 "preview": "https://cards.scryfall.io/normal/front/b/c/bc7e0407-fea1-43ef-8580-82271e440bb3.jpg",
                 "py/object": "pauperformance_bot.entity.api.archetype.TypicalCard",
                 "type_line": "Land",
-                "typical": 0
+                "typical": 1
             },
             {
                 "at_least": [
-                    0.375,
-                    0.375,
-                    0.25,
-                    0.25
+                    0.444,
+                    0.444,
+                    0.444,
+                    0.444
                 ],
-                "average": 3.3,
+                "average": 4.0,
                 "banned": false,
-                "link": "https://scryfall.com/card/m11/70/preordain",
-                "name": "Preordain",
-                "preview": "https://cards.scryfall.io/normal/front/e/3/e3868c3d-4fcd-444b-866f-0f8e50ce7b67.jpg",
+                "link": "https://scryfall.com/card/ice/371/snow-covered-island",
+                "name": "Snow-Covered Island",
+                "preview": "https://cards.scryfall.io/normal/front/a/d/ad8b77cf-b53e-4da3-9c27-3851b7b25a98.jpg",
                 "py/object": "pauperformance_bot.entity.api.archetype.TypicalCard",
-                "type_line": "Sorcery",
-                "typical": 0
+                "type_line": "Basic Snow Land \u2014 Island",
+                "typical": 1
             },
             {
                 "at_least": [
-                    0.25,
-                    0.25,
-                    0.125,
-                    0.125
-                ],
-                "average": 3.0,
-                "banned": false,
-                "link": "https://scryfall.com/card/usg/252/fertile-ground",
-                "name": "Fertile Ground",
-                "preview": "https://cards.scryfall.io/normal/front/0/9/091dda35-59e5-456d-8804-61513a610aed.jpg",
-                "py/object": "pauperformance_bot.entity.api.archetype.TypicalCard",
-                "type_line": "Enchantment \u2014 Aura",
-                "typical": 0
-            },
-            {
-                "at_least": [
-                    0.25,
-                    0.25,
+                    0.333,
+                    0.333,
                     0.0,
                     0.0
                 ],
@@ -1130,55 +1225,39 @@
             },
             {
                 "at_least": [
-                    0.25,
-                    0.25,
-                    0.25,
-                    0.25
+                    0.333,
+                    0.333,
+                    0.222,
+                    0.222
                 ],
-                "average": 4.0,
+                "average": 3.3,
                 "banned": false,
-                "link": "https://scryfall.com/card/dis/99/utopia-sprawl",
-                "name": "Utopia Sprawl",
-                "preview": "https://cards.scryfall.io/normal/front/5/0/5047e271-fbf1-402c-9eb9-0806e5988f76.jpg",
-                "py/object": "pauperformance_bot.entity.api.archetype.TypicalCard",
-                "type_line": "Enchantment \u2014 Aura",
-                "typical": 0
-            },
-            {
-                "at_least": [
-                    0.125,
-                    0.0,
-                    0.0,
-                    0.0
-                ],
-                "average": 1.0,
-                "banned": false,
-                "link": "https://scryfall.com/card/rav/40/compulsive-research",
-                "name": "Compulsive Research",
-                "preview": "https://cards.scryfall.io/normal/front/2/0/20b9c057-b80a-4e4e-a0d7-34b7ff3a69f4.jpg",
+                "link": "https://scryfall.com/card/m11/70/preordain",
+                "name": "Preordain",
+                "preview": "https://cards.scryfall.io/normal/front/e/3/e3868c3d-4fcd-444b-866f-0f8e50ce7b67.jpg",
                 "py/object": "pauperformance_bot.entity.api.archetype.TypicalCard",
                 "type_line": "Sorcery",
                 "typical": 0
             },
             {
                 "at_least": [
-                    0.125,
-                    0.0,
-                    0.0,
-                    0.0
+                    0.222,
+                    0.222,
+                    0.111,
+                    0.111
                 ],
-                "average": 1.0,
+                "average": 3.0,
                 "banned": false,
-                "link": "https://scryfall.com/card/gpt/26/gigadrowse",
-                "name": "Gigadrowse",
-                "preview": "https://cards.scryfall.io/normal/front/b/f/bf9f85b3-eb8c-43de-aaac-8a887e9c58da.jpg",
+                "link": "https://scryfall.com/card/usg/252/fertile-ground",
+                "name": "Fertile Ground",
+                "preview": "https://cards.scryfall.io/normal/front/0/9/091dda35-59e5-456d-8804-61513a610aed.jpg",
                 "py/object": "pauperformance_bot.entity.api.archetype.TypicalCard",
-                "type_line": "Instant",
+                "type_line": "Enchantment \u2014 Aura",
                 "typical": 0
             },
             {
                 "at_least": [
-                    0.125,
+                    0.222,
                     0.0,
                     0.0,
                     0.0
@@ -1194,8 +1273,56 @@
             },
             {
                 "at_least": [
-                    0.125,
-                    0.125,
+                    0.222,
+                    0.222,
+                    0.222,
+                    0.222
+                ],
+                "average": 4.0,
+                "banned": false,
+                "link": "https://scryfall.com/card/dis/99/utopia-sprawl",
+                "name": "Utopia Sprawl",
+                "preview": "https://cards.scryfall.io/normal/front/5/0/5047e271-fbf1-402c-9eb9-0806e5988f76.jpg",
+                "py/object": "pauperformance_bot.entity.api.archetype.TypicalCard",
+                "type_line": "Enchantment \u2014 Aura",
+                "typical": 0
+            },
+            {
+                "at_least": [
+                    0.111,
+                    0.0,
+                    0.0,
+                    0.0
+                ],
+                "average": 1.0,
+                "banned": false,
+                "link": "https://scryfall.com/card/rav/40/compulsive-research",
+                "name": "Compulsive Research",
+                "preview": "https://cards.scryfall.io/normal/front/2/0/20b9c057-b80a-4e4e-a0d7-34b7ff3a69f4.jpg",
+                "py/object": "pauperformance_bot.entity.api.archetype.TypicalCard",
+                "type_line": "Sorcery",
+                "typical": 0
+            },
+            {
+                "at_least": [
+                    0.111,
+                    0.0,
+                    0.0,
+                    0.0
+                ],
+                "average": 1.0,
+                "banned": false,
+                "link": "https://scryfall.com/card/gpt/26/gigadrowse",
+                "name": "Gigadrowse",
+                "preview": "https://cards.scryfall.io/normal/front/b/f/bf9f85b3-eb8c-43de-aaac-8a887e9c58da.jpg",
+                "py/object": "pauperformance_bot.entity.api.archetype.TypicalCard",
+                "type_line": "Instant",
+                "typical": 0
+            },
+            {
+                "at_least": [
+                    0.111,
+                    0.111,
                     0.0,
                     0.0
                 ],
@@ -1216,6 +1343,14 @@
                 "label": "BNR",
                 "metagame": "101",
                 "name": "Banned & Restricted Announcement",
+                "py/object": "pauperformance_bot.entity.api.archetype.MetagameRef"
+            },
+            {
+                "date": "2021-06-18",
+                "decks": 1,
+                "label": "mh2",
+                "metagame": "094",
+                "name": "Modern Horizons 2",
                 "py/object": "pauperformance_bot.entity.api.archetype.MetagameRef"
             },
             {
@@ -1241,10 +1376,10 @@
                 "at_least": [
                     1.0,
                     1.0,
-                    0.875,
-                    0.875
+                    0.889,
+                    0.778
                 ],
-                "average": 3.8,
+                "average": 3.7,
                 "banned": false,
                 "link": "https://scryfall.com/card/ody/251/moments-peace",
                 "name": "Moment's Peace",
@@ -1255,10 +1390,10 @@
             },
             {
                 "at_least": [
-                    0.875,
-                    0.875,
-                    0.625,
-                    0.625
+                    0.778,
+                    0.778,
+                    0.556,
+                    0.556
                 ],
                 "average": 3.4,
                 "banned": false,
@@ -1271,9 +1406,9 @@
             },
             {
                 "at_least": [
-                    0.5,
-                    0.5,
-                    0.5,
+                    0.556,
+                    0.556,
+                    0.556,
                     0.0
                 ],
                 "average": 3.0,
@@ -1288,11 +1423,11 @@
             {
                 "at_least": [
                     1.0,
-                    0.875,
-                    0.25,
-                    0.125
+                    0.889,
+                    0.333,
+                    0.111
                 ],
-                "average": 2.2,
+                "average": 2.3,
                 "banned": false,
                 "link": "https://scryfall.com/card/gpt/26/gigadrowse",
                 "name": "Gigadrowse",
@@ -1305,10 +1440,10 @@
                 "at_least": [
                     1.0,
                     1.0,
-                    0.375,
-                    0.125
+                    0.333,
+                    0.111
                 ],
-                "average": 2.5,
+                "average": 2.4,
                 "banned": false,
                 "link": "https://scryfall.com/card/mh1/191/weather-the-storm",
                 "name": "Weather the Storm",
@@ -1319,9 +1454,9 @@
             },
             {
                 "at_least": [
-                    0.375,
-                    0.375,
-                    0.25,
+                    0.333,
+                    0.333,
+                    0.222,
                     0.0
                 ],
                 "average": 2.7,
@@ -1335,8 +1470,24 @@
             },
             {
                 "at_least": [
-                    0.125,
-                    0.125,
+                    0.222,
+                    0.222,
+                    0.111,
+                    0.111
+                ],
+                "average": 3.0,
+                "banned": false,
+                "link": "https://scryfall.com/card/ice/72/hydroblast",
+                "name": "Hydroblast",
+                "preview": "https://cards.scryfall.io/normal/front/f/6/f62716f0-fde2-49ef-b8a4-c1b03f451194.jpg",
+                "py/object": "pauperformance_bot.entity.api.archetype.TypicalCard",
+                "type_line": "Instant",
+                "typical": 0
+            },
+            {
+                "at_least": [
+                    0.111,
+                    0.111,
                     0.0,
                     0.0
                 ],
@@ -1351,8 +1502,8 @@
             },
             {
                 "at_least": [
-                    0.125,
-                    0.125,
+                    0.111,
+                    0.111,
                     0.0,
                     0.0
                 ],
@@ -1367,23 +1518,7 @@
             },
             {
                 "at_least": [
-                    0.125,
-                    0.125,
-                    0.0,
-                    0.0
-                ],
-                "average": 2.0,
-                "banned": false,
-                "link": "https://scryfall.com/card/ice/72/hydroblast",
-                "name": "Hydroblast",
-                "preview": "https://cards.scryfall.io/normal/front/f/6/f62716f0-fde2-49ef-b8a4-c1b03f451194.jpg",
-                "py/object": "pauperformance_bot.entity.api.archetype.TypicalCard",
-                "type_line": "Instant",
-                "typical": 0
-            },
-            {
-                "at_least": [
-                    0.125,
+                    0.111,
                     0.0,
                     0.0,
                     0.0
@@ -1399,7 +1534,7 @@
             },
             {
                 "at_least": [
-                    0.125,
+                    0.111,
                     0.0,
                     0.0,
                     0.0
@@ -1434,7 +1569,7 @@
             },
             {
                 "date": "2021-06-18",
-                "decks": 0,
+                "decks": 1,
                 "label": "mh2",
                 "metagame": "094",
                 "name": "Modern Horizons 2",
