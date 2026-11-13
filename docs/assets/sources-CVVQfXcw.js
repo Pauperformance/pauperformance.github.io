@@ -1,0 +1,1 @@
+const a={mtggoldfish:"MTGGoldfish",mtgtop8:"MTGTop8",waybackmachine:"Wayback Machine"},o=t=>a[t]||t;function c(t){return t?t.startsWith("https://web.archive.org/")?"waybackmachine":t.includes("mtgtop8.com")?"mtgtop8":"mtggoldfish":null}export{c as a,o as s};
