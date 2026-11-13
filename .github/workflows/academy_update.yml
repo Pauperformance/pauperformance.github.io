@@ -1,7 +1,9 @@
 # This workflow updates the Academy every 30 minutes (off the top of the
 # hour, when GitHub delays and drops many scheduled runs): scrape videos,
 # classify tournaments and videos, export the Academy data, rebuild the
-# website and push everything to master.
+# website and push everything to master. The tournaments of all sources are
+# put together (one per real event, each deck counted once) before the
+# export: the Academy data and the website read only the decks that counts.
 # A run that takes longer than 30 minutes makes the next one wait: the
 # concurrency group below keeps at most one run pending behind it.
 #
@@ -92,6 +94,15 @@ jobs:
       run: |
         source venv/bin/activate
         myr silver classify-tournaments
+
+    # Puts the tournaments of all sources together, into
+    # assets/data/tournament/reconciled. It reads the stored tournaments, not
+    # the classification: it and "Classify tournaments" are independent and
+    # can run in either order, but both must precede "Update Academy".
+    - name: Reconcile tournaments
+      run: |
+        source venv/bin/activate
+        myr academy reconcile
 
     - name: Classify videos
       run: |
