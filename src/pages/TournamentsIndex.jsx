@@ -3,15 +3,10 @@ import { Link, useNavigate } from 'react-router-dom'
 import Layout from '../components/Layout'
 import { useSearchShortcut, searchShortcutLabel } from '../utils/useSearchShortcut'
 import { formatShortDate } from '../utils/dates'
+import { sourceLabel } from '../utils/sources'
 
 const PAGE_SIZE = 50
 
-// Where a tournament comes from, as data/tournaments.json names it.
-const SOURCES = [
-  { key: 'mtggoldfish', label: 'MTGGoldfish' },
-  { key: 'waybackmachine', label: 'Wayback Machine' },
-]
-const SOURCE_LABEL = Object.fromEntries(SOURCES.map(s => [s.key, s.label]))
 
 // "Players" is how many decks the source lists for the event, usually the top
 // finishers rather than every entrant, so these are lower bounds on its size.
@@ -59,7 +54,6 @@ export default function TournamentsIndex() {
   const [loading, setLoading] = useState(true)
   const [search, setSearch] = useState('')
   const searchRef = useSearchShortcut()
-  const [activeSources, setActiveSources] = useState(new Set())
   const [from, setFrom] = useState('')
   const [to, setTo] = useState('')
   const [minDecks, setMinDecks] = useState(0)
@@ -71,7 +65,7 @@ export default function TournamentsIndex() {
 
   useEffect(() => {
     fetch('/data/tournaments.json').then(r => r.json()).then(data => {
-      setRows(data.map(([id, source, date, name, decks, url]) => ({ id, source, date, name, decks, url })))
+      setRows(data.map(([id, date, name, decks, sources, notes]) => ({ id, date, name, decks, sources, notes })))
       setLoading(false)
     })
   }, [])
@@ -90,7 +84,7 @@ export default function TournamentsIndex() {
       setSortDir(d => d === 'asc' ? 'desc' : 'asc')
     } else {
       setSortCol(col)
-      setSortDir(col === 'name' || col === 'source' ? 'asc' : 'desc')
+      setSortDir(col === 'name' ? 'asc' : 'desc')
     }
   }
 
@@ -101,28 +95,22 @@ export default function TournamentsIndex() {
     setTo(localIso(new Date()))
   }
 
-  function toggleSource(key) {
-    setActiveSources(prev => { const n = new Set(prev); n.has(key) ? n.delete(key) : n.add(key); return n })
-  }
-
   const filtered = useMemo(() => {
     const q = search.trim().toLowerCase()
     return rows.filter(r => {
       if (q && !r.name.toLowerCase().includes(q) && !r.id.includes(q)) return false
-      if (activeSources.size > 0 && !activeSources.has(r.source)) return false
       if (from && r.date < from) return false
       if (to && r.date > to) return false
       if (r.decks < minDecks) return false
       return true
     })
-  }, [rows, search, activeSources, from, to, minDecks])
+  }, [rows, search, from, to, minDecks])
 
   const sorted = useMemo(() => {
     const dir = sortDir === 'asc' ? 1 : -1
     return [...filtered].sort((a, b) => {
       let av, bv
       if (sortCol === 'name') { av = a.name.toLowerCase(); bv = b.name.toLowerCase() }
-      else if (sortCol === 'source') { av = a.source; bv = b.source }
       else if (sortCol === 'decks') { av = a.decks; bv = b.decks }
       else { av = a.date; bv = b.date }
       if (av < bv) return -dir
@@ -136,10 +124,10 @@ export default function TournamentsIndex() {
 
   const totalPages = Math.ceil(sorted.length / PAGE_SIZE)
   const pageRows = sorted.slice(page * PAGE_SIZE, (page + 1) * PAGE_SIZE)
-  const hasFilters = search || activeSources.size > 0 || from || to || minDecks > 0
+  const hasFilters = search || from || to || minDecks > 0
 
   function clearFilters() {
-    setSearch(''); setActiveSources(new Set()); setFrom(''); setTo(''); setMinDecks(0)
+    setSearch(''); setFrom(''); setTo(''); setMinDecks(0)
   }
 
   const paginationBar = (ref) => totalPages > 1 && (
@@ -162,8 +150,9 @@ export default function TournamentsIndex() {
         <div>
           <h1 className="text-2xl font-bold text-white">Tournaments</h1>
           <p className="mt-2 text-gray-400 text-sm">
-            {rows.length.toLocaleString()} Pauper tournaments tracked, from MTGGoldfish and the Wayback Machine.
-            The player count is how many decks (one per player) the source lists for the event, usually the top finishers rather than every entrant.
+            {rows.length.toLocaleString()} Pauper tournaments tracked, put together from MTGGoldfish, MTGTop8 and the Wayback Machine:
+            an event several of them list is one tournament here, with the differences between them shown on its page.
+            The player count is how many different decks the sources list for the event, usually the top finishers rather than every entrant.
           </p>
         </div>
 
@@ -183,21 +172,6 @@ export default function TournamentsIndex() {
                 <svg className="w-4 h-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round"><path d="M18 6 6 18M6 6l12 12"/></svg>
               </button>
             )}
-          </div>
-
-          <div className="flex flex-wrap items-center gap-2">
-            <span className="text-sm text-gray-500 w-14 shrink-0">Source:</span>
-            {SOURCES.map(s => {
-              const on = activeSources.has(s.key)
-              return (
-                <button key={s.key} onClick={() => toggleSource(s.key)} aria-pressed={on}
-                  className={`px-3 py-1 rounded-full text-xs font-semibold border transition-colors ${on
-                    ? 'bg-amber-400 border-amber-400 text-gray-900'
-                    : 'border-gray-600 text-gray-400 hover:border-gray-400 hover:text-gray-200'}`}>
-                  {s.label}
-                </button>
-              )
-            })}
           </div>
 
           <div className="flex flex-wrap items-center gap-2">
@@ -240,26 +214,27 @@ export default function TournamentsIndex() {
                 <thead>
                   <tr className="bg-gray-800 border-b border-gray-700">
                     <SortHeader col="name"   label="Tournament" sortCol={sortCol} sortDir={sortDir} onSort={handleSort} extraClass="w-1/2" />
-                    <SortHeader col="source" label="Source"     sortCol={sortCol} sortDir={sortDir} onSort={handleSort} extraClass="hidden sm:table-cell" />
+                    <th className="px-4 py-3 text-xs font-semibold uppercase tracking-wider text-left text-gray-400 hidden sm:table-cell">Sources</th>
                     <SortHeader col="decks"  label="Players"    sortCol={sortCol} sortDir={sortDir} onSort={handleSort} align="right" />
                     <SortHeader col="date"   label="Date"       sortCol={sortCol} sortDir={sortDir} onSort={handleSort} align="right" />
                   </tr>
                 </thead>
                 <tbody className="divide-y divide-gray-700/50 bg-gray-900">
                   {pageRows.map(r => (
-                    <tr key={`${r.source}-${r.id}`}
+                    <tr key={r.id}
                       onClick={e => { if (!e.target.closest('a')) navigate(`/tournaments/${r.id}`) }}
                       className="bg-gray-900 hover:bg-gray-800 cursor-pointer group">
                       <td className="px-4 py-2.5 font-medium">
                         <Link to={`/tournaments/${r.id}`} className="text-gray-200 group-hover:text-amber-400 transition-colors">
                           {r.name || `Tournament #${r.id}`}
                         </Link>
+                        {r.notes > 0 && (
+                          <span title={`The sources disagree on ${r.notes} point${r.notes !== 1 ? 's' : ''}`}
+                            className="ml-2 text-xs text-amber-500">⚠ {r.notes}</span>
+                        )}
                       </td>
-                      <td className="px-4 py-2.5 hidden sm:table-cell">
-                        <a href={r.url} target="_blank" rel="noopener noreferrer"
-                          className="text-gray-400 hover:text-amber-400 transition-colors">
-                          {SOURCE_LABEL[r.source] || r.source}
-                        </a>
+                      <td className="px-4 py-2.5 hidden sm:table-cell text-gray-400">
+                        {r.sources.map(sourceLabel).join(' · ')}
                       </td>
                       <td className="px-4 py-2.5 text-right font-mono text-amber-400">{r.decks}</td>
                       <td className="px-4 py-2.5 text-right text-gray-400 whitespace-nowrap">{formatShortDate(r.date)}</td>
