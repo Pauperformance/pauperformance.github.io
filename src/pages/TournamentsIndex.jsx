@@ -4,6 +4,9 @@ import Layout from '../components/Layout'
 import { useSearchShortcut, searchShortcutLabel } from '../utils/useSearchShortcut'
 import { formatShortDate } from '../utils/dates'
 import { sourceLabel } from '../utils/sources'
+import { useMediaQuery } from '../utils/useMediaQuery'
+import TournamentPane from '../components/TournamentPane'
+import SwipeCards from '../components/SwipeCards'
 
 const PAGE_SIZE = 50
 
@@ -46,6 +49,11 @@ function SortHeader({ col, label, sortCol, sortDir, onSort, align = 'left', extr
   )
 }
 
+// Wide enough for the list of tournaments to sit beside the one selected
+const WIDE_QUERY = '(min-width: 1440px)'
+// Phones and small tablets: one tournament at a time, swiped (Tailwind's lg, below)
+const NARROW_QUERY = '(max-width: 1023px)'
+
 const inputClass = 'bg-gray-900 border border-gray-600 rounded-lg px-3 py-1 text-sm text-gray-300 hover:border-gray-400 focus:outline-none focus:border-amber-400'
 
 export default function TournamentsIndex() {
@@ -61,6 +69,12 @@ export default function TournamentsIndex() {
   const [sortDir, setSortDir] = useState('desc')
   const [page, setPage] = useState(0)
   const paginationRef = useRef(null)
+  const wide = useMediaQuery(WIDE_QUERY)
+  const narrow = useMediaQuery(NARROW_QUERY)
+  const [selectedId, setSelectedId] = useState(null)
+  // details of the tournaments opened, by id; null for those that failed to load
+  const [details, setDetails] = useState({})
+  const requested = useRef(new Set())
   const pageInitRef = useRef(true)
 
   useEffect(() => {
@@ -124,6 +138,28 @@ export default function TournamentsIndex() {
 
   const totalPages = Math.ceil(sorted.length / PAGE_SIZE)
   const pageRows = sorted.slice(page * PAGE_SIZE, (page + 1) * PAGE_SIZE)
+  // The tournament shown beside the list (wide) or as the card (narrow): the one
+  // picked, else the first of the page (wide) or of the list (narrow).
+  const selectedIndex = sorted.findIndex(r => r.id === selectedId)
+  const cardIndex = Math.max(0, selectedIndex)
+  const selected = selectedIndex >= 0 ? selectedId : (narrow ? sorted[0] : pageRows[0])?.id
+
+  // the details of the tournament shown, and of the cards a swipe away, are loaded ahead
+  const wanted = narrow
+    ? [sorted[cardIndex], sorted[cardIndex + 1], sorted[cardIndex - 1]].filter(Boolean).map(r => r.id)
+    : (wide && selected ? [selected] : [])
+  const wantedKey = wanted.join()
+  useEffect(() => {
+    for (const id of wantedKey ? wantedKey.split(',') : []) {
+      if (id in details || requested.current.has(id)) continue
+      requested.current.add(id)
+      fetch(`/data/tournament-details/${encodeURIComponent(id)}.json`)
+        .then(r => (r.ok ? r.json() : null))
+        .catch(() => null)
+        .then(data => setDetails(prev => ({ ...prev, [id]: data })))
+    }
+  }, [wantedKey, details])
+
   const hasFilters = search || from || to || minDecks > 0
 
   function clearFilters() {
@@ -150,9 +186,9 @@ export default function TournamentsIndex() {
         <div>
           <h1 className="text-2xl font-bold text-white">Tournaments</h1>
           <p className="mt-2 text-gray-400 text-sm">
-            {rows.length.toLocaleString()} Pauper tournaments tracked, put together from MTGGoldfish, MTGTop8 and the Wayback Machine:
-            an event several of them list is one tournament here, with the differences between them shown on its page.
-            The player count is how many different decks the sources list for the event, usually the top finishers rather than every entrant.
+            {rows.length.toLocaleString()} Pauper tournaments tracked and reconciled across multiple sources.
+            Inconsistencies across tournaments are highlighted.
+            Some events might report only top decklists.
           </p>
         </div>
 
@@ -206,6 +242,60 @@ export default function TournamentsIndex() {
         {loading ? (
           <p className="text-gray-400 text-sm py-8 text-center">Loading tournaments…</p>
         ) : (
+          narrow ? (
+            <>
+              <p className="text-xs text-gray-500">{filtered.length.toLocaleString()} tournament{filtered.length !== 1 ? 's' : ''}</p>
+              {filtered.length === 0 ? (
+                <p className="text-center text-gray-500 text-sm py-12">No tournaments match your filters.</p>
+              ) : (
+                <SwipeCards index={cardIndex} count={sorted.length} cardKey={selected}
+                  onChange={i => setSelectedId(sorted[i].id)}
+                  label={`${(cardIndex + 1).toLocaleString()} of ${sorted.length.toLocaleString()}`}
+                  hint="Swipe the card left or right for the next or previous tournament.">
+                  <div className="bg-gray-900 border border-gray-700 rounded-xl p-4">
+                    <TournamentPane t={details[selected]} showDecks={false} />
+                  </div>
+                </SwipeCards>
+              )}
+            </>
+          ) : wide ? (
+            <>
+              <p className="text-xs text-gray-500">{filtered.length.toLocaleString()} tournament{filtered.length !== 1 ? 's' : ''}</p>
+              <div className="flex gap-6 items-start">
+                <div className="w-96 2xl:w-[28rem] shrink-0 sticky top-24 max-h-[calc(100vh-7rem)] overflow-y-auto space-y-3">
+                  <ul className="border border-gray-700 rounded-xl overflow-hidden bg-gray-900 divide-y divide-gray-700/50">
+                    {pageRows.map(r => {
+                      const open = r.id === selected
+                      return (
+                        <li key={r.id}>
+                          <button onClick={() => setSelectedId(r.id)} aria-current={open ? 'true' : undefined}
+                            className={`w-full px-3 py-2 text-left border-l-2 transition-colors ${open ? 'bg-gray-800 border-amber-400' : 'border-transparent hover:bg-gray-800/60'}`}>
+                            <span className={`block truncate ${open ? 'text-amber-400' : 'text-gray-200'}`}>
+                              {r.name || `Tournament #${r.id}`}
+                              {r.notes > 0 && (
+                                <span title={`The sources disagree on ${r.notes} point${r.notes !== 1 ? 's' : ''}`}
+                                  className="ml-2 text-xs text-amber-500">⚠ {r.notes}</span>
+                              )}
+                            </span>
+                            <span className="block truncate text-xs text-gray-500">
+                              {formatShortDate(r.date)} · {r.decks} players · {r.sources.map(sourceLabel).join(' · ')}
+                            </span>
+                          </button>
+                        </li>
+                      )
+                    })}
+                  </ul>
+                  {filtered.length === 0 && (
+                    <p className="text-center text-gray-500 text-sm py-12">No tournaments match your filters.</p>
+                  )}
+                  {paginationBar(null)}
+                </div>
+                <div className="flex-1 min-w-0">
+                  {selected && <TournamentPane t={details[selected]} />}
+                </div>
+              </div>
+            </>
+          ) : (
           <>
             <p className="text-xs text-gray-500">{filtered.length.toLocaleString()} tournament{filtered.length !== 1 ? 's' : ''}</p>
             {paginationBar(paginationRef)}
@@ -248,6 +338,7 @@ export default function TournamentsIndex() {
             </div>
             {paginationBar(null)}
           </>
+          )
         )}
       </div>
     </Layout>
