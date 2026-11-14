@@ -5,6 +5,7 @@ import CookieBanner from './components/CookieBanner'
 
 const Home           = lazy(() => import('./pages/Home'))
 const ArchetypesIndex = lazy(() => import('./pages/ArchetypesIndex'))
+const ArchetypeMapPage = lazy(() => import('./pages/ArchetypeMapPage'))
 const ArchetypePage  = lazy(() => import('./pages/ArchetypePage'))
 const FamilyPage     = lazy(() => import('./pages/FamilyPage'))
 const Announcements  = lazy(() => import('./pages/Announcements'))
@@ -43,6 +44,7 @@ function App() {
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/archetypes" element={<ArchetypesIndex />} />
+        <Route path="/view" element={<ArchetypeMapPage />} />
         <Route path="/archetypes/:name" element={<ArchetypePage />} />
         <Route path="/families/:name" element={<FamilyPage />} />
         <Route path="/announcements" element={<Announcements />} />
