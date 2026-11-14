@@ -2,6 +2,7 @@ import { useState, useEffect, useMemo, useRef } from 'react'
 import { Link, useNavigate } from 'react-router-dom'
 import Layout from '../components/Layout'
 import { useSearchShortcut, searchShortcutLabel } from '../utils/useSearchShortcut'
+import { FilterPanel } from '../components/FilterSheet'
 import { useEnterShortcut } from '../utils/useEnterShortcut'
 import { useCardPreview } from '../components/CardPreview'
 
@@ -315,7 +316,9 @@ export default function CardsIndex() {
           <p className="mt-2 text-gray-400 text-sm">{cards.length} cards played in Pauper decks</p>
         </div>
 
-        <div className="bg-gray-800 border border-gray-700 rounded-xl p-4 space-y-3">
+        <FilterPanel activeCount={(search ? 1 : 0) + activeMana.size + activeTypes.size + activeCmc.size + (activePopularity ? 1 : 0) + activeArchetypes.size}
+          onClear={() => { setSearch(''); setActiveMana(new Set()); setActiveTypes(new Set()); setActiveCmc(new Set()); setActivePopularity(null); setActiveArchetypes(new Set()) }}
+          summary={`${filtered.length} card${filtered.length !== 1 ? 's' : ''}`}>
           <div className="relative">
             <input
               ref={searchRef}
@@ -423,7 +426,7 @@ export default function CardsIndex() {
               </div>
             )}
           </div>
-        </div>
+        </FilterPanel>
 
         {loading ? (
           <p className="text-gray-500 text-sm">Loading…</p>

@@ -1,10 +1,13 @@
-import { useState, useEffect, useMemo } from 'react'
+import { useState, useEffect, useMemo, useRef } from 'react'
 import { Link, useNavigate } from 'react-router-dom'
 import { nameToSlug } from '../utils/slugs'
 import Layout from '../components/Layout'
-import ArchetypeMap from '../components/ArchetypeMap'
 import { useSearchShortcut, searchShortcutLabel } from '../utils/useSearchShortcut'
 import { useEnterShortcut } from '../utils/useEnterShortcut'
+import { useMediaQuery } from '../utils/useMediaQuery'
+import ArchetypePane from '../components/ArchetypePane'
+import SwipeCards from '../components/SwipeCards'
+import FilterSheet from '../components/FilterSheet'
 
 const MANA_ORDER = ['W', 'U', 'B', 'R', 'G', 'C']
 const GAME_TYPES = ['Aggro', 'Midrange', 'Control', 'Tempo', 'Combo']
@@ -15,6 +18,11 @@ const META_RANGES = [
   { label: '5–10%', min: 5, max: 10, maxInclusive: false },
   { label: '≥ 10%', min: 10, max: 100, maxInclusive: true },
 ]
+
+// Wide enough for the list of archetypes to sit beside the one selected; below
+// Tailwind's lg, phones and small tablets get one archetype at a time, swiped.
+const WIDE_QUERY = '(min-width: 1440px)'
+const NARROW_QUERY = '(max-width: 1023px)'
 
 const MANA_LABELS = { W: 'White', U: 'Blue', B: 'Black', R: 'Red', G: 'Green', C: 'Colorless' }
 
@@ -90,6 +98,14 @@ export default function ArchetypesIndex() {
   const [activeMetaRange, setActiveMetaRange] = useState(null)
   const [sortCol, setSortCol] = useState('meta')
   const [sortDir, setSortDir] = useState('desc')
+  const wide = useMediaQuery(WIDE_QUERY)
+  const narrow = useMediaQuery(NARROW_QUERY)
+  const [selectedName, setSelectedName] = useState(null)
+  // details of the archetypes opened, by name; null for those that failed to load
+  const [details, setDetails] = useState({})
+  const requested = useRef(new Set())
+  const rowRef = useRef(null)
+  const justPicked = useRef(false)
 
   useEffect(() => {
     Promise.all([
@@ -146,8 +162,6 @@ export default function ArchetypesIndex() {
     })
   }, [archetypes, search, activeTypes, activeMana, manaMode, typeMode, activeMetaRange, metaMap])
 
-  const visibleNames = useMemo(() => new Set(filtered.map(a => a.name)), [filtered])
-
   function handleSort(col) {
     if (sortCol === col) {
       setSortDir(d => d === 'asc' ? 'desc' : 'asc')
@@ -180,9 +194,105 @@ export default function ArchetypesIndex() {
     })
   }, [filtered, sortCol, sortDir, metaMap])
 
+  // The archetype shown beside the list (wide) or as the card (narrow): the one picked, else the first
+  const selectedIndex = sorted.findIndex(a => a.name === selectedName)
+  const cardIndex = Math.max(0, selectedIndex)
+  const selected = sorted[cardIndex]?.name
+
+  function pick(name) {
+    justPicked.current = true
+    setSelectedName(name)
+  }
+
+  // the details of the archetype shown, and of the cards a swipe away, are loaded ahead
+  const wantedKey = (narrow
+    ? [sorted[cardIndex], sorted[cardIndex + 1], sorted[cardIndex - 1]].filter(Boolean).map(a => a.name)
+    : (wide && selected ? [selected] : [])).join('\n')
+  useEffect(() => {
+    for (const name of wantedKey ? wantedKey.split('\n') : []) {
+      if (name in details || requested.current.has(name)) continue
+      requested.current.add(name)
+      fetch(`/data/archetype-details/${nameToSlug(name)}.json`)
+        .then(r => (r.ok ? r.json() : null))
+        .catch(() => null)
+        .then(data => setDetails(prev => ({ ...prev, [name]: data })))
+    }
+  }, [wantedKey, details])
+
+  // Picking an archetype lines the list and its typical list up under the header
+  useEffect(() => {
+    if (!justPicked.current) return
+    justPicked.current = false
+    if (!wide) return
+    const frame = requestAnimationFrame(() => {
+      const el = rowRef.current
+      if (!el) return
+      const offset = (document.querySelector('header')?.offsetHeight ?? 64) + 16
+      const delta = el.getBoundingClientRect().top - offset
+      if (Math.abs(delta) > 4) window.scrollBy({ top: delta, behavior: 'smooth' })
+    })
+    return () => cancelAnimationFrame(frame)
+  }, [selected, wide])
+
   useEnterShortcut(() => {
-    if (sorted.length > 0) navigate(`/archetypes/${nameToSlug(sorted[0].name)}`)
+    if (sorted.length === 0) return
+    if (wide) pick(sorted[0].name)
+    else navigate(`/archetypes/${nameToSlug(sorted[0].name)}`)
   }, searchRef)
+
+  const activeCount = (search ? 1 : 0) + activeTypes.size + activeMana.size + (activeMetaRange !== null ? 1 : 0)
+  function clearFilters() {
+    setSearch(''); setActiveTypes(new Set()); setActiveMana(new Set()); setActiveMetaRange(null)
+  }
+
+  const filterControls = (
+    <>
+      <div className="relative">
+        <input
+          ref={searchRef}
+          type="search"
+          placeholder={`Search archetypes... (${searchShortcutLabel})`}
+          value={search}
+          onChange={e => setSearch(e.target.value)}
+          onKeyDown={e => { if (e.key === 'Enter') e.target.blur() }}
+          className="w-full bg-gray-900 border border-gray-600 rounded-lg px-4 py-2 pr-8 text-sm text-gray-100 placeholder-gray-500 focus:outline-none focus:border-amber-400 [&::-webkit-search-cancel-button]:hidden"
+        />
+        {search && (
+          <button onClick={() => setSearch('')} className="absolute right-2 top-1/2 -translate-y-1/2 text-gray-500 hover:text-gray-300 transition-colors" aria-label="Clear search">
+            <svg className="w-4 h-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round"><path d="M18 6 6 18M6 6l12 12"/></svg>
+          </button>
+        )}
+      </div>
+      <div className="flex flex-wrap gap-2 items-center">
+        <span className="text-sm text-gray-500 w-10 shrink-0">Color:</span>
+        {MANA_ORDER.map(m => (
+          <FilterButton key={m} active={activeMana.has(m)} onClick={() => toggleMana(m)}>
+            <span className="flex items-center gap-1">
+              <ManaIcon color={m} size="w-4 h-4" />
+              {MANA_LABELS[m]}
+            </span>
+          </FilterButton>
+        ))}
+        <AndOrToggle value={manaMode} onChange={setManaMode} />
+      </div>
+      <div className="flex flex-wrap gap-2 items-center">
+        <span className="text-sm text-gray-500 w-10 shrink-0">Type:</span>
+        {GAME_TYPES.map(t => (
+          <FilterButton key={t} active={activeTypes.has(t)} onClick={() => toggleType(t)}>{t}</FilterButton>
+        ))}
+        <AndOrToggle value={typeMode} onChange={setTypeMode} />
+      </div>
+      <div className="flex flex-wrap gap-2 items-center">
+        <span className="text-sm text-gray-500 w-10 shrink-0">Meta:</span>
+        {META_RANGES.map(r => (
+          <FilterButton key={r.label} active={activeMetaRange === r.label}
+            onClick={() => setActiveMetaRange(prev => prev === r.label ? null : r.label)}>
+            {r.label}
+          </FilterButton>
+        ))}
+      </div>
+    </>
+  )
 
   return (
     <Layout>
@@ -190,71 +300,77 @@ export default function ArchetypesIndex() {
         <div>
           <h1 className="text-2xl font-bold text-white">Archetypes Index</h1>
           <p className="mt-2 text-gray-400 text-sm">
-            A curated list of the most important Pauper archetypes. Some may no longer be present in the meta due to bans.
+            A curated list of the most important Pauper archetypes. Some may no longer be present in the meta due to bans.{' '}
+            <Link to="/view" className="text-amber-400 hover:text-amber-300 whitespace-nowrap">Open the interactive map →</Link>
           </p>
         </div>
 
-        {!loading && (
-          <ArchetypeMap
-            archetypes={archetypes}
-            visible={visibleNames}
-            metaMap={metaMap}
-            filtering={filtered.length !== archetypes.length}
-          />
+        {/* Filters: inline on larger screens, in the floating sheet on phones */}
+        {narrow ? (
+          <FilterSheet activeCount={activeCount} onClear={clearFilters}
+            summary={`${filtered.length} archetype${filtered.length !== 1 ? 's' : ''}`}>
+            {filterControls}
+          </FilterSheet>
+        ) : (
+          <div className="bg-gray-800 border border-gray-700 rounded-xl p-4 space-y-3">{filterControls}</div>
         )}
-
-        {/* Filters */}
-        <div className="bg-gray-800 border border-gray-700 rounded-xl p-4 space-y-3">
-          <div className="relative">
-            <input
-              ref={searchRef}
-              type="search"
-              placeholder={`Search archetypes... (${searchShortcutLabel})`}
-              value={search}
-              onChange={e => setSearch(e.target.value)}
-              onKeyDown={e => { if (e.key === 'Enter') e.target.blur() }}
-              className="w-full bg-gray-900 border border-gray-600 rounded-lg px-4 py-2 pr-8 text-sm text-gray-100 placeholder-gray-500 focus:outline-none focus:border-amber-400 [&::-webkit-search-cancel-button]:hidden"
-            />
-            {search && (
-              <button onClick={() => setSearch('')} className="absolute right-2 top-1/2 -translate-y-1/2 text-gray-500 hover:text-gray-300 transition-colors" aria-label="Clear search">
-                <svg className="w-4 h-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round"><path d="M18 6 6 18M6 6l12 12"/></svg>
-              </button>
-            )}
-          </div>
-          <div className="flex flex-wrap gap-2 items-center">
-            <span className="text-sm text-gray-500 w-10 shrink-0">Color:</span>
-            {MANA_ORDER.map(m => (
-              <FilterButton key={m} active={activeMana.has(m)} onClick={() => toggleMana(m)}>
-                <span className="flex items-center gap-1">
-                  <ManaIcon color={m} size="w-4 h-4" />
-                  {MANA_LABELS[m]}
-                </span>
-              </FilterButton>
-            ))}
-            <AndOrToggle value={manaMode} onChange={setManaMode} />
-          </div>
-          <div className="flex flex-wrap gap-2 items-center">
-            <span className="text-sm text-gray-500 w-10 shrink-0">Type:</span>
-            {GAME_TYPES.map(t => (
-              <FilterButton key={t} active={activeTypes.has(t)} onClick={() => toggleType(t)}>{t}</FilterButton>
-            ))}
-            <AndOrToggle value={typeMode} onChange={setTypeMode} />
-          </div>
-          <div className="flex flex-wrap gap-2 items-center">
-            <span className="text-sm text-gray-500 w-10 shrink-0">Meta:</span>
-            {META_RANGES.map(r => (
-              <FilterButton key={r.label} active={activeMetaRange === r.label}
-                onClick={() => setActiveMetaRange(prev => prev === r.label ? null : r.label)}>
-                {r.label}
-              </FilterButton>
-            ))}
-          </div>
-        </div>
-
         {/* Table */}
         {loading ? (
           <p className="text-gray-400 text-sm py-8 text-center">Loading archetypes...</p>
         ) : (
+          narrow ? (
+            <>
+              <p className="text-xs text-gray-500">{filtered.length} archetype{filtered.length !== 1 ? 's' : ''}</p>
+              {filtered.length === 0 ? (
+                <p className="text-center text-gray-500 text-sm py-12">No archetypes match your filters.</p>
+              ) : (
+                <SwipeCards index={cardIndex} count={sorted.length} cardKey={selected}
+                  onChange={i => setSelectedName(sorted[i].name)}
+                  label={`${cardIndex + 1} of ${sorted.length}`}
+                  hint="Swipe the card left or right for the next or previous archetype.">
+                  <div className="bg-gray-900 border border-gray-700 rounded-xl p-4">
+                    <ArchetypePane a={sorted[cardIndex]} meta={metaMap[selected]} details={details[selected]} />
+                  </div>
+                </SwipeCards>
+              )}
+            </>
+          ) : wide ? (
+            <>
+              <p className="text-xs text-gray-500">{filtered.length} archetype{filtered.length !== 1 ? 's' : ''}</p>
+              <div ref={rowRef} className="flex gap-6 items-start">
+                <div className="w-96 2xl:w-[28rem] shrink-0 sticky top-24 max-h-[calc(100vh-7rem)] overflow-y-auto">
+                  <ul className="border border-gray-700 rounded-xl overflow-hidden bg-gray-900 divide-y divide-gray-700/50">
+                    {sorted.map(a => {
+                      const open = a.name === selected
+                      return (
+                        <li key={a.name}>
+                          <button onClick={() => pick(a.name)} aria-current={open ? 'true' : undefined}
+                            className={`w-full flex items-center gap-3 px-3 py-2 text-left border-l-2 transition-colors ${open ? 'bg-gray-800 border-amber-400' : 'border-transparent hover:bg-gray-800/60'}`}>
+                            <span className="min-w-0 flex-1">
+                              <span className={`block truncate ${open ? 'text-amber-400' : 'text-gray-200'}`}>{a.name}</span>
+                              <span className="block truncate text-xs text-gray-500">{a.game_type.join(', ')}</span>
+                            </span>
+                            <span className="flex gap-0.5 shrink-0">
+                              {MANA_ORDER.filter(m => a.dominant_mana.includes(m)).map(m => (
+                                <ManaIcon key={m} color={m} size="w-4 h-4" />
+                              ))}
+                            </span>
+                            <span className="w-14 shrink-0 text-right font-mono text-sm text-amber-400">{(metaMap[a.name] ?? 0).toFixed(1)}%</span>
+                          </button>
+                        </li>
+                      )
+                    })}
+                  </ul>
+                  {filtered.length === 0 && (
+                    <p className="text-center text-gray-500 text-sm py-12">No archetypes match your filters.</p>
+                  )}
+                </div>
+                <div className="flex-1 min-w-0">
+                  {selected && <ArchetypePane a={sorted[cardIndex]} meta={metaMap[selected]} details={details[selected]} />}
+                </div>
+              </div>
+            </>
+          ) : (
           <>
             <p className="text-xs text-gray-500">{filtered.length} archetype{filtered.length !== 1 ? 's' : ''}</p>
             <div className="border border-gray-700 rounded-xl overflow-hidden bg-gray-900">
@@ -311,6 +427,7 @@ export default function ArchetypesIndex() {
               )}
             </div>
           </>
+          )
         )}
       </div>
     </Layout>

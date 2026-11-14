@@ -2,6 +2,7 @@ import { useState, useEffect, useMemo, useRef } from 'react'
 import { Link } from 'react-router-dom'
 import Layout from '../components/Layout'
 import { useSearchShortcut, searchShortcutLabel } from '../utils/useSearchShortcut'
+import { FilterPanel } from '../components/FilterSheet'
 import { nameToSlug } from '../utils/slugs'
 import { firstYearOf, formatShortDate } from '../utils/dates'
 import { LANG_FLAG, LANG_CANONICAL, LANG_NAME } from '../utils/languages'
@@ -254,7 +255,9 @@ export default function Watch() {
           <p className="mt-2 text-gray-400 text-sm">Pauper videos from creators around the world.</p>
         </div>
 
-        <div className="bg-gray-800 border border-gray-700 rounded-xl p-4 space-y-3">
+        <FilterPanel activeCount={(search ? 1 : 0) + activeCreators.size + activeLanguages.size + activeArchetypes.size + (filterDateFrom ? 1 : 0) + (filterDateTo ? 1 : 0)}
+          onClear={() => { setSearch(''); setActiveCreators(new Set()); setActiveLanguages(new Set()); setActiveArchetypes(new Set()); setFilterDateFrom(''); setFilterDateTo('') }}
+          summary={`${filtered.length} video${filtered.length !== 1 ? 's' : ''}`}>
           <div className="relative">
             <input
               ref={searchRef}
@@ -421,7 +424,7 @@ export default function Watch() {
               </button>
             </div>
           </div>
-        </div>
+        </FilterPanel>
 
         {loading ? (
           <p className="text-gray-400 text-sm py-8 text-center">Loading videos…</p>

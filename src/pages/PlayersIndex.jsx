@@ -2,6 +2,7 @@ import { useState, useEffect, useMemo, useRef } from 'react'
 import { useNavigate } from 'react-router-dom'
 import Layout from '../components/Layout'
 import { useSearchShortcut, searchShortcutLabel } from '../utils/useSearchShortcut'
+import { FilterPanel } from '../components/FilterSheet'
 import { useEnterShortcut } from '../utils/useEnterShortcut'
 import { formatShortDate } from '../utils/dates'
 
@@ -154,7 +155,9 @@ export default function PlayersIndex() {
           </p>
         </div>
 
-        <div className="bg-gray-800 border border-gray-700 rounded-xl p-4 space-y-3">
+        <FilterPanel activeCount={(search ? 1 : 0) + activeArchetypes.size}
+          onClear={() => { setSearch(''); setActiveArchetypes(new Set()) }}
+          summary={`${filtered.length.toLocaleString()} player${filtered.length !== 1 ? 's' : ''}`}>
           <div className="relative">
             <input
               ref={searchRef}
@@ -221,7 +224,7 @@ export default function PlayersIndex() {
               </div>
             )}
           </div>
-        </div>
+        </FilterPanel>
 
         {loading ? (
           <p className="text-gray-400 text-sm py-8 text-center">Loading players…</p>

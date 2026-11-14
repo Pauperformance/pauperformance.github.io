@@ -186,6 +186,8 @@ export default function TournamentDecks({ decks, several = false, showArchetype 
   // Swap on phones: the decklist itself, whose header (player and archetype) goes to the top
   const swapPanelRef = useRef(null)
   const swapAreaRef = useRef(null)
+  // Table on desktop: the list and the decklist together
+  const tableRef = useRef(null)
   const justPicked = useRef(false)
   const swipeStart = useRef(null)
   const cardPages = useCardPages()
@@ -210,14 +212,25 @@ export default function TournamentDecks({ decks, several = false, showArchetype 
     if (!justPicked.current) return
     const frame = requestAnimationFrame(() => {
       if (contentReady) justPicked.current = false
-      const el = mode === 'swap' && !isDesktop ? swapPanelRef.current : targetRef.current
-      if (!el) return
       const offset = (document.querySelector('header')?.offsetHeight ?? 64) + 16
+      if (isDesktop) {
+        // Table on desktop: the list and the decklist are lined up with the top of
+        // the screen, under the header. Where that would take the deck picked out
+        // of view (a long list, scrolled far down), the page stays where it is.
+        const wrap = tableRef.current
+        const row = wrap?.querySelector('[aria-expanded="true"]')
+        if (!wrap || !row) return
+        const delta = wrap.getBoundingClientRect().top - offset
+        if (Math.abs(delta) <= 4) return
+        const rowTop = row.getBoundingClientRect().top - delta
+        const visible = rowTop >= offset && rowTop + row.offsetHeight <= window.innerHeight
+        if (delta > 0 || visible) window.scrollBy({ top: delta, behavior: 'smooth' })
+        return
+      }
+      const el = mode === 'swap' ? swapPanelRef.current : targetRef.current
+      if (!el) return
       const delta = el.getBoundingClientRect().top - offset
-      // Table on desktop: the panel sticks at the top by itself once there, so
-      // only scroll to it from above. On phones always align it.
-      const scroll = !isDesktop ? Math.abs(delta) > 4 : delta > 4
-      if (scroll) window.scrollBy({ top: delta, behavior: 'smooth' })
+      if (Math.abs(delta) > 4) window.scrollBy({ top: delta, behavior: 'smooth' })
     })
     return () => cancelAnimationFrame(frame)
   }, [selected, isDesktop, mode, contentReady])
@@ -355,7 +368,7 @@ export default function TournamentDecks({ decks, several = false, showArchetype 
   )
 
   const table = (
-    <div className="lg:flex lg:gap-6 lg:items-start">
+    <div ref={tableRef} className="lg:flex lg:gap-6 lg:items-start">
       <ul className="lg:w-80 xl:w-[26rem] lg:shrink-0 border border-gray-700 rounded-xl overflow-hidden bg-gray-900 divide-y divide-gray-700/50">
         {decks.map(d => {
           const open = d.id === selected
@@ -380,8 +393,8 @@ export default function TournamentDecks({ decks, several = false, showArchetype 
         })}
       </ul>
       {isDesktop && selectedDeck && (
-        // stays in view while the list is scrolled
-        <div ref={targetRef} className="flex-1 min-w-0 sticky top-24 max-h-[calc(100vh-7rem)] overflow-y-auto">
+        // stays in view while the list is scrolled; a fixed height, so that the page doesn't change height from one deck to the next
+        <div ref={targetRef} className="flex-1 min-w-0 sticky top-24 h-[calc(100vh-7rem)] overflow-y-auto">
           {panelFor(selectedDeck, true)}
         </div>
       )}
