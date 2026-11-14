@@ -2,6 +2,7 @@ import { useState, useEffect, useMemo, useRef } from 'react'
 import { Link, useNavigate } from 'react-router-dom'
 import Layout from '../components/Layout'
 import { useSearchShortcut, searchShortcutLabel } from '../utils/useSearchShortcut'
+import { FilterPanel } from '../components/FilterSheet'
 import { formatShortDate } from '../utils/dates'
 import { sourceLabel } from '../utils/sources'
 import { useMediaQuery } from '../utils/useMediaQuery'
@@ -192,7 +193,9 @@ export default function TournamentsIndex() {
           </p>
         </div>
 
-        <div className="bg-gray-800 border border-gray-700 rounded-xl p-4 space-y-3">
+        <FilterPanel activeCount={(search ? 1 : 0) + (from ? 1 : 0) + (to ? 1 : 0) + (minDecks > 0 ? 1 : 0)}
+          onClear={clearFilters}
+          summary={`${filtered.length.toLocaleString()} tournament${filtered.length !== 1 ? 's' : ''}`}>
           <div className="relative">
             <input
               ref={searchRef}
@@ -237,7 +240,7 @@ export default function TournamentsIndex() {
               </button>
             )}
           </div>
-        </div>
+        </FilterPanel>
 
         {loading ? (
           <p className="text-gray-400 text-sm py-8 text-center">Loading tournaments…</p>

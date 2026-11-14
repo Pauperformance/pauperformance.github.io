@@ -7,6 +7,7 @@ import { useEnterShortcut } from '../utils/useEnterShortcut'
 import { useMediaQuery } from '../utils/useMediaQuery'
 import ArchetypePane from '../components/ArchetypePane'
 import SwipeCards from '../components/SwipeCards'
+import FilterSheet from '../components/FilterSheet'
 
 const MANA_ORDER = ['W', 'U', 'B', 'R', 'G', 'C']
 const GAME_TYPES = ['Aggro', 'Midrange', 'Control', 'Tempo', 'Combo']
@@ -239,6 +240,60 @@ export default function ArchetypesIndex() {
     else navigate(`/archetypes/${nameToSlug(sorted[0].name)}`)
   }, searchRef)
 
+  const activeCount = (search ? 1 : 0) + activeTypes.size + activeMana.size + (activeMetaRange !== null ? 1 : 0)
+  function clearFilters() {
+    setSearch(''); setActiveTypes(new Set()); setActiveMana(new Set()); setActiveMetaRange(null)
+  }
+
+  const filterControls = (
+    <>
+      <div className="relative">
+        <input
+          ref={searchRef}
+          type="search"
+          placeholder={`Search archetypes... (${searchShortcutLabel})`}
+          value={search}
+          onChange={e => setSearch(e.target.value)}
+          onKeyDown={e => { if (e.key === 'Enter') e.target.blur() }}
+          className="w-full bg-gray-900 border border-gray-600 rounded-lg px-4 py-2 pr-8 text-sm text-gray-100 placeholder-gray-500 focus:outline-none focus:border-amber-400 [&::-webkit-search-cancel-button]:hidden"
+        />
+        {search && (
+          <button onClick={() => setSearch('')} className="absolute right-2 top-1/2 -translate-y-1/2 text-gray-500 hover:text-gray-300 transition-colors" aria-label="Clear search">
+            <svg className="w-4 h-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round"><path d="M18 6 6 18M6 6l12 12"/></svg>
+          </button>
+        )}
+      </div>
+      <div className="flex flex-wrap gap-2 items-center">
+        <span className="text-sm text-gray-500 w-10 shrink-0">Color:</span>
+        {MANA_ORDER.map(m => (
+          <FilterButton key={m} active={activeMana.has(m)} onClick={() => toggleMana(m)}>
+            <span className="flex items-center gap-1">
+              <ManaIcon color={m} size="w-4 h-4" />
+              {MANA_LABELS[m]}
+            </span>
+          </FilterButton>
+        ))}
+        <AndOrToggle value={manaMode} onChange={setManaMode} />
+      </div>
+      <div className="flex flex-wrap gap-2 items-center">
+        <span className="text-sm text-gray-500 w-10 shrink-0">Type:</span>
+        {GAME_TYPES.map(t => (
+          <FilterButton key={t} active={activeTypes.has(t)} onClick={() => toggleType(t)}>{t}</FilterButton>
+        ))}
+        <AndOrToggle value={typeMode} onChange={setTypeMode} />
+      </div>
+      <div className="flex flex-wrap gap-2 items-center">
+        <span className="text-sm text-gray-500 w-10 shrink-0">Meta:</span>
+        {META_RANGES.map(r => (
+          <FilterButton key={r.label} active={activeMetaRange === r.label}
+            onClick={() => setActiveMetaRange(prev => prev === r.label ? null : r.label)}>
+            {r.label}
+          </FilterButton>
+        ))}
+      </div>
+    </>
+  )
+
   return (
     <Layout>
       <div className="space-y-6">
@@ -250,54 +305,15 @@ export default function ArchetypesIndex() {
           </p>
         </div>
 
-        {/* Filters */}
-        <div className="bg-gray-800 border border-gray-700 rounded-xl p-4 space-y-3">
-          <div className="relative">
-            <input
-              ref={searchRef}
-              type="search"
-              placeholder={`Search archetypes... (${searchShortcutLabel})`}
-              value={search}
-              onChange={e => setSearch(e.target.value)}
-              onKeyDown={e => { if (e.key === 'Enter') e.target.blur() }}
-              className="w-full bg-gray-900 border border-gray-600 rounded-lg px-4 py-2 pr-8 text-sm text-gray-100 placeholder-gray-500 focus:outline-none focus:border-amber-400 [&::-webkit-search-cancel-button]:hidden"
-            />
-            {search && (
-              <button onClick={() => setSearch('')} className="absolute right-2 top-1/2 -translate-y-1/2 text-gray-500 hover:text-gray-300 transition-colors" aria-label="Clear search">
-                <svg className="w-4 h-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round"><path d="M18 6 6 18M6 6l12 12"/></svg>
-              </button>
-            )}
-          </div>
-          <div className="flex flex-wrap gap-2 items-center">
-            <span className="text-sm text-gray-500 w-10 shrink-0">Color:</span>
-            {MANA_ORDER.map(m => (
-              <FilterButton key={m} active={activeMana.has(m)} onClick={() => toggleMana(m)}>
-                <span className="flex items-center gap-1">
-                  <ManaIcon color={m} size="w-4 h-4" />
-                  {MANA_LABELS[m]}
-                </span>
-              </FilterButton>
-            ))}
-            <AndOrToggle value={manaMode} onChange={setManaMode} />
-          </div>
-          <div className="flex flex-wrap gap-2 items-center">
-            <span className="text-sm text-gray-500 w-10 shrink-0">Type:</span>
-            {GAME_TYPES.map(t => (
-              <FilterButton key={t} active={activeTypes.has(t)} onClick={() => toggleType(t)}>{t}</FilterButton>
-            ))}
-            <AndOrToggle value={typeMode} onChange={setTypeMode} />
-          </div>
-          <div className="flex flex-wrap gap-2 items-center">
-            <span className="text-sm text-gray-500 w-10 shrink-0">Meta:</span>
-            {META_RANGES.map(r => (
-              <FilterButton key={r.label} active={activeMetaRange === r.label}
-                onClick={() => setActiveMetaRange(prev => prev === r.label ? null : r.label)}>
-                {r.label}
-              </FilterButton>
-            ))}
-          </div>
-        </div>
-
+        {/* Filters: inline on larger screens, in the floating sheet on phones */}
+        {narrow ? (
+          <FilterSheet activeCount={activeCount} onClear={clearFilters}
+            summary={`${filtered.length} archetype${filtered.length !== 1 ? 's' : ''}`}>
+            {filterControls}
+          </FilterSheet>
+        ) : (
+          <div className="bg-gray-800 border border-gray-700 rounded-xl p-4 space-y-3">{filterControls}</div>
+        )}
         {/* Table */}
         {loading ? (
           <p className="text-gray-400 text-sm py-8 text-center">Loading archetypes...</p>

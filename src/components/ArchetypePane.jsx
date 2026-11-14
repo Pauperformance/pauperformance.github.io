@@ -3,6 +3,7 @@ import TypicalListSection from './TypicalListSection'
 import { useCardPreview } from './CardPreview'
 import { useMetagames } from './CardPopularityChart'
 import { nameToSlug } from '../utils/slugs'
+import { useMediaQuery } from '../utils/useMediaQuery'
 
 const MANA_ORDER = ['W', 'U', 'B', 'R', 'G', 'C']
 const POPULARITY_METAGAMES = '/data/archetype-popularity-metagames.json'
@@ -14,6 +15,8 @@ const POPULARITY_METAGAMES = '/data/archetype-popularity-metagames.json'
 export default function ArchetypePane({ a, meta, details }) {
   const { bind: bindPreview, preview } = useCardPreview({ sheet: true })
   const metagames = useMetagames(POPULARITY_METAGAMES)
+  // phones get the simple, deck-page-like list
+  const phone = useMediaQuery('(max-width: 1023px)')
 
   return (
     <div className="space-y-5">
@@ -52,7 +55,7 @@ export default function ArchetypePane({ a, meta, details }) {
           <p className="text-gray-500 text-sm">This archetype could not be loaded.</p>
         ) : (
           <TypicalListSection key={a.name} name={details.name} list={details.typical_list} bindPreview={bindPreview}
-            currentMetagame={metagames?.at(-1)?.slug.split('.')[0]} />
+            currentMetagame={metagames?.at(-1)?.slug.split('.')[0]} compact={phone} />
         )}
       </section>
       {preview}

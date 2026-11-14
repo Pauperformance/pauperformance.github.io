@@ -9,6 +9,7 @@ import { bansCrossed, computeTypicalList } from '../utils/typicalList'
 import { cardLinkSlug, useCardPages } from '../utils/cardPages'
 import { nameToSlug } from '../utils/slugs'
 import { formatShortDate } from '../utils/dates'
+import { DeckList, VisualList, Toggle, NO_VERSUS, sortCards } from '../pages/DeckPage'
 
 // The typical list, computed by Myr from the archetype's recent decklists:
 // for each card, how many copies the aggregate list plays and the share of
@@ -269,7 +270,70 @@ function RangeEnd({ label, metagame, today }) {
   )
 }
 
-export default function TypicalListSection({ name, list, currentMetagame, bindPreview }) {
+// The view choices (text or visual, grouped, sorted) outlive the list: swiping
+// to the next archetype builds a new one, which keeps them.
+const viewPrefs = {}
+function useViewPref(key, initial) {
+  const [value, setValue] = useState(key in viewPrefs ? viewPrefs[key] : initial)
+  const change = v => { viewPrefs[key] = v; setValue(v) }
+  return [value, change]
+}
+
+// On phones the typical list reads like any decklist (see a deck's page):
+// copies, name and mana cost, by type. No range to drag, no percentages.
+function CompactTypicalList({ name, list, bindPreview }) {
+  const cardPages = useCardPages()
+  const [data, setData] = useState({ images: {}, types: {}, costs: {}, cmc: {} })
+  const [visual, setVisual] = useViewPref('visual', false)
+  const [groupByType, setGroupByType] = useViewPref('groupByType', true)
+  const [sort, setSort] = useViewPref('sort', 'name')
+  useEffect(() => {
+    Promise.all([
+      fetch('/data/card-images.json').then(r => r.json()),
+      fetch('/data/card-types.json').then(r => r.json()),
+      fetch('/data/card-mana-costs.json').then(r => r.json()),
+      fetch('/data/card-cmc.json').then(r => r.json()),
+    ]).then(([images, types, costs, cmc]) => setData({ images, types, costs, cmc })).catch(() => {})
+  }, [])
+  const decklist = typicalDecklist(list)
+  const dates = list.first_date === list.last_date
+    ? `on ${formatShortDate(list.last_date)}`
+    : `between ${formatShortDate(list.first_date)} and ${formatShortDate(list.last_date)}`
+  const board = (cards, label) => visual ? (
+    <VisualList cards={sortCards(cards, sort, data.cmc)} label={label} cardImages={data.images} cardTypes={data.types}
+      groupByType={groupByType} cardPages={cardPages} bindPreview={bindPreview} />
+  ) : (
+    <DeckList cards={sortCards(cards, sort, data.cmc)} label={label} onHover={() => {}} bindPreview={bindPreview} cardImages={data.images}
+      cardTypes={data.types} groupByType={groupByType} cardPages={cardPages} manaCosts={data.costs}
+      versus={NO_VERSUS} />
+  )
+  return (
+    <div className="space-y-4">
+      <p className="text-sm text-gray-400">
+        The typical list: what <span className="text-gray-200">{list.decks} deck{list.decks === 1 ? '' : 's'}</span> played, {dates}.
+        {list.decks < FEW_DECKS && <span className="text-amber-300"> Too few for reliable numbers.</span>}
+      </p>
+      {list.ended_by_bans.length > 0 && (
+        <p className="text-sm text-amber-200 bg-amber-900/20 border border-amber-800/50 rounded-lg px-3 py-2">
+          Before the ban of {joinNames(list.ended_by_bans)}: this is how {name} was played then.
+        </p>
+      )}
+      <div className="flex flex-wrap gap-2">
+        <Toggle value={visual} onChange={setVisual} options={[[false, 'Text'], [true, 'Visual']]} />
+        <Toggle value={groupByType} onChange={setGroupByType} options={[[true, 'Grouped'], [false, 'Ungrouped']]} />
+        <Toggle value={sort} onChange={setSort} options={[['name', 'A–Z'], ['cmc', 'Mana value']]} />
+        <MtgoButtons decklist={decklist} fileName={`${nameToSlug(name)}_typical_list.txt`} />
+      </div>
+      <div className="space-y-6">
+        {board(decklist.main, 'Maindeck')}
+        {board(decklist.side, 'Sideboard')}
+      </div>
+    </div>
+  )
+}
+
+// compact: the simple, deck-page-like view (the archetypes index on phones)
+export default function TypicalListSection({ name, list, currentMetagame, bindPreview, compact = false }) {
   const cardPages = useCardPages()
   const [cardTypes, setCardTypes] = useState({})
   useEffect(() => {
@@ -289,6 +353,7 @@ export default function TypicalListSection({ name, list, currentMetagame, bindPr
     [custom, counts, timeline, range],
   )
   if (!list?.decks) return <p className="text-gray-500 text-sm">No decklists recorded.</p>
+  if (compact) return <CompactTypicalList name={name} list={list} bindPreview={bindPreview} />
   const crossed = canChoose ? bansCrossed(timeline, bans, range[0], range[1]) : []
   const unbansCrossed = canChoose ? bansCrossed(timeline, unbans, range[0], range[1]) : []
   // the list shown: the precomputed one, or the visitor's range (the
