@@ -23,6 +23,7 @@ const metagames = JSON.parse(readFileSync(join(dataDir, 'metagame_index.json'), 
 
 const routes = [
   '/archetypes',
+  '/view',
   '/announcements',
   '/sets',
   '/metagames',
