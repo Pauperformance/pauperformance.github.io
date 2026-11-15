@@ -6,6 +6,7 @@ import { cardLinkSlug, useCardPages } from '../utils/cardPages'
 import { formatShortDate } from '../utils/dates'
 import { easeInOut, scrollGently } from '../utils/scroll'
 import { useCardPreview } from '../components/CardPreview'
+import { useImageFor } from '../utils/artwork'
 import CardLink from '../components/PoolCardLink'
 import MetaPie from '../components/MetaPie'
 
@@ -97,7 +98,8 @@ function StatsSection() {
 // Oracle text); plain text for a card without a page.
 function StapleLink({ card, cardPages, bindPreview }) {
   const slug = cardLinkSlug(cardPages, card.name)
-  const handlers = bindPreview(card.name, { slug: slug || undefined, image: card.preview })
+  const imageFor = useImageFor()
+  const handlers = bindPreview(card.name, { slug: slug || undefined, image: imageFor(card.name, card.preview) })
   const cls = 'px-2 py-0.5 rounded-md text-xs border bg-gray-800 border-gray-700 text-gray-300 whitespace-nowrap'
   return slug
     ? <Link to={`/cards/${slug}`} {...handlers} className={`${cls} hover:border-amber-400/50 hover:text-amber-400 transition-colors`}>{card.name}</Link>
@@ -136,6 +138,7 @@ function StapleRows({ children }) {
 function TopDecksSection() {
   const [decks, setDecks] = useState([])
   const cardPages = useCardPages()
+  const imageFor = useImageFor()
   const { bind: bindPreview, preview } = useCardPreview()
 
   useEffect(() => {
@@ -153,7 +156,7 @@ function TopDecksSection() {
               {/* as on the metagame's page: Scryfall's art crop (the artwork without its frame), up to the box's border */}
               <div className="relative aspect-[2/1] bg-gray-900 overflow-hidden">
                 {deck.featured_image
-                  ? <img src={deck.featured_image.replace('/normal/', '/art_crop/')} alt={deck.archetype_name} loading="lazy"
+                  ? <img src={imageFor(deck.featured_card, deck.featured_image).replace('/normal/', '/art_crop/')} alt={deck.archetype_name} loading="lazy"
                       className="absolute inset-0 w-full h-full object-cover group-hover:scale-110 transition-transform duration-300" />
                   : <div className="absolute inset-0 flex items-center justify-center text-gray-600 text-xs">No image</div>
                 }
@@ -250,6 +253,7 @@ function BrainstormSection() {
   const boxRef = useRef(null)
   const [boxWidth, setBoxWidth] = useState(0)
   const cardPages = useCardPages()
+  const imageFor = useImageFor()
   const { bind: bindPreview, preview } = useCardPreview()
 
   useEffect(() => {
@@ -536,7 +540,7 @@ function BrainstormSection() {
           className="relative w-full aspect-[2/1] sm:aspect-auto sm:w-32 md:w-44 shrink-0 bg-gray-900 overflow-hidden group">
           {deck.featured_image
             // Scryfall's art crop of the same card: the artwork without its frame
-            ? <img src={deck.featured_image.replace('/normal/', '/art_crop/')} alt={deck.archetype_name}
+            ? <img src={imageFor(deck.featured_card, deck.featured_image).replace('/normal/', '/art_crop/')} alt={deck.archetype_name}
                 className="absolute inset-0 w-full h-full object-cover group-hover:scale-110 transition-transform duration-300" />
             : <div className="absolute inset-0 flex items-center justify-center text-gray-600 text-xs">No image</div>
           }

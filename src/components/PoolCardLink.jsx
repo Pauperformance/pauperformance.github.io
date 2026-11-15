@@ -1,5 +1,6 @@
 import { Link } from 'react-router-dom'
 import { useCardPages, cardLinkSlug } from '../utils/cardPages'
+import { useImageFor } from '../utils/artwork'
 
 const TONES = {
   default: 'border-gray-700',
@@ -37,6 +38,7 @@ const PLAY_BORDERS = {
 // playing it, on the Sets page) styles the chip by how much it is played.
 export default function CardLink({ card, highlighted, slug, tone = 'default', bindPreview }) {
   const pages = useCardPages()
+  const imageFor = useImageFor()
 
   const match = card.url && card.url.match(/scryfall\.com\/card\/([^/]+)\/([^/]+)\//)
   const imgSrc = match
@@ -57,7 +59,7 @@ export default function CardLink({ card, highlighted, slug, tone = 'default', bi
       : `bg-gray-900 ${tierTone} ${borderTone} ${pageSlug ? 'hover:border-amber-400/50 hover:text-amber-300' : ''}`
   }`
   const handlers = {
-    ...bindPreview(card.name, { slug: pageSlug || undefined, image: imgSrc }),
+    ...bindPreview(card.name, { slug: pageSlug || undefined, image: imageFor(card.name, imgSrc) }),
     title: card.banned ? 'Banned in Pauper' : undefined,
   }
 

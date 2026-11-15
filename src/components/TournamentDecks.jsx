@@ -5,6 +5,7 @@ import MtgoButtons from './MtgoButtons'
 import { useCardData, useCardPreview, OracleText } from './CardPreview'
 import { useCardPages } from '../utils/cardPages'
 import { getSettings } from '../utils/settings'
+import { loadCardImages, useArtwork } from '../utils/artwork'
 import { nameToSlug, pilotToSlug } from '../utils/slugs'
 import { sourceLabel } from '../utils/sources'
 
@@ -202,12 +203,14 @@ export default function TournamentDecks({ decks, several = false, showArchetype 
   const index = Math.max(0, decks.findIndex(d => d.id === selected))
 
   // the card data the decklists need, loaded once a deck is open
+  // (again if the visitor changes the artwork in the meantime)
+  const artwork = useArtwork()
   useEffect(() => {
-    if (!selected || res) return
-    Promise.all(['card-images', 'card-types', 'card-mana-costs', 'card-cmc'].map(n => fetch(`/data/${n}.json`).then(r => r.json())))
-      .then(([images, types, costs, cmc]) => setRes({ images, types, costs, cmc }))
-      .catch(() => setRes({ images: {}, types: {}, costs: {}, cmc: {} }))
-  }, [selected, res])
+    if (!selected || (res && res.artwork === artwork)) return
+    Promise.all([loadCardImages(artwork), ...['card-types', 'card-mana-costs', 'card-cmc'].map(n => fetch(`/data/${n}.json`).then(r => r.json()))])
+      .then(([images, types, costs, cmc]) => setRes({ artwork, images, types, costs, cmc }))
+      .catch(() => setRes({ artwork, images: {}, types: {}, costs: {}, cmc: {} }))
+  }, [selected, res, artwork])
 
   // the page is as tall as it will be once the decklist (and the card data it
   // needs) is in: until then the scroll may fall short, so it is redone

@@ -4,6 +4,7 @@ import Layout from '../components/Layout'
 import { Toggle, DeckList, VisualList, sortCards, NO_VERSUS } from './DeckPage'
 import { LANG_FLAG, LANG_NAME } from '../utils/languages'
 import { useSettings, updateSettings, resetSettings, DEFAULT_SETTINGS } from '../utils/settings'
+import { ARTWORKS } from '../utils/artwork'
 
 // "the Watch page", linked
 function WatchLink() {
@@ -108,7 +109,8 @@ function HiddenCreators({ hidden, onChange }) {
 
 export default function Settings() {
   const settings = useSettings()
-  const { deckView, watch, videos } = settings
+  const { deckView, watch, videos, cards } = settings
+  const setCards = patch => updateSettings({ cards: patch })
   const setDeckView = patch => updateSettings({ deckView: patch })
   const setVideos = patch => updateSettings({ videos: patch })
   const setWatch = patch => updateSettings({ watch: patch })
@@ -138,6 +140,12 @@ export default function Settings() {
         </Setting>
 
         <div className="space-y-6">
+        <Setting
+          title="Card artwork"
+          description="The print of a card shown wherever its image appears: its first print ever, which can be an uncommon or a rare, or its first common print. Cards first printed as a common look the same either way.">
+          <Toggle value={cards.artwork} onChange={v => setCards({ artwork: v })} options={ARTWORKS} />
+        </Setting>
+
         <Setting
           title="Watch: content creators"
           description={<>Click a creator to hide their content from <WatchLink />.</>}>
