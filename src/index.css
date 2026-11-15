@@ -106,8 +106,20 @@
   animation: swap-from-left 140ms ease-out;
 }
 
+/* A nudge to the left and right on first view: the card can be swiped */
+@keyframes swipe-hint {
+  0%, 100% { transform: none; }
+  25% { transform: translateX(-36px) rotate(-2deg); }
+  60% { transform: translateX(28px) rotate(1.5deg); }
+  80% { transform: translateX(-8px); }
+}
+
+.swipe-hint {
+  animation: swipe-hint 1100ms ease-in-out 500ms;
+}
+
 @media (prefers-reduced-motion: reduce) {
-  .swap-from-right, .swap-from-left {
+  .swipe-hint, .swap-from-right, .swap-from-left {
     animation: none;
   }
 }

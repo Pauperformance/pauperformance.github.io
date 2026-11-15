@@ -190,6 +190,9 @@ export default function TournamentDecks({ decks, several = false, showArchetype 
   const tableRef = useRef(null)
   const justPicked = useRef(false)
   const swipeStart = useRef(null)
+  // the first decklist nudges sideways once, to say it can be swiped
+  const [hinting, setHinting] = useState(decks.length > 1)
+  const firstDeckId = useRef(decks[0]?.id)
   const cardPages = useCardPages()
   const { bind: bindPreview, preview } = useCardPreview({ sheet: true })
 
@@ -348,6 +351,9 @@ export default function TournamentDecks({ decks, several = false, showArchetype 
 
   const swap = (
     <div ref={targetRef}>
+      <p className="mb-3 text-center text-xs text-gray-400">
+        Swipe the decklist left or right for the next or previous deck.
+      </p>
       <div className="flex items-center justify-between gap-2 mb-3">
         <button onClick={() => step(-1)} disabled={index === 0} className={NAV_BUTTON}>‹ Previous</button>
         <span className="text-sm text-gray-400 text-center">
@@ -357,13 +363,11 @@ export default function TournamentDecks({ decks, several = false, showArchetype 
       </div>
       {/* sideways swipes are ours, vertical ones still scroll the page */}
       <div ref={swapAreaRef} onTouchStart={onTouchStart} onTouchMove={onTouchMove} onTouchEnd={onTouchEnd} onTouchCancel={onTouchCancel} style={{ touchAction: 'pan-y' }}>
-        <div key={decks[index]?.id} ref={swapPanelRef} className={direction > 0 ? 'swap-from-right' : direction < 0 ? 'swap-from-left' : ''}>
+        <div key={decks[index]?.id} ref={swapPanelRef} className={direction > 0 ? 'swap-from-right' : direction < 0 ? 'swap-from-left' : hinting && decks[index]?.id === firstDeckId.current ? 'swipe-hint' : ''}
+          onAnimationEnd={() => setHinting(false)}>
           {decks[index] && panelFor(decks[index], false)}
         </div>
       </div>
-      <p className="mt-3 text-center text-xs text-gray-500">
-        Swipe the decklist left or right for the next or previous deck.
-      </p>
     </div>
   )
 
