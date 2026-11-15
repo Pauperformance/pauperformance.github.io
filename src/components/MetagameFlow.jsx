@@ -288,7 +288,7 @@ export function MoverTile({ card, cardPages, bindPreview, badges = [], large = f
           {compared ? `${change > 0 ? '▲' : '▼'} ${Math.abs(change).toFixed(1)}%` : `${card.share.toFixed(1)}%`}
         </span>
       </span>
-      <span className={`block truncate px-2 py-1 text-gray-300 group-hover:text-amber-400 transition-colors ${large ? 'text-base text-center' : 'text-xs'}`}>{card.name}</span>
+      <span className={`block truncate px-2 py-1 text-gray-300 group-hover:text-amber-400 transition-colors text-center ${large ? 'text-base' : 'text-xs'}`}>{card.name}</span>
     </>
   )
   const className = 'group flex flex-col min-w-0 min-h-0 rounded-lg overflow-hidden bg-gray-800 border border-gray-700 hover:border-amber-400/50 transition-colors'
