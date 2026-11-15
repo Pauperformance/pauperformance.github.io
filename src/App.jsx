@@ -24,6 +24,7 @@ const PlayerPage     = lazy(() => import('./pages/PlayerPage'))
 const BlindSpy       = lazy(() => import('./pages/BlindSpy'))
 const Diff            = lazy(() => import('./pages/Diff'))
 const FAQ            = lazy(() => import('./pages/FAQ'))
+const Settings       = lazy(() => import('./pages/Settings'))
 
 function NotFound() {
   return (
@@ -64,6 +65,7 @@ function App() {
         <Route path="/blind-spy" element={<BlindSpy />} />
         <Route path="/diff" element={<Diff />} />
         <Route path="/faq" element={<FAQ />} />
+        <Route path="/settings" element={<Settings />} />
         <Route path="/contact" element={<Navigate to="/" replace />} />
         <Route path="*" element={<NotFound />} />
       </Routes>

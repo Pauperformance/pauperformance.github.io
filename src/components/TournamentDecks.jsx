@@ -4,6 +4,7 @@ import { DeckList, VisualList, Toggle, sortCards, useDeckMetagame, versusOf } fr
 import MtgoButtons from './MtgoButtons'
 import { useCardData, useCardPreview, OracleText } from './CardPreview'
 import { useCardPages } from '../utils/cardPages'
+import { getSettings } from '../utils/settings'
 import { nameToSlug, pilotToSlug } from '../utils/slugs'
 import { sourceLabel } from '../utils/sources'
 
@@ -178,7 +179,7 @@ export default function TournamentDecks({ decks, several = false, showArchetype 
   const [res, setRes] = useState(null)
   const [hoveredCard, setHoveredCard] = useState(null)
   // how the decklists are shown, kept while another deck is selected
-  const [view, setView] = useState({ visual: false, groupByType: true, sort: 'name' })
+  const [view, setView] = useState(() => getSettings().deckView)
   // The panel of the deck selected (beside the list on desktop), its row
   // (opened under it on phones) or the swiper, and whether the visitor just
   // picked it: the page then scrolls so that the player and archetype are at the top.
