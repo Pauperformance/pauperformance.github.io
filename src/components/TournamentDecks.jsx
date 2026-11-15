@@ -384,7 +384,7 @@ export default function TournamentDecks({ decks, several = false, showArchetype 
                 <span className={`${decks.some(x => x.lead) ? 'w-24' : 'w-12'} shrink-0 text-sm text-gray-500 whitespace-nowrap`}>{d.lead ?? d.place ?? '—'}</span>
                 <span className="min-w-0 flex-1">
                   <span className={`block truncate ${open ? 'text-amber-400' : 'text-gray-200'}`}>{d.pilot || 'Anonymous'}</span>
-                  <span className="block truncate text-xs text-gray-500">{d.detail ?? d.archetype ?? 'Unclassified'}</span>
+                  <span className="block truncate text-xs text-gray-500">{d.listDetail ?? d.detail ?? d.archetype ?? 'Unclassified'}</span>
                   {several && d.copies && (d.copies.length === 1 || d.match === 'different') && (
                     <span className="block truncate text-xs text-amber-600">
                       {d.copies.length === 1 ? `only in ${sourceLabel(d.copies[0].source)}` : 'lists differ'}

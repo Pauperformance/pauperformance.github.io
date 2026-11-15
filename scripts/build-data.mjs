@@ -1338,7 +1338,10 @@ function displayPlace(place) {
   return n + suffix
 }
 const keptTournamentFiles = new Set()
-for (const t of reconciledTournaments) {
+// The classified decks of each metagame, newest tournament first and in
+// finishing order within it, for the Decks section of its page.
+const metagameDecks = {}
+for (const t of reconciledTournaments.slice().sort((a, b) => b.date.localeCompare(a.date) || a.id.localeCompare(b.id))) {
   const name = (t.sources[0].name || '').trim()
   tournamentRows.push([t.id, t.date, name, t.decks.length, t.sources.map(s => s.source), t.discrepancies.length])
   let metagame = null
@@ -1364,6 +1367,12 @@ for (const t of reconciledTournaments) {
       differences: d.differences,
     }
   })
+  if (metagame) {
+    const list = metagameDecks[metagameSlug(metagame)] ||= []
+    for (const d of decks) {
+      if (d.archetype) list.push({ id: d.id, pilot: d.pilot, archetype: d.archetype, place: d.place, tournament_name: name, tournament_date: t.date })
+    }
+  }
   writeFileSync(join(tournamentDetailsDir, t.id + '.json'),
     JSON.stringify({ id: t.id, name, date: t.date, metagame, ranked: t.ranked, sources: t.sources, discrepancies: t.discrepancies, decks }))
   keptTournamentFiles.add(t.id + '.json')
@@ -1371,6 +1380,14 @@ for (const t of reconciledTournaments) {
 for (const f of readdirSync(tournamentDetailsDir)) {
   if (!keptTournamentFiles.has(f)) unlinkSync(join(tournamentDetailsDir, f))
 }
+// One file per metagame (the decks of the metagame pages); the stale ones go
+const metagameDecksDir = join(outDir, 'metagame-decks')
+mkdirSync(metagameDecksDir, { recursive: true })
+for (const f of readdirSync(metagameDecksDir)) {
+  if (!(f.slice(0, -5) in metagameDecks)) unlinkSync(join(metagameDecksDir, f))
+}
+for (const [slug, list] of Object.entries(metagameDecks)) writeIfChanged(join(metagameDecksDir, slug + '.json'), JSON.stringify(list))
+console.log('Built metagame-decks/ with ' + Object.keys(metagameDecks).length + ' metagames.')
 tournamentRows.sort((a, b) => b[1].localeCompare(a[1]) || a[0].localeCompare(b[0]))
 writeFileSync(join(outDir, 'tournaments.json'), JSON.stringify(tournamentRows))
 console.log('Built tournaments.json with ' + tournamentRows.length + ' entries.')
