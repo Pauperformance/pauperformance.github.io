@@ -185,7 +185,7 @@ export default function TournamentsIndex() {
     <Layout>
       <div className="space-y-6">
         <div>
-          <h1 className="text-2xl font-bold text-white">Tournaments</h1>
+          <h1 className="text-2xl font-bold text-white">Tournaments Index</h1>
           <p className="mt-2 text-gray-400 text-sm">
             {rows.length.toLocaleString()} Pauper tournaments tracked and reconciled across multiple sources.
             Inconsistencies across tournaments are highlighted.

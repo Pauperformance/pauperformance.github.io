@@ -19,6 +19,9 @@ export default function SwipeCards({ index, count, onChange, label, hint, cardKe
   const panelRef = useRef(null)
   const swipeStart = useRef(null)
   const dragging = useRef(false)
+  // the card nudges sideways once, when first shown, to say it can be swiped
+  const [hinting, setHinting] = useState(count > 1)
+  const firstKey = useRef(cardKey)
 
   const step = n => {
     const to = index + n
@@ -106,6 +109,9 @@ export default function SwipeCards({ index, count, onChange, label, hint, cardKe
 
   return (
     <div>
+      <p className="mb-3 text-center text-xs text-gray-400">
+        {hint}
+      </p>
       <div className="flex items-center justify-between gap-2 mb-3">
         <button onClick={() => step(-1)} disabled={index <= 0} className={NAV_BUTTON}>‹ Previous</button>
         <span className="text-sm text-gray-400 text-center">{label}</span>
@@ -113,13 +119,11 @@ export default function SwipeCards({ index, count, onChange, label, hint, cardKe
       </div>
       {/* sideways swipes are ours, vertical ones still scroll the page */}
       <div ref={areaRef} onTouchStart={onTouchStart} onTouchMove={onTouchMove} onTouchEnd={onTouchEnd} onTouchCancel={onTouchCancel} style={{ touchAction: 'pan-y' }}>
-        <div key={cardKey} ref={panelRef} className={direction > 0 ? 'swap-from-right' : direction < 0 ? 'swap-from-left' : ''}>
+        <div key={cardKey} ref={panelRef} className={direction > 0 ? 'swap-from-right' : direction < 0 ? 'swap-from-left' : hinting && cardKey === firstKey.current ? 'swipe-hint' : ''}
+          onAnimationEnd={() => setHinting(false)}>
           {children}
         </div>
       </div>
-      <p className="mt-3 text-center text-xs text-gray-500">
-        {hint}
-      </p>
     </div>
   )
 }

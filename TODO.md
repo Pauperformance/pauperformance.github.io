@@ -18,3 +18,7 @@
   "SB: 1 Dispel", Italian names...): about 40 names, shown as plain text. Fix
   them where Myr imports decklists, or with a list of corrections applied by
   `build-data.mjs`.
+- [ ] **Treat "Name Sticker" Goblin as a banned card**: it should
+  get the Banned badge on its card page and count as banned wherever banned
+  cards are used. `banned` comes from Myr's card intel export, so set it there
+  (Myr is the source of truth).
