@@ -4,6 +4,7 @@ import Layout from '../components/Layout'
 import CardLink from '../components/PoolCardLink'
 import MetaPie from '../components/MetaPie'
 import ShareChange from '../components/ShareChange'
+import MetagameDecks from '../components/MetagameDecks'
 import { useCardPreview } from '../components/CardPreview'
 import { useCardPages, cardLinkSlug } from '../utils/cardPages'
 import { nameToSlug, metagameSlug } from '../utils/slugs'
@@ -450,6 +451,14 @@ export default function MetagamePage() {
                     <CardMovers movers={metagame.card_movers} cardPages={cardPages} bindPreview={bindPreview} />
                   </section>
                 )}
+
+                <section id="decks">
+                  <h2 className="text-xl font-semibold text-white mb-1">Decks</h2>
+                  <p className="text-sm text-gray-400 mb-4">
+                    Browse the decklists of this metagame, from the most recent tournament back.
+                  </p>
+                  <MetagameDecks key={code} slug={code.toLowerCase()} />
+                </section>
               </>
             )}
           </>
