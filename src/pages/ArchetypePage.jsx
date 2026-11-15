@@ -1,5 +1,5 @@
 import { useState, useEffect, useMemo, useRef } from 'react'
-import { useParams, Link, useNavigate } from 'react-router-dom'
+import { useParams, Link, useNavigate, useSearchParams } from 'react-router-dom'
 import ReactMarkdown from 'react-markdown'
 import Layout from '../components/Layout'
 import { useCardPreview } from '../components/CardPreview'
@@ -8,6 +8,7 @@ import CardPopularityChart, { PopularityTrend, useMetagames } from '../component
 import TournamentDecks, { useIsDesktop } from '../components/TournamentDecks'
 import { displayPlace } from '../utils/places'
 import TypicalListSection from '../components/TypicalListSection'
+import CardEvolution from '../components/CardEvolution'
 import { cardLinkSlug, useCardPages } from '../utils/cardPages'
 import { nameToSlug, pilotToSlug } from '../utils/slugs'
 import { firstYearOf, formatShortDate } from '../utils/dates'
@@ -385,6 +386,8 @@ function ResourcesSection({ resources: rawResources, discord, sideboards: rawSid
 export default function ArchetypePage() {
   const { name } = useParams()
   const navigate = useNavigate()
+  // the metagame the visitor came from (its page links here): the typical list starts on it
+  const fromMetagame = useSearchParams()[0].get('metagame')
   const { bind: bindPreview, preview } = useCardPreview({ sheet: true })
   const [data, setData] = useState(null)
   const [notFound, setNotFound] = useState(false)
@@ -450,6 +453,7 @@ export default function ArchetypePage() {
     { id: 'resources', label: 'Resources', count: resourceCount },
     data.decks?.length > 0 && { id: 'reference-decks', label: 'Reference decks', count: data.decks.length },
     { id: 'decks', label: 'Decks', count: data.intel_deck_count ?? null },
+    popularity && { id: 'evolution', label: 'Evolution' },
     { id: 'videos', label: 'Videos', count: data.videos?.length || 0 },
   ].filter(Boolean)
 
@@ -537,7 +541,7 @@ export default function ArchetypePage() {
         <section id="typical-list">
           <SectionHeader>Typical list</SectionHeader>
           <TypicalListSection key={data.name} name={data.name} list={data.typical_list} bindPreview={bindPreview}
-            currentMetagame={popularityMetagames?.at(-1)?.slug.split('.')[0]} />
+            currentMetagame={popularityMetagames?.at(-1)?.slug.split('.')[0]} focusMetagame={fromMetagame} />
         </section>
 
         {/* Resources */}
@@ -563,6 +567,14 @@ export default function ArchetypePage() {
           <SectionHeader>Decks</SectionHeader>
           <IntelDecksSection name={name} />
         </section>
+
+        {/* Evolution */}
+        {popularity && (
+          <section id="evolution">
+            <SectionHeader>Evolution</SectionHeader>
+            <CardEvolution key={data.name} name={data.name} series={popularity.series} bindPreview={bindPreview} />
+          </section>
+        )}
 
         {/* Videos */}
         <section id="videos">
