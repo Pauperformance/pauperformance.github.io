@@ -79,7 +79,7 @@ function DonutChart({ data, activeIndex, onSliceEnter, onSliceLeave }) {
 // most played first. Archetypes under minListedShare (%) are listed as one
 // Other row. listClassName, listStyle: the list's grid, sized to its length;
 // rowClassName: each row's.
-export default function MetaPie({ shares, minListedShare = 0, listClassName, listStyle, rowClassName = '' }) {
+export default function MetaPie({ shares, minListedShare = 0, listClassName, listStyle, rowClassName = '', linkSuffix = '' }) {
   const [activeIndex, setActiveIndex] = useState(undefined)
 
   // the archetypes under minListedShare are Other in the donut too
@@ -129,7 +129,7 @@ export default function MetaPie({ shares, minListedShare = 0, listClassName, lis
             entry.archetype_name,
             i < SHOWN_SLICES ? CHART_COLORS[i] : OTHER_COLOR,
             <Link
-              to={`/archetypes/${nameToSlug(entry.archetype_name)}`}
+              to={`/archetypes/${nameToSlug(entry.archetype_name)}${linkSuffix}`}
               title={entry.archetype_name}
               className="text-sm text-gray-300 hover:text-amber-400 transition-colors flex-1 min-w-0 truncate"
             >
