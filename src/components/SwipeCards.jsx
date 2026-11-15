@@ -117,8 +117,12 @@ export default function SwipeCards({ index, count, onChange, label, hint, cardKe
         <span className="text-sm text-gray-400 text-center">{label}</span>
         <button onClick={() => step(1)} disabled={index >= count - 1} className={NAV_BUTTON}>Next ›</button>
       </div>
-      {/* sideways swipes are ours, vertical ones still scroll the page */}
-      <div ref={areaRef} onTouchStart={onTouchStart} onTouchMove={onTouchMove} onTouchEnd={onTouchEnd} onTouchCancel={onTouchCancel} style={{ touchAction: 'pan-y' }}>
+      {/* Sideways swipes are ours, vertical ones still scroll the page. The card
+          slides, rotates and is nudged beyond its box: clipped sideways (out to the
+          screen's edges, hence the negative margin), so that the page doesn't gain
+          a horizontal scroll, and bounce, while it moves. */}
+      <div ref={areaRef} onTouchStart={onTouchStart} onTouchMove={onTouchMove} onTouchEnd={onTouchEnd} onTouchCancel={onTouchCancel}
+        className="-mx-4 px-4" style={{ touchAction: 'pan-y', overflowX: 'clip' }}>
         <div key={cardKey} ref={panelRef} className={direction > 0 ? 'swap-from-right' : direction < 0 ? 'swap-from-left' : hinting && cardKey === firstKey.current ? 'swipe-hint' : ''}
           onAnimationEnd={() => setHinting(false)}>
           {children}

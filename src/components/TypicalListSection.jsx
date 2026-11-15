@@ -8,6 +8,7 @@ import { ColorsPie, CardTypesRadar } from './DeckStats'
 import { bansCrossed, computeTypicalList } from '../utils/typicalList'
 import { cardLinkSlug, useCardPages } from '../utils/cardPages'
 import { nameToSlug } from '../utils/slugs'
+import { getSettings } from '../utils/settings'
 import { formatShortDate } from '../utils/dates'
 import { DeckList, VisualList, Toggle, NO_VERSUS, sortCards } from '../pages/DeckPage'
 
@@ -284,9 +285,9 @@ function useViewPref(key, initial) {
 function CompactTypicalList({ name, list, bindPreview }) {
   const cardPages = useCardPages()
   const [data, setData] = useState({ images: {}, types: {}, costs: {}, cmc: {} })
-  const [visual, setVisual] = useViewPref('visual', false)
-  const [groupByType, setGroupByType] = useViewPref('groupByType', true)
-  const [sort, setSort] = useViewPref('sort', 'name')
+  const [visual, setVisual] = useViewPref('visual', getSettings().deckView.visual)
+  const [groupByType, setGroupByType] = useViewPref('groupByType', getSettings().deckView.groupByType)
+  const [sort, setSort] = useViewPref('sort', getSettings().deckView.sort)
   useEffect(() => {
     Promise.all([
       fetch('/data/card-images.json').then(r => r.json()),

@@ -34,6 +34,7 @@ const routes = [
   '/blind-spy',
   '/diff',
   '/faq',
+  '/settings',
   ...archetypes.map(a => `/archetypes/${nameToSlug(a.name)}`),
   ...families.map(f => `/families/${f.slug}`),
   ...metagames.map(m => `/metagames/${metagameSlug(m)}`),
