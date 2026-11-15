@@ -5,6 +5,9 @@ import { useSearchShortcut, searchShortcutLabel } from '../utils/useSearchShortc
 import { FilterPanel } from '../components/FilterSheet'
 import { useEnterShortcut } from '../utils/useEnterShortcut'
 import { useCardPreview } from '../components/CardPreview'
+import { useMediaQuery } from '../utils/useMediaQuery'
+import CardPane, { useCardDecks } from '../components/CardPane'
+import SwipeCards from '../components/SwipeCards'
 
 const MANA_ORDER = ['W', 'U', 'B', 'R', 'G', 'C']
 const MANA_LABELS = { W: 'White', U: 'Blue', B: 'Black', R: 'Red', G: 'Green', C: 'Colorless' }
@@ -19,6 +22,11 @@ const POPULARITY_FILTERS = [
   { key: 'played', label: 'Played', test: c => c.popularityDecks > 0 },
 ]
 const PAGE_SIZE = 50
+
+// As on the Archetypes Index: wide enough for the list beside the card selected;
+// below Tailwind's lg, one card at a time, swiped; in between, the table.
+const WIDE_QUERY = '(min-width: 1440px)'
+const NARROW_QUERY = '(max-width: 1023px)'
 
 function ManaIcon({ color, size = 'w-6 h-6' }) {
   return (
@@ -107,6 +115,12 @@ export default function CardsIndex() {
   const paginationRef = useRef(null)
   const pageInitRef = useRef(true)
   const navigate = useNavigate()
+  const wide = useMediaQuery(WIDE_QUERY)
+  const narrow = useMediaQuery(NARROW_QUERY)
+  const [selectedSlug, setSelectedSlug] = useState(null)
+  // details of the cards opened, by slug; null for those that failed to load
+  const [details, setDetails] = useState({})
+  const requested = useRef(new Set())
   const { bind: bindPreview, preview } = useCardPreview()
 
   useEffect(() => {
@@ -244,6 +258,7 @@ export default function CardsIndex() {
 
   useEffect(() => {
     if (pageInitRef.current) { pageInitRef.current = false; return }
+    if (wide || narrow) return
     const el = paginationRef.current
     if (!el) return
     const headerHeight = document.querySelector('header')?.offsetHeight ?? 64
@@ -287,11 +302,35 @@ export default function CardsIndex() {
 
   useEffect(() => { setPage(0) }, [sorted])
 
+  // The card shown beside the list (wide) or as the swipe card (narrow): the one picked, else the first
+  const selectedIndex = sorted.findIndex(c => c.slug === selectedSlug)
+  const cardIndex = Math.max(0, selectedIndex)
+  const selected = sorted[cardIndex]?.slug
+  const showsPane = wide || narrow
+
+  // the details of the card shown, and of the ones a swipe away, are loaded ahead
+  const wantedKey = (narrow
+    ? [sorted[cardIndex], sorted[cardIndex + 1], sorted[cardIndex - 1]].filter(Boolean).map(c => c.slug)
+    : (wide && selected ? [selected] : [])).join('\n')
+  useEffect(() => {
+    for (const slug of wantedKey ? wantedKey.split('\n') : []) {
+      if (slug in details || requested.current.has(slug)) continue
+      requested.current.add(slug)
+      fetch(`/data/card-details/${slug}.json`)
+        .then(r => (r.ok ? r.json() : null))
+        .catch(() => null)
+        .then(data => setDetails(prev => ({ ...prev, [slug]: data })))
+    }
+  }, [wantedKey, details])
+  const paneDecks = useCardDecks(showsPane ? selected : null)
+
   const totalPages = Math.ceil(sorted.length / PAGE_SIZE)
   const pageCards = sorted.slice(page * PAGE_SIZE, (page + 1) * PAGE_SIZE)
 
   useEnterShortcut(() => {
-    if (pageCards.length > 0) navigate(`/cards/${pageCards[0].slug}`)
+    if (sorted.length === 0) return
+    if (wide) setSelectedSlug(sorted[0].slug)
+    else navigate(`/cards/${sorted[0].slug}`)
   }, searchRef)
 
   const paginationBar = (ref) => totalPages > 1 && (
@@ -306,6 +345,20 @@ export default function CardsIndex() {
         Next →
       </button>
     </div>
+  )
+
+  const pane = selected && (
+    <CardPane card={details[selected]} name={sorted[cardIndex]?.name} decks={paneDecks} pageLink />
+  )
+  const countLine = (
+    <p className="text-xs text-gray-500">
+      {filtered.length} card{filtered.length !== 1 ? 's' : ''}
+      {popularityMetagame && (
+        <> · Popularity: rank by the tournament decks playing it in the current metagame,{' '}
+          <Link to={`/metagames/${popularityMetagame.slug}`} className="text-gray-400 hover:text-amber-400 transition-colors">{popularityMetagame.name}</Link>
+        </>
+      )}
+    </p>
   )
 
   return (
@@ -432,16 +485,51 @@ export default function CardsIndex() {
           <p className="text-gray-500 text-sm">Loading…</p>
         ) : (
           <>
-            <p className="text-xs text-gray-500">
-              {filtered.length} card{filtered.length !== 1 ? 's' : ''}
-              {popularityMetagame && (
-                <> · Popularity: rank by the tournament decks playing it in the current metagame,{' '}
-                  <Link to={`/metagames/${popularityMetagame.slug}`} className="text-gray-400 hover:text-amber-400 transition-colors">{popularityMetagame.name}</Link>
-                </>
-              )}
-            </p>
+            {countLine}
             {filtered.length === 0 ? (
               <p className="text-gray-500 text-sm">No cards found.</p>
+            ) : narrow ? (
+              <SwipeCards index={cardIndex} count={sorted.length} cardKey={selected}
+                onChange={i => setSelectedSlug(sorted[i].slug)}
+                label={`${(cardIndex + 1).toLocaleString('en-US')} of ${sorted.length.toLocaleString('en-US')}`}
+                hint="Swipe the card left or right for the next or previous card.">
+                <div className="bg-gray-900 border border-gray-700 rounded-xl p-4">{pane}</div>
+              </SwipeCards>
+            ) : wide ? (
+              <div className="flex gap-6 items-start">
+                <div className="w-96 2xl:w-[28rem] shrink-0 sticky top-24 max-h-[calc(100vh-7rem)] overflow-y-auto">
+                  {paginationBar(null)}
+                  <ul className="border border-gray-700 rounded-xl overflow-hidden bg-gray-900 divide-y divide-gray-700/50">
+                    {pageCards.map(c => {
+                      const open = c.slug === selected
+                      return (
+                        <li key={c.slug}>
+                          <button onClick={() => setSelectedSlug(c.slug)} aria-current={open ? 'true' : undefined}
+                            className={`w-full flex items-center gap-3 px-3 py-2 text-left border-l-2 transition-colors ${open ? 'bg-gray-800 border-amber-400' : 'border-transparent hover:bg-gray-800/60'}`}>
+                            <span className="min-w-0 flex-1">
+                              <span className={`block truncate ${open ? 'text-amber-400' : 'text-gray-200'}`}>{c.name}</span>
+                              <span className="block truncate text-xs text-gray-500">{(c.types || []).join(', ')}{c.cmc != null ? ` · CMC ${c.cmc}` : ''}</span>
+                            </span>
+                            <span className="flex gap-0.5 shrink-0">
+                              {(c.colors || []).length === 0
+                                ? <ManaIcon color="C" size="w-4 h-4" />
+                                : MANA_ORDER.filter(m => m !== 'C' && (c.colors || []).includes(m)).map(m => (
+                                    <ManaIcon key={m} color={m} size="w-4 h-4" />
+                                  ))}
+                            </span>
+                            {popularityMetagame && (
+                              <span className="w-14 shrink-0 text-right font-mono text-xs text-amber-400">
+                                {c.popularity != null ? `#${c.popularity.toLocaleString('en-US')}` : '—'}
+                              </span>
+                            )}
+                          </button>
+                        </li>
+                      )
+                    })}
+                  </ul>
+                </div>
+                <div className="flex-1 min-w-0">{pane}</div>
+              </div>
             ) : (
               <>
                 {paginationBar(paginationRef)}
