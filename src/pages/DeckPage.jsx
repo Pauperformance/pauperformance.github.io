@@ -9,6 +9,7 @@ import { ColorsPie, CardTypesRadar, SampleHand } from '../components/DeckStats'
 import VideosSection from '../components/VideosSection'
 import { OracleText, useCardData, useCardPreview } from '../components/CardPreview'
 import { cardLinkSlug, useCardPages } from '../utils/cardPages'
+import { getSettings } from '../utils/settings'
 import { MetagameBadge } from '../components/Metagame'
 import { computeTypicalList } from '../utils/typicalList'
 import { formatDate } from '../utils/dates'
@@ -117,7 +118,9 @@ function groupCards(cards, cardTypes) {
   return TYPE_ORDER.filter(t => groups[t]).map(t => [t, groups[t]])
 }
 
-function CardTile({ c, cardPages, bindPreview, image }) {
+const TILE_SIZE = 'w-[calc((100%-1rem)/3)] sm:w-36 lg:w-48'
+
+function CardTile({ c, cardPages, bindPreview, image, sizeClass = TILE_SIZE }) {
   const slug = cardLinkSlug(cardPages, c.name)
   // the card's Oracle text pops up beside it on hover (its image is already there)
   const bound = bindPreview(c.name, { slug: slug || undefined, image, showImage: false })
@@ -133,18 +136,19 @@ function CardTile({ c, cardPages, bindPreview, image }) {
     </>
   )
   // same size as the cards of the sample hand
-  const cls = 'relative block w-[calc((100%-1rem)/3)] sm:w-36 lg:w-48 hover:brightness-110 transition'
+  const cls = `relative block ${sizeClass} hover:brightness-110 transition`
   return slug
     ? <Link to={`/cards/${slug}`} className={cls} {...bound}>{content}</Link>
     : <div className={cls} {...bound}>{content}</div>
 }
 
-export function VisualList({ cards, label, cardImages, cardTypes, groupByType, cardPages, bindPreview }) {
+// tileClass: the size of the cards, where they are to be smaller (the settings' preview)
+export function VisualList({ cards, label, cardImages, cardTypes, groupByType, cardPages, bindPreview, tileClass }) {
   if (!cards || !cards.length) return null
   const total = cards.reduce((sum, c) => sum + c.qty, 0)
   const grid = list => (
     <div className="flex flex-wrap gap-2">
-      {list.map((c, i) => <CardTile key={i} c={c} cardPages={cardPages} bindPreview={bindPreview} image={cardImages[c.name]} />)}
+      {list.map((c, i) => <CardTile key={i} c={c} cardPages={cardPages} bindPreview={bindPreview} image={cardImages[c.name]} sizeClass={tileClass} />)}
     </div>
   )
   return (
@@ -243,9 +247,10 @@ export default function DeckPage() {
   const [cardTypes, setCardTypes] = useState({})
   const [manaCosts, setManaCosts] = useState({})
   const [hoveredCard, setHoveredCard] = useState(null)
-  const [groupByType, setGroupByType] = useState(true)
-  const [visual, setVisual] = useState(false)
-  const [sort, setSort] = useState('name')
+  // each starts from the visitor's settings (see the Settings page)
+  const [groupByType, setGroupByType] = useState(() => getSettings().deckView.groupByType)
+  const [visual, setVisual] = useState(() => getSettings().deckView.visual)
+  const [sort, setSort] = useState(() => getSettings().deckView.sort)
   const [cmc, setCmc] = useState({})
   // Width of the lists and of the hover panel beside them in the text view:
   // the visual view (which has no panel) takes both on desktop, so the

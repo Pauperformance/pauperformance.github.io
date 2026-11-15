@@ -124,7 +124,7 @@ export default function MetaPie({ shares, minListedShare = 0, listClassName, lis
           />
         </div>
 
-        <div className={`flex-1 min-w-0 ${listClassName}`} style={listStyle}>
+        <div className={`flex-1 min-w-0 w-full sm:w-auto ${listClassName}`} style={listStyle}>
           {listed.map((entry, i) => row(
             entry.archetype_name,
             i < SHOWN_SLICES ? CHART_COLORS[i] : OTHER_COLOR,
@@ -141,7 +141,7 @@ export default function MetaPie({ shares, minListedShare = 0, listClassName, lis
           {unlisted.length > 0 && row(
             'other',
             OTHER_COLOR,
-            <span className="text-sm text-gray-500 flex-1 whitespace-nowrap">
+            <span className="text-sm text-gray-500 flex-1 min-w-0 truncate">
               {minListedShare > 0
                 ? `Other (< ${minListedShare}%)`
                 : `Other (${unlisted.length} archetype${unlisted.length === 1 ? '' : 's'})`}

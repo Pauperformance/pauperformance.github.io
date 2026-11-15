@@ -13,6 +13,7 @@ import { nameToSlug, pilotToSlug } from '../utils/slugs'
 import { firstYearOf, formatShortDate } from '../utils/dates'
 import { LANG_FLAG } from '../utils/languages'
 import VideosSection, { MonthPicker } from '../components/VideosSection'
+import { FilterPanel } from '../components/FilterSheet'
 
 const POPULARITY_METAGAMES = '/data/archetype-popularity-metagames.json'
 const MANA_ORDER = ['W', 'U', 'B', 'R', 'G', 'C']
@@ -158,6 +159,8 @@ function IntelDecksSection({ name }) {
   const [filterDateTo, setFilterDateTo] = useState('')
   const [filterPilot, setFilterPilot] = useState('')
   const isDesktop = useIsDesktop()
+  // the section, for the phone's filter button to show only while it is on screen
+  const sectionRef = useRef(null)
 
   useEffect(() => {
     fetch(`/data/intel-decks/${name}.json`)
@@ -216,9 +219,15 @@ function IntelDecksSection({ name }) {
     detail: d.tournament_name,
   }))
 
+  const clearFilters = () => {
+    setFilterTournament(''); setFilterPilot(''); setFilterDateFrom(''); setFilterDateTo(''); setPage(0)
+  }
+
   return (
-    <div className="space-y-3">
-      <div className="bg-gray-800 border border-gray-700 rounded-xl p-4 space-y-3">
+    <div ref={sectionRef} className="space-y-3">
+      <FilterPanel scopeRef={sectionRef} onClear={clearFilters}
+        activeCount={(filterTournament ? 1 : 0) + (filterPilot ? 1 : 0) + (filterDateFrom ? 1 : 0) + (filterDateTo ? 1 : 0)}
+        summary={`${filtered.length} decklist${filtered.length !== 1 ? 's' : ''}`}>
         <div className="relative">
           <input
             type="search" placeholder="Search tournaments…" value={filterTournament} onChange={setFilter(setFilterTournament)}
@@ -259,7 +268,7 @@ function IntelDecksSection({ name }) {
             )}
           </div>
         </div>
-      </div>
+      </FilterPanel>
       <p className="text-xs text-gray-500">
         {filtered.length !== decks.length ? `${filtered.length} of ${decks.length}` : decks.length} decklists
       </p>

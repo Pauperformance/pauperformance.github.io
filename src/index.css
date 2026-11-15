@@ -21,6 +21,21 @@
   --color-amber-200: #f0c57a;
 }
 
+/* Scrollbars in the site's palette: the accent yellow on the page's dark.
+   .no-scrollbar (below) still hides them where wanted. */
+* {
+  scrollbar-width: thin;
+  scrollbar-color: var(--color-amber-400) var(--color-gray-900);
+}
+
+/* Browsers without scrollbar-color (Safari before 18.2) */
+@supports not (scrollbar-color: auto) {
+  *::-webkit-scrollbar { width: 10px; height: 10px; }
+  *::-webkit-scrollbar-track { background: var(--color-gray-900); }
+  *::-webkit-scrollbar-thumb { background: var(--color-amber-400); border-radius: 9999px; border: 2px solid var(--color-gray-900); }
+  *::-webkit-scrollbar-thumb:hover { background: var(--color-amber-200); }
+}
+
 /* Brainstorm glyph ring (pages/Home.jsx): the glyph at rest in front flares
    and keeps glowing, and light spreads out under its archetype card */
 @keyframes glyph-select {

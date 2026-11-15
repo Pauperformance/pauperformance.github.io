@@ -2,11 +2,64 @@ import { useState, useEffect } from 'react'
 import { createPortal } from 'react-dom'
 import { useMediaQuery } from '../utils/useMediaQuery'
 
+// Several sheets on one page (the archetype page has one for its decks, one for
+// its videos) would float their buttons in the same corner. A sheet given a
+// scope (a ref to the element of its section) only shows its button while that
+// section is the one most in view.
+const scopes = new Map() // element -> setActive
+let scopeFrame = null
+
+function updateScopes() {
+  scopeFrame = null
+  let best = null
+  let bestShown = 0
+  for (const el of scopes.keys()) {
+    const r = el.getBoundingClientRect()
+    const shown = Math.min(r.bottom, window.innerHeight) - Math.max(r.top, 0)
+    if (shown > bestShown) { best = el; bestShown = shown }
+  }
+  for (const [el, setActive] of scopes) setActive(el === best)
+}
+
+function scheduleScopes() {
+  if (scopeFrame === null) scopeFrame = requestAnimationFrame(updateScopes)
+}
+
+// Whether the sheet shows: always, without a scope
+function useScopeActive(scopeRef) {
+  const [active, setActive] = useState(!scopeRef)
+  useEffect(() => {
+    const el = scopeRef && scopeRef.current
+    if (!el) return
+    if (!scopes.size) {
+      window.addEventListener('scroll', scheduleScopes, { passive: true })
+      window.addEventListener('resize', scheduleScopes)
+    }
+    scopes.set(el, setActive)
+    // the section grows and shrinks (results load, filters apply)
+    const observer = new ResizeObserver(scheduleScopes)
+    observer.observe(el)
+    scheduleScopes()
+    return () => {
+      observer.disconnect()
+      scopes.delete(el)
+      if (!scopes.size) {
+        window.removeEventListener('scroll', scheduleScopes)
+        window.removeEventListener('resize', scheduleScopes)
+      }
+      scheduleScopes()
+    }
+  }, [scopeRef])
+  return active
+}
+
 // Mobile filters: a round button floats at the bottom of the screen and opens
 // the filters in a sheet above it. The button closes the sheet again, and the
 // results behind it are already up to date.
-export default function FilterSheet({ activeCount = 0, summary, onClear, children }) {
+// scopeRef: see useScopeActive above.
+export default function FilterSheet({ activeCount = 0, summary, onClear, scopeRef, children }) {
   const [open, setOpen] = useState(false)
+  const active = useScopeActive(scopeRef)
 
   useEffect(() => {
     if (!open) return
@@ -14,6 +67,9 @@ export default function FilterSheet({ activeCount = 0, summary, onClear, childre
     window.addEventListener('keydown', onKey)
     return () => window.removeEventListener('keydown', onKey)
   }, [open])
+
+  // out of its section's reach, and closed: nothing floats
+  if (!active && !open) return null
 
   // Rendered in <body>: inside a page's `space-y-*` stack it would pick up the
   // stack's margins and float above the bottom edge of the screen.
@@ -59,8 +115,8 @@ export default function FilterSheet({ activeCount = 0, summary, onClear, childre
 
 // The filters of an index page: the usual box above the results, or on phones
 // (the same width the swipe cards use) the floating sheet.
-export function FilterPanel({ activeCount, onClear, summary, children }) {
+export function FilterPanel({ activeCount, onClear, summary, scopeRef, children }) {
   const phone = useMediaQuery('(max-width: 1023px)')
-  if (phone) return <FilterSheet activeCount={activeCount} onClear={onClear} summary={summary}>{children}</FilterSheet>
+  if (phone) return <FilterSheet activeCount={activeCount} onClear={onClear} summary={summary} scopeRef={scopeRef}>{children}</FilterSheet>
   return <div className="bg-gray-800 border border-gray-700 rounded-xl p-4 space-y-3">{children}</div>
 }

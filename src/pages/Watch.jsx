@@ -7,6 +7,7 @@ import { nameToSlug } from '../utils/slugs'
 import { firstYearOf, formatShortDate } from '../utils/dates'
 import { LANG_FLAG, LANG_CANONICAL, LANG_NAME } from '../utils/languages'
 import VideoCard from '../components/VideoCard'
+import { getSettings } from '../utils/settings'
 
 const LANG_DISPLAY = Object.fromEntries(Object.entries(LANG_NAME).map(([l, name]) => [l, `${LANG_FLAG[l]} ${name}`]))
 
@@ -65,13 +66,21 @@ export default function Watch() {
   const [search, setSearch] = useState('')
   const searchRef = useSearchShortcut()
   const [activeCreators, setActiveCreators] = useState(new Set())
-  const [activeLanguages, setActiveLanguages] = useState(new Set())
+  // the languages shown: those of the visitor's settings to start with (none: all)
+  const [activeLanguages, setActiveLanguages] = useState(() => new Set(getSettings().watch.languages))
   const [activeArchetypes, setActiveArchetypes] = useState(new Set())
   const [archetypeSearch, setArchetypeSearch] = useState('')
   const [dropdownOpen, setDropdownOpen] = useState(false)
-  const [creatorDropdownOpen, setCreatorDropdownOpen] = useState(false)
+  // the creator menu: closed, or open to add a creator to show ('show') or to hide ('hide')
+  const [creatorMenu, setCreatorMenu] = useState('')
+  const creatorDropdownOpen = creatorMenu !== ''
+  // the creators hidden: those of the visitor's settings to start with
+  const [excludedCreators, setExcludedCreators] = useState(() => new Set(getSettings().watch.hiddenCreators))
   const [creatorSearch, setCreatorSearch] = useState('')
-  const [activeType, setActiveType] = useState('videos')
+  // videos or shorts to start with: the visitor's setting
+  const [activeType, setActiveType] = useState(() => getSettings().watch.type)
+  // whether the videos preview (play without pressing play): the visitor's setting to start with
+  const [previews, setPreviews] = useState(() => getSettings().videos.previews)
   const [filterDateFrom, setFilterDateFrom] = useState('')
   const [filterDateTo, setFilterDateTo] = useState('')
   const [toWrapped, setToWrapped] = useState(false)
@@ -122,7 +131,7 @@ export default function Watch() {
     if (!creatorDropdownOpen) return
     function handleClick(e) {
       if (creatorDropdownRef.current && !creatorDropdownRef.current.contains(e.target)) {
-        setCreatorDropdownOpen(false)
+        setCreatorMenu('')
         setCreatorSearch('')
       }
     }
@@ -139,6 +148,9 @@ export default function Watch() {
   }
   function toggleCreator(c) {
     setActiveCreators(prev => { const n = new Set(prev); n.has(c) ? n.delete(c) : n.add(c); return n })
+  }
+  function toggleExcludedCreator(c) {
+    setExcludedCreators(prev => { const n = new Set(prev); n.has(c) ? n.delete(c) : n.add(c); return n })
   }
   function toggleArchetype(a) {
     setActiveArchetypes(prev => { const n = new Set(prev); n.has(a) ? n.delete(a) : n.add(a); return n })
@@ -162,6 +174,7 @@ export default function Watch() {
     return videos.filter(v => {
       if (q && !v.title.toLowerCase().includes(q)) return false
       if (activeCreators.size > 0 && !activeCreators.has(v.creator_name)) return false
+      if (excludedCreators.has(v.creator_name)) return false
       if (activeLanguages.size > 0 && !activeLanguages.has(LANG_CANONICAL[v.language] ?? v.language)) return false
       if (activeArchetypes.size > 0 && !activeArchetypes.has(v.archetype)) return false
       if (activeType === 'videos' && v.is_short === true) return false
@@ -170,7 +183,7 @@ export default function Watch() {
       if (filterDateTo && v.date.slice(0, 7) > filterDateTo) return false
       return true
     })
-  }, [videos, search, activeCreators, activeLanguages, activeArchetypes, activeType, filterDateFrom, filterDateTo])
+  }, [videos, search, activeCreators, activeLanguages, activeArchetypes, activeType, filterDateFrom, filterDateTo, excludedCreators])
 
   const firstYear = useMemo(() => firstYearOf(videos, 'date'), [videos])
 
@@ -218,6 +231,7 @@ export default function Watch() {
         if (v.archetype !== a) return false
         if (q && !v.title.toLowerCase().includes(q)) return false
         if (activeCreators.size > 0 && !activeCreators.has(v.creator_name)) return false
+        if (excludedCreators.has(v.creator_name)) return false
         if (activeLanguages.size > 0 && !activeLanguages.has(LANG_CANONICAL[v.language] ?? v.language)) return false
         if (activeType === 'videos' && v.is_short === true) return false
         if (activeType === 'shorts' && v.is_short !== true) return false
@@ -226,12 +240,12 @@ export default function Watch() {
         return true
       })
     })
-  }, [archetypes, archetypeSearch, activeArchetypes, videos, search, activeCreators, activeLanguages, activeType, filterDateFrom, filterDateTo])
+  }, [archetypes, archetypeSearch, activeArchetypes, videos, search, activeCreators, excludedCreators, activeLanguages, activeType, filterDateFrom, filterDateTo])
 
   const visibleCreators = useMemo(() => {
     const q = search.trim().toLowerCase()
     return creators.filter(c => {
-      if (activeCreators.has(c)) return false
+      if (activeCreators.has(c) || excludedCreators.has(c)) return false
       if (creatorSearch && !c.toLowerCase().includes(creatorSearch.toLowerCase())) return false
       return videos.some(v => {
         if (v.creator_name !== c) return false
@@ -245,7 +259,7 @@ export default function Watch() {
         return true
       })
     })
-  }, [creators, creatorSearch, activeCreators, videos, search, activeLanguages, activeArchetypes, activeType, filterDateFrom, filterDateTo])
+  }, [creators, creatorSearch, activeCreators, excludedCreators, videos, search, activeLanguages, activeArchetypes, activeType, filterDateFrom, filterDateTo])
 
   return (
     <Layout>
@@ -255,8 +269,8 @@ export default function Watch() {
           <p className="mt-2 text-gray-400 text-sm">Pauper videos from creators around the world.</p>
         </div>
 
-        <FilterPanel activeCount={(search ? 1 : 0) + activeCreators.size + activeLanguages.size + activeArchetypes.size + (filterDateFrom ? 1 : 0) + (filterDateTo ? 1 : 0)}
-          onClear={() => { setSearch(''); setActiveCreators(new Set()); setActiveLanguages(new Set()); setActiveArchetypes(new Set()); setFilterDateFrom(''); setFilterDateTo('') }}
+        <FilterPanel activeCount={(search ? 1 : 0) + activeCreators.size + excludedCreators.size + activeLanguages.size + activeArchetypes.size + (filterDateFrom ? 1 : 0) + (filterDateTo ? 1 : 0)}
+          onClear={() => { setSearch(''); setActiveCreators(new Set()); setExcludedCreators(new Set()); setActiveLanguages(new Set()); setActiveArchetypes(new Set()); setFilterDateFrom(''); setFilterDateTo('') }}
           summary={`${filtered.length} video${filtered.length !== 1 ? 's' : ''}`}>
           <div className="relative">
             <input
@@ -290,22 +304,34 @@ export default function Watch() {
             <FilterButton active={activeType === 'videos'} onClick={() => toggleType('videos')}>Videos</FilterButton>
             <FilterButton active={activeType === 'shorts'} onClick={() => toggleType('shorts')}>Shorts</FilterButton>
           </div>
+          <div className="flex flex-wrap gap-2 items-center">
+            <span className="text-sm text-gray-500 w-16 shrink-0" title="Video previews, without pressing play">Autoplay:</span>
+            <FilterButton active={previews} onClick={() => setPreviews(true)}>On</FilterButton>
+            <FilterButton active={!previews} onClick={() => setPreviews(false)}>Off</FilterButton>
+          </div>
           <div className="flex flex-col gap-2">
             <div className="flex items-center gap-2">
               <span className="text-sm text-gray-500 w-16 shrink-0">Creator:</span>
               <div className="relative" ref={creatorDropdownRef}>
-                <button
-                  onClick={() => setCreatorDropdownOpen(o => !o)}
-                  className="bg-gray-900 border border-gray-600 rounded-lg px-3 py-1 text-sm text-gray-300 hover:border-gray-400 focus:outline-none focus:border-amber-400 cursor-pointer flex items-center gap-2">
-                  Add creator… <span className="text-gray-500 text-xs">▾</span>
-                </button>
+                <div className="flex flex-wrap gap-2">
+                  <button
+                    onClick={() => { setCreatorMenu(m => m === 'show' ? '' : 'show'); setCreatorSearch('') }}
+                    className="bg-gray-900 border border-gray-600 rounded-lg px-3 py-1 text-sm text-gray-300 hover:border-gray-400 focus:outline-none focus:border-amber-400 cursor-pointer flex items-center gap-2">
+                    Add creator… <span className="text-gray-500 text-xs">▾</span>
+                  </button>
+                  <button
+                    onClick={() => { setCreatorMenu(m => m === 'hide' ? '' : 'hide'); setCreatorSearch('') }}
+                    className="bg-gray-900 border border-gray-600 rounded-lg px-3 py-1 text-sm text-gray-300 hover:border-gray-400 focus:outline-none focus:border-amber-400 cursor-pointer flex items-center gap-2">
+                    Hide creator… <span className="text-gray-500 text-xs">▾</span>
+                  </button>
+                </div>
                 {creatorDropdownOpen && (
                   <div className="absolute z-20 mt-1 w-56 bg-gray-900 border border-gray-600 rounded-lg shadow-lg overflow-hidden">
                     <div className="p-2">
                       <input
                         autoFocus
                         type="search"
-                        placeholder="Search creators…"
+                        placeholder={creatorMenu === 'hide' ? 'Search creators to hide…' : 'Search creators…'}
                         value={creatorSearch}
                         onChange={e => setCreatorSearch(e.target.value)}
                         className="w-full bg-gray-800 border border-gray-600 rounded px-2 py-1 text-sm text-gray-100 placeholder-gray-500 focus:outline-none focus:border-amber-400"
@@ -317,7 +343,7 @@ export default function Watch() {
                         : visibleCreators.map(c => (
                             <li key={c}>
                               <button
-                                onClick={() => { toggleCreator(c); setCreatorSearch(''); setCreatorDropdownOpen(false) }}
+                                onClick={() => { (creatorMenu === 'hide' ? toggleExcludedCreator : toggleCreator)(c); setCreatorSearch(''); setCreatorMenu('') }}
                                 className="w-full text-left px-3 py-1.5 text-sm text-gray-300 hover:bg-gray-800 hover:text-white transition-colors">
                                 {c}
                               </button>
@@ -329,12 +355,18 @@ export default function Watch() {
                 )}
               </div>
             </div>
-            {activeCreators.size > 0 && (
+            {(activeCreators.size > 0 || excludedCreators.size > 0) && (
               <div className="flex flex-wrap gap-1.5 pl-[calc(theme(spacing.2)+4rem)]">
                 {[...activeCreators].map(c => (
                   <span key={c} className="inline-flex items-center gap-1 px-3 py-1 rounded-full text-xs font-semibold bg-amber-400 text-gray-900">
                     {c}
                     <button onClick={() => toggleCreator(c)} className="hover:text-gray-700 leading-none">×</button>
+                  </span>
+                ))}
+                {[...excludedCreators].map(c => (
+                  <span key={c} title="Hidden" className="inline-flex items-center gap-1 px-3 py-1 rounded-full text-xs font-semibold bg-red-900/60 text-red-100 border border-red-700">
+                    <span className="line-through">{c}</span>
+                    <button onClick={() => toggleExcludedCreator(c)} className="hover:text-white leading-none" aria-label={`Show ${c} again`}>×</button>
                   </span>
                 ))}
               </div>
@@ -459,7 +491,7 @@ export default function Watch() {
                   )}
 
                   <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
-                    {visibleVideos.map(v => <VideoCard key={v.video_id} v={v} />)}
+                    {visibleVideos.map(v => <VideoCard key={v.video_id} v={v} previews={previews} />)}
                   </div>
 
                   {viewMode === 'paginated' && totalPages > 1 && (
