@@ -1,16 +1,78 @@
-import { useState, useRef } from 'react'
+import { useState, useRef, useEffect } from 'react'
 import { Link } from 'react-router-dom'
+import { getSettings } from '../utils/settings'
+import { registerPreviewCard } from '../utils/videoPreviews'
 import { nameToSlug } from '../utils/slugs'
 import { formatShortDate } from '../utils/dates'
 import { LANG_FLAG, LANG_CANONICAL, LANG_NAME } from '../utils/languages'
 
+// How long the mouse rests on a thumbnail before its preview starts, and how
+// long a preview plays at most
+const PREVIEW_HOVER_MS = 200
+const PREVIEW_MAX_MS = 15000
+
+// The embedded player, muted and without controls, from the beginning of the video
+function previewUrl(v) {
+  const params = new URLSearchParams({
+    autoplay: '1', mute: '1', controls: '0', playsinline: '1', disablekb: '1', fs: '0',
+    modestbranding: '1', rel: '0', iv_load_policy: '3',
+    loop: '1', playlist: v.video_id,
+  })
+  return `https://www.youtube.com/embed/${v.video_id}?${params}`
+}
+
 // A video: its player, title, creator, language, archetype (unless
 // showArchetype is false, on the archetype's own page), decklist and date.
-export default function VideoCard({ v, showArchetype = true }) {
+// previews: whether the video previews on hover (see below); the visitor's
+// settings when not given.
+export default function VideoCard({ v, showArchetype = true, previews }) {
   const [playing, setPlaying] = useState(false)
   const containerRef = useRef(null)
 
+  // The preview: the video playing muted over its thumbnail, without pressing play.
+  // On hover (after a short rest of the mouse) on desktop; on touch screens for the
+  // card in the middle of the screen (utils/videoPreviews.js). Off when `previews`
+  // is false (the visitor's settings when the page doesn't say), with reduced
+  // motion, or with Save-Data.
+  const [previewing, setPreviewing] = useState(false)
+  const [previewReady, setPreviewReady] = useState(false)
+  const [capable] = useState(() => {
+    if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) return null
+    if (navigator.connection && navigator.connection.saveData) return null
+    return window.matchMedia('(hover: none)').matches ? 'touch' : 'hover'
+  })
+  const [fromSettings] = useState(() => getSettings().videos.previews)
+  const mode = (previews === undefined ? fromSettings : previews) ? capable : null
+  const hoverTimer = useRef(null)
+
+  // switched off while a preview plays
+  useEffect(() => { if (!mode) setPreviewing(false) }, [mode])
+
+  useEffect(() => {
+    if (mode !== 'touch' || playing) return
+    return registerPreviewCard(containerRef.current, setPreviewing)
+  }, [mode, playing])
+
+  // a preview doesn't go on for ever: back to the thumbnail after a while
+  useEffect(() => {
+    if (!previewing) { setPreviewReady(false); return }
+    const t = setTimeout(() => setPreviewing(false), PREVIEW_MAX_MS)
+    return () => clearTimeout(t)
+  }, [previewing])
+
+  useEffect(() => () => clearTimeout(hoverTimer.current), [])
+
+  const onEnter = () => {
+    if (mode !== 'hover' || playing) return
+    hoverTimer.current = setTimeout(() => setPreviewing(true), PREVIEW_HOVER_MS)
+  }
+  const onLeave = () => {
+    clearTimeout(hoverTimer.current)
+    if (mode === 'hover') setPreviewing(false)
+  }
+
   function handlePlay() {
+    setPreviewing(false)
     setPlaying(true)
     if (containerRef.current && containerRef.current.requestFullscreen) {
       containerRef.current.requestFullscreen().catch(() => {})
@@ -19,7 +81,7 @@ export default function VideoCard({ v, showArchetype = true }) {
 
   return (
     <div className="group bg-gray-800 border border-gray-700 rounded-xl overflow-hidden hover:border-amber-400/50 transition-all flex flex-col">
-      <div ref={containerRef} className="relative aspect-video bg-gray-900 overflow-hidden">
+      <div ref={containerRef} onMouseEnter={onEnter} onMouseLeave={onLeave} className="relative aspect-video bg-gray-900 overflow-hidden">
         {playing ? (
           <iframe
             src={`https://www.youtube.com/embed/${v.video_id}?autoplay=1`}
@@ -44,6 +106,18 @@ export default function VideoCard({ v, showArchetype = true }) {
               </div>
             </div>
           </button>
+        )}
+        {/* the preview, above the thumbnail but not catching the clicks: they still play the video */}
+        {previewing && !playing && (
+          <iframe
+            src={previewUrl(v)}
+            title=""
+            aria-hidden="true"
+            tabIndex={-1}
+            allow="autoplay; encrypted-media"
+            onLoad={() => setPreviewReady(true)}
+            className={`absolute inset-0 w-full h-full pointer-events-none transition-opacity duration-300 ${previewReady ? 'opacity-100' : 'opacity-0'}`}
+          />
         )}
       </div>
       <div className="p-3 flex flex-col gap-1.5 flex-1">

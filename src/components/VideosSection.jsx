@@ -2,6 +2,7 @@ import { useState, useEffect, useMemo, useRef } from 'react'
 import { firstYearOf } from '../utils/dates'
 import { LANG_FLAG, LANG_CANONICAL, LANG_NAME } from '../utils/languages'
 import VideoCard from './VideoCard'
+import { FilterPanel } from './FilterSheet'
 
 // The videos of an archetype, with their filters: on the archetype page, and
 // on the pages of its decks.
@@ -71,6 +72,8 @@ export default function VideosSection({ videos: allVideos }) {
   const sentinelRef = useRef(null)
   const paginationRef = useRef(null)
   const pageInitRef = useRef(true)
+  // the section, for the phone's filter button to show only while it is on screen
+  const sectionRef = useRef(null)
 
   const creators = useMemo(() => [...new Set((allVideos || []).map(v => v.creator_name).filter(Boolean))].sort(), [allVideos])
   const languages = useMemo(() => [...new Set((allVideos || []).map(v => LANG_CANONICAL[v.language] ?? v.language).filter(Boolean))].sort(), [allVideos])
@@ -161,8 +164,11 @@ export default function VideosSection({ videos: allVideos }) {
   if (!allVideos?.length) return <p className="text-gray-500 text-sm">No videos recorded.</p>
 
   return (
-    <div className="space-y-3">
-      <div className="bg-gray-800 border border-gray-700 rounded-xl p-4 space-y-3">
+    <div ref={sectionRef} className="space-y-3">
+      <FilterPanel scopeRef={sectionRef}
+        activeCount={(search ? 1 : 0) + activeCreators.size + activeLanguages.size + (filterDateFrom ? 1 : 0) + (filterDateTo ? 1 : 0)}
+        onClear={() => { setSearch(''); setActiveCreators(new Set()); setActiveLanguages(new Set()); setFilterDateFrom(''); setFilterDateTo('') }}
+        summary={`${filtered.length} video${filtered.length !== 1 ? 's' : ''}`}>
         <div className="relative">
           <input type="search" placeholder="Search videos…" value={search} onChange={e => setSearch(e.target.value)}
             onKeyDown={e => { if (e.key === 'Enter') e.target.blur() }}
@@ -228,7 +234,7 @@ export default function VideosSection({ videos: allVideos }) {
             </button>
           </div>
         </div>
-      </div>
+      </FilterPanel>
 
       <p className="text-xs text-gray-500">{filtered.length !== allVideos.length ? `${filtered.length} of ${allVideos.length}` : allVideos.length} video{allVideos.length !== 1 ? 's' : ''}</p>
 

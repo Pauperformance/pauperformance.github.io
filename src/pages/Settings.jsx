@@ -108,8 +108,9 @@ function HiddenCreators({ hidden, onChange }) {
 
 export default function Settings() {
   const settings = useSettings()
-  const { deckView, watch } = settings
+  const { deckView, watch, videos } = settings
   const setDeckView = patch => updateSettings({ deckView: patch })
+  const setVideos = patch => updateSettings({ videos: patch })
   const setWatch = patch => updateSettings({ watch: patch })
   const changed = JSON.stringify(settings) !== JSON.stringify(DEFAULT_SETTINGS)
 
@@ -166,6 +167,12 @@ export default function Settings() {
               )
             })}
           </div>
+        </Setting>
+
+        <Setting
+          title="Video previews"
+          description={<>Play a short preview of a video without pressing play, wherever videos are listed, such as <WatchLink /> and the archetype pages. Turn it off to save data and battery.</>}>
+          <Toggle value={videos.previews} onChange={v => setVideos({ previews: v })} options={[[true, 'On'], [false, 'Off']]} />
         </Setting>
         </div>
         </div>

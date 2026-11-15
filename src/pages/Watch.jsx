@@ -79,6 +79,8 @@ export default function Watch() {
   const [creatorSearch, setCreatorSearch] = useState('')
   // videos or shorts to start with: the visitor's setting
   const [activeType, setActiveType] = useState(() => getSettings().watch.type)
+  // whether the videos preview (play without pressing play): the visitor's setting to start with
+  const [previews, setPreviews] = useState(() => getSettings().videos.previews)
   const [filterDateFrom, setFilterDateFrom] = useState('')
   const [filterDateTo, setFilterDateTo] = useState('')
   const [toWrapped, setToWrapped] = useState(false)
@@ -302,6 +304,11 @@ export default function Watch() {
             <FilterButton active={activeType === 'videos'} onClick={() => toggleType('videos')}>Videos</FilterButton>
             <FilterButton active={activeType === 'shorts'} onClick={() => toggleType('shorts')}>Shorts</FilterButton>
           </div>
+          <div className="flex flex-wrap gap-2 items-center">
+            <span className="text-sm text-gray-500 w-16 shrink-0" title="Video previews, without pressing play">Autoplay:</span>
+            <FilterButton active={previews} onClick={() => setPreviews(true)}>On</FilterButton>
+            <FilterButton active={!previews} onClick={() => setPreviews(false)}>Off</FilterButton>
+          </div>
           <div className="flex flex-col gap-2">
             <div className="flex items-center gap-2">
               <span className="text-sm text-gray-500 w-16 shrink-0">Creator:</span>
@@ -484,7 +491,7 @@ export default function Watch() {
                   )}
 
                   <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
-                    {visibleVideos.map(v => <VideoCard key={v.video_id} v={v} />)}
+                    {visibleVideos.map(v => <VideoCard key={v.video_id} v={v} previews={previews} />)}
                   </div>
 
                   {viewMode === 'paginated' && totalPages > 1 && (

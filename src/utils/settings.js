@@ -11,6 +11,9 @@ export const DEFAULT_SETTINGS = {
   // the Watch page: videos or shorts to start with, the creators left out of it,
   // and the languages to start with (language codes of utils/languages.js; none: all)
   watch: { type: 'videos', hiddenCreators: [], languages: [] },
+  // everywhere videos are listed (Watch, archetype pages…): a muted preview
+  // playing on hover (desktop) or when the video is in the middle of the screen (touch)
+  videos: { previews: true },
 }
 
 const listeners = new Set()
