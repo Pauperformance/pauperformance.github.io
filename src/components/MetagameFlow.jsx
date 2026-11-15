@@ -14,7 +14,7 @@ import { useCardPages, cardLinkSlug } from '../utils/cardPages'
 // previous one's. Metagames without decks (before the first ones recorded)
 // take a short step, showing only their sets and B&Rs.
 
-const STEP_PX = 120        // scroll per metagame with decks
+export const STEP_PX = 120        // scroll per metagame with decks
 const EMPTY_WEIGHT = 0.25  // the step of a metagame without decks, in steps
 const TIMELINE_PX = 84     // timeline per step
 const HOLD = 0.6
@@ -47,7 +47,7 @@ function smooth(x) {
 }
 
 // The step at u (in steps from the first metagame).
-function stepAt(steps, u) {
+export function stepAt(steps, u) {
   let lo = 0, hi = steps.length - 1
   while (lo < hi) {
     const mid = (lo + hi + 1) >> 1
@@ -68,7 +68,7 @@ function timelineName(m) {
   return shortName(m).replace('Banned & Restricted', 'B&R')
 }
 
-function metagameTitle(m) {
+export function metagameTitle(m) {
   return [...m.sets.map(s => s.name), ...m.bans.map(b => b.subtitle)].join(' + ')
 }
 
@@ -86,7 +86,7 @@ function eventsSummary(m) {
   ].filter(Boolean).join(' · ')
 }
 
-function useHeaderHeight() {
+export function useHeaderHeight() {
   const [height, setHeight] = useState(0)
   useLayoutEffect(() => {
     const header = document.querySelector('header')
@@ -100,7 +100,7 @@ function useHeaderHeight() {
   return height
 }
 
-function useViewportHeight() {
+export function useViewportHeight() {
   const [height, setHeight] = useState(() => window.innerHeight)
   useEffect(() => {
     const onResize = () => setHeight(window.innerHeight)
@@ -113,7 +113,7 @@ function useViewportHeight() {
 // slices: the archetypes (all those over the threshold, listed or not); other:
 // the rest, otherTotal: the rest and the archetypes not listed (what the bars
 // call Other, so hovering Other lights them all); extra: those not listed.
-function Donut({ slices, other, otherTotal, extra, center, hovered, onHover }) {
+export function Donut({ slices, other, otherTotal, extra, center, hovered, onHover }) {
   const SIZE = 220, cx = 110, cy = 110, innerR = 62, outerR = 102
   const all = [...slices, ...(other > 0.05 ? [{ name: 'Other', value: other, colors: [OTHER_COLOR] }] : [])]
   const total = all.reduce((s, d) => s + d.value, 0)
@@ -184,7 +184,7 @@ function Bars({ rows, rowPx, otherLabel, scale, changes, slug, hovered, onHover 
             {r.name === 'Other' ? (
               <span className="flex-1 min-w-0 sm:flex-none sm:w-48 shrink-0 truncate text-sm max-sm:text-base text-gray-500">{otherLabel}</span>
             ) : (
-              <Link to={`/archetypes/${nameToSlug(r.name)}`}
+              <Link to={`/archetypes/${nameToSlug(r.name)}?metagame=${slug.split(".")[0]}`}
                 className={`flex-1 min-w-0 sm:flex-none sm:w-48 shrink-0 truncate text-sm max-sm:text-base hover:text-amber-400 transition-colors ${entered ? 'text-amber-200' : 'text-gray-300'}`}>
                 {r.name}
               </Link>
@@ -249,10 +249,21 @@ function useCardMovers(slug, enabled) {
   return enabled && loaded.slug === slug ? loaded.movers : undefined
 }
 
+// A small label on a mover: New (just printed), Banned or Unbanned.
+const BADGE_TONES = {
+  new: 'border-amber-300/70 bg-gray-900/85 text-amber-300',
+  banned: 'border-red-400/70 bg-gray-900/85 text-red-400',
+  unbanned: 'border-green-400/70 bg-gray-900/85 text-green-400',
+}
+function MoverBadge({ badge, large }) {
+  return <span title={badge.title} className={`rounded-full border font-semibold shrink-0 ${large ? 'px-2 text-xs leading-5' : 'px-1.5 text-[10px] leading-4'} ${BADGE_TONES[badge.tone]}`}>{badge.label}</span>
+}
+
 // A card of the movers, as a tile filling its cell of the grid: its artwork, as
 // on the metagame's page, with how it moved (or, with no previous metagame to
 // compare with, how much it is played), and its name.
-function MoverTile({ card, cardPages, bindPreview }) {
+// large: bigger labels (the artwork tiles are big enough for them on desktops)
+export function MoverTile({ card, cardPages, bindPreview, badges = [], large = false }) {
   const slug = cardLinkSlug(cardPages, card.name)
   const image = card.image
     || `https://api.scryfall.com/cards/named?exact=${encodeURIComponent(card.name)}&format=image&version=normal`
@@ -268,11 +279,16 @@ function MoverTile({ card, cardPages, bindPreview }) {
       <span className="relative block flex-1 min-h-[2.5rem] overflow-hidden bg-gray-900">
         <img src={src} alt={card.name} loading="lazy"
           className="absolute inset-0 w-full h-full object-cover group-hover:scale-110 transition-transform duration-300" />
-        <span className={`absolute top-1 right-1 rounded bg-gray-900/85 px-1.5 py-px text-xs font-bold tabular-nums ${!compared ? 'text-amber-400' : change > 0 ? 'text-emerald-400' : 'text-rose-400'}`}>
+        {badges.length > 0 && (
+          <span className="absolute top-1 left-1 flex flex-col items-start gap-0.5">
+            {badges.map(b => <MoverBadge key={b.label} badge={b} large={large} />)}
+          </span>
+        )}
+        <span className={`absolute top-1 right-1 rounded bg-gray-900/85 font-bold tabular-nums ${large ? 'px-2 py-0.5 text-base' : 'px-1.5 py-px text-xs'} ${!compared ? 'text-amber-400' : change > 0 ? 'text-emerald-400' : 'text-rose-400'}`}>
           {compared ? `${change > 0 ? '▲' : '▼'} ${Math.abs(change).toFixed(1)}%` : `${card.share.toFixed(1)}%`}
         </span>
       </span>
-      <span className="block truncate px-2 py-1 text-xs text-gray-300 group-hover:text-amber-400 transition-colors">{card.name}</span>
+      <span className={`block truncate px-2 py-1 text-gray-300 group-hover:text-amber-400 transition-colors ${large ? 'text-base text-center' : 'text-xs'}`}>{card.name}</span>
     </>
   )
   const className = 'group flex flex-col min-w-0 min-h-0 rounded-lg overflow-hidden bg-gray-800 border border-gray-700 hover:border-amber-400/50 transition-colors'
@@ -283,7 +299,7 @@ function MoverTile({ card, cardPages, bindPreview }) {
 
 // The same card as a line of text, for the screens too narrow for the artwork:
 // its name and how it moved (or how much it is played).
-function MoverRow({ card, cardPages, bindPreview }) {
+export function MoverRow({ card, cardPages, bindPreview, badges = [] }) {
   const slug = cardLinkSlug(cardPages, card.name)
   const image = card.image
     || `https://api.scryfall.com/cards/named?exact=${encodeURIComponent(card.name)}&format=image&version=normal`
@@ -296,6 +312,7 @@ function MoverRow({ card, cardPages, bindPreview }) {
   const content = (
     <>
       <span className="truncate min-w-0 flex-1 text-gray-300 group-hover:text-amber-400 transition-colors">{card.name}</span>
+      {badges.map(b => <MoverBadge key={b.label} badge={b} />)}
       <span className={`shrink-0 font-mono tabular-nums ${!compared ? 'text-amber-400' : change > 0 ? 'text-emerald-400' : 'text-rose-400'}`}>
         {compared ? `${change > 0 ? '▲' : '▼'} ${Math.abs(change).toFixed(1)}%` : `${card.share.toFixed(1)}%`}
       </span>
@@ -374,7 +391,7 @@ function Events({ metagame, poolUrls, bindPreview }) {
 // The rail: newer metagames above the marker, older ones below it, filled.
 // Scrolling down moves the dots up through the marker, back in time.
 // position: where the marker is, in steps.
-function Timeline({ steps, position, current, onPick }) {
+export function Timeline({ steps, position, current, onPick }) {
   return (
     <div className="relative h-full overflow-hidden select-none">
       <div className="absolute left-3 top-0 h-1/2 w-0.5 -translate-x-1/2 bg-gray-700" />

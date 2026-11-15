@@ -172,8 +172,8 @@ function TopCard({ card, cardPages, bindPreview }) {
   )
 }
 
-function ArchetypeCard({ archetype, rank, cardPages, bindPreview }) {
-  const to = `/archetypes/${nameToSlug(archetype.name)}`
+function ArchetypeCard({ archetype, rank, cardPages, bindPreview, code }) {
+  const to = `/archetypes/${nameToSlug(archetype.name)}?metagame=${code}`
   return (
     <div className="bg-gray-800 border border-gray-700 rounded-xl overflow-hidden flex flex-col hover:border-amber-400/50 transition-colors group">
       {/* phones: a wide banner; wider: narrower boxes, so a taller one */}
@@ -280,7 +280,7 @@ function CardMovers({ movers, cardPages, bindPreview }) {
 }
 
 // The archetypes under MIN_SHARE, as a compact table.
-function SmallArchetypes({ archetypes }) {
+function SmallArchetypes({ archetypes, code }) {
   return (
     <div className="bg-gray-800 border border-gray-700 rounded-xl overflow-hidden">
       <table className="w-full text-sm">
@@ -288,7 +288,7 @@ function SmallArchetypes({ archetypes }) {
           {archetypes.map(a => (
             <tr key={a.name}>
               <td className="px-4 py-1.5">
-                <Link to={`/archetypes/${nameToSlug(a.name)}`} className="text-gray-300 hover:text-amber-400 transition-colors">{a.name}</Link>
+                <Link to={`/archetypes/${nameToSlug(a.name)}?metagame=${code}`} className="text-gray-300 hover:text-amber-400 transition-colors">{a.name}</Link>
               </td>
               <td className="px-4 py-1.5 text-right text-xs text-gray-500 tabular-nums whitespace-nowrap">{a.decks} deck{a.decks === 1 ? '' : 's'}</td>
               <td className="px-4 py-1.5 text-right text-xs text-gray-400 tabular-nums whitespace-nowrap w-16">{a.meta_share.toFixed(1)}%</td>
@@ -377,7 +377,7 @@ export default function MetagamePage() {
                   <h2 className="text-xl font-semibold text-white mb-4">Bake into a Pie</h2>
                   <MetaPie
                     shares={metagame.archetypes.map(a => ({ archetype_name: a.name, meta_share: a.meta_share }))}
-                    minListedShare={MIN_SHARE}
+                    minListedShare={MIN_SHARE} linkSuffix={`?metagame=${metagame.metagame.metagame}`}
                     listClassName="grid grid-cols-2 lg:grid-cols-3 gap-x-4 gap-y-1.5 content-start" />
                 </section>
 
@@ -396,7 +396,7 @@ export default function MetagamePage() {
                   </p>
                   <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 2xl:grid-cols-5 gap-3">
                     {shown.map((a, i) => (
-                      <ArchetypeCard key={a.name} archetype={a} rank={i + 1} cardPages={cardPages} bindPreview={bindPreview} />
+                      <ArchetypeCard key={a.name} archetype={a} rank={i + 1} cardPages={cardPages} bindPreview={bindPreview} code={metagame.metagame.metagame} />
                     ))}
                   </div>
                   {small.length > 0 && (
@@ -409,7 +409,7 @@ export default function MetagamePage() {
                             : `Show ${small.length} archetype${small.length === 1 ? '' : 's'} under ${MIN_SHARE}%`}
                         </button>
                       </div>
-                      {showSmall && <SmallArchetypes archetypes={small} />}
+                      {showSmall && <SmallArchetypes archetypes={small} code={metagame.metagame.metagame} />}
                     </div>
                   )}
                 </section>

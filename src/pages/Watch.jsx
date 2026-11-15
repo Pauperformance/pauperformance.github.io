@@ -7,6 +7,8 @@ import { nameToSlug } from '../utils/slugs'
 import { firstYearOf, formatShortDate } from '../utils/dates'
 import { LANG_FLAG, LANG_CANONICAL, LANG_NAME } from '../utils/languages'
 import VideoCard from '../components/VideoCard'
+import SwipeCards from '../components/SwipeCards'
+import { useMediaQuery } from '../utils/useMediaQuery'
 import { getSettings } from '../utils/settings'
 
 const LANG_DISPLAY = Object.fromEntries(Object.entries(LANG_NAME).map(([l, name]) => [l, `${LANG_FLAG[l]} ${name}`]))
@@ -86,6 +88,7 @@ export default function Watch() {
   const [toWrapped, setToWrapped] = useState(false)
   const [viewMode, setViewMode] = useState('infinite')
   const [page, setPage] = useState(0)
+  const phone = useMediaQuery('(max-width: 767px)')
   const [visibleCount, setVisibleCount] = useState(PAGE_SIZE)
   const dropdownRef = useRef(null)
   const creatorDropdownRef = useRef(null)
@@ -470,7 +473,7 @@ export default function Watch() {
               ? <p className="text-center text-gray-500 text-sm py-12">No videos match your filters.</p>
               : (
                 <>
-                  {viewMode === 'paginated' && totalPages > 1 && (
+                  {viewMode === 'paginated' && !phone && totalPages > 1 && (
                     <div ref={paginationRef} className="flex items-center justify-center gap-3">
                       <button
                         onClick={() => setPage(p => p - 1)}
@@ -490,11 +493,24 @@ export default function Watch() {
                     </div>
                   )}
 
-                  <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
-                    {visibleVideos.map(v => <VideoCard key={v.video_id} v={v} previews={previews} />)}
-                  </div>
+                  {viewMode === 'paginated' && phone && totalPages > 1 ? (
+                    <div ref={paginationRef}>
+                      <SwipeCards index={page} count={totalPages} cardKey={page}
+                        onChange={setPage}
+                        label={`Page ${page + 1} of ${totalPages}`}
+                        hint="Swipe the page left or right for the next or previous page.">
+                        <div className="grid grid-cols-1 gap-4">
+                          {visibleVideos.map(v => <VideoCard key={v.video_id} v={v} previews={previews} />)}
+                        </div>
+                      </SwipeCards>
+                    </div>
+                  ) : (
+                    <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
+                      {visibleVideos.map(v => <VideoCard key={v.video_id} v={v} previews={previews} />)}
+                    </div>
+                  )}
 
-                  {viewMode === 'paginated' && totalPages > 1 && (
+                  {viewMode === 'paginated' && !phone && totalPages > 1 && (
                     <div className="flex items-center justify-center gap-3 pt-2">
                       <button
                         onClick={() => setPage(p => p - 1)}

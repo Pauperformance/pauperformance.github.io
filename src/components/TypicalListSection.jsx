@@ -334,7 +334,7 @@ function CompactTypicalList({ name, list, bindPreview }) {
 }
 
 // compact: the simple, deck-page-like view (the archetypes index on phones)
-export default function TypicalListSection({ name, list, currentMetagame, bindPreview, compact = false }) {
+export default function TypicalListSection({ name, list, currentMetagame, focusMetagame, bindPreview, compact = false }) {
   const cardPages = useCardPages()
   const [cardTypes, setCardTypes] = useState({})
   useEffect(() => {
@@ -347,7 +347,14 @@ export default function TypicalListSection({ name, list, currentMetagame, bindPr
   // no range to choose for archetypes exported before Myr made the counts
   const canChoose = Boolean(list?.decks) && timeline.length > 1
   const initial = useMemo(() => (canChoose ? defaultRange(list) : null), [list, canChoose])
-  const [range, setRange] = useState(initial)
+  // coming from a metagame's page: the list of that metagame alone
+  const focused = useMemo(() => {
+    const i = canChoose && focusMetagame ? timeline.findIndex(m => m.metagame === focusMetagame) : -1
+    return i >= 0 ? [i, i] : null
+  }, [canChoose, focusMetagame, timeline])
+  const [range, setRange] = useState(focused || initial)
+  // the focused metagame's list is not the precomputed one: fetch its counts right away
+  useEffect(() => { if (focused) loadCounts() }, [focused]) // eslint-disable-line react-hooks/exhaustive-deps
   const custom = canChoose && (range[0] !== initial[0] || range[1] !== initial[1])
   const computed = useMemo(
     () => (custom && counts ? computeTypicalList(timeline, counts, range[0], range[1]) : null),
