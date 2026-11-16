@@ -1,0 +1,65 @@
+# This workflow builds the website (into docs/, which is NOT tracked by git)
+# and deploys it to GitHub Pages. The Pages source must be "GitHub Actions".
+#
+# It runs:
+#  - on every push to master that touches sources or data;
+#  - after every myr-academy-update run that pushed something (called as a
+#    reusable workflow: Myr pushes with GITHUB_TOKEN, which does not trigger
+#    the push event below);
+#  - manually.
+
+name: deploy-site
+
+on:
+  push:
+    branches: [ master ]
+    paths-ignore:
+      # raw MTGGoldfish decks pushed by razor: the site shows them only
+      # once myr-academy-update has classified them (and deployed the site)
+      - 'assets/data/deck/mtggoldfish_tournament/**'
+      - 'assets/data/tournament/mtggoldfish/**'
+  workflow_dispatch:
+  workflow_call:
+
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+# One deployment at a time; a newer one supersedes a pending one.
+concurrency:
+  group: deploy-site
+  cancel-in-progress: true
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+
+    - name: Clone Academy repository
+      uses: actions/checkout@v4
+      with:
+        ref: 'master'
+
+    - name: Set up Node
+      uses: actions/setup-node@v4
+      with:
+        node-version: '22'
+        cache: 'npm'
+
+    - name: Build website
+      run: |
+        npm ci
+        npm run build
+
+    - name: Upload site
+      uses: actions/upload-pages-artifact@v3
+      with:
+        path: docs
+
+    - name: Deploy to GitHub Pages
+      id: deployment
+      uses: actions/deploy-pages@v4

@@ -114,21 +114,8 @@ jobs:
         source venv/bin/activate
         myr academy update
 
-    - name: Set up Node
-      uses: actions/setup-node@v4
-      with:
-        node-version: '22'
-        cache: 'npm'
-        cache-dependency-path: academy/package-lock.json
-
-    # The React site serves docs/, generated from the assets Myr just updated.
-    - name: Build website
-      working-directory: academy
-      run: |
-        npm ci
-        npm run build
-
     - name: Push changes
+      id: push
       working-directory: academy
       run: |
         git config --local user.email "ShadowTemplate@users.noreply.github.com"
@@ -139,16 +126,23 @@ jobs:
           echo "Nothing to commit."
         else
           git commit -m "Myr update: $(date -u +'%Y-%m-%d, %H:%M:%S')"
-          # master may have moved meanwhile (e.g. a push rebuilt by
-          # build-site). On conflicts keep Myr's side (in a rebase, "theirs"
-          # is the commit being replayed), then rebuild docs/ from the
-          # rebased sources, since this push does not trigger build-site.
-          base=$(git rev-parse HEAD~1)
+          # master may have moved meanwhile. On conflicts keep Myr's side
+          # (in a rebase, "theirs" is the commit being replayed).
           git pull --rebase -X theirs
-          if [ "$(git rev-parse HEAD~1)" != "$base" ]; then
-            npm run build
-            git add -A docs
-            git diff --cached --quiet || git commit --amend --no-edit
-          fi
           git push
+          echo "changed=true" >> "$GITHUB_OUTPUT"
         fi
+
+    outputs:
+      changed: ${{ steps.push.outputs.changed }}
+
+  # The website (docs/, not tracked by git) is built and deployed from the
+  # master Myr just pushed. This push does not trigger deploy-site by itself.
+  deploy:
+    needs: build
+    if: needs.build.outputs.changed == 'true'
+    permissions:
+      contents: read
+      pages: write
+      id-token: write
+    uses: ./.github/workflows/deploy_site.yml
