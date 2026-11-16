@@ -23,13 +23,13 @@
         "Combo"
     ],
     "last_appearance": {
-        "date": "2026-11-05",
+        "date": "2026-11-15",
         "metagame": {
-            "date": "2026-10-02",
+            "date": "2026-11-13",
             "decks": null,
-            "label": "fra",
-            "metagame": "147",
-            "name": "Reality Fracture",
+            "label": "trk",
+            "metagame": "148",
+            "name": "Star Trek",
             "py/object": "pauperformance_bot.entity.api.archetype.MetagameRef"
         },
         "py/object": "pauperformance_bot.entity.api.archetype.Appearance"
@@ -9906,6 +9906,135 @@
                         4
                     ]
                 }
+            },
+            "148": {
+                "main": {
+                    "Cabal Ritual": [
+                        1,
+                        1,
+                        1
+                    ],
+                    "Conduit Pylons": [
+                        1,
+                        1
+                    ],
+                    "Dark Ritual": [
+                        1,
+                        1,
+                        1,
+                        1
+                    ],
+                    "Drannith Healer": [
+                        1,
+                        1,
+                        1,
+                        1
+                    ],
+                    "Drannith Stinger": [
+                        1,
+                        1,
+                        1,
+                        1
+                    ],
+                    "Great Furnace": [
+                        1,
+                        1,
+                        1,
+                        1
+                    ],
+                    "Horror of the Broken Lands": [
+                        1,
+                        1
+                    ],
+                    "Imposing Vantasaur": [
+                        1,
+                        1,
+                        1,
+                        1
+                    ],
+                    "Lotus Petal": [
+                        1,
+                        1,
+                        1,
+                        1
+                    ],
+                    "Monstrous Carabid": [
+                        1,
+                        1,
+                        1
+                    ],
+                    "Page, Loose Leaf": [
+                        1,
+                        1,
+                        1,
+                        1
+                    ],
+                    "Reaping the Graves": [
+                        1,
+                        1,
+                        1,
+                        1
+                    ],
+                    "Rowan's Grim Search": [
+                        1,
+                        1,
+                        1,
+                        1
+                    ],
+                    "Songs of the Damned": [
+                        1,
+                        1,
+                        1,
+                        1
+                    ],
+                    "Street Wraith": [
+                        1,
+                        1,
+                        1,
+                        1
+                    ],
+                    "Surveillance Room": [
+                        1,
+                        1
+                    ],
+                    "Vault of Whispers": [
+                        1,
+                        1,
+                        1,
+                        1
+                    ]
+                },
+                "side": {
+                    "Barkform Harvester": [
+                        1
+                    ],
+                    "Chitin Gravestalker": [
+                        1,
+                        1,
+                        1,
+                        1
+                    ],
+                    "Coercion": [
+                        1,
+                        1
+                    ],
+                    "Faerie Macabre": [
+                        1,
+                        1
+                    ],
+                    "Pyroblast": [
+                        1,
+                        1,
+                        1
+                    ],
+                    "Siege Smash": [
+                        1,
+                        1
+                    ],
+                    "Swamp": [
+                        1
+                    ]
+                }
             }
         },
         "cards": {
@@ -10016,6 +10145,12 @@
                 "link": "https://scryfall.com/card/tsp/251/chromatic-star",
                 "preview": "https://cards.scryfall.io/normal/front/1/d/1d7a1357-debd-49b0-9fd5-560d5b3f589e.jpg",
                 "type_line": "Artifact"
+            },
+            "Coercion": {
+                "banned": false,
+                "link": "https://scryfall.com/card/vis/54/coercion",
+                "preview": "https://cards.scryfall.io/normal/front/f/3/f3b07d33-f5f5-45cc-b2ac-360eaf2d4146.jpg",
+                "type_line": "Sorcery"
             },
             "Conduit Pylons": {
                 "banned": false,
@@ -10678,7 +10813,7 @@
                 "type_line": "Creature \u2014 Zombie Giant"
             }
         },
-        "decks": 50,
+        "decks": 51,
         "ended_by_bans": [],
         "era_end": null,
         "era_start": {
@@ -10690,7 +10825,7 @@
             "py/object": "pauperformance_bot.entity.api.archetype.MetagameRef"
         },
         "first_date": "2026-08-15",
-        "last_date": "2026-11-05",
+        "last_date": "2026-11-15",
         "later_decks": 0,
         "main": [
             {
@@ -10826,7 +10961,7 @@
                     0.98,
                     0.98,
                     0.98,
-                    0.9
+                    0.902
                 ],
                 "average": 3.9,
                 "banned": false,
@@ -10855,10 +10990,10 @@
             },
             {
                 "at_least": [
-                    0.82,
-                    0.82,
-                    0.82,
-                    0.78
+                    0.824,
+                    0.824,
+                    0.824,
+                    0.784
                 ],
                 "average": 4.0,
                 "banned": false,
@@ -10871,26 +11006,10 @@
             },
             {
                 "at_least": [
-                    0.8,
-                    0.8,
-                    0.76,
-                    0.76
-                ],
-                "average": 3.9,
-                "banned": false,
-                "link": "https://scryfall.com/card/ons/312/barren-moor",
-                "name": "Barren Moor",
-                "preview": "https://cards.scryfall.io/normal/front/4/5/45be3811-a223-4c45-9b24-0317f2d53c60.jpg",
-                "py/object": "pauperformance_bot.entity.api.archetype.TypicalCard",
-                "type_line": "Land",
-                "typical": 4
-            },
-            {
-                "at_least": [
-                    0.8,
-                    0.8,
-                    0.8,
-                    0.64
+                    0.804,
+                    0.804,
+                    0.804,
+                    0.647
                 ],
                 "average": 3.8,
                 "banned": false,
@@ -10903,10 +11022,26 @@
             },
             {
                 "at_least": [
+                    0.784,
+                    0.784,
+                    0.745,
+                    0.745
+                ],
+                "average": 3.9,
+                "banned": false,
+                "link": "https://scryfall.com/card/ons/312/barren-moor",
+                "name": "Barren Moor",
+                "preview": "https://cards.scryfall.io/normal/front/4/5/45be3811-a223-4c45-9b24-0317f2d53c60.jpg",
+                "py/object": "pauperformance_bot.entity.api.archetype.TypicalCard",
+                "type_line": "Land",
+                "typical": 4
+            },
+            {
+                "at_least": [
                     1.0,
                     1.0,
-                    0.96,
-                    0.24
+                    0.961,
+                    0.235
                 ],
                 "average": 3.2,
                 "banned": false,
@@ -10919,10 +11054,10 @@
             },
             {
                 "at_least": [
-                    0.84,
-                    0.84,
-                    0.72,
-                    0.08
+                    0.843,
+                    0.843,
+                    0.725,
+                    0.078
                 ],
                 "average": 3.0,
                 "banned": false,
@@ -10937,8 +11072,8 @@
                 "at_least": [
                     1.0,
                     1.0,
-                    0.2,
-                    0.16
+                    0.196,
+                    0.157
                 ],
                 "average": 2.4,
                 "banned": false,
@@ -10951,7 +11086,7 @@
             },
             {
                 "at_least": [
-                    0.22,
+                    0.216,
                     0.0,
                     0.0,
                     0.0
@@ -10967,12 +11102,12 @@
             },
             {
                 "at_least": [
-                    0.2,
-                    0.16,
-                    0.16,
-                    0.16
+                    0.216,
+                    0.176,
+                    0.157,
+                    0.157
                 ],
-                "average": 3.4,
+                "average": 3.3,
                 "banned": false,
                 "link": "https://scryfall.com/card/otj/254/conduit-pylons",
                 "name": "Conduit Pylons",
@@ -10983,10 +11118,10 @@
             },
             {
                 "at_least": [
-                    0.2,
-                    0.2,
-                    0.2,
-                    0.2
+                    0.196,
+                    0.196,
+                    0.196,
+                    0.196
                 ],
                 "average": 4.0,
                 "banned": false,
@@ -10999,10 +11134,10 @@
             },
             {
                 "at_least": [
-                    0.16,
-                    0.12,
-                    0.12,
-                    0.12
+                    0.157,
+                    0.118,
+                    0.118,
+                    0.118
                 ],
                 "average": 3.2,
                 "banned": false,
@@ -11015,12 +11150,12 @@
             },
             {
                 "at_least": [
-                    0.12,
-                    0.08,
-                    0.08,
-                    0.08
+                    0.137,
+                    0.098,
+                    0.078,
+                    0.078
                 ],
-                "average": 3.0,
+                "average": 2.9,
                 "banned": false,
                 "link": "https://scryfall.com/card/msh/274/surveillance-room",
                 "name": "Surveillance Room",
@@ -11031,6 +11166,14 @@
             }
         ],
         "metagames": [
+            {
+                "date": "2026-11-13",
+                "decks": 1,
+                "label": "trk",
+                "metagame": "148",
+                "name": "Star Trek",
+                "py/object": "pauperformance_bot.entity.api.archetype.MetagameRef"
+            },
             {
                 "date": "2026-10-02",
                 "decks": 25,
@@ -11068,10 +11211,10 @@
         "side": [
             {
                 "at_least": [
-                    0.96,
-                    0.96,
-                    0.96,
-                    0.96
+                    0.961,
+                    0.961,
+                    0.961,
+                    0.961
                 ],
                 "average": 4.0,
                 "banned": false,
@@ -11084,10 +11227,10 @@
             },
             {
                 "at_least": [
-                    0.66,
-                    0.66,
-                    0.66,
-                    0.06
+                    0.667,
+                    0.667,
+                    0.667,
+                    0.059
                 ],
                 "average": 3.1,
                 "banned": false,
@@ -11100,9 +11243,9 @@
             },
             {
                 "at_least": [
-                    0.8,
-                    0.76,
-                    0.04,
+                    0.784,
+                    0.745,
+                    0.039,
                     0.0
                 ],
                 "average": 2.0,
@@ -11116,9 +11259,9 @@
             },
             {
                 "at_least": [
-                    0.78,
-                    0.78,
-                    0.08,
+                    0.784,
+                    0.784,
+                    0.078,
                     0.0
                 ],
                 "average": 2.1,
@@ -11132,8 +11275,8 @@
             },
             {
                 "at_least": [
-                    0.74,
-                    0.74,
+                    0.745,
+                    0.745,
                     0.02,
                     0.0
                 ],
@@ -11148,7 +11291,7 @@
             },
             {
                 "at_least": [
-                    0.9,
+                    0.902,
                     0.0,
                     0.0,
                     0.0
@@ -11164,7 +11307,7 @@
             },
             {
                 "at_least": [
-                    0.56,
+                    0.569,
                     0.0,
                     0.0,
                     0.0
@@ -11180,10 +11323,10 @@
             },
             {
                 "at_least": [
-                    0.22,
-                    0.22,
-                    0.22,
-                    0.1
+                    0.216,
+                    0.216,
+                    0.216,
+                    0.098
                 ],
                 "average": 3.5,
                 "banned": false,
@@ -11196,9 +11339,9 @@
             },
             {
                 "at_least": [
-                    0.22,
-                    0.18,
-                    0.18,
+                    0.216,
+                    0.176,
+                    0.176,
                     0.02
                 ],
                 "average": 2.7,
@@ -11212,7 +11355,7 @@
             },
             {
                 "at_least": [
-                    0.16,
+                    0.157,
                     0.0,
                     0.0,
                     0.0
@@ -11228,8 +11371,8 @@
             },
             {
                 "at_least": [
-                    0.16,
-                    0.14,
+                    0.157,
+                    0.137,
                     0.0,
                     0.0
                 ],
@@ -11244,7 +11387,7 @@
             },
             {
                 "at_least": [
-                    0.16,
+                    0.157,
                     0.02,
                     0.0,
                     0.0
@@ -11260,10 +11403,10 @@
             },
             {
                 "at_least": [
-                    0.14,
-                    0.14,
-                    0.14,
-                    0.12
+                    0.137,
+                    0.137,
+                    0.137,
+                    0.118
                 ],
                 "average": 3.9,
                 "banned": false,
@@ -11276,7 +11419,7 @@
             },
             {
                 "at_least": [
-                    0.06,
+                    0.059,
                     0.02,
                     0.0,
                     0.0
@@ -11837,6 +11980,14 @@
                 "label": "fra",
                 "metagame": "147",
                 "name": "Reality Fracture",
+                "py/object": "pauperformance_bot.entity.api.archetype.MetagameRef"
+            },
+            {
+                "date": "2026-11-13",
+                "decks": 1,
+                "label": "trk",
+                "metagame": "148",
+                "name": "Star Trek",
                 "py/object": "pauperformance_bot.entity.api.archetype.MetagameRef"
             }
         ],

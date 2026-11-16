@@ -7112,8 +7112,9 @@
             "148": {
                 "main": {
                     "Accursed Marauder": [
-                        3,
-                        3
+                        4,
+                        4,
+                        1
                     ],
                     "Apostle's Blessing": [
                         3,
@@ -7129,37 +7130,51 @@
                         3,
                         2
                     ],
+                    "Bone Picker": [
+                        1,
+                        1,
+                        1,
+                        1
+                    ],
                     "Carrion Feeder": [
-                        3,
-                        3,
-                        3,
-                        3
+                        4,
+                        4,
+                        4,
+                        4
+                    ],
+                    "Corrupted Conviction": [
+                        1,
+                        1
                     ],
                     "Escape Tunnel": [
                         1,
                         1
                     ],
+                    "Ghoulcaller's Chant": [
+                        1,
+                        1
+                    ],
                     "Infestation Sage": [
-                        3,
-                        3,
-                        3,
-                        3
+                        4,
+                        4,
+                        4,
+                        4
                     ],
                     "Mesmeric Fiend": [
                         3,
                         3
                     ],
                     "Mortician Beetle": [
-                        3,
-                        3,
-                        3,
-                        3
+                        4,
+                        4,
+                        4,
+                        4
                     ],
                     "Nested Shambler": [
-                        3,
-                        3,
-                        3,
-                        3
+                        4,
+                        4,
+                        4,
+                        4
                     ],
                     "Nezumi Linkbreaker": [
                         3,
@@ -7167,14 +7182,18 @@
                         3,
                         3
                     ],
+                    "Perilous Myr": [
+                        1,
+                        1
+                    ],
                     "Rite of Consumption": [
                         3,
                         3
                     ],
                     "Shambling Ghast": [
-                        3,
-                        3,
-                        3,
+                        4,
+                        4,
+                        4,
                         3
                     ],
                     "Snuff Out": [
@@ -7182,27 +7201,32 @@
                         1
                     ],
                     "Supernatural Stamina": [
-                        3,
-                        3,
-                        3,
-                        1
+                        4,
+                        4,
+                        4,
+                        2
                     ],
                     "Swamp": [
-                        3,
-                        3,
-                        3,
-                        3,
-                        3,
-                        3,
-                        3,
-                        3,
-                        3,
-                        3,
-                        3,
-                        3,
-                        3,
-                        3,
-                        3,
+                        4,
+                        4,
+                        4,
+                        4,
+                        4,
+                        4,
+                        4,
+                        4,
+                        4,
+                        4,
+                        4,
+                        4,
+                        4,
+                        4,
+                        4,
+                        2,
+                        1
+                    ],
+                    "Tragic Slip": [
+                        1,
                         1
                     ],
                     "Unearth": [
@@ -7210,6 +7234,15 @@
                         3,
                         3,
                         2
+                    ],
+                    "Village Rites": [
+                        1,
+                        1,
+                        1,
+                        1
+                    ],
+                    "Voracious Vermin": [
+                        1
                     ]
                 },
                 "side": {
@@ -7221,14 +7254,24 @@
                         1
                     ],
                     "Drown in Sorrow": [
-                        3,
-                        3
+                        4,
+                        4
+                    ],
+                    "Duress": [
+                        1,
+                        1
+                    ],
+                    "Faerie Macabre": [
+                        1,
+                        1
                     ],
                     "Mesmeric Fiend": [
-                        3
+                        4,
+                        1,
+                        1
                     ],
                     "Nihil Spellbomb": [
-                        3
+                        4
                     ],
                     "Rite of Consumption": [
                         1
@@ -7247,11 +7290,13 @@
                         2
                     ],
                     "Sylvok Lifestaff": [
+                        2,
+                        1,
                         1
                     ],
                     "Tragic Slip": [
-                        3,
-                        3
+                        4,
+                        4
                     ],
                     "Vampiric Link": [
                         3,
@@ -8312,7 +8357,7 @@
                 "type_line": "Sorcery"
             }
         },
-        "decks": 51,
+        "decks": 52,
         "ended_by_bans": [],
         "era_end": null,
         "era_start": {
@@ -8342,22 +8387,6 @@
                 "py/object": "pauperformance_bot.entity.api.archetype.TypicalCard",
                 "type_line": "Basic Land \u2014 Swamp",
                 "typical": 16
-            },
-            {
-                "at_least": [
-                    1.0,
-                    1.0,
-                    1.0,
-                    0.765
-                ],
-                "average": 3.8,
-                "banned": false,
-                "link": "https://scryfall.com/card/roe/98/bloodthrone-vampire",
-                "name": "Bloodthrone Vampire",
-                "preview": "https://cards.scryfall.io/normal/front/4/8/48bf0233-1d2e-40cb-9a69-8eeeeb2959ca.jpg",
-                "py/object": "pauperformance_bot.entity.api.archetype.TypicalCard",
-                "type_line": "Creature \u2014 Vampire",
-                "typical": 4
             },
             {
                 "at_least": [
@@ -8411,24 +8440,8 @@
                 "at_least": [
                     1.0,
                     1.0,
-                    0.98,
-                    0.882
-                ],
-                "average": 3.9,
-                "banned": false,
-                "link": "https://scryfall.com/card/otj/96/nezumi-linkbreaker",
-                "name": "Nezumi Linkbreaker",
-                "preview": "https://cards.scryfall.io/normal/front/6/d/6dd0095b-6136-4368-94cb-4c82621aaf37.jpg",
-                "py/object": "pauperformance_bot.entity.api.archetype.TypicalCard",
-                "type_line": "Creature \u2014 Rat Warlock",
-                "typical": 4
-            },
-            {
-                "at_least": [
-                    1.0,
-                    1.0,
-                    0.961,
-                    0.647
+                    0.962,
+                    0.654
                 ],
                 "average": 3.6,
                 "banned": false,
@@ -8441,10 +8454,42 @@
             },
             {
                 "at_least": [
-                    0.961,
-                    0.922,
-                    0.922,
-                    0.902
+                    0.981,
+                    0.981,
+                    0.981,
+                    0.75
+                ],
+                "average": 3.8,
+                "banned": false,
+                "link": "https://scryfall.com/card/roe/98/bloodthrone-vampire",
+                "name": "Bloodthrone Vampire",
+                "preview": "https://cards.scryfall.io/normal/front/4/8/48bf0233-1d2e-40cb-9a69-8eeeeb2959ca.jpg",
+                "py/object": "pauperformance_bot.entity.api.archetype.TypicalCard",
+                "type_line": "Creature \u2014 Vampire",
+                "typical": 4
+            },
+            {
+                "at_least": [
+                    0.981,
+                    0.981,
+                    0.962,
+                    0.865
+                ],
+                "average": 3.9,
+                "banned": false,
+                "link": "https://scryfall.com/card/otj/96/nezumi-linkbreaker",
+                "name": "Nezumi Linkbreaker",
+                "preview": "https://cards.scryfall.io/normal/front/6/d/6dd0095b-6136-4368-94cb-4c82621aaf37.jpg",
+                "py/object": "pauperformance_bot.entity.api.archetype.TypicalCard",
+                "type_line": "Creature \u2014 Rat Warlock",
+                "typical": 4
+            },
+            {
+                "at_least": [
+                    0.962,
+                    0.923,
+                    0.923,
+                    0.904
                 ],
                 "average": 3.9,
                 "banned": false,
@@ -8457,10 +8502,10 @@
             },
             {
                 "at_least": [
-                    0.882,
-                    0.882,
-                    0.745,
-                    0.647
+                    0.885,
+                    0.885,
+                    0.75,
+                    0.635
                 ],
                 "average": 3.6,
                 "banned": false,
@@ -8473,10 +8518,10 @@
             },
             {
                 "at_least": [
-                    0.647,
-                    0.608,
-                    0.569,
-                    0.549
+                    0.654,
+                    0.615,
+                    0.577,
+                    0.558
                 ],
                 "average": 3.7,
                 "banned": false,
@@ -8489,10 +8534,10 @@
             },
             {
                 "at_least": [
-                    0.843,
-                    0.824,
-                    0.608,
-                    0.294
+                    0.827,
+                    0.808,
+                    0.596,
+                    0.288
                 ],
                 "average": 3.0,
                 "banned": false,
@@ -8505,9 +8550,9 @@
             },
             {
                 "at_least": [
-                    0.824,
-                    0.765,
-                    0.118,
+                    0.808,
+                    0.75,
+                    0.115,
                     0.0
                 ],
                 "average": 2.1,
@@ -8521,9 +8566,9 @@
             },
             {
                 "at_least": [
-                    0.549,
-                    0.471,
-                    0.059,
+                    0.558,
+                    0.481,
+                    0.077,
                     0.0
                 ],
                 "average": 2.0,
@@ -8537,10 +8582,10 @@
             },
             {
                 "at_least": [
-                    0.471,
-                    0.451,
-                    0.157,
-                    0.02
+                    0.462,
+                    0.442,
+                    0.154,
+                    0.019
                 ],
                 "average": 2.3,
                 "banned": false,
@@ -8553,8 +8598,8 @@
             },
             {
                 "at_least": [
-                    0.255,
-                    0.196,
+                    0.25,
+                    0.192,
                     0.0,
                     0.0
                 ],
@@ -8569,12 +8614,12 @@
             },
             {
                 "at_least": [
-                    0.216,
-                    0.176,
-                    0.078,
-                    0.039
+                    0.231,
+                    0.192,
+                    0.077,
+                    0.038
                 ],
-                "average": 2.4,
+                "average": 2.3,
                 "banned": false,
                 "link": "https://scryfall.com/card/mom/98/corrupted-conviction",
                 "name": "Corrupted Conviction",
@@ -8585,10 +8630,10 @@
             },
             {
                 "at_least": [
-                    0.216,
-                    0.176,
-                    0.039,
-                    0.02
+                    0.212,
+                    0.173,
+                    0.038,
+                    0.019
                 ],
                 "average": 2.1,
                 "banned": false,
@@ -8601,10 +8646,26 @@
             },
             {
                 "at_least": [
-                    0.196,
-                    0.176,
-                    0.02,
-                    0.02
+                    0.212,
+                    0.135,
+                    0.058,
+                    0.0
+                ],
+                "average": 1.9,
+                "banned": false,
+                "link": "https://scryfall.com/card/dka/76/tragic-slip",
+                "name": "Tragic Slip",
+                "preview": "https://cards.scryfall.io/normal/front/0/9/09666671-601e-4fca-bdfb-fb288bf2672c.jpg",
+                "py/object": "pauperformance_bot.entity.api.archetype.TypicalCard",
+                "type_line": "Instant",
+                "typical": 0
+            },
+            {
+                "at_least": [
+                    0.192,
+                    0.173,
+                    0.019,
+                    0.019
                 ],
                 "average": 2.1,
                 "banned": false,
@@ -8617,8 +8678,8 @@
             },
             {
                 "at_least": [
-                    0.196,
-                    0.176,
+                    0.192,
+                    0.173,
                     0.0,
                     0.0
                 ],
@@ -8633,26 +8694,10 @@
             },
             {
                 "at_least": [
-                    0.196,
-                    0.118,
-                    0.059,
-                    0.0
-                ],
-                "average": 1.9,
-                "banned": false,
-                "link": "https://scryfall.com/card/dka/76/tragic-slip",
-                "name": "Tragic Slip",
-                "preview": "https://cards.scryfall.io/normal/front/0/9/09666671-601e-4fca-bdfb-fb288bf2672c.jpg",
-                "py/object": "pauperformance_bot.entity.api.archetype.TypicalCard",
-                "type_line": "Instant",
-                "typical": 0
-            },
-            {
-                "at_least": [
-                    0.176,
-                    0.176,
-                    0.157,
-                    0.157
+                    0.173,
+                    0.173,
+                    0.154,
+                    0.154
                 ],
                 "average": 3.8,
                 "banned": false,
@@ -8665,8 +8710,8 @@
             },
             {
                 "at_least": [
-                    0.157,
-                    0.02,
+                    0.154,
+                    0.019,
                     0.0,
                     0.0
                 ],
@@ -8681,8 +8726,8 @@
             },
             {
                 "at_least": [
-                    0.137,
-                    0.059,
+                    0.135,
+                    0.058,
                     0.0,
                     0.0
                 ],
@@ -8697,8 +8742,8 @@
             },
             {
                 "at_least": [
-                    0.137,
-                    0.078,
+                    0.135,
+                    0.077,
                     0.0,
                     0.0
                 ],
@@ -8713,8 +8758,8 @@
             },
             {
                 "at_least": [
-                    0.118,
-                    0.02,
+                    0.115,
+                    0.019,
                     0.0,
                     0.0
                 ],
@@ -8729,7 +8774,7 @@
             },
             {
                 "at_least": [
-                    0.098,
+                    0.096,
                     0.0,
                     0.0,
                     0.0
@@ -8745,7 +8790,7 @@
             },
             {
                 "at_least": [
-                    0.078,
+                    0.077,
                     0.0,
                     0.0,
                     0.0
@@ -8761,7 +8806,7 @@
             },
             {
                 "at_least": [
-                    0.078,
+                    0.077,
                     0.0,
                     0.0,
                     0.0
@@ -8777,7 +8822,7 @@
             },
             {
                 "at_least": [
-                    0.078,
+                    0.077,
                     0.0,
                     0.0,
                     0.0
@@ -8793,10 +8838,10 @@
             },
             {
                 "at_least": [
-                    0.078,
-                    0.078,
-                    0.078,
-                    0.078
+                    0.077,
+                    0.077,
+                    0.077,
+                    0.077
                 ],
                 "average": 4.0,
                 "banned": false,
@@ -8809,8 +8854,8 @@
             },
             {
                 "at_least": [
-                    0.059,
-                    0.059,
+                    0.058,
+                    0.058,
                     0.0,
                     0.0
                 ],
@@ -8827,7 +8872,7 @@
         "metagames": [
             {
                 "date": "2026-11-13",
-                "decks": 3,
+                "decks": 4,
                 "label": "trk",
                 "metagame": "148",
                 "name": "Star Trek",
@@ -8846,10 +8891,10 @@
         "side": [
             {
                 "at_least": [
-                    0.804,
-                    0.667,
-                    0.412,
-                    0.294
+                    0.808,
+                    0.673,
+                    0.423,
+                    0.288
                 ],
                 "average": 2.7,
                 "banned": false,
@@ -8862,10 +8907,10 @@
             },
             {
                 "at_least": [
-                    0.784,
-                    0.667,
-                    0.235,
-                    0.02
+                    0.769,
+                    0.654,
+                    0.231,
+                    0.019
                 ],
                 "average": 2.2,
                 "banned": false,
@@ -8878,10 +8923,10 @@
             },
             {
                 "at_least": [
-                    0.706,
-                    0.569,
-                    0.157,
-                    0.098
+                    0.692,
+                    0.558,
+                    0.154,
+                    0.096
                 ],
                 "average": 2.2,
                 "banned": false,
@@ -8894,10 +8939,10 @@
             },
             {
                 "at_least": [
-                    0.706,
-                    0.569,
-                    0.294,
-                    0.098
+                    0.692,
+                    0.558,
+                    0.288,
+                    0.096
                 ],
                 "average": 2.4,
                 "banned": false,
@@ -8910,10 +8955,10 @@
             },
             {
                 "at_least": [
-                    0.686,
-                    0.529,
-                    0.078,
-                    0.02
+                    0.692,
+                    0.538,
+                    0.077,
+                    0.019
                 ],
                 "average": 1.9,
                 "banned": false,
@@ -8926,8 +8971,8 @@
             },
             {
                 "at_least": [
-                    0.49,
-                    0.373,
+                    0.5,
+                    0.385,
                     0.0,
                     0.0
                 ],
@@ -8942,10 +8987,10 @@
             },
             {
                 "at_least": [
-                    0.471,
-                    0.333,
-                    0.118,
-                    0.039
+                    0.462,
+                    0.327,
+                    0.115,
+                    0.038
                 ],
                 "average": 2.0,
                 "banned": false,
@@ -8958,9 +9003,9 @@
             },
             {
                 "at_least": [
-                    0.431,
-                    0.255,
-                    0.039,
+                    0.442,
+                    0.269,
+                    0.058,
                     0.0
                 ],
                 "average": 1.7,
@@ -8974,8 +9019,8 @@
             },
             {
                 "at_least": [
-                    0.333,
-                    0.039,
+                    0.346,
+                    0.038,
                     0.0,
                     0.0
                 ],
@@ -8990,8 +9035,8 @@
             },
             {
                 "at_least": [
-                    0.333,
-                    0.157,
+                    0.327,
+                    0.154,
                     0.0,
                     0.0
                 ],
@@ -9006,8 +9051,8 @@
             },
             {
                 "at_least": [
-                    0.216,
-                    0.196,
+                    0.231,
+                    0.212,
                     0.0,
                     0.0
                 ],
@@ -9022,7 +9067,23 @@
             },
             {
                 "at_least": [
-                    0.157,
+                    0.173,
+                    0.154,
+                    0.077,
+                    0.0
+                ],
+                "average": 2.3,
+                "banned": false,
+                "link": "https://scryfall.com/card/usg/132/duress",
+                "name": "Duress",
+                "preview": "https://cards.scryfall.io/normal/front/c/a/ca367f49-0f4a-4b7f-8104-851893fbcd8a.jpg",
+                "py/object": "pauperformance_bot.entity.api.archetype.TypicalCard",
+                "type_line": "Sorcery",
+                "typical": 0
+            },
+            {
+                "at_least": [
+                    0.154,
                     0.0,
                     0.0,
                     0.0
@@ -9038,25 +9099,9 @@
             },
             {
                 "at_least": [
-                    0.157,
-                    0.137,
-                    0.078,
-                    0.0
-                ],
-                "average": 2.4,
-                "banned": false,
-                "link": "https://scryfall.com/card/usg/132/duress",
-                "name": "Duress",
-                "preview": "https://cards.scryfall.io/normal/front/c/a/ca367f49-0f4a-4b7f-8104-851893fbcd8a.jpg",
-                "py/object": "pauperformance_bot.entity.api.archetype.TypicalCard",
-                "type_line": "Sorcery",
-                "typical": 0
-            },
-            {
-                "at_least": [
-                    0.157,
-                    0.157,
-                    0.157,
+                    0.154,
+                    0.154,
+                    0.154,
                     0.0
                 ],
                 "average": 3.0,
@@ -9070,7 +9115,7 @@
             },
             {
                 "at_least": [
-                    0.137,
+                    0.135,
                     0.0,
                     0.0,
                     0.0
@@ -9086,8 +9131,8 @@
             },
             {
                 "at_least": [
-                    0.098,
-                    0.02,
+                    0.096,
+                    0.019,
                     0.0,
                     0.0
                 ],
@@ -9102,7 +9147,7 @@
             },
             {
                 "at_least": [
-                    0.078,
+                    0.077,
                     0.0,
                     0.0,
                     0.0
@@ -9118,8 +9163,8 @@
             },
             {
                 "at_least": [
-                    0.078,
-                    0.059,
+                    0.077,
+                    0.058,
                     0.0,
                     0.0
                 ],
@@ -9134,7 +9179,7 @@
             },
             {
                 "at_least": [
-                    0.078,
+                    0.077,
                     0.0,
                     0.0,
                     0.0
@@ -9150,7 +9195,7 @@
             },
             {
                 "at_least": [
-                    0.078,
+                    0.077,
                     0.0,
                     0.0,
                     0.0
@@ -9166,8 +9211,8 @@
             },
             {
                 "at_least": [
-                    0.078,
-                    0.02,
+                    0.077,
+                    0.019,
                     0.0,
                     0.0
                 ],
@@ -9182,7 +9227,7 @@
             },
             {
                 "at_least": [
-                    0.078,
+                    0.077,
                     0.0,
                     0.0,
                     0.0
@@ -9198,9 +9243,9 @@
             },
             {
                 "at_least": [
-                    0.059,
-                    0.059,
-                    0.059,
+                    0.058,
+                    0.058,
+                    0.058,
                     0.0
                 ],
                 "average": 3.0,
@@ -9214,8 +9259,8 @@
             },
             {
                 "at_least": [
-                    0.059,
-                    0.059,
+                    0.058,
+                    0.058,
                     0.0,
                     0.0
                 ],
@@ -9230,8 +9275,8 @@
             },
             {
                 "at_least": [
-                    0.059,
-                    0.039,
+                    0.058,
+                    0.038,
                     0.0,
                     0.0
                 ],
@@ -9691,7 +9736,7 @@
             },
             {
                 "date": "2026-11-13",
-                "decks": 3,
+                "decks": 4,
                 "label": "trk",
                 "metagame": "148",
                 "name": "Star Trek",
