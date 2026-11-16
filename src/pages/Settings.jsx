@@ -4,27 +4,31 @@ import Layout from '../components/Layout'
 import { Toggle, DeckList, VisualList, sortCards, NO_VERSUS } from './DeckPage'
 import { LANG_FLAG, LANG_NAME } from '../utils/languages'
 import { useSettings, updateSettings, resetSettings, DEFAULT_SETTINGS } from '../utils/settings'
-import { ARTWORKS } from '../utils/artwork'
+import { ARTWORKS, useArtwork } from '../utils/artwork'
 
 // "the Watch page", linked
 function WatchLink() {
   return <Link to="/watch" className="text-amber-400 hover:underline">the Watch page</Link>
 }
 
-// A decklist of 5 cards, 4 copies of each, to show what the decklist view settings do to a list.
+// A decklist of 7 cards, 4 copies of each, to show what the decklist view settings do to a list.
 // Its data is here, not loaded: the preview is there at once.
 const SCRYFALL = 'https://cards.scryfall.io/normal/front/'
 const SAMPLE = [
   { qty: 4, name: 'Chittering Rats', types: ['Creature'], cost: '{1}{B}{B}', cmc: 3, image: `${SCRYFALL}9/8/980135d5-dfaa-4beb-b4b3-1e256bb46e61.jpg?1783944446` },
   { qty: 4, name: 'Cuombajj Witches', types: ['Creature'], cost: '{B}{B}', cmc: 2, image: `${SCRYFALL}7/9/7995c3f9-a147-43c9-9f82-470924818a4c.jpg?1783948388` },
   { qty: 4, name: 'Gray Merchant of Asphodel', types: ['Creature'], cost: '{3}{B}{B}', cmc: 5, image: `${SCRYFALL}b/0/b06078ce-f534-4e16-9a70-d51620a33eb2.jpg?1783939779` },
+  // Cast Down, Guttersnipe and Baleful Strix: the first print and the first common print differ, which shows the Card artwork setting
+  { qty: 4, name: 'Cast Down', types: ['Instant'], cost: '{1}{B}', cmc: 2, image: `${SCRYFALL}4/8/480fecdd-5978-47e6-9c25-7a04cdf616db.jpg?1783930185`, firstImage: `${SCRYFALL}1/1/116ce944-6871-4f51-a889-d9c4a5d7cff2.jpg?1783935014` },
+  { qty: 4, name: 'Guttersnipe', types: ['Creature'], cost: '{2}{R}', cmc: 3, image: `${SCRYFALL}a/4/a4276d10-d163-4068-a6db-5bb0a1ac88e3.jpg?1783915651`, firstImage: `${SCRYFALL}9/d/9d8590ea-512c-4e09-97cc-7f07d0706f2b.jpg?1783940355` },
+  { qty: 4, name: 'Baleful Strix', types: ['Artifact', 'Creature'], cost: '{U}{B}', cmc: 2, image: `${SCRYFALL}d/f/df0cc01f-356e-4645-96d6-e730e2d23482.jpg?1788526982`, firstImage: `${SCRYFALL}6/2/62090c97-7e3e-4854-bc44-c4a900133ec5.jpg?1783940604` },
   { qty: 4, name: 'Tortured Existence', types: ['Enchantment'], cost: '{B}', cmc: 1, image: `${SCRYFALL}1/7/1754b92b-d6f9-4503-af01-dee03f72a048.jpg?1783946558` },
-  { qty: 4, name: 'Swamp', types: ['Land'], cost: null, cmc: 0, image: `${SCRYFALL}6/1/6176936d-72e2-4205-8871-4c5a4f1cb2d8.jpg?1783948657` },
 ]
 const byName = pick => Object.fromEntries(SAMPLE.map(c => [c.name, pick(c)]))
 const SAMPLE_DATA = {
   cards: SAMPLE.map(({ qty, name }) => ({ qty, name })),
-  images: byName(c => c.image),
+  // the images by artwork: first common print ('common'), first print ever ('first')
+  images: { common: byName(c => c.image), first: byName(c => c.firstImage || c.image) },
   types: byName(c => c.types),
   costs: byName(c => c.cost),
   cmc: byName(c => c.cmc),
@@ -37,17 +41,18 @@ const NO_HOVER = () => {}
 function DeckViewPreview({ deckView }) {
   const { visual, groupByType, sort } = deckView
   const cards = sortCards(SAMPLE_DATA.cards, sort, SAMPLE_DATA.cmc)
+  const images = SAMPLE_DATA.images[useArtwork() === 'common' ? 'common' : 'first']
   return (
     <div className="mt-5 rounded-lg border border-gray-700 bg-gray-900 p-4">
       <p className="text-xs text-gray-500 mb-3">Preview, with a sample decklist</p>
       {visual ? (
-        <VisualList cards={cards} label="Maindeck" cardImages={SAMPLE_DATA.images} cardTypes={SAMPLE_DATA.types}
+        <VisualList cards={cards} label="Maindeck" cardImages={images} cardTypes={SAMPLE_DATA.types}
           groupByType={groupByType} cardPages={NO_CARD_PAGES} bindPreview={NO_PREVIEW}
           tileClass="w-[calc((100%-1.5rem)/4)] sm:w-24" />
       ) : (
         <div className="max-w-xs">
           <DeckList cards={cards} label="Maindeck" onHover={NO_HOVER} bindPreview={NO_PREVIEW}
-            cardImages={SAMPLE_DATA.images} cardTypes={SAMPLE_DATA.types} groupByType={groupByType}
+            cardImages={images} cardTypes={SAMPLE_DATA.types} groupByType={groupByType}
             cardPages={NO_CARD_PAGES} versus={NO_VERSUS} manaCosts={SAMPLE_DATA.costs} />
         </div>
       )}
