@@ -2,6 +2,7 @@ import { readFileSync, readdirSync, writeFileSync, unlinkSync, copyFileSync, mkd
 import { join } from 'path'
 import { metagameSlug } from '../src/utils/slugs.js'
 import { computeTypicalList } from '../src/utils/typicalList.js'
+import { encodeCardDecks } from '../src/utils/cardDecks.js'
 import { buildArchetypeMap } from './archetype-map.mjs'
 
 const buildStart = Date.now()
@@ -983,7 +984,7 @@ if (anyDeckChanged) {
     var sortedDecks = Object.values(slugDecks[slugNames[csi]]).sort(function(a, b) {
       return (b.tournament_date || '').localeCompare(a.tournament_date || '')
     })
-    writeFileSync(cardDeckOutputPath, JSON.stringify(sortedDecks))
+    writeFileSync(cardDeckOutputPath, JSON.stringify(encodeCardDecks(sortedDecks)))
     cardDeckWritten++
   }
   // a card only played by decks that no longer count has no deck file any more

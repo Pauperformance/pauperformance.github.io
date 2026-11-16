@@ -15,6 +15,7 @@ import { resolve, join } from 'path'
 import { fileURLToPath } from 'url'
 import { nameToSlug, pilotToSlug } from '../src/utils/slugs.js'
 import { cardPageSlug, makeCardPages } from '../src/utils/cardPages.js'
+import { decodeCardDecks } from '../src/utils/cardDecks.js'
 
 const __dirname = fileURLToPath(new URL('.', import.meta.url))
 const dataDir = resolve(__dirname, '..', 'public', 'data')
@@ -151,8 +152,8 @@ eachFile('intel-decks', (decks, slug) => {
 })
 
 // CardPage, PlayerPage, DeckPage
-eachFile('card-decks', (decks, slug) => {
-  for (const d of decks) link('decks', d.id, `/cards/${slug}`)
+eachFile('card-decks', (data, slug) => {
+  for (const d of decodeCardDecks(data)) link('decks', d.id, `/cards/${slug}`)
 })
 eachFile('player-decks', (p, slug) => {
   const source = `/players/${slug}`
