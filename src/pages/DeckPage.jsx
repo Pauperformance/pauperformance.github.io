@@ -10,6 +10,7 @@ import VideosSection from '../components/VideosSection'
 import { OracleText, useCardData, useCardPreview } from '../components/CardPreview'
 import { cardLinkSlug, useCardPages } from '../utils/cardPages'
 import { getSettings } from '../utils/settings'
+import { loadCardImages, useArtwork } from '../utils/artwork'
 import { MetagameBadge } from '../components/Metagame'
 import { computeTypicalList } from '../utils/typicalList'
 import { formatDate } from '../utils/dates'
@@ -274,15 +275,17 @@ export default function DeckPage() {
   const deckMetagame = useDeckMetagame(deck)
   const typical = deckMetagame?.typical
   const hoveredImage = hoveredCard && (cardImages[hoveredCard] || (hoveredData && hoveredData.images[0]))
+  const artwork = useArtwork()
+  useEffect(() => {
+    loadCardImages(artwork).then(setCardImages)
+  }, [artwork])
   useEffect(() => {
     Promise.all([
-      fetch('/data/card-images.json').then(r => r.json()),
       fetch('/data/card-types.json').then(r => r.json()),
       fetch('/data/card-mana-costs.json').then(r => r.json()),
       fetch('/data/card-cmc.json').then(r => r.json()),
-    ]).then(([images, types, costs, values]) => {
+    ]).then(([types, costs, values]) => {
       setCmc(values)
-      setCardImages(images)
       setCardTypes(types)
       setManaCosts(costs)
     }).catch(() => {})

@@ -10,6 +10,7 @@ import { displayPlace } from '../utils/places'
 import TypicalListSection from '../components/TypicalListSection'
 import CardEvolution from '../components/CardEvolution'
 import { cardLinkSlug, useCardPages } from '../utils/cardPages'
+import { useImageFor } from '../utils/artwork'
 import { nameToSlug, pilotToSlug } from '../utils/slugs'
 import { firstYearOf, formatShortDate } from '../utils/dates'
 import { LANG_FLAG } from '../utils/languages'
@@ -393,6 +394,7 @@ export default function ArchetypePage() {
   const [notFound, setNotFound] = useState(false)
   const [popularity, setPopularity] = useState(null)
   const cardPages = useCardPages()
+  const imageFor = useImageFor()
   const popularityMetagames = useMetagames(POPULARITY_METAGAMES)
 
   // the archetype's share of each metagame (missing for the never-played ones)
@@ -468,7 +470,7 @@ export default function ArchetypePage() {
           const card = data.representative_card
           const slug = cardLinkSlug(cardPages, card.name)
           const img = (
-            <img src={card.preview} alt={card.name}
+            <img src={imageFor(card.name, card.preview)} alt={card.name}
               className="w-44 shrink-0 aspect-[488/680] rounded-[4.75%/3.5%] border border-gray-700 group-hover:border-amber-400 transition-colors object-cover" />
           )
           return slug

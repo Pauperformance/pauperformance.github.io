@@ -7,6 +7,7 @@ import ShareChange from '../components/ShareChange'
 import MetagameDecks from '../components/MetagameDecks'
 import { useCardPreview } from '../components/CardPreview'
 import { useCardPages, cardLinkSlug } from '../utils/cardPages'
+import { useImageFor } from '../utils/artwork'
 import { nameToSlug, metagameSlug } from '../utils/slugs'
 import { formatDate, daysBetween, todayIso } from '../utils/dates'
 
@@ -157,7 +158,8 @@ function Counters({ metagame, bindPreview }) {
 // hover; plain text for a card without a page.
 function TopCard({ card, cardPages, bindPreview }) {
   const slug = cardLinkSlug(cardPages, card.name)
-  const handlers = bindPreview(card.name, { slug: slug || undefined, image: card.preview })
+  const imageFor = useImageFor()
+  const handlers = bindPreview(card.name, { slug: slug || undefined, image: imageFor(card.name, card.preview) })
   const cls = `truncate min-w-0 ${card.banned ? 'text-red-300/80' : 'text-gray-300'}`
   return (
     <div className="flex items-baseline gap-2 text-[13px]" title={card.banned ? 'Banned in Pauper today' : undefined}>
@@ -174,13 +176,14 @@ function TopCard({ card, cardPages, bindPreview }) {
 
 function ArchetypeCard({ archetype, rank, cardPages, bindPreview, code }) {
   const to = `/archetypes/${nameToSlug(archetype.name)}?metagame=${code}`
+  const imageFor = useImageFor()
   return (
     <div className="bg-gray-800 border border-gray-700 rounded-xl overflow-hidden flex flex-col hover:border-amber-400/50 transition-colors group">
       {/* phones: a wide banner; wider: narrower boxes, so a taller one */}
       <Link to={to} className="relative block aspect-[3/1] sm:aspect-[2/1] bg-gray-900 overflow-hidden">
         {archetype.featured_image
           // Scryfall's art crop of the same card: the artwork without its frame
-          ? <img src={archetype.featured_image.replace('/normal/', '/art_crop/')} alt={archetype.name} loading="lazy"
+          ? <img src={imageFor(archetype.featured_card, archetype.featured_image).replace('/normal/', '/art_crop/')} alt={archetype.name} loading="lazy"
               className="absolute inset-0 w-full h-full object-cover group-hover:scale-110 transition-transform duration-300" />
           : <div className="absolute inset-0 bg-gray-750" />}
         <span className="absolute top-2 left-2 rounded-md bg-gray-900/85 px-2 py-0.5 text-sm font-bold font-mono text-gray-200">#{rank}</span>
@@ -220,9 +223,10 @@ function ArchetypeCard({ archetype, rank, cardPages, bindPreview, code }) {
 // the decks, and how it moved.
 function CardMover({ card, cardPages, bindPreview }) {
   const slug = cardLinkSlug(cardPages, card.name)
+  const imageFor = useImageFor()
   // the card's image as the rest of the site shows it; Scryfall's, by name, for
   // a card without one
-  const image = card.image
+  const image = imageFor(card.name, card.image)
     || `https://api.scryfall.com/cards/named?exact=${encodeURIComponent(card.name)}&format=image&version=normal`
   const handlers = bindPreview(card.name, { slug: slug || undefined, image })
   // without previous_share (no metagame to compare with) the card is only played

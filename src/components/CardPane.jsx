@@ -5,6 +5,7 @@ import ManaCost from './ManaCost'
 import { AppearanceRow, MetagameBadge } from './Metagame'
 import CardPopularityChart, { PopularityTrend } from './CardPopularityChart'
 import { nameToSlug } from '../utils/slugs'
+import { useArtwork, withArtwork } from '../utils/artwork'
 
 function FaceDetails({ face }) {
   return (
@@ -129,8 +130,10 @@ function PlayedIn({ decks }) {
 // meanwhile; decks: the decklists playing it (for the archetypes); titleAs: the
 // heading's tag; pageLink: a link to the card's own page, under the images.
 export default function CardPane({ card, name, decks, titleAs: Title = 'h2', pageLink = false }) {
+  const artwork = useArtwork()
   if (!card) return <p className="text-gray-500 text-sm">{name ? `${name}: ` : ''}Loading…</p>
-  const s = card.scryfall
+  // the print of the visitor's artwork: its image, set, rarity and artist
+  const s = withArtwork(card.scryfall, card.first_print, artwork)
   const faces = s?.card_faces || null
   // DFC: card_faces present but no top-level image (each face has its own image)
   // Split: card_faces present with a top-level image (one image, multiple text halves)
@@ -225,7 +228,7 @@ export default function CardPane({ card, name, decks, titleAs: Title = 'h2', pag
                     <p className="text-xs text-gray-500">
                       {s.artist && <>Illustrated by <span className="text-gray-400">{s.artist}</span></>}
                       {s.artist && s.set_name && <span className="mx-2">·</span>}
-                      {s.set_name && <span className="text-gray-400">{s.set_name}</span>}
+                      {s.set_name && <span className="text-gray-400">{s.set_name}{s.rarity && <span className="capitalize">, {s.rarity}</span>}</span>}
                     </p>
                   )}
 

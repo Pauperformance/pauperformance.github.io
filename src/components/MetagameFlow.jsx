@@ -7,6 +7,7 @@ import { formatDate, formatShortDate, daysBetween, formatDays } from '../utils/d
 import { metagameSlug, nameToSlug } from '../utils/slugs'
 import { scrollGently } from '../utils/scroll'
 import { useCardPages, cardLinkSlug } from '../utils/cardPages'
+import { useImageFor } from '../utils/artwork'
 
 // The metagames as time flowing: the page scrolls through them, newest first,
 // back in time, while the timeline and the widgets stay on screen. Each
@@ -265,7 +266,8 @@ function MoverBadge({ badge, large }) {
 // large: bigger labels (the artwork tiles are big enough for them on desktops)
 export function MoverTile({ card, cardPages, bindPreview, badges = [], large = false }) {
   const slug = cardLinkSlug(cardPages, card.name)
-  const image = card.image
+  const imageFor = useImageFor()
+  const image = imageFor(card.name, card.image)
     || `https://api.scryfall.com/cards/named?exact=${encodeURIComponent(card.name)}&format=image&version=normal`
   const handlers = bindPreview(card.name, { slug: slug || undefined, image })
   const compared = card.previous_share !== undefined
@@ -301,7 +303,8 @@ export function MoverTile({ card, cardPages, bindPreview, badges = [], large = f
 // its name and how it moved (or how much it is played).
 export function MoverRow({ card, cardPages, bindPreview, badges = [] }) {
   const slug = cardLinkSlug(cardPages, card.name)
-  const image = card.image
+  const imageFor = useImageFor()
+  const image = imageFor(card.name, card.image)
     || `https://api.scryfall.com/cards/named?exact=${encodeURIComponent(card.name)}&format=image&version=normal`
   const handlers = bindPreview(card.name, { slug: slug || undefined, image })
   const compared = card.previous_share !== undefined
