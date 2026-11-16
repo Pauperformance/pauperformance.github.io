@@ -645,6 +645,9 @@ const sets = setIndexRaw['py/reduce'][4]['py/tuple'].map(function(entry) {
     pauper_pool: d.new_pauper_cards,
   }
 })
+// Myr numbers sets in the order it first saw them on Scryfall, which is not their release
+// order (a set announced early gets a low code): order them by date, then by code
+sets.sort(function(a, b) { return a.date < b.date ? -1 : a.date > b.date ? 1 : a.code - b.code })
 writeFileSync(join(outDir, 'sets.json'), JSON.stringify(sets))
 console.log('Built sets.json with ' + sets.length + ' entries (' + sets.filter(function(s) { return s.pauper_pool }).length + ' in Pauper pool).')
 
