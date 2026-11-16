@@ -5,6 +5,7 @@ import ManaCost from './ManaCost'
 import { AppearanceRow, MetagameBadge } from './Metagame'
 import CardPopularityChart, { PopularityTrend } from './CardPopularityChart'
 import { nameToSlug } from '../utils/slugs'
+import { decodeCardDecks } from '../utils/cardDecks'
 import { useArtwork, withArtwork } from '../utils/artwork'
 
 function FaceDetails({ face }) {
@@ -80,7 +81,7 @@ export function useCardDecks(slug) {
     if (!slug) return
     let cancelled = false
     fetch(`/data/card-decks/${slug}.json`)
-      .then(r => r.ok ? r.json() : [])
+      .then(r => r.ok ? r.json().then(decodeCardDecks) : [])
       .then(d => { if (!cancelled) setDecks(d) })
       .catch(() => { if (!cancelled) setDecks([]) })
     return () => { cancelled = true }
