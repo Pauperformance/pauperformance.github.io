@@ -761,7 +761,10 @@ mkdirSync(cardDetailsDir, { recursive: true })
 
 const cardFiles = readdirSync(cardIntelDir).filter(function(f) { return f.endsWith('.json') }).sort()
 const cardsIndex = []
+// the images of the cards' first common prints, and of their first prints ever
+// (Myr's `first_print`, see src/utils/artwork.js): the visitor picks in Settings
 const cardImageMap = {}
+const cardImageFirstMap = {}
 const cardTypeMap = {}
 const cardCmcMap = {}
 const cardColorMap = {}
@@ -816,11 +819,14 @@ for (const f of cardFiles) {
   cardsIndex.push(cardEntry)
   cardDetailInputs.push({ entry: cardEntry, path: cardInputPath })
 
-  cardImageMap[name] = scryfall
-    ? (scryfall.image_uris && scryfall.image_uris.normal)
-      || (scryfall.card_faces && scryfall.card_faces[0] && scryfall.card_faces[0].image_uris && scryfall.card_faces[0].image_uris.normal)
+  const imageOf = s => s
+    ? (s.image_uris && s.image_uris.normal)
+      || (s.card_faces && s.card_faces[0] && s.card_faces[0].image_uris && s.card_faces[0].image_uris.normal)
       || null
     : null
+  cardImageMap[name] = imageOf(scryfall)
+  // a card with no first print in its intel file (not exported yet) keeps the common one
+  cardImageFirstMap[name] = imageOf(raw.first_print) || cardImageMap[name]
   // Map both full name and front-face name (for DFCs) to types
   cardTypeMap[name] = types
   if (name.indexOf(' // ') !== -1) {
@@ -838,6 +844,7 @@ for (const f of cardFiles) {
     if (cardColorMap[plain] === undefined) cardColorMap[plain] = colors
     if (manaCost && cardManaCostMap[plain] === undefined) cardManaCostMap[plain] = manaCost
     if (!cardImageMap[plain]) cardImageMap[plain] = cardImageMap[name]
+    if (!cardImageFirstMap[plain]) cardImageFirstMap[plain] = cardImageFirstMap[name]
   }
 }
 // The popularity column: each card's rank in the latest metagame, the cards
@@ -882,6 +889,9 @@ for (const { entry, path } of cardDetailInputs) {
     banned: bannedCards.has(entry.name),
     archetypes: (raw.archetypes && raw.archetypes['py/set']) || [],
     scryfall: raw.scryfall || null,
+    // what of its first print ever differs from `scryfall` (the first common
+    // print): image, set, rarity, artist... (see withArtwork in src/utils/artwork.js)
+    first_print: raw.first_print || null,
     // the first and last decklists playing it (first_on_record: the first is
     // among the oldest decklists on record, so it may have been played before)
     first_appearance: appearance(raw.first_appearance),
@@ -912,6 +922,7 @@ writeFileSync(join(outDir, 'cards.json'), JSON.stringify(cardsIndex))
 // Every card page, so pages link only cards that have one (src/utils/cardPages.js).
 writeFileSync(join(outDir, 'card-slugs.json'), JSON.stringify(cardsIndex.map(function(c) { return c.slug })))
 writeFileSync(join(outDir, 'card-images.json'), JSON.stringify(cardImageMap))
+writeFileSync(join(outDir, 'card-images-first.json'), JSON.stringify(cardImageFirstMap))
 writeFileSync(join(outDir, 'card-types.json'), JSON.stringify(cardTypeMap))
 // mana values, for the mana curves of decks and archetypes
 writeFileSync(join(outDir, 'card-cmc.json'), JSON.stringify(cardCmcMap))
@@ -1108,6 +1119,9 @@ const topDecks = metagameOut.slice(0, 16).map(entry => {
     game_type: (arch && arch.game_type) || [],
     featured_image: (representative && representative.preview)
       || (staples[0] && staples[0].preview) || null,
+    // the card of the image, to show it in the visitor's artwork
+    featured_card: representative && representative.preview ? representative.name
+      : (staples[0] && staples[0].preview ? staples[0].name : null),
     staples,
   }
 })
@@ -1241,6 +1255,8 @@ for (const m of metagameFiles) {
       game_type: brew ? [] : (arch && arch.game_type) || [],
       featured_image: (representative && representative.preview)
         || (a.cards[0] && a.cards[0].preview) || null,
+      featured_card: representative && representative.preview ? representative.name
+        : (a.cards[0] && a.cards[0].preview ? a.cards[0].name : null),
       // play rate: the share of the archetype's decks playing the card
       cards: a.cards.map(c => ({
         name: c.name, link: c.link, preview: c.preview, banned: c.banned === true,

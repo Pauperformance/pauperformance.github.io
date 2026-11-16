@@ -14,6 +14,9 @@ export const DEFAULT_SETTINGS = {
   // everywhere videos are listed (Watch, archetype pages…): a muted preview
   // playing on hover (desktop) or when the video is in the middle of the screen (touch)
   videos: { previews: true },
+  // the artwork cards are shown with: the card's first print ever ('first') or its
+  // first common print ('common'), see utils/artwork.js
+  cards: { artwork: 'first' },
 }
 
 const listeners = new Set()

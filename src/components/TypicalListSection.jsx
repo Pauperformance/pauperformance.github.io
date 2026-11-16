@@ -9,6 +9,7 @@ import { bansCrossed, computeTypicalList } from '../utils/typicalList'
 import { cardLinkSlug, useCardPages } from '../utils/cardPages'
 import { nameToSlug } from '../utils/slugs'
 import { getSettings } from '../utils/settings'
+import { loadCardImages, useArtwork, useImageFor } from '../utils/artwork'
 import { formatShortDate } from '../utils/dates'
 import { DeckList, VisualList, Toggle, NO_VERSUS, sortCards } from '../pages/DeckPage'
 
@@ -44,7 +45,8 @@ function CopiesCell({ share }) {
 // beside the table have it. On touch devices a tap opens the preview sheet.
 function TypicalCardRow({ card, cardPages, bindPreview }) {
   const slug = cardLinkSlug(cardPages, card.name)
-  const handlers = bindPreview(card.name, { slug: slug || undefined, image: card.preview, hover: false })
+  const imageFor = useImageFor()
+  const handlers = bindPreview(card.name, { slug: slug || undefined, image: imageFor(card.name, card.preview), hover: false })
   // Cards with no page (e.g. banned ones) are shown but not linked.
   const name = slug
     ? <Link to={`/cards/${slug}`} {...handlers} className="truncate text-gray-200 hover:text-amber-400 transition-colors">{card.name}</Link>
@@ -83,12 +85,14 @@ function groupOf(card) {
 
 function TypicalCardImage({ card, cardPages, bindPreview }) {
   const slug = cardLinkSlug(cardPages, card.name)
+  const imageFor = useImageFor()
+  const image = imageFor(card.name, card.preview)
   const img = (
-    <img src={card.preview} alt={card.name} loading="lazy"
+    <img src={image} alt={card.name} loading="lazy"
       className={`w-full aspect-[488/680] rounded-[4.75%/3.5%] border object-cover transition-colors ${card.banned ? 'border-red-700' : 'border-gray-700 group-hover:border-amber-400'}`} />
   )
   // the hover preview: the card's image (larger) and its Oracle text
-  const handlers = bindPreview(card.name, { slug: slug || undefined, image: card.preview })
+  const handlers = bindPreview(card.name, { slug: slug || undefined, image })
   return (
     <div className="relative">
       {/* Cards with no page (e.g. banned ones) are shown but not linked. */}
@@ -288,14 +292,15 @@ function CompactTypicalList({ name, list, bindPreview }) {
   const [visual, setVisual] = useViewPref('visual', getSettings().deckView.visual)
   const [groupByType, setGroupByType] = useViewPref('groupByType', getSettings().deckView.groupByType)
   const [sort, setSort] = useViewPref('sort', getSettings().deckView.sort)
+  const artwork = useArtwork()
   useEffect(() => {
     Promise.all([
-      fetch('/data/card-images.json').then(r => r.json()),
+      loadCardImages(artwork),
       fetch('/data/card-types.json').then(r => r.json()),
       fetch('/data/card-mana-costs.json').then(r => r.json()),
       fetch('/data/card-cmc.json').then(r => r.json()),
     ]).then(([images, types, costs, cmc]) => setData({ images, types, costs, cmc })).catch(() => {})
-  }, [])
+  }, [artwork])
   const decklist = typicalDecklist(list)
   const dates = list.first_date === list.last_date
     ? `on ${formatShortDate(list.last_date)}`

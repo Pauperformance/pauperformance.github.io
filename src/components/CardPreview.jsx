@@ -1,7 +1,8 @@
-import { Fragment, useCallback, useEffect, useLayoutEffect, useRef, useState } from 'react'
+import { Fragment, useCallback, useEffect, useLayoutEffect, useMemo, useRef, useState } from 'react'
 import { createPortal } from 'react-dom'
 import { Link } from 'react-router-dom'
 import { cardLinkSlug, loadCardPages, useCardPages } from '../utils/cardPages'
+import { useArtwork, withArtwork } from '../utils/artwork'
 
 // Hover preview of a card: its image (both sides of a double-faced card)
 // beside its current Oracle text, since the wording printed on the image can
@@ -39,7 +40,7 @@ function loadCard(slug) {
   if (!cache.has(slug)) {
     cache.set(slug, fetch(`/data/card-details/${slug}.json`)
       .then(r => r.ok ? r.json() : null)
-      .then(d => d && d.scryfall ? toPreview(d.scryfall) : null)
+      .then(d => d && d.scryfall ? { scryfall: d.scryfall, firstPrint: d.first_print } : null)
       .catch(() => { cache.delete(slug); return null }))
   }
   return cache.get(slug)
@@ -136,6 +137,8 @@ function OracleFace({ face }) {
 export function useCardData(name, slug) {
   // Tagged with the name it was loaded for, so a stale card is never shown.
   const [loaded, setLoaded] = useState({ name: null, card: undefined })
+  // shown with the visitor's artwork (see the Settings page)
+  const artwork = useArtwork()
 
   useEffect(() => {
     if (!name) return
@@ -145,8 +148,12 @@ export function useCardData(name, slug) {
     return () => { alive = false }
   }, [name, slug])
 
+  const card = loaded.name === name ? loaded.card : undefined
+  const preview = useMemo(
+    () => card ? toPreview(withArtwork(card.scryfall, card.firstPrint, artwork)) : card,
+    [card, artwork])
   if (!name) return null
-  return loaded.name === name ? loaded.card : undefined
+  return preview
 }
 
 // The card's Oracle text, one block per face; a skeleton while loading.
