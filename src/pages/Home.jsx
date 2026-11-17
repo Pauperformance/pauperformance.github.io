@@ -220,6 +220,14 @@ const SPRITE = 200 / 1407
 const HEADDRESS = { left: 300 / 1407, width: 850 / 1407 }
 const HEADDRESS_Z = 30
 
+// Horizontal wheel feel: how long the ring takes to glide after the wheel
+// while scrolling and while snapping (ms), how much scroll turns it by one
+// archetype (px), and how long the wheel must pause before it snaps (ms)
+const WHEEL_GLIDE_MS = 150
+const WHEEL_SNAP_GLIDE_MS = 300
+const WHEEL_PX_PER_GLYPH = 350
+const WHEEL_SETTLE_MS = 350
+
 const wrap = (i) => ((i % GLYPHS) + GLYPHS) % GLYPHS
 
 // The hint wiggle: how far the ring rocks (in glyphs), how many full
@@ -249,6 +257,7 @@ function BrainstormSection() {
   const draggedRef = useRef(false)
   const introRef = useRef(false)
   const interactedRef = useRef(false)
+  const wheelingRef = useRef(false)
   const sceneRef = useRef(null)
   const boxRef = useRef(null)
   const [boxWidth, setBoxWidth] = useState(0)
@@ -431,6 +440,59 @@ function BrainstormSection() {
     else return
     e.preventDefault()
   }
+
+  // A horizontal mouse wheel (or trackpad swipe) moves the ring's target, and
+  // the ring glides after it continuously (exponential smoothing), so even one
+  // notch is seen as a smooth turn. Once the wheel pauses, the target snaps to
+  // the nearest glyph and the ring glides there. Native listener: React's
+  // wheel events are passive and couldn't stop the browser navigating back.
+  const interruptRef = useRef(interrupt)
+  interruptRef.current = interrupt
+  useEffect(() => {
+    const targets = [sceneRef.current, boxRef.current].filter(Boolean)
+    const reduced = window.matchMedia('(prefers-reduced-motion: reduce)').matches
+    let settleTimer = null
+    let last = 0
+    const glide = (now) => {
+      const dt = Math.min(now - last, 50)
+      last = now
+      const diff = targetRef.current - rotRef.current
+      if (Math.abs(diff) < 0.002) return setNow(targetRef.current)
+      setNow(rotRef.current + diff * (1 - Math.exp(-dt / (wheelingRef.current ? WHEEL_GLIDE_MS : WHEEL_SNAP_GLIDE_MS))))
+      frameRef.current = requestAnimationFrame(glide)
+    }
+    const startGlide = () => {
+      cancelAnimationFrame(frameRef.current)
+      last = performance.now()
+      frameRef.current = requestAnimationFrame(glide)
+    }
+    const onWheel = (e) => {
+      if (Math.abs(e.deltaX) <= Math.abs(e.deltaY)) return
+      e.preventDefault()
+      interruptRef.current()
+      if (!wheelingRef.current) {
+        cancelAnimationFrame(frameRef.current)
+        targetRef.current = rotRef.current
+        wheelingRef.current = true
+        if (!reduced) startGlide()
+      }
+      const dx = e.deltaMode === 1 ? e.deltaX * 33 : e.deltaX
+      targetRef.current += dx / WHEEL_PX_PER_GLYPH
+      if (reduced) setNow(targetRef.current)
+      clearTimeout(settleTimer)
+      settleTimer = setTimeout(() => {
+        wheelingRef.current = false
+        targetRef.current = Math.round(targetRef.current)
+        if (reduced) setNow(targetRef.current)
+        else startGlide()
+      }, WHEEL_SETTLE_MS)
+    }
+    targets.forEach(t => t.addEventListener('wheel', onWheel, { passive: false }))
+    return () => {
+      clearTimeout(settleTimer)
+      targets.forEach(t => t.removeEventListener('wheel', onWheel))
+    }
+  }, [decks.length])
 
   if (!decks.length) return null
 
