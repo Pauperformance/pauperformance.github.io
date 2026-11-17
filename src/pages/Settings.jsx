@@ -114,7 +114,8 @@ function HiddenCreators({ hidden, onChange }) {
 
 export default function Settings() {
   const settings = useSettings()
-  const { deckView, watch, videos, cards } = settings
+  const { deckView, watch, videos, cards, home } = settings
+  const setHome = patch => updateSettings({ home: patch })
   const setCards = patch => updateSettings({ cards: patch })
   const setDeckView = patch => updateSettings({ deckView: patch })
   const setVideos = patch => updateSettings({ videos: patch })
@@ -133,6 +134,7 @@ export default function Settings() {
 
         {/* as wide as the other pages: two columns on large screens */}
         <div className="grid gap-6 lg:grid-cols-2 items-start">
+        <div className="space-y-6">
         <Setting
           title="Decklist view"
           description="How decklists are shown by default across the website. You can still change the view on each page later.">
@@ -144,13 +146,26 @@ export default function Settings() {
           <DeckViewPreview deckView={deckView} />
         </Setting>
 
-        <div className="space-y-6">
         <Setting
           title="Card artwork"
-          description="The print of a card shown wherever its image appears: its first print ever, which can be an uncommon or a rare, or its first common print. Cards first printed as a common look the same either way.">
+          description="The print of a card shown wherever its image appears: its first print ever (any rarity) or its first common print.">
           <Toggle value={cards.artwork} onChange={v => setCards({ artwork: v })} options={ARTWORKS} />
         </Setting>
 
+        <Setting
+          title="Home: metagame viewer"
+          description="How the top archetypes are shown on the home page: Brainstorm widget or table. You can still switch on the page itself.">
+          <Toggle value={home.metaView} onChange={v => setHome({ metaView: v })} options={[['brainstorm', 'Brainstorm'], ['table', 'Table']]} />
+        </Setting>
+
+        <Setting
+          title="Video previews"
+          description={<>Play a short preview of a video without pressing play, wherever videos are listed, such as <WatchLink /> and the archetype pages. Turn it off to save data and battery.</>}>
+          <Toggle value={videos.previews} onChange={v => setVideos({ previews: v })} options={[[true, 'On'], [false, 'Off']]} />
+        </Setting>
+        </div>
+
+        <div className="space-y-6">
         <Setting
           title="Watch: content creators"
           description={<>Click a creator to hide their content from <WatchLink />.</>}>
@@ -180,12 +195,6 @@ export default function Settings() {
               )
             })}
           </div>
-        </Setting>
-
-        <Setting
-          title="Video previews"
-          description={<>Play a short preview of a video without pressing play, wherever videos are listed, such as <WatchLink /> and the archetype pages. Turn it off to save data and battery.</>}>
-          <Toggle value={videos.previews} onChange={v => setVideos({ previews: v })} options={[[true, 'On'], [false, 'Off']]} />
         </Setting>
         </div>
         </div>

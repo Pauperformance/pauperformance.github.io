@@ -9,6 +9,7 @@ import { useCardPreview } from '../components/CardPreview'
 import { useImageFor } from '../utils/artwork'
 import CardLink from '../components/PoolCardLink'
 import MetaPie from '../components/MetaPie'
+import { useSettings, updateSettings } from '../utils/settings'
 
 function useCountUp(target, duration = 1600) {
   const [count, setCount] = useState(0)
@@ -663,22 +664,11 @@ function MetagameSection() {
 }
 
 // How the top archetypes are shown: the Brainstorm glyph ring (default) or
-// the card table. The choice is remembered per browser.
-const META_VIEW_KEY = 'home-meta-view'
-
+// the card table. Stored in the settings, so it can be changed there too.
 function useMetaView() {
-  const [view, setView] = useState(() => {
-    try {
-      return localStorage.getItem(META_VIEW_KEY) === 'table' ? 'table' : 'brainstorm'
-    } catch {
-      return 'brainstorm'
-    }
-  })
-  const choose = (next) => {
-    setView(next)
-    try { localStorage.setItem(META_VIEW_KEY, next) } catch { /* private mode: just don't remember */ }
-  }
-  return [view, choose]
+  const { home } = useSettings()
+  const view = home.metaView === 'table' ? 'table' : 'brainstorm'
+  return [view, next => updateSettings({ home: { metaView: next } })]
 }
 
 
