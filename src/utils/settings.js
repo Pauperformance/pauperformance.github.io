@@ -17,6 +17,8 @@ export const DEFAULT_SETTINGS = {
   // the artwork cards are shown with: the card's first print ever ('first') or its
   // first common print ('common'), see utils/artwork.js
   cards: { artwork: 'first' },
+  // the home page's metagame viewer: the Brainstorm glyph ring ('brainstorm') or the card table ('table')
+  home: { metaView: 'brainstorm' },
 }
 
 const listeners = new Set()
