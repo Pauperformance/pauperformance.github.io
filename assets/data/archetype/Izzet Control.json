@@ -9,13 +9,13 @@
     ],
     "family": "Terror",
     "first_appearance": {
-        "date": "2016-07-12",
+        "date": "2016-07-25",
         "metagame": {
-            "date": "2016-06-10",
+            "date": "2016-07-22",
             "decks": null,
-            "label": "ema",
-            "metagame": "053",
-            "name": "Eternal Masters",
+            "label": "emn",
+            "metagame": "054",
+            "name": "Eldritch Moon",
             "py/object": "pauperformance_bot.entity.api.archetype.MetagameRef"
         },
         "py/object": "pauperformance_bot.entity.api.archetype.Appearance"
@@ -62,160 +62,6 @@
             ]
         },
         "by_metagame": {
-            "053": {
-                "main": {
-                    "Archaeomancer": [
-                        3,
-                        3,
-                        2,
-                        2
-                    ],
-                    "Compulsive Research": [
-                        3,
-                        3,
-                        3,
-                        1
-                    ],
-                    "Counterspell": [
-                        3,
-                        3,
-                        3,
-                        3
-                    ],
-                    "Firebolt": [
-                        3,
-                        3
-                    ],
-                    "Flame Slash": [
-                        3,
-                        3,
-                        2
-                    ],
-                    "Forgotten Cave": [
-                        1
-                    ],
-                    "Ghostly Flicker": [
-                        3,
-                        3,
-                        3
-                    ],
-                    "Island": [
-                        2,
-                        2,
-                        2,
-                        2,
-                        2,
-                        2,
-                        2,
-                        2
-                    ],
-                    "Izzet Boilerworks": [
-                        3,
-                        3,
-                        3,
-                        3
-                    ],
-                    "Lightning Bolt": [
-                        3,
-                        3,
-                        3,
-                        3
-                    ],
-                    "Lonely Sandbar": [
-                        1
-                    ],
-                    "Mountain": [
-                        2,
-                        2,
-                        2,
-                        2,
-                        2
-                    ],
-                    "Mulldrifter": [
-                        3,
-                        3,
-                        3,
-                        3
-                    ],
-                    "Peregrine Drake": [
-                        3,
-                        3,
-                        3,
-                        3
-                    ],
-                    "Preordain": [
-                        3,
-                        3,
-                        3,
-                        3
-                    ],
-                    "Rolling Thunder": [
-                        1
-                    ],
-                    "Sea Gate Oracle": [
-                        3,
-                        3,
-                        3,
-                        3
-                    ],
-                    "Snow-Covered Island": [
-                        1,
-                        1,
-                        1,
-                        1,
-                        1,
-                        1,
-                        1,
-                        1
-                    ],
-                    "Snow-Covered Mountain": [
-                        1,
-                        1,
-                        1,
-                        1
-                    ],
-                    "Swiftwater Cliffs": [
-                        3,
-                        3,
-                        3,
-                        3
-                    ]
-                },
-                "side": {
-                    "Dispel": [
-                        1,
-                        1
-                    ],
-                    "Electrickery": [
-                        3,
-                        3,
-                        2,
-                        2
-                    ],
-                    "Gorilla Shaman": [
-                        1
-                    ],
-                    "Hydroblast": [
-                        3,
-                        3
-                    ],
-                    "Pyroblast": [
-                        3,
-                        3,
-                        3,
-                        3
-                    ],
-                    "Sage's Row Denizen": [
-                        2
-                    ],
-                    "Stone Rain": [
-                        3,
-                        3,
-                        3,
-                        3
-                    ]
-                }
-            },
             "054": {
                 "main": {
                     "Archaeomancer": [
@@ -567,20 +413,20 @@
             "056": {
                 "main": {
                     "Archaeomancer": [
-                        23,
-                        23,
-                        23
-                    ],
-                    "Compulsive Research": [
-                        23,
-                        23,
+                        20,
+                        20,
                         20
                     ],
+                    "Compulsive Research": [
+                        20,
+                        20,
+                        17
+                    ],
                     "Counterspell": [
-                        23,
-                        23,
-                        23,
-                        23
+                        20,
+                        20,
+                        20,
+                        20
                     ],
                     "Deep Analysis": [
                         4
@@ -594,80 +440,79 @@
                         1
                     ],
                     "Firebolt": [
-                        12
+                        10
                     ],
                     "Flame Slash": [
-                        23,
-                        23,
-                        21,
-                        17
+                        20,
+                        20,
+                        18,
+                        14
                     ],
                     "Forgotten Cave": [
-                        17,
+                        16,
                         1
                     ],
                     "Ghostly Flicker": [
-                        23,
-                        22,
-                        22
+                        20,
+                        19,
+                        19
                     ],
                     "Harvest Pyre": [
                         4
                     ],
                     "Island": [
-                        20,
-                        20,
-                        20,
-                        20,
-                        20,
-                        20,
-                        20,
                         17,
+                        17,
+                        17,
+                        17,
+                        17,
+                        17,
+                        17,
+                        15,
                         6
                     ],
                     "Izzet Boilerworks": [
-                        23,
-                        23,
-                        23,
-                        23
+                        20,
+                        20,
+                        20,
+                        20
                     ],
                     "Izzet Guildgate": [
-                        7
+                        6
                     ],
                     "Lightning Bolt": [
-                        23,
-                        23,
-                        19,
-                        19
-                    ],
-                    "Lonely Sandbar": [
-                        15
-                    ],
-                    "Mountain": [
-                        20,
                         20,
                         20,
                         16,
-                        7,
-                        2
+                        16
+                    ],
+                    "Lonely Sandbar": [
+                        14
+                    ],
+                    "Mountain": [
+                        17,
+                        17,
+                        17,
+                        13,
+                        5
                     ],
                     "Mulldrifter": [
-                        23,
-                        23,
-                        23,
-                        22
+                        20,
+                        20,
+                        20,
+                        20
                     ],
                     "Peregrine Drake": [
-                        23,
-                        23,
-                        23,
-                        23
+                        20,
+                        20,
+                        20,
+                        20
                     ],
                     "Preordain": [
-                        23,
-                        23,
-                        23,
-                        23
+                        20,
+                        20,
+                        20,
+                        20
                     ],
                     "Radiant Fountain": [
                         1,
@@ -678,13 +523,13 @@
                         4
                     ],
                     "Rolling Thunder": [
-                        4
+                        2
                     ],
                     "Sea Gate Oracle": [
-                        23,
-                        23,
-                        23,
-                        23
+                        20,
+                        20,
+                        20,
+                        20
                     ],
                     "Snow-Covered Island": [
                         3,
@@ -702,28 +547,28 @@
                         3
                     ],
                     "Swiftwater Cliffs": [
-                        23,
-                        23,
-                        23,
-                        23
+                        20,
+                        20,
+                        20,
+                        20
                     ]
                 },
                 "side": {
                     "Aura Flux": [
-                        13,
-                        7
+                        10,
+                        4
                     ],
                     "Dispel": [
-                        19,
-                        13,
+                        16,
+                        12,
                         4
                     ],
                     "Echoing Truth": [
                         3
                     ],
                     "Electrickery": [
-                        23,
-                        23,
+                        20,
+                        20,
                         15,
                         4
                     ],
@@ -747,28 +592,21 @@
                         3
                     ],
                     "Hydroblast": [
-                        23,
-                        23,
-                        21,
-                        8
+                        20,
+                        20,
+                        18,
+                        6
                     ],
                     "Pyroblast": [
-                        23,
-                        23,
-                        23,
-                        16
+                        20,
+                        20,
+                        20,
+                        14
                     ],
                     "Relic of Progenitus": [
-                        7,
                         6,
+                        5,
                         3
-                    ],
-                    "Shattering Pulse": [
-                        2,
-                        2
-                    ],
-                    "Smash to Smithereens": [
-                        1
                     ]
                 }
             },
@@ -1689,57 +1527,21 @@
                         7,
                         7
                     ],
-                    "Archaeomancer": [
-                        1,
-                        1
-                    ],
-                    "Ash Barrens": [
-                        1
-                    ],
                     "Augur of Bolas": [
-                        5,
                         4,
-                        4,
-                        4
-                    ],
-                    "Bloodfell Caves": [
-                        1
-                    ],
-                    "Brainstorm": [
-                        1,
-                        1,
-                        1
-                    ],
-                    "Chainer's Edict": [
-                        1,
-                        1,
-                        1,
-                        1
-                    ],
-                    "Chittering Rats": [
-                        1
+                        3,
+                        3,
+                        3
                     ],
                     "Counterspell": [
-                        11,
-                        11,
-                        11,
-                        11
+                        10,
+                        10,
+                        10,
+                        10
                     ],
                     "Deep Analysis": [
                         7,
                         7
-                    ],
-                    "Dimir Aqueduct": [
-                        1,
-                        1,
-                        1
-                    ],
-                    "Dinrova Horror": [
-                        1
-                    ],
-                    "Dismal Backwater": [
-                        1,
-                        1
                     ],
                     "Dispel": [
                         10,
@@ -1749,9 +1551,6 @@
                         2,
                         1
                     ],
-                    "Echoing Decay": [
-                        1
-                    ],
                     "Eldrazi Skyspawner": [
                         3,
                         3,
@@ -1759,12 +1558,6 @@
                     ],
                     "Electrickery": [
                         4
-                    ],
-                    "Evolving Wilds": [
-                        1,
-                        1,
-                        1,
-                        1
                     ],
                     "Exclude": [
                         10,
@@ -1782,19 +1575,15 @@
                         6
                     ],
                     "Flame Slash": [
-                        11,
-                        11,
-                        11,
-                        5
+                        10,
+                        10,
+                        10,
+                        4
                     ],
                     "Flurry of Horns": [
                         7,
                         7,
                         7,
-                        1
-                    ],
-                    "Ghostly Flicker": [
-                        1,
                         1
                     ],
                     "Harvest Pyre": [
@@ -1804,18 +1593,18 @@
                         3
                     ],
                     "Island": [
-                        7,
-                        7,
-                        7,
-                        7,
+                        6,
+                        6,
+                        6,
+                        6,
                         6,
                         6,
                         6
                     ],
                     "Izzet Boilerworks": [
-                        11,
-                        11,
-                        9,
+                        10,
+                        10,
+                        8,
                         8
                     ],
                     "Lightning Bolt": [
@@ -1832,7 +1621,7 @@
                         1
                     ],
                     "Mountain": [
-                        7,
+                        6,
                         6,
                         6,
                         6,
@@ -1840,10 +1629,10 @@
                         6
                     ],
                     "Mulldrifter": [
-                        4,
-                        4,
-                        4,
-                        4
+                        3,
+                        3,
+                        3,
+                        3
                     ],
                     "Oona's Grace": [
                         2
@@ -1855,17 +1644,14 @@
                         7
                     ],
                     "Preordain": [
-                        11,
-                        11,
-                        11,
-                        11
-                    ],
-                    "Reaping the Graves": [
-                        1
+                        10,
+                        10,
+                        10,
+                        10
                     ],
                     "Sea Gate Oracle": [
-                        4,
-                        4,
+                        3,
+                        3,
                         3,
                         3
                     ],
@@ -1898,17 +1684,11 @@
                         3,
                         2
                     ],
-                    "Swamp": [
-                        1
-                    ],
                     "Swiftwater Cliffs": [
-                        10,
-                        10,
+                        9,
+                        9,
                         9,
                         9
-                    ],
-                    "Terminate": [
-                        1
                     ],
                     "Terramorphic Expanse": [
                         1,
@@ -1929,12 +1709,12 @@
                         6
                     ],
                     "Electrickery": [
-                        10,
+                        9,
                         3
                     ],
                     "Gorilla Shaman": [
-                        11,
-                        11,
+                        10,
+                        10,
                         8,
                         1
                     ],
@@ -1942,28 +1722,28 @@
                         2
                     ],
                     "Hydroblast": [
-                        11,
-                        11,
-                        11,
+                        10,
+                        10,
+                        10,
                         4
                     ],
                     "Pyroblast": [
-                        11,
-                        11,
-                        11,
-                        8
+                        10,
+                        10,
+                        10,
+                        7
                     ],
                     "Relic of Progenitus": [
-                        4,
-                        4,
-                        2
+                        3,
+                        3,
+                        1
                     ],
                     "Staggershock": [
                         1
                     ],
                     "Stormbound Geist": [
-                        4,
-                        4
+                        3,
+                        3
                     ],
                     "Swirling Sandstorm": [
                         4,
@@ -4285,27 +4065,33 @@
             "077": {
                 "main": {
                     "Ash Barrens": [
+                        2,
+                        1,
+                        1,
                         1
                     ],
                     "Augur of Bolas": [
-                        1,
-                        1,
-                        1,
-                        1
+                        2,
+                        2,
+                        2,
+                        2
                     ],
                     "Brainstorm": [
-                        1,
-                        1,
-                        1,
-                        1
+                        2,
+                        2,
+                        2,
+                        2
                     ],
                     "Capsize": [
                         1
                     ],
                     "Counterspell": [
-                        1,
-                        1,
-                        1,
+                        2,
+                        2,
+                        2,
+                        2
+                    ],
+                    "Deprive": [
                         1
                     ],
                     "Dispel": [
@@ -4316,94 +4102,108 @@
                         1
                     ],
                     "Izzet Boilerworks": [
-                        1,
+                        2,
                         1
                     ],
                     "Lightning Bolt": [
-                        1,
-                        1,
-                        1,
+                        2,
+                        2,
+                        2,
                         1
                     ],
                     "Mulldrifter": [
-                        1,
-                        1,
-                        1,
-                        1
+                        2,
+                        2,
+                        2,
+                        2
                     ],
                     "Ponder": [
-                        1,
-                        1,
+                        2,
+                        2,
+                        2,
+                        2
+                    ],
+                    "Preordain": [
                         1,
                         1
                     ],
                     "Relic of Progenitus": [
-                        1,
-                        1
+                        2,
+                        2
                     ],
                     "Repeal": [
-                        1
+                        2
                     ],
                     "Sea Gate Oracle": [
-                        1,
-                        1,
-                        1,
-                        1
+                        2,
+                        2,
+                        2,
+                        2
                     ],
                     "Skred": [
-                        1,
-                        1,
-                        1,
-                        1
+                        2,
+                        2,
+                        2,
+                        2
                     ],
                     "Snow-Covered Island": [
-                        1,
-                        1,
-                        1,
-                        1,
-                        1,
-                        1,
-                        1,
-                        1,
-                        1,
+                        2,
+                        2,
+                        2,
+                        2,
+                        2,
+                        2,
+                        2,
+                        2,
+                        2,
+                        2,
                         1
                     ],
                     "Snow-Covered Mountain": [
-                        1,
-                        1
+                        2,
+                        2
                     ],
                     "Spellstutter Sprite": [
-                        1,
-                        1,
-                        1,
-                        1
+                        2,
+                        2,
+                        2,
+                        2
                     ],
                     "Terramorphic Expanse": [
-                        1,
+                        2,
                         1
                     ]
                 },
                 "side": {
+                    "Annul": [
+                        1,
+                        1
+                    ],
                     "Dispel": [
                         1,
                         1
                     ],
                     "Electrickery": [
-                        1,
-                        1
+                        2,
+                        2
                     ],
                     "Gorilla Shaman": [
-                        1,
+                        2,
+                        2,
                         1
                     ],
                     "Hydroblast": [
-                        1,
+                        2,
+                        2,
                         1
                     ],
                     "Pyroblast": [
-                        1,
-                        1,
-                        1,
+                        2,
+                        2,
+                        2,
+                        2
+                    ],
+                    "Relic of Progenitus": [
                         1
                     ],
                     "Stormbound Geist": [
@@ -5228,12 +5028,6 @@
                 "preview": "https://cards.scryfall.io/normal/front/0/b/0bb07402-d526-4938-89a3-9174d5b5a4de.jpg",
                 "type_line": "Sorcery"
             },
-            "Sage's Row Denizen": {
-                "banned": false,
-                "link": "https://scryfall.com/card/gtc/46/sages-row-denizen",
-                "preview": "https://cards.scryfall.io/normal/front/0/6/063e6df9-2287-485a-ab46-fa4a38783884.jpg",
-                "type_line": "Creature \u2014 Vedalken Wizard"
-            },
             "Sea Gate Oracle": {
                 "banned": false,
                 "link": "https://scryfall.com/card/roe/85/sea-gate-oracle",
@@ -5246,22 +5040,10 @@
                 "preview": "https://cards.scryfall.io/normal/front/8/4/849a7d2b-3fdb-4e7f-b0b6-f6559dcb32e2.jpg",
                 "type_line": "Artifact"
             },
-            "Shattering Pulse": {
-                "banned": false,
-                "link": "https://scryfall.com/card/exo/102/shattering-pulse",
-                "preview": "https://cards.scryfall.io/normal/front/8/9/89d3b846-6071-4d65-86ba-da08c4bd0aa1.jpg",
-                "type_line": "Instant"
-            },
             "Skred": {
                 "banned": false,
                 "link": "https://scryfall.com/card/csp/97/skred",
                 "preview": "https://cards.scryfall.io/normal/front/b/3/b3d6d42a-7607-4361-acc4-7f3cb956bfc9.jpg",
-                "type_line": "Instant"
-            },
-            "Smash to Smithereens": {
-                "banned": false,
-                "link": "https://scryfall.com/card/shm/107/smash-to-smithereens",
-                "preview": "https://cards.scryfall.io/normal/front/7/e/7eda1524-44dd-4f70-ac21-bac51578860e.jpg",
                 "type_line": "Instant"
             },
             "Snap": {
@@ -5373,7 +5155,7 @@
                 "type_line": "Artifact"
             }
         },
-        "decks": 43,
+        "decks": 44,
         "ended_by_bans": [],
         "era_end": null,
         "era_start": {
@@ -5390,12 +5172,12 @@
         "main": [
             {
                 "at_least": [
-                    0.767,
-                    0.767,
-                    0.767,
-                    0.767
+                    0.773,
+                    0.773,
+                    0.773,
+                    0.773
                 ],
-                "average": 9.6,
+                "average": 9.7,
                 "banned": false,
                 "link": "https://scryfall.com/card/ice/371/snow-covered-island",
                 "name": "Snow-Covered Island",
@@ -5439,11 +5221,11 @@
             {
                 "at_least": [
                     1.0,
-                    0.977,
-                    0.86,
-                    0.628
+                    0.955,
+                    0.841,
+                    0.614
                 ],
-                "average": 3.5,
+                "average": 3.4,
                 "banned": false,
                 "link": "https://scryfall.com/card/gpt/159/izzet-boilerworks",
                 "name": "Izzet Boilerworks",
@@ -5454,10 +5236,10 @@
             },
             {
                 "at_least": [
-                    0.884,
-                    0.884,
-                    0.814,
-                    0.791
+                    0.886,
+                    0.886,
+                    0.795,
+                    0.773
                 ],
                 "average": 3.8,
                 "banned": false,
@@ -5470,10 +5252,10 @@
             },
             {
                 "at_least": [
-                    0.86,
-                    0.86,
-                    0.86,
-                    0.86
+                    0.864,
+                    0.864,
+                    0.864,
+                    0.864
                 ],
                 "average": 4.0,
                 "banned": false,
@@ -5487,9 +5269,9 @@
             {
                 "at_least": [
                     1.0,
-                    0.953,
-                    0.698,
-                    0.163
+                    0.955,
+                    0.705,
+                    0.182
                 ],
                 "average": 2.8,
                 "banned": false,
@@ -5502,10 +5284,26 @@
             },
             {
                 "at_least": [
-                    0.953,
-                    0.93,
-                    0.86,
-                    0.349
+                    0.955,
+                    0.886,
+                    0.409,
+                    0.205
+                ],
+                "average": 2.6,
+                "banned": false,
+                "link": "https://scryfall.com/card/c16/56/ash-barrens",
+                "name": "Ash Barrens",
+                "preview": "https://cards.scryfall.io/normal/front/9/d/9d7ac112-bb20-4ea4-b797-5d21f6b7c121.jpg",
+                "py/object": "pauperformance_bot.entity.api.archetype.TypicalCard",
+                "type_line": "Land",
+                "typical": 3
+            },
+            {
+                "at_least": [
+                    0.955,
+                    0.932,
+                    0.864,
+                    0.341
                 ],
                 "average": 3.2,
                 "banned": false,
@@ -5518,9 +5316,9 @@
             },
             {
                 "at_least": [
-                    0.884,
-                    0.884,
-                    0.674,
+                    0.864,
+                    0.864,
+                    0.659,
                     0.0
                 ],
                 "average": 2.8,
@@ -5534,10 +5332,10 @@
             },
             {
                 "at_least": [
-                    0.767,
-                    0.767,
-                    0.721,
-                    0.093
+                    0.773,
+                    0.773,
+                    0.727,
+                    0.114
                 ],
                 "average": 3.1,
                 "banned": false,
@@ -5550,10 +5348,10 @@
             },
             {
                 "at_least": [
-                    0.651,
-                    0.651,
-                    0.605,
-                    0.186
+                    0.636,
+                    0.636,
+                    0.591,
+                    0.182
                 ],
                 "average": 3.2,
                 "banned": false,
@@ -5566,26 +5364,10 @@
             },
             {
                 "at_least": [
-                    0.953,
-                    0.884,
-                    0.395,
-                    0.186
-                ],
-                "average": 2.5,
-                "banned": false,
-                "link": "https://scryfall.com/card/c16/56/ash-barrens",
-                "name": "Ash Barrens",
-                "preview": "https://cards.scryfall.io/normal/front/9/d/9d7ac112-bb20-4ea4-b797-5d21f6b7c121.jpg",
-                "py/object": "pauperformance_bot.entity.api.archetype.TypicalCard",
-                "type_line": "Land",
-                "typical": 2
-            },
-            {
-                "at_least": [
-                    0.837,
-                    0.814,
-                    0.233,
-                    0.093
+                    0.818,
+                    0.795,
+                    0.227,
+                    0.091
                 ],
                 "average": 2.4,
                 "banned": false,
@@ -5598,8 +5380,8 @@
             },
             {
                 "at_least": [
-                    0.837,
-                    0.674,
+                    0.818,
+                    0.659,
                     0.0,
                     0.0
                 ],
@@ -5614,9 +5396,9 @@
             },
             {
                 "at_least": [
-                    0.767,
-                    0.767,
-                    0.256,
+                    0.773,
+                    0.773,
+                    0.25,
                     0.0
                 ],
                 "average": 2.3,
@@ -5630,10 +5412,10 @@
             },
             {
                 "at_least": [
-                    0.419,
-                    0.395,
-                    0.372,
-                    0.302
+                    0.432,
+                    0.409,
+                    0.386,
+                    0.318
                 ],
                 "average": 3.6,
                 "banned": false,
@@ -5646,8 +5428,8 @@
             },
             {
                 "at_least": [
-                    0.744,
-                    0.186,
+                    0.727,
+                    0.182,
                     0.0,
                     0.0
                 ],
@@ -5662,7 +5444,7 @@
             },
             {
                 "at_least": [
-                    0.605,
+                    0.591,
                     0.0,
                     0.0,
                     0.0
@@ -5678,8 +5460,8 @@
             },
             {
                 "at_least": [
-                    0.535,
-                    0.093,
+                    0.523,
+                    0.091,
                     0.0,
                     0.0
                 ],
@@ -5694,8 +5476,8 @@
             },
             {
                 "at_least": [
-                    0.442,
-                    0.116,
+                    0.432,
+                    0.114,
                     0.0,
                     0.0
                 ],
@@ -5710,8 +5492,8 @@
             },
             {
                 "at_least": [
-                    0.395,
-                    0.047,
+                    0.386,
+                    0.045,
                     0.0,
                     0.0
                 ],
@@ -5722,11 +5504,11 @@
                 "preview": "https://cards.scryfall.io/normal/front/d/5/d5e45005-dd81-4d80-b043-02f719aca929.jpg",
                 "py/object": "pauperformance_bot.entity.api.archetype.TypicalCard",
                 "type_line": "Sorcery",
-                "typical": 1
+                "typical": 0
             },
             {
                 "at_least": [
-                    0.372,
+                    0.364,
                     0.0,
                     0.0,
                     0.0
@@ -5742,10 +5524,26 @@
             },
             {
                 "at_least": [
-                    0.302,
-                    0.163,
-                    0.116,
-                    0.093
+                    0.295,
+                    0.25,
+                    0.227,
+                    0.227
+                ],
+                "average": 3.4,
+                "banned": false,
+                "link": "https://scryfall.com/card/lrw/79/ponder",
+                "name": "Ponder",
+                "preview": "https://cards.scryfall.io/normal/front/b/a/ba6b6fc5-5077-4812-b8e9-906783dbaf67.jpg",
+                "py/object": "pauperformance_bot.entity.api.archetype.TypicalCard",
+                "type_line": "Sorcery",
+                "typical": 0
+            },
+            {
+                "at_least": [
+                    0.295,
+                    0.159,
+                    0.114,
+                    0.091
                 ],
                 "average": 2.2,
                 "banned": false,
@@ -5758,7 +5556,7 @@
             },
             {
                 "at_least": [
-                    0.279,
+                    0.273,
                     0.0,
                     0.0,
                     0.0
@@ -5774,23 +5572,7 @@
             },
             {
                 "at_least": [
-                    0.279,
-                    0.233,
-                    0.209,
-                    0.209
-                ],
-                "average": 3.3,
-                "banned": false,
-                "link": "https://scryfall.com/card/lrw/79/ponder",
-                "name": "Ponder",
-                "preview": "https://cards.scryfall.io/normal/front/b/a/ba6b6fc5-5077-4812-b8e9-906783dbaf67.jpg",
-                "py/object": "pauperformance_bot.entity.api.archetype.TypicalCard",
-                "type_line": "Sorcery",
-                "typical": 0
-            },
-            {
-                "at_least": [
-                    0.279,
+                    0.273,
                     0.0,
                     0.0,
                     0.0
@@ -5806,10 +5588,10 @@
             },
             {
                 "at_least": [
-                    0.256,
-                    0.186,
-                    0.14,
-                    0.14
+                    0.25,
+                    0.182,
+                    0.136,
+                    0.136
                 ],
                 "average": 2.8,
                 "banned": false,
@@ -5822,10 +5604,10 @@
             },
             {
                 "at_least": [
-                    0.233,
-                    0.233,
-                    0.233,
-                    0.233
+                    0.227,
+                    0.227,
+                    0.227,
+                    0.227
                 ],
                 "average": 9.2,
                 "banned": false,
@@ -5838,9 +5620,9 @@
             },
             {
                 "at_least": [
-                    0.233,
-                    0.116,
-                    0.116,
+                    0.227,
+                    0.114,
+                    0.114,
                     0.0
                 ],
                 "average": 2.0,
@@ -5854,7 +5636,7 @@
             },
             {
                 "at_least": [
-                    0.186,
+                    0.182,
                     0.0,
                     0.0,
                     0.0
@@ -5870,8 +5652,8 @@
             },
             {
                 "at_least": [
-                    0.14,
-                    0.14,
+                    0.136,
+                    0.136,
                     0.0,
                     0.0
                 ],
@@ -5886,10 +5668,26 @@
             },
             {
                 "at_least": [
-                    0.14,
-                    0.14,
-                    0.14,
-                    0.14
+                    0.136,
+                    0.136,
+                    0.114,
+                    0.114
+                ],
+                "average": 3.7,
+                "banned": false,
+                "link": "https://scryfall.com/card/lrw/89/spellstutter-sprite",
+                "name": "Spellstutter Sprite",
+                "preview": "https://cards.scryfall.io/normal/front/4/e/4e5ba4a9-a282-4d4b-b25a-179e05e458f4.jpg",
+                "py/object": "pauperformance_bot.entity.api.archetype.TypicalCard",
+                "type_line": "Creature \u2014 Faerie Wizard",
+                "typical": 0
+            },
+            {
+                "at_least": [
+                    0.136,
+                    0.136,
+                    0.136,
+                    0.136
                 ],
                 "average": 4.0,
                 "banned": false,
@@ -5902,7 +5700,7 @@
             },
             {
                 "at_least": [
-                    0.116,
+                    0.114,
                     0.0,
                     0.0,
                     0.0
@@ -5918,8 +5716,8 @@
             },
             {
                 "at_least": [
-                    0.116,
-                    0.07,
+                    0.114,
+                    0.068,
                     0.0,
                     0.0
                 ],
@@ -5934,26 +5732,26 @@
             },
             {
                 "at_least": [
-                    0.116,
-                    0.116,
-                    0.093,
-                    0.093
+                    0.114,
+                    0.091,
+                    0.0,
+                    0.0
                 ],
-                "average": 3.6,
+                "average": 1.8,
                 "banned": false,
-                "link": "https://scryfall.com/card/lrw/89/spellstutter-sprite",
-                "name": "Spellstutter Sprite",
-                "preview": "https://cards.scryfall.io/normal/front/4/e/4e5ba4a9-a282-4d4b-b25a-179e05e458f4.jpg",
+                "link": "https://scryfall.com/card/tsp/279/terramorphic-expanse",
+                "name": "Terramorphic Expanse",
+                "preview": "https://cards.scryfall.io/normal/front/f/d/fd097ea2-0a1c-44a0-824b-d5373df513fb.jpg",
                 "py/object": "pauperformance_bot.entity.api.archetype.TypicalCard",
-                "type_line": "Creature \u2014 Faerie Wizard",
+                "type_line": "Land",
                 "typical": 0
             },
             {
                 "at_least": [
-                    0.093,
-                    0.07,
-                    0.07,
-                    0.047
+                    0.091,
+                    0.068,
+                    0.068,
+                    0.045
                 ],
                 "average": 3.0,
                 "banned": false,
@@ -5966,7 +5764,7 @@
             },
             {
                 "at_least": [
-                    0.093,
+                    0.091,
                     0.0,
                     0.0,
                     0.0
@@ -5982,44 +5780,12 @@
             },
             {
                 "at_least": [
-                    0.093,
-                    0.093,
+                    0.091,
+                    0.068,
                     0.0,
                     0.0
                 ],
-                "average": 2.0,
-                "banned": false,
-                "link": "https://scryfall.com/card/tsp/279/terramorphic-expanse",
-                "name": "Terramorphic Expanse",
-                "preview": "https://cards.scryfall.io/normal/front/f/d/fd097ea2-0a1c-44a0-824b-d5373df513fb.jpg",
-                "py/object": "pauperformance_bot.entity.api.archetype.TypicalCard",
-                "type_line": "Land",
-                "typical": 0
-            },
-            {
-                "at_least": [
-                    0.07,
-                    0.07,
-                    0.0,
-                    0.0
-                ],
-                "average": 2.0,
-                "banned": false,
-                "link": "https://scryfall.com/card/ddp/60/forked-bolt",
-                "name": "Forked Bolt",
-                "preview": "https://cards.scryfall.io/normal/front/3/6/364ed745-0dff-477a-a2c5-987639936337.jpg",
-                "py/object": "pauperformance_bot.entity.api.archetype.TypicalCard",
-                "type_line": "Sorcery",
-                "typical": 0
-            },
-            {
-                "at_least": [
-                    0.07,
-                    0.047,
-                    0.0,
-                    0.0
-                ],
-                "average": 1.7,
+                "average": 1.8,
                 "banned": false,
                 "link": "https://scryfall.com/card/ala/218/relic-of-progenitus",
                 "name": "Relic of Progenitus",
@@ -6030,7 +5796,7 @@
             },
             {
                 "at_least": [
-                    0.07,
+                    0.091,
                     0.0,
                     0.0,
                     0.0
@@ -6046,7 +5812,39 @@
             },
             {
                 "at_least": [
-                    0.07,
+                    0.068,
+                    0.0,
+                    0.0,
+                    0.0
+                ],
+                "average": 1.0,
+                "banned": false,
+                "link": "https://scryfall.com/card/roe/59/deprive",
+                "name": "Deprive",
+                "preview": "https://cards.scryfall.io/normal/front/2/e/2efecdd9-bd3a-4b79-92da-6485589d5bde.jpg",
+                "py/object": "pauperformance_bot.entity.api.archetype.TypicalCard",
+                "type_line": "Instant",
+                "typical": 0
+            },
+            {
+                "at_least": [
+                    0.068,
+                    0.068,
+                    0.0,
+                    0.0
+                ],
+                "average": 2.0,
+                "banned": false,
+                "link": "https://scryfall.com/card/ddp/60/forked-bolt",
+                "name": "Forked Bolt",
+                "preview": "https://cards.scryfall.io/normal/front/3/6/364ed745-0dff-477a-a2c5-987639936337.jpg",
+                "py/object": "pauperformance_bot.entity.api.archetype.TypicalCard",
+                "type_line": "Sorcery",
+                "typical": 0
+            },
+            {
+                "at_least": [
+                    0.068,
                     0.023,
                     0.023,
                     0.0
@@ -6072,7 +5870,7 @@
             },
             {
                 "date": "2019-07-12",
-                "decks": 1,
+                "decks": 2,
                 "label": "m20",
                 "metagame": "077",
                 "name": "Core Set 2020",
@@ -6140,9 +5938,9 @@
             {
                 "at_least": [
                     1.0,
-                    0.953,
-                    0.86,
-                    0.535
+                    0.955,
+                    0.864,
+                    0.523
                 ],
                 "average": 3.3,
                 "banned": false,
@@ -6157,8 +5955,8 @@
                 "at_least": [
                     1.0,
                     1.0,
-                    0.86,
-                    0.698
+                    0.864,
+                    0.705
                 ],
                 "average": 3.6,
                 "banned": false,
@@ -6171,8 +5969,8 @@
             },
             {
                 "at_least": [
-                    0.953,
-                    0.744,
+                    0.955,
+                    0.75,
                     0.0,
                     0.0
                 ],
@@ -6187,12 +5985,12 @@
             },
             {
                 "at_least": [
-                    0.884,
-                    0.744,
-                    0.0,
+                    0.886,
+                    0.75,
+                    0.023,
                     0.0
                 ],
-                "average": 1.8,
+                "average": 1.9,
                 "banned": false,
                 "link": "https://scryfall.com/card/all/72a/gorilla-shaman",
                 "name": "Gorilla Shaman",
@@ -6203,12 +6001,12 @@
             },
             {
                 "at_least": [
-                    0.86,
-                    0.744,
+                    0.864,
+                    0.727,
                     0.0,
                     0.0
                 ],
-                "average": 1.9,
+                "average": 1.8,
                 "banned": false,
                 "link": "https://scryfall.com/card/ala/218/relic-of-progenitus",
                 "name": "Relic of Progenitus",
@@ -6219,8 +6017,8 @@
             },
             {
                 "at_least": [
-                    0.512,
-                    0.233,
+                    0.5,
+                    0.227,
                     0.0,
                     0.0
                 ],
@@ -6235,8 +6033,8 @@
             },
             {
                 "at_least": [
-                    0.465,
-                    0.163,
+                    0.455,
+                    0.159,
                     0.0,
                     0.0
                 ],
@@ -6251,8 +6049,8 @@
             },
             {
                 "at_least": [
-                    0.256,
-                    0.163,
+                    0.25,
+                    0.159,
                     0.0,
                     0.0
                 ],
@@ -6267,7 +6065,7 @@
             },
             {
                 "at_least": [
-                    0.186,
+                    0.182,
                     0.023,
                     0.0,
                     0.0
@@ -6283,9 +6081,9 @@
             },
             {
                 "at_least": [
-                    0.116,
-                    0.07,
-                    0.047,
+                    0.114,
+                    0.068,
+                    0.045,
                     0.023
                 ],
                 "average": 2.2,
@@ -6299,24 +6097,8 @@
             },
             {
                 "at_least": [
-                    0.093,
-                    0.093,
-                    0.023,
-                    0.023
-                ],
-                "average": 2.5,
-                "banned": false,
-                "link": "https://scryfall.com/card/lea/169/red-elemental-blast",
-                "name": "Red Elemental Blast",
-                "preview": "https://cards.scryfall.io/normal/front/7/7/776ad9be-3309-4f1d-9f27-6219d9477662.jpg",
-                "py/object": "pauperformance_bot.entity.api.archetype.TypicalCard",
-                "type_line": "Instant",
-                "typical": 0
-            },
-            {
-                "at_least": [
-                    0.07,
-                    0.07,
+                    0.091,
+                    0.091,
                     0.0,
                     0.0
                 ],
@@ -6331,7 +6113,23 @@
             },
             {
                 "at_least": [
-                    0.07,
+                    0.091,
+                    0.091,
+                    0.023,
+                    0.023
+                ],
+                "average": 2.5,
+                "banned": false,
+                "link": "https://scryfall.com/card/lea/169/red-elemental-blast",
+                "name": "Red Elemental Blast",
+                "preview": "https://cards.scryfall.io/normal/front/7/7/776ad9be-3309-4f1d-9f27-6219d9477662.jpg",
+                "py/object": "pauperformance_bot.entity.api.archetype.TypicalCard",
+                "type_line": "Instant",
+                "typical": 0
+            },
+            {
+                "at_least": [
+                    0.068,
                     0.023,
                     0.0,
                     0.0
@@ -6347,7 +6145,7 @@
             },
             {
                 "at_least": [
-                    0.07,
+                    0.068,
                     0.0,
                     0.0,
                     0.0
@@ -6367,14 +6165,6 @@
         ],
         "timeline": [
             {
-                "date": "2016-06-10",
-                "decks": 3,
-                "label": "ema",
-                "metagame": "053",
-                "name": "Eternal Masters",
-                "py/object": "pauperformance_bot.entity.api.archetype.MetagameRef"
-            },
-            {
                 "date": "2016-07-22",
                 "decks": 6,
                 "label": "emn",
@@ -6392,7 +6182,7 @@
             },
             {
                 "date": "2016-09-30",
-                "decks": 23,
+                "decks": 20,
                 "label": "kld",
                 "metagame": "056",
                 "name": "Kaladesh",
@@ -6440,7 +6230,7 @@
             },
             {
                 "date": "2017-07-14",
-                "decks": 11,
+                "decks": 10,
                 "label": "hou",
                 "metagame": "062",
                 "name": "Hour of Devastation",
@@ -6560,7 +6350,7 @@
             },
             {
                 "date": "2019-07-12",
-                "decks": 1,
+                "decks": 2,
                 "label": "m20",
                 "metagame": "077",
                 "name": "Core Set 2020",
