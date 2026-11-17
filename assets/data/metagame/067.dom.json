@@ -84,9 +84,9 @@
                 }
             ],
             "decks": 39,
-            "meta_share": 11.14,
+            "meta_share": 11.21,
             "name": "Flicker Tron",
-            "previous_share": 7.71,
+            "previous_share": 7.79,
             "py/object": "pauperformance_bot.entity.api.metagame.ArchetypeShare",
             "tournaments": 12
         },
@@ -174,9 +174,9 @@
                 }
             ],
             "decks": 38,
-            "meta_share": 10.86,
+            "meta_share": 10.92,
             "name": "Izzet Faeries",
-            "previous_share": 14.22,
+            "previous_share": 14.36,
             "py/object": "pauperformance_bot.entity.api.metagame.ArchetypeShare",
             "tournaments": 12
         },
@@ -264,9 +264,9 @@
                 }
             ],
             "decks": 31,
-            "meta_share": 8.86,
+            "meta_share": 8.91,
             "name": "Stompy",
-            "previous_share": 4.58,
+            "previous_share": 4.62,
             "py/object": "pauperformance_bot.entity.api.metagame.ArchetypeShare",
             "tournaments": 13
         },
@@ -354,9 +354,9 @@
                 }
             ],
             "decks": 28,
-            "meta_share": 8.0,
+            "meta_share": 8.05,
             "name": "Boros Monarch",
-            "previous_share": 9.4,
+            "previous_share": 9.49,
             "py/object": "pauperformance_bot.entity.api.metagame.ArchetypeShare",
             "tournaments": 12
         },
@@ -444,9 +444,9 @@
                 }
             ],
             "decks": 25,
-            "meta_share": 7.14,
+            "meta_share": 7.18,
             "name": "MonoU Faeries",
-            "previous_share": 9.16,
+            "previous_share": 9.25,
             "py/object": "pauperformance_bot.entity.api.metagame.ArchetypeShare",
             "tournaments": 13
         },
@@ -534,9 +534,9 @@
                 }
             ],
             "decks": 23,
-            "meta_share": 6.57,
+            "meta_share": 6.61,
             "name": "Inside Out",
-            "previous_share": 6.02,
+            "previous_share": 6.08,
             "py/object": "pauperformance_bot.entity.api.metagame.ArchetypeShare",
             "tournaments": 12
         },
@@ -624,11 +624,101 @@
                 }
             ],
             "decks": 20,
-            "meta_share": 5.71,
+            "meta_share": 5.75,
             "name": "Elves",
-            "previous_share": 2.89,
+            "previous_share": 2.68,
             "py/object": "pauperformance_bot.entity.api.metagame.ArchetypeShare",
             "tournaments": 14
+        },
+        {
+            "cards": [
+                {
+                    "at_least": [
+                        0.941,
+                        0.706,
+                        0.706,
+                        0.647
+                    ],
+                    "average": 3.2,
+                    "banned": false,
+                    "link": "https://scryfall.com/card/frf/72/gurmag-angler",
+                    "name": "Gurmag Angler",
+                    "preview": "https://cards.scryfall.io/normal/front/c/6/c60a8cf1-a8c7-4f45-bbd3-188fab2652f9.jpg",
+                    "py/object": "pauperformance_bot.entity.api.archetype.TypicalCard",
+                    "type_line": "Creature \u2014 Zombie Fish",
+                    "typical": 4
+                },
+                {
+                    "at_least": [
+                        0.765,
+                        0.765,
+                        0.765,
+                        0.765
+                    ],
+                    "average": 4.0,
+                    "banned": false,
+                    "link": "https://scryfall.com/card/mm3/30/augur-of-bolas",
+                    "name": "Augur of Bolas",
+                    "preview": "https://cards.scryfall.io/normal/front/8/f/8f7eca7a-5f42-4e58-a6c0-8d07517bda8a.jpg",
+                    "py/object": "pauperformance_bot.entity.api.archetype.TypicalCard",
+                    "type_line": "Creature \u2014 Merfolk Wizard",
+                    "typical": 4
+                },
+                {
+                    "at_least": [
+                        0.765,
+                        0.765,
+                        0.765,
+                        0.765
+                    ],
+                    "average": 4.0,
+                    "banned": false,
+                    "link": "https://scryfall.com/card/ice/64/counterspell",
+                    "name": "Counterspell",
+                    "preview": "https://cards.scryfall.io/normal/front/a/e/aedbcbaa-40f0-485f-8427-778edc2d2ec0.jpg",
+                    "py/object": "pauperformance_bot.entity.api.archetype.TypicalCard",
+                    "type_line": "Instant",
+                    "typical": 4
+                },
+                {
+                    "at_least": [
+                        0.765,
+                        0.765,
+                        0.647,
+                        0.588
+                    ],
+                    "average": 3.6,
+                    "banned": false,
+                    "link": "https://scryfall.com/card/m11/70/preordain",
+                    "name": "Preordain",
+                    "preview": "https://cards.scryfall.io/normal/front/e/3/e3868c3d-4fcd-444b-866f-0f8e50ce7b67.jpg",
+                    "py/object": "pauperformance_bot.entity.api.archetype.TypicalCard",
+                    "type_line": "Sorcery",
+                    "typical": 4
+                },
+                {
+                    "at_least": [
+                        0.706,
+                        0.706,
+                        0.706,
+                        0.588
+                    ],
+                    "average": 3.8,
+                    "banned": false,
+                    "link": "https://scryfall.com/card/zen/87/disfigure",
+                    "name": "Disfigure",
+                    "preview": "https://cards.scryfall.io/normal/front/b/3/b3842ad2-a449-4963-8c96-276554125757.jpg",
+                    "py/object": "pauperformance_bot.entity.api.archetype.TypicalCard",
+                    "type_line": "Instant",
+                    "typical": 4
+                }
+            ],
+            "decks": 17,
+            "meta_share": 4.89,
+            "name": "Dimir Control",
+            "previous_share": 4.14,
+            "py/object": "pauperformance_bot.entity.api.metagame.ArchetypeShare",
+            "tournaments": 11
         },
         {
             "cards": [
@@ -714,9 +804,9 @@
                 }
             ],
             "decks": 15,
-            "meta_share": 4.29,
+            "meta_share": 4.31,
             "name": "Affinity",
-            "previous_share": 1.69,
+            "previous_share": 1.22,
             "py/object": "pauperformance_bot.entity.api.metagame.ArchetypeShare",
             "tournaments": 12
         },
@@ -804,101 +894,11 @@
                 }
             ],
             "decks": 15,
-            "meta_share": 4.29,
+            "meta_share": 4.31,
             "name": "Burn",
-            "previous_share": 3.13,
+            "previous_share": 3.16,
             "py/object": "pauperformance_bot.entity.api.metagame.ArchetypeShare",
             "tournaments": 12
-        },
-        {
-            "cards": [
-                {
-                    "at_least": [
-                        0.933,
-                        0.667,
-                        0.667,
-                        0.6
-                    ],
-                    "average": 3.1,
-                    "banned": false,
-                    "link": "https://scryfall.com/card/frf/72/gurmag-angler",
-                    "name": "Gurmag Angler",
-                    "preview": "https://cards.scryfall.io/normal/front/c/6/c60a8cf1-a8c7-4f45-bbd3-188fab2652f9.jpg",
-                    "py/object": "pauperformance_bot.entity.api.archetype.TypicalCard",
-                    "type_line": "Creature \u2014 Zombie Fish",
-                    "typical": 4
-                },
-                {
-                    "at_least": [
-                        0.733,
-                        0.733,
-                        0.733,
-                        0.733
-                    ],
-                    "average": 4.0,
-                    "banned": false,
-                    "link": "https://scryfall.com/card/mm3/30/augur-of-bolas",
-                    "name": "Augur of Bolas",
-                    "preview": "https://cards.scryfall.io/normal/front/8/f/8f7eca7a-5f42-4e58-a6c0-8d07517bda8a.jpg",
-                    "py/object": "pauperformance_bot.entity.api.archetype.TypicalCard",
-                    "type_line": "Creature \u2014 Merfolk Wizard",
-                    "typical": 4
-                },
-                {
-                    "at_least": [
-                        0.733,
-                        0.733,
-                        0.733,
-                        0.733
-                    ],
-                    "average": 4.0,
-                    "banned": false,
-                    "link": "https://scryfall.com/card/ice/64/counterspell",
-                    "name": "Counterspell",
-                    "preview": "https://cards.scryfall.io/normal/front/a/e/aedbcbaa-40f0-485f-8427-778edc2d2ec0.jpg",
-                    "py/object": "pauperformance_bot.entity.api.archetype.TypicalCard",
-                    "type_line": "Instant",
-                    "typical": 4
-                },
-                {
-                    "at_least": [
-                        0.733,
-                        0.733,
-                        0.6,
-                        0.533
-                    ],
-                    "average": 3.5,
-                    "banned": false,
-                    "link": "https://scryfall.com/card/m11/70/preordain",
-                    "name": "Preordain",
-                    "preview": "https://cards.scryfall.io/normal/front/e/3/e3868c3d-4fcd-444b-866f-0f8e50ce7b67.jpg",
-                    "py/object": "pauperformance_bot.entity.api.archetype.TypicalCard",
-                    "type_line": "Sorcery",
-                    "typical": 4
-                },
-                {
-                    "at_least": [
-                        0.667,
-                        0.667,
-                        0.667,
-                        0.6
-                    ],
-                    "average": 3.9,
-                    "banned": false,
-                    "link": "https://scryfall.com/card/zen/87/disfigure",
-                    "name": "Disfigure",
-                    "preview": "https://cards.scryfall.io/normal/front/b/3/b3842ad2-a449-4963-8c96-276554125757.jpg",
-                    "py/object": "pauperformance_bot.entity.api.archetype.TypicalCard",
-                    "type_line": "Instant",
-                    "typical": 4
-                }
-            ],
-            "decks": 15,
-            "meta_share": 4.29,
-            "name": "Dimir Control",
-            "previous_share": 3.86,
-            "py/object": "pauperformance_bot.entity.api.metagame.ArchetypeShare",
-            "tournaments": 10
         },
         {
             "cards": [
@@ -984,9 +984,9 @@
                 }
             ],
             "decks": 15,
-            "meta_share": 4.29,
+            "meta_share": 4.31,
             "name": "Izzet Blitz",
-            "previous_share": 3.86,
+            "previous_share": 3.89,
             "py/object": "pauperformance_bot.entity.api.metagame.ArchetypeShare",
             "tournaments": 10
         },
@@ -1074,9 +1074,9 @@
                 }
             ],
             "decks": 12,
-            "meta_share": 3.43,
+            "meta_share": 3.45,
             "name": "MonoB Control",
-            "previous_share": 3.86,
+            "previous_share": 3.89,
             "py/object": "pauperformance_bot.entity.api.metagame.ArchetypeShare",
             "tournaments": 9
         },
@@ -1135,9 +1135,9 @@
                         1.0,
                         1.0,
                         1.0,
-                        0.9
+                        1.0
                     ],
-                    "average": 3.9,
+                    "average": 4.0,
                     "banned": false,
                     "link": "https://scryfall.com/card/m10/143/jackal-familiar",
                     "name": "Jackal Familiar",
@@ -1163,12 +1163,12 @@
                     "typical": 4
                 }
             ],
-            "decks": 10,
-            "meta_share": 2.86,
+            "decks": 8,
+            "meta_share": 2.3,
             "name": "Red Deck Wins",
-            "previous_share": 2.41,
+            "previous_share": 2.19,
             "py/object": "pauperformance_bot.entity.api.metagame.ArchetypeShare",
-            "tournaments": 9
+            "tournaments": 8
         },
         {
             "cards": [
@@ -1254,9 +1254,9 @@
                 }
             ],
             "decks": 7,
-            "meta_share": 2.0,
+            "meta_share": 2.01,
             "name": "MonoW Heroic",
-            "previous_share": 1.93,
+            "previous_share": 1.95,
             "py/object": "pauperformance_bot.entity.api.metagame.ArchetypeShare",
             "tournaments": 7
         },
@@ -1344,9 +1344,9 @@
                 }
             ],
             "decks": 6,
-            "meta_share": 1.71,
+            "meta_share": 1.72,
             "name": "Bogles",
-            "previous_share": 4.1,
+            "previous_share": 4.14,
             "py/object": "pauperformance_bot.entity.api.metagame.ArchetypeShare",
             "tournaments": 6
         },
@@ -1434,9 +1434,9 @@
                 }
             ],
             "decks": 6,
-            "meta_share": 1.71,
+            "meta_share": 1.72,
             "name": "Slivers",
-            "previous_share": 1.2,
+            "previous_share": 1.22,
             "py/object": "pauperformance_bot.entity.api.metagame.ArchetypeShare",
             "tournaments": 5
         },
@@ -1524,9 +1524,9 @@
                 }
             ],
             "decks": 6,
-            "meta_share": 1.71,
+            "meta_share": 1.72,
             "name": "Whirlpool Mill",
-            "previous_share": 1.93,
+            "previous_share": 1.95,
             "py/object": "pauperformance_bot.entity.api.metagame.ArchetypeShare",
             "tournaments": 6
         },
@@ -1614,9 +1614,9 @@
                 }
             ],
             "decks": 5,
-            "meta_share": 1.43,
+            "meta_share": 1.44,
             "name": "Dimir Delver",
-            "previous_share": 0.48,
+            "previous_share": 0.49,
             "py/object": "pauperformance_bot.entity.api.metagame.ArchetypeShare",
             "tournaments": 5
         },
@@ -1704,9 +1704,9 @@
                 }
             ],
             "decks": 5,
-            "meta_share": 1.43,
+            "meta_share": 1.44,
             "name": "Orzhov Pestilence",
-            "previous_share": 1.2,
+            "previous_share": 1.22,
             "py/object": "pauperformance_bot.entity.api.metagame.ArchetypeShare",
             "tournaments": 4
         },
@@ -1794,9 +1794,9 @@
                 }
             ],
             "decks": 5,
-            "meta_share": 1.43,
+            "meta_share": 1.44,
             "name": "Rainbow Tron",
-            "previous_share": 0.96,
+            "previous_share": 0.97,
             "py/object": "pauperformance_bot.entity.api.metagame.ArchetypeShare",
             "tournaments": 5
         },
@@ -1886,97 +1886,7 @@
             "decks": 3,
             "meta_share": 0.86,
             "name": "Azorius Prowess",
-            "previous_share": 1.69,
-            "py/object": "pauperformance_bot.entity.api.metagame.ArchetypeShare",
-            "tournaments": 3
-        },
-        {
-            "cards": [
-                {
-                    "at_least": [
-                        1.0,
-                        1.0,
-                        1.0,
-                        1.0
-                    ],
-                    "average": 4.0,
-                    "banned": false,
-                    "link": "https://scryfall.com/card/mm3/30/augur-of-bolas",
-                    "name": "Augur of Bolas",
-                    "preview": "https://cards.scryfall.io/normal/front/8/f/8f7eca7a-5f42-4e58-a6c0-8d07517bda8a.jpg",
-                    "py/object": "pauperformance_bot.entity.api.archetype.TypicalCard",
-                    "type_line": "Creature \u2014 Merfolk Wizard",
-                    "typical": 4
-                },
-                {
-                    "at_least": [
-                        1.0,
-                        1.0,
-                        1.0,
-                        1.0
-                    ],
-                    "average": 4.0,
-                    "banned": false,
-                    "link": "https://scryfall.com/card/ice/64/counterspell",
-                    "name": "Counterspell",
-                    "preview": "https://cards.scryfall.io/normal/front/a/e/aedbcbaa-40f0-485f-8427-778edc2d2ec0.jpg",
-                    "py/object": "pauperformance_bot.entity.api.archetype.TypicalCard",
-                    "type_line": "Instant",
-                    "typical": 4
-                },
-                {
-                    "at_least": [
-                        1.0,
-                        1.0,
-                        1.0,
-                        0.667
-                    ],
-                    "average": 3.7,
-                    "banned": false,
-                    "link": "https://scryfall.com/card/zen/87/disfigure",
-                    "name": "Disfigure",
-                    "preview": "https://cards.scryfall.io/normal/front/b/3/b3842ad2-a449-4963-8c96-276554125757.jpg",
-                    "py/object": "pauperformance_bot.entity.api.archetype.TypicalCard",
-                    "type_line": "Instant",
-                    "typical": 4
-                },
-                {
-                    "at_least": [
-                        1.0,
-                        1.0,
-                        1.0,
-                        1.0
-                    ],
-                    "average": 4.0,
-                    "banned": false,
-                    "link": "https://scryfall.com/card/frf/72/gurmag-angler",
-                    "name": "Gurmag Angler",
-                    "preview": "https://cards.scryfall.io/normal/front/c/6/c60a8cf1-a8c7-4f45-bbd3-188fab2652f9.jpg",
-                    "py/object": "pauperformance_bot.entity.api.archetype.TypicalCard",
-                    "type_line": "Creature \u2014 Zombie Fish",
-                    "typical": 4
-                },
-                {
-                    "at_least": [
-                        1.0,
-                        1.0,
-                        1.0,
-                        1.0
-                    ],
-                    "average": 4.0,
-                    "banned": false,
-                    "link": "https://scryfall.com/card/m11/70/preordain",
-                    "name": "Preordain",
-                    "preview": "https://cards.scryfall.io/normal/front/e/3/e3868c3d-4fcd-444b-866f-0f8e50ce7b67.jpg",
-                    "py/object": "pauperformance_bot.entity.api.archetype.TypicalCard",
-                    "type_line": "Sorcery",
-                    "typical": 4
-                }
-            ],
-            "decks": 3,
-            "meta_share": 0.86,
-            "name": "Dimir Alchemy",
-            "previous_share": 2.65,
+            "previous_share": 1.7,
             "py/object": "pauperformance_bot.entity.api.metagame.ArchetypeShare",
             "tournaments": 3
         },
@@ -2066,7 +1976,97 @@
             "decks": 3,
             "meta_share": 0.86,
             "name": "Dimir Flicker",
-            "previous_share": 1.69,
+            "previous_share": 1.7,
+            "py/object": "pauperformance_bot.entity.api.metagame.ArchetypeShare",
+            "tournaments": 3
+        },
+        {
+            "cards": [
+                {
+                    "at_least": [
+                        1.0,
+                        1.0,
+                        1.0,
+                        0.667
+                    ],
+                    "average": 3.7,
+                    "banned": false,
+                    "link": "https://scryfall.com/card/ori/223/bonded-construct",
+                    "name": "Bonded Construct",
+                    "preview": "https://cards.scryfall.io/normal/front/4/3/43361897-f853-4cab-a132-5af48dad3b54.jpg",
+                    "py/object": "pauperformance_bot.entity.api.archetype.TypicalCard",
+                    "type_line": "Artifact Creature \u2014 Construct",
+                    "typical": 4
+                },
+                {
+                    "at_least": [
+                        1.0,
+                        1.0,
+                        1.0,
+                        1.0
+                    ],
+                    "average": 4.0,
+                    "banned": false,
+                    "link": "https://scryfall.com/card/mm3/207/burning-tree-emissary",
+                    "name": "Burning-Tree Emissary",
+                    "preview": "https://cards.scryfall.io/normal/front/4/8/48335a70-151d-4d92-8365-e2ad9ac153ac.jpg",
+                    "py/object": "pauperformance_bot.entity.api.archetype.TypicalCard",
+                    "type_line": "Creature \u2014 Human Shaman",
+                    "typical": 4
+                },
+                {
+                    "at_least": [
+                        1.0,
+                        1.0,
+                        1.0,
+                        1.0
+                    ],
+                    "average": 4.0,
+                    "banned": false,
+                    "link": "https://scryfall.com/card/zen/125/goblin-bushwhacker",
+                    "name": "Goblin Bushwhacker",
+                    "preview": "https://cards.scryfall.io/normal/front/4/0/4085a5bf-a71b-4c73-9b39-0dcc328fe11b.jpg",
+                    "py/object": "pauperformance_bot.entity.api.archetype.TypicalCard",
+                    "type_line": "Creature \u2014 Goblin Warrior",
+                    "typical": 4
+                },
+                {
+                    "at_least": [
+                        1.0,
+                        1.0,
+                        1.0,
+                        1.0
+                    ],
+                    "average": 4.0,
+                    "banned": false,
+                    "link": "https://scryfall.com/card/bok/106/goblin-cohort",
+                    "name": "Goblin Cohort",
+                    "preview": "https://cards.scryfall.io/normal/front/8/9/8964afec-50a9-45c4-bd2b-d06f8e75f4ae.jpg",
+                    "py/object": "pauperformance_bot.entity.api.archetype.TypicalCard",
+                    "type_line": "Creature \u2014 Goblin Warrior",
+                    "typical": 4
+                },
+                {
+                    "at_least": [
+                        1.0,
+                        1.0,
+                        1.0,
+                        0.667
+                    ],
+                    "average": 3.7,
+                    "banned": false,
+                    "link": "https://scryfall.com/card/m10/143/jackal-familiar",
+                    "name": "Jackal Familiar",
+                    "preview": "https://cards.scryfall.io/normal/front/0/a/0a47a2dc-f7f2-4103-9ebe-8cd8b83915ae.jpg",
+                    "py/object": "pauperformance_bot.entity.api.archetype.TypicalCard",
+                    "type_line": "Creature \u2014 Jackal",
+                    "typical": 4
+                }
+            ],
+            "decks": 3,
+            "meta_share": 0.86,
+            "name": "Goblins",
+            "previous_share": 1.46,
             "py/object": "pauperformance_bot.entity.api.metagame.ArchetypeShare",
             "tournaments": 3
         },
@@ -2156,7 +2156,7 @@
             "decks": 2,
             "meta_share": 0.57,
             "name": "Dimir Teachings",
-            "previous_share": 1.45,
+            "previous_share": 1.46,
             "py/object": "pauperformance_bot.entity.api.metagame.ArchetypeShare",
             "tournaments": 2
         },
@@ -2441,11 +2441,11 @@
                     ],
                     "average": 4.0,
                     "banned": false,
-                    "link": "https://scryfall.com/card/ori/223/bonded-construct",
-                    "name": "Bonded Construct",
-                    "preview": "https://cards.scryfall.io/normal/front/4/3/43361897-f853-4cab-a132-5af48dad3b54.jpg",
+                    "link": "https://scryfall.com/card/mm3/30/augur-of-bolas",
+                    "name": "Augur of Bolas",
+                    "preview": "https://cards.scryfall.io/normal/front/8/f/8f7eca7a-5f42-4e58-a6c0-8d07517bda8a.jpg",
                     "py/object": "pauperformance_bot.entity.api.archetype.TypicalCard",
-                    "type_line": "Artifact Creature \u2014 Construct",
+                    "type_line": "Creature \u2014 Merfolk Wizard",
                     "typical": 4
                 },
                 {
@@ -2457,11 +2457,11 @@
                     ],
                     "average": 4.0,
                     "banned": false,
-                    "link": "https://scryfall.com/card/mm3/207/burning-tree-emissary",
-                    "name": "Burning-Tree Emissary",
-                    "preview": "https://cards.scryfall.io/normal/front/4/8/48335a70-151d-4d92-8365-e2ad9ac153ac.jpg",
+                    "link": "https://scryfall.com/card/ice/64/counterspell",
+                    "name": "Counterspell",
+                    "preview": "https://cards.scryfall.io/normal/front/a/e/aedbcbaa-40f0-485f-8427-778edc2d2ec0.jpg",
                     "py/object": "pauperformance_bot.entity.api.archetype.TypicalCard",
-                    "type_line": "Creature \u2014 Human Shaman",
+                    "type_line": "Instant",
                     "typical": 4
                 },
                 {
@@ -2473,11 +2473,11 @@
                     ],
                     "average": 4.0,
                     "banned": false,
-                    "link": "https://scryfall.com/card/gtc/92/foundry-street-denizen",
-                    "name": "Foundry Street Denizen",
-                    "preview": "https://cards.scryfall.io/normal/front/0/b/0befed63-07ba-4728-9078-57bbccbeeeb1.jpg",
+                    "link": "https://scryfall.com/card/zen/87/disfigure",
+                    "name": "Disfigure",
+                    "preview": "https://cards.scryfall.io/normal/front/b/3/b3842ad2-a449-4963-8c96-276554125757.jpg",
                     "py/object": "pauperformance_bot.entity.api.archetype.TypicalCard",
-                    "type_line": "Creature \u2014 Goblin Warrior",
+                    "type_line": "Instant",
                     "typical": 4
                 },
                 {
@@ -2489,11 +2489,11 @@
                     ],
                     "average": 4.0,
                     "banned": false,
-                    "link": "https://scryfall.com/card/zen/125/goblin-bushwhacker",
-                    "name": "Goblin Bushwhacker",
-                    "preview": "https://cards.scryfall.io/normal/front/4/0/4085a5bf-a71b-4c73-9b39-0dcc328fe11b.jpg",
+                    "link": "https://scryfall.com/card/frf/72/gurmag-angler",
+                    "name": "Gurmag Angler",
+                    "preview": "https://cards.scryfall.io/normal/front/c/6/c60a8cf1-a8c7-4f45-bbd3-188fab2652f9.jpg",
                     "py/object": "pauperformance_bot.entity.api.archetype.TypicalCard",
-                    "type_line": "Creature \u2014 Goblin Warrior",
+                    "type_line": "Creature \u2014 Zombie Fish",
                     "typical": 4
                 },
                 {
@@ -2505,18 +2505,18 @@
                     ],
                     "average": 4.0,
                     "banned": false,
-                    "link": "https://scryfall.com/card/bok/106/goblin-cohort",
-                    "name": "Goblin Cohort",
-                    "preview": "https://cards.scryfall.io/normal/front/8/9/8964afec-50a9-45c4-bd2b-d06f8e75f4ae.jpg",
+                    "link": "https://scryfall.com/card/m11/70/preordain",
+                    "name": "Preordain",
+                    "preview": "https://cards.scryfall.io/normal/front/e/3/e3868c3d-4fcd-444b-866f-0f8e50ce7b67.jpg",
                     "py/object": "pauperformance_bot.entity.api.archetype.TypicalCard",
-                    "type_line": "Creature \u2014 Goblin Warrior",
+                    "type_line": "Sorcery",
                     "typical": 4
                 }
             ],
             "decks": 1,
             "meta_share": 0.29,
-            "name": "Goblins",
-            "previous_share": 1.2,
+            "name": "Dimir Alchemy",
+            "previous_share": 2.43,
             "py/object": "pauperformance_bot.entity.api.metagame.ArchetypeShare",
             "tournaments": 1
         },
@@ -2606,7 +2606,7 @@
             "decks": 1,
             "meta_share": 0.29,
             "name": "Izzet Control",
-            "previous_share": 3.37,
+            "previous_share": 3.41,
             "py/object": "pauperformance_bot.entity.api.metagame.ArchetypeShare",
             "tournaments": 1
         },
@@ -2696,7 +2696,7 @@
             "decks": 1,
             "meta_share": 0.29,
             "name": "Kuldotha Rebirth",
-            "previous_share": 0.24,
+            "previous_share": 0.0,
             "py/object": "pauperformance_bot.entity.api.metagame.ArchetypeShare",
             "tournaments": 1
         },
@@ -2801,96 +2801,6 @@
                     ],
                     "average": 4.0,
                     "banned": false,
-                    "link": "https://scryfall.com/card/ths/111/akroan-crusader",
-                    "name": "Akroan Crusader",
-                    "preview": "https://cards.scryfall.io/normal/front/a/4/a47c50d9-11ec-486b-a5ce-5a6b70858f30.jpg",
-                    "py/object": "pauperformance_bot.entity.api.archetype.TypicalCard",
-                    "type_line": "Creature \u2014 Human Soldier",
-                    "typical": 4
-                },
-                {
-                    "at_least": [
-                        1.0,
-                        1.0,
-                        1.0,
-                        1.0
-                    ],
-                    "average": 4.0,
-                    "banned": false,
-                    "link": "https://scryfall.com/card/isd/143/furor-of-the-bitten",
-                    "name": "Furor of the Bitten",
-                    "preview": "https://cards.scryfall.io/normal/front/f/f/ff4a4c19-6427-4a03-a543-992c910e668f.jpg",
-                    "py/object": "pauperformance_bot.entity.api.archetype.TypicalCard",
-                    "type_line": "Enchantment \u2014 Aura",
-                    "typical": 4
-                },
-                {
-                    "at_least": [
-                        1.0,
-                        1.0,
-                        1.0,
-                        1.0
-                    ],
-                    "average": 4.0,
-                    "banned": true,
-                    "link": "https://scryfall.com/card/nph/35/gitaxian-probe",
-                    "name": "Gitaxian Probe",
-                    "preview": "https://cards.scryfall.io/normal/front/9/9/995486ce-58bb-4753-a812-0ca73ef1a235.jpg",
-                    "py/object": "pauperformance_bot.entity.api.archetype.TypicalCard",
-                    "type_line": "Sorcery",
-                    "typical": 4
-                },
-                {
-                    "at_least": [
-                        1.0,
-                        1.0,
-                        1.0,
-                        1.0
-                    ],
-                    "average": 4.0,
-                    "banned": false,
-                    "link": "https://scryfall.com/card/roe/153/kiln-fiend",
-                    "name": "Kiln Fiend",
-                    "preview": "https://cards.scryfall.io/normal/front/0/c/0c584268-67c3-411b-a26c-aee3adf23872.jpg",
-                    "py/object": "pauperformance_bot.entity.api.archetype.TypicalCard",
-                    "type_line": "Creature \u2014 Elemental Beast",
-                    "typical": 4
-                },
-                {
-                    "at_least": [
-                        1.0,
-                        1.0,
-                        1.0,
-                        1.0
-                    ],
-                    "average": 4.0,
-                    "banned": false,
-                    "link": "https://scryfall.com/card/nph/116/mutagenic-growth",
-                    "name": "Mutagenic Growth",
-                    "preview": "https://cards.scryfall.io/normal/front/a/f/af2d23da-70a1-49ba-91bf-c110cc4bbedc.jpg",
-                    "py/object": "pauperformance_bot.entity.api.archetype.TypicalCard",
-                    "type_line": "Instant",
-                    "typical": 4
-                }
-            ],
-            "decks": 1,
-            "meta_share": 0.29,
-            "name": "MonoR Blitz",
-            "previous_share": 0.48,
-            "py/object": "pauperformance_bot.entity.api.metagame.ArchetypeShare",
-            "tournaments": 1
-        },
-        {
-            "cards": [
-                {
-                    "at_least": [
-                        1.0,
-                        1.0,
-                        1.0,
-                        1.0
-                    ],
-                    "average": 4.0,
-                    "banned": false,
                     "link": "https://scryfall.com/card/roe/174/ancient-stirrings",
                     "name": "Ancient Stirrings",
                     "preview": "https://cards.scryfall.io/normal/front/9/7/97ac2766-a597-4949-882d-c5e61e6dd268.jpg",
@@ -2969,102 +2879,12 @@
             "previous_share": 0.0,
             "py/object": "pauperformance_bot.entity.api.metagame.ArchetypeShare",
             "tournaments": 1
-        },
-        {
-            "cards": [
-                {
-                    "at_least": [
-                        1.0,
-                        1.0,
-                        1.0,
-                        1.0
-                    ],
-                    "average": 4.0,
-                    "banned": false,
-                    "link": "https://scryfall.com/card/jud/5/benevolent-bodyguard",
-                    "name": "Benevolent Bodyguard",
-                    "preview": "https://cards.scryfall.io/normal/front/2/2/22492fb3-5ceb-4d5e-ba82-ae1a6a69c105.jpg",
-                    "py/object": "pauperformance_bot.entity.api.archetype.TypicalCard",
-                    "type_line": "Creature \u2014 Human Cleric",
-                    "typical": 4
-                },
-                {
-                    "at_least": [
-                        1.0,
-                        1.0,
-                        1.0,
-                        1.0
-                    ],
-                    "average": 4.0,
-                    "banned": false,
-                    "link": "https://scryfall.com/card/zen/23/kor-skyfisher",
-                    "name": "Kor Skyfisher",
-                    "preview": "https://cards.scryfall.io/normal/front/b/b/bb2e9465-f5ba-4c7b-9f03-d40dc8394acd.jpg",
-                    "py/object": "pauperformance_bot.entity.api.archetype.TypicalCard",
-                    "type_line": "Creature \u2014 Kor Soldier",
-                    "typical": 4
-                },
-                {
-                    "at_least": [
-                        1.0,
-                        1.0,
-                        1.0,
-                        1.0
-                    ],
-                    "average": 4.0,
-                    "banned": false,
-                    "link": "https://scryfall.com/card/mbs/11/leonin-skyhunter",
-                    "name": "Leonin Skyhunter",
-                    "preview": "https://cards.scryfall.io/normal/front/f/7/f7eb723d-aa4c-4a38-98de-1faefffab56b.jpg",
-                    "py/object": "pauperformance_bot.entity.api.archetype.TypicalCard",
-                    "type_line": "Creature \u2014 Cat Knight",
-                    "typical": 4
-                },
-                {
-                    "at_least": [
-                        1.0,
-                        1.0,
-                        1.0,
-                        1.0
-                    ],
-                    "average": 4.0,
-                    "banned": false,
-                    "link": "https://scryfall.com/card/plc/25/mana-tithe",
-                    "name": "Mana Tithe",
-                    "preview": "https://cards.scryfall.io/normal/front/7/d/7d48d622-f397-4f31-b1a5-0c23f60aa71c.jpg",
-                    "py/object": "pauperformance_bot.entity.api.archetype.TypicalCard",
-                    "type_line": "Instant",
-                    "typical": 4
-                },
-                {
-                    "at_least": [
-                        1.0,
-                        1.0,
-                        1.0,
-                        1.0
-                    ],
-                    "average": 4.0,
-                    "banned": false,
-                    "link": "https://scryfall.com/card/dst/137/razor-golem",
-                    "name": "Razor Golem",
-                    "preview": "https://cards.scryfall.io/normal/front/6/4/64a86ec3-378f-4fca-b5f7-6dc02d47f7b9.jpg",
-                    "py/object": "pauperformance_bot.entity.api.archetype.TypicalCard",
-                    "type_line": "Artifact Creature \u2014 Golem",
-                    "typical": 4
-                }
-            ],
-            "decks": 1,
-            "meta_share": 0.29,
-            "name": "White Weenie",
-            "previous_share": 0.72,
-            "py/object": "pauperformance_bot.entity.api.metagame.ArchetypeShare",
-            "tournaments": 1
         }
     ],
-    "decks": 350,
+    "decks": 348,
     "metagame": {
         "date": "2018-04-27",
-        "decks": 350,
+        "decks": 348,
         "label": "dom",
         "metagame": "067",
         "name": "Dominaria",

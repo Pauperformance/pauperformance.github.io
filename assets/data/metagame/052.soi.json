@@ -84,9 +84,9 @@
                 }
             ],
             "decks": 93,
-            "meta_share": 25.2,
+            "meta_share": 25.91,
             "name": "MonoU Faeries",
-            "previous_share": 16.93,
+            "previous_share": 17.36,
             "py/object": "pauperformance_bot.entity.api.metagame.ArchetypeShare",
             "tournaments": 51
         },
@@ -97,7 +97,7 @@
                         1.0,
                         1.0,
                         1.0,
-                        0.974
+                        0.973
                     ],
                     "average": 4.0,
                     "banned": false,
@@ -129,7 +129,7 @@
                         1.0,
                         1.0,
                         0.987,
-                        0.974
+                        0.973
                     ],
                     "average": 4.0,
                     "banned": false,
@@ -145,7 +145,7 @@
                         1.0,
                         1.0,
                         0.987,
-                        0.974
+                        0.973
                     ],
                     "average": 4.0,
                     "banned": false,
@@ -161,7 +161,7 @@
                         1.0,
                         1.0,
                         0.987,
-                        0.961
+                        0.96
                     ],
                     "average": 3.9,
                     "banned": false,
@@ -173,10 +173,10 @@
                     "typical": 4
                 }
             ],
-            "decks": 76,
-            "meta_share": 20.6,
+            "decks": 75,
+            "meta_share": 20.89,
             "name": "Stompy",
-            "previous_share": 12.15,
+            "previous_share": 12.6,
             "py/object": "pauperformance_bot.entity.api.metagame.ArchetypeShare",
             "tournaments": 51
         },
@@ -264,9 +264,9 @@
                 }
             ],
             "decks": 41,
-            "meta_share": 11.11,
+            "meta_share": 11.42,
             "name": "MonoB Control",
-            "previous_share": 9.36,
+            "previous_share": 9.71,
             "py/object": "pauperformance_bot.entity.api.metagame.ArchetypeShare",
             "tournaments": 29
         },
@@ -276,16 +276,48 @@
                     "at_least": [
                         1.0,
                         1.0,
-                        0.97,
-                        0.909
+                        1.0,
+                        0.962
                     ],
-                    "average": 3.9,
+                    "average": 4.0,
                     "banned": true,
                     "link": "https://scryfall.com/card/atq/23/atog",
                     "name": "Atog",
                     "preview": "https://cards.scryfall.io/normal/front/2/2/2249fc40-4412-48fd-800a-7ea3678aee3f.jpg",
                     "py/object": "pauperformance_bot.entity.api.archetype.TypicalCard",
                     "type_line": "Creature \u2014 Atog",
+                    "typical": 4
+                },
+                {
+                    "at_least": [
+                        1.0,
+                        1.0,
+                        1.0,
+                        0.885
+                    ],
+                    "average": 3.9,
+                    "banned": false,
+                    "link": "https://scryfall.com/card/som/114/carapace-forger",
+                    "name": "Carapace Forger",
+                    "preview": "https://cards.scryfall.io/normal/front/e/9/e9948e4c-d583-4fde-a305-df926cf00199.jpg",
+                    "py/object": "pauperformance_bot.entity.api.archetype.TypicalCard",
+                    "type_line": "Creature \u2014 Elf Artificer",
+                    "typical": 4
+                },
+                {
+                    "at_least": [
+                        1.0,
+                        1.0,
+                        1.0,
+                        0.962
+                    ],
+                    "average": 4.0,
+                    "banned": false,
+                    "link": "https://scryfall.com/card/mrd/172/frogmite",
+                    "name": "Frogmite",
+                    "preview": "https://cards.scryfall.io/normal/front/f/f/ff504dcb-2eb8-4b3c-a8b9-29697739b649.jpg",
+                    "py/object": "pauperformance_bot.entity.api.archetype.TypicalCard",
+                    "type_line": "Artifact Creature \u2014 Frog",
                     "typical": 4
                 },
                 {
@@ -309,7 +341,7 @@
                         1.0,
                         1.0,
                         1.0,
-                        0.97
+                        1.0
                     ],
                     "average": 4.0,
                     "banned": false,
@@ -319,46 +351,14 @@
                     "py/object": "pauperformance_bot.entity.api.archetype.TypicalCard",
                     "type_line": "Artifact Creature \u2014 Myr",
                     "typical": 4
-                },
-                {
-                    "at_least": [
-                        1.0,
-                        1.0,
-                        1.0,
-                        1.0
-                    ],
-                    "average": 4.0,
-                    "banned": false,
-                    "link": "https://scryfall.com/card/mrd/54/thoughtcast",
-                    "name": "Thoughtcast",
-                    "preview": "https://cards.scryfall.io/normal/front/e/f/efb965a7-877a-4302-b507-25b0a9e32d9b.jpg",
-                    "py/object": "pauperformance_bot.entity.api.archetype.TypicalCard",
-                    "type_line": "Sorcery",
-                    "typical": 4
-                },
-                {
-                    "at_least": [
-                        0.97,
-                        0.97,
-                        0.939,
-                        0.909
-                    ],
-                    "average": 3.9,
-                    "banned": false,
-                    "link": "https://scryfall.com/card/mrd/172/frogmite",
-                    "name": "Frogmite",
-                    "preview": "https://cards.scryfall.io/normal/front/f/f/ff504dcb-2eb8-4b3c-a8b9-29697739b649.jpg",
-                    "py/object": "pauperformance_bot.entity.api.archetype.TypicalCard",
-                    "type_line": "Artifact Creature \u2014 Frog",
-                    "typical": 4
                 }
             ],
-            "decks": 33,
-            "meta_share": 8.94,
+            "decks": 26,
+            "meta_share": 7.24,
             "name": "Affinity",
-            "previous_share": 13.35,
+            "previous_share": 12.4,
             "py/object": "pauperformance_bot.entity.api.metagame.ArchetypeShare",
-            "tournaments": 26
+            "tournaments": 19
         },
         {
             "cards": [
@@ -444,9 +444,9 @@
                 }
             ],
             "decks": 25,
-            "meta_share": 6.78,
+            "meta_share": 6.96,
             "name": "Bogles",
-            "previous_share": 5.78,
+            "previous_share": 5.79,
             "py/object": "pauperformance_bot.entity.api.metagame.ArchetypeShare",
             "tournaments": 23
         },
@@ -534,9 +534,9 @@
                 }
             ],
             "decks": 17,
-            "meta_share": 4.61,
+            "meta_share": 4.74,
             "name": "Izzet Blitz",
-            "previous_share": 8.57,
+            "previous_share": 8.88,
             "py/object": "pauperformance_bot.entity.api.metagame.ArchetypeShare",
             "tournaments": 16
         },
@@ -624,9 +624,9 @@
                 }
             ],
             "decks": 14,
-            "meta_share": 3.79,
+            "meta_share": 3.9,
             "name": "Burn",
-            "previous_share": 5.38,
+            "previous_share": 5.58,
             "py/object": "pauperformance_bot.entity.api.metagame.ArchetypeShare",
             "tournaments": 10
         },
@@ -714,9 +714,9 @@
                 }
             ],
             "decks": 14,
-            "meta_share": 3.79,
+            "meta_share": 3.9,
             "name": "Elves",
-            "previous_share": 2.39,
+            "previous_share": 2.48,
             "py/object": "pauperformance_bot.entity.api.metagame.ArchetypeShare",
             "tournaments": 13
         },
@@ -804,9 +804,9 @@
                 }
             ],
             "decks": 14,
-            "meta_share": 3.79,
+            "meta_share": 3.9,
             "name": "Goblins",
-            "previous_share": 10.36,
+            "previous_share": 10.54,
             "py/object": "pauperformance_bot.entity.api.metagame.ArchetypeShare",
             "tournaments": 12
         },
@@ -894,9 +894,9 @@
                 }
             ],
             "decks": 12,
-            "meta_share": 3.25,
+            "meta_share": 3.34,
             "name": "Rainbow Tron",
-            "previous_share": 5.98,
+            "previous_share": 4.96,
             "py/object": "pauperformance_bot.entity.api.metagame.ArchetypeShare",
             "tournaments": 8
         },
@@ -984,101 +984,11 @@
                 }
             ],
             "decks": 9,
-            "meta_share": 2.44,
+            "meta_share": 2.51,
             "name": "Flicker Tron",
-            "previous_share": 0.8,
+            "previous_share": 0.83,
             "py/object": "pauperformance_bot.entity.api.metagame.ArchetypeShare",
             "tournaments": 8
-        },
-        {
-            "cards": [
-                {
-                    "at_least": [
-                        1.0,
-                        1.0,
-                        1.0,
-                        1.0
-                    ],
-                    "average": 4.0,
-                    "banned": false,
-                    "link": "https://scryfall.com/card/tmp/238/muscle-sliver",
-                    "name": "Muscle Sliver",
-                    "preview": "https://cards.scryfall.io/normal/front/6/0/602a1e1f-4195-48c0-8290-562e7e0db6d8.jpg",
-                    "py/object": "pauperformance_bot.entity.api.archetype.TypicalCard",
-                    "type_line": "Creature \u2014 Sliver",
-                    "typical": 4
-                },
-                {
-                    "at_least": [
-                        1.0,
-                        1.0,
-                        1.0,
-                        1.0
-                    ],
-                    "average": 4.0,
-                    "banned": false,
-                    "link": "https://scryfall.com/card/lgn/19/plated-sliver",
-                    "name": "Plated Sliver",
-                    "preview": "https://cards.scryfall.io/normal/front/8/2/82846d31-4981-4ef1-85c3-703569146a84.jpg",
-                    "py/object": "pauperformance_bot.entity.api.archetype.TypicalCard",
-                    "type_line": "Creature \u2014 Sliver",
-                    "typical": 4
-                },
-                {
-                    "at_least": [
-                        1.0,
-                        1.0,
-                        1.0,
-                        1.0
-                    ],
-                    "average": 4.0,
-                    "banned": false,
-                    "link": "https://scryfall.com/card/m14/189/predatory-sliver",
-                    "name": "Predatory Sliver",
-                    "preview": "https://cards.scryfall.io/normal/front/a/2/a2e37de8-66a1-4afa-aa6f-1151f849dfa8.jpg",
-                    "py/object": "pauperformance_bot.entity.api.archetype.TypicalCard",
-                    "type_line": "Creature \u2014 Sliver",
-                    "typical": 4
-                },
-                {
-                    "at_least": [
-                        1.0,
-                        1.0,
-                        1.0,
-                        1.0
-                    ],
-                    "average": 4.0,
-                    "banned": false,
-                    "link": "https://scryfall.com/card/tsp/41/sidewinder-sliver",
-                    "name": "Sidewinder Sliver",
-                    "preview": "https://cards.scryfall.io/normal/front/b/0/b073b8f2-b42d-40f2-b5fb-e78ffb1733ea.jpg",
-                    "py/object": "pauperformance_bot.entity.api.archetype.TypicalCard",
-                    "type_line": "Creature \u2014 Sliver",
-                    "typical": 4
-                },
-                {
-                    "at_least": [
-                        1.0,
-                        1.0,
-                        1.0,
-                        1.0
-                    ],
-                    "average": 4.0,
-                    "banned": false,
-                    "link": "https://scryfall.com/card/plc/30/sinew-sliver",
-                    "name": "Sinew Sliver",
-                    "preview": "https://cards.scryfall.io/normal/front/6/c/6cd2ed50-cd9a-45d9-a59a-6279be1ab308.jpg",
-                    "py/object": "pauperformance_bot.entity.api.archetype.TypicalCard",
-                    "type_line": "Creature \u2014 Sliver",
-                    "typical": 4
-                }
-            ],
-            "decks": 6,
-            "meta_share": 1.63,
-            "name": "Slivers",
-            "previous_share": 1.99,
-            "py/object": "pauperformance_bot.entity.api.metagame.ArchetypeShare",
-            "tournaments": 6
         },
         {
             "cards": [
@@ -1164,9 +1074,9 @@
                 }
             ],
             "decks": 5,
-            "meta_share": 1.36,
+            "meta_share": 1.39,
             "name": "Red Deck Wins",
-            "previous_share": 0.0,
+            "previous_share": 0.21,
             "py/object": "pauperformance_bot.entity.api.metagame.ArchetypeShare",
             "tournaments": 5
         },
@@ -1254,9 +1164,99 @@
                 }
             ],
             "decks": 4,
-            "meta_share": 1.08,
+            "meta_share": 1.11,
             "name": "Dimir Delver",
-            "previous_share": 2.59,
+            "previous_share": 2.69,
+            "py/object": "pauperformance_bot.entity.api.metagame.ArchetypeShare",
+            "tournaments": 4
+        },
+        {
+            "cards": [
+                {
+                    "at_least": [
+                        1.0,
+                        1.0,
+                        1.0,
+                        1.0
+                    ],
+                    "average": 4.0,
+                    "banned": false,
+                    "link": "https://scryfall.com/card/tmp/238/muscle-sliver",
+                    "name": "Muscle Sliver",
+                    "preview": "https://cards.scryfall.io/normal/front/6/0/602a1e1f-4195-48c0-8290-562e7e0db6d8.jpg",
+                    "py/object": "pauperformance_bot.entity.api.archetype.TypicalCard",
+                    "type_line": "Creature \u2014 Sliver",
+                    "typical": 4
+                },
+                {
+                    "at_least": [
+                        1.0,
+                        1.0,
+                        1.0,
+                        1.0
+                    ],
+                    "average": 4.0,
+                    "banned": false,
+                    "link": "https://scryfall.com/card/lgn/19/plated-sliver",
+                    "name": "Plated Sliver",
+                    "preview": "https://cards.scryfall.io/normal/front/8/2/82846d31-4981-4ef1-85c3-703569146a84.jpg",
+                    "py/object": "pauperformance_bot.entity.api.archetype.TypicalCard",
+                    "type_line": "Creature \u2014 Sliver",
+                    "typical": 4
+                },
+                {
+                    "at_least": [
+                        1.0,
+                        1.0,
+                        1.0,
+                        1.0
+                    ],
+                    "average": 4.0,
+                    "banned": false,
+                    "link": "https://scryfall.com/card/m14/189/predatory-sliver",
+                    "name": "Predatory Sliver",
+                    "preview": "https://cards.scryfall.io/normal/front/a/2/a2e37de8-66a1-4afa-aa6f-1151f849dfa8.jpg",
+                    "py/object": "pauperformance_bot.entity.api.archetype.TypicalCard",
+                    "type_line": "Creature \u2014 Sliver",
+                    "typical": 4
+                },
+                {
+                    "at_least": [
+                        1.0,
+                        1.0,
+                        1.0,
+                        1.0
+                    ],
+                    "average": 4.0,
+                    "banned": false,
+                    "link": "https://scryfall.com/card/tsp/41/sidewinder-sliver",
+                    "name": "Sidewinder Sliver",
+                    "preview": "https://cards.scryfall.io/normal/front/b/0/b073b8f2-b42d-40f2-b5fb-e78ffb1733ea.jpg",
+                    "py/object": "pauperformance_bot.entity.api.archetype.TypicalCard",
+                    "type_line": "Creature \u2014 Sliver",
+                    "typical": 4
+                },
+                {
+                    "at_least": [
+                        1.0,
+                        1.0,
+                        1.0,
+                        1.0
+                    ],
+                    "average": 4.0,
+                    "banned": false,
+                    "link": "https://scryfall.com/card/plc/30/sinew-sliver",
+                    "name": "Sinew Sliver",
+                    "preview": "https://cards.scryfall.io/normal/front/6/c/6cd2ed50-cd9a-45d9-a59a-6279be1ab308.jpg",
+                    "py/object": "pauperformance_bot.entity.api.archetype.TypicalCard",
+                    "type_line": "Creature \u2014 Sliver",
+                    "typical": 4
+                }
+            ],
+            "decks": 4,
+            "meta_share": 1.11,
+            "name": "Slivers",
+            "previous_share": 2.07,
             "py/object": "pauperformance_bot.entity.api.metagame.ArchetypeShare",
             "tournaments": 4
         },
@@ -1344,9 +1344,9 @@
                 }
             ],
             "decks": 3,
-            "meta_share": 0.81,
+            "meta_share": 0.84,
             "name": "Dimir Control",
-            "previous_share": 0.2,
+            "previous_share": 0.62,
             "py/object": "pauperformance_bot.entity.api.metagame.ArchetypeShare",
             "tournaments": 3
         },
@@ -1434,9 +1434,9 @@
                 }
             ],
             "decks": 2,
-            "meta_share": 0.54,
+            "meta_share": 0.56,
             "name": "Acid Trip",
-            "previous_share": 1.79,
+            "previous_share": 1.86,
             "py/object": "pauperformance_bot.entity.api.metagame.ArchetypeShare",
             "tournaments": 2
         },
@@ -1524,17 +1524,17 @@
                 }
             ],
             "decks": 1,
-            "meta_share": 0.27,
+            "meta_share": 0.28,
             "name": "Watch Rites",
-            "previous_share": 0.2,
+            "previous_share": 0.21,
             "py/object": "pauperformance_bot.entity.api.metagame.ArchetypeShare",
             "tournaments": 1
         }
     ],
-    "decks": 369,
+    "decks": 359,
     "metagame": {
         "date": "2016-04-08",
-        "decks": 369,
+        "decks": 359,
         "label": "soi",
         "metagame": "052",
         "name": "Shadows over Innistrad",

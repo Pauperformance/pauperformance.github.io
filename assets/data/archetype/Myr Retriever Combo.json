@@ -6,13 +6,13 @@
     ],
     "family": null,
     "first_appearance": {
-        "date": "2022-04-29",
+        "date": "2022-01-07",
         "metagame": {
-            "date": "2022-04-29",
+            "date": "2021-11-19",
             "decks": null,
-            "label": "snc",
-            "metagame": "102",
-            "name": "Streets of New Capenna",
+            "label": "vow",
+            "metagame": "098",
+            "name": "Innistrad: Crimson Vow",
             "py/object": "pauperformance_bot.entity.api.archetype.MetagameRef"
         },
         "py/object": "pauperformance_bot.entity.api.archetype.Appearance"
@@ -49,8 +49,163 @@
     "resources": [],
     "resources_discord": [],
     "typical_list": {
-        "bans": {},
+        "bans": {
+            "099": [
+                "Atog",
+                "Prophetic Prism"
+            ],
+            "101": [
+                "Disciple of the Vault"
+            ]
+        },
         "by_metagame": {
+            "098": {
+                "main": {
+                    "Ashnod's Altar": [
+                        1,
+                        1,
+                        1,
+                        1
+                    ],
+                    "Atog": [
+                        1,
+                        1,
+                        1,
+                        1
+                    ],
+                    "Chromatic Star": [
+                        1,
+                        1,
+                        1,
+                        1
+                    ],
+                    "Darksteel Citadel": [
+                        1,
+                        1,
+                        1,
+                        1
+                    ],
+                    "Disciple of the Vault": [
+                        1,
+                        1,
+                        1,
+                        1
+                    ],
+                    "Etherium Sculptor": [
+                        1,
+                        1,
+                        1,
+                        1
+                    ],
+                    "Fling": [
+                        1
+                    ],
+                    "Frogmite": [
+                        1,
+                        1
+                    ],
+                    "Galvanic Blast": [
+                        1,
+                        1
+                    ],
+                    "Great Furnace": [
+                        1,
+                        1,
+                        1,
+                        1
+                    ],
+                    "Ichor Wellspring": [
+                        1,
+                        1,
+                        1
+                    ],
+                    "Myr Retriever": [
+                        1,
+                        1,
+                        1,
+                        1
+                    ],
+                    "Perilous Research": [
+                        1,
+                        1,
+                        1
+                    ],
+                    "Prophetic Prism": [
+                        1,
+                        1,
+                        1,
+                        1
+                    ],
+                    "Seat of the Synod": [
+                        1,
+                        1,
+                        1,
+                        1
+                    ],
+                    "Temur Battle Rage": [
+                        1
+                    ],
+                    "Thoughtcast": [
+                        1,
+                        1,
+                        1,
+                        1
+                    ],
+                    "Vault of Whispers": [
+                        1,
+                        1,
+                        1,
+                        1
+                    ]
+                },
+                "side": {
+                    "Abrade": [
+                        1,
+                        1
+                    ],
+                    "Duress": [
+                        1,
+                        1
+                    ],
+                    "Electrickery": [
+                        1,
+                        1
+                    ],
+                    "Hydroblast": [
+                        1,
+                        1
+                    ],
+                    "Metallic Rebuke": [
+                        1,
+                        1
+                    ],
+                    "Pyroblast": [
+                        1
+                    ],
+                    "Reaping the Graves": [
+                        1
+                    ],
+                    "Red Elemental Blast": [
+                        1
+                    ],
+                    "Tormod's Crypt": [
+                        1,
+                        1
+                    ]
+                }
+            },
+            "099": {
+                "main": {},
+                "side": {}
+            },
+            "100": {
+                "main": {},
+                "side": {}
+            },
+            "101": {
+                "main": {},
+                "side": {}
+            },
             "102": {
                 "main": {
                     "Ashnod's Altar": [
@@ -194,6 +349,12 @@
                 "preview": "https://cards.scryfall.io/normal/front/d/5/d5e1a75e-1369-4f28-bb7d-e7ea2e6087e9.jpg",
                 "type_line": "Artifact"
             },
+            "Atog": {
+                "banned": true,
+                "link": "https://scryfall.com/card/atq/23/atog",
+                "preview": "https://cards.scryfall.io/normal/front/2/2/2249fc40-4412-48fd-800a-7ea3678aee3f.jpg",
+                "type_line": "Creature \u2014 Atog"
+            },
             "Chromatic Star": {
                 "banned": false,
                 "link": "https://scryfall.com/card/tsp/251/chromatic-star",
@@ -205,6 +366,12 @@
                 "link": "https://scryfall.com/card/dst/164/darksteel-citadel",
                 "preview": "https://cards.scryfall.io/normal/front/c/5/c5d0e808-d67b-4ea3-9c04-d20269fe692c.jpg",
                 "type_line": "Artifact Land"
+            },
+            "Disciple of the Vault": {
+                "banned": true,
+                "link": "https://scryfall.com/card/mrd/62/disciple-of-the-vault",
+                "preview": "https://cards.scryfall.io/normal/front/6/4/644359dc-3c4c-4291-876d-7390dc466877.jpg",
+                "type_line": "Creature \u2014 Human Cleric"
             },
             "Duress": {
                 "banned": false,
@@ -278,6 +445,12 @@
                 "preview": "https://cards.scryfall.io/normal/front/f/4/f425b017-8c4d-457f-919a-f2686d71bcac.jpg",
                 "type_line": "Instant"
             },
+            "Prophetic Prism": {
+                "banned": false,
+                "link": "https://scryfall.com/card/roe/222/prophetic-prism",
+                "preview": "https://cards.scryfall.io/normal/front/c/f/cfb90d44-8cb1-4b83-b2f2-92c19d6304fb.jpg",
+                "type_line": "Artifact"
+            },
             "Pyroblast": {
                 "banned": false,
                 "link": "https://scryfall.com/card/ice/213/pyroblast",
@@ -330,7 +503,14 @@
         "decks": 2,
         "ended_by_bans": [],
         "era_end": null,
-        "era_start": null,
+        "era_start": {
+            "date": "2022-03-07",
+            "decks": null,
+            "label": "BNR",
+            "metagame": "101",
+            "name": "Banned & Restricted Announcement",
+            "py/object": "pauperformance_bot.entity.api.archetype.MetagameRef"
+        },
         "first_date": "2022-04-29",
         "last_date": "2022-05-06",
         "later_decks": 0,
@@ -733,8 +913,42 @@
                 "typical": 1
             }
         ],
-        "started_by_bans": [],
+        "started_by_bans": [
+            "Disciple of the Vault"
+        ],
         "timeline": [
+            {
+                "date": "2021-11-19",
+                "decks": 1,
+                "label": "vow",
+                "metagame": "098",
+                "name": "Innistrad: Crimson Vow",
+                "py/object": "pauperformance_bot.entity.api.archetype.MetagameRef"
+            },
+            {
+                "date": "2022-01-21",
+                "decks": 0,
+                "label": "BNR",
+                "metagame": "099",
+                "name": "Banned & Restricted Announcement",
+                "py/object": "pauperformance_bot.entity.api.archetype.MetagameRef"
+            },
+            {
+                "date": "2022-02-18",
+                "decks": 0,
+                "label": "neo",
+                "metagame": "100",
+                "name": "Kamigawa: Neon Dynasty",
+                "py/object": "pauperformance_bot.entity.api.archetype.MetagameRef"
+            },
+            {
+                "date": "2022-03-07",
+                "decks": 0,
+                "label": "BNR",
+                "metagame": "101",
+                "name": "Banned & Restricted Announcement",
+                "py/object": "pauperformance_bot.entity.api.archetype.MetagameRef"
+            },
             {
                 "date": "2022-04-29",
                 "decks": 2,

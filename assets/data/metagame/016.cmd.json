@@ -84,9 +84,9 @@
                 }
             ],
             "decks": 37,
-            "meta_share": 14.4,
+            "meta_share": 14.51,
             "name": "Empty The Warrens Storm",
-            "previous_share": 16.17,
+            "previous_share": 14.82,
             "py/object": "pauperformance_bot.entity.api.metagame.ArchetypeShare",
             "tournaments": 27
         },
@@ -174,14 +174,30 @@
                 }
             ],
             "decks": 35,
-            "meta_share": 13.62,
+            "meta_share": 13.73,
             "name": "MonoB Control",
-            "previous_share": 5.65,
+            "previous_share": 5.75,
             "py/object": "pauperformance_bot.entity.api.metagame.ArchetypeShare",
             "tournaments": 23
         },
         {
             "cards": [
+                {
+                    "at_least": [
+                        1.0,
+                        1.0,
+                        1.0,
+                        0.935
+                    ],
+                    "average": 3.9,
+                    "banned": false,
+                    "link": "https://scryfall.com/card/som/114/carapace-forger",
+                    "name": "Carapace Forger",
+                    "preview": "https://cards.scryfall.io/normal/front/e/9/e9948e4c-d583-4fde-a305-df926cf00199.jpg",
+                    "py/object": "pauperformance_bot.entity.api.archetype.TypicalCard",
+                    "type_line": "Creature \u2014 Elf Artificer",
+                    "typical": 4
+                },
                 {
                     "at_least": [
                         1.0,
@@ -202,8 +218,8 @@
                     "at_least": [
                         1.0,
                         1.0,
-                        0.97,
-                        0.636
+                        0.968,
+                        0.613
                     ],
                     "average": 3.6,
                     "banned": false,
@@ -218,8 +234,8 @@
                     "at_least": [
                         1.0,
                         1.0,
-                        0.97,
-                        0.97
+                        0.968,
+                        0.968
                     ],
                     "average": 3.9,
                     "banned": false,
@@ -245,30 +261,14 @@
                     "py/object": "pauperformance_bot.entity.api.archetype.TypicalCard",
                     "type_line": "Artifact Creature \u2014 Myr",
                     "typical": 4
-                },
-                {
-                    "at_least": [
-                        1.0,
-                        1.0,
-                        1.0,
-                        0.697
-                    ],
-                    "average": 3.7,
-                    "banned": false,
-                    "link": "https://scryfall.com/card/lrw/261/springleaf-drum",
-                    "name": "Springleaf Drum",
-                    "preview": "https://cards.scryfall.io/normal/front/f/a/fa8b09d0-fbd2-4441-9d87-02450412e0db.jpg",
-                    "py/object": "pauperformance_bot.entity.api.archetype.TypicalCard",
-                    "type_line": "Artifact",
-                    "typical": 4
                 }
             ],
-            "decks": 33,
-            "meta_share": 12.84,
+            "decks": 31,
+            "meta_share": 12.16,
             "name": "Affinity",
-            "previous_share": 13.09,
+            "previous_share": 11.68,
             "py/object": "pauperformance_bot.entity.api.metagame.ArchetypeShare",
-            "tournaments": 26
+            "tournaments": 25
         },
         {
             "cards": [
@@ -354,9 +354,9 @@
                 }
             ],
             "decks": 31,
-            "meta_share": 12.06,
+            "meta_share": 12.16,
             "name": "Goblins",
-            "previous_share": 8.64,
+            "previous_share": 9.07,
             "py/object": "pauperformance_bot.entity.api.metagame.ArchetypeShare",
             "tournaments": 26
         },
@@ -444,9 +444,9 @@
                 }
             ],
             "decks": 26,
-            "meta_share": 10.12,
+            "meta_share": 10.2,
             "name": "Infect",
-            "previous_share": 7.78,
+            "previous_share": 8.18,
             "py/object": "pauperformance_bot.entity.api.metagame.ArchetypeShare",
             "tournaments": 22
         },
@@ -534,9 +534,9 @@
                 }
             ],
             "decks": 23,
-            "meta_share": 8.95,
+            "meta_share": 9.02,
             "name": "Izzet 8-Post",
-            "previous_share": 6.84,
+            "previous_share": 7.1,
             "py/object": "pauperformance_bot.entity.api.metagame.ArchetypeShare",
             "tournaments": 18
         },
@@ -624,9 +624,9 @@
                 }
             ],
             "decks": 22,
-            "meta_share": 8.56,
+            "meta_share": 8.63,
             "name": "Esper Familiars",
-            "previous_share": 16.77,
+            "previous_share": 17.52,
             "py/object": "pauperformance_bot.entity.api.metagame.ArchetypeShare",
             "tournaments": 17
         },
@@ -714,9 +714,9 @@
                 }
             ],
             "decks": 12,
-            "meta_share": 4.67,
+            "meta_share": 4.71,
             "name": "White Weenie",
-            "previous_share": 6.59,
+            "previous_share": 6.92,
             "py/object": "pauperformance_bot.entity.api.metagame.ArchetypeShare",
             "tournaments": 9
         },
@@ -804,9 +804,9 @@
                 }
             ],
             "decks": 10,
-            "meta_share": 3.89,
+            "meta_share": 3.92,
             "name": "Golgari TortEx",
-            "previous_share": 1.28,
+            "previous_share": 1.35,
             "py/object": "pauperformance_bot.entity.api.metagame.ArchetypeShare",
             "tournaments": 10
         },
@@ -894,9 +894,9 @@
                 }
             ],
             "decks": 10,
-            "meta_share": 3.89,
+            "meta_share": 3.92,
             "name": "MonoU Faeries",
-            "previous_share": 1.37,
+            "previous_share": 1.08,
             "py/object": "pauperformance_bot.entity.api.metagame.ArchetypeShare",
             "tournaments": 10
         },
@@ -984,9 +984,9 @@
                 }
             ],
             "decks": 7,
-            "meta_share": 2.72,
+            "meta_share": 2.75,
             "name": "Burn",
-            "previous_share": 8.47,
+            "previous_share": 8.89,
             "py/object": "pauperformance_bot.entity.api.metagame.ArchetypeShare",
             "tournaments": 7
         },
@@ -1074,9 +1074,9 @@
                 }
             ],
             "decks": 5,
-            "meta_share": 1.95,
+            "meta_share": 1.96,
             "name": "Dimir 8-Post",
-            "previous_share": 0.43,
+            "previous_share": 0.45,
             "py/object": "pauperformance_bot.entity.api.metagame.ArchetypeShare",
             "tournaments": 5
         },
@@ -1164,9 +1164,9 @@
                 }
             ],
             "decks": 5,
-            "meta_share": 1.95,
+            "meta_share": 1.96,
             "name": "Stompy",
-            "previous_share": 2.57,
+            "previous_share": 2.7,
             "py/object": "pauperformance_bot.entity.api.metagame.ArchetypeShare",
             "tournaments": 5
         },
@@ -1256,15 +1256,15 @@
             "decks": 1,
             "meta_share": 0.39,
             "name": "Dimir Control",
-            "previous_share": 0.43,
+            "previous_share": 0.45,
             "py/object": "pauperformance_bot.entity.api.metagame.ArchetypeShare",
             "tournaments": 1
         }
     ],
-    "decks": 257,
+    "decks": 255,
     "metagame": {
         "date": "2011-06-17",
-        "decks": 257,
+        "decks": 255,
         "label": "cmd",
         "metagame": "016",
         "name": "Commander 2011",
