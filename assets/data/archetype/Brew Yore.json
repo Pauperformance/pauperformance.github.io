@@ -29,13 +29,13 @@
         "Combo"
     ],
     "last_appearance": {
-        "date": "2026-11-10",
+        "date": "2026-11-16",
         "metagame": {
-            "date": "2026-10-02",
+            "date": "2026-11-13",
             "decks": null,
-            "label": "fra",
-            "metagame": "147",
-            "name": "Reality Fracture",
+            "label": "trk",
+            "metagame": "148",
+            "name": "Star Trek",
             "py/object": "pauperformance_bot.entity.api.archetype.MetagameRef"
         },
         "py/object": "pauperformance_bot.entity.api.archetype.Appearance"
@@ -1076,6 +1076,194 @@
                         2
                     ]
                 }
+            },
+            "148": {
+                "main": {
+                    "Ancient Den": [
+                        2,
+                        1
+                    ],
+                    "Baleful Strix": [
+                        1,
+                        1
+                    ],
+                    "Blood Fountain": [
+                        2,
+                        1
+                    ],
+                    "Cast Down": [
+                        1
+                    ],
+                    "Cryogen Relic": [
+                        2,
+                        2,
+                        2,
+                        2
+                    ],
+                    "Dispatch": [
+                        2,
+                        2,
+                        2,
+                        1
+                    ],
+                    "Drossforge Bridge": [
+                        1,
+                        1
+                    ],
+                    "Galvanic Blast": [
+                        1,
+                        1,
+                        1
+                    ],
+                    "Giant's Boulder": [
+                        2,
+                        2,
+                        2,
+                        1
+                    ],
+                    "Glint Hawk": [
+                        1,
+                        1,
+                        1,
+                        1
+                    ],
+                    "Goldmire Bridge": [
+                        2,
+                        2
+                    ],
+                    "Great Furnace": [
+                        1,
+                        1
+                    ],
+                    "Kor Skyfisher": [
+                        1,
+                        1
+                    ],
+                    "Krark-Clan Shaman": [
+                        1,
+                        1
+                    ],
+                    "Makeshift Munitions": [
+                        1
+                    ],
+                    "Mistvault Bridge": [
+                        2,
+                        2,
+                        2,
+                        1
+                    ],
+                    "Myr Enforcer": [
+                        2,
+                        2,
+                        2,
+                        1
+                    ],
+                    "Nihil Spellbomb": [
+                        1,
+                        1
+                    ],
+                    "Omen of the Dead": [
+                        1
+                    ],
+                    "Razortide Bridge": [
+                        2,
+                        1,
+                        1,
+                        1
+                    ],
+                    "Reckoner's Bargain": [
+                        2,
+                        2,
+                        2,
+                        2
+                    ],
+                    "Refurbished Familiar": [
+                        2,
+                        2,
+                        2,
+                        2
+                    ],
+                    "Seat of the Synod": [
+                        2,
+                        2,
+                        2,
+                        1
+                    ],
+                    "Silverbluff Bridge": [
+                        1
+                    ],
+                    "Thoughtcast": [
+                        2,
+                        2,
+                        2,
+                        2
+                    ],
+                    "Tithing Blade": [
+                        1,
+                        1
+                    ],
+                    "Utrom Monitor": [
+                        2,
+                        2,
+                        2
+                    ],
+                    "Vault of Whispers": [
+                        2,
+                        2,
+                        2,
+                        1
+                    ]
+                },
+                "side": {
+                    "Arms of Hadar": [
+                        1,
+                        1
+                    ],
+                    "Blue Elemental Blast": [
+                        2,
+                        2,
+                        2,
+                        2
+                    ],
+                    "Counterspell": [
+                        1,
+                        1
+                    ],
+                    "Fiery Cannonade": [
+                        1,
+                        1
+                    ],
+                    "Krark-Clan Shaman": [
+                        1
+                    ],
+                    "Negate": [
+                        1,
+                        1,
+                        1,
+                        1
+                    ],
+                    "Pyroblast": [
+                        1,
+                        1,
+                        1
+                    ],
+                    "Soul-Guide Lantern": [
+                        1
+                    ],
+                    "Thraben Charm": [
+                        1,
+                        1,
+                        1
+                    ],
+                    "Toxin Analysis": [
+                        1,
+                        1
+                    ],
+                    "Vandalblast": [
+                        1,
+                        1
+                    ]
+                }
             }
         },
         "cards": {
@@ -1349,6 +1537,12 @@
                 "preview": "https://cards.scryfall.io/normal/front/6/0/603d217b-6375-46fc-992a-8dbd779da1e5.jpg",
                 "type_line": "Artifact"
             },
+            "Omen of the Dead": {
+                "banned": false,
+                "link": "https://scryfall.com/card/thb/110/omen-of-the-dead",
+                "preview": "https://cards.scryfall.io/normal/front/8/0/8023fc44-fb8e-420d-a68c-b45912c4e5bd.jpg",
+                "type_line": "Enchantment"
+            },
             "Prophetic Prism": {
                 "banned": false,
                 "link": "https://scryfall.com/card/roe/222/prophetic-prism",
@@ -1542,20 +1736,20 @@
                 "type_line": "Instant"
             }
         },
-        "decks": 53,
+        "decks": 55,
         "ended_by_bans": [],
         "era_end": null,
         "era_start": null,
         "first_date": "2026-09-02",
-        "last_date": "2026-11-10",
+        "last_date": "2026-11-16",
         "later_decks": 0,
         "main": [
             {
                 "at_least": [
                     1.0,
                     1.0,
-                    0.981,
-                    0.887
+                    0.982,
+                    0.873
                 ],
                 "average": 3.9,
                 "banned": false,
@@ -1570,8 +1764,8 @@
                 "at_least": [
                     1.0,
                     1.0,
-                    0.981,
-                    0.981
+                    0.982,
+                    0.982
                 ],
                 "average": 4.0,
                 "banned": false,
@@ -1584,10 +1778,10 @@
             },
             {
                 "at_least": [
-                    0.981,
-                    0.981,
-                    0.943,
-                    0.66
+                    0.982,
+                    0.982,
+                    0.945,
+                    0.673
                 ],
                 "average": 3.6,
                 "banned": false,
@@ -1600,10 +1794,10 @@
             },
             {
                 "at_least": [
-                    0.962,
-                    0.962,
-                    0.962,
-                    0.585
+                    0.964,
+                    0.964,
+                    0.964,
+                    0.582
                 ],
                 "average": 3.6,
                 "banned": false,
@@ -1616,10 +1810,10 @@
             },
             {
                 "at_least": [
-                    0.962,
-                    0.962,
-                    0.962,
-                    0.962
+                    0.964,
+                    0.964,
+                    0.964,
+                    0.964
                 ],
                 "average": 4.0,
                 "banned": false,
@@ -1632,10 +1826,10 @@
             },
             {
                 "at_least": [
-                    0.962,
-                    0.962,
-                    0.943,
-                    0.642
+                    0.964,
+                    0.964,
+                    0.945,
+                    0.636
                 ],
                 "average": 3.6,
                 "banned": false,
@@ -1648,12 +1842,12 @@
             },
             {
                 "at_least": [
-                    0.887,
-                    0.887,
-                    0.868,
-                    0.774
+                    0.873,
+                    0.873,
+                    0.855,
+                    0.745
                 ],
-                "average": 3.9,
+                "average": 3.8,
                 "banned": false,
                 "link": "https://scryfall.com/card/som/91/galvanic-blast",
                 "name": "Galvanic Blast",
@@ -1664,26 +1858,10 @@
             },
             {
                 "at_least": [
-                    0.811,
-                    0.811,
-                    0.755,
-                    0.528
-                ],
-                "average": 3.6,
-                "banned": false,
-                "link": "https://scryfall.com/card/som/10/glint-hawk",
-                "name": "Glint Hawk",
-                "preview": "https://cards.scryfall.io/normal/front/2/8/284c4710-4183-4743-9c8b-515cc98cbbb8.jpg",
-                "py/object": "pauperformance_bot.entity.api.archetype.TypicalCard",
-                "type_line": "Creature \u2014 Bird",
-                "typical": 4
-            },
-            {
-                "at_least": [
-                    0.811,
-                    0.811,
-                    0.811,
-                    0.66
+                    0.818,
+                    0.818,
+                    0.818,
+                    0.655
                 ],
                 "average": 3.8,
                 "banned": false,
@@ -1696,10 +1874,10 @@
             },
             {
                 "at_least": [
-                    0.811,
-                    0.811,
-                    0.811,
-                    0.66
+                    0.818,
+                    0.818,
+                    0.818,
+                    0.673
                 ],
                 "average": 3.8,
                 "banned": false,
@@ -1712,10 +1890,26 @@
             },
             {
                 "at_least": [
-                    0.925,
-                    0.868,
-                    0.755,
-                    0.358
+                    0.8,
+                    0.8,
+                    0.745,
+                    0.527
+                ],
+                "average": 3.6,
+                "banned": false,
+                "link": "https://scryfall.com/card/som/10/glint-hawk",
+                "name": "Glint Hawk",
+                "preview": "https://cards.scryfall.io/normal/front/2/8/284c4710-4183-4743-9c8b-515cc98cbbb8.jpg",
+                "py/object": "pauperformance_bot.entity.api.archetype.TypicalCard",
+                "type_line": "Creature \u2014 Bird",
+                "typical": 4
+            },
+            {
+                "at_least": [
+                    0.909,
+                    0.855,
+                    0.727,
+                    0.345
                 ],
                 "average": 3.1,
                 "banned": false,
@@ -1728,12 +1922,12 @@
             },
             {
                 "at_least": [
-                    0.887,
-                    0.792,
-                    0.679,
-                    0.189
+                    0.891,
+                    0.782,
+                    0.655,
+                    0.182
                 ],
-                "average": 2.9,
+                "average": 2.8,
                 "banned": false,
                 "link": "https://scryfall.com/card/mrd/278/ancient-den",
                 "name": "Ancient Den",
@@ -1744,10 +1938,10 @@
             },
             {
                 "at_least": [
-                    0.811,
-                    0.811,
-                    0.755,
-                    0.302
+                    0.818,
+                    0.818,
+                    0.764,
+                    0.309
                 ],
                 "average": 3.3,
                 "banned": false,
@@ -1760,10 +1954,10 @@
             },
             {
                 "at_least": [
-                    0.811,
-                    0.811,
-                    0.792,
-                    0.264
+                    0.818,
+                    0.818,
+                    0.8,
+                    0.255
                 ],
                 "average": 3.3,
                 "banned": false,
@@ -1776,10 +1970,10 @@
             },
             {
                 "at_least": [
-                    0.962,
-                    0.604,
-                    0.038,
-                    0.019
+                    0.964,
+                    0.6,
+                    0.036,
+                    0.018
                 ],
                 "average": 1.7,
                 "banned": false,
@@ -1792,9 +1986,9 @@
             },
             {
                 "at_least": [
-                    0.868,
-                    0.849,
-                    0.038,
+                    0.855,
+                    0.836,
+                    0.036,
                     0.0
                 ],
                 "average": 2.0,
@@ -1808,7 +2002,7 @@
             },
             {
                 "at_least": [
-                    0.887,
+                    0.873,
                     0.0,
                     0.0,
                     0.0
@@ -1824,10 +2018,10 @@
             },
             {
                 "at_least": [
-                    0.849,
-                    0.321,
-                    0.151,
-                    0.132
+                    0.855,
+                    0.327,
+                    0.164,
+                    0.145
                 ],
                 "average": 1.7,
                 "banned": false,
@@ -1840,10 +2034,10 @@
             },
             {
                 "at_least": [
-                    0.604,
-                    0.453,
-                    0.132,
-                    0.075
+                    0.6,
+                    0.455,
+                    0.127,
+                    0.073
                 ],
                 "average": 2.1,
                 "banned": false,
@@ -1856,10 +2050,10 @@
             },
             {
                 "at_least": [
-                    0.528,
-                    0.226,
-                    0.132,
-                    0.019
+                    0.527,
+                    0.236,
+                    0.127,
+                    0.018
                 ],
                 "average": 1.7,
                 "banned": false,
@@ -1872,10 +2066,10 @@
             },
             {
                 "at_least": [
-                    0.491,
-                    0.491,
-                    0.491,
-                    0.283
+                    0.509,
+                    0.509,
+                    0.509,
+                    0.291
                 ],
                 "average": 3.6,
                 "banned": false,
@@ -1888,8 +2082,8 @@
             },
             {
                 "at_least": [
-                    0.34,
-                    0.057,
+                    0.345,
+                    0.055,
                     0.0,
                     0.0
                 ],
@@ -1904,12 +2098,12 @@
             },
             {
                 "at_least": [
-                    0.283,
-                    0.075,
+                    0.309,
+                    0.109,
                     0.0,
                     0.0
                 ],
-                "average": 1.3,
+                "average": 1.4,
                 "banned": false,
                 "link": "https://scryfall.com/card/mh2/247/goldmire-bridge",
                 "name": "Goldmire Bridge",
@@ -1920,8 +2114,8 @@
             },
             {
                 "at_least": [
-                    0.226,
-                    0.038,
+                    0.236,
+                    0.055,
                     0.0,
                     0.0
                 ],
@@ -1936,12 +2130,12 @@
             },
             {
                 "at_least": [
-                    0.208,
-                    0.208,
-                    0.189,
-                    0.189
+                    0.218,
+                    0.218,
+                    0.182,
+                    0.182
                 ],
-                "average": 3.8,
+                "average": 3.7,
                 "banned": false,
                 "link": "https://scryfall.com/card/zen/23/kor-skyfisher",
                 "name": "Kor Skyfisher",
@@ -1952,8 +2146,8 @@
             },
             {
                 "at_least": [
-                    0.208,
-                    0.151,
+                    0.2,
+                    0.145,
                     0.0,
                     0.0
                 ],
@@ -1968,10 +2162,10 @@
             },
             {
                 "at_least": [
-                    0.189,
-                    0.189,
-                    0.189,
-                    0.189
+                    0.182,
+                    0.182,
+                    0.182,
+                    0.182
                 ],
                 "average": 4.0,
                 "banned": false,
@@ -1984,12 +2178,12 @@
             },
             {
                 "at_least": [
-                    0.132,
-                    0.094,
+                    0.145,
+                    0.109,
                     0.0,
                     0.0
                 ],
-                "average": 1.7,
+                "average": 1.8,
                 "banned": false,
                 "link": "https://scryfall.com/card/mrd/98/krark-clan-shaman",
                 "name": "Krark-Clan Shaman",
@@ -2000,7 +2194,7 @@
             },
             {
                 "at_least": [
-                    0.132,
+                    0.127,
                     0.0,
                     0.0,
                     0.0
@@ -2016,10 +2210,10 @@
             },
             {
                 "at_least": [
-                    0.094,
-                    0.038,
-                    0.038,
-                    0.038
+                    0.091,
+                    0.036,
+                    0.036,
+                    0.036
                 ],
                 "average": 2.2,
                 "banned": false,
@@ -2032,8 +2226,24 @@
             },
             {
                 "at_least": [
-                    0.075,
-                    0.019,
+                    0.073,
+                    0.018,
+                    0.0,
+                    0.0
+                ],
+                "average": 1.2,
+                "banned": false,
+                "link": "https://scryfall.com/card/2xm/79/cast-down",
+                "name": "Cast Down",
+                "preview": "https://cards.scryfall.io/normal/front/4/8/480fecdd-5978-47e6-9c25-7a04cdf616db.jpg",
+                "py/object": "pauperformance_bot.entity.api.archetype.TypicalCard",
+                "type_line": "Instant",
+                "typical": 0
+            },
+            {
+                "at_least": [
+                    0.073,
+                    0.018,
                     0.0,
                     0.0
                 ],
@@ -2045,25 +2255,17 @@
                 "py/object": "pauperformance_bot.entity.api.archetype.TypicalCard",
                 "type_line": "Instant",
                 "typical": 0
-            },
-            {
-                "at_least": [
-                    0.057,
-                    0.019,
-                    0.0,
-                    0.0
-                ],
-                "average": 1.3,
-                "banned": false,
-                "link": "https://scryfall.com/card/2xm/79/cast-down",
-                "name": "Cast Down",
-                "preview": "https://cards.scryfall.io/normal/front/4/8/480fecdd-5978-47e6-9c25-7a04cdf616db.jpg",
-                "py/object": "pauperformance_bot.entity.api.archetype.TypicalCard",
-                "type_line": "Instant",
-                "typical": 0
             }
         ],
         "metagames": [
+            {
+                "date": "2026-11-13",
+                "decks": 2,
+                "label": "trk",
+                "metagame": "148",
+                "name": "Star Trek",
+                "py/object": "pauperformance_bot.entity.api.archetype.MetagameRef"
+            },
             {
                 "date": "2026-10-02",
                 "decks": 23,
@@ -2093,26 +2295,10 @@
         "side": [
             {
                 "at_least": [
-                    0.585,
-                    0.547,
-                    0.528,
-                    0.453
-                ],
-                "average": 3.6,
-                "banned": false,
-                "link": "https://scryfall.com/card/ice/72/hydroblast",
-                "name": "Hydroblast",
-                "preview": "https://cards.scryfall.io/normal/front/f/6/f62716f0-fde2-49ef-b8a4-c1b03f451194.jpg",
-                "py/object": "pauperformance_bot.entity.api.archetype.TypicalCard",
-                "type_line": "Instant",
-                "typical": 4
-            },
-            {
-                "at_least": [
-                    0.717,
-                    0.698,
-                    0.623,
-                    0.358
+                    0.709,
+                    0.691,
+                    0.618,
+                    0.345
                 ],
                 "average": 3.3,
                 "banned": false,
@@ -2125,10 +2311,42 @@
             },
             {
                 "at_least": [
-                    0.887,
-                    0.792,
-                    0.358,
-                    0.019
+                    0.564,
+                    0.527,
+                    0.509,
+                    0.436
+                ],
+                "average": 3.6,
+                "banned": false,
+                "link": "https://scryfall.com/card/ice/72/hydroblast",
+                "name": "Hydroblast",
+                "preview": "https://cards.scryfall.io/normal/front/f/6/f62716f0-fde2-49ef-b8a4-c1b03f451194.jpg",
+                "py/object": "pauperformance_bot.entity.api.archetype.TypicalCard",
+                "type_line": "Instant",
+                "typical": 3
+            },
+            {
+                "at_least": [
+                    0.509,
+                    0.473,
+                    0.436,
+                    0.4
+                ],
+                "average": 3.6,
+                "banned": false,
+                "link": "https://scryfall.com/card/lea/49/blue-elemental-blast",
+                "name": "Blue Elemental Blast",
+                "preview": "https://cards.scryfall.io/normal/front/2/0/20d666ef-39bf-4fbf-8201-5f1056539da2.jpg",
+                "py/object": "pauperformance_bot.entity.api.archetype.TypicalCard",
+                "type_line": "Instant",
+                "typical": 3
+            },
+            {
+                "at_least": [
+                    0.873,
+                    0.764,
+                    0.345,
+                    0.018
                 ],
                 "average": 2.3,
                 "banned": false,
@@ -2141,8 +2359,8 @@
             },
             {
                 "at_least": [
-                    0.642,
-                    0.528,
+                    0.618,
+                    0.509,
                     0.0,
                     0.0
                 ],
@@ -2157,24 +2375,8 @@
             },
             {
                 "at_least": [
-                    0.491,
-                    0.453,
-                    0.415,
-                    0.377
-                ],
-                "average": 3.5,
-                "banned": false,
-                "link": "https://scryfall.com/card/lea/49/blue-elemental-blast",
-                "name": "Blue Elemental Blast",
-                "preview": "https://cards.scryfall.io/normal/front/2/0/20d666ef-39bf-4fbf-8201-5f1056539da2.jpg",
-                "py/object": "pauperformance_bot.entity.api.archetype.TypicalCard",
-                "type_line": "Instant",
-                "typical": 2
-            },
-            {
-                "at_least": [
-                    0.528,
-                    0.094,
+                    0.527,
+                    0.109,
                     0.0,
                     0.0
                 ],
@@ -2189,8 +2391,8 @@
             },
             {
                 "at_least": [
-                    0.491,
-                    0.245,
+                    0.473,
+                    0.236,
                     0.0,
                     0.0
                 ],
@@ -2205,8 +2407,8 @@
             },
             {
                 "at_least": [
-                    0.358,
-                    0.038,
+                    0.345,
+                    0.036,
                     0.0,
                     0.0
                 ],
@@ -2221,10 +2423,10 @@
             },
             {
                 "at_least": [
-                    0.302,
-                    0.264,
-                    0.189,
-                    0.094
+                    0.291,
+                    0.255,
+                    0.182,
+                    0.091
                 ],
                 "average": 2.8,
                 "banned": false,
@@ -2237,7 +2439,7 @@
             },
             {
                 "at_least": [
-                    0.17,
+                    0.182,
                     0.0,
                     0.0,
                     0.0
@@ -2253,8 +2455,8 @@
             },
             {
                 "at_least": [
-                    0.17,
-                    0.132,
+                    0.182,
+                    0.145,
                     0.0,
                     0.0
                 ],
@@ -2269,12 +2471,12 @@
             },
             {
                 "at_least": [
-                    0.151,
-                    0.019,
+                    0.164,
+                    0.036,
                     0.0,
                     0.0
                 ],
-                "average": 1.1,
+                "average": 1.2,
                 "banned": false,
                 "link": "https://scryfall.com/card/cmr/178/fiery-cannonade",
                 "name": "Fiery Cannonade",
@@ -2285,8 +2487,8 @@
             },
             {
                 "at_least": [
-                    0.132,
-                    0.113,
+                    0.127,
+                    0.109,
                     0.0,
                     0.0
                 ],
@@ -2301,8 +2503,40 @@
             },
             {
                 "at_least": [
-                    0.113,
-                    0.019,
+                    0.109,
+                    0.109,
+                    0.018,
+                    0.0
+                ],
+                "average": 2.2,
+                "banned": false,
+                "link": "https://scryfall.com/card/clb/113/arms-of-hadar",
+                "name": "Arms of Hadar",
+                "preview": "https://cards.scryfall.io/normal/front/d/b/db1fd431-8f6d-4ca5-bc0c-53881c500da1.jpg",
+                "py/object": "pauperformance_bot.entity.api.archetype.TypicalCard",
+                "type_line": "Sorcery",
+                "typical": 0
+            },
+            {
+                "at_least": [
+                    0.109,
+                    0.109,
+                    0.091,
+                    0.055
+                ],
+                "average": 3.3,
+                "banned": false,
+                "link": "https://scryfall.com/card/mor/43/negate",
+                "name": "Negate",
+                "preview": "https://cards.scryfall.io/normal/front/5/a/5a501252-e722-4ebf-bcf7-f53a42745fa7.jpg",
+                "py/object": "pauperformance_bot.entity.api.archetype.TypicalCard",
+                "type_line": "Instant",
+                "typical": 0
+            },
+            {
+                "at_least": [
+                    0.109,
+                    0.018,
                     0.0,
                     0.0
                 ],
@@ -2317,23 +2551,7 @@
             },
             {
                 "at_least": [
-                    0.094,
-                    0.094,
-                    0.019,
-                    0.0
-                ],
-                "average": 2.2,
-                "banned": false,
-                "link": "https://scryfall.com/card/clb/113/arms-of-hadar",
-                "name": "Arms of Hadar",
-                "preview": "https://cards.scryfall.io/normal/front/d/b/db1fd431-8f6d-4ca5-bc0c-53881c500da1.jpg",
-                "py/object": "pauperformance_bot.entity.api.archetype.TypicalCard",
-                "type_line": "Sorcery",
-                "typical": 0
-            },
-            {
-                "at_least": [
-                    0.094,
+                    0.091,
                     0.0,
                     0.0,
                     0.0
@@ -2349,8 +2567,8 @@
             },
             {
                 "at_least": [
-                    0.094,
-                    0.019,
+                    0.091,
+                    0.018,
                     0.0,
                     0.0
                 ],
@@ -2365,25 +2583,9 @@
             },
             {
                 "at_least": [
-                    0.094,
-                    0.094,
-                    0.075,
-                    0.038
-                ],
-                "average": 3.2,
-                "banned": false,
-                "link": "https://scryfall.com/card/mor/43/negate",
-                "name": "Negate",
-                "preview": "https://cards.scryfall.io/normal/front/5/a/5a501252-e722-4ebf-bcf7-f53a42745fa7.jpg",
-                "py/object": "pauperformance_bot.entity.api.archetype.TypicalCard",
-                "type_line": "Instant",
-                "typical": 0
-            },
-            {
-                "at_least": [
-                    0.075,
-                    0.075,
-                    0.057,
+                    0.073,
+                    0.073,
+                    0.055,
                     0.0
                 ],
                 "average": 2.8,
@@ -2397,8 +2599,24 @@
             },
             {
                 "at_least": [
-                    0.057,
-                    0.057,
+                    0.073,
+                    0.055,
+                    0.036,
+                    0.0
+                ],
+                "average": 2.2,
+                "banned": false,
+                "link": "https://scryfall.com/card/mh3/45/thraben-charm",
+                "name": "Thraben Charm",
+                "preview": "https://cards.scryfall.io/normal/front/d/d/dd28a646-f38f-4cdf-948c-969cd979e5e6.jpg",
+                "py/object": "pauperformance_bot.entity.api.archetype.TypicalCard",
+                "type_line": "Instant",
+                "typical": 0
+            },
+            {
+                "at_least": [
+                    0.055,
+                    0.055,
                     0.0,
                     0.0
                 ],
@@ -2413,9 +2631,9 @@
             },
             {
                 "at_least": [
-                    0.057,
-                    0.057,
-                    0.057,
+                    0.055,
+                    0.055,
+                    0.055,
                     0.0
                 ],
                 "average": 3.0,
@@ -2425,22 +2643,6 @@
                 "preview": "https://cards.scryfall.io/normal/front/a/d/ade075fd-73ee-4d12-a2da-48e5938043af.jpg",
                 "py/object": "pauperformance_bot.entity.api.archetype.TypicalCard",
                 "type_line": "Sorcery",
-                "typical": 0
-            },
-            {
-                "at_least": [
-                    0.057,
-                    0.038,
-                    0.019,
-                    0.0
-                ],
-                "average": 2.0,
-                "banned": false,
-                "link": "https://scryfall.com/card/mh3/45/thraben-charm",
-                "name": "Thraben Charm",
-                "preview": "https://cards.scryfall.io/normal/front/d/d/dd28a646-f38f-4cdf-948c-969cd979e5e6.jpg",
-                "py/object": "pauperformance_bot.entity.api.archetype.TypicalCard",
-                "type_line": "Instant",
                 "typical": 0
             }
         ],
@@ -2476,6 +2678,14 @@
                 "label": "fra",
                 "metagame": "147",
                 "name": "Reality Fracture",
+                "py/object": "pauperformance_bot.entity.api.archetype.MetagameRef"
+            },
+            {
+                "date": "2026-11-13",
+                "decks": 2,
+                "label": "trk",
+                "metagame": "148",
+                "name": "Star Trek",
                 "py/object": "pauperformance_bot.entity.api.archetype.MetagameRef"
             }
         ],
