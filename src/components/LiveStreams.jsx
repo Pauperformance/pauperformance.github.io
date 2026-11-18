@@ -2,13 +2,17 @@ import { useEffect, useRef, useState } from 'react'
 import { Link } from 'react-router-dom'
 import { getSettings } from '../utils/settings'
 import { registerPreviewCard } from '../utils/videoPreviews'
+import { probeLive, isProbeable } from '../utils/liveProbe'
+import { TWITCH_ICON, YOUTUBE_ICON } from '../utils/socialIcons'
+import { creatorLanguages } from '../utils/creatorLanguages'
+import { LANG_CANONICAL, LANG_FLAG, LANG_NAME } from '../utils/languages'
 
 // Who of the creators is live on Twitch right now, as tiles. Everything comes
 // from DecAPI (https://docs.decapi.me/twitch), which needs no key and allows
 // calls from the browser:
 //   uptime       whether a channel is live, and for how long
-//   title, game, viewercount   the stream's details, asked for the live ones
-//   avatar, followcount        the channel's profile picture and followers
+//   title, viewercount   the stream's details, asked for the live ones
+//   avatar               the channel's profile picture
 //   multi        one page to watch several streams side by side (multistre.am,
 //                which DecAPI's /multi points to)
 // The thumbnails are Twitch's own live previews. The live status is checked
@@ -31,8 +35,8 @@ function channelOf(url) {
   return match ? match[1].toLowerCase() : null
 }
 
-// The channel's profile picture and followers: they hardly
-// change, so they are kept in the session for an hour
+// The channel's profile picture: it hardly
+// changes, so they are kept in the session for an hour
 const detailsMemory = new Map()
 async function channelDetails(login) {
   const key = `twitch-details:${login}`
@@ -40,14 +44,8 @@ async function channelDetails(login) {
     try { return JSON.parse(sessionStorage.getItem(key)) } catch { return null }
   })()
   if (kept && Date.now() - kept.at < DETAILS_TTL_MS) return kept.value
-  const [avatar, followers] = await Promise.all([
-    text(`${DECAPI}/avatar/${login}`),
-    text(`${DECAPI}/followcount/${login}`),
-  ])
-  const value = {
-    avatar: avatar && avatar.startsWith('https://') ? avatar : null,
-    followers: followers && /^\d+$/.test(followers) ? Number(followers) : null,
-  }
+  const avatar = await text(`${DECAPI}/avatar/${login}`)
+  const value = { avatar: avatar && avatar.startsWith('https://') ? avatar : null }
   detailsMemory.set(key, { at: Date.now(), value })
   try { sessionStorage.setItem(key, JSON.stringify({ at: Date.now(), value })) } catch { /* no storage: just fetched again */ }
   return value
@@ -58,16 +56,14 @@ async function checkChannel(channel) {
   const uptime = await text(`${DECAPI}/uptime/${channel.login}`)
   if (uptime === null) return undefined
   if (isProblem(uptime)) return null
-  const [title, game, viewers] = await Promise.all([
+  const [title, viewers] = await Promise.all([
     text(`${DECAPI}/title/${channel.login}`),
-    text(`${DECAPI}/game/${channel.login}`),
     text(`${DECAPI}/viewercount/${channel.login}`),
   ])
   const count = Number(viewers)
   return {
     uptime,
     title: isProblem(title) ? null : title,
-    game: isProblem(game) ? null : game,
     viewers: Number.isFinite(count) ? count : null,
   }
 }
@@ -139,9 +135,27 @@ function previewMode() {
   return window.matchMedia('(hover: none)').matches ? 'touch' : 'hover'
 }
 
-const compact = n => (n >= 1000 ? `${(n / 1000).toFixed(n >= 10000 ? 0 : 1)}K` : String(n))
+// the platform's icon, bottom-right on a tile's thumbnail
+function PlatformBadge({ icon, label, color }) {
+  return (
+    <span title={label} className={`absolute bottom-2 right-2 flex h-9 w-10 items-center justify-center ${color}`}>
+      <svg viewBox="0 0 24 24" className="h-6 w-6 fill-current drop-shadow-[0_1px_3px_rgba(0,0,0,0.9)]" role="img" aria-label={label}><path d={icon} /></svg>
+    </span>
+  )
+}
 
-function Avatar({ src, name, className }) {
+// the creator's language, as on the video cards: flag and name
+function LanguageBadge({ code }) {
+  if (!code) return null
+  return (
+    <span className="inline-flex items-center gap-1 px-2 py-0.5 rounded-full text-xs font-semibold text-gray-300 bg-gray-700 shrink-0">
+      <span className="text-base leading-none">{LANG_FLAG[code] ?? code}</span>
+      {LANG_NAME[code]}
+    </span>
+  )
+}
+
+export function Avatar({ src, name, className }) {
   const [failed, setFailed] = useState(null)
   return src && failed !== src
     ? <img src={src} alt="" loading="lazy" referrerPolicy="no-referrer" onError={() => setFailed(src)}
@@ -236,7 +250,8 @@ export function LiveTile({ channel, stream, details, minute }) {
               <span className="text-red-400">●</span> {stream.viewers}
             </span>
           )}
-          <span className="absolute bottom-2 right-2 rounded bg-gray-900/85 px-1.5 py-0.5 text-xs text-gray-300">{stream.uptime}</span>
+          <span className="absolute bottom-2 left-2 rounded bg-gray-900/85 px-1.5 py-0.5 text-xs text-gray-300">{stream.uptime}</span>
+          <PlatformBadge icon={TWITCH_ICON} label="Twitch" color="text-purple-300" />
         </div>
       </div>
       <div className="flex gap-3 p-3">
@@ -244,10 +259,7 @@ export function LiveTile({ channel, stream, details, minute }) {
         <div className="min-w-0">
           <div className="truncate text-base font-semibold text-white group-hover:text-amber-400 transition-colors">{channel.name}</div>
           {stream.title && <div className="mt-0.5 line-clamp-2 text-sm text-gray-300">{stream.title}</div>}
-          <div className="mt-1 flex flex-wrap items-center gap-x-2 text-xs text-gray-500">
-            {stream.game && <span className="truncate">{stream.game}</span>}
-            {details && details.followers != null && <span>{compact(details.followers)} followers</span>}
-          </div>
+          {channel.language && <div className="mt-1.5"><LanguageBadge code={channel.language} /></div>}
         </div>
       </div>
     </a>
@@ -256,7 +268,7 @@ export function LiveTile({ channel, stream, details, minute }) {
 
 // Who is live, checked every minute while the page is open. hidden: Set of the
 // creators' names to leave out (the visitor's hidden creators). withDetails:
-// also fetch the live channels' pictures and followers (for the tiles).
+// also fetch the live channels' pictures (for the tiles).
 // streams is null until the first check is done.
 export function useLiveStreams(hidden, withDetails = true) {
   const [channels, setChannels] = useState(null)
@@ -266,14 +278,14 @@ export function useLiveStreams(hidden, withDetails = true) {
   const [minute, setMinute] = useState(() => Math.floor(Date.now() / 60_000))
 
   useEffect(() => {
-    fetch('/data/creators.json').then(r => r.json()).then(creators => {
+    Promise.all([fetch('/data/creators.json').then(r => r.json()), creatorLanguages()]).then(([creators, languages]) => {
       const seen = new Set()
       const list = []
       for (const c of creators) {
         const login = channelOf(c.twitch_channel_url)
         if (!login || seen.has(login) || (hidden && hidden.has(c.name))) continue
         seen.add(login)
-        list.push({ login, name: c.name, url: c.twitch_channel_url })
+        list.push({ login, name: c.name, url: c.twitch_channel_url, language: languages[c.name] || null })
       }
       setChannels(list)
     }).catch(() => setChannels([]))
@@ -297,7 +309,7 @@ export function useLiveStreams(hidden, withDetails = true) {
     return () => { alive = false; clearInterval(timer) }
   }, [channels])
 
-  // the pictures and followers of the channels that are live, once each
+  // the pictures of the channels that are live, once each
   const liveLogins = streams ? Object.keys(streams).filter(login => streams[login]).join(',') : ''
   useEffect(() => {
     if (!withDetails || !liveLogins) return
@@ -312,19 +324,127 @@ export function useLiveStreams(hidden, withDetails = true) {
   return { channels, streams, details, minute, liveCount }
 }
 
-// hidden: Set of the creators' names to leave out (the visitor's hidden creators)
-export default function LiveStreams({ hidden }) {
+// The YouTube live streams on the air, as videos: the recent videos flagged is_live
+// that play as live (utils/liveProbe.js), checked again every two minutes while the
+// page is open. hidden: Set of the creators' names to leave out. Returns { live, unknown }:
+// the videos on the air, and the ids of those that can't be told (so they are kept as videos).
+const YOUTUBE_REFRESH_MS = 2 * 60_000
+export function useLiveYouTube(hidden, enabled = true) {
+  const [candidates, setCandidates] = useState([])
+  const [onAir, setOnAir] = useState({ live: [], unknown: new Set() })
+
+  useEffect(() => {
+    if (!enabled) { setCandidates([]); return }
+    // the creators' pictures, to show beside the stream's title
+    Promise.all([
+      fetch('/data/videos.json').then(r => r.json()),
+      fetch('/data/creators.json').then(r => r.json()).catch(() => []),
+      creatorLanguages(),
+    ]).then(([videos, creators, languages]) => {
+      const avatars = Object.fromEntries(creators.map(c => [c.name, c.youtube_avatar_url || c.twitch_avatar_url || null]))
+      setCandidates(videos
+        .filter(v => isProbeable(v) && !(hidden && hidden.has(v.creator_name)))
+        .map(v => ({ ...v, avatar: avatars[v.creator_name] || null, creatorLanguage: languages[v.creator_name] || LANG_CANONICAL[v.language] || null })))
+    }).catch(() => setCandidates([]))
+  }, [hidden, enabled])
+
+  useEffect(() => {
+    if (!candidates.length) { setOnAir({ live: [], unknown: new Set() }); return }
+    let alive = true
+    const check = async (force = false) => {
+      const found = await Promise.all(candidates.map(async v => [v, await probeLive(v.video_id, force)]))
+      if (alive) setOnAir({
+        live: found.filter(([, status]) => status === 'live').map(([v]) => v),
+        unknown: new Set(found.filter(([, status]) => status === 'unknown').map(([v]) => v.video_id)),
+      })
+    }
+    check()
+    const timer = setInterval(() => { if (!document.hidden) check(true) }, YOUTUBE_REFRESH_MS)
+    return () => { alive = false; clearInterval(timer) }
+  }, [candidates])
+
+  return onAir
+}
+
+// A YouTube live stream on the air, as the Twitch tiles: it plays on YouTube. Its preview is
+// the videos' (components/VideoCard.jsx): the muted embedded player over the thumbnail, after
+// the mouse rests on the tile (desktop) or for the tile in the middle of the screen (touch),
+// with the visitor's Autoplay setting on.
+export function YouTubeLiveTile({ v }) {
+  const thumbRef = useRef(null)
+  const hoverTimer = useRef(null)
+  const [mode] = useState(previewMode)
+  const [previewing, setPreviewing] = useState(false)
+  const [ready, setReady] = useState(false)
+
+  useEffect(() => {
+    if (mode !== 'touch') return
+    return registerPreviewCard(thumbRef.current, setPreviewing)
+  }, [mode])
+
+  // a preview doesn't go on for ever
+  useEffect(() => {
+    if (!previewing) { setReady(false); return }
+    const t = setTimeout(() => setPreviewing(false), PREVIEW_MAX_MS)
+    return () => clearTimeout(t)
+  }, [previewing])
+
+  useEffect(() => () => clearTimeout(hoverTimer.current), [])
+
+  const onEnter = () => { if (mode === 'hover') hoverTimer.current = setTimeout(() => setPreviewing(true), PREVIEW_HOVER_MS) }
+  const onLeave = () => { clearTimeout(hoverTimer.current); if (mode === 'hover') setPreviewing(false) }
+
+  const params = new URLSearchParams({
+    autoplay: '1', mute: '1', controls: '0', playsinline: '1', disablekb: '1', fs: '0',
+    modestbranding: '1', rel: '0', iv_load_policy: '3',
+  })
+
+  return (
+    <a href={v.link} target="_blank" rel="noreferrer"
+      className="group block overflow-hidden rounded-xl border border-gray-700 bg-gray-800 hover:border-amber-400/50 transition-colors">
+      <div ref={thumbRef} onMouseEnter={onEnter} onMouseLeave={onLeave} className="relative aspect-video overflow-hidden bg-gray-900">
+        <img src={`https://img.youtube.com/vi/${v.video_id}/hqdefault.jpg`} alt="" loading="lazy"
+          className="absolute inset-0 h-full w-full object-cover" />
+        {previewing && (
+          <iframe src={`https://www.youtube.com/embed/${v.video_id}?${params}`} title="" aria-hidden="true" tabIndex={-1}
+            allow="autoplay; encrypted-media" onLoad={() => setReady(true)}
+            className={`absolute inset-0 h-full w-full pointer-events-none transition-opacity duration-300 ${ready ? 'opacity-100' : 'opacity-0'}`} />
+        )}
+        {/* the badges go while the preview plays */}
+        <div className={previewing ? 'invisible' : ''}>
+          <span className="absolute left-2 top-2 rounded bg-red-600 px-1.5 py-0.5 text-[11px] font-bold uppercase tracking-wide text-white">Live</span>
+          <PlatformBadge icon={YOUTUBE_ICON} label="YouTube" color="text-red-400" />
+        </div>
+      </div>
+      <div className="flex gap-3 p-3">
+        <Avatar src={v.avatar} name={v.creator_name} className="h-10 w-10 shrink-0" />
+        <div className="min-w-0">
+          <div className="truncate text-base font-semibold text-white group-hover:text-amber-400 transition-colors">{v.creator_name}</div>
+          <div className="mt-0.5 line-clamp-2 text-sm text-gray-300">{v.title}</div>
+          {v.creatorLanguage && <div className="mt-1.5"><LanguageBadge code={v.creatorLanguage} /></div>}
+        </div>
+      </div>
+    </a>
+  )
+}
+
+// hidden: Set of the creators' names to leave out (the visitor's hidden creators);
+// youtube: the YouTube streams on the air (useLiveYouTube, which the page calls to also
+// keep them out of its list of videos)
+export default function LiveStreams({ hidden, youtube }) {
   const { channels, streams, details, minute } = useLiveStreams(hidden)
   if (!streams) return <p className="text-gray-400 text-sm py-8 text-center">Checking who is live…</p>
 
   const live = channels.filter(c => streams[c.login]).sort((a, b) => (streams[b.login].viewers ?? 0) - (streams[a.login].viewers ?? 0))
+
+  const total = live.length + youtube.length
 
   return (
     <div>
       <section className="space-y-4">
         <div className="flex flex-wrap items-center justify-between gap-2">
           <p className="text-xs text-gray-500">
-            {live.length === 0 ? 'Nobody is live' : `${live.length} live`} of {channels.length} Twitch channels, checked every minute.
+            {total === 0 ? 'Nobody is live' : `${total} live`} on Twitch ({channels.length} channels) and YouTube, checked every minute or two.
           </p>
           {live.length > 1 && (
             <a href={`https://multistre.am/${live.map(c => c.login).join('/')}/`} target="_blank" rel="noreferrer"
@@ -333,13 +453,14 @@ export default function LiveStreams({ hidden }) {
             </a>
           )}
         </div>
-        {live.length === 0 ? (
+        {total === 0 ? (
           <p className="text-center text-gray-500 text-sm py-8">
             Nobody is streaming right now. The list of monitored channels is in the <Link to="/creators" className="text-amber-400 hover:underline">Creators page</Link>.
           </p>
         ) : (
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4">
             {live.map(c => <LiveTile key={c.login} channel={c} stream={streams[c.login]} details={details[c.login]} minute={minute} />)}
+            {youtube.map(v => <YouTubeLiveTile key={v.video_id} v={v} />)}
           </div>
         )}
       </section>

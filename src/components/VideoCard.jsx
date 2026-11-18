@@ -5,6 +5,8 @@ import { registerPreviewCard } from '../utils/videoPreviews'
 import { probeLive, knownLive, isProbeable } from '../utils/liveProbe'
 import { nameToSlug } from '../utils/slugs'
 import { formatShortDate } from '../utils/dates'
+import { Avatar } from './LiveStreams'
+import { creatorAvatars } from '../utils/creatorAvatars'
 import { LANG_FLAG, LANG_CANONICAL, LANG_NAME } from '../utils/languages'
 
 // How long the mouse rests on a thumbnail before its preview starts, and how
@@ -36,15 +38,28 @@ function useLiveStatus(v) {
   return status
 }
 
+// The creator's picture, when the card shows it (null otherwise, and until it is known)
+function useCreatorAvatar(name, enabled) {
+  const [avatar, setAvatar] = useState(null)
+  useEffect(() => {
+    if (!enabled) return
+    let alive = true
+    creatorAvatars().then(avatars => { if (alive) setAvatar(avatars[name] || null) })
+    return () => { alive = false }
+  }, [name, enabled])
+  return avatar
+}
+
 // A video: its player, title, creator, language, archetype (unless
 // showArchetype is false, on the archetype's own page), decklist and date.
 // A podcast never shows the archetype or the decklist: it isn't about one deck.
 // previews: whether the video previews on hover (see below); the visitor's
-// settings when not given.
-export default function VideoCard({ v, showArchetype = true, previews }) {
+// settings when not given. withAvatar: the creator's picture beside their name.
+export default function VideoCard({ v, showArchetype = true, previews, withAvatar = false }) {
   const [playing, setPlaying] = useState(false)
   const containerRef = useRef(null)
   const liveStatus = useLiveStatus(v)
+  const avatar = useCreatorAvatar(v.creator_name, withAvatar)
 
   // The preview: the video playing muted over its thumbnail, without pressing play.
   // On hover (after a short rest of the mouse) on desktop; on touch screens for the
@@ -148,7 +163,14 @@ export default function VideoCard({ v, showArchetype = true, previews }) {
           className="text-sm font-medium text-gray-200 hover:text-amber-400 transition-colors line-clamp-2 leading-snug">
           {v.title}
         </a>
-        <p className="text-xs text-gray-400">{v.creator_name}</p>
+        {withAvatar && v.creator_name ? (
+          <p className="flex items-center gap-1.5 text-xs text-gray-400">
+            <Avatar src={avatar} name={v.creator_name} className="h-5 w-5 shrink-0 text-[10px]" />
+            <span className="truncate">{v.creator_name}</span>
+          </p>
+        ) : (
+          <p className="text-xs text-gray-400">{v.creator_name}</p>
+        )}
         <div className="mt-auto pt-1.5 flex items-center justify-between gap-2">
           <div className="flex items-center gap-1.5 min-w-0">
             <span className="inline-flex items-center gap-1 px-2 py-0.5 rounded-full text-xs font-semibold text-gray-300 bg-gray-700 shrink-0">

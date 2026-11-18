@@ -10,7 +10,7 @@ import { useCardPreview } from '../components/CardPreview'
 import { useImageFor } from '../utils/artwork'
 import ShareChange from '../components/ShareChange'
 import VideoCard from '../components/VideoCard'
-import { LiveTile, useLiveStreams } from '../components/LiveStreams'
+import { LiveTile, YouTubeLiveTile, useLiveStreams, useLiveYouTube } from '../components/LiveStreams'
 import { getSettings } from '../utils/settings'
 import { useMediaQuery } from '../utils/useMediaQuery'
 import { showsVideos, typeAllows } from '../utils/watchTypes'
@@ -922,9 +922,18 @@ function NewspauperSection() {
                 {/* a new archetype's representative card: its art, without the frame */}
                 {entry.type === 'archetype' && cards[entry.name]?.preview && (
                   <Link to={title.to} tabIndex={-1} aria-hidden="true"
-                    className="relative shrink-0 self-stretch w-20 sm:w-28 -my-3.5 -mr-4 bg-gray-900 overflow-hidden group">
+                    className="relative shrink-0 self-stretch w-20 sm:w-28 -my-3.5 -mr-4 rounded-l-2xl bg-gray-900 overflow-hidden group">
                     <img src={imageFor(cards[entry.name].name, cards[entry.name].preview).replace('/normal/', '/art_crop/')} alt=""
                       loading="lazy" className="absolute inset-0 w-full h-full object-cover group-hover:scale-110 transition-transform duration-300" />
+                  </Link>
+                )}
+                {/* a new content creator's picture, as full-height as the card art */}
+                {entry.type === 'creator' && (creators[entry.name]?.youtube_avatar_url || creators[entry.name]?.twitch_avatar_url) && (
+                  <Link to={title.to} tabIndex={-1} aria-hidden="true"
+                    className="relative shrink-0 self-stretch w-20 sm:w-28 -my-3.5 -mr-4 rounded-l-2xl bg-gray-900 overflow-hidden group">
+                    <img src={creators[entry.name].youtube_avatar_url || creators[entry.name].twitch_avatar_url} alt=""
+                      loading="lazy" referrerPolicy="no-referrer"
+                      className="absolute inset-0 w-full h-full object-cover group-hover:scale-110 transition-transform duration-300" />
                   </Link>
                 )}
               </div>
@@ -1190,6 +1199,9 @@ function RecentVideosSection() {
   // who is streaming on Twitch: their tiles come first (not the creators the visitor hid)
   const hiddenCreators = useMemo(() => new Set(getSettings().watch.hiddenCreators), [])
   const { channels, streams, details, minute } = useLiveStreams(hiddenCreators)
+  // the YouTube streams on the air: tiles too, not repeated among the videos. The ones that
+  // have ended, or are not checked yet, are left out; those that can't be told stay videos.
+  const { live: youtube, unknown: unknownLives } = useLiveYouTube(hiddenCreators)
   const live = streams
     ? channels.filter(c => streams[c.login]).sort((a, b) => (streams[b.login].viewers ?? 0) - (streams[a.login].viewers ?? 0))
     : []
@@ -1218,7 +1230,7 @@ function RecentVideosSection() {
     <section>
       <h2 className="text-xl font-semibold text-white">Sewer-veillance Cam</h2>
       <p className="text-sm text-gray-400 mt-0.5 mb-4">Ongoing live streams and videos from the last week</p>
-      {videos.length === 0 && live.length === 0 ? (
+      {videos.filter(v => !v.is_live || unknownLives.has(v.video_id)).length === 0 && live.length === 0 && youtube.length === 0 ? (
         // streams is null until the first check of who is live is done
         <p className="text-sm text-gray-400">
           {streams ? 'Nobody is live and there are no videos from the last week.' : 'Checking who is live…'}
@@ -1226,7 +1238,8 @@ function RecentVideosSection() {
       ) : (
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
           {live.map(c => <LiveTile key={c.login} channel={c} stream={streams[c.login]} details={details[c.login]} minute={minute} />)}
-          {videos.map(v => <VideoCard key={v.video_id || v.link} v={v} />)}
+          {youtube.map(v => <YouTubeLiveTile key={v.video_id} v={v} />)}
+          {videos.filter(v => !v.is_live || unknownLives.has(v.video_id)).map(v => <VideoCard key={v.video_id || v.link} v={v} withAvatar />)}
         </div>
       )}
       <MoreButton to="/watch">View more videos</MoreButton>
