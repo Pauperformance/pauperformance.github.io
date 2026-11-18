@@ -8,9 +8,10 @@ const KEY = 'settings'
 export const DEFAULT_SETTINGS = {
   // how decklists are shown: text or visual, grouped by type or not, A–Z or by mana value
   deckView: { visual: false, groupByType: true, sort: 'name' },
-  // the Watch page: videos or shorts to start with, the creators left out of it,
-  // and the languages to start with (language codes of utils/languages.js; none: all)
-  watch: { type: 'videos', hiddenCreators: [], languages: [] },
+  // the Watch page: what it shows to start with, any of 'videos', 'live' and 'shorts'
+  // together (utils/watchTypes.js), the creators left out of it, and the languages to
+  // start with (language codes of utils/languages.js; none: all)
+  watch: { types: ['videos'], hiddenCreators: [], languages: [] },
   // everywhere videos are listed (Watch, archetype pages…): a muted preview
   // playing on hover (desktop) or when the video is in the middle of the screen (touch)
   videos: { previews: true },
@@ -26,6 +27,10 @@ let cache = null
 
 // every group of settings (deckView, watch…) gets the defaults of what is missing
 function withDefaults(saved) {
+  // settings saved before the types could be picked together hold one: type
+  if (saved && saved.watch && saved.watch.type !== undefined && !saved.watch.types) {
+    saved = { ...saved, watch: { ...saved.watch, types: saved.watch.type ? [saved.watch.type] : [] } }
+  }
   const out = {}
   for (const group of Object.keys(DEFAULT_SETTINGS)) {
     out[group] = { ...DEFAULT_SETTINGS[group], ...(saved && saved[group]) }

@@ -1,12 +1,20 @@
-import { useState, useEffect, useLayoutEffect, useRef } from 'react'
-import { Link } from 'react-router-dom'
+import { useState, useEffect, useLayoutEffect, useMemo, useRef } from 'react'
+import { Link, useNavigate } from 'react-router-dom'
 import Layout from '../components/Layout'
-import { nameToSlug, metagameSlug } from '../utils/slugs'
+import { computeTypicalList } from '../utils/typicalList'
+import { nameToSlug, metagameSlug, pilotToSlug } from '../utils/slugs'
 import { cardLinkSlug, useCardPages } from '../utils/cardPages'
 import { formatShortDate } from '../utils/dates'
 import { easeInOut, scrollGently } from '../utils/scroll'
 import { useCardPreview } from '../components/CardPreview'
 import { useImageFor } from '../utils/artwork'
+import ShareChange from '../components/ShareChange'
+import VideoCard from '../components/VideoCard'
+import { LiveTile, useLiveStreams } from '../components/LiveStreams'
+import { getSettings } from '../utils/settings'
+import { useMediaQuery } from '../utils/useMediaQuery'
+import { showsVideos, typeAllows } from '../utils/watchTypes'
+import { LANG_CANONICAL } from '../utils/languages'
 import CardLink from '../components/PoolCardLink'
 import MetaPie from '../components/MetaPie'
 import { useSettings, updateSettings } from '../utils/settings'
@@ -140,7 +148,7 @@ function TopDecksSection() {
   const [decks, setDecks] = useState([])
   const cardPages = useCardPages()
   const imageFor = useImageFor()
-  const { bind: bindPreview, preview } = useCardPreview()
+  const { bind: bindPreview, preview } = useCardPreview({ sheet: true })
 
   useEffect(() => {
     fetch('/data/top_decks.json').then(r => r.json()).then(setDecks)
@@ -180,7 +188,10 @@ function TopDecksSection() {
                     ))}
                   </div>
                 </div>
-                <span className="text-xs text-amber-400 font-mono">Meta: {deck.meta_share.toFixed(1)}%</span>
+                <div className="flex items-center gap-2">
+                  <span className="text-xs text-amber-400 font-mono">Meta: {deck.meta_share.toFixed(1)}%</span>
+                  <ShareChange share={deck.meta_share} previous={deck.previous_share} debut={deck.debut} size="text-[11px]" />
+                </div>
               </div>
             </Link>
             {deck.staples.length > 0 && (
@@ -264,7 +275,7 @@ function BrainstormSection() {
   const [boxWidth, setBoxWidth] = useState(0)
   const cardPages = useCardPages()
   const imageFor = useImageFor()
-  const { bind: bindPreview, preview } = useCardPreview()
+  const { bind: bindPreview, preview } = useCardPreview({ sheet: true })
 
   useEffect(() => {
     fetch('/data/top_decks.json').then(r => r.json()).then(d => setDecks(d.slice(0, GLYPHS)))
@@ -628,6 +639,7 @@ function BrainstormSection() {
           </div>
           <div className="flex items-center gap-2">
             <span className="text-lg text-amber-400 font-mono">Meta: {deck.meta_share.toFixed(1)}%</span>
+            <ShareChange share={deck.meta_share} previous={deck.previous_share} debut={deck.debut} size="text-sm" />
           </div>
           {/* staples come most played first; as many as fit in two rows */}
           <StapleRows key={deck.archetype_name}>
@@ -680,28 +692,32 @@ const NEWS_KINDS = {
   // a megaphone: an official announcement
   announcement: {
     name: 'Announcement',
+    color: '#e0443e',
     icon: <><path d="m3 11 18-5v12L3 14v-3z" /><path d="M11.6 16.8a3 3 0 1 1-5.8-1.6" /></>,
   },
   // stacked layers: the card pool, one layer per metagame
   metagame: {
     name: 'Metagame',
+    color: '#2f8ad6',
     icon: <><path d="M12.83 2.18a2 2 0 0 0-1.66 0L2.6 6.08a1 1 0 0 0 0 1.83l8.58 3.91a2 2 0 0 0 1.66 0l8.58-3.9a1 1 0 0 0 0-1.83Z" /><path d="m22 17.65-9.17 4.16a2 2 0 0 1-1.66 0L2 17.65" /><path d="m22 12.65-9.17 4.16a2 2 0 0 1-1.66 0L2 12.65" /></>,
   },
   // crossed swords: a deck to battle with
   archetype: {
     name: 'New archetype',
+    color: '#2f9e60',
     icon: <><path d="M14.5 17.5 3 6V3h3l11.5 11.5" /><path d="m13 19 6-6" /><path d="m16 16 4 4" /><path d="m19 21 2-2" /><path d="M14.5 6.5 18 3h3v3l-3.5 3.5" /><path d="m5 14 4 4" /><path d="m7 17-3 3" /><path d="m3 19 2 2" /></>,
   },
   // a tree of boxes: archetypes grouped under a family
   family: {
     name: 'New family',
+    color: '#9b7be0',
     icon: <><rect x="16" y="16" width="6" height="6" rx="1" /><rect x="2" y="16" width="6" height="6" rx="1" /><rect x="9" y="2" width="6" height="6" rx="1" /><path d="M5 16v-3a1 1 0 0 1 1-1h12a1 1 0 0 1 1 1v3" /><path d="M12 12V8" /></>,
   },
 }
 
 function NewsIcon({ kind }) {
   return (
-    <svg className="w-4 h-4 shrink-0 text-amber-400" fill="none" stroke="currentColor" strokeWidth="2"
+    <svg className="w-5 h-5 shrink-0" style={{ color: kind.color }} fill="none" stroke="currentColor" strokeWidth="2"
       strokeLinecap="round" strokeLinejoin="round" viewBox="0 0 24 24" role="img" aria-label={kind.name}>
       <title>{kind.name}</title>
       {kind.icon}
@@ -742,7 +758,7 @@ function NewsDetails({ entry, bindPreview }) {
         )}
         {entry.refs.map(ref => (
           <a key={ref.url} href={ref.url} target="_blank" rel="noreferrer"
-            className="block text-xs text-gray-400 hover:text-amber-400 transition-colors mt-2">{ref.text} ↗</a>
+            className="block text-sm text-gray-400 hover:text-amber-400 transition-colors mt-2">{ref.text} ↗</a>
         ))}
       </>
     )
@@ -750,12 +766,12 @@ function NewsDetails({ entry, bindPreview }) {
   if (entry.type === 'metagame') {
     const cards = entry.sets.reduce((sum, s) => sum + s.new_pauper_cards, 0)
     return cards > 0
-      ? <p className="text-xs text-gray-400 mt-1">{cards} new Pauper card{cards === 1 ? '' : 's'}</p>
+      ? <p className="text-sm text-gray-400 mt-1">{cards} new Pauper card{cards === 1 ? '' : 's'}</p>
       : null
   }
   if (entry.type === 'archetype' && entry.family) {
     return (
-      <p className="text-xs text-gray-400 mt-1">
+      <p className="text-sm text-gray-400 mt-1">
         Family: <Link to={`/families/${nameToSlug(entry.family)}`} className="hover:text-amber-400 transition-colors">{entry.family}</Link>
       </p>
     )
@@ -764,10 +780,23 @@ function NewsDetails({ entry, bindPreview }) {
 }
 
 function NewspauperSection() {
+  const navigate = useNavigate()
   const [news, setNews] = useState(null)
-  const { bind: bindPreview, preview } = useCardPreview()
+  const { bind: bindPreview, preview } = useCardPreview({ sheet: true })
+  // the mana colours of the archetypes and families, by name: a family has those
+  // of its archetypes
+  const [mana, setMana] = useState({})
 
   useEffect(() => {
+    Promise.all([fetchJson('/data/archetypes.json'), fetchJson('/data/families.json')]).then(([archetypes, families]) => {
+      const colours = {}
+      for (const a of archetypes || []) colours[a.name] = a.dominant_mana || []
+      for (const f of families || []) {
+        const union = new Set(f.archetypes.flatMap(a => a.dominant_mana || []))
+        colours[f.name] = ['W', 'U', 'B', 'R', 'G'].filter(m => union.has(m))
+      }
+      setMana(colours)
+    })
     fetch('/data/newspauper.json').then(r => r.json()).then(setNews).catch(() => setNews([]))
   }, [])
 
@@ -779,21 +808,32 @@ function NewspauperSection() {
       {news && entries.length === 0 ? (
         <p className="text-sm text-gray-400">No news in the last two months.</p>
       ) : (
-        // one column on phones, two on desktops (newest first, left to right);
-        // the 1px gaps show the lines between entries
-        <div className="grid lg:grid-cols-2 gap-px bg-gray-700 border border-gray-700 rounded-xl overflow-hidden">
+        // one column on phones, two on desktops (newest first, left to right)
+        <div className="grid lg:grid-cols-2 gap-3">
           {entries.map(entry => {
             const title = newsTitle(entry)
+            // a new archetype or family is in its own colours, the other news in its kind's
+            const colours = (entry.type === 'archetype' || entry.type === 'family') ? mana[entry.name] : null
+            const kind = colours && colours.length
+              ? { ...NEWS_KINDS[entry.type], color: MANA_COLORS[colours[0]] }
+              : NEWS_KINDS[entry.type]
             return (
-              <div key={`${entry.type}-${entry.date}-${title.text}`} className="flex items-start gap-3 px-5 py-4 bg-gray-800">
-                {/* the icon sits above the date on phones, beside it from sm up */}
-                <div className="shrink-0 w-20 sm:w-28 flex flex-col sm:flex-row sm:items-center gap-1.5 sm:gap-2 mt-0.5">
-                  <NewsIcon kind={NEWS_KINDS[entry.type]} />
-                  <span className="text-xs text-gray-500 tabular-nums">{formatShortDate(entry.date)}</span>
+              <div key={`${entry.type}-${entry.date}-${title.text}`}
+                onClick={e => { if (!e.target.closest('a')) navigate(title.to) }}
+                className="relative flex items-stretch gap-4 pl-6 pr-4 py-3.5 rounded-xl cursor-pointer border border-gray-700 bg-gray-800 overflow-hidden hover:border-amber-400/40 transition-colors">
+                {/* the kind's colour down the left edge */}
+                <div aria-hidden="true" className="absolute inset-y-0 left-0 w-1.5" style={{ background: colours && colours.length ? manaStripe(colours) : kind.color }} />
+                {/* the date, over the kind's icon, in a box tinted with its colour */}
+                <div className="shrink-0 flex flex-col items-center justify-center rounded-lg px-4 py-3 min-w-[5.5rem]"
+                  style={{ background: colours && colours.length ? manaTint(colours) : `${kind.color}1f` }}>
+                  <NewsIcon kind={kind} />
+                  <span className="mt-1.5 text-xl font-bold font-mono leading-none text-gray-200">{Number(entry.date.slice(8, 10))}</span>
+                  <span className="mt-1 text-[10px] uppercase tracking-wider text-gray-500">{formatShortDate(entry.date).split(' ')[0]}</span>
                 </div>
-                <div className="min-w-0 flex-1">
+                <div className="min-w-0 flex-1 self-center">
+                  <div className="text-xs font-semibold uppercase tracking-wider" style={{ color: kind.color }}>{kind.name}</div>
                   <Link to={title.to}
-                    className="text-sm font-medium text-gray-200 hover:text-amber-400 transition-colors leading-snug">
+                    className="block mt-0.5 text-base font-semibold text-white hover:text-amber-400 transition-colors leading-snug">
                     {title.text}
                   </Link>
                   <NewsDetails entry={entry} bindPreview={bindPreview} />
@@ -801,11 +841,307 @@ function NewspauperSection() {
               </div>
             )
           })}
-          {/* an odd count leaves the last row half empty: fill it */}
-          {entries.length % 2 === 1 && <div aria-hidden="true" className="hidden lg:block bg-gray-800" />}
         </div>
       )}
       {preview}
+    </section>
+  )
+}
+
+// The recent sections show what happened in the last week
+const RECENT_DAYS = 7
+const MIN_TOURNAMENT_PLAYERS = 32
+
+// YYYY-MM-DD of the day `days` ago, in the visitor's own time zone
+function daysAgoIso(days) {
+  const d = new Date()
+  d.setDate(d.getDate() - days)
+  const pad = n => String(n).padStart(2, '0')
+  return `${d.getFullYear()}-${pad(d.getMonth() + 1)}-${pad(d.getDate())}`
+}
+
+function MoreButton({ to, children }) {
+  return (
+    <div className="flex justify-center mt-4">
+      <Link to={to}
+        className="px-4 py-2 rounded-lg border border-gray-700 bg-gray-800 text-sm text-gray-300 hover:border-amber-400/50 hover:text-amber-400 transition-colors">
+        {children}
+      </Link>
+    </div>
+  )
+}
+
+// Outline icons for the boxes of a recent tournament
+function CalendarIcon({ className }) {
+  return (
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round"
+      aria-hidden="true" className={className}>
+      <rect x="3.5" y="5" width="17" height="15.5" rx="2.5" />
+      <path d="M3.5 10h17M8 3v4M16 3v4" />
+    </svg>
+  )
+}
+
+// three people: one in front, one at each side
+function PlayersIcon({ className }) {
+  return (
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round"
+      aria-hidden="true" className={className}>
+      <circle cx="12" cy="8" r="3" />
+      <path d="M6.5 19.5v-1a5.5 5.5 0 0 1 11 0v1" />
+      <circle cx="4.8" cy="10" r="2.2" />
+      <path d="M1.5 17.5v-.5a3.3 3.3 0 0 1 3.3-3.3" />
+      <circle cx="19.2" cy="10" r="2.2" />
+      <path d="M22.5 17.5v-.5a3.3 3.3 0 0 0-3.3-3.3" />
+    </svg>
+  )
+}
+
+// The colour of each mana symbol, as the stripe of a winner's archetype
+const MANA_COLORS = { W: '#f3ecc4', U: '#2f8ad6', B: '#7c6f80', R: '#e0443e', G: '#2f9e60', C: '#9ca3af' }
+
+// A vertical stripe in the archetype's colours, one band each (grey when it has none)
+function manaStripe(mana) {
+  const colors = (mana && mana.length ? mana : ['C']).map(m => MANA_COLORS[m] || MANA_COLORS.C)
+  const step = 100 / colors.length
+  return `linear-gradient(to bottom, ${colors.map((c, i) => `${c} ${i * step}% ${(i + 1) * step}%`).join(', ')})`
+}
+
+// The cards a winning deck plays in more or fewer copies than the typical list
+// of its archetype in the metagame it was played in (as the arrows of the deck
+// page do), the biggest differences first. Basic lands are left out, their
+// split is only the mana base. null when there is nothing to compare to.
+const BASIC_LANDS = new Set(['Plains', 'Island', 'Swamp', 'Mountain', 'Forest', 'Wastes',
+  'Snow-Covered Plains', 'Snow-Covered Island', 'Snow-Covered Swamp', 'Snow-Covered Mountain', 'Snow-Covered Forest'])
+// fewer decks than this in the metagame make for a noisy typical list
+const MIN_DECKS_FOR_COMPARISON = 3
+const archetypeCache = new Map()
+
+const fetchJson = url => fetch(url).then(r => (r.ok ? r.json() : null)).catch(() => null)
+
+function loadArchetype(slug) {
+  if (!archetypeCache.has(slug)) {
+    archetypeCache.set(slug, Promise.all([
+      fetchJson(`/data/archetype-details/${slug}.json`),
+      fetchJson(`/data/archetype-typical/${slug}.json`),
+    ]))
+  }
+  return archetypeCache.get(slug)
+}
+
+async function deckDifferences(deckId, archetype) {
+  if (!archetype) return null
+  const [deck, [details, counts]] = await Promise.all([
+    fetchJson(`/data/deck-details/${encodeURIComponent(deckId)}.json`),
+    loadArchetype(nameToSlug(archetype)),
+  ])
+  if (!deck || !deck.decklist) return null
+  const timeline = (details && details.typical_list && details.typical_list.timeline) || []
+  let index = -1
+  timeline.forEach((m, i) => { if (m.date <= deck.tournament_date) index = i })
+  if (index < 0 || !counts || !counts.by_metagame || !counts.by_metagame[timeline[index].metagame]) return null
+  const list = computeTypicalList(timeline, counts, index, index)
+  if (list.decks < MIN_DECKS_FOR_COMPARISON) return null
+  const typical = new Map(list.main.map(c => [c.name, c.typical]))
+  return deck.decklist.main
+    .filter(c => !BASIC_LANDS.has(c.name))
+    .map(c => ({ name: c.name, diff: c.qty - (typical.get(c.name) || 0) }))
+    .filter(c => c.diff !== 0)
+    .sort((a, b) => Math.abs(b.diff) - Math.abs(a.diff) || a.name.localeCompare(b.name))
+}
+
+// A card the winning deck plays in more (green) or fewer (red) copies than usual
+function DiffChip({ card, cardPages, bindPreview }) {
+  const slug = cardLinkSlug(cardPages, card.name)
+  const handlers = bindPreview(card.name, { slug: slug || undefined })
+  const up = card.diff > 0
+  const cls = `inline-flex items-center gap-1 rounded-md border px-1.5 py-0.5 text-xs whitespace-nowrap ${
+    up ? 'border-emerald-500/30 bg-emerald-500/10 text-emerald-300' : 'border-rose-500/30 bg-rose-500/10 text-rose-300'}`
+  const title = `${Math.abs(card.diff)} ${Math.abs(card.diff) === 1 ? 'copy' : 'copies'} ${up ? 'more' : 'fewer'} than the typical list`
+  const content = <><span className="font-mono">{up ? '+' : '−'}{Math.abs(card.diff)}</span>{card.name}</>
+  return slug
+    ? <Link to={`/cards/${slug}`} {...handlers} title={title} className={`${cls} hover:brightness-125 transition`}>{content}</Link>
+    : <span {...handlers} title={title} className={cls}>{content}</span>
+}
+
+// The same colours, faint, as the background of a box
+function manaTint(mana) {
+  const colors = (mana && mana.length ? mana : ['C']).map(m => MANA_COLORS[m] || MANA_COLORS.C)
+  return colors.length === 1 ? `${colors[0]}1f` : `linear-gradient(135deg, ${colors.map(c => `${c}1f`).join(', ')})`
+}
+
+function RecentTournamentsSection() {
+  const navigate = useNavigate()
+  const [rows, setRows] = useState(null)
+  // the winners (the 1st place deck), by tournament id; filled in as they load
+  const [winners, setWinners] = useState({})
+  // the cards of each winning deck off the typical list, by tournament id
+  const [differences, setDifferences] = useState({})
+  const requestedDifferences = useRef(new Set())
+  const desktop = useMediaQuery('(min-width: 1024px)')
+  const cardPages = useCardPages()
+  const { bind: bindPreview, preview } = useCardPreview({ sheet: true })
+  // the mana colours of each archetype, by name
+  const [mana, setMana] = useState({})
+
+  useEffect(() => {
+    fetch('/data/archetypes.json').then(r => r.json())
+      .then(list => setMana(Object.fromEntries(list.map(a => [a.name, a.dominant_mana || []]))))
+      .catch(() => {})
+    fetch('/data/tournaments.json').then(r => r.json()).then(data => {
+      const since = daysAgoIso(RECENT_DAYS)
+      const recent = data
+        .map(([id, date, name, players, sources]) => ({ id, date, name, players, sources }))
+        .filter(t => t.date >= since && t.players >= MIN_TOURNAMENT_PLAYERS)
+        .sort((a, b) => b.date.localeCompare(a.date) || b.players - a.players)
+      setRows(recent)
+      recent.forEach(t => {
+        fetch(`/data/tournament-details/${encodeURIComponent(t.id)}.json`)
+          .then(r => r.ok ? r.json() : null)
+          .then(d => {
+            // sources that list records, not placings, have no 1st place: the
+            // best record (listed first) stands in, shown with its record
+            const w = d && (d.decks.find(deck => deck.place === '1st') || d.decks[0])
+            if (w) setWinners(prev => ({ ...prev, [t.id]: w }))
+          })
+          .catch(() => {})
+      })
+    }).catch(() => setRows([]))
+  }, [])
+
+  // the winning decks' differences with the typical list, on desktop only (phones
+  // have no room for them): loaded once the winners are
+  useEffect(() => {
+    if (!desktop) return
+    for (const [id, w] of Object.entries(winners)) {
+      if (requestedDifferences.current.has(id)) continue
+      requestedDifferences.current.add(id)
+      deckDifferences(w.id, w.archetype).then(diffs => {
+        if (diffs && diffs.length) setDifferences(prev => ({ ...prev, [id]: diffs }))
+      })
+    }
+  }, [desktop, winners])
+
+  if (!rows) return null
+
+  return (
+    <section>
+      <h2 className="text-xl font-semibold text-white mb-4">Recent Tournaments</h2>
+      {rows.length === 0 ? (
+        <p className="text-sm text-gray-400">No tournaments of {MIN_TOURNAMENT_PLAYERS}+ players in the last week.</p>
+      ) : (
+        <div className="grid lg:grid-cols-2 gap-3">
+          {rows.map(t => {
+            const winner = winners[t.id]
+            const colors = winner && winner.archetype ? mana[winner.archetype] || [] : []
+            // the trophy, or the record when the source lists no final placings
+            const place = winner && (winner.place === '1st'
+              ? <span aria-hidden="true">🏆</span>
+              : <span title="Best record: the source doesn't list the final placings" className="shrink-0 rounded bg-gray-900/70 px-1.5 py-0.5 text-xs font-mono text-gray-400">{winner.place}</span>)
+            const pilotLink = winner && (winner.pilot
+              ? <Link to={`/players/${pilotToSlug(winner.pilot)}`} className="truncate font-medium text-gray-200 hover:text-amber-400 transition-colors">{winner.pilot}</Link>
+              : <span className="text-gray-300">Anonymous</span>)
+            const archetypeLink = winner && <Link to={`/decks/${winner.id}`} className="truncate text-amber-400 hover:text-amber-300 transition-colors">{winner.archetype || 'Decklist'}</Link>
+            return (
+              <div key={t.id}
+                onClick={e => { if (!e.target.closest("a")) navigate(`/tournaments/${t.id}`) }}
+                className="relative grid grid-cols-[minmax(0,1fr)_auto_auto] gap-x-2 gap-y-2.5 sm:flex sm:items-stretch sm:gap-4 pl-5 pr-3 py-3 sm:pl-6 sm:pr-4 sm:py-3.5 rounded-xl cursor-pointer border border-gray-700 bg-gray-800 overflow-hidden hover:border-amber-400/40 transition-colors">
+                {/* the winning archetype's colours down the left edge */}
+                <div aria-hidden="true" className="absolute inset-y-0 left-0 w-1.5"
+                  style={{ background: winner ? manaStripe(colors) : '#374151' }} />
+                {/* phones: the title on a row of its own, then the winner's two rows beside the two boxes */}
+                <div className="col-start-2 row-start-2 sm:col-auto sm:row-auto shrink-0 flex flex-col items-center justify-center rounded-lg bg-gray-900/70 px-2.5 py-2 min-w-[3.75rem] sm:px-4 sm:py-3 sm:min-w-[5.5rem]">
+                  <CalendarIcon className="w-3.5 h-3.5 mb-1 sm:w-4 sm:h-4 sm:mb-1.5 text-gray-500" />
+                  <span className="text-lg sm:text-xl font-bold font-mono leading-none text-gray-200">{Number(t.date.slice(8, 10))}</span>
+                  <span className="mt-1 text-[10px] uppercase tracking-wider text-gray-500">{formatShortDate(t.date).split(' ')[0]}</span>
+                </div>
+                <div className="contents sm:block sm:min-w-0 sm:flex-1 sm:self-center">
+                  <Link to={`/tournaments/${t.id}`}
+                    className="col-span-3 row-start-1 block truncate text-base font-semibold leading-snug text-white hover:text-amber-400 transition-colors">
+                    {t.name || `Tournament #${t.id}`}
+                  </Link>
+                  {winner ? (
+                    <>
+                      {/* wide: one line under the title */}
+                      <div className="hidden sm:flex flex-wrap items-center gap-x-2 gap-y-1 min-w-0 mt-2 text-sm">
+                        {place}{pilotLink}
+                        <span className="text-gray-600">with</span>
+                        {archetypeLink}
+                        {colors.length > 0 && <ManaSymbols mana={colors} className="flex" />}
+                      </div>
+                      {/* phones: the player, then the archetype, on rows of their own */}
+                      <div className="sm:hidden col-start-1 row-start-2 min-w-0 flex flex-col justify-center gap-1.5 text-sm">
+                        <div className="flex items-center gap-2 min-w-0">{place}{pilotLink}</div>
+                        <div className="flex items-center gap-2 min-w-0">
+                          {archetypeLink}
+                          {colors.length > 0 && <ManaSymbols mana={colors} className="flex" />}
+                        </div>
+                      </div>
+                    </>
+                  ) : <div className="hidden sm:block mt-2 h-5" />}
+                  {desktop && differences[t.id] && (
+                    <div className="mt-2 flex flex-wrap gap-1">
+                      {differences[t.id].map(c => <DiffChip key={c.name} card={c} cardPages={cardPages} bindPreview={bindPreview} />)}
+                    </div>
+                  )}
+                </div>
+                <div className="col-start-3 row-start-2 sm:col-auto sm:row-auto shrink-0 flex flex-col items-center justify-center rounded-lg bg-gray-900/70 px-2.5 py-2 min-w-[3.75rem] sm:px-4 sm:py-3 sm:min-w-[5.5rem]">
+                  <PlayersIcon className="w-3.5 h-3.5 mb-1 sm:w-4 sm:h-4 sm:mb-1.5 text-amber-400/60" />
+                  <span className="text-lg sm:text-xl font-bold font-mono leading-none text-amber-400">{t.players}</span>
+                  <span className="mt-1 text-[10px] uppercase tracking-wider text-gray-500">players</span>
+                </div>
+              </div>
+            )
+          })}
+        </div>
+      )}
+      <MoreButton to="/tournaments">View more tournaments</MoreButton>
+      {preview}
+    </section>
+  )
+}
+
+function RecentVideosSection() {
+  const [videos, setVideos] = useState(null)
+  // who is streaming on Twitch: their tiles come first (not the creators the visitor hid)
+  const hiddenCreators = useMemo(() => new Set(getSettings().watch.hiddenCreators), [])
+  const { channels, streams, details, minute } = useLiveStreams(hiddenCreators)
+  const live = streams
+    ? channels.filter(c => streams[c.login]).sort((a, b) => (streams[b.login].viewers ?? 0) - (streams[a.login].viewers ?? 0))
+    : []
+
+  useEffect(() => {
+    fetch('/data/videos.json').then(r => r.json()).then(data => {
+      const since = daysAgoIso(RECENT_DAYS)
+      // the visitor's Watch settings: types, hidden creators and languages
+      const { types, hiddenCreators, languages: langs } = getSettings().watch
+      // Live alone leaves the videos to their default: no shorts
+      const shown = showsVideos(types) ? types : ['videos']
+      const hidden = new Set(hiddenCreators)
+      const languages = new Set(langs)
+      setVideos(data
+        .filter(v => v.date >= since
+          && typeAllows(shown, v)
+          && !hidden.has(v.creator_name)
+          && (languages.size === 0 || languages.has(LANG_CANONICAL[v.language] ?? v.language)))
+        .sort((a, b) => b.date.localeCompare(a.date)))
+    }).catch(() => setVideos([]))
+  }, [])
+
+  if (!videos) return null
+
+  return (
+    <section>
+      <h2 className="text-xl font-semibold text-white mb-4">Sewer-veillance Cam</h2>
+      {videos.length === 0 && live.length === 0 ? (
+        <p className="text-sm text-gray-400">No videos in the last week.</p>
+      ) : (
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
+          {live.map(c => <LiveTile key={c.login} channel={c} stream={streams[c.login]} details={details[c.login]} minute={minute} />)}
+          {videos.map(v => <VideoCard key={v.video_id || v.link} v={v} />)}
+        </div>
+      )}
+      <MoreButton to="/watch">View more videos</MoreButton>
     </section>
   )
 }
@@ -859,7 +1195,11 @@ export default function Home() {
 
         <StatsSection />
 
+        <RecentTournamentsSection />
+
         <NewspauperSection />
+
+        <RecentVideosSection />
       </div>
     </Layout>
   )
