@@ -102,7 +102,7 @@ function CardName({ c, onHover, cardPages, versus, metagameCode, manaCost, bindP
         <span className="text-gray-200" {...hover}>{c.name}</span>
       )}
       {/* the cost lines up on the right of the column */}
-      {manaCost && <span className="ml-auto pl-3 self-center" {...hover}><ManaCost cost={manaCost} size="w-4 h-4" /></span>}
+      {manaCost && <span className="ml-auto pl-3 self-center shrink-0" {...hover}><ManaCost cost={manaCost} size="w-4 h-4" /></span>}
     </li>
   )
 }

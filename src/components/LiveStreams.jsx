@@ -12,8 +12,9 @@ import { registerPreviewCard } from '../utils/videoPreviews'
 //   multi        one page to watch several streams side by side (multistre.am,
 //                which DecAPI's /multi points to)
 // The thumbnails are Twitch's own live previews. The live status is checked
-// again every minute while the page is open; the rest is fetched once and kept
-// for an hour (DecAPI allows 100 calls a minute).
+// again every minute while the page is open, and kept for a minute across
+// pages; the rest is fetched once and kept for an hour (DecAPI allows 100 calls
+// a minute).
 
 const REFRESH_MS = 60_000
 const DETAILS_TTL_MS = 60 * 60_000
@@ -69,6 +70,35 @@ async function checkChannel(channel) {
     game: isProblem(game) ? null : game,
     viewers: Number.isFinite(count) ? count : null,
   }
+}
+
+// A channel's stream as checkChannel tells it, kept for a minute (in memory and
+// in the session) and shared by every page and component, so that turning the
+// Live filter off and on, hiding a creator or moving from page to page doesn't
+// ask DecAPI again. force: ask anyway (the check every minute of an open page).
+// A check that can't tell (undefined) is not kept.
+const STATUS_TTL_MS = 60_000
+const statusMemory = new Map()
+const statusInFlight = new Map()
+async function liveStatus(channel, force = false) {
+  const key = `twitch-status:${channel.login}`
+  if (!force) {
+    const kept = statusMemory.get(key) || (() => {
+      try { return JSON.parse(sessionStorage.getItem(key)) } catch { return null }
+    })()
+    if (kept && Date.now() - kept.at < STATUS_TTL_MS) return kept.value
+  }
+  // two components asking at once share the request
+  if (statusInFlight.has(key)) return statusInFlight.get(key)
+  const request = checkChannel(channel).then(value => {
+    if (value !== undefined) {
+      statusMemory.set(key, { at: Date.now(), value })
+      try { sessionStorage.setItem(key, JSON.stringify({ at: Date.now(), value })) } catch { /* no storage: just asked again */ }
+    }
+    return value
+  }).finally(() => statusInFlight.delete(key))
+  statusInFlight.set(key, request)
+  return request
 }
 
 // The preview of a stream, as the videos' (components/VideoCard.jsx): Twitch's
@@ -253,15 +283,17 @@ export function useLiveStreams(hidden, withDetails = true) {
   useEffect(() => {
     if (!channels) return
     let alive = true
-    const check = async () => {
-      const found = await Promise.all(channels.map(async c => [c.login, await checkChannel(c)]))
+    const check = async (force = false) => {
+      const found = await Promise.all(channels.map(async c => [c.login, await liveStatus(c, force)]))
       if (!alive) return
       // the channels that couldn't be checked keep their last status
       setStreams(prev => Object.fromEntries(found.map(([login, stream]) => [login, stream === undefined ? (prev && prev[login]) || null : stream])))
       setMinute(Math.floor(Date.now() / 60_000))
     }
     check()
-    const timer = setInterval(() => { if (!document.hidden) check() }, REFRESH_MS)
+    // the refresh of an open page asks again: it would otherwise find the answer
+    // kept a moment ago and wait for the next minute
+    const timer = setInterval(() => { if (!document.hidden) check(true) }, REFRESH_MS)
     return () => { alive = false; clearInterval(timer) }
   }, [channels])
 
@@ -303,7 +335,7 @@ export default function LiveStreams({ hidden }) {
         </div>
         {live.length === 0 ? (
           <p className="text-center text-gray-500 text-sm py-8">
-            Nobody is streaming right now. The channels are also on the <Link to="/creators" className="text-amber-400 hover:underline">Creators page</Link>.
+            Nobody is streaming right now. The list of monitored channels is in the <Link to="/creators" className="text-amber-400 hover:underline">Creators page</Link>.
           </p>
         ) : (
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4">

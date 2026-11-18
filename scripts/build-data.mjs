@@ -83,8 +83,11 @@ const archetypes = readdirSync(archetypeDir)
   })
 
 // Write combined index (slim fields only)
-const index = archetypes.map(({ name, aliases, dominant_mana, game_type, family }) => ({
+const index = archetypes.map(({ name, aliases, dominant_mana, game_type, family, representative_card }) => ({
   name, aliases, dominant_mana, game_type, family: family || null,
+  representative_card: representative_card
+    ? { name: representative_card.name, preview: representative_card.preview }
+    : null,
 }))
 writeFileSync(join(outDir, 'archetypes.json'), JSON.stringify(index))
 console.log(`Built archetypes.json with ${index.length} entries.`)
