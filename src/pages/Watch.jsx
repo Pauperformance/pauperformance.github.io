@@ -7,7 +7,7 @@ import { nameToSlug } from '../utils/slugs'
 import { firstYearOf, formatShortDate } from '../utils/dates'
 import { LANG_FLAG, LANG_CANONICAL, LANG_NAME } from '../utils/languages'
 import VideoCard from '../components/VideoCard'
-import LiveStreams from '../components/LiveStreams'
+import LiveStreams, { useLiveYouTube } from '../components/LiveStreams'
 import { probeLive, isProbeable } from '../utils/liveProbe'
 import { WATCH_TYPES, showsLive, typeAllows } from '../utils/watchTypes'
 import SwipeCards from '../components/SwipeCards'
@@ -85,6 +85,9 @@ export default function Watch() {
   // videos or shorts to start with: the visitor's setting
   // what is shown: videos, live streams, shorts, any together (none: videos and shorts)
   const [activeTypes, setActiveTypes] = useState(() => new Set(getSettings().watch.types))
+  // with Live: the YouTube streams on the air are tiles, and not repeated among the videos
+  const youtubeLive = useLiveYouTube(excludedCreators, showsLive(activeTypes)).live
+  const youtubeLiveIds = useMemo(() => new Set(youtubeLive.map(v => v.video_id)), [youtubeLive])
   // with Live: the live streams still on the air. Those that have ended are left out, and
   // so are the ones not checked yet (utils/liveProbe.js): they appear once found live.
   const [liveStatus, setLiveStatus] = useState({})
@@ -198,12 +201,13 @@ export default function Watch() {
       if (excludedCreators.has(v.creator_name)) return false
       if (activeLanguages.size > 0 && !activeLanguages.has(LANG_CANONICAL[v.language] ?? v.language)) return false
       if (activeArchetypes.size > 0 && !activeArchetypes.has(v.archetype)) return false
+      if (youtubeLiveIds.has(v.video_id)) return false
       if (!typeAllows(activeTypes, v, onAir)) return false
       if (filterDateFrom && v.date.slice(0, 7) < filterDateFrom) return false
       if (filterDateTo && v.date.slice(0, 7) > filterDateTo) return false
       return true
     })
-  }, [videos, search, activeCreators, activeLanguages, activeArchetypes, activeTypes, filterDateFrom, filterDateTo, excludedCreators, onAir])
+  }, [videos, search, activeCreators, activeLanguages, activeArchetypes, activeTypes, filterDateFrom, filterDateTo, excludedCreators, onAir, youtubeLiveIds])
 
   const firstYear = useMemo(() => firstYearOf(videos, 'date'), [videos])
 
@@ -480,7 +484,7 @@ export default function Watch() {
           </div>
         </FilterPanel>
 
-        {showsLive(activeTypes) && <LiveStreams hidden={excludedCreators} />}
+        {showsLive(activeTypes) && <LiveStreams hidden={excludedCreators} youtube={youtubeLive} />}
 
         {loading ? (
           <p className="text-gray-400 text-sm py-8 text-center">Loading videos…</p>
@@ -521,13 +525,13 @@ export default function Watch() {
                         label={`Page ${page + 1} of ${totalPages}`}
                         hint="Swipe the page left or right for the next or previous page.">
                         <div className="grid grid-cols-1 gap-4">
-                          {visibleVideos.map(v => <VideoCard key={v.video_id} v={v} previews={previews} />)}
+                          {visibleVideos.map(v => <VideoCard key={v.video_id} v={v} previews={previews} withAvatar />)}
                         </div>
                       </SwipeCards>
                     </div>
                   ) : (
                     <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
-                      {visibleVideos.map(v => <VideoCard key={v.video_id} v={v} previews={previews} />)}
+                      {visibleVideos.map(v => <VideoCard key={v.video_id} v={v} previews={previews} withAvatar />)}
                     </div>
                   )}
 

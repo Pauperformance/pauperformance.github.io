@@ -90,9 +90,9 @@ function pump() {
   }
 }
 
-// 'live' | 'offline' | 'unknown'; a few at a time, kept for a few minutes
-export function probeLive(id) {
-  const kept = read(id)
+// 'live' | 'offline' | 'unknown'; a few at a time, kept for a few minutes (force: probe anyway)
+export function probeLive(id, force = false) {
+  const kept = force ? null : read(id)
   if (kept) return Promise.resolve(kept)
   if (pending.has(id)) return pending.get(id).promise
   let resolve
