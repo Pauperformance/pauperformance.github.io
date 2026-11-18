@@ -28,7 +28,7 @@ export default function TournamentPane({ t, showDecks = true }) {
       <div className="space-y-2">
         <div className="flex flex-wrap items-baseline justify-between gap-x-4 gap-y-1">
           <h2 className="text-xl font-bold text-white">{t.name || `Tournament #${t.id}`}</h2>
-          <Link to={`/tournaments/${t.id}`} className="text-sm text-amber-400 hover:text-amber-300 whitespace-nowrap">Tournament page →</Link>
+          <Link to={`/tournaments/${t.id}`} className="inline-flex items-center justify-center gap-1 px-4 py-2 rounded-lg bg-amber-400 text-gray-900 text-sm font-semibold hover:bg-amber-300 transition-colors whitespace-nowrap">Tournament page</Link>
         </div>
         <p className="text-gray-400 text-sm">Played on {formatDate(t.date)}</p>
         {t.metagame && (
@@ -118,6 +118,10 @@ export default function TournamentPane({ t, showDecks = true }) {
           <TournamentDecks key={t.id} decks={t.decks} several={distinctSources(t).length > 1} />
         )}
       </section>}
+
+      <div className="flex justify-center pt-2">
+        <Link to={`/tournaments/${t.id}`} className="inline-flex items-center justify-center gap-1 px-6 py-3 rounded-lg bg-amber-400 text-gray-900 text-base font-semibold hover:bg-amber-300 transition-colors whitespace-nowrap">Tournament page</Link>
+      </div>
     </div>
   )
 }

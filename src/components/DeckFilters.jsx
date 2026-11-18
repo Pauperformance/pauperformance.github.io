@@ -28,7 +28,7 @@ const PAGER_BUTTON = 'px-4 py-2 rounded-lg text-sm font-semibold border border-g
 export function Pager({ page, totalPages, onPage, innerRef }) {
   if (totalPages <= 1) return null
   return (
-    <div ref={innerRef} className="flex items-center justify-center gap-3">
+    <div ref={innerRef} className="flex items-center justify-center gap-3 lg:pl-[21.5rem] xl:pl-[27.5rem]">
       <button onClick={() => onPage(Math.max(0, page - 1))} disabled={page === 0} className={PAGER_BUTTON}>← Previous</button>
       <span className="text-sm text-gray-400">Page {page + 1} of {totalPages}</span>
       <button onClick={() => onPage(Math.min(totalPages - 1, page + 1))} disabled={page === totalPages - 1} className={PAGER_BUTTON}>Next →</button>

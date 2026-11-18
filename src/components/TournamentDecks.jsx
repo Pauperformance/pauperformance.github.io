@@ -1,6 +1,8 @@
 import { useState, useEffect, useRef } from 'react'
 import { Link } from 'react-router-dom'
 import { DeckList, VisualList, Toggle, sortCards, useDeckMetagame, versusOf } from '../pages/DeckPage'
+import SizeStars from './SizeStars'
+import { MetagameBadge } from './Metagame'
 import MtgoButtons from './MtgoButtons'
 import { useCardData, useCardPreview, OracleText } from './CardPreview'
 import { useCardPages } from '../utils/cardPages'
@@ -107,10 +109,17 @@ function DeckPanel({ deck, several, showArchetype, data, res, view, onView, hove
           )}
           {deck.place && <span className="text-gray-500 font-normal text-sm"> · {deck.place}</span>}
         </p>
-        <Link to={`/decks/${deck.id}`} className="text-sm text-amber-400 hover:text-amber-300">Deck page →</Link>
+        <Link to={`/decks/${deck.id}`} className="inline-flex items-center justify-center gap-1 rounded-lg bg-amber-400 text-gray-900 font-semibold hover:bg-amber-300 transition-colors whitespace-nowrap px-4 py-2 text-sm">Deck page</Link>
       </div>
       {/* where the deck was played, when the list shows it by something else (an archetype's decks) */}
-      {deck.lead && <p className="-mt-2 text-sm text-gray-400">{deck.lead}{deck.detail ? ` @ ${deck.detail}` : ''}</p>}
+      {deck.lead && <p className="-mt-2 text-sm text-gray-400">{deck.lead}{deck.detail ? ` @ ${deck.detail}` : ''}{deck.players && <SizeStars players={deck.players} className="ml-2" />}</p>}
+      {deckMetagame?.metagame && (
+        <p className="-mt-2 flex flex-wrap items-center gap-x-2 gap-y-1 text-sm text-gray-400">
+          <span>Metagame:</span>
+          <MetagameBadge metagame={deckMetagame.metagame} />
+          {deckMetagame.metagame.name && deckMetagame.metagame.name !== deckMetagame.metagame.label && <span>{deckMetagame.metagame.name}</span>}
+        </p>
+      )}
       {several && deck.copies && <DeckCopies deck={deck} />}
       {data === undefined || !res ? (
         <p className="text-gray-500 text-sm">Loading decklist…</p>
@@ -151,6 +160,9 @@ function DeckPanel({ deck, several, showArchetype, data, res, view, onView, hove
         )}
         </>
       )}
+      <div className="flex justify-center pt-2">
+        <Link to={`/decks/${deck.id}`} className="inline-flex items-center justify-center gap-1 rounded-lg bg-amber-400 text-gray-900 font-semibold hover:bg-amber-300 transition-colors whitespace-nowrap px-6 py-3 text-base">Deck page</Link>
+      </div>
     </div>
   )
 }
@@ -384,7 +396,10 @@ export default function TournamentDecks({ decks, several = false, showArchetype 
             <li key={d.id} ref={open && !isDesktop ? targetRef : null}>
               <button onClick={() => { justPicked.current = !(open && !isDesktop); setSelectedId(open && !isDesktop ? '' : d.id) }} aria-expanded={open}
                 className={`w-full flex items-baseline gap-3 px-3 py-2 text-left border-l-2 transition-colors ${open ? 'bg-gray-800 border-amber-400' : 'border-transparent hover:bg-gray-800/60'}`}>
-                <span className={`${decks.some(x => x.lead) ? 'w-24' : 'w-12'} shrink-0 text-sm text-gray-500 whitespace-nowrap`}>{d.lead ?? d.place ?? '—'}</span>
+                <span className={`${decks.some(x => x.lead) ? 'w-24' : 'w-12'} shrink-0 text-sm text-gray-500 whitespace-nowrap`}>
+                  {d.lead ?? d.place ?? '—'}
+                  {d.players && <div className="mt-1 leading-none"><SizeStars players={d.players} /></div>}
+                </span>
                 <span className="min-w-0 flex-1">
                   <span className={`block truncate ${open ? 'text-amber-400' : 'text-gray-200'}`}>{d.pilot || 'Anonymous'}</span>
                   <span className="block truncate text-xs text-gray-500">{d.listDetail ?? d.detail ?? d.archetype ?? 'Unclassified'}</span>

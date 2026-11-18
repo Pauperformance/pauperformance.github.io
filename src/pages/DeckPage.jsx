@@ -462,6 +462,12 @@ export default function DeckPage() {
                     <ColorsPie cards={deck.decklist.main} cardTypes={cardTypes} />
                     <ManaCurve cards={deck.decklist.main} centered />
                     <CardTypesRadar cards={deck.decklist.main} cardTypes={cardTypes} />
+                    {deck.archetype && (
+                      <Link to={`/archetypes/${nameToSlug(deck.archetype)}`}
+                        className="inline-flex items-center justify-center gap-1 px-6 py-3 rounded-lg bg-amber-400 text-gray-900 text-base font-semibold hover:bg-amber-300 transition-colors whitespace-nowrap">
+                        Explore Archetype
+                      </Link>
+                    )}
                   </div>
                 </div>
                 <SampleHand cards={deck.decklist.main} images={cardImages} />

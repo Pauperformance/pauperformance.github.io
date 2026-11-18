@@ -2,7 +2,7 @@ import { Link } from 'react-router-dom'
 import TypicalListSection from './TypicalListSection'
 import { useCardPreview } from './CardPreview'
 import { useMetagames } from './CardPopularityChart'
-import { nameToSlug } from '../utils/slugs'
+import { nameToSlug, metagameSlug } from '../utils/slugs'
 import { useMediaQuery } from '../utils/useMediaQuery'
 
 const MANA_ORDER = ['W', 'U', 'B', 'R', 'G', 'C']
@@ -10,9 +10,9 @@ const POPULARITY_METAGAMES = '/data/archetype-popularity-metagames.json'
 
 // An archetype in brief, for the archetypes page: who it is, and its typical list.
 // a: its row of the index (name, aliases, colors, type, family); meta: its share of
-// the metagame (%); details: the archetype's details (undefined while loading,
+// the metagame (%), metagame: that metagame ({metagame, label, name, date}); details: the archetype's details (undefined while loading,
 // null if they could not be loaded).
-export default function ArchetypePane({ a, meta, details }) {
+export default function ArchetypePane({ a, meta, metagame, details }) {
   const { bind: bindPreview, preview } = useCardPreview({ sheet: true })
   const metagames = useMetagames(POPULARITY_METAGAMES)
   // phones get the simple, deck-page-like list
@@ -26,7 +26,7 @@ export default function ArchetypePane({ a, meta, details }) {
             {a.name}
             {a.aliases?.length > 0 && <span className="ml-2 text-sm font-normal text-gray-500">({a.aliases.join(', ')})</span>}
           </h2>
-          <Link to={`/archetypes/${nameToSlug(a.name)}`} className="text-sm text-amber-400 hover:text-amber-300 whitespace-nowrap">Archetype page →</Link>
+          <Link to={`/archetypes/${nameToSlug(a.name)}`} className="inline-flex items-center justify-center gap-1 px-4 py-2 rounded-lg bg-amber-400 text-gray-900 text-sm font-semibold hover:bg-amber-300 transition-colors whitespace-nowrap">Archetype page</Link>
         </div>
         <div className="flex flex-wrap items-center gap-x-6 gap-y-2 text-sm">
           <div className="flex items-center gap-1">
@@ -43,7 +43,17 @@ export default function ArchetypePane({ a, meta, details }) {
               <Link to={`/families/${nameToSlug(a.family)}`} className="font-medium text-amber-400 hover:text-amber-300">{a.family}</Link>
             </div>
           )}
-          <div><span className="text-gray-500">Meta </span><span className="font-mono font-medium text-amber-400">{(meta ?? 0).toFixed(1)}%</span></div>
+          <div>
+            <span className="text-gray-500">Meta </span><span className="font-mono font-medium text-amber-400">{(meta ?? 0).toFixed(1)}%</span>
+            {metagame && (
+              <span className="text-gray-500">
+                {' '}of the current metagame:{' '}
+                <Link to={`/metagames/${metagameSlug(metagame)}`} className="text-amber-400 hover:text-amber-300">
+                  {metagame.metagame}.{metagame.label}{metagame.name && metagame.name !== metagame.label ? ` ${metagame.name}` : ''}
+                </Link>
+              </span>
+            )}
+          </div>
         </div>
       </div>
 
@@ -58,6 +68,9 @@ export default function ArchetypePane({ a, meta, details }) {
             currentMetagame={metagames?.at(-1)?.slug.split('.')[0]} compact={phone} />
         )}
       </section>
+      <div className="flex justify-center pt-2">
+        <Link to={`/archetypes/${nameToSlug(a.name)}`} className="inline-flex items-center justify-center gap-1 px-6 py-3 rounded-lg bg-amber-400 text-gray-900 text-base font-semibold hover:bg-amber-300 transition-colors whitespace-nowrap">Archetype page</Link>
+      </div>
       {preview}
     </div>
   )

@@ -1,6 +1,7 @@
 import { useState, useEffect, useMemo, useRef } from 'react'
 import { Link, useNavigate } from 'react-router-dom'
-import { nameToSlug } from '../utils/slugs'
+import { nameToSlug, metagameSlug } from '../utils/slugs'
+import { formatDate } from '../utils/dates'
 import Layout from '../components/Layout'
 import { useSearchShortcut, searchShortcutLabel } from '../utils/useSearchShortcut'
 import { useEnterShortcut } from '../utils/useEnterShortcut'
@@ -88,6 +89,8 @@ function AndOrToggle({ value, onChange }) {
 export default function ArchetypesIndex() {
   const [archetypes, setArchetypes] = useState([])
   const [metaMap, setMetaMap] = useState({})
+  // the metagame the shares count the decks of
+  const [metagame, setMetagame] = useState(null)
   const [loading, setLoading] = useState(true)
   const [search, setSearch] = useState('')
   const searchRef = useSearchShortcut()
@@ -115,6 +118,7 @@ export default function ArchetypesIndex() {
       setArchetypes(archetypeData)
       const entries = metagameData.meta_shares || metagameData
       setMetaMap(Object.fromEntries(entries.map(e => [e.archetype_name, e.meta_share])))
+      setMetagame(metagameData.metagame?.date ? metagameData.metagame : null)
       setLoading(false)
     })
   }, [])
@@ -303,6 +307,15 @@ export default function ArchetypesIndex() {
             A curated list of the most important Pauper archetypes. Some may no longer be present in the meta due to bans.{' '}
             <Link to="/view" className="text-amber-400 hover:text-amber-300 whitespace-nowrap">Open the interactive map →</Link>
           </p>
+          {metagame && (
+            <p className="mt-1 text-gray-400 text-sm">
+              Meta % is the share of the decks in the current metagame,{' '}
+              <Link to={`/metagames/${metagameSlug(metagame)}`} className="text-amber-400 hover:text-amber-300">
+                {metagame.metagame}.{metagame.label}{metagame.name && metagame.name !== metagame.label ? ` ${metagame.name}` : ''}
+              </Link>
+              {' '}(from {formatDate(metagame.date).replace(/, \d{4}$/, '')}).
+            </p>
+          )}
         </div>
 
         {/* Filters: inline on larger screens, in the floating sheet on phones */}
@@ -329,7 +342,7 @@ export default function ArchetypesIndex() {
                   label={`${cardIndex + 1} of ${sorted.length}`}
                   hint="Swipe the card left or right for the next or previous archetype.">
                   <div className="bg-gray-900 border border-gray-700 rounded-xl p-4">
-                    <ArchetypePane a={sorted[cardIndex]} meta={metaMap[selected]} details={details[selected]} />
+                    <ArchetypePane a={sorted[cardIndex]} meta={metaMap[selected]} metagame={metagame} details={details[selected]} />
                   </div>
                 </SwipeCards>
               )}
@@ -366,7 +379,7 @@ export default function ArchetypesIndex() {
                   )}
                 </div>
                 <div className="flex-1 min-w-0">
-                  {selected && <ArchetypePane a={sorted[cardIndex]} meta={metaMap[selected]} details={details[selected]} />}
+                  {selected && <ArchetypePane a={sorted[cardIndex]} meta={metaMap[selected]} metagame={metagame} details={details[selected]} />}
                 </div>
               </div>
             </>
