@@ -4,7 +4,7 @@ import { metagameSlug } from '../src/utils/slugs.js'
 import { computeTypicalList } from '../src/utils/typicalList.js'
 import { encodeCardDecks } from '../src/utils/cardDecks.js'
 import { buildArchetypeMap } from './archetype-map.mjs'
-import { youtubeAvatars } from './creator-avatars.mjs'
+import { youtubeAvatars, twitchAvatars } from './creator-avatars.mjs'
 
 const buildStart = Date.now()
 
@@ -175,9 +175,9 @@ for (const archetype of archetypes) {
   // Load videos
   const videos = readJsonDir(videoFolderPath)
     .sort((a, b) => b.date.localeCompare(a.date))
-    .map(({ name: title, link, language, date, creator_name, deck_name, deck_url, video_id, is_short }) => ({
+    .map(({ name: title, link, language, date, creator_name, deck_name, deck_url, video_id, is_short, is_podcast }) => ({
       title, link, language, date, creator_name, deck_name: deck_name || null, deck_url: deck_url || null,
-      video_id: video_id || null, is_short: is_short === true,
+      video_id: video_id || null, is_short: is_short === true, is_podcast: is_podcast === true,
     }))
 
   const detail = {
@@ -1054,11 +1054,15 @@ const creatorDir = 'assets/data/creator'
 const creatorFiles = readdirSync(creatorDir)
   .filter(function(f) { return f.endsWith('.json') })
   .map(function(f) { return JSON.parse(readFileSync(join(creatorDir, f), 'utf8')) })
-// the YouTube channels' pictures, for the creators with no Twitch channel (those
-// show their Twitch picture): fetched when missing or a week old
+// the YouTube channels' pictures, for the creators with no Twitch channel:
+// fetched when missing or a week old
 const youtubeAvatarUrls = await youtubeAvatars(
   creatorFiles.filter(function(c) { return c.youtube_channel_url && !c.twitch_channel_url })
     .map(function(c) { return c.youtube_channel_url }))
+// the Twitch channels' pictures, fetched the same way
+const twitchAvatarUrls = await twitchAvatars(
+  creatorFiles.filter(function(c) { return c.twitch_channel_url })
+    .map(function(c) { return c.twitch_channel_url }))
 const creators = creatorFiles
   .map(function(c) {
     var slug1 = c.mtgo_name ? pilotToSlug(c.mtgo_name) : null
@@ -1071,7 +1075,9 @@ const creators = creatorFiles
       player_slug2: (slug2 && playersMap[slug2]) ? slug2 : null,
       twitch_channel_url: c.twitch_channel_url || null,
       youtube_channel_url: c.youtube_channel_url || null,
+      metafy_url: c.metafy_url || null,
       youtube_avatar_url: youtubeAvatarUrls[c.youtube_channel_url] || null,
+      twitch_avatar_url: twitchAvatarUrls[c.twitch_channel_url] || null,
       resources: Array.from(new Set([c.name, c.mtgo_name, c.mtgo_name2].filter(Boolean)))
         .flatMap(function(n) { return resourcesByAuthor[n] || [] })
         .sort(function(a, b) { return (b.date || '').localeCompare(a.date || '') }),
@@ -1347,6 +1353,7 @@ readdirSync(videoDir).forEach(function(archetypeName) {
       archetype: archetypeName,
       video_id: v.video_id,
       is_short: v.is_short === true,
+      is_podcast: v.is_podcast === true,
     })
   })
 })
@@ -1443,12 +1450,20 @@ for (const f of readdirSync(metagameDecksDir)) {
 }
 for (const [slug, list] of Object.entries(metagameDecks)) writeIfChanged(join(metagameDecksDir, slug + '.json'), JSON.stringify(list))
 console.log('Built metagame-decks/ with ' + Object.keys(metagameDecks).length + ' metagames.')
-// the results go in the players index
+// the results go in the players index, with the resources (guides, videos...)
+// and sideboard guides their creator profile authored
+const resourceCounts = {}
+for (const c of creators) {
+  for (const slug of new Set([c.player_slug, c.player_slug2].filter(Boolean))) {
+    resourceCounts[slug] = (resourceCounts[slug] || 0) + c.resources.length + c.sideboards.length
+  }
+}
 for (const p of players) {
   const r = playerResults[p.slug]
   p.events = r ? r.events : 0
   p.wins = r ? r.wins : 0
   p.top8 = r ? r.top8 : 0
+  p.resources = resourceCounts[p.slug] || 0
 }
 writeFileSync(join(outDir, 'players.json'), JSON.stringify(players))
 tournamentRows.sort((a, b) => b[1].localeCompare(a[1]) || a[0].localeCompare(b[0]))
