@@ -174,7 +174,7 @@ export default function Settings() {
         </Setting>
 
         <Setting
-          title="Watch: videos, live and shorts"
+          title="Watch: videos, live, shorts and podcasts"
           description={<>What <WatchLink /> shows when you open it: pick any of them together. You can still change it on the page itself.</>}>
           <div className="flex flex-wrap gap-2">
             {WATCH_TYPES.map(([type, label]) => {

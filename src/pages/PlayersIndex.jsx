@@ -113,7 +113,7 @@ export default function PlayersIndex() {
         av = a.archetypeCount; bv = b.archetypeCount
       } else if (sortCol === 'decks') {
         av = a.deckCount; bv = b.deckCount
-      } else if (sortCol === 'wins' || sortCol === 'top8' || sortCol === 'events') {
+      } else if (sortCol === 'wins' || sortCol === 'top8' || sortCol === 'events' || sortCol === 'resources') {
         av = a[sortCol] || 0; bv = b[sortCol] || 0
         if (av === bv) { av = a.deckCount; bv = b.deckCount }
       } else if (sortCol === 'lastSeen') {
@@ -246,6 +246,7 @@ export default function PlayersIndex() {
                     <SortHeader col="events"     label="Events"     sortCol={sortCol} sortDir={sortDir} onSort={handleSort} align="right" extraClass="hidden md:table-cell" />
                     <SortHeader col="wins"       label="Wins"       sortCol={sortCol} sortDir={sortDir} onSort={handleSort} align="right" />
                     <SortHeader col="top8"       label="Top 8"      sortCol={sortCol} sortDir={sortDir} onSort={handleSort} align="right" extraClass="hidden sm:table-cell" />
+                    <SortHeader col="resources"  label="Resources"  sortCol={sortCol} sortDir={sortDir} onSort={handleSort} align="right" extraClass="hidden md:table-cell" />
                     <SortHeader col="lastSeen"   label="Last Seen"  sortCol={sortCol} sortDir={sortDir} onSort={handleSort} align="right" extraClass="hidden md:table-cell" />
                   </tr>
                 </thead>
@@ -261,6 +262,7 @@ export default function PlayersIndex() {
                       <td className="px-4 py-2.5 text-right text-gray-400 hidden md:table-cell">{p.events || '—'}</td>
                       <td className="px-4 py-2.5 text-right font-mono text-amber-400">{p.wins || '—'}</td>
                       <td className="px-4 py-2.5 text-right text-gray-400 hidden sm:table-cell">{p.top8 || '—'}</td>
+                      <td className="px-4 py-2.5 text-right text-gray-400 hidden md:table-cell">{p.resources || '—'}</td>
                       <td className="px-4 py-2.5 text-right text-gray-400 hidden md:table-cell">{formatShortDate(p.lastSeen) || '—'}</td>
                     </tr>
                   ))}

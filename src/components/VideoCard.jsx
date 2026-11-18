@@ -23,6 +23,7 @@ function previewUrl(v) {
 
 // A video: its player, title, creator, language, archetype (unless
 // showArchetype is false, on the archetype's own page), decklist and date.
+// A podcast never shows the archetype or the decklist: it isn't about one deck.
 // previews: whether the video previews on hover (see below); the visitor's
 // settings when not given.
 export default function VideoCard({ v, showArchetype = true, previews }) {
@@ -132,14 +133,14 @@ export default function VideoCard({ v, showArchetype = true, previews }) {
               <span className="text-base leading-none">{LANG_FLAG[v.language] ?? v.language}</span>
               {LANG_NAME[LANG_CANONICAL[v.language]]}
             </span>
-            {showArchetype && (
+            {showArchetype && !v.is_podcast && (
               <Link
                 to={`/archetypes/${nameToSlug(v.archetype)}`}
                 className="inline-block px-2 py-0.5 rounded-full text-xs font-semibold bg-gray-700 text-amber-400 hover:bg-gray-600 transition-colors truncate">
                 {v.archetype}
               </Link>
             )}
-            {v.deck_url && (
+            {v.deck_url && !v.is_podcast && (
               <a href={v.deck_url} target="_blank" rel="noreferrer" title="Decklist"
                 className="inline-flex items-center gap-1 shrink-0 px-2 py-0.5 rounded-full text-xs font-semibold bg-gray-700 text-amber-400 hover:bg-gray-600 transition-colors">
                 <svg className="w-3.5 h-3.5" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M15 12h-5M15 8h-5M19 17V5a2 2 0 0 0-2-2H4M8 21h12a2 2 0 0 0 2-2v-1a1 1 0 0 0-1-1H11a1 1 0 0 0-1 1v1a2 2 0 1 1-4 0V5a2 2 0 1 0-4 0v2a1 1 0 0 0 1 1h3"/></svg>

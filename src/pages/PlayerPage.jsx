@@ -2,6 +2,7 @@ import { useState, useEffect, useMemo, useRef } from 'react'
 import { useParams, Link } from 'react-router-dom'
 import Layout from '../components/Layout'
 import { nameToSlug } from '../utils/slugs'
+import { METAFY_ICON } from '../utils/socialIcons'
 import { firstYearOf, formatDate, formatShortDate } from '../utils/dates'
 
 const LANG_FLAG = {
@@ -285,6 +286,16 @@ export default function PlayerPage() {
                       <path d="M11.571 4.714h1.715v5.143H11.57zm4.715 0H18v5.143h-1.714zM6 0L1.714 4.286v15.428h5.143V24l4.286-4.286h3.428L22.286 12V0zm14.571 11.143l-3.428 3.428h-3.429l-3 3v-3H6.857V1.714h13.714z"/>
                     </svg>
                     Twitch
+                  </a>
+                )}
+                {creator && creator.metafy_url && (
+                  <a href={creator.metafy_url} target="_blank" rel="noreferrer"
+                    className="flex items-center gap-1.5 px-2.5 py-1 rounded-lg bg-gray-800 border border-gray-700 hover:border-sky-500/70 hover:text-sky-400 text-gray-400 transition-colors text-xs font-medium"
+                    title="Metafy profile">
+                    <svg className="w-4 h-4 shrink-0" viewBox="0 0 24 24" fill="currentColor">
+                      <path d={METAFY_ICON} />
+                    </svg>
+                    Metafy
                   </a>
                 )}
               </div>

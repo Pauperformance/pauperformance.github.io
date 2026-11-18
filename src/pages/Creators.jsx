@@ -2,8 +2,7 @@ import { useState, useEffect } from 'react'
 import { Link } from 'react-router-dom'
 import Layout from '../components/Layout'
 import { useSearchShortcut, searchShortcutLabel } from '../utils/useSearchShortcut'
-import { useTwitchAvatar } from '../utils/twitchAvatar'
-import { TWITCH_ICON, YOUTUBE_ICON } from '../utils/socialIcons'
+import { TWITCH_ICON, YOUTUBE_ICON, METAFY_ICON } from '../utils/socialIcons'
 
 const PLAYER_ICON = 'M12 12c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm0 2c-2.67 0-8 1.34-8 4v2h16v-2c0-2.66-5.33-4-8-4z'
 
@@ -27,7 +26,7 @@ function SocialLink({ href, icon, label, color }) {
 // The creator's picture: their Twitch profile picture, else their YouTube
 // channel's (fetched when the site is built), else their initial
 function CreatorAvatar({ creator }) {
-  const src = useTwitchAvatar(creator.twitch_channel_url) || creator.youtube_avatar_url
+  const src = creator.twitch_avatar_url || creator.youtube_avatar_url
   // a picture that fails to load (or none) gives way to the initial
   const [failed, setFailed] = useState(null)
   return src && failed !== src
@@ -67,6 +66,14 @@ function CreatorCard({ creator }) {
             icon={TWITCH_ICON}
             label="Twitch"
             color="bg-purple-900/40 text-purple-300 hover:bg-purple-800/60"
+          />
+        )}
+        {creator.metafy_url && (
+          <SocialLink
+            href={creator.metafy_url}
+            icon={METAFY_ICON}
+            label="Metafy"
+            color="bg-sky-900/40 text-sky-300 hover:bg-sky-800/60"
           />
         )}
       </div>
