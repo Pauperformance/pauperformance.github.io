@@ -17,18 +17,29 @@ export function metagameShares(t) {
   return { shares, classified }
 }
 
+// The sources that have a tournament, once each: a source that lists the event
+// twice (its second listing is marked `duplicate`) is still one source.
+export function distinctSources(t) {
+  return [...new Set((t?.sources || []).map(s => s.source))]
+}
+
+// The listings to link to: the duplicates of the kept one are not linked again.
+export function listedSources(t) {
+  return (t?.sources || []).filter(s => !s.duplicate)
+}
+
 // How the sources of a tournament compare, and what they disagree about, in words
 export function sourceComparison(t) {
   if (!t) return { overlap: [], notes: [] }
-  const several = t.sources.length > 1
+  const several = distinctSources(t).length > 1
   const overlap = []
   if (several) {
     const multi = t.decks.filter(d => d.copies.length > 1)
     const differ = multi.filter(d => d.match === 'different').length
     if (multi.length) overlap.push(`${multi.length} deck${multi.length !== 1 ? 's are' : ' is'} in more than one source (${multi.length - differ} with the same list${differ ? `, ${differ} with different lists` : ''})`)
-    for (const s of t.sources) {
-      const only = t.decks.filter(d => d.copies.length === 1 && d.copies[0].source === s.source).length
-      if (only) overlap.push(`${only} only in ${sourceLabel(s.source)}`)
+    for (const source of distinctSources(t)) {
+      const only = t.decks.filter(d => d.copies.length === 1 && d.copies[0].source === source).length
+      if (only) overlap.push(`${only} only in ${sourceLabel(source)}`)
     }
   }
   const notes = []
