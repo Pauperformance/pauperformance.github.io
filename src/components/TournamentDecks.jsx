@@ -160,9 +160,6 @@ function DeckPanel({ deck, several, showArchetype, data, res, view, onView, hove
         )}
         </>
       )}
-      <div className="flex justify-center pt-2">
-        <Link to={`/decks/${deck.id}`} className="inline-flex items-center justify-center gap-1 rounded-lg bg-amber-400 text-gray-900 font-semibold hover:bg-amber-300 transition-colors whitespace-nowrap px-6 py-3 text-base">Deck page</Link>
-      </div>
     </div>
   )
 }

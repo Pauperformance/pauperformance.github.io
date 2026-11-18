@@ -110,6 +110,7 @@ export default function TournamentPane({ t, showDecks = true }) {
         </details>
       )}
 
+
       {showDecks && <section>
         <h3 className="text-lg font-semibold text-white mb-3">Decks</h3>
         {t.decks.length === 0 ? (
@@ -119,9 +120,6 @@ export default function TournamentPane({ t, showDecks = true }) {
         )}
       </section>}
 
-      <div className="flex justify-center pt-2">
-        <Link to={`/tournaments/${t.id}`} className="inline-flex items-center justify-center gap-1 px-6 py-3 rounded-lg bg-amber-400 text-gray-900 text-base font-semibold hover:bg-amber-300 transition-colors whitespace-nowrap">Tournament page</Link>
-      </div>
     </div>
   )
 }

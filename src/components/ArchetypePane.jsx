@@ -68,9 +68,6 @@ export default function ArchetypePane({ a, meta, metagame, details }) {
             currentMetagame={metagames?.at(-1)?.slug.split('.')[0]} compact={phone} />
         )}
       </section>
-      <div className="flex justify-center pt-2">
-        <Link to={`/archetypes/${nameToSlug(a.name)}`} className="inline-flex items-center justify-center gap-1 px-6 py-3 rounded-lg bg-amber-400 text-gray-900 text-base font-semibold hover:bg-amber-300 transition-colors whitespace-nowrap">Archetype page</Link>
-      </div>
       {preview}
     </div>
   )
