@@ -9,17 +9,22 @@ const has = (types, t) => (types instanceof Set ? types.has(t) : types.includes(
 // whether the live streams are shown
 export const showsLive = types => has(types, 'live')
 
-// whether videos (or shorts) are shown: not with Live alone
+// whether Live alone leaves the plain videos out (the Home page then falls back to
+// the default videos); the Watch page shows the past lives with it instead
 export const showsVideos = types => has(types, 'videos') || has(types, 'shorts') || has(types, 'podcasts') || !has(types, 'live')
 
 // whether a video is shown: a short only with Shorts, a video (podcasts included)
-// with Videos, a podcast also with Podcasts alone (no restriction when none of
-// the three is picked)
-export function typeAllows(types, video) {
+// with Videos, a podcast also with Podcasts alone, a live stream (past or not) also
+// with Live alone (no restriction when none of the four is picked). onAir(video),
+// when given, tells whether a live stream is still on the air: with Live alone the
+// ones that have ended are left out.
+export function typeAllows(types, video, onAir) {
   const wantVideos = has(types, 'videos')
   const wantShorts = has(types, 'shorts')
   const wantPodcasts = has(types, 'podcasts')
-  if (!wantVideos && !wantShorts && !wantPodcasts) return true
-  if (video.is_short === true) return wantShorts
-  return wantVideos || (wantPodcasts && video.is_podcast === true)
+  const wantLive = has(types, 'live')
+  if (!wantVideos && !wantShorts && !wantPodcasts && !wantLive) return true
+  const live = wantLive && video.is_live === true && (!onAir || onAir(video))
+  if (video.is_short === true) return wantShorts || live
+  return wantVideos || (wantPodcasts && video.is_podcast === true) || live
 }

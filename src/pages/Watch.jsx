@@ -1,4 +1,4 @@
-import { useState, useEffect, useMemo, useRef } from 'react'
+import { useState, useEffect, useMemo, useRef, useCallback } from 'react'
 import { Link } from 'react-router-dom'
 import Layout from '../components/Layout'
 import { useSearchShortcut, searchShortcutLabel } from '../utils/useSearchShortcut'
@@ -8,7 +8,8 @@ import { firstYearOf, formatShortDate } from '../utils/dates'
 import { LANG_FLAG, LANG_CANONICAL, LANG_NAME } from '../utils/languages'
 import VideoCard from '../components/VideoCard'
 import LiveStreams from '../components/LiveStreams'
-import { WATCH_TYPES, showsLive, showsVideos, typeAllows } from '../utils/watchTypes'
+import { probeLive, isProbeable } from '../utils/liveProbe'
+import { WATCH_TYPES, showsLive, typeAllows } from '../utils/watchTypes'
 import SwipeCards from '../components/SwipeCards'
 import { useMediaQuery } from '../utils/useMediaQuery'
 import { getSettings } from '../utils/settings'
@@ -84,6 +85,10 @@ export default function Watch() {
   // videos or shorts to start with: the visitor's setting
   // what is shown: videos, live streams, shorts, any together (none: videos and shorts)
   const [activeTypes, setActiveTypes] = useState(() => new Set(getSettings().watch.types))
+  // with Live: the live streams still on the air. Those that have ended are left out, and
+  // so are the ones not checked yet (utils/liveProbe.js): they appear once found live.
+  const [liveStatus, setLiveStatus] = useState({})
+  const onAir = useCallback(v => liveStatus[v.video_id] === 'live' || liveStatus[v.video_id] === 'unknown', [liveStatus])
   // whether the videos preview (play without pressing play): the visitor's setting to start with
   const [previews, setPreviews] = useState(() => getSettings().videos.previews)
   const [filterDateFrom, setFilterDateFrom] = useState('')
@@ -175,6 +180,16 @@ export default function Watch() {
     setFilterDateTo(toYM(to))
   }
 
+  // check the live streams as soon as Live is picked
+  useEffect(() => {
+    if (!showsLive(activeTypes)) return
+    let alive = true
+    videos.filter(isProbeable).forEach(v => {
+      probeLive(v.video_id).then(st => { if (alive) setLiveStatus(prev => (prev[v.video_id] === st ? prev : { ...prev, [v.video_id]: st })) })
+    })
+    return () => { alive = false }
+  }, [videos, activeTypes])
+
   const filtered = useMemo(() => {
     const q = search.trim().toLowerCase()
     return videos.filter(v => {
@@ -183,12 +198,12 @@ export default function Watch() {
       if (excludedCreators.has(v.creator_name)) return false
       if (activeLanguages.size > 0 && !activeLanguages.has(LANG_CANONICAL[v.language] ?? v.language)) return false
       if (activeArchetypes.size > 0 && !activeArchetypes.has(v.archetype)) return false
-      if (!typeAllows(activeTypes, v)) return false
+      if (!typeAllows(activeTypes, v, onAir)) return false
       if (filterDateFrom && v.date.slice(0, 7) < filterDateFrom) return false
       if (filterDateTo && v.date.slice(0, 7) > filterDateTo) return false
       return true
     })
-  }, [videos, search, activeCreators, activeLanguages, activeArchetypes, activeTypes, filterDateFrom, filterDateTo, excludedCreators])
+  }, [videos, search, activeCreators, activeLanguages, activeArchetypes, activeTypes, filterDateFrom, filterDateTo, excludedCreators, onAir])
 
   const firstYear = useMemo(() => firstYearOf(videos, 'date'), [videos])
 
@@ -238,13 +253,13 @@ export default function Watch() {
         if (activeCreators.size > 0 && !activeCreators.has(v.creator_name)) return false
         if (excludedCreators.has(v.creator_name)) return false
         if (activeLanguages.size > 0 && !activeLanguages.has(LANG_CANONICAL[v.language] ?? v.language)) return false
-        if (!typeAllows(activeTypes, v)) return false
+        if (!typeAllows(activeTypes, v, onAir)) return false
         if (filterDateFrom && v.date.slice(0, 7) < filterDateFrom) return false
         if (filterDateTo && v.date.slice(0, 7) > filterDateTo) return false
         return true
       })
     })
-  }, [archetypes, archetypeSearch, activeArchetypes, videos, search, activeCreators, excludedCreators, activeLanguages, activeTypes, filterDateFrom, filterDateTo])
+  }, [archetypes, archetypeSearch, activeArchetypes, videos, search, activeCreators, excludedCreators, activeLanguages, activeTypes, filterDateFrom, filterDateTo, onAir])
 
   const visibleCreators = useMemo(() => {
     const q = search.trim().toLowerCase()
@@ -256,13 +271,13 @@ export default function Watch() {
         if (q && !v.title.toLowerCase().includes(q)) return false
         if (activeLanguages.size > 0 && !activeLanguages.has(LANG_CANONICAL[v.language] ?? v.language)) return false
         if (activeArchetypes.size > 0 && !activeArchetypes.has(v.archetype)) return false
-        if (!typeAllows(activeTypes, v)) return false
+        if (!typeAllows(activeTypes, v, onAir)) return false
         if (filterDateFrom && v.date.slice(0, 7) < filterDateFrom) return false
         if (filterDateTo && v.date.slice(0, 7) > filterDateTo) return false
         return true
       })
     })
-  }, [creators, creatorSearch, activeCreators, excludedCreators, videos, search, activeLanguages, activeArchetypes, activeTypes, filterDateFrom, filterDateTo])
+  }, [creators, creatorSearch, activeCreators, excludedCreators, videos, search, activeLanguages, activeArchetypes, activeTypes, filterDateFrom, filterDateTo, onAir])
 
   return (
     <Layout>
@@ -274,7 +289,7 @@ export default function Watch() {
 
         <FilterPanel activeCount={(search ? 1 : 0) + activeCreators.size + excludedCreators.size + activeLanguages.size + activeArchetypes.size + (filterDateFrom ? 1 : 0) + (filterDateTo ? 1 : 0)}
           onClear={() => { setSearch(''); setActiveCreators(new Set()); setExcludedCreators(new Set()); setActiveLanguages(new Set()); setActiveArchetypes(new Set()); setFilterDateFrom(''); setFilterDateTo('') }}
-          summary={showsVideos(activeTypes) ? `${filtered.length} video${filtered.length !== 1 ? 's' : ''}` : 'Live now'}>
+          summary={`${filtered.length} video${filtered.length !== 1 ? 's' : ''}`}>
           <div className="relative">
             <input
               ref={searchRef}
@@ -467,7 +482,7 @@ export default function Watch() {
 
         {showsLive(activeTypes) && <LiveStreams hidden={excludedCreators} />}
 
-        {!showsVideos(activeTypes) ? null : loading ? (
+        {loading ? (
           <p className="text-gray-400 text-sm py-8 text-center">Loading videos…</p>
         ) : (
           <>

@@ -2,6 +2,7 @@ import { useState, useRef, useEffect } from 'react'
 import { Link } from 'react-router-dom'
 import { getSettings } from '../utils/settings'
 import { registerPreviewCard } from '../utils/videoPreviews'
+import { probeLive, knownLive, isProbeable } from '../utils/liveProbe'
 import { nameToSlug } from '../utils/slugs'
 import { formatShortDate } from '../utils/dates'
 import { LANG_FLAG, LANG_CANONICAL, LANG_NAME } from '../utils/languages'
@@ -21,6 +22,20 @@ function previewUrl(v) {
   return `https://www.youtube.com/embed/${v.video_id}?${params}`
 }
 
+// A live stream's state: 'live', 'offline' or 'unknown' (null for what isn't one, and
+// while it is being checked). Only recent ones are checked (utils/liveProbe.js).
+function useLiveStatus(v) {
+  const probed = isProbeable(v)
+  const [status, setStatus] = useState(() => (probed ? knownLive(v.video_id) : null))
+  useEffect(() => {
+    if (!probed) return
+    let alive = true
+    probeLive(v.video_id).then(s => { if (alive) setStatus(s) })
+    return () => { alive = false }
+  }, [probed, v.video_id])
+  return status
+}
+
 // A video: its player, title, creator, language, archetype (unless
 // showArchetype is false, on the archetype's own page), decklist and date.
 // A podcast never shows the archetype or the decklist: it isn't about one deck.
@@ -29,6 +44,7 @@ function previewUrl(v) {
 export default function VideoCard({ v, showArchetype = true, previews }) {
   const [playing, setPlaying] = useState(false)
   const containerRef = useRef(null)
+  const liveStatus = useLiveStatus(v)
 
   // The preview: the video playing muted over its thumbnail, without pressing play.
   // On hover (after a short rest of the mouse) on desktop; on touch screens for the
@@ -107,6 +123,12 @@ export default function VideoCard({ v, showArchetype = true, previews }) {
               </div>
             </div>
           </button>
+        )}
+        {v.is_live === true && (
+          <span className={`absolute top-2 left-2 px-2 py-0.5 rounded text-xs font-bold pointer-events-none ${
+            liveStatus === 'live' ? 'bg-red-600 text-white' : 'bg-black/70 text-gray-200'}`}>
+            {liveStatus === 'live' ? '● LIVE NOW' : liveStatus === 'offline' ? 'Live stream ended' : 'Live stream'}
+          </span>
         )}
         {/* the preview, above the thumbnail but not catching the clicks: they still play the video */}
         {previewing && !playing && (
