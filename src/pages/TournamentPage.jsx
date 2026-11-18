@@ -1,5 +1,5 @@
 import { useState, useEffect, useMemo } from 'react'
-import { useParams, Link } from 'react-router-dom'
+import { useParams, useNavigate, Link } from 'react-router-dom'
 import Layout from '../components/Layout'
 import MetaPie from '../components/MetaPie'
 import TournamentDecks from '../components/TournamentDecks'
@@ -7,11 +7,12 @@ import { MetagameBadge } from '../components/Metagame'
 import { pilotToSlug } from '../utils/slugs'
 import { formatDate } from '../utils/dates'
 import { sourceLabel } from '../utils/sources'
-import { metagameShares, sourceComparison } from '../utils/tournament'
+import { distinctSources, listedSources, metagameShares, sourceComparison } from '../utils/tournament'
 
 
 export default function TournamentPage() {
   const { id } = useParams()
+  const navigate = useNavigate()
   // undefined while loading, null when there is no such tournament
   const [t, setT] = useState(undefined)
 
@@ -21,9 +22,22 @@ export default function TournamentPage() {
     fetch(`/data/tournament-details/${encodeURIComponent(id)}.json`)
       .then(r => (r.ok ? r.json() : null))
       .catch(() => null)
-      .then(data => { if (!cancelled) setT(data) })
+      .then(async data => {
+        if (data) return data
+        // the copy of an event that a source lists twice has no page: its old
+        // link leads to the tournament that was kept
+        const aliases = await fetch('/data/tournament-aliases.json')
+          .then(r => (r.ok ? r.json() : {}))
+          .catch(() => ({}))
+        if (aliases[id]) {
+          navigate(`/tournaments/${encodeURIComponent(aliases[id])}`, { replace: true })
+          return undefined
+        }
+        return null
+      })
+      .then(data => { if (!cancelled && data !== undefined) setT(data) })
     return () => { cancelled = true }
-  }, [id])
+  }, [id, navigate])
 
   const { shares, classified } = useMemo(() => metagameShares(t), [t])
   const { overlap, notes } = useMemo(() => sourceComparison(t), [t])
@@ -83,9 +97,9 @@ export default function TournamentPage() {
             </div>
           )}
           <div>
-            <p className="text-base text-gray-500 mb-0.5">{t.sources.length > 1 ? 'Sources' : 'Source'}</p>
+            <p className="text-base text-gray-500 mb-0.5">{distinctSources(t).length > 1 ? 'Sources' : 'Source'}</p>
             <p className="font-medium text-gray-200 flex flex-wrap gap-x-4">
-              {t.sources.map(src => (
+              {listedSources(t).map(src => (
                 <a key={src.source + src.id} href={src.url} target="_blank" rel="noopener noreferrer"
                   title={`${src.name} · ${src.decks} deck${src.decks !== 1 ? 's' : ''}`}
                   className="text-amber-400 hover:text-amber-300">
@@ -103,6 +117,7 @@ export default function TournamentPage() {
               {t.sources.map(src => (
                 <li key={src.source + src.id}>
                   {sourceLabel(src.source)}: {src.decks} deck{src.decks !== 1 ? 's' : ''}, “{src.name}”, {formatDate(src.date)}
+                  {src.duplicate && ' (a second listing of the same event, not counted)'}
                 </li>
               ))}
             </ul>
@@ -133,7 +148,7 @@ export default function TournamentPage() {
           {t.decks.length === 0 ? (
             <p className="text-gray-500 text-sm">The source lists no decks for this tournament.</p>
           ) : (
-            <TournamentDecks key={t.id} decks={t.decks} several={t.sources.length > 1} />
+            <TournamentDecks key={t.id} decks={t.decks} several={distinctSources(t).length > 1} />
           )}
         </section>
       </div>

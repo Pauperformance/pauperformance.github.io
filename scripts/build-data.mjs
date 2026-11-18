@@ -1378,6 +1378,8 @@ function displayPlace(place) {
   return n + suffix
 }
 const keptTournamentFiles = new Set()
+// {id of a tournament a source listed twice (the copy): id of the one shown}
+const tournamentAliases = {}
 // What each player did in the tournaments: events entered, wins and top 8s. Only
 // the tournaments with a reliable ranking count for the results (leagues, where
 // the decks share a record, do not), and a top 8 in a tournament of up to 8
@@ -1388,7 +1390,10 @@ const playerResults = {}
 const metagameDecks = {}
 for (const t of reconciledTournaments.slice().sort((a, b) => b.date.localeCompare(a.date) || a.id.localeCompare(b.id))) {
   const name = (t.sources[0].name || '').trim()
-  tournamentRows.push([t.id, t.date, name, t.decks.length, t.sources.map(s => s.source), t.discrepancies.length])
+  // a source that lists the event twice is one source
+  tournamentRows.push([t.id, t.date, name, t.decks.length, [...new Set(t.sources.map(s => s.source))], t.discrepancies.length])
+  // the second listing has no page of its own: its old link leads to this one
+  for (const s of t.sources) if (s.duplicate) tournamentAliases[s.site_id] = t.id
   let metagame = null
   for (const m of metagameStarts) if (m.date <= t.date) metagame = m
   t.decks.forEach((d, i) => {
@@ -1435,6 +1440,7 @@ for (const t of reconciledTournaments.slice().sort((a, b) => b.date.localeCompar
 for (const f of readdirSync(tournamentDetailsDir)) {
   if (!keptTournamentFiles.has(f)) unlinkSync(join(tournamentDetailsDir, f))
 }
+writeIfChanged(join(outDir, 'tournament-aliases.json'), JSON.stringify(tournamentAliases))
 // One file per metagame (the decks of the metagame pages); the stale ones go
 const metagameDecksDir = join(outDir, 'metagame-decks')
 mkdirSync(metagameDecksDir, { recursive: true })

@@ -7,7 +7,7 @@ import { MetagameBadge } from './Metagame'
 import { pilotToSlug } from '../utils/slugs'
 import { formatDate } from '../utils/dates'
 import { sourceLabel } from '../utils/sources'
-import { metagameShares, sourceComparison } from '../utils/tournament'
+import { distinctSources, listedSources, metagameShares, sourceComparison } from '../utils/tournament'
 
 // A tournament in brief, for the tournaments page on wide screens: who played
 // and won it, its metagame, how the sources compare, then its decks (the list
@@ -59,9 +59,9 @@ export default function TournamentPane({ t, showDecks = true }) {
             </div>
           )}
           <div>
-            <span className="text-gray-500">{t.sources.length > 1 ? 'Sources ' : 'Source '}</span>
+            <span className="text-gray-500">{distinctSources(t).length > 1 ? 'Sources ' : 'Source '}</span>
             <span className="font-medium text-gray-200 inline-flex flex-wrap gap-x-3">
-              {t.sources.map(src => (
+              {listedSources(t).map(src => (
                 <a key={src.source + src.id} href={src.url} target="_blank" rel="noopener noreferrer"
                   title={`${src.name} · ${src.decks} deck${src.decks !== 1 ? 's' : ''}`}
                   className="text-amber-400 hover:text-amber-300">
@@ -96,6 +96,7 @@ export default function TournamentPane({ t, showDecks = true }) {
               {t.sources.map(src => (
                 <li key={src.source + src.id}>
                   {sourceLabel(src.source)}: {src.decks} deck{src.decks !== 1 ? 's' : ''}, “{src.name}”, {formatDate(src.date)}
+                  {src.duplicate && ' (a second listing of the same event, not counted)'}
                 </li>
               ))}
             </ul>
@@ -114,7 +115,7 @@ export default function TournamentPane({ t, showDecks = true }) {
         {t.decks.length === 0 ? (
           <p className="text-gray-500 text-sm">The source lists no decks for this tournament.</p>
         ) : (
-          <TournamentDecks key={t.id} decks={t.decks} several={t.sources.length > 1} />
+          <TournamentDecks key={t.id} decks={t.decks} several={distinctSources(t).length > 1} />
         )}
       </section>}
     </div>
