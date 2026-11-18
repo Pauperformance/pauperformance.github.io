@@ -824,6 +824,9 @@ for (const f of cardFiles) {
     manaCost = scryfall.layout === 'split' ? faceCosts.join(' // ') : (faceCosts[0] || '')
   }
   const cardEntry = { slug, name, archetypeCount: archetypes.length, colors: colors, types: types, cmc: cmc }
+  // the unofficial in-universe names of the card (Myr's `alternative_names`),
+  // for the search of /cards: only the few cards having them
+  if (raw.alternative_names && raw.alternative_names.length > 0) cardEntry.alternativeNames = raw.alternative_names
   cardsIndex.push(cardEntry)
   cardDetailInputs.push({ entry: cardEntry, path: cardInputPath })
 
@@ -894,6 +897,9 @@ for (const { entry, path } of cardDetailInputs) {
   // every new decklist, the intel file doesn't
   if (writeIfChanged(join(cardDetailsDir, entry.slug + '.json'), JSON.stringify({
     slug: entry.slug, name: entry.name,
+    // the unofficial in-universe names the card also goes by (Skittering
+    // Kitten for Masked Meower), shown next to its name
+    alternative_names: raw.alternative_names || [],
     banned: bannedCards.has(entry.name),
     archetypes: (raw.archetypes && raw.archetypes['py/set']) || [],
     scryfall: raw.scryfall || null,

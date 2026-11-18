@@ -89,6 +89,13 @@ function AndOrToggle({ value, onChange }) {
 }
 
 
+// The search finds a card by its official name or by an unofficial in-universe
+// one (alternativeNames, see the card page): q is lowercase
+function matchesSearch(card, q) {
+  return card.name.toLowerCase().includes(q)
+    || (card.alternativeNames || []).some(n => n.toLowerCase().includes(q))
+}
+
 export default function CardsIndex() {
   const [cards, setCards] = useState([])
   const [archetypeCardSlugs, setArchetypeCardSlugs] = useState({})
@@ -198,7 +205,7 @@ export default function CardsIndex() {
     const q = search.trim().toLowerCase()
     const slugs = new Set()
     cards.forEach(c => {
-      if (q && !c.name.toLowerCase().includes(q)) return
+      if (q && !matchesSearch(c, q)) return
       if (activeMana.size > 0) {
         const colors = c.colors || []
         const manaMatch = manaMode === 'and'
@@ -232,7 +239,7 @@ export default function CardsIndex() {
   const filtered = useMemo(() => {
     const q = search.trim().toLowerCase()
     return cards.filter(c => {
-      if (q && !c.name.toLowerCase().includes(q)) return false
+      if (q && !matchesSearch(c, q)) return false
       if (activeMana.size > 0) {
         const colors = c.colors || []
         const manaMatch = manaMode === 'and'
