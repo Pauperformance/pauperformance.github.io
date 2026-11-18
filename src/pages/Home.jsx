@@ -4,7 +4,7 @@ import Layout from '../components/Layout'
 import { computeTypicalList } from '../utils/typicalList'
 import { nameToSlug, metagameSlug, pilotToSlug } from '../utils/slugs'
 import { cardLinkSlug, useCardPages } from '../utils/cardPages'
-import { formatShortDate } from '../utils/dates'
+import { formatDate, formatShortDate } from '../utils/dates'
 import { easeInOut, scrollGently } from '../utils/scroll'
 import { useCardPreview } from '../components/CardPreview'
 import { useImageFor } from '../utils/artwork'
@@ -18,6 +18,7 @@ import { LANG_CANONICAL } from '../utils/languages'
 import CardLink from '../components/PoolCardLink'
 import MetaPie from '../components/MetaPie'
 import { useSettings, updateSettings } from '../utils/settings'
+import { TWITCH_ICON, YOUTUBE_ICON, METAFY_ICON } from '../utils/socialIcons'
 
 function useCountUp(target, duration = 1600) {
   const [count, setCount] = useState(0)
@@ -655,18 +656,32 @@ function BrainstormSection() {
 
 function MetagameSection() {
   const [data, setData] = useState([])
+  // the ongoing metagame (code, label, name, start date): the shares count the tournaments played in it
+  const [current, setCurrent] = useState(null)
 
   useEffect(() => {
     fetch('/data/metagame.json')
       .then(r => r.json())
-      .then(d => setData((d.meta_shares || d).slice().sort((a, b) => b.meta_share - a.meta_share)))
+      .then(d => {
+        setData((d.meta_shares || d).slice().sort((a, b) => b.meta_share - a.meta_share))
+        setCurrent(d.metagame?.date ? d.metagame : null)
+      })
   }, [])
 
   if (!data.length) return null
 
   return (
     <section>
-      <h2 className="text-xl font-semibold text-white mb-4">Bake into a Pie</h2>
+      <h2 className={`text-xl font-semibold text-white ${current ? '' : 'mb-4'}`}>Bake into a Pie</h2>
+      {current && (
+        <p className="text-sm text-gray-400 mt-0.5 mb-4">
+          Current metagame:{' '}
+          <Link to={`/metagames/${metagameSlug(current)}`} className="text-amber-400 hover:text-amber-300 transition-colors">
+            {current.metagame}.{current.label}{current.name && current.name !== current.label ? ` ${current.name}` : ''}
+          </Link>
+          {' '}(from {formatDate(current.date).replace(/, \d{4}$/, '')})
+        </p>
+      )}
       {/* the list in columns, filled evenly */}
       <MetaPie shares={data} minListedShare={1}
         listClassName="columns-2 lg:columns-3 2xl:columns-4 gap-x-4"
@@ -684,8 +699,8 @@ function useMetaView() {
 }
 
 
-// The news of the last two months, exported by Myr newest first:
-// announcements, new metagames, and archetypes and families added to the Academy.
+// The news of the last month, exported by Myr newest first: announcements,
+// new metagames, and archetypes, families and content creators added to the Academy.
 // Each kind of news: its name (the icon's tooltip) and icon (Lucide-style
 // stroke paths on a 24x24 grid).
 const NEWS_KINDS = {
@@ -697,7 +712,7 @@ const NEWS_KINDS = {
   },
   // stacked layers: the card pool, one layer per metagame
   metagame: {
-    name: 'Metagame',
+    name: 'New metagame',
     color: '#2f8ad6',
     icon: <><path d="M12.83 2.18a2 2 0 0 0-1.66 0L2.6 6.08a1 1 0 0 0 0 1.83l8.58 3.91a2 2 0 0 0 1.66 0l8.58-3.9a1 1 0 0 0 0-1.83Z" /><path d="m22 17.65-9.17 4.16a2 2 0 0 1-1.66 0L2 17.65" /><path d="m22 12.65-9.17 4.16a2 2 0 0 1-1.66 0L2 12.65" /></>,
   },
@@ -712,6 +727,12 @@ const NEWS_KINDS = {
     name: 'New family',
     color: '#9b7be0',
     icon: <><rect x="16" y="16" width="6" height="6" rx="1" /><rect x="2" y="16" width="6" height="6" rx="1" /><rect x="9" y="2" width="6" height="6" rx="1" /><path d="M5 16v-3a1 1 0 0 1 1-1h12a1 1 0 0 1 1 1v3" /><path d="M12 12V8" /></>,
+  },
+  // a video camera: a content creator
+  creator: {
+    name: 'New content creator',
+    color: '#e0a82e',
+    icon: <><path d="m16 13 5.223 3.482a.5.5 0 0 0 .777-.416V7.87a.5.5 0 0 0-.752-.432L16 10.5" /><rect x="2" y="6" width="14" height="12" rx="2" /></>,
   },
 }
 
@@ -732,18 +753,56 @@ function newsTitle(entry) {
     case 'metagame':
       return {
         to: `/metagames/${metagameSlug(entry)}`,
-        text: `New metagame begins: ${entry.p13m}.${entry.label} · ${[...entry.sets.map(s => s.name), ...entry.bans.map(b => b.subtitle)].join(' + ')}`,
+        text: `${entry.p13m}.${entry.label} ·${[...entry.sets.map(s => s.name), ...entry.bans.map(b => b.subtitle)].join(' + ')}`,
       }
     case 'archetype':
-      return { to: `/archetypes/${nameToSlug(entry.name)}`, text: `New archetype: ${entry.name}` }
+      return { to: `/archetypes/${nameToSlug(entry.name)}`, text: entry.name }
     case 'family':
-      return { to: `/families/${nameToSlug(entry.name)}`, text: `New family: ${entry.name}` }
+      return { to: `/families/${nameToSlug(entry.name)}`, text: entry.name }
+    case 'creator':
+      return { to: '/creators', text: entry.name }
     default:
       return null
   }
 }
 
-function NewsDetails({ entry, bindPreview }) {
+// The creator's YouTube, Twitch and Metafy, as icons (whichever they have)
+function CreatorLinks({ creator }) {
+  const links = [
+    { href: creator.youtube_channel_url, icon: YOUTUBE_ICON, label: 'YouTube', color: 'bg-red-900/40 text-red-300 hover:bg-red-800/60' },
+    { href: creator.twitch_channel_url, icon: TWITCH_ICON, label: 'Twitch', color: 'bg-purple-900/40 text-purple-300 hover:bg-purple-800/60' },
+    { href: creator.metafy_url, icon: METAFY_ICON, label: 'Metafy', color: 'bg-sky-900/40 text-sky-300 hover:bg-sky-800/60' },
+  ].filter(l => l.href)
+  if (!links.length) return null
+  return (
+    <div className="flex flex-wrap gap-1.5 mt-2">
+      {links.map(l => (
+        <a key={l.label} href={l.href} target="_blank" rel="noopener noreferrer" title={l.label} aria-label={l.label}
+          className={`flex items-center justify-center w-8 h-7 rounded transition-colors ${l.color}`}>
+          <svg viewBox="0 0 24 24" className="w-4 h-4 fill-current" aria-hidden="true"><path d={l.icon} /></svg>
+        </a>
+      ))}
+    </div>
+  )
+}
+
+const MANA_NAMES = { W: 'White', U: 'Blue', B: 'Black', R: 'Red', G: 'Green', C: 'Colorless' }
+
+// An archetype's or family's colours, as mana icons
+function NewsMana({ colours }) {
+  return (
+    <span className="inline-flex items-center gap-0.5 shrink-0">
+      {colours.map(c => (
+        <img key={c} src={`/images/mana/${c}.png`} alt={MANA_NAMES[c] ?? c} title={MANA_NAMES[c] ?? c} className="w-4 h-4" />
+      ))}
+    </span>
+  )
+}
+
+function NewsDetails({ entry, bindPreview, creators, types }) {
+  if (entry.type === 'creator') {
+    return creators[entry.name] ? <CreatorLinks creator={creators[entry.name]} /> : null
+  }
   if (entry.type === 'announcement') {
     const cards = [
       ...entry.banned.map(name => ({ name, tone: 'banned' })),
@@ -769,10 +828,16 @@ function NewsDetails({ entry, bindPreview }) {
       ? <p className="text-sm text-gray-400 mt-1">{cards} new Pauper card{cards === 1 ? '' : 's'}</p>
       : null
   }
-  if (entry.type === 'archetype' && entry.family) {
+  if (entry.type === 'archetype') {
+    const type = (types[entry.name] || []).join(' / ')
+    if (!entry.family && !type) return null
     return (
       <p className="text-sm text-gray-400 mt-1">
-        Family: <Link to={`/families/${nameToSlug(entry.family)}`} className="hover:text-amber-400 transition-colors">{entry.family}</Link>
+        {entry.family && (
+          <>Family: <Link to={`/families/${nameToSlug(entry.family)}`} className="hover:text-amber-400 transition-colors">{entry.family}</Link></>
+        )}
+        {entry.family && type && ' · '}
+        {type && <>Type: {type}</>}
       </p>
     )
   }
@@ -786,8 +851,18 @@ function NewspauperSection() {
   // the mana colours of the archetypes and families, by name: a family has those
   // of its archetypes
   const [mana, setMana] = useState({})
+  // the game types (Aggro, Control...) of the archetypes, by name
+  const [types, setTypes] = useState({})
+  // their representative cards ({name, preview}), by name
+  const [cards, setCards] = useState({})
+  const imageFor = useImageFor()
+  // the content creators, by name: the links of the new ones
+  const [creators, setCreators] = useState({})
 
   useEffect(() => {
+    fetchJson('/data/creators.json').then(list => {
+      setCreators(Object.fromEntries((list || []).map(c => [c.name, c])))
+    })
     Promise.all([fetchJson('/data/archetypes.json'), fetchJson('/data/families.json')]).then(([archetypes, families]) => {
       const colours = {}
       for (const a of archetypes || []) colours[a.name] = a.dominant_mana || []
@@ -796,6 +871,8 @@ function NewspauperSection() {
         colours[f.name] = ['W', 'U', 'B', 'R', 'G'].filter(m => union.has(m))
       }
       setMana(colours)
+      setTypes(Object.fromEntries((archetypes || []).map(a => [a.name, a.game_type || []])))
+      setCards(Object.fromEntries((archetypes || []).filter(a => a.representative_card).map(a => [a.name, a.representative_card])))
     })
     fetch('/data/newspauper.json').then(r => r.json()).then(setNews).catch(() => setNews([]))
   }, [])
@@ -804,40 +881,52 @@ function NewspauperSection() {
 
   return (
     <section>
-      <h2 className="text-xl font-semibold text-white mb-4">Newspauper</h2>
+      <h2 className="text-xl font-semibold text-white">Newspauper</h2>
+      <p className="text-sm text-gray-400 mt-0.5 mb-4">Major updates on the Academy</p>
       {news && entries.length === 0 ? (
-        <p className="text-sm text-gray-400">No news in the last two months.</p>
+        <p className="text-sm text-gray-400">No news in the last month.</p>
       ) : (
-        // one column on phones, two on desktops (newest first, left to right)
-        <div className="grid lg:grid-cols-2 gap-3">
+        // one column on phones, two on small desktops, three on wide ones (newest first, left to right)
+        <div className="grid lg:grid-cols-2 xl:grid-cols-3 gap-3">
           {entries.map(entry => {
             const title = newsTitle(entry)
-            // a new archetype or family is in its own colours, the other news in its kind's
+            // every kind of news has its own colour; an archetype's or family's mana
+            // colours show only as the icons next to its name
             const colours = (entry.type === 'archetype' || entry.type === 'family') ? mana[entry.name] : null
-            const kind = colours && colours.length
-              ? { ...NEWS_KINDS[entry.type], color: MANA_COLORS[colours[0]] }
-              : NEWS_KINDS[entry.type]
+            const kind = NEWS_KINDS[entry.type]
             return (
               <div key={`${entry.type}-${entry.date}-${title.text}`}
                 onClick={e => { if (!e.target.closest('a')) navigate(title.to) }}
                 className="relative flex items-stretch gap-4 pl-6 pr-4 py-3.5 rounded-xl cursor-pointer border border-gray-700 bg-gray-800 overflow-hidden hover:border-amber-400/40 transition-colors">
                 {/* the kind's colour down the left edge */}
-                <div aria-hidden="true" className="absolute inset-y-0 left-0 w-1.5" style={{ background: colours && colours.length ? manaStripe(colours) : kind.color }} />
+                <div aria-hidden="true" className="absolute inset-y-0 left-0 w-1.5" style={{ background: kind.color }} />
                 {/* the date, over the kind's icon, in a box tinted with its colour */}
                 <div className="shrink-0 flex flex-col items-center justify-center rounded-lg px-4 py-3 min-w-[5.5rem]"
-                  style={{ background: colours && colours.length ? manaTint(colours) : `${kind.color}1f` }}>
+                  style={{ background: `${kind.color}1f` }}>
                   <NewsIcon kind={kind} />
                   <span className="mt-1.5 text-xl font-bold font-mono leading-none text-gray-200">{Number(entry.date.slice(8, 10))}</span>
                   <span className="mt-1 text-[10px] uppercase tracking-wider text-gray-500">{formatShortDate(entry.date).split(' ')[0]}</span>
                 </div>
                 <div className="min-w-0 flex-1 self-center">
                   <div className="text-xs font-semibold uppercase tracking-wider" style={{ color: kind.color }}>{kind.name}</div>
-                  <Link to={title.to}
-                    className="block mt-0.5 text-base font-semibold text-white hover:text-amber-400 transition-colors leading-snug">
-                    {title.text}
-                  </Link>
-                  <NewsDetails entry={entry} bindPreview={bindPreview} />
+                  {/* the name, then the colours as mana icons */}
+                  <div className="flex items-center flex-wrap gap-x-2 gap-y-1 mt-0.5">
+                    <Link to={title.to}
+                      className="text-base font-semibold text-white hover:text-amber-400 transition-colors leading-snug">
+                      {title.text}
+                    </Link>
+                    {colours && colours.length > 0 && <NewsMana colours={colours} />}
+                  </div>
+                  <NewsDetails entry={entry} bindPreview={bindPreview} creators={creators} types={types} />
                 </div>
+                {/* a new archetype's representative card: its art, without the frame */}
+                {entry.type === 'archetype' && cards[entry.name]?.preview && (
+                  <Link to={title.to} tabIndex={-1} aria-hidden="true"
+                    className="relative shrink-0 self-stretch w-20 sm:w-28 -my-3.5 -mr-4 bg-gray-900 overflow-hidden group">
+                    <img src={imageFor(cards[entry.name].name, cards[entry.name].preview).replace('/normal/', '/art_crop/')} alt=""
+                      loading="lazy" className="absolute inset-0 w-full h-full object-cover group-hover:scale-110 transition-transform duration-300" />
+                  </Link>
+                )}
               </div>
             )
           })}
@@ -964,12 +1053,6 @@ function DiffChip({ card, cardPages, bindPreview }) {
     : <span {...handlers} title={title} className={cls}>{content}</span>
 }
 
-// The same colours, faint, as the background of a box
-function manaTint(mana) {
-  const colors = (mana && mana.length ? mana : ['C']).map(m => MANA_COLORS[m] || MANA_COLORS.C)
-  return colors.length === 1 ? `${colors[0]}1f` : `linear-gradient(135deg, ${colors.map(c => `${c}1f`).join(', ')})`
-}
-
 function RecentTournamentsSection() {
   const navigate = useNavigate()
   const [rows, setRows] = useState(null)
@@ -1026,7 +1109,8 @@ function RecentTournamentsSection() {
 
   return (
     <section>
-      <h2 className="text-xl font-semibold text-white mb-4">Recent Tournaments</h2>
+      <h2 className="text-xl font-semibold text-white">Ancient Grudge</h2>
+      <p className="text-sm text-gray-400 mt-0.5 mb-4">Major tournaments of the last week</p>
       {rows.length === 0 ? (
         <p className="text-sm text-gray-400">No tournaments of {MIN_TOURNAMENT_PLAYERS}+ players in the last week.</p>
       ) : (
@@ -1132,9 +1216,13 @@ function RecentVideosSection() {
 
   return (
     <section>
-      <h2 className="text-xl font-semibold text-white mb-4">Sewer-veillance Cam</h2>
+      <h2 className="text-xl font-semibold text-white">Sewer-veillance Cam</h2>
+      <p className="text-sm text-gray-400 mt-0.5 mb-4">Ongoing live streams and videos from the last week</p>
       {videos.length === 0 && live.length === 0 ? (
-        <p className="text-sm text-gray-400">No videos in the last week.</p>
+        // streams is null until the first check of who is live is done
+        <p className="text-sm text-gray-400">
+          {streams ? 'Nobody is live and there are no videos from the last week.' : 'Checking who is live…'}
+        </p>
       ) : (
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
           {live.map(c => <LiveTile key={c.login} channel={c} stream={streams[c.login]} details={details[c.login]} minute={minute} />)}

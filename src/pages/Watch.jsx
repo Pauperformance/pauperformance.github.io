@@ -362,16 +362,19 @@ export default function Watch() {
             {(activeCreators.size > 0 || excludedCreators.size > 0) && (
               <div className="flex flex-wrap gap-1.5 pl-[calc(theme(spacing.2)+4rem)]">
                 {[...activeCreators].map(c => (
-                  <span key={c} className="inline-flex items-center gap-1 px-3 py-1 rounded-full text-xs font-semibold bg-amber-400 text-gray-900">
+                  // the whole pill removes the filter, not just its ×
+                  <button key={c} type="button" onClick={() => toggleCreator(c)} title={`Remove the ${c} filter`} aria-label={`Remove the ${c} filter`}
+                    className="inline-flex items-center gap-1 px-3 py-1 rounded-full text-xs font-semibold bg-amber-400 text-gray-900 cursor-pointer hover:bg-amber-300 transition-colors">
                     {c}
-                    <button onClick={() => toggleCreator(c)} className="hover:text-gray-700 leading-none">×</button>
-                  </span>
+                    <span aria-hidden="true" className="leading-none">×</span>
+                  </button>
                 ))}
                 {[...excludedCreators].map(c => (
-                  <span key={c} title="Hidden" className="inline-flex items-center gap-1 px-3 py-1 rounded-full text-xs font-semibold bg-red-900/60 text-red-100 border border-red-700">
+                  <button key={c} type="button" onClick={() => toggleExcludedCreator(c)} title={`Hidden: click to show ${c} again`} aria-label={`Show ${c} again`}
+                    className="inline-flex items-center gap-1 px-3 py-1 rounded-full text-xs font-semibold bg-red-900/60 text-red-100 border border-red-700 cursor-pointer hover:bg-red-800/70 transition-colors">
                     <span className="line-through">{c}</span>
-                    <button onClick={() => toggleExcludedCreator(c)} className="hover:text-white leading-none" aria-label={`Show ${c} again`}>×</button>
-                  </span>
+                    <span aria-hidden="true" className="leading-none">×</span>
+                  </button>
                 ))}
               </div>
             )}

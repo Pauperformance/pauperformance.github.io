@@ -25,9 +25,9 @@ export default function ManaCost({ cost, size = 'w-5 h-5' }) {
           {h > 0 && <span className="mx-0.5 text-gray-500 text-xs">//</span>}
           {tokens.map((t, i) => {
             const key = t.replace('/', '')
-            if (MANA_ICONS.has(key)) return <img key={i} src={`/images/mana/${key}.png`} alt={`{${t}}`} className={`${size} inline-block`} />
+            if (MANA_ICONS.has(key)) return <img key={i} src={`/images/mana/${key}.png`} alt={`{${t}}`} className={`${size} inline-block shrink-0`} />
             return (
-              <span key={i} className={`inline-flex items-center justify-center ${size} rounded-full bg-gray-600 text-gray-200 text-xs font-bold leading-none`}>
+              <span key={i} className={`inline-flex shrink-0 items-center justify-center ${size} rounded-full bg-gray-600 text-gray-200 text-xs font-bold leading-none`}>
                 {t}
               </span>
             )
