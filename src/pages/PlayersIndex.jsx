@@ -113,6 +113,9 @@ export default function PlayersIndex() {
         av = a.archetypeCount; bv = b.archetypeCount
       } else if (sortCol === 'decks') {
         av = a.deckCount; bv = b.deckCount
+      } else if (sortCol === 'wins' || sortCol === 'top8' || sortCol === 'events') {
+        av = a[sortCol] || 0; bv = b[sortCol] || 0
+        if (av === bv) { av = a.deckCount; bv = b.deckCount }
       } else if (sortCol === 'lastSeen') {
         av = a.lastSeen; bv = b.lastSeen
       }
@@ -152,6 +155,7 @@ export default function PlayersIndex() {
           <h1 className="text-2xl font-bold text-white">Players Index</h1>
           <p className="mt-2 text-gray-400 text-sm">
             {players.length.toLocaleString()} players tracked across all Pauper tournaments.
+            Wins and Top 8s count the tournaments with a ranking and more than 8 decks listed.
           </p>
         </div>
 
@@ -239,6 +243,9 @@ export default function PlayersIndex() {
                     <SortHeader col="name"       label="Name"       sortCol={sortCol} sortDir={sortDir} onSort={handleSort} extraClass="w-1/2" />
                     <SortHeader col="archetypes" label="Archetypes" sortCol={sortCol} sortDir={sortDir} onSort={handleSort} align="right" extraClass="hidden sm:table-cell" />
                     <SortHeader col="decks"      label="Decks"      sortCol={sortCol} sortDir={sortDir} onSort={handleSort} align="right" />
+                    <SortHeader col="events"     label="Events"     sortCol={sortCol} sortDir={sortDir} onSort={handleSort} align="right" extraClass="hidden md:table-cell" />
+                    <SortHeader col="wins"       label="Wins"       sortCol={sortCol} sortDir={sortDir} onSort={handleSort} align="right" />
+                    <SortHeader col="top8"       label="Top 8"      sortCol={sortCol} sortDir={sortDir} onSort={handleSort} align="right" extraClass="hidden sm:table-cell" />
                     <SortHeader col="lastSeen"   label="Last Seen"  sortCol={sortCol} sortDir={sortDir} onSort={handleSort} align="right" extraClass="hidden md:table-cell" />
                   </tr>
                 </thead>
@@ -251,6 +258,9 @@ export default function PlayersIndex() {
                       <td className="px-4 py-2.5 font-medium text-gray-200 group-hover:text-amber-400 transition-colors">{p.name}</td>
                       <td className="px-4 py-2.5 text-right text-gray-400 hidden sm:table-cell">{p.archetypeCount}</td>
                       <td className="px-4 py-2.5 text-right font-mono text-amber-400">{p.deckCount.toLocaleString()}</td>
+                      <td className="px-4 py-2.5 text-right text-gray-400 hidden md:table-cell">{p.events || '—'}</td>
+                      <td className="px-4 py-2.5 text-right font-mono text-amber-400">{p.wins || '—'}</td>
+                      <td className="px-4 py-2.5 text-right text-gray-400 hidden sm:table-cell">{p.top8 || '—'}</td>
                       <td className="px-4 py-2.5 text-right text-gray-400 hidden md:table-cell">{formatShortDate(p.lastSeen) || '—'}</td>
                     </tr>
                   ))}
