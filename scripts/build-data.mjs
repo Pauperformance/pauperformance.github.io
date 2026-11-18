@@ -1483,19 +1483,23 @@ tournamentRows.sort((a, b) => b[1].localeCompare(a[1]) || a[0].localeCompare(b[0
 writeFileSync(join(outDir, 'tournaments.json'), JSON.stringify(tournamentRows))
 console.log('Built tournaments.json with ' + tournamentRows.length + ' entries.')
 
-// When the newest tournament was downloaded (UTC, ISO 8601). Myr stores it as
-// "fetched_at" in each tournament file; older files have none.
-const tournamentDir = 'assets/data/tournament/mtggoldfish'
+// When the newest tournament was downloaded (UTC, ISO 8601), whatever its
+// source. Myr stores it as "fetched_at" in each tournament file; older files
+// have none.
+const tournamentDirs = ['assets/data/tournament/mtggoldfish', 'assets/data/tournament/mtgtop8']
 let lastDecksFetchedAt = ''
-for (const f of readdirSync(tournamentDir)) {
-  if (!f.endsWith('.json')) continue
-  const fetchedAt = JSON.parse(readFileSync(join(tournamentDir, f), 'utf8')).fetched_at
-  if (fetchedAt && fetchedAt > lastDecksFetchedAt) lastDecksFetchedAt = fetchedAt
+for (const dir of tournamentDirs) {
+  if (!existsSync(dir)) continue
+  for (const f of readdirSync(dir)) {
+    if (!f.endsWith('.json')) continue
+    const fetchedAt = JSON.parse(readFileSync(join(dir, f), 'utf8')).fetched_at
+    if (fetchedAt && fetchedAt > lastDecksFetchedAt) lastDecksFetchedAt = fetchedAt
+  }
 }
 
 // Write aggregate stats used by the home page counters and footer.
 // lastDecksUpdate: the most recent tournament among the classified decks.
-// lastDecksFetchedAt: when the newest tournament was downloaded.
+// lastDecksFetchedAt: when the newest tournament (MTGGoldfish or MTGTop8) was downloaded.
 // classifiedDecks: the decks of an archetype. The deck-details also hold the
 // unclassified tournament decks (see above): they are not counted here.
 const stats = {
