@@ -38,6 +38,19 @@ function BannedBadge({ card }) {
   )
 }
 
+// Under the card's name: the unofficial in-universe names Wizards also printed
+// it under (Skittering Kitten for Masked Meower), if it has any.
+function AlternativeNames({ card, className = '' }) {
+  const names = card.alternative_names || []
+  if (names.length === 0) return null
+  return (
+    <p className={`text-sm text-gray-400 ${className}`}
+      title="Wizards also printed the card under this name in an in-universe set">
+      Also known as <span className="text-gray-200">{names.join(', ')}</span>
+    </p>
+  )
+}
+
 // the label column of the card's rows (first and last played, popularity,
 // played in): wide enough for "First played:"
 const LABEL_WIDTH = 'w-20'
@@ -158,6 +171,7 @@ export default function CardPane({ card, name, decks, titleAs: Title = 'h2', pag
           <BannedBadge card={card} />
           {pageLink && <PageLink card={card} />}
         </div>
+        <AlternativeNames card={card} className="md:hidden mb-2" />
               <div className="flex flex-col md:flex-row gap-8 mb-10">
                 {/* Images; on phones as wide as the images, not the page, so
                     the links under them end at the card's right edge */}
@@ -207,6 +221,7 @@ export default function CardPane({ card, name, decks, titleAs: Title = 'h2', pag
                         <BannedBadge card={card} />
                         {pageLink && <PageLink card={card} />}
                       </div>
+                      <AlternativeNames card={card} className="hidden md:block -mt-3" />
                       {faces.map((face, i) => (
                         <div key={i}>
                           {i > 0 && <div className="border-t border-gray-700 mb-5" />}
@@ -222,6 +237,7 @@ export default function CardPane({ card, name, decks, titleAs: Title = 'h2', pag
                         <BannedBadge card={card} />
                         {pageLink && <PageLink card={card} />}
                       </div>
+                      <AlternativeNames card={card} className="hidden md:block -mt-3" />
                       {s?.type_line && <span className="text-gray-300 text-sm">{s.type_line}</span>}
                       {s?.oracle_text && (
                         <RulesText text={s.oracle_text}
