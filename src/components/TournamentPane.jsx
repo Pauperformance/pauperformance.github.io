@@ -1,5 +1,6 @@
 import { useMemo } from 'react'
 import { Link } from 'react-router-dom'
+import SizeStars from './SizeStars'
 import MetaPie from './MetaPie'
 import TournamentDecks from './TournamentDecks'
 import { MetagameBadge } from './Metagame'
@@ -41,6 +42,7 @@ export default function TournamentPane({ t, showDecks = true }) {
           <div title="The different decks the sources list for the event, usually the top finishers rather than every entrant">
             <span className="text-gray-500">Players </span>
             <span className="font-medium text-gray-200">{t.decks.length}</span>
+            <SizeStars players={t.decks.length} className="ml-2" />
           </div>
           {winner && (
             <div>

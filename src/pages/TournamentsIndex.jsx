@@ -8,6 +8,7 @@ import { sourceLabel } from '../utils/sources'
 import { useMediaQuery } from '../utils/useMediaQuery'
 import TournamentPane from '../components/TournamentPane'
 import SwipeCards from '../components/SwipeCards'
+import SizeStars from '../components/SizeStars'
 
 const PAGE_SIZE = 50
 
@@ -274,6 +275,7 @@ export default function TournamentsIndex() {
                           <button onClick={() => setSelectedId(r.id)} aria-current={open ? 'true' : undefined}
                             className={`w-full px-3 py-2 text-left border-l-2 transition-colors ${open ? 'bg-gray-800 border-amber-400' : 'border-transparent hover:bg-gray-800/60'}`}>
                             <span className={`block truncate ${open ? 'text-amber-400' : 'text-gray-200'}`}>
+                              <SizeStars players={r.decks} className="w-12 mr-2" />
                               {r.name || `Tournament #${r.id}`}
                               {r.notes > 0 && (
                                 <span title={`The sources disagree on ${r.notes} point${r.notes !== 1 ? 's' : ''}`}
@@ -318,6 +320,7 @@ export default function TournamentsIndex() {
                       onClick={e => { if (!e.target.closest('a')) navigate(`/tournaments/${r.id}`) }}
                       className="bg-gray-900 hover:bg-gray-800 cursor-pointer group">
                       <td className="px-4 py-2.5 font-medium">
+                        <SizeStars players={r.decks} className="w-12 mr-2" />
                         <Link to={`/tournaments/${r.id}`} className="text-gray-200 group-hover:text-amber-400 transition-colors">
                           {r.name || `Tournament #${r.id}`}
                         </Link>
