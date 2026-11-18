@@ -4,6 +4,7 @@ import { metagameSlug } from '../src/utils/slugs.js'
 import { computeTypicalList } from '../src/utils/typicalList.js'
 import { encodeCardDecks } from '../src/utils/cardDecks.js'
 import { buildArchetypeMap } from './archetype-map.mjs'
+import { youtubeAvatars } from './creator-avatars.mjs'
 
 const buildStart = Date.now()
 
@@ -1047,10 +1048,16 @@ console.log('Built pauper_pool.json with ' + pool.length + ' sets and ' + totalC
 
 // Build creators index
 const creatorDir = 'assets/data/creator'
-const creators = readdirSync(creatorDir)
+const creatorFiles = readdirSync(creatorDir)
   .filter(function(f) { return f.endsWith('.json') })
-  .map(function(f) {
-    var c = JSON.parse(readFileSync(join(creatorDir, f), 'utf8'))
+  .map(function(f) { return JSON.parse(readFileSync(join(creatorDir, f), 'utf8')) })
+// the YouTube channels' pictures, for the creators with no Twitch channel (those
+// show their Twitch picture): fetched when missing or a week old
+const youtubeAvatarUrls = await youtubeAvatars(
+  creatorFiles.filter(function(c) { return c.youtube_channel_url && !c.twitch_channel_url })
+    .map(function(c) { return c.youtube_channel_url }))
+const creators = creatorFiles
+  .map(function(c) {
     var slug1 = c.mtgo_name ? pilotToSlug(c.mtgo_name) : null
     var slug2 = c.mtgo_name2 ? pilotToSlug(c.mtgo_name2) : null
     return {
@@ -1061,6 +1068,7 @@ const creators = readdirSync(creatorDir)
       player_slug2: (slug2 && playersMap[slug2]) ? slug2 : null,
       twitch_channel_url: c.twitch_channel_url || null,
       youtube_channel_url: c.youtube_channel_url || null,
+      youtube_avatar_url: youtubeAvatarUrls[c.youtube_channel_url] || null,
       resources: Array.from(new Set([c.name, c.mtgo_name, c.mtgo_name2].filter(Boolean)))
         .flatMap(function(n) { return resourcesByAuthor[n] || [] })
         .sort(function(a, b) { return (b.date || '').localeCompare(a.date || '') }),
@@ -1107,6 +1115,13 @@ function isLand(name) {
   return (cardTypeMap[name] || []).includes('Land')
 }
 
+// share in the previous metagame with decks (0 when not played there, "debut"
+// when in none before); null with no previous metagame to compare with
+const previousBreakdown = breakdowns[breakdowns.length - 2]
+const previousShares = previousBreakdown
+  ? new Map(previousBreakdown.archetypes.map(a => [a.name, a.meta_share])) : null
+const earlierArchetypes = new Set(breakdowns.slice(0, -1).flatMap(m => m.archetypes.map(a => a.name)))
+
 const topDecks = metagameOut.slice(0, 16).map(entry => {
   const arch = archetypeMap[entry.archetype_name]
   const typical = arch && arch.typical_list
@@ -1119,6 +1134,8 @@ const topDecks = metagameOut.slice(0, 16).map(entry => {
   return {
     archetype_name: entry.archetype_name,
     meta_share: entry.meta_share,
+    previous_share: previousShares ? previousShares.get(entry.archetype_name) || 0 : null,
+    debut: !earlierArchetypes.has(entry.archetype_name),
     dominant_mana: (arch && arch.dominant_mana) || [],
     game_type: (arch && arch.game_type) || [],
     featured_image: (representative && representative.preview)

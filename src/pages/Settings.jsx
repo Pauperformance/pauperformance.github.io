@@ -5,6 +5,7 @@ import { Toggle, DeckList, VisualList, sortCards, NO_VERSUS } from './DeckPage'
 import { LANG_FLAG, LANG_NAME } from '../utils/languages'
 import { useSettings, updateSettings, resetSettings, DEFAULT_SETTINGS } from '../utils/settings'
 import { ARTWORKS, useArtwork } from '../utils/artwork'
+import { WATCH_TYPES } from '../utils/watchTypes'
 
 // "the Watch page", linked
 function WatchLink() {
@@ -148,13 +149,13 @@ export default function Settings() {
 
         <Setting
           title="Card artwork"
-          description="The print of a card shown wherever its image appears: its first print ever (any rarity) or its first common print.">
+          description="Artworks of cards displayed in the website.">
           <Toggle value={cards.artwork} onChange={v => setCards({ artwork: v })} options={ARTWORKS} />
         </Setting>
 
         <Setting
           title="Home: metagame viewer"
-          description="How the top archetypes are shown on the home page: Brainstorm widget or table. You can still switch on the page itself.">
+          description="Choose how top archetypes appear on the home page. You can still switch on the page itself.">
           <Toggle value={home.metaView} onChange={v => setHome({ metaView: v })} options={[['brainstorm', 'Brainstorm'], ['table', 'Table']]} />
         </Setting>
 
@@ -173,9 +174,22 @@ export default function Settings() {
         </Setting>
 
         <Setting
-          title="Watch: videos or shorts"
-          description={<>What <WatchLink /> shows when you open it. You can still switch on the page itself.</>}>
-          <Toggle value={watch.type} onChange={v => setWatch({ type: v })} options={[['videos', 'Videos'], ['shorts', 'Shorts']]} />
+          title="Watch: videos, live and shorts"
+          description={<>What <WatchLink /> shows when you open it: pick any of them together. You can still change it on the page itself.</>}>
+          <div className="flex flex-wrap gap-2">
+            {WATCH_TYPES.map(([type, label]) => {
+              const on = watch.types.includes(type)
+              return (
+                <button key={type} aria-pressed={on}
+                  onClick={() => setWatch({ types: on ? watch.types.filter(t => t !== type) : [...watch.types, type] })}
+                  className={`px-3 py-1.5 rounded-lg border text-sm font-medium transition-colors ${
+                    on ? 'bg-amber-400 border-amber-400 text-gray-900' : 'border-gray-600 text-gray-400 hover:text-gray-200'
+                  }`}>
+                  {label}
+                </button>
+              )
+            })}
+          </div>
         </Setting>
 
         <Setting

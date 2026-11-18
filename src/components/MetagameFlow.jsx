@@ -265,6 +265,8 @@ function MoverBadge({ badge, large }) {
 // compare with, how much it is played), and its name.
 // large: bigger labels (the artwork tiles are big enough for them on desktops)
 export function MoverTile({ card, cardPages, bindPreview, badges = [], large = false }) {
+  // a card printed since the previous metagame glows, as the archetype box of the home page does
+  const isNew = badges.some(b => b.tone === 'new')
   const slug = cardLinkSlug(cardPages, card.name)
   const imageFor = useImageFor()
   const image = imageFor(card.name, card.image)
@@ -281,6 +283,7 @@ export function MoverTile({ card, cardPages, bindPreview, badges = [], large = f
       <span className="relative block flex-1 min-h-[2.5rem] overflow-hidden bg-gray-900">
         <img src={src} alt={card.name} loading="lazy"
           className="absolute inset-0 w-full h-full object-cover group-hover:scale-110 transition-transform duration-300" />
+        {isNew && <span aria-hidden="true" className="card-new-shine" />}
         {badges.length > 0 && (
           <span className="absolute top-1 left-1 flex flex-col items-start gap-0.5">
             {badges.map(b => <MoverBadge key={b.label} badge={b} large={large} />)}
@@ -293,7 +296,7 @@ export function MoverTile({ card, cardPages, bindPreview, badges = [], large = f
       <span className={`block truncate px-2 py-1 text-gray-300 group-hover:text-amber-400 transition-colors text-center ${large ? 'text-base' : 'text-xs'}`}>{card.name}</span>
     </>
   )
-  const className = 'group flex flex-col min-w-0 min-h-0 rounded-lg overflow-hidden bg-gray-800 border border-gray-700 hover:border-amber-400/50 transition-colors'
+  const className = `group flex flex-col min-w-0 min-h-0 rounded-lg overflow-hidden bg-gray-800 border border-gray-700 hover:border-amber-400/50 transition-colors${isNew ? ' card-new' : ''}`
   return slug
     ? <Link to={`/cards/${slug}`} {...handlers} title={title} className={className}>{content}</Link>
     : <span {...handlers} title={title} className={className}>{content}</span>
@@ -302,6 +305,7 @@ export function MoverTile({ card, cardPages, bindPreview, badges = [], large = f
 // The same card as a line of text, for the screens too narrow for the artwork:
 // its name and how it moved (or how much it is played).
 export function MoverRow({ card, cardPages, bindPreview, badges = [] }) {
+  const isNew = badges.some(b => b.tone === 'new')
   const slug = cardLinkSlug(cardPages, card.name)
   const imageFor = useImageFor()
   const image = imageFor(card.name, card.image)
@@ -321,7 +325,7 @@ export function MoverRow({ card, cardPages, bindPreview, badges = [] }) {
       </span>
     </>
   )
-  const className = 'group flex items-baseline gap-2 min-w-0 text-[13px] leading-5'
+  const className = `group flex items-baseline gap-2 min-w-0 text-[13px] leading-5${isNew ? ' card-new-row' : ''}`
   return slug
     ? <Link to={`/cards/${slug}`} {...handlers} title={title} className={className}>{content}</Link>
     : <span {...handlers} title={title} className={className}>{content}</span>

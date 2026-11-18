@@ -7,6 +7,8 @@ import { nameToSlug } from '../utils/slugs'
 import { firstYearOf, formatShortDate } from '../utils/dates'
 import { LANG_FLAG, LANG_CANONICAL, LANG_NAME } from '../utils/languages'
 import VideoCard from '../components/VideoCard'
+import LiveStreams from '../components/LiveStreams'
+import { WATCH_TYPES, showsLive, showsVideos, typeAllows } from '../utils/watchTypes'
 import SwipeCards from '../components/SwipeCards'
 import { useMediaQuery } from '../utils/useMediaQuery'
 import { getSettings } from '../utils/settings'
@@ -80,7 +82,8 @@ export default function Watch() {
   const [excludedCreators, setExcludedCreators] = useState(() => new Set(getSettings().watch.hiddenCreators))
   const [creatorSearch, setCreatorSearch] = useState('')
   // videos or shorts to start with: the visitor's setting
-  const [activeType, setActiveType] = useState(() => getSettings().watch.type)
+  // what is shown: videos, live streams, shorts, any together (none: videos and shorts)
+  const [activeTypes, setActiveTypes] = useState(() => new Set(getSettings().watch.types))
   // whether the videos preview (play without pressing play): the visitor's setting to start with
   const [previews, setPreviews] = useState(() => getSettings().videos.previews)
   const [filterDateFrom, setFilterDateFrom] = useState('')
@@ -159,7 +162,7 @@ export default function Watch() {
     setActiveArchetypes(prev => { const n = new Set(prev); n.has(a) ? n.delete(a) : n.add(a); return n })
   }
   function toggleType(t) {
-    setActiveType(prev => prev === t ? '' : t)
+    setActiveTypes(prev => { const n = new Set(prev); n.has(t) ? n.delete(t) : n.add(t); return n })
   }
 
   const toYM = (d) => d.toISOString().slice(0, 7)
@@ -180,13 +183,12 @@ export default function Watch() {
       if (excludedCreators.has(v.creator_name)) return false
       if (activeLanguages.size > 0 && !activeLanguages.has(LANG_CANONICAL[v.language] ?? v.language)) return false
       if (activeArchetypes.size > 0 && !activeArchetypes.has(v.archetype)) return false
-      if (activeType === 'videos' && v.is_short === true) return false
-      if (activeType === 'shorts' && v.is_short !== true) return false
+      if (!typeAllows(activeTypes, v)) return false
       if (filterDateFrom && v.date.slice(0, 7) < filterDateFrom) return false
       if (filterDateTo && v.date.slice(0, 7) > filterDateTo) return false
       return true
     })
-  }, [videos, search, activeCreators, activeLanguages, activeArchetypes, activeType, filterDateFrom, filterDateTo, excludedCreators])
+  }, [videos, search, activeCreators, activeLanguages, activeArchetypes, activeTypes, filterDateFrom, filterDateTo, excludedCreators])
 
   const firstYear = useMemo(() => firstYearOf(videos, 'date'), [videos])
 
@@ -236,14 +238,13 @@ export default function Watch() {
         if (activeCreators.size > 0 && !activeCreators.has(v.creator_name)) return false
         if (excludedCreators.has(v.creator_name)) return false
         if (activeLanguages.size > 0 && !activeLanguages.has(LANG_CANONICAL[v.language] ?? v.language)) return false
-        if (activeType === 'videos' && v.is_short === true) return false
-        if (activeType === 'shorts' && v.is_short !== true) return false
+        if (!typeAllows(activeTypes, v)) return false
         if (filterDateFrom && v.date.slice(0, 7) < filterDateFrom) return false
         if (filterDateTo && v.date.slice(0, 7) > filterDateTo) return false
         return true
       })
     })
-  }, [archetypes, archetypeSearch, activeArchetypes, videos, search, activeCreators, excludedCreators, activeLanguages, activeType, filterDateFrom, filterDateTo])
+  }, [archetypes, archetypeSearch, activeArchetypes, videos, search, activeCreators, excludedCreators, activeLanguages, activeTypes, filterDateFrom, filterDateTo])
 
   const visibleCreators = useMemo(() => {
     const q = search.trim().toLowerCase()
@@ -255,14 +256,13 @@ export default function Watch() {
         if (q && !v.title.toLowerCase().includes(q)) return false
         if (activeLanguages.size > 0 && !activeLanguages.has(LANG_CANONICAL[v.language] ?? v.language)) return false
         if (activeArchetypes.size > 0 && !activeArchetypes.has(v.archetype)) return false
-        if (activeType === 'videos' && v.is_short === true) return false
-        if (activeType === 'shorts' && v.is_short !== true) return false
+        if (!typeAllows(activeTypes, v)) return false
         if (filterDateFrom && v.date.slice(0, 7) < filterDateFrom) return false
         if (filterDateTo && v.date.slice(0, 7) > filterDateTo) return false
         return true
       })
     })
-  }, [creators, creatorSearch, activeCreators, excludedCreators, videos, search, activeLanguages, activeArchetypes, activeType, filterDateFrom, filterDateTo])
+  }, [creators, creatorSearch, activeCreators, excludedCreators, videos, search, activeLanguages, activeArchetypes, activeTypes, filterDateFrom, filterDateTo])
 
   return (
     <Layout>
@@ -274,7 +274,7 @@ export default function Watch() {
 
         <FilterPanel activeCount={(search ? 1 : 0) + activeCreators.size + excludedCreators.size + activeLanguages.size + activeArchetypes.size + (filterDateFrom ? 1 : 0) + (filterDateTo ? 1 : 0)}
           onClear={() => { setSearch(''); setActiveCreators(new Set()); setExcludedCreators(new Set()); setActiveLanguages(new Set()); setActiveArchetypes(new Set()); setFilterDateFrom(''); setFilterDateTo('') }}
-          summary={`${filtered.length} video${filtered.length !== 1 ? 's' : ''}`}>
+          summary={showsVideos(activeTypes) ? `${filtered.length} video${filtered.length !== 1 ? 's' : ''}` : 'Live now'}>
           <div className="relative">
             <input
               ref={searchRef}
@@ -304,8 +304,9 @@ export default function Watch() {
           </div>
           <div className="flex flex-wrap gap-2 items-center">
             <span className="text-sm text-gray-500 w-16 shrink-0">Type:</span>
-            <FilterButton active={activeType === 'videos'} onClick={() => toggleType('videos')}>Videos</FilterButton>
-            <FilterButton active={activeType === 'shorts'} onClick={() => toggleType('shorts')}>Shorts</FilterButton>
+            {WATCH_TYPES.map(([type, label]) => (
+              <FilterButton key={type} active={activeTypes.has(type)} onClick={() => toggleType(type)}>{label}</FilterButton>
+            ))}
           </div>
           <div className="flex flex-wrap gap-2 items-center">
             <span className="text-sm text-gray-500 w-16 shrink-0" title="Video previews, without pressing play">Autoplay:</span>
@@ -461,7 +462,9 @@ export default function Watch() {
           </div>
         </FilterPanel>
 
-        {loading ? (
+        {showsLive(activeTypes) && <LiveStreams hidden={excludedCreators} />}
+
+        {!showsVideos(activeTypes) ? null : loading ? (
           <p className="text-gray-400 text-sm py-8 text-center">Loading videos…</p>
         ) : (
           <>

@@ -11,7 +11,7 @@ import { useSettings } from './settings'
 // first common print's). The first is loaded by loadCardImages; the second is
 // replaced by imageFor, which looks the name up in the other map.
 
-export const ARTWORKS = [['first', 'First print'], ['common', 'First common print']]
+export const ARTWORKS = [['first', 'First print ever'], ['common', 'First common print']]
 
 // the card-images maps (name -> image URL), by artwork: the first common prints
 // and the first prints ever

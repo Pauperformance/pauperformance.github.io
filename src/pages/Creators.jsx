@@ -2,6 +2,7 @@ import { useState, useEffect } from 'react'
 import { Link } from 'react-router-dom'
 import Layout from '../components/Layout'
 import { useSearchShortcut, searchShortcutLabel } from '../utils/useSearchShortcut'
+import { useTwitchAvatar } from '../utils/twitchAvatar'
 
 const TWITCH_ICON = 'M11.571 4.714h1.715v5.143H11.57zm4.715 0H18v5.143h-1.714zM6 0L1.714 4.286v15.428h5.143V24l4.286-4.286h3.428L22.286 12V0zm14.571 11.143l-3.428 3.428h-3.429l-3 3v-3H6.857V1.714h13.714z'
 const YOUTUBE_ICON = 'M23.495 6.205a3.007 3.007 0 0 0-2.088-2.088c-1.87-.501-9.396-.501-9.396-.501s-7.507-.01-9.396.501A3.007 3.007 0 0 0 .527 6.205a31.247 31.247 0 0 0-.522 5.805 31.247 31.247 0 0 0 .522 5.783 3.007 3.007 0 0 0 2.088 2.088c1.868.502 9.396.502 9.396.502s7.506 0 9.396-.502a3.007 3.007 0 0 0 2.088-2.088 31.247 31.247 0 0 0 .5-5.783 31.247 31.247 0 0 0-.5-5.805zM9.609 15.601V8.408l6.264 3.602z'
@@ -24,6 +25,21 @@ function SocialLink({ href, icon, label, color }) {
   )
 }
 
+// The creator's picture: their Twitch profile picture, else their YouTube
+// channel's (fetched when the site is built), else their initial
+function CreatorAvatar({ creator }) {
+  const src = useTwitchAvatar(creator.twitch_channel_url) || creator.youtube_avatar_url
+  // a picture that fails to load (or none) gives way to the initial
+  const [failed, setFailed] = useState(null)
+  return src && failed !== src
+    // no referrer: some of YouTube's picture addresses refuse the ones of other sites
+    ? <img src={src} alt="" loading="lazy" referrerPolicy="no-referrer" onError={() => setFailed(src)}
+        className="h-10 w-10 shrink-0 rounded-full bg-gray-900 object-cover" />
+    : <span aria-hidden="true" className="flex h-10 w-10 shrink-0 items-center justify-center rounded-full bg-gray-700 text-sm font-bold text-gray-300">
+        {creator.name.slice(0, 1).toUpperCase()}
+      </span>
+}
+
 function CreatorCard({ creator }) {
   const mtgoEntries = [
     { name: creator.mtgo_name, slug: creator.player_slug },
@@ -32,7 +48,29 @@ function CreatorCard({ creator }) {
 
   return (
     <div className="min-w-0 bg-gray-800 border border-gray-700 rounded-lg p-4 flex flex-col gap-3 hover:border-gray-500 transition-colors">
-      <div className="font-semibold text-amber-400 text-sm leading-tight break-words">{creator.name}</div>
+      <div className="flex items-center gap-2.5 min-w-0">
+        <CreatorAvatar creator={creator} />
+        <div className="font-semibold text-amber-400 text-sm leading-tight break-words min-w-0">{creator.name}</div>
+      </div>
+
+      <div className="flex flex-wrap gap-1.5">
+        {creator.youtube_channel_url && (
+          <SocialLink
+            href={creator.youtube_channel_url}
+            icon={YOUTUBE_ICON}
+            label="YouTube"
+            color="bg-red-900/40 text-red-300 hover:bg-red-800/60"
+          />
+        )}
+        {creator.twitch_channel_url && (
+          <SocialLink
+            href={creator.twitch_channel_url}
+            icon={TWITCH_ICON}
+            label="Twitch"
+            color="bg-purple-900/40 text-purple-300 hover:bg-purple-800/60"
+          />
+        )}
+      </div>
 
       {mtgoEntries.length > 0 && (
         <div className="flex flex-col gap-1">
@@ -58,25 +96,6 @@ function CreatorCard({ creator }) {
           ))}
         </div>
       )}
-
-      <div className="flex flex-wrap gap-1.5 mt-auto">
-        {creator.youtube_channel_url && (
-          <SocialLink
-            href={creator.youtube_channel_url}
-            icon={YOUTUBE_ICON}
-            label="YouTube"
-            color="bg-red-900/40 text-red-300 hover:bg-red-800/60"
-          />
-        )}
-        {creator.twitch_channel_url && (
-          <SocialLink
-            href={creator.twitch_channel_url}
-            icon={TWITCH_ICON}
-            label="Twitch"
-            color="bg-purple-900/40 text-purple-300 hover:bg-purple-800/60"
-          />
-        )}
-      </div>
     </div>
   )
 }
