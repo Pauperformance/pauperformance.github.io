@@ -175,9 +175,9 @@ for (const archetype of archetypes) {
   // Load videos
   const videos = readJsonDir(videoFolderPath)
     .sort((a, b) => b.date.localeCompare(a.date))
-    .map(({ name: title, link, language, date, creator_name, deck_name, deck_url, video_id, is_short, is_podcast }) => ({
+    .map(({ name: title, link, language, date, creator_name, deck_name, deck_url, video_id, is_short, is_podcast, is_live }) => ({
       title, link, language, date, creator_name, deck_name: deck_name || null, deck_url: deck_url || null,
-      video_id: video_id || null, is_short: is_short === true, is_podcast: is_podcast === true,
+      video_id: video_id || null, is_short: is_short === true, is_podcast: is_podcast === true, is_live: is_live === true,
     }))
 
   const detail = {
@@ -1360,6 +1360,7 @@ readdirSync(videoDir).forEach(function(archetypeName) {
       video_id: v.video_id,
       is_short: v.is_short === true,
       is_podcast: v.is_podcast === true,
+      is_live: v.is_live === true,
     })
   })
 })
