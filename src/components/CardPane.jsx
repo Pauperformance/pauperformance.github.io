@@ -130,6 +130,14 @@ function PlayedIn({ decks }) {
 // card: the details from /data/card-details (null while they load); name: shown
 // meanwhile; decks: the decklists playing it (for the archetypes); titleAs: the
 // heading's tag; pageLink: a link to the card's own page, under the images.
+// On the cards index, at the right of the title (as "Archetype page →")
+function PageLink({ card }) {
+  return (
+    <Link to={`/cards/${card.slug || nameToSlug(card.name)}`}
+      className="ml-auto text-sm text-amber-400 hover:text-amber-300 whitespace-nowrap">Card page →</Link>
+  )
+}
+
 export default function CardPane({ card, name, decks, titleAs: Title = 'h2', pageLink = false }) {
   const artwork = useArtwork()
   if (!card) return <p className="text-gray-500 text-sm">{name ? `${name}: ` : ''}Loading…</p>
@@ -148,6 +156,7 @@ export default function CardPane({ card, name, decks, titleAs: Title = 'h2', pag
           <Title className="text-2xl font-bold text-gray-100">{card.name}</Title>
           {!isMultiFace && s?.mana_cost && <ManaCost cost={s.mana_cost} />}
           <BannedBadge card={card} />
+          {pageLink && <PageLink card={card} />}
         </div>
               <div className="flex flex-col md:flex-row gap-8 mb-10">
                 {/* Images; on phones as wide as the images, not the page, so
@@ -185,9 +194,7 @@ export default function CardPane({ card, name, decks, titleAs: Title = 'h2', pag
                         View on Scryfall →
                       </a>
                     )}
-                    {pageLink
-                      ? <Link to={`/cards/${card.slug || nameToSlug(card.name)}`} className="text-gray-400 hover:text-amber-400 transition-colors">Card page →</Link>
-                      : <Link to="/cards" className="text-gray-400 hover:text-amber-400 transition-colors">Cards Index →</Link>}
+                    {!pageLink && <Link to="/cards" className="text-gray-400 hover:text-amber-400 transition-colors">Cards Index →</Link>}
                   </div>
                 </div>
 
@@ -198,6 +205,7 @@ export default function CardPane({ card, name, decks, titleAs: Title = 'h2', pag
                       <div className="hidden md:flex items-center gap-3 flex-wrap">
                         <Title className="text-2xl font-bold text-gray-100">{card.name}</Title>
                         <BannedBadge card={card} />
+                        {pageLink && <PageLink card={card} />}
                       </div>
                       {faces.map((face, i) => (
                         <div key={i}>
@@ -212,6 +220,7 @@ export default function CardPane({ card, name, decks, titleAs: Title = 'h2', pag
                         <Title className="text-2xl font-bold text-gray-100">{card.name}</Title>
                         {s?.mana_cost && <ManaCost cost={s.mana_cost} />}
                         <BannedBadge card={card} />
+                        {pageLink && <PageLink card={card} />}
                       </div>
                       {s?.type_line && <span className="text-gray-300 text-sm">{s.type_line}</span>}
                       {s?.oracle_text && (
