@@ -1375,6 +1375,11 @@ function displayPlace(place) {
   return n + suffix
 }
 const keptTournamentFiles = new Set()
+// What each player did in the tournaments: events entered, wins and top 8s. Only
+// the tournaments with a reliable ranking count for the results (leagues, where
+// the decks share a record, do not), and a top 8 in a tournament of up to 8
+// decks means nothing, so it takes more than 8 decks listed.
+const playerResults = {}
 // The classified decks of each metagame, newest tournament first and in
 // finishing order within it, for the Decks section of its page.
 const metagameDecks = {}
@@ -1383,6 +1388,16 @@ for (const t of reconciledTournaments.slice().sort((a, b) => b.date.localeCompar
   tournamentRows.push([t.id, t.date, name, t.decks.length, t.sources.map(s => s.source), t.discrepancies.length])
   let metagame = null
   for (const m of metagameStarts) if (m.date <= t.date) metagame = m
+  t.decks.forEach((d, i) => {
+    const pilot = d.decks[d.primary].pilot
+    if (!pilot) return
+    const r = playerResults[pilotToSlug(pilot)] ||= { events: 0, wins: 0, top8: 0 }
+    r.events++
+    if (t.ranked && t.decks.length > 8) {
+      if (i === 0) r.wins++
+      if (i < 8) r.top8++
+    }
+  })
   const decks = t.decks.map(d => {
     const primary = d.decks[d.primary]
     const copies = Object.entries(d.decks)
@@ -1425,6 +1440,14 @@ for (const f of readdirSync(metagameDecksDir)) {
 }
 for (const [slug, list] of Object.entries(metagameDecks)) writeIfChanged(join(metagameDecksDir, slug + '.json'), JSON.stringify(list))
 console.log('Built metagame-decks/ with ' + Object.keys(metagameDecks).length + ' metagames.')
+// the results go in the players index
+for (const p of players) {
+  const r = playerResults[p.slug]
+  p.events = r ? r.events : 0
+  p.wins = r ? r.wins : 0
+  p.top8 = r ? r.top8 : 0
+}
+writeFileSync(join(outDir, 'players.json'), JSON.stringify(players))
 tournamentRows.sort((a, b) => b[1].localeCompare(a[1]) || a[0].localeCompare(b[0]))
 writeFileSync(join(outDir, 'tournaments.json'), JSON.stringify(tournamentRows))
 console.log('Built tournaments.json with ' + tournamentRows.length + ' entries.')
