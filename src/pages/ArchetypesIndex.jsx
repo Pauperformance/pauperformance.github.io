@@ -342,7 +342,7 @@ export default function ArchetypesIndex() {
                   label={`${cardIndex + 1} of ${sorted.length}`}
                   hint="Swipe the card left or right for the next or previous archetype.">
                   <div className="bg-gray-900 border border-gray-700 rounded-xl p-4">
-                    <ArchetypePane a={sorted[cardIndex]} meta={metaMap[selected]} metagame={metagame} details={details[selected]} />
+                    <ArchetypePane a={sorted[cardIndex]} meta={metaMap[selected]} details={details[selected]} />
                   </div>
                 </SwipeCards>
               )}
@@ -379,7 +379,7 @@ export default function ArchetypesIndex() {
                   )}
                 </div>
                 <div className="flex-1 min-w-0">
-                  {selected && <ArchetypePane a={sorted[cardIndex]} meta={metaMap[selected]} metagame={metagame} details={details[selected]} />}
+                  {selected && <ArchetypePane a={sorted[cardIndex]} meta={metaMap[selected]} details={details[selected]} />}
                 </div>
               </div>
             </>

@@ -81,18 +81,22 @@ export function versusOf(typical, board) {
   }
 }
 
-function CardName({ c, onHover, cardPages, versus, metagameCode, manaCost, bindPreview, image }) {
+// extra: a node at the right of the row, before the mana cost (the typical list's copy shares)
+function CardName({ c, onHover, cardPages, versus, metagameCode, manaCost, bindPreview, image, extra }) {
   const slug = cardLinkSlug(cardPages, c.name)
   // on touch devices a tap opens the preview sheet (the hover panel is desktop only)
   const tap = bindPreview(c.name, { slug: slug || undefined, image, hover: false })
   const hover = { ...tap, onMouseEnter: () => onHover(c.name), onMouseLeave: () => onHover(null) }
   return (
     <li className="flex items-baseline gap-2">
-      <span className="w-3 text-center shrink-0 text-xs" title={versus.title(c, metagameCode)}>
-        {versus.diff(c) > 0 && <span className="text-green-400">▲</span>}
-        {versus.diff(c) < 0 && <span className="text-red-400">▼</span>}
-      </span>
-      <span className="w-5 text-right text-gray-500 shrink-0">{c.qty}</span>
+      {/* the room for the arrows, unless there is nothing to compare to */}
+      {versus !== NO_VERSUS && (
+        <span className="w-3 text-center shrink-0 text-xs" title={versus.title(c, metagameCode)}>
+          {versus.diff(c) > 0 && <span className="text-green-400">▲</span>}
+          {versus.diff(c) < 0 && <span className="text-red-400">▼</span>}
+        </span>
+      )}
+      <span className="w-5 text-right text-gray-500 shrink-0">{c.qty || '–'}</span>
       {/* Cards with no page (banned, misspelt) are plain text. */}
       {slug ? (
         <Link to={`/cards/${slug}`} className="text-gray-200 hover:text-amber-400 transition-colors" {...hover}>
@@ -103,6 +107,8 @@ function CardName({ c, onHover, cardPages, versus, metagameCode, manaCost, bindP
       )}
       {/* the cost lines up on the right of the column */}
       {manaCost && <span className="ml-auto pl-3 self-center shrink-0" {...hover}><ManaCost cost={manaCost} size="w-4 h-4" /></span>}
+      {/* after the cost, so that the shares line up whatever the cost's width */}
+      {extra && <span className={`${manaCost ? '' : 'ml-auto '}pl-3 self-center shrink-0`}>{extra}</span>}
     </li>
   )
 }
@@ -121,19 +127,24 @@ function groupCards(cards, cardTypes) {
 
 const TILE_SIZE = 'w-[calc((100%-1rem)/3)] sm:w-36 lg:w-48'
 
-function CardTile({ c, cardPages, bindPreview, image, sizeClass = TILE_SIZE }) {
+function CardTile({ c, cardPages, bindPreview, image, sizeClass = TILE_SIZE, extra }) {
   const slug = cardLinkSlug(cardPages, c.name)
   // the card's Oracle text pops up beside it on hover (its image is already there)
   const bound = bindPreview(c.name, { slug: slug || undefined, image, showImage: false })
   const picture = image
-    ? <img src={image} alt={c.name} loading="lazy" className="w-full aspect-[63/88] rounded-xl bg-gray-800 object-cover shadow-lg border border-gray-700" />
+    ? <img src={image} alt={c.name} loading="lazy" className="block w-full aspect-[63/88] rounded-xl bg-gray-800 object-cover shadow-lg border border-gray-700" />
     : <div className="w-full aspect-[63/88] rounded-xl bg-gray-800 border border-gray-700 p-2 text-xs text-gray-300">{c.name}</div>
   const content = (
     <>
-      {picture}
-      <span className="absolute bottom-1 left-1 min-w-6 px-1.5 py-0.5 rounded-full bg-gray-900/90 border border-gray-600 text-center text-xs font-bold text-white">
-        {c.qty}×
+      <span className="relative block">
+        {picture}
+        {c.qty > 0 && (
+          <span className="absolute bottom-1 left-1 min-w-6 px-1.5 py-0.5 rounded-full bg-gray-900/90 border border-gray-600 text-center text-xs font-bold text-white">
+            {c.qty}×
+          </span>
+        )}
       </span>
+      {extra && <span className="block mt-1">{extra}</span>}
     </>
   )
   // same size as the cards of the sample hand
@@ -144,12 +155,13 @@ function CardTile({ c, cardPages, bindPreview, image, sizeClass = TILE_SIZE }) {
 }
 
 // tileClass: the size of the cards, where they are to be smaller (the settings' preview)
-export function VisualList({ cards, label, cardImages, cardTypes, groupByType, cardPages, bindPreview, tileClass }) {
+// tileExtra(card): a node under each card; others: cards shown apart after the rest (qty 0)
+export function VisualList({ cards, label, cardImages, cardTypes, groupByType, cardPages, bindPreview, tileClass, tileExtra, others, othersLabel = 'Other options' }) {
   if (!cards || !cards.length) return null
   const total = cards.reduce((sum, c) => sum + c.qty, 0)
   const grid = list => (
     <div className="flex flex-wrap gap-2">
-      {list.map((c, i) => <CardTile key={i} c={c} cardPages={cardPages} bindPreview={bindPreview} image={cardImages[c.name]} sizeClass={tileClass} />)}
+      {list.map((c, i) => <CardTile key={i} c={c} cardPages={cardPages} bindPreview={bindPreview} image={cardImages[c.name]} sizeClass={tileClass} extra={tileExtra && tileExtra(c)} />)}
     </div>
   )
   return (
@@ -165,6 +177,14 @@ export function VisualList({ cards, label, cardImages, cardTypes, groupByType, c
           {grid(list)}
         </div>
       )) : grid(cards)}
+      {others && others.length > 0 && (
+        <div>
+          <p className="text-xs text-gray-600 uppercase tracking-wider mt-3 mb-1">
+            {othersLabel} <span className="text-gray-700">({others.length})</span>
+          </p>
+          {grid(others)}
+        </div>
+      )}
     </div>
   )
 }
@@ -194,7 +214,8 @@ export function Toggle({ options, value, onChange }) {
 // What a decklist is compared with when there is nothing to compare it to.
 export const NO_VERSUS = { diff: () => 0, title: () => undefined }
 
-export function DeckList({ cards, label, onHover, bindPreview, cardImages, cardTypes, groupByType, cardPages, versus, metagameCode, manaCosts }) {
+// rowExtra(card): a node at the right of each row; others: cards listed apart, after the rest (qty 0), under `othersLabel`
+export function DeckList({ cards, label, onHover, bindPreview, cardImages, cardTypes, groupByType, cardPages, versus, metagameCode, manaCosts, rowExtra, others, othersLabel = 'Other options' }) {
   if (!cards || !cards.length) return null
   const total = cards.reduce((sum, c) => sum + c.qty, 0)
 
@@ -215,7 +236,7 @@ export function DeckList({ cards, label, onHover, bindPreview, cardImages, cardT
             {pluralType(t)} <span className="text-gray-700">({groupTotal})</span>
           </p>
           <ul className="space-y-0.5">
-            {groups[t].map((c, i) => <CardName key={i} c={c} onHover={onHover} cardPages={cardPages} versus={versus} metagameCode={metagameCode} manaCost={manaCosts[c.name]} bindPreview={bindPreview} image={cardImages[c.name]} />)}
+            {groups[t].map((c, i) => <CardName key={i} c={c} onHover={onHover} cardPages={cardPages} versus={versus} metagameCode={metagameCode} manaCost={manaCosts[c.name]} bindPreview={bindPreview} image={cardImages[c.name]} extra={rowExtra && rowExtra(c)} />)}
           </ul>
         </div>
       )
@@ -223,7 +244,7 @@ export function DeckList({ cards, label, onHover, bindPreview, cardImages, cardT
   } else {
     content = (
       <ul className="space-y-0.5">
-        {cards.map((c, i) => <CardName key={i} c={c} onHover={onHover} cardPages={cardPages} versus={versus} metagameCode={metagameCode} manaCost={manaCosts[c.name]} bindPreview={bindPreview} image={cardImages[c.name]} />)}
+        {cards.map((c, i) => <CardName key={i} c={c} onHover={onHover} cardPages={cardPages} versus={versus} metagameCode={metagameCode} manaCost={manaCosts[c.name]} bindPreview={bindPreview} image={cardImages[c.name]} extra={rowExtra && rowExtra(c)} />)}
       </ul>
     )
   }
@@ -234,6 +255,16 @@ export function DeckList({ cards, label, onHover, bindPreview, cardImages, cardT
         {label} <span className="text-gray-600">({total})</span>
       </h3>
       {content}
+      {others && others.length > 0 && (
+        <div>
+          <p className="text-xs text-gray-600 uppercase tracking-wider mt-3 mb-1">
+            {othersLabel} <span className="text-gray-700">({others.length})</span>
+          </p>
+          <ul className="space-y-0.5">
+            {others.map((c, i) => <CardName key={i} c={c} onHover={onHover} cardPages={cardPages} versus={versus} metagameCode={metagameCode} manaCost={manaCosts[c.name]} bindPreview={bindPreview} image={cardImages[c.name]} extra={rowExtra && rowExtra(c)} />)}
+          </ul>
+        </div>
+      )}
     </div>
   )
 }

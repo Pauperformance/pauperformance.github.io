@@ -2,7 +2,7 @@ import { Link } from 'react-router-dom'
 import TypicalListSection from './TypicalListSection'
 import { useCardPreview } from './CardPreview'
 import { useMetagames } from './CardPopularityChart'
-import { nameToSlug, metagameSlug } from '../utils/slugs'
+import { nameToSlug } from '../utils/slugs'
 import { useMediaQuery } from '../utils/useMediaQuery'
 
 const MANA_ORDER = ['W', 'U', 'B', 'R', 'G', 'C']
@@ -10,9 +10,9 @@ const POPULARITY_METAGAMES = '/data/archetype-popularity-metagames.json'
 
 // An archetype in brief, for the archetypes page: who it is, and its typical list.
 // a: its row of the index (name, aliases, colors, type, family); meta: its share of
-// the metagame (%), metagame: that metagame ({metagame, label, name, date}); details: the archetype's details (undefined while loading,
+// the metagame (%); details: the archetype's details (undefined while loading,
 // null if they could not be loaded).
-export default function ArchetypePane({ a, meta, metagame, details }) {
+export default function ArchetypePane({ a, meta, details }) {
   const { bind: bindPreview, preview } = useCardPreview({ sheet: true })
   const metagames = useMetagames(POPULARITY_METAGAMES)
   // phones get the simple, deck-page-like list
@@ -45,14 +45,6 @@ export default function ArchetypePane({ a, meta, metagame, details }) {
           )}
           <div>
             <span className="text-gray-500">Meta </span><span className="font-mono font-medium text-amber-400">{(meta ?? 0).toFixed(1)}%</span>
-            {metagame && (
-              <span className="text-gray-500">
-                {' '}of the current metagame:{' '}
-                <Link to={`/metagames/${metagameSlug(metagame)}`} className="text-amber-400 hover:text-amber-300">
-                  {metagame.metagame}.{metagame.label}{metagame.name && metagame.name !== metagame.label ? ` ${metagame.name}` : ''}
-                </Link>
-              </span>
-            )}
           </div>
         </div>
       </div>

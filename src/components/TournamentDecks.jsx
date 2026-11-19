@@ -109,7 +109,12 @@ function DeckPanel({ deck, several, showArchetype, data, res, view, onView, hove
           )}
           {deck.place && <span className="text-gray-500 font-normal text-sm"> · {deck.place}</span>}
         </p>
-        <Link to={`/decks/${deck.id}`} className="inline-flex items-center justify-center gap-1 rounded-lg bg-amber-400 text-gray-900 font-semibold hover:bg-amber-300 transition-colors whitespace-nowrap px-4 py-2 text-sm">Deck page</Link>
+        <div className="flex flex-wrap gap-2">
+          {deck.archetype && showArchetype && (
+            <Link to={`/archetypes/${nameToSlug(deck.archetype)}`} className="inline-flex items-center justify-center gap-1 rounded-lg bg-amber-400 text-gray-900 font-semibold hover:bg-amber-300 transition-colors whitespace-nowrap px-4 py-2 text-sm">Archetype page</Link>
+          )}
+          <Link to={`/decks/${deck.id}`} className="inline-flex items-center justify-center gap-1 rounded-lg bg-amber-400 text-gray-900 font-semibold hover:bg-amber-300 transition-colors whitespace-nowrap px-4 py-2 text-sm">Deck page</Link>
+        </div>
       </div>
       {/* where the deck was played, when the list shows it by something else (an archetype's decks) */}
       {deck.lead && <p className="-mt-2 text-sm text-gray-400">{deck.lead}{deck.detail ? ` @ ${deck.detail}` : ''}{deck.players && <SizeStars players={deck.players} className="ml-2" />}</p>}

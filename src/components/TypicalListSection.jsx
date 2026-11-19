@@ -1,23 +1,25 @@
 import { useState, useEffect, useMemo } from 'react'
-import { Link } from 'react-router-dom'
 import { MetagameBadge } from './Metagame'
 import MtgoButtons from './MtgoButtons'
 import MetagameRangeSlider from './MetagameRangeSlider'
 import ManaCurve from './ManaCurve'
 import { ColorsPie, CardTypesRadar } from './DeckStats'
 import { bansCrossed, computeTypicalList } from '../utils/typicalList'
-import { cardLinkSlug, useCardPages } from '../utils/cardPages'
+import { useCardPages } from '../utils/cardPages'
 import { nameToSlug } from '../utils/slugs'
 import { getSettings } from '../utils/settings'
-import { loadCardImages, useArtwork, useImageFor } from '../utils/artwork'
+import { loadCardImages, useArtwork } from '../utils/artwork'
 import { formatShortDate } from '../utils/dates'
 import { DeckList, VisualList, Toggle, NO_VERSUS, sortCards } from '../pages/DeckPage'
+import { useCardData, OracleText } from './CardPreview'
 
 // The typical list, computed by Myr from the archetype's recent decklists:
 // for each card, how many copies the aggregate list plays and the share of
 // decklists playing at least 1, 2, 3 and 4 copies.
 const BASIC_LAND = /^(Snow-Covered )?(Plains|Island|Swamp|Mountain|Forest|Wastes)$/
 const FEW_DECKS = 10
+// smaller cards than on a deck's page: there are up to 25 of them in a board
+const TILE_SIZE = 'w-[calc((100%-1rem)/3)] sm:w-28 lg:w-36'
 const COPIES_HEADERS = ['1+', '2+', '3+', '4']
 
 function percent(share) {
@@ -28,184 +30,40 @@ function joinNames(names) {
   return names.length < 2 ? names.join('') : `${names.slice(0, -1).join(', ')} and ${names[names.length - 1]}`
 }
 
-function CopiesCell({ share }) {
-  return (
-    <td className="px-0.5 py-1">
-      <div className="relative h-6 rounded bg-gray-800 overflow-hidden">
-        <div className="absolute inset-y-0 left-0 bg-amber-400/25" style={{ width: percent(share) }} />
-        <span className={`relative flex h-full items-center justify-center text-xs tabular-nums ${share >= 0.5 ? 'text-gray-100' : 'text-gray-400'}`}>
-          {percent(share)}
-        </span>
-      </div>
-    </td>
-  )
-}
-
-// A row of the typical list's table. No hover preview: the card images
-// beside the table have it. On touch devices a tap opens the preview sheet.
-function TypicalCardRow({ card, cardPages, bindPreview }) {
-  const slug = cardLinkSlug(cardPages, card.name)
-  const imageFor = useImageFor()
-  const handlers = bindPreview(card.name, { slug: slug || undefined, image: imageFor(card.name, card.preview), hover: false })
-  // Cards with no page (e.g. banned ones) are shown but not linked.
-  const name = slug
-    ? <Link to={`/cards/${slug}`} {...handlers} className="truncate text-gray-200 hover:text-amber-400 transition-colors">{card.name}</Link>
-    : <span {...handlers} className="truncate text-gray-200">{card.name}</span>
-  // basics (and the like) are played in any number: their average says more
+// How many of the decks play at least 1, 2, 3 and 4 copies of a card: four
+// small bars, filled by the share. Basics (and the like), played in any number,
+// say their average instead. compact: the smaller bars under a card's image.
+function CopyShares({ card, compact = false }) {
   const anyNumber = BASIC_LAND.test(card.name) || card.average > 4
+  if (anyNumber) {
+    const full = `${card.average} on average, in ${percent(card.at_least[0])} of decks`
+    // the average only: the share of decks playing a land says little (it is in the tooltip)
+    return compact
+      ? <span title={full} className="block text-center text-[11px] leading-tight text-gray-400 tabular-nums">{card.average} on average</span>
+      : <span title={full} className="text-xs text-gray-400 tabular-nums whitespace-nowrap">{card.average} on average</span>
+  }
   return (
-    <tr className="hover:bg-gray-800/60">
-      <td className="pl-3 pr-1 py-1 text-right tabular-nums font-semibold text-amber-400">{card.typical || '–'}</td>
-      <td className="px-2 py-1">
-        <div className="flex items-center gap-1.5 min-w-0">
-          {name}
-          {card.banned && (
-            <span className="shrink-0 px-1.5 rounded text-[10px] font-semibold uppercase tracking-wide bg-red-900/50 text-red-300 border border-red-800">Banned</span>
-          )}
-        </div>
-      </td>
-      {anyNumber
-        ? <td colSpan={4} className="pr-3 py-1 text-center text-xs text-gray-400 tabular-nums">{card.average} on average, in {percent(card.at_least[0])}</td>
-        : card.at_least.map((share, i) => <CopiesCell key={i} share={share} />)}
-    </tr>
-  )
-}
-
-// The groups of a visual decklist, by the card's (front face) type.
-const CARD_GROUPS = [
-  ['Creatures', t => t.includes('Creature')],
-  ['Lands', t => t.includes('Land')],
-  ['Spells', () => true],
-]
-
-function groupOf(card) {
-  const front = (card.type_line || '').split(' // ')[0]
-  return CARD_GROUPS.find(([, test]) => test(front))[0]
-}
-
-function TypicalCardImage({ card, cardPages, bindPreview }) {
-  const slug = cardLinkSlug(cardPages, card.name)
-  const imageFor = useImageFor()
-  const image = imageFor(card.name, card.preview)
-  const img = (
-    <img src={image} alt={card.name} loading="lazy"
-      className={`w-full aspect-[488/680] rounded-[4.75%/3.5%] border object-cover transition-colors ${card.banned ? 'border-red-700' : 'border-gray-700 group-hover:border-amber-400'}`} />
-  )
-  // the hover preview: the card's image (larger) and its Oracle text
-  const handlers = bindPreview(card.name, { slug: slug || undefined, image })
-  return (
-    <div className="relative">
-      {/* Cards with no page (e.g. banned ones) are shown but not linked. */}
-      {slug
-        ? <Link to={`/cards/${slug}`} {...handlers} className="group block">{img}</Link>
-        : <span {...handlers} className="group block">{img}</span>}
-      {/* copies in the typical list; for the other options, how many decklists play it */}
-      {card.typical > 0
-        ? <span className="absolute left-1.5 bottom-1.5 min-w-6 px-1.5 py-0.5 rounded-md text-center text-xs font-bold tabular-nums bg-gray-900/90 text-amber-400 border border-gray-600">
-            {card.typical}
+    <span className="flex gap-0.5" title="Decks playing at least 1, 2, 3 and 4 copies">
+      {card.at_least.map((share, i) => (
+        <span key={i} title={`${COPIES_HEADERS[i]} ${i === 0 ? 'copy' : 'copies'}: ${percent(share)} of the decks`}
+          className={`relative block rounded bg-gray-800 overflow-hidden ${compact ? 'h-4 flex-1' : 'h-5 w-8 sm:w-11'}`}>
+          <span className="absolute inset-y-0 left-0 bg-amber-400/30" style={{ width: percent(share) }} />
+          <span className={`relative flex h-full items-center justify-center tabular-nums ${compact ? 'text-[10px]' : 'text-[11px] sm:text-xs'} ${share >= 0.5 ? 'text-gray-100' : 'text-gray-500'}`}>
+            {Math.round(share * 100)}
           </span>
-        : <span title={`In ${percent(card.at_least[0])} of decklists`}
-            className="absolute left-1.5 bottom-1.5 px-1.5 py-0.5 rounded-md text-xs font-semibold tabular-nums bg-gray-900/90 text-gray-300 border border-gray-600">
-            {percent(card.at_least[0])}
-          </span>}
-      {card.banned && (
-        <span className="absolute right-1.5 bottom-1.5 px-1.5 py-0.5 rounded-md text-[10px] font-semibold uppercase bg-red-900/90 text-red-200 border border-red-800">Banned</span>
-      )}
-    </div>
-  )
-}
-
-// A board's cards as images: the typical list's, grouped by type (the
-// sideboard's aren't), then the other options while the table shows them.
-function TypicalGallery({ title, cards, grouped, showOthers, cardPages, bindPreview }) {
-  const listed = cards.filter(c => c.typical > 0)
-  const others = showOthers ? cards.filter(c => !c.typical) : []
-  // creatures, then spells, then lands, as decklists usually go
-  const groups = grouped
-    ? ['Creatures', 'Spells', 'Lands'].map(name => [name, listed.filter(c => groupOf(c) === name)])
-    : [[title, listed]]
-  const copies = group => group.reduce((n, c) => n + c.typical, 0)
-  return (
-    <div className="space-y-3">
-      {groups.filter(([, group]) => group.length).map(([name, group]) => (
-        <GalleryGroup key={name} name={name} count={copies(group)} cards={group} cardPages={cardPages} bindPreview={bindPreview} />
+        </span>
       ))}
-      {others.length > 0 && (
-        <GalleryGroup name="Other options" count={`${others.length} card${others.length === 1 ? '' : 's'}`}
-          cards={others} cardPages={cardPages} bindPreview={bindPreview} />
-      )}
-    </div>
+    </span>
   )
 }
 
-function GalleryGroup({ name, count, cards, cardPages, bindPreview }) {
-  return (
-    <div>
-      <p className="mb-1.5 text-xs font-semibold text-gray-400 uppercase tracking-wider">
-        {name} <span className="font-normal normal-case text-gray-500">({count})</span>
-      </p>
-      <div className="grid gap-2 grid-cols-[repeat(auto-fill,minmax(5.5rem,1fr))] sm:grid-cols-[repeat(auto-fill,minmax(7rem,1fr))]">
-        {cards.map(card => <TypicalCardImage key={card.name} card={card} cardPages={cardPages} bindPreview={bindPreview} />)}
-      </div>
-    </div>
-  )
-}
-
-// A board of the typical list: its table, and beside it (below on phones)
-// its cards as images. The table's toggle shows the other options in both.
-function TypicalBoard({ title, cards, grouped, cardPages, bindPreview }) {
-  const [showOthers, setShowOthers] = useState(false)
-  return (
-    <div className="grid gap-4 lg:grid-cols-[minmax(0,30rem)_minmax(0,1fr)] items-start">
-      <TypicalTable title={title} cards={cards} cardPages={cardPages} bindPreview={bindPreview}
-        showOthers={showOthers} onToggleOthers={() => setShowOthers(s => !s)} />
-      <TypicalGallery title={title} cards={cards} grouped={grouped} showOthers={showOthers}
-        cardPages={cardPages} bindPreview={bindPreview} />
-    </div>
-  )
-}
-
-function TypicalTable({ title, cards, cardPages, bindPreview, showOthers, onToggleOthers }) {
-  const listed = cards.filter(c => c.typical > 0)
-  const others = cards.filter(c => !c.typical)
-  const total = listed.reduce((n, c) => n + c.typical, 0)
-  const row = card => <TypicalCardRow key={card.name} card={card} cardPages={cardPages} bindPreview={bindPreview} />
-  return (
-    <div className="border border-gray-700 rounded-xl overflow-hidden">
-      <table className="w-full table-fixed text-sm bg-gray-900">
-        <colgroup>
-          <col className="w-9" />
-          <col />
-          {COPIES_HEADERS.map(h => <col key={h} className="w-11 sm:w-13" />)}
-        </colgroup>
-        <thead>
-          <tr className="bg-gray-800 border-b border-gray-700">
-            <th colSpan={2} className="text-left px-3 py-2 text-xs font-semibold text-gray-400 uppercase tracking-wider">
-              {title} <span className="font-normal text-gray-500">({total})</span>
-            </th>
-            {COPIES_HEADERS.map(h => (
-              <th key={h} className="py-2 text-center text-xs font-semibold text-gray-400">{h}</th>
-            ))}
-          </tr>
-        </thead>
-        <tbody className="divide-y divide-gray-700/50">
-          {listed.map(row)}
-          {showOthers && (
-            <tr>
-              <td colSpan={6} className="px-3 pt-3 pb-1 text-xs font-semibold text-gray-500 uppercase tracking-wider">Other options</td>
-            </tr>
-          )}
-          {showOthers && others.map(row)}
-        </tbody>
-      </table>
-      {others.length > 0 && (
-        <button onClick={onToggleOthers}
-          className="w-full px-3 py-2 text-xs text-gray-400 hover:text-amber-400 bg-gray-800 border-t border-gray-700 transition-colors select-none">
-          {showOthers ? 'Hide other options' : `Show ${others.length} other option${others.length === 1 ? '' : 's'}`}
-        </button>
-      )}
-    </div>
-  )
+// The typical list's cards as the board of a deck: the cards of the list (with
+// their typical copies) and, apart, the other options (qty 0).
+function boardOf(cards) {
+  return {
+    listed: cards.filter(c => c.typical > 0).map(c => ({ ...c, qty: c.typical })),
+    others: cards.filter(c => !c.typical).map(c => ({ ...c, qty: 0 })),
+  }
 }
 
 // A ban bounding the era the typical list comes from.
@@ -284,14 +142,20 @@ function useViewPref(key, initial) {
   return [value, change]
 }
 
-// On phones the typical list reads like any decklist (see a deck's page):
-// copies, name and mana cost, by type. No range to drag, no percentages.
-function CompactTypicalList({ name, list, bindPreview }) {
+// The typical list as a decklist, like a deck's page: the visitor's own view
+// choices (see the Settings page: text or visual, grouped, sorted), the
+// quantities in the list and the share of decks behind them as an extra layer
+// ("Copy %", not on phones, which have no room for it).
+function TypicalCards({ name, list, bindPreview, phone, fileSuffix = '' }) {
   const cardPages = useCardPages()
   const [data, setData] = useState({ images: {}, types: {}, costs: {}, cmc: {} })
   const [visual, setVisual] = useViewPref('visual', getSettings().deckView.visual)
   const [groupByType, setGroupByType] = useViewPref('groupByType', getSettings().deckView.groupByType)
   const [sort, setSort] = useViewPref('sort', getSettings().deckView.sort)
+  const [shares, setShares] = useViewPref('shares', true)
+  const [others, setOthers] = useState(false)
+  const [hoveredCard, setHoveredCard] = useState(null)
+  const hoveredData = useCardData(hoveredCard)
   const artwork = useArtwork()
   useEffect(() => {
     Promise.all([
@@ -301,18 +165,67 @@ function CompactTypicalList({ name, list, bindPreview }) {
       fetch('/data/card-cmc.json').then(r => r.json()),
     ]).then(([images, types, costs, cmc]) => setData({ images, types, costs, cmc })).catch(() => {})
   }, [artwork])
+  const withShares = shares && !phone
+  const main = boardOf(list.main)
+  const side = boardOf(list.side)
+  const hoveredImage = hoveredCard && (data.images[hoveredCard] || (hoveredData && hoveredData.images[0]))
+  const board = ({ listed, others: rest }, label) => {
+    const apart = others ? sortCards(rest, sort, data.cmc) : []
+    const cards = sortCards(listed, sort, data.cmc)
+    return visual ? (
+      <VisualList cards={cards} label={label} cardImages={data.images} cardTypes={data.types} groupByType={groupByType}
+        cardPages={cardPages} bindPreview={bindPreview} others={apart} tileClass={TILE_SIZE}
+        tileExtra={withShares ? c => <CopyShares card={c} compact /> : undefined} />
+    ) : (
+      <DeckList cards={cards} label={label} onHover={setHoveredCard} bindPreview={bindPreview} cardImages={data.images}
+        cardTypes={data.types} groupByType={groupByType} cardPages={cardPages} manaCosts={data.costs}
+        versus={NO_VERSUS} others={apart}
+        rowExtra={withShares ? c => <CopyShares card={c} /> : undefined} />
+    )
+  }
   const decklist = typicalDecklist(list)
+  const optionCount = main.others.length + side.others.length
+  return (
+    <div className="space-y-4">
+      <div className="flex flex-wrap items-center gap-2">
+        <Toggle value={visual} onChange={setVisual} options={[[false, 'Text'], [true, 'Visual']]} />
+        <Toggle value={groupByType} onChange={setGroupByType} options={[[true, 'Grouped'], [false, 'Ungrouped']]} />
+        <Toggle value={sort} onChange={setSort} options={[['name', 'A–Z'], ['cmc', 'Mana value']]} />
+        {!phone && <Toggle value={shares} onChange={setShares} options={[[true, 'Copy %'], [false, 'No %']]} />}
+        {!phone && optionCount > 0 && <Toggle value={others} onChange={setOthers} options={[[false, 'List only'], [true, `+ ${optionCount} options`]]} />}
+        <MtgoButtons decklist={decklist} fileName={`${nameToSlug(name)}_typical_list${fileSuffix}.txt`} />
+      </div>
+      {withShares && (
+        <p className="text-sm text-gray-400">
+          {visual ? 'Below' : 'Next to'} each card, the % of decks playing at least 1, 2, 3 and 4 copies.
+        </p>
+      )}
+      <div className="flex gap-6 items-start">
+        <div className={`min-w-0 ${visual || phone ? 'flex-1 space-y-6' : 'flex flex-col sm:flex-row gap-8'}`}>
+          {board(main, 'Maindeck')}
+          {board(side, 'Sideboard')}
+        </div>
+        {!phone && !visual && (
+          // the card hovered, as on a deck's page
+          <div className="hidden xl:flex flex-col min-[1800px]:flex-row gap-4 items-start shrink-0 sticky top-24 w-56 min-[1800px]:w-[496px]">
+            <div className="w-56 shrink-0">
+              {hoveredImage
+                ? <img src={hoveredImage} alt={hoveredCard} className="w-full rounded-xl shadow-lg border border-gray-700" />
+                : <div className="w-full aspect-[63/88] rounded-xl border border-gray-700" />}
+            </div>
+            {hoveredCard && <OracleText card={hoveredData} className="w-56 min-[1800px]:w-64 text-gray-200" />}
+          </div>
+        )}
+      </div>
+    </div>
+  )
+}
+
+// On phones, the typical list reads like any decklist, with no percentages.
+function CompactTypicalList({ name, list, bindPreview }) {
   const dates = list.first_date === list.last_date
     ? `on ${formatShortDate(list.last_date)}`
     : `between ${formatShortDate(list.first_date)} and ${formatShortDate(list.last_date)}`
-  const board = (cards, label) => visual ? (
-    <VisualList cards={sortCards(cards, sort, data.cmc)} label={label} cardImages={data.images} cardTypes={data.types}
-      groupByType={groupByType} cardPages={cardPages} bindPreview={bindPreview} />
-  ) : (
-    <DeckList cards={sortCards(cards, sort, data.cmc)} label={label} onHover={() => {}} bindPreview={bindPreview} cardImages={data.images}
-      cardTypes={data.types} groupByType={groupByType} cardPages={cardPages} manaCosts={data.costs}
-      versus={NO_VERSUS} />
-  )
   return (
     <div className="space-y-4">
       <p className="text-sm text-gray-400">
@@ -324,16 +237,7 @@ function CompactTypicalList({ name, list, bindPreview }) {
           Before the ban of {joinNames(list.ended_by_bans)}: this is how {name} was played then.
         </p>
       )}
-      <div className="flex flex-wrap gap-2">
-        <Toggle value={visual} onChange={setVisual} options={[[false, 'Text'], [true, 'Visual']]} />
-        <Toggle value={groupByType} onChange={setGroupByType} options={[[true, 'Grouped'], [false, 'Ungrouped']]} />
-        <Toggle value={sort} onChange={setSort} options={[['name', 'A–Z'], ['cmc', 'Mana value']]} />
-        <MtgoButtons decklist={decklist} fileName={`${nameToSlug(name)}_typical_list.txt`} />
-      </div>
-      <div className="space-y-6">
-        {board(decklist.main, 'Maindeck')}
-        {board(decklist.side, 'Sideboard')}
-      </div>
+      <TypicalCards name={name} list={list} bindPreview={bindPreview} phone />
     </div>
   )
 }
@@ -465,19 +369,8 @@ export default function TypicalListSection({ name, list, currentMetagame, focusM
         <p className="text-gray-500 text-sm">No decklists in this range.</p>
       ) : (
         <>
-          <div className="flex flex-wrap items-center justify-between gap-3">
-            <p className="text-sm text-gray-400">
-              Next to each card, the % of decks playing at least <i>n</i> copies.
-            </p>
-            <div className="flex flex-wrap gap-2">
-              <MtgoButtons decklist={typicalDecklist(shown)} fileName={`${nameToSlug(name)}_typical_list${fileSuffix}.txt`} />
-            </div>
-          </div>
           <div className={`space-y-6 transition-opacity ${loading ? 'opacity-40 pointer-events-none' : ''}`}>
-            <TypicalBoard title="Maindeck" cards={shown.main} grouped cardPages={cardPages} bindPreview={bindPreview} />
-            {shown.side.length > 0 && (
-              <TypicalBoard title="Sideboard" cards={shown.side} cardPages={cardPages} bindPreview={bindPreview} />
-            )}
+            <TypicalCards name={name} list={shown} bindPreview={bindPreview} fileSuffix={fileSuffix} />
             {/* the stats of the maindeck, side by side after the decklist */}
             <div className="flex flex-wrap justify-center gap-x-12 gap-y-8 items-start">
               <ColorsPie cards={typicalDecklist(shown).main} cardTypes={cardTypes} />

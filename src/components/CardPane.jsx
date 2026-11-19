@@ -143,11 +143,11 @@ function PlayedIn({ decks }) {
 // card: the details from /data/card-details (null while they load); name: shown
 // meanwhile; decks: the decklists playing it (for the archetypes); titleAs: the
 // heading's tag; pageLink: a link to the card's own page, under the images.
-// On the cards index, at the right of the title (as "Archetype page →")
+// On the cards index, at the right of the title (as the "Archetype page" button)
 function PageLink({ card }) {
   return (
     <Link to={`/cards/${card.slug || nameToSlug(card.name)}`}
-      className="ml-auto text-sm text-amber-400 hover:text-amber-300 whitespace-nowrap">Card page →</Link>
+      className="ml-auto inline-flex items-center justify-center gap-1 rounded-lg bg-amber-400 text-gray-900 font-semibold hover:bg-amber-300 transition-colors whitespace-nowrap px-4 py-2 text-sm">Card page</Link>
   )
 }
 
@@ -213,7 +213,7 @@ export default function CardPane({ card, name, decks, titleAs: Title = 'h2', pag
                 </div>
 
                 {/* Card details */}
-                <div className="flex flex-col gap-5 min-w-0">
+                <div className="flex flex-col gap-5 min-w-0 flex-1">
                   {isMultiFace ? (
                     <>
                       <div className="hidden md:flex items-center gap-3 flex-wrap">
