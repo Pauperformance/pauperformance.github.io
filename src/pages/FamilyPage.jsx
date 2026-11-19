@@ -210,6 +210,17 @@ export default function FamilyPage() {
     allVideos.length > 0 && { id: 'videos', label: 'Videos', count: allVideos.length },
   ].filter(Boolean)
 
+  // the two counters: under the pie on wide screens, beside it on phones
+  const stats = [
+    <Stat key="since" label="Played since">{summary.first ? summary.first.slice(0, 4) : '—'}</Stat>,
+    <Stat key="share" label="Current metashare">
+      <span className="inline-flex items-baseline gap-2">
+        {summary.share.toFixed(1)}%
+        {trend && <PopularityTrend share={trend.share} previous={trend.previous} />}
+      </span>
+    </Stat>,
+  ]
+
   const cardRows = allCards ? coreCards.cards : coreCards.cards.slice(0, CORE_CARDS_SHOWN)
 
   return (
@@ -279,19 +290,11 @@ export default function FamilyPage() {
               {composition.length > 0 && (
                 <div title="Each archetype's share of the family's tournament decks, over all the metagames"
                   className="flex-1 [&>div]:h-full [&>div]:flex [&>div]:items-center">
-                  <MetaPie compact shares={composition}
+                  <MetaPie compact shares={composition} aside={<div className="flex flex-col gap-3 h-full [&>*]:flex-1">{stats}</div>}
                     listClassName="grid grid-cols-1 gap-y-1.5 content-start max-h-52 overflow-y-auto no-scrollbar" />
                 </div>
               )}
-              <div className="grid grid-cols-2 gap-3">
-                <Stat label="Played since">{summary.first ? summary.first.slice(0, 4) : '—'}</Stat>
-                <Stat label="Current metashare">
-                  <span className="inline-flex items-baseline gap-2">
-                    {summary.share.toFixed(1)}%
-                    {trend && <PopularityTrend share={trend.share} previous={trend.previous} />}
-                  </span>
-                </Stat>
-              </div>
+              <div className="hidden sm:grid grid-cols-2 gap-3">{stats}</div>
             </div>
             {series?.some(([, decks]) => decks > 0) && (
               <div className="min-w-0">
@@ -305,6 +308,7 @@ export default function FamilyPage() {
         {/* the archetypes, each with its typical list */}
         <section id="archetypes">
           <SectionHeader>Archetypes</SectionHeader>
+          <p className="sm:hidden -mt-1 mb-3 text-sm text-gray-500">Tap an archetype's name to visualize it.</p>
           <FamilyArchetypes archetypes={sorted} family={family.name} metaMap={metaMap} weights={weights} parts={parts} />
         </section>
 
