@@ -619,6 +619,34 @@ for (const arch of archetypes) {
     game_type: arch.game_type || [],
   })
 }
+// A family's representative card: the one most of its archetypes play in their
+// typical list (as the family page picks it), else the representative card of
+// its first archetype that has one.
+for (const fam of Object.values(familyMap)) {
+  const cards = new Map()
+  for (const arch of archetypes) {
+    if (arch.family !== fam.name) continue
+    const t = arch.typical_list
+    if (!t || !(t.main || []).length) continue
+    const decks = t.decks || 1
+    for (const c of t.main) {
+      if (/^Basic/.test(c.type_line || '') || !c.preview) continue
+      const e = cards.get(c.name) || { name: c.name, preview: c.preview, archetypes: 0, copies: 0, weight: 0 }
+      if ((c.at_least && c.at_least[0] || 0) >= 0.5) e.archetypes++
+      e.copies += (c.average || 0) * decks
+      e.weight += decks
+      cards.set(c.name, e)
+    }
+  }
+  const rows = Array.from(cards.values()).filter(function(c) { return c.archetypes })
+  rows.sort(function(a, b) { return b.archetypes - a.archetypes || b.copies / b.weight - a.copies / a.weight || a.name.localeCompare(b.name) })
+  var rep = rows[0]
+  if (!rep) {
+    var fallback = archetypes.find(function(a) { return a.family === fam.name && a.representative_card && a.representative_card.preview })
+    rep = fallback && fallback.representative_card
+  }
+  fam.representative_card = rep ? { name: rep.name, preview: rep.preview } : null
+}
 // Parse descriptions from families/*.md
 if (existsSync(familyMdDir)) {
   readdirSync(familyMdDir).filter(function(f) { return f.endsWith('.md') }).forEach(function(fname) {

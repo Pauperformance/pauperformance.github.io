@@ -874,7 +874,11 @@ function NewspauperSection() {
       }
       setMana(colours)
       setTypes(Object.fromEntries((archetypes || []).map(a => [a.name, a.game_type || []])))
-      setCards(Object.fromEntries((archetypes || []).filter(a => a.representative_card).map(a => [a.name, a.representative_card])))
+      // by kind and name: a family can share its name with an archetype
+      setCards(Object.fromEntries([
+        ...(archetypes || []).filter(a => a.representative_card).map(a => [`archetype:${a.name}`, a.representative_card]),
+        ...(families || []).filter(f => f.representative_card).map(f => [`family:${f.name}`, f.representative_card]),
+      ]))
     })
     fetch('/data/newspauper.json').then(r => r.json()).then(setNews).catch(() => setNews([]))
   }, [])
@@ -922,11 +926,11 @@ function NewspauperSection() {
                   </div>
                   <NewsDetails entry={entry} bindPreview={bindPreview} creators={creators} types={types} />
                 </div>
-                {/* a new archetype's representative card: its art, without the frame */}
-                {entry.type === 'archetype' && cards[entry.name]?.preview && (
+                {/* a new archetype's or family's representative card: its art, without the frame */}
+                {(entry.type === 'archetype' || entry.type === 'family') && cards[`${entry.type}:${entry.name}`]?.preview && (
                   <Link to={title.to} tabIndex={-1} aria-hidden="true"
                     className="relative shrink-0 self-stretch w-20 sm:w-28 -my-3.5 -mr-4 rounded-l-2xl bg-gray-900 overflow-hidden group">
-                    <img src={imageFor(cards[entry.name].name, cards[entry.name].preview).replace('/normal/', '/art_crop/')} alt=""
+                    <img src={imageFor(cards[`${entry.type}:${entry.name}`].name, cards[`${entry.type}:${entry.name}`].preview).replace('/normal/', '/art_crop/')} alt=""
                       loading="lazy" className="absolute inset-0 w-full h-full object-cover group-hover:scale-110 transition-transform duration-300" />
                   </Link>
                 )}
