@@ -684,7 +684,7 @@ if (existsSync('assets/data/newspauper.json')) {
 // Articles: the ones from the article sites (Myr's resource exports), newest
 // first. The homepage shows the last month, the articles page all of them.
 {
-  const dir = 'assets/data/resource'
+  const dir = 'assets/data/resource/articles'
   const articles = existsSync(dir)
     ? readdirSync(dir).filter(f => f.endsWith('.json'))
         .flatMap(f => JSON.parse(readFileSync(join(dir, f), 'utf8')))
