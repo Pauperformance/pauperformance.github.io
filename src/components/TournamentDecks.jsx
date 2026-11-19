@@ -392,7 +392,7 @@ export default function TournamentDecks({ decks, several = false, showArchetype 
 
   const table = (
     <div ref={tableRef} className="lg:flex lg:gap-6 lg:items-start">
-      <div className="lg:w-80 xl:w-[26rem] lg:shrink-0">
+      <div data-sidebar className="lg:w-80 xl:w-[26rem] lg:shrink-0">
       <ul className="border border-gray-700 rounded-xl overflow-hidden bg-gray-900 divide-y divide-gray-700/50">
         {decks.map(d => {
           const open = d.id === selected
@@ -406,7 +406,7 @@ export default function TournamentDecks({ decks, several = false, showArchetype 
                 </span>
                 <span className="min-w-0 flex-1">
                   <span className={`block truncate ${open ? 'text-amber-400' : 'text-gray-200'}`}>{d.listTitle || d.pilot || 'Anonymous'}</span>
-                  <span className="block truncate text-xs text-gray-500">{d.listDetail ?? d.detail ?? d.archetype ?? 'Unclassified'}</span>
+                  <span className="block truncate text-sm text-gray-500">{d.listDetail ?? d.detail ?? d.archetype ?? 'Unclassified'}</span>
                   {several && d.copies && (d.copies.length === 1 || d.match === 'different') && (
                     <span className="block truncate text-xs text-amber-600">
                       {d.copies.length === 1 ? `only in ${sourceLabel(d.copies[0].source)}` : 'lists differ'}

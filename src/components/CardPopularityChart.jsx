@@ -75,6 +75,8 @@ export default function CardPopularityChart({
   metagamesUrl = '/data/card-popularity-metagames.json',
   subject = 'card',
   caption = 'Popularity of card in tournaments since it became Pauper legal. Hover a metagame for its rank; click to open it.',
+  // false for a series with no rank (a family's): played then means any decks
+  ranked = true,
 }) {
   const metagames = useMetagames(metagamesUrl)
   const containerRef = useRef(null)
@@ -148,10 +150,10 @@ export default function CardPopularityChart({
         <span className="inline-flex items-baseline gap-2 text-gray-400 tabular-nums">
           {activeIndex > 0 && <PopularityTrend share={active.share} previous={points[activeIndex - 1].share} />}
           <span>
-          {active.rank
+          {(ranked ? active.rank : active.decks > 0)
             ? <>
-                <span className="text-amber-400 font-semibold">#{active.rank.toLocaleString('en-US')}</span>
-                {' · '}{formatShare(active.share)} of decks ({active.decks.toLocaleString('en-US')} of {active.metagame.decks.toLocaleString('en-US')})
+                {ranked && <><span className="text-amber-400 font-semibold">#{active.rank.toLocaleString('en-US')}</span>{' · '}</>}
+                {formatShare(active.share)} of decks ({active.decks.toLocaleString('en-US')} of {active.metagame.decks.toLocaleString('en-US')})
               </>
             : <>Not played ({active.metagame.decks.toLocaleString('en-US')} decks)</>}
           </span>
