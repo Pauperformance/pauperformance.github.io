@@ -9,6 +9,8 @@ import { easeInOut, scrollGently } from '../utils/scroll'
 import { useCardPreview } from '../components/CardPreview'
 import { useImageFor } from '../utils/artwork'
 import ShareChange from '../components/ShareChange'
+import ArticleCard from '../components/ArticleCard'
+import CalendarIcon from '../components/CalendarIcon'
 import VideoCard from '../components/VideoCard'
 import { LiveTile, YouTubeLiveTile, useLiveStreams, useLiveYouTube } from '../components/LiveStreams'
 import { getSettings } from '../utils/settings'
@@ -946,6 +948,32 @@ function NewspauperSection() {
   )
 }
 
+const ARTICLE_DAYS = 30
+
+// The articles of the last month, from the sites that publish Pauper ones
+function ArticlesSection() {
+  const [articles, setArticles] = useState(null)
+
+  useEffect(() => {
+    fetchJson('/data/articles.json').then(list => setArticles(list || []))
+  }, [])
+
+  const since = daysAgoIso(ARTICLE_DAYS)
+  const recent = (articles || []).filter(a => a.date >= since)
+  if (recent.length === 0) return null
+
+  return (
+    <section>
+      <h2 className="text-xl font-semibold text-white">Read the Bones</h2>
+      <p className="text-sm text-gray-400 mt-0.5 mb-4">Pauper articles published in the last month</p>
+      <div className="grid lg:grid-cols-2 xl:grid-cols-3 gap-3">
+        {recent.map(a => <ArticleCard key={a.link} article={a} />)}
+      </div>
+      <MoreButton to="/articles">View more articles</MoreButton>
+    </section>
+  )
+}
+
 // The recent sections show what happened in the last week
 const RECENT_DAYS = 7
 const MIN_TOURNAMENT_PLAYERS = 32
@@ -970,16 +998,6 @@ function MoreButton({ to, children }) {
 }
 
 // Outline icons for the boxes of a recent tournament
-function CalendarIcon({ className }) {
-  return (
-    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round"
-      aria-hidden="true" className={className}>
-      <rect x="3.5" y="5" width="17" height="15.5" rx="2.5" />
-      <path d="M3.5 10h17M8 3v4M16 3v4" />
-    </svg>
-  )
-}
-
 // three people: one in front, one at each side
 function PlayersIcon({ className }) {
   return (
@@ -1303,6 +1321,8 @@ export default function Home() {
         <StatsSection />
 
         <RecentTournamentsSection />
+
+        <ArticlesSection />
 
         <NewspauperSection />
 

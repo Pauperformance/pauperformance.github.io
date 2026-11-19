@@ -9,6 +9,7 @@ const NAV_ITEMS = [
   { to: '/metagames', label: 'Metagames' },
   { to: '/announcements', label: 'Announcements' },
   { to: '/watch', label: 'Watch' },
+  { to: '/articles', label: 'Articles' },
   { to: '/tournaments', label: 'Tournaments' },
   { to: '/players', label: 'Players' },
   { to: '/creators', label: 'Creators' },
