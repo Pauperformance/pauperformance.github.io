@@ -681,6 +681,21 @@ if (existsSync('assets/data/newspauper.json')) {
   console.log('No Newspauper yet: built an empty newspauper.json.')
 }
 
+// Articles: the ones from the article sites (Myr's resource exports), newest
+// first. The homepage shows the last month, the articles page all of them.
+{
+  const dir = 'assets/data/resource'
+  const articles = existsSync(dir)
+    ? readdirSync(dir).filter(f => f.endsWith('.json'))
+        .flatMap(f => JSON.parse(readFileSync(join(dir, f), 'utf8')))
+        .sort((a, b) => b.date.localeCompare(a.date))
+        .map(({ source, title, link, language, author, date, summary, image, tags }) =>
+          ({ source, title, link, language, author, date, summary, image, tags }))
+    : []
+  writeFileSync(join(outDir, 'articles.json'), JSON.stringify(articles))
+  console.log('Built articles.json with ' + articles.length + ' articles.')
+}
+
 // Card popularity: Myr's ranking of the cards played in each metagame's
 // tournament decks (its export_card_popularity, missing until its
 // first export), as assets/data/card_popularity/<metagame>.json, each listing

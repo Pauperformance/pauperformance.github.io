@@ -17,6 +17,7 @@ const CardsIndex     = lazy(() => import('./pages/CardsIndex'))
 const CardPage       = lazy(() => import('./pages/CardPage'))
 const DeckPage       = lazy(() => import('./pages/DeckPage'))
 const Watch          = lazy(() => import('./pages/Watch'))
+const ArticlesIndex  = lazy(() => import('./pages/ArticlesIndex'))
 const TournamentsIndex = lazy(() => import('./pages/TournamentsIndex'))
 const TournamentPage = lazy(() => import('./pages/TournamentPage'))
 const PlayersIndex   = lazy(() => import('./pages/PlayersIndex'))
@@ -58,6 +59,7 @@ function App() {
         <Route path="/cards/:slug" element={<CardPage />} />
         <Route path="/decks/:id" element={<DeckPage />} />
         <Route path="/watch" element={<Watch />} />
+        <Route path="/articles" element={<ArticlesIndex />} />
         <Route path="/tournaments" element={<TournamentsIndex />} />
         <Route path="/tournaments/:id" element={<TournamentPage />} />
         <Route path="/players" element={<PlayersIndex />} />

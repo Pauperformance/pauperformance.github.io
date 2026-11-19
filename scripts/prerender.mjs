@@ -30,6 +30,7 @@ const routes = [
   '/creators',
   '/cards',
   '/watch',
+  '/articles',
   '/tournaments',
   '/blind-spy',
   '/diff',
