@@ -17,6 +17,7 @@ import { firstYearOf, formatShortDate } from '../utils/dates'
 import { LANG_FLAG } from '../utils/languages'
 import VideosSection, { MonthPicker } from '../components/VideosSection'
 import { FilterPanel } from '../components/FilterSheet'
+import { Pager } from '../components/DeckFilters'
 import SizeFilter, { bigEnough } from '../components/SizeFilter'
 
 const POPULARITY_METAGAMES = '/data/archetype-popularity-metagames.json'
@@ -281,35 +282,12 @@ function IntelDecksSection({ name }) {
       <p className="text-xs text-gray-500">
         {filtered.length !== decks.length ? `${filtered.length} of ${decks.length}` : decks.length} decklists
       </p>
-      {totalPages > 1 && (
-        <div ref={paginationRef} className="flex items-center justify-center gap-3 lg:pl-[21.5rem] xl:pl-[27.5rem]">
-          <button onClick={() => setPage(p => Math.max(0, p - 1))} disabled={page === 0}
-            className="px-4 py-2 rounded-lg text-sm font-semibold border border-gray-600 text-gray-400 hover:border-gray-400 hover:text-gray-200 transition-colors disabled:opacity-30 disabled:cursor-not-allowed">
-            ← Previous
-          </button>
-          <span className="text-sm text-gray-400">Page {page + 1} of {totalPages}</span>
-          <button onClick={() => setPage(p => Math.min(totalPages - 1, p + 1))} disabled={page === totalPages - 1}
-            className="px-4 py-2 rounded-lg text-sm font-semibold border border-gray-600 text-gray-400 hover:border-gray-400 hover:text-gray-200 transition-colors disabled:opacity-30 disabled:cursor-not-allowed">
-            Next →
-          </button>
-        </div>
-      )}
       {browsed.length === 0 ? (
         <p className="px-4 py-8 text-center text-gray-500 text-sm">No decklists match your filters.</p>
       ) : (
-        <TournamentDecks key={`${page}:${browsed[0].id}:${browsed.length}`} decks={browsed} showArchetype={false} />
-      )}
-      {totalPages > 1 && (
-        <div className="flex items-center justify-center gap-3 lg:pl-[21.5rem] xl:pl-[27.5rem]">
-          <button onClick={() => setPage(p => Math.max(0, p - 1))} disabled={page === 0}
-            className="px-4 py-2 rounded-lg text-sm font-semibold border border-gray-600 text-gray-400 hover:border-gray-400 hover:text-gray-200 transition-colors disabled:opacity-30 disabled:cursor-not-allowed">
-            ← Previous
-          </button>
-          <span className="text-sm text-gray-400">Page {page + 1} of {totalPages}</span>
-          <button onClick={() => setPage(p => Math.min(totalPages - 1, p + 1))} disabled={page === totalPages - 1}
-            className="px-4 py-2 rounded-lg text-sm font-semibold border border-gray-600 text-gray-400 hover:border-gray-400 hover:text-gray-200 transition-colors disabled:opacity-30 disabled:cursor-not-allowed">
-            Next →
-          </button>
+        <div ref={paginationRef}>
+          <TournamentDecks key={`${page}:${browsed[0].id}:${browsed.length}`} decks={browsed} showArchetype={false}
+            pager={<Pager page={page} totalPages={totalPages} onPage={setPage} />} />
         </div>
       )}
     </div>

@@ -182,8 +182,9 @@ const NAV_BUTTON = 'px-4 py-2 rounded-lg text-sm font-semibold border border-gra
 // one has, or whose lists differ, is pointed out. Each deck is shown by its
 // pilot, `lead` (default: its place) on the left and `detail` (default: its
 // archetype) under the pilot; showArchetype: whether the panel names the
-// archetype, which is no news on the page of the archetype itself.
-export default function TournamentDecks({ decks, several = false, showArchetype = true }) {
+// archetype, which is no news on the page of the archetype itself; pager: the
+// Previous / Next buttons for the pages of decks, under the list.
+export default function TournamentDecks({ decks, several = false, showArchetype = true, pager = null }) {
   const isDesktop = useIsDesktop()
   const mode = isDesktop ? 'table' : 'swap'
   const [selectedId, setSelectedId] = useState(null)
@@ -391,7 +392,8 @@ export default function TournamentDecks({ decks, several = false, showArchetype 
 
   const table = (
     <div ref={tableRef} className="lg:flex lg:gap-6 lg:items-start">
-      <ul className="lg:w-80 xl:w-[26rem] lg:shrink-0 border border-gray-700 rounded-xl overflow-hidden bg-gray-900 divide-y divide-gray-700/50">
+      <div className="lg:w-80 xl:w-[26rem] lg:shrink-0">
+      <ul className="border border-gray-700 rounded-xl overflow-hidden bg-gray-900 divide-y divide-gray-700/50">
         {decks.map(d => {
           const open = d.id === selected
           return (
@@ -403,7 +405,7 @@ export default function TournamentDecks({ decks, several = false, showArchetype 
                   {d.players && <div className="mt-1 leading-none"><SizeStars players={d.players} /></div>}
                 </span>
                 <span className="min-w-0 flex-1">
-                  <span className={`block truncate ${open ? 'text-amber-400' : 'text-gray-200'}`}>{d.pilot || 'Anonymous'}</span>
+                  <span className={`block truncate ${open ? 'text-amber-400' : 'text-gray-200'}`}>{d.listTitle || d.pilot || 'Anonymous'}</span>
                   <span className="block truncate text-xs text-gray-500">{d.listDetail ?? d.detail ?? d.archetype ?? 'Unclassified'}</span>
                   {several && d.copies && (d.copies.length === 1 || d.match === 'different') && (
                     <span className="block truncate text-xs text-amber-600">
@@ -417,6 +419,8 @@ export default function TournamentDecks({ decks, several = false, showArchetype 
           )
         })}
       </ul>
+      {pager}
+      </div>
       {isDesktop && selectedDeck && (
         // stays in view while the list is scrolled; a fixed height, so that the page doesn't change height from one deck to the next
         <div ref={targetRef} className="flex-1 min-w-0 sticky top-24 h-[calc(100vh-7rem)] overflow-y-auto">
