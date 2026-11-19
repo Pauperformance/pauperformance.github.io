@@ -90,6 +90,16 @@ jobs:
         source venv/bin/activate
         python -m pauperformance_bot.task.async_scraper
 
+    # The articles of the article sites (Cards Realm, CoolStuffInc, MTG Rocks),
+    # into assets/data/resource/articles. Incremental: a run with nothing new
+    # costs a few requests. A site that blocks the runners (as MTGGoldfish does)
+    # must not hold up the Academy update, hence continue-on-error.
+    - name: Scrape articles (sync scraper)
+      continue-on-error: true
+      run: |
+        source venv/bin/activate
+        python -m pauperformance_bot.task.sync_scraper resources
+
     - name: Classify tournaments
       run: |
         source venv/bin/activate
