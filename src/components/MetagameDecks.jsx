@@ -2,6 +2,7 @@ import { useState, useEffect, useMemo, useRef } from 'react'
 import { useTournamentSizes, playersOf } from '../utils/tournamentSizes'
 import TournamentDecks, { useIsDesktop } from './TournamentDecks'
 import { FilterPanel } from './FilterSheet'
+import SizeFilter, { bigEnough } from './SizeFilter'
 import { SearchInput, SelectInput, Pager } from './DeckFilters'
 import { displayPlace } from '../utils/places'
 import { formatShortDate } from '../utils/dates'
@@ -18,6 +19,7 @@ export default function MetagameDecks({ slug }) {
   const [archetype, setArchetype] = useState('')
   const [tournament, setTournament] = useState('')
   const [pilot, setPilot] = useState('')
+  const [minStars, setMinStars] = useState(0)
   const isDesktop = useIsDesktop()
   const sizes = useTournamentSizes()
   const sectionRef = useRef(null)
@@ -56,8 +58,9 @@ export default function MetagameDecks({ slug }) {
     return (decks || []).filter(d =>
       (!archetype || d.archetype === archetype) &&
       (!t || (d.tournament_name || '').toLowerCase().includes(t)) &&
-      (!p || (d.pilot || '').toLowerCase().includes(p)))
-  }, [decks, archetype, tournament, pilot])
+      (!p || (d.pilot || '').toLowerCase().includes(p)) &&
+      bigEnough(playersOf(sizes, d), minStars))
+  }, [decks, sizes, archetype, tournament, pilot, minStars])
 
   if (!decks) return <p className="text-gray-500 text-sm">Loading decklists…</p>
   if (!decks.length) return <p className="text-gray-500 text-sm">No decklists recorded.</p>
@@ -76,13 +79,13 @@ export default function MetagameDecks({ slug }) {
     // in the list the archetype is what tells the decks of a metagame apart
     listDetail: d.archetype,
   }))
-  const activeCount = (archetype ? 1 : 0) + (tournament ? 1 : 0) + (pilot ? 1 : 0)
+  const activeCount = (archetype ? 1 : 0) + (tournament ? 1 : 0) + (pilot ? 1 : 0) + (minStars ? 1 : 0)
   const count = n => n.toLocaleString('en-US')
 
   return (
     <div ref={sectionRef} className="space-y-3">
       <FilterPanel scopeRef={sectionRef} activeCount={activeCount}
-        onClear={() => { setArchetype(''); setTournament(''); setPilot(''); setPage(0) }}
+        onClear={() => { setArchetype(''); setTournament(''); setPilot(''); setMinStars(0); setPage(0) }}
         summary={`${count(filtered.length)} decklist${filtered.length !== 1 ? 's' : ''}`}>
         <SelectInput value={archetype} onChange={e => filter(setArchetype)(e.target.value)}>
           <option value="">All archetypes</option>
@@ -92,6 +95,7 @@ export default function MetagameDecks({ slug }) {
           onChange={e => filter(setTournament)(e.target.value)} onClear={() => filter(setTournament)('')} />
         <SearchInput placeholder="Search pilots…" value={pilot}
           onChange={e => filter(setPilot)(e.target.value)} onClear={() => filter(setPilot)('')} />
+        <SizeFilter value={minStars} onChange={filter(setMinStars)} />
       </FilterPanel>
       <p className="text-xs text-gray-500">
         {filtered.length !== decks.length ? `${count(filtered.length)} of ${count(decks.length)}` : count(decks.length)} decklists
