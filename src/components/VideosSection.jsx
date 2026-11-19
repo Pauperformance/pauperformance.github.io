@@ -1,6 +1,7 @@
 import { useState, useEffect, useMemo, useRef } from 'react'
 import { firstYearOf } from '../utils/dates'
 import { LANG_FLAG, LANG_CANONICAL, LANG_NAME } from '../utils/languages'
+import { getSettings } from '../utils/settings'
 import VideoCard from './VideoCard'
 import { FilterPanel } from './FilterSheet'
 
@@ -57,10 +58,21 @@ export function MonthPicker({ label, value, onChange, labelClass = '', firstYear
   )
 }
 
-export default function VideosSection({ videos: allVideos }) {
+export default function VideosSection({ videos: listedVideos }) {
+  // the creators hidden in the Settings are left out, as on the Watch page
+  const allVideos = useMemo(() => {
+    const hidden = new Set(getSettings().watch.hiddenCreators)
+    return hidden.size ? (listedVideos || []).filter(v => !hidden.has(v.creator_name)) : listedVideos
+  }, [listedVideos])
   const [search, setSearch] = useState('')
   const [activeCreators, setActiveCreators] = useState(new Set())
-  const [activeLanguages, setActiveLanguages] = useState(new Set())
+  // starts with the languages picked in the Settings, those the videos are in (none: all of them)
+  const [activeLanguages, setActiveLanguages] = useState(() => {
+    const present = new Set((allVideos || []).map(v => LANG_CANONICAL[v.language] ?? v.language))
+    const wanted = getSettings().watch.languages.filter(l => present.has(l))
+    return new Set(wanted)
+  })
+  const [activeArchetypes, setActiveArchetypes] = useState(new Set())
   const [activeType, setActiveType] = useState('videos')
   const [filterDateFrom, setFilterDateFrom] = useState('')
   const [filterDateTo, setFilterDateTo] = useState('')
@@ -76,9 +88,12 @@ export default function VideosSection({ videos: allVideos }) {
   const sectionRef = useRef(null)
 
   const creators = useMemo(() => [...new Set((allVideos || []).map(v => v.creator_name).filter(Boolean))].sort(), [allVideos])
+  // the archetypes of the videos, when they come from several (a family's): filtered by, and named on each
+  const archetypes = useMemo(() => [...new Set((allVideos || []).map(v => v.archetype).filter(Boolean))].sort(), [allVideos])
   const languages = useMemo(() => [...new Set((allVideos || []).map(v => LANG_CANONICAL[v.language] ?? v.language).filter(Boolean))].sort(), [allVideos])
 
   function toggleCreator(c) { setActiveCreators(prev => { const n = new Set(prev); n.has(c) ? n.delete(c) : n.add(c); return n }) }
+  function toggleArchetype(a) { setActiveArchetypes(prev => { const n = new Set(prev); n.has(a) ? n.delete(a) : n.add(a); return n }) }
   function toggleLanguage(l) { setActiveLanguages(prev => { const n = new Set(prev); n.has(l) ? n.delete(l) : n.add(l); return n }) }
   function toggleType(t) { setActiveType(prev => prev === t ? '' : t) }
 
@@ -97,13 +112,14 @@ export default function VideosSection({ videos: allVideos }) {
       if (q && !v.title.toLowerCase().includes(q)) return false
       if (activeCreators.size > 0 && !activeCreators.has(v.creator_name)) return false
       if (activeLanguages.size > 0 && !activeLanguages.has(LANG_CANONICAL[v.language] ?? v.language)) return false
+      if (activeArchetypes.size > 0 && !activeArchetypes.has(v.archetype)) return false
       if (activeType === 'videos' && v.is_short === true) return false
       if (activeType === 'shorts' && v.is_short !== true) return false
       if (filterDateFrom && v.date.slice(0, 7) < filterDateFrom) return false
       if (filterDateTo && v.date.slice(0, 7) > filterDateTo) return false
       return true
     })
-  }, [allVideos, search, activeCreators, activeLanguages, activeType, filterDateFrom, filterDateTo])
+  }, [allVideos, search, activeCreators, activeLanguages, activeArchetypes, activeType, filterDateFrom, filterDateTo])
 
   const firstYear = useMemo(() => firstYearOf(allVideos, 'date'), [allVideos])
 
@@ -166,8 +182,8 @@ export default function VideosSection({ videos: allVideos }) {
   return (
     <div ref={sectionRef} className="space-y-3">
       <FilterPanel scopeRef={sectionRef}
-        activeCount={(search ? 1 : 0) + activeCreators.size + activeLanguages.size + (filterDateFrom ? 1 : 0) + (filterDateTo ? 1 : 0)}
-        onClear={() => { setSearch(''); setActiveCreators(new Set()); setActiveLanguages(new Set()); setFilterDateFrom(''); setFilterDateTo('') }}
+        activeCount={(search ? 1 : 0) + activeCreators.size + activeLanguages.size + activeArchetypes.size + (filterDateFrom ? 1 : 0) + (filterDateTo ? 1 : 0)}
+        onClear={() => { setSearch(''); setActiveCreators(new Set()); setActiveLanguages(new Set()); setActiveArchetypes(new Set()); setFilterDateFrom(''); setFilterDateTo('') }}
         summary={`${filtered.length} video${filtered.length !== 1 ? 's' : ''}`}>
         <div className="relative">
           <input type="search" placeholder="Search videos…" value={search} onChange={e => setSearch(e.target.value)}
@@ -179,6 +195,14 @@ export default function VideosSection({ videos: allVideos }) {
             </button>
           )}
         </div>
+        {archetypes.length > 1 && (
+          <div className="flex flex-wrap gap-2 items-center">
+            <span className="text-sm text-gray-500 w-16 shrink-0">Archetype:</span>
+            {archetypes.map(a => (
+              <FilterButton key={a} active={activeArchetypes.has(a)} onClick={() => toggleArchetype(a)}>{a}</FilterButton>
+            ))}
+          </div>
+        )}
         {languages.length > 1 && (
           <div className="flex flex-wrap gap-2 items-center">
             <span className="text-sm text-gray-500 w-16 shrink-0">Language:</span>
@@ -244,7 +268,7 @@ export default function VideosSection({ videos: allVideos }) {
           <>
             {viewMode === 'paginated' && totalPages > 1 && paginationBar(paginationRef)}
             <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
-              {visibleVideos.map(v => <VideoCard showArchetype={false} withAvatar key={v.video_id || v.link} v={v} />)}
+              {visibleVideos.map(v => <VideoCard showArchetype={archetypes.length > 1} withAvatar key={v.video_id || v.link} v={v} />)}
             </div>
             {viewMode === 'paginated' && totalPages > 1 && paginationBar(null)}
             {viewMode === 'infinite' && visibleCount < filtered.length && (

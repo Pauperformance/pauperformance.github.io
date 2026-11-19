@@ -10,6 +10,7 @@ import TournamentPane from '../components/TournamentPane'
 import SwipeCards from '../components/SwipeCards'
 import SizeStars, { sizeStars } from '../components/SizeStars'
 import SizeFilter from '../components/SizeFilter'
+import { scrollSidebarToTop } from '../utils/scroll'
 
 const PAGE_SIZE = 50
 
@@ -162,12 +163,12 @@ export default function TournamentsIndex() {
 
   const paginationBar = (ref) => totalPages > 1 && (
     <div ref={ref} className="flex items-center justify-center gap-3 py-2">
-      <button onClick={() => setPage(p => Math.max(0, p - 1))} disabled={page === 0}
+      <button onClick={e => { scrollSidebarToTop(e.currentTarget); setPage(p => Math.max(0, p - 1)) }} disabled={page === 0}
         className="px-4 py-2 rounded-lg text-sm font-semibold border border-gray-600 text-gray-400 hover:border-gray-400 hover:text-gray-200 transition-colors disabled:opacity-30 disabled:cursor-not-allowed">
         ← Previous
       </button>
       <span className="text-sm text-gray-400">Page {page + 1} of {totalPages}</span>
-      <button onClick={() => setPage(p => Math.min(totalPages - 1, p + 1))} disabled={page >= totalPages - 1}
+      <button onClick={e => { scrollSidebarToTop(e.currentTarget); setPage(p => Math.min(totalPages - 1, p + 1)) }} disabled={page >= totalPages - 1}
         className="px-4 py-2 rounded-lg text-sm font-semibold border border-gray-600 text-gray-400 hover:border-gray-400 hover:text-gray-200 transition-colors disabled:opacity-30 disabled:cursor-not-allowed">
         Next →
       </button>

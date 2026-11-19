@@ -26,3 +26,23 @@ export function scrollGently(to) {
   }
   frame = requestAnimationFrame(step)
 }
+
+// Call from a Previous / Next button at the end of a sidebar list: brings the
+// start of that list back into view, gently. The sidebar is either its own
+// scrolling box (the wide index pages) or a block of the page marked with
+// data-sidebar (the decks of a tournament, an archetype, a player...).
+export function scrollSidebarToTop(button) {
+  if (!button) return
+  const reduced = window.matchMedia('(prefers-reduced-motion: reduce)').matches
+  const behavior = reduced ? 'auto' : 'smooth'
+  for (let el = button.parentElement; el && el !== document.body; el = el.parentElement) {
+    if (el.scrollHeight > el.clientHeight && /(auto|scroll)/.test(getComputedStyle(el).overflowY)) {
+      if (el.scrollTop > 0) el.scrollTo({ top: 0, behavior })
+      return
+    }
+  }
+  const block = button.closest('[data-sidebar]')
+  if (!block) return
+  const top = block.getBoundingClientRect().top
+  if (top < 96) scrollGently(window.scrollY + top - 96)
+}

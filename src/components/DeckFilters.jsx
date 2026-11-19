@@ -1,4 +1,5 @@
 // The pieces of a decks list shared by the archetype and metagame pages.
+import { scrollSidebarToTop } from '../utils/scroll'
 
 const INPUT = 'w-full bg-gray-900 border border-gray-600 rounded-lg px-4 py-2 text-sm text-gray-100 placeholder-gray-500 focus:outline-none focus:border-amber-400'
 
@@ -30,9 +31,9 @@ export function Pager({ page, totalPages, onPage }) {
   if (totalPages <= 1) return null
   return (
     <div className="flex items-center justify-between gap-2 mt-3">
-      <button onClick={() => onPage(Math.max(0, page - 1))} disabled={page === 0} className={PAGER_BUTTON}>← Previous</button>
+      <button onClick={e => { scrollSidebarToTop(e.currentTarget); onPage(Math.max(0, page - 1)) }} disabled={page === 0} className={PAGER_BUTTON}>← Previous</button>
       <span className="text-xs text-gray-400 text-center">Page {page + 1} of {totalPages}</span>
-      <button onClick={() => onPage(Math.min(totalPages - 1, page + 1))} disabled={page === totalPages - 1} className={PAGER_BUTTON}>Next →</button>
+      <button onClick={e => { scrollSidebarToTop(e.currentTarget); onPage(Math.min(totalPages - 1, page + 1)) }} disabled={page === totalPages - 1} className={PAGER_BUTTON}>Next →</button>
     </div>
   )
 }

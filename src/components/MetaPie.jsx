@@ -79,7 +79,7 @@ function DonutChart({ data, activeIndex, onSliceEnter, onSliceLeave }) {
 // most played first. Archetypes under minListedShare (%) are listed as one
 // Other row. listClassName, listStyle: the list's grid, sized to its length;
 // rowClassName: each row's.
-export default function MetaPie({ shares, minListedShare = 0, listClassName, listStyle, rowClassName = '', linkSuffix = '' }) {
+export default function MetaPie({ shares, minListedShare = 0, listClassName, listStyle, rowClassName = '', linkSuffix = '', compact = false }) {
   const [activeIndex, setActiveIndex] = useState(undefined)
 
   // the archetypes under minListedShare are Other in the donut too
@@ -113,9 +113,9 @@ export default function MetaPie({ shares, minListedShare = 0, listClassName, lis
   )
 
   return (
-    <div className="bg-gray-800 border border-gray-700 rounded-xl p-5">
-      <div className="flex flex-col sm:flex-row gap-6 items-start">
-        <div className="w-full sm:w-56 shrink-0 h-56 sm:-mt-3">
+    <div className={`bg-gray-800 border border-gray-700 rounded-xl ${compact ? 'p-4' : 'p-5'}`}>
+      <div className={`flex flex-col sm:flex-row ${compact ? 'items-center gap-4' : 'items-start gap-6'}`}>
+        <div className={compact ? 'w-36 h-36 shrink-0 mx-auto sm:mx-0' : 'w-full sm:w-56 shrink-0 h-56 sm:-mt-3'}>
           <DonutChart
             data={chartData}
             activeIndex={activeIndex}
