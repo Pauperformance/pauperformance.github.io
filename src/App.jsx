@@ -7,6 +7,7 @@ const Home           = lazy(() => import('./pages/Home'))
 const ArchetypesIndex = lazy(() => import('./pages/ArchetypesIndex'))
 const ArchetypeMapPage = lazy(() => import('./pages/ArchetypeMapPage'))
 const ArchetypePage  = lazy(() => import('./pages/ArchetypePage'))
+const FamiliesIndex  = lazy(() => import('./pages/FamiliesIndex'))
 const FamilyPage     = lazy(() => import('./pages/FamilyPage'))
 const Announcements  = lazy(() => import('./pages/Announcements'))
 const PauperPool     = lazy(() => import('./pages/PauperPool'))
@@ -48,6 +49,7 @@ function App() {
         <Route path="/archetypes" element={<ArchetypesIndex />} />
         <Route path="/view" element={<ArchetypeMapPage />} />
         <Route path="/archetypes/:name" element={<ArchetypePage />} />
+        <Route path="/families" element={<FamiliesIndex />} />
         <Route path="/families/:name" element={<FamilyPage />} />
         <Route path="/announcements" element={<Announcements />} />
         <Route path="/timeline" element={<Navigate to="/announcements" replace />} />
