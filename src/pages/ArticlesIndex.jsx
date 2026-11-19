@@ -18,9 +18,9 @@ function localIso(d) {
 }
 
 const RANGES = [
+  { label: 'Last week', back: d => d.setDate(d.getDate() - 7) },
   { label: 'Last month', back: d => d.setMonth(d.getMonth() - 1) },
   { label: 'Last 3 months', back: d => d.setMonth(d.getMonth() - 3) },
-  { label: 'Last year', back: d => d.setFullYear(d.getFullYear() - 1) },
 ]
 
 const inputClass = 'bg-gray-900 border border-gray-600 rounded-lg px-3 py-1 text-sm text-gray-300 hover:border-gray-400 focus:outline-none focus:border-amber-400'

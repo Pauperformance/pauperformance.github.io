@@ -3,7 +3,13 @@ import { LANG_FLAG, LANG_CANONICAL, LANG_NAME } from '../utils/languages'
 import CalendarIcon from './CalendarIcon'
 
 const ARTICLE_COLOR = '#d9822b'
-const SOURCE_NAMES = { cardsrealm: 'Cards Realm' }
+const SOURCE_NAMES = { cardsrealm: 'Cards Realm', coolstuffinc: 'CoolStuffInc', mtgrocks: 'MTGRocks' }
+// The site's logo, shown when an article has no picture of its own
+const SOURCE_LOGOS = {
+  cardsrealm: '/images/sources/cardsrealm.png',
+  coolstuffinc: '/images/sources/coolstuffinc.png',
+  mtgrocks: '/images/sources/mtgrocks.png',
+}
 
 // An article from one of the sites that publish Pauper ones, in the look of a
 // Newspauper entry: the date on the left, the picture full-height on the right.
@@ -46,10 +52,13 @@ export default function ArticleCard({ article: a, showImage = true }) {
         </div>
       </div>
       {/* the article's picture, as full-height as the card art in Newspauper */}
-      {showImage && a.image && (
-        <div className="order-3 relative shrink-0 self-stretch w-20 sm:w-28 -my-3 -mr-3 sm:-my-3.5 sm:-mr-4 rounded-l-2xl bg-gray-900 overflow-hidden">
-          <img src={a.image} alt="" loading="lazy" referrerPolicy="no-referrer"
-            className="absolute inset-0 w-full h-full object-cover group-hover:scale-110 transition-transform duration-300" />
+      {showImage && (a.image || SOURCE_LOGOS[a.source]) && (
+        <div className={`order-3 relative shrink-0 self-stretch w-20 sm:w-28 -my-3 -mr-3 sm:-my-3.5 sm:-mr-4 rounded-l-2xl overflow-hidden ${a.image ? 'bg-gray-900' : 'bg-white'}`}>
+          {a.image
+            ? <img src={a.image} alt="" loading="lazy" referrerPolicy="no-referrer"
+                className="absolute inset-0 w-full h-full object-cover group-hover:scale-110 transition-transform duration-300" />
+            : <img src={SOURCE_LOGOS[a.source]} alt={SOURCE_NAMES[a.source] || a.source} loading="lazy"
+                className="absolute inset-0 w-full h-full object-contain p-2" />}
         </div>
       )}
     </a>
