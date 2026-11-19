@@ -4,6 +4,7 @@ import Layout from '../components/Layout'
 import CardLink from '../components/PoolCardLink'
 import MetaPie from '../components/MetaPie'
 import ShareChange from '../components/ShareChange'
+import TableOfContents from '../components/TableOfContents'
 import MetagameDecks from '../components/MetagameDecks'
 import { useCardPreview } from '../components/CardPreview'
 import { useCardPages, cardLinkSlug } from '../utils/cardPages'
@@ -330,6 +331,13 @@ export default function MetagamePage() {
 
   const shown = metagame ? metagame.archetypes.filter(a => a.meta_share >= MIN_SHARE) : []
   const small = metagame ? metagame.archetypes.slice(shown.length) : []
+  const cm = metagame && metagame.card_movers
+  const sections = metagame && metagame.decks > 0 ? [
+    { id: 'pie', label: 'Bake into a Pie' },
+    { id: 'archetypes', label: 'Archetypes', count: shown.length },
+    cm && (cm.top || cm.up.length > 0 || cm.down.length > 0) && { id: 'cards', label: cm.top ? 'Top Cards' : 'Top Movers' },
+    { id: 'decks', label: 'Decks', count: metagame.decks },
+  ].filter(Boolean) : []
 
   return (
     <Layout>
@@ -345,7 +353,8 @@ export default function MetagamePage() {
 
         {metagame && (
           <>
-            <div className="space-y-4">
+            <div className="flex flex-col gap-6 md:flex-row md:items-start md:justify-between">
+            <div className="space-y-4 min-w-0 flex-1">
               <div className="flex items-center justify-between gap-3">
                 <Link to="/metagames" className="text-sm text-gray-400 hover:text-amber-400 transition-colors">← Metagame Index</Link>
                 <div className="flex gap-2">
@@ -370,6 +379,8 @@ export default function MetagamePage() {
                 </p>
               </div>
             </div>
+            {sections.length > 0 && <TableOfContents sections={sections} />}
+            </div>
 
             <Counters metagame={metagame} bindPreview={bindPreview} />
 
@@ -377,7 +388,7 @@ export default function MetagamePage() {
               <p className="text-gray-400 text-sm">No classified decklists from this metagame.</p>
             ) : (
               <>
-                <section>
+                <section id="pie">
                   <h2 className="text-xl font-semibold text-white mb-4">Bake into a Pie</h2>
                   <MetaPie
                     shares={metagame.archetypes.map(a => ({ archetype_name: a.name, meta_share: a.meta_share }))}
@@ -385,7 +396,7 @@ export default function MetagamePage() {
                     listClassName="grid grid-cols-2 lg:grid-cols-3 gap-x-4 gap-y-1.5 content-start" />
                 </section>
 
-                <section>
+                <section id="archetypes">
                   <h2 className="text-xl font-semibold text-white mb-1">Archetypes</h2>
                   <p className="text-sm text-gray-400 mb-4">
                     Archetypes with at least {MIN_SHARE}% of the decks, with popularity change since the previous
@@ -419,7 +430,7 @@ export default function MetagamePage() {
                 </section>
 
                 {metagame.card_movers && (metagame.card_movers.top || metagame.card_movers.up.length > 0 || metagame.card_movers.down.length > 0) && (
-                  <section>
+                  <section id="cards">
                     <h2 className="text-xl font-semibold text-white mb-1">
                       {metagame.card_movers.top ? 'Top Cards' : 'Top Movers'}
                     </h2>
