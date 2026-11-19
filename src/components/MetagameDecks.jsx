@@ -96,13 +96,14 @@ export default function MetagameDecks({ slug }) {
       <p className="text-xs text-gray-500">
         {filtered.length !== decks.length ? `${count(filtered.length)} of ${count(decks.length)}` : count(decks.length)} decklists
       </p>
-      <Pager page={page} totalPages={totalPages} onPage={setPage} innerRef={pagerRef} />
       {browsed.length === 0 ? (
         <p className="px-4 py-8 text-center text-gray-500 text-sm">No decklists match your filters.</p>
       ) : (
-        <TournamentDecks key={`${page}:${browsed[0].id}:${browsed.length}`} decks={browsed} />
+        <div ref={pagerRef}>
+          <TournamentDecks key={`${page}:${browsed[0].id}:${browsed.length}`} decks={browsed}
+            pager={<Pager page={page} totalPages={totalPages} onPage={setPage} />} />
+        </div>
       )}
-      <Pager page={page} totalPages={totalPages} onPage={setPage} />
     </div>
   )
 }

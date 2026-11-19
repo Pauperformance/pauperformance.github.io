@@ -1,6 +1,12 @@
 import { useState, useEffect, useMemo, useRef } from 'react'
 import { useParams, Link } from 'react-router-dom'
 import Layout from '../components/Layout'
+import TournamentDecks, { useIsDesktop } from '../components/TournamentDecks'
+import { FilterPanel } from '../components/FilterSheet'
+import SizeFilter, { bigEnough } from '../components/SizeFilter'
+import { Pager } from '../components/DeckFilters'
+import { useTournamentSizes, playersOf } from '../utils/tournamentSizes'
+import { displayPlace } from '../utils/places'
 import { nameToSlug } from '../utils/slugs'
 import { METAFY_ICON } from '../utils/socialIcons'
 import { firstYearOf, formatDate, formatShortDate } from '../utils/dates'
@@ -39,7 +45,7 @@ function MonthPicker({ label, value, onChange, firstYear }) {
 
   return (
     <div className="flex items-center gap-1.5">
-      <span className="text-sm text-gray-500 shrink-0 w-12">{label}</span>
+      <span className="text-sm text-gray-400 shrink-0">{label}</span>
       <select value={month} onChange={e => handleMonth(e.target.value)} className={SELECT_CLS}>
         <option value="">Month</option>
         {MONTHS.map((m, i) => <option key={i} value={String(i + 1).padStart(2, '0')}>{m}</option>)}
@@ -126,7 +132,11 @@ export default function PlayerPage() {
   const [archetypeSearch, setArchetypeSearch] = useState('')
   const [dropdownOpen, setDropdownOpen] = useState(false)
   const [page, setPage] = useState(0)
+  const [minSize, setMinSize] = useState(0)
+  const sectionRef = useRef(null)
   const dropdownRef = useRef(null)
+  const isDesktop = useIsDesktop()
+  const sizes = useTournamentSizes()
   const paginationRef = useRef(null)
   const pageInitRef = useRef(true)
 
@@ -198,9 +208,26 @@ export default function PlayerPage() {
       if (filterDateFrom && (d.tournament_date || '').slice(0, 7) < filterDateFrom) return false
       if (filterDateTo && (d.tournament_date || '').slice(0, 7) > filterDateTo) return false
       if (activeArchetypes.size > 0 && !activeArchetypes.has(d.archetype)) return false
+      if (!bigEnough(playersOf(sizes, d), minSize)) return false
       return true
     })
-  }, [player, filterTournament, filterDateFrom, filterDateTo, activeArchetypes])
+  }, [player, filterTournament, filterDateFrom, filterDateTo, activeArchetypes, minSize, sizes])
+
+  const toYM = d => d.toISOString().slice(0, 7)
+  const applyRange = daysAgo => {
+    const to = new Date()
+    const from = new Date()
+    if (daysAgo === 7) from.setDate(from.getDate() - 7)
+    else if (daysAgo === 30) from.setMonth(from.getMonth() - 1)
+    else from.setFullYear(from.getFullYear() - 1)
+    setFilterDateFrom(toYM(from))
+    setFilterDateTo(toYM(to))
+    setPage(0)
+  }
+
+  const clearFilters = () => {
+    setFilterTournament(''); setFilterDateFrom(''); setFilterDateTo(''); setActiveArchetypes(new Set()); setMinSize(0); setPage(0)
+  }
 
   const firstYear = useMemo(() => firstYearOf(player?.decks, 'tournament_date'), [player])
 
@@ -232,25 +259,25 @@ export default function PlayerPage() {
 
   useEffect(() => { setVideoPage(0) }, [filteredVideos])
 
-  const totalPages = Math.ceil(filtered.length / PAGE_SIZE)
-  const pageDecks = filtered.slice(page * PAGE_SIZE, (page + 1) * PAGE_SIZE)
+  // desktop: a page of decks beside the decklist; phones swipe through all of them
+  const totalPages = isDesktop ? Math.ceil(filtered.length / PAGE_SIZE) : 1
+  const pageDecks = isDesktop ? filtered.slice(page * PAGE_SIZE, (page + 1) * PAGE_SIZE) : filtered
 
   const totalVideoPages = Math.ceil(filteredVideos.length / VIDEO_PAGE_SIZE)
   const visibleVideos = filteredVideos.slice(videoPage * VIDEO_PAGE_SIZE, (videoPage + 1) * VIDEO_PAGE_SIZE)
 
-  const paginationBar = (ref) => (
-    <div ref={ref} className="flex items-center justify-center gap-3 py-2">
-      <button onClick={() => setPage(p => Math.max(0, p - 1))} disabled={page === 0}
-        className="px-4 py-2 rounded-lg text-sm font-semibold border border-gray-600 text-gray-400 hover:border-gray-400 hover:text-gray-200 transition-colors disabled:opacity-30 disabled:cursor-not-allowed">
-        ← Previous
-      </button>
-      <span className="text-sm text-gray-400">Page {page + 1} of {totalPages}</span>
-      <button onClick={() => setPage(p => Math.min(totalPages - 1, p + 1))} disabled={page >= totalPages - 1}
-        className="px-4 py-2 rounded-lg text-sm font-semibold border border-gray-600 text-gray-400 hover:border-gray-400 hover:text-gray-200 transition-colors disabled:opacity-30 disabled:cursor-not-allowed">
-        Next →
-      </button>
-    </div>
-  )
+  const browsed = pageDecks.map(d => ({
+    id: d.id,
+    pilot: player.name,
+    archetype: d.archetype,
+    place: displayPlace(d.place),
+    lead: formatShortDate(d.tournament_date),
+    detail: d.tournament_name,
+    // in the list: the archetype large, the event small
+    listTitle: d.archetype,
+    listDetail: d.tournament_name,
+    players: playersOf(sizes, d),
+  }))
 
   return (
     <Layout>
@@ -375,7 +402,10 @@ export default function PlayerPage() {
 
             <h2 className="text-lg font-semibold text-white border-t border-gray-700 pt-4">Decks</h2>
 
-            <div className="bg-gray-800 border border-gray-700 rounded-xl p-4 space-y-3">
+            <div ref={sectionRef} className="space-y-3">
+            <FilterPanel scopeRef={sectionRef} onClear={clearFilters}
+              activeCount={(filterTournament ? 1 : 0) + activeArchetypes.size + (filterDateFrom ? 1 : 0) + (filterDateTo ? 1 : 0) + (minSize ? 1 : 0)}
+              summary={`${filtered.length} deck${filtered.length !== 1 ? 's' : ''}`}>
               <div className="relative">
                 <input
                   type="search"
@@ -446,59 +476,35 @@ export default function PlayerPage() {
               <div className="flex flex-wrap items-center gap-4">
                 <MonthPicker label="From:" value={filterDateFrom} onChange={v => { setFilterDateFrom(v); setPage(0) }} firstYear={firstYear} />
                 <MonthPicker label="To:" value={filterDateTo} onChange={v => { setFilterDateTo(v); setPage(0) }} firstYear={firstYear} />
-                {(filterDateFrom || filterDateTo) && (
-                  <button onClick={() => { setFilterDateFrom(''); setFilterDateTo(''); setPage(0) }}
-                    className="px-2.5 py-1 rounded-lg text-xs font-semibold border border-gray-600 text-gray-400 hover:border-gray-400 hover:text-gray-200 transition-colors">
-                    Reset
-                  </button>
-                )}
+                <div className="flex gap-1.5">
+                  {[['Last week', 7], ['Last month', 30], ['Last year', 365]].map(([label, days]) => (
+                    <button key={label} onClick={() => applyRange(days)}
+                      className="px-2.5 py-1 text-xs rounded-md border border-gray-600 text-gray-400 hover:border-amber-400/50 hover:text-amber-400 transition-colors">
+                      {label}
+                    </button>
+                  ))}
+                  {(filterDateFrom || filterDateTo) && (
+                    <button onClick={() => { setFilterDateFrom(''); setFilterDateTo(''); setPage(0) }}
+                      className="px-2.5 py-1 text-xs rounded-md border border-gray-600 text-gray-400 hover:border-amber-400/50 hover:text-amber-400 transition-colors">
+                      Reset
+                    </button>
+                  )}
+                </div>
               </div>
-            </div>
+              <SizeFilter value={minSize} onChange={v => { setMinSize(v); setPage(0) }} />
+            </FilterPanel>
 
             <p className="text-xs text-gray-500">{filtered.length.toLocaleString()} deck{filtered.length !== 1 ? 's' : ''}</p>
 
             {filtered.length === 0 ? (
               <p className="text-center text-gray-500 text-sm py-12">No decks match your filters.</p>
             ) : (
-              <>
-                {totalPages > 1 && paginationBar(paginationRef)}
-                <div className="border border-gray-700 rounded-xl overflow-hidden bg-gray-900">
-                  <table className="w-full text-base bg-gray-900 table-fixed">
-                    <thead>
-                      <tr className="bg-gray-800 border-b border-gray-700">
-                        <th className="text-left px-4 py-2 text-xs font-semibold text-gray-400 uppercase tracking-wider w-[35%]">Tournament</th>
-                        <th className="text-left px-4 py-2 text-xs font-semibold text-gray-400 uppercase tracking-wider w-[20%] hidden sm:table-cell">Archetype</th>
-                        <th className="text-left px-4 py-2 text-xs font-semibold text-gray-400 uppercase tracking-wider w-40 hidden md:table-cell">Date</th>
-                        <th className="text-left px-4 py-2 text-xs font-semibold text-gray-400 uppercase tracking-wider w-24 hidden sm:table-cell">Place</th>
-                        <th className="text-left px-4 py-2 text-xs font-semibold text-gray-400 uppercase tracking-wider w-20">Deck</th>
-                      </tr>
-                    </thead>
-                    <tbody className="divide-y divide-gray-700/50 bg-gray-900">
-                      {pageDecks.map(d => (
-                        <tr key={d.id} className="bg-gray-900 hover:bg-gray-800 transition-colors">
-                          <td className="px-4 py-2.5 text-gray-300 truncate">{d.tournament_name || '—'}</td>
-                          <td className="px-4 py-2.5 hidden sm:table-cell">
-                            <Link to={`/archetypes/${nameToSlug(d.archetype)}`}
-                              className="text-amber-400 hover:underline font-medium">
-                              {d.archetype}
-                            </Link>
-                          </td>
-                          <td className="px-4 py-2.5 text-gray-500 hidden md:table-cell">{formatShortDate(d.tournament_date) || '—'}</td>
-                          <td className="px-4 py-2.5 text-gray-400 hidden sm:table-cell">{d.place || '—'}</td>
-                          <td className="px-4 py-2.5">
-                            <Link to={`/decks/${d.id}`}
-                              className="text-xs font-semibold text-gray-400 hover:text-amber-400 transition-colors">
-                              View
-                            </Link>
-                          </td>
-                        </tr>
-                      ))}
-                    </tbody>
-                  </table>
-                </div>
-                {totalPages > 1 && paginationBar(null)}
-              </>
+              <div ref={paginationRef}>
+                <TournamentDecks key={`${page}:${browsed[0].id}:${browsed.length}`} decks={browsed}
+                  pager={<Pager page={page} totalPages={totalPages} onPage={setPage} />} />
+              </div>
             )}
+            </div>
 
             {creator && (
               <div className="space-y-4">

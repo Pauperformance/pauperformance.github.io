@@ -32,7 +32,7 @@ export default function PlayersIndex() {
   const [activeArchetypes, setActiveArchetypes] = useState(new Set())
   const [archetypeSearch, setArchetypeSearch] = useState('')
   const [dropdownOpen, setDropdownOpen] = useState(false)
-  const [sortCol, setSortCol] = useState('decks')
+  const [sortCol, setSortCol] = useState('events')
   const [sortDir, setSortDir] = useState('desc')
   const [page, setPage] = useState(0)
   const dropdownRef = useRef(null)
