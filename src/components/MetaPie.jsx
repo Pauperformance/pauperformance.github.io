@@ -78,8 +78,8 @@ function DonutChart({ data, activeIndex, onSliceEnter, onSliceLeave }) {
 // of archetypes and their shares. shares: [{ archetype_name, meta_share }],
 // most played first. Archetypes under minListedShare (%) are listed as one
 // Other row. listClassName, listStyle: the list's grid, sized to its length;
-// rowClassName: each row's.
-export default function MetaPie({ shares, minListedShare = 0, listClassName, listStyle, rowClassName = '', linkSuffix = '', compact = false }) {
+// rowClassName: each row's. aside: shown on phones only, to the right of the pie.
+export default function MetaPie({ shares, minListedShare = 0, listClassName, listStyle, rowClassName = '', linkSuffix = '', compact = false, aside }) {
   const [activeIndex, setActiveIndex] = useState(undefined)
 
   // the archetypes under minListedShare are Other in the donut too
@@ -113,18 +113,24 @@ export default function MetaPie({ shares, minListedShare = 0, listClassName, lis
   )
 
   return (
-    <div className={`bg-gray-800 border border-gray-700 rounded-xl ${compact ? 'p-4' : 'p-5'}`}>
-      <div className={`flex flex-col sm:flex-row ${compact ? 'items-center gap-4' : 'items-start gap-6'}`}>
-        <div className={compact ? 'w-36 h-36 shrink-0 mx-auto sm:mx-0' : 'w-full sm:w-56 shrink-0 h-56 sm:-mt-3'}>
-          <DonutChart
-            data={chartData}
-            activeIndex={activeIndex}
-            onSliceEnter={(i) => setActiveIndex(i)}
-            onSliceLeave={() => setActiveIndex(undefined)}
-          />
+    <div className={aside ? 'sm:bg-gray-800 sm:border sm:border-gray-700 sm:rounded-xl sm:p-4' : `bg-gray-800 border border-gray-700 rounded-xl ${compact ? 'p-4' : 'p-5'}`}>
+      <div className={`flex flex-col sm:flex-row ${aside ? 'sm:items-center sm:gap-4' : compact ? 'items-center gap-4' : 'items-start gap-6'}`}>
+        <div className={aside ? 'flex items-stretch gap-3 w-full sm:w-auto sm:block shrink-0' : 'contents'}>
+          {/* phones: the pie and the list make one L-shaped card, the aside outside it on the pie's right */}
+          <div className={aside ? 'relative -mb-[2px] shrink-0 p-3 rounded-t-xl border border-b-0 border-gray-700 bg-gray-800 sm:mb-0 sm:p-0 sm:border-0 sm:bg-transparent sm:rounded-none' : 'contents'}>
+            <div className={compact ? `w-36 h-36 shrink-0 sm:mx-0 ${aside ? '' : 'mx-auto'}` : 'w-full sm:w-56 shrink-0 h-56 sm:-mt-3'}>
+              <DonutChart
+                data={chartData}
+                activeIndex={activeIndex}
+                onSliceEnter={(i) => setActiveIndex(i)}
+                onSliceLeave={() => setActiveIndex(undefined)}
+              />
+            </div>
+          </div>
+          {aside && <div className="sm:hidden flex-1 min-w-0 pb-3">{aside}</div>}
         </div>
 
-        <div className={`flex-1 min-w-0 w-full sm:w-auto ${listClassName}`} style={listStyle}>
+        <div className={`flex-1 min-w-0 w-full sm:w-auto ${aside ? 'rounded-b-xl rounded-tr-xl border border-gray-700 bg-gray-800 p-4 sm:p-0 sm:border-0 sm:bg-transparent sm:rounded-none' : ''} ${listClassName}`} style={listStyle}>
           {listed.map((entry, i) => row(
             entry.archetype_name,
             i < SHOWN_SLICES ? CHART_COLORS[i] : OTHER_COLOR,
