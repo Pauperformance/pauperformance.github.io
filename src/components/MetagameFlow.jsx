@@ -304,7 +304,7 @@ export function MoverTile({ card, cardPages, bindPreview, badges = [], large = f
 
 // The same card as a line of text, for the screens too narrow for the artwork:
 // its name and how it moved (or how much it is played).
-export function MoverRow({ card, cardPages, bindPreview, badges = [] }) {
+export function MoverRow({ card, cardPages, bindPreview, badges = [], roomy = false }) {
   const isNew = badges.some(b => b.tone === 'new')
   const slug = cardLinkSlug(cardPages, card.name)
   const imageFor = useImageFor()
@@ -318,14 +318,14 @@ export function MoverRow({ card, cardPages, bindPreview, badges = [] }) {
     : `${card.name}: in ${card.share.toFixed(1)}% of the decks`
   const content = (
     <>
-      <span className="truncate min-w-0 flex-1 text-gray-300 group-hover:text-amber-400 transition-colors">{card.name}</span>
+      <span className={`min-w-0 flex-1 text-gray-300 group-hover:text-amber-400 transition-colors ${roomy ? 'truncate text-[15px]' : 'truncate'}`}>{card.name}</span>
       {badges.map(b => <MoverBadge key={b.label} badge={b} />)}
-      <span className={`shrink-0 font-mono tabular-nums ${!compared ? 'text-amber-400' : change > 0 ? 'text-emerald-400' : 'text-rose-400'}`}>
+      <span className={`shrink-0 font-mono tabular-nums ${roomy ? 'text-sm font-semibold' : ''} ${!compared ? 'text-amber-400' : change > 0 ? 'text-emerald-400' : 'text-rose-400'}`}>
         {compared ? `${change > 0 ? '▲' : '▼'} ${Math.abs(change).toFixed(1)}%` : `${card.share.toFixed(1)}%`}
       </span>
     </>
   )
-  const className = `group flex items-baseline gap-2 min-w-0 text-[13px] leading-5${isNew ? ' card-new-row' : ''}`
+  const className = `group flex gap-2 min-w-0 ${roomy ? 'items-center text-[15px] leading-6 py-2 px-2.5 -mx-2.5 rounded-lg active:bg-gray-700/60' : 'items-baseline text-[13px] leading-5'}${isNew ? ' card-new-row' : ''}`
   return slug
     ? <Link to={`/cards/${slug}`} {...handlers} title={title} className={className}>{content}</Link>
     : <span {...handlers} title={title} className={className}>{content}</span>
@@ -363,10 +363,19 @@ function Events({ metagame, poolUrls, bindPreview }) {
   return (
     <div key={metagameSlug(metagame)} className="space-y-2">
       {/* the main set (the biggest) first, its supplementary sets after */}
-      {[...metagame.sets].sort((a, b) => b.cards.length - a.cards.length).map(s => (
-        <div key={s.scryfall_code} className="flow-event-in text-sm text-gray-300">
-          <span className="text-xs uppercase tracking-wide text-gray-500 mr-2">New set</span>
-          {s.name} <span className="text-gray-500">· {s.cards.length} new card{s.cards.length === 1 ? '' : 's'}</span>
+      {[...metagame.sets].sort((a, b) => b.cards.length - a.cards.length).map((s, i) => (
+        <div key={s.scryfall_code} className="flow-event-in space-y-2 rounded-lg border border-amber-300/30 bg-amber-300/5 px-3 py-2.5"
+          style={{ animationDelay: `${i * 80}ms` }}>
+          <p className="text-sm text-gray-200 flex flex-wrap items-center gap-x-2 gap-y-1">
+            <span className="rounded-full border border-amber-300/70 px-2 text-xs font-semibold leading-5 text-amber-300">New set</span>
+            <span className="font-semibold text-white">{s.name}</span>
+            <span className="text-gray-400">· {s.cards.length} new card{s.cards.length === 1 ? '' : 's'} in Pauper</span>
+          </p>
+          {s.cards.length > 0 && (
+            <div className="flex flex-wrap gap-1.5">
+              {s.cards.map(c => <CardLink key={c.name} card={{ name: c.name, url: c.url }} tone="new" bindPreview={bindPreview} />)}
+            </div>
+          )}
         </div>
       ))}
       {metagame.bans.map((b, i) => (

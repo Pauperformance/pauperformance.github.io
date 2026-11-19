@@ -26,7 +26,7 @@ export default function ArchetypePane({ a, meta, details }) {
             {a.name}
             {a.aliases?.length > 0 && <span className="ml-2 text-sm font-normal text-gray-500">({a.aliases.join(', ')})</span>}
           </h2>
-          <Link to={`/archetypes/${nameToSlug(a.name)}`} className="text-sm text-amber-400 hover:text-amber-300 whitespace-nowrap">Archetype page →</Link>
+          <Link to={`/archetypes/${nameToSlug(a.name)}`} className="inline-flex items-center justify-center gap-1 px-4 py-2 rounded-lg bg-amber-400 text-gray-900 text-sm font-semibold hover:bg-amber-300 transition-colors whitespace-nowrap">Archetype page</Link>
         </div>
         <div className="flex flex-wrap items-center gap-x-6 gap-y-2 text-sm">
           <div className="flex items-center gap-1">
@@ -43,7 +43,9 @@ export default function ArchetypePane({ a, meta, details }) {
               <Link to={`/families/${nameToSlug(a.family)}`} className="font-medium text-amber-400 hover:text-amber-300">{a.family}</Link>
             </div>
           )}
-          <div><span className="text-gray-500">Meta </span><span className="font-mono font-medium text-amber-400">{(meta ?? 0).toFixed(1)}%</span></div>
+          <div>
+            <span className="text-gray-500">Meta </span><span className="font-mono font-medium text-amber-400">{(meta ?? 0).toFixed(1)}%</span>
+          </div>
         </div>
       </div>
 

@@ -5,6 +5,7 @@ import Layout from '../components/Layout'
 import { useCardPreview } from '../components/CardPreview'
 import { AppearanceRow, MetagameBadge } from '../components/Metagame'
 import CardPopularityChart, { PopularityTrend, useMetagames } from '../components/CardPopularityChart'
+import { useTournamentSizes, playersOf } from '../utils/tournamentSizes'
 import TournamentDecks, { useIsDesktop } from '../components/TournamentDecks'
 import { displayPlace } from '../utils/places'
 import TypicalListSection from '../components/TypicalListSection'
@@ -16,6 +17,7 @@ import { firstYearOf, formatShortDate } from '../utils/dates'
 import { LANG_FLAG } from '../utils/languages'
 import VideosSection, { MonthPicker } from '../components/VideosSection'
 import { FilterPanel } from '../components/FilterSheet'
+import SizeFilter, { bigEnough } from '../components/SizeFilter'
 
 const POPULARITY_METAGAMES = '/data/archetype-popularity-metagames.json'
 const MANA_ORDER = ['W', 'U', 'B', 'R', 'G', 'C']
@@ -160,7 +162,9 @@ function IntelDecksSection({ name }) {
   const [filterDateFrom, setFilterDateFrom] = useState('')
   const [filterDateTo, setFilterDateTo] = useState('')
   const [filterPilot, setFilterPilot] = useState('')
+  const [minSize, setMinSize] = useState(0)
   const isDesktop = useIsDesktop()
+  const sizes = useTournamentSizes()
   // the section, for the phone's filter button to show only while it is on screen
   const sectionRef = useRef(null)
 
@@ -185,9 +189,10 @@ function IntelDecksSection({ name }) {
       if (filterDateFrom && (d.tournament_date || '').slice(0, 7) < filterDateFrom) return false
       if (filterDateTo && (d.tournament_date || '').slice(0, 7) > filterDateTo) return false
       if (filterPilot && !(d.pilot || '').toLowerCase().includes(filterPilot.toLowerCase())) return false
+      if (!bigEnough(playersOf(sizes, d), minSize)) return false
       return true
     })
-  }, [decks, filterTournament, filterDateFrom, filterDateTo, filterPilot])
+  }, [decks, filterTournament, filterDateFrom, filterDateTo, filterPilot, minSize, sizes])
 
   const firstYear = useMemo(() => firstYearOf(decks, 'tournament_date'), [decks])
 
@@ -219,16 +224,17 @@ function IntelDecksSection({ name }) {
     place: displayPlace(d.place),
     lead: formatShortDate(d.tournament_date),
     detail: d.tournament_name,
+    players: playersOf(sizes, d),
   }))
 
   const clearFilters = () => {
-    setFilterTournament(''); setFilterPilot(''); setFilterDateFrom(''); setFilterDateTo(''); setPage(0)
+    setFilterTournament(''); setFilterPilot(''); setFilterDateFrom(''); setFilterDateTo(''); setMinSize(0); setPage(0)
   }
 
   return (
     <div ref={sectionRef} className="space-y-3">
       <FilterPanel scopeRef={sectionRef} onClear={clearFilters}
-        activeCount={(filterTournament ? 1 : 0) + (filterPilot ? 1 : 0) + (filterDateFrom ? 1 : 0) + (filterDateTo ? 1 : 0)}
+        activeCount={(filterTournament ? 1 : 0) + (filterPilot ? 1 : 0) + (filterDateFrom ? 1 : 0) + (filterDateTo ? 1 : 0) + (minSize ? 1 : 0)}
         summary={`${filtered.length} decklist${filtered.length !== 1 ? 's' : ''}`}>
         <div className="relative">
           <input
@@ -270,12 +276,13 @@ function IntelDecksSection({ name }) {
             )}
           </div>
         </div>
+        <SizeFilter value={minSize} onChange={v => { setMinSize(v); setPage(0) }} />
       </FilterPanel>
       <p className="text-xs text-gray-500">
         {filtered.length !== decks.length ? `${filtered.length} of ${decks.length}` : decks.length} decklists
       </p>
       {totalPages > 1 && (
-        <div ref={paginationRef} className="flex items-center justify-center gap-3">
+        <div ref={paginationRef} className="flex items-center justify-center gap-3 lg:pl-[21.5rem] xl:pl-[27.5rem]">
           <button onClick={() => setPage(p => Math.max(0, p - 1))} disabled={page === 0}
             className="px-4 py-2 rounded-lg text-sm font-semibold border border-gray-600 text-gray-400 hover:border-gray-400 hover:text-gray-200 transition-colors disabled:opacity-30 disabled:cursor-not-allowed">
             ← Previous
@@ -293,7 +300,7 @@ function IntelDecksSection({ name }) {
         <TournamentDecks key={`${page}:${browsed[0].id}:${browsed.length}`} decks={browsed} showArchetype={false} />
       )}
       {totalPages > 1 && (
-        <div className="flex items-center justify-center gap-3">
+        <div className="flex items-center justify-center gap-3 lg:pl-[21.5rem] xl:pl-[27.5rem]">
           <button onClick={() => setPage(p => Math.max(0, p - 1))} disabled={page === 0}
             className="px-4 py-2 rounded-lg text-sm font-semibold border border-gray-600 text-gray-400 hover:border-gray-400 hover:text-gray-200 transition-colors disabled:opacity-30 disabled:cursor-not-allowed">
             ← Previous

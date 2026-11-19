@@ -70,7 +70,7 @@ function moversOf(board, previous, marksOf) {
 }
 
 // One board of one metagame: its top movers, rising and falling side by side.
-function Board({ title, movers, marksOf, info, bindPreview, tiles }) {
+function Board({ title, movers, marksOf, info, bindPreview, tiles, phone }) {
   const cardPages = useCardPages()
   const withImage = c => ({ ...c, image: info[c.name]?.preview })
   const groups = movers.top
@@ -78,19 +78,21 @@ function Board({ title, movers, marksOf, info, bindPreview, tiles }) {
     : [['Top Movers · Rising', movers.up], ['Top Movers · Falling', movers.down]]
   return (
     <div className="min-w-0 min-h-0 flex-1 flex flex-col bg-gray-800 border border-gray-700 rounded-xl px-3 pt-2 pb-3 gap-1.5 overflow-y-auto no-scrollbar">
-      <p className="text-xs uppercase tracking-widest text-gray-300 shrink-0">{title}</p>
+      {!phone && <p className="text-xs uppercase tracking-widest text-gray-300 shrink-0">{title}</p>}
       {/* with the artwork, rising above falling: each a row of 5 tiles filling the height; as lines of text, side by side */}
-      <div className={`flex-1 min-h-0 ${tiles ? 'flex flex-col gap-2' : `grid gap-x-5 ${movers.top ? 'grid-cols-1' : 'grid-cols-2'}`}`}>
+      <div className={`flex-1 min-h-0 ${tiles ? 'flex flex-col gap-2' : phone ? 'flex flex-col gap-3' : `grid gap-x-5 ${movers.top ? 'grid-cols-1' : 'grid-cols-2'}`}`}>
         {groups.map(([group, cards]) => (
           <div key={group} className={`min-w-0 min-h-0 flex flex-col ${tiles ? 'flex-1' : ''}`}>
-            <p className="text-xs uppercase tracking-widest text-gray-500 mb-1 shrink-0">{group}</p>
+            <p className={`uppercase tracking-widest shrink-0 ${phone
+              ? `text-xs font-semibold mb-0.5 ${group.includes('Rising') ? 'text-emerald-400' : group.includes('Falling') ? 'text-rose-400' : 'text-amber-400'}`
+              : 'text-xs text-gray-500 mb-1'}`}>{phone ? group.replace('Top Movers · ', '') : group}</p>
             {cards.length === 0 ? <p className="text-sm text-gray-500 py-2">None.</p> : (
               <div className={tiles
                 ? `flex-1 min-h-0 grid gap-2 grid-cols-5 ${movers.top ? 'grid-rows-2' : 'grid-rows-1'}`
-                : 'grid grid-cols-1 gap-y-0.5 content-start'}>
+                : `grid grid-cols-1 content-start ${phone ? 'divide-y divide-gray-700/60' : 'gap-y-0.5'}`}>
                 {cards.map(c => tiles
                   ? <MoverTile key={c.name} card={withImage(c)} cardPages={cardPages} bindPreview={bindPreview} badges={marksOf(c.name)} large />
-                  : <MoverRow key={c.name} card={withImage(c)} cardPages={cardPages} bindPreview={bindPreview} badges={marksOf(c.name)} />)}
+                  : <MoverRow key={c.name} card={withImage(c)} cardPages={cardPages} bindPreview={bindPreview} badges={marksOf(c.name)} roomy={phone} />)}
               </div>
             )}
           </div>
@@ -207,10 +209,9 @@ export default function CardEvolution({ name, series, bindPreview }) {
     return () => window.removeEventListener('keydown', onKey)
   }, [steps, headerHeight, scrollToStep])
 
-  // phones show one board at a time; below 1024px the movers are lines of text, without the artwork
+  // phones show only the main deck, to save room; below 1024px the movers are lines of text, without the artwork
   const wide = useMediaQuery('(min-width: 768px)')
   const tiles = useMediaQuery('(min-width: 1024px)')
-  const [phoneBoard, setPhoneBoard] = useState('main')
 
   const current = Math.round(u)
   const step = steps[current]
@@ -233,49 +234,56 @@ export default function CardEvolution({ name, series, bindPreview }) {
   else if (steps.length < 2) body = <p className="text-gray-500 text-sm py-8 text-center">Not enough metagames with {MIN_DECKS}+ decks of this archetype to compare.</p>
   else {
     const m = step.m
-    const boards = wide ? BOARDS : BOARDS.filter(([k]) => k === phoneBoard)
+    const boards = wide ? BOARDS : BOARDS.filter(([k]) => k === 'main')
     body = (
       <div ref={sectionRef} className="relative" style={{ height: (steps.length - 1) * STEP_PX + stageHeight }}>
         <div className="sticky flex gap-3 lg:gap-6 py-2" style={{ top: headerHeight, height: stageHeight }}>
           <div className="flex-1 min-w-0 flex flex-col gap-2 overflow-hidden">
             <div className="bg-gray-800 border border-gray-700 rounded-xl px-3 py-2 shrink-0 space-y-0.5">
-              <div className="flex items-start gap-3 flex-wrap">
-                <div className="min-w-[10rem] flex-1">
-                  <p className="text-amber-400 font-semibold">{formatDate(m.date)} <span className="text-gray-500 font-normal text-sm">· {step.decks} decks</span></p>
-                  <p className="text-white font-medium truncate" title={metagameTitle(m)}>{metagameTitle(m)}</p>
+              <div className={wide ? 'flex items-start gap-3' : 'space-y-1'}>
+                <div className="min-w-0 flex-1">
+                  <p className="flex items-baseline justify-between gap-3 text-amber-400 font-semibold whitespace-nowrap">
+                    <span>{formatDate(m.date)}</span>
+                    <span className="text-gray-500 font-normal text-sm">{step.decks} decks</span>
+                  </p>
+                  <p className={`text-white font-medium ${wide ? 'truncate' : 'leading-snug'}`} title={metagameTitle(m)}>{metagameTitle(m)}</p>
                 </div>
-                <div className="flex gap-2 shrink-0">
-                  {current > 0 && (
-                    <button onClick={() => scrollToStep(0)}
+                {wide && (
+                  <div className="flex gap-2 shrink-0">
+                    {current > 0 && (
+                      <button onClick={() => scrollToStep(0)}
+                        className="px-2.5 py-1 rounded-md border border-gray-700 bg-gray-900 text-xs text-gray-300 hover:border-amber-400/50 hover:text-amber-400 transition-colors">
+                        Today ↑
+                      </button>
+                    )}
+                    <Link to={`/metagames/${step.slug}`}
                       className="px-2.5 py-1 rounded-md border border-gray-700 bg-gray-900 text-xs text-gray-300 hover:border-amber-400/50 hover:text-amber-400 transition-colors">
-                      Today ↑
-                    </button>
-                  )}
-                  <Link to={`/metagames/${step.slug}`}
-                    className="px-2.5 py-1 rounded-md border border-gray-700 bg-gray-900 text-xs text-gray-300 hover:border-amber-400/50 hover:text-amber-400 transition-colors">
-                    Metagame →
-                  </Link>
-                </div>
+                      Metagame →
+                    </Link>
+                  </div>
+                )}
               </div>
               {(step.newSets.length > 0 || step.banned.size > 0 || step.unbanned.size > 0) && (
-                <p className="text-xs text-gray-400 line-clamp-2">
+                <p className={`text-xs text-gray-400 ${wide ? 'line-clamp-2' : 'leading-snug'}`}>
                   {step.newSets.length > 0 && <span><span className="text-gray-500 uppercase tracking-wide mr-1">New</span>{step.newSets.map(s => s.name).join(', ')}. </span>}
                   {step.banned.size > 0 && <span><span className="text-red-400/80 mr-1">Banned</span>{[...step.banned].join(', ')}. </span>}
                   {step.unbanned.size > 0 && <span><span className="text-green-400/80 mr-1">Unbanned</span>{[...step.unbanned].join(', ')}.</span>}
                 </p>
               )}
               {!wide && (
-                <div className="inline-flex rounded-lg border border-gray-600 overflow-hidden text-xs font-semibold mt-1">
-                  {BOARDS.map(([k, label]) => (
-                    <button key={k} onClick={() => setPhoneBoard(k)}
-                      className={`px-3 py-1 ${phoneBoard === k ? 'bg-amber-400 text-gray-900' : 'text-gray-400'}`}>{label}</button>
-                  ))}
+                <div className="grid grid-cols-2 gap-2 pt-1">
+                  {current > 0
+                    ? <button onClick={() => scrollToStep(0)}
+                        className="py-1.5 rounded-md border border-gray-700 bg-gray-900 text-xs text-gray-300">Today ↑</button>
+                    : <span />}
+                  <Link to={`/metagames/${step.slug}`}
+                    className="py-1.5 text-center rounded-md border border-gray-700 bg-gray-900 text-xs text-gray-300">Metagame →</Link>
                 </div>
               )}
             </div>
             <div className="flex-1 min-h-0 flex flex-col gap-2">
               {boards.map(([k, label]) => (
-                <Board key={k} title={label} movers={movers[k]} marksOf={marksOf} info={counts.cards} bindPreview={bindPreview} tiles={tiles} />
+                <Board key={k} title={label} movers={movers[k]} marksOf={marksOf} info={counts.cards} bindPreview={bindPreview} tiles={tiles} phone={!wide} />
               ))}
             </div>
           </div>

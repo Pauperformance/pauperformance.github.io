@@ -504,8 +504,7 @@ export default function CardsIndex() {
               </SwipeCards>
             ) : wide ? (
               <div className="flex gap-6 items-start">
-                <div className="w-96 2xl:w-[28rem] shrink-0 sticky top-24 max-h-[calc(100vh-7rem)] overflow-y-auto">
-                  {paginationBar(null)}
+                <div className="w-96 2xl:w-[28rem] shrink-0 sticky top-24 max-h-[calc(100vh-7rem)] overflow-y-auto space-y-3">
                   <ul className="border border-gray-700 rounded-xl overflow-hidden bg-gray-900 divide-y divide-gray-700/50">
                     {pageCards.map(c => {
                       const open = c.slug === selected
@@ -534,6 +533,7 @@ export default function CardsIndex() {
                       )
                     })}
                   </ul>
+                  {paginationBar(null)}
                 </div>
                 <div className="flex-1 min-w-0">{pane}</div>
               </div>

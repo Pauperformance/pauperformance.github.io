@@ -8,20 +8,11 @@ import { sourceLabel } from '../utils/sources'
 import { useMediaQuery } from '../utils/useMediaQuery'
 import TournamentPane from '../components/TournamentPane'
 import SwipeCards from '../components/SwipeCards'
-import SizeStars from '../components/SizeStars'
+import SizeStars, { sizeStars } from '../components/SizeStars'
+import SizeFilter from '../components/SizeFilter'
 
 const PAGE_SIZE = 50
 
-
-// "Players" is how many decks the source lists for the event, usually the top
-// finishers rather than every entrant, so these are lower bounds on its size.
-const SIZE_OPTIONS = [
-  { label: 'Any size', min: 0 },
-  { label: '8+ players', min: 8 },
-  { label: '16+ players', min: 16 },
-  { label: '32+ players', min: 32 },
-  { label: '64+ players', min: 64 },
-]
 
 // YYYY-MM-DD of a Date in the visitor's own time zone (toISOString would be UTC).
 function localIso(d) {
@@ -66,7 +57,8 @@ export default function TournamentsIndex() {
   const searchRef = useSearchShortcut()
   const [from, setFrom] = useState('')
   const [to, setTo] = useState('')
-  const [minDecks, setMinDecks] = useState(0)
+  // the least stars of the size of a tournament (0 for any)
+  const [minStars, setMinStars] = useState(0)
   const [sortCol, setSortCol] = useState('date')
   const [sortDir, setSortDir] = useState('desc')
   const [page, setPage] = useState(0)
@@ -117,10 +109,10 @@ export default function TournamentsIndex() {
       if (q && !r.name.toLowerCase().includes(q) && !r.id.includes(q)) return false
       if (from && r.date < from) return false
       if (to && r.date > to) return false
-      if (r.decks < minDecks) return false
+      if (sizeStars(r.decks) < minStars) return false
       return true
     })
-  }, [rows, search, from, to, minDecks])
+  }, [rows, search, from, to, minStars])
 
   const sorted = useMemo(() => {
     const dir = sortDir === 'asc' ? 1 : -1
@@ -162,10 +154,10 @@ export default function TournamentsIndex() {
     }
   }, [wantedKey, details])
 
-  const hasFilters = search || from || to || minDecks > 0
+  const hasFilters = search || from || to || minStars > 0
 
   function clearFilters() {
-    setSearch(''); setFrom(''); setTo(''); setMinDecks(0)
+    setSearch(''); setFrom(''); setTo(''); setMinStars(0)
   }
 
   const paginationBar = (ref) => totalPages > 1 && (
@@ -194,7 +186,7 @@ export default function TournamentsIndex() {
           </p>
         </div>
 
-        <FilterPanel activeCount={(search ? 1 : 0) + (from ? 1 : 0) + (to ? 1 : 0) + (minDecks > 0 ? 1 : 0)}
+        <FilterPanel activeCount={(search ? 1 : 0) + (from ? 1 : 0) + (to ? 1 : 0) + (minStars > 0 ? 1 : 0)}
           onClear={clearFilters}
           summary={`${filtered.length.toLocaleString()} tournament${filtered.length !== 1 ? 's' : ''}`}>
           <div className="relative">
@@ -230,11 +222,7 @@ export default function TournamentsIndex() {
           </div>
 
           <div className="flex flex-wrap items-center gap-2">
-            <span className="text-sm text-gray-500 w-14 shrink-0">Size:</span>
-            <select value={minDecks} onChange={e => setMinDecks(Number(e.target.value))}
-              aria-label="Minimum number of players" className={`${inputClass} cursor-pointer`}>
-              {SIZE_OPTIONS.map(o => <option key={o.min} value={o.min}>{o.label}</option>)}
-            </select>
+            <SizeFilter value={minStars} onChange={setMinStars} />
             {hasFilters && (
               <button onClick={clearFilters} className="ml-auto text-xs text-gray-400 hover:text-amber-400 transition-colors">
                 Clear filters

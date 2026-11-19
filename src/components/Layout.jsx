@@ -3,7 +3,6 @@ import { Link, useLocation } from 'react-router-dom'
 import { formatDateTime, formatShortDate } from '../utils/dates'
 
 const NAV_ITEMS = [
-  { to: '/', label: 'Home' },
   { to: '/archetypes', label: 'Archetypes' },
   { to: '/cards', label: 'Cards' },
   { to: '/sets', label: 'Sets' },

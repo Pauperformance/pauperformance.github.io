@@ -6,6 +6,7 @@ const TONES = {
   default: 'border-gray-700',
   banned: 'border-red-900/60',
   unbanned: 'border-green-900/60',
+  new: 'border-amber-300/60',
 }
 
 // How much a card is played, from the number of decklists playing it.

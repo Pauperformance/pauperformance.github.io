@@ -882,7 +882,7 @@ function NewspauperSection() {
   return (
     <section>
       <h2 className="text-xl font-semibold text-white">Newspauper</h2>
-      <p className="text-sm text-gray-400 mt-0.5 mb-4">Major updates on the Academy</p>
+      <p className="text-sm text-gray-400 mt-0.5 mb-4">Major updates on the Academy of the last month</p>
       {news && entries.length === 0 ? (
         <p className="text-sm text-gray-400">No news in the last month.</p>
       ) : (
@@ -1007,7 +1007,7 @@ function manaStripe(mana) {
 
 // The cards a winning deck plays in more or fewer copies than the typical list
 // of its archetype in the metagame it was played in (as the arrows of the deck
-// page do), the biggest differences first. Basic lands are left out, their
+// page do), the biggest differences first (none: the typical list itself). Basic lands are left out, their
 // split is only the mana base. null when there is nothing to compare to.
 const BASIC_LANDS = new Set(['Plains', 'Island', 'Swamp', 'Mountain', 'Forest', 'Wastes',
   'Snow-Covered Plains', 'Snow-Covered Island', 'Snow-Covered Swamp', 'Snow-Covered Mountain', 'Snow-Covered Forest'])
@@ -1109,7 +1109,7 @@ function RecentTournamentsSection() {
       if (requestedDifferences.current.has(id)) continue
       requestedDifferences.current.add(id)
       deckDifferences(w.id, w.archetype).then(diffs => {
-        if (diffs && diffs.length) setDifferences(prev => ({ ...prev, [id]: diffs }))
+        if (diffs) setDifferences(prev => ({ ...prev, [id]: diffs }))
       })
     }
   }, [desktop, winners])
@@ -1174,6 +1174,12 @@ function RecentTournamentsSection() {
                   ) : <div className="hidden sm:block mt-2 h-5" />}
                   {desktop && differences[t.id] && (
                     <div className="mt-2 flex flex-wrap gap-1">
+                      {differences[t.id].length === 0 && (
+                        <span title="The deck plays the typical list of its archetype in that metagame, give or take the basic lands"
+                          className="inline-flex items-center rounded-full border border-sky-500/30 bg-sky-500/10 px-2 py-0.5 text-xs font-semibold text-sky-300 whitespace-nowrap">
+                          Typical list
+                        </span>
+                      )}
                       {differences[t.id].map(c => <DiffChip key={c.name} card={c} cardPages={cardPages} bindPreview={bindPreview} />)}
                     </div>
                   )}

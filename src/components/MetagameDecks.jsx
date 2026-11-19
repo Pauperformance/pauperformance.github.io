@@ -1,4 +1,5 @@
 import { useState, useEffect, useMemo, useRef } from 'react'
+import { useTournamentSizes, playersOf } from '../utils/tournamentSizes'
 import TournamentDecks, { useIsDesktop } from './TournamentDecks'
 import { FilterPanel } from './FilterSheet'
 import { SearchInput, SelectInput, Pager } from './DeckFilters'
@@ -18,6 +19,7 @@ export default function MetagameDecks({ slug }) {
   const [tournament, setTournament] = useState('')
   const [pilot, setPilot] = useState('')
   const isDesktop = useIsDesktop()
+  const sizes = useTournamentSizes()
   const sectionRef = useRef(null)
   const pagerRef = useRef(null)
   const firstPage = useRef(true)
@@ -70,6 +72,7 @@ export default function MetagameDecks({ slug }) {
     place: displayPlace(d.place),
     lead: formatShortDate(d.tournament_date),
     detail: d.tournament_name,
+    players: playersOf(sizes, d),
     // in the list the archetype is what tells the decks of a metagame apart
     listDetail: d.archetype,
   }))
