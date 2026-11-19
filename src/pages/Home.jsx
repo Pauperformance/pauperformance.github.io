@@ -879,7 +879,8 @@ function NewspauperSection() {
     fetch('/data/newspauper.json').then(r => r.json()).then(setNews).catch(() => setNews([]))
   }, [])
 
-  const entries = (news || []).filter(newsTitle)
+  // Brew is a placeholder, not a real archetype: no "New archetype" entry for it
+  const entries = (news || []).filter(newsTitle).filter(e => !(e.type === 'archetype' && e.name === 'Brew'))
 
   return (
     <section>
