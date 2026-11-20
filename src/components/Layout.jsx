@@ -425,7 +425,11 @@ export default function Layout({ children, topBar = null }) {
               </a>
             ))}
           </div>
-          <span>Pauperformance Academy</span>
+          <p className="max-w-4xl text-center text-xs leading-relaxed">
+            Pauperformance Academy is unofficial Fan Content permitted under the Fan Content Policy. Not approved/endorsed by Wizards.{' '}
+            <br className="hidden md:inline" />
+            Portions of the materials used are property of Wizards of the Coast. ©Wizards of the Coast LLC.
+          </p>
           {pathname === '/' && <DataFreshness />}
         </div>
       </footer>
