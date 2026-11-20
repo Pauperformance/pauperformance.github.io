@@ -680,7 +680,7 @@ export default function MetagameFlow({ index, poolUrls, bindPreview }) {
               <span className="truncate">{eventsSummary(m)}</span>
               <span className="text-gray-600">{eventsOpen ? '▲' : '▼'}</span>
             </button>
-            <div className={`${eventsOpen ? 'block mt-3' : 'hidden'} sm:block sm:mt-2 sm:pt-2 sm:border-t border-gray-700 pb-2 flex-1 min-h-0 overflow-y-auto no-scrollbar`}>
+            <div className={`${eventsOpen ? 'block mt-3' : 'hidden'} sm:block sm:mt-2 sm:pt-2 sm:border-t border-gray-700 pb-2 flex-1 min-h-0 overflow-y-auto sm:pr-2`}>
               <Events metagame={m} poolUrls={poolUrls} bindPreview={bindPreview} />
             </div>
           </div>

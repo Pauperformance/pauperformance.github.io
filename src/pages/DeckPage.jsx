@@ -489,7 +489,7 @@ export default function DeckPage() {
                   )}
                 </div>
                 </div>
-                  <div className="flex flex-wrap justify-center w-full 2xl:w-auto 2xl:flex-col 2xl:justify-start gap-x-12 gap-y-8 items-start 2xl:items-center">
+                  <div className="flex flex-wrap justify-center w-full 2xl:w-auto 2xl:flex-col 2xl:justify-start gap-x-12 gap-y-8 items-start 2xl:items-center rounded-xl border border-gray-700 p-5">
                     <ColorsPie cards={deck.decklist.main} cardTypes={cardTypes} />
                     <ManaCurve cards={deck.decklist.main} centered />
                     <CardTypesRadar cards={deck.decklist.main} cardTypes={cardTypes} />

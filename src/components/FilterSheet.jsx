@@ -98,7 +98,7 @@ export default function FilterSheet({ activeCount = 0, summary, onClear, scopeRe
         onClick={() => setOpen(o => !o)}
         aria-label={open ? 'Close filters' : 'Open filters'}
         aria-expanded={open}
-        className="fixed bottom-5 right-5 z-50 w-12 h-12 rounded-full bg-amber-400 text-gray-900 shadow-lg shadow-black/50 flex items-center justify-center active:scale-95 transition-transform">
+        className="fixed bottom-[calc(4.75rem+env(safe-area-inset-bottom))] md:bottom-5 right-4 md:right-5 z-50 w-12 h-12 rounded-full bg-amber-400 text-gray-900 shadow-lg shadow-black/50 flex items-center justify-center active:scale-95 transition-transform">
         {open ? (
           <svg className="w-6 h-6" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round"><path d="M18 6 6 18M6 6l12 12" /></svg>
         ) : (

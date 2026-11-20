@@ -4,11 +4,14 @@ import Layout from '../components/Layout'
 import TournamentDecks, { useIsDesktop } from '../components/TournamentDecks'
 import { FilterPanel } from '../components/FilterSheet'
 import SizeFilter, { bigEnough } from '../components/SizeFilter'
+import ResultFilter from '../components/ResultFilter'
 import { Pager } from '../components/DeckFilters'
 import { useTournamentSizes, playersOf } from '../utils/tournamentSizes'
-import { displayPlace } from '../utils/places'
+import { displayPlace, resultMatches } from '../utils/places'
 import { nameToSlug } from '../utils/slugs'
 import { METAFY_ICON } from '../utils/socialIcons'
+import { getSettings } from '../utils/settings'
+import { languageAllowed } from '../utils/languages'
 import { firstYearOf, formatDate, formatShortDate } from '../utils/dates'
 
 const LANG_FLAG = {
@@ -133,6 +136,7 @@ export default function PlayerPage() {
   const [dropdownOpen, setDropdownOpen] = useState(false)
   const [page, setPage] = useState(0)
   const [minSize, setMinSize] = useState(0)
+  const [result, setResult] = useState('')
   const sectionRef = useRef(null)
   const dropdownRef = useRef(null)
   const isDesktop = useIsDesktop()
@@ -169,7 +173,10 @@ export default function PlayerPage() {
         fetch('/data/videos.json')
           .then(r => r.json())
           .then(videos => {
-            setCreatorVideos(videos.filter(v => v.creator_name === match.name))
+            // the visitor's Watch settings apply: nothing from a creator hidden there, only the languages picked
+            const { hiddenCreators, languages } = getSettings().watch
+            const picked = new Set(languages)
+            setCreatorVideos(hiddenCreators.includes(match.name) ? [] : videos.filter(v => v.creator_name === match.name && languageAllowed(picked, v.language)))
             setVideosLoading(false)
           })
       })
@@ -209,9 +216,10 @@ export default function PlayerPage() {
       if (filterDateTo && (d.tournament_date || '').slice(0, 7) > filterDateTo) return false
       if (activeArchetypes.size > 0 && !activeArchetypes.has(d.archetype)) return false
       if (!bigEnough(playersOf(sizes, d), minSize)) return false
+      if (!resultMatches(d.place, result)) return false
       return true
     })
-  }, [player, filterTournament, filterDateFrom, filterDateTo, activeArchetypes, minSize, sizes])
+  }, [player, filterTournament, filterDateFrom, filterDateTo, activeArchetypes, minSize, result, sizes])
 
   const toYM = d => d.toISOString().slice(0, 7)
   const applyRange = daysAgo => {
@@ -226,7 +234,7 @@ export default function PlayerPage() {
   }
 
   const clearFilters = () => {
-    setFilterTournament(''); setFilterDateFrom(''); setFilterDateTo(''); setActiveArchetypes(new Set()); setMinSize(0); setPage(0)
+    setFilterTournament(''); setFilterDateFrom(''); setFilterDateTo(''); setActiveArchetypes(new Set()); setMinSize(0); setResult(''); setPage(0)
   }
 
   const firstYear = useMemo(() => firstYearOf(player?.decks, 'tournament_date'), [player])
@@ -276,6 +284,8 @@ export default function PlayerPage() {
     // in the list: the archetype large, the event small
     listTitle: d.archetype,
     listDetail: d.tournament_name,
+    // in the list: the player's result in the event, under the date
+    listPlace: displayPlace(d.place),
     players: playersOf(sizes, d),
   }))
 
@@ -294,7 +304,7 @@ export default function PlayerPage() {
           <>
             <div>
               <div className="flex items-center gap-3 flex-wrap">
-                <h1 className="text-2xl font-bold text-white">{player.name}</h1>
+                <h1 className="w-full sm:w-auto text-2xl font-bold text-white">{player.name}</h1>
                 {creator && creator.youtube_channel_url && (
                   <a href={creator.youtube_channel_url} target="_blank" rel="noreferrer"
                     className="flex items-center gap-1.5 px-2.5 py-1 rounded-lg bg-gray-800 border border-gray-700 hover:border-red-500/70 hover:text-red-400 text-gray-400 transition-colors text-xs font-medium"
@@ -404,7 +414,7 @@ export default function PlayerPage() {
 
             <div ref={sectionRef} className="space-y-3">
             <FilterPanel scopeRef={sectionRef} onClear={clearFilters}
-              activeCount={(filterTournament ? 1 : 0) + activeArchetypes.size + (filterDateFrom ? 1 : 0) + (filterDateTo ? 1 : 0) + (minSize ? 1 : 0)}
+              activeCount={(filterTournament ? 1 : 0) + activeArchetypes.size + (filterDateFrom ? 1 : 0) + (filterDateTo ? 1 : 0) + (minSize ? 1 : 0) + (result ? 1 : 0)}
               summary={`${filtered.length} deck${filtered.length !== 1 ? 's' : ''}`}>
               <div className="relative">
                 <input
@@ -492,6 +502,7 @@ export default function PlayerPage() {
                 </div>
               </div>
               <SizeFilter value={minSize} onChange={v => { setMinSize(v); setPage(0) }} />
+              <ResultFilter value={result} onChange={v => { setResult(v); setPage(0) }} />
             </FilterPanel>
 
             <p className="text-xs text-gray-500">{filtered.length.toLocaleString()} deck{filtered.length !== 1 ? 's' : ''}</p>
@@ -500,7 +511,7 @@ export default function PlayerPage() {
               <p className="text-center text-gray-500 text-sm py-12">No decks match your filters.</p>
             ) : (
               <div ref={paginationRef}>
-                <TournamentDecks key={`${page}:${browsed[0].id}:${browsed.length}`} decks={browsed}
+                <TournamentDecks key={`${page}:${browsed[0].id}:${browsed.length}`} decks={browsed} wideList
                   pager={<Pager page={page} totalPages={totalPages} onPage={setPage} />} />
               </div>
             )}
@@ -517,7 +528,7 @@ export default function PlayerPage() {
                 {videosLoading ? (
                   <p className="text-gray-500 text-sm">Loading videos…</p>
                 ) : filteredVideos.length === 0 ? (
-                  <p className="text-gray-500 text-sm">No videos match the selected archetypes.</p>
+                  <p className="text-gray-500 text-sm">{creatorVideos.length === 0 ? 'No videos match your settings.' : 'No videos match your filters.'}</p>
                 ) : (
                   <>
                     {totalVideoPages > 1 && (

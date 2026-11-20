@@ -11,7 +11,7 @@ export function toMtgoText(decklist) {
   return lines.join('\n')
 }
 
-const BUTTON = 'px-3 py-1.5 rounded-lg text-sm font-medium border border-gray-600 text-gray-400 hover:border-gray-400 hover:text-gray-200 transition-colors'
+const BUTTON = 'px-2 py-1 md:px-3 md:py-1.5 rounded-lg text-xs md:text-sm font-medium border border-gray-600 text-gray-400 hover:border-gray-400 hover:text-gray-200 transition-colors'
 
 // The "Download for MTGO" and "Copy for MTGO" buttons. fileName: of the
 // downloaded file, e.g. "8022126.txt".
@@ -37,8 +37,8 @@ export default function MtgoButtons({ decklist, fileName }) {
 
   return (
     <>
-      <button onClick={handleDownload} className={BUTTON}>⤓ Download for MTGO</button>
-      <button onClick={handleCopy} className={BUTTON}>{copied ? '✓ Copied!' : '⧉ Copy for MTGO'}</button>
+      <button onClick={handleDownload} className={BUTTON}>⤓ Download<span className="hidden md:inline"> for MTGO</span></button>
+      <button onClick={handleCopy} className={BUTTON}>{copied ? '✓ Copied!' : <>⧉ Copy<span className="hidden md:inline"> for MTGO</span></>}</button>
     </>
   )
 }

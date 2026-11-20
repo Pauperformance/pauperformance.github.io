@@ -5,7 +5,7 @@ import { registerPreviewCard } from '../utils/videoPreviews'
 import { probeLive, isProbeable } from '../utils/liveProbe'
 import { TWITCH_ICON, YOUTUBE_ICON } from '../utils/socialIcons'
 import { creatorLanguages } from '../utils/creatorLanguages'
-import { LANG_CANONICAL, LANG_FLAG, LANG_NAME } from '../utils/languages'
+import { LANG_CANONICAL, LANG_FLAG, LANG_NAME, languageAllowed } from '../utils/languages'
 
 // Who of the creators is live on Twitch right now, as tiles. Everything comes
 // from DecAPI (https://docs.decapi.me/twitch), which needs no key and allows
@@ -430,12 +430,13 @@ export function YouTubeLiveTile({ v }) {
 
 // hidden: Set of the creators' names to leave out (the visitor's hidden creators);
 // youtube: the YouTube streams on the air (useLiveYouTube, which the page calls to also
-// keep them out of its list of videos)
-export default function LiveStreams({ hidden, youtube }) {
+// keep them out of its list of videos); languages: Set of the languages picked (none: all)
+export default function LiveStreams({ hidden, youtube: youtubeLive, languages = new Set() }) {
   const { channels, streams, details, minute } = useLiveStreams(hidden)
   if (!streams) return <p className="text-gray-400 text-sm py-8 text-center">Checking who is live…</p>
 
-  const live = channels.filter(c => streams[c.login]).sort((a, b) => (streams[b.login].viewers ?? 0) - (streams[a.login].viewers ?? 0))
+  const youtube = youtubeLive.filter(v => languageAllowed(languages, v.creatorLanguage))
+  const live = channels.filter(c => streams[c.login] && languageAllowed(languages, c.language)).sort((a, b) => (streams[b.login].viewers ?? 0) - (streams[a.login].viewers ?? 0))
 
   const total = live.length + youtube.length
 

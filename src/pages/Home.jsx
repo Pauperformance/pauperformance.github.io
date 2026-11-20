@@ -16,8 +16,9 @@ import { LiveTile, YouTubeLiveTile, useLiveStreams, useLiveYouTube } from '../co
 import { getSettings } from '../utils/settings'
 import { useMediaQuery } from '../utils/useMediaQuery'
 import { showsVideos, typeAllows } from '../utils/watchTypes'
-import { LANG_CANONICAL } from '../utils/languages'
+import { LANG_CANONICAL, languageAllowed } from '../utils/languages'
 import CardLink from '../components/PoolCardLink'
+import SectionBar from '../components/SectionBar'
 import MetaPie from '../components/MetaPie'
 import { useSettings, updateSettings } from '../utils/settings'
 import { TWITCH_ICON, YOUTUBE_ICON, METAFY_ICON } from '../utils/socialIcons'
@@ -93,7 +94,7 @@ function StatsSection() {
   if (!stats) return null
 
   return (
-    <section className="bg-gray-800 border border-gray-700 rounded-xl px-6 py-8">
+    <section id="stats" className="bg-gray-800 border border-gray-700 rounded-xl px-6 py-8">
       <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-6 gap-6 divide-y-0 sm:divide-x sm:divide-gray-700">
         <StatCounter value={stats.archetypes} label="Archetypes" />
         <StatCounter value={stats.cards} label="Common Cards" />
@@ -145,6 +146,22 @@ function StapleRows({ children }) {
   }, [children])
 
   return <div ref={ref} className="flex flex-wrap content-start gap-1 overflow-hidden h-12">{children}</div>
+}
+
+// The pie of the metagame goes in the empty cells at the end of the table's last row, where there are
+// at least 3 of them (the grid has 2, 3, 4 and 5 columns on the screens it grows to); where there are
+// fewer it takes a row of its own. The class names are written out for Tailwind to find them.
+const PIE_SPAN = {
+  base: { full: 'col-span-full', 3: 'col-span-3', 4: 'col-span-4' },
+  sm: { full: 'sm:col-span-full', 3: 'sm:col-span-3', 4: 'sm:col-span-4' },
+  md: { full: 'md:col-span-full', 3: 'md:col-span-3', 4: 'md:col-span-4' },
+  lg: { full: 'lg:col-span-full', 3: 'lg:col-span-3', 4: 'lg:col-span-4' },
+}
+function pieSpanClasses(count) {
+  return [['base', 2], ['sm', 3], ['md', 4], ['lg', 5]].map(([bp, columns]) => {
+    const free = (columns - (count % columns)) % columns
+    return PIE_SPAN[bp][free >= 3 ? free : 'full']
+  }).join(' ')
 }
 
 function TopDecksSection() {
@@ -206,6 +223,9 @@ function TopDecksSection() {
             )}
           </div>
         ))}
+        <div className={`${pieSpanClasses(decks.length)} min-w-0`}>
+          <MetagameSection embedded />
+        </div>
       </div>
       {preview}
     </section>
@@ -656,7 +676,7 @@ function BrainstormSection() {
   }
 }
 
-function MetagameSection() {
+function MetagameSection({ embedded = false }) {
   const [data, setData] = useState([])
   // the ongoing metagame (code, label, name, start date): the shares count the tournaments played in it
   const [current, setCurrent] = useState(null)
@@ -673,7 +693,8 @@ function MetagameSection() {
   if (!data.length) return null
 
   return (
-    <section>
+    // embedded (beside the table's last cards): the card fills the height of the cell, as tall as the cards beside it
+    <section id="metagame" className={embedded ? 'h-full flex flex-col' : ''}>
       <h2 className={`text-xl font-semibold text-white ${current ? '' : 'mb-4'}`}>Bake into a Pie</h2>
       {current && (
         <p className="text-sm text-gray-400 mt-0.5 mb-4">
@@ -686,8 +707,9 @@ function MetagameSection() {
       )}
       {/* the list in columns, filled evenly */}
       <MetaPie shares={data} minListedShare={1}
-        listClassName="columns-2 lg:columns-3 2xl:columns-4 gap-x-4"
-        rowClassName="break-inside-avoid mb-1.5" />
+        listClassName={embedded ? 'columns-2 xl:columns-3 gap-x-4' : 'columns-2 lg:columns-3 2xl:columns-4 gap-x-4'}
+        rowClassName="break-inside-avoid mb-1.5"
+        rootClassName={embedded ? 'flex-1 flex flex-col justify-center' : ''} />
     </section>
   )
 }
@@ -883,15 +905,19 @@ function NewspauperSection() {
     fetch('/data/newspauper.json').then(r => r.json()).then(setNews).catch(() => setNews([]))
   }, [])
 
+  // only the news of the last two weeks (dates are YYYY-MM-DD, so they compare as text);
   // Brew is a placeholder, not a real archetype: no "New archetype" entry for it
-  const entries = (news || []).filter(newsTitle).filter(e => !(e.type === 'archetype' && e.name === 'Brew'))
+  const since = new Date()
+  since.setDate(since.getDate() - 14)
+  const sinceIso = `${since.getFullYear()}-${String(since.getMonth() + 1).padStart(2, '0')}-${String(since.getDate()).padStart(2, '0')}`
+  const entries = (news || []).filter(newsTitle).filter(e => !(e.type === 'archetype' && e.name === 'Brew')).filter(e => e.date >= sinceIso)
 
   return (
-    <section>
+    <section id="newspauper">
       <h2 className="text-xl font-semibold text-white">Newspauper</h2>
-      <p className="text-sm text-gray-400 mt-0.5 mb-4">Major updates on the Academy of the last month</p>
+      <p className="text-sm text-gray-400 mt-0.5 mb-4">Major updates on the Academy of the last two weeks</p>
       {news && entries.length === 0 ? (
-        <p className="text-sm text-gray-400">No news in the last month.</p>
+        <p className="text-sm text-gray-400">No news in the last two weeks.</p>
       ) : (
         // one column on phones, two on small desktops, three on wide ones (newest first, left to right)
         <div className="grid lg:grid-cols-2 xl:grid-cols-3 gap-3">
@@ -968,7 +994,7 @@ function ArticlesSection() {
   if (recent.length === 0) return null
 
   return (
-    <section>
+    <section id="articles">
       <h2 className="text-xl font-semibold text-white">Read the Bones</h2>
       <p className="text-sm text-gray-400 mt-0.5 mb-4">Pauper articles published in the last month</p>
       <div className="grid lg:grid-cols-2 xl:grid-cols-3 gap-3">
@@ -1140,7 +1166,7 @@ function RecentTournamentsSection() {
   if (!rows) return null
 
   return (
-    <section>
+    <section id="tournaments">
       <h2 className="text-xl font-semibold text-white">Ancient Grudge</h2>
       <p className="text-sm text-gray-400 mt-0.5 mb-4">Major tournaments of the last week</p>
       {rows.length === 0 ? (
@@ -1231,8 +1257,11 @@ function RecentVideosSection() {
   // the YouTube streams on the air: tiles too, not repeated among the videos. The ones that
   // have ended, or are not checked yet, are left out; those that can't be told stay videos.
   const { live: youtube, unknown: unknownLives } = useLiveYouTube(hiddenCreators)
+  // the languages of the visitor's Watch settings apply to the streams too (none: all)
+  const langs = useMemo(() => new Set(getSettings().watch.languages), [])
+  const langAllowed = code => languageAllowed(langs, code)
   const live = streams
-    ? channels.filter(c => streams[c.login]).sort((a, b) => (streams[b.login].viewers ?? 0) - (streams[a.login].viewers ?? 0))
+    ? channels.filter(c => streams[c.login] && langAllowed(c.language)).sort((a, b) => (streams[b.login].viewers ?? 0) - (streams[a.login].viewers ?? 0))
     : []
 
   useEffect(() => {
@@ -1256,10 +1285,10 @@ function RecentVideosSection() {
   if (!videos) return null
 
   return (
-    <section>
+    <section id="videos">
       <h2 className="text-xl font-semibold text-white">Sewer-veillance Cam</h2>
       <p className="text-sm text-gray-400 mt-0.5 mb-4">Ongoing live streams and videos from the last week</p>
-      {videos.filter(v => !v.is_live || unknownLives.has(v.video_id)).length === 0 && live.length === 0 && youtube.length === 0 ? (
+      {videos.filter(v => !v.is_live || unknownLives.has(v.video_id)).length === 0 && live.length === 0 && youtube.filter(v => langAllowed(v.creatorLanguage)).length === 0 ? (
         // streams is null until the first check of who is live is done
         <p className="text-sm text-gray-400">
           {streams ? 'Nobody is live and there are no videos from the last week.' : 'Checking who is live…'}
@@ -1267,7 +1296,7 @@ function RecentVideosSection() {
       ) : (
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
           {live.map(c => <LiveTile key={c.login} channel={c} stream={streams[c.login]} details={details[c.login]} minute={minute} />)}
-          {youtube.map(v => <YouTubeLiveTile key={v.video_id} v={v} />)}
+          {youtube.filter(v => langAllowed(v.creatorLanguage)).map(v => <YouTubeLiveTile key={v.video_id} v={v} />)}
           {videos.filter(v => !v.is_live || unknownLives.has(v.video_id)).map(v => <VideoCard key={v.video_id || v.link} v={v} withAvatar />)}
         </div>
       )}
@@ -1275,6 +1304,16 @@ function RecentVideosSection() {
     </section>
   )
 }
+
+// The home page's sections, for the icon bar of phones
+const HOME_SECTIONS = [
+  { id: 'top-archetypes', label: 'Top archetypes', short: 'Top decks' },
+  { id: 'metagame', label: 'Metagame', short: 'Meta' },
+  { id: 'tournaments', label: 'Tournaments', short: 'Events' },
+  { id: 'articles', label: 'Articles', short: 'Articles' },
+  { id: 'newspauper', label: 'Newspauper', short: 'News' },
+  { id: 'videos', label: 'Videos', short: 'Videos' },
+]
 
 export default function Home() {
   const [metaView, setMetaView] = useMetaView()
@@ -1294,7 +1333,7 @@ export default function Home() {
   }
 
   return (
-    <Layout>
+    <Layout topBar={<SectionBar sections={HOME_SECTIONS} />}>
       <div className="space-y-12">
         {/* The welcome sits close to the top archetypes it introduces */}
         <div className="space-y-4">
@@ -1308,7 +1347,7 @@ export default function Home() {
             </p>
           </section>
 
-          <div ref={metaViewRef}>
+          <div ref={metaViewRef} id="top-archetypes">
             {metaView === 'table' ? <TopDecksSection /> : <BrainstormSection />}
           </div>
 
@@ -1321,7 +1360,8 @@ export default function Home() {
           </div>
         </div>
 
-        <MetagameSection />
+        {/* Table view: the pie is in the table's last row */}
+        {metaView !== 'table' && <MetagameSection />}
 
         <StatsSection />
 

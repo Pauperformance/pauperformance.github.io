@@ -92,7 +92,7 @@ export default function TournamentPane({ t, showDecks = true }) {
             {notes.length > 0 && <span className="ml-2 text-xs font-normal text-amber-500">⚠ {notes.length}</span>}
           </summary>
           <div className="mt-2 space-y-2">
-            <ul className="text-gray-300">
+            <ul className="list-disc pl-5 text-gray-300 text-sm space-y-0.5">
               {t.sources.map(src => (
                 <li key={src.source + src.id}>
                   {sourceLabel(src.source)}: {src.decks} deck{src.decks !== 1 ? 's' : ''}, “{src.name}”, {formatDate(src.date)}
@@ -100,9 +100,13 @@ export default function TournamentPane({ t, showDecks = true }) {
                 </li>
               ))}
             </ul>
-            {overlap.length > 0 && <p className="text-gray-300">{overlap.join(' · ')}.</p>}
+            {overlap.length > 0 && (
+              <ul className="text-gray-300 text-sm space-y-0.5">
+                {overlap.map((o, i) => <li key={i}>{o}.</li>)}
+              </ul>
+            )}
             {notes.length > 0 && (
-              <ul className="list-disc pl-5 text-amber-500 space-y-0.5">
+              <ul className="text-amber-500 space-y-0.5">
                 {notes.map((n, i) => <li key={i}>{n}</li>)}
               </ul>
             )}
@@ -116,7 +120,7 @@ export default function TournamentPane({ t, showDecks = true }) {
         {t.decks.length === 0 ? (
           <p className="text-gray-500 text-sm">The source lists no decks for this tournament.</p>
         ) : (
-          <TournamentDecks key={t.id} decks={t.decks} several={distinctSources(t).length > 1} />
+          <TournamentDecks key={t.id} decks={t.decks} several={distinctSources(t).length > 1} allLabel="players" stackCard />
         )}
       </section>}
 

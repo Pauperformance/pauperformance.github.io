@@ -1,4 +1,5 @@
 import { useState, useEffect, useMemo, useRef } from 'react'
+import { Link } from 'react-router-dom'
 import Layout from '../components/Layout'
 import { useSearchShortcut, searchShortcutLabel } from '../utils/useSearchShortcut'
 import { FilterPanel } from '../components/FilterSheet'
@@ -6,7 +7,6 @@ import { formatShortDate } from '../utils/dates'
 import { sourceLabel } from '../utils/sources'
 import { useMediaQuery } from '../utils/useMediaQuery'
 import TournamentPane from '../components/TournamentPane'
-import SwipeCards from '../components/SwipeCards'
 import SizeStars, { sizeStars } from '../components/SizeStars'
 import SizeFilter from '../components/SizeFilter'
 import { scrollSidebarToTop } from '../utils/scroll'
@@ -95,16 +95,12 @@ export default function TournamentsIndex() {
 
   const totalPages = Math.ceil(sorted.length / PAGE_SIZE)
   const pageRows = sorted.slice(page * PAGE_SIZE, (page + 1) * PAGE_SIZE)
-  // The tournament shown beside the list (wide) or as the card (narrow): the one
-  // picked, else the first of the page (wide) or of the list (narrow).
+  // The tournament shown beside the list (wide): the one picked, else the first of the page
   const selectedIndex = sorted.findIndex(r => r.id === selectedId)
-  const cardIndex = Math.max(0, selectedIndex)
-  const selected = selectedIndex >= 0 ? selectedId : (narrow ? sorted[0] : pageRows[0])?.id
+  const selected = selectedIndex >= 0 ? selectedId : pageRows[0]?.id
 
-  // the details of the tournament shown, and of the cards a swipe away, are loaded ahead
-  const wanted = narrow
-    ? [sorted[cardIndex], sorted[cardIndex + 1], sorted[cardIndex - 1]].filter(Boolean).map(r => r.id)
-    : (wide && selected ? [selected] : [])
+  // the details of the tournament shown are loaded
+  const wanted = wide && selected ? [selected] : []
   const wantedKey = wanted.join()
   useEffect(() => {
     for (const id of wantedKey ? wantedKey.split(',') : []) {
@@ -200,18 +196,30 @@ export default function TournamentsIndex() {
           narrow ? (
             <>
               <p className="text-xs text-gray-500">{filtered.length.toLocaleString()} tournament{filtered.length !== 1 ? 's' : ''}</p>
-              {filtered.length === 0 ? (
+              {/* the list of the wide layout; a tournament opens its page */}
+              <ul className="border border-gray-700 rounded-xl overflow-hidden bg-gray-900 divide-y divide-gray-700/50">
+                {pageRows.map(r => (
+                  <li key={r.id}>
+                    <Link to={`/tournaments/${r.id}`} className="block px-3 py-2.5 border-l-2 border-transparent active:bg-gray-800">
+                      <span className="block truncate text-gray-200">
+                        <SizeStars players={r.decks} className="w-12 mr-2" />
+                        {r.name || `Tournament #${r.id}`}
+                        {r.notes > 0 && (
+                          <span title={`The sources disagree on ${r.notes} point${r.notes !== 1 ? 's' : ''}`}
+                            className="ml-2 text-xs text-amber-500">⚠ {r.notes}</span>
+                        )}
+                      </span>
+                      <span className="block truncate text-xs text-gray-500">
+                        {formatShortDate(r.date)} · {r.decks} players · {r.sources.map(sourceLabel).join(' · ')}
+                      </span>
+                    </Link>
+                  </li>
+                ))}
+              </ul>
+              {filtered.length === 0 && (
                 <p className="text-center text-gray-500 text-sm py-12">No tournaments match your filters.</p>
-              ) : (
-                <SwipeCards index={cardIndex} count={sorted.length} cardKey={selected}
-                  onChange={i => setSelectedId(sorted[i].id)}
-                  label={`${(cardIndex + 1).toLocaleString()} of ${sorted.length.toLocaleString()}`}
-                  hint="Swipe the card left or right for the next or previous tournament.">
-                  <div className="bg-gray-900 border border-gray-700 rounded-xl p-4">
-                    <TournamentPane t={details[selected]} showDecks={false} />
-                  </div>
-                </SwipeCards>
               )}
+              {paginationBar()}
             </>
           ) : wide ? (
             <>

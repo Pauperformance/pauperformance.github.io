@@ -5,6 +5,7 @@ import CardLink from '../components/PoolCardLink'
 import MetaPie from '../components/MetaPie'
 import ShareChange from '../components/ShareChange'
 import TableOfContents from '../components/TableOfContents'
+import SectionBar from '../components/SectionBar'
 import MetagameDecks from '../components/MetagameDecks'
 import { useCardPreview } from '../components/CardPreview'
 import { useCardPages, cardLinkSlug } from '../utils/cardPages'
@@ -333,14 +334,14 @@ export default function MetagamePage() {
   const small = metagame ? metagame.archetypes.slice(shown.length) : []
   const cm = metagame && metagame.card_movers
   const sections = metagame && metagame.decks > 0 ? [
-    { id: 'pie', label: 'Bake into a Pie' },
+    { id: 'pie', label: 'Bake into a Pie', short: 'Pie' },
     { id: 'archetypes', label: 'Archetypes', count: shown.length },
     cm && (cm.top || cm.up.length > 0 || cm.down.length > 0) && { id: 'cards', label: cm.top ? 'Top Cards' : 'Top Movers' },
     { id: 'decks', label: 'Decks', count: metagame.decks },
   ].filter(Boolean) : []
 
   return (
-    <Layout>
+    <Layout topBar={sections.length > 0 ? <SectionBar sections={sections} /> : null}>
       <div className="space-y-8">
         {loading && <p className="text-gray-500 text-sm">Loading…</p>}
 
@@ -379,7 +380,7 @@ export default function MetagamePage() {
                 </p>
               </div>
             </div>
-            {sections.length > 0 && <TableOfContents sections={sections} />}
+            {sections.length > 0 && <TableOfContents sections={sections} hideOnMobile />}
             </div>
 
             <Counters metagame={metagame} bindPreview={bindPreview} />
