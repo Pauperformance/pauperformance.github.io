@@ -15,7 +15,7 @@ function SortHeader({ col, label, sortCol, sortDir, onSort, align = 'left', extr
   return (
     <th
       onClick={() => onSort(col)}
-      className={`px-4 py-3 text-xs font-semibold uppercase tracking-wider cursor-pointer select-none group ${alignClass} ${extraClass}`}>
+      className={`px-4 py-3 text-xs font-semibold uppercase tracking-wider cursor-pointer select-none group whitespace-nowrap ${alignClass} ${extraClass}`}>
       <span className={`inline-flex items-center gap-1 transition-colors ${active ? 'text-amber-400' : 'text-gray-400 group-hover:text-gray-200'}`}>
         {label}
         <span className={`${active ? 'text-amber-400' : 'text-gray-600 group-hover:text-gray-400'}`}>{indicator}</span>
@@ -240,7 +240,7 @@ export default function PlayersIndex() {
               <table className="w-full text-base bg-gray-900">
                 <thead>
                   <tr className="bg-gray-800 border-b border-gray-700">
-                    <SortHeader col="name"       label="Name"       sortCol={sortCol} sortDir={sortDir} onSort={handleSort} extraClass="w-1/2" />
+                    <SortHeader col="name"       label="Name"       sortCol={sortCol} sortDir={sortDir} onSort={handleSort} />
                     <SortHeader col="archetypes" label="Archetypes" sortCol={sortCol} sortDir={sortDir} onSort={handleSort} align="right" extraClass="hidden sm:table-cell" />
                     <SortHeader col="decks"      label="Decks"      sortCol={sortCol} sortDir={sortDir} onSort={handleSort} align="right" />
                     <SortHeader col="events"     label="Events"     sortCol={sortCol} sortDir={sortDir} onSort={handleSort} align="right" extraClass="hidden md:table-cell" />
@@ -263,7 +263,7 @@ export default function PlayersIndex() {
                       <td className="px-4 py-2.5 text-right font-mono text-amber-400">{p.wins || '—'}</td>
                       <td className="px-4 py-2.5 text-right text-gray-400 hidden sm:table-cell">{p.top8 || '—'}</td>
                       <td className="px-4 py-2.5 text-right text-gray-400 hidden md:table-cell">{p.resources || '—'}</td>
-                      <td className="px-4 py-2.5 text-right text-gray-400 hidden md:table-cell">{formatShortDate(p.lastSeen) || '—'}</td>
+                      <td className="px-4 py-2.5 text-right text-gray-400 hidden md:table-cell whitespace-nowrap">{formatShortDate(p.lastSeen) || '—'}</td>
                     </tr>
                   ))}
                 </tbody>

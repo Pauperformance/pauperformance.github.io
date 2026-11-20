@@ -4,7 +4,6 @@ import Layout from '../components/Layout'
 import { useSearchShortcut, searchShortcutLabel } from '../utils/useSearchShortcut'
 import { FilterPanel } from '../components/FilterSheet'
 import { useEnterShortcut } from '../utils/useEnterShortcut'
-import { useCardPreview } from '../components/CardPreview'
 import { useMediaQuery } from '../utils/useMediaQuery'
 import CardPane, { useCardDecks } from '../components/CardPane'
 import SwipeCards from '../components/SwipeCards'
@@ -24,9 +23,8 @@ const POPULARITY_FILTERS = [
 ]
 const PAGE_SIZE = 50
 
-// As on the Archetypes Index: wide enough for the list beside the card selected;
-// below Tailwind's lg, one card at a time, swiped; in between, the table.
-const WIDE_QUERY = '(min-width: 1440px)'
+// As on the Archetypes Index: from Tailwind's lg up the list sits beside the card
+// selected; below it, one card at a time, swiped.
 const NARROW_QUERY = '(max-width: 1023px)'
 
 function ManaIcon({ color, size = 'w-6 h-6' }) {
@@ -37,23 +35,6 @@ function ManaIcon({ color, size = 'w-6 h-6' }) {
       title={MANA_LABELS[color]}
       className={`${size} inline-block`}
     />
-  )
-}
-
-function SortHeader({ col, label, sortCol, sortDir, onSort, align = 'left', extraClass = '', title }) {
-  const active = sortCol === col
-  const indicator = active ? (sortDir === 'asc' ? '↑' : '↓') : '↕'
-  const alignClass = align === 'right' ? 'text-right' : 'text-left'
-  return (
-    <th
-      onClick={() => onSort(col)}
-      title={title}
-      className={`px-4 py-3 text-xs font-semibold uppercase tracking-wider cursor-pointer select-none group ${alignClass} ${extraClass}`}>
-      <span className={`inline-flex items-center gap-1 transition-colors ${active ? 'text-amber-400' : 'text-gray-400 group-hover:text-gray-200'}`}>
-        {label}
-        <span className={`${active ? 'text-amber-400' : 'text-gray-600 group-hover:text-gray-400'}`}>{indicator}</span>
-      </span>
-    </th>
   )
 }
 
@@ -120,16 +101,13 @@ export default function CardsIndex() {
   const [dropdownOpen, setDropdownOpen] = useState(false)
   const [page, setPage] = useState(0)
   const dropdownRef = useRef(null)
-  const paginationRef = useRef(null)
-  const pageInitRef = useRef(true)
   const navigate = useNavigate()
-  const wide = useMediaQuery(WIDE_QUERY)
   const narrow = useMediaQuery(NARROW_QUERY)
+  const wide = !narrow
   const [selectedSlug, setSelectedSlug] = useState(null)
   // details of the cards opened, by slug; null for those that failed to load
   const [details, setDetails] = useState({})
   const requested = useRef(new Set())
-  const { bind: bindPreview, preview } = useCardPreview()
 
   useEffect(() => {
     if (!dropdownOpen) return
@@ -264,25 +242,6 @@ export default function CardsIndex() {
     })
   }, [cards, search, activeMana, activeTypes, activeCmc, popularityTest, allowedSlugs, manaMode, typeMode])
 
-  useEffect(() => {
-    if (pageInitRef.current) { pageInitRef.current = false; return }
-    if (wide || narrow) return
-    const el = paginationRef.current
-    if (!el) return
-    const headerHeight = document.querySelector('header')?.offsetHeight ?? 64
-    const top = el.getBoundingClientRect().top + window.scrollY - headerHeight - 16
-    window.scrollTo({ top, behavior: 'smooth' })
-  }, [page])
-
-  function handleSort(col) {
-    if (sortCol === col) {
-      setSortDir(d => d === 'asc' ? 'desc' : 'asc')
-    } else {
-      setSortCol(col)
-      setSortDir(col === 'archetypes' || col === 'cmc' ? 'desc' : 'asc')
-    }
-  }
-
   const sorted = useMemo(() => {
     return [...filtered].sort((a, b) => {
       let av, bv
@@ -341,8 +300,8 @@ export default function CardsIndex() {
     else navigate(`/cards/${sorted[0].slug}`)
   }, searchRef)
 
-  const paginationBar = (ref) => totalPages > 1 && (
-    <div ref={ref} className="flex items-center justify-center gap-3 py-2">
+  const paginationBar = () => totalPages > 1 && (
+    <div className="flex items-center justify-center gap-3 py-2">
       <button onClick={e => { scrollSidebarToTop(e.currentTarget); setPage(p => Math.max(0, p - 1)) }} disabled={page === 0}
         className="px-4 py-2 rounded-lg text-sm font-semibold border border-gray-600 text-gray-400 hover:border-gray-400 hover:text-gray-200 transition-colors disabled:opacity-30 disabled:cursor-not-allowed">
         ← Previous
@@ -505,7 +464,7 @@ export default function CardsIndex() {
               </SwipeCards>
             ) : wide ? (
               <div className="flex gap-6 items-start">
-                <div className="w-96 2xl:w-[28rem] shrink-0 sticky top-24 max-h-[calc(100vh-7rem)] overflow-y-auto space-y-3">
+                <div className="w-72 xl:w-96 2xl:w-[28rem] shrink-0 sticky top-24 max-h-[calc(100vh-7rem)] overflow-y-auto space-y-3">
                   <ul className="border border-gray-700 rounded-xl overflow-hidden bg-gray-900 divide-y divide-gray-700/50">
                     {pageCards.map(c => {
                       const open = c.slug === selected
@@ -534,64 +493,11 @@ export default function CardsIndex() {
                       )
                     })}
                   </ul>
-                  {paginationBar(null)}
+                  {paginationBar()}
                 </div>
                 <div className="flex-1 min-w-0">{pane}</div>
               </div>
-            ) : (
-              <>
-                {paginationBar(paginationRef)}
-                <div className="border border-gray-700 rounded-xl overflow-hidden bg-gray-900">
-                  <table className="w-full text-base bg-gray-900">
-                    <thead>
-                      <tr className="bg-gray-800 border-b border-gray-700">
-                        <SortHeader col="name"       label="Name"       sortCol={sortCol} sortDir={sortDir} onSort={handleSort} extraClass="w-2/5" />
-                        <SortHeader col="colors"     label="Colors"     sortCol={sortCol} sortDir={sortDir} onSort={handleSort} />
-                        <SortHeader col="type"       label="Type"       sortCol={sortCol} sortDir={sortDir} onSort={handleSort} extraClass="hidden sm:table-cell" />
-                        <SortHeader col="cmc"        label="CMC"        sortCol={sortCol} sortDir={sortDir} onSort={handleSort} align="right" extraClass="hidden sm:table-cell" />
-                        {popularityMetagame && (
-                          <SortHeader col="popularity" label="Popularity" sortCol={sortCol} sortDir={sortDir} onSort={handleSort} align="right"
-                            title={`Rank by the tournament decks playing it in the current metagame (${popularityMetagame.name}): #1 is the most played`} />
-                        )}
-                        <SortHeader col="archetypes" label="Archetypes" sortCol={sortCol} sortDir={sortDir} onSort={handleSort} align="right" />
-                      </tr>
-                    </thead>
-                    <tbody className="divide-y divide-gray-700/50 bg-gray-900">
-                      {pageCards.map(c => (
-                        <tr key={c.slug}
-                          onClick={() => navigate(`/cards/${c.slug}`)}
-                          onAuxClick={e => { if (e.button === 1) window.open(`/cards/${c.slug}`, '_blank') }}
-                          className="bg-gray-900 hover:bg-gray-800 cursor-pointer group">
-                          <td className="px-4 py-2.5 font-medium text-gray-200 group-hover:text-amber-400">
-                            <span {...bindPreview(c.name, { slug: c.slug })}>{c.name}</span>
-                          </td>
-                          <td className="px-4 py-2.5">
-                            <div className="flex gap-0.5">
-                              {(c.colors || []).length === 0
-                                ? <ManaIcon color="C" />
-                                : MANA_ORDER.filter(m => m !== 'C' && (c.colors || []).includes(m)).map(m => (
-                                    <ManaIcon key={m} color={m} />
-                                  ))
-                              }
-                            </div>
-                          </td>
-                          <td className="px-4 py-2.5 text-gray-400 hidden sm:table-cell">{(c.types || []).join(', ')}</td>
-                          <td className="px-4 py-2.5 text-right text-gray-400 hidden sm:table-cell">{c.cmc ?? '—'}</td>
-                          {popularityMetagame && (
-                            <td className="px-4 py-2.5 text-right text-gray-400 tabular-nums">
-                              {c.popularity != null ? `#${c.popularity.toLocaleString('en-US')}` : '—'}
-                            </td>
-                          )}
-                          <td className="px-4 py-2.5 text-right text-gray-400">{c.archetypeCount}</td>
-                        </tr>
-                      ))}
-                    </tbody>
-                  </table>
-                </div>
-                {paginationBar(null)}
-                {preview}
-              </>
-            )}
+            ) : null}
           </>
         )}
       </div>

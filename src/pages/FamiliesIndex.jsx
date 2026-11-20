@@ -6,6 +6,7 @@ import Layout from '../components/Layout'
 import { useSearchShortcut, searchShortcutLabel } from '../utils/useSearchShortcut'
 import { useEnterShortcut } from '../utils/useEnterShortcut'
 import { useMediaQuery } from '../utils/useMediaQuery'
+import SwipeCards from '../components/SwipeCards'
 
 const MANA_ORDER = ['W', 'U', 'B', 'R', 'G', 'C']
 const MANA_LABELS = { W: 'White', U: 'Blue', B: 'Black', R: 'Red', G: 'Green', C: 'Colorless' }
@@ -27,22 +28,9 @@ function FilterButton({ active, onClick, children }) {
   )
 }
 
-function SortHeader({ col, label, sortCol, sortDir, onSort, align = 'left', extraClass = '' }) {
-  const active = sortCol === col
-  const indicator = active ? (sortDir === 'asc' ? '↑' : '↓') : '↕'
-  return (
-    <th onClick={() => onSort(col)}
-      className={`px-4 py-3 text-xs font-semibold uppercase tracking-wider cursor-pointer select-none group ${align === 'right' ? 'text-right' : 'text-left'} ${extraClass}`}>
-      <span className={`inline-flex items-center gap-1 transition-colors ${active ? 'text-amber-400' : 'text-gray-400 group-hover:text-gray-200'}`}>
-        {label}
-        <span className={active ? 'text-amber-400' : 'text-gray-600 group-hover:text-gray-400'}>{indicator}</span>
-      </span>
-    </th>
-  )
-}
-
-// Wide enough for the list of families to sit beside the one selected
-const WIDE_QUERY = '(min-width: 1440px)'
+// From Tailwind's lg up the list of families sits beside the one selected; below it,
+// phones and small tablets get one family at a time, swiped.
+const NARROW_QUERY = '(max-width: 1023px)'
 
 // A family in brief: who it is, and its archetypes
 function FamilyPane({ f, metaMap }) {
@@ -100,7 +88,8 @@ export default function FamiliesIndex() {
   const [activeMana, setActiveMana] = useState(new Set())
   const [sortCol, setSortCol] = useState('meta')
   const [sortDir, setSortDir] = useState('desc')
-  const wide = useMediaQuery(WIDE_QUERY)
+  const narrow = useMediaQuery(NARROW_QUERY)
+  const wide = !narrow
   const [selectedName, setSelectedName] = useState(null)
   const rowRef = useRef(null)
   const navigate = useNavigate()
@@ -141,11 +130,6 @@ export default function FamiliesIndex() {
     })
   }, [families, search, activeTypes, activeMana])
 
-  function handleSort(col) {
-    if (sortCol === col) setSortDir(d => (d === 'asc' ? 'desc' : 'asc'))
-    else { setSortCol(col); setSortDir(col === 'name' ? 'asc' : 'desc') }
-  }
-
   const sorted = useMemo(() => [...filtered].sort((a, b) => {
     let av, bv
     if (sortCol === 'name') { av = a.name.toLowerCase(); bv = b.name.toLowerCase() }
@@ -162,14 +146,13 @@ export default function FamiliesIndex() {
 
   // The family shown beside the list (wide): the one picked, else the first
   const selected = sorted.find(f => f.name === selectedName) || sorted[0]
+  const cardIndex = Math.max(0, sorted.findIndex(f => f.name === selectedName))
 
   useEnterShortcut(() => {
     if (!sorted.length) return
     if (wide) setSelectedName(sorted[0].name)
     else navigate(`/families/${nameToSlug(sorted[0].name)}`)
   }, searchRef)
-
-  const go = f => navigate(`/families/${nameToSlug(f.name)}`)
 
   return (
     <Layout>
@@ -217,9 +200,22 @@ export default function FamiliesIndex() {
         ) : (
           <>
             <p className="text-xs text-gray-500">{filtered.length} famil{filtered.length !== 1 ? 'ies' : 'y'}</p>
-            {wide ? (
+            {narrow ? (
+              filtered.length === 0 ? (
+                <p className="text-center text-gray-500 text-sm py-12">No families match your filters.</p>
+              ) : (
+                <SwipeCards index={cardIndex} count={sorted.length} cardKey={selected?.name}
+                  onChange={i => setSelectedName(sorted[i].name)}
+                  label={`${cardIndex + 1} of ${sorted.length}`}
+                  hint="Swipe the card left or right for the next or previous family.">
+                  <div className="bg-gray-900 border border-gray-700 rounded-xl p-4">
+                    {selected && <FamilyPane key={selected.name} f={selected} metaMap={metaMap} />}
+                  </div>
+                </SwipeCards>
+              )
+            ) : (
               <div ref={rowRef} className="flex gap-6 items-start">
-                <div className="w-96 2xl:w-[28rem] shrink-0 sticky top-24 max-h-[calc(100vh-7rem)] overflow-y-auto">
+                <div className="w-72 xl:w-96 2xl:w-[28rem] shrink-0 sticky top-24 max-h-[calc(100vh-7rem)] overflow-y-auto">
                   <ul className="border border-gray-700 rounded-xl overflow-hidden bg-gray-900 divide-y divide-gray-700/50">
                     {sorted.map(f => {
                       const open = f.name === selected?.name
@@ -246,38 +242,6 @@ export default function FamiliesIndex() {
                   {selected && <FamilyPane key={selected.name} f={selected} metaMap={metaMap} />}
                 </div>
               </div>
-            ) : (
-            <div className="border border-gray-700 rounded-xl overflow-hidden bg-gray-900">
-              <table className="w-full text-base bg-gray-900">
-                <thead>
-                  <tr className="bg-gray-800 border-b border-gray-700">
-                    <SortHeader col="name" label="Name" sortCol={sortCol} sortDir={sortDir} onSort={handleSort} extraClass="w-2/5" />
-                    <SortHeader col="colors" label="Colors" sortCol={sortCol} sortDir={sortDir} onSort={handleSort} />
-                    <SortHeader col="type" label="Type" sortCol={sortCol} sortDir={sortDir} onSort={handleSort} extraClass="hidden sm:table-cell" />
-                    <SortHeader col="count" label="Archetypes" sortCol={sortCol} sortDir={sortDir} onSort={handleSort} align="right" extraClass="hidden sm:table-cell" />
-                    <SortHeader col="meta" label="Meta %" sortCol={sortCol} sortDir={sortDir} onSort={handleSort} align="right" />
-                  </tr>
-                </thead>
-                <tbody className="divide-y divide-gray-700/50">
-                  {sorted.map(f => (
-                    <tr key={f.slug} onClick={() => go(f)}
-                      onAuxClick={e => { if (e.button === 1) window.open(`/#/families/${nameToSlug(f.name)}`, '_blank') }}
-                      className="hover:bg-gray-800 cursor-pointer group">
-                      <td className="px-4 py-3 font-medium text-gray-200 group-hover:text-amber-400 transition-colors">{f.name}</td>
-                      <td className="px-4 py-3">
-                        <div className="flex gap-0.5">
-                          {MANA_ORDER.filter(m => f.mana.includes(m)).map(m => <ManaIcon key={m} color={m} />)}
-                        </div>
-                      </td>
-                      <td className="px-4 py-3 text-gray-400 hidden sm:table-cell">{f.types.join(', ')}</td>
-                      <td className="px-4 py-3 text-right text-gray-400 hidden sm:table-cell">{f.archetypes.length}</td>
-                      <td className="px-4 py-3 text-right font-mono text-amber-400">{f.meta.toFixed(1)}%</td>
-                    </tr>
-                  ))}
-                </tbody>
-              </table>
-              {filtered.length === 0 && <p className="text-center text-gray-500 text-sm py-12">No families match your filters.</p>}
-            </div>
             )}
           </>
         )}

@@ -1,5 +1,4 @@
 import { useState, useEffect, useMemo, useRef } from 'react'
-import { Link, useNavigate } from 'react-router-dom'
 import Layout from '../components/Layout'
 import { useSearchShortcut, searchShortcutLabel } from '../utils/useSearchShortcut'
 import { FilterPanel } from '../components/FilterSheet'
@@ -29,31 +28,12 @@ const RANGES = [
   { label: 'Last year', back: d => d.setFullYear(d.getFullYear() - 1) },
 ]
 
-function SortHeader({ col, label, sortCol, sortDir, onSort, align = 'left', extraClass = '' }) {
-  const active = sortCol === col
-  const indicator = active ? (sortDir === 'asc' ? '↑' : '↓') : '↕'
-  const alignClass = align === 'right' ? 'text-right' : 'text-left'
-  return (
-    <th
-      onClick={() => onSort(col)}
-      className={`px-4 py-3 text-xs font-semibold uppercase tracking-wider cursor-pointer select-none group ${alignClass} ${extraClass}`}>
-      <span className={`inline-flex items-center gap-1 transition-colors ${active ? 'text-amber-400' : 'text-gray-400 group-hover:text-gray-200'}`}>
-        {label}
-        <span className={`${active ? 'text-amber-400' : 'text-gray-600 group-hover:text-gray-400'}`}>{indicator}</span>
-      </span>
-    </th>
-  )
-}
-
-// Wide enough for the list of tournaments to sit beside the one selected
-const WIDE_QUERY = '(min-width: 1440px)'
 // Phones and small tablets: one tournament at a time, swiped (Tailwind's lg, below)
 const NARROW_QUERY = '(max-width: 1023px)'
 
 const inputClass = 'bg-gray-900 border border-gray-600 rounded-lg px-3 py-1 text-sm text-gray-300 hover:border-gray-400 focus:outline-none focus:border-amber-400'
 
 export default function TournamentsIndex() {
-  const navigate = useNavigate()
   const [rows, setRows] = useState([])
   const [loading, setLoading] = useState(true)
   const [search, setSearch] = useState('')
@@ -65,14 +45,12 @@ export default function TournamentsIndex() {
   const [sortCol, setSortCol] = useState('date')
   const [sortDir, setSortDir] = useState('desc')
   const [page, setPage] = useState(0)
-  const paginationRef = useRef(null)
-  const wide = useMediaQuery(WIDE_QUERY)
   const narrow = useMediaQuery(NARROW_QUERY)
+  const wide = !narrow
   const [selectedId, setSelectedId] = useState(null)
   // details of the tournaments opened, by id; null for those that failed to load
   const [details, setDetails] = useState({})
   const requested = useRef(new Set())
-  const pageInitRef = useRef(true)
 
   useEffect(() => {
     fetch('/data/tournaments.json').then(r => r.json()).then(data => {
@@ -80,24 +58,6 @@ export default function TournamentsIndex() {
       setLoading(false)
     })
   }, [])
-
-  useEffect(() => {
-    if (pageInitRef.current) { pageInitRef.current = false; return }
-    const el = paginationRef.current
-    if (!el) return
-    const headerHeight = document.querySelector('header')?.offsetHeight ?? 64
-    const top = el.getBoundingClientRect().top + window.scrollY - headerHeight - 16
-    window.scrollTo({ top, behavior: 'smooth' })
-  }, [page])
-
-  function handleSort(col) {
-    if (sortCol === col) {
-      setSortDir(d => d === 'asc' ? 'desc' : 'asc')
-    } else {
-      setSortCol(col)
-      setSortDir(col === 'name' ? 'asc' : 'desc')
-    }
-  }
 
   function applyRange(back) {
     const start = new Date()
@@ -163,8 +123,8 @@ export default function TournamentsIndex() {
     setSearch(''); setFrom(''); setTo(''); setMinStars(0)
   }
 
-  const paginationBar = (ref) => totalPages > 1 && (
-    <div ref={ref} className="flex items-center justify-center gap-3 py-2">
+  const paginationBar = () => totalPages > 1 && (
+    <div className="flex items-center justify-center gap-3 py-2">
       <button onClick={e => { scrollSidebarToTop(e.currentTarget); setPage(p => Math.max(0, p - 1)) }} disabled={page === 0}
         className="px-4 py-2 rounded-lg text-sm font-semibold border border-gray-600 text-gray-400 hover:border-gray-400 hover:text-gray-200 transition-colors disabled:opacity-30 disabled:cursor-not-allowed">
         ← Previous
@@ -257,7 +217,7 @@ export default function TournamentsIndex() {
             <>
               <p className="text-xs text-gray-500">{filtered.length.toLocaleString()} tournament{filtered.length !== 1 ? 's' : ''}</p>
               <div className="flex gap-6 items-start">
-                <div className="w-96 2xl:w-[28rem] shrink-0 sticky top-24 max-h-[calc(100vh-7rem)] overflow-y-auto space-y-3">
+                <div className="w-72 xl:w-96 2xl:w-[28rem] shrink-0 sticky top-24 max-h-[calc(100vh-7rem)] overflow-y-auto space-y-3">
                   <ul className="border border-gray-700 rounded-xl overflow-hidden bg-gray-900 divide-y divide-gray-700/50">
                     {pageRows.map(r => {
                       const open = r.id === selected
@@ -284,58 +244,14 @@ export default function TournamentsIndex() {
                   {filtered.length === 0 && (
                     <p className="text-center text-gray-500 text-sm py-12">No tournaments match your filters.</p>
                   )}
-                  {paginationBar(null)}
+                  {paginationBar()}
                 </div>
                 <div className="flex-1 min-w-0">
                   {selected && <TournamentPane t={details[selected]} />}
                 </div>
               </div>
             </>
-          ) : (
-          <>
-            <p className="text-xs text-gray-500">{filtered.length.toLocaleString()} tournament{filtered.length !== 1 ? 's' : ''}</p>
-            {paginationBar(paginationRef)}
-            <div className="border border-gray-700 rounded-xl overflow-hidden bg-gray-900">
-              <table className="w-full text-base bg-gray-900">
-                <thead>
-                  <tr className="bg-gray-800 border-b border-gray-700">
-                    <SortHeader col="name"   label="Tournament" sortCol={sortCol} sortDir={sortDir} onSort={handleSort} extraClass="w-1/2" />
-                    <th className="px-4 py-3 text-xs font-semibold uppercase tracking-wider text-left text-gray-400 hidden sm:table-cell">Sources</th>
-                    <SortHeader col="decks"  label="Players"    sortCol={sortCol} sortDir={sortDir} onSort={handleSort} align="right" />
-                    <SortHeader col="date"   label="Date"       sortCol={sortCol} sortDir={sortDir} onSort={handleSort} align="right" />
-                  </tr>
-                </thead>
-                <tbody className="divide-y divide-gray-700/50 bg-gray-900">
-                  {pageRows.map(r => (
-                    <tr key={r.id}
-                      onClick={e => { if (!e.target.closest('a')) navigate(`/tournaments/${r.id}`) }}
-                      className="bg-gray-900 hover:bg-gray-800 cursor-pointer group">
-                      <td className="px-4 py-2.5 font-medium">
-                        <SizeStars players={r.decks} className="w-12 mr-2" />
-                        <Link to={`/tournaments/${r.id}`} className="text-gray-200 group-hover:text-amber-400 transition-colors">
-                          {r.name || `Tournament #${r.id}`}
-                        </Link>
-                        {r.notes > 0 && (
-                          <span title={`The sources disagree on ${r.notes} point${r.notes !== 1 ? 's' : ''}`}
-                            className="ml-2 text-xs text-amber-500">⚠ {r.notes}</span>
-                        )}
-                      </td>
-                      <td className="px-4 py-2.5 hidden sm:table-cell text-gray-400">
-                        {r.sources.map(sourceLabel).join(' · ')}
-                      </td>
-                      <td className="px-4 py-2.5 text-right font-mono text-amber-400">{r.decks}</td>
-                      <td className="px-4 py-2.5 text-right text-gray-400 whitespace-nowrap">{formatShortDate(r.date)}</td>
-                    </tr>
-                  ))}
-                </tbody>
-              </table>
-              {filtered.length === 0 && (
-                <p className="text-center text-gray-500 text-sm py-12">No tournaments match your filters.</p>
-              )}
-            </div>
-            {paginationBar(null)}
-          </>
-          )
+          ) : null
         )}
       </div>
     </Layout>
