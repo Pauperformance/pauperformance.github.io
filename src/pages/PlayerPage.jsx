@@ -299,7 +299,7 @@ export default function PlayerPage() {
           <>
             <div>
               <div className="flex items-center gap-3 flex-wrap">
-                <h1 className="text-2xl font-bold text-white">{player.name}</h1>
+                <h1 className="w-full sm:w-auto text-2xl font-bold text-white">{player.name}</h1>
                 {creator && creator.youtube_channel_url && (
                   <a href={creator.youtube_channel_url} target="_blank" rel="noreferrer"
                     className="flex items-center gap-1.5 px-2.5 py-1 rounded-lg bg-gray-800 border border-gray-700 hover:border-red-500/70 hover:text-red-400 text-gray-400 transition-colors text-xs font-medium"
