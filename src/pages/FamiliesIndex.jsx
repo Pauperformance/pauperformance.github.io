@@ -1,6 +1,7 @@
 import { useState, useEffect, useMemo, useRef } from 'react'
 import { Link, useNavigate } from 'react-router-dom'
 import { nameToSlug, metagameSlug } from '../utils/slugs'
+import { displayMana, manaSrc, manaLabel } from '../utils/mana'
 import { formatDate } from '../utils/dates'
 import Layout from '../components/Layout'
 import { useSearchShortcut, searchShortcutLabel } from '../utils/useSearchShortcut'
@@ -13,8 +14,8 @@ const MANA_LABELS = { W: 'White', U: 'Blue', B: 'Black', R: 'Red', G: 'Green', C
 const GAME_TYPES = ['Aggro', 'Midrange', 'Control', 'Tempo', 'Combo']
 
 function ManaIcon({ color, size = 'w-6 h-6' }) {
-  return <img src={`/images/mana/${color}.png`} alt={MANA_LABELS[color] ?? color}
-    title={MANA_LABELS[color] ?? color} className={`${size} inline-block`} />
+  return <img src={manaSrc(color)} alt={MANA_LABELS[color] ?? manaLabel(color)}
+    title={MANA_LABELS[color] ?? manaLabel(color)} className={`${size} inline-block`} />
 }
 
 function FilterButton({ active, onClick, children }) {
@@ -44,7 +45,7 @@ function FamilyPane({ f, metaMap }) {
         </div>
         <div className="flex flex-wrap items-center gap-x-6 gap-y-2 text-sm">
           <div className="flex items-center gap-1">
-            {MANA_ORDER.filter(m => f.mana.includes(m)).map(m => <ManaIcon key={m} color={m} size="w-5 h-5" />)}
+            {displayMana(MANA_ORDER.filter(m => f.mana.includes(m))).map(m => <ManaIcon key={m} color={m} size="w-5 h-5" />)}
           </div>
           {f.types.length > 0 && <div><span className="text-gray-500">Type </span><span className="font-medium text-gray-200">{f.types.join(', ')}</span></div>}
           <div><span className="text-gray-500">Archetypes </span><span className="font-medium text-gray-200">{f.archetypes.length}</span></div>
@@ -63,7 +64,7 @@ function FamilyPane({ f, metaMap }) {
                   <span className="block truncate text-xs text-gray-500">{a.game_type.join(', ')}</span>
                 </span>
                 <span className="flex gap-0.5 shrink-0">
-                  {MANA_ORDER.filter(m => a.dominant_mana.includes(m)).map(m => <ManaIcon key={m} color={m} size="w-4 h-4" />)}
+                  {displayMana(MANA_ORDER.filter(m => a.dominant_mana.includes(m))).map(m => <ManaIcon key={m} color={m} size="w-4 h-4" />)}
                 </span>
                 <span className="w-14 shrink-0 text-right font-mono text-sm text-amber-400">{(metaMap[a.name] ?? 0).toFixed(1)}%</span>
               </Link>
@@ -228,7 +229,7 @@ export default function FamiliesIndex() {
                               <span className="block truncate text-xs text-gray-500">{f.archetypes.length} archetypes · {f.types.join(', ')}</span>
                             </span>
                             <span className="flex gap-0.5 shrink-0">
-                              {MANA_ORDER.filter(m => f.mana.includes(m)).map(m => <ManaIcon key={m} color={m} size="w-4 h-4" />)}
+                              {displayMana(MANA_ORDER.filter(m => f.mana.includes(m))).map(m => <ManaIcon key={m} color={m} size="w-4 h-4" />)}
                             </span>
                             <span className="w-14 shrink-0 text-right font-mono text-sm text-amber-400">{f.meta.toFixed(1)}%</span>
                           </button>

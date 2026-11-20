@@ -3,6 +3,7 @@ import { Link, useNavigate } from 'react-router-dom'
 import Layout from '../components/Layout'
 import { computeTypicalList } from '../utils/typicalList'
 import { nameToSlug, metagameSlug, pilotToSlug } from '../utils/slugs'
+import { displayMana, manaSrc, manaLabel } from '../utils/mana'
 import { cardLinkSlug, useCardPages } from '../utils/cardPages'
 import { formatDate, formatShortDate } from '../utils/dates'
 import { easeInOut, scrollGently } from '../utils/scroll'
@@ -203,8 +204,8 @@ function TopDecksSection() {
                 <div className="flex items-start justify-between gap-1">
                   <span className="text-base font-semibold text-white leading-tight group-hover:text-amber-400 transition-colors line-clamp-2">{deck.archetype_name}</span>
                   <div className="flex items-center gap-0.5 shrink-0">
-                    {deck.dominant_mana.map(m => (
-                      <img key={m} src={`/images/mana/${m}.png`} alt={m} className="w-3.5 h-3.5" />
+                    {displayMana(deck.dominant_mana).map(m => (
+                      <img key={m} src={manaSrc(m)} alt={manaLabel(m)} className="w-3.5 h-3.5" />
                     ))}
                   </div>
                 </div>
@@ -235,7 +236,7 @@ function TopDecksSection() {
 function ManaSymbols({ mana, className }) {
   return (
     <div className={`${className} shrink-0 items-center gap-0.5`}>
-      {mana.map(m => <img key={m} src={`/images/mana/${m}.png`} alt={m} className="w-4 h-4" />)}
+      {displayMana(mana).map(m => <img key={m} src={manaSrc(m)} alt={manaLabel(m)} className="w-4 h-4" />)}
     </div>
   )
 }
@@ -714,11 +715,11 @@ function MetagameSection({ embedded = false }) {
   )
 }
 
-// How the top archetypes are shown: the Brainstorm glyph ring (default) or
-// the card table. Stored in the settings, so it can be changed there too.
+// How the top archetypes are shown: the card table (default) or
+// the Brainstorm glyph ring. Stored in the settings, so it can be changed there too.
 function useMetaView() {
   const { home } = useSettings()
-  const view = home.metaView === 'table' ? 'table' : 'brainstorm'
+  const view = home.metaView === 'brainstorm' ? 'brainstorm' : 'table'
   return [view, next => updateSettings({ home: { metaView: next } })]
 }
 
@@ -816,8 +817,8 @@ const MANA_NAMES = { W: 'White', U: 'Blue', B: 'Black', R: 'Red', G: 'Green', C:
 function NewsMana({ colours }) {
   return (
     <span className="inline-flex items-center gap-0.5 shrink-0">
-      {colours.map(c => (
-        <img key={c} src={`/images/mana/${c}.png`} alt={MANA_NAMES[c] ?? c} title={MANA_NAMES[c] ?? c} className="w-4 h-4" />
+      {displayMana(colours).map(c => (
+        <img key={c} src={manaSrc(c)} alt={c === 'WUBRG' ? manaLabel(c) : (MANA_NAMES[c] ?? c)} title={c === 'WUBRG' ? manaLabel(c) : (MANA_NAMES[c] ?? c)} className="w-4 h-4" />
       ))}
     </span>
   )
@@ -1258,7 +1259,7 @@ function RecentVideosSection() {
   // have ended, or are not checked yet, are left out; those that can't be told stay videos.
   const { live: youtube, unknown: unknownLives } = useLiveYouTube(hiddenCreators)
   // the languages of the visitor's Watch settings apply to the streams too (none: all)
-  const langs = useMemo(() => new Set(getSettings().watch.languages), [])
+  const langs = useMemo(() => new Set(getSettings().content.languages), [])
   const langAllowed = code => languageAllowed(langs, code)
   const live = streams
     ? channels.filter(c => streams[c.login] && langAllowed(c.language)).sort((a, b) => (streams[b.login].viewers ?? 0) - (streams[a.login].viewers ?? 0))
@@ -1268,7 +1269,8 @@ function RecentVideosSection() {
     fetch('/data/videos.json').then(r => r.json()).then(data => {
       const since = daysAgoIso(RECENT_DAYS)
       // the visitor's Watch settings: types, hidden creators and languages
-      const { types, hiddenCreators, languages: langs } = getSettings().watch
+      const { types, hiddenCreators } = getSettings().watch
+      const langs = getSettings().content.languages
       // Live alone leaves the videos to their default: no shorts
       const shown = showsVideos(types) ? types : ['videos']
       const hidden = new Set(hiddenCreators)

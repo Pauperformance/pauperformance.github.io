@@ -3,6 +3,7 @@ import TypicalListSection from './TypicalListSection'
 import { useCardPreview } from './CardPreview'
 import { useMetagames } from './CardPopularityChart'
 import { nameToSlug } from '../utils/slugs'
+import { displayMana, manaSrc, manaLabel } from '../utils/mana'
 import { useMediaQuery } from '../utils/useMediaQuery'
 
 const MANA_ORDER = ['W', 'U', 'B', 'R', 'G', 'C']
@@ -30,8 +31,8 @@ export default function ArchetypePane({ a, meta, details }) {
         </div>
         <div className="flex flex-wrap items-center gap-x-6 gap-y-2 text-sm">
           <div className="flex items-center gap-1">
-            {MANA_ORDER.filter(m => a.dominant_mana.includes(m)).map(m => (
-              <img key={m} src={`/images/mana/${m}.png`} alt={m} className="w-5 h-5" />
+            {displayMana(MANA_ORDER.filter(m => a.dominant_mana.includes(m))).map(m => (
+              <img key={m} src={manaSrc(m)} alt={manaLabel(m)} className="w-5 h-5" />
             ))}
           </div>
           {a.game_type.length > 0 && (

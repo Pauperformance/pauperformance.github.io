@@ -9,17 +9,19 @@ export const DEFAULT_SETTINGS = {
   // how decklists are shown: text or visual, grouped by type or not, A–Z or by mana value
   deckView: { visual: false, groupByType: true, sort: 'name' },
   // the Watch page: what it shows to start with, any of 'videos', 'live' and 'shorts'
-  // together (utils/watchTypes.js), the creators left out of it, and the languages to
-  // start with (language codes of utils/languages.js; none: all)
-  watch: { types: ['videos'], hiddenCreators: [], languages: [] },
+  // together (utils/watchTypes.js) and the creators left out of it
+  watch: { types: ['videos'], hiddenCreators: [] },
+  // the languages of what is listed, videos and articles, to start with
+  // (language codes of utils/languages.js; none: all)
+  content: { languages: [] },
   // everywhere videos are listed (Watch, archetype pages…): a muted preview
   // playing on hover (desktop) or when the video is in the middle of the screen (touch)
   videos: { previews: true },
   // the artwork cards are shown with: the card's first print ever ('first') or its
   // first common print ('common'), see utils/artwork.js
   cards: { artwork: 'first' },
-  // the home page's metagame viewer: the Brainstorm glyph ring ('brainstorm') or the card table ('table')
-  home: { metaView: 'brainstorm' },
+  // the home page's metagame viewer: the card table ('table', the default) or the Brainstorm glyph ring ('brainstorm')
+  home: { metaView: 'table' },
 }
 
 const listeners = new Set()
@@ -30,6 +32,11 @@ function withDefaults(saved) {
   // settings saved before the types could be picked together hold one: type
   if (saved && saved.watch && saved.watch.type !== undefined && !saved.watch.types) {
     saved = { ...saved, watch: { ...saved.watch, types: saved.watch.type ? [saved.watch.type] : [] } }
+  }
+  // the languages were once a Watch setting
+  if (saved && saved.watch && saved.watch.languages !== undefined) {
+    const { languages, ...watch } = saved.watch
+    saved = { ...saved, watch, content: { languages, ...saved.content } }
   }
   const out = {}
   for (const group of Object.keys(DEFAULT_SETTINGS)) {

@@ -4,6 +4,7 @@ import { DeckList, VisualList, Toggle, sortCards, useDeckMetagame, versusOf } fr
 import SizeStars from './SizeStars'
 import { MetagameBadge } from './Metagame'
 import MtgoButtons from './MtgoButtons'
+import RowArt from './RowArt'
 import { useCardData, useCardPreview, OracleText } from './CardPreview'
 import { useCardPages } from '../utils/cardPages'
 import { getSettings } from '../utils/settings'
@@ -482,7 +483,7 @@ export default function TournamentDecks({ decks, several = false, showArchetype 
       const name = loaded[d.id] ? pickDeckCard(loaded[d.id].decklist, d.id, cardTypes) : null
       url = name && rowImages?.[name]
     }
-    return url ? url.replace('/normal/', '/small/') : null
+    return url || null
   }
 
   const table = (
@@ -509,17 +510,7 @@ export default function TournamentDecks({ decks, several = false, showArchetype 
                     </span>
                   )}
                 </span>
-                {rowArt(d) && (
-                  <span className="relative shrink-0 self-stretch w-20 sm:w-24 -my-2 -mr-3 overflow-hidden bg-gray-800 [container-type:size]"
-                    style={{ clipPath: 'polygon(22% 0, 100% 0, 100% 100%, 0 100%)' }}>
-                    {/* Scryfall's "small" card (146px wide) cropped to its art window: its art is about as wide as the
-                        row picture, so the browser hardly shrinks it. The 6x shrink of the 616px art_crop made the
-                        scan's grain shimmer. The art is 83% of the card's width, 44% of its height, centred at 33%
-                        down; the image covers the picture box, using the box's own size (container units). */}
-                    <img src={rowArt(d)} alt="" loading="lazy" className="absolute left-1/2 top-1/2 max-w-none h-auto"
-                      style={{ width: 'max(125cqw, 170cqh)', transform: 'translate(-50%, -33.4%)' }} />
-                  </span>
-                )}
+                <RowArt url={rowArt(d)} />
               </button>
             </li>
           )

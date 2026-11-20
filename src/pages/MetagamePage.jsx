@@ -2,6 +2,7 @@ import { useState, useEffect } from 'react'
 import { useParams, Link } from 'react-router-dom'
 import Layout from '../components/Layout'
 import CardLink from '../components/PoolCardLink'
+import { displayMana, manaSrc, manaLabel } from '../utils/mana'
 import MetaPie from '../components/MetaPie'
 import ShareChange from '../components/ShareChange'
 import TableOfContents from '../components/TableOfContents'
@@ -201,7 +202,7 @@ function ArchetypeCard({ archetype, rank, cardPages, bindPreview, code }) {
         <div className="flex items-center gap-2 min-w-0">
           <Link to={to} className="truncate min-w-0 font-semibold text-white hover:text-amber-400 transition-colors">{archetype.name}</Link>
           <div className="flex shrink-0 items-center gap-0.5">
-            {archetype.dominant_mana.map(m => <img key={m} src={`/images/mana/${m}.png`} alt={m} className="w-4 h-4" />)}
+            {displayMana(archetype.dominant_mana).map(m => <img key={m} src={manaSrc(m)} alt={manaLabel(m)} className="w-4 h-4" />)}
           </div>
           <span className="ml-auto shrink-0 text-lg text-amber-400 font-mono tabular-nums">{archetype.meta_share.toFixed(1)}%</span>
         </div>

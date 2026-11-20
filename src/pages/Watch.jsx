@@ -72,7 +72,7 @@ export default function Watch() {
   const searchRef = useSearchShortcut()
   const [activeCreators, setActiveCreators] = useState(new Set())
   // the languages shown: those of the visitor's settings to start with (none: all)
-  const [activeLanguages, setActiveLanguages] = useState(() => new Set(getSettings().watch.languages))
+  const [activeLanguages, setActiveLanguages] = useState(() => new Set(getSettings().content.languages))
   const [activeArchetypes, setActiveArchetypes] = useState(new Set())
   const [archetypeSearch, setArchetypeSearch] = useState('')
   const [dropdownOpen, setDropdownOpen] = useState(false)
