@@ -12,7 +12,9 @@ import { nameToSlug } from '../utils/slugs'
 import { METAFY_ICON } from '../utils/socialIcons'
 import { getSettings } from '../utils/settings'
 import { languageAllowed } from '../utils/languages'
-import { firstYearOf, formatDate, formatShortDate } from '../utils/dates'
+import { formatDate, formatShortDate } from '../utils/dates'
+import DateChips from '../components/DateChips'
+import { LONG_RANGES, rangeStart } from '../utils/dateRanges'
 
 const LANG_FLAG = {
   en: '🇬🇧', eng: '🇬🇧', 'en-US': '🇬🇧', 'en-GB': '🇬🇧',
@@ -25,41 +27,8 @@ const LANG_FLAG = {
   pl: '🇵🇱',
 }
 
-const MONTHS = ['Jan','Feb','Mar','Apr','May','Jun','Jul','Aug','Sep','Oct','Nov','Dec']
-const SELECT_CLS = 'bg-gray-800 border border-gray-600 rounded-lg px-2 py-1.5 text-sm text-gray-100 focus:outline-none focus:border-amber-400 [color-scheme:dark]'
 const PAGE_SIZE = 20
 const VIDEO_PAGE_SIZE = 50
-
-function MonthPicker({ label, value, onChange, firstYear }) {
-  const [year, setYear] = useState(value ? value.split('-')[0] : '')
-  const [month, setMonth] = useState(value ? value.split('-')[1] : '')
-  const currentYear = new Date().getFullYear()
-  // from the oldest entry of the table (firstYearOf), this year until it loads
-  const fromYear = firstYear ?? currentYear
-  const years = Array.from({ length: currentYear - fromYear + 1 }, (_, i) => String(fromYear + i))
-
-  useEffect(() => {
-    setYear(value ? value.split('-')[0] : '')
-    setMonth(value ? value.split('-')[1] : '')
-  }, [value])
-
-  const handleYear = (y) => { setYear(y); onChange(y && month ? `${y}-${month}` : '') }
-  const handleMonth = (m) => { setMonth(m); onChange(year && m ? `${year}-${m}` : '') }
-
-  return (
-    <div className="flex items-center gap-1.5">
-      <span className="text-sm text-gray-400 shrink-0">{label}</span>
-      <select value={month} onChange={e => handleMonth(e.target.value)} className={SELECT_CLS}>
-        <option value="">Month</option>
-        {MONTHS.map((m, i) => <option key={i} value={String(i + 1).padStart(2, '0')}>{m}</option>)}
-      </select>
-      <select value={year} onChange={e => handleYear(e.target.value)} className={SELECT_CLS}>
-        <option value="">Year</option>
-        {years.map(y => <option key={y} value={y}>{y}</option>)}
-      </select>
-    </div>
-  )
-}
 
 function VideoCard({ v }) {
   const [playing, setPlaying] = useState(false)
@@ -129,8 +98,9 @@ export default function PlayerPage() {
   const [notFound, setNotFound] = useState(false)
 
   const [filterTournament, setFilterTournament] = useState('')
-  const [filterDateFrom, setFilterDateFrom] = useState('')
-  const [filterDateTo, setFilterDateTo] = useState('')
+  // the date chip picked (its label), or none for any date
+  const [range, setRange] = useState('')
+  const dateFrom = useMemo(() => rangeStart(range), [range])
   const [activeArchetypes, setActiveArchetypes] = useState(new Set())
   const [archetypeSearch, setArchetypeSearch] = useState('')
   const [dropdownOpen, setDropdownOpen] = useState(false)
@@ -212,32 +182,17 @@ export default function PlayerPage() {
     if (!player) return []
     return player.decks.filter(d => {
       if (filterTournament && !(d.tournament_name || '').toLowerCase().includes(filterTournament.toLowerCase())) return false
-      if (filterDateFrom && (d.tournament_date || '').slice(0, 7) < filterDateFrom) return false
-      if (filterDateTo && (d.tournament_date || '').slice(0, 7) > filterDateTo) return false
+      if (dateFrom && (d.tournament_date || '') < dateFrom) return false
       if (activeArchetypes.size > 0 && !activeArchetypes.has(d.archetype)) return false
       if (!bigEnough(playersOf(sizes, d), minSize)) return false
       if (!resultMatches(d.place, result)) return false
       return true
     })
-  }, [player, filterTournament, filterDateFrom, filterDateTo, activeArchetypes, minSize, result, sizes])
-
-  const toYM = d => d.toISOString().slice(0, 7)
-  const applyRange = daysAgo => {
-    const to = new Date()
-    const from = new Date()
-    if (daysAgo === 7) from.setDate(from.getDate() - 7)
-    else if (daysAgo === 30) from.setMonth(from.getMonth() - 1)
-    else from.setFullYear(from.getFullYear() - 1)
-    setFilterDateFrom(toYM(from))
-    setFilterDateTo(toYM(to))
-    setPage(0)
-  }
+  }, [player, filterTournament, dateFrom, activeArchetypes, minSize, result, sizes])
 
   const clearFilters = () => {
-    setFilterTournament(''); setFilterDateFrom(''); setFilterDateTo(''); setActiveArchetypes(new Set()); setMinSize(0); setResult(''); setPage(0)
+    setFilterTournament(''); setRange(''); setActiveArchetypes(new Set()); setMinSize(0); setResult(''); setPage(0)
   }
-
-  const firstYear = useMemo(() => firstYearOf(player?.decks, 'tournament_date'), [player])
 
   useEffect(() => { setPage(0) }, [filtered])
 
@@ -414,7 +369,7 @@ export default function PlayerPage() {
 
             <div ref={sectionRef} className="space-y-3">
             <FilterPanel scopeRef={sectionRef} onClear={clearFilters}
-              activeCount={(filterTournament ? 1 : 0) + activeArchetypes.size + (filterDateFrom ? 1 : 0) + (filterDateTo ? 1 : 0) + (minSize ? 1 : 0) + (result ? 1 : 0)}
+              activeCount={(filterTournament ? 1 : 0) + activeArchetypes.size + (range ? 1 : 0) + (minSize ? 1 : 0) + (result ? 1 : 0)}
               summary={`${filtered.length} deck${filtered.length !== 1 ? 's' : ''}`}>
               <div className="relative">
                 <input
@@ -483,24 +438,7 @@ export default function PlayerPage() {
                 )}
               </div>
 
-              <div className="flex flex-wrap items-center gap-4">
-                <MonthPicker label="From:" value={filterDateFrom} onChange={v => { setFilterDateFrom(v); setPage(0) }} firstYear={firstYear} />
-                <MonthPicker label="To:" value={filterDateTo} onChange={v => { setFilterDateTo(v); setPage(0) }} firstYear={firstYear} />
-                <div className="flex gap-1.5">
-                  {[['Last week', 7], ['Last month', 30], ['Last year', 365]].map(([label, days]) => (
-                    <button key={label} onClick={() => applyRange(days)}
-                      className="px-2.5 py-1 text-xs rounded-md border border-gray-600 text-gray-400 hover:border-amber-400/50 hover:text-amber-400 transition-colors">
-                      {label}
-                    </button>
-                  ))}
-                  {(filterDateFrom || filterDateTo) && (
-                    <button onClick={() => { setFilterDateFrom(''); setFilterDateTo(''); setPage(0) }}
-                      className="px-2.5 py-1 text-xs rounded-md border border-gray-600 text-gray-400 hover:border-amber-400/50 hover:text-amber-400 transition-colors">
-                      Reset
-                    </button>
-                  )}
-                </div>
-              </div>
+              <DateChips ranges={LONG_RANGES} value={range} onChange={v => { setRange(v); setPage(0) }} />
               <SizeFilter value={minSize} onChange={v => { setMinSize(v); setPage(0) }} />
               <ResultFilter value={result} onChange={v => { setResult(v); setPage(0) }} />
             </FilterPanel>

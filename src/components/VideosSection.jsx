@@ -1,5 +1,6 @@
 import { useState, useEffect, useMemo, useRef } from 'react'
-import { firstYearOf } from '../utils/dates'
+import DateChips from './DateChips'
+import { LONG_RANGES, rangeStart } from '../utils/dateRanges'
 import { LANG_FLAG, LANG_CANONICAL, LANG_NAME } from '../utils/languages'
 import { getSettings } from '../utils/settings'
 import VideoCard from './VideoCard'
@@ -11,8 +12,6 @@ import { FilterPanel } from './FilterSheet'
 const LANG_DISPLAY = Object.fromEntries(Object.entries(LANG_NAME).map(([l, name]) => [l, `${LANG_FLAG[l]} ${name}`]))
 
 const VIDEOS_PAGE_SIZE = 50
-const MONTHS = ['Jan','Feb','Mar','Apr','May','Jun','Jul','Aug','Sep','Oct','Nov','Dec']
-const SELECT_CLS = 'bg-gray-800 border border-gray-600 rounded-lg px-2 py-1.5 text-sm text-gray-100 focus:outline-none focus:border-amber-400 [color-scheme:dark]'
 
 function FilterButton({ active, onClick, children }) {
   return (
@@ -24,37 +23,6 @@ function FilterButton({ active, onClick, children }) {
       }`}>
       {children}
     </button>
-  )
-}
-
-export function MonthPicker({ label, value, onChange, labelClass = '', firstYear }) {
-  const [year, setYear] = useState(value ? value.split('-')[0] : '')
-  const [month, setMonth] = useState(value ? value.split('-')[1] : '')
-  const currentYear = new Date().getFullYear()
-  // from the oldest entry of the table (firstYearOf), this year until it loads
-  const fromYear = firstYear ?? currentYear
-  const years = Array.from({ length: currentYear - fromYear + 1 }, (_, i) => String(fromYear + i))
-
-  useEffect(() => {
-    setYear(value ? value.split('-')[0] : '')
-    setMonth(value ? value.split('-')[1] : '')
-  }, [value])
-
-  const handleYear = (y) => { setYear(y); onChange(y && month ? `${y}-${month}` : '') }
-  const handleMonth = (m) => { setMonth(m); onChange(year && m ? `${year}-${m}` : '') }
-
-  return (
-    <div className="flex items-center gap-1.5">
-      <span className={`text-sm text-gray-400 shrink-0 ${labelClass}`}>{label}</span>
-      <select value={month} onChange={e => handleMonth(e.target.value)} className={SELECT_CLS}>
-        <option value="">Month</option>
-        {MONTHS.map((m, i) => <option key={i} value={String(i + 1).padStart(2, '0')}>{m}</option>)}
-      </select>
-      <select value={year} onChange={e => handleYear(e.target.value)} className={SELECT_CLS}>
-        <option value="">Year</option>
-        {years.map(y => <option key={y} value={y}>{y}</option>)}
-      </select>
-    </div>
   )
 }
 
@@ -74,13 +42,12 @@ export default function VideosSection({ videos: listedVideos }) {
   })
   const [activeArchetypes, setActiveArchetypes] = useState(new Set())
   const [activeType, setActiveType] = useState('videos')
-  const [filterDateFrom, setFilterDateFrom] = useState('')
-  const [filterDateTo, setFilterDateTo] = useState('')
-  const [toWrapped, setToWrapped] = useState(false)
+  // the date chip picked (its label), or none for any date
+  const [range, setRange] = useState('')
+  const dateFrom = useMemo(() => rangeStart(range), [range])
   const [viewMode, setViewMode] = useState('infinite')
   const [page, setPage] = useState(0)
   const [visibleCount, setVisibleCount] = useState(VIDEOS_PAGE_SIZE)
-  const dateRowRef = useRef(null)
   const sentinelRef = useRef(null)
   const paginationRef = useRef(null)
   const pageInitRef = useRef(true)
@@ -97,15 +64,6 @@ export default function VideosSection({ videos: listedVideos }) {
   function toggleLanguage(l) { setActiveLanguages(prev => { const n = new Set(prev); n.has(l) ? n.delete(l) : n.add(l); return n }) }
   function toggleType(t) { setActiveType(prev => prev === t ? '' : t) }
 
-  const toYM = (d) => d.toISOString().slice(0, 7)
-  function applyRange(daysAgo) {
-    const to = new Date(), from = new Date()
-    if (daysAgo === 7) from.setDate(from.getDate() - 7)
-    else if (daysAgo === 30) from.setMonth(from.getMonth() - 1)
-    else from.setFullYear(from.getFullYear() - 1)
-    setFilterDateFrom(toYM(from)); setFilterDateTo(toYM(to))
-  }
-
   const filtered = useMemo(() => {
     const q = search.trim().toLowerCase()
     return (allVideos || []).filter(v => {
@@ -115,13 +73,10 @@ export default function VideosSection({ videos: listedVideos }) {
       if (activeArchetypes.size > 0 && !activeArchetypes.has(v.archetype)) return false
       if (activeType === 'videos' && v.is_short === true) return false
       if (activeType === 'shorts' && v.is_short !== true) return false
-      if (filterDateFrom && v.date.slice(0, 7) < filterDateFrom) return false
-      if (filterDateTo && v.date.slice(0, 7) > filterDateTo) return false
+      if (dateFrom && v.date < dateFrom) return false
       return true
     })
-  }, [allVideos, search, activeCreators, activeLanguages, activeArchetypes, activeType, filterDateFrom, filterDateTo])
-
-  const firstYear = useMemo(() => firstYearOf(allVideos, 'date'), [allVideos])
+  }, [allVideos, search, activeCreators, activeLanguages, activeArchetypes, activeType, dateFrom])
 
   useEffect(() => { setPage(0); setVisibleCount(VIDEOS_PAGE_SIZE) }, [filtered])
 
@@ -144,19 +99,6 @@ export default function VideosSection({ videos: listedVideos }) {
     observer.observe(el)
     return () => observer.disconnect()
   }, [viewMode, visibleCount, filtered])
-
-  useEffect(() => {
-    const el = dateRowRef.current
-    if (!el) return
-    const check = () => {
-      const pickers = el.querySelectorAll('[data-picker]')
-      if (pickers.length >= 2) setToWrapped(pickers[1].offsetTop > pickers[0].offsetTop)
-    }
-    const observer = new ResizeObserver(check)
-    observer.observe(el)
-    check()
-    return () => observer.disconnect()
-  }, [])
 
   const totalPages = Math.ceil(filtered.length / VIDEOS_PAGE_SIZE)
   const visibleVideos = viewMode === 'paginated'
@@ -182,8 +124,8 @@ export default function VideosSection({ videos: listedVideos }) {
   return (
     <div ref={sectionRef} className="space-y-3">
       <FilterPanel scopeRef={sectionRef}
-        activeCount={(search ? 1 : 0) + activeCreators.size + activeLanguages.size + activeArchetypes.size + (filterDateFrom ? 1 : 0) + (filterDateTo ? 1 : 0)}
-        onClear={() => { setSearch(''); setActiveCreators(new Set()); setActiveLanguages(new Set()); setActiveArchetypes(new Set()); setFilterDateFrom(''); setFilterDateTo('') }}
+        activeCount={(search ? 1 : 0) + activeCreators.size + activeLanguages.size + activeArchetypes.size + (range ? 1 : 0)}
+        onClear={() => { setSearch(''); setActiveCreators(new Set()); setActiveLanguages(new Set()); setActiveArchetypes(new Set()); setRange('') }}
         summary={`${filtered.length} video${filtered.length !== 1 ? 's' : ''}`}>
         <div className="relative">
           <input type="search" placeholder="Search videos…" value={search} onChange={e => setSearch(e.target.value)}
@@ -226,23 +168,9 @@ export default function VideosSection({ videos: listedVideos }) {
             ))}
           </div>
         )}
-        <div ref={dateRowRef} className="flex flex-wrap items-center gap-4">
-          <MonthPicker label="From:" value={filterDateFrom} onChange={v => setFilterDateFrom(v)} labelClass="w-16" firstYear={firstYear} />
-          <MonthPicker label="To:" value={filterDateTo} onChange={v => setFilterDateTo(v)} labelClass={toWrapped ? 'w-16' : ''} firstYear={firstYear} />
-          <div className="flex gap-1.5 flex-wrap">
-            {[{ label: 'Last week', days: 7 }, { label: 'Last month', days: 30 }, { label: 'Last year', days: 365 }].map(({ label, days }) => (
-              <button key={label} onClick={() => applyRange(days)}
-                className="px-2.5 py-1 rounded-lg text-xs font-semibold border border-gray-600 text-gray-400 hover:border-gray-400 hover:text-gray-200 transition-colors">
-                {label}
-              </button>
-            ))}
-            {(filterDateFrom || filterDateTo) && (
-              <button onClick={() => { setFilterDateFrom(''); setFilterDateTo('') }}
-                className="px-2.5 py-1 rounded-lg text-xs font-semibold border border-gray-600 text-gray-400 hover:border-gray-400 hover:text-gray-200 transition-colors">
-                Reset
-              </button>
-            )}
-          </div>
+        <div className="flex flex-wrap items-center gap-2">
+          <span className="text-sm text-gray-500 w-16 shrink-0">Date:</span>
+          <DateChips ranges={LONG_RANGES} value={range} onChange={setRange} />
         </div>
         <div className="flex items-center gap-2">
           <span className="text-sm text-gray-500 w-16 shrink-0">View:</span>

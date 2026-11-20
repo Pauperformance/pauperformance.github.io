@@ -4,7 +4,9 @@ import Layout from '../components/Layout'
 import { useSearchShortcut, searchShortcutLabel } from '../utils/useSearchShortcut'
 import { FilterPanel } from '../components/FilterSheet'
 import { nameToSlug } from '../utils/slugs'
-import { firstYearOf, formatShortDate } from '../utils/dates'
+import { formatShortDate } from '../utils/dates'
+import DateChips from '../components/DateChips'
+import { WATCH_RANGES, rangeStart } from '../utils/dateRanges'
 import { LANG_FLAG, LANG_CANONICAL, LANG_NAME } from '../utils/languages'
 import VideoCard from '../components/VideoCard'
 import LiveStreams, { useLiveYouTube } from '../components/LiveStreams'
@@ -16,8 +18,6 @@ import { getSettings } from '../utils/settings'
 
 const LANG_DISPLAY = Object.fromEntries(Object.entries(LANG_NAME).map(([l, name]) => [l, `${LANG_FLAG[l]} ${name}`]))
 
-const MONTHS = ['Jan','Feb','Mar','Apr','May','Jun','Jul','Aug','Sep','Oct','Nov','Dec']
-const SELECT_CLS = 'bg-gray-800 border border-gray-600 rounded-lg px-2 py-1.5 text-sm text-gray-100 focus:outline-none focus:border-amber-400 [color-scheme:dark]'
 const PAGE_SIZE = 50
 
 function FilterButton({ active, onClick, children }) {
@@ -31,37 +31,6 @@ function FilterButton({ active, onClick, children }) {
       }`}>
       {children}
     </button>
-  )
-}
-
-function MonthPicker({ label, value, onChange, labelClass = 'w-16', firstYear }) {
-  const [year, setYear] = useState(value ? value.split('-')[0] : '')
-  const [month, setMonth] = useState(value ? value.split('-')[1] : '')
-  const currentYear = new Date().getFullYear()
-  // from the oldest entry of the table (firstYearOf), this year until it loads
-  const fromYear = firstYear ?? currentYear
-  const years = Array.from({ length: currentYear - fromYear + 1 }, (_, i) => String(fromYear + i))
-
-  useEffect(() => {
-    setYear(value ? value.split('-')[0] : '')
-    setMonth(value ? value.split('-')[1] : '')
-  }, [value])
-
-  const handleYear = (y) => { setYear(y); onChange(y && month ? `${y}-${month}` : '') }
-  const handleMonth = (m) => { setMonth(m); onChange(year && m ? `${year}-${m}` : '') }
-
-  return (
-    <div className="flex items-center gap-1.5" data-picker>
-      <span className={`text-sm text-gray-500 shrink-0 ${labelClass}`}>{label}</span>
-      <select value={month} onChange={e => handleMonth(e.target.value)} className={SELECT_CLS}>
-        <option value="">Month</option>
-        {MONTHS.map((m, i) => <option key={i} value={String(i + 1).padStart(2, '0')}>{m}</option>)}
-      </select>
-      <select value={year} onChange={e => handleYear(e.target.value)} className={SELECT_CLS}>
-        <option value="">Year</option>
-        {years.map(y => <option key={y} value={y}>{y}</option>)}
-      </select>
-    </div>
   )
 }
 
@@ -94,9 +63,9 @@ export default function Watch() {
   const onAir = useCallback(v => liveStatus[v.video_id] === 'live' || liveStatus[v.video_id] === 'unknown', [liveStatus])
   // whether the videos preview (play without pressing play): the visitor's setting to start with
   const [previews, setPreviews] = useState(() => getSettings().videos.previews)
-  const [filterDateFrom, setFilterDateFrom] = useState('')
-  const [filterDateTo, setFilterDateTo] = useState('')
-  const [toWrapped, setToWrapped] = useState(false)
+  // the date chip picked (its label), or none for any date
+  const [range, setRange] = useState('')
+  const dateFrom = useMemo(() => rangeStart(range), [range])
   const [viewMode, setViewMode] = useState('infinite')
   const [page, setPage] = useState(0)
   const phone = useMediaQuery('(max-width: 767px)')
@@ -104,7 +73,6 @@ export default function Watch() {
   const dropdownRef = useRef(null)
   const creatorDropdownRef = useRef(null)
   const sentinelRef = useRef(null)
-  const dateRowRef = useRef(null)
   const resultsRef = useRef(null)
   const paginationRef = useRef(null)
   const pageInitRef = useRef(true)
@@ -114,19 +82,6 @@ export default function Watch() {
       setVideos(data)
       setLoading(false)
     })
-  }, [])
-
-  useEffect(() => {
-    const el = dateRowRef.current
-    if (!el) return
-    const check = () => {
-      const pickers = el.querySelectorAll('[data-picker]')
-      if (pickers.length >= 2) setToWrapped(pickers[1].offsetTop > pickers[0].offsetTop)
-    }
-    const observer = new ResizeObserver(check)
-    observer.observe(el)
-    check()
-    return () => observer.disconnect()
   }, [])
 
   useEffect(() => {
@@ -173,16 +128,6 @@ export default function Watch() {
     setActiveTypes(prev => { const n = new Set(prev); n.has(t) ? n.delete(t) : n.add(t); return n })
   }
 
-  const toYM = (d) => d.toISOString().slice(0, 7)
-  function applyRange(daysAgo) {
-    const to = new Date(), from = new Date()
-    if (daysAgo === 7) from.setDate(from.getDate() - 7)
-    else if (daysAgo === 30) from.setMonth(from.getMonth() - 1)
-    else from.setFullYear(from.getFullYear() - 1)
-    setFilterDateFrom(toYM(from))
-    setFilterDateTo(toYM(to))
-  }
-
   // check the live streams as soon as Live is picked
   useEffect(() => {
     if (!showsLive(activeTypes)) return
@@ -203,13 +148,10 @@ export default function Watch() {
       if (activeArchetypes.size > 0 && !activeArchetypes.has(v.archetype)) return false
       if (youtubeLiveIds.has(v.video_id)) return false
       if (!typeAllows(activeTypes, v, onAir)) return false
-      if (filterDateFrom && v.date.slice(0, 7) < filterDateFrom) return false
-      if (filterDateTo && v.date.slice(0, 7) > filterDateTo) return false
+      if (dateFrom && v.date < dateFrom) return false
       return true
     })
-  }, [videos, search, activeCreators, activeLanguages, activeArchetypes, activeTypes, filterDateFrom, filterDateTo, excludedCreators, onAir, youtubeLiveIds])
-
-  const firstYear = useMemo(() => firstYearOf(videos, 'date'), [videos])
+  }, [videos, search, activeCreators, activeLanguages, activeArchetypes, activeTypes, dateFrom, excludedCreators, onAir, youtubeLiveIds])
 
   // Reset paging whenever filters change
   useEffect(() => {
@@ -258,12 +200,11 @@ export default function Watch() {
         if (excludedCreators.has(v.creator_name)) return false
         if (activeLanguages.size > 0 && !activeLanguages.has(LANG_CANONICAL[v.language] ?? v.language)) return false
         if (!typeAllows(activeTypes, v, onAir)) return false
-        if (filterDateFrom && v.date.slice(0, 7) < filterDateFrom) return false
-        if (filterDateTo && v.date.slice(0, 7) > filterDateTo) return false
+        if (dateFrom && v.date < dateFrom) return false
         return true
       })
     })
-  }, [archetypes, archetypeSearch, activeArchetypes, videos, search, activeCreators, excludedCreators, activeLanguages, activeTypes, filterDateFrom, filterDateTo, onAir])
+  }, [archetypes, archetypeSearch, activeArchetypes, videos, search, activeCreators, excludedCreators, activeLanguages, activeTypes, dateFrom, onAir])
 
   const visibleCreators = useMemo(() => {
     const q = search.trim().toLowerCase()
@@ -276,12 +217,11 @@ export default function Watch() {
         if (activeLanguages.size > 0 && !activeLanguages.has(LANG_CANONICAL[v.language] ?? v.language)) return false
         if (activeArchetypes.size > 0 && !activeArchetypes.has(v.archetype)) return false
         if (!typeAllows(activeTypes, v, onAir)) return false
-        if (filterDateFrom && v.date.slice(0, 7) < filterDateFrom) return false
-        if (filterDateTo && v.date.slice(0, 7) > filterDateTo) return false
+        if (dateFrom && v.date < dateFrom) return false
         return true
       })
     })
-  }, [creators, creatorSearch, activeCreators, excludedCreators, videos, search, activeLanguages, activeArchetypes, activeTypes, filterDateFrom, filterDateTo, onAir])
+  }, [creators, creatorSearch, activeCreators, excludedCreators, videos, search, activeLanguages, activeArchetypes, activeTypes, dateFrom, onAir])
 
   return (
     <Layout>
@@ -291,8 +231,8 @@ export default function Watch() {
           <p className="mt-2 text-gray-400 text-sm">Pauper videos from creators around the world.</p>
         </div>
 
-        <FilterPanel activeCount={(search ? 1 : 0) + activeCreators.size + excludedCreators.size + activeLanguages.size + activeArchetypes.size + (filterDateFrom ? 1 : 0) + (filterDateTo ? 1 : 0)}
-          onClear={() => { setSearch(''); setActiveCreators(new Set()); setExcludedCreators(new Set()); setActiveLanguages(new Set()); setActiveArchetypes(new Set()); setFilterDateFrom(''); setFilterDateTo('') }}
+        <FilterPanel activeCount={(search ? 1 : 0) + activeCreators.size + excludedCreators.size + activeLanguages.size + activeArchetypes.size + (range ? 1 : 0)}
+          onClear={() => { setSearch(''); setActiveCreators(new Set()); setExcludedCreators(new Set()); setActiveLanguages(new Set()); setActiveArchetypes(new Set()); setRange('') }}
           summary={`${filtered.length} video${filtered.length !== 1 ? 's' : ''}`}>
           <div className="relative">
             <input
@@ -448,23 +388,9 @@ export default function Watch() {
               </div>
             )}
           </div>
-          <div ref={dateRowRef} className="flex flex-wrap items-center gap-4">
-            <MonthPicker label="From:" value={filterDateFrom} onChange={v => setFilterDateFrom(v)} firstYear={firstYear} />
-            <MonthPicker label="To:" value={filterDateTo} onChange={v => setFilterDateTo(v)} labelClass={toWrapped ? 'w-16' : ''} firstYear={firstYear} />
-            <div className="flex gap-1.5 flex-wrap">
-              {[{ label: 'Last week', days: 7 }, { label: 'Last month', days: 30 }, { label: 'Last year', days: 365 }].map(({ label, days }) => (
-                <button key={label} onClick={() => applyRange(days)}
-                  className="px-2.5 py-1 rounded-lg text-xs font-semibold border border-gray-600 text-gray-400 hover:border-gray-400 hover:text-gray-200 transition-colors">
-                  {label}
-                </button>
-              ))}
-              {(filterDateFrom || filterDateTo) && (
-                <button onClick={() => { setFilterDateFrom(''); setFilterDateTo('') }}
-                  className="px-2.5 py-1 rounded-lg text-xs font-semibold border border-gray-600 text-gray-400 hover:border-gray-400 hover:text-gray-200 transition-colors">
-                  Reset
-                </button>
-              )}
-            </div>
+          <div className="flex flex-wrap items-center gap-2">
+            <span className="text-sm text-gray-500 w-16 shrink-0">Date:</span>
+            <DateChips ranges={WATCH_RANGES} value={range} onChange={setRange} />
           </div>
           <div className="flex items-center gap-2">
             <span className="text-sm text-gray-500 w-16 shrink-0">View:</span>

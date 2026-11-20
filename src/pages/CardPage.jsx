@@ -5,11 +5,12 @@ import CardPane, { useCardDecks } from '../components/CardPane'
 import TournamentDecks, { useIsDesktop } from '../components/TournamentDecks'
 import SizeFilter, { bigEnough } from '../components/SizeFilter'
 import { FilterPanel } from '../components/FilterSheet'
-import { MonthPicker } from '../components/VideosSection'
+import DateChips from '../components/DateChips'
+import { LONG_RANGES, rangeStart } from '../utils/dateRanges'
 import { displayPlace } from '../utils/places'
 import { useTournamentSizes, playersOf } from '../utils/tournamentSizes'
 import { fullCardSlug } from '../utils/cardPages'
-import { firstYearOf, formatShortDate } from '../utils/dates'
+import { formatShortDate } from '../utils/dates'
 
 
 const PAGE_SIZE = 20
@@ -24,8 +25,9 @@ function CardDecksSection({ decks }) {
   const [activeArchetypes, setActiveArchetypes] = useState(new Set())
   const [filterTournament, setFilterTournament] = useState('')
   const [filterPilot, setFilterPilot] = useState('')
-  const [filterDateFrom, setFilterDateFrom] = useState('')
-  const [filterDateTo, setFilterDateTo] = useState('')
+  // the date chip picked (its label), or none for any date
+  const [range, setRange] = useState('')
+  const dateFrom = useMemo(() => rangeStart(range), [range])
   const [minSize, setMinSize] = useState(0)
   const [archetypeSearch, setArchetypeSearch] = useState('')
   const [dropdownOpen, setDropdownOpen] = useState(false)
@@ -55,36 +57,25 @@ function CardDecksSection({ decks }) {
     setPage(0)
   }
 
-  const toYM = (d) => d.toISOString().slice(0, 7)
-  const applyRange = (daysAgo) => {
-    const to = new Date(), from = new Date()
-    if (daysAgo === 7) from.setDate(from.getDate() - 7)
-    else if (daysAgo === 30) from.setMonth(from.getMonth() - 1)
-    else from.setFullYear(from.getFullYear() - 1)
-    setFilterDateFrom(toYM(from)); setFilterDateTo(toYM(to)); setPage(0)
-  }
-
   const filtered = useMemo(() => {
     if (!decks) return []
     return decks.filter(d => {
       if (activeArchetypes.size > 0 && !activeArchetypes.has(d.archetype)) return false
       if (filterTournament && !(d.tournament_name || '').toLowerCase().includes(filterTournament.toLowerCase())) return false
       if (filterPilot && !(d.pilot || '').toLowerCase().includes(filterPilot.toLowerCase())) return false
-      if (filterDateFrom && (d.tournament_date || '').slice(0, 7) < filterDateFrom) return false
-      if (filterDateTo && (d.tournament_date || '').slice(0, 7) > filterDateTo) return false
+      if (dateFrom && (d.tournament_date || '') < dateFrom) return false
       if (!bigEnough(playersOf(sizes, d), minSize)) return false
       return true
     })
-  }, [decks, activeArchetypes, filterTournament, filterPilot, filterDateFrom, filterDateTo, minSize, sizes])
+  }, [decks, activeArchetypes, filterTournament, filterPilot, dateFrom, minSize, sizes])
 
-  const firstYear = useMemo(() => firstYearOf(decks, 'tournament_date'), [decks])
 
   if (!decks) return <p className="text-gray-500 text-sm">Loading decks…</p>
   if (!decks.length) return <p className="text-gray-500 text-sm">No decks recorded.</p>
 
   const setFilter = (setter) => (e) => { setter(e.target.value); setPage(0) }
   const clearFilters = () => {
-    setFilterTournament(''); setFilterPilot(''); setFilterDateFrom(''); setFilterDateTo('')
+    setFilterTournament(''); setFilterPilot(''); setRange('')
     setMinSize(0); setActiveArchetypes(new Set()); setPage(0)
   }
 
@@ -120,7 +111,7 @@ function CardDecksSection({ decks }) {
     <div ref={sectionRef} className="space-y-3">
       <h2 className="text-lg font-semibold text-white mb-3 pb-2 border-b border-gray-700">Decks</h2>
       <FilterPanel scopeRef={sectionRef} onClear={clearFilters}
-        activeCount={(filterTournament ? 1 : 0) + (filterPilot ? 1 : 0) + (filterDateFrom ? 1 : 0) + (filterDateTo ? 1 : 0) + (minSize ? 1 : 0) + activeArchetypes.size}
+        activeCount={(filterTournament ? 1 : 0) + (filterPilot ? 1 : 0) + (range ? 1 : 0) + (minSize ? 1 : 0) + activeArchetypes.size}
         summary={`${filtered.length} deck${filtered.length !== 1 ? 's' : ''}`}>
         <input
           type="search" placeholder="Search tournaments…" value={filterTournament} onChange={setFilter(setFilterTournament)}
@@ -128,24 +119,7 @@ function CardDecksSection({ decks }) {
         <input
           type="text" placeholder="Search pilots…" value={filterPilot} onChange={setFilter(setFilterPilot)}
           className="w-full bg-gray-900 border border-gray-600 rounded-lg px-4 py-2 text-sm text-gray-100 placeholder-gray-500 focus:outline-none focus:border-amber-400" />
-        <div className="flex flex-wrap gap-4 items-center">
-          <MonthPicker label="From:" value={filterDateFrom} onChange={v => { setFilterDateFrom(v); setPage(0) }} firstYear={firstYear} />
-          <MonthPicker label="To:" value={filterDateTo} onChange={v => { setFilterDateTo(v); setPage(0) }} firstYear={firstYear} />
-          <div className="flex gap-1.5">
-            {[['Last week', 7], ['Last month', 30], ['Last year', 365]].map(([label, days]) => (
-              <button key={label} onClick={() => applyRange(days)}
-                className="px-2.5 py-1 text-xs rounded-md border border-gray-600 text-gray-400 hover:border-amber-400/50 hover:text-amber-400 transition-colors">
-                {label}
-              </button>
-            ))}
-            {(filterDateFrom || filterDateTo) && (
-              <button onClick={() => { setFilterDateFrom(''); setFilterDateTo(''); setPage(0) }}
-                className="px-2.5 py-1 text-xs rounded-md border border-gray-600 text-gray-400 hover:border-amber-400/50 hover:text-amber-400 transition-colors">
-                Reset
-              </button>
-            )}
-          </div>
-        </div>
+        <DateChips ranges={LONG_RANGES} value={range} onChange={v => { setRange(v); setPage(0) }} />
         <SizeFilter value={minSize} onChange={v => { setMinSize(v); setPage(0) }} />
         <div className="flex flex-col gap-2">
           <div className="flex items-center gap-2">
