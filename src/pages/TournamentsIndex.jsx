@@ -25,6 +25,8 @@ const RANGES = [
   { label: 'Last 2 days', back: d => d.setDate(d.getDate() - 2) },
   { label: 'Last week', back: d => d.setDate(d.getDate() - 7) },
   { label: 'Last month', back: d => d.setMonth(d.getMonth() - 1) },
+  { label: 'Last 3 months', back: d => d.setMonth(d.getMonth() - 3) },
+  { label: 'Last year', back: d => d.setFullYear(d.getFullYear() - 1) },
 ]
 
 function SortHeader({ col, label, sortCol, sortDir, onSort, align = 'left', extraClass = '' }) {

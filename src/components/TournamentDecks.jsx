@@ -139,8 +139,8 @@ function DeckPanel({ deck, several, showArchetype, data, res, view, onView, hove
           <MtgoButtons decklist={data.decklist} fileName={`${deck.id}.txt`} />
         </div>
         <div className="flex gap-6 items-start">
-          {/* text view: the lists take their own width, so the card hovered shows beside them, not at the far right */}
-          <div className={`min-w-0 ${visual ? 'flex-1 space-y-6' : 'flex flex-col sm:flex-row gap-8'}`}>
+          {/* text view: the lists take their own width, so the card hovered shows beside them, not at the far right; each keeps a minimum width and wraps under the other when the panel is too narrow, instead of squeezing names and spilling into the image */}
+          <div className={`min-w-0 ${visual ? 'flex-1 space-y-6' : 'flex flex-wrap gap-x-8 gap-y-6 [&>*]:min-w-64'}`}>
             {list(data.decklist.main, 'Maindeck', 'main')}
             {list(data.decklist.side, 'Sideboard', 'side')}
           </div>

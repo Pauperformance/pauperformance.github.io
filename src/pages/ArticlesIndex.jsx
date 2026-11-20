@@ -1,15 +1,10 @@
 import { useState, useEffect, useMemo } from 'react'
 import Layout from '../components/Layout'
-import ArticleCard from '../components/ArticleCard'
+import ArticleCard, { SOURCE_NAMES } from '../components/ArticleCard'
 import { FilterPanel } from '../components/FilterSheet'
 import { useSearchShortcut, searchShortcutLabel } from '../utils/useSearchShortcut'
 
 const PAGE_SIZE = 48
-
-// The tags every article has, or that say nothing about its subject
-const PLAIN_TAGS = new Set(['mtg', 'magic: the gathering', 'pauper'])
-// A tag becomes a filter once this many articles carry it
-const MIN_TAG_ARTICLES = 10
 
 // YYYY-MM-DD of a Date in the visitor's own time zone (toISOString would be UTC).
 function localIso(d) {
@@ -25,18 +20,13 @@ const RANGES = [
 
 const inputClass = 'bg-gray-900 border border-gray-600 rounded-lg px-3 py-1 text-sm text-gray-300 hover:border-gray-400 focus:outline-none focus:border-amber-400'
 
-// The tags of an article, lowercased ("Deck" and "deck" are one), without the plain ones
-function topics(article) {
-  return [...new Set((article.tags || []).map(t => t.trim().toLowerCase()))].filter(t => t && !PLAIN_TAGS.has(t))
-}
-
 export default function ArticlesIndex() {
   const [articles, setArticles] = useState(null)
   const [search, setSearch] = useState('')
   const [from, setFrom] = useState('')
   const [to, setTo] = useState('')
   const [author, setAuthor] = useState('')
-  const [tags, setTags] = useState([])
+  const [source, setSource] = useState('')
   const [shown, setShown] = useState(PAGE_SIZE)
   const searchRef = useSearchShortcut()
 
@@ -44,17 +34,17 @@ export default function ArticlesIndex() {
     fetch('/data/articles.json').then(r => r.json()).then(setArticles).catch(() => setArticles([]))
   }, [])
 
-  // the authors, most published first, and the most common tags
-  const { authors, tagOptions } = useMemo(() => {
+  // the authors, most published first, and the sources
+  const { authors, sources } = useMemo(() => {
     const byAuthor = new Map()
-    const byTag = new Map()
+    const bySource = new Map()
     for (const a of articles || []) {
       byAuthor.set(a.author, (byAuthor.get(a.author) || 0) + 1)
-      for (const t of topics(a)) byTag.set(t, (byTag.get(t) || 0) + 1)
+      bySource.set(a.source, (bySource.get(a.source) || 0) + 1)
     }
     return {
+      sources: [...bySource].sort((x, y) => y[1] - x[1]),
       authors: [...byAuthor].sort((x, y) => y[1] - x[1] || x[0].localeCompare(y[0])),
-      tagOptions: [...byTag].filter(([, n]) => n >= MIN_TAG_ARTICLES).sort((x, y) => y[1] - x[1]),
     }
   }, [articles])
 
@@ -64,13 +54,13 @@ export default function ArticlesIndex() {
       if (from && a.date < from) return false
       if (to && a.date > to) return false
       if (author && a.author !== author) return false
-      if (tags.length && !topics(a).some(t => tags.includes(t))) return false
+      if (source && a.source !== source) return false
       return !q || [a.title, a.author, a.summary, ...(a.tags || [])].some(t => t && t.toLowerCase().includes(q))
     })
-  }, [articles, search, from, to, author, tags])
+  }, [articles, search, from, to, author, source])
 
   // a new set of results starts from the first page again
-  useEffect(() => { setShown(PAGE_SIZE) }, [search, from, to, author, tags])
+  useEffect(() => { setShown(PAGE_SIZE) }, [search, from, to, author, source])
 
   const applyRange = back => {
     const d = new Date()
@@ -78,9 +68,8 @@ export default function ArticlesIndex() {
     setFrom(localIso(d))
     setTo('')
   }
-  const toggleTag = t => setTags(cur => (cur.includes(t) ? cur.filter(x => x !== t) : [...cur, t]))
-  const clearFilters = () => { setSearch(''); setFrom(''); setTo(''); setAuthor(''); setTags([]) }
-  const activeCount = (search ? 1 : 0) + (from || to ? 1 : 0) + (author ? 1 : 0) + (tags.length ? 1 : 0)
+  const clearFilters = () => { setSearch(''); setFrom(''); setTo(''); setAuthor(''); setSource('') }
+  const activeCount = (search ? 1 : 0) + (from || to ? 1 : 0) + (author ? 1 : 0) + (source ? 1 : 0)
   const count = `${filtered.length.toLocaleString()} article${filtered.length === 1 ? '' : 's'}`
 
   return (
@@ -130,19 +119,13 @@ export default function ArticlesIndex() {
             </select>
           </div>
 
-          {tagOptions.length > 0 && (
-            <div className="flex flex-wrap items-center gap-2">
-              <span className="text-sm text-gray-500 w-14 shrink-0">Topic:</span>
-              {tagOptions.map(([t, n]) => (
-                <button key={t} onClick={() => toggleTag(t)} aria-pressed={tags.includes(t)}
-                  className={`px-2.5 py-1 rounded-lg text-xs font-semibold border transition-colors ${tags.includes(t)
-                    ? 'border-amber-400 text-amber-400 bg-amber-400/10'
-                    : 'border-gray-600 text-gray-400 hover:border-gray-400 hover:text-gray-200'}`}>
-                  {t} <span className="text-gray-500">{n}</span>
-                </button>
-              ))}
-            </div>
-          )}
+          <div className="flex flex-wrap items-center gap-2">
+            <label htmlFor="article-source" className="text-sm text-gray-500 w-14 shrink-0">Source:</label>
+            <select id="article-source" value={source} onChange={e => setSource(e.target.value)} className={`${inputClass} max-w-full`}>
+              <option value="">All sources</option>
+              {sources.map(([key, n]) => <option key={key} value={key}>{SOURCE_NAMES[key] || key} ({n})</option>)}
+            </select>
+          </div>
 
           {activeCount > 0 && (
             <div className="flex">

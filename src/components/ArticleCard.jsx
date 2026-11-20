@@ -3,13 +3,13 @@ import { LANG_FLAG, LANG_CANONICAL, LANG_NAME } from '../utils/languages'
 import CalendarIcon from './CalendarIcon'
 
 const ARTICLE_COLOR = '#d9822b'
-const SOURCE_NAMES = { cardsrealm: 'Cards Realm', coolstuffinc: 'CoolStuffInc', mtgrocks: 'MTGRocks', pauperwave: 'Pauperwave' }
+export const SOURCE_NAMES = { cardsrealm: 'Cards Realm', coolstuffinc: 'CoolStuffInc', mtgrocks: 'MTGRocks', pauperwave: 'Pauperwave' }
 // The site's logo, shown when an article has no picture of its own
 const SOURCE_LOGOS = {
   cardsrealm: '/images/sources/cardsrealm.png',
   coolstuffinc: '/images/sources/coolstuffinc.png',
   mtgrocks: '/images/sources/mtgrocks.png',
-  pauperwave: '/images/sources/pauperwave.png',
+  pauperwave: '/images/sources/pauperwave.jpg',
 }
 
 // An article from one of the sites that publish Pauper ones, in the look of a
