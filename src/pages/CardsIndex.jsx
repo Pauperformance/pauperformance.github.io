@@ -497,7 +497,7 @@ export default function CardsIndex() {
               </>
             ) : wide ? (
               <div className="flex gap-6 items-start">
-                <div className="w-72 xl:w-96 2xl:w-[28rem] shrink-0 sticky top-24 max-h-[calc(100vh-7rem)] overflow-y-auto space-y-3">
+                <div className="w-[22rem] xl:w-[32rem] shrink-0 sticky top-24 max-h-[calc(100vh-7rem)] overflow-y-auto space-y-3">
                   <ul className="border border-gray-700 rounded-xl overflow-hidden bg-gray-900 divide-y divide-gray-700/50">
                     {pageCards.map(c => {
                       const open = c.slug === selected
@@ -506,8 +506,8 @@ export default function CardsIndex() {
                           <button onClick={() => setSelectedSlug(c.slug)} aria-current={open ? 'true' : undefined}
                             className={`w-full flex items-center gap-3 px-3 py-2 text-left border-l-2 transition-colors ${open ? 'bg-gray-800 border-amber-400' : 'border-transparent hover:bg-gray-800/60'}`}>
                             <span className="min-w-0 flex-1">
-                              <span className={`block truncate ${open ? 'text-amber-400' : 'text-gray-200'}`}>{c.name}</span>
-                              <span className="flex items-center gap-1.5 text-xs text-gray-500">
+                              <span className="flex items-center gap-2">
+                                <span className={`truncate ${open ? 'text-amber-400' : 'text-gray-200'}`}>{c.name}</span>
                                 <span className="flex gap-0.5 shrink-0">
                                   {(c.colors || []).length === 0
                                     ? <ManaIcon color="C" size="w-4 h-4" />
@@ -515,8 +515,8 @@ export default function CardsIndex() {
                                         <ManaIcon key={m} color={m} size="w-4 h-4" />
                                       ))}
                                 </span>
-                                <span className="truncate">{(c.types || []).join(', ')}{c.cmc != null ? ` · CMC ${c.cmc}` : ''}</span>
                               </span>
+                              <span className="block truncate text-xs text-gray-500">{(c.types || []).join(', ')}{c.cmc != null ? ` · CMC ${c.cmc}` : ''}</span>
                             </span>
                             {popularityMetagame && (
                               <span className="w-14 shrink-0 text-right font-mono text-xs text-amber-400">

@@ -175,7 +175,7 @@ function CardDecksSection({ decks }) {
       {browsed.length === 0 ? (
         <p className="px-4 py-8 text-center text-gray-500 text-sm">No decks match your filters.</p>
       ) : (
-        <TournamentDecks key={`${page}:${browsed[0].id}:${browsed.length}`} decks={browsed} />
+        <TournamentDecks key={`${page}:${browsed[0].id}:${browsed.length}`} decks={browsed} wideList />
       )}
       {totalPages > 1 && pagination}
     </div>
