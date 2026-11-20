@@ -193,7 +193,7 @@ export default function TournamentsIndex() {
             <>
               <p className="text-xs text-gray-500">{filtered.length.toLocaleString()} tournament{filtered.length !== 1 ? 's' : ''}</p>
               <div className="flex gap-6 items-start">
-                <div className="w-72 xl:w-96 2xl:w-[28rem] shrink-0 sticky top-24 max-h-[calc(100vh-7rem)] overflow-y-auto space-y-3">
+                <div className="w-[22rem] xl:w-[32rem] shrink-0 sticky top-24 max-h-[calc(100vh-7rem)] overflow-y-auto space-y-3">
                   <ul className="border border-gray-700 rounded-xl overflow-hidden bg-gray-900 divide-y divide-gray-700/50">
                     {pageRows.map(r => {
                       const open = r.id === selected
