@@ -69,7 +69,7 @@ export default function VideosSection({ videos: listedVideos }) {
   // starts with the languages picked in the Settings, those the videos are in (none: all of them)
   const [activeLanguages, setActiveLanguages] = useState(() => {
     const present = new Set((allVideos || []).map(v => LANG_CANONICAL[v.language] ?? v.language))
-    const wanted = getSettings().watch.languages.filter(l => present.has(l))
+    const wanted = getSettings().content.languages.filter(l => present.has(l))
     return new Set(wanted)
   })
   const [activeArchetypes, setActiveArchetypes] = useState(new Set())

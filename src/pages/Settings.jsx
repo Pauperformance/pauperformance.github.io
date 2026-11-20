@@ -91,12 +91,11 @@ function HiddenCreators({ hidden, onChange }) {
         {names.map(name => {
           const isHidden = hidden.includes(name)
           return (
-            <button key={name} onClick={() => toggle(name)} aria-pressed={isHidden}
-              title={isHidden ? 'Hidden: click to show' : 'Shown: click to hide'}
-              className={`px-3 py-1.5 rounded-lg border text-sm transition-colors ${
+            <button key={name} onClick={() => toggle(name)} aria-pressed={!isHidden}
+              className={`px-3 py-1.5 rounded-lg border text-sm font-medium transition-colors ${
                 isHidden
-                  ? 'border-gray-700 text-gray-500 line-through hover:text-gray-300'
-                  : 'border-gray-600 text-gray-200 hover:bg-gray-700'
+                  ? 'border-gray-600 text-gray-400 hover:text-gray-200'
+                  : 'bg-amber-400 border-amber-400 text-gray-900'
               }`}>
               {name}
             </button>
@@ -104,9 +103,9 @@ function HiddenCreators({ hidden, onChange }) {
         })}
       </div>
       <p className="text-xs text-gray-500 mt-3">
-        {hidden.length ? `${hidden.length} hidden.` : 'None hidden.'}
+        {hidden.length ? `${hidden.length} not shown.` : 'All shown.'}
         {hidden.length > 0 && (
-          <button onClick={() => onChange([])} className="ml-2 underline underline-offset-2 hover:text-gray-300">Show all</button>
+          <button onClick={() => onChange([])} className="ml-2 underline underline-offset-2 hover:text-gray-300">Select all</button>
         )}
       </p>
     </div>
@@ -115,12 +114,13 @@ function HiddenCreators({ hidden, onChange }) {
 
 export default function Settings() {
   const settings = useSettings()
-  const { deckView, watch, videos, cards, home } = settings
+  const { deckView, watch, content, videos, cards, home } = settings
   const setHome = patch => updateSettings({ home: patch })
   const setCards = patch => updateSettings({ cards: patch })
   const setDeckView = patch => updateSettings({ deckView: patch })
   const setVideos = patch => updateSettings({ videos: patch })
   const setWatch = patch => updateSettings({ watch: patch })
+  const setContent = patch => updateSettings({ content: patch })
   const changed = JSON.stringify(settings) !== JSON.stringify(DEFAULT_SETTINGS)
 
   return (
@@ -148,15 +148,35 @@ export default function Settings() {
         </Setting>
 
         <Setting
+          title="Languages"
+          description="The initial languages shown in the videos and in the articles. Pick none to see them all. You can still change them on each page."
+        >
+          <div className="flex flex-wrap gap-2">
+            {Object.entries(LANG_NAME).map(([code, name]) => {
+              const on = content.languages.includes(code)
+              return (
+                <button key={code} aria-pressed={on}
+                  onClick={() => setContent({ languages: on ? content.languages.filter(l => l !== code) : [...content.languages, code] })}
+                  className={`px-3 py-1.5 rounded-lg border text-sm font-medium transition-colors ${
+                    on ? 'bg-amber-400 border-amber-400 text-gray-900' : 'border-gray-600 text-gray-400 hover:text-gray-200'
+                  }`}>
+                  {LANG_FLAG[code]} {name}
+                </button>
+              )
+            })}
+          </div>
+        </Setting>
+
+        <Setting
           title="Card artwork"
           description="Artworks of cards displayed in the website.">
           <Toggle value={cards.artwork} onChange={v => setCards({ artwork: v })} options={ARTWORKS} />
         </Setting>
 
         <Setting
-          title="Home: metagame viewer"
+          title="Home metagame viewer"
           description="Choose how top archetypes appear on the home page. You can still switch on the page itself.">
-          <Toggle value={home.metaView} onChange={v => setHome({ metaView: v })} options={[['brainstorm', 'Brainstorm'], ['table', 'Table']]} />
+          <Toggle value={home.metaView} onChange={v => setHome({ metaView: v })} options={[['table', 'Table'], ['brainstorm', 'Brainstorm']]} />
         </Setting>
 
         <Setting
@@ -168,13 +188,13 @@ export default function Settings() {
 
         <div className="space-y-6">
         <Setting
-          title="Watch: content creators"
-          description={<>Click a creator to hide their content from <WatchLink />.</>}>
+          title="Content creators"
+          description="The creators whose videos and live streams are shown across the website. Unselect a creator to hide them.">
           <HiddenCreators hidden={watch.hiddenCreators} onChange={names => setWatch({ hiddenCreators: names })} />
         </Setting>
 
         <Setting
-          title="Watch: videos, live, shorts and podcasts"
+          title="Content type"
           description={<>What <WatchLink /> shows when you open it: pick any of them together. You can still change it on the page itself.</>}>
           <div className="flex flex-wrap gap-2">
             {WATCH_TYPES.map(([type, label]) => {
@@ -192,24 +212,6 @@ export default function Settings() {
           </div>
         </Setting>
 
-        <Setting
-          title="Watch: languages"
-          description={<>The languages <WatchLink /> starts with. Pick none to see them all. You can still change the language filter on the page itself.</>}>
-          <div className="flex flex-wrap gap-2">
-            {Object.entries(LANG_NAME).map(([code, name]) => {
-              const on = watch.languages.includes(code)
-              return (
-                <button key={code} aria-pressed={on}
-                  onClick={() => setWatch({ languages: on ? watch.languages.filter(l => l !== code) : [...watch.languages, code] })}
-                  className={`px-3 py-1.5 rounded-lg border text-sm font-medium transition-colors ${
-                    on ? 'bg-amber-400 border-amber-400 text-gray-900' : 'border-gray-600 text-gray-400 hover:text-gray-200'
-                  }`}>
-                  {LANG_FLAG[code]} {name}
-                </button>
-              )
-            })}
-          </div>
-        </Setting>
         </div>
         </div>
 

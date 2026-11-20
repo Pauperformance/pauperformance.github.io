@@ -1,6 +1,7 @@
 import { useState, useEffect, useMemo, useRef } from 'react'
 import { Link, useNavigate } from 'react-router-dom'
 import { nameToSlug, metagameSlug } from '../utils/slugs'
+import { displayMana, manaSrc, manaLabel } from '../utils/mana'
 import { formatDate } from '../utils/dates'
 import Layout from '../components/Layout'
 import { useSearchShortcut, searchShortcutLabel } from '../utils/useSearchShortcut'
@@ -8,6 +9,8 @@ import { useEnterShortcut } from '../utils/useEnterShortcut'
 import { useMediaQuery } from '../utils/useMediaQuery'
 import ArchetypePane from '../components/ArchetypePane'
 import FilterSheet from '../components/FilterSheet'
+import RowArt from '../components/RowArt'
+import { useImageFor } from '../utils/artwork'
 
 const MANA_ORDER = ['W', 'U', 'B', 'R', 'G', 'C']
 const GAME_TYPES = ['Aggro', 'Midrange', 'Control', 'Tempo', 'Combo']
@@ -28,9 +31,9 @@ const MANA_LABELS = { W: 'White', U: 'Blue', B: 'Black', R: 'Red', G: 'Green', C
 function ManaIcon({ color, size = 'w-6 h-6' }) {
   return (
     <img
-      src={`/images/mana/${color}.png`}
-      alt={MANA_LABELS[color] ?? color}
-      title={MANA_LABELS[color] ?? color}
+      src={manaSrc(color)}
+      alt={MANA_LABELS[color] ?? manaLabel(color)}
+      title={MANA_LABELS[color] ?? manaLabel(color)}
       className={`${size} inline-block`}
     />
   )
@@ -85,6 +88,9 @@ export default function ArchetypesIndex() {
   const [sortDir, setSortDir] = useState('desc')
   const narrow = useMediaQuery(NARROW_QUERY)
   const wide = !narrow
+  const imageFor = useImageFor()
+  // the picture of an archetype's row: its representative card
+  const artOf = a => a.representative_card && imageFor(a.representative_card.name, a.representative_card.preview)
   const [selectedName, setSelectedName] = useState(null)
   // details of the archetypes opened, by name; null for those that failed to load
   const [details, setDetails] = useState({})
@@ -311,16 +317,19 @@ export default function ArchetypesIndex() {
                   <li key={a.name}>
                     <Link to={`/archetypes/${nameToSlug(a.name)}`}
                       className="flex items-center gap-3 px-3 py-2.5 border-l-2 border-transparent active:bg-gray-800">
-                      <span className="min-w-0 flex-1">
+                      <span className="min-w-0">
                         <span className="block truncate text-gray-200">{a.name}</span>
-                        <span className="block truncate text-xs text-gray-500">{a.game_type.join(', ')}</span>
+                        <span className="flex items-start gap-1.5 text-xs text-gray-500">
+                          <span className="flex gap-0.5 shrink-0">
+                            {displayMana(MANA_ORDER.filter(m => a.dominant_mana.includes(m))).map(m => (
+                              <ManaIcon key={m} color={m} size="w-4 h-4" />
+                            ))}
+                          </span>
+                          <span>{a.game_type.join(', ')}</span>
+                        </span>
                       </span>
-                      <span className="flex gap-0.5 shrink-0">
-                        {MANA_ORDER.filter(m => a.dominant_mana.includes(m)).map(m => (
-                          <ManaIcon key={m} color={m} size="w-4 h-4" />
-                        ))}
-                      </span>
-                      <span className="w-14 shrink-0 text-right font-mono text-sm text-amber-400">{(metaMap[a.name] ?? 0).toFixed(1)}%</span>
+                      <span className="ml-auto w-14 shrink-0 text-right font-mono text-sm text-amber-400">{(metaMap[a.name] ?? 0).toFixed(1)}%</span>
+                      <RowArt url={artOf(a)} margin="-my-2.5 -mr-3" />
                     </Link>
                   </li>
                 ))}
@@ -341,16 +350,19 @@ export default function ArchetypesIndex() {
                         <li key={a.name}>
                           <button onClick={() => pick(a.name)} aria-current={open ? 'true' : undefined}
                             className={`w-full flex items-center gap-3 px-3 py-2 text-left border-l-2 transition-colors ${open ? 'bg-gray-800 border-amber-400' : 'border-transparent hover:bg-gray-800/60'}`}>
-                            <span className="min-w-0 flex-1">
+                            <span className="min-w-0">
                               <span className={`block truncate ${open ? 'text-amber-400' : 'text-gray-200'}`}>{a.name}</span>
-                              <span className="block truncate text-xs text-gray-500">{a.game_type.join(', ')}</span>
+                              <span className="flex items-start gap-1.5 text-xs text-gray-500">
+                                <span className="flex gap-0.5 shrink-0">
+                                  {displayMana(MANA_ORDER.filter(m => a.dominant_mana.includes(m))).map(m => (
+                                    <ManaIcon key={m} color={m} size="w-4 h-4" />
+                                  ))}
+                                </span>
+                                <span>{a.game_type.join(', ')}</span>
+                              </span>
                             </span>
-                            <span className="flex gap-0.5 shrink-0">
-                              {MANA_ORDER.filter(m => a.dominant_mana.includes(m)).map(m => (
-                                <ManaIcon key={m} color={m} size="w-4 h-4" />
-                              ))}
-                            </span>
-                            <span className="w-14 shrink-0 text-right font-mono text-sm text-amber-400">{(metaMap[a.name] ?? 0).toFixed(1)}%</span>
+                            <span className="ml-auto w-14 shrink-0 text-right font-mono text-sm text-amber-400">{(metaMap[a.name] ?? 0).toFixed(1)}%</span>
+                            <RowArt url={artOf(a)} />
                           </button>
                         </li>
                       )

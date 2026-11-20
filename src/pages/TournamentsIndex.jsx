@@ -183,7 +183,7 @@ export default function TournamentsIndex() {
           <div className="flex flex-wrap items-center gap-2">
             <SizeFilter value={minStars} onChange={setMinStars} />
             {hasFilters && (
-              <button onClick={clearFilters} className="ml-auto text-xs text-gray-400 hover:text-amber-400 transition-colors">
+              <button onClick={clearFilters} className="ml-auto hidden lg:block text-xs text-gray-400 hover:text-amber-400 transition-colors">
                 Clear filters
               </button>
             )}

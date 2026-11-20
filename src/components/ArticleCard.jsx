@@ -18,6 +18,8 @@ export default function ArticleCard({ article: a, showImage = true }) {
   // the language's flag and name (the sources write it as "ENG", "PT"...)
   const code = a.language && (LANG_CANONICAL[a.language] ?? LANG_CANONICAL[a.language.toLowerCase()])
   const lang = code ? { flag: LANG_FLAG[code], name: LANG_NAME[code] } : null
+  // Pauperwave's own pictures can't be shown (its site blocks loading them from elsewhere): its logo instead
+  const picture = a.source === 'pauperwave' ? null : a.image
   return (
     <a href={a.link} target="_blank" rel="noopener noreferrer"
       className="relative flex items-stretch gap-3 sm:gap-4 pl-5 pr-3 py-3 sm:pl-6 sm:pr-4 sm:py-3.5 rounded-xl border border-gray-700 bg-gray-800 overflow-hidden hover:border-amber-400/40 transition-colors group">
@@ -53,10 +55,10 @@ export default function ArticleCard({ article: a, showImage = true }) {
         </div>
       </div>
       {/* the article's picture, as full-height as the card art in Newspauper */}
-      {showImage && (a.image || SOURCE_LOGOS[a.source]) && (
-        <div className={`order-3 relative shrink-0 self-stretch w-20 sm:w-28 -my-3 -mr-3 sm:-my-3.5 sm:-mr-4 rounded-l-2xl overflow-hidden ${a.image ? 'bg-gray-900' : 'bg-white'}`}>
-          {a.image
-            ? <img src={a.image} alt="" loading="lazy" referrerPolicy="no-referrer"
+      {showImage && (picture || SOURCE_LOGOS[a.source]) && (
+        <div className={`order-3 relative shrink-0 self-stretch w-20 sm:w-28 -my-3 -mr-3 sm:-my-3.5 sm:-mr-4 rounded-l-2xl overflow-hidden ${picture ? 'bg-gray-900' : 'bg-white'}`}>
+          {picture
+            ? <img src={picture} alt="" loading="lazy" referrerPolicy="no-referrer"
                 className="absolute inset-0 w-full h-full object-cover group-hover:scale-110 transition-transform duration-300" />
             : <img src={SOURCE_LOGOS[a.source]} alt={SOURCE_NAMES[a.source] || a.source} loading="lazy"
                 className="absolute inset-0 w-full h-full object-contain p-2" />}

@@ -2,6 +2,7 @@ import { useState, useEffect, useMemo, useRef } from 'react'
 import { useParams, Link, useNavigate, useSearchParams } from 'react-router-dom'
 import ReactMarkdown from 'react-markdown'
 import Layout from '../components/Layout'
+import { displayMana, manaSrc, manaLabel } from '../utils/mana'
 import { useCardPreview } from '../components/CardPreview'
 import { AppearanceRow, MetagameBadge } from '../components/Metagame'
 import CardPopularityChart, { PopularityTrend, useMetagames } from '../components/CardPopularityChart'
@@ -27,7 +28,7 @@ const POPULARITY_METAGAMES = '/data/archetype-popularity-metagames.json'
 const MANA_ORDER = ['W', 'U', 'B', 'R', 'G', 'C']
 function ManaIcon({ color }) {
   return (
-    <img src={`/images/mana/${color}.png`} alt={color}
+    <img src={manaSrc(color)} alt={manaLabel(color)}
       className="w-5 h-5 inline-block" />
   )
 }
@@ -447,7 +448,7 @@ export default function ArchetypePage() {
           <div className="mt-3 space-y-2">
             <div className="flex flex-wrap items-center gap-1.5">
               <span className="w-24 shrink-0 text-sm text-gray-500">Color:</span>
-              {MANA_ORDER.filter(m => data.dominant_mana.includes(m)).map(m => (
+              {displayMana(MANA_ORDER.filter(m => data.dominant_mana.includes(m))).map(m => (
                 <ManaIcon key={m} color={m} />
               ))}
             </div>

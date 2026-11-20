@@ -1,6 +1,7 @@
 import { useState, useEffect, useMemo } from 'react'
 import { useParams, Link } from 'react-router-dom'
 import Layout from '../components/Layout'
+import { displayMana, manaSrc, manaLabel } from '../utils/mana'
 import { useCardPreview } from '../components/CardPreview'
 import CardPopularityChart, { PopularityTrend, useMetagames } from '../components/CardPopularityChart'
 import VideosSection from '../components/VideosSection'
@@ -25,8 +26,8 @@ const getJson = url => fetch(url).then(r => (r.ok ? r.json() : null)).catch(() =
 
 function ManaIcon({ color }) {
   return (
-    <img src={`/images/mana/${color}.png`} alt={MANA_LABELS[color] ?? color}
-      title={MANA_LABELS[color] ?? color} className="w-5 h-5 inline-block" />
+    <img src={manaSrc(color)} alt={MANA_LABELS[color] ?? manaLabel(color)}
+      title={MANA_LABELS[color] ?? manaLabel(color)} className="w-5 h-5 inline-block" />
   )
 }
 
@@ -248,7 +249,7 @@ export default function FamilyPage() {
               <div className="mt-3 space-y-2">
                 <div className="flex flex-wrap items-center gap-1.5">
                   <span className="w-24 shrink-0 text-sm text-gray-500">Color:</span>
-                  {summary.colors.map(m => <ManaIcon key={m} color={m} />)}
+                  {displayMana(summary.colors).map(m => <ManaIcon key={m} color={m} />)}
                 </div>
                 <div className="flex flex-wrap items-center gap-1.5">
                   <span className="w-24 shrink-0 text-sm text-gray-500">Type:</span>

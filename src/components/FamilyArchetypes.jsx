@@ -1,6 +1,7 @@
 import { useState, useEffect, useRef } from 'react'
 import ArchetypePane from './ArchetypePane'
 import { useIsDesktop } from './TournamentDecks'
+import { displayMana, manaSrc, manaLabel } from '../utils/mana'
 
 const MANA_ORDER = ['W', 'U', 'B', 'R', 'G', 'C']
 const fmtInt = n => n.toLocaleString('en-US')
@@ -47,8 +48,8 @@ export default function FamilyArchetypes({ archetypes, family, metaMap, weights,
                     <span className={`block truncate ${open ? 'text-amber-400' : 'text-gray-200'}`}>{a.name}</span>
                     <span className="flex items-center gap-1.5 min-w-0 text-sm text-gray-500">
                       <span className="flex gap-0.5 shrink-0">
-                        {MANA_ORDER.filter(m => a.dominant_mana.includes(m)).map(m => (
-                          <img key={m} src={`/images/mana/${m}.png`} alt={m} className="w-4 h-4" />
+                        {displayMana(MANA_ORDER.filter(m => a.dominant_mana.includes(m))).map(m => (
+                          <img key={m} src={manaSrc(m)} alt={manaLabel(m)} className="w-4 h-4" />
                         ))}
                       </span>
                       <span className="truncate">{a.game_type.join(', ')} · {fmtInt(weights[a.name] || 0)} decks</span>
