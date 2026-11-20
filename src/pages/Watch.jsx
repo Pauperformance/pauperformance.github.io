@@ -484,7 +484,7 @@ export default function Watch() {
           </div>
         </FilterPanel>
 
-        {showsLive(activeTypes) && <LiveStreams hidden={excludedCreators} youtube={youtubeLive} />}
+        {showsLive(activeTypes) && <LiveStreams hidden={excludedCreators} youtube={youtubeLive} languages={activeLanguages} />}
 
         {loading ? (
           <p className="text-gray-400 text-sm py-8 text-center">Loading videos…</p>

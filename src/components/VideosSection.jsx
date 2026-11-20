@@ -177,7 +177,7 @@ export default function VideosSection({ videos: listedVideos }) {
     </div>
   )
 
-  if (!allVideos?.length) return <p className="text-gray-500 text-sm">No videos recorded.</p>
+  if (!allVideos?.length) return <p className="text-gray-500 text-sm">{listedVideos?.length ? 'No videos match your settings.' : 'No videos recorded.'}</p>
 
   return (
     <div ref={sectionRef} className="space-y-3">

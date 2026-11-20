@@ -20,6 +20,8 @@ export const LANG_CANONICAL = {
   hi: 'hi',
   pl: 'pl',
 }
+// Whether a language (any of its codes) is among those picked; none picked: all
+export const languageAllowed = (picked, code) => picked.size === 0 || picked.has(LANG_CANONICAL[code] ?? code)
 export const LANG_NAME = {
   en: 'English',
   it: 'Italian',

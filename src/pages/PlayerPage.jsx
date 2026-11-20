@@ -10,6 +10,8 @@ import { useTournamentSizes, playersOf } from '../utils/tournamentSizes'
 import { displayPlace, resultMatches } from '../utils/places'
 import { nameToSlug } from '../utils/slugs'
 import { METAFY_ICON } from '../utils/socialIcons'
+import { getSettings } from '../utils/settings'
+import { languageAllowed } from '../utils/languages'
 import { firstYearOf, formatDate, formatShortDate } from '../utils/dates'
 
 const LANG_FLAG = {
@@ -171,7 +173,10 @@ export default function PlayerPage() {
         fetch('/data/videos.json')
           .then(r => r.json())
           .then(videos => {
-            setCreatorVideos(videos.filter(v => v.creator_name === match.name))
+            // the visitor's Watch settings apply: nothing from a creator hidden there, only the languages picked
+            const { hiddenCreators, languages } = getSettings().watch
+            const picked = new Set(languages)
+            setCreatorVideos(hiddenCreators.includes(match.name) ? [] : videos.filter(v => v.creator_name === match.name && languageAllowed(picked, v.language)))
             setVideosLoading(false)
           })
       })
@@ -523,7 +528,7 @@ export default function PlayerPage() {
                 {videosLoading ? (
                   <p className="text-gray-500 text-sm">Loading videos…</p>
                 ) : filteredVideos.length === 0 ? (
-                  <p className="text-gray-500 text-sm">No videos match the selected archetypes.</p>
+                  <p className="text-gray-500 text-sm">{creatorVideos.length === 0 ? 'No videos match your settings.' : 'No videos match the selected archetypes.'}</p>
                 ) : (
                   <>
                     {totalVideoPages > 1 && (

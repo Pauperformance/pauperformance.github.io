@@ -16,7 +16,7 @@ import { LiveTile, YouTubeLiveTile, useLiveStreams, useLiveYouTube } from '../co
 import { getSettings } from '../utils/settings'
 import { useMediaQuery } from '../utils/useMediaQuery'
 import { showsVideos, typeAllows } from '../utils/watchTypes'
-import { LANG_CANONICAL } from '../utils/languages'
+import { LANG_CANONICAL, languageAllowed } from '../utils/languages'
 import CardLink from '../components/PoolCardLink'
 import SectionBar from '../components/SectionBar'
 import MetaPie from '../components/MetaPie'
@@ -1257,8 +1257,11 @@ function RecentVideosSection() {
   // the YouTube streams on the air: tiles too, not repeated among the videos. The ones that
   // have ended, or are not checked yet, are left out; those that can't be told stay videos.
   const { live: youtube, unknown: unknownLives } = useLiveYouTube(hiddenCreators)
+  // the languages of the visitor's Watch settings apply to the streams too (none: all)
+  const langs = useMemo(() => new Set(getSettings().watch.languages), [])
+  const langAllowed = code => languageAllowed(langs, code)
   const live = streams
-    ? channels.filter(c => streams[c.login]).sort((a, b) => (streams[b.login].viewers ?? 0) - (streams[a.login].viewers ?? 0))
+    ? channels.filter(c => streams[c.login] && langAllowed(c.language)).sort((a, b) => (streams[b.login].viewers ?? 0) - (streams[a.login].viewers ?? 0))
     : []
 
   useEffect(() => {
@@ -1285,7 +1288,7 @@ function RecentVideosSection() {
     <section id="videos">
       <h2 className="text-xl font-semibold text-white">Sewer-veillance Cam</h2>
       <p className="text-sm text-gray-400 mt-0.5 mb-4">Ongoing live streams and videos from the last week</p>
-      {videos.filter(v => !v.is_live || unknownLives.has(v.video_id)).length === 0 && live.length === 0 && youtube.length === 0 ? (
+      {videos.filter(v => !v.is_live || unknownLives.has(v.video_id)).length === 0 && live.length === 0 && youtube.filter(v => langAllowed(v.creatorLanguage)).length === 0 ? (
         // streams is null until the first check of who is live is done
         <p className="text-sm text-gray-400">
           {streams ? 'Nobody is live and there are no videos from the last week.' : 'Checking who is live…'}
@@ -1293,7 +1296,7 @@ function RecentVideosSection() {
       ) : (
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
           {live.map(c => <LiveTile key={c.login} channel={c} stream={streams[c.login]} details={details[c.login]} minute={minute} />)}
-          {youtube.map(v => <YouTubeLiveTile key={v.video_id} v={v} />)}
+          {youtube.filter(v => langAllowed(v.creatorLanguage)).map(v => <YouTubeLiveTile key={v.video_id} v={v} />)}
           {videos.filter(v => !v.is_live || unknownLives.has(v.video_id)).map(v => <VideoCard key={v.video_id || v.link} v={v} withAvatar />)}
         </div>
       )}
