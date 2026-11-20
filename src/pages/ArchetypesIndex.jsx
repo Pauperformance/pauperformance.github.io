@@ -7,7 +7,6 @@ import { useSearchShortcut, searchShortcutLabel } from '../utils/useSearchShortc
 import { useEnterShortcut } from '../utils/useEnterShortcut'
 import { useMediaQuery } from '../utils/useMediaQuery'
 import ArchetypePane from '../components/ArchetypePane'
-import SwipeCards from '../components/SwipeCards'
 import FilterSheet from '../components/FilterSheet'
 
 const MANA_ORDER = ['W', 'U', 'B', 'R', 'G', 'C']
@@ -172,7 +171,7 @@ export default function ArchetypesIndex() {
     })
   }, [filtered, sortCol, sortDir, metaMap])
 
-  // The archetype shown beside the list (wide) or as the card (narrow): the one picked, else the first
+  // The archetype shown beside the list (wide): the one picked, else the first
   const selectedIndex = sorted.findIndex(a => a.name === selectedName)
   const cardIndex = Math.max(0, selectedIndex)
   const selected = sorted[cardIndex]?.name
@@ -182,10 +181,8 @@ export default function ArchetypesIndex() {
     setSelectedName(name)
   }
 
-  // the details of the archetype shown, and of the cards a swipe away, are loaded ahead
-  const wantedKey = (narrow
-    ? [sorted[cardIndex], sorted[cardIndex + 1], sorted[cardIndex - 1]].filter(Boolean).map(a => a.name)
-    : (wide && selected ? [selected] : [])).join('\n')
+  // the details of the archetype shown are loaded
+  const wantedKey = (wide && selected ? [selected] : []).join('\n')
   useEffect(() => {
     for (const name of wantedKey ? wantedKey.split('\n') : []) {
       if (name in details || requested.current.has(name)) continue
@@ -301,24 +298,35 @@ export default function ArchetypesIndex() {
         ) : (
           <div className="bg-gray-800 border border-gray-700 rounded-xl p-4 space-y-3">{filterControls}</div>
         )}
-        {/* Table */}
+        {/* List */}
         {loading ? (
           <p className="text-gray-400 text-sm py-8 text-center">Loading archetypes...</p>
         ) : (
           narrow ? (
             <>
               <p className="text-xs text-gray-500">{filtered.length} archetype{filtered.length !== 1 ? 's' : ''}</p>
-              {filtered.length === 0 ? (
+              {/* the list of the wide layout; an archetype opens its page */}
+              <ul className="border border-gray-700 rounded-xl overflow-hidden bg-gray-900 divide-y divide-gray-700/50">
+                {sorted.map(a => (
+                  <li key={a.name}>
+                    <Link to={`/archetypes/${nameToSlug(a.name)}`}
+                      className="flex items-center gap-3 px-3 py-2.5 border-l-2 border-transparent active:bg-gray-800">
+                      <span className="min-w-0 flex-1">
+                        <span className="block truncate text-gray-200">{a.name}</span>
+                        <span className="block truncate text-xs text-gray-500">{a.game_type.join(', ')}</span>
+                      </span>
+                      <span className="flex gap-0.5 shrink-0">
+                        {MANA_ORDER.filter(m => a.dominant_mana.includes(m)).map(m => (
+                          <ManaIcon key={m} color={m} size="w-4 h-4" />
+                        ))}
+                      </span>
+                      <span className="w-14 shrink-0 text-right font-mono text-sm text-amber-400">{(metaMap[a.name] ?? 0).toFixed(1)}%</span>
+                    </Link>
+                  </li>
+                ))}
+              </ul>
+              {filtered.length === 0 && (
                 <p className="text-center text-gray-500 text-sm py-12">No archetypes match your filters.</p>
-              ) : (
-                <SwipeCards index={cardIndex} count={sorted.length} cardKey={selected}
-                  onChange={i => setSelectedName(sorted[i].name)}
-                  label={`${cardIndex + 1} of ${sorted.length}`}
-                  hint="Swipe the card left or right for the next or previous archetype.">
-                  <div className="bg-gray-900 border border-gray-700 rounded-xl p-4">
-                    <ArchetypePane a={sorted[cardIndex]} meta={metaMap[selected]} details={details[selected]} />
-                  </div>
-                </SwipeCards>
               )}
             </>
           ) : wide ? (
