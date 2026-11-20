@@ -201,7 +201,7 @@ function TypicalCards({ name, list, bindPreview, phone, fileSuffix = '' }) {
         </p>
       )}
       <div className="flex gap-6 items-start">
-        <div className={`min-w-0 ${visual || phone ? 'flex-1 space-y-6' : 'flex flex-col sm:flex-row gap-8'}`}>
+        <div className={`min-w-0 ${visual || phone ? 'flex-1 space-y-6' : 'flex flex-wrap gap-x-8 gap-y-6 [&>*]:min-w-64'}`}>
           {board(main, 'Maindeck')}
           {board(side, 'Sideboard')}
         </div>
