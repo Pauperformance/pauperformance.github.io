@@ -909,11 +909,11 @@ function NewspauperSection() {
   }, [])
 
   // only the news of the last two weeks (dates are YYYY-MM-DD, so they compare as text);
-  // Brew is a placeholder, not a real archetype: no "New archetype" entry for it
+  // Brew is a placeholder, not a real archetype, and neither are its variants (Brew Izzet...): no "New archetype" entry for them
   const since = new Date()
   since.setDate(since.getDate() - 14)
   const sinceIso = `${since.getFullYear()}-${String(since.getMonth() + 1).padStart(2, '0')}-${String(since.getDate()).padStart(2, '0')}`
-  const entries = (news || []).filter(newsTitle).filter(e => !(e.type === 'archetype' && e.name === 'Brew')).filter(e => e.date >= sinceIso)
+  const entries = (news || []).filter(newsTitle).filter(e => !(e.type === 'archetype' && (e.name === 'Brew' || e.family === 'Brew'))).filter(e => e.date >= sinceIso)
 
   return (
     <section id="newspauper">
