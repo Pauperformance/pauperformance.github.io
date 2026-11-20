@@ -13,7 +13,7 @@ const NAV_ITEMS = [
   { to: '/tournaments', label: 'Tournaments' },
   { to: '/players', label: 'Players' },
   { to: '/creators', label: 'Creators' },
-  { to: '/faq', label: 'FAQ' },
+  // FAQ ('/faq') is hidden for now: its page and route are still there, add it back here to link it
 ]
 
 // Phones: the bottom bar. The pages that have an entry of their own (their
@@ -24,8 +24,8 @@ const BAR_ITEMS = [
     x: [2, 22],
     icon: <><path d="M14.5 17.5 3 6V3h3l11.5 11.5" /><path d="m13 19 6-6" /><path d="m16 16 4 4" /><path d="m19 21 2-2" /><path d="M14.5 6.5 18 3h3v3l-3.5 3.5" /><path d="m5 14 4 4" /><path d="m7 17-3 3" /><path d="m3 19 2 2" /></> },
   { to: '/articles', label: 'Articles',
-    x: [3, 21],
-    icon: <><path d="M15 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V7z" /><path d="M14 2v4a2 2 0 0 0 2 2h4" /><path d="M8 13h8" /><path d="M8 17h8" /><path d="M8 9h2" /></> },
+    x: [2, 22],
+    icon: <><path d="M12 5.5v16" /><path d="M12 5.5 3 3v16.5l9 2" /><path d="M12 5.5 21 3v16.5l-9 2" /><path d="M5.5 8h4" /><path d="M5.5 12h4" /><path d="M5.5 16h4" /><path d="M14.5 8h4" /><path d="M14.5 12h4" /><path d="M14.5 16h4" /></> },
   { to: '/tournaments', label: 'Tournaments',
     x: [1, 23],
     icon: <><path d="M6 9H4.5a2.5 2.5 0 0 1 0-5H6" /><path d="M18 9h1.5a2.5 2.5 0 0 0 0-5H18" /><path d="M4 22h16" /><path d="M10 14.66V17c0 .55-.47.98-.97 1.21C7.85 18.75 7 20.24 7 22" /><path d="M14 14.66V17c0 .55.47.98.97 1.21C16.15 18.75 17 20.24 17 22" /><path d="M18 2H6v7a6 6 0 0 0 12 0V2Z" /></> },

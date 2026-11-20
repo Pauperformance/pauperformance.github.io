@@ -281,8 +281,8 @@ export default function ArchetypesIndex() {
         <div>
           <h1 className="text-2xl font-bold text-white">Archetypes Index</h1>
           <p className="mt-2 text-gray-400 text-sm">
-            A curated list of the most important Pauper archetypes. Some may no longer be present in the meta due to bans.{' '}
-            <Link to="/view" className="text-amber-400 hover:text-amber-300 whitespace-nowrap">Open the interactive map →</Link>
+            A curated list of the most important Pauper archetypes. Some may no longer be present in the meta due to bans.
+            {/* the interactive map ('/view') is unlinked for now: its page and route are still there */}
           </p>
           {metagame && (
             <p className="mt-1 text-gray-400 text-sm">

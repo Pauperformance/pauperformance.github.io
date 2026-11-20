@@ -6,8 +6,9 @@ import { FilterPanel } from '../components/FilterSheet'
 import { useEnterShortcut } from '../utils/useEnterShortcut'
 import { useMediaQuery } from '../utils/useMediaQuery'
 import CardPane, { useCardDecks } from '../components/CardPane'
-import SwipeCards from '../components/SwipeCards'
 import { scrollSidebarToTop } from '../utils/scroll'
+import RowArt from '../components/RowArt'
+import { loadCardImages, useArtwork } from '../utils/artwork'
 
 const MANA_ORDER = ['W', 'U', 'B', 'R', 'G', 'C']
 const MANA_LABELS = { W: 'White', U: 'Blue', B: 'Black', R: 'Red', G: 'Green', C: 'Colorless' }
@@ -24,7 +25,7 @@ const POPULARITY_FILTERS = [
 const PAGE_SIZE = 50
 
 // As on the Archetypes Index: from Tailwind's lg up the list sits beside the card
-// selected; below it, one card at a time, swiped.
+// selected; below it, phones and small tablets get a list of links to the cards' pages.
 const NARROW_QUERY = '(max-width: 1023px)'
 
 function ManaIcon({ color, size = 'w-6 h-6' }) {
@@ -104,6 +105,15 @@ export default function CardsIndex() {
   const navigate = useNavigate()
   const narrow = useMediaQuery(NARROW_QUERY)
   const wide = !narrow
+  // the pictures of the rows on phones: the cards' images, in the artwork the visitor picked
+  const artwork = useArtwork()
+  const [images, setImages] = useState(null)
+  useEffect(() => {
+    if (!narrow) return
+    let live = true
+    loadCardImages(artwork).then(m => { if (live) setImages(m) })
+    return () => { live = false }
+  }, [narrow, artwork])
   const [selectedSlug, setSelectedSlug] = useState(null)
   // details of the cards opened, by slug; null for those that failed to load
   const [details, setDetails] = useState({})
@@ -269,16 +279,14 @@ export default function CardsIndex() {
 
   useEffect(() => { setPage(0) }, [sorted])
 
-  // The card shown beside the list (wide) or as the swipe card (narrow): the one picked, else the first
+  // The card shown beside the list (wide): the one picked, else the first
   const selectedIndex = sorted.findIndex(c => c.slug === selectedSlug)
   const cardIndex = Math.max(0, selectedIndex)
   const selected = sorted[cardIndex]?.slug
-  const showsPane = wide || narrow
+  const showsPane = wide
 
-  // the details of the card shown, and of the ones a swipe away, are loaded ahead
-  const wantedKey = (narrow
-    ? [sorted[cardIndex], sorted[cardIndex + 1], sorted[cardIndex - 1]].filter(Boolean).map(c => c.slug)
-    : (wide && selected ? [selected] : [])).join('\n')
+  // the details of the card shown are loaded
+  const wantedKey = (wide && selected ? [selected] : []).join('\n')
   useEffect(() => {
     for (const slug of wantedKey ? wantedKey.split('\n') : []) {
       if (slug in details || requested.current.has(slug)) continue
@@ -456,12 +464,37 @@ export default function CardsIndex() {
             {filtered.length === 0 ? (
               <p className="text-gray-500 text-sm">No cards found.</p>
             ) : narrow ? (
-              <SwipeCards index={cardIndex} count={sorted.length} cardKey={selected}
-                onChange={i => setSelectedSlug(sorted[i].slug)}
-                label={`${(cardIndex + 1).toLocaleString('en-US')} of ${sorted.length.toLocaleString('en-US')}`}
-                hint="Swipe the card left or right for the next or previous card.">
-                <div className="bg-gray-900 border border-gray-700 rounded-xl p-4">{pane}</div>
-              </SwipeCards>
+              <>
+                {/* the list of the wide layout; a card opens its page */}
+                <ul className="border border-gray-700 rounded-xl overflow-hidden bg-gray-900 divide-y divide-gray-700/50">
+                  {pageCards.map(c => (
+                    <li key={c.slug}>
+                      <Link to={`/cards/${c.slug}`} className="flex items-center gap-3 px-3 py-2.5 border-l-2 border-transparent active:bg-gray-800">
+                        <span className="min-w-0 flex-1">
+                          <span className="block truncate text-gray-200">{c.name}</span>
+                          <span className="flex items-center gap-1.5 text-xs text-gray-500">
+                            <span className="flex gap-0.5 shrink-0">
+                              {(c.colors || []).length === 0
+                                ? <ManaIcon color="C" size="w-4 h-4" />
+                                : MANA_ORDER.filter(m => m !== 'C' && (c.colors || []).includes(m)).map(m => (
+                                    <ManaIcon key={m} color={m} size="w-4 h-4" />
+                                  ))}
+                            </span>
+                            <span className="truncate">{(c.types || []).join(', ')}{c.cmc != null ? ` · CMC ${c.cmc}` : ''}</span>
+                          </span>
+                        </span>
+                        {popularityMetagame && (
+                          <span className="w-14 shrink-0 text-right font-mono text-xs text-amber-400">
+                            {c.popularity != null ? `#${c.popularity.toLocaleString('en-US')}` : '—'}
+                          </span>
+                        )}
+                        <RowArt url={images && images[c.name]} margin="-my-2.5 -mr-3" />
+                      </Link>
+                    </li>
+                  ))}
+                </ul>
+                {paginationBar()}
+              </>
             ) : wide ? (
               <div className="flex gap-6 items-start">
                 <div className="w-72 xl:w-96 2xl:w-[28rem] shrink-0 sticky top-24 max-h-[calc(100vh-7rem)] overflow-y-auto space-y-3">
@@ -474,14 +507,16 @@ export default function CardsIndex() {
                             className={`w-full flex items-center gap-3 px-3 py-2 text-left border-l-2 transition-colors ${open ? 'bg-gray-800 border-amber-400' : 'border-transparent hover:bg-gray-800/60'}`}>
                             <span className="min-w-0 flex-1">
                               <span className={`block truncate ${open ? 'text-amber-400' : 'text-gray-200'}`}>{c.name}</span>
-                              <span className="block truncate text-xs text-gray-500">{(c.types || []).join(', ')}{c.cmc != null ? ` · CMC ${c.cmc}` : ''}</span>
-                            </span>
-                            <span className="flex gap-0.5 shrink-0">
-                              {(c.colors || []).length === 0
-                                ? <ManaIcon color="C" size="w-4 h-4" />
-                                : MANA_ORDER.filter(m => m !== 'C' && (c.colors || []).includes(m)).map(m => (
-                                    <ManaIcon key={m} color={m} size="w-4 h-4" />
-                                  ))}
+                              <span className="flex items-center gap-1.5 text-xs text-gray-500">
+                                <span className="flex gap-0.5 shrink-0">
+                                  {(c.colors || []).length === 0
+                                    ? <ManaIcon color="C" size="w-4 h-4" />
+                                    : MANA_ORDER.filter(m => m !== 'C' && (c.colors || []).includes(m)).map(m => (
+                                        <ManaIcon key={m} color={m} size="w-4 h-4" />
+                                      ))}
+                                </span>
+                                <span className="truncate">{(c.types || []).join(', ')}{c.cmc != null ? ` · CMC ${c.cmc}` : ''}</span>
+                              </span>
                             </span>
                             {popularityMetagame && (
                               <span className="w-14 shrink-0 text-right font-mono text-xs text-amber-400">

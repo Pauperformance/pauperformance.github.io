@@ -9,7 +9,7 @@ export function displayPlace(place) {
 }
 
 // The results a list of decks can be filtered by, [key, label]
-export const RESULTS = [['winner', 'Winner'], ['top4', 'Top 4'], ['top8', 'Top 8'], ['undefeated', 'Undefeated']]
+export const RESULTS = [['undefeated', 'Undefeated'], ['winner', 'Winner'], ['top4', 'Top 4'], ['top8', 'Top 8']]
 
 // Whether a place (as the sources give it) is the result `key` (see RESULTS; '' for any).
 // A place is an ordinal or a plain number ("1st", "12"), a bracket ("5-8": places 5 to 8, as
