@@ -111,30 +111,43 @@ export default function TournamentPage() {
         </div>
 
         {(overlap.length > 0 || notes.length > 0) && (
-          <section className="rounded-xl border border-gray-700 bg-gray-800/50 px-4 py-3 text-sm space-y-2">
-            <h2 className="text-base font-semibold text-white">How the sources compare</h2>
-            <ul className="text-gray-300 text-sm">
-              {t.sources.map(src => (
-                <li key={src.source + src.id}>
-                  {sourceLabel(src.source)}: {src.decks} deck{src.decks !== 1 ? 's' : ''}, “{src.name}”, {formatDate(src.date)}
-                  {src.duplicate && ' (a second listing of the same event, not counted)'}
-                </li>
-              ))}
-            </ul>
-            {overlap.length > 0 && <p className="text-gray-300">{overlap.join(' · ')}.</p>}
-            {notes.length > 0 && (
-              <ul className="list-disc pl-5 text-amber-500 space-y-0.5">
-                {notes.map((n, i) => <li key={i}>{n}</li>)}
+          <details className="rounded-xl border border-gray-700 bg-gray-800/50 px-4 py-3 text-sm">
+            <summary className="cursor-pointer select-none text-base font-semibold text-white">
+              How the sources compare
+              {notes.length > 0 && <span className="ml-2 text-xs font-normal text-amber-500">⚠ {notes.length}</span>}
+            </summary>
+            <div className="mt-2 space-y-2">
+              <ul className="list-disc pl-5 text-gray-300 text-sm space-y-0.5">
+                {t.sources.map(src => (
+                  <li key={src.source + src.id}>
+                    {sourceLabel(src.source)}: {src.decks} deck{src.decks !== 1 ? 's' : ''}, “{src.name}”, {formatDate(src.date)}
+                    {src.duplicate && ' (a second listing of the same event, not counted)'}
+                  </li>
+                ))}
               </ul>
-            )}
-          </section>
+              {overlap.length > 0 && (
+                <ul className="text-gray-300 text-sm space-y-0.5">
+                  {overlap.map((o, i) => <li key={i}>{o}.</li>)}
+                </ul>
+              )}
+              {notes.length > 0 && (
+                <ul className="text-amber-500 space-y-0.5">
+                  {notes.map((n, i) => <li key={i}>{n}</li>)}
+                </ul>
+              )}
+            </div>
+          </details>
         )}
 
         {shares.length > 0 && (
           <section>
             <h2 className="text-xl font-semibold text-white mb-4">Metagame</h2>
-            <MetaPie shares={shares}
-              listClassName="grid grid-cols-2 gap-x-4 gap-y-1.5 content-start" />
+            {/* on wide screens the card is as wide as its content, the list's two columns at most 40rem each,
+                so that a name and its share stay next to each other */}
+            <div className="sm:w-fit max-w-full">
+              <MetaPie shares={shares}
+                listClassName="grid grid-cols-2 gap-x-10 gap-y-1.5 content-start sm:min-w-[28rem] sm:max-w-[48rem]" />
+            </div>
             {classified < t.decks.length && (
               <p className="mt-2 text-xs text-gray-500">
                 {t.decks.length - classified} of {t.decks.length} decks are not classified in an archetype yet and are left out.

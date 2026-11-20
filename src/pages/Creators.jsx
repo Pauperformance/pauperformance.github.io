@@ -83,7 +83,7 @@ function CreatorCard({ creator }) {
           {mtgoEntries.map(({ name: n, slug }) => (
             <span key={n} className="flex items-center gap-1 text-xs min-w-0">
               <span className="text-gray-500 font-medium shrink-0">MTGO:</span>
-              <span className="text-gray-400 bg-gray-750 px-2 py-0.5 rounded">{n}</span>
+              <span className="text-gray-400 bg-gray-750 px-2 py-0.5 rounded min-w-0 truncate" title={n}>{n}</span>
               {slug && (
                 <Link
                   to={`/players/${slug}`}
@@ -158,7 +158,7 @@ export default function Creators() {
         ) : filtered.length === 0 ? (
           <p className="text-gray-500 text-sm">No creators found.</p>
         ) : (
-          <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 2xl:grid-cols-6 gap-3">
+          <div className="grid grid-cols-1 min-[500px]:grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 2xl:grid-cols-6 gap-3">
             {filtered.map(c => <CreatorCard key={c.name} creator={c} />)}
           </div>
         )}

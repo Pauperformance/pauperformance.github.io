@@ -2,6 +2,8 @@ import { useState, useEffect, useMemo, useRef } from 'react'
 import TournamentDecks, { useIsDesktop } from './TournamentDecks'
 import { FilterPanel } from './FilterSheet'
 import SizeFilter, { bigEnough } from './SizeFilter'
+import ResultFilter from './ResultFilter'
+import { resultMatches } from '../utils/places'
 import { Pager } from './DeckFilters'
 import { MonthPicker } from './VideosSection'
 import { useTournamentSizes, playersOf } from '../utils/tournamentSizes'
@@ -37,6 +39,7 @@ export default function FamilyDecks({ decks, archetypes }) {
   const [filterDateTo, setFilterDateTo] = useState('')
   const [activeArchetypes, setActiveArchetypes] = useState(new Set())
   const [minSize, setMinSize] = useState(0)
+  const [result, setResult] = useState('')
   const sectionRef = useRef(null)
   const paginationRef = useRef(null)
   const pageInitRef = useRef(0)
@@ -55,8 +58,9 @@ export default function FamilyDecks({ decks, archetypes }) {
     if (filterDateTo && (d.tournament_date || '').slice(0, 7) > filterDateTo) return false
     if (activeArchetypes.size > 0 && !activeArchetypes.has(d.archetype)) return false
     if (!bigEnough(playersOf(sizes, d), minSize)) return false
+    if (!resultMatches(d.place, result)) return false
     return true
-  }), [sortedDecks, filterTournament, filterPilot, filterDateFrom, filterDateTo, activeArchetypes, minSize, sizes])
+  }), [sortedDecks, filterTournament, filterPilot, filterDateFrom, filterDateTo, activeArchetypes, minSize, result, sizes])
 
   useEffect(() => { setPage(0) }, [filtered])
 
@@ -86,7 +90,7 @@ export default function FamilyDecks({ decks, archetypes }) {
   }
   const clearFilters = () => {
     setFilterTournament(''); setFilterPilot(''); setFilterDateFrom(''); setFilterDateTo('')
-    setActiveArchetypes(new Set()); setMinSize(0)
+    setActiveArchetypes(new Set()); setMinSize(0); setResult('')
   }
 
   // desktop: a page of decks beside the decklist; phones swipe through all of them
@@ -106,7 +110,7 @@ export default function FamilyDecks({ decks, archetypes }) {
   }))
 
   const activeCount = (filterTournament ? 1 : 0) + (filterPilot ? 1 : 0) + activeArchetypes.size
-    + (filterDateFrom ? 1 : 0) + (filterDateTo ? 1 : 0) + (minSize ? 1 : 0)
+    + (filterDateFrom ? 1 : 0) + (filterDateTo ? 1 : 0) + (minSize ? 1 : 0) + (result ? 1 : 0)
   const available = archetypes.filter(a => !activeArchetypes.has(a))
 
   return (
@@ -152,6 +156,7 @@ export default function FamilyDecks({ decks, archetypes }) {
           </div>
         </div>
         <SizeFilter value={minSize} onChange={setMinSize} />
+        <ResultFilter value={result} onChange={setResult} />
       </FilterPanel>
 
       <p className="text-xs text-gray-500">

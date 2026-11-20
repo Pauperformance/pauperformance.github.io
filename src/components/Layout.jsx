@@ -1,4 +1,4 @@
-import { useState, useEffect } from 'react'
+import { useState, useEffect, useRef } from 'react'
 import { Link, useLocation } from 'react-router-dom'
 import { formatDateTime, formatShortDate } from '../utils/dates'
 
@@ -15,6 +15,160 @@ const NAV_ITEMS = [
   { to: '/creators', label: 'Creators' },
   { to: '/faq', label: 'FAQ' },
 ]
+
+// Phones: the bottom bar. The pages that have an entry of their own (their
+// path in NAV_ITEMS), then "Other" with all the remaining pages of NAV_ITEMS.
+// Icons: Lucide-style stroke paths on a 24x24 grid.
+const BAR_ITEMS = [
+  { to: '/archetypes', label: 'Archetypes',
+    x: [2, 22],
+    icon: <><path d="M14.5 17.5 3 6V3h3l11.5 11.5" /><path d="m13 19 6-6" /><path d="m16 16 4 4" /><path d="m19 21 2-2" /><path d="M14.5 6.5 18 3h3v3l-3.5 3.5" /><path d="m5 14 4 4" /><path d="m7 17-3 3" /><path d="m3 19 2 2" /></> },
+  { to: '/articles', label: 'Articles',
+    x: [3, 21],
+    icon: <><path d="M15 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V7z" /><path d="M14 2v4a2 2 0 0 0 2 2h4" /><path d="M8 13h8" /><path d="M8 17h8" /><path d="M8 9h2" /></> },
+  { to: '/tournaments', label: 'Tournaments',
+    x: [1, 23],
+    icon: <><path d="M6 9H4.5a2.5 2.5 0 0 1 0-5H6" /><path d="M18 9h1.5a2.5 2.5 0 0 0 0-5H18" /><path d="M4 22h16" /><path d="M10 14.66V17c0 .55-.47.98-.97 1.21C7.85 18.75 7 20.24 7 22" /><path d="M14 14.66V17c0 .55.47.98.97 1.21C16.15 18.75 17 20.24 17 22" /><path d="M18 2H6v7a6 6 0 0 0 12 0V2Z" /></> },
+  { to: '/watch', label: 'Watch',
+    x: [1, 23],
+    icon: <><path d="M10 7.75a.75.75 0 0 1 1.142-.638l3.664 2.249a.75.75 0 0 1 0 1.278l-3.664 2.25a.75.75 0 0 1-1.142-.638z" /><path d="M12 17v4" /><path d="M8 21h8" /><rect x="2" y="3" width="20" height="14" rx="2" /></> },
+  { to: '/metagames', label: 'Metagames',
+    x: [1, 23],
+    icon: <><path d="M21 12c.552 0 1.005-.449.95-.998a10 10 0 0 0-8.953-8.951c-.55-.055-.998.398-.998.95v8a1 1 0 0 0 1 1z" /><path d="M21.21 15.89A10 10 0 1 1 8 2.83" /></> },
+]
+// Icons of the pages in the "Other" menu
+const OTHER_ICONS = {
+  // three cards fanned out from a point below them, like a starting hand; the side cards are cut away where the
+  // middle one covers them (the mask), so that their lines don't show through it
+  '/cards': <>
+    <mask id="cards-hand">
+      <rect x="-4" y="-4" width="32" height="32" fill="white" stroke="none" />
+      <rect x="7.15" y="3.4" width="9.7" height="18.2" rx="2.4" fill="black" stroke="none" />
+    </mask>
+    <g mask="url(#cards-hand)">
+      <rect x="8.75" y="5" width="6.5" height="15" rx="1.5" transform="rotate(-20 12 28)" />
+      <rect x="8.75" y="5" width="6.5" height="15" rx="1.5" transform="rotate(20 12 28)" />
+    </g>
+    <rect x="8.75" y="5" width="6.5" height="15" rx="1.5" />
+  </>,
+  '/sets': <><path d="M12.83 2.18a2 2 0 0 0-1.66 0L2.6 6.08a1 1 0 0 0 0 1.83l8.58 3.91a2 2 0 0 0 1.66 0l8.58-3.9a1 1 0 0 0 0-1.83Z" /><path d="m22 17.65-9.17 4.16a2 2 0 0 1-1.66 0L2 17.65" /><path d="m22 12.65-9.17 4.16a2 2 0 0 1-1.66 0L2 12.65" /></>,
+  '/announcements': <><path d="m3 11 18-5v12L3 14v-3z" /><path d="M11.6 16.8a3 3 0 1 1-5.8-1.6" /></>,
+  '/players': <><path d="M19 21v-2a4 4 0 0 0-4-4H9a4 4 0 0 0-4 4v2" /><circle cx="12" cy="7" r="4" /></>,
+  '/creators': <><path d="M20.2 6 3 11l-.9-2.4c-.3-1.1.3-2.2 1.3-2.5l13.5-4c1.1-.3 2.2.3 2.5 1.3Z" /><path d="m6.2 5.3 3.1 3.9" /><path d="m12.4 3.4 3.1 4" /><path d="M3 11h18v8a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2Z" /></>,
+  '/faq': <><circle cx="12" cy="12" r="10" /><path d="M9.09 9a3 3 0 0 1 5.83 1c0 2-3 3-3 3" /><path d="M12 17h.01" /></>,
+}
+const BAR_PATHS = BAR_ITEMS.map(i => i.to)
+const OTHER_ITEMS = NAV_ITEMS.filter(i => !BAR_PATHS.includes(i.to))
+const BAR_BUTTON = 'shrink-0 px-3 flex flex-col items-center gap-0.5 pt-2 pb-1.5 text-[10px] font-medium transition-colors'
+
+function BottomBar({ pathname }) {
+  const [open, setOpen] = useState(false)
+  useEffect(() => { setOpen(false) }, [pathname])
+  useEffect(() => {
+    if (!open) return
+    const onKey = e => { if (e.key === 'Escape') setOpen(false) }
+    window.addEventListener('keydown', onKey)
+    return () => window.removeEventListener('keydown', onKey)
+  }, [open])
+  // "Other" is lit on the pages it holds
+  const inOther = pathname === '/settings' || OTHER_ITEMS.some(i => pathname === i.to || pathname.startsWith(`${i.to}/`))
+  // The icon is cropped to what it draws (x = its range on the 24-grid, stroke included),
+  // so the width of the svg is the width you see and the gaps between icons are the same.
+  const svg = (icon, [x0, x1]) => (
+    <svg className="h-6 shrink-0" style={{ width: x1 - x0 }} fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" viewBox={`${x0} 0 ${x1 - x0} 24`} aria-hidden="true">{icon}</svg>
+  )
+  // the label is centred under the icon and doesn't count in the width of the button
+  const label = text => (
+    <span className="relative block h-3 w-full">
+      <span className="absolute left-1/2 top-0 -translate-x-1/2 whitespace-nowrap leading-3">{text}</span>
+    </span>
+  )
+  return (
+    <>
+      {/* a tap anywhere else closes the menu */}
+      {open && <div className="md:hidden fixed inset-0 z-20" onClick={() => setOpen(false)} />}
+      <nav aria-label="Main" className={`md:hidden fixed inset-x-0 bottom-0 ${open ? 'z-[60]' : 'z-30'} border-t border-gray-700 bg-gray-950 pb-[env(safe-area-inset-bottom)]`}>
+        {open && (
+          <div className="absolute bottom-full right-0 w-52 origin-bottom-right rounded-t-xl border border-b-0 border-gray-700 bg-gray-950 p-1.5 shadow-2xl flex flex-col">
+            {OTHER_ITEMS.map(({ to, label }) => (
+              <Link key={to} to={to}
+                className={`flex items-center gap-3 px-3 py-2.5 rounded-lg text-sm font-medium transition-colors ${
+                  pathname === to || pathname.startsWith(`${to}/`) ? 'bg-amber-400/10 text-amber-400' : 'text-gray-300 active:bg-gray-800'
+                }`}>
+                <svg className="w-5 h-5 shrink-0" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" viewBox="0 0 24 24" aria-hidden="true">{OTHER_ICONS[to]}</svg>
+                {label}
+              </Link>
+            ))}
+            <div className="my-1 border-t border-gray-800" />
+            <Link to="/settings"
+              className={`flex items-center gap-3 px-3 py-2.5 rounded-lg text-sm font-medium transition-colors ${
+                pathname === '/settings' ? 'bg-amber-400/10 text-amber-400' : 'text-gray-300 active:bg-gray-800'
+              }`}>
+              <GearIcon className="w-5 h-5 shrink-0" />
+              Settings
+            </Link>
+          </div>
+        )}
+        <div className="flex items-stretch justify-around">
+          {BAR_ITEMS.map(({ to, label: text, icon, x }) => {
+            const active = pathname === to || pathname.startsWith(`${to}/`)
+            return (
+              <Link key={to} to={to} aria-current={active ? 'page' : undefined}
+                className={`${BAR_BUTTON} ${active ? 'text-amber-400' : 'text-gray-400 active:text-white'}`}>
+                {svg(icon, x)}
+                {label(text)}
+              </Link>
+            )
+          })}
+          <button onClick={() => setOpen(o => !o)} aria-expanded={open} aria-haspopup="menu"
+            className={`${BAR_BUTTON} ${open || inOther ? 'text-amber-400' : 'text-gray-400 active:text-white'}`}>
+            {svg(<><circle cx="12" cy="12" r="1" /><circle cx="20" cy="12" r="1" /><circle cx="4" cy="12" r="1" /></>, [2, 22])}
+            {label('Other')}
+          </button>
+        </div>
+      </nav>
+    </>
+  )
+}
+
+// Desktop: the "Other" entry of the header, with the pages that have no entry of their own in a menu under it
+function HeaderOther({ pathname }) {
+  const [open, setOpen] = useState(false)
+  useEffect(() => { setOpen(false) }, [pathname])
+  useEffect(() => {
+    if (!open) return
+    const onKey = e => { if (e.key === 'Escape') setOpen(false) }
+    window.addEventListener('keydown', onKey)
+    return () => window.removeEventListener('keydown', onKey)
+  }, [open])
+  const inOther = OTHER_ITEMS.some(i => pathname === i.to || pathname.startsWith(`${i.to}/`))
+  return (
+    <div className="relative">
+      {/* a click anywhere else closes the menu */}
+      {open && <div className="fixed inset-0" onClick={() => setOpen(false)} />}
+      <button onClick={() => setOpen(o => !o)} aria-expanded={open} aria-haspopup="menu"
+        className={`flex items-center gap-1 px-2 2xl:px-3 py-1.5 rounded-md text-sm font-medium transition-colors ${
+          open || inOther ? 'bg-amber-400/10 text-amber-400' : 'text-gray-400 hover:text-white hover:bg-gray-800'
+        }`}>
+        Other
+        <svg className={`w-3.5 h-3.5 transition-transform ${open ? 'rotate-180' : ''}`} fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" viewBox="0 0 24 24" aria-hidden="true"><path d="m6 9 6 6 6-6" /></svg>
+      </button>
+      {open && (
+        <div className="absolute left-1/2 -translate-x-1/2 top-full mt-2 w-52 rounded-xl border border-gray-700 bg-gray-950 p-1.5 shadow-2xl flex flex-col">
+          {OTHER_ITEMS.map(({ to, label }) => (
+            <Link key={to} to={to}
+              className={`flex items-center gap-3 px-3 py-2 rounded-lg text-sm font-medium transition-colors ${
+                pathname === to || pathname.startsWith(`${to}/`) ? 'bg-amber-400/10 text-amber-400' : 'text-gray-300 hover:bg-gray-800 hover:text-white'
+              }`}>
+              <svg className="w-5 h-5 shrink-0" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" viewBox="0 0 24 24" aria-hidden="true">{OTHER_ICONS[to]}</svg>
+              {label}
+            </Link>
+          ))}
+        </div>
+      )}
+    </div>
+  )
+}
 
 // Where to find Pauperformance, in the footer of every page (but the hidden ones).
 const CONTACTS = [
@@ -117,11 +271,38 @@ function DataFreshness() {
   return <span className="text-xs text-gray-500 text-center">{parts.join(' ')}</span>
 }
 
-export default function Layout({ children }) {
+// The face of the coins: a conic sweep of gold tones and a bright spot at the top left
+const FACE = 'radial-gradient(circle at 30% 28%, rgba(255,255,255,0.95) 0, rgba(255,255,255,0) 38%), conic-gradient(from 210deg, #b8860b, #ffe066, #fff7c2, #ffd23f, #c99700, #ffe680, #b8860b)'
+
+// How thick the coins are (px) and the number of discs that make up their edge
+const COIN_THICKNESS = 5
+const COIN_DISCS = 9
+
+// The easter egg's coins, each: how far across the mascot (%), when it starts (ms), how long it takes to fall (ms),
+// its size (px) and how fast it turns (ms per two turns; negative: the other way). Uneven on purpose.
+const COINS = [[41, 0, 880, 16, 1150], [68, 70, 960, 14, -1050], [53, 240, 800, 18, 1250], [85, 280, 920, 15, -1100], [35, 520, 1000, 17, 1050], [76, 640, 840, 14, -1200]]
+
+// topBar: a bar for the page (its section icons on phones), kept under the header
+export default function Layout({ children, topBar = null }) {
   // The header and every page share one width, so the menu doesn't move from
   // page to page: wide screens use up to 1920px.
   const maxW = 'max-w-[1920px]'
   const { pathname } = useLocation()
+  // Easter egg: each click on the mascot drops a burst of coins in front of it (clicks in a row, more of them
+  // at once). It goes nowhere: the logo and the title are the ways home.
+  const [bursts, setBursts] = useState([])
+  const burstId = useRef(0)
+  const clickMascot = () => {
+    if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) return
+    const id = ++burstId.current
+    const jitter = n => (Math.random() * 2 - 1) * n
+    const coins = COINS.map(([left, delay, fall, size, turn]) => [
+      Math.min(88, Math.max(30, left + jitter(9))), Math.max(0, delay + jitter(90)), fall * (1 + jitter(0.1)), size + Math.round(jitter(1)), turn * (1 + jitter(0.15)),
+    ])
+    // at most 8 bursts (48 coins) at a time
+    setBursts(prev => [...prev.slice(-7), { id, coins }])
+    setTimeout(() => setBursts(prev => prev.filter(b => b.id !== id)), 1700)
+  }
   const [menuOpen, setMenuOpen] = useState(false)
 
   useEffect(() => { setMenuOpen(false) }, [pathname])
@@ -129,30 +310,68 @@ export default function Layout({ children }) {
   return (
     <div className="min-h-screen bg-gray-900 text-gray-100">
       <header className="border-b border-gray-700 bg-gray-950 sticky top-0 z-10">
-        <div className={`${maxW} mx-auto px-4 py-4 flex items-center gap-4 2xl:gap-8`}>
-          <Link to="/" className="shrink-0">
+        <div className={`${maxW} mx-auto px-4 py-4 flex items-center gap-4 2xl:gap-8 relative overflow-x-clip`}>
+          <Link to="/" className="shrink-0 relative z-10">
             <div className="text-xl font-bold tracking-tight text-white">
               Pauperformance <span className="text-amber-400">Academy</span>
             </div>
             <div className="text-xs text-gray-500 tracking-wide mt-0.5">A common journey to optimal Pauper</div>
           </Link>
-          {/* The menu is in the bar from xl (1280px) up: with Settings beside it, it doesn't fit below. */}
-          <nav className="hidden xl:flex justify-center 2xl:gap-1 flex-1">
-            {NAV_ITEMS.map(({ to, label }) => (
+          {/* The main pages are in the bar from xl (1280px) up, the others under "Other" (as on phones): with Settings beside it, more doesn't fit. */}
+          <nav className="hidden xl:flex justify-center items-center 2xl:gap-1 flex-1">
+            {BAR_ITEMS.map(({ to, label, icon }) => (
               <Link key={to} to={to}
-                className={`px-2 2xl:px-3 py-1.5 rounded-md text-sm font-medium transition-colors ${
-                  pathname === to
+                className={`flex items-center gap-1.5 px-2 2xl:px-3 py-1.5 rounded-md text-sm font-medium transition-colors ${
+                  pathname === to || pathname.startsWith(`${to}/`)
                     ? 'bg-amber-400/10 text-amber-400'
                     : 'text-gray-400 hover:text-white hover:bg-gray-800'
                 }`}>
+                <svg className="w-4 h-4 shrink-0" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" viewBox="0 0 24 24" aria-hidden="true">{icon}</svg>
                 {label}
               </Link>
             ))}
+            <HeaderOther pathname={pathname} />
+            <Link to="/settings"
+              className={`flex items-center gap-1.5 px-2 2xl:px-3 py-1.5 rounded-md text-sm font-medium transition-colors ${
+                pathname === '/settings'
+                  ? 'bg-amber-400/10 text-amber-400'
+                  : 'text-gray-400 hover:text-white hover:bg-gray-800'
+              }`}>
+              <GearIcon className="w-4 h-4" />
+              Settings
+            </Link>
           </nav>
-          {/* Settings: a label with the gear on desktop, the gear alone beside the hamburger on mobile */}
-          <div className="ml-auto xl:ml-0 flex items-center gap-1 shrink-0">
+          {/* phones and desktop (not between: the hamburger is there): the mascot, top right; on phones it takes the place, as tall as the bar and out of the layout (absolute), so the bar keeps its height */}
+          <button type="button" aria-label="Gary the mascot" onClick={clickMascot} className="md:hidden xl:block absolute -right-[10px] top-0 h-full overflow-hidden cursor-pointer">
+            <img src="/images/logo-color-crop.png" alt="" width="511" height="210" className="block h-full w-auto max-w-none" />
+            {/* the coins fall from the top of the bar and fade out at its bottom edge, in front of the mascot; overflow-hidden on the link, so that they never go past the bar */}
+            {bursts.flatMap(b => b.coins.map(([left, delay, fall, size, turn], i) => (
+              <span key={`${b.id}-${i}`} aria-hidden="true" className="coin-drop pointer-events-none absolute"
+                style={{ left: `${left}%`, width: size, height: size, animationDelay: `${delay}ms`, animationDuration: `${fall}ms`, perspective: 160 }}>
+                {/* a coin in 3D: its faces and a stack of discs between them for the edge, turning on its axis */}
+                <span className="coin-turn relative block w-full h-full"
+                  style={{ animationDuration: `${Math.abs(turn)}ms`, animationDirection: turn < 0 ? 'reverse' : 'normal' }}>
+                  {/* the coin is COIN_THICKNESS thick, centred on the plane it turns around */}
+                  {Array.from({ length: COIN_DISCS }, (_, k) => (
+                    <span key={k} className="absolute inset-0 rounded-full"
+                      style={{ transform: `translateZ(${COIN_THICKNESS / 2 - (k + 1) * COIN_THICKNESS / (COIN_DISCS + 1)}px)`, background: k % 2 ? '#d9a300' : '#9a6f00' }} />
+                  ))}
+                  {/* the back face, then the front face with its shine */}
+                  <span className="absolute inset-0 rounded-full" style={{ transform: `translateZ(${-COIN_THICKNESS / 2}px) rotateY(180deg)`, background: FACE, border: '1px solid #9a6f00' }} />
+                  <span className="absolute inset-0 overflow-hidden rounded-full"
+                    style={{ transform: `translateZ(${COIN_THICKNESS / 2}px)`, background: FACE, border: '1px solid #9a6f00', boxShadow: 'inset 0 0 0 2px rgba(255, 245, 170, 0.5), 0 0 6px rgba(255, 210, 60, 0.7)' }}>
+                    {/* the glint sweeping over the coin */}
+                    <span className="coin-glint absolute inset-y-0 -left-1/2 w-1/2"
+                      style={{ background: 'linear-gradient(100deg, transparent 0%, rgba(255,255,255,0.9) 50%, transparent 100%)' }} />
+                  </span>
+                </span>
+              </span>
+            )))}
+          </button>
+          {/* Settings: beside "Other" in the bar on desktop; the gear alone beside the hamburger on tablets; on phones it is in the "Other" menu */}
+          <div className="hidden md:flex ml-auto xl:ml-0 xl:w-44 items-center gap-1 shrink-0">
             <Link to="/settings" aria-label="Settings"
-              className={`flex items-center gap-1.5 p-2 xl:px-2 2xl:px-3 xl:py-1.5 rounded-md text-sm font-medium transition-colors ${
+              className={`hidden md:flex xl:hidden items-center gap-1.5 p-2 rounded-md text-sm font-medium transition-colors ${
                 pathname === '/settings'
                   ? 'bg-amber-400/10 text-amber-400'
                   : 'text-gray-400 hover:text-white hover:bg-gray-800'
@@ -161,7 +380,7 @@ export default function Layout({ children }) {
               <span className="hidden xl:inline">Settings</span>
             </Link>
             <button
-              className="xl:hidden p-2 rounded-md text-gray-400 hover:text-white hover:bg-gray-800 transition-colors"
+              className="hidden md:block xl:hidden p-2 rounded-md text-gray-400 hover:text-white hover:bg-gray-800 transition-colors"
               onClick={() => setMenuOpen(o => !o)}
               aria-label="Toggle menu">
               <svg className="w-6 h-6" fill="none" stroke="currentColor" strokeWidth="2" viewBox="0 0 24 24">
@@ -173,7 +392,7 @@ export default function Layout({ children }) {
           </div>
         </div>
         {menuOpen && (
-          <div className="xl:hidden border-t border-gray-700 bg-gray-950 px-4 py-3 flex flex-col gap-1">
+          <div className="hidden md:flex xl:hidden border-t border-gray-700 bg-gray-950 px-4 py-3 flex-col gap-1">
             {NAV_ITEMS.map(({ to, label }) => (
               <Link key={to} to={to}
                 className={`px-3 py-2 rounded-md text-sm font-medium transition-colors ${
@@ -186,13 +405,14 @@ export default function Layout({ children }) {
             ))}
           </div>
         )}
+        {topBar}
       </header>
 
       <main className={`${maxW} mx-auto px-4 pt-5 pb-10`}>
         {children}
       </main>
 
-      <footer className="border-t border-gray-700 mt-16">
+      <footer className="border-t border-gray-700 mt-16 pb-16 md:pb-0">
         <div className="max-w-[1920px] mx-auto px-4 py-8 flex flex-col items-center gap-4 text-sm text-gray-500">
           <div className="flex flex-wrap justify-center gap-x-6 gap-y-2">
             {CONTACTS.filter(c => !c.hidden).map(({ href, label, icon }) => (
@@ -209,6 +429,8 @@ export default function Layout({ children }) {
           {pathname === '/' && <DataFreshness />}
         </div>
       </footer>
+
+      <BottomBar pathname={pathname} />
     </div>
   )
 }

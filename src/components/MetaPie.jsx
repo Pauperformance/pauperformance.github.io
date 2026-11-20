@@ -78,8 +78,8 @@ function DonutChart({ data, activeIndex, onSliceEnter, onSliceLeave }) {
 // of archetypes and their shares. shares: [{ archetype_name, meta_share }],
 // most played first. Archetypes under minListedShare (%) are listed as one
 // Other row. listClassName, listStyle: the list's grid, sized to its length;
-// rowClassName: each row's. aside: shown on phones only, to the right of the pie.
-export default function MetaPie({ shares, minListedShare = 0, listClassName, listStyle, rowClassName = '', linkSuffix = '', compact = false, aside }) {
+// rowClassName: each row's. rootClassName: the card's. aside: shown on phones only, to the right of the pie.
+export default function MetaPie({ shares, minListedShare = 0, listClassName, listStyle, rowClassName = '', linkSuffix = '', compact = false, aside, rootClassName = '' }) {
   const [activeIndex, setActiveIndex] = useState(undefined)
 
   // the archetypes under minListedShare are Other in the donut too
@@ -113,7 +113,7 @@ export default function MetaPie({ shares, minListedShare = 0, listClassName, lis
   )
 
   return (
-    <div className={aside ? 'sm:bg-gray-800 sm:border sm:border-gray-700 sm:rounded-xl sm:p-4' : `bg-gray-800 border border-gray-700 rounded-xl ${compact ? 'p-4' : 'p-5'}`}>
+    <div className={`${aside ? 'sm:bg-gray-800 sm:border sm:border-gray-700 sm:rounded-xl sm:p-4' : `bg-gray-800 border border-gray-700 rounded-xl ${compact ? 'p-4' : 'p-5'}`} ${rootClassName}`}>
       <div className={`flex flex-col sm:flex-row ${aside ? 'sm:items-center sm:gap-4' : compact ? 'items-center gap-4' : 'items-start gap-6'}`}>
         <div className={aside ? 'flex items-stretch gap-3 w-full sm:w-auto sm:block shrink-0' : 'contents'}>
           {/* phones: the pie and the list make one L-shaped card, the aside outside it on the pie's right */}

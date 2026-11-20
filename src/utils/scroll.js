@@ -3,11 +3,15 @@ export const easeInOut = (t) => (t < 0.5 ? 4 * t * t * t : 1 - Math.pow(-2 * t +
 // A slower, eased scroll than the browser's own smooth scroll: 0.7s for a
 // short way, up to 1.4s for a long one. Scrolling or touching the page while
 // it runs hands control back to the reader.
-export function scrollGently(to) {
+// `to` can be a function giving the position: it is asked again on every frame,
+// so that content loading on the way (which moves the target) doesn't make the
+// scroll land short or long.
+export function scrollGently(target) {
+  const to = typeof target === 'function' ? target : () => target
   const from = window.scrollY
-  const distance = to - from
+  const distance = to() - from
   if (Math.abs(distance) < 1) return
-  if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) return window.scrollTo(0, to)
+  if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) return window.scrollTo(0, to())
   const duration = Math.min(1400, 700 + Math.abs(distance) / 3)
   const start = performance.now()
   let frame
@@ -20,9 +24,13 @@ export function scrollGently(to) {
   window.addEventListener('touchstart', stop, { passive: true })
   const step = (now) => {
     const t = Math.min((now - start) / duration, 1)
-    window.scrollTo(0, from + distance * easeInOut(t))
+    window.scrollTo(0, from + (to() - from) * easeInOut(t))
     if (t < 1) frame = requestAnimationFrame(step)
-    else stop()
+    else {
+      stop()
+      // content that came in just now: one last correction
+      setTimeout(() => { if (Math.abs(to() - window.scrollY) > 4) window.scrollTo({ top: to(), behavior: 'smooth' }) }, 250)
+    }
   }
   frame = requestAnimationFrame(step)
 }

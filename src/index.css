@@ -186,6 +186,28 @@
   }
 }
 
+/* Easter egg: the coins that drop in front of the mascot in the header */
+@keyframes coin-drop {
+  0% { top: -30%; opacity: 0; transform: scale(1); }
+  10% { opacity: 1; }
+  92% { opacity: 1; }
+  100% { top: 92%; opacity: 0; transform: scale(0.7); }
+}
+.coin-drop { animation: coin-drop 900ms cubic-bezier(0.4, 0, 0.8, 0.7) both; }
+@keyframes coin-turn {
+  from { transform: rotateX(28deg) rotateY(0deg); }
+  to { transform: rotateX(28deg) rotateY(720deg); }
+}
+@keyframes coin-glint {
+  0% { transform: translateX(0); }
+  100% { transform: translateX(400%); }
+}
+.coin-turn { animation: coin-turn 800ms linear infinite; transform-style: preserve-3d; }
+.coin-glint { animation: coin-glint 450ms ease-in-out infinite; }
+@media (prefers-reduced-motion: reduce) {
+  .coin-drop, .coin-turn, .coin-glint { animation: none; opacity: 0; }
+}
+
 /* A metagame's sets and B&Rs appearing in the metagame flow (components/MetagameFlow.jsx) */
 @keyframes flow-event-in {
   from {

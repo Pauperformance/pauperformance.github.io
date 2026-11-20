@@ -7,7 +7,7 @@ import { AppearanceRow, MetagameBadge } from '../components/Metagame'
 import CardPopularityChart, { PopularityTrend, useMetagames } from '../components/CardPopularityChart'
 import { useTournamentSizes, playersOf } from '../utils/tournamentSizes'
 import TournamentDecks, { useIsDesktop } from '../components/TournamentDecks'
-import { displayPlace } from '../utils/places'
+import { displayPlace, resultMatches } from '../utils/places'
 import TypicalListSection from '../components/TypicalListSection'
 import CardEvolution from '../components/CardEvolution'
 import { cardLinkSlug, useCardPages } from '../utils/cardPages'
@@ -19,7 +19,9 @@ import VideosSection, { MonthPicker } from '../components/VideosSection'
 import { FilterPanel } from '../components/FilterSheet'
 import { Pager } from '../components/DeckFilters'
 import TableOfContents from '../components/TableOfContents'
+import SectionBar from '../components/SectionBar'
 import SizeFilter, { bigEnough } from '../components/SizeFilter'
+import ResultFilter from '../components/ResultFilter'
 
 const POPULARITY_METAGAMES = '/data/archetype-popularity-metagames.json'
 const MANA_ORDER = ['W', 'U', 'B', 'R', 'G', 'C']
@@ -137,6 +139,7 @@ function IntelDecksSection({ name }) {
   const [filterDateTo, setFilterDateTo] = useState('')
   const [filterPilot, setFilterPilot] = useState('')
   const [minSize, setMinSize] = useState(0)
+  const [result, setResult] = useState('')
   const isDesktop = useIsDesktop()
   const sizes = useTournamentSizes()
   // the section, for the phone's filter button to show only while it is on screen
@@ -164,9 +167,10 @@ function IntelDecksSection({ name }) {
       if (filterDateTo && (d.tournament_date || '').slice(0, 7) > filterDateTo) return false
       if (filterPilot && !(d.pilot || '').toLowerCase().includes(filterPilot.toLowerCase())) return false
       if (!bigEnough(playersOf(sizes, d), minSize)) return false
+      if (!resultMatches(d.place, result)) return false
       return true
     })
-  }, [decks, filterTournament, filterDateFrom, filterDateTo, filterPilot, minSize, sizes])
+  }, [decks, filterTournament, filterDateFrom, filterDateTo, filterPilot, minSize, result, sizes])
 
   const firstYear = useMemo(() => firstYearOf(decks, 'tournament_date'), [decks])
 
@@ -198,17 +202,19 @@ function IntelDecksSection({ name }) {
     place: displayPlace(d.place),
     lead: formatShortDate(d.tournament_date),
     detail: d.tournament_name,
+    // in the list: the player's result, before the player's name
+    listPlace: displayPlace(d.place),
     players: playersOf(sizes, d),
   }))
 
   const clearFilters = () => {
-    setFilterTournament(''); setFilterPilot(''); setFilterDateFrom(''); setFilterDateTo(''); setMinSize(0); setPage(0)
+    setFilterTournament(''); setFilterPilot(''); setFilterDateFrom(''); setFilterDateTo(''); setMinSize(0); setResult(''); setPage(0)
   }
 
   return (
     <div ref={sectionRef} className="space-y-3">
       <FilterPanel scopeRef={sectionRef} onClear={clearFilters}
-        activeCount={(filterTournament ? 1 : 0) + (filterPilot ? 1 : 0) + (filterDateFrom ? 1 : 0) + (filterDateTo ? 1 : 0) + (minSize ? 1 : 0)}
+        activeCount={(filterTournament ? 1 : 0) + (filterPilot ? 1 : 0) + (filterDateFrom ? 1 : 0) + (filterDateTo ? 1 : 0) + (minSize ? 1 : 0) + (result ? 1 : 0)}
         summary={`${filtered.length} decklist${filtered.length !== 1 ? 's' : ''}`}>
         <div className="relative">
           <input
@@ -251,6 +257,7 @@ function IntelDecksSection({ name }) {
           </div>
         </div>
         <SizeFilter value={minSize} onChange={v => { setMinSize(v); setPage(0) }} />
+        <ResultFilter value={result} onChange={v => { setResult(v); setPage(0) }} />
       </FilterPanel>
       <p className="text-xs text-gray-500">
         {filtered.length !== decks.length ? `${filtered.length} of ${decks.length}` : decks.length} decklists
@@ -408,17 +415,17 @@ export default function ArchetypePage() {
   const resourceCount = (data.resources?.length || 0) + (data.resources_discord?.length || 0)
     + (data.resource_sideboards?.length || 0)
   const sections = [
-    popularity && { id: 'popularity', label: 'Popularity' },
-    { id: 'typical-list', label: 'Typical list' },
+    popularity && { id: 'popularity', label: 'Popularity', short: 'Popularity' },
+    { id: 'typical-list', label: 'Typical list', short: 'List' },
     { id: 'resources', label: 'Resources', count: resourceCount },
-    data.decks?.length > 0 && { id: 'reference-decks', label: 'Reference decks', count: data.decks.length },
+    data.decks?.length > 0 && { id: 'reference-decks', label: 'Reference decks', short: 'Reference', count: data.decks.length },
     { id: 'decks', label: 'Decks', count: data.intel_deck_count ?? null },
     popularity && { id: 'evolution', label: 'Evolution' },
     { id: 'videos', label: 'Videos', count: data.videos?.length || 0 },
   ].filter(Boolean)
 
   return (
-    <Layout>
+    <Layout topBar={<SectionBar sections={sections} />}>
       <div className="space-y-8">
         {/* Header, with the table of contents beside it */}
         <div className="flex flex-col gap-6 md:flex-row md:items-start md:justify-between">
@@ -477,7 +484,7 @@ export default function ArchetypePage() {
           </div>
         </div>
         </div>
-        <TableOfContents sections={sections} />
+        <TableOfContents sections={sections} hideOnMobile />
         </div>
 
         {/* Description */}

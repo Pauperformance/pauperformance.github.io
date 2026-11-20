@@ -25,7 +25,7 @@ export default function CookieBanner() {
     <div
       role="dialog"
       aria-label="Cookie consent"
-      className="fixed inset-x-3 bottom-3 z-50 mx-auto max-w-xl rounded-lg border border-gray-600 bg-gray-800 p-4 shadow-2xl md:w-max md:max-w-full md:flex md:items-center md:gap-5"
+      className="fixed inset-x-3 bottom-20 md:bottom-3 z-50 mx-auto max-w-xl rounded-lg border border-gray-600 bg-gray-800 p-4 shadow-2xl md:w-max md:max-w-full md:flex md:items-center md:gap-5"
     >
       <p className="text-sm text-gray-200">
         We use cookies to store your settings and count visits.
