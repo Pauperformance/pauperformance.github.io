@@ -242,7 +242,7 @@ const NAV_BUTTON = 'px-4 py-2 rounded-lg text-sm font-semibold border border-gra
 // archetype) under the pilot; showArchetype: whether the panel names the
 // archetype, which is no news on the page of the archetype itself; pager: the
 // Previous / Next buttons for the pages of decks, under the list.
-export default function TournamentDecks({ decks, several = false, showArchetype = true, pager = null, stackCard = false, wideList = false }) {
+export default function TournamentDecks({ decks, several = false, showArchetype = true, pager = null, stackCard = false, wideList = false, allLabel = 'decks' }) {
   const isDesktop = useIsDesktop()
   const mode = isDesktop ? 'table' : 'swap'
   const [selectedId, setSelectedId] = useState(null)
@@ -448,7 +448,7 @@ export default function TournamentDecks({ decks, several = false, showArchetype 
         Swipe the decklist left or right for the next or previous deck.
       </p>
       <div className="mb-3 flex justify-center">
-        <button onClick={() => { justPicked.current = false; setOpened(false) }} className={NAV_BUTTON}>← All players</button>
+        <button onClick={() => { justPicked.current = false; setOpened(false) }} className={NAV_BUTTON}>← All {allLabel}</button>
       </div>
       <div className="flex items-center justify-between gap-2 mb-3">
         <button onClick={() => step(-1)} disabled={index === 0} className={NAV_BUTTON}>‹ Previous</button>

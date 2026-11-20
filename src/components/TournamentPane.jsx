@@ -120,7 +120,7 @@ export default function TournamentPane({ t, showDecks = true }) {
         {t.decks.length === 0 ? (
           <p className="text-gray-500 text-sm">The source lists no decks for this tournament.</p>
         ) : (
-          <TournamentDecks key={t.id} decks={t.decks} several={distinctSources(t).length > 1} stackCard />
+          <TournamentDecks key={t.id} decks={t.decks} several={distinctSources(t).length > 1} allLabel="players" stackCard />
         )}
       </section>}
 
