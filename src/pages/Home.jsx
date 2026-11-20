@@ -165,7 +165,8 @@ function pieSpanClasses(count) {
   }).join(' ')
 }
 
-function TopDecksSection() {
+// switchButton: the button that swaps the view, shown on phones between the cards and the pie
+function TopDecksSection({ switchButton }) {
   const [decks, setDecks] = useState([])
   const cardPages = useCardPages()
   const imageFor = useImageFor()
@@ -224,6 +225,7 @@ function TopDecksSection() {
             )}
           </div>
         ))}
+        {switchButton && <div className="col-span-full flex justify-center md:hidden">{switchButton}</div>}
         <div className={`${pieSpanClasses(decks.length)} min-w-0`}>
           <MetagameSection embedded />
         </div>
@@ -1336,6 +1338,13 @@ export default function Home() {
     })
   }
 
+  const switchButton = (
+    <button onClick={switchMetaView}
+      className="px-4 py-2 rounded-lg border border-gray-700 bg-gray-800 text-sm text-gray-300 hover:border-amber-400/50 hover:text-amber-400 transition-colors">
+      {metaView === 'table' ? 'Switch to Brainstorm View' : 'Switch to Table View'}
+    </button>
+  )
+
   return (
     <Layout topBar={<SectionBar sections={HOME_SECTIONS} />}>
       <div className="space-y-12">
@@ -1352,15 +1361,13 @@ export default function Home() {
           </section>
 
           <div ref={metaViewRef} id="top-archetypes">
-            {metaView === 'table' ? <TopDecksSection /> : <BrainstormSection />}
+            {metaView === 'table' ? <TopDecksSection switchButton={switchButton} /> : <BrainstormSection />}
           </div>
 
-          {/* Brainstorm: clear of the light that pools under the archetype card */}
-          <div className={`flex justify-center ${metaView === 'table' ? '' : 'pt-4'}`}>
-            <button onClick={switchMetaView}
-              className="px-4 py-2 rounded-lg border border-gray-700 bg-gray-800 text-sm text-gray-300 hover:border-amber-400/50 hover:text-amber-400 transition-colors">
-              {metaView === 'table' ? 'Switch to Brainstorm View' : 'Switch to Table View'}
-            </button>
+          {/* Brainstorm: clear of the light that pools under the archetype card. Table, on phones: the button is
+              in the table, before the pie, so there it is not repeated here. */}
+          <div className={metaView === 'table' ? 'hidden md:flex justify-center' : 'flex justify-center pt-4'}>
+            {switchButton}
           </div>
         </div>
 
