@@ -7,7 +7,7 @@ import MtgoButtons from './MtgoButtons'
 import { useCardData, useCardPreview, OracleText } from './CardPreview'
 import { useCardPages } from '../utils/cardPages'
 import { getSettings } from '../utils/settings'
-import { loadCardImages, useArtwork } from '../utils/artwork'
+import { loadCardImages, useArtwork, useImageFor } from '../utils/artwork'
 import { nameToSlug, pilotToSlug } from '../utils/slugs'
 import { sourceLabel } from '../utils/sources'
 
@@ -27,6 +27,11 @@ export function useIsDesktop() {
 
 // What each source says of a deck: its copies, and where they differ. Shown for
 // tournaments several sources list, to tell what matches and what doesn't.
+const samePilot = (a, b) => {
+  const norm = s => (s || '').replace(/[\s_]+/g, ' ').trim().toLowerCase()
+  return norm(a) === norm(b)
+}
+
 function DeckCopies({ deck }) {
   const copies = deck.copies || []
   const differences = Object.entries(deck.differences || {})
@@ -43,7 +48,11 @@ function DeckCopies({ deck }) {
           <li key={c.source} className="text-gray-300">
             <a href={c.url} target="_blank" rel="noopener noreferrer" className="text-amber-400 hover:text-amber-300">{sourceLabel(c.source)} →</a>
             <span className="text-gray-400">
-              {' '}{c.pilot || 'Anonymous'}{c.place ? ` · ${c.place}` : ''}{c.name ? ` · “${c.name}”` : ''}
+              {' '}{[
+                !samePilot(c.pilot, deck.pilot) ? (c.pilot || 'Anonymous') : null,
+                c.place || null,
+                c.name ? `“${c.name}”` : null,
+              ].filter(Boolean).join(' · ')}
               {copies.length > 1 && c.counted ? ' · shown here' : ''}
             </span>
           </li>
@@ -71,10 +80,58 @@ function DeckCopies({ deck }) {
   )
 }
 
+// The representative card of each archetype, by archetype name (loaded once)
+let representativeCards = null // the map, once loaded
+let representativeRequest = null // the request, while it loads
+function useRepresentativeCards() {
+  const [cards, setCards] = useState(representativeCards)
+  useEffect(() => {
+    if (cards) return
+    representativeRequest ??= fetch('/data/archetypes.json').then(r => r.json())
+      .then(list => Object.fromEntries(list.filter(a => a.representative_card).map(a => [a.name, a.representative_card])))
+      .catch(() => ({}))
+      .then(map => (representativeCards = map))
+    let live = true
+    representativeRequest.then(map => { if (live) setCards(map) })
+    return () => { live = false }
+  }, [cards])
+  return cards || {}
+}
+
+// The card types by card name (loaded once), to tell the lands from the rest
+let cardTypesMap = null
+let cardTypesRequest = null
+function useCardTypes(wanted) {
+  const [types, setTypes] = useState(cardTypesMap)
+  useEffect(() => {
+    if (!wanted || types) return
+    cardTypesRequest ??= fetch('/data/card-types.json').then(r => r.json()).catch(() => ({})).then(m => (cardTypesMap = m))
+    let live = true
+    cardTypesRequest.then(m => { if (live) setTypes(m) })
+    return () => { live = false }
+  }, [wanted, types])
+  return types
+}
+
+// The card a deck without an archetype is shown with: one of the non-land cards the deck plays in the most
+// copies (4 if it has any, else 3, ...), picked by the deck's id so that it is the same every time.
+// null where the deck is empty or no such card can be told.
+function pickDeckCard(decklist, id, types) {
+  const main = decklist?.main
+  if (!main?.length || !types) return null
+  const spells = main.filter(c => c.qty > 0 && c.name && !(types[c.name] || []).includes('Land'))
+  if (!spells.length) return null
+  const most = Math.max(...spells.map(c => c.qty))
+  const names = [...new Set(spells.filter(c => c.qty === most).map(c => c.name))].sort()
+  let hash = 0
+  for (const ch of String(id)) hash = (hash * 31 + ch.charCodeAt(0)) >>> 0
+  return names[hash % names.length]
+}
+
 // The decklist of the selected deck, with who played it and a link to its page.
 // deck: the tournament's entry (id, pilot, archetype, place); data: its deck
 // details (undefined while loading, false if they could not be loaded).
-function DeckPanel({ deck, several, showArchetype, data, res, view, onView, hoveredCard, onHover, bindPreview, cardPages, showCardImage }) {
+function DeckPanel({ deck, several, showArchetype, data, res, view, onView, hoveredCard, onHover, bindPreview, cardPages, showCardImage, stackCard }) {
   const { visual, groupByType, sort } = view
   const hoveredData = useCardData(hoveredCard)
   const hoveredImage = hoveredCard && res && (res.images[hoveredCard] || (hoveredData && hoveredData.images[0]))
@@ -146,14 +203,15 @@ function DeckPanel({ deck, several, showArchetype, data, res, view, onView, hove
           </div>
           {showCardImage && !visual && (
             // the image of the card hovered (an empty card-sized box meanwhile, keeping the place),
-            // with its Oracle text under it, or beside it where there is room (as on a deck page)
-            <div className="hidden xl:flex flex-col min-[1800px]:flex-row gap-4 items-start shrink-0 w-56 min-[1800px]:w-[496px]">
+            // with its Oracle text under it, or beside it where there is room (as on a deck page);
+            // stackCard: under it always, where the list of tournaments leaves little room (the tournaments index)
+            <div className={`hidden xl:flex flex-col gap-4 items-start shrink-0 w-56 ${stackCard ? '' : 'min-[1800px]:flex-row min-[1800px]:w-[496px]'}`}>
               <div className="w-56 shrink-0">
                 {hoveredImage
                   ? <img src={hoveredImage} alt={hoveredCard} className="w-full rounded-xl shadow-lg border border-gray-700" />
                   : <div className="w-full aspect-[63/88] rounded-xl border border-gray-700" />}
               </div>
-              {hoveredCard && <OracleText card={hoveredData} className="w-56 min-[1800px]:w-64 text-gray-200" />}
+              {hoveredCard && <OracleText card={hoveredData} className={`w-56 text-gray-200 ${stackCard ? '' : 'min-[1800px]:w-64'}`} />}
             </div>
           )}
         </div>
@@ -184,10 +242,12 @@ const NAV_BUTTON = 'px-4 py-2 rounded-lg text-sm font-semibold border border-gra
 // archetype) under the pilot; showArchetype: whether the panel names the
 // archetype, which is no news on the page of the archetype itself; pager: the
 // Previous / Next buttons for the pages of decks, under the list.
-export default function TournamentDecks({ decks, several = false, showArchetype = true, pager = null }) {
+export default function TournamentDecks({ decks, several = false, showArchetype = true, pager = null, stackCard = false, wideList = false }) {
   const isDesktop = useIsDesktop()
   const mode = isDesktop ? 'table' : 'swap'
   const [selectedId, setSelectedId] = useState(null)
+  // phones: whether the decklists are open (swiped) or the list of players is shown
+  const [opened, setOpened] = useState(false)
   // which way the last swap went, for the decklist to slide in from that side
   const [direction, setDirection] = useState(0)
   // deck-details by deck id; false for those that failed to load
@@ -212,6 +272,20 @@ export default function TournamentDecks({ decks, several = false, showArchetype 
   const firstDeckId = useRef(decks[0]?.id)
   const cardPages = useCardPages()
   const { bind: bindPreview, preview } = useCardPreview({ sheet: true })
+  // each deck of the list shows its archetype's representative card
+  const representatives = useRepresentativeCards()
+  const imageFor = useImageFor()
+  // decks without an archetype are shown with a card of their own list (once their details are loaded)
+  const unclassifiedIds = showArchetype ? decks.filter(d => !d.archetype).map(d => d.id) : []
+  const cardTypes = useCardTypes(unclassifiedIds.length > 0)
+  const [rowImages, setRowImages] = useState(null)
+  const rowArtwork = useArtwork()
+  useEffect(() => {
+    if (!unclassifiedIds.length) return
+    let live = true
+    loadCardImages(rowArtwork).then(m => { if (live) setRowImages(m) })
+    return () => { live = false }
+  }, [rowArtwork, unclassifiedIds.length])
 
   // the first deck (the winner, where the source lists by place) is open from the start on desktop and in Swap
   const selected = selectedId || (isDesktop || mode === 'swap' ? decks[0]?.id : null)
@@ -266,7 +340,7 @@ export default function TournamentDecks({ decks, several = false, showArchetype 
   // are asked for, so that a swipe shows the next decklist at once.
   const requested = useRef(new Set())
   useEffect(() => {
-    const ids = [selected, decks[index + 1]?.id, decks[index - 1]?.id, decks[index + 2]?.id].filter(Boolean)
+    const ids = [selected, decks[index + 1]?.id, decks[index - 1]?.id, decks[index + 2]?.id, ...decks.filter(d => !d.archetype).map(d => d.id)].filter(Boolean)
     for (const id of ids) {
       if (id in loaded || requested.current.has(id)) continue
       requested.current.add(id)
@@ -364,7 +438,7 @@ export default function TournamentDecks({ decks, several = false, showArchetype 
 
   const panelFor = (deck, showCardImage) => (
     <DeckPanel deck={deck} several={several} showArchetype={showArchetype} data={loaded[deck.id]} res={res} view={view} onView={patch => setView(v => ({ ...v, ...patch }))} hoveredCard={hoveredCard} onHover={setHoveredCard}
-      bindPreview={bindPreview} cardPages={cardPages} showCardImage={showCardImage} />
+      bindPreview={bindPreview} cardPages={cardPages} showCardImage={showCardImage} stackCard={stackCard} />
   )
   const selectedDeck = decks.find(d => d.id === selected)
 
@@ -373,10 +447,18 @@ export default function TournamentDecks({ decks, several = false, showArchetype 
       <p className="mb-3 text-center text-xs text-gray-400">
         Swipe the decklist left or right for the next or previous deck.
       </p>
+      <div className="mb-3 flex justify-center">
+        <button onClick={() => { justPicked.current = false; setOpened(false) }} className={NAV_BUTTON}>← All players</button>
+      </div>
       <div className="flex items-center justify-between gap-2 mb-3">
         <button onClick={() => step(-1)} disabled={index === 0} className={NAV_BUTTON}>‹ Previous</button>
-        <span className="text-sm text-gray-400 text-center">
-          {index + 1} of {decks.length}{decks[index]?.place ? ` · ${decks[index].place}` : ''}
+        {/* the player and deck selected, updated with every swipe */}
+        <span className="min-w-0 flex-1 text-center">
+          <span className="block truncate text-sm font-semibold text-gray-200">{decks[index]?.listTitle || decks[index]?.pilot || 'Anonymous'}</span>
+          <span className="block truncate text-xs text-gray-500">
+            {[decks[index]?.listDetail ?? decks[index]?.detail ?? decks[index]?.archetype ?? 'Unclassified', decks[index]?.place].filter(Boolean).join(' · ')}
+            {' · '}{index + 1} of {decks.length}
+          </span>
         </span>
         <button onClick={() => step(1)} disabled={index >= decks.length - 1} className={NAV_BUTTON}>Next ›</button>
       </div>
@@ -390,22 +472,36 @@ export default function TournamentDecks({ decks, several = false, showArchetype 
     </div>
   )
 
+  // The picture of a deck's row: its archetype's representative card, or for a deck without one a card
+  // of its list; none (no picture, no gap) where neither can be told.
+  const rowArt = d => {
+    if (!showArchetype) return null
+    const rep = representatives[d.archetype]
+    let url = rep && imageFor(rep.name, rep.preview)
+    if (!d.archetype) {
+      const name = loaded[d.id] ? pickDeckCard(loaded[d.id].decklist, d.id, cardTypes) : null
+      url = name && rowImages?.[name]
+    }
+    return url ? url.replace('/normal/', '/small/') : null
+  }
+
   const table = (
     <div ref={tableRef} className="lg:flex lg:gap-6 lg:items-start">
-      <div data-sidebar className="lg:w-80 xl:w-[26rem] lg:shrink-0">
+      <div data-sidebar className={`lg:shrink-0 ${wideList ? 'lg:w-[22rem] xl:w-[32rem]' : 'lg:w-80 xl:w-[26rem]'}`}>
       <ul className="border border-gray-700 rounded-xl overflow-hidden bg-gray-900 divide-y divide-gray-700/50">
         {decks.map(d => {
-          const open = d.id === selected
+          // phones: tapping a player opens the decklists, at that deck
+          const open = isDesktop && d.id === selected
           return (
-            <li key={d.id} ref={open && !isDesktop ? targetRef : null}>
-              <button onClick={() => { justPicked.current = !(open && !isDesktop); setSelectedId(open && !isDesktop ? '' : d.id) }} aria-expanded={open}
-                className={`w-full flex items-baseline gap-3 px-3 py-2 text-left border-l-2 transition-colors ${open ? 'bg-gray-800 border-amber-400' : 'border-transparent hover:bg-gray-800/60'}`}>
+            <li key={d.id}>
+              <button onClick={() => { justPicked.current = true; setSelectedId(d.id); if (!isDesktop) { setDirection(0); setOpened(true) } }} aria-expanded={isDesktop ? open : undefined}
+                className={`w-full flex items-baseline gap-3 px-3 py-2 text-left overflow-hidden border-l-2 transition-colors ${open ? 'bg-gray-800 border-amber-400' : 'border-transparent hover:bg-gray-800/60'}`}>
                 <span className={`${decks.some(x => x.lead) ? 'w-24' : 'w-12'} shrink-0 text-sm text-gray-500 whitespace-nowrap`}>
                   {d.lead ?? d.place ?? '—'}
                   {d.players && <div className="mt-1 leading-none"><SizeStars players={d.players} /></div>}
                 </span>
                 <span className="min-w-0 flex-1">
-                  <span className={`block truncate ${open ? 'text-amber-400' : 'text-gray-200'}`}>{d.listTitle || d.pilot || 'Anonymous'}</span>
+                  <span className={`block truncate ${open ? 'text-amber-400' : 'text-gray-200'}`}>{d.listPlace && <span className={`mr-1.5 text-sm font-medium ${open ? 'text-amber-400' : 'text-gray-400'}`}>{d.listPlace} ·</span>}{d.listTitle || d.pilot || 'Anonymous'}</span>
                   <span className="block truncate text-sm text-gray-500">{d.listDetail ?? d.detail ?? d.archetype ?? 'Unclassified'}</span>
                   {several && d.copies && (d.copies.length === 1 || d.match === 'different') && (
                     <span className="block truncate text-xs text-amber-600">
@@ -413,8 +509,18 @@ export default function TournamentDecks({ decks, several = false, showArchetype 
                     </span>
                   )}
                 </span>
+                {rowArt(d) && (
+                  <span className="relative shrink-0 self-stretch w-20 sm:w-24 -my-2 -mr-3 overflow-hidden bg-gray-800 [container-type:size]"
+                    style={{ clipPath: 'polygon(22% 0, 100% 0, 100% 100%, 0 100%)' }}>
+                    {/* Scryfall's "small" card (146px wide) cropped to its art window: its art is about as wide as the
+                        row picture, so the browser hardly shrinks it. The 6x shrink of the 616px art_crop made the
+                        scan's grain shimmer. The art is 83% of the card's width, 44% of its height, centred at 33%
+                        down; the image covers the picture box, using the box's own size (container units). */}
+                    <img src={rowArt(d)} alt="" loading="lazy" className="absolute left-1/2 top-1/2 max-w-none h-auto"
+                      style={{ width: 'max(125cqw, 170cqh)', transform: 'translate(-50%, -33.4%)' }} />
+                  </span>
+                )}
               </button>
-              {!isDesktop && open && <div className="px-3 pb-4 pt-2 bg-gray-800/30">{panelFor(d, false)}</div>}
             </li>
           )
         })}
@@ -433,7 +539,7 @@ export default function TournamentDecks({ decks, several = false, showArchetype 
   return (
     <div>
       {preview}
-      {mode === 'swap' ? swap : table}
+      {mode === 'swap' && opened ? swap : table}
     </div>
   )
 }
