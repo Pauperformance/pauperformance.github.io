@@ -43,7 +43,8 @@ function NotFound() {
 function App() {
   return (
     <>
-    <Suspense fallback={null}>
+    {/* while a page's code loads, the header and the bottom bar are already there, around an empty space */}
+    <Suspense fallback={<Layout><div className="min-h-[60vh]" /></Layout>}>
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/archetypes" element={<ArchetypesIndex />} />
