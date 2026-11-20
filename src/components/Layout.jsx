@@ -310,15 +310,15 @@ export default function Layout({ children, topBar = null }) {
   return (
     <div className="min-h-screen bg-gray-900 text-gray-100">
       <header className="border-b border-gray-700 bg-gray-950 sticky top-0 z-10">
-        <div className={`${maxW} mx-auto px-4 py-4 flex items-center gap-4 2xl:gap-8 relative overflow-x-clip`}>
+        <div className={`${maxW} mx-auto px-4 py-4 flex items-center gap-4 2xl:gap-8 xl:grid xl:grid-cols-[1fr_auto_1fr] relative overflow-x-clip`}>
           <Link to="/" className="shrink-0 relative z-10">
             <div className="text-xl font-bold tracking-tight text-white">
               Pauperformance <span className="text-amber-400">Academy</span>
             </div>
             <div className="text-xs text-gray-500 tracking-wide mt-0.5">A common journey to optimal Pauper</div>
           </Link>
-          {/* The main pages are in the bar from xl (1280px) up, the others under "Other" (as on phones): with Settings beside it, more doesn't fit. */}
-          <nav className="hidden xl:flex justify-center items-center 2xl:gap-1 flex-1">
+          {/* The main pages are in the bar from xl (1280px) up, the others under "Other" (as on phones): with Settings beside it, more doesn't fit. From xl the header is three columns (logo, bar, an empty one), so the bar is centred on the page, not between the logo and the edge. */}
+          <nav className="hidden xl:flex justify-center items-center 2xl:gap-1">
             {BAR_ITEMS.map(({ to, label, icon }) => (
               <Link key={to} to={to}
                 className={`flex items-center gap-1.5 px-2 2xl:px-3 py-1.5 rounded-md text-sm font-medium transition-colors ${
@@ -342,7 +342,7 @@ export default function Layout({ children, topBar = null }) {
             </Link>
           </nav>
           {/* phones and desktop (not between: the hamburger is there): the mascot, top right; on phones it takes the place, as tall as the bar and out of the layout (absolute), so the bar keeps its height */}
-          <button type="button" aria-label="Gary the mascot" onClick={clickMascot} className="md:hidden xl:block absolute -right-[10px] top-0 h-full overflow-hidden cursor-pointer">
+          <button type="button" aria-label="Gary the mascot" onClick={clickMascot} className="md:hidden xl:block absolute -right-[10px] xl:right-4 top-0 h-full overflow-hidden cursor-pointer">
             <img src="/images/logo-color-crop.png" alt="" width="511" height="210" className="block h-full w-auto max-w-none" />
             {/* the coins fall from the top of the bar and fade out at its bottom edge, in front of the mascot; overflow-hidden on the link, so that they never go past the bar */}
             {bursts.flatMap(b => b.coins.map(([left, delay, fall, size, turn], i) => (
@@ -369,7 +369,7 @@ export default function Layout({ children, topBar = null }) {
             )))}
           </button>
           {/* Settings: beside "Other" in the bar on desktop; the gear alone beside the hamburger on tablets; on phones it is in the "Other" menu */}
-          <div className="hidden md:flex ml-auto xl:ml-0 xl:w-44 items-center gap-1 shrink-0">
+          <div className="hidden md:flex ml-auto xl:ml-0 items-center gap-1 shrink-0">
             <Link to="/settings" aria-label="Settings"
               className={`hidden md:flex xl:hidden items-center gap-1.5 p-2 rounded-md text-sm font-medium transition-colors ${
                 pathname === '/settings'
