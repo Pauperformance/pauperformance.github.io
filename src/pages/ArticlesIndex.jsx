@@ -2,6 +2,8 @@ import { useState, useEffect, useMemo } from 'react'
 import Layout from '../components/Layout'
 import ArticleCard, { SOURCE_NAMES } from '../components/ArticleCard'
 import { FilterPanel } from '../components/FilterSheet'
+import { LANG_CANONICAL, LANG_FLAG, LANG_NAME } from '../utils/languages'
+import { getSettings } from '../utils/settings'
 import { useSearchShortcut, searchShortcutLabel } from '../utils/useSearchShortcut'
 
 const PAGE_SIZE = 48
@@ -18,58 +20,75 @@ const RANGES = [
   { label: 'Last 3 months', back: d => d.setMonth(d.getMonth() - 3) },
 ]
 
+// The language code of an article (the sources write it as "ENG", "ITA"...)
+const languageOf = a => a.language && (LANG_CANONICAL[a.language] ?? LANG_CANONICAL[a.language.toLowerCase()])
+
 const inputClass = 'bg-gray-900 border border-gray-600 rounded-lg px-3 py-1 text-sm text-gray-300 hover:border-gray-400 focus:outline-none focus:border-amber-400'
 
 export default function ArticlesIndex() {
   const [articles, setArticles] = useState(null)
   const [search, setSearch] = useState('')
-  const [from, setFrom] = useState('')
-  const [to, setTo] = useState('')
+  // the date chip picked (its label), or none for any date
+  const [range, setRange] = useState('')
+  // the languages picked (none: all)
+  const [languages, setLanguages] = useState(() => new Set())
   const [author, setAuthor] = useState('')
   const [source, setSource] = useState('')
   const [shown, setShown] = useState(PAGE_SIZE)
   const searchRef = useSearchShortcut()
 
   useEffect(() => {
-    fetch('/data/articles.json').then(r => r.json()).then(setArticles).catch(() => setArticles([]))
+    fetch('/data/articles.json').then(r => r.json()).then(data => {
+      // starts with the languages picked in the Settings, those the articles are in (none: all of them)
+      const present = new Set(data.map(languageOf).filter(Boolean))
+      setLanguages(new Set(getSettings().content.languages.filter(l => present.has(l))))
+      setArticles(data)
+    }).catch(() => setArticles([]))
   }, [])
 
   // the authors, most published first, and the sources
-  const { authors, sources } = useMemo(() => {
+  const { authors, sources, languageOptions } = useMemo(() => {
     const byAuthor = new Map()
     const bySource = new Map()
+    const byLanguage = new Map()
     for (const a of articles || []) {
+      const l = languageOf(a)
+      if (l) byLanguage.set(l, (byLanguage.get(l) || 0) + 1)
       byAuthor.set(a.author, (byAuthor.get(a.author) || 0) + 1)
       bySource.set(a.source, (bySource.get(a.source) || 0) + 1)
     }
     return {
+      languageOptions: [...byLanguage].sort((x, y) => y[1] - x[1]),
       sources: [...bySource].sort((x, y) => y[1] - x[1]),
       authors: [...byAuthor].sort((x, y) => y[1] - x[1] || x[0].localeCompare(y[0])),
     }
   }, [articles])
 
+  // the first day of the date chip picked
+  const from = useMemo(() => {
+    const r = RANGES.find(x => x.label === range)
+    if (!r) return ''
+    const d = new Date()
+    r.back(d)
+    return localIso(d)
+  }, [range])
+
   const filtered = useMemo(() => {
     const q = search.trim().toLowerCase()
     return (articles || []).filter(a => {
       if (from && a.date < from) return false
-      if (to && a.date > to) return false
       if (author && a.author !== author) return false
+      if (languages.size > 0 && !languages.has(languageOf(a))) return false
       if (source && a.source !== source) return false
       return !q || [a.title, a.author, a.summary, ...(a.tags || [])].some(t => t && t.toLowerCase().includes(q))
     })
-  }, [articles, search, from, to, author, source])
+  }, [articles, search, from, languages, author, source])
 
   // a new set of results starts from the first page again
-  useEffect(() => { setShown(PAGE_SIZE) }, [search, from, to, author, source])
+  useEffect(() => { setShown(PAGE_SIZE) }, [search, from, languages, author, source])
 
-  const applyRange = back => {
-    const d = new Date()
-    back(d)
-    setFrom(localIso(d))
-    setTo('')
-  }
-  const clearFilters = () => { setSearch(''); setFrom(''); setTo(''); setAuthor(''); setSource('') }
-  const activeCount = (search ? 1 : 0) + (from || to ? 1 : 0) + (author ? 1 : 0) + (source ? 1 : 0)
+  const clearFilters = () => { setSearch(''); setRange(''); setLanguages(new Set()); setAuthor(''); setSource('') }
+  const activeCount = (search ? 1 : 0) + (range ? 1 : 0) + (languages.size ? 1 : 0) + (author ? 1 : 0) + (source ? 1 : 0)
   const count = `${filtered.length.toLocaleString()} article${filtered.length === 1 ? '' : 's'}`
 
   return (
@@ -97,22 +116,35 @@ export default function ArticlesIndex() {
           </div>
 
           <div className="flex flex-wrap items-center gap-2">
-            <span className="text-sm text-gray-500 w-14 shrink-0">Date:</span>
-            <input type="date" value={from} max={to || undefined} onChange={e => setFrom(e.target.value)}
-              aria-label="From date" className={inputClass} />
-            <span className="text-gray-500 text-sm">to</span>
-            <input type="date" value={to} min={from || undefined} onChange={e => setTo(e.target.value)}
-              aria-label="To date" className={inputClass} />
-            {RANGES.map(({ label, back }) => (
-              <button key={label} onClick={() => applyRange(back)}
-                className="px-2.5 py-1 rounded-lg text-xs font-semibold border border-gray-600 text-gray-400 hover:border-gray-400 hover:text-gray-200 transition-colors">
+            <span className="text-sm text-gray-500 w-20 shrink-0">Date:</span>
+            {RANGES.map(({ label }) => (
+              <button key={label} onClick={() => setRange(r => (r === label ? '' : label))} aria-pressed={range === label}
+                className={`px-2.5 py-1 rounded-lg text-xs font-semibold border transition-colors ${range === label
+                  ? 'border-amber-400 text-amber-400 bg-amber-400/10'
+                  : 'border-gray-600 text-gray-400 hover:border-gray-400 hover:text-gray-200'}`}>
                 {label}
               </button>
             ))}
           </div>
 
           <div className="flex flex-wrap items-center gap-2">
-            <label htmlFor="article-author" className="text-sm text-gray-500 w-14 shrink-0">Author:</label>
+            <span className="text-sm text-gray-500 w-20 shrink-0">Language:</span>
+            {languageOptions.map(([code, n]) => {
+              const on = languages.has(code)
+              return (
+                <button key={code} aria-pressed={on}
+                  onClick={() => setLanguages(cur => { const next = new Set(cur); next.has(code) ? next.delete(code) : next.add(code); return next })}
+                  className={`px-2.5 py-1 rounded-lg text-xs font-semibold border transition-colors ${on
+                    ? 'border-amber-400 text-amber-400 bg-amber-400/10'
+                    : 'border-gray-600 text-gray-400 hover:border-gray-400 hover:text-gray-200'}`}>
+                  {LANG_FLAG[code]} {LANG_NAME[code] || code} <span className="text-gray-500">{n}</span>
+                </button>
+              )
+            })}
+          </div>
+
+          <div className="flex flex-wrap items-center gap-2">
+            <label htmlFor="article-author" className="text-sm text-gray-500 w-20 shrink-0">Author:</label>
             <select id="article-author" value={author} onChange={e => setAuthor(e.target.value)} className={`${inputClass} max-w-full`}>
               <option value="">All authors</option>
               {authors.map(([name, n]) => <option key={name} value={name}>{name} ({n})</option>)}
@@ -120,7 +152,7 @@ export default function ArticlesIndex() {
           </div>
 
           <div className="flex flex-wrap items-center gap-2">
-            <label htmlFor="article-source" className="text-sm text-gray-500 w-14 shrink-0">Source:</label>
+            <label htmlFor="article-source" className="text-sm text-gray-500 w-20 shrink-0">Source:</label>
             <select id="article-source" value={source} onChange={e => setSource(e.target.value)} className={`${inputClass} max-w-full`}>
               <option value="">All sources</option>
               {sources.map(([key, n]) => <option key={key} value={key}>{SOURCE_NAMES[key] || key} ({n})</option>)}
@@ -128,7 +160,7 @@ export default function ArticlesIndex() {
           </div>
 
           {activeCount > 0 && (
-            <div className="flex">
+            <div className="hidden lg:flex">
               <button onClick={clearFilters} className="ml-auto text-xs text-gray-400 hover:text-amber-400 transition-colors">
                 Clear filters
               </button>
