@@ -20,9 +20,8 @@ const META_RANGES = [
   { label: '≥ 10%', min: 10, max: 100, maxInclusive: true },
 ]
 
-// Wide enough for the list of archetypes to sit beside the one selected; below
-// Tailwind's lg, phones and small tablets get one archetype at a time, swiped.
-const WIDE_QUERY = '(min-width: 1440px)'
+// From Tailwind's lg up the list of archetypes sits beside the one selected; below
+// it, phones and small tablets get one archetype at a time, swiped.
 const NARROW_QUERY = '(max-width: 1023px)'
 
 const MANA_LABELS = { W: 'White', U: 'Blue', B: 'Black', R: 'Red', G: 'Green', C: 'Colorless' }
@@ -35,22 +34,6 @@ function ManaIcon({ color, size = 'w-6 h-6' }) {
       title={MANA_LABELS[color] ?? color}
       className={`${size} inline-block`}
     />
-  )
-}
-
-function SortHeader({ col, label, sortCol, sortDir, onSort, align = 'left', extraClass = '' }) {
-  const active = sortCol === col
-  const indicator = active ? (sortDir === 'asc' ? '↑' : '↓') : '↕'
-  const alignClass = align === 'right' ? 'text-right' : 'text-left'
-  return (
-    <th
-      onClick={() => onSort(col)}
-      className={`px-4 py-3 text-xs font-semibold uppercase tracking-wider cursor-pointer select-none group ${alignClass} ${extraClass}`}>
-      <span className={`inline-flex items-center gap-1 transition-colors ${active ? 'text-amber-400' : 'text-gray-400 group-hover:text-gray-200'}`}>
-        {label}
-        <span className={`${active ? 'text-amber-400' : 'text-gray-600 group-hover:text-gray-400'}`}>{indicator}</span>
-      </span>
-    </th>
   )
 }
 
@@ -101,8 +84,8 @@ export default function ArchetypesIndex() {
   const [activeMetaRange, setActiveMetaRange] = useState(null)
   const [sortCol, setSortCol] = useState('meta')
   const [sortDir, setSortDir] = useState('desc')
-  const wide = useMediaQuery(WIDE_QUERY)
   const narrow = useMediaQuery(NARROW_QUERY)
+  const wide = !narrow
   const [selectedName, setSelectedName] = useState(null)
   // details of the archetypes opened, by name; null for those that failed to load
   const [details, setDetails] = useState({})
@@ -165,15 +148,6 @@ export default function ArchetypesIndex() {
       return true
     })
   }, [archetypes, search, activeTypes, activeMana, manaMode, typeMode, activeMetaRange, metaMap])
-
-  function handleSort(col) {
-    if (sortCol === col) {
-      setSortDir(d => d === 'asc' ? 'desc' : 'asc')
-    } else {
-      setSortCol(col)
-      setSortDir(col === 'meta' ? 'desc' : 'asc')
-    }
-  }
 
   const sorted = useMemo(() => {
     if (!sortCol) return filtered
@@ -351,7 +325,7 @@ export default function ArchetypesIndex() {
             <>
               <p className="text-xs text-gray-500">{filtered.length} archetype{filtered.length !== 1 ? 's' : ''}</p>
               <div ref={rowRef} className="flex gap-6 items-start">
-                <div className="w-96 2xl:w-[28rem] shrink-0 sticky top-24 max-h-[calc(100vh-7rem)] overflow-y-auto">
+                <div className="w-72 xl:w-96 2xl:w-[28rem] shrink-0 sticky top-24 max-h-[calc(100vh-7rem)] overflow-y-auto">
                   <ul className="border border-gray-700 rounded-xl overflow-hidden bg-gray-900 divide-y divide-gray-700/50">
                     {sorted.map(a => {
                       const open = a.name === selected
@@ -383,64 +357,7 @@ export default function ArchetypesIndex() {
                 </div>
               </div>
             </>
-          ) : (
-          <>
-            <p className="text-xs text-gray-500">{filtered.length} archetype{filtered.length !== 1 ? 's' : ''}</p>
-            <div className="border border-gray-700 rounded-xl overflow-hidden bg-gray-900">
-              <table className="w-full text-base bg-gray-900">
-                <thead>
-                  <tr className="bg-gray-800 border-b border-gray-700">
-                    <SortHeader col="name"   label="Name"    sortCol={sortCol} sortDir={sortDir} onSort={handleSort} extraClass="w-2/5" />
-                    <SortHeader col="colors" label="Colors"  sortCol={sortCol} sortDir={sortDir} onSort={handleSort} />
-                    <SortHeader col="type"   label="Type"    sortCol={sortCol} sortDir={sortDir} onSort={handleSort} />
-                    <SortHeader col="family" label="Family"  sortCol={sortCol} sortDir={sortDir} onSort={handleSort} align="left" extraClass="hidden sm:table-cell" />
-                    <SortHeader col="meta"   label="Meta %"  sortCol={sortCol} sortDir={sortDir} onSort={handleSort} align="right" />
-                  </tr>
-                </thead>
-                <tbody className="divide-y divide-gray-700/50 bg-gray-900">
-                  {sorted.map(a => (
-                    <tr key={a.name}
-                      onClick={() => navigate(`/archetypes/${nameToSlug(a.name)}`)}
-                      onAuxClick={e => { if (e.button === 1) window.open(`/archetypes/${nameToSlug(a.name)}`, '_blank') }}
-                      className="bg-gray-900 hover:bg-gray-800 cursor-pointer group">
-                      <td className="px-4 py-3">
-                        <span className="font-medium text-gray-200 group-hover:text-amber-400 transition-colors">
-                          {a.name}
-                        </span>
-                        {a.aliases?.length > 0 && (
-                          <span className="ml-2 text-xs text-gray-500">({a.aliases.join(', ')})</span>
-                        )}
-                      </td>
-                      <td className="px-4 py-3">
-                        <div className="flex gap-0.5">
-                          {MANA_ORDER.filter(m => a.dominant_mana.includes(m)).map(m => (
-                            <ManaIcon key={m} color={m} />
-                          ))}
-                        </div>
-                      </td>
-                      <td className="px-4 py-3 text-gray-400">{a.game_type.join(', ')}</td>
-                      <td className="px-4 py-3 hidden sm:table-cell">
-                        {a.family
-                          ? <Link to={`/families/${nameToSlug(a.family)}`}
-                              onClick={e => e.stopPropagation()}
-                              className="text-gray-500 hover:text-amber-400 transition-colors">
-                              {a.family}
-                            </Link>
-                          : <span className="text-gray-700">—</span>}
-                      </td>
-                      <td className="px-4 py-3 text-right font-mono text-amber-400">
-                        {(metaMap[a.name] ?? 0).toFixed(1)}%
-                      </td>
-                    </tr>
-                  ))}
-                </tbody>
-              </table>
-              {filtered.length === 0 && (
-                <p className="text-center text-gray-500 text-sm py-12">No archetypes match your filters.</p>
-              )}
-            </div>
-          </>
-          )
+          ) : null
         )}
       </div>
     </Layout>
