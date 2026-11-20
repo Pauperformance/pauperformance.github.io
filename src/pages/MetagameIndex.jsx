@@ -337,8 +337,8 @@ export default function MetagameIndex() {
             </div>
           </div>
           <p className="mt-2 text-gray-400 text-sm leading-relaxed">
-            A new metagame starts whenever the pool of Pauper cards changes: a set introducing new commons, or a
-            banned and restricted announcement. Metagame <span className="text-white font-mono">000</span> is the
+            A new metagame starts whenever the pool of Pauper cards changes: a set introduces new commons or a
+            ban is announced. Metagame <span className="text-white font-mono">000</span> is the
             format's launch on Magic Online; earlier sets have negative codes and are kept for history.
             Currently <span className="text-white font-medium">{launched}</span> metagames since the launch, and{' '}
             <span className="text-white font-medium">{history}</span> before it.

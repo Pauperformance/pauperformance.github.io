@@ -117,8 +117,8 @@ export default function TournamentsIndex() {
         <div>
           <h1 className="text-2xl font-bold text-white">Tournaments Index</h1>
           <p className="mt-2 text-gray-400 text-sm">
-            {rows.length.toLocaleString()} Pauper tournaments tracked and reconciled across multiple sources.
-            Inconsistencies across tournaments are highlighted.
+            Pauper tournaments tracked and reconciled across multiple sources.
+            Inconsistencies are highlighted.
             Some events might report only top decklists.
           </p>
         </div>
