@@ -5,14 +5,14 @@ import SizeFilter, { bigEnough } from './SizeFilter'
 import ResultFilter from './ResultFilter'
 import { resultMatches } from '../utils/places'
 import { Pager } from './DeckFilters'
-import { MonthPicker } from './VideosSection'
+import DateChips from './DateChips'
+import { LONG_RANGES, rangeStart } from '../utils/dateRanges'
 import { useTournamentSizes, playersOf } from '../utils/tournamentSizes'
 import { displayPlace } from '../utils/places'
-import { firstYearOf, formatShortDate } from '../utils/dates'
+import { formatShortDate } from '../utils/dates'
 
 const PAGE_SIZE = 20
 const SEARCH_CLS = 'w-full bg-gray-900 border border-gray-600 rounded-lg px-4 py-2 pr-8 text-sm text-gray-100 placeholder-gray-500 focus:outline-none focus:border-amber-400 [&::-webkit-search-cancel-button]:hidden'
-const RANGE_BUTTON = 'px-2.5 py-1 text-xs rounded-md border border-gray-600 text-gray-400 hover:border-amber-400/50 hover:text-amber-400 transition-colors'
 
 function SearchBox({ value, onChange, placeholder }) {
   return (
@@ -35,8 +35,9 @@ export default function FamilyDecks({ decks, archetypes }) {
   const [page, setPage] = useState(0)
   const [filterTournament, setFilterTournament] = useState('')
   const [filterPilot, setFilterPilot] = useState('')
-  const [filterDateFrom, setFilterDateFrom] = useState('')
-  const [filterDateTo, setFilterDateTo] = useState('')
+  // the date chip picked (its label), or none for any date
+  const [range, setRange] = useState('')
+  const dateFrom = useMemo(() => rangeStart(range), [range])
   const [activeArchetypes, setActiveArchetypes] = useState(new Set())
   const [minSize, setMinSize] = useState(0)
   const [result, setResult] = useState('')
@@ -54,13 +55,12 @@ export default function FamilyDecks({ decks, archetypes }) {
   const filtered = useMemo(() => sortedDecks.filter(d => {
     if (filterTournament && !(d.tournament_name || '').toLowerCase().includes(filterTournament.toLowerCase())) return false
     if (filterPilot && !(d.pilot || '').toLowerCase().includes(filterPilot.toLowerCase())) return false
-    if (filterDateFrom && (d.tournament_date || '').slice(0, 7) < filterDateFrom) return false
-    if (filterDateTo && (d.tournament_date || '').slice(0, 7) > filterDateTo) return false
+    if (dateFrom && (d.tournament_date || '') < dateFrom) return false
     if (activeArchetypes.size > 0 && !activeArchetypes.has(d.archetype)) return false
     if (!bigEnough(playersOf(sizes, d), minSize)) return false
     if (!resultMatches(d.place, result)) return false
     return true
-  }), [sortedDecks, filterTournament, filterPilot, filterDateFrom, filterDateTo, activeArchetypes, minSize, result, sizes])
+  }), [sortedDecks, filterTournament, filterPilot, dateFrom, activeArchetypes, minSize, result, sizes])
 
   useEffect(() => { setPage(0) }, [filtered])
 
@@ -75,21 +75,12 @@ export default function FamilyDecks({ decks, archetypes }) {
     window.scrollTo({ top: el.getBoundingClientRect().top + window.scrollY - headerHeight - 16, behavior: 'smooth' })
   }, [page])
 
-  const firstYear = useMemo(() => firstYearOf(decks, 'tournament_date'), [decks])
 
   const toggleArchetype = a => {
     setActiveArchetypes(prev => { const n = new Set(prev); n.has(a) ? n.delete(a) : n.add(a); return n })
   }
-  const toYM = d => d.toISOString().slice(0, 7)
-  const applyRange = days => {
-    const to = new Date(), from = new Date()
-    if (days === 7) from.setDate(from.getDate() - 7)
-    else if (days === 30) from.setMonth(from.getMonth() - 1)
-    else from.setFullYear(from.getFullYear() - 1)
-    setFilterDateFrom(toYM(from)); setFilterDateTo(toYM(to))
-  }
   const clearFilters = () => {
-    setFilterTournament(''); setFilterPilot(''); setFilterDateFrom(''); setFilterDateTo('')
+    setFilterTournament(''); setFilterPilot(''); setRange('')
     setActiveArchetypes(new Set()); setMinSize(0); setResult('')
   }
 
@@ -110,7 +101,7 @@ export default function FamilyDecks({ decks, archetypes }) {
   }))
 
   const activeCount = (filterTournament ? 1 : 0) + (filterPilot ? 1 : 0) + activeArchetypes.size
-    + (filterDateFrom ? 1 : 0) + (filterDateTo ? 1 : 0) + (minSize ? 1 : 0) + (result ? 1 : 0)
+    + (range ? 1 : 0) + (minSize ? 1 : 0) + (result ? 1 : 0)
   const available = archetypes.filter(a => !activeArchetypes.has(a))
 
   return (
@@ -143,18 +134,7 @@ export default function FamilyDecks({ decks, archetypes }) {
           </div>
         )}
 
-        <div className="flex flex-wrap items-center gap-4">
-          <MonthPicker label="From:" value={filterDateFrom} onChange={setFilterDateFrom} firstYear={firstYear} />
-          <MonthPicker label="To:" value={filterDateTo} onChange={setFilterDateTo} firstYear={firstYear} />
-          <div className="flex gap-1.5">
-            {[['Last week', 7], ['Last month', 30], ['Last year', 365]].map(([label, days]) => (
-              <button key={label} onClick={() => applyRange(days)} className={RANGE_BUTTON}>{label}</button>
-            ))}
-            {(filterDateFrom || filterDateTo) && (
-              <button onClick={() => { setFilterDateFrom(''); setFilterDateTo('') }} className={RANGE_BUTTON}>Reset</button>
-            )}
-          </div>
-        </div>
+        <DateChips ranges={LONG_RANGES} value={range} onChange={setRange} />
         <SizeFilter value={minSize} onChange={setMinSize} />
         <ResultFilter value={result} onChange={setResult} />
       </FilterPanel>

@@ -133,9 +133,9 @@ export default function Settings() {
           </p>
         </div>
 
-        {/* as wide as the other pages: two columns on large screens */}
-        <div className="grid gap-6 lg:grid-cols-2 items-start">
-        <div className="space-y-6">
+        {/* as wide as the other pages: the settings flow over two columns on large screens, three on wide ones,
+            filled evenly top to bottom */}
+        <div className="gap-6 lg:columns-2 min-[1700px]:columns-3 [&>*]:break-inside-avoid [&>*]:mb-6">
         <Setting
           title="Decklist view"
           description="How decklists are shown by default across the website. You can still change the view on each page later.">
@@ -184,9 +184,7 @@ export default function Settings() {
           description={<>Play a short preview of a video without pressing play, wherever videos are listed, such as <WatchLink /> and the archetype pages. Turn it off to save data and battery.</>}>
           <Toggle value={videos.previews} onChange={v => setVideos({ previews: v })} options={[[true, 'On'], [false, 'Off']]} />
         </Setting>
-        </div>
 
-        <div className="space-y-6">
         <Setting
           title="Content creators"
           description="The creators whose videos and live streams are shown across the website. Unselect a creator to hide them.">
@@ -211,8 +209,6 @@ export default function Settings() {
             })}
           </div>
         </Setting>
-
-        </div>
         </div>
 
         <button onClick={resetSettings} disabled={!changed}

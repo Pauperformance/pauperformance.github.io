@@ -9,37 +9,23 @@ import { useMediaQuery } from '../utils/useMediaQuery'
 import TournamentPane from '../components/TournamentPane'
 import SizeStars, { sizeStars } from '../components/SizeStars'
 import SizeFilter from '../components/SizeFilter'
+import DateChips from '../components/DateChips'
+import { LONG_RANGES, rangeStart } from '../utils/dateRanges'
 import { scrollSidebarToTop } from '../utils/scroll'
 
 const PAGE_SIZE = 50
 
-
-// YYYY-MM-DD of a Date in the visitor's own time zone (toISOString would be UTC).
-function localIso(d) {
-  const pad = n => String(n).padStart(2, '0')
-  return `${d.getFullYear()}-${pad(d.getMonth() + 1)}-${pad(d.getDate())}`
-}
-
-const RANGES = [
-  { label: 'Last 2 days', back: d => d.setDate(d.getDate() - 2) },
-  { label: 'Last week', back: d => d.setDate(d.getDate() - 7) },
-  { label: 'Last month', back: d => d.setMonth(d.getMonth() - 1) },
-  { label: 'Last 3 months', back: d => d.setMonth(d.getMonth() - 3) },
-  { label: 'Last year', back: d => d.setFullYear(d.getFullYear() - 1) },
-]
-
 // Phones and small tablets: one tournament at a time, swiped (Tailwind's lg, below)
 const NARROW_QUERY = '(max-width: 1023px)'
-
-const inputClass = 'bg-gray-900 border border-gray-600 rounded-lg px-3 py-1 text-sm text-gray-300 hover:border-gray-400 focus:outline-none focus:border-amber-400'
 
 export default function TournamentsIndex() {
   const [rows, setRows] = useState([])
   const [loading, setLoading] = useState(true)
   const [search, setSearch] = useState('')
   const searchRef = useSearchShortcut()
-  const [from, setFrom] = useState('')
-  const [to, setTo] = useState('')
+  // the date chip picked (its label), or none for any date
+  const [range, setRange] = useState('')
+  const from = useMemo(() => rangeStart(range), [range])
   // the least stars of the size of a tournament (0 for any)
   const [minStars, setMinStars] = useState(0)
   const [sortCol, setSortCol] = useState('date')
@@ -59,23 +45,15 @@ export default function TournamentsIndex() {
     })
   }, [])
 
-  function applyRange(back) {
-    const start = new Date()
-    back(start)
-    setFrom(localIso(start))
-    setTo(localIso(new Date()))
-  }
-
   const filtered = useMemo(() => {
     const q = search.trim().toLowerCase()
     return rows.filter(r => {
       if (q && !r.name.toLowerCase().includes(q) && !r.id.includes(q)) return false
       if (from && r.date < from) return false
-      if (to && r.date > to) return false
       if (sizeStars(r.decks) < minStars) return false
       return true
     })
-  }, [rows, search, from, to, minStars])
+  }, [rows, search, from, minStars])
 
   const sorted = useMemo(() => {
     const dir = sortDir === 'asc' ? 1 : -1
@@ -113,10 +91,10 @@ export default function TournamentsIndex() {
     }
   }, [wantedKey, details])
 
-  const hasFilters = search || from || to || minStars > 0
+  const hasFilters = search || range || minStars > 0
 
   function clearFilters() {
-    setSearch(''); setFrom(''); setTo(''); setMinStars(0)
+    setSearch(''); setRange(''); setMinStars(0)
   }
 
   const paginationBar = () => totalPages > 1 && (
@@ -145,7 +123,7 @@ export default function TournamentsIndex() {
           </p>
         </div>
 
-        <FilterPanel activeCount={(search ? 1 : 0) + (from ? 1 : 0) + (to ? 1 : 0) + (minStars > 0 ? 1 : 0)}
+        <FilterPanel activeCount={(search ? 1 : 0) + (range ? 1 : 0) + (minStars > 0 ? 1 : 0)}
           onClear={clearFilters}
           summary={`${filtered.length.toLocaleString()} tournament${filtered.length !== 1 ? 's' : ''}`}>
           <div className="relative">
@@ -167,17 +145,7 @@ export default function TournamentsIndex() {
 
           <div className="flex flex-wrap items-center gap-2">
             <span className="text-sm text-gray-500 w-14 shrink-0">Date:</span>
-            <input type="date" value={from} max={to || undefined} onChange={e => setFrom(e.target.value)}
-              aria-label="From date" className={inputClass} />
-            <span className="text-gray-500 text-sm">to</span>
-            <input type="date" value={to} min={from || undefined} onChange={e => setTo(e.target.value)}
-              aria-label="To date" className={inputClass} />
-            {RANGES.map(({ label, back }) => (
-              <button key={label} onClick={() => applyRange(back)}
-                className="px-2.5 py-1 rounded-lg text-xs font-semibold border border-gray-600 text-gray-400 hover:border-gray-400 hover:text-gray-200 transition-colors">
-                {label}
-              </button>
-            ))}
+            <DateChips ranges={LONG_RANGES} value={range} onChange={setRange} />
           </div>
 
           <div className="flex flex-wrap items-center gap-2">
