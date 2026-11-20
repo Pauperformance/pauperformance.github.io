@@ -22,3 +22,12 @@
   get the Banned badge on its card page and count as banned wherever banned
   cards are used. `banned` comes from Myr's card intel export, so set it there
   (Myr is the source of truth).
+- [ ] **Make the Previous / Next buttons consistent**: three looks today (the big
+  centred bar on Tournaments, Cards, Players, Card page and the video lists;
+  the small `Pager` under the decklists of archetype, family, metagame and
+  player pages; the `SwipeCards` header on phones), some at the bottom only and
+  some at the top and bottom, and Articles has "Show more" instead. Use one
+  shared component and one placement rule. The Card page's bars (`pagination`
+  in `src/pages/CardPage.jsx`) are padded `lg:pl-[21.5rem] xl:pl-[27.5rem]` for
+  the old narrow left panel, so they are off-centre since it became `wideList`
+  (22rem / 32rem).
