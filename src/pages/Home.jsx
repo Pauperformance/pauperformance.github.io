@@ -905,15 +905,19 @@ function NewspauperSection() {
     fetch('/data/newspauper.json').then(r => r.json()).then(setNews).catch(() => setNews([]))
   }, [])
 
+  // only the news of the last two weeks (dates are YYYY-MM-DD, so they compare as text);
   // Brew is a placeholder, not a real archetype: no "New archetype" entry for it
-  const entries = (news || []).filter(newsTitle).filter(e => !(e.type === 'archetype' && e.name === 'Brew'))
+  const since = new Date()
+  since.setDate(since.getDate() - 14)
+  const sinceIso = `${since.getFullYear()}-${String(since.getMonth() + 1).padStart(2, '0')}-${String(since.getDate()).padStart(2, '0')}`
+  const entries = (news || []).filter(newsTitle).filter(e => !(e.type === 'archetype' && e.name === 'Brew')).filter(e => e.date >= sinceIso)
 
   return (
     <section id="newspauper">
       <h2 className="text-xl font-semibold text-white">Newspauper</h2>
-      <p className="text-sm text-gray-400 mt-0.5 mb-4">Major updates on the Academy of the last month</p>
+      <p className="text-sm text-gray-400 mt-0.5 mb-4">Major updates on the Academy of the last two weeks</p>
       {news && entries.length === 0 ? (
-        <p className="text-sm text-gray-400">No news in the last month.</p>
+        <p className="text-sm text-gray-400">No news in the last two weeks.</p>
       ) : (
         // one column on phones, two on small desktops, three on wide ones (newest first, left to right)
         <div className="grid lg:grid-cols-2 xl:grid-cols-3 gap-3">
