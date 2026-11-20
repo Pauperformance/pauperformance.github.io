@@ -134,8 +134,8 @@ export default function Settings() {
         </div>
 
         {/* as wide as the other pages: the settings flow over two columns on large screens, three on wide ones,
-            filled evenly top to bottom */}
-        <div className="gap-6 lg:columns-2 min-[1700px]:columns-3 [&>*]:break-inside-avoid [&>*]:mb-6">
+            filled evenly top to bottom; with two, the second starts at the fifth card */}
+        <div className="gap-6 lg:columns-2 min-[1700px]:columns-3 [&>*]:break-inside-avoid [&>*]:mb-6 lg:max-[1699px]:[&>*:nth-child(4)]:[break-after:column]">
         <Setting
           title="Decklist view"
           description="How decklists are shown by default across the website. You can still change the view on each page later.">
@@ -180,15 +180,15 @@ export default function Settings() {
         </Setting>
 
         <Setting
-          title="Video previews"
-          description={<>Play a short preview of a video without pressing play, wherever videos are listed, such as <WatchLink /> and the archetype pages. Turn it off to save data and battery.</>}>
-          <Toggle value={videos.previews} onChange={v => setVideos({ previews: v })} options={[[true, 'On'], [false, 'Off']]} />
-        </Setting>
-
-        <Setting
           title="Content creators"
           description="The creators whose videos and live streams are shown across the website. Unselect a creator to hide them.">
           <HiddenCreators hidden={watch.hiddenCreators} onChange={names => setWatch({ hiddenCreators: names })} />
+        </Setting>
+
+        <Setting
+          title="Video previews"
+          description={<>Play a short preview of a video without pressing play, wherever videos are listed, such as <WatchLink /> and the archetype pages. Turn it off to save data and battery.</>}>
+          <Toggle value={videos.previews} onChange={v => setVideos({ previews: v })} options={[[true, 'On'], [false, 'Off']]} />
         </Setting>
 
         <Setting
