@@ -528,7 +528,7 @@ export default function PlayerPage() {
                 {videosLoading ? (
                   <p className="text-gray-500 text-sm">Loading videos…</p>
                 ) : filteredVideos.length === 0 ? (
-                  <p className="text-gray-500 text-sm">{creatorVideos.length === 0 ? 'No videos match your settings.' : 'No videos match the selected archetypes.'}</p>
+                  <p className="text-gray-500 text-sm">{creatorVideos.length === 0 ? 'No videos match your settings.' : 'No videos match your filters.'}</p>
                 ) : (
                   <>
                     {totalVideoPages > 1 && (
