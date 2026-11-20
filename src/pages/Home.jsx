@@ -696,7 +696,9 @@ function MetagameSection({ embedded = false }) {
   return (
     // embedded (beside the table's last cards): the card fills the height of the cell, as tall as the cards beside it
     <section id="metagame" className={embedded ? 'h-full flex flex-col' : ''}>
-      <h2 className={`text-xl font-semibold text-white ${current ? '' : 'mb-4'}`}>Bake into a Pie</h2>
+      {/* embedded, the cell is as tall as the cards beside it: a little room above the title moves it down and
+          leaves the card, which fills the rest, less empty space */}
+      <h2 className={`text-xl font-semibold text-white ${embedded ? 'mt-4' : ''} ${current ? '' : 'mb-4'}`}>Bake into a Pie</h2>
       {current && (
         <p className="text-sm text-gray-400 mt-0.5 mb-4">
           Current metagame:{' '}
