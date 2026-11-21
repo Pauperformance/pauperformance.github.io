@@ -39,6 +39,16 @@ export default function SwipeCards({ index, count, onChange, label, hint, cardKe
     if (areaRef.current) areaRef.current.style.minHeight = ''
   }, [cardKey])
 
+  // Once a drag is ours, the page must not scroll under the finger as well: that needs a listener that is
+  // allowed to cancel the move (React's touch listeners are passive).
+  useEffect(() => {
+    const el = areaRef.current
+    if (!el) return
+    const hold = e => { if (dragging.current && e.cancelable) e.preventDefault() }
+    el.addEventListener('touchmove', hold, { passive: false })
+    return () => el.removeEventListener('touchmove', hold)
+  }, [])
+
   // the arrow keys step too, unless the visitor is typing or choosing something
   useEffect(() => {
     const onKey = e => {
@@ -118,11 +128,13 @@ export default function SwipeCards({ index, count, onChange, label, hint, cardKe
         <button onClick={() => step(1)} disabled={index >= count - 1} className={NAV_BUTTON}>Next ›</button>
       </div>
       {/* Sideways swipes are ours, vertical ones still scroll the page. The card
-          slides, rotates and is nudged beyond its box: clipped sideways (out to the
-          screen's edges, hence the negative margin), so that the page doesn't gain
-          a horizontal scroll, and bounce, while it moves. */}
+          slides, rotates and is nudged beyond its box: clipped (out to the screen's
+          edges, hence the negative margin), so that the page gains no scroll, and
+          doesn't bounce, while it moves (a tilted card would also reach above and
+          below its box and make the page taller, then shorter). No scroll anchoring
+          either: swapping the card must not make the page jump. */}
       <div ref={areaRef} onTouchStart={onTouchStart} onTouchMove={onTouchMove} onTouchEnd={onTouchEnd} onTouchCancel={onTouchCancel}
-        className="-mx-4 px-4" style={{ touchAction: 'pan-y', overflowX: 'clip' }}>
+        className="-mx-4 px-4" style={{ touchAction: 'pan-y', overflow: 'clip', overflowAnchor: 'none' }}>
         <div key={cardKey} ref={panelRef} className={direction > 0 ? 'swap-from-right' : direction < 0 ? 'swap-from-left' : hinting && cardKey === firstKey.current ? 'swipe-hint' : ''}
           onAnimationEnd={() => setHinting(false)}>
           {children}

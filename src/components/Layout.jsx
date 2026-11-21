@@ -306,7 +306,7 @@ export default function Layout({ children, topBar = null }) {
   return (
     <div className="min-h-screen bg-gray-900 text-gray-100">
       <header className="border-b border-gray-700 bg-gray-950 sticky top-0 z-10">
-        <div className={`${maxW} mx-auto px-4 h-16 sm:h-[4.75rem] xl:h-auto xl:py-4 flex items-center gap-4 2xl:gap-8 xl:grid xl:grid-cols-[1fr_auto_1fr] relative overflow-x-clip`}>
+        <div className={`${maxW} mx-auto px-4 h-16 sm:h-[4.75rem] xl:h-auto xl:py-4 flex items-center gap-4 2xl:gap-8 xl:grid xl:grid-cols-[1fr_auto_1fr] relative`}>
           <Link to="/" className="relative z-10 xl:shrink-0">
             <div className="text-base sm:text-xl font-bold tracking-tight text-white whitespace-nowrap">
               Pauperformance <span className="text-amber-400">Academy</span>
@@ -338,8 +338,8 @@ export default function Layout({ children, topBar = null }) {
             </Link>
           </nav>
           {/* the mascot is always top right, out of the layout (absolute) so the bar keeps its height: as tall as the bar, which has a fixed height below xl (so the mascot stays small there and the texts are one line) */}
-          <button type="button" aria-label="Gary the mascot" onClick={clickMascot} className="absolute -right-[10px] xl:right-4 top-0 h-full overflow-hidden cursor-pointer">
-            <img src="/images/logo-color-crop.png" alt="" width="511" height="210" fetchPriority="high" className="block h-full w-auto max-w-none" />
+          <button type="button" aria-label="Gary the mascot" onClick={clickMascot} className="absolute right-0 xl:right-4 top-0 h-full overflow-hidden cursor-pointer">
+            <img src="/images/logo-color-crop.png" alt="" width="511" height="210" fetchPriority="high" className="block h-full w-auto max-w-none -mr-[10px] xl:mr-0" />
             {/* the coins fall from the top of the bar and fade out at its bottom edge, in front of the mascot; overflow-hidden on the link, so that they never go past the bar */}
             {bursts.flatMap(b => b.coins.map(([left, delay, fall, size, turn], i) => (
               <span key={`${b.id}-${i}`} aria-hidden="true" className="coin-drop pointer-events-none absolute"
