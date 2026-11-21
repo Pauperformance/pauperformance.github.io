@@ -84,7 +84,7 @@ function DeckCopies({ deck }) {
 // The representative card of each archetype, by archetype name (loaded once)
 let representativeCards = null // the map, once loaded
 let representativeRequest = null // the request, while it loads
-function useRepresentativeCards() {
+export function useRepresentativeCards() {
   const [cards, setCards] = useState(representativeCards)
   useEffect(() => {
     if (cards) return
@@ -431,6 +431,15 @@ export default function TournamentDecks({ decks, several = false, showArchetype 
       settle(el, 'none', '1')
     }
   }
+  // Once a drag is ours, the page must not scroll under the finger as well: that needs a listener that is
+  // allowed to cancel the move (React's touch listeners are passive).
+  useEffect(() => {
+    const el = swapAreaRef.current
+    if (!el) return
+    const hold = e => { if (dragging.current && e.cancelable) e.preventDefault() }
+    el.addEventListener('touchmove', hold, { passive: false })
+    return () => el.removeEventListener('touchmove', hold)
+  })
   const onTouchCancel = () => {
     swipeStart.current = null
     if (dragging.current && swapPanelRef.current) settle(swapPanelRef.current, 'none', '1')
@@ -443,14 +452,15 @@ export default function TournamentDecks({ decks, several = false, showArchetype 
   )
   const selectedDeck = decks.find(d => d.id === selected)
 
+  // phones: back to the list, above the decklist and again after it
+  const backToList = <button onClick={() => { justPicked.current = false; setOpened(false) }} className={NAV_BUTTON}>← All {allLabel}</button>
+
   const swap = (
     <div ref={targetRef}>
       <p className="mb-3 text-center text-xs text-gray-400">
         Swipe the decklist left or right for the next or previous deck.
       </p>
-      <div className="mb-3 flex justify-center">
-        <button onClick={() => { justPicked.current = false; setOpened(false) }} className={NAV_BUTTON}>← All {allLabel}</button>
-      </div>
+      <div className="mb-3 flex justify-center">{backToList}</div>
       <div className="flex items-center justify-between gap-2 mb-3">
         <button onClick={() => step(-1)} disabled={index === 0} className={NAV_BUTTON}>‹ Previous</button>
         {/* the player and deck selected, updated with every swipe */}
@@ -464,12 +474,17 @@ export default function TournamentDecks({ decks, several = false, showArchetype 
         <button onClick={() => step(1)} disabled={index >= decks.length - 1} className={NAV_BUTTON}>Next ›</button>
       </div>
       {/* sideways swipes are ours, vertical ones still scroll the page */}
-      <div ref={swapAreaRef} onTouchStart={onTouchStart} onTouchMove={onTouchMove} onTouchEnd={onTouchEnd} onTouchCancel={onTouchCancel} style={{ touchAction: 'pan-y' }}>
+      {/* The card slides, rotates and is nudged beyond its box: clipped (out to the screen's edges, hence the negative
+          margin), so that the page gains no scroll, and doesn't go up and down, while it moves. No scroll anchoring
+          either: swapping the deck must not make the page jump. */}
+      <div ref={swapAreaRef} onTouchStart={onTouchStart} onTouchMove={onTouchMove} onTouchEnd={onTouchEnd} onTouchCancel={onTouchCancel}
+        className="-mx-4 px-4" style={{ touchAction: 'pan-y', overflow: 'clip', overflowAnchor: 'none' }}>
         <div key={decks[index]?.id} ref={swapPanelRef} className={direction > 0 ? 'swap-from-right' : direction < 0 ? 'swap-from-left' : hinting && decks[index]?.id === firstDeckId.current ? 'swipe-hint' : ''}
           onAnimationEnd={() => setHinting(false)}>
           {decks[index] && panelFor(decks[index], false)}
         </div>
       </div>
+      <div className="mt-4 flex justify-center">{backToList}</div>
     </div>
   )
 

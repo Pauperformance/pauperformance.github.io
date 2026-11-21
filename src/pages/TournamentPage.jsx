@@ -146,7 +146,7 @@ export default function TournamentPage() {
                 so that a name and its share stay next to each other */}
             <div className="sm:w-fit max-w-full">
               <MetaPie shares={shares}
-                listClassName="grid grid-cols-2 gap-x-10 gap-y-1.5 content-start sm:min-w-[28rem] sm:max-w-[48rem]" />
+                listClassName="columns-2 gap-x-10 sm:min-w-[28rem] sm:max-w-[48rem]" rowClassName="break-inside-avoid mb-1.5" />
             </div>
             {classified < t.decks.length && (
               <p className="mt-2 text-xs text-gray-500">

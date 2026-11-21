@@ -294,6 +294,10 @@ export default function PlayerPage() {
               <div className="mt-2 flex flex-wrap gap-4 text-sm text-gray-400">
                 <span><span className="text-white font-medium">{player.deckCount.toLocaleString()}</span> decks</span>
                 <span><span className="text-white font-medium">{player.archetypeCount}</span> archetypes</span>
+                {player.events != null && <span><span className="text-white font-medium">{player.events.toLocaleString()}</span> events</span>}
+                {player.wins != null && <span><span className="text-white font-medium">{player.wins.toLocaleString()}</span> wins</span>}
+                {player.top8 != null && <span><span className="text-white font-medium">{player.top8.toLocaleString()}</span> Top8s</span>}
+                {player.resources != null && <span><span className="text-white font-medium">{player.resources.toLocaleString()}</span> resources</span>}
                 {player.firstSeen && <span>First seen: <span className="text-white font-medium">{formatDate(player.firstSeen)}</span></span>}
                 {player.lastSeen && <span>Last seen: <span className="text-white font-medium">{formatDate(player.lastSeen)}</span></span>}
               </div>

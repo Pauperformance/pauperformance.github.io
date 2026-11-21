@@ -181,12 +181,13 @@ function HandCard({ name, images }) {
     : <div className="w-[calc((100%-1rem)/3)] sm:w-36 lg:w-48 aspect-[63/88] rounded-xl border border-gray-700 p-2 text-xs text-gray-500">{name}</div>
 }
 
-// The deck shuffled; the first `drawn` cards are in hand.
+// The deck shuffled; the first `drawn` cards are in hand. Nothing is drawn until the visitor asks for it.
 export function SampleHand({ cards, images }) {
   const names = useMemo(() => cards.flatMap(c => Array(c.qty).fill(c.name)), [cards])
-  const [state, setState] = useState(() => ({ library: shuffled(names), drawn: HAND_SIZE }))
+  const [state, setState] = useState(() => ({ library: shuffled(names), drawn: 0 }))
   const newHand = useCallback(() => setState({ library: shuffled(names), drawn: HAND_SIZE }), [names])
-  useEffect(() => { newHand() }, [newHand])
+  // another deck: shuffled again, nothing drawn
+  useEffect(() => { setState({ library: shuffled(names), drawn: 0 }) }, [names])
   if (!names.length) return null
   const hand = state.library.slice(0, state.drawn)
   const button = 'px-3 py-1.5 rounded-lg text-sm font-medium border border-gray-600 text-gray-400 hover:border-gray-400 hover:text-gray-200 transition-colors disabled:opacity-40 disabled:hover:border-gray-600 disabled:hover:text-gray-400'
@@ -194,13 +195,15 @@ export function SampleHand({ cards, images }) {
     <div>
       <h3 className={TITLE}>Sample hand</h3>
       <div className="flex gap-2 mb-3">
-        <button className={button} onClick={newHand}>New hand</button>
+        <button className={button} onClick={newHand}>{state.drawn ? 'New hand' : 'Draw 7'}</button>
         <button className={button} onClick={() => setState(s => ({ ...s, drawn: s.drawn + 1 }))}
           disabled={state.drawn >= state.library.length}>Draw</button>
       </div>
-      <div className="flex flex-wrap gap-2">
-        {hand.map((name, i) => <HandCard key={`${i}-${name}`} name={name} images={images} />)}
-      </div>
+      {hand.length > 0 && (
+        <div className="flex flex-wrap gap-2">
+          {hand.map((name, i) => <HandCard key={`${i}-${name}`} name={name} images={images} />)}
+        </div>
+      )}
     </div>
   )
 }
