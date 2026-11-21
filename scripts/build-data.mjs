@@ -1139,6 +1139,8 @@ const creators = creatorFiles
       twitch_channel_url: c.twitch_channel_url || null,
       youtube_channel_url: c.youtube_channel_url || null,
       metafy_url: c.metafy_url || null,
+      patreon_url: c.patreon_url || null,
+      x_url: c.x_url || null,
       youtube_avatar_url: youtubeAvatarUrls[c.youtube_channel_url] || null,
       twitch_avatar_url: twitchAvatarUrls[c.twitch_channel_url] || null,
       resources: Array.from(new Set([c.name, c.mtgo_name, c.mtgo_name2].filter(Boolean)))

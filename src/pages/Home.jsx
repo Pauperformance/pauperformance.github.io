@@ -22,7 +22,7 @@ import CardLink from '../components/PoolCardLink'
 import SectionBar from '../components/SectionBar'
 import MetaPie from '../components/MetaPie'
 import { useSettings, updateSettings } from '../utils/settings'
-import { TWITCH_ICON, YOUTUBE_ICON, METAFY_ICON } from '../utils/socialIcons'
+import { TWITCH_ICON, YOUTUBE_ICON, METAFY_ICON, PATREON_ICON, X_ICON } from '../utils/socialIcons'
 
 function useCountUp(target, duration = 1600) {
   const [count, setCount] = useState(0)
@@ -801,6 +801,8 @@ function CreatorLinks({ creator }) {
     { href: creator.youtube_channel_url, icon: YOUTUBE_ICON, label: 'YouTube', color: 'bg-red-900/40 text-red-300 hover:bg-red-800/60' },
     { href: creator.twitch_channel_url, icon: TWITCH_ICON, label: 'Twitch', color: 'bg-purple-900/40 text-purple-300 hover:bg-purple-800/60' },
     { href: creator.metafy_url, icon: METAFY_ICON, label: 'Metafy', color: 'bg-sky-900/40 text-sky-300 hover:bg-sky-800/60' },
+    { href: creator.patreon_url, icon: PATREON_ICON, label: 'Patreon', color: 'bg-orange-900/40 text-orange-300 hover:bg-orange-800/60' },
+    { href: creator.x_url, icon: X_ICON, label: 'X', color: 'bg-gray-700/60 text-gray-200 hover:bg-gray-600/70' },
   ].filter(l => l.href)
   if (!links.length) return null
   return (

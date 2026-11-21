@@ -9,7 +9,7 @@ import { Pager } from '../components/DeckFilters'
 import { useTournamentSizes, playersOf } from '../utils/tournamentSizes'
 import { displayPlace, resultMatches } from '../utils/places'
 import { nameToSlug } from '../utils/slugs'
-import { METAFY_ICON } from '../utils/socialIcons'
+import { METAFY_ICON, PATREON_ICON, X_ICON } from '../utils/socialIcons'
 import { getSettings } from '../utils/settings'
 import { languageAllowed } from '../utils/languages'
 import { formatDate, formatShortDate } from '../utils/dates'
@@ -288,6 +288,26 @@ export default function PlayerPage() {
                       <path d={METAFY_ICON} />
                     </svg>
                     Metafy
+                  </a>
+                )}
+                {creator && creator.patreon_url && (
+                  <a href={creator.patreon_url} target="_blank" rel="noreferrer"
+                    className="flex items-center gap-1.5 px-2.5 py-1 rounded-lg bg-gray-800 border border-gray-700 hover:border-orange-500/70 hover:text-orange-400 text-gray-400 transition-colors text-xs font-medium"
+                    title="Patreon page">
+                    <svg className="w-4 h-4 shrink-0" viewBox="0 0 24 24" fill="currentColor">
+                      <path d={PATREON_ICON} />
+                    </svg>
+                    Patreon
+                  </a>
+                )}
+                {creator && creator.x_url && (
+                  <a href={creator.x_url} target="_blank" rel="noreferrer"
+                    className="flex items-center gap-1.5 px-2.5 py-1 rounded-lg bg-gray-800 border border-gray-700 hover:border-gray-400 hover:text-white text-gray-400 transition-colors text-xs font-medium"
+                    title="X profile">
+                    <svg className="w-4 h-4 shrink-0" viewBox="0 0 24 24" fill="currentColor">
+                      <path d={X_ICON} />
+                    </svg>
+                    X
                   </a>
                 )}
               </div>
