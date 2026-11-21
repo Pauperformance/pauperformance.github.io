@@ -2,7 +2,7 @@ import { useState, useEffect } from 'react'
 import { Link } from 'react-router-dom'
 import Layout from '../components/Layout'
 import { useSearchShortcut, searchShortcutLabel } from '../utils/useSearchShortcut'
-import { TWITCH_ICON, YOUTUBE_ICON, METAFY_ICON } from '../utils/socialIcons'
+import { TWITCH_ICON, YOUTUBE_ICON, METAFY_ICON, PATREON_ICON, X_ICON } from '../utils/socialIcons'
 
 const PLAYER_ICON = 'M12 12c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm0 2c-2.67 0-8 1.34-8 4v2h16v-2c0-2.66-5.33-4-8-4z'
 
@@ -74,6 +74,22 @@ function CreatorCard({ creator }) {
             icon={METAFY_ICON}
             label="Metafy"
             color="bg-sky-900/40 text-sky-300 hover:bg-sky-800/60"
+          />
+        )}
+        {creator.patreon_url && (
+          <SocialLink
+            href={creator.patreon_url}
+            icon={PATREON_ICON}
+            label="Patreon"
+            color="bg-orange-900/40 text-orange-300 hover:bg-orange-800/60"
+          />
+        )}
+        {creator.x_url && (
+          <SocialLink
+            href={creator.x_url}
+            icon={X_ICON}
+            label="X"
+            color="bg-gray-700/60 text-gray-200 hover:bg-gray-600/70"
           />
         )}
       </div>
