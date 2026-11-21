@@ -445,7 +445,7 @@ export default function LiveStreams({ hidden, youtube: youtubeLive, languages = 
       <section className="space-y-4">
         <div className="flex flex-wrap items-center justify-between gap-2">
           <p className="text-xs text-gray-500">
-            {total === 0 ? 'Nobody is live' : `${total} live`} on Twitch ({channels.length} channels) and YouTube, checked every minute or two.
+            {total === 0 ? 'Nobody is live' : `${total} live`} on Twitch or YouTube. Checked every 2 minutes.
           </p>
           {live.length > 1 && (
             <a href={`https://multistre.am/${live.map(c => c.login).join('/')}/`} target="_blank" rel="noreferrer"
