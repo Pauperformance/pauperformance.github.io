@@ -1,28 +1,31 @@
 import { useState, useEffect, useMemo, useRef } from 'react'
-import { useNavigate } from 'react-router-dom'
+import { Link, useNavigate } from 'react-router-dom'
 import Layout from '../components/Layout'
 import { useSearchShortcut, searchShortcutLabel } from '../utils/useSearchShortcut'
 import { FilterPanel } from '../components/FilterSheet'
 import { useEnterShortcut } from '../utils/useEnterShortcut'
-import { formatShortDate } from '../utils/dates'
+import { useMediaQuery } from '../utils/useMediaQuery'
+import { scrollSidebarToTop } from '../utils/scroll'
+import { useImageFor } from '../utils/artwork'
+import PlayerPane from '../components/PlayerPane'
+import RowArt from '../components/RowArt'
+import { useRepresentativeCards } from '../components/TournamentDecks'
 
 const PAGE_SIZE = 50
 
-function SortHeader({ col, label, sortCol, sortDir, onSort, align = 'left', extraClass = '' }) {
-  const active = sortCol === col
-  const indicator = active ? (sortDir === 'asc' ? '↑' : '↓') : '↕'
-  const alignClass = align === 'right' ? 'text-right' : 'text-left'
-  return (
-    <th
-      onClick={() => onSort(col)}
-      className={`px-4 py-3 text-xs font-semibold uppercase tracking-wider cursor-pointer select-none group whitespace-nowrap ${alignClass} ${extraClass}`}>
-      <span className={`inline-flex items-center gap-1 transition-colors ${active ? 'text-amber-400' : 'text-gray-400 group-hover:text-gray-200'}`}>
-        {label}
-        <span className={`${active ? 'text-amber-400' : 'text-gray-600 group-hover:text-gray-400'}`}>{indicator}</span>
-      </span>
-    </th>
-  )
-}
+// Phones and small tablets: the list of players, each opening its page (Tailwind's lg, below)
+const NARROW_QUERY = '(max-width: 1023px)'
+
+// how the players can be sorted, and the way each starts (the most, the newest or A-Z first)
+const SORTS = [
+  ['events', 'Events', 'desc'],
+  ['decks', 'Decks', 'desc'],
+  ['wins', 'Wins', 'desc'],
+  ['top8', 'Top8', 'desc'],
+  ['archetypes', 'Archetypes', 'desc'],
+  ['lastSeen', 'Last seen', 'desc'],
+  ['name', 'Name', 'asc'],
+]
 
 export default function PlayersIndex() {
   const [players, setPlayers] = useState([])
@@ -36,9 +39,14 @@ export default function PlayersIndex() {
   const [sortDir, setSortDir] = useState('desc')
   const [page, setPage] = useState(0)
   const dropdownRef = useRef(null)
-  const paginationRef = useRef(null)
-  const pageInitRef = useRef(true)
   const navigate = useNavigate()
+  const narrow = useMediaQuery(NARROW_QUERY)
+  const [selectedSlug, setSelectedSlug] = useState(null)
+  // the decks of the players opened, by slug; null for those that failed to load
+  const [details, setDetails] = useState({})
+  const requested = useRef(new Set())
+  const representatives = useRepresentativeCards()
+  const imageFor = useImageFor()
 
   useEffect(() => {
     fetch('/data/players.json').then(r => r.json()).then(data => {
@@ -59,22 +67,9 @@ export default function PlayersIndex() {
     return () => document.removeEventListener('mousedown', handleClick)
   }, [dropdownOpen])
 
-  useEffect(() => {
-    if (pageInitRef.current) { pageInitRef.current = false; return }
-    const el = paginationRef.current
-    if (!el) return
-    const headerHeight = document.querySelector('header')?.offsetHeight ?? 64
-    const top = el.getBoundingClientRect().top + window.scrollY - headerHeight - 16
-    window.scrollTo({ top, behavior: 'smooth' })
-  }, [page])
-
-  function handleSort(col) {
-    if (sortCol === col) {
-      setSortDir(d => d === 'asc' ? 'desc' : 'asc')
-    } else {
-      setSortCol(col)
-      setSortDir(col === 'name' || col === 'lastSeen' ? 'asc' : 'desc')
-    }
+  function pickSort(col, dir) {
+    setSortCol(col)
+    setSortDir(dir)
   }
 
   function toggleArchetype(a) {
@@ -130,22 +125,51 @@ export default function PlayersIndex() {
   const totalPages = Math.ceil(sorted.length / PAGE_SIZE)
   const pagePlayers = sorted.slice(page * PAGE_SIZE, (page + 1) * PAGE_SIZE)
 
+  // The player shown beside the list (wide): the one picked, else the first of the page
+  const selected = sorted.some(x => x.slug === selectedSlug) ? selectedSlug : pagePlayers[0]?.slug
+  const selectedPlayer = sorted.find(x => x.slug === selected)
+
+  // the decks of the player shown are loaded
+  useEffect(() => {
+    if (narrow || !selected || selected in details || requested.current.has(selected)) return
+    requested.current.add(selected)
+    fetch(`/data/player-decks/${encodeURIComponent(selected)}.json`)
+      .then(r => (r.ok ? r.json() : null))
+      .catch(() => null)
+      .then(data => setDetails(prev => ({ ...prev, [selected]: data })))
+  }, [narrow, selected, details])
+
   useEnterShortcut(() => {
     if (pagePlayers.length > 0) navigate(`/players/${pagePlayers[0].slug}`)
   }, searchRef)
 
-  const paginationBar = (ref) => totalPages > 1 && (
-    <div ref={ref} className="flex items-center justify-center gap-3 py-2">
-      <button onClick={() => setPage(p => Math.max(0, p - 1))} disabled={page === 0}
+  const paginationBar = () => totalPages > 1 && (
+    <div className="flex items-center justify-center gap-3 py-2">
+      <button onClick={e => { scrollSidebarToTop(e.currentTarget); setPage(p => Math.max(0, p - 1)) }} disabled={page === 0}
         className="px-4 py-2 rounded-lg text-sm font-semibold border border-gray-600 text-gray-400 hover:border-gray-400 hover:text-gray-200 transition-colors disabled:opacity-30 disabled:cursor-not-allowed">
         ← Previous
       </button>
       <span className="text-sm text-gray-400">Page {page + 1} of {totalPages}</span>
-      <button onClick={() => setPage(p => Math.min(totalPages - 1, p + 1))} disabled={page >= totalPages - 1}
+      <button onClick={e => { scrollSidebarToTop(e.currentTarget); setPage(p => Math.min(totalPages - 1, p + 1)) }} disabled={page >= totalPages - 1}
         className="px-4 py-2 rounded-lg text-sm font-semibold border border-gray-600 text-gray-400 hover:border-gray-400 hover:text-gray-200 transition-colors disabled:opacity-30 disabled:cursor-not-allowed">
         Next →
       </button>
     </div>
+  )
+
+  // The picture of a player's row: the representative card of the archetype played most
+  const rowArt = x => {
+    const rep = x.top && representatives[x.top]
+    return rep ? imageFor(rep.name, rep.preview) : null
+  }
+  // what a row says: the name, then the archetype played most and how much the player played and won
+  const rowText = (x, open) => (
+    <span className="min-w-0 flex-1">
+      <span className={`block truncate ${open ? 'text-amber-400' : 'text-gray-200'}`}>{x.name}</span>
+      <span className="block truncate text-sm text-gray-500">
+        {[x.top, `${x.deckCount.toLocaleString('en-US')} deck${x.deckCount !== 1 ? 's' : ''}`, x.wins > 0 && `${x.wins.toLocaleString('en-US')} win${x.wins !== 1 ? 's' : ''}`].filter(Boolean).join(' · ')}
+      </span>
+    </span>
   )
 
   return (
@@ -154,8 +178,8 @@ export default function PlayersIndex() {
         <div>
           <h1 className="text-2xl font-bold text-white">Players Index</h1>
           <p className="mt-2 text-gray-400 text-sm">
-            {players.length.toLocaleString()} players tracked across all Pauper tournaments.
-            Wins and Top 8s count the tournaments with a ranking and more than 8 decks listed.
+            Players tracked across all Pauper tournaments.
+            Wins and Top8s count the tournaments with a ranking and more than 8 decks listed.
           </p>
         </div>
 
@@ -228,52 +252,75 @@ export default function PlayersIndex() {
               </div>
             )}
           </div>
+          <div className="flex flex-wrap items-center gap-2">
+            <span className="text-sm text-gray-500 w-20 shrink-0">Sort by:</span>
+            <div className="flex flex-wrap gap-1.5">
+              {SORTS.map(([col, label, dir]) => (
+                <button key={col} onClick={() => pickSort(col, dir)} aria-pressed={sortCol === col}
+                  className={`px-2.5 py-1 rounded-lg text-xs font-semibold border transition-colors ${sortCol === col
+                    ? 'border-amber-400 text-amber-400 bg-amber-400/10'
+                    : 'border-gray-600 text-gray-400 hover:border-gray-400 hover:text-gray-200'}`}>
+                  {label}
+                </button>
+              ))}
+            </div>
+          </div>
         </FilterPanel>
 
         {loading ? (
           <p className="text-gray-400 text-sm py-8 text-center">Loading players…</p>
         ) : (
-          <>
-            <p className="text-xs text-gray-500">{filtered.length.toLocaleString()} player{filtered.length !== 1 ? 's' : ''}</p>
-            {paginationBar(paginationRef)}
-            <div className="border border-gray-700 rounded-xl overflow-hidden bg-gray-900">
-              <table className="w-full text-base bg-gray-900">
-                <thead>
-                  <tr className="bg-gray-800 border-b border-gray-700">
-                    <SortHeader col="name"       label="Name"       sortCol={sortCol} sortDir={sortDir} onSort={handleSort} />
-                    <SortHeader col="archetypes" label="Archetypes" sortCol={sortCol} sortDir={sortDir} onSort={handleSort} align="right" extraClass="hidden sm:table-cell" />
-                    <SortHeader col="decks"      label="Decks"      sortCol={sortCol} sortDir={sortDir} onSort={handleSort} align="right" />
-                    <SortHeader col="events"     label="Events"     sortCol={sortCol} sortDir={sortDir} onSort={handleSort} align="right" extraClass="hidden md:table-cell" />
-                    <SortHeader col="wins"       label="Wins"       sortCol={sortCol} sortDir={sortDir} onSort={handleSort} align="right" />
-                    <SortHeader col="top8"       label="Top 8"      sortCol={sortCol} sortDir={sortDir} onSort={handleSort} align="right" extraClass="hidden sm:table-cell" />
-                    <SortHeader col="resources"  label="Resources"  sortCol={sortCol} sortDir={sortDir} onSort={handleSort} align="right" extraClass="hidden md:table-cell" />
-                    <SortHeader col="lastSeen"   label="Last Seen"  sortCol={sortCol} sortDir={sortDir} onSort={handleSort} align="right" extraClass="hidden md:table-cell" />
-                  </tr>
-                </thead>
-                <tbody className="divide-y divide-gray-700/50 bg-gray-900">
-                  {pagePlayers.map(p => (
-                    <tr key={p.slug}
-                      onClick={() => navigate(`/players/${p.slug}`)}
-                      onAuxClick={e => { if (e.button === 1) window.open(`/#/players/${p.slug}`, '_blank') }}
-                      className="bg-gray-900 hover:bg-gray-800 cursor-pointer group">
-                      <td className="px-4 py-2.5 font-medium text-gray-200 group-hover:text-amber-400 transition-colors">{p.name}</td>
-                      <td className="px-4 py-2.5 text-right text-gray-400 hidden sm:table-cell">{p.archetypeCount}</td>
-                      <td className="px-4 py-2.5 text-right font-mono text-amber-400">{p.deckCount.toLocaleString()}</td>
-                      <td className="px-4 py-2.5 text-right text-gray-400 hidden md:table-cell">{p.events || '—'}</td>
-                      <td className="px-4 py-2.5 text-right font-mono text-amber-400">{p.wins || '—'}</td>
-                      <td className="px-4 py-2.5 text-right text-gray-400 hidden sm:table-cell">{p.top8 || '—'}</td>
-                      <td className="px-4 py-2.5 text-right text-gray-400 hidden md:table-cell">{p.resources || '—'}</td>
-                      <td className="px-4 py-2.5 text-right text-gray-400 hidden md:table-cell whitespace-nowrap">{formatShortDate(p.lastSeen) || '—'}</td>
-                    </tr>
+          narrow ? (
+            <>
+              <p className="text-xs text-gray-500">{filtered.length.toLocaleString()} player{filtered.length !== 1 ? 's' : ''}</p>
+              {/* the list of the wide layout; a player opens his page */}
+              <div data-sidebar className="space-y-3">
+                <ul className="border border-gray-700 rounded-xl overflow-hidden bg-gray-900 divide-y divide-gray-700/50">
+                  {pagePlayers.map(x => (
+                    <li key={x.slug}>
+                      <Link to={`/players/${x.slug}`} className="flex items-baseline gap-3 px-3 py-2 overflow-hidden border-l-2 border-transparent active:bg-gray-800">
+                        {rowText(x, false)}
+                        <RowArt url={rowArt(x)} />
+                      </Link>
+                    </li>
                   ))}
-                </tbody>
-              </table>
-              {filtered.length === 0 && (
-                <p className="text-center text-gray-500 text-sm py-12">No players match your search.</p>
-              )}
-            </div>
-            {paginationBar(null)}
-          </>
+                </ul>
+                {filtered.length === 0 && (
+                  <p className="text-center text-gray-500 text-sm py-12">No players match your search.</p>
+                )}
+                {paginationBar()}
+              </div>
+            </>
+          ) : (
+            <>
+              <p className="text-xs text-gray-500">{filtered.length.toLocaleString()} player{filtered.length !== 1 ? 's' : ''}</p>
+              <div className="flex gap-6 items-start">
+                <div className="w-[22rem] xl:w-[32rem] shrink-0 sticky top-24 max-h-[calc(100vh-7rem)] overflow-y-auto space-y-3">
+                  <ul className="border border-gray-700 rounded-xl overflow-hidden bg-gray-900 divide-y divide-gray-700/50">
+                    {pagePlayers.map(x => {
+                      const open = x.slug === selected
+                      return (
+                        <li key={x.slug}>
+                          <button onClick={() => setSelectedSlug(x.slug)} aria-current={open ? 'true' : undefined}
+                            className={`w-full flex items-baseline gap-3 px-3 py-2 text-left overflow-hidden border-l-2 transition-colors ${open ? 'bg-gray-800 border-amber-400' : 'border-transparent hover:bg-gray-800/60'}`}>
+                            {rowText(x, open)}
+                            <RowArt url={rowArt(x)} />
+                          </button>
+                        </li>
+                      )
+                    })}
+                  </ul>
+                  {filtered.length === 0 && (
+                    <p className="text-center text-gray-500 text-sm py-12">No players match your search.</p>
+                  )}
+                  {paginationBar()}
+                </div>
+                <div className="flex-1 min-w-0">
+                  {selectedPlayer && <PlayerPane key={selectedPlayer.slug} p={selectedPlayer} data={details[selected]} />}
+                </div>
+              </div>
+            </>
+          )
         )}
       </div>
     </Layout>

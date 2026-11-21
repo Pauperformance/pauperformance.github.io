@@ -395,7 +395,7 @@ export default function MetagamePage() {
                   <MetaPie
                     shares={metagame.archetypes.map(a => ({ archetype_name: a.name, meta_share: a.meta_share }))}
                     minListedShare={MIN_SHARE} linkSuffix={`?metagame=${metagame.metagame.metagame}`}
-                    listClassName="grid grid-cols-2 lg:grid-cols-3 gap-x-4 gap-y-1.5 content-start" />
+                    listClassName="columns-2 lg:columns-3 gap-x-4" rowClassName="break-inside-avoid mb-1.5" />
                 </section>
 
                 <section id="archetypes">

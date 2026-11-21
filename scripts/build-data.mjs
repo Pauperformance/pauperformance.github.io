@@ -570,7 +570,21 @@ console.log('Built intel-decks for ' + intelDeckCount + ' archetypes. Deck-detai
 
 // Build players index + per-player deck files
 var players = Object.values(playersMap).map(function(p) {
-  return { name: p.name, slug: p.slug, deckCount: p.deckCount, archetypeCount: Object.keys(p.archetypeSet).length, archetypes: Object.keys(p.archetypeSet).sort(), firstSeen: p.firstSeen, lastSeen: p.lastSeen }
+  // the archetype the player played most (the one played last, among equals): the index shows its card
+  var played = {}
+  var top = ''
+  var topCount = 0
+  var topLast = ''
+  p.decks.forEach(function(d) {
+    var a = played[d.archetype] || (played[d.archetype] = { count: 0, last: '' })
+    a.count++
+    if ((d.tournament_date || '') > a.last) a.last = d.tournament_date || ''
+  })
+  Object.keys(played).forEach(function(name) {
+    var a = played[name]
+    if (a.count > topCount || (a.count === topCount && a.last > topLast)) { top = name; topCount = a.count; topLast = a.last }
+  })
+  return { name: p.name, slug: p.slug, deckCount: p.deckCount, archetypeCount: Object.keys(p.archetypeSet).length, archetypes: Object.keys(p.archetypeSet).sort(), top: top, firstSeen: p.firstSeen, lastSeen: p.lastSeen }
 }).sort(function(a, b) { return b.deckCount - a.deckCount })
 writeFileSync(join(outDir, 'players.json'), JSON.stringify(players))
 console.log('Built players.json with ' + players.length + ' players.')
@@ -1520,6 +1534,18 @@ for (const p of players) {
   p.wins = r ? r.wins : 0
   p.top8 = r ? r.top8 : 0
   p.resources = resourceCounts[p.slug] || 0
+}
+// the same statistics go in the player's own file, for the player page and the preview beside the index
+{
+  let playerFilesUpdated = 0
+  for (const p of players) {
+    const file = join(playerDecksDir, p.slug + '.json')
+    if (!existsSync(file)) continue
+    const data = JSON.parse(readFileSync(file, 'utf8'))
+    Object.assign(data, { events: p.events, wins: p.wins, top8: p.top8, resources: p.resources })
+    if (writeIfChanged(file, JSON.stringify(data))) playerFilesUpdated++
+  }
+  console.log('Player statistics added to ' + playerFilesUpdated + ' player files.')
 }
 writeFileSync(join(outDir, 'players.json'), JSON.stringify(players))
 tournamentRows.sort((a, b) => b[1].localeCompare(a[1]) || a[0].localeCompare(b[0]))

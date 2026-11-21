@@ -76,7 +76,7 @@ export default function TournamentPane({ t, showDecks = true }) {
       {shares.length > 0 && (
         <section>
           <h3 className="text-lg font-semibold text-white mb-3">Metagame</h3>
-          <MetaPie shares={shares} listClassName="grid grid-cols-2 2xl:grid-cols-3 gap-x-4 gap-y-1.5 content-start" />
+          <MetaPie shares={shares} listClassName="columns-2 2xl:columns-3 gap-x-4" rowClassName="break-inside-avoid mb-1.5" />
           {classified < t.decks.length && (
             <p className="mt-2 text-xs text-gray-500">
               {t.decks.length - classified} of {t.decks.length} decks are not classified in an archetype yet and are left out.
