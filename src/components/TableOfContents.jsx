@@ -11,10 +11,10 @@ export function scrollToSection(id) {
 }
 
 // The page's table of contents: sections: [{ id, label, count }].
-// hideOnMobile: phones have the icon bar (SectionBar) instead.
+// hideOnMobile: below xl (1280px) the icon bar (SectionBar) takes its place, as the bottom bar does.
 export default function TableOfContents({ sections, hideOnMobile = false }) {
   return (
-    <nav aria-label="On this page" className={`${hideOnMobile ? 'hidden md:block ' : ''}bg-gray-800 border border-gray-700 rounded-xl p-4 md:w-60 shrink-0`}>
+    <nav aria-label="On this page" className={`${hideOnMobile ? 'hidden xl:block ' : ''}bg-gray-800 border border-gray-700 rounded-xl p-4 md:w-60 shrink-0`}>
       <p className="mb-2 text-xs font-semibold text-gray-400 uppercase tracking-wider">On this page</p>
       <ul className="flex flex-wrap gap-x-4 gap-y-1.5 md:flex-col">
         {sections.map(({ id, label, count }) => (

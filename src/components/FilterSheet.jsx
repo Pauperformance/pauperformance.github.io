@@ -118,5 +118,21 @@ export default function FilterSheet({ activeCount = 0, summary, onClear, scopeRe
 export function FilterPanel({ activeCount, onClear, summary, scopeRef, children }) {
   const phone = useMediaQuery('(max-width: 1023px)')
   if (phone) return <FilterSheet activeCount={activeCount} onClear={onClear} summary={summary} scopeRef={scopeRef}>{children}</FilterSheet>
-  return <div className="bg-gray-800 border border-gray-700 rounded-xl p-4 space-y-3">{children}</div>
+  return <FilterBox activeCount={activeCount} onClear={onClear}>{children}</FilterBox>
+}
+
+// The usual box of filters above the results, with "Clear filters" at its bottom right (on the row of the last
+// filter, out of the layout, so that no row comes or goes as filters are set) once something is filtered
+export function FilterBox({ activeCount, onClear, children }) {
+  return (
+    <div className="relative bg-gray-800 border border-gray-700 rounded-xl p-4">
+      {/* the filters are a stack of their own: the button, as a sibling in it, would give the last row a margin */}
+      <div className="space-y-3">{children}</div>
+      {activeCount > 0 && onClear && (
+        <button onClick={onClear} className="absolute bottom-4 right-4 px-2.5 py-1 rounded-full border border-gray-600 text-xs font-semibold text-gray-400 hover:border-amber-400 hover:text-amber-400 transition-colors">
+          Clear filters
+        </button>
+      )}
+    </div>
+  )
 }

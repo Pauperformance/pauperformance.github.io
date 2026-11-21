@@ -96,7 +96,7 @@ function StatsSection() {
 
   return (
     <section id="stats" className="bg-gray-800 border border-gray-700 rounded-xl px-6 py-8">
-      <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-6 gap-6 divide-y-0 sm:divide-x sm:divide-gray-700">
+      <div className="grid grid-cols-2 sm:grid-cols-3 xl:grid-cols-6 gap-6 divide-y-0 sm:divide-x sm:divide-gray-700">
         <StatCounter value={stats.archetypes} label="Archetypes" />
         <StatCounter value={stats.cards} label="Common Cards" />
         <StatCounter value={stats.sets} label="Pauper Sets" />
@@ -114,7 +114,7 @@ function StapleLink({ card, cardPages, bindPreview }) {
   const slug = cardLinkSlug(cardPages, card.name)
   const imageFor = useImageFor()
   const handlers = bindPreview(card.name, { slug: slug || undefined, image: imageFor(card.name, card.preview) })
-  const cls = 'px-2 py-0.5 rounded-md text-xs border bg-gray-800 border-gray-700 text-gray-300 whitespace-nowrap'
+  const cls = 'px-2 py-0.5 rounded-md text-xs border bg-gray-800 border-gray-700 text-gray-300 whitespace-nowrap max-w-full truncate'
   return slug
     ? <Link to={`/cards/${slug}`} {...handlers} className={`${cls} hover:border-amber-400/50 hover:text-amber-400 transition-colors`}>{card.name}</Link>
     : <span {...handlers} className={cls}>{card.name}</span>
@@ -1300,7 +1300,7 @@ function RecentVideosSection() {
           {streams ? 'Nobody is live and there are no videos from the last week.' : 'Checking who is live…'}
         </p>
       ) : (
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4">
           {live.map(c => <LiveTile key={c.login} channel={c} stream={streams[c.login]} details={details[c.login]} minute={minute} />)}
           {youtube.filter(v => langAllowed(v.creatorLanguage)).map(v => <YouTubeLiveTile key={v.video_id} v={v} />)}
           {videos.filter(v => !v.is_live || unknownLives.has(v.video_id)).map(v => <VideoCard key={v.video_id || v.link} v={v} withAvatar />)}

@@ -25,6 +25,8 @@
     <link rel="icon" type="image/png" sizes="256x256" href="/favicon-256.png" />
     <link rel="apple-touch-icon" sizes="256x256" href="/favicon-256.png" />
     <link rel="manifest" href="/manifest.json" />
+    <!-- the mascot is in the header of every page, but React renders it: preloaded, it is fetched with the HTML instead of after the script -->
+    <link rel="preload" as="image" href="/images/logo-color-crop.png" fetchpriority="high" />
     <meta name="theme-color" content="#0e0a0a" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta name="color-scheme" content="dark" />

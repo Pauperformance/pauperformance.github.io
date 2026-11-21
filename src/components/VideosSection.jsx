@@ -195,7 +195,7 @@ export default function VideosSection({ videos: listedVideos }) {
         : (
           <>
             {viewMode === 'paginated' && totalPages > 1 && paginationBar(paginationRef)}
-            <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
+            <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 xl:grid-cols-4 gap-4">
               {visibleVideos.map(v => <VideoCard showArchetype={archetypes.length > 1} withAvatar key={v.video_id || v.link} v={v} />)}
             </div>
             {viewMode === 'paginated' && totalPages > 1 && paginationBar(null)}
