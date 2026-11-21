@@ -86,8 +86,8 @@ function BottomBar({ pathname }) {
   return (
     <>
       {/* a tap anywhere else closes the menu */}
-      {open && <div className="md:hidden fixed inset-0 z-20" onClick={() => setOpen(false)} />}
-      <nav aria-label="Main" className={`md:hidden fixed inset-x-0 bottom-0 ${open ? 'z-[60]' : 'z-30'} border-t border-gray-700 bg-gray-950 pb-[env(safe-area-inset-bottom)]`}>
+      {open && <div className="xl:hidden fixed inset-0 z-20" onClick={() => setOpen(false)} />}
+      <nav aria-label="Main" className={`xl:hidden fixed inset-x-0 bottom-0 ${open ? 'z-[60]' : 'z-30'} border-t border-gray-700 bg-gray-950 pb-[env(safe-area-inset-bottom)]`}>
         {open && (
           <div className="absolute bottom-full right-0 w-52 origin-bottom-right rounded-t-xl border border-b-0 border-gray-700 bg-gray-950 p-1.5 shadow-2xl flex flex-col">
             {OTHER_ITEMS.map(({ to, label }) => (
@@ -303,19 +303,15 @@ export default function Layout({ children, topBar = null }) {
     setBursts(prev => [...prev.slice(-7), { id, coins }])
     setTimeout(() => setBursts(prev => prev.filter(b => b.id !== id)), 1700)
   }
-  const [menuOpen, setMenuOpen] = useState(false)
-
-  useEffect(() => { setMenuOpen(false) }, [pathname])
-
   return (
     <div className="min-h-screen bg-gray-900 text-gray-100">
       <header className="border-b border-gray-700 bg-gray-950 sticky top-0 z-10">
-        <div className={`${maxW} mx-auto px-4 py-4 flex items-center gap-4 2xl:gap-8 xl:grid xl:grid-cols-[1fr_auto_1fr] relative overflow-x-clip`}>
-          <Link to="/" className="shrink-0 relative z-10">
-            <div className="text-xl font-bold tracking-tight text-white">
+        <div className={`${maxW} mx-auto px-4 h-16 sm:h-[4.75rem] xl:h-auto xl:py-4 flex items-center gap-4 2xl:gap-8 xl:grid xl:grid-cols-[1fr_auto_1fr] relative overflow-x-clip`}>
+          <Link to="/" className="relative z-10 xl:shrink-0">
+            <div className="text-base sm:text-xl font-bold tracking-tight text-white whitespace-nowrap">
               Pauperformance <span className="text-amber-400">Academy</span>
             </div>
-            <div className="text-xs text-gray-500 tracking-wide mt-0.5">A common journey to optimal Pauper</div>
+            <div className="text-[11px] sm:text-xs text-gray-500 tracking-wide mt-0.5 whitespace-nowrap">A common journey to optimal Pauper</div>
           </Link>
           {/* The main pages are in the bar from xl (1280px) up, the others under "Other" (as on phones): with Settings beside it, more doesn't fit. From xl the header is three columns (logo, bar, an empty one), so the bar is centred on the page, not between the logo and the edge. */}
           <nav className="hidden xl:flex justify-center items-center 2xl:gap-1">
@@ -341,9 +337,9 @@ export default function Layout({ children, topBar = null }) {
               Settings
             </Link>
           </nav>
-          {/* phones and desktop (not between: the hamburger is there): the mascot, top right; on phones it takes the place, as tall as the bar and out of the layout (absolute), so the bar keeps its height */}
-          <button type="button" aria-label="Gary the mascot" onClick={clickMascot} className="md:hidden xl:block absolute -right-[10px] xl:right-4 top-0 h-full overflow-hidden cursor-pointer">
-            <img src="/images/logo-color-crop.png" alt="" width="511" height="210" className="block h-full w-auto max-w-none" />
+          {/* the mascot is always top right, out of the layout (absolute) so the bar keeps its height: as tall as the bar, which has a fixed height below xl (so the mascot stays small there and the texts are one line) */}
+          <button type="button" aria-label="Gary the mascot" onClick={clickMascot} className="absolute -right-[10px] xl:right-4 top-0 h-full overflow-hidden cursor-pointer">
+            <img src="/images/logo-color-crop.png" alt="" width="511" height="210" fetchPriority="high" className="block h-full w-auto max-w-none" />
             {/* the coins fall from the top of the bar and fade out at its bottom edge, in front of the mascot; overflow-hidden on the link, so that they never go past the bar */}
             {bursts.flatMap(b => b.coins.map(([left, delay, fall, size, turn], i) => (
               <span key={`${b.id}-${i}`} aria-hidden="true" className="coin-drop pointer-events-none absolute"
@@ -368,43 +364,7 @@ export default function Layout({ children, topBar = null }) {
               </span>
             )))}
           </button>
-          {/* Settings: beside "Other" in the bar on desktop; the gear alone beside the hamburger on tablets; on phones it is in the "Other" menu */}
-          <div className="hidden md:flex ml-auto xl:ml-0 items-center gap-1 shrink-0">
-            <Link to="/settings" aria-label="Settings"
-              className={`hidden md:flex xl:hidden items-center gap-1.5 p-2 rounded-md text-sm font-medium transition-colors ${
-                pathname === '/settings'
-                  ? 'bg-amber-400/10 text-amber-400'
-                  : 'text-gray-400 hover:text-white hover:bg-gray-800'
-              }`}>
-              <GearIcon className="w-6 h-6 xl:w-4 xl:h-4" />
-              <span className="hidden xl:inline">Settings</span>
-            </Link>
-            <button
-              className="hidden md:block xl:hidden p-2 rounded-md text-gray-400 hover:text-white hover:bg-gray-800 transition-colors"
-              onClick={() => setMenuOpen(o => !o)}
-              aria-label="Toggle menu">
-              <svg className="w-6 h-6" fill="none" stroke="currentColor" strokeWidth="2" viewBox="0 0 24 24">
-                {menuOpen
-                  ? <path strokeLinecap="round" strokeLinejoin="round" d="M6 18L18 6M6 6l12 12" />
-                  : <path strokeLinecap="round" strokeLinejoin="round" d="M4 6h16M4 12h16M4 18h16" />}
-              </svg>
-            </button>
-          </div>
         </div>
-        {menuOpen && (
-          <div className="hidden md:flex xl:hidden border-t border-gray-700 bg-gray-950 px-4 py-3 flex-col gap-1">
-            {NAV_ITEMS.map(({ to, label }) => (
-              <Link key={to} to={to}
-                className={`px-3 py-2 rounded-md text-sm font-medium transition-colors ${
-                  pathname === to
-                    ? 'bg-amber-400/10 text-amber-400'
-                    : 'text-gray-400 hover:text-white hover:bg-gray-800'
-                }`}>
-                {label}
-              </Link>
-            ))}
-          </div>
-        )}
         {topBar}
       </header>
 
@@ -412,7 +372,7 @@ export default function Layout({ children, topBar = null }) {
         {children}
       </main>
 
-      <footer className="border-t border-gray-700 mt-16 pb-16 md:pb-0">
+      <footer className="border-t border-gray-700 mt-16 pb-16 xl:pb-0">
         <div className="max-w-[1920px] mx-auto px-4 py-8 flex flex-col items-center gap-4 text-sm text-gray-500">
           <div className="flex flex-wrap justify-center gap-x-6 gap-y-2">
             {CONTACTS.filter(c => !c.hidden).map(({ href, label, icon }) => (

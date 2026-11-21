@@ -8,7 +8,7 @@ import { useSearchShortcut, searchShortcutLabel } from '../utils/useSearchShortc
 import { useEnterShortcut } from '../utils/useEnterShortcut'
 import { useMediaQuery } from '../utils/useMediaQuery'
 import ArchetypePane from '../components/ArchetypePane'
-import FilterSheet from '../components/FilterSheet'
+import FilterSheet, { FilterBox } from '../components/FilterSheet'
 import RowArt from '../components/RowArt'
 import { useImageFor } from '../utils/artwork'
 
@@ -302,7 +302,7 @@ export default function ArchetypesIndex() {
             {filterControls}
           </FilterSheet>
         ) : (
-          <div className="bg-gray-800 border border-gray-700 rounded-xl p-4 space-y-3">{filterControls}</div>
+          <FilterBox activeCount={activeCount} onClear={clearFilters}>{filterControls}</FilterBox>
         )}
         {/* List */}
         {loading ? (

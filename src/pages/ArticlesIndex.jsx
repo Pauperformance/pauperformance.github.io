@@ -158,14 +158,6 @@ export default function ArticlesIndex() {
               {sources.map(([key, n]) => <option key={key} value={key}>{SOURCE_NAMES[key] || key} ({n})</option>)}
             </select>
           </div>
-
-          {activeCount > 0 && (
-            <div className="hidden lg:flex">
-              <button onClick={clearFilters} className="ml-auto text-xs text-gray-400 hover:text-amber-400 transition-colors">
-                Clear filters
-              </button>
-            </div>
-          )}
         </FilterPanel>
 
         {!articles ? (

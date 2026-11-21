@@ -40,7 +40,7 @@ Object.assign(ICONS, HOME_ICONS, {
 })
 const FALLBACK = <circle cx="12" cy="12" r="4" />
 
-// The page's table of contents as a row of icons, for phones: it goes in the
+// The page's table of contents as a row of icons, for phones and tablets (below xl, with the bottom bar): it goes in the
 // Layout's `topBar`, which stays fixed under the header while the page scrolls.
 // sections: [{ id, label, count }], as for TableOfContents. The section being
 // read is lit.
@@ -81,7 +81,7 @@ export default function SectionBar({ sections: all }) {
   }, [sections])
 
   return (
-    <nav aria-label="On this page" className="md:hidden border-t border-gray-800 bg-gray-950">
+    <nav aria-label="On this page" className="xl:hidden border-t border-gray-800 bg-gray-950">
       <ul className="flex items-stretch px-1">
         {sections.map(({ id, label, short }) => (
           <li key={id} className="flex-1 min-w-0">
