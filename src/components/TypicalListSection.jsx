@@ -1,4 +1,4 @@
-import { useState, useEffect, useMemo } from 'react'
+import { useState, useEffect, useMemo, useRef } from 'react'
 import { MetagameBadge } from './Metagame'
 import MtgoButtons from './MtgoButtons'
 import MetagameRangeSlider from './MetagameRangeSlider'
@@ -183,6 +183,28 @@ function TypicalCards({ name, list, bindPreview, phone, fileSuffix = '' }) {
         rowExtra={withShares ? c => <CopyShares card={c} /> : undefined} />
     )
   }
+  // Maindeck and Sideboard stacked (one under the other) are both as wide as the wider of the two, so that the
+  // mana icons and the shares line up from one to the other; side by side, they keep the width of their cards.
+  const boardsRef = useRef(null)
+  useEffect(() => {
+    const el = boardsRef.current
+    if (!el) return
+    const fit = () => {
+      // measured as they are, each as wide as its own cards
+      delete el.dataset.stacked
+      el.style.removeProperty('--board-w')
+      const [first, second] = el.children
+      if (first && second && second.offsetTop > first.offsetTop) {
+        el.dataset.stacked = ''
+        el.style.setProperty('--board-w', `${Math.ceil(Math.max(...[...el.children].map(c => c.getBoundingClientRect().width)))}px`)
+      }
+    }
+    fit()
+    const observer = new ResizeObserver(fit)
+    observer.observe(el)
+    for (const child of el.children) observer.observe(child)
+    return () => observer.disconnect()
+  })
   const decklist = typicalDecklist(list)
   const optionCount = main.others.length + side.others.length
   return (
@@ -201,7 +223,7 @@ function TypicalCards({ name, list, bindPreview, phone, fileSuffix = '' }) {
         </p>
       )}
       <div className="flex gap-6 items-start">
-        <div className={`min-w-0 ${visual || phone ? 'flex-1 space-y-6' : 'flex flex-wrap gap-x-8 gap-y-6 [&>*]:min-w-64'}`}>
+        <div ref={boardsRef} className={`min-w-0 ${visual || phone ? 'flex-1 space-y-6' : 'flex flex-wrap gap-x-8 gap-y-6 [&>*]:min-w-64 [&[data-stacked]>*]:w-[var(--board-w)] [&[data-stacked]>*]:max-w-full'}`}>
           {board(main, 'Maindeck')}
           {board(side, 'Sideboard')}
         </div>
@@ -371,8 +393,8 @@ export default function TypicalListSection({ name, list, currentMetagame, focusM
         <>
           <div className={`space-y-6 transition-opacity ${loading ? 'opacity-40 pointer-events-none' : ''}`}>
             <TypicalCards name={name} list={shown} bindPreview={bindPreview} fileSuffix={fileSuffix} />
-            {/* the stats of the maindeck, side by side after the decklist */}
-            <div className="flex flex-wrap justify-center gap-x-12 gap-y-8 items-start">
+            {/* the stats of the maindeck, side by side after the decklist, outlined as on a deck's page */}
+            <div className="flex flex-wrap justify-center gap-x-12 gap-y-8 items-start w-fit max-w-full rounded-xl border border-gray-700 p-5">
               <ColorsPie cards={typicalDecklist(shown).main} cardTypes={cardTypes} />
               <ManaCurve cards={typicalDecklist(shown).main} centered />
               <CardTypesRadar cards={typicalDecklist(shown).main} cardTypes={cardTypes} />
