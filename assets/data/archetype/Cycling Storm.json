@@ -23,7 +23,7 @@
         "Combo"
     ],
     "last_appearance": {
-        "date": "2026-11-17",
+        "date": "2026-11-20",
         "metagame": {
             "date": "2026-11-13",
             "decks": null,
@@ -9805,41 +9805,59 @@
             },
             "148": {
                 "main": {
+                    "Architects of Will": [
+                        1,
+                        1,
+                        1
+                    ],
+                    "Ash Barrens": [
+                        1,
+                        1,
+                        1,
+                        1
+                    ],
                     "Barkform Harvester": [
                         1
                     ],
                     "Barren Moor": [
-                        2,
-                        2,
-                        2,
-                        2
-                    ],
-                    "Cabal Ritual": [
+                        3,
                         3,
                         3,
                         3
+                    ],
+                    "Blood Celebrant": [
+                        1
+                    ],
+                    "Cabal Ritual": [
+                        4,
+                        4,
+                        4,
+                        1
                     ],
                     "Conduit Pylons": [
                         1,
                         1
                     ],
                     "Dark Ritual": [
-                        3,
-                        3,
-                        3,
-                        3
+                        4,
+                        4,
+                        4,
+                        4
+                    ],
+                    "Dihada's Ploy": [
+                        1
                     ],
                     "Drannith Healer": [
-                        3,
-                        3,
-                        3,
-                        3
+                        4,
+                        4,
+                        4,
+                        4
                     ],
                     "Drannith Stinger": [
-                        3,
-                        3,
-                        3,
-                        3
+                        4,
+                        4,
+                        4,
+                        4
                     ],
                     "Great Furnace": [
                         3,
@@ -9848,25 +9866,33 @@
                         3
                     ],
                     "Horror of the Broken Lands": [
-                        3,
-                        3
+                        4,
+                        4,
+                        1,
+                        1
                     ],
                     "Imposing Vantasaur": [
-                        3,
-                        3,
-                        3,
-                        3
+                        4,
+                        4,
+                        4,
+                        4
+                    ],
+                    "Island": [
+                        1
                     ],
                     "Lotus Petal": [
-                        3,
-                        3,
-                        3,
-                        2
+                        4,
+                        4,
+                        4,
+                        3
                     ],
                     "Monstrous Carabid": [
                         3,
                         3,
                         2
+                    ],
+                    "Otherworldly Gaze": [
+                        1
                     ],
                     "Page, Loose Leaf": [
                         3,
@@ -9875,10 +9901,13 @@
                         3
                     ],
                     "Reaping the Graves": [
-                        3,
-                        3,
-                        3,
-                        3
+                        4,
+                        4,
+                        4,
+                        4
+                    ],
+                    "Repository Skaab": [
+                        1
                     ],
                     "Rowan's Grim Search": [
                         3,
@@ -9886,22 +9915,30 @@
                         3,
                         3
                     ],
+                    "Seething Landscape": [
+                        1
+                    ],
                     "Shenanigans": [
                         1
                     ],
                     "Songs of the Damned": [
-                        3,
-                        3,
-                        3,
-                        3
+                        4,
+                        4,
+                        4,
+                        4
                     ],
                     "Street Wraith": [
-                        3,
-                        3,
-                        3,
-                        3
+                        4,
+                        4,
+                        4,
+                        4
                     ],
                     "Surveillance Room": [
+                        1,
+                        1
+                    ],
+                    "Swamp": [
+                        1,
                         1,
                         1
                     ],
@@ -9926,20 +9963,34 @@
                         1,
                         1
                     ],
+                    "Darkness": [
+                        1,
+                        1
+                    ],
                     "Duress": [
-                        2,
-                        2
+                        3,
+                        3
                     ],
                     "Faerie Macabre": [
                         3,
                         3
                     ],
+                    "Forest": [
+                        1
+                    ],
+                    "Gnaw to the Bone": [
+                        1,
+                        1
+                    ],
                     "Lotus Petal": [
                         1
                     ],
+                    "Mountain": [
+                        1
+                    ],
                     "Pyroblast": [
-                        2,
-                        2,
+                        3,
+                        3,
                         2
                     ],
                     "Red Elemental Blast": [
@@ -9948,11 +9999,18 @@
                         1
                     ],
                     "Siege Smash": [
-                        3,
-                        3
+                        4,
+                        4
+                    ],
+                    "Snuff Out": [
+                        1
                     ],
                     "Swamp": [
                         3
+                    ],
+                    "Vision Charm": [
+                        1,
+                        1
                     ]
                 }
             }
@@ -10426,6 +10484,12 @@
                 "preview": "https://cards.scryfall.io/normal/front/7/3/737679bd-b38f-402e-a6b2-7964da0f8d2f.jpg",
                 "type_line": "Creature \u2014 Elemental"
             },
+            "Otherworldly Gaze": {
+                "banned": false,
+                "link": "https://scryfall.com/card/mid/67/otherworldly-gaze",
+                "preview": "https://cards.scryfall.io/normal/front/9/c/9cebee20-869e-45ed-9ddc-843faf4032ad.jpg",
+                "type_line": "Instant"
+            },
             "Page, Loose Leaf": {
                 "banned": false,
                 "link": "https://scryfall.com/card/sos/250/page-loose-leaf",
@@ -10727,7 +10791,7 @@
                 "type_line": "Creature \u2014 Zombie Giant"
             }
         },
-        "decks": 50,
+        "decks": 51,
         "ended_by_bans": [],
         "era_end": null,
         "era_start": {
@@ -10739,7 +10803,7 @@
             "py/object": "pauperformance_bot.entity.api.archetype.MetagameRef"
         },
         "first_date": "2026-08-15",
-        "last_date": "2026-11-17",
+        "last_date": "2026-11-20",
         "later_decks": 0,
         "main": [
             {
@@ -10815,22 +10879,6 @@
                 ],
                 "average": 4.0,
                 "banned": false,
-                "link": "https://scryfall.com/card/sos/250/page-loose-leaf",
-                "name": "Page, Loose Leaf",
-                "preview": "https://cards.scryfall.io/normal/front/8/c/8c6fecfd-8241-4cf0-b1eb-19472b99e0ed.jpg",
-                "py/object": "pauperformance_bot.entity.api.archetype.TypicalCard",
-                "type_line": "Legendary Artifact Creature \u2014 Construct",
-                "typical": 4
-            },
-            {
-                "at_least": [
-                    1.0,
-                    1.0,
-                    1.0,
-                    1.0
-                ],
-                "average": 4.0,
-                "banned": false,
                 "link": "https://scryfall.com/card/scg/72/reaping-the-graves",
                 "name": "Reaping the Graves",
                 "preview": "https://cards.scryfall.io/normal/front/7/6/760a66bd-2821-4710-8f02-3c30772dd884.jpg",
@@ -10875,7 +10923,23 @@
                     0.98,
                     0.98,
                     0.98,
-                    0.9
+                    0.98
+                ],
+                "average": 4.0,
+                "banned": false,
+                "link": "https://scryfall.com/card/sos/250/page-loose-leaf",
+                "name": "Page, Loose Leaf",
+                "preview": "https://cards.scryfall.io/normal/front/8/c/8c6fecfd-8241-4cf0-b1eb-19472b99e0ed.jpg",
+                "py/object": "pauperformance_bot.entity.api.archetype.TypicalCard",
+                "type_line": "Legendary Artifact Creature \u2014 Construct",
+                "typical": 4
+            },
+            {
+                "at_least": [
+                    0.961,
+                    0.961,
+                    0.961,
+                    0.882
                 ],
                 "average": 3.9,
                 "banned": false,
@@ -10888,10 +10952,10 @@
             },
             {
                 "at_least": [
-                    0.98,
-                    0.98,
-                    0.98,
-                    0.98
+                    0.961,
+                    0.961,
+                    0.961,
+                    0.961
                 ],
                 "average": 4.0,
                 "banned": false,
@@ -10904,26 +10968,10 @@
             },
             {
                 "at_least": [
-                    0.82,
-                    0.82,
-                    0.82,
-                    0.78
-                ],
-                "average": 4.0,
-                "banned": false,
-                "link": "https://scryfall.com/card/mrd/282/great-furnace",
-                "name": "Great Furnace",
-                "preview": "https://cards.scryfall.io/normal/front/2/8/2877281d-c85d-4f32-b40d-828b93c4ee8e.jpg",
-                "py/object": "pauperformance_bot.entity.api.archetype.TypicalCard",
-                "type_line": "Artifact Land",
-                "typical": 4
-            },
-            {
-                "at_least": [
-                    0.8,
-                    0.8,
-                    0.76,
-                    0.76
+                    0.804,
+                    0.804,
+                    0.765,
+                    0.765
                 ],
                 "average": 3.9,
                 "banned": false,
@@ -10936,10 +10984,26 @@
             },
             {
                 "at_least": [
-                    0.8,
-                    0.8,
-                    0.8,
-                    0.62
+                    0.804,
+                    0.804,
+                    0.804,
+                    0.765
+                ],
+                "average": 4.0,
+                "banned": false,
+                "link": "https://scryfall.com/card/mrd/282/great-furnace",
+                "name": "Great Furnace",
+                "preview": "https://cards.scryfall.io/normal/front/2/8/2877281d-c85d-4f32-b40d-828b93c4ee8e.jpg",
+                "py/object": "pauperformance_bot.entity.api.archetype.TypicalCard",
+                "type_line": "Artifact Land",
+                "typical": 4
+            },
+            {
+                "at_least": [
+                    0.804,
+                    0.804,
+                    0.804,
+                    0.627
                 ],
                 "average": 3.8,
                 "banned": false,
@@ -10954,8 +11018,8 @@
                 "at_least": [
                     1.0,
                     1.0,
-                    0.96,
-                    0.24
+                    0.961,
+                    0.255
                 ],
                 "average": 3.2,
                 "banned": false,
@@ -10968,10 +11032,10 @@
             },
             {
                 "at_least": [
-                    0.84,
-                    0.84,
-                    0.7,
-                    0.08
+                    0.824,
+                    0.824,
+                    0.686,
+                    0.078
                 ],
                 "average": 2.9,
                 "banned": false,
@@ -10986,8 +11050,8 @@
                 "at_least": [
                     1.0,
                     1.0,
-                    0.2,
-                    0.16
+                    0.216,
+                    0.176
                 ],
                 "average": 2.4,
                 "banned": false,
@@ -11000,7 +11064,7 @@
             },
             {
                 "at_least": [
-                    0.24,
+                    0.235,
                     0.0,
                     0.0,
                     0.0
@@ -11016,10 +11080,10 @@
             },
             {
                 "at_least": [
-                    0.22,
-                    0.18,
-                    0.16,
-                    0.16
+                    0.216,
+                    0.176,
+                    0.157,
+                    0.157
                 ],
                 "average": 3.3,
                 "banned": false,
@@ -11032,10 +11096,10 @@
             },
             {
                 "at_least": [
-                    0.2,
-                    0.2,
-                    0.2,
-                    0.2
+                    0.196,
+                    0.196,
+                    0.196,
+                    0.196
                 ],
                 "average": 4.0,
                 "banned": false,
@@ -11048,10 +11112,10 @@
             },
             {
                 "at_least": [
-                    0.14,
-                    0.1,
-                    0.1,
-                    0.1
+                    0.137,
+                    0.098,
+                    0.098,
+                    0.098
                 ],
                 "average": 3.1,
                 "banned": false,
@@ -11064,10 +11128,10 @@
             },
             {
                 "at_least": [
-                    0.14,
-                    0.1,
-                    0.08,
-                    0.08
+                    0.137,
+                    0.098,
+                    0.078,
+                    0.078
                 ],
                 "average": 2.9,
                 "banned": false,
@@ -11082,7 +11146,7 @@
         "metagames": [
             {
                 "date": "2026-11-13",
-                "decks": 3,
+                "decks": 4,
                 "label": "trk",
                 "metagame": "148",
                 "name": "Star Trek",
@@ -11125,10 +11189,10 @@
         "side": [
             {
                 "at_least": [
-                    0.96,
-                    0.96,
-                    0.96,
-                    0.96
+                    0.941,
+                    0.941,
+                    0.941,
+                    0.941
                 ],
                 "average": 4.0,
                 "banned": false,
@@ -11141,10 +11205,10 @@
             },
             {
                 "at_least": [
-                    0.64,
-                    0.64,
-                    0.64,
-                    0.06
+                    0.647,
+                    0.647,
+                    0.627,
+                    0.059
                 ],
                 "average": 3.1,
                 "banned": false,
@@ -11157,9 +11221,9 @@
             },
             {
                 "at_least": [
-                    0.78,
-                    0.74,
-                    0.04,
+                    0.784,
+                    0.745,
+                    0.039,
                     0.0
                 ],
                 "average": 2.0,
@@ -11173,9 +11237,9 @@
             },
             {
                 "at_least": [
-                    0.78,
-                    0.78,
-                    0.08,
+                    0.784,
+                    0.784,
+                    0.078,
                     0.0
                 ],
                 "average": 2.1,
@@ -11189,8 +11253,8 @@
             },
             {
                 "at_least": [
-                    0.74,
-                    0.74,
+                    0.725,
+                    0.725,
                     0.02,
                     0.0
                 ],
@@ -11205,7 +11269,7 @@
             },
             {
                 "at_least": [
-                    0.9,
+                    0.882,
                     0.0,
                     0.0,
                     0.0
@@ -11221,7 +11285,7 @@
             },
             {
                 "at_least": [
-                    0.54,
+                    0.529,
                     0.0,
                     0.0,
                     0.0
@@ -11237,9 +11301,9 @@
             },
             {
                 "at_least": [
-                    0.24,
-                    0.2,
-                    0.2,
+                    0.235,
+                    0.196,
+                    0.196,
                     0.02
                 ],
                 "average": 2.8,
@@ -11253,10 +11317,10 @@
             },
             {
                 "at_least": [
-                    0.22,
-                    0.22,
-                    0.22,
-                    0.1
+                    0.216,
+                    0.216,
+                    0.216,
+                    0.098
                 ],
                 "average": 3.5,
                 "banned": false,
@@ -11269,7 +11333,7 @@
             },
             {
                 "at_least": [
-                    0.18,
+                    0.176,
                     0.02,
                     0.0,
                     0.0
@@ -11285,7 +11349,7 @@
             },
             {
                 "at_least": [
-                    0.16,
+                    0.157,
                     0.0,
                     0.0,
                     0.0
@@ -11301,8 +11365,8 @@
             },
             {
                 "at_least": [
-                    0.16,
-                    0.14,
+                    0.157,
+                    0.137,
                     0.0,
                     0.0
                 ],
@@ -11317,10 +11381,10 @@
             },
             {
                 "at_least": [
-                    0.14,
-                    0.14,
-                    0.14,
-                    0.12
+                    0.137,
+                    0.137,
+                    0.137,
+                    0.118
                 ],
                 "average": 3.9,
                 "banned": false,
@@ -11333,18 +11397,34 @@
             },
             {
                 "at_least": [
-                    0.06,
-                    0.02,
+                    0.078,
+                    0.039,
                     0.0,
                     0.0
                 ],
-                "average": 1.3,
+                "average": 1.5,
                 "banned": false,
                 "link": "https://scryfall.com/card/leg/94/darkness",
                 "name": "Darkness",
                 "preview": "https://cards.scryfall.io/normal/front/5/3/53b04dab-45b7-418b-a0f0-bcf35145fc53.jpg",
                 "py/object": "pauperformance_bot.entity.api.archetype.TypicalCard",
                 "type_line": "Instant",
+                "typical": 0
+            },
+            {
+                "at_least": [
+                    0.059,
+                    0.0,
+                    0.0,
+                    0.0
+                ],
+                "average": 1.0,
+                "banned": false,
+                "link": "https://scryfall.com/card/lea/292/mountain",
+                "name": "Mountain",
+                "preview": "https://cards.scryfall.io/normal/front/e/a/eace2c85-976c-425e-9800-5a6ccbd91b56.jpg",
+                "py/object": "pauperformance_bot.entity.api.archetype.TypicalCard",
+                "type_line": "Basic Land \u2014 Mountain",
                 "typical": 0
             }
         ],
@@ -11898,7 +11978,7 @@
             },
             {
                 "date": "2026-11-13",
-                "decks": 3,
+                "decks": 4,
                 "label": "trk",
                 "metagame": "148",
                 "name": "Star Trek",
