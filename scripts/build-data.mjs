@@ -302,8 +302,29 @@ if (!existsSync(join(reconciledDir, 'decks.json'))) {
 // {deck id: [merged tournament id, 1 if counted]}
 const reconciledDecks = JSON.parse(readFileSync(join(reconciledDir, 'decks.json'), 'utf8'))
 const isCounted = id => !!reconciledDecks[id] && reconciledDecks[id][1] === 1
+// The pilots that go by more than one name, as Myr found them: [{name, aliases,
+// ...}]. A pilot is known by `name` everywhere on the site, whatever the source
+// calls them, so a player has one page and one entry in the index.
+const playersPath = join(reconciledDir, 'players.json')
+const playerList = existsSync(playersPath) ? JSON.parse(readFileSync(playersPath, 'utf8')) : []
+if (!playerList.length) console.warn(playersPath + ' not found or empty: pilots with several names stay apart')
+const playerAliases = {}  // other name -> the name shown
+const playerNames = {}  // the name shown -> its other names
+const groupedPilots = new Set()  // every name that is part of a group
+for (const p of playerList) {
+  playerNames[p.name] = p.aliases
+  groupedPilots.add(p.name)
+  for (const a of p.aliases) {
+    playerAliases[a] = p.name
+    groupedPilots.add(a)
+  }
+}
+const canonicalPilot = name => (name && playerAliases[name]) || name || null
+// What a deck's details depend on besides its own files: the names of the pilots
+// of a group change when the group does.
+const playerInputs = pilot => (pilot && groupedPilots.has(pilot) ? [playersPath] : [])
 const reconciledTournaments = readdirSync(reconciledDir)
-  .filter(f => f.endsWith('.json') && f !== 'index.json' && f !== 'decks.json')
+  .filter(f => f.endsWith('.json') && f !== 'index.json' && f !== 'decks.json' && f !== 'players.json')
   .map(f => JSON.parse(readFileSync(join(reconciledDir, f), 'utf8')))
 // The counted copy of each deck that is another copy of the same deck: its page
 // leads to the counted one.
@@ -368,7 +389,7 @@ for (const archetype of archetypes) {
       var deckMeta = {
         id: id,
         archetype: name,
-        pilot: d.pilot || null,
+        pilot: canonicalPilot(d.pilot),
         place: d.place || null,
         tournament_name: d.tournament_name || null,
         tournament_date: d.tournament_date || null,
@@ -376,7 +397,7 @@ for (const archetype of archetypes) {
       if (d.tournament_date && d.tournament_date > lastDecksUpdate) lastDecksUpdate = d.tournament_date
       deckInfoById[id] = { archetype: name, pilot: deckMeta.pilot, place: deckMeta.place }
 
-      if (!deckDetailsOutdated && !needsRebuild(outputPath, [inputPath, txtPath])) {
+      if (!deckDetailsOutdated && !needsRebuild(outputPath, [inputPath, txtPath, ...playerInputs(d.pilot)])) {
         // Cache hit: defer deck-detail read until we know if cardDecksMap is needed
         cachedDecks.push({ outputPath: outputPath, meta: deckMeta })
         deckDetailSkipped++
@@ -390,7 +411,7 @@ for (const archetype of archetypes) {
           id: id,
           archetype: name,
           url: d.url,
-          pilot: d.pilot || null,
+          pilot: deckMeta.pilot,
           place: d.place || null,
           tournament_name: d.tournament_name || null,
           tournament_date: d.tournament_date || null,
@@ -421,7 +442,7 @@ for (const archetype of archetypes) {
       return {
         id: id,
         url: d.url,
-        pilot: d.pilot || null,
+        pilot: deckMeta.pilot,
         place: d.place || null,
         tournament_name: d.tournament_name || null,
         tournament_date: d.tournament_date || null,
@@ -468,12 +489,12 @@ for (const source of tournamentDeckSources) {
     activeDeckIds.add(uid)
     unclassifiedCount++
     var umeta = {
-      id: uid, archetype: null, pilot: ud.pilot || null, place: ud.place || null,
+      id: uid, archetype: null, pilot: canonicalPilot(ud.pilot), place: ud.place || null,
       tournament_name: ud.tournament_name || null, tournament_date: ud.tournament_date || null,
     }
     deckInfoById[uid] = { archetype: null, pilot: umeta.pilot, place: umeta.place }
     var udecklist = null
-    if (!deckDetailsOutdated && !needsRebuild(uoutput, [uinput, utxtPath])) {
+    if (!deckDetailsOutdated && !needsRebuild(uoutput, [uinput, utxtPath, ...playerInputs(ud.pilot)])) {
       cachedDecks.push({ outputPath: uoutput, meta: umeta })
       deckDetailSkipped++
       continue
@@ -584,7 +605,10 @@ var players = Object.values(playersMap).map(function(p) {
     var a = played[name]
     if (a.count > topCount || (a.count === topCount && a.last > topLast)) { top = name; topCount = a.count; topLast = a.last }
   })
-  return { name: p.name, slug: p.slug, deckCount: p.deckCount, archetypeCount: Object.keys(p.archetypeSet).length, archetypes: Object.keys(p.archetypeSet).sort(), top: top, firstSeen: p.firstSeen, lastSeen: p.lastSeen }
+  var entry = { name: p.name, slug: p.slug, deckCount: p.deckCount, archetypeCount: Object.keys(p.archetypeSet).length, archetypes: Object.keys(p.archetypeSet).sort(), top: top, firstSeen: p.firstSeen, lastSeen: p.lastSeen }
+  // the other names of a pilot that goes by several, for the index to find them by
+  if (playerNames[p.name]) entry.aliases = playerNames[p.name]
+  return entry
 }).sort(function(a, b) { return b.deckCount - a.deckCount })
 writeFileSync(join(outDir, 'players.json'), JSON.stringify(players))
 console.log('Built players.json with ' + players.length + ' players.')
@@ -609,11 +633,13 @@ if (anyDeckChanged || playerDecksEmpty || stalePlayerDecksRemoved > 0) {
     var pdDecks = pd.decks.slice().sort(function(a, b) {
       return (b.tournament_date || '').localeCompare(a.tournament_date || '')
     })
-    writeFileSync(join(playerDecksDir, pd.slug + '.json'), JSON.stringify({
+    var pdFile = {
       name: pd.name, slug: pd.slug, deckCount: pd.deckCount,
       archetypeCount: pdArchetypes.length, firstSeen: pd.firstSeen, lastSeen: pd.lastSeen,
       archetypes: pdArchetypes, decks: pdDecks,
-    }))
+    }
+    if (playerNames[pd.name]) pdFile.aliases = playerNames[pd.name]
+    writeFileSync(join(playerDecksDir, pd.slug + '.json'), JSON.stringify(pdFile))
   }
   console.log('Built player-decks for ' + playerSlugs.length + ' players.')
 } else {
@@ -1128,8 +1154,8 @@ const twitchAvatarUrls = await twitchAvatars(
     .map(function(c) { return c.twitch_channel_url }))
 const creators = creatorFiles
   .map(function(c) {
-    var slug1 = c.mtgo_name ? pilotToSlug(c.mtgo_name) : null
-    var slug2 = c.mtgo_name2 ? pilotToSlug(c.mtgo_name2) : null
+    var slug1 = c.mtgo_name ? pilotToSlug(canonicalPilot(c.mtgo_name)) : null
+    var slug2 = c.mtgo_name2 ? pilotToSlug(canonicalPilot(c.mtgo_name2)) : null
     return {
       name: c.name,
       mtgo_name: c.mtgo_name || null,
@@ -1470,7 +1496,7 @@ for (const t of reconciledTournaments.slice().sort((a, b) => b.date.localeCompar
   let metagame = null
   for (const m of metagameStarts) if (m.date <= t.date) metagame = m
   t.decks.forEach((d, i) => {
-    const pilot = d.decks[d.primary].pilot
+    const pilot = canonicalPilot(d.decks[d.primary].pilot)
     if (!pilot) return
     const r = playerResults[pilotToSlug(pilot)] ||= { events: 0, wins: 0, top8: 0 }
     r.events++
@@ -1488,7 +1514,7 @@ for (const t of reconciledTournaments.slice().sort((a, b) => b.date.localeCompar
     return {
       id: primary.id,
       archetype: classified ? classified.archetype : null,
-      pilot: primary.pilot || null,
+      pilot: canonicalPilot(primary.pilot),
       place: displayPlace(placeCopy.place),
       match: d.match,
       place_conflict: d.place_conflict,
