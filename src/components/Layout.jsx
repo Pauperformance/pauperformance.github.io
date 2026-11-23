@@ -13,6 +13,7 @@ const NAV_ITEMS = [
   { to: '/tournaments', label: 'Tournaments' },
   { to: '/players', label: 'Players' },
   { to: '/creators', label: 'Creators' },
+  { to: '/wordle', label: 'Wordle' },
   // FAQ ('/faq') is hidden for now: its page and route are still there, add it back here to link it
 ]
 
@@ -55,6 +56,8 @@ const OTHER_ICONS = {
   '/announcements': <><path d="m3 11 18-5v12L3 14v-3z" /><path d="M11.6 16.8a3 3 0 1 1-5.8-1.6" /></>,
   '/players': <><path d="M19 21v-2a4 4 0 0 0-4-4H9a4 4 0 0 0-4 4v2" /><circle cx="12" cy="7" r="4" /></>,
   '/creators': <><path d="M20.2 6 3 11l-.9-2.4c-.3-1.1.3-2.2 1.3-2.5l13.5-4c1.1-.3 2.2.3 2.5 1.3Z" /><path d="m6.2 5.3 3.1 3.9" /><path d="m12.4 3.4 3.1 4" /><path d="M3 11h18v8a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2Z" /></>,
+  // a row of letter tiles, the middle one filled
+  '/wordle': <><rect x="2" y="8" width="5" height="8" rx="1" /><rect x="9.5" y="8" width="5" height="8" rx="1" fill="currentColor" /><rect x="17" y="8" width="5" height="8" rx="1" /></>,
   '/faq': <><circle cx="12" cy="12" r="10" /><path d="M9.09 9a3 3 0 0 1 5.83 1c0 2-3 3-3 3" /><path d="M12 17h.01" /></>,
 }
 const BAR_PATHS = BAR_ITEMS.map(i => i.to)
