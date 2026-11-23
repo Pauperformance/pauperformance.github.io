@@ -1,10 +1,21 @@
 import { useState, useEffect } from 'react'
 import { createPortal } from 'react-dom'
 import ReactMarkdown from 'react-markdown'
+import { Link } from 'react-router-dom'
 import Layout from '../components/Layout'
+import { useCardPreview } from '../components/CardPreview'
 
-function CardLink({ href, children }) {
+// A card in a bullet. Links to the card's page on the Academy (an internal
+// /cards/<slug> link, written in Myr's announcements.json) and previews it on
+// hover; cards with no page keep their Scryfall link.
+function CardLink({ href, children, bindPreview }) {
   const [pos, setPos] = useState(null)
+
+  if (href?.startsWith('/cards/')) {
+    const slug = href.slice('/cards/'.length)
+    return <Link to={href} {...bindPreview(nodeText(children), { slug })}>{children}</Link>
+  }
+
   const match = href?.match(/scryfall\.com\/card\/([^/]+)\/(\d+)/)
 
   if (!match) {
@@ -39,13 +50,18 @@ function CardLink({ href, children }) {
   )
 }
 
-const mdComponents = {
-  a: ({ href, children }) => <CardLink href={href}>{children}</CardLink>
+// The text of a link's children (the card's name).
+function nodeText(children) {
+  return Array.isArray(children) ? children.join('') : String(children)
 }
 
 export default function Announcements() {
   const [entries, setEntries] = useState([])
   const [loading, setLoading] = useState(true)
+  const { bind: bindPreview, preview } = useCardPreview()
+  const mdComponents = {
+    a: ({ href, children }) => <CardLink href={href} bindPreview={bindPreview}>{children}</CardLink>,
+  }
 
   useEffect(() => {
     fetch('/data/announcements.json')
@@ -110,6 +126,7 @@ export default function Announcements() {
           </div>
         )}
       </div>
+      {preview}
     </Layout>
   )
 }
