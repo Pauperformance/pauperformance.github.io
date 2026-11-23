@@ -31,7 +31,6 @@ const routes = [
   '/cards',
   '/watch',
   '/articles',
-  '/theory',
   '/tournaments',
   '/blind-spy',
   '/wordle',

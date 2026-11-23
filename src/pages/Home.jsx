@@ -775,7 +775,7 @@ function NewsIcon({ kind }) {
   )
 }
 
-function newsTitle(entry) {
+function newsTitle(entry, creators = {}) {
   switch (entry.type) {
     case 'announcement':
       return { to: '/announcements', text: entry.subtitle }
@@ -789,7 +789,9 @@ function newsTitle(entry) {
     case 'family':
       return { to: `/families/${nameToSlug(entry.name)}`, text: entry.name }
     case 'creator':
-      return { to: '/creators', text: entry.name }
+      // the creator's player page if they have one, else the Creators page
+      { const c = creators[entry.name]; const slug = c && (c.player_slug || c.player_slug2)
+        return { to: slug ? `/players/${slug}` : '/creators', text: entry.name } }
     default:
       return null
   }
@@ -929,7 +931,7 @@ function NewspauperSection() {
         // one column on phones, two on small desktops, three on wide ones (newest first, left to right)
         <div className="grid lg:grid-cols-2 xl:grid-cols-3 gap-3">
           {entries.map(entry => {
-            const title = newsTitle(entry)
+            const title = newsTitle(entry, creators)
             // every kind of news has its own colour; an archetype's or family's mana
             // colours show only as the icons next to its name
             const colours = (entry.type === 'archetype' || entry.type === 'family') ? mana[entry.name] : null
@@ -968,10 +970,10 @@ function NewspauperSection() {
                   </Link>
                 )}
                 {/* a new content creator's picture, as full-height as the card art */}
-                {entry.type === 'creator' && (creators[entry.name]?.youtube_avatar_url || creators[entry.name]?.twitch_avatar_url) && (
+                {entry.type === 'creator' && (creators[entry.name]?.avatar_url || creators[entry.name]?.youtube_avatar_url || creators[entry.name]?.twitch_avatar_url || creators[entry.name]?.x_avatar_url) && (
                   <Link to={title.to} tabIndex={-1} aria-hidden="true"
                     className="relative shrink-0 self-stretch w-20 sm:w-28 -my-3.5 -mr-4 rounded-l-2xl bg-gray-900 overflow-hidden group">
-                    <img src={creators[entry.name].youtube_avatar_url || creators[entry.name].twitch_avatar_url} alt=""
+                    <img src={creators[entry.name].avatar_url || creators[entry.name].youtube_avatar_url || creators[entry.name].twitch_avatar_url || creators[entry.name].x_avatar_url} alt=""
                       loading="lazy" referrerPolicy="no-referrer"
                       className="absolute inset-0 w-full h-full object-cover group-hover:scale-110 transition-transform duration-300" />
                   </Link>

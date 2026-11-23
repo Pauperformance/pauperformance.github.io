@@ -1,5 +1,4 @@
 import { useState, useEffect, useMemo } from 'react'
-import { Link } from 'react-router-dom'
 import Layout from '../components/Layout'
 import ArticleCard, { SOURCE_NAMES } from '../components/ArticleCard'
 import { FilterPanel } from '../components/FilterSheet'
@@ -35,6 +34,8 @@ export default function ArticlesIndex() {
   const [languages, setLanguages] = useState(() => new Set())
   const [author, setAuthor] = useState('')
   const [source, setSource] = useState('')
+  // 'pauper' or 'theory', or none for both
+  const [kind, setKind] = useState('')
   const [shown, setShown] = useState(PAGE_SIZE)
   const searchRef = useSearchShortcut()
 
@@ -77,19 +78,20 @@ export default function ArticlesIndex() {
   const filtered = useMemo(() => {
     const q = search.trim().toLowerCase()
     return (articles || []).filter(a => {
-      if (from && a.date < from) return false
+      if (from && !(a.date >= from)) return false
+      if (kind && (a.source === 'masterdoc') !== (kind === 'theory')) return false
       if (author && a.author !== author) return false
       if (languages.size > 0 && !languages.has(languageOf(a))) return false
       if (source && a.source !== source) return false
       return !q || [a.title, a.author, a.summary, ...(a.tags || [])].some(t => t && t.toLowerCase().includes(q))
     })
-  }, [articles, search, from, languages, author, source])
+  }, [articles, search, from, languages, author, source, kind])
 
   // a new set of results starts from the first page again
-  useEffect(() => { setShown(PAGE_SIZE) }, [search, from, languages, author, source])
+  useEffect(() => { setShown(PAGE_SIZE) }, [search, from, languages, author, source, kind])
 
-  const clearFilters = () => { setSearch(''); setRange(''); setLanguages(new Set()); setAuthor(''); setSource('') }
-  const activeCount = (search ? 1 : 0) + (range ? 1 : 0) + (languages.size ? 1 : 0) + (author ? 1 : 0) + (source ? 1 : 0)
+  const clearFilters = () => { setSearch(''); setRange(''); setLanguages(new Set()); setAuthor(''); setSource(''); setKind('') }
+  const activeCount = (search ? 1 : 0) + (range ? 1 : 0) + (languages.size ? 1 : 0) + (author ? 1 : 0) + (source ? 1 : 0) + (kind ? 1 : 0)
   const count = `${filtered.length.toLocaleString()} article${filtered.length === 1 ? '' : 's'}`
 
   return (
@@ -99,7 +101,8 @@ export default function ArticlesIndex() {
           <h1 className="text-2xl font-bold text-white">Articles</h1>
           <p className="mt-2 text-gray-400 text-sm">
             Pauper articles from around the web: deck techs, sideboard guides, set reviews and more.
-            For the classic strategy writing that applies to any format, see <Link to="/theory" className="text-amber-400 hover:underline">Theory</Link>.
+            Plus the classic Magic theory writing, from Who's the Beatdown? to the Metagame Clock: not about
+            Pauper, but it applies to it all the same (picked from the Magic Articles Masterdoc by I_LOVE_AZORIUS).
           </p>
         </div>
 
@@ -118,6 +121,18 @@ export default function ArticlesIndex() {
           </div>
 
           <div className="flex flex-wrap items-center gap-2">
+            <span className="text-sm text-gray-500 w-20 shrink-0">Type:</span>
+            {[['pauper', 'Pauper'], ['theory', 'Magic theory']].map(([key, label]) => (
+              <button key={key} aria-pressed={kind === key} onClick={() => setKind(k => (k === key ? '' : key))}
+                className={`px-2.5 py-1 rounded-lg text-xs font-semibold border transition-colors ${kind === key
+                  ? 'border-amber-400 text-amber-400 bg-amber-400/10'
+                  : 'border-gray-600 text-gray-400 hover:border-gray-400 hover:text-gray-200'}`}>
+                {label}
+              </button>
+            ))}
+          </div>
+
+          <div className="flex flex-wrap items-center gap-2">
             <span className="text-sm text-gray-500 w-20 shrink-0">Date:</span>
             {RANGES.map(({ label }) => (
               <button key={label} onClick={() => setRange(r => (r === label ? '' : label))} aria-pressed={range === label}
@@ -131,7 +146,7 @@ export default function ArticlesIndex() {
 
           <div className="flex flex-wrap items-center gap-2">
             <span className="text-sm text-gray-500 w-20 shrink-0">Language:</span>
-            {languageOptions.map(([code, n]) => {
+            {languageOptions.map(([code]) => {
               const on = languages.has(code)
               return (
                 <button key={code} aria-pressed={on}
@@ -139,7 +154,7 @@ export default function ArticlesIndex() {
                   className={`px-2.5 py-1 rounded-lg text-xs font-semibold border transition-colors ${on
                     ? 'border-amber-400 text-amber-400 bg-amber-400/10'
                     : 'border-gray-600 text-gray-400 hover:border-gray-400 hover:text-gray-200'}`}>
-                  {LANG_FLAG[code]} {LANG_NAME[code] || code} <span className="text-gray-500">{n}</span>
+                  {LANG_FLAG[code]} {LANG_NAME[code] || code}
                 </button>
               )
             })}
