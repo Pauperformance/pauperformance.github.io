@@ -51,6 +51,41 @@ function AlternativeNames({ card, className = '' }) {
   )
 }
 
+// Under the card's rules: the same card under another name, with a link to its
+// page (Magic Online temporarily re-implemented _____ Goblin as "Name Sticker"
+// Goblin), and how many decklists play each of the two names.
+function TwinNotice({ card, decks }) {
+  const twins = card.twins || []
+  if (twins.length === 0) return null
+  const counts = {}
+  for (const d of decks || []) counts[d.cardSlug] = (counts[d.cardSlug] || 0) + 1
+  const slugOf = c => c.slug || nameToSlug(c.name)
+  const total = (decks || []).length
+  const plural = n => `${n} deck${n !== 1 ? 's' : ''}`
+  return (
+    <div className="flex flex-col gap-2 text-sm bg-gray-800 border border-gray-700 rounded-lg px-4 py-3">
+      <span className="text-xs font-semibold uppercase tracking-wide text-gray-500">The same card under another name</span>
+      {twins.map(t => (
+        <Link key={t.slug} to={`/cards/${t.slug}`} className="flex items-center gap-3 group">
+          {t.image && <img src={t.image} alt={t.name} loading="lazy" className="w-12 rounded border border-gray-700 group-hover:border-amber-400 transition-colors" />}
+          <span className="min-w-0">
+            <span className="text-amber-400 group-hover:text-amber-300 font-semibold">{t.name}</span>
+            {t.banned && <span className="ml-2 px-1.5 py-0.5 rounded text-xs font-semibold uppercase bg-red-900/50 text-red-300 border border-red-800">Banned</span>}
+            <span className="block text-xs text-gray-400">
+              {t.games.includes('paper') ? 'Paper and Magic Online' : 'Magic Online only'}
+            </span>
+          </span>
+        </Link>
+      ))}
+      {decks && total > 0 && (
+        <p className="text-xs text-gray-400">
+          {plural(total)} play either name: {[card, ...twins].map(c => `${counts[slugOf(c)] || 0} as ${c.name}`).join(', ')}.
+        </p>
+      )}
+    </div>
+  )
+}
+
 // the label column of the card's rows (first and last played, popularity,
 // played in): wide enough for "First played:"
 const LABEL_WIDTH = 'w-20'
@@ -86,19 +121,28 @@ function PopularityRow({ card }) {
 }
 
 // The decklists playing the card (null while loading), from
-// /data/card-decks/<slug>.json.
-export function useCardDecks(slug) {
+// /data/card-decks/<slug>.json. With its twins' slugs (see TwinNotice), also
+// theirs, each deck once; every deck then has the slug of the card it plays
+// (cardSlug), or one of them if it plays both.
+export function useCardDecks(slug, twinSlugs = []) {
   const [decks, setDecks] = useState(null)
+  const slugs = [slug, ...twinSlugs].join(',')
   useEffect(() => {
     setDecks(null)
     if (!slug) return
     let cancelled = false
-    fetch(`/data/card-decks/${slug}.json`)
+    const load = s => fetch(`/data/card-decks/${s}.json`)
       .then(r => r.ok ? r.json().then(decodeCardDecks) : [])
-      .then(d => { if (!cancelled) setDecks(d) })
-      .catch(() => { if (!cancelled) setDecks([]) })
+      .then(list => list.map(d => ({ ...d, cardSlug: s })))
+      .catch(() => [])
+    Promise.all(slugs.split(',').map(load)).then(lists => {
+      if (cancelled) return
+      const byId = new Map()
+      for (const d of lists.flat()) if (!byId.has(d.id)) byId.set(d.id, d)
+      setDecks([...byId.values()].sort((a, b) => (b.tournament_date || '').localeCompare(a.tournament_date || '')))
+    })
     return () => { cancelled = true }
-  }, [slug])
+  }, [slugs])
   return decks
 }
 
@@ -257,6 +301,8 @@ export default function CardPane({ card, name, decks, titleAs: Title = 'h2', pag
                       {s.set_name && <span className="text-gray-400">{s.set_name}{s.rarity && <span className="capitalize">, {s.rarity}</span>}</span>}
                     </p>
                   )}
+
+                  <TwinNotice card={card} decks={decks} />
 
                   {/* First and last decklists playing it, its popularity and
                       archetypes: rows as close as each other */}

@@ -189,7 +189,8 @@ export default function CardPage() {
   const [loading, setLoading] = useState(true)
   const [notFound, setNotFound] = useState(false)
   const navigate = useNavigate()
-  const decks = useCardDecks(slug)
+  // the decks of the card's twin too (the same card under another name)
+  const decks = useCardDecks(slug, (card?.twins || []).map(t => t.slug))
 
   useEffect(() => {
     let cancelled = false

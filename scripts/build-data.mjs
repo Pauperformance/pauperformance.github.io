@@ -867,6 +867,18 @@ const cardCmcMap = {}
 const cardColorMap = {}
 const cardManaCostMap = {}
 let cardDetailWritten = 0, cardDetailSkipped = 0
+// Other spellings of a card's name in decklists, as MTGGoldfish and MTGO write
+// them (no quotes; underscores of a different length). Same table as Myr's TYPOS.
+const CARD_NAME_ALIASES = {
+  '_____ Goblin': ['________ Goblin'],
+  '"Name Sticker" Goblin': ['Name Sticker Goblin'],
+}
+// The cards that have a twin: another card with the same illustration, cost and
+// type that Scryfall relates to them as a combo piece, like "Name Sticker"
+// Goblin, the name under which MTGO temporarily re-implemented _____ Goblin
+// (with other rules text).
+// By card name: its slug, image, games, and the names of the cards related.
+const twinCandidates = {}
 // the card-details files to write once the popularity ranks are known (they
 // need every card): each card's index entry and intel file
 const cardDetailInputs = []
@@ -918,6 +930,16 @@ for (const f of cardFiles) {
   if (raw.alternative_names && raw.alternative_names.length > 0) cardEntry.alternativeNames = raw.alternative_names
   cardsIndex.push(cardEntry)
   cardDetailInputs.push({ entry: cardEntry, path: cardInputPath })
+  const relatedNames = ((scryfall && scryfall.all_parts) || [])
+    .filter(p => p.component === 'combo_piece' && p.name !== name).map(p => p.name)
+  if (relatedNames.length > 0) {
+    twinCandidates[name] = {
+      slug, name, relatedNames,
+      signature: [scryfall.illustration_id, scryfall.mana_cost, scryfall.type_line].join('|'),
+      image: (scryfall.image_uris && scryfall.image_uris.normal) || null,
+      games: scryfall.games || [],
+    }
+  }
 
   const imageOf = s => s
     ? (s.image_uris && s.image_uris.normal)
@@ -936,7 +958,7 @@ for (const f of cardFiles) {
   // Decklists (MTGGoldfish, MTGO) spell names without accents ("Troll of
   // Khazad-dum" for "Troll of Khazad-dûm") and split cards with a slash
   // ("Fire/Ice" for "Fire // Ice"): map those spellings too
-  var plainNames = [name, name.split(' // ')[0], name.replace(' // ', '/')].map(withoutAccents)
+  var plainNames = [name, name.split(' // ')[0], name.replace(' // ', '/')].concat(CARD_NAME_ALIASES[name] || []).map(withoutAccents)
   for (var pni = 0; pni < plainNames.length; pni++) {
     var plain = plainNames[pni]
     if (!cardTypeMap[plain]) cardTypeMap[plain] = types
@@ -971,6 +993,14 @@ for (var pci = 0; pci < cardsIndex.length; pci++) {
     cardsIndex[pci].popularityDecks = null
   }
 }
+// The card's twins (see twinCandidates), by name.
+function twinsOf(name) {
+  const me = twinCandidates[name]
+  if (!me) return []
+  return me.relatedNames.map(n => twinCandidates[n])
+    .filter(t => t && t.signature === me.signature)
+    .map(t => ({ slug: t.slug, name: t.name, image: t.image, games: t.games, banned: bannedCards.has(t.name) }))
+}
 // The card pages, with the same rank: the intel files read again, rather than
 // every card's Scryfall data kept in memory.
 for (const { entry, path } of cardDetailInputs) {
@@ -990,6 +1020,8 @@ for (const { entry, path } of cardDetailInputs) {
     // Kitten for Masked Meower), shown next to its name
     alternative_names: raw.alternative_names || [],
     banned: bannedCards.has(entry.name),
+    // the card's twins (see twinCandidates), shown with a link to their page
+    twins: twinsOf(entry.name),
     archetypes: (raw.archetypes && raw.archetypes['py/set']) || [],
     scryfall: raw.scryfall || null,
     // what of its first print ever differs from `scryfall` (the first common
@@ -1046,7 +1078,7 @@ for (var ci2 = 0; ci2 < cardsIndex.length; ci2++) {
   }
   // as decklists spell them: without accents, split cards with a slash
   var spellings = [ci2entry.name, ci2entry.name.split(' // ')[0], ci2entry.name.replace(' // ', '/')]
-    .map(withoutAccents)
+    .concat(CARD_NAME_ALIASES[ci2entry.name] || []).map(withoutAccents)
   for (var spi = 0; spi < spellings.length; spi++) {
     if (!cardNameToSlug[spellings[spi]]) cardNameToSlug[spellings[spi]] = ci2entry.slug
   }
