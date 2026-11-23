@@ -460,7 +460,7 @@ export default function ArchetypePage() {
         </div>
 
         {/* Description */}
-        {data.description && (
+        {data.description && data.description.trim() && !data.description.includes('Still missing') && (
           <div className="bg-gray-800 border border-gray-700 rounded-xl p-5 prose prose-invert prose-sm max-w-none">
             <ReactMarkdown components={{ a: ({ node, ...props }) => <a {...props} className="text-amber-400 hover:underline" target="_blank" rel="noreferrer" /> }}>{data.description}</ReactMarkdown>
           </div>
