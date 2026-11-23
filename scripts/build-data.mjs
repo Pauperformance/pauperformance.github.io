@@ -320,6 +320,9 @@ for (const p of playerList) {
   }
 }
 const canonicalPilot = name => (name && playerAliases[name]) || name || null
+// The name as the source wrote it, when the site shows another one for it: the
+// decks carry it as `pilot_original`, to see how the names were put together.
+const originalPilot = name => (name && canonicalPilot(name) !== name ? name : undefined)
 // What a deck's details depend on besides its own files: the names of the pilots
 // of a group change when the group does.
 const playerInputs = pilot => (pilot && groupedPilots.has(pilot) ? [playersPath] : [])
@@ -341,7 +344,7 @@ for (const t of reconciledTournaments) {
   }
 }
 // Bumped when the deck-details get a new field: they are all written again once.
-const DECK_DETAILS_VERSION = '3'
+const DECK_DETAILS_VERSION = '4'
 const deckDetailsVersionPath = join(outDir, 'deck-details-version')
 const deckDetailsOutdated = !existsSync(deckDetailsVersionPath) ||
   readFileSync(deckDetailsVersionPath, 'utf8').trim() !== DECK_DETAILS_VERSION
@@ -390,6 +393,7 @@ for (const archetype of archetypes) {
         id: id,
         archetype: name,
         pilot: canonicalPilot(d.pilot),
+        pilot_original: originalPilot(d.pilot),
         place: d.place || null,
         tournament_name: d.tournament_name || null,
         tournament_date: d.tournament_date || null,
@@ -412,6 +416,7 @@ for (const archetype of archetypes) {
           archetype: name,
           url: d.url,
           pilot: deckMeta.pilot,
+          pilot_original: deckMeta.pilot_original,
           place: d.place || null,
           tournament_name: d.tournament_name || null,
           tournament_date: d.tournament_date || null,
@@ -443,6 +448,7 @@ for (const archetype of archetypes) {
         id: id,
         url: d.url,
         pilot: deckMeta.pilot,
+        pilot_original: deckMeta.pilot_original,
         place: d.place || null,
         tournament_name: d.tournament_name || null,
         tournament_date: d.tournament_date || null,
@@ -466,7 +472,7 @@ for (const archetype of archetypes) {
     var pdate = decks[pi].tournament_date || ''
     if (pdate > playersMap[slug].lastSeen) playersMap[slug].lastSeen = pdate
     if (!playersMap[slug].firstSeen || (pdate && pdate < playersMap[slug].firstSeen)) playersMap[slug].firstSeen = pdate
-    playersMap[slug].decks.push({ id: decks[pi].id, url: decks[pi].url, archetype: name, place: decks[pi].place, tournament_name: decks[pi].tournament_name, tournament_date: decks[pi].tournament_date })
+    playersMap[slug].decks.push({ id: decks[pi].id, url: decks[pi].url, pilot_original: decks[pi].pilot_original, archetype: name, place: decks[pi].place, tournament_name: decks[pi].tournament_name, tournament_date: decks[pi].tournament_date })
   }
 }
 
@@ -489,7 +495,7 @@ for (const source of tournamentDeckSources) {
     activeDeckIds.add(uid)
     unclassifiedCount++
     var umeta = {
-      id: uid, archetype: null, pilot: canonicalPilot(ud.pilot), place: ud.place || null,
+      id: uid, archetype: null, pilot: canonicalPilot(ud.pilot), pilot_original: originalPilot(ud.pilot), place: ud.place || null,
       tournament_name: ud.tournament_name || null, tournament_date: ud.tournament_date || null,
     }
     deckInfoById[uid] = { archetype: null, pilot: umeta.pilot, place: umeta.place }
@@ -501,7 +507,7 @@ for (const source of tournamentDeckSources) {
     }
     udecklist = parseDecklist(readFileSync(utxtPath, 'utf8'))
     writeFileSync(uoutput, JSON.stringify({
-      id: uid, archetype: null, url: ud.url, pilot: umeta.pilot, place: umeta.place,
+      id: uid, archetype: null, url: ud.url, pilot: umeta.pilot, pilot_original: umeta.pilot_original, place: umeta.place,
       tournament_name: umeta.tournament_name, tournament_date: umeta.tournament_date,
       tournament: reconciledDecks[uid][0],
       sources: sourcesOf[uid] || null,
@@ -1515,6 +1521,7 @@ for (const t of reconciledTournaments.slice().sort((a, b) => b.date.localeCompar
       id: primary.id,
       archetype: classified ? classified.archetype : null,
       pilot: canonicalPilot(primary.pilot),
+      pilot_original: originalPilot(primary.pilot),
       place: displayPlace(placeCopy.place),
       match: d.match,
       place_conflict: d.place_conflict,
@@ -1529,7 +1536,7 @@ for (const t of reconciledTournaments.slice().sort((a, b) => b.date.localeCompar
   if (metagame) {
     const list = metagameDecks[metagameSlug(metagame)] ||= []
     for (const d of decks) {
-      if (d.archetype) list.push({ id: d.id, pilot: d.pilot, archetype: d.archetype, place: d.place, tournament_name: name, tournament_date: t.date })
+      if (d.archetype) list.push({ id: d.id, pilot: d.pilot, pilot_original: d.pilot_original, archetype: d.archetype, place: d.place, tournament_name: name, tournament_date: t.date })
     }
   }
   writeFileSync(join(tournamentDetailsDir, t.id + '.json'),

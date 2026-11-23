@@ -23,6 +23,7 @@ export default function PlayerPane({ p, data }) {
     const browsed = data.decks.slice(0, LATEST_DECKS).map(d => ({
       id: d.id,
       pilot: data.name,
+      pilotOriginal: d.pilot_original,
       archetype: d.archetype,
       place: displayPlace(d.place),
       lead: formatShortDate(d.tournament_date),

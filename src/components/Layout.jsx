@@ -70,8 +70,8 @@ function BottomBar({ pathname }) {
     window.addEventListener('keydown', onKey)
     return () => window.removeEventListener('keydown', onKey)
   }, [open])
-  // "Other" is lit on the pages it holds
-  const inOther = pathname === '/settings' || OTHER_ITEMS.some(i => pathname === i.to || pathname.startsWith(`${i.to}/`))
+  // "Other" is lit on the pages it holds (the page itself, not those below it)
+  const inOther = pathname === '/settings' || OTHER_ITEMS.some(i => pathname === i.to)
   // The icon is cropped to what it draws (x = its range on the 24-grid, stroke included),
   // so the width of the svg is the width you see and the gaps between icons are the same.
   const svg = (icon, [x0, x1]) => (
@@ -93,7 +93,7 @@ function BottomBar({ pathname }) {
             {OTHER_ITEMS.map(({ to, label }) => (
               <Link key={to} to={to}
                 className={`flex items-center gap-3 px-3 py-2.5 rounded-lg text-sm font-medium transition-colors ${
-                  pathname === to || pathname.startsWith(`${to}/`) ? 'bg-amber-400/10 text-amber-400' : 'text-gray-300 active:bg-gray-800'
+                  pathname === to ? 'bg-amber-400/10 text-amber-400' : 'text-gray-300 active:bg-gray-800'
                 }`}>
                 <svg className="w-5 h-5 shrink-0" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" viewBox="0 0 24 24" aria-hidden="true">{OTHER_ICONS[to]}</svg>
                 {label}
@@ -111,7 +111,7 @@ function BottomBar({ pathname }) {
         )}
         <div className="flex items-stretch justify-around">
           {BAR_ITEMS.map(({ to, label: text, icon, x }) => {
-            const active = pathname === to || pathname.startsWith(`${to}/`)
+            const active = pathname === to
             return (
               <Link key={to} to={to} aria-current={active ? 'page' : undefined}
                 className={`${BAR_BUTTON} ${active ? 'text-amber-400' : 'text-gray-400 active:text-white'}`}>
@@ -141,7 +141,7 @@ function HeaderOther({ pathname }) {
     window.addEventListener('keydown', onKey)
     return () => window.removeEventListener('keydown', onKey)
   }, [open])
-  const inOther = OTHER_ITEMS.some(i => pathname === i.to || pathname.startsWith(`${i.to}/`))
+  const inOther = OTHER_ITEMS.some(i => pathname === i.to)
   return (
     <div className="relative">
       {/* a click anywhere else closes the menu */}
@@ -158,7 +158,7 @@ function HeaderOther({ pathname }) {
           {OTHER_ITEMS.map(({ to, label }) => (
             <Link key={to} to={to}
               className={`flex items-center gap-3 px-3 py-2 rounded-lg text-sm font-medium transition-colors ${
-                pathname === to || pathname.startsWith(`${to}/`) ? 'bg-amber-400/10 text-amber-400' : 'text-gray-300 hover:bg-gray-800 hover:text-white'
+                pathname === to ? 'bg-amber-400/10 text-amber-400' : 'text-gray-300 hover:bg-gray-800 hover:text-white'
               }`}>
               <svg className="w-5 h-5 shrink-0" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" viewBox="0 0 24 24" aria-hidden="true">{OTHER_ICONS[to]}</svg>
               {label}
@@ -318,7 +318,7 @@ export default function Layout({ children, topBar = null }) {
             {BAR_ITEMS.map(({ to, label, icon }) => (
               <Link key={to} to={to}
                 className={`flex items-center gap-1.5 px-2 2xl:px-3 py-1.5 rounded-md text-sm font-medium transition-colors ${
-                  pathname === to || pathname.startsWith(`${to}/`)
+                  pathname === to
                     ? 'bg-amber-400/10 text-amber-400'
                     : 'text-gray-400 hover:text-white hover:bg-gray-800'
                 }`}>

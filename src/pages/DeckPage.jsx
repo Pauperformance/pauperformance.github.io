@@ -1,6 +1,6 @@
 import { Fragment, useRef, useState, useEffect } from 'react'
 import { useParams, Link, useNavigate } from 'react-router-dom'
-import { nameToSlug } from '../utils/slugs'
+import { nameToSlug, pilotToSlug } from '../utils/slugs'
 import Layout from '../components/Layout'
 import MtgoButtons from '../components/MtgoButtons'
 import ManaCurve from '../components/ManaCurve'
@@ -341,7 +341,7 @@ export default function DeckPage() {
     <div className="flex flex-wrap gap-4">
       <div>
         <p className="text-base text-gray-500 mb-0.5">Pilot</p>
-        <p className="font-medium text-gray-200">{deck.pilot || 'Anonymous'}</p>
+        <p className="font-medium text-gray-200" title={deck.pilot_original ? `The site shows this player as ${deck.pilot}` : undefined}>{deck.pilot_original || deck.pilot || 'Anonymous'}</p>
       </div>
       {deck.place && (
         <div>
@@ -403,7 +403,7 @@ export default function DeckPage() {
             <div>
               <h1 className="text-2xl font-bold text-white">
                 {deck.archetype
-                  ? <><Link to={`/archetypes/${nameToSlug(deck.archetype)}`} className="text-amber-400 hover:text-amber-300 transition-colors">{deck.archetype}</Link><span className="text-white"> by {deck.pilot || 'Anonymous'}</span></>
+                  ? <><Link to={`/archetypes/${nameToSlug(deck.archetype)}`} className="text-amber-400 hover:text-amber-300 transition-colors">{deck.archetype}</Link><span className="text-white"> by {deck.pilot ? <Link to={`/players/${pilotToSlug(deck.pilot)}`} className="text-amber-400 hover:text-amber-300 transition-colors">{deck.pilot}</Link> : 'Anonymous'}</span></>
                   : deck.pilot || 'Anonymous'}
               </h1>
               <p className="mt-2 text-gray-400">

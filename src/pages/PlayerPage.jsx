@@ -234,6 +234,7 @@ export default function PlayerPage() {
   const browsed = pageDecks.map(d => ({
     id: d.id,
     pilot: player.name,
+    pilotOriginal: d.pilot_original,
     archetype: d.archetype,
     place: displayPlace(d.place),
     lead: formatShortDate(d.tournament_date),
