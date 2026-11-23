@@ -1,4 +1,5 @@
 import { useState, useEffect, useMemo } from 'react'
+import { Link } from 'react-router-dom'
 import Layout from '../components/Layout'
 import ArticleCard, { SOURCE_NAMES } from '../components/ArticleCard'
 import { FilterPanel } from '../components/FilterSheet'
@@ -98,6 +99,7 @@ export default function ArticlesIndex() {
           <h1 className="text-2xl font-bold text-white">Articles</h1>
           <p className="mt-2 text-gray-400 text-sm">
             Pauper articles from around the web: deck techs, sideboard guides, set reviews and more.
+            For the classic strategy writing that applies to any format, see <Link to="/theory" className="text-amber-400 hover:underline">Theory</Link>.
           </p>
         </div>
 

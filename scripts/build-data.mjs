@@ -770,6 +770,20 @@ if (existsSync('assets/data/newspauper.json')) {
   console.log('Built articles.json with ' + articles.length + ' articles.')
 }
 
+// Theory: general Magic theory articles (not about Pauper, so apart from the
+// ones above), oldest first as the ideas build on each other; the undated last.
+{
+  const dir = 'assets/data/resource/theory'
+  const theory = existsSync(dir)
+    ? readdirSync(dir).filter(f => f.endsWith('.json'))
+        .flatMap(f => JSON.parse(readFileSync(join(dir, f), 'utf8')))
+        .sort((a, b) => (a.date || '9999').localeCompare(b.date || '9999') || a.title.localeCompare(b.title))
+        .map(({ title, link, author, date, summary, tags }) => ({ title, link, author, date, summary, tags }))
+    : []
+  writeFileSync(join(outDir, 'theory.json'), JSON.stringify(theory))
+  console.log('Built theory.json with ' + theory.length + ' articles.')
+}
+
 // Card popularity: Myr's ranking of the cards played in each metagame's
 // tournament decks (its export_card_popularity, missing until its
 // first export), as assets/data/card_popularity/<metagame>.json, each listing
