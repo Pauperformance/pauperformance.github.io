@@ -26,6 +26,7 @@ const LANG_FLAG = {
   fr: '🇫🇷',
   hi: '🇮🇳',
   pl: '🇵🇱',
+  ja: '🇯🇵', jp: '🇯🇵',
 }
 
 const PAGE_SIZE = 20
