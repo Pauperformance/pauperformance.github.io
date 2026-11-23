@@ -1,6 +1,7 @@
 import { useState, useEffect } from 'react'
 import { Link } from 'react-router-dom'
 import Layout from '../components/Layout'
+import PanelBadge from '../components/PanelBadge'
 import { useSearchShortcut, searchShortcutLabel } from '../utils/useSearchShortcut'
 import { TWITCH_ICON, YOUTUBE_ICON, METAFY_ICON, PATREON_ICON, X_ICON } from '../utils/socialIcons'
 
@@ -50,6 +51,8 @@ function CreatorCard({ creator }) {
         <CreatorAvatar creator={creator} />
         <div className="font-semibold text-amber-400 text-sm leading-tight break-words min-w-0">{creator.name}</div>
       </div>
+
+      {creator.pauper_format_panel && <div><PanelBadge /></div>}
 
       <div className="flex flex-wrap gap-1.5">
         {creator.youtube_channel_url && (
