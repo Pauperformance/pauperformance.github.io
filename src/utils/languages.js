@@ -9,6 +9,7 @@ export const LANG_FLAG = {
   fr: '🇫🇷',
   hi: '🇮🇳',
   pl: '🇵🇱',
+  ja: '🇯🇵', jp: '🇯🇵',
 }
 export const LANG_CANONICAL = {
   en: 'en', eng: 'en', 'en-US': 'en', 'en-GB': 'en',
@@ -19,6 +20,7 @@ export const LANG_CANONICAL = {
   fr: 'fr',
   hi: 'hi',
   pl: 'pl',
+  ja: 'ja', jp: 'ja',
 }
 // Whether a language (any of its codes) is among those picked; none picked: all
 export const languageAllowed = (picked, code) => picked.size === 0 || picked.has(LANG_CANONICAL[code] ?? code)
@@ -31,4 +33,5 @@ export const LANG_NAME = {
   fr: 'French',
   hi: 'Hindi',
   pl: 'Polish',
+  ja: 'Japanese',
 }
