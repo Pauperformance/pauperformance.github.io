@@ -3,7 +3,7 @@ import { LANG_FLAG, LANG_CANONICAL, LANG_NAME } from '../utils/languages'
 import CalendarIcon from './CalendarIcon'
 
 const ARTICLE_COLOR = '#d9822b'
-export const SOURCE_NAMES = { cardsrealm: 'Cards Realm', coolstuffinc: 'CoolStuffInc', mtgrocks: 'MTGRocks', pauperwave: 'Pauperwave' }
+export const SOURCE_NAMES = { cardsrealm: 'Cards Realm', coolstuffinc: 'CoolStuffInc', mtgrocks: 'MTGRocks', pauperwave: 'Pauperwave', masterdoc: 'Magic Theory' }
 // The site's logo, shown when an article has no picture of its own
 const SOURCE_LOGOS = {
   cardsrealm: '/images/sources/cardsrealm.png',
@@ -14,11 +14,22 @@ const SOURCE_LOGOS = {
 
 // An article from one of the sites that publish Pauper ones, in the look of a
 // Newspauper entry: the date on the left, the picture full-height on the right.
+// The topic of a theory article: its tag that isn't one of its two labels
+const topicOf = a => (a.tags || []).find(t => t !== 'Foundational Theory' && t !== 'Must-read')
+
+// The big and small text of the date box: the day and month, or for the
+// theory ones (often old, some undated) the year
+function dateParts(a) {
+  if (a.source === 'masterdoc') return a.date ? [a.date.slice(0, 4), 'Year'] : ['?', 'Undated']
+  return [Number(a.date.slice(8, 10)), formatShortDate(a.date).split(' ')[0]]
+}
+
 export default function ArticleCard({ article: a, showImage = true }) {
   // the language's flag and name (the sources write it as "ENG", "PT"...)
   const code = a.language && (LANG_CANONICAL[a.language] ?? LANG_CANONICAL[a.language.toLowerCase()])
   const lang = code ? { flag: LANG_FLAG[code], name: LANG_NAME[code] } : null
   // Pauperwave's own pictures can't be shown (its site blocks loading them from elsewhere): its logo instead
+  const [dayBig, daySmall] = dateParts(a)
   const picture = a.source === 'pauperwave' ? null : a.image
   return (
     <a href={a.link} target="_blank" rel="noopener noreferrer"
@@ -28,20 +39,21 @@ export default function ArticleCard({ article: a, showImage = true }) {
       <div className="hidden sm:flex sm:order-1 shrink-0 flex-col items-center justify-center self-center rounded-lg sm:px-4 sm:py-3 sm:min-w-[5.5rem]"
         style={{ background: `${ARTICLE_COLOR}1f` }}>
         <CalendarIcon className="w-3.5 h-3.5 mb-1 sm:w-4 sm:h-4 sm:mb-1.5 text-gray-500" />
-        <span className="text-lg sm:text-xl font-bold font-mono leading-none text-gray-200">{Number(a.date.slice(8, 10))}</span>
-        <span className="mt-1 text-[10px] uppercase tracking-wider text-gray-500">{formatShortDate(a.date).split(' ')[0]}</span>
+        <span className="text-lg sm:text-xl font-bold font-mono leading-none text-gray-200">{dayBig}</span>
+        <span className="mt-1 text-[10px] uppercase tracking-wider text-gray-500">{daySmall}</span>
       </div>
       <div className="order-1 sm:order-2 min-w-0 flex-1 self-center">
         <div className="text-xs font-semibold uppercase tracking-wider" style={{ color: ARTICLE_COLOR }}>
           {SOURCE_NAMES[a.source] || a.source}
+          {a.source === 'masterdoc' && topicOf(a) && <span className="normal-case font-normal tracking-normal text-gray-500"> · {topicOf(a)}</span>}
         </div>
         <div className="mt-0.5 text-base font-semibold text-white group-hover:text-amber-400 transition-colors leading-snug">{a.title}</div>
         <div className="flex items-center gap-3 sm:block mt-2 sm:mt-1.5">
           {/* phones: the date in a small box, with the author and the language on its right, one per row */}
           <div className="sm:hidden shrink-0 flex flex-col items-center justify-center rounded-lg bg-gray-900/70 px-2.5 py-2 min-w-[3.75rem]">
             <CalendarIcon className="w-3.5 h-3.5 mb-1 text-gray-500" />
-            <span className="text-lg font-bold font-mono leading-none text-gray-200">{Number(a.date.slice(8, 10))}</span>
-            <span className="mt-1 text-[10px] uppercase tracking-wider text-gray-500">{formatShortDate(a.date).split(' ')[0]}</span>
+            <span className="text-lg font-bold font-mono leading-none text-gray-200">{dayBig}</span>
+            <span className="mt-1 text-[10px] uppercase tracking-wider text-gray-500">{daySmall}</span>
           </div>
           <div className="min-w-0 flex flex-col items-start gap-1 sm:flex-row sm:flex-wrap sm:items-center sm:gap-x-2">
             <span className="max-w-full text-sm text-gray-400 truncate">by {a.author}</span>

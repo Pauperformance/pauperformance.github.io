@@ -4,7 +4,7 @@ import { metagameSlug } from '../src/utils/slugs.js'
 import { computeTypicalList } from '../src/utils/typicalList.js'
 import { encodeCardDecks } from '../src/utils/cardDecks.js'
 import { buildArchetypeMap } from './archetype-map.mjs'
-import { youtubeAvatars, twitchAvatars } from './creator-avatars.mjs'
+import { youtubeAvatars, twitchAvatars, xAvatars } from './creator-avatars.mjs'
 
 const buildStart = Date.now()
 
@@ -755,33 +755,22 @@ if (existsSync('assets/data/newspauper.json')) {
   console.log('No Newspauper yet: built an empty newspauper.json.')
 }
 
-// Articles: the ones from the article sites (Myr's resource exports), newest
-// first. The homepage shows the last month, the articles page all of them.
+// Articles: the ones from the article sites (Myr's resource exports) plus the
+// general Magic theory ones (the Masterdoc, not about Pauper), newest first;
+// the undated theory ones last. The homepage shows the Pauper ones of the last
+// month, the articles page all of them (filterable by type).
 {
-  const dir = 'assets/data/resource/articles'
-  const articles = existsSync(dir)
+  const read = dir => existsSync(dir)
     ? readdirSync(dir).filter(f => f.endsWith('.json'))
         .flatMap(f => JSON.parse(readFileSync(join(dir, f), 'utf8')))
-        .sort((a, b) => b.date.localeCompare(a.date))
-        .map(({ source, title, link, language, author, date, summary, image, tags }) =>
-          ({ source, title, link, language, author, date, summary, image, tags }))
     : []
+  const articles = read('assets/data/resource/articles')
+    .concat(read('assets/data/resource/theory').map(a => Object.assign({}, a, { source: 'masterdoc' })))
+    .sort((a, b) => (b.date || '').localeCompare(a.date || '') || a.title.localeCompare(b.title))
+    .map(({ source, title, link, language, author, date, summary, image, tags }) =>
+      ({ source, title, link, language, author, date, summary, image, tags }))
   writeFileSync(join(outDir, 'articles.json'), JSON.stringify(articles))
   console.log('Built articles.json with ' + articles.length + ' articles.')
-}
-
-// Theory: general Magic theory articles (not about Pauper, so apart from the
-// ones above), oldest first as the ideas build on each other; the undated last.
-{
-  const dir = 'assets/data/resource/theory'
-  const theory = existsSync(dir)
-    ? readdirSync(dir).filter(f => f.endsWith('.json'))
-        .flatMap(f => JSON.parse(readFileSync(join(dir, f), 'utf8')))
-        .sort((a, b) => (a.date || '9999').localeCompare(b.date || '9999') || a.title.localeCompare(b.title))
-        .map(({ title, link, author, date, summary, tags }) => ({ title, link, author, date, summary, tags }))
-    : []
-  writeFileSync(join(outDir, 'theory.json'), JSON.stringify(theory))
-  console.log('Built theory.json with ' + theory.length + ' articles.')
 }
 
 // Card popularity: Myr's ranking of the cards played in each metagame's
@@ -1204,6 +1193,12 @@ const youtubeAvatarUrls = await youtubeAvatars(
 const twitchAvatarUrls = await twitchAvatars(
   creatorFiles.filter(function(c) { return c.twitch_channel_url })
     .map(function(c) { return c.twitch_channel_url }))
+// the X accounts' pictures, the last resort for the creators none of the above
+// gave a picture to
+const xAvatarUrls = await xAvatars(
+  creatorFiles.filter(function(c) {
+    return c.x_url && !youtubeAvatarUrls[c.youtube_channel_url] && !twitchAvatarUrls[c.twitch_channel_url]
+  }).map(function(c) { return c.x_url }))
 const creators = creatorFiles
   .map(function(c) {
     var slug1 = c.mtgo_name ? pilotToSlug(canonicalPilot(c.mtgo_name)) : null
@@ -1222,6 +1217,9 @@ const creators = creatorFiles
       pauper_format_panel: !!c.pauper_format_panel,
       youtube_avatar_url: youtubeAvatarUrls[c.youtube_channel_url] || null,
       twitch_avatar_url: twitchAvatarUrls[c.twitch_channel_url] || null,
+      x_avatar_url: xAvatarUrls[c.x_url] || null,
+      // a picture picked by hand: public/images/creators/<name>.jpg, which wins over the others
+      avatar_url: existsSync(join('public/images/creators', c.name + '.jpg')) ? '/images/creators/' + encodeURIComponent(c.name) + '.jpg' : null,
       resources: Array.from(new Set([c.name, c.mtgo_name, c.mtgo_name2].filter(Boolean)))
         .flatMap(function(n) { return resourcesByAuthor[n] || [] })
         .sort(function(a, b) { return (b.date || '').localeCompare(a.date || '') }),

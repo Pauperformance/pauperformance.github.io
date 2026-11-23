@@ -1,7 +1,8 @@
 // The profile pictures of the creators' YouTube and Twitch channels, for the
 // Creators page, fetched at build time. YouTube has no light API for them
 // without a key, but each channel page names its picture in its og:image tag;
-// Twitch pictures come from DecAPI (https://docs.decapi.me/twitch, no key).
+// Twitch pictures come from DecAPI (https://docs.decapi.me/twitch, no key),
+// and X ones, the last resort, from unavatar.io.
 //
 // The pictures are kept in scripts/creator-avatars.json (committed): a channel
 // is fetched again only when its entry is missing or older than MAX_AGE_DAYS,
@@ -53,8 +54,24 @@ async function fetchTwitchAvatar(channelUrl) {
   }
 }
 
+// The X account's picture, from unavatar.io, or null. For an account it can't
+// read, it answers with a generic favicon instead: only X's own pictures count.
+async function fetchXAvatar(profileUrl) {
+  const match = profileUrl.match(/(?:x|twitter)\.com\/([A-Za-z0-9_]+)/)
+  if (!match) return null
+  try {
+    const res = await fetch(`https://unavatar.io/x/${match[1]}?json`, { signal: AbortSignal.timeout(TIMEOUT_MS) })
+    if (!res.ok) return null
+    const { url } = await res.json()
+    return /^https:\/\/pbs\.twimg\.com\//.test(url) ? url : null
+  } catch {
+    return null
+  }
+}
+
 export const youtubeAvatars = (channelUrls, opts) => avatars(channelUrls, fetchAvatar, 'YouTube', opts)
 export const twitchAvatars = (channelUrls, opts) => avatars(channelUrls, fetchTwitchAvatar, 'Twitch', opts)
+export const xAvatars = (profileUrls, opts) => avatars(profileUrls, fetchXAvatar, 'X', opts)
 
 // channelUrls: the channel URLs; returns { url: pictureUrl } for those with a picture
 async function avatars(channelUrls, fetchOne, label, { force = false } = {}) {
@@ -83,4 +100,5 @@ if (process.argv[1] === fileURLToPath(import.meta.url)) {
     .map(f => JSON.parse(readFileSync(`${creatorDir}/${f}`, 'utf8')))
   console.log(await youtubeAvatars(creators.filter(c => c.youtube_channel_url && !c.twitch_channel_url).map(c => c.youtube_channel_url), { force: true }))
   console.log(await twitchAvatars(creators.filter(c => c.twitch_channel_url).map(c => c.twitch_channel_url), { force: true }))
+  console.log(await xAvatars(creators.filter(c => c.x_url).map(c => c.x_url), { force: true }))
 }

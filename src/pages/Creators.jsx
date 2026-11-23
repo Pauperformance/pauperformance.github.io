@@ -25,9 +25,9 @@ function SocialLink({ href, icon, label, color }) {
 }
 
 // The creator's picture: their Twitch profile picture, else their YouTube
-// channel's (fetched when the site is built), else their initial
+// channel's, else their X one (fetched when the site is built), else their initial
 function CreatorAvatar({ creator }) {
-  const src = creator.twitch_avatar_url || creator.youtube_avatar_url
+  const src = creator.avatar_url || creator.twitch_avatar_url || creator.youtube_avatar_url || creator.x_avatar_url
   // a picture that fails to load (or none) gives way to the initial
   const [failed, setFailed] = useState(null)
   return src && failed !== src
