@@ -1,53 +1,24 @@
-import { useState, useEffect } from 'react'
-import { createPortal } from 'react-dom'
+import { useState, useEffect, useMemo } from 'react'
 import ReactMarkdown from 'react-markdown'
 import { Link } from 'react-router-dom'
 import Layout from '../components/Layout'
 import { useCardPreview } from '../components/CardPreview'
 
 // A card in a bullet. Links to the card's page on the Academy (an internal
-// /cards/<slug> link, written in Myr's announcements.json) and previews it on
-// hover; cards with no page keep their Scryfall link.
+// /cards/<slug> link, written in Myr's announcements.json); older bullets keep
+// their Scryfall link. Either way, the card is previewed with its Oracle text on
+// hover, and in a bottom sheet on tap on touch devices (see useCardPreview).
 function CardLink({ href, children, bindPreview }) {
-  const [pos, setPos] = useState(null)
-
   if (href?.startsWith('/cards/')) {
     const slug = href.slice('/cards/'.length)
     return <Link to={href} {...bindPreview(nodeText(children), { slug })}>{children}</Link>
   }
 
-  const match = href?.match(/scryfall\.com\/card\/([^/]+)\/(\d+)/)
-
-  if (!match) {
-    return <a href={href} target="_blank" rel="noreferrer">{children}</a>
+  if (href?.match(/scryfall\.com\/card\//)) {
+    return <a href={href} target="_blank" rel="noreferrer" {...bindPreview(nodeText(children))}>{children}</a>
   }
 
-  const [, set, num] = match
-  const imgUrl = `https://api.scryfall.com/cards/${set}/${num}?format=image&version=normal`
-
-  return (
-    <a
-      href={href}
-      target="_blank"
-      rel="noreferrer"
-      onMouseMove={e => setPos({ x: e.clientX, y: e.clientY })}
-      onMouseLeave={() => setPos(null)}
-    >
-      {children}
-      {pos && createPortal(
-        <div
-          className="fixed z-50 pointer-events-none"
-          style={{
-            left: pos.x + 16,
-            top: Math.max(8, pos.y - 180),
-          }}
-        >
-          <img src={imgUrl} alt="" className="w-44 rounded-xl shadow-2xl border border-gray-700" />
-        </div>,
-        document.body
-      )}
-    </a>
-  )
+  return <a href={href} target="_blank" rel="noreferrer">{children}</a>
 }
 
 // The text of a link's children (the card's name).
@@ -58,10 +29,13 @@ function nodeText(children) {
 export default function Announcements() {
   const [entries, setEntries] = useState([])
   const [loading, setLoading] = useState(true)
-  const { bind: bindPreview, preview } = useCardPreview()
-  const mdComponents = {
+  const { bind: bindPreview, preview } = useCardPreview({ sheet: true })
+  // Stable: with new components on every render (the preview opening is one),
+  // React would mount the links again, and the preview would be placed by a
+  // link that is no longer on the page.
+  const mdComponents = useMemo(() => ({
     a: ({ href, children }) => <CardLink href={href} bindPreview={bindPreview}>{children}</CardLink>,
-  }
+  }), [bindPreview])
 
   useEffect(() => {
     fetch('/data/announcements.json')
