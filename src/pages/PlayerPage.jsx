@@ -133,9 +133,11 @@ export default function PlayerPage() {
     fetch('/data/creators.json')
       .then(r => r.json())
       .then(creators => {
+        // a creator's MTGO name can be any of the names the player goes by
+        const names = [player.name, ...(player.aliases || [])]
         const match = creators.find(c =>
-          (c.mtgo_name && c.mtgo_name === player.name) ||
-          (c.mtgo_name2 && c.mtgo_name2 === player.name)
+          (c.mtgo_name && names.includes(c.mtgo_name)) ||
+          (c.mtgo_name2 && names.includes(c.mtgo_name2))
         )
         if (!match) return
         setCreator(match)
@@ -321,6 +323,11 @@ export default function PlayerPage() {
                 {player.firstSeen && <span>First seen: <span className="text-white font-medium">{formatDate(player.firstSeen)}</span></span>}
                 {player.lastSeen && <span>Last seen: <span className="text-white font-medium">{formatDate(player.lastSeen)}</span></span>}
               </div>
+              {player.aliases && player.aliases.length > 0 && (
+                <p className="mt-2 text-sm text-gray-400">
+                  Also known as <span className="text-gray-300">{player.aliases.join(', ')}</span>
+                </p>
+              )}
             </div>
 
             {creator && creator.sideboards && creator.sideboards.length > 0 && (

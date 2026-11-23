@@ -93,7 +93,7 @@ export default function PlayersIndex() {
   const filtered = useMemo(() => {
     const q = search.trim().toLowerCase()
     return players.filter(p => {
-      if (q && !p.name.toLowerCase().includes(q)) return false
+      if (q && !p.name.toLowerCase().includes(q) && !(p.aliases || []).some(a => a.toLowerCase().includes(q))) return false
       if (activeArchetypes.size > 0 && !(p.archetypes || []).some(a => activeArchetypes.has(a))) return false
       return true
     })
@@ -163,9 +163,12 @@ export default function PlayersIndex() {
     return rep ? imageFor(rep.name, rep.preview) : null
   }
   // what a row says: the name, then the archetype played most and how much the player played and won
-  const rowText = (x, open) => (
+  // (the rank is the place in the list as filtered and sorted, over all its pages)
+  const rowText = (x, open, rank) => (
     <span className="min-w-0 flex-1">
-      <span className={`block truncate ${open ? 'text-amber-400' : 'text-gray-200'}`}>{x.name}</span>
+      <span className={`block truncate ${open ? 'text-amber-400' : 'text-gray-200'}`}>
+        <span className="font-semibold text-amber-400 tabular-nums">#{rank.toLocaleString('en-US')}</span>{' · '}{x.name}
+      </span>
       <span className="block truncate text-sm text-gray-500">
         {[x.top, `${x.deckCount.toLocaleString('en-US')} deck${x.deckCount !== 1 ? 's' : ''}`, x.wins > 0 && `${x.wins.toLocaleString('en-US')} win${x.wins !== 1 ? 's' : ''}`].filter(Boolean).join(' · ')}
       </span>
@@ -276,10 +279,10 @@ export default function PlayersIndex() {
               {/* the list of the wide layout; a player opens his page */}
               <div data-sidebar className="space-y-3">
                 <ul className="border border-gray-700 rounded-xl overflow-hidden bg-gray-900 divide-y divide-gray-700/50">
-                  {pagePlayers.map(x => (
+                  {pagePlayers.map((x, i) => (
                     <li key={x.slug}>
                       <Link to={`/players/${x.slug}`} className="flex items-baseline gap-3 px-3 py-2 overflow-hidden border-l-2 border-transparent active:bg-gray-800">
-                        {rowText(x, false)}
+                        {rowText(x, false, page * PAGE_SIZE + i + 1)}
                         <RowArt url={rowArt(x)} />
                       </Link>
                     </li>
@@ -297,13 +300,13 @@ export default function PlayersIndex() {
               <div className="flex gap-6 items-start">
                 <div className="w-[22rem] xl:w-[32rem] shrink-0 sticky top-24 max-h-[calc(100vh-7rem)] overflow-y-auto space-y-3">
                   <ul className="border border-gray-700 rounded-xl overflow-hidden bg-gray-900 divide-y divide-gray-700/50">
-                    {pagePlayers.map(x => {
+                    {pagePlayers.map((x, i) => {
                       const open = x.slug === selected
                       return (
                         <li key={x.slug}>
                           <button onClick={() => setSelectedSlug(x.slug)} aria-current={open ? 'true' : undefined}
                             className={`w-full flex items-baseline gap-3 px-3 py-2 text-left overflow-hidden border-l-2 transition-colors ${open ? 'bg-gray-800 border-amber-400' : 'border-transparent hover:bg-gray-800/60'}`}>
-                            {rowText(x, open)}
+                            {rowText(x, open, page * PAGE_SIZE + i + 1)}
                             <RowArt url={rowArt(x)} />
                           </button>
                         </li>
