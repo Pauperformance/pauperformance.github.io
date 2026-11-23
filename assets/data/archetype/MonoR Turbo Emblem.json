@@ -56,6 +56,9 @@
     "resources_discord": [],
     "typical_list": {
         "bans": {
+            "122": [
+                "\"Name Sticker\" Goblin"
+            ],
             "131": [
                 "Kuldotha Rebirth"
             ]
@@ -495,7 +498,7 @@
         },
         "cards": {
             "\"Name Sticker\" Goblin": {
-                "banned": false,
+                "banned": true,
                 "link": "https://scryfall.com/card/unf/107m/name-sticker-goblin",
                 "preview": "https://cards.scryfall.io/normal/front/f/d/fd1442b4-da59-4042-835f-143c8dcaa73b.jpg",
                 "type_line": "Creature \u2014 Goblin Guest"
@@ -711,7 +714,7 @@
                 "type_line": "Stickers"
             },
             "________ Goblin": {
-                "banned": true,
+                "banned": false,
                 "link": "https://scryfall.com/card/unf/107/_____-goblin",
                 "preview": "https://cards.scryfall.io/normal/front/5/8/5819e3f3-da49-4003-88ce-f3b7bb495787.jpg",
                 "type_line": "Creature \u2014 Goblin Guest"
@@ -719,13 +722,13 @@
         },
         "decks": 12,
         "ended_by_bans": [
-            "Kuldotha Rebirth"
+            "\"Name Sticker\" Goblin"
         ],
         "era_end": {
-            "date": "2025-03-31",
+            "date": "2024-05-13",
             "decks": null,
             "label": "BNR",
-            "metagame": "131",
+            "metagame": "122",
             "name": "Banned & Restricted Announcement",
             "py/object": "pauperformance_bot.entity.api.archetype.MetagameRef"
         },
@@ -950,7 +953,7 @@
                     0.833
                 ],
                 "average": 4.0,
-                "banned": false,
+                "banned": true,
                 "link": "https://scryfall.com/card/unf/107m/name-sticker-goblin",
                 "name": "\"Name Sticker\" Goblin",
                 "preview": "https://cards.scryfall.io/normal/front/f/d/fd1442b4-da59-4042-835f-143c8dcaa73b.jpg",
@@ -1206,7 +1209,7 @@
                     0.083
                 ],
                 "average": 4.0,
-                "banned": true,
+                "banned": false,
                 "link": "https://scryfall.com/card/unf/107/_____-goblin",
                 "name": "________ Goblin",
                 "preview": "https://cards.scryfall.io/normal/front/5/8/5819e3f3-da49-4003-88ce-f3b7bb495787.jpg",
