@@ -24,6 +24,7 @@ const TournamentPage = lazy(() => import('./pages/TournamentPage'))
 const PlayersIndex   = lazy(() => import('./pages/PlayersIndex'))
 const PlayerPage     = lazy(() => import('./pages/PlayerPage'))
 const BlindSpy       = lazy(() => import('./pages/BlindSpy'))
+const Wordle          = lazy(() => import('./pages/Wordle'))
 const Diff            = lazy(() => import('./pages/Diff'))
 const FAQ            = lazy(() => import('./pages/FAQ'))
 const Settings       = lazy(() => import('./pages/Settings'))
@@ -68,6 +69,7 @@ function App() {
         <Route path="/players" element={<PlayersIndex />} />
         <Route path="/players/:slug" element={<PlayerPage />} />
         <Route path="/blind-spy" element={<BlindSpy />} />
+        <Route path="/wordle" element={<Wordle />} />
         <Route path="/diff" element={<Diff />} />
         <Route path="/faq" element={<FAQ />} />
         <Route path="/settings" element={<Settings />} />

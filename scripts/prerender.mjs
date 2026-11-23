@@ -33,6 +33,7 @@ const routes = [
   '/articles',
   '/tournaments',
   '/blind-spy',
+  '/wordle',
   '/diff',
   '/faq',
   '/settings',

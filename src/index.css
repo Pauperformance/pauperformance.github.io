@@ -230,3 +230,28 @@
 /* Scrollable, but without a visible scrollbar */
 .no-scrollbar { scrollbar-width: none; }
 .no-scrollbar::-webkit-scrollbar { display: none; }
+
+/* Wordle (/wordle): the tiles' pop, flip and shake, as in the original */
+@keyframes wordle-pop {
+  0% { transform: scale(1); }
+  50% { transform: scale(1.12); }
+  100% { transform: scale(1); }
+}
+@keyframes wordle-flip {
+  0% { transform: rotateX(0); background-color: transparent; border-color: #6b7280; }
+  49.9% { transform: rotateX(-90deg); background-color: transparent; border-color: #6b7280; }
+  50% { transform: rotateX(-90deg); }
+  100% { transform: rotateX(0); }
+}
+@keyframes wordle-shake {
+  10%, 90% { transform: translateX(-1px); }
+  20%, 80% { transform: translateX(2px); }
+  30%, 50%, 70% { transform: translateX(-4px); }
+  40%, 60% { transform: translateX(4px); }
+}
+.wordle-pop { animation: wordle-pop 100ms ease-in-out; }
+.wordle-flip { animation: wordle-flip 500ms ease-in-out both; }
+.wordle-shake { animation: wordle-shake 600ms ease-in-out; }
+@media (prefers-reduced-motion: reduce) {
+  .wordle-pop, .wordle-flip, .wordle-shake { animation: none; }
+}
