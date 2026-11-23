@@ -90,17 +90,13 @@ export default function PlayersIndex() {
     })
   }, [allArchetypes, archetypeSearch, activeArchetypes])
 
-  const filtered = useMemo(() => {
-    const q = search.trim().toLowerCase()
-    return players.filter(p => {
-      if (q && !p.name.toLowerCase().includes(q) && !(p.aliases || []).some(a => a.toLowerCase().includes(q))) return false
-      if (activeArchetypes.size > 0 && !(p.archetypes || []).some(a => activeArchetypes.has(a))) return false
-      return true
-    })
-  }, [players, search, activeArchetypes])
-
-  const sorted = useMemo(() => {
-    return [...filtered].sort((a, b) => {
+  // The players of the archetypes picked, in the order picked: their rank. The
+  // name typed does not change it, only the archetypes and the sorting do.
+  const ranked = useMemo(() => {
+    const list = activeArchetypes.size > 0
+      ? players.filter(p => (p.archetypes || []).some(a => activeArchetypes.has(a)))
+      : players
+    return [...list].sort((a, b) => {
       let av, bv
       if (sortCol === 'name') {
         av = a.name.toLowerCase(); bv = b.name.toLowerCase()
@@ -118,7 +114,16 @@ export default function PlayersIndex() {
       if (av > bv) return sortDir === 'asc' ? 1 : -1
       return 0
     })
-  }, [filtered, sortCol, sortDir])
+  }, [players, activeArchetypes, sortCol, sortDir])
+
+  const rankOf = useMemo(() => new Map(ranked.map((p, i) => [p.slug, i + 1])), [ranked])
+
+  const sorted = useMemo(() => {
+    const q = search.trim().toLowerCase()
+    if (!q) return ranked
+    return ranked.filter(p => p.name.toLowerCase().includes(q) || (p.aliases || []).some(a => a.toLowerCase().includes(q)))
+  }, [ranked, search])
+  const filtered = sorted
 
   useEffect(() => { setPage(0) }, [sorted])
 
@@ -163,7 +168,7 @@ export default function PlayersIndex() {
     return rep ? imageFor(rep.name, rep.preview) : null
   }
   // what a row says: the name, then the archetype played most and how much the player played and won
-  // (the rank is the place in the list as filtered and sorted, over all its pages)
+  // (the rank is the place in the list of the archetypes picked, sorted; the search does not change it)
   const rowText = (x, open, rank) => (
     <span className="min-w-0 flex-1">
       <span className={`block truncate ${open ? 'text-amber-400' : 'text-gray-200'}`}>
@@ -282,7 +287,7 @@ export default function PlayersIndex() {
                   {pagePlayers.map((x, i) => (
                     <li key={x.slug}>
                       <Link to={`/players/${x.slug}`} className="flex items-baseline gap-3 px-3 py-2 overflow-hidden border-l-2 border-transparent active:bg-gray-800">
-                        {rowText(x, false, page * PAGE_SIZE + i + 1)}
+                        {rowText(x, false, rankOf.get(x.slug))}
                         <RowArt url={rowArt(x)} />
                       </Link>
                     </li>
@@ -306,7 +311,7 @@ export default function PlayersIndex() {
                         <li key={x.slug}>
                           <button onClick={() => setSelectedSlug(x.slug)} aria-current={open ? 'true' : undefined}
                             className={`w-full flex items-baseline gap-3 px-3 py-2 text-left overflow-hidden border-l-2 transition-colors ${open ? 'bg-gray-800 border-amber-400' : 'border-transparent hover:bg-gray-800/60'}`}>
-                            {rowText(x, open, page * PAGE_SIZE + i + 1)}
+                            {rowText(x, open, rankOf.get(x.slug))}
                             <RowArt url={rowArt(x)} />
                           </button>
                         </li>

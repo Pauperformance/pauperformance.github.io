@@ -26,6 +26,11 @@ export function useIsDesktop() {
   return matches
 }
 
+// The name the source wrote for a deck's pilot, when the site shows another one
+// for it (the names were put together): decks carry it as `pilot_original` (the
+// data) or `pilotOriginal` (the lists built from it).
+const originalOf = d => d?.pilotOriginal || d?.pilot_original || null
+
 // What each source says of a deck: its copies, and where they differ. Shown for
 // tournaments several sources list, to tell what matches and what doesn't.
 const samePilot = (a, b) => {
@@ -157,8 +162,8 @@ function DeckPanel({ deck, several, showArchetype, data, res, view, onView, hove
       <div className="flex flex-wrap items-baseline justify-between gap-x-4 gap-y-1">
         <p className="text-lg font-semibold text-white">
           {deck.pilot && deck.archetype
-            ? <Link to={`/players/${pilotToSlug(deck.pilot)}`} className="hover:text-amber-400 transition-colors">{deck.pilot}</Link>
-            : (deck.pilot || 'Anonymous')}
+            ? <Link to={`/players/${pilotToSlug(deck.pilot)}`} className="hover:text-amber-400 transition-colors" title={originalOf(deck) ? `Reconciled as ${deck.pilot}: the site shows one entry for all the spellings of a player` : undefined}>{originalOf(deck) || deck.pilot}</Link>
+            : (originalOf(deck) || deck.pilot || 'Anonymous')}
           {deck.archetype && showArchetype && (
             <>
               <span className="text-gray-500 font-normal"> · </span>

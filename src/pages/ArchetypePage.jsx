@@ -187,6 +187,7 @@ function IntelDecksSection({ name }) {
   const browsed = page_decks.map(d => ({
     id: d.id,
     pilot: d.pilot,
+    pilotOriginal: d.pilot_original,
     archetype: name,
     place: displayPlace(d.place),
     lead: formatShortDate(d.tournament_date),

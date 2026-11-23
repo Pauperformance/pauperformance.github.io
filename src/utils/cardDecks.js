@@ -4,8 +4,10 @@
 // distinct string once and a deck as the numbers pointing at them:
 //   { archetypes: [name, ...], pilots: [name, ...], places: [place, ...],
 //     tournaments: [[name, date], ...],
-//     decks: [[id, archetype, pilot, place, tournament], ...] }
-// (an index into the table, or null; an id that is not a canonical integer is
+//     decks: [[id, archetype, pilot, place, tournament, original pilot], ...] }
+// (an index into the table, or null; the last, only there for the decks whose
+// pilot was put together with another name, is the name the source wrote, an
+// index into the pilots; an id that is not a canonical integer is
 // kept as a string). The decks keep their order. encodeCardDecks is used by
 // scripts/build-data.mjs, decodeCardDecks by the app and scripts/check-links.mjs.
 
@@ -23,6 +25,7 @@ export function encodeCardDecks(decks) {
     index(tables.pilots, d.pilot),
     index(tables.places, d.place),
     index(tables.tournaments, JSON.stringify([d.tournament_name, d.tournament_date])),
+    ...(d.pilot_original ? [index(tables.pilots, d.pilot_original)] : []),
   ])
   return {
     archetypes: [...tables.archetypes.keys()],
@@ -36,12 +39,13 @@ export function encodeCardDecks(decks) {
 export function decodeCardDecks(data) {
   const { archetypes, pilots, places, tournaments, decks } = data
   const at = (table, i) => i === null ? null : table[i]
-  return decks.map(([id, a, p, pl, t]) => ({
+  return decks.map(([id, a, p, pl, t, o]) => ({
     id: String(id),
     archetype: at(archetypes, a),
     pilot: at(pilots, p),
     place: at(places, pl),
     tournament_name: tournaments[t][0],
     tournament_date: tournaments[t][1],
+    ...(o !== undefined ? { pilot_original: pilots[o] } : {}),
   }))
 }

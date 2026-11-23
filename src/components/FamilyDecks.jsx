@@ -90,6 +90,7 @@ export default function FamilyDecks({ decks, archetypes }) {
   const browsed = pageDecks.map(d => ({
     id: d.id,
     pilot: d.pilot,
+    pilotOriginal: d.pilot_original,
     archetype: d.archetype,
     place: displayPlace(d.place),
     lead: formatShortDate(d.tournament_date),
