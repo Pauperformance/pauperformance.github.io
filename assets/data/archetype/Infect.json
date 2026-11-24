@@ -21,7 +21,7 @@
         "Aggro"
     ],
     "last_appearance": {
-        "date": "2026-11-17",
+        "date": "2026-11-21",
         "metagame": {
             "date": "2026-11-13",
             "decks": null,
@@ -25751,6 +25751,8 @@
             "148": {
                 "main": {
                     "Blight Mamba": [
+                        2,
+                        2,
                         1,
                         1
                     ],
@@ -25766,16 +25768,16 @@
                         1
                     ],
                     "Embiggen": [
-                        1,
-                        1,
-                        1,
-                        1
+                        2,
+                        2,
+                        2,
+                        2
                     ],
                     "Escape Tunnel": [
-                        1,
-                        1,
-                        1,
-                        1
+                        2,
+                        2,
+                        2,
+                        2
                     ],
                     "Foreboding Landscape": [
                         1,
@@ -25783,34 +25785,47 @@
                         1
                     ],
                     "Forest": [
-                        1,
-                        1,
-                        1,
-                        1,
-                        1,
-                        1,
-                        1,
+                        2,
+                        2,
+                        2,
+                        2,
+                        2,
+                        2,
+                        2,
+                        2,
                         1
                     ],
                     "Glistener Elf": [
-                        1,
-                        1,
-                        1,
-                        1
+                        2,
+                        2,
+                        2,
+                        2
                     ],
                     "Go Forth": [
+                        2,
+                        2,
+                        2,
+                        2
+                    ],
+                    "Hickory Woodlot": [
                         1,
                         1,
                         1,
                         1
                     ],
                     "Ichorclaw Myr": [
-                        1,
-                        1,
+                        2,
+                        2,
+                        2,
+                        2
+                    ],
+                    "Island": [
                         1,
                         1
                     ],
-                    "Island": [
+                    "Llanowar Augur": [
+                        1,
+                        1,
                         1,
                         1
                     ],
@@ -25821,36 +25836,71 @@
                         1
                     ],
                     "Might of Old Krosa": [
-                        1,
+                        2,
+                        2,
+                        2,
+                        2
+                    ],
+                    "Mutagenic Growth": [
+                        2,
+                        2,
+                        2,
+                        2
+                    ],
+                    "Rancor": [
                         1,
                         1,
                         1
                     ],
-                    "Mutagenic Growth": [
-                        1,
-                        1,
-                        1,
+                    "Seal of Strength": [
                         1
                     ],
                     "Snakeskin Veil": [
-                        1,
-                        1,
-                        1,
-                        1
+                        2,
+                        2,
+                        2,
+                        2
                     ],
                     "Vines of Vastwood": [
-                        1,
+                        2,
+                        2,
                         1
                     ]
                 },
                 "side": {
+                    "Bojuka Bog": [
+                        1
+                    ],
+                    "Crop Rotation": [
+                        1,
+                        1
+                    ],
                     "Dispel": [
                         1,
                         1,
                         1,
                         1
                     ],
+                    "Gut Shot": [
+                        1,
+                        1,
+                        1
+                    ],
+                    "Nature's Claim": [
+                        1,
+                        1,
+                        1
+                    ],
                     "Relic of Progenitus": [
+                        1,
+                        1
+                    ],
+                    "Scattershot Archer": [
+                        1,
+                        1,
+                        1
+                    ],
+                    "Seal of Strength": [
                         1,
                         1
                     ],
@@ -25863,7 +25913,7 @@
                         1
                     ],
                     "Vines of Vastwood": [
-                        1,
+                        2,
                         1
                     ],
                     "Weather the Storm": [
@@ -28318,7 +28368,7 @@
                 "type_line": "Creature \u2014 Wolf"
             }
         },
-        "decks": 50,
+        "decks": 40,
         "ended_by_bans": [],
         "era_end": null,
         "era_start": {
@@ -28329,18 +28379,18 @@
             "name": "Banned & Restricted Announcement - 'Blue Monday'",
             "py/object": "pauperformance_bot.entity.api.archetype.MetagameRef"
         },
-        "first_date": "2026-06-29",
-        "last_date": "2026-11-17",
+        "first_date": "2026-08-15",
+        "last_date": "2026-11-21",
         "later_decks": 0,
         "main": [
             {
                 "at_least": [
-                    0.96,
-                    0.96,
-                    0.96,
-                    0.96
+                    0.975,
+                    0.975,
+                    0.975,
+                    0.975
                 ],
-                "average": 10.2,
+                "average": 10.1,
                 "banned": false,
                 "link": "https://scryfall.com/card/lea/294/forest",
                 "name": "Forest",
@@ -28352,9 +28402,9 @@
             {
                 "at_least": [
                     1.0,
-                    0.96,
-                    0.92,
-                    0.86
+                    0.95,
+                    0.9,
+                    0.875
                 ],
                 "average": 3.7,
                 "banned": false,
@@ -28369,10 +28419,10 @@
                 "at_least": [
                     1.0,
                     1.0,
-                    0.96,
-                    0.9
+                    0.95,
+                    0.875
                 ],
-                "average": 3.9,
+                "average": 3.8,
                 "banned": false,
                 "link": "https://scryfall.com/card/mkm/261/escape-tunnel",
                 "name": "Escape Tunnel",
@@ -28402,9 +28452,9 @@
                     1.0,
                     1.0,
                     1.0,
-                    0.92
+                    0.95
                 ],
-                "average": 3.9,
+                "average": 4.0,
                 "banned": false,
                 "link": "https://scryfall.com/card/som/166/ichorclaw-myr",
                 "name": "Ichorclaw Myr",
@@ -28417,8 +28467,8 @@
                 "at_least": [
                     1.0,
                     1.0,
-                    0.98,
-                    0.96
+                    0.975,
+                    0.95
                 ],
                 "average": 3.9,
                 "banned": false,
@@ -28431,12 +28481,12 @@
             },
             {
                 "at_least": [
-                    0.98,
-                    0.96,
-                    0.96,
-                    0.9
+                    0.975,
+                    0.95,
+                    0.95,
+                    0.85
                 ],
-                "average": 3.9,
+                "average": 3.8,
                 "banned": false,
                 "link": "https://scryfall.com/card/ulg/110/rancor",
                 "name": "Rancor",
@@ -28447,10 +28497,10 @@
             },
             {
                 "at_least": [
-                    0.98,
-                    0.98,
-                    0.98,
-                    0.96
+                    0.975,
+                    0.975,
+                    0.975,
+                    0.95
                 ],
                 "average": 4.0,
                 "banned": false,
@@ -28463,10 +28513,10 @@
             },
             {
                 "at_least": [
-                    0.96,
-                    0.96,
-                    0.92,
-                    0.92
+                    0.95,
+                    0.95,
+                    0.9,
+                    0.9
                 ],
                 "average": 3.9,
                 "banned": false,
@@ -28479,12 +28529,12 @@
             },
             {
                 "at_least": [
-                    0.92,
-                    0.92,
-                    0.92,
-                    0.88
+                    0.9,
+                    0.9,
+                    0.9,
+                    0.85
                 ],
-                "average": 4.0,
+                "average": 3.9,
                 "banned": false,
                 "link": "https://scryfall.com/card/unf/137/embiggen",
                 "name": "Embiggen",
@@ -28495,12 +28545,12 @@
             },
             {
                 "at_least": [
-                    0.7,
-                    0.7,
-                    0.7,
-                    0.62
+                    0.65,
+                    0.65,
+                    0.65,
+                    0.55
                 ],
-                "average": 3.9,
+                "average": 3.8,
                 "banned": false,
                 "link": "https://scryfall.com/card/fut/129/llanowar-augur",
                 "name": "Llanowar Augur",
@@ -28511,10 +28561,10 @@
             },
             {
                 "at_least": [
-                    0.64,
-                    0.64,
-                    0.64,
-                    0.64
+                    0.625,
+                    0.625,
+                    0.625,
+                    0.625
                 ],
                 "average": 4.0,
                 "banned": false,
@@ -28527,10 +28577,26 @@
             },
             {
                 "at_least": [
-                    0.62,
-                    0.62,
-                    0.58,
-                    0.5
+                    0.95,
+                    0.9,
+                    0.525,
+                    0.175
+                ],
+                "average": 2.7,
+                "banned": false,
+                "link": "https://scryfall.com/card/zen/193/vines-of-vastwood",
+                "name": "Vines of Vastwood",
+                "preview": "https://cards.scryfall.io/normal/front/e/8/e8bd8b10-de86-4bb6-b49f-6ccb5297c81c.jpg",
+                "py/object": "pauperformance_bot.entity.api.archetype.TypicalCard",
+                "type_line": "Instant",
+                "typical": 3
+            },
+            {
+                "at_least": [
+                    0.625,
+                    0.625,
+                    0.575,
+                    0.475
                 ],
                 "average": 3.7,
                 "banned": false,
@@ -28539,32 +28605,16 @@
                 "preview": "https://cards.scryfall.io/normal/front/e/4/e4ed67f0-85cc-4b1d-b745-e13e5bea3397.jpg",
                 "py/object": "pauperformance_bot.entity.api.archetype.TypicalCard",
                 "type_line": "Instant",
-                "typical": 4
+                "typical": 3
             },
             {
                 "at_least": [
-                    0.96,
-                    0.92,
-                    0.46,
-                    0.16
+                    0.675,
+                    0.475,
+                    0.35,
+                    0.25
                 ],
                 "average": 2.6,
-                "banned": false,
-                "link": "https://scryfall.com/card/zen/193/vines-of-vastwood",
-                "name": "Vines of Vastwood",
-                "preview": "https://cards.scryfall.io/normal/front/e/8/e8bd8b10-de86-4bb6-b49f-6ccb5297c81c.jpg",
-                "py/object": "pauperformance_bot.entity.api.archetype.TypicalCard",
-                "type_line": "Instant",
-                "typical": 2
-            },
-            {
-                "at_least": [
-                    0.72,
-                    0.46,
-                    0.36,
-                    0.28
-                ],
-                "average": 2.5,
                 "banned": false,
                 "link": "https://scryfall.com/card/nem/115/seal-of-strength",
                 "name": "Seal of Strength",
@@ -28575,12 +28625,12 @@
             },
             {
                 "at_least": [
-                    0.42,
-                    0.26,
-                    0.04,
+                    0.45,
+                    0.25,
+                    0.025,
                     0.0
                 ],
-                "average": 1.7,
+                "average": 1.6,
                 "banned": false,
                 "link": "https://scryfall.com/card/nph/2/apostles-blessing",
                 "name": "Apostle's Blessing",
@@ -28591,10 +28641,10 @@
             },
             {
                 "at_least": [
-                    0.08,
-                    0.08,
-                    0.08,
-                    0.08
+                    0.1,
+                    0.1,
+                    0.1,
+                    0.1
                 ],
                 "average": 4.0,
                 "banned": false,
@@ -28607,10 +28657,10 @@
             },
             {
                 "at_least": [
-                    0.08,
-                    0.08,
-                    0.02,
-                    0.02
+                    0.1,
+                    0.1,
+                    0.025,
+                    0.025
                 ],
                 "average": 2.5,
                 "banned": false,
@@ -28623,8 +28673,8 @@
             },
             {
                 "at_least": [
-                    0.08,
-                    0.06,
+                    0.1,
+                    0.075,
                     0.0,
                     0.0
                 ],
@@ -28639,10 +28689,10 @@
             },
             {
                 "at_least": [
-                    0.08,
-                    0.08,
-                    0.06,
-                    0.06
+                    0.1,
+                    0.1,
+                    0.075,
+                    0.075
                 ],
                 "average": 3.5,
                 "banned": false,
@@ -28655,9 +28705,9 @@
             },
             {
                 "at_least": [
-                    0.06,
-                    0.06,
-                    0.06,
+                    0.075,
+                    0.075,
+                    0.075,
                     0.0
                 ],
                 "average": 3.0,
@@ -28671,7 +28721,7 @@
             },
             {
                 "at_least": [
-                    0.06,
+                    0.075,
                     0.0,
                     0.0,
                     0.0
@@ -28684,12 +28734,156 @@
                 "py/object": "pauperformance_bot.entity.api.archetype.TypicalCard",
                 "type_line": "Instant",
                 "typical": 0
+            },
+            {
+                "at_least": [
+                    0.05,
+                    0.05,
+                    0.05,
+                    0.05
+                ],
+                "average": 4.0,
+                "banned": false,
+                "link": "https://scryfall.com/card/avr/167/abundant-growth",
+                "name": "Abundant Growth",
+                "preview": "https://cards.scryfall.io/normal/front/a/f/afbc8fd0-dc15-4ac9-b97b-173f7fb66ed7.jpg",
+                "py/object": "pauperformance_bot.entity.api.archetype.TypicalCard",
+                "type_line": "Enchantment \u2014 Aura",
+                "typical": 0
+            },
+            {
+                "at_least": [
+                    0.05,
+                    0.05,
+                    0.05,
+                    0.05
+                ],
+                "average": 4.0,
+                "banned": false,
+                "link": "https://scryfall.com/card/fin/176/blitzball-shot",
+                "name": "Blitzball Shot",
+                "preview": "https://cards.scryfall.io/normal/front/e/c/ec8ab637-3d7d-4712-9f83-8920f808f715.jpg",
+                "py/object": "pauperformance_bot.entity.api.archetype.TypicalCard",
+                "type_line": "Instant",
+                "typical": 0
+            },
+            {
+                "at_least": [
+                    0.05,
+                    0.0,
+                    0.0,
+                    0.0
+                ],
+                "average": 1.0,
+                "banned": false,
+                "link": "https://scryfall.com/card/wwk/132/bojuka-bog",
+                "name": "Bojuka Bog",
+                "preview": "https://cards.scryfall.io/normal/front/5/2/529c38b3-7397-4dac-9859-acd9cd451c32.jpg",
+                "py/object": "pauperformance_bot.entity.api.archetype.TypicalCard",
+                "type_line": "Land",
+                "typical": 0
+            },
+            {
+                "at_least": [
+                    0.05,
+                    0.05,
+                    0.0,
+                    0.0
+                ],
+                "average": 2.0,
+                "banned": false,
+                "link": "https://scryfall.com/card/ulg/98/crop-rotation",
+                "name": "Crop Rotation",
+                "preview": "https://cards.scryfall.io/normal/front/6/5/6563f790-862c-465a-b963-7a61f2385516.jpg",
+                "py/object": "pauperformance_bot.entity.api.archetype.TypicalCard",
+                "type_line": "Instant",
+                "typical": 0
+            },
+            {
+                "at_least": [
+                    0.05,
+                    0.0,
+                    0.0,
+                    0.0
+                ],
+                "average": 1.0,
+                "banned": false,
+                "link": "https://scryfall.com/card/mkm/159/fanatical-strength",
+                "name": "Fanatical Strength",
+                "preview": "https://cards.scryfall.io/normal/front/4/9/4941fa74-c7b9-4468-8080-de8057d3d27b.jpg",
+                "py/object": "pauperformance_bot.entity.api.archetype.TypicalCard",
+                "type_line": "Instant",
+                "typical": 0
+            },
+            {
+                "at_least": [
+                    0.05,
+                    0.05,
+                    0.0,
+                    0.0
+                ],
+                "average": 2.0,
+                "banned": false,
+                "link": "https://scryfall.com/card/wwk/108/natures-claim",
+                "name": "Nature's Claim",
+                "preview": "https://cards.scryfall.io/normal/front/6/4/64ae5a91-ac54-4222-832e-d7a740a3f7cb.jpg",
+                "py/object": "pauperformance_bot.entity.api.archetype.TypicalCard",
+                "type_line": "Instant",
+                "typical": 0
+            },
+            {
+                "at_least": [
+                    0.05,
+                    0.05,
+                    0.05,
+                    0.025
+                ],
+                "average": 3.5,
+                "banned": false,
+                "link": "https://scryfall.com/card/lci/71/relics-roar",
+                "name": "Relic's Roar",
+                "preview": "https://cards.scryfall.io/normal/front/3/5/35096eb3-ad7b-4b6e-b799-cb4cc447883e.jpg",
+                "py/object": "pauperformance_bot.entity.api.archetype.TypicalCard",
+                "type_line": "Instant",
+                "typical": 0
+            },
+            {
+                "at_least": [
+                    0.05,
+                    0.0,
+                    0.0,
+                    0.0
+                ],
+                "average": 1.0,
+                "banned": false,
+                "link": "https://scryfall.com/card/wwk/142/sejiri-steppe",
+                "name": "Sejiri Steppe",
+                "preview": "https://cards.scryfall.io/normal/front/6/6/668f5732-da88-4d42-9186-70cfef81f689.jpg",
+                "py/object": "pauperformance_bot.entity.api.archetype.TypicalCard",
+                "type_line": "Land",
+                "typical": 0
+            },
+            {
+                "at_least": [
+                    0.05,
+                    0.05,
+                    0.0,
+                    0.0
+                ],
+                "average": 2.0,
+                "banned": false,
+                "link": "https://scryfall.com/card/ons/326/tranquil-thicket",
+                "name": "Tranquil Thicket",
+                "preview": "https://cards.scryfall.io/normal/front/a/f/afcb7cef-8aeb-4c84-88e9-6df17768e292.jpg",
+                "py/object": "pauperformance_bot.entity.api.archetype.TypicalCard",
+                "type_line": "Land",
+                "typical": 0
             }
         ],
         "metagames": [
             {
                 "date": "2026-11-13",
-                "decks": 1,
+                "decks": 2,
                 "label": "trk",
                 "metagame": "148",
                 "name": "Star Trek",
@@ -28726,14 +28920,6 @@
                 "metagame": "144",
                 "name": "The Hobbit",
                 "py/object": "pauperformance_bot.entity.api.archetype.MetagameRef"
-            },
-            {
-                "date": "2026-06-29",
-                "decks": 11,
-                "label": "BNR",
-                "metagame": "143",
-                "name": "Banned & Restricted Announcement",
-                "py/object": "pauperformance_bot.entity.api.archetype.MetagameRef"
             }
         ],
         "py/object": "pauperformance_bot.entity.api.archetype.TypicalList",
@@ -28741,11 +28927,11 @@
             {
                 "at_least": [
                     0.9,
-                    0.86,
-                    0.8,
-                    0.12
+                    0.85,
+                    0.775,
+                    0.125
                 ],
-                "average": 3.0,
+                "average": 2.9,
                 "banned": false,
                 "link": "https://scryfall.com/card/mm2/117/gut-shot",
                 "name": "Gut Shot",
@@ -28756,12 +28942,12 @@
             },
             {
                 "at_least": [
-                    0.82,
-                    0.78,
-                    0.48,
-                    0.2
+                    0.8,
+                    0.75,
+                    0.55,
+                    0.225
                 ],
-                "average": 2.8,
+                "average": 2.9,
                 "banned": false,
                 "link": "https://scryfall.com/card/wwk/108/natures-claim",
                 "name": "Nature's Claim",
@@ -28772,12 +28958,12 @@
             },
             {
                 "at_least": [
-                    0.48,
-                    0.42,
-                    0.16,
-                    0.02
+                    0.475,
+                    0.4,
+                    0.225,
+                    0.025
                 ],
-                "average": 2.2,
+                "average": 2.4,
                 "banned": false,
                 "link": "https://scryfall.com/card/con/90/scattershot-archer",
                 "name": "Scattershot Archer",
@@ -28788,8 +28974,8 @@
             },
             {
                 "at_least": [
-                    0.38,
-                    0.38,
+                    0.4,
+                    0.4,
                     0.0,
                     0.0
                 ],
@@ -28804,10 +28990,10 @@
             },
             {
                 "at_least": [
-                    0.38,
-                    0.36,
-                    0.04,
-                    0.04
+                    0.35,
+                    0.325,
+                    0.05,
+                    0.05
                 ],
                 "average": 2.2,
                 "banned": false,
@@ -28820,9 +29006,9 @@
             },
             {
                 "at_least": [
-                    0.44,
-                    0.26,
-                    0.06,
+                    0.425,
+                    0.225,
+                    0.075,
                     0.0
                 ],
                 "average": 1.7,
@@ -28836,23 +29022,7 @@
             },
             {
                 "at_least": [
-                    0.42,
-                    0.24,
-                    0.0,
-                    0.0
-                ],
-                "average": 1.6,
-                "banned": false,
-                "link": "https://scryfall.com/card/zen/193/vines-of-vastwood",
-                "name": "Vines of Vastwood",
-                "preview": "https://cards.scryfall.io/normal/front/e/8/e8bd8b10-de86-4bb6-b49f-6ccb5297c81c.jpg",
-                "py/object": "pauperformance_bot.entity.api.archetype.TypicalCard",
-                "type_line": "Instant",
-                "typical": 1
-            },
-            {
-                "at_least": [
-                    0.4,
+                    0.425,
                     0.0,
                     0.0,
                     0.0
@@ -28868,12 +29038,28 @@
             },
             {
                 "at_least": [
-                    0.34,
-                    0.26,
-                    0.14,
-                    0.02
+                    0.4,
+                    0.2,
+                    0.0,
+                    0.0
                 ],
-                "average": 2.2,
+                "average": 1.5,
+                "banned": false,
+                "link": "https://scryfall.com/card/zen/193/vines-of-vastwood",
+                "name": "Vines of Vastwood",
+                "preview": "https://cards.scryfall.io/normal/front/e/8/e8bd8b10-de86-4bb6-b49f-6ccb5297c81c.jpg",
+                "py/object": "pauperformance_bot.entity.api.archetype.TypicalCard",
+                "type_line": "Instant",
+                "typical": 1
+            },
+            {
+                "at_least": [
+                    0.25,
+                    0.175,
+                    0.05,
+                    0.025
+                ],
+                "average": 2.0,
                 "banned": false,
                 "link": "https://scryfall.com/card/neo/211/tamiyos-safekeeping",
                 "name": "Tamiyo's Safekeeping",
@@ -28884,9 +29070,57 @@
             },
             {
                 "at_least": [
-                    0.26,
-                    0.24,
-                    0.12,
+                    0.25,
+                    0.225,
+                    0.05,
+                    0.0
+                ],
+                "average": 2.1,
+                "banned": false,
+                "link": "https://scryfall.com/card/mh1/191/weather-the-storm",
+                "name": "Weather the Storm",
+                "preview": "https://cards.scryfall.io/normal/front/f/6/f6a9fa51-78c3-42e6-8c2e-39658f59ed87.jpg",
+                "py/object": "pauperformance_bot.entity.api.archetype.TypicalCard",
+                "type_line": "Instant",
+                "typical": 0
+            },
+            {
+                "at_least": [
+                    0.225,
+                    0.225,
+                    0.1,
+                    0.05
+                ],
+                "average": 2.7,
+                "banned": false,
+                "link": "https://scryfall.com/card/roe/208/spider-umbra",
+                "name": "Spider Umbra",
+                "preview": "https://cards.scryfall.io/normal/front/2/e/2e593a5b-0de6-4df2-bbda-54195400dc69.jpg",
+                "py/object": "pauperformance_bot.entity.api.archetype.TypicalCard",
+                "type_line": "Enchantment \u2014 Aura",
+                "typical": 0
+            },
+            {
+                "at_least": [
+                    0.225,
+                    0.075,
+                    0.025,
+                    0.0
+                ],
+                "average": 1.4,
+                "banned": false,
+                "link": "https://scryfall.com/card/chr/109/tormods-crypt",
+                "name": "Tormod's Crypt",
+                "preview": "https://cards.scryfall.io/normal/front/5/5/55709270-74b2-4a3f-947d-29ac7c309b0f.jpg",
+                "py/object": "pauperformance_bot.entity.api.archetype.TypicalCard",
+                "type_line": "Artifact",
+                "typical": 0
+            },
+            {
+                "at_least": [
+                    0.2,
+                    0.175,
+                    0.1,
                     0.0
                 ],
                 "average": 2.4,
@@ -28900,60 +29134,12 @@
             },
             {
                 "at_least": [
-                    0.22,
-                    0.2,
-                    0.06,
-                    0.0
-                ],
-                "average": 2.2,
-                "banned": false,
-                "link": "https://scryfall.com/card/mh1/191/weather-the-storm",
-                "name": "Weather the Storm",
-                "preview": "https://cards.scryfall.io/normal/front/f/6/f6a9fa51-78c3-42e6-8c2e-39658f59ed87.jpg",
-                "py/object": "pauperformance_bot.entity.api.archetype.TypicalCard",
-                "type_line": "Instant",
-                "typical": 0
-            },
-            {
-                "at_least": [
-                    0.2,
-                    0.2,
-                    0.1,
-                    0.06
-                ],
-                "average": 2.8,
-                "banned": false,
-                "link": "https://scryfall.com/card/roe/208/spider-umbra",
-                "name": "Spider Umbra",
-                "preview": "https://cards.scryfall.io/normal/front/2/e/2e593a5b-0de6-4df2-bbda-54195400dc69.jpg",
-                "py/object": "pauperformance_bot.entity.api.archetype.TypicalCard",
-                "type_line": "Enchantment \u2014 Aura",
-                "typical": 0
-            },
-            {
-                "at_least": [
-                    0.2,
-                    0.08,
-                    0.04,
-                    0.0
-                ],
-                "average": 1.6,
-                "banned": false,
-                "link": "https://scryfall.com/card/chr/109/tormods-crypt",
-                "name": "Tormod's Crypt",
-                "preview": "https://cards.scryfall.io/normal/front/5/5/55709270-74b2-4a3f-947d-29ac7c309b0f.jpg",
-                "py/object": "pauperformance_bot.entity.api.archetype.TypicalCard",
-                "type_line": "Artifact",
-                "typical": 0
-            },
-            {
-                "at_least": [
-                    0.14,
-                    0.08,
+                    0.15,
+                    0.075,
                     0.0,
                     0.0
                 ],
-                "average": 1.6,
+                "average": 1.5,
                 "banned": false,
                 "link": "https://scryfall.com/card/iko/170/ram-through",
                 "name": "Ram Through",
@@ -28964,9 +29150,9 @@
             },
             {
                 "at_least": [
-                    0.12,
-                    0.06,
-                    0.04,
+                    0.15,
+                    0.075,
+                    0.05,
                     0.0
                 ],
                 "average": 1.8,
@@ -28980,7 +29166,7 @@
             },
             {
                 "at_least": [
-                    0.1,
+                    0.125,
                     0.0,
                     0.0,
                     0.0
@@ -28996,23 +29182,7 @@
             },
             {
                 "at_least": [
-                    0.1,
-                    0.1,
-                    0.04,
-                    0.0
-                ],
-                "average": 2.4,
-                "banned": false,
-                "link": "https://scryfall.com/card/ala/218/relic-of-progenitus",
-                "name": "Relic of Progenitus",
-                "preview": "https://cards.scryfall.io/normal/front/9/0/90c41192-64ef-43aa-9af0-75f0d3f56688.jpg",
-                "py/object": "pauperformance_bot.entity.api.archetype.TypicalCard",
-                "type_line": "Artifact",
-                "typical": 0
-            },
-            {
-                "at_least": [
-                    0.1,
+                    0.125,
                     0.0,
                     0.0,
                     0.0
@@ -29028,8 +29198,8 @@
             },
             {
                 "at_least": [
-                    0.08,
-                    0.04,
+                    0.1,
+                    0.05,
                     0.0,
                     0.0
                 ],
@@ -29044,10 +29214,10 @@
             },
             {
                 "at_least": [
-                    0.08,
-                    0.08,
-                    0.04,
-                    0.02
+                    0.1,
+                    0.1,
+                    0.05,
+                    0.025
                 ],
                 "average": 2.8,
                 "banned": false,
@@ -29060,12 +29230,28 @@
             },
             {
                 "at_least": [
-                    0.08,
-                    0.02,
-                    0.02,
+                    0.1,
+                    0.1,
+                    0.025,
                     0.0
                 ],
-                "average": 1.5,
+                "average": 2.2,
+                "banned": false,
+                "link": "https://scryfall.com/card/ala/218/relic-of-progenitus",
+                "name": "Relic of Progenitus",
+                "preview": "https://cards.scryfall.io/normal/front/9/0/90c41192-64ef-43aa-9af0-75f0d3f56688.jpg",
+                "py/object": "pauperformance_bot.entity.api.archetype.TypicalCard",
+                "type_line": "Artifact",
+                "typical": 0
+            },
+            {
+                "at_least": [
+                    0.075,
+                    0.0,
+                    0.0,
+                    0.0
+                ],
+                "average": 1.0,
                 "banned": false,
                 "link": "https://scryfall.com/card/lea/193/fog",
                 "name": "Fog",
@@ -29076,18 +29262,130 @@
             },
             {
                 "at_least": [
-                    0.06,
-                    0.02,
-                    0.02,
+                    0.05,
+                    0.05,
+                    0.05,
+                    0.025
+                ],
+                "average": 3.5,
+                "banned": false,
+                "link": "https://scryfall.com/card/lea/49/blue-elemental-blast",
+                "name": "Blue Elemental Blast",
+                "preview": "https://cards.scryfall.io/normal/front/2/0/20d666ef-39bf-4fbf-8201-5f1056539da2.jpg",
+                "py/object": "pauperformance_bot.entity.api.archetype.TypicalCard",
+                "type_line": "Instant",
+                "typical": 0
+            },
+            {
+                "at_least": [
+                    0.05,
+                    0.025,
+                    0.025,
                     0.0
                 ],
-                "average": 1.7,
+                "average": 2.0,
                 "banned": false,
                 "link": "https://scryfall.com/card/isd/201/rangers-guile",
                 "name": "Ranger's Guile",
                 "preview": "https://cards.scryfall.io/normal/front/c/9/c90742ae-c48b-4d32-a6b7-aa51a94018bd.jpg",
                 "py/object": "pauperformance_bot.entity.api.archetype.TypicalCard",
                 "type_line": "Instant",
+                "typical": 0
+            },
+            {
+                "at_least": [
+                    0.05,
+                    0.025,
+                    0.0,
+                    0.0
+                ],
+                "average": 1.5,
+                "banned": false,
+                "link": "https://scryfall.com/card/zen/67/spell-pierce",
+                "name": "Spell Pierce",
+                "preview": "https://cards.scryfall.io/normal/front/c/b/cb3d3901-e4a6-45ab-a7b5-c65d91e1875e.jpg",
+                "py/object": "pauperformance_bot.entity.api.archetype.TypicalCard",
+                "type_line": "Instant",
+                "typical": 0
+            },
+            {
+                "at_least": [
+                    0.05,
+                    0.05,
+                    0.0,
+                    0.0
+                ],
+                "average": 2.0,
+                "banned": false,
+                "link": "https://scryfall.com/card/pcy/126/spore-frog",
+                "name": "Spore Frog",
+                "preview": "https://cards.scryfall.io/normal/front/2/f/2f752339-003d-4ded-b2bf-e4200fc8d5d6.jpg",
+                "py/object": "pauperformance_bot.entity.api.archetype.TypicalCard",
+                "type_line": "Creature \u2014 Frog",
+                "typical": 0
+            },
+            {
+                "at_least": [
+                    0.05,
+                    0.0,
+                    0.0,
+                    0.0
+                ],
+                "average": 1.0,
+                "banned": false,
+                "link": "https://scryfall.com/card/zen/226/teetering-peaks",
+                "name": "Teetering Peaks",
+                "preview": "https://cards.scryfall.io/normal/front/e/5/e56aca36-bb51-45e3-9ef9-9f9f2aa1e088.jpg",
+                "py/object": "pauperformance_bot.entity.api.archetype.TypicalCard",
+                "type_line": "Land",
+                "typical": 0
+            },
+            {
+                "at_least": [
+                    0.05,
+                    0.05,
+                    0.05,
+                    0.05
+                ],
+                "average": 4.0,
+                "banned": false,
+                "link": "https://scryfall.com/card/one/185/thirsting-roots",
+                "name": "Thirsting Roots",
+                "preview": "https://cards.scryfall.io/normal/front/7/5/75a4a340-453b-471a-82ba-48ebf20b271a.jpg",
+                "py/object": "pauperformance_bot.entity.api.archetype.TypicalCard",
+                "type_line": "Sorcery",
+                "typical": 0
+            },
+            {
+                "at_least": [
+                    0.05,
+                    0.025,
+                    0.0,
+                    0.0
+                ],
+                "average": 1.5,
+                "banned": false,
+                "link": "https://scryfall.com/card/ons/296/vitality-charm",
+                "name": "Vitality Charm",
+                "preview": "https://cards.scryfall.io/normal/front/e/1/e1abae21-ed8f-4e21-b227-f721b840c11f.jpg",
+                "py/object": "pauperformance_bot.entity.api.archetype.TypicalCard",
+                "type_line": "Instant",
+                "typical": 0
+            },
+            {
+                "at_least": [
+                    0.05,
+                    0.025,
+                    0.025,
+                    0.0
+                ],
+                "average": 2.0,
+                "banned": false,
+                "link": "https://scryfall.com/card/dka/134/young-wolf",
+                "name": "Young Wolf",
+                "preview": "https://cards.scryfall.io/normal/front/0/c/0c39aa40-ef5f-40f1-a6dd-fbce91172c50.jpg",
+                "py/object": "pauperformance_bot.entity.api.archetype.TypicalCard",
+                "type_line": "Creature \u2014 Wolf",
                 "typical": 0
             }
         ],
@@ -30185,7 +30483,7 @@
             },
             {
                 "date": "2026-11-13",
-                "decks": 1,
+                "decks": 2,
                 "label": "trk",
                 "metagame": "148",
                 "name": "Star Trek",

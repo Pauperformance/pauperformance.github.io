@@ -10858,65 +10858,79 @@
             "145": {
                 "main": {
                     "Battle Screech": [
-                        7,
-                        7,
-                        7,
-                        7
+                        8,
+                        8,
+                        8,
+                        8
                     ],
                     "Boros Garrison": [
-                        7,
-                        7,
-                        7,
-                        6
+                        8,
+                        8,
+                        8,
+                        7
+                    ],
+                    "Dust to Dust": [
+                        1,
+                        1
+                    ],
+                    "Electrickery": [
+                        1,
+                        1
                     ],
                     "Faithless Looting": [
-                        7,
-                        7,
-                        2
+                        8,
+                        8,
+                        3,
+                        1
                     ],
                     "Fields of Strife": [
                         4
                     ],
                     "Lightning Bolt": [
-                        7,
-                        7,
-                        7,
+                        8,
+                        8,
+                        8,
                         6
                     ],
                     "Lunarch Veteran": [
-                        7,
-                        7,
-                        7,
-                        3
+                        8,
+                        8,
+                        8,
+                        4
+                    ],
+                    "Martyr of Sands": [
+                        1,
+                        1,
+                        1
                     ],
                     "Mountain": [
+                        8,
+                        8,
                         7,
-                        7,
-                        6,
                         1
                     ],
                     "Novice Inspector": [
-                        7,
-                        7,
-                        7,
-                        7
+                        8,
+                        8,
+                        8,
+                        8
                     ],
                     "Plains": [
+                        8,
+                        8,
+                        8,
+                        8,
+                        8,
+                        8,
+                        8,
                         7,
-                        7,
-                        7,
-                        7,
-                        7,
-                        7,
-                        7,
-                        6,
                         1
                     ],
                     "Prismatic Strands": [
-                        7,
-                        7,
-                        7,
-                        2
+                        8,
+                        8,
+                        8,
+                        3
                     ],
                     "Pursue the Past": [
                         7,
@@ -10924,22 +10938,34 @@
                         7,
                         7
                     ],
+                    "Pyroblast": [
+                        1,
+                        1
+                    ],
                     "Rally the Peasants": [
-                        7,
-                        7,
-                        5
+                        8,
+                        8,
+                        6
+                    ],
+                    "Raze": [
+                        1,
+                        1
+                    ],
+                    "Red Elemental Blast": [
+                        1,
+                        1
                     ],
                     "Sazacap's Brew": [
                         1
                     ],
                     "Shattered Landscape": [
-                        1,
-                        1,
-                        1,
+                        2,
+                        2,
+                        2,
                         1
                     ],
                     "Sheltering Landscape": [
-                        1,
+                        2,
                         1,
                         1
                     ],
@@ -10949,25 +10975,32 @@
                         7,
                         7
                     ],
+                    "Squadron Hawk": [
+                        1,
+                        1,
+                        1,
+                        1
+                    ],
                     "Thraben Charm": [
-                        7,
-                        7,
+                        8,
+                        8,
+                        2,
                         1
                     ],
                     "Thraben Inspector": [
-                        7,
-                        7,
-                        7,
-                        6
+                        8,
+                        8,
+                        8,
+                        7
                     ],
                     "Thrilling Discovery": [
+                        8,
                         7,
                         6,
-                        5,
-                        5
+                        6
                     ],
                     "Wind-Scarred Crag": [
-                        7,
+                        8,
                         5,
                         5,
                         1
@@ -12377,7 +12410,7 @@
                 "type_line": "Land"
             }
         },
-        "decks": 53,
+        "decks": 54,
         "ended_by_bans": [],
         "era_end": null,
         "era_start": null,
@@ -12421,10 +12454,10 @@
                 "at_least": [
                     1.0,
                     1.0,
-                    0.83,
-                    0.717
+                    0.833,
+                    0.722
                 ],
-                "average": 3.5,
+                "average": 3.6,
                 "banned": false,
                 "link": "https://scryfall.com/card/rav/275/boros-garrison",
                 "name": "Boros Garrison",
@@ -12438,7 +12471,7 @@
                     1.0,
                     1.0,
                     0.981,
-                    0.698
+                    0.685
                 ],
                 "average": 3.7,
                 "banned": false,
@@ -12454,7 +12487,7 @@
                     1.0,
                     1.0,
                     1.0,
-                    0.717
+                    0.722
                 ],
                 "average": 3.7,
                 "banned": false,
@@ -12483,10 +12516,10 @@
             },
             {
                 "at_least": [
-                    0.962,
-                    0.962,
-                    0.698,
-                    0.547
+                    0.963,
+                    0.963,
+                    0.704,
+                    0.556
                 ],
                 "average": 3.3,
                 "banned": false,
@@ -12499,10 +12532,26 @@
             },
             {
                 "at_least": [
-                    0.566,
-                    0.547,
-                    0.547,
-                    0.547
+                    0.852,
+                    0.815,
+                    0.722,
+                    0.481
+                ],
+                "average": 3.4,
+                "banned": false,
+                "link": "https://scryfall.com/card/stx/243/thrilling-discovery",
+                "name": "Thrilling Discovery",
+                "preview": "https://cards.scryfall.io/normal/front/b/a/bac1f45e-1884-490e-a94f-f7d312f0e229.jpg",
+                "py/object": "pauperformance_bot.entity.api.archetype.TypicalCard",
+                "type_line": "Sorcery",
+                "typical": 4
+            },
+            {
+                "at_least": [
+                    0.556,
+                    0.537,
+                    0.537,
+                    0.537
                 ],
                 "average": 3.9,
                 "banned": false,
@@ -12515,10 +12564,10 @@
             },
             {
                 "at_least": [
-                    0.547,
-                    0.547,
-                    0.547,
-                    0.547
+                    0.537,
+                    0.537,
+                    0.537,
+                    0.537
                 ],
                 "average": 4.0,
                 "banned": false,
@@ -12533,8 +12582,8 @@
                 "at_least": [
                     1.0,
                     1.0,
-                    0.528,
-                    0.396
+                    0.537,
+                    0.407
                 ],
                 "average": 2.9,
                 "banned": false,
@@ -12550,7 +12599,7 @@
                     1.0,
                     1.0,
                     0.981,
-                    0.038
+                    0.037
                 ],
                 "average": 3.0,
                 "banned": false,
@@ -12565,8 +12614,8 @@
                 "at_least": [
                     1.0,
                     1.0,
-                    0.962,
-                    0.396
+                    0.963,
+                    0.407
                 ],
                 "average": 3.4,
                 "banned": false,
@@ -12581,7 +12630,7 @@
                 "at_least": [
                     1.0,
                     1.0,
-                    0.943,
+                    0.944,
                     0.019
                 ],
                 "average": 3.0,
@@ -12595,26 +12644,10 @@
             },
             {
                 "at_least": [
-                    0.849,
-                    0.811,
-                    0.717,
-                    0.472
-                ],
-                "average": 3.4,
-                "banned": false,
-                "link": "https://scryfall.com/card/stx/243/thrilling-discovery",
-                "name": "Thrilling Discovery",
-                "preview": "https://cards.scryfall.io/normal/front/b/a/bac1f45e-1884-490e-a94f-f7d312f0e229.jpg",
-                "py/object": "pauperformance_bot.entity.api.archetype.TypicalCard",
-                "type_line": "Sorcery",
-                "typical": 3
-            },
-            {
-                "at_least": [
                     1.0,
-                    0.962,
-                    0.434,
-                    0.189
+                    0.963,
+                    0.444,
+                    0.204
                 ],
                 "average": 2.6,
                 "banned": false,
@@ -12627,10 +12660,10 @@
             },
             {
                 "at_least": [
-                    0.868,
-                    0.472,
-                    0.302,
-                    0.075
+                    0.87,
+                    0.463,
+                    0.296,
+                    0.074
                 ],
                 "average": 2.0,
                 "banned": false,
@@ -12639,14 +12672,14 @@
                 "preview": "https://cards.scryfall.io/normal/front/3/b/3b296781-78ac-411f-88fc-2d924ad22986.jpg",
                 "py/object": "pauperformance_bot.entity.api.archetype.TypicalCard",
                 "type_line": "Land",
-                "typical": 2
+                "typical": 1
             },
             {
                 "at_least": [
-                    0.509,
-                    0.453,
-                    0.189,
-                    0.132
+                    0.519,
+                    0.444,
+                    0.185,
+                    0.13
                 ],
                 "average": 2.5,
                 "banned": false,
@@ -12659,10 +12692,10 @@
             },
             {
                 "at_least": [
-                    0.434,
-                    0.434,
-                    0.434,
-                    0.434
+                    0.444,
+                    0.444,
+                    0.444,
+                    0.444
                 ],
                 "average": 4.0,
                 "banned": false,
@@ -12675,8 +12708,8 @@
             },
             {
                 "at_least": [
-                    0.283,
-                    0.264,
+                    0.278,
+                    0.259,
                     0.019,
                     0.0
                 ],
@@ -12691,7 +12724,7 @@
             },
             {
                 "at_least": [
-                    0.226,
+                    0.222,
                     0.0,
                     0.0,
                     0.0
@@ -12707,10 +12740,10 @@
             },
             {
                 "at_least": [
-                    0.208,
-                    0.208,
-                    0.132,
-                    0.075
+                    0.204,
+                    0.204,
+                    0.13,
+                    0.074
                 ],
                 "average": 3.0,
                 "banned": false,
@@ -12723,26 +12756,10 @@
             },
             {
                 "at_least": [
-                    0.132,
-                    0.132,
-                    0.132,
-                    0.132
-                ],
-                "average": 4.0,
-                "banned": false,
-                "link": "https://scryfall.com/card/snc/26/raffines-informant",
-                "name": "Raffine's Informant",
-                "preview": "https://cards.scryfall.io/normal/front/4/e/4e64ff87-2099-4360-94f6-164277b7b514.jpg",
-                "py/object": "pauperformance_bot.entity.api.archetype.TypicalCard",
-                "type_line": "Creature \u2014 Human Wizard",
-                "typical": 0
-            },
-            {
-                "at_least": [
-                    0.132,
-                    0.113,
-                    0.094,
-                    0.057
+                    0.148,
+                    0.13,
+                    0.111,
+                    0.056
                 ],
                 "average": 3.0,
                 "banned": false,
@@ -12755,8 +12772,24 @@
             },
             {
                 "at_least": [
-                    0.113,
-                    0.113,
+                    0.13,
+                    0.13,
+                    0.13,
+                    0.13
+                ],
+                "average": 4.0,
+                "banned": false,
+                "link": "https://scryfall.com/card/snc/26/raffines-informant",
+                "name": "Raffine's Informant",
+                "preview": "https://cards.scryfall.io/normal/front/4/e/4e64ff87-2099-4360-94f6-164277b7b514.jpg",
+                "py/object": "pauperformance_bot.entity.api.archetype.TypicalCard",
+                "type_line": "Creature \u2014 Human Wizard",
+                "typical": 0
+            },
+            {
+                "at_least": [
+                    0.111,
+                    0.111,
                     0.0,
                     0.0
                 ],
@@ -12771,9 +12804,9 @@
             },
             {
                 "at_least": [
-                    0.113,
-                    0.113,
-                    0.113,
+                    0.111,
+                    0.111,
+                    0.111,
                     0.019
                 ],
                 "average": 3.2,
@@ -12805,7 +12838,7 @@
             },
             {
                 "date": "2026-09-02",
-                "decks": 7,
+                "decks": 8,
                 "label": "slz",
                 "metagame": "145",
                 "name": "The Zeta Set",
@@ -12864,10 +12897,10 @@
         "side": [
             {
                 "at_least": [
-                    0.962,
-                    0.962,
-                    0.849,
-                    0.528
+                    0.944,
+                    0.944,
+                    0.833,
+                    0.519
                 ],
                 "average": 3.4,
                 "banned": false,
@@ -12880,9 +12913,9 @@
             },
             {
                 "at_least": [
-                    0.981,
-                    0.981,
-                    0.151,
+                    0.963,
+                    0.963,
+                    0.148,
                     0.0
                 ],
                 "average": 2.2,
@@ -12896,10 +12929,10 @@
             },
             {
                 "at_least": [
-                    0.736,
-                    0.547,
-                    0.377,
-                    0.226
+                    0.722,
+                    0.537,
+                    0.37,
+                    0.222
                 ],
                 "average": 2.6,
                 "banned": false,
@@ -12912,10 +12945,10 @@
             },
             {
                 "at_least": [
-                    0.604,
-                    0.585,
-                    0.453,
-                    0.075
+                    0.593,
+                    0.574,
+                    0.444,
+                    0.074
                 ],
                 "average": 2.8,
                 "banned": false,
@@ -12928,9 +12961,9 @@
             },
             {
                 "at_least": [
-                    0.585,
-                    0.547,
-                    0.094,
+                    0.574,
+                    0.537,
+                    0.093,
                     0.0
                 ],
                 "average": 2.1,
@@ -12944,8 +12977,8 @@
             },
             {
                 "at_least": [
-                    0.604,
-                    0.075,
+                    0.593,
+                    0.074,
                     0.0,
                     0.0
                 ],
@@ -12960,7 +12993,7 @@
             },
             {
                 "at_least": [
-                    0.585,
+                    0.574,
                     0.019,
                     0.0,
                     0.0
@@ -12976,7 +13009,7 @@
             },
             {
                 "at_least": [
-                    0.453,
+                    0.444,
                     0.0,
                     0.0,
                     0.0
@@ -12992,8 +13025,8 @@
             },
             {
                 "at_least": [
-                    0.434,
-                    0.415,
+                    0.426,
+                    0.407,
                     0.019,
                     0.0
                 ],
@@ -13008,9 +13041,9 @@
             },
             {
                 "at_least": [
-                    0.226,
-                    0.226,
-                    0.057,
+                    0.222,
+                    0.222,
+                    0.056,
                     0.0
                 ],
                 "average": 2.2,
@@ -13024,7 +13057,7 @@
             },
             {
                 "at_least": [
-                    0.132,
+                    0.13,
                     0.0,
                     0.0,
                     0.0
@@ -13040,8 +13073,8 @@
             },
             {
                 "at_least": [
-                    0.132,
-                    0.075,
+                    0.13,
+                    0.074,
                     0.0,
                     0.0
                 ],
@@ -13056,8 +13089,8 @@
             },
             {
                 "at_least": [
-                    0.113,
-                    0.113,
+                    0.111,
+                    0.111,
                     0.0,
                     0.0
                 ],
@@ -13072,9 +13105,9 @@
             },
             {
                 "at_least": [
-                    0.075,
-                    0.075,
-                    0.057,
+                    0.074,
+                    0.074,
+                    0.056,
                     0.019
                 ],
                 "average": 3.0,
@@ -13088,8 +13121,8 @@
             },
             {
                 "at_least": [
-                    0.075,
-                    0.075,
+                    0.074,
+                    0.074,
                     0.019,
                     0.0
                 ],
@@ -13104,8 +13137,8 @@
             },
             {
                 "at_least": [
-                    0.057,
-                    0.057,
+                    0.056,
+                    0.056,
                     0.0,
                     0.0
                 ],
@@ -13120,8 +13153,8 @@
             },
             {
                 "at_least": [
-                    0.057,
-                    0.038,
+                    0.056,
+                    0.037,
                     0.0,
                     0.0
                 ],
@@ -13136,7 +13169,7 @@
             },
             {
                 "at_least": [
-                    0.057,
+                    0.056,
                     0.019,
                     0.0,
                     0.0
@@ -13152,7 +13185,7 @@
             },
             {
                 "at_least": [
-                    0.057,
+                    0.056,
                     0.019,
                     0.0,
                     0.0
@@ -13763,7 +13796,7 @@
             },
             {
                 "date": "2026-09-02",
-                "decks": 7,
+                "decks": 8,
                 "label": "slz",
                 "metagame": "145",
                 "name": "The Zeta Set",
