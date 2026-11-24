@@ -28,13 +28,13 @@
         "Combo"
     ],
     "last_appearance": {
-        "date": "2026-10-24",
+        "date": "2026-11-23",
         "metagame": {
-            "date": "2026-10-02",
+            "date": "2026-11-13",
             "decks": null,
-            "label": "fra",
-            "metagame": "147",
-            "name": "Reality Fracture",
+            "label": "trk",
+            "metagame": "148",
+            "name": "Star Trek",
             "py/object": "pauperformance_bot.entity.api.archetype.MetagameRef"
         },
         "py/object": "pauperformance_bot.entity.api.archetype.Appearance"
@@ -1393,6 +1393,150 @@
                         1
                     ]
                 }
+            },
+            "148": {
+                "main": {
+                    "Ancient Den": [
+                        1
+                    ],
+                    "Bojuka Bog": [
+                        1
+                    ],
+                    "Cavern Harpy": [
+                        1
+                    ],
+                    "Cryogen Relic": [
+                        1,
+                        1,
+                        1,
+                        1
+                    ],
+                    "Dispatch": [
+                        1,
+                        1,
+                        1
+                    ],
+                    "Dream Stalker": [
+                        1,
+                        1,
+                        1,
+                        1
+                    ],
+                    "Fanatical Offering": [
+                        1,
+                        1,
+                        1
+                    ],
+                    "Glint Hawk": [
+                        1,
+                        1,
+                        1,
+                        1
+                    ],
+                    "Goldmire Bridge": [
+                        1,
+                        1,
+                        1,
+                        1
+                    ],
+                    "Grim Bauble": [
+                        1,
+                        1
+                    ],
+                    "Hopeless Nightmare": [
+                        1,
+                        1,
+                        1,
+                        1
+                    ],
+                    "Island": [
+                        1
+                    ],
+                    "Kenku Artificer": [
+                        1
+                    ],
+                    "Kor Skyfisher": [
+                        1,
+                        1,
+                        1,
+                        1
+                    ],
+                    "Mistvault Bridge": [
+                        1,
+                        1,
+                        1,
+                        1
+                    ],
+                    "Moon-Circuit Hacker": [
+                        1,
+                        1
+                    ],
+                    "Navigator's Compass": [
+                        1,
+                        1,
+                        1
+                    ],
+                    "Omen of the Dead": [
+                        1
+                    ],
+                    "Razortide Bridge": [
+                        1,
+                        1
+                    ],
+                    "Refurbished Familiar": [
+                        1,
+                        1,
+                        1,
+                        1
+                    ],
+                    "Seat of the Synod": [
+                        1,
+                        1
+                    ],
+                    "Suffocating Fumes": [
+                        1
+                    ],
+                    "Thraben Charm": [
+                        1
+                    ],
+                    "Vault of Whispers": [
+                        1,
+                        1,
+                        1,
+                        1
+                    ]
+                },
+                "side": {
+                    "Arms of Hadar": [
+                        1,
+                        1
+                    ],
+                    "Navigator's Compass": [
+                        1
+                    ],
+                    "Standard Bearer": [
+                        1,
+                        1,
+                        1
+                    ],
+                    "Thraben Charm": [
+                        1
+                    ],
+                    "Tithing Blade": [
+                        1,
+                        1,
+                        1
+                    ],
+                    "Turn Aside": [
+                        1,
+                        1,
+                        1
+                    ],
+                    "Vedalken Certarch": [
+                        1,
+                        1
+                    ]
+                }
             }
         },
         "cards": {
@@ -1486,6 +1630,12 @@
                 "preview": "https://cards.scryfall.io/normal/front/4/8/480fecdd-5978-47e6-9c25-7a04cdf616db.jpg",
                 "type_line": "Instant"
             },
+            "Cavern Harpy": {
+                "banned": false,
+                "link": "https://scryfall.com/card/pls/97/cavern-harpy",
+                "preview": "https://cards.scryfall.io/normal/front/a/d/adfb0804-50d6-4bca-8733-72e01030a543.jpg",
+                "type_line": "Creature \u2014 Harpy Beast"
+            },
             "Chainer's Edict": {
                 "banned": false,
                 "link": "https://scryfall.com/card/vma/108/chainers-edict",
@@ -1545,6 +1695,12 @@
                 "link": "https://scryfall.com/card/ktk/232/dismal-backwater",
                 "preview": "https://cards.scryfall.io/normal/front/6/3/63742780-47ee-4a66-993a-69e06c14967d.jpg",
                 "type_line": "Land"
+            },
+            "Dispatch": {
+                "banned": false,
+                "link": "https://scryfall.com/card/slz/2/dispatch",
+                "preview": "https://cards.scryfall.io/normal/front/c/e/ce4f9234-1304-44dd-9a20-64dfafb1fe4b.jpg",
+                "type_line": "Instant"
             },
             "Dispel": {
                 "banned": false,
@@ -2063,7 +2219,7 @@
                 "type_line": "Instant"
             }
         },
-        "decks": 10,
+        "decks": 11,
         "ended_by_bans": [],
         "era_end": null,
         "era_start": {
@@ -2075,15 +2231,15 @@
             "py/object": "pauperformance_bot.entity.api.archetype.MetagameRef"
         },
         "first_date": "2025-09-28",
-        "last_date": "2026-10-24",
+        "last_date": "2026-11-23",
         "later_decks": 0,
         "main": [
             {
                 "at_least": [
-                    1.0,
-                    1.0,
-                    1.0,
-                    0.9
+                    0.909,
+                    0.909,
+                    0.909,
+                    0.818
                 ],
                 "average": 3.9,
                 "banned": false,
@@ -2096,10 +2252,10 @@
             },
             {
                 "at_least": [
-                    0.9,
-                    0.9,
-                    0.9,
-                    0.9
+                    0.909,
+                    0.909,
+                    0.909,
+                    0.909
                 ],
                 "average": 4.0,
                 "banned": false,
@@ -2112,10 +2268,10 @@
             },
             {
                 "at_least": [
-                    0.9,
-                    0.9,
-                    0.9,
-                    0.9
+                    0.909,
+                    0.909,
+                    0.909,
+                    0.909
                 ],
                 "average": 4.0,
                 "banned": false,
@@ -2128,12 +2284,12 @@
             },
             {
                 "at_least": [
-                    0.9,
-                    0.9,
-                    0.9,
-                    0.9
+                    0.909,
+                    0.909,
+                    0.909,
+                    0.818
                 ],
-                "average": 4.0,
+                "average": 3.9,
                 "banned": false,
                 "link": "https://scryfall.com/card/lci/105/fanatical-offering",
                 "name": "Fanatical Offering",
@@ -2144,10 +2300,10 @@
             },
             {
                 "at_least": [
-                    0.9,
-                    0.9,
-                    0.9,
-                    0.9
+                    0.909,
+                    0.909,
+                    0.909,
+                    0.909
                 ],
                 "average": 4.0,
                 "banned": false,
@@ -2160,10 +2316,10 @@
             },
             {
                 "at_least": [
-                    0.9,
-                    0.9,
-                    0.9,
-                    0.9
+                    0.909,
+                    0.909,
+                    0.909,
+                    0.909
                 ],
                 "average": 4.0,
                 "banned": false,
@@ -2176,10 +2332,10 @@
             },
             {
                 "at_least": [
-                    0.9,
-                    0.9,
-                    0.9,
-                    0.9
+                    0.909,
+                    0.909,
+                    0.909,
+                    0.909
                 ],
                 "average": 4.0,
                 "banned": false,
@@ -2192,10 +2348,10 @@
             },
             {
                 "at_least": [
-                    0.9,
-                    0.9,
-                    0.9,
-                    0.9
+                    0.909,
+                    0.909,
+                    0.909,
+                    0.909
                 ],
                 "average": 4.0,
                 "banned": false,
@@ -2208,10 +2364,10 @@
             },
             {
                 "at_least": [
-                    0.9,
-                    0.9,
-                    0.9,
-                    0.9
+                    0.909,
+                    0.909,
+                    0.909,
+                    0.909
                 ],
                 "average": 4.0,
                 "banned": false,
@@ -2224,10 +2380,10 @@
             },
             {
                 "at_least": [
-                    0.9,
-                    0.9,
-                    0.9,
-                    0.9
+                    0.909,
+                    0.909,
+                    0.909,
+                    0.909
                 ],
                 "average": 4.0,
                 "banned": false,
@@ -2240,12 +2396,12 @@
             },
             {
                 "at_least": [
-                    0.9,
-                    0.9,
-                    0.9,
+                    0.909,
+                    0.909,
+                    0.818,
                     0.0
                 ],
-                "average": 3.0,
+                "average": 2.9,
                 "banned": false,
                 "link": "https://scryfall.com/card/dft/88/grim-bauble",
                 "name": "Grim Bauble",
@@ -2256,9 +2412,9 @@
             },
             {
                 "at_least": [
-                    0.9,
-                    0.9,
-                    0.8,
+                    0.909,
+                    0.909,
+                    0.818,
                     0.0
                 ],
                 "average": 2.9,
@@ -2272,12 +2428,12 @@
             },
             {
                 "at_least": [
-                    0.9,
-                    0.9,
-                    0.8,
+                    0.909,
+                    0.909,
+                    0.727,
                     0.0
                 ],
-                "average": 2.9,
+                "average": 2.8,
                 "banned": false,
                 "link": "https://scryfall.com/card/mrd/283/seat-of-the-synod",
                 "name": "Seat of the Synod",
@@ -2288,12 +2444,12 @@
             },
             {
                 "at_least": [
-                    0.9,
-                    0.8,
-                    0.8,
-                    0.5
+                    0.909,
+                    0.818,
+                    0.818,
+                    0.545
                 ],
-                "average": 3.3,
+                "average": 3.4,
                 "banned": false,
                 "link": "https://scryfall.com/card/mrd/286/vault-of-whispers",
                 "name": "Vault of Whispers",
@@ -2304,12 +2460,12 @@
             },
             {
                 "at_least": [
-                    0.9,
-                    0.9,
+                    0.909,
+                    0.818,
                     0.0,
                     0.0
                 ],
-                "average": 2.0,
+                "average": 1.9,
                 "banned": false,
                 "link": "https://scryfall.com/card/wwk/132/bojuka-bog",
                 "name": "Bojuka Bog",
@@ -2320,8 +2476,8 @@
             },
             {
                 "at_least": [
-                    0.8,
-                    0.8,
+                    0.818,
+                    0.818,
                     0.0,
                     0.0
                 ],
@@ -2337,7 +2493,7 @@
             {
                 "at_least": [
                     1.0,
-                    0.1,
+                    0.091,
                     0.0,
                     0.0
                 ],
@@ -2352,8 +2508,8 @@
             },
             {
                 "at_least": [
-                    0.9,
-                    0.4,
+                    0.909,
+                    0.364,
                     0.0,
                     0.0
                 ],
@@ -2368,7 +2524,7 @@
             },
             {
                 "at_least": [
-                    0.9,
+                    0.909,
                     0.0,
                     0.0,
                     0.0
@@ -2384,7 +2540,7 @@
             },
             {
                 "at_least": [
-                    0.9,
+                    0.909,
                     0.0,
                     0.0,
                     0.0
@@ -2400,200 +2556,8 @@
             },
             {
                 "at_least": [
-                    0.1,
-                    0.1,
-                    0.1,
-                    0.1
-                ],
-                "average": 4.0,
-                "banned": false,
-                "link": "https://scryfall.com/card/slz/88/baleful-strix",
-                "name": "Baleful Strix",
-                "preview": "https://cards.scryfall.io/normal/front/d/f/df0cc01f-356e-4645-96d6-e730e2d23482.jpg",
-                "py/object": "pauperformance_bot.entity.api.archetype.TypicalCard",
-                "type_line": "Artifact Creature \u2014 Bird",
-                "typical": 0
-            },
-            {
-                "at_least": [
-                    0.1,
-                    0.1,
-                    0.1,
-                    0.1
-                ],
-                "average": 4.0,
-                "banned": false,
-                "link": "https://scryfall.com/card/clb/346/basilisk-gate",
-                "name": "Basilisk Gate",
-                "preview": "https://cards.scryfall.io/normal/front/4/a/4a306025-d429-4006-b7ed-bdb287e83f57.jpg",
-                "py/object": "pauperformance_bot.entity.api.archetype.TypicalCard",
-                "type_line": "Land \u2014 Gate",
-                "typical": 0
-            },
-            {
-                "at_least": [
-                    0.1,
-                    0.1,
-                    0.1,
-                    0.1
-                ],
-                "average": 4.0,
-                "banned": false,
-                "link": "https://scryfall.com/card/clb/347/black-dragon-gate",
-                "name": "Black Dragon Gate",
-                "preview": "https://cards.scryfall.io/normal/front/c/4/c4ceb589-c741-44ac-98c8-3d997953ee61.jpg",
-                "py/object": "pauperformance_bot.entity.api.archetype.TypicalCard",
-                "type_line": "Land \u2014 Gate",
-                "typical": 0
-            },
-            {
-                "at_least": [
-                    0.1,
-                    0.1,
-                    0.1,
-                    0.1
-                ],
-                "average": 4.0,
-                "banned": false,
-                "link": "https://scryfall.com/card/ice/61/brainstorm",
-                "name": "Brainstorm",
-                "preview": "https://cards.scryfall.io/normal/front/8/d/8d42d7aa-7f53-4cfc-842a-086aab2448d1.jpg",
-                "py/object": "pauperformance_bot.entity.api.archetype.TypicalCard",
-                "type_line": "Instant",
-                "typical": 0
-            },
-            {
-                "at_least": [
-                    0.1,
-                    0.1,
-                    0.1,
-                    0.1
-                ],
-                "average": 4.0,
-                "banned": false,
-                "link": "https://scryfall.com/card/clb/349/citadel-gate",
-                "name": "Citadel Gate",
-                "preview": "https://cards.scryfall.io/normal/front/c/0/c0e6f002-9a10-49a1-8604-2b8ff57732dd.jpg",
-                "py/object": "pauperformance_bot.entity.api.archetype.TypicalCard",
-                "type_line": "Land \u2014 Gate",
-                "typical": 0
-            },
-            {
-                "at_least": [
-                    0.1,
-                    0.1,
-                    0.1,
-                    0.1
-                ],
-                "average": 4.0,
-                "banned": false,
-                "link": "https://scryfall.com/card/ice/64/counterspell",
-                "name": "Counterspell",
-                "preview": "https://cards.scryfall.io/normal/front/a/e/aedbcbaa-40f0-485f-8427-778edc2d2ec0.jpg",
-                "py/object": "pauperformance_bot.entity.api.archetype.TypicalCard",
-                "type_line": "Instant",
-                "typical": 0
-            },
-            {
-                "at_least": [
-                    0.1,
-                    0.0,
-                    0.0,
-                    0.0
-                ],
-                "average": 1.0,
-                "banned": false,
-                "link": "https://scryfall.com/card/khm/257/glacial-floodplain",
-                "name": "Glacial Floodplain",
-                "preview": "https://cards.scryfall.io/normal/front/9/d/9de5fadd-4559-479f-b45d-abe792f0f6e5.jpg",
-                "py/object": "pauperformance_bot.entity.api.archetype.TypicalCard",
-                "type_line": "Snow Land \u2014 Plains Island",
-                "typical": 0
-            },
-            {
-                "at_least": [
-                    0.1,
-                    0.0,
-                    0.0,
-                    0.0
-                ],
-                "average": 1.0,
-                "banned": false,
-                "link": "https://scryfall.com/card/rav/166/golgari-brownscale",
-                "name": "Golgari Brownscale",
-                "preview": "https://cards.scryfall.io/normal/front/6/9/690cfc79-da41-4ac0-b0cc-719aa650b207.jpg",
-                "py/object": "pauperformance_bot.entity.api.archetype.TypicalCard",
-                "type_line": "Creature \u2014 Lizard",
-                "typical": 0
-            },
-            {
-                "at_least": [
-                    0.1,
-                    0.0,
-                    0.0,
-                    0.0
-                ],
-                "average": 1.0,
-                "banned": false,
-                "link": "https://scryfall.com/card/khm/262/ice-tunnel",
-                "name": "Ice Tunnel",
-                "preview": "https://cards.scryfall.io/normal/front/8/c/8cff3ef0-4dfb-472e-aa1e-77613dd0f6d8.jpg",
-                "py/object": "pauperformance_bot.entity.api.archetype.TypicalCard",
-                "type_line": "Snow Land \u2014 Island Swamp",
-                "typical": 0
-            },
-            {
-                "at_least": [
-                    0.1,
-                    0.1,
-                    0.1,
-                    0.1
-                ],
-                "average": 4.0,
-                "banned": false,
-                "link": "https://scryfall.com/card/ltr/60/l%C3%B3rien-revealed",
-                "name": "Lorien Revealed",
-                "preview": "https://cards.scryfall.io/normal/front/0/c/0ce44270-a684-4489-9077-521456e6dfaa.jpg",
-                "py/object": "pauperformance_bot.entity.api.archetype.TypicalCard",
-                "type_line": "Sorcery",
-                "typical": 0
-            },
-            {
-                "at_least": [
-                    0.1,
-                    0.0,
-                    0.0,
-                    0.0
-                ],
-                "average": 1.0,
-                "banned": false,
-                "link": "https://scryfall.com/card/tmt/68/oroku-saki-shredder-rising",
-                "name": "Oroku Saki, Shredder Rising",
-                "preview": "https://cards.scryfall.io/normal/front/e/6/e65ff1f4-a061-4c31-a78e-92af6e7bc56f.jpg",
-                "py/object": "pauperformance_bot.entity.api.archetype.TypicalCard",
-                "type_line": "Legendary Creature \u2014 Human Ninja",
-                "typical": 0
-            },
-            {
-                "at_least": [
-                    0.1,
-                    0.1,
-                    0.1,
-                    0.1
-                ],
-                "average": 4.0,
-                "banned": false,
-                "link": "https://scryfall.com/card/lrw/79/ponder",
-                "name": "Ponder",
-                "preview": "https://cards.scryfall.io/normal/front/b/a/ba6b6fc5-5077-4812-b8e9-906783dbaf67.jpg",
-                "py/object": "pauperformance_bot.entity.api.archetype.TypicalCard",
-                "type_line": "Sorcery",
-                "typical": 0
-            },
-            {
-                "at_least": [
-                    0.1,
-                    0.1,
+                    0.182,
+                    0.182,
                     0.0,
                     0.0
                 ],
@@ -2608,55 +2572,7 @@
             },
             {
                 "at_least": [
-                    0.1,
-                    0.1,
-                    0.1,
-                    0.1
-                ],
-                "average": 4.0,
-                "banned": false,
-                "link": "https://scryfall.com/card/akh/27/sacred-cat",
-                "name": "Sacred Cat",
-                "preview": "https://cards.scryfall.io/normal/front/0/8/08891c78-13c1-4d84-aa9c-78346b3b7d18.jpg",
-                "py/object": "pauperformance_bot.entity.api.archetype.TypicalCard",
-                "type_line": "Creature \u2014 Cat",
-                "typical": 0
-            },
-            {
-                "at_least": [
-                    0.1,
-                    0.1,
-                    0.1,
-                    0.1
-                ],
-                "average": 4.0,
-                "banned": false,
-                "link": "https://scryfall.com/card/clb/359/sea-gate",
-                "name": "Sea Gate",
-                "preview": "https://cards.scryfall.io/normal/front/d/9/d97f31e1-bcaf-4316-a2de-49e2cf7566ec.jpg",
-                "py/object": "pauperformance_bot.entity.api.archetype.TypicalCard",
-                "type_line": "Land \u2014 Gate",
-                "typical": 0
-            },
-            {
-                "at_least": [
-                    0.1,
-                    0.1,
-                    0.1,
-                    0.1
-                ],
-                "average": 4.0,
-                "banned": false,
-                "link": "https://scryfall.com/card/m11/33/squadron-hawk",
-                "name": "Squadron Hawk",
-                "preview": "https://cards.scryfall.io/normal/front/b/e/beddd409-0154-45a5-a20d-833cf1b5e1f4.jpg",
-                "py/object": "pauperformance_bot.entity.api.archetype.TypicalCard",
-                "type_line": "Creature \u2014 Bird",
-                "typical": 0
-            },
-            {
-                "at_least": [
-                    0.1,
+                    0.182,
                     0.0,
                     0.0,
                     0.0
@@ -2672,9 +2588,297 @@
             },
             {
                 "at_least": [
-                    0.1,
-                    0.1,
-                    0.1,
+                    0.182,
+                    0.091,
+                    0.0,
+                    0.0
+                ],
+                "average": 1.5,
+                "banned": false,
+                "link": "https://scryfall.com/card/mh3/45/thraben-charm",
+                "name": "Thraben Charm",
+                "preview": "https://cards.scryfall.io/normal/front/d/d/dd28a646-f38f-4cdf-948c-969cd979e5e6.jpg",
+                "py/object": "pauperformance_bot.entity.api.archetype.TypicalCard",
+                "type_line": "Instant",
+                "typical": 0
+            },
+            {
+                "at_least": [
+                    0.091,
+                    0.091,
+                    0.091,
+                    0.091
+                ],
+                "average": 4.0,
+                "banned": false,
+                "link": "https://scryfall.com/card/slz/88/baleful-strix",
+                "name": "Baleful Strix",
+                "preview": "https://cards.scryfall.io/normal/front/d/f/df0cc01f-356e-4645-96d6-e730e2d23482.jpg",
+                "py/object": "pauperformance_bot.entity.api.archetype.TypicalCard",
+                "type_line": "Artifact Creature \u2014 Bird",
+                "typical": 0
+            },
+            {
+                "at_least": [
+                    0.091,
+                    0.091,
+                    0.091,
+                    0.091
+                ],
+                "average": 4.0,
+                "banned": false,
+                "link": "https://scryfall.com/card/clb/346/basilisk-gate",
+                "name": "Basilisk Gate",
+                "preview": "https://cards.scryfall.io/normal/front/4/a/4a306025-d429-4006-b7ed-bdb287e83f57.jpg",
+                "py/object": "pauperformance_bot.entity.api.archetype.TypicalCard",
+                "type_line": "Land \u2014 Gate",
+                "typical": 0
+            },
+            {
+                "at_least": [
+                    0.091,
+                    0.091,
+                    0.091,
+                    0.091
+                ],
+                "average": 4.0,
+                "banned": false,
+                "link": "https://scryfall.com/card/clb/347/black-dragon-gate",
+                "name": "Black Dragon Gate",
+                "preview": "https://cards.scryfall.io/normal/front/c/4/c4ceb589-c741-44ac-98c8-3d997953ee61.jpg",
+                "py/object": "pauperformance_bot.entity.api.archetype.TypicalCard",
+                "type_line": "Land \u2014 Gate",
+                "typical": 0
+            },
+            {
+                "at_least": [
+                    0.091,
+                    0.091,
+                    0.091,
+                    0.091
+                ],
+                "average": 4.0,
+                "banned": false,
+                "link": "https://scryfall.com/card/ice/61/brainstorm",
+                "name": "Brainstorm",
+                "preview": "https://cards.scryfall.io/normal/front/8/d/8d42d7aa-7f53-4cfc-842a-086aab2448d1.jpg",
+                "py/object": "pauperformance_bot.entity.api.archetype.TypicalCard",
+                "type_line": "Instant",
+                "typical": 0
+            },
+            {
+                "at_least": [
+                    0.091,
+                    0.0,
+                    0.0,
+                    0.0
+                ],
+                "average": 1.0,
+                "banned": false,
+                "link": "https://scryfall.com/card/pls/97/cavern-harpy",
+                "name": "Cavern Harpy",
+                "preview": "https://cards.scryfall.io/normal/front/a/d/adfb0804-50d6-4bca-8733-72e01030a543.jpg",
+                "py/object": "pauperformance_bot.entity.api.archetype.TypicalCard",
+                "type_line": "Creature \u2014 Harpy Beast",
+                "typical": 0
+            },
+            {
+                "at_least": [
+                    0.091,
+                    0.091,
+                    0.091,
+                    0.091
+                ],
+                "average": 4.0,
+                "banned": false,
+                "link": "https://scryfall.com/card/clb/349/citadel-gate",
+                "name": "Citadel Gate",
+                "preview": "https://cards.scryfall.io/normal/front/c/0/c0e6f002-9a10-49a1-8604-2b8ff57732dd.jpg",
+                "py/object": "pauperformance_bot.entity.api.archetype.TypicalCard",
+                "type_line": "Land \u2014 Gate",
+                "typical": 0
+            },
+            {
+                "at_least": [
+                    0.091,
+                    0.091,
+                    0.091,
+                    0.091
+                ],
+                "average": 4.0,
+                "banned": false,
+                "link": "https://scryfall.com/card/ice/64/counterspell",
+                "name": "Counterspell",
+                "preview": "https://cards.scryfall.io/normal/front/a/e/aedbcbaa-40f0-485f-8427-778edc2d2ec0.jpg",
+                "py/object": "pauperformance_bot.entity.api.archetype.TypicalCard",
+                "type_line": "Instant",
+                "typical": 0
+            },
+            {
+                "at_least": [
+                    0.091,
+                    0.091,
+                    0.091,
+                    0.0
+                ],
+                "average": 3.0,
+                "banned": false,
+                "link": "https://scryfall.com/card/slz/2/dispatch",
+                "name": "Dispatch",
+                "preview": "https://cards.scryfall.io/normal/front/c/e/ce4f9234-1304-44dd-9a20-64dfafb1fe4b.jpg",
+                "py/object": "pauperformance_bot.entity.api.archetype.TypicalCard",
+                "type_line": "Instant",
+                "typical": 0
+            },
+            {
+                "at_least": [
+                    0.091,
+                    0.0,
+                    0.0,
+                    0.0
+                ],
+                "average": 1.0,
+                "banned": false,
+                "link": "https://scryfall.com/card/khm/257/glacial-floodplain",
+                "name": "Glacial Floodplain",
+                "preview": "https://cards.scryfall.io/normal/front/9/d/9de5fadd-4559-479f-b45d-abe792f0f6e5.jpg",
+                "py/object": "pauperformance_bot.entity.api.archetype.TypicalCard",
+                "type_line": "Snow Land \u2014 Plains Island",
+                "typical": 0
+            },
+            {
+                "at_least": [
+                    0.091,
+                    0.0,
+                    0.0,
+                    0.0
+                ],
+                "average": 1.0,
+                "banned": false,
+                "link": "https://scryfall.com/card/rav/166/golgari-brownscale",
+                "name": "Golgari Brownscale",
+                "preview": "https://cards.scryfall.io/normal/front/6/9/690cfc79-da41-4ac0-b0cc-719aa650b207.jpg",
+                "py/object": "pauperformance_bot.entity.api.archetype.TypicalCard",
+                "type_line": "Creature \u2014 Lizard",
+                "typical": 0
+            },
+            {
+                "at_least": [
+                    0.091,
+                    0.0,
+                    0.0,
+                    0.0
+                ],
+                "average": 1.0,
+                "banned": false,
+                "link": "https://scryfall.com/card/khm/262/ice-tunnel",
+                "name": "Ice Tunnel",
+                "preview": "https://cards.scryfall.io/normal/front/8/c/8cff3ef0-4dfb-472e-aa1e-77613dd0f6d8.jpg",
+                "py/object": "pauperformance_bot.entity.api.archetype.TypicalCard",
+                "type_line": "Snow Land \u2014 Island Swamp",
+                "typical": 0
+            },
+            {
+                "at_least": [
+                    0.091,
+                    0.091,
+                    0.091,
+                    0.091
+                ],
+                "average": 4.0,
+                "banned": false,
+                "link": "https://scryfall.com/card/ltr/60/l%C3%B3rien-revealed",
+                "name": "Lorien Revealed",
+                "preview": "https://cards.scryfall.io/normal/front/0/c/0ce44270-a684-4489-9077-521456e6dfaa.jpg",
+                "py/object": "pauperformance_bot.entity.api.archetype.TypicalCard",
+                "type_line": "Sorcery",
+                "typical": 0
+            },
+            {
+                "at_least": [
+                    0.091,
+                    0.0,
+                    0.0,
+                    0.0
+                ],
+                "average": 1.0,
+                "banned": false,
+                "link": "https://scryfall.com/card/tmt/68/oroku-saki-shredder-rising",
+                "name": "Oroku Saki, Shredder Rising",
+                "preview": "https://cards.scryfall.io/normal/front/e/6/e65ff1f4-a061-4c31-a78e-92af6e7bc56f.jpg",
+                "py/object": "pauperformance_bot.entity.api.archetype.TypicalCard",
+                "type_line": "Legendary Creature \u2014 Human Ninja",
+                "typical": 0
+            },
+            {
+                "at_least": [
+                    0.091,
+                    0.091,
+                    0.091,
+                    0.091
+                ],
+                "average": 4.0,
+                "banned": false,
+                "link": "https://scryfall.com/card/lrw/79/ponder",
+                "name": "Ponder",
+                "preview": "https://cards.scryfall.io/normal/front/b/a/ba6b6fc5-5077-4812-b8e9-906783dbaf67.jpg",
+                "py/object": "pauperformance_bot.entity.api.archetype.TypicalCard",
+                "type_line": "Sorcery",
+                "typical": 0
+            },
+            {
+                "at_least": [
+                    0.091,
+                    0.091,
+                    0.091,
+                    0.091
+                ],
+                "average": 4.0,
+                "banned": false,
+                "link": "https://scryfall.com/card/akh/27/sacred-cat",
+                "name": "Sacred Cat",
+                "preview": "https://cards.scryfall.io/normal/front/0/8/08891c78-13c1-4d84-aa9c-78346b3b7d18.jpg",
+                "py/object": "pauperformance_bot.entity.api.archetype.TypicalCard",
+                "type_line": "Creature \u2014 Cat",
+                "typical": 0
+            },
+            {
+                "at_least": [
+                    0.091,
+                    0.091,
+                    0.091,
+                    0.091
+                ],
+                "average": 4.0,
+                "banned": false,
+                "link": "https://scryfall.com/card/clb/359/sea-gate",
+                "name": "Sea Gate",
+                "preview": "https://cards.scryfall.io/normal/front/d/9/d97f31e1-bcaf-4316-a2de-49e2cf7566ec.jpg",
+                "py/object": "pauperformance_bot.entity.api.archetype.TypicalCard",
+                "type_line": "Land \u2014 Gate",
+                "typical": 0
+            },
+            {
+                "at_least": [
+                    0.091,
+                    0.091,
+                    0.091,
+                    0.091
+                ],
+                "average": 4.0,
+                "banned": false,
+                "link": "https://scryfall.com/card/m11/33/squadron-hawk",
+                "name": "Squadron Hawk",
+                "preview": "https://cards.scryfall.io/normal/front/b/e/beddd409-0154-45a5-a20d-833cf1b5e1f4.jpg",
+                "py/object": "pauperformance_bot.entity.api.archetype.TypicalCard",
+                "type_line": "Creature \u2014 Bird",
+                "typical": 0
+            },
+            {
+                "at_least": [
+                    0.091,
+                    0.091,
+                    0.091,
                     0.0
                 ],
                 "average": 3.0,
@@ -2688,24 +2892,8 @@
             },
             {
                 "at_least": [
-                    0.1,
-                    0.1,
-                    0.0,
-                    0.0
-                ],
-                "average": 2.0,
-                "banned": false,
-                "link": "https://scryfall.com/card/mh3/45/thraben-charm",
-                "name": "Thraben Charm",
-                "preview": "https://cards.scryfall.io/normal/front/d/d/dd28a646-f38f-4cdf-948c-969cd979e5e6.jpg",
-                "py/object": "pauperformance_bot.entity.api.archetype.TypicalCard",
-                "type_line": "Instant",
-                "typical": 0
-            },
-            {
-                "at_least": [
-                    0.1,
-                    0.1,
+                    0.091,
+                    0.091,
                     0.0,
                     0.0
                 ],
@@ -2720,8 +2908,8 @@
             },
             {
                 "at_least": [
-                    0.1,
-                    0.1,
+                    0.091,
+                    0.091,
                     0.0,
                     0.0
                 ],
@@ -2736,7 +2924,7 @@
             },
             {
                 "at_least": [
-                    0.1,
+                    0.091,
                     0.0,
                     0.0,
                     0.0
@@ -2752,6 +2940,14 @@
             }
         ],
         "metagames": [
+            {
+                "date": "2026-11-13",
+                "decks": 1,
+                "label": "trk",
+                "metagame": "148",
+                "name": "Star Trek",
+                "py/object": "pauperformance_bot.entity.api.archetype.MetagameRef"
+            },
             {
                 "date": "2026-10-02",
                 "decks": 1,
@@ -2797,9 +2993,9 @@
         "side": [
             {
                 "at_least": [
-                    0.9,
-                    0.9,
-                    0.8,
+                    0.909,
+                    0.909,
+                    0.818,
                     0.0
                 ],
                 "average": 2.9,
@@ -2813,9 +3009,9 @@
             },
             {
                 "at_least": [
-                    0.9,
-                    0.8,
-                    0.8,
+                    0.909,
+                    0.818,
+                    0.818,
                     0.0
                 ],
                 "average": 2.8,
@@ -2829,12 +3025,12 @@
             },
             {
                 "at_least": [
-                    0.8,
-                    0.8,
-                    0.8,
+                    0.818,
+                    0.818,
+                    0.727,
                     0.0
                 ],
-                "average": 3.0,
+                "average": 2.9,
                 "banned": false,
                 "link": "https://scryfall.com/card/som/52/vedalken-certarch",
                 "name": "Vedalken Certarch",
@@ -2845,12 +3041,12 @@
             },
             {
                 "at_least": [
-                    0.5,
-                    0.5,
-                    0.3,
+                    0.545,
+                    0.455,
+                    0.273,
                     0.0
                 ],
-                "average": 2.6,
+                "average": 2.3,
                 "banned": false,
                 "link": "https://scryfall.com/card/mh3/45/thraben-charm",
                 "name": "Thraben Charm",
@@ -2861,8 +3057,8 @@
             },
             {
                 "at_least": [
-                    0.4,
-                    0.3,
+                    0.455,
+                    0.364,
                     0.0,
                     0.0
                 ],
@@ -2877,7 +3073,7 @@
             },
             {
                 "at_least": [
-                    0.8,
+                    0.818,
                     0.0,
                     0.0,
                     0.0
@@ -2893,7 +3089,7 @@
             },
             {
                 "at_least": [
-                    0.5,
+                    0.455,
                     0.0,
                     0.0,
                     0.0
@@ -2909,10 +3105,10 @@
             },
             {
                 "at_least": [
-                    0.2,
-                    0.2,
-                    0.2,
-                    0.2
+                    0.182,
+                    0.182,
+                    0.182,
+                    0.182
                 ],
                 "average": 4.0,
                 "banned": false,
@@ -2925,7 +3121,7 @@
             },
             {
                 "at_least": [
-                    0.2,
+                    0.182,
                     0.0,
                     0.0,
                     0.0
@@ -2941,8 +3137,8 @@
             },
             {
                 "at_least": [
-                    0.2,
-                    0.1,
+                    0.182,
+                    0.091,
                     0.0,
                     0.0
                 ],
@@ -2957,8 +3153,24 @@
             },
             {
                 "at_least": [
-                    0.1,
-                    0.1,
+                    0.182,
+                    0.182,
+                    0.182,
+                    0.0
+                ],
+                "average": 3.0,
+                "banned": false,
+                "link": "https://scryfall.com/card/som/49/turn-aside",
+                "name": "Turn Aside",
+                "preview": "https://cards.scryfall.io/normal/front/5/6/56226f57-6ff0-430e-aba6-6b3dd51f8d3c.jpg",
+                "py/object": "pauperformance_bot.entity.api.archetype.TypicalCard",
+                "type_line": "Instant",
+                "typical": 0
+            },
+            {
+                "at_least": [
+                    0.091,
+                    0.091,
                     0.0,
                     0.0
                 ],
@@ -2973,10 +3185,10 @@
             },
             {
                 "at_least": [
-                    0.1,
-                    0.1,
-                    0.1,
-                    0.1
+                    0.091,
+                    0.091,
+                    0.091,
+                    0.091
                 ],
                 "average": 4.0,
                 "banned": false,
@@ -2989,7 +3201,7 @@
             },
             {
                 "at_least": [
-                    0.1,
+                    0.091,
                     0.0,
                     0.0,
                     0.0
@@ -3005,10 +3217,10 @@
             },
             {
                 "at_least": [
-                    0.1,
-                    0.1,
-                    0.1,
-                    0.1
+                    0.091,
+                    0.091,
+                    0.091,
+                    0.091
                 ],
                 "average": 4.0,
                 "banned": false,
@@ -3021,7 +3233,7 @@
             },
             {
                 "at_least": [
-                    0.1,
+                    0.091,
                     0.0,
                     0.0,
                     0.0
@@ -3037,7 +3249,7 @@
             },
             {
                 "at_least": [
-                    0.1,
+                    0.091,
                     0.0,
                     0.0,
                     0.0
@@ -3053,7 +3265,7 @@
             },
             {
                 "at_least": [
-                    0.1,
+                    0.091,
                     0.0,
                     0.0,
                     0.0
@@ -3069,8 +3281,8 @@
             },
             {
                 "at_least": [
-                    0.1,
-                    0.1,
+                    0.091,
+                    0.091,
                     0.0,
                     0.0
                 ],
@@ -3085,7 +3297,7 @@
             },
             {
                 "at_least": [
-                    0.1,
+                    0.091,
                     0.0,
                     0.0,
                     0.0
@@ -3101,8 +3313,8 @@
             },
             {
                 "at_least": [
-                    0.1,
-                    0.1,
+                    0.091,
+                    0.091,
                     0.0,
                     0.0
                 ],
@@ -3117,8 +3329,8 @@
             },
             {
                 "at_least": [
-                    0.1,
-                    0.1,
+                    0.091,
+                    0.091,
                     0.0,
                     0.0
                 ],
@@ -3133,10 +3345,10 @@
             },
             {
                 "at_least": [
-                    0.1,
-                    0.1,
-                    0.1,
-                    0.1
+                    0.091,
+                    0.091,
+                    0.091,
+                    0.091
                 ],
                 "average": 4.0,
                 "banned": false,
@@ -3149,23 +3361,7 @@
             },
             {
                 "at_least": [
-                    0.1,
-                    0.1,
-                    0.1,
-                    0.0
-                ],
-                "average": 3.0,
-                "banned": false,
-                "link": "https://scryfall.com/card/som/49/turn-aside",
-                "name": "Turn Aside",
-                "preview": "https://cards.scryfall.io/normal/front/5/6/56226f57-6ff0-430e-aba6-6b3dd51f8d3c.jpg",
-                "py/object": "pauperformance_bot.entity.api.archetype.TypicalCard",
-                "type_line": "Instant",
-                "typical": 0
-            },
-            {
-                "at_least": [
-                    0.1,
+                    0.091,
                     0.0,
                     0.0,
                     0.0
@@ -3438,6 +3634,14 @@
                 "label": "fra",
                 "metagame": "147",
                 "name": "Reality Fracture",
+                "py/object": "pauperformance_bot.entity.api.archetype.MetagameRef"
+            },
+            {
+                "date": "2026-11-13",
+                "decks": 1,
+                "label": "trk",
+                "metagame": "148",
+                "name": "Star Trek",
                 "py/object": "pauperformance_bot.entity.api.archetype.MetagameRef"
             }
         ],
