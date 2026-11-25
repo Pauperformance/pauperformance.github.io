@@ -4,6 +4,7 @@ export const SOURCE_LABEL = {
   mtggoldfish: 'MTGGoldfish',
   mtgtop8: 'MTGTop8',
   waybackmachine: 'Wayback Machine',
+  pdc: 'PDC Magic',
 }
 
 export const sourceLabel = source => SOURCE_LABEL[source] || source
@@ -11,6 +12,8 @@ export const sourceLabel = source => SOURCE_LABEL[source] || source
 // Where a deck's own page is, from its url.
 export function sourceOfUrl(url) {
   if (!url) return null
+  // PDC's decks are links to the archive's copy of pdcmagic.com: before the archive
+  if (url.includes('pdcmagic.com')) return 'pdc'
   if (url.startsWith('https://web.archive.org/')) return 'waybackmachine'
   if (url.includes('mtgtop8.com')) return 'mtgtop8'
   return 'mtggoldfish'

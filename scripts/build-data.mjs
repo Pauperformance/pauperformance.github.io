@@ -276,11 +276,13 @@ function parseDecklist(txt) {
 
 // The tournament deck sources: deck lists (<id>.txt) and their metadata
 // (<id>.json). MTGGoldfish, and the older Pauper events of the Wayback Machine
-// (ids <mtgo_id>-<n>) and MTGTop8 (ids mt8-<n>): ids don't collide across sources.
+// (ids <mtgo_id>-<n>), MTGTop8 (ids mt8-<n>) and the old PDC Magic site, also
+// from the Wayback Machine (ids pdc-<n>): ids don't collide across sources.
 const tournamentDeckSources = [
   { decks: 'assets/data/deck/mtggoldfish_tournament', meta: 'assets/data/tournament/mtggoldfish/deck' },
   { decks: 'assets/data/deck/mtgtop8_tournament', meta: 'assets/data/tournament/mtgtop8/deck' },
   { decks: 'assets/data/deck/waybackmachine_tournament', meta: 'assets/data/tournament/waybackmachine/deck' },
+  { decks: 'assets/data/deck/pdc', meta: 'assets/data/tournament/pdc/deck' },
 ]
 // the deck list of a tournament deck id, from the source holding it
 function tournamentDeckTxtPath(id) {
