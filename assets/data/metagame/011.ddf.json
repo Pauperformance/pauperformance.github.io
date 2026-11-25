@@ -83,12 +83,12 @@
                     "typical": 4
                 }
             ],
-            "decks": 5,
-            "meta_share": 20.83,
+            "decks": 6,
+            "meta_share": 22.22,
             "name": "Goblins",
-            "previous_share": 28.21,
+            "previous_share": 28.57,
             "py/object": "pauperformance_bot.entity.api.metagame.ArchetypeShare",
-            "tournaments": 4
+            "tournaments": 5
         },
         {
             "cards": [
@@ -174,9 +174,9 @@
                 }
             ],
             "decks": 5,
-            "meta_share": 20.83,
+            "meta_share": 18.52,
             "name": "MonoU Faeries",
-            "previous_share": 35.9,
+            "previous_share": 33.33,
             "py/object": "pauperformance_bot.entity.api.metagame.ArchetypeShare",
             "tournaments": 4
         },
@@ -264,9 +264,9 @@
                 }
             ],
             "decks": 3,
-            "meta_share": 12.5,
+            "meta_share": 11.11,
             "name": "Burn",
-            "previous_share": 5.13,
+            "previous_share": 4.76,
             "py/object": "pauperformance_bot.entity.api.metagame.ArchetypeShare",
             "tournaments": 2
         },
@@ -354,11 +354,191 @@
                 }
             ],
             "decks": 3,
-            "meta_share": 12.5,
+            "meta_share": 11.11,
             "name": "Dimir Control",
-            "previous_share": 7.69,
+            "previous_share": 7.14,
             "py/object": "pauperformance_bot.entity.api.metagame.ArchetypeShare",
             "tournaments": 2
+        },
+        {
+            "cards": [
+                {
+                    "at_least": [
+                        1.0,
+                        1.0,
+                        1.0,
+                        1.0
+                    ],
+                    "average": 4.0,
+                    "banned": false,
+                    "link": "https://scryfall.com/card/tor/51/cabal-ritual",
+                    "name": "Cabal Ritual",
+                    "preview": "https://cards.scryfall.io/normal/front/5/4/5403b49d-03a7-4cc3-af3c-df098c1c9c2e.jpg",
+                    "py/object": "pauperformance_bot.entity.api.archetype.TypicalCard",
+                    "type_line": "Instant",
+                    "typical": 4
+                },
+                {
+                    "at_least": [
+                        1.0,
+                        1.0,
+                        1.0,
+                        0.667
+                    ],
+                    "average": 3.7,
+                    "banned": false,
+                    "link": "https://scryfall.com/card/mrd/151/chromatic-sphere",
+                    "name": "Chromatic Sphere",
+                    "preview": "https://cards.scryfall.io/normal/front/f/3/f31a6dfd-93d2-49c8-a357-9a707b9c42bd.jpg",
+                    "py/object": "pauperformance_bot.entity.api.archetype.TypicalCard",
+                    "type_line": "Artifact",
+                    "typical": 4
+                },
+                {
+                    "at_least": [
+                        1.0,
+                        1.0,
+                        1.0,
+                        1.0
+                    ],
+                    "average": 4.0,
+                    "banned": false,
+                    "link": "https://scryfall.com/card/lea/98/dark-ritual",
+                    "name": "Dark Ritual",
+                    "preview": "https://cards.scryfall.io/normal/front/e/b/ebb6664d-23ca-456e-9916-afcd6f26aa7f.jpg",
+                    "py/object": "pauperformance_bot.entity.api.archetype.TypicalCard",
+                    "type_line": "Instant",
+                    "typical": 4
+                },
+                {
+                    "at_least": [
+                        1.0,
+                        1.0,
+                        1.0,
+                        1.0
+                    ],
+                    "average": 4.0,
+                    "banned": true,
+                    "link": "https://scryfall.com/card/tsp/152/empty-the-warrens",
+                    "name": "Empty the Warrens",
+                    "preview": "https://cards.scryfall.io/normal/front/9/5/952bb27c-c58a-478a-b637-eb4f7e1e0ab4.jpg",
+                    "py/object": "pauperformance_bot.entity.api.archetype.TypicalCard",
+                    "type_line": "Sorcery",
+                    "typical": 4
+                },
+                {
+                    "at_least": [
+                        1.0,
+                        1.0,
+                        1.0,
+                        1.0
+                    ],
+                    "average": 4.0,
+                    "banned": true,
+                    "link": "https://scryfall.com/card/tsp/160/grapeshot",
+                    "name": "Grapeshot",
+                    "preview": "https://cards.scryfall.io/normal/front/4/e/4ee33cb6-768e-44a0-b6f4-b8638aa84330.jpg",
+                    "py/object": "pauperformance_bot.entity.api.archetype.TypicalCard",
+                    "type_line": "Sorcery",
+                    "typical": 4
+                }
+            ],
+            "decks": 3,
+            "meta_share": 11.11,
+            "name": "Empty The Warrens Storm",
+            "previous_share": 7.14,
+            "py/object": "pauperformance_bot.entity.api.metagame.ArchetypeShare",
+            "tournaments": 3
+        },
+        {
+            "cards": [
+                {
+                    "at_least": [
+                        1.0,
+                        1.0,
+                        1.0,
+                        0.667
+                    ],
+                    "average": 3.7,
+                    "banned": false,
+                    "link": "https://scryfall.com/card/rav/165/gather-courage",
+                    "name": "Gather Courage",
+                    "preview": "https://cards.scryfall.io/normal/front/9/3/93311f80-0d0e-4005-ba43-5dbfe438d127.jpg",
+                    "py/object": "pauperformance_bot.entity.api.archetype.TypicalCard",
+                    "type_line": "Instant",
+                    "typical": 4
+                },
+                {
+                    "at_least": [
+                        1.0,
+                        1.0,
+                        1.0,
+                        1.0
+                    ],
+                    "average": 4.0,
+                    "banned": false,
+                    "link": "https://scryfall.com/card/wwk/104/groundswell",
+                    "name": "Groundswell",
+                    "preview": "https://cards.scryfall.io/normal/front/4/c/4ca76e9a-672f-49eb-86c6-00fac60d3065.jpg",
+                    "py/object": "pauperformance_bot.entity.api.archetype.TypicalCard",
+                    "type_line": "Instant",
+                    "typical": 4
+                },
+                {
+                    "at_least": [
+                        1.0,
+                        1.0,
+                        1.0,
+                        1.0
+                    ],
+                    "average": 4.0,
+                    "banned": false,
+                    "link": "https://scryfall.com/card/eve/71/nettle-sentinel",
+                    "name": "Nettle Sentinel",
+                    "preview": "https://cards.scryfall.io/normal/front/f/9/f9f21681-fd36-4106-8395-3153599a08a6.jpg",
+                    "py/object": "pauperformance_bot.entity.api.archetype.TypicalCard",
+                    "type_line": "Creature \u2014 Elf Warrior",
+                    "typical": 4
+                },
+                {
+                    "at_least": [
+                        1.0,
+                        1.0,
+                        1.0,
+                        1.0
+                    ],
+                    "average": 4.0,
+                    "banned": false,
+                    "link": "https://scryfall.com/card/ulg/110/rancor",
+                    "name": "Rancor",
+                    "preview": "https://cards.scryfall.io/normal/front/5/9/59e256c2-38df-4012-9308-ce17dd889e5f.jpg",
+                    "py/object": "pauperformance_bot.entity.api.archetype.TypicalCard",
+                    "type_line": "Enchantment \u2014 Aura",
+                    "typical": 4
+                },
+                {
+                    "at_least": [
+                        1.0,
+                        1.0,
+                        1.0,
+                        1.0
+                    ],
+                    "average": 4.0,
+                    "banned": false,
+                    "link": "https://scryfall.com/card/gpt/96/skarrgan-pit-skulk",
+                    "name": "Skarrgan Pit-Skulk",
+                    "preview": "https://cards.scryfall.io/normal/front/c/c/cc65d7ea-e8f4-4be9-94e4-2fa2e4d83177.jpg",
+                    "py/object": "pauperformance_bot.entity.api.archetype.TypicalCard",
+                    "type_line": "Creature \u2014 Human Warrior",
+                    "typical": 4
+                }
+            ],
+            "decks": 3,
+            "meta_share": 11.11,
+            "name": "Stompy",
+            "previous_share": 14.29,
+            "py/object": "pauperformance_bot.entity.api.metagame.ArchetypeShare",
+            "tournaments": 3
         },
         {
             "cards": [
@@ -444,191 +624,11 @@
                 }
             ],
             "decks": 2,
-            "meta_share": 8.33,
+            "meta_share": 7.41,
             "name": "Affinity",
             "previous_share": 0.0,
             "py/object": "pauperformance_bot.entity.api.metagame.ArchetypeShare",
             "tournaments": 1
-        },
-        {
-            "cards": [
-                {
-                    "at_least": [
-                        1.0,
-                        1.0,
-                        1.0,
-                        1.0
-                    ],
-                    "average": 4.0,
-                    "banned": false,
-                    "link": "https://scryfall.com/card/tor/51/cabal-ritual",
-                    "name": "Cabal Ritual",
-                    "preview": "https://cards.scryfall.io/normal/front/5/4/5403b49d-03a7-4cc3-af3c-df098c1c9c2e.jpg",
-                    "py/object": "pauperformance_bot.entity.api.archetype.TypicalCard",
-                    "type_line": "Instant",
-                    "typical": 4
-                },
-                {
-                    "at_least": [
-                        1.0,
-                        1.0,
-                        1.0,
-                        1.0
-                    ],
-                    "average": 4.0,
-                    "banned": false,
-                    "link": "https://scryfall.com/card/lea/98/dark-ritual",
-                    "name": "Dark Ritual",
-                    "preview": "https://cards.scryfall.io/normal/front/e/b/ebb6664d-23ca-456e-9916-afcd6f26aa7f.jpg",
-                    "py/object": "pauperformance_bot.entity.api.archetype.TypicalCard",
-                    "type_line": "Instant",
-                    "typical": 4
-                },
-                {
-                    "at_least": [
-                        1.0,
-                        1.0,
-                        1.0,
-                        1.0
-                    ],
-                    "average": 4.0,
-                    "banned": true,
-                    "link": "https://scryfall.com/card/tsp/152/empty-the-warrens",
-                    "name": "Empty the Warrens",
-                    "preview": "https://cards.scryfall.io/normal/front/9/5/952bb27c-c58a-478a-b637-eb4f7e1e0ab4.jpg",
-                    "py/object": "pauperformance_bot.entity.api.archetype.TypicalCard",
-                    "type_line": "Sorcery",
-                    "typical": 4
-                },
-                {
-                    "at_least": [
-                        1.0,
-                        1.0,
-                        1.0,
-                        1.0
-                    ],
-                    "average": 4.0,
-                    "banned": true,
-                    "link": "https://scryfall.com/card/tsp/160/grapeshot",
-                    "name": "Grapeshot",
-                    "preview": "https://cards.scryfall.io/normal/front/4/e/4ee33cb6-768e-44a0-b6f4-b8638aa84330.jpg",
-                    "py/object": "pauperformance_bot.entity.api.archetype.TypicalCard",
-                    "type_line": "Sorcery",
-                    "typical": 4
-                },
-                {
-                    "at_least": [
-                        1.0,
-                        1.0,
-                        1.0,
-                        1.0
-                    ],
-                    "average": 4.0,
-                    "banned": false,
-                    "link": "https://scryfall.com/card/shm/211/manamorphose",
-                    "name": "Manamorphose",
-                    "preview": "https://cards.scryfall.io/normal/front/5/0/50283122-b8c4-4fb3-8eba-6252b72222f4.jpg",
-                    "py/object": "pauperformance_bot.entity.api.archetype.TypicalCard",
-                    "type_line": "Instant",
-                    "typical": 4
-                }
-            ],
-            "decks": 2,
-            "meta_share": 8.33,
-            "name": "Empty The Warrens Storm",
-            "previous_share": 7.69,
-            "py/object": "pauperformance_bot.entity.api.metagame.ArchetypeShare",
-            "tournaments": 2
-        },
-        {
-            "cards": [
-                {
-                    "at_least": [
-                        1.0,
-                        1.0,
-                        1.0,
-                        1.0
-                    ],
-                    "average": 4.0,
-                    "banned": false,
-                    "link": "https://scryfall.com/card/rav/165/gather-courage",
-                    "name": "Gather Courage",
-                    "preview": "https://cards.scryfall.io/normal/front/9/3/93311f80-0d0e-4005-ba43-5dbfe438d127.jpg",
-                    "py/object": "pauperformance_bot.entity.api.archetype.TypicalCard",
-                    "type_line": "Instant",
-                    "typical": 4
-                },
-                {
-                    "at_least": [
-                        1.0,
-                        1.0,
-                        1.0,
-                        1.0
-                    ],
-                    "average": 4.0,
-                    "banned": false,
-                    "link": "https://scryfall.com/card/wwk/104/groundswell",
-                    "name": "Groundswell",
-                    "preview": "https://cards.scryfall.io/normal/front/4/c/4ca76e9a-672f-49eb-86c6-00fac60d3065.jpg",
-                    "py/object": "pauperformance_bot.entity.api.archetype.TypicalCard",
-                    "type_line": "Instant",
-                    "typical": 4
-                },
-                {
-                    "at_least": [
-                        1.0,
-                        1.0,
-                        1.0,
-                        1.0
-                    ],
-                    "average": 4.0,
-                    "banned": false,
-                    "link": "https://scryfall.com/card/eve/71/nettle-sentinel",
-                    "name": "Nettle Sentinel",
-                    "preview": "https://cards.scryfall.io/normal/front/f/9/f9f21681-fd36-4106-8395-3153599a08a6.jpg",
-                    "py/object": "pauperformance_bot.entity.api.archetype.TypicalCard",
-                    "type_line": "Creature \u2014 Elf Warrior",
-                    "typical": 4
-                },
-                {
-                    "at_least": [
-                        1.0,
-                        1.0,
-                        1.0,
-                        1.0
-                    ],
-                    "average": 4.0,
-                    "banned": false,
-                    "link": "https://scryfall.com/card/ulg/110/rancor",
-                    "name": "Rancor",
-                    "preview": "https://cards.scryfall.io/normal/front/5/9/59e256c2-38df-4012-9308-ce17dd889e5f.jpg",
-                    "py/object": "pauperformance_bot.entity.api.archetype.TypicalCard",
-                    "type_line": "Enchantment \u2014 Aura",
-                    "typical": 4
-                },
-                {
-                    "at_least": [
-                        1.0,
-                        1.0,
-                        1.0,
-                        1.0
-                    ],
-                    "average": 4.0,
-                    "banned": false,
-                    "link": "https://scryfall.com/card/gpt/96/skarrgan-pit-skulk",
-                    "name": "Skarrgan Pit-Skulk",
-                    "preview": "https://cards.scryfall.io/normal/front/c/c/cc65d7ea-e8f4-4be9-94e4-2fa2e4d83177.jpg",
-                    "py/object": "pauperformance_bot.entity.api.archetype.TypicalCard",
-                    "type_line": "Creature \u2014 Human Warrior",
-                    "typical": 4
-                }
-            ],
-            "decks": 2,
-            "meta_share": 8.33,
-            "name": "Stompy",
-            "previous_share": 12.82,
-            "py/object": "pauperformance_bot.entity.api.metagame.ArchetypeShare",
-            "tournaments": 2
         },
         {
             "cards": [
@@ -714,7 +714,7 @@
                 }
             ],
             "decks": 1,
-            "meta_share": 4.17,
+            "meta_share": 3.7,
             "name": "Golgari TortEx",
             "previous_share": 0.0,
             "py/object": "pauperformance_bot.entity.api.metagame.ArchetypeShare",
@@ -804,17 +804,17 @@
                 }
             ],
             "decks": 1,
-            "meta_share": 4.17,
+            "meta_share": 3.7,
             "name": "White Weenie",
-            "previous_share": 2.56,
+            "previous_share": 4.76,
             "py/object": "pauperformance_bot.entity.api.metagame.ArchetypeShare",
             "tournaments": 1
         }
     ],
-    "decks": 24,
+    "decks": 27,
     "metagame": {
         "date": "2010-09-03",
-        "decks": 24,
+        "decks": 27,
         "label": "ddf",
         "metagame": "011",
         "name": "Duel Decks: Elspeth vs. Tezzeret",
@@ -837,5 +837,5 @@
         "py/object": "pauperformance_bot.entity.api.archetype.MetagameRef"
     },
     "py/object": "pauperformance_bot.entity.api.metagame.MetagameBreakdown",
-    "tournaments": 4
+    "tournaments": 7
 }

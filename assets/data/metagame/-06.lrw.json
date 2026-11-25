@@ -1,9 +1,100 @@
 {
-    "archetypes": [],
-    "decks": 0,
+    "archetypes": [
+        {
+            "cards": [
+                {
+                    "at_least": [
+                        1.0,
+                        1.0,
+                        1.0,
+                        1.0
+                    ],
+                    "average": 4.0,
+                    "banned": false,
+                    "link": "https://scryfall.com/card/ice/64/counterspell",
+                    "name": "Counterspell",
+                    "preview": "https://cards.scryfall.io/normal/front/a/e/aedbcbaa-40f0-485f-8427-778edc2d2ec0.jpg",
+                    "py/object": "pauperformance_bot.entity.api.archetype.TypicalCard",
+                    "type_line": "Instant",
+                    "typical": 4
+                },
+                {
+                    "at_least": [
+                        1.0,
+                        1.0,
+                        1.0,
+                        1.0
+                    ],
+                    "average": 4.0,
+                    "banned": false,
+                    "link": "https://scryfall.com/card/inv/56/exclude",
+                    "name": "Exclude",
+                    "preview": "https://cards.scryfall.io/normal/front/a/e/aeb359c8-209c-455f-84b2-970e5678a9fa.jpg",
+                    "py/object": "pauperformance_bot.entity.api.archetype.TypicalCard",
+                    "type_line": "Instant",
+                    "typical": 4
+                },
+                {
+                    "at_least": [
+                        1.0,
+                        1.0,
+                        1.0,
+                        1.0
+                    ],
+                    "average": 4.0,
+                    "banned": false,
+                    "link": "https://scryfall.com/card/leg/58/force-spike",
+                    "name": "Force Spike",
+                    "preview": "https://cards.scryfall.io/normal/front/7/0/70e64028-ae96-4950-aa6c-9d347409fad3.jpg",
+                    "py/object": "pauperformance_bot.entity.api.archetype.TypicalCard",
+                    "type_line": "Instant",
+                    "typical": 4
+                },
+                {
+                    "at_least": [
+                        1.0,
+                        1.0,
+                        1.0,
+                        1.0
+                    ],
+                    "average": 4.0,
+                    "banned": false,
+                    "link": "https://scryfall.com/card/plc/58/piracy-charm",
+                    "name": "Piracy Charm",
+                    "preview": "https://cards.scryfall.io/normal/front/5/8/586a1d9f-59ae-41a7-8de7-d6c4553ea79e.jpg",
+                    "py/object": "pauperformance_bot.entity.api.archetype.TypicalCard",
+                    "type_line": "Instant",
+                    "typical": 4
+                },
+                {
+                    "at_least": [
+                        1.0,
+                        1.0,
+                        1.0,
+                        1.0
+                    ],
+                    "average": 4.0,
+                    "banned": false,
+                    "link": "https://scryfall.com/card/inv/67/prohibit",
+                    "name": "Prohibit",
+                    "preview": "https://cards.scryfall.io/normal/front/0/d/0daa5458-2a97-40d0-b18d-2381a7a68ee1.jpg",
+                    "py/object": "pauperformance_bot.entity.api.archetype.TypicalCard",
+                    "type_line": "Instant",
+                    "typical": 4
+                }
+            ],
+            "decks": 2,
+            "meta_share": 100.0,
+            "name": "MonoU Control",
+            "previous_share": null,
+            "py/object": "pauperformance_bot.entity.api.metagame.ArchetypeShare",
+            "tournaments": 2
+        }
+    ],
+    "decks": 2,
     "metagame": {
         "date": "2007-10-12",
-        "decks": 0,
+        "decks": 2,
         "label": "lrw",
         "metagame": "-06",
         "name": "Lorwyn",
@@ -26,5 +117,5 @@
         "py/object": "pauperformance_bot.entity.api.archetype.MetagameRef"
     },
     "py/object": "pauperformance_bot.entity.api.metagame.MetagameBreakdown",
-    "tournaments": 0
+    "tournaments": 2
 }

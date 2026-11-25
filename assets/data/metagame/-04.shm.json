@@ -1,9 +1,100 @@
 {
-    "archetypes": [],
-    "decks": 0,
+    "archetypes": [
+        {
+            "cards": [
+                {
+                    "at_least": [
+                        1.0,
+                        1.0,
+                        1.0,
+                        1.0
+                    ],
+                    "average": 4.0,
+                    "banned": false,
+                    "link": "https://scryfall.com/card/dst/39/chittering-rats",
+                    "name": "Chittering Rats",
+                    "preview": "https://cards.scryfall.io/normal/front/9/8/980135d5-dfaa-4beb-b4b3-1e256bb46e61.jpg",
+                    "py/object": "pauperformance_bot.entity.api.archetype.TypicalCard",
+                    "type_line": "Creature \u2014 Rat",
+                    "typical": 4
+                },
+                {
+                    "at_least": [
+                        1.0,
+                        1.0,
+                        1.0,
+                        1.0
+                    ],
+                    "average": 4.0,
+                    "banned": false,
+                    "link": "https://scryfall.com/card/usg/124/corrupt",
+                    "name": "Corrupt",
+                    "preview": "https://cards.scryfall.io/normal/front/3/2/32e1c65c-ced6-484d-b3b4-db913c6bf84b.jpg",
+                    "py/object": "pauperformance_bot.entity.api.archetype.TypicalCard",
+                    "type_line": "Sorcery",
+                    "typical": 4
+                },
+                {
+                    "at_least": [
+                        1.0,
+                        1.0,
+                        1.0,
+                        1.0
+                    ],
+                    "average": 4.0,
+                    "banned": false,
+                    "link": "https://scryfall.com/card/vis/55/crypt-rats",
+                    "name": "Crypt Rats",
+                    "preview": "https://cards.scryfall.io/normal/front/7/3/736455f6-c1b3-4a5a-a91f-a0cd3986ed53.jpg",
+                    "py/object": "pauperformance_bot.entity.api.archetype.TypicalCard",
+                    "type_line": "Creature \u2014 Rat",
+                    "typical": 4
+                },
+                {
+                    "at_least": [
+                        1.0,
+                        1.0,
+                        1.0,
+                        1.0
+                    ],
+                    "average": 4.0,
+                    "banned": false,
+                    "link": "https://scryfall.com/card/ody/145/innocent-blood",
+                    "name": "Innocent Blood",
+                    "preview": "https://cards.scryfall.io/normal/front/d/2/d26af8f6-df64-4027-880c-f2fae2d8103f.jpg",
+                    "py/object": "pauperformance_bot.entity.api.archetype.TypicalCard",
+                    "type_line": "Sorcery",
+                    "typical": 4
+                },
+                {
+                    "at_least": [
+                        1.0,
+                        1.0,
+                        1.0,
+                        1.0
+                    ],
+                    "average": 4.0,
+                    "banned": false,
+                    "link": "https://scryfall.com/card/apc/49/phyrexian-rager",
+                    "name": "Phyrexian Rager",
+                    "preview": "https://cards.scryfall.io/normal/front/3/a/3addf34c-ea54-42a3-bccd-b73453d964d2.jpg",
+                    "py/object": "pauperformance_bot.entity.api.archetype.TypicalCard",
+                    "type_line": "Creature \u2014 Phyrexian Horror",
+                    "typical": 4
+                }
+            ],
+            "decks": 1,
+            "meta_share": 100.0,
+            "name": "MonoB Control",
+            "previous_share": null,
+            "py/object": "pauperformance_bot.entity.api.metagame.ArchetypeShare",
+            "tournaments": 1
+        }
+    ],
+    "decks": 1,
     "metagame": {
         "date": "2008-05-02",
-        "decks": 0,
+        "decks": 1,
         "label": "shm",
         "metagame": "-04",
         "name": "Shadowmoor",
@@ -26,5 +117,5 @@
         "py/object": "pauperformance_bot.entity.api.archetype.MetagameRef"
     },
     "py/object": "pauperformance_bot.entity.api.metagame.MetagameBreakdown",
-    "tournaments": 0
+    "tournaments": 1
 }

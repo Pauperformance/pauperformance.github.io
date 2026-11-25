@@ -84,9 +84,9 @@
                 }
             ],
             "decks": 14,
-            "meta_share": 35.9,
+            "meta_share": 33.33,
             "name": "MonoU Faeries",
-            "previous_share": 41.67,
+            "previous_share": 35.71,
             "py/object": "pauperformance_bot.entity.api.metagame.ArchetypeShare",
             "tournaments": 6
         },
@@ -129,7 +129,7 @@
                         1.0,
                         1.0,
                         1.0,
-                        0.909
+                        0.917
                     ],
                     "average": 3.9,
                     "banned": false,
@@ -161,7 +161,7 @@
                         1.0,
                         1.0,
                         1.0,
-                        0.909
+                        0.917
                     ],
                     "average": 3.9,
                     "banned": false,
@@ -173,12 +173,12 @@
                     "typical": 4
                 }
             ],
-            "decks": 11,
-            "meta_share": 28.21,
+            "decks": 12,
+            "meta_share": 28.57,
             "name": "Goblins",
-            "previous_share": 25.0,
+            "previous_share": 21.43,
             "py/object": "pauperformance_bot.entity.api.metagame.ArchetypeShare",
-            "tournaments": 6
+            "tournaments": 7
         },
         {
             "cards": [
@@ -187,9 +187,9 @@
                         1.0,
                         1.0,
                         1.0,
-                        1.0
+                        0.833
                     ],
-                    "average": 4.0,
+                    "average": 3.8,
                     "banned": false,
                     "link": "https://scryfall.com/card/rav/165/gather-courage",
                     "name": "Gather Courage",
@@ -263,12 +263,12 @@
                     "typical": 4
                 }
             ],
-            "decks": 5,
-            "meta_share": 12.82,
+            "decks": 6,
+            "meta_share": 14.29,
             "name": "Stompy",
-            "previous_share": 8.33,
+            "previous_share": 7.14,
             "py/object": "pauperformance_bot.entity.api.metagame.ArchetypeShare",
-            "tournaments": 3
+            "tournaments": 4
         },
         {
             "cards": [
@@ -354,7 +354,7 @@
                 }
             ],
             "decks": 3,
-            "meta_share": 7.69,
+            "meta_share": 7.14,
             "name": "Dimir Control",
             "previous_share": 0.0,
             "py/object": "pauperformance_bot.entity.api.metagame.ArchetypeShare",
@@ -444,9 +444,9 @@
                 }
             ],
             "decks": 3,
-            "meta_share": 7.69,
+            "meta_share": 7.14,
             "name": "Empty The Warrens Storm",
-            "previous_share": 8.33,
+            "previous_share": 10.71,
             "py/object": "pauperformance_bot.entity.api.metagame.ArchetypeShare",
             "tournaments": 3
         },
@@ -534,9 +534,9 @@
                 }
             ],
             "decks": 2,
-            "meta_share": 5.13,
+            "meta_share": 4.76,
             "name": "Burn",
-            "previous_share": 0.0,
+            "previous_share": 7.14,
             "py/object": "pauperformance_bot.entity.api.metagame.ArchetypeShare",
             "tournaments": 2
         },
@@ -583,22 +583,6 @@
                     ],
                     "average": 4.0,
                     "banned": false,
-                    "link": "https://scryfall.com/card/fem/8a/icatian-javelineers",
-                    "name": "Icatian Javelineers",
-                    "preview": "https://cards.scryfall.io/normal/front/f/0/f04b8356-2384-4743-80dd-f15ca7ec65f7.jpg",
-                    "py/object": "pauperformance_bot.entity.api.archetype.TypicalCard",
-                    "type_line": "Creature \u2014 Human Soldier",
-                    "typical": 4
-                },
-                {
-                    "at_least": [
-                        1.0,
-                        1.0,
-                        1.0,
-                        1.0
-                    ],
-                    "average": 4.0,
-                    "banned": false,
                     "link": "https://scryfall.com/card/zen/14/journey-to-nowhere",
                     "name": "Journey to Nowhere",
                     "preview": "https://cards.scryfall.io/normal/front/0/9/09cfe585-8a55-4b27-89e0-dfb6946fe1f3.jpg",
@@ -615,26 +599,42 @@
                     ],
                     "average": 4.0,
                     "banned": false,
-                    "link": "https://scryfall.com/card/zen/23/kor-skyfisher",
-                    "name": "Kor Skyfisher",
-                    "preview": "https://cards.scryfall.io/normal/front/b/b/bb2e9465-f5ba-4c7b-9f03-d40dc8394acd.jpg",
+                    "link": "https://scryfall.com/card/dst/137/razor-golem",
+                    "name": "Razor Golem",
+                    "preview": "https://cards.scryfall.io/normal/front/6/4/64a86ec3-378f-4fca-b5f7-6dc02d47f7b9.jpg",
                     "py/object": "pauperformance_bot.entity.api.archetype.TypicalCard",
-                    "type_line": "Creature \u2014 Kor Soldier",
+                    "type_line": "Artifact Creature \u2014 Golem",
+                    "typical": 4
+                },
+                {
+                    "at_least": [
+                        1.0,
+                        1.0,
+                        1.0,
+                        1.0
+                    ],
+                    "average": 4.0,
+                    "banned": false,
+                    "link": "https://scryfall.com/card/plc/18/shade-of-trokair",
+                    "name": "Shade of Trokair",
+                    "preview": "https://cards.scryfall.io/normal/front/2/b/2b90d62c-5b3e-4830-bdc9-c3e342fc8389.jpg",
+                    "py/object": "pauperformance_bot.entity.api.archetype.TypicalCard",
+                    "type_line": "Creature \u2014 Shade",
                     "typical": 4
                 }
             ],
-            "decks": 1,
-            "meta_share": 2.56,
+            "decks": 2,
+            "meta_share": 4.76,
             "name": "White Weenie",
             "previous_share": 0.0,
             "py/object": "pauperformance_bot.entity.api.metagame.ArchetypeShare",
-            "tournaments": 1
+            "tournaments": 2
         }
     ],
-    "decks": 39,
+    "decks": 42,
     "metagame": {
         "date": "2010-07-16",
-        "decks": 39,
+        "decks": 42,
         "label": "m11",
         "metagame": "010",
         "name": "Magic 2011",
@@ -657,5 +657,5 @@
         "py/object": "pauperformance_bot.entity.api.archetype.MetagameRef"
     },
     "py/object": "pauperformance_bot.entity.api.metagame.MetagameBreakdown",
-    "tournaments": 6
+    "tournaments": 9
 }
